@@ -16,22 +16,22 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $browser The browser property
+     * @var string|null $browser Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
     */
     private ?string $browser = null;
     
     /**
-     * @var DateTime|null $eventDateTime The eventDateTime property
+     * @var DateTime|null $eventDateTime Date and time of the simulation event by a user in an attack simulation and training campaign.
     */
     private ?DateTime $eventDateTime = null;
     
     /**
-     * @var string|null $eventName The eventName property
+     * @var string|null $eventName Name of the simulation event by a user in an attack simulation and training campaign.
     */
     private ?string $eventName = null;
     
     /**
-     * @var string|null $ipAddress The ipAddress property
+     * @var string|null $ipAddress IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
     */
     private ?string $ipAddress = null;
     
@@ -41,7 +41,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $osPlatformDeviceDetails The osPlatformDeviceDetails property
+     * @var string|null $osPlatformDeviceDetails The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
     */
     private ?string $osPlatformDeviceDetails = null;
     
@@ -71,7 +71,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the browser property value. The browser property
+     * Gets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @return string|null
     */
     public function getBrowser(): ?string {
@@ -79,7 +79,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
@@ -87,7 +87,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the eventName property value. The eventName property
+     * Gets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
      * @return string|null
     */
     public function getEventName(): ?string {
@@ -111,7 +111,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @return string|null
     */
     public function getIpAddress(): ?string {
@@ -127,7 +127,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the osPlatformDeviceDetails property value. The osPlatformDeviceDetails property
+     * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      * @return string|null
     */
     public function getOsPlatformDeviceDetails(): ?string {
@@ -157,7 +157,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the browser property value. The browser property
+     * Sets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the browser property.
     */
     public function setBrowser(?string $value ): void {
@@ -165,7 +165,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value ): void {
@@ -173,7 +173,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the eventName property value. The eventName property
+     * Sets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the eventName property.
     */
     public function setEventName(?string $value ): void {
@@ -181,7 +181,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value ): void {
@@ -197,7 +197,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the osPlatformDeviceDetails property value. The osPlatformDeviceDetails property
+     * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the osPlatformDeviceDetails property.
     */
     public function setOsPlatformDeviceDetails(?string $value ): void {

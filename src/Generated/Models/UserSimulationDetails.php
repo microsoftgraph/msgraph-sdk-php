@@ -16,27 +16,27 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var int|null $assignedTrainingsCount The assignedTrainingsCount property
+     * @var int|null $assignedTrainingsCount Number of trainings assigned to a user in an attack simulation and training campaign.
     */
     private ?int $assignedTrainingsCount = null;
     
     /**
-     * @var int|null $completedTrainingsCount The completedTrainingsCount property
+     * @var int|null $completedTrainingsCount Number of trainings completed by a user in an attack simulation and training campaign.
     */
     private ?int $completedTrainingsCount = null;
     
     /**
-     * @var DateTime|null $compromisedDateTime The compromisedDateTime property
+     * @var DateTime|null $compromisedDateTime Date and time of the compromising online action by a user in an attack simulation and training campaign.
     */
     private ?DateTime $compromisedDateTime = null;
     
     /**
-     * @var int|null $inProgressTrainingsCount The inProgressTrainingsCount property
+     * @var int|null $inProgressTrainingsCount Number of trainings in progress by a user in an attack simulation and training campaign.
     */
     private ?int $inProgressTrainingsCount = null;
     
     /**
-     * @var bool|null $isCompromised The isCompromised property
+     * @var bool|null $isCompromised Indicates whether a user was compromised in an attack simulation and training campaign.
     */
     private ?bool $isCompromised = null;
     
@@ -46,22 +46,22 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var DateTime|null $reportedPhishDateTime The reportedPhishDateTime property
+     * @var DateTime|null $reportedPhishDateTime Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
     */
     private ?DateTime $reportedPhishDateTime = null;
     
     /**
-     * @var array<UserSimulationEventInfo>|null $simulationEvents The simulationEvents property
+     * @var array<UserSimulationEventInfo>|null $simulationEvents List of simulation events of a user in the attack simulation and training campaign.
     */
     private ?array $simulationEvents = null;
     
     /**
-     * @var AttackSimulationUser|null $simulationUser The simulationUser property
+     * @var AttackSimulationUser|null $simulationUser User in an attack simulation and training campaign.
     */
     private ?AttackSimulationUser $simulationUser = null;
     
     /**
-     * @var array<UserTrainingEventInfo>|null $trainingEvents The trainingEvents property
+     * @var array<UserTrainingEventInfo>|null $trainingEvents List of training events of a user in the attack simulation and training campaign.
     */
     private ?array $trainingEvents = null;
     
@@ -91,7 +91,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the assignedTrainingsCount property value. The assignedTrainingsCount property
+     * Gets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
      * @return int|null
     */
     public function getAssignedTrainingsCount(): ?int {
@@ -99,7 +99,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the completedTrainingsCount property value. The completedTrainingsCount property
+     * Gets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
      * @return int|null
     */
     public function getCompletedTrainingsCount(): ?int {
@@ -107,7 +107,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the compromisedDateTime property value. The compromisedDateTime property
+     * Gets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
      * @return DateTime|null
     */
     public function getCompromisedDateTime(): ?DateTime {
@@ -135,7 +135,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the inProgressTrainingsCount property value. The inProgressTrainingsCount property
+     * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
      * @return int|null
     */
     public function getInProgressTrainingsCount(): ?int {
@@ -143,7 +143,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the isCompromised property value. The isCompromised property
+     * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      * @return bool|null
     */
     public function getIsCompromised(): ?bool {
@@ -159,7 +159,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the reportedPhishDateTime property value. The reportedPhishDateTime property
+     * Gets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      * @return DateTime|null
     */
     public function getReportedPhishDateTime(): ?DateTime {
@@ -167,7 +167,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the simulationEvents property value. The simulationEvents property
+     * Gets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
      * @return array<UserSimulationEventInfo>|null
     */
     public function getSimulationEvents(): ?array {
@@ -175,7 +175,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the simulationUser property value. The simulationUser property
+     * Gets the simulationUser property value. User in an attack simulation and training campaign.
      * @return AttackSimulationUser|null
     */
     public function getSimulationUser(): ?AttackSimulationUser {
@@ -183,7 +183,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingEvents property value. The trainingEvents property
+     * Gets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
      * @return array<UserTrainingEventInfo>|null
     */
     public function getTrainingEvents(): ?array {
@@ -217,7 +217,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the assignedTrainingsCount property value. The assignedTrainingsCount property
+     * Sets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the assignedTrainingsCount property.
     */
     public function setAssignedTrainingsCount(?int $value ): void {
@@ -225,7 +225,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the completedTrainingsCount property value. The completedTrainingsCount property
+     * Sets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the completedTrainingsCount property.
     */
     public function setCompletedTrainingsCount(?int $value ): void {
@@ -233,7 +233,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the compromisedDateTime property value. The compromisedDateTime property
+     * Sets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the compromisedDateTime property.
     */
     public function setCompromisedDateTime(?DateTime $value ): void {
@@ -241,7 +241,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the inProgressTrainingsCount property value. The inProgressTrainingsCount property
+     * Sets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the inProgressTrainingsCount property.
     */
     public function setInProgressTrainingsCount(?int $value ): void {
@@ -249,7 +249,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the isCompromised property value. The isCompromised property
+     * Sets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      *  @param bool|null $value Value to set for the isCompromised property.
     */
     public function setIsCompromised(?bool $value ): void {
@@ -265,7 +265,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the reportedPhishDateTime property value. The reportedPhishDateTime property
+     * Sets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the reportedPhishDateTime property.
     */
     public function setReportedPhishDateTime(?DateTime $value ): void {
@@ -273,7 +273,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the simulationEvents property value. The simulationEvents property
+     * Sets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
      *  @param array<UserSimulationEventInfo>|null $value Value to set for the simulationEvents property.
     */
     public function setSimulationEvents(?array $value ): void {
@@ -281,7 +281,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the simulationUser property value. The simulationUser property
+     * Sets the simulationUser property value. User in an attack simulation and training campaign.
      *  @param AttackSimulationUser|null $value Value to set for the simulationUser property.
     */
     public function setSimulationUser(?AttackSimulationUser $value ): void {
@@ -289,7 +289,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingEvents property value. The trainingEvents property
+     * Sets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
      *  @param array<UserTrainingEventInfo>|null $value Value to set for the trainingEvents property.
     */
     public function setTrainingEvents(?array $value ): void {

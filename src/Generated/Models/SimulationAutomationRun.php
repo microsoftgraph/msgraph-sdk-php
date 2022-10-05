@@ -10,22 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SimulationAutomationRun extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $endDateTime The endDateTime property
+     * @var DateTime|null $endDateTime Date and time when the run ends in an attack simulation automation.
     */
     private ?DateTime $endDateTime = null;
     
     /**
-     * @var string|null $simulationId The simulationId property
+     * @var string|null $simulationId Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
     */
     private ?string $simulationId = null;
     
     /**
-     * @var DateTime|null $startDateTime The startDateTime property
+     * @var DateTime|null $startDateTime Date and time when the run starts in an attack simulation automation.
     */
     private ?DateTime $startDateTime = null;
     
     /**
-     * @var SimulationAutomationRunStatus|null $status The status property
+     * @var SimulationAutomationRunStatus|null $status Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
     */
     private ?SimulationAutomationRunStatus $status = null;
     
@@ -47,7 +47,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. Date and time when the run ends in an attack simulation automation.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -69,7 +69,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Gets the simulationId property value. The simulationId property
+     * Gets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      * @return string|null
     */
     public function getSimulationId(): ?string {
@@ -77,7 +77,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -85,7 +85,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      * @return SimulationAutomationRunStatus|null
     */
     public function getStatus(): ?SimulationAutomationRunStatus {
@@ -105,7 +105,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. Date and time when the run ends in an attack simulation automation.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value ): void {
@@ -113,7 +113,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Sets the simulationId property value. The simulationId property
+     * Sets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
      *  @param string|null $value Value to set for the simulationId property.
     */
     public function setSimulationId(?string $value ): void {
@@ -121,7 +121,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value ): void {
@@ -129,7 +129,7 @@ class SimulationAutomationRun extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
      *  @param SimulationAutomationRunStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationAutomationRunStatus $value ): void {

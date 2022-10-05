@@ -16,17 +16,17 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $browser The browser property
+     * @var string|null $browser Browser of the user from where the training event was generated.
     */
     private ?string $browser = null;
     
     /**
-     * @var DateTime|null $contentDateTime The contentDateTime property
+     * @var DateTime|null $contentDateTime Date and time of the training content playback by the user.
     */
     private ?DateTime $contentDateTime = null;
     
     /**
-     * @var string|null $ipAddress The ipAddress property
+     * @var string|null $ipAddress IP address of the user for the training event.
     */
     private ?string $ipAddress = null;
     
@@ -36,12 +36,12 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $osPlatformDeviceDetails The osPlatformDeviceDetails property
+     * @var string|null $osPlatformDeviceDetails The operating system, platform, and device details of the user for the training event.
     */
     private ?string $osPlatformDeviceDetails = null;
     
     /**
-     * @var float|null $potentialScoreImpact The potentialScoreImpact property
+     * @var float|null $potentialScoreImpact Potential improvement in the tenant security posture after completion of the training by the user.
     */
     private ?float $potentialScoreImpact = null;
     
@@ -71,7 +71,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the browser property value. The browser property
+     * Gets the browser property value. Browser of the user from where the training event was generated.
      * @return string|null
     */
     public function getBrowser(): ?string {
@@ -79,7 +79,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the contentDateTime property value. The contentDateTime property
+     * Gets the contentDateTime property value. Date and time of the training content playback by the user.
      * @return DateTime|null
     */
     public function getContentDateTime(): ?DateTime {
@@ -103,7 +103,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. IP address of the user for the training event.
      * @return string|null
     */
     public function getIpAddress(): ?string {
@@ -119,7 +119,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the osPlatformDeviceDetails property value. The osPlatformDeviceDetails property
+     * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
      * @return string|null
     */
     public function getOsPlatformDeviceDetails(): ?string {
@@ -127,7 +127,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the potentialScoreImpact property value. The potentialScoreImpact property
+     * Gets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
      * @return float|null
     */
     public function getPotentialScoreImpact(): ?float {
@@ -157,7 +157,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the browser property value. The browser property
+     * Sets the browser property value. Browser of the user from where the training event was generated.
      *  @param string|null $value Value to set for the browser property.
     */
     public function setBrowser(?string $value ): void {
@@ -165,7 +165,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the contentDateTime property value. The contentDateTime property
+     * Sets the contentDateTime property value. Date and time of the training content playback by the user.
      *  @param DateTime|null $value Value to set for the contentDateTime property.
     */
     public function setContentDateTime(?DateTime $value ): void {
@@ -173,7 +173,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. IP address of the user for the training event.
      *  @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value ): void {
@@ -189,7 +189,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the osPlatformDeviceDetails property value. The osPlatformDeviceDetails property
+     * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
      *  @param string|null $value Value to set for the osPlatformDeviceDetails property.
     */
     public function setOsPlatformDeviceDetails(?string $value ): void {
@@ -197,7 +197,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the potentialScoreImpact property value. The potentialScoreImpact property
+     * Sets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
      *  @param float|null $value Value to set for the potentialScoreImpact property.
     */
     public function setPotentialScoreImpact(?float $value ): void {

@@ -15,12 +15,12 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName Display name of the training.
     */
     private ?string $displayName = null;
     
     /**
-     * @var TrainingStatus|null $latestTrainingStatus The latestTrainingStatus property
+     * @var TrainingStatus|null $latestTrainingStatus Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
     */
     private ?TrainingStatus $latestTrainingStatus = null;
     
@@ -30,17 +30,17 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var UserTrainingContentEventInfo|null $trainingAssignedProperties The trainingAssignedProperties property
+     * @var UserTrainingContentEventInfo|null $trainingAssignedProperties Event details of the training when it was assigned to the user.
     */
     private ?UserTrainingContentEventInfo $trainingAssignedProperties = null;
     
     /**
-     * @var UserTrainingContentEventInfo|null $trainingCompletedProperties The trainingCompletedProperties property
+     * @var UserTrainingContentEventInfo|null $trainingCompletedProperties Event details of the training when it was completed by the user.
     */
     private ?UserTrainingContentEventInfo $trainingCompletedProperties = null;
     
     /**
-     * @var UserTrainingContentEventInfo|null $trainingUpdatedProperties The trainingUpdatedProperties property
+     * @var UserTrainingContentEventInfo|null $trainingUpdatedProperties Event details of the training when it was updated/in-progress by the user.
     */
     private ?UserTrainingContentEventInfo $trainingUpdatedProperties = null;
     
@@ -70,7 +70,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the training.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -94,7 +94,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the latestTrainingStatus property value. The latestTrainingStatus property
+     * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return TrainingStatus|null
     */
     public function getLatestTrainingStatus(): ?TrainingStatus {
@@ -110,7 +110,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingAssignedProperties property value. The trainingAssignedProperties property
+     * Gets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingAssignedProperties(): ?UserTrainingContentEventInfo {
@@ -118,7 +118,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingCompletedProperties property value. The trainingCompletedProperties property
+     * Gets the trainingCompletedProperties property value. Event details of the training when it was completed by the user.
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingCompletedProperties(): ?UserTrainingContentEventInfo {
@@ -126,7 +126,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the trainingUpdatedProperties property value. The trainingUpdatedProperties property
+     * Gets the trainingUpdatedProperties property value. Event details of the training when it was updated/in-progress by the user.
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingUpdatedProperties(): ?UserTrainingContentEventInfo {
@@ -156,7 +156,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the training.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -164,7 +164,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the latestTrainingStatus property value. The latestTrainingStatus property
+     * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      *  @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
     */
     public function setLatestTrainingStatus(?TrainingStatus $value ): void {
@@ -180,7 +180,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingAssignedProperties property value. The trainingAssignedProperties property
+     * Sets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingAssignedProperties property.
     */
     public function setTrainingAssignedProperties(?UserTrainingContentEventInfo $value ): void {
@@ -188,7 +188,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingCompletedProperties property value. The trainingCompletedProperties property
+     * Sets the trainingCompletedProperties property value. Event details of the training when it was completed by the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingCompletedProperties property.
     */
     public function setTrainingCompletedProperties(?UserTrainingContentEventInfo $value ): void {
@@ -196,7 +196,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the trainingUpdatedProperties property value. The trainingUpdatedProperties property
+     * Sets the trainingUpdatedProperties property value. Event details of the training when it was updated/in-progress by the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingUpdatedProperties property.
     */
     public function setTrainingUpdatedProperties(?UserTrainingContentEventInfo $value ): void {

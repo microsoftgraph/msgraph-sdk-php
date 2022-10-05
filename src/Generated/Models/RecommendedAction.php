@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RecommendedAction implements AdditionalDataHolder, Parsable 
 {
     /**
-     * @var string|null $actionWebUrl The actionWebUrl property
+     * @var string|null $actionWebUrl Web URL to the recommended action.
     */
     private ?string $actionWebUrl = null;
     
@@ -25,12 +25,12 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var float|null $potentialScoreImpact The potentialScoreImpact property
+     * @var float|null $potentialScoreImpact Potential improvement in the tenant security score from the recommended action.
     */
     private ?float $potentialScoreImpact = null;
     
     /**
-     * @var string|null $title The title property
+     * @var string|null $title Title of the recommended action.
     */
     private ?string $title = null;
     
@@ -52,7 +52,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the actionWebUrl property value. The actionWebUrl property
+     * Gets the actionWebUrl property value. Web URL to the recommended action.
      * @return string|null
     */
     public function getActionWebUrl(): ?string {
@@ -90,7 +90,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the potentialScoreImpact property value. The potentialScoreImpact property
+     * Gets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
      * @return float|null
     */
     public function getPotentialScoreImpact(): ?float {
@@ -98,7 +98,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the recommended action.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -118,7 +118,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the actionWebUrl property value. The actionWebUrl property
+     * Sets the actionWebUrl property value. Web URL to the recommended action.
      *  @param string|null $value Value to set for the actionWebUrl property.
     */
     public function setActionWebUrl(?string $value ): void {
@@ -142,7 +142,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the potentialScoreImpact property value. The potentialScoreImpact property
+     * Sets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
      *  @param float|null $value Value to set for the potentialScoreImpact property.
     */
     public function setPotentialScoreImpact(?float $value ): void {
@@ -150,7 +150,7 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the recommended action.
      *  @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value ): void {

@@ -16,22 +16,22 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     private array $additionalData;
     
     /**
-     * @var AttackSimulationUser|null $attackSimulationUser The attackSimulationUser property
+     * @var AttackSimulationUser|null $attackSimulationUser User in an attack simulation and training campaign.
     */
     private ?AttackSimulationUser $attackSimulationUser = null;
     
     /**
-     * @var int|null $clickCount The clickCount property
+     * @var int|null $clickCount Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
     */
     private ?int $clickCount = null;
     
     /**
-     * @var int|null $compromisedCount The compromisedCount property
+     * @var int|null $compromisedCount Number of compromising actions by the user in attack simulation and training campaigns.
     */
     private ?int $compromisedCount = null;
     
     /**
-     * @var DateTime|null $latestSimulationDateTime The latestSimulationDateTime property
+     * @var DateTime|null $latestSimulationDateTime Date and time of the latest attack simulation and training campaign that the user was included in.
     */
     private ?DateTime $latestSimulationDateTime = null;
     
@@ -41,7 +41,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     private ?string $odataType = null;
     
     /**
-     * @var int|null $simulationCount The simulationCount property
+     * @var int|null $simulationCount Number of attack simulation and training campaigns that the user was included in.
     */
     private ?int $simulationCount = null;
     
@@ -71,7 +71,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Gets the attackSimulationUser property value. The attackSimulationUser property
+     * Gets the attackSimulationUser property value. User in an attack simulation and training campaign.
      * @return AttackSimulationUser|null
     */
     public function getAttackSimulationUser(): ?AttackSimulationUser {
@@ -79,7 +79,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Gets the clickCount property value. The clickCount property
+     * Gets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
      * @return int|null
     */
     public function getClickCount(): ?int {
@@ -87,7 +87,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Gets the compromisedCount property value. The compromisedCount property
+     * Gets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
      * @return int|null
     */
     public function getCompromisedCount(): ?int {
@@ -111,7 +111,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Gets the latestSimulationDateTime property value. The latestSimulationDateTime property
+     * Gets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      * @return DateTime|null
     */
     public function getLatestSimulationDateTime(): ?DateTime {
@@ -127,7 +127,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Gets the simulationCount property value. The simulationCount property
+     * Gets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
      * @return int|null
     */
     public function getSimulationCount(): ?int {
@@ -157,7 +157,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Sets the attackSimulationUser property value. The attackSimulationUser property
+     * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      *  @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
     */
     public function setAttackSimulationUser(?AttackSimulationUser $value ): void {
@@ -165,7 +165,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Sets the clickCount property value. The clickCount property
+     * Sets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
      *  @param int|null $value Value to set for the clickCount property.
     */
     public function setClickCount(?int $value ): void {
@@ -173,7 +173,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Sets the compromisedCount property value. The compromisedCount property
+     * Sets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
      *  @param int|null $value Value to set for the compromisedCount property.
     */
     public function setCompromisedCount(?int $value ): void {
@@ -181,7 +181,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Sets the latestSimulationDateTime property value. The latestSimulationDateTime property
+     * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      *  @param DateTime|null $value Value to set for the latestSimulationDateTime property.
     */
     public function setLatestSimulationDateTime(?DateTime $value ): void {
@@ -197,7 +197,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     }
 
     /**
-     * Sets the simulationCount property value. The simulationCount property
+     * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
      *  @param int|null $value Value to set for the simulationCount property.
     */
     public function setSimulationCount(?int $value ): void {

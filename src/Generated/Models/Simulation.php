@@ -10,77 +10,77 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Simulation extends Entity implements Parsable 
 {
     /**
-     * @var SimulationAttackTechnique|null $attackTechnique The attackTechnique property
+     * @var SimulationAttackTechnique|null $attackTechnique The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
     */
     private ?SimulationAttackTechnique $attackTechnique = null;
     
     /**
-     * @var SimulationAttackType|null $attackType The attackType property
+     * @var SimulationAttackType|null $attackType Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
     */
     private ?SimulationAttackType $attackType = null;
     
     /**
-     * @var string|null $automationId The automationId property
+     * @var string|null $automationId Unique identifier for the attack simulation automation.
     */
     private ?string $automationId = null;
     
     /**
-     * @var DateTime|null $completionDateTime The completionDateTime property
+     * @var DateTime|null $completionDateTime Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
     */
     private ?DateTime $completionDateTime = null;
     
     /**
-     * @var EmailIdentity|null $createdBy The createdBy property
+     * @var EmailIdentity|null $createdBy Identity of the user who created the attack simulation and training campaign.
     */
     private ?EmailIdentity $createdBy = null;
     
     /**
-     * @var DateTime|null $createdDateTime The createdDateTime property
+     * @var DateTime|null $createdDateTime Date and time of creation of the attack simulation and training campaign.
     */
     private ?DateTime $createdDateTime = null;
     
     /**
-     * @var string|null $description The description property
+     * @var string|null $description Description of the attack simulation and training campaign.
     */
     private ?string $description = null;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName Display name of the attack simulation and training campaign. Supports $filter and $orderby.
     */
     private ?string $displayName = null;
     
     /**
-     * @var bool|null $isAutomated The isAutomated property
+     * @var bool|null $isAutomated Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     */
     private ?bool $isAutomated = null;
     
     /**
-     * @var EmailIdentity|null $lastModifiedBy The lastModifiedBy property
+     * @var EmailIdentity|null $lastModifiedBy Identity of the user who most recently modified the attack simulation and training campaign.
     */
     private ?EmailIdentity $lastModifiedBy = null;
     
     /**
-     * @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property
+     * @var DateTime|null $lastModifiedDateTime Date and time of the most recent modification of the attack simulation and training campaign.
     */
     private ?DateTime $lastModifiedDateTime = null;
     
     /**
-     * @var DateTime|null $launchDateTime The launchDateTime property
+     * @var DateTime|null $launchDateTime Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
     */
     private ?DateTime $launchDateTime = null;
     
     /**
-     * @var PayloadDeliveryPlatform|null $payloadDeliveryPlatform The payloadDeliveryPlatform property
+     * @var PayloadDeliveryPlatform|null $payloadDeliveryPlatform Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     */
     private ?PayloadDeliveryPlatform $payloadDeliveryPlatform = null;
     
     /**
-     * @var SimulationReport|null $report The report property
+     * @var SimulationReport|null $report Report of the attack simulation and training campaign.
     */
     private ?SimulationReport $report = null;
     
     /**
-     * @var SimulationStatus|null $status The status property
+     * @var SimulationStatus|null $status Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
     */
     private ?SimulationStatus $status = null;
     
@@ -102,7 +102,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackTechnique property value. The attackTechnique property
+     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      * @return SimulationAttackTechnique|null
     */
     public function getAttackTechnique(): ?SimulationAttackTechnique {
@@ -110,7 +110,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackType property value. The attackType property
+     * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return SimulationAttackType|null
     */
     public function getAttackType(): ?SimulationAttackType {
@@ -118,7 +118,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the automationId property value. The automationId property
+     * Gets the automationId property value. Unique identifier for the attack simulation automation.
      * @return string|null
     */
     public function getAutomationId(): ?string {
@@ -126,7 +126,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -134,7 +134,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
      * @return EmailIdentity|null
     */
     public function getCreatedBy(): ?EmailIdentity {
@@ -142,7 +142,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -150,7 +150,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the attack simulation and training campaign.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -158,7 +158,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -191,7 +191,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAutomated property value. The isAutomated property
+     * Gets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @return bool|null
     */
     public function getIsAutomated(): ?bool {
@@ -199,7 +199,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
      * @return EmailIdentity|null
     */
     public function getLastModifiedBy(): ?EmailIdentity {
@@ -207,7 +207,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -215,7 +215,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the launchDateTime property value. The launchDateTime property
+     * Gets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return DateTime|null
     */
     public function getLaunchDateTime(): ?DateTime {
@@ -223,7 +223,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloadDeliveryPlatform property value. The payloadDeliveryPlatform property
+     * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return PayloadDeliveryPlatform|null
     */
     public function getPayloadDeliveryPlatform(): ?PayloadDeliveryPlatform {
@@ -231,7 +231,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the report property value. The report property
+     * Gets the report property value. Report of the attack simulation and training campaign.
      * @return SimulationReport|null
     */
     public function getReport(): ?SimulationReport {
@@ -239,7 +239,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @return SimulationStatus|null
     */
     public function getStatus(): ?SimulationStatus {
@@ -270,7 +270,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackTechnique property value. The attackTechnique property
+     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      *  @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
     */
     public function setAttackTechnique(?SimulationAttackTechnique $value ): void {
@@ -278,7 +278,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackType property value. The attackType property
+     * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      *  @param SimulationAttackType|null $value Value to set for the attackType property.
     */
     public function setAttackType(?SimulationAttackType $value ): void {
@@ -286,7 +286,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the automationId property value. The automationId property
+     * Sets the automationId property value. Unique identifier for the attack simulation automation.
      *  @param string|null $value Value to set for the automationId property.
     */
     public function setAutomationId(?string $value ): void {
@@ -294,7 +294,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
      *  @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value ): void {
@@ -302,7 +302,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
      *  @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value ): void {
@@ -310,7 +310,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value ): void {
@@ -318,7 +318,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the attack simulation and training campaign.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -326,7 +326,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -334,7 +334,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAutomated property value. The isAutomated property
+     * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      *  @param bool|null $value Value to set for the isAutomated property.
     */
     public function setIsAutomated(?bool $value ): void {
@@ -342,7 +342,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
      *  @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value ): void {
@@ -350,7 +350,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value ): void {
@@ -358,7 +358,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the launchDateTime property value. The launchDateTime property
+     * Sets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
      *  @param DateTime|null $value Value to set for the launchDateTime property.
     */
     public function setLaunchDateTime(?DateTime $value ): void {
@@ -366,7 +366,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloadDeliveryPlatform property value. The payloadDeliveryPlatform property
+     * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      *  @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
     */
     public function setPayloadDeliveryPlatform(?PayloadDeliveryPlatform $value ): void {
@@ -374,7 +374,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the report property value. The report property
+     * Sets the report property value. Report of the attack simulation and training campaign.
      *  @param SimulationReport|null $value Value to set for the report property.
     */
     public function setReport(?SimulationReport $value ): void {
@@ -382,7 +382,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      *  @param SimulationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationStatus $value ): void {

@@ -15,12 +15,12 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName Display name of the user.
     */
     private ?string $displayName = null;
     
     /**
-     * @var string|null $email The email property
+     * @var string|null $email Email address of the user.
     */
     private ?string $email = null;
     
@@ -30,7 +30,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var string|null $userId The userId property
+     * @var string|null $userId This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
     */
     private ?string $userId = null;
     
@@ -60,7 +60,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the user.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -68,7 +68,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the user.
      * @return string|null
     */
     public function getEmail(): ?string {
@@ -98,7 +98,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -126,7 +126,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the user.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -134,7 +134,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the user.
      *  @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value ): void {
@@ -150,7 +150,7 @@ class AttackSimulationUser implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. This is the id property value of the user resource that represents the user in the Azure Active Directory tenant.
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {
