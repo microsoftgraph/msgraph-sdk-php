@@ -26,6 +26,36 @@ class ConditionalAccessRoot extends Entity
 {
 
      /**
+     * Gets the authenticationContextClassReferences
+    * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     *
+     * @return array|null The authenticationContextClassReferences
+     */
+    public function getAuthenticationContextClassReferences()
+    {
+        if (array_key_exists("authenticationContextClassReferences", $this->_propDict)) {
+           return $this->_propDict["authenticationContextClassReferences"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationContextClassReferences
+    * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+    *
+    * @param AuthenticationContextClassReference[] $val The authenticationContextClassReferences
+    *
+    * @return ConditionalAccessRoot
+    */
+    public function setAuthenticationContextClassReferences($val)
+    {
+        $this->_propDict["authenticationContextClassReferences"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the namedLocations
     * Read-only. Nullable. Returns a collection of the specified named locations.
      *
