@@ -203,7 +203,7 @@ class MacOSLobApp extends MobileLobApp
     * Gets the md5Hash
     * The MD5 hash codes
     *
-    * @return string|null The md5Hash
+    * @return array|null The md5Hash
     */
     public function getMd5Hash()
     {
@@ -218,7 +218,7 @@ class MacOSLobApp extends MobileLobApp
     * Sets the md5Hash
     * The MD5 hash codes
     *
-    * @param string $val The md5Hash
+    * @param string[] $val The md5Hash
     *
     * @return MacOSLobApp
     */
