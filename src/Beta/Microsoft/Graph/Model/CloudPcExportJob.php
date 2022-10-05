@@ -232,7 +232,7 @@ class CloudPcExportJob extends Entity
     /**
     * Gets the select
     *
-    * @return string|null The select
+    * @return array|null The select
     */
     public function getSelect()
     {
@@ -246,7 +246,7 @@ class CloudPcExportJob extends Entity
     /**
     * Sets the select
     *
-    * @param string $val The select
+    * @param string[] $val The select
     *
     * @return CloudPcExportJob
     */

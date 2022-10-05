@@ -239,7 +239,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     * Gets the infoUrls
     * List of links more info for the setting can be found at
     *
-    * @return string|null The infoUrls
+    * @return array|null The infoUrls
     */
     public function getInfoUrls()
     {
@@ -254,7 +254,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     * Sets the infoUrls
     * List of links more info for the setting can be found at
     *
-    * @param string $val The infoUrls
+    * @param string[] $val The infoUrls
     *
     * @return DeviceManagementConfigurationSettingDefinition
     */
@@ -268,7 +268,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     * Gets the keywords
     * Tokens which to search settings on
     *
-    * @return string|null The keywords
+    * @return array|null The keywords
     */
     public function getKeywords()
     {
@@ -283,7 +283,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
     * Sets the keywords
     * Tokens which to search settings on
     *
-    * @param string $val The keywords
+    * @param string[] $val The keywords
     *
     * @return DeviceManagementConfigurationSettingDefinition
     */

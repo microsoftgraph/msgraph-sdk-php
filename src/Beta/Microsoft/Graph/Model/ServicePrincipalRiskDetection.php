@@ -276,7 +276,7 @@ class ServicePrincipalRiskDetection extends Entity
     * Gets the keyIds
     * The unique identifier (GUID) for the key credential associated with the risk detection.
     *
-    * @return string|null The keyIds
+    * @return array|null The keyIds
     */
     public function getKeyIds()
     {
@@ -291,7 +291,7 @@ class ServicePrincipalRiskDetection extends Entity
     * Sets the keyIds
     * The unique identifier (GUID) for the key credential associated with the risk detection.
     *
-    * @param string $val The keyIds
+    * @param string[] $val The keyIds
     *
     * @return ServicePrincipalRiskDetection
     */

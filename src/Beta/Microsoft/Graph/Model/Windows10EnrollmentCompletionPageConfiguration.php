@@ -260,7 +260,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Gets the selectedMobileAppIds
     * Selected applications to track the installation status
     *
-    * @return string|null The selectedMobileAppIds
+    * @return array|null The selectedMobileAppIds
     */
     public function getSelectedMobileAppIds()
     {
@@ -275,7 +275,7 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     * Sets the selectedMobileAppIds
     * Selected applications to track the installation status
     *
-    * @param string $val The selectedMobileAppIds
+    * @param string[] $val The selectedMobileAppIds
     *
     * @return Windows10EnrollmentCompletionPageConfiguration
     */
