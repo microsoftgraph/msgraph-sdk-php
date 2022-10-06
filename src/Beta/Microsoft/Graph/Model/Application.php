@@ -331,7 +331,7 @@ class Application extends DirectoryObject
     * Gets the identifierUris
     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
-    * @return string|null The identifierUris
+    * @return array|null The identifierUris
     */
     public function getIdentifierUris()
     {
@@ -346,7 +346,7 @@ class Application extends DirectoryObject
     * Sets the identifierUris
     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
-    * @param string $val The identifierUris
+    * @param string[] $val The identifierUris
     *
     * @return Application
     */
@@ -819,6 +819,37 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the servicePrincipalLockConfiguration
+    *
+    * @return ServicePrincipalLockConfiguration|null The servicePrincipalLockConfiguration
+    */
+    public function getServicePrincipalLockConfiguration()
+    {
+        if (array_key_exists("servicePrincipalLockConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["servicePrincipalLockConfiguration"], "\Beta\Microsoft\Graph\Model\ServicePrincipalLockConfiguration") || is_null($this->_propDict["servicePrincipalLockConfiguration"])) {
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            } else {
+                $this->_propDict["servicePrincipalLockConfiguration"] = new ServicePrincipalLockConfiguration($this->_propDict["servicePrincipalLockConfiguration"]);
+                return $this->_propDict["servicePrincipalLockConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the servicePrincipalLockConfiguration
+    *
+    * @param ServicePrincipalLockConfiguration $val The servicePrincipalLockConfiguration
+    *
+    * @return Application
+    */
+    public function setServicePrincipalLockConfiguration($val)
+    {
+        $this->_propDict["servicePrincipalLockConfiguration"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the signInAudience
     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
     *
@@ -884,7 +915,7 @@ class Application extends DirectoryObject
     * Gets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return string|null The tags
+    * @return array|null The tags
     */
     public function getTags()
     {
@@ -899,7 +930,7 @@ class Application extends DirectoryObject
     * Sets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable.Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string $val The tags
+    * @param string[] $val The tags
     *
     * @return Application
     */

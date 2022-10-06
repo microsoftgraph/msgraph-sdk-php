@@ -237,7 +237,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the enabledPreviewFeatures
     * List of features enabled for private preview on the tenant.
     *
-    * @return string|null The enabledPreviewFeatures
+    * @return array|null The enabledPreviewFeatures
     */
     public function getEnabledPreviewFeatures()
     {
@@ -252,7 +252,7 @@ class AuthorizationPolicy extends PolicyBase
     * Sets the enabledPreviewFeatures
     * List of features enabled for private preview on the tenant.
     *
-    * @param string $val The enabledPreviewFeatures
+    * @param string[] $val The enabledPreviewFeatures
     *
     * @return AuthorizationPolicy
     */
@@ -295,7 +295,7 @@ class AuthorizationPolicy extends PolicyBase
     * Gets the permissionGrantPolicyIdsAssignedToDefaultUserRole
     * Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
     *
-    * @return string|null The permissionGrantPolicyIdsAssignedToDefaultUserRole
+    * @return array|null The permissionGrantPolicyIdsAssignedToDefaultUserRole
     */
     public function getPermissionGrantPolicyIdsAssignedToDefaultUserRole()
     {
@@ -310,7 +310,7 @@ class AuthorizationPolicy extends PolicyBase
     * Sets the permissionGrantPolicyIdsAssignedToDefaultUserRole
     * Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
     *
-    * @param string $val The permissionGrantPolicyIdsAssignedToDefaultUserRole
+    * @param string[] $val The permissionGrantPolicyIdsAssignedToDefaultUserRole
     *
     * @return AuthorizationPolicy
     */

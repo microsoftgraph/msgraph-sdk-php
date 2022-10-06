@@ -26,7 +26,7 @@ class MicrosoftTunnelSite extends Entity
 {
     /**
     * Gets the description
-    * The MicrosoftTunnelSite's description
+    * The site's description (optional)
     *
     * @return string|null The description
     */
@@ -41,7 +41,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the description
-    * The MicrosoftTunnelSite's description
+    * The site's description (optional)
     *
     * @param string $val The description
     *
@@ -55,7 +55,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Gets the displayName
-    * The MicrosoftTunnelSite's display name
+    * The display name for the site. This property is required when a site is created.
     *
     * @return string|null The displayName
     */
@@ -70,7 +70,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the displayName
-    * The MicrosoftTunnelSite's display name
+    * The display name for the site. This property is required when a site is created.
     *
     * @param string $val The displayName
     *
@@ -113,7 +113,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Gets the internalNetworkProbeUrl
-    * The MicrosoftTunnelSite's Internal Network Access Probe URL
+    * The site's Internal Network Access Probe URL
     *
     * @return string|null The internalNetworkProbeUrl
     */
@@ -128,7 +128,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the internalNetworkProbeUrl
-    * The MicrosoftTunnelSite's Internal Network Access Probe URL
+    * The site's Internal Network Access Probe URL
     *
     * @param string $val The internalNetworkProbeUrl
     *
@@ -142,7 +142,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Gets the publicAddress
-    * The MicrosoftTunnelSite's public domain name or IP address
+    * The site's public domain name or IP address
     *
     * @return string|null The publicAddress
     */
@@ -157,7 +157,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the publicAddress
-    * The MicrosoftTunnelSite's public domain name or IP address
+    * The site's public domain name or IP address
     *
     * @param string $val The publicAddress
     *
@@ -171,9 +171,9 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Gets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * List of Scope Tags for this Entity instance
     *
-    * @return string|null The roleScopeTagIds
+    * @return array|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -186,9 +186,9 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the roleScopeTagIds
-    * List of Scope Tags for this Entity instance.
+    * List of Scope Tags for this Entity instance
     *
-    * @param string $val The roleScopeTagIds
+    * @param string[] $val The roleScopeTagIds
     *
     * @return MicrosoftTunnelSite
     */
@@ -229,7 +229,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Gets the upgradeAvailable
-    * True if an upgrade is available
+    * The site provides the state of when an upgrade is available
     *
     * @return bool|null The upgradeAvailable
     */
@@ -244,7 +244,7 @@ class MicrosoftTunnelSite extends Entity
 
     /**
     * Sets the upgradeAvailable
-    * True if an upgrade is available
+    * The site provides the state of when an upgrade is available
     *
     * @param bool $val The upgradeAvailable
     *

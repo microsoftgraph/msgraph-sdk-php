@@ -27,7 +27,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the arguments
-    * Arguments included within the task.
+    * Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
      *
      * @return array|null The arguments
      */
@@ -42,7 +42,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the arguments
-    * Arguments included within the task.
+    * Arguments included within the task.  For guidance to configure this property, see Configure the arguments for built-in Lifecycle Workflow tasks.
     *
     * @param \Beta\Microsoft\Graph\Model\KeyValuePair[] $val The arguments
     *

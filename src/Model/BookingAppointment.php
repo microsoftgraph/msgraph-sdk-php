@@ -663,7 +663,7 @@ class BookingAppointment extends Entity
     * Gets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
-    * @return string|null The staffMemberIds
+    * @return array|null The staffMemberIds
     */
     public function getStaffMemberIds()
     {
@@ -678,7 +678,7 @@ class BookingAppointment extends Entity
     * Sets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
-    * @param string $val The staffMemberIds
+    * @param string[] $val The staffMemberIds
     *
     * @return BookingAppointment
     */

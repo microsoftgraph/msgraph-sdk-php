@@ -27,7 +27,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the simulationAutomations
-    * Represents simulation automations created to run on a tenant.
+    * Represents simulation automation created to run on a tenant.
      *
      * @return array|null The simulationAutomations
      */
@@ -42,7 +42,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the simulationAutomations
-    * Represents simulation automations created to run on a tenant.
+    * Represents simulation automation created to run on a tenant.
     *
     * @param SimulationAutomation[] $val The simulationAutomations
     *

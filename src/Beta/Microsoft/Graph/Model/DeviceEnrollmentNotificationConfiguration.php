@@ -119,7 +119,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
     * Gets the notificationTemplates
     * The list of notification data -
     *
-    * @return string|null The notificationTemplates
+    * @return array|null The notificationTemplates
     */
     public function getNotificationTemplates()
     {
@@ -134,7 +134,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
     * Sets the notificationTemplates
     * The list of notification data -
     *
-    * @param string $val The notificationTemplates
+    * @param string[] $val The notificationTemplates
     *
     * @return DeviceEnrollmentNotificationConfiguration
     */

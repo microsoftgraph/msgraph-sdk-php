@@ -148,6 +148,36 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the payloads
+    * Associated assignments for a specific filter
+     *
+     * @return array|null The payloads
+     */
+    public function getPayloads()
+    {
+        if (array_key_exists("payloads", $this->_propDict)) {
+           return $this->_propDict["payloads"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the payloads
+    * Associated assignments for a specific filter
+    *
+    * @param PayloadByFilter[] $val The payloads
+    *
+    * @return DeviceAndAppManagementAssignmentFilter
+    */
+    public function setPayloads($val)
+    {
+        $this->_propDict["payloads"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the platform
     * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
@@ -185,7 +215,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     * Gets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
     *
-    * @return string|null The roleScopeTags
+    * @return array|null The roleScopeTags
     */
     public function getRoleScopeTags()
     {
@@ -200,7 +230,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     * Sets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
     *
-    * @param string $val The roleScopeTags
+    * @param string[] $val The roleScopeTags
     *
     * @return DeviceAndAppManagementAssignmentFilter
     */

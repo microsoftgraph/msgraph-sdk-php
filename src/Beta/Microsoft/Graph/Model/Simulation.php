@@ -278,7 +278,7 @@ class Simulation extends Entity
 
     /**
     * Gets the isAutomated
-    * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+    * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
     * @return bool|null The isAutomated
     */
@@ -293,7 +293,7 @@ class Simulation extends Entity
 
     /**
     * Sets the isAutomated
-    * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+    * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
     * @param bool $val The isAutomated
     *

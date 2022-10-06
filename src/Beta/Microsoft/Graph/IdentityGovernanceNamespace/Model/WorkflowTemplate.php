@@ -26,7 +26,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
-    * The category of the workflow template. The possible values are: joiner, leaver.
+    * The category of the workflow template. The possible values are: joiner, leaver. Supports $filter (eq).
     *
     * @return LifecycleWorkflowCategory|null The category
     */
@@ -45,7 +45,7 @@ class WorkflowTemplate extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
-    * The category of the workflow template. The possible values are: joiner, leaver.
+    * The category of the workflow template. The possible values are: joiner, leaver. Supports $filter (eq).
     *
     * @param LifecycleWorkflowCategory $val The category
     *

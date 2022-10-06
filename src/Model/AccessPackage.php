@@ -179,6 +179,34 @@ class AccessPackage extends Entity
 
 
      /**
+     * Gets the accessPackagesIncompatibleWith
+     *
+     * @return array|null The accessPackagesIncompatibleWith
+     */
+    public function getAccessPackagesIncompatibleWith()
+    {
+        if (array_key_exists("accessPackagesIncompatibleWith", $this->_propDict)) {
+           return $this->_propDict["accessPackagesIncompatibleWith"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accessPackagesIncompatibleWith
+    *
+    * @param AccessPackage[] $val The accessPackagesIncompatibleWith
+    *
+    * @return AccessPackage
+    */
+    public function setAccessPackagesIncompatibleWith($val)
+    {
+        $this->_propDict["accessPackagesIncompatibleWith"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the assignmentPolicies
      *
      * @return array|null The assignmentPolicies
@@ -233,6 +261,62 @@ class AccessPackage extends Entity
     public function setCatalog($val)
     {
         $this->_propDict["catalog"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incompatibleAccessPackages
+     *
+     * @return array|null The incompatibleAccessPackages
+     */
+    public function getIncompatibleAccessPackages()
+    {
+        if (array_key_exists("incompatibleAccessPackages", $this->_propDict)) {
+           return $this->_propDict["incompatibleAccessPackages"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incompatibleAccessPackages
+    *
+    * @param AccessPackage[] $val The incompatibleAccessPackages
+    *
+    * @return AccessPackage
+    */
+    public function setIncompatibleAccessPackages($val)
+    {
+        $this->_propDict["incompatibleAccessPackages"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incompatibleGroups
+     *
+     * @return array|null The incompatibleGroups
+     */
+    public function getIncompatibleGroups()
+    {
+        if (array_key_exists("incompatibleGroups", $this->_propDict)) {
+           return $this->_propDict["incompatibleGroups"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incompatibleGroups
+    *
+    * @param Group[] $val The incompatibleGroups
+    *
+    * @return AccessPackage
+    */
+    public function setIncompatibleGroups($val)
+    {
+        $this->_propDict["incompatibleGroups"] = $val;
         return $this;
     }
 

@@ -55,6 +55,37 @@ class Security extends Entity
         return $this;
     }
 
+    /**
+    * Gets the attackSimulation
+    *
+    * @return AttackSimulationRoot|null The attackSimulation
+    */
+    public function getAttackSimulation()
+    {
+        if (array_key_exists("attackSimulation", $this->_propDict)) {
+            if (is_a($this->_propDict["attackSimulation"], "\Microsoft\Graph\Model\AttackSimulationRoot") || is_null($this->_propDict["attackSimulation"])) {
+                return $this->_propDict["attackSimulation"];
+            } else {
+                $this->_propDict["attackSimulation"] = new AttackSimulationRoot($this->_propDict["attackSimulation"]);
+                return $this->_propDict["attackSimulation"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the attackSimulation
+    *
+    * @param AttackSimulationRoot $val The attackSimulation
+    *
+    * @return Security
+    */
+    public function setAttackSimulation($val)
+    {
+        $this->_propDict["attackSimulation"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the alerts
