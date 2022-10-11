@@ -271,7 +271,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     /**
     * Gets the userTags
     *
-    * @return array|null The userTags
+    * @return string|null The userTags
     */
     public function getUserTags()
     {
@@ -285,7 +285,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel
     /**
     * Sets the userTags
     *
-    * @param string[] $val The userTags
+    * @param string $val The userTags
     *
     * @return OnenotePage
     */

@@ -270,7 +270,7 @@ class Group extends DirectoryObject
     * Gets the groupTypes
     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
-    * @return array|null The groupTypes
+    * @return string|null The groupTypes
     */
     public function getGroupTypes()
     {
@@ -285,7 +285,7 @@ class Group extends DirectoryObject
     * Sets the groupTypes
     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
-    * @param string[] $val The groupTypes
+    * @param string $val The groupTypes
     *
     * @return Group
     */
@@ -328,7 +328,7 @@ class Group extends DirectoryObject
     * Gets the infoCatalogs
     * Identifies the info segments assigned to the group. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The infoCatalogs
+    * @return string|null The infoCatalogs
     */
     public function getInfoCatalogs()
     {
@@ -343,7 +343,7 @@ class Group extends DirectoryObject
     * Sets the infoCatalogs
     * Identifies the info segments assigned to the group. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The infoCatalogs
+    * @param string $val The infoCatalogs
     *
     * @return Group
     */
@@ -355,7 +355,7 @@ class Group extends DirectoryObject
 
     /**
     * Gets the isAssignableToRole
-    * Indicates whether this group can be assigned to an Azure Active Directory role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
+    * Indicates whether this group can be assigned to an Azure Active Directory role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
     *
     * @return bool|null The isAssignableToRole
     */
@@ -370,7 +370,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the isAssignableToRole
-    * Indicates whether this group can be assigned to an Azure Active Directory role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
+    * Indicates whether this group can be assigned to an Azure Active Directory role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global Administrator and Privileged Role Administrator roles can set this property. The caller must also be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not).
     *
     * @param bool $val The isAssignableToRole
     *
@@ -884,7 +884,7 @@ class Group extends DirectoryObject
     * Gets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @return array|null The proxyAddresses
+    * @return string|null The proxyAddresses
     */
     public function getProxyAddresses()
     {
@@ -899,7 +899,7 @@ class Group extends DirectoryObject
     * Sets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @param string[] $val The proxyAddresses
+    * @param string $val The proxyAddresses
     *
     * @return Group
     */
@@ -946,7 +946,7 @@ class Group extends DirectoryObject
     * Gets the resourceBehaviorOptions
     * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
-    * @return array|null The resourceBehaviorOptions
+    * @return string|null The resourceBehaviorOptions
     */
     public function getResourceBehaviorOptions()
     {
@@ -961,7 +961,7 @@ class Group extends DirectoryObject
     * Sets the resourceBehaviorOptions
     * Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
     *
-    * @param string[] $val The resourceBehaviorOptions
+    * @param string $val The resourceBehaviorOptions
     *
     * @return Group
     */
@@ -975,7 +975,7 @@ class Group extends DirectoryObject
     * Gets the resourceProvisioningOptions
     * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
     *
-    * @return array|null The resourceProvisioningOptions
+    * @return string|null The resourceProvisioningOptions
     */
     public function getResourceProvisioningOptions()
     {
@@ -990,7 +990,7 @@ class Group extends DirectoryObject
     * Sets the resourceProvisioningOptions
     * Specifies the group resources that are provisioned as part of Microsoft 365 group creation, that are not normally part of default group creation. Possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
     *
-    * @param string[] $val The resourceProvisioningOptions
+    * @param string $val The resourceProvisioningOptions
     *
     * @return Group
     */

@@ -88,6 +88,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Gets the notes
+    * Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
     *
     * @return ItemBody|null The notes
     */
@@ -106,6 +107,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Sets the notes
+    * Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
     *
     * @param ItemBody $val The notes
     *

@@ -243,7 +243,7 @@ class DeviceManagementCompliancePolicy extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @return array|null The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -258,7 +258,7 @@ class DeviceManagementCompliancePolicy extends Entity
     * Sets the roleScopeTagIds
     * List of Scope Tags for this Entity instance.
     *
-    * @param string[] $val The roleScopeTagIds
+    * @param string $val The roleScopeTagIds
     *
     * @return DeviceManagementCompliancePolicy
     */

@@ -190,7 +190,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     * Gets the scepServerUrls
     * SCEP Server Url(s)
     *
-    * @return array|null The scepServerUrls
+    * @return string|null The scepServerUrls
     */
     public function getScepServerUrls()
     {
@@ -205,7 +205,7 @@ class AndroidForWorkScepCertificateProfile extends AndroidForWorkCertificateProf
     * Sets the scepServerUrls
     * SCEP Server Url(s)
     *
-    * @param string[] $val The scepServerUrls
+    * @param string $val The scepServerUrls
     *
     * @return AndroidForWorkScepCertificateProfile
     */

@@ -551,7 +551,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the mitreTechniques
     * The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
     *
-    * @return array|null The mitreTechniques
+    * @return string|null The mitreTechniques
     */
     public function getMitreTechniques()
     {
@@ -566,7 +566,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the mitreTechniques
     * The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
     *
-    * @param string[] $val The mitreTechniques
+    * @param string $val The mitreTechniques
     *
     * @return Alert
     */

@@ -633,7 +633,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     * Gets the factoryResetDeviceAdministratorEmails
     * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
     *
-    * @return array|null The factoryResetDeviceAdministratorEmails
+    * @return string|null The factoryResetDeviceAdministratorEmails
     */
     public function getFactoryResetDeviceAdministratorEmails()
     {
@@ -648,7 +648,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     * Sets the factoryResetDeviceAdministratorEmails
     * List of Google account emails that will be required to authenticate after a device is factory reset before it can be set up.
     *
-    * @param string[] $val The factoryResetDeviceAdministratorEmails
+    * @param string $val The factoryResetDeviceAdministratorEmails
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */
@@ -1977,7 +1977,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     * Gets the kioskModeWifiAllowedSsids
     * The restricted set of WIFI SSIDs available for the user to configure in Kiosk Mode. This collection can contain a maximum of 500 elements.
     *
-    * @return array|null The kioskModeWifiAllowedSsids
+    * @return string|null The kioskModeWifiAllowedSsids
     */
     public function getKioskModeWifiAllowedSsids()
     {
@@ -1992,7 +1992,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     * Sets the kioskModeWifiAllowedSsids
     * The restricted set of WIFI SSIDs available for the user to configure in Kiosk Mode. This collection can contain a maximum of 500 elements.
     *
-    * @param string[] $val The kioskModeWifiAllowedSsids
+    * @param string $val The kioskModeWifiAllowedSsids
     *
     * @return AndroidDeviceOwnerGeneralDeviceConfiguration
     */

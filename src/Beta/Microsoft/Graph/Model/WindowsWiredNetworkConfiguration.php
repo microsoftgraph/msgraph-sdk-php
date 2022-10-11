@@ -570,7 +570,7 @@ class WindowsWiredNetworkConfiguration extends DeviceConfiguration
     * Gets the trustedServerCertificateNames
     * Specify trusted server certificate names.
     *
-    * @return array|null The trustedServerCertificateNames
+    * @return string|null The trustedServerCertificateNames
     */
     public function getTrustedServerCertificateNames()
     {
@@ -585,7 +585,7 @@ class WindowsWiredNetworkConfiguration extends DeviceConfiguration
     * Sets the trustedServerCertificateNames
     * Specify trusted server certificate names.
     *
-    * @param string[] $val The trustedServerCertificateNames
+    * @param string $val The trustedServerCertificateNames
     *
     * @return WindowsWiredNetworkConfiguration
     */

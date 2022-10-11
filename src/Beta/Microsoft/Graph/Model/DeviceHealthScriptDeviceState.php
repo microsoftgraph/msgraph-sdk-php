@@ -28,7 +28,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Gets the assignmentFilterIds
     * A list of the assignment filter ids used for health script applicability evaluation
     *
-    * @return array|null The assignmentFilterIds
+    * @return string|null The assignmentFilterIds
     */
     public function getAssignmentFilterIds()
     {
@@ -43,7 +43,7 @@ class DeviceHealthScriptDeviceState extends Entity
     * Sets the assignmentFilterIds
     * A list of the assignment filter ids used for health script applicability evaluation
     *
-    * @param string[] $val The assignmentFilterIds
+    * @param string $val The assignmentFilterIds
     *
     * @return DeviceHealthScriptDeviceState
     */

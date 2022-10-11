@@ -58,7 +58,7 @@ class Organization extends DirectoryObject
     * Gets the businessPhones
     * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
     *
-    * @return array|null The businessPhones
+    * @return string|null The businessPhones
     */
     public function getBusinessPhones()
     {
@@ -73,7 +73,7 @@ class Organization extends DirectoryObject
     * Sets the businessPhones
     * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
     *
-    * @param string[] $val The businessPhones
+    * @param string $val The businessPhones
     *
     * @return Organization
     */
@@ -298,7 +298,7 @@ class Organization extends DirectoryObject
     * Gets the marketingNotificationEmails
     * Not nullable.
     *
-    * @return array|null The marketingNotificationEmails
+    * @return string|null The marketingNotificationEmails
     */
     public function getMarketingNotificationEmails()
     {
@@ -313,7 +313,7 @@ class Organization extends DirectoryObject
     * Sets the marketingNotificationEmails
     * Not nullable.
     *
-    * @param string[] $val The marketingNotificationEmails
+    * @param string $val The marketingNotificationEmails
     *
     * @return Organization
     */
@@ -509,7 +509,7 @@ class Organization extends DirectoryObject
     /**
     * Gets the securityComplianceNotificationMails
     *
-    * @return array|null The securityComplianceNotificationMails
+    * @return string|null The securityComplianceNotificationMails
     */
     public function getSecurityComplianceNotificationMails()
     {
@@ -523,7 +523,7 @@ class Organization extends DirectoryObject
     /**
     * Sets the securityComplianceNotificationMails
     *
-    * @param string[] $val The securityComplianceNotificationMails
+    * @param string $val The securityComplianceNotificationMails
     *
     * @return Organization
     */
@@ -536,7 +536,7 @@ class Organization extends DirectoryObject
     /**
     * Gets the securityComplianceNotificationPhones
     *
-    * @return array|null The securityComplianceNotificationPhones
+    * @return string|null The securityComplianceNotificationPhones
     */
     public function getSecurityComplianceNotificationPhones()
     {
@@ -550,7 +550,7 @@ class Organization extends DirectoryObject
     /**
     * Sets the securityComplianceNotificationPhones
     *
-    * @param string[] $val The securityComplianceNotificationPhones
+    * @param string $val The securityComplianceNotificationPhones
     *
     * @return Organization
     */
@@ -622,7 +622,7 @@ class Organization extends DirectoryObject
     * Gets the technicalNotificationMails
     * Not nullable.
     *
-    * @return array|null The technicalNotificationMails
+    * @return string|null The technicalNotificationMails
     */
     public function getTechnicalNotificationMails()
     {
@@ -637,7 +637,7 @@ class Organization extends DirectoryObject
     * Sets the technicalNotificationMails
     * Not nullable.
     *
-    * @param string[] $val The technicalNotificationMails
+    * @param string $val The technicalNotificationMails
     *
     * @return Organization
     */

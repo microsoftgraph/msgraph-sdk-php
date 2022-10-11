@@ -152,7 +152,7 @@ class PolicySet extends Entity
     * Gets the guidedDeploymentTags
     * Tags of the guided deployment
     *
-    * @return array|null The guidedDeploymentTags
+    * @return string|null The guidedDeploymentTags
     */
     public function getGuidedDeploymentTags()
     {
@@ -167,7 +167,7 @@ class PolicySet extends Entity
     * Sets the guidedDeploymentTags
     * Tags of the guided deployment
     *
-    * @param string[] $val The guidedDeploymentTags
+    * @param string $val The guidedDeploymentTags
     *
     * @return PolicySet
     */
@@ -214,7 +214,7 @@ class PolicySet extends Entity
     * Gets the roleScopeTags
     * RoleScopeTags of the PolicySet
     *
-    * @return array|null The roleScopeTags
+    * @return string|null The roleScopeTags
     */
     public function getRoleScopeTags()
     {
@@ -229,7 +229,7 @@ class PolicySet extends Entity
     * Sets the roleScopeTags
     * RoleScopeTags of the PolicySet
     *
-    * @param string[] $val The roleScopeTags
+    * @param string $val The roleScopeTags
     *
     * @return PolicySet
     */
