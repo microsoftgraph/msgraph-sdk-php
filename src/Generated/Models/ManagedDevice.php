@@ -185,6 +185,11 @@ class ManagedDevice extends Entity implements Parsable
     private ?ManagementAgentType $managementAgent = null;
     
     /**
+     * @var DateTime|null $managementCertificateExpirationDate Reports device management certificate expiration date. This property is read-only.
+    */
+    private ?DateTime $managementCertificateExpirationDate = null;
+    
+    /**
      * @var string|null $manufacturer Manufacturer of the device. This property is read-only.
     */
     private ?string $manufacturer = null;
@@ -240,6 +245,11 @@ class ManagedDevice extends Entity implements Parsable
     private ?string $remoteAssistanceSessionUrl = null;
     
     /**
+     * @var bool|null $requireUserEnrollmentApproval Reports if the managed iOS device is user approval enrollment. This property is read-only.
+    */
+    private ?bool $requireUserEnrollmentApproval = null;
+    
+    /**
      * @var string|null $serialNumber SerialNumber. This property is read-only.
     */
     private ?string $serialNumber = null;
@@ -273,6 +283,11 @@ class ManagedDevice extends Entity implements Parsable
      * @var string|null $userPrincipalName Device user principal name. This property is read-only.
     */
     private ?string $userPrincipalName = null;
+    
+    /**
+     * @var array<User>|null $users The primary users associated with the managed device.
+    */
+    private ?array $users = null;
     
     /**
      * @var string|null $wiFiMacAddress Wi-Fi MAC. This property is read-only.
@@ -538,6 +553,7 @@ class ManagedDevice extends Entity implements Parsable
             'managedDeviceName' => function (ParseNode $n) use ($o) { $o->setManagedDeviceName($n->getStringValue()); },
             'managedDeviceOwnerType' => function (ParseNode $n) use ($o) { $o->setManagedDeviceOwnerType($n->getEnumValue(ManagedDeviceOwnerType::class)); },
             'managementAgent' => function (ParseNode $n) use ($o) { $o->setManagementAgent($n->getEnumValue(ManagementAgentType::class)); },
+            'managementCertificateExpirationDate' => function (ParseNode $n) use ($o) { $o->setManagementCertificateExpirationDate($n->getDateTimeValue()); },
             'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
             'meid' => function (ParseNode $n) use ($o) { $o->setMeid($n->getStringValue()); },
             'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
@@ -549,6 +565,7 @@ class ManagedDevice extends Entity implements Parsable
             'physicalMemoryInBytes' => function (ParseNode $n) use ($o) { $o->setPhysicalMemoryInBytes($n->getIntegerValue()); },
             'remoteAssistanceSessionErrorDetails' => function (ParseNode $n) use ($o) { $o->setRemoteAssistanceSessionErrorDetails($n->getStringValue()); },
             'remoteAssistanceSessionUrl' => function (ParseNode $n) use ($o) { $o->setRemoteAssistanceSessionUrl($n->getStringValue()); },
+            'requireUserEnrollmentApproval' => function (ParseNode $n) use ($o) { $o->setRequireUserEnrollmentApproval($n->getBooleanValue()); },
             'serialNumber' => function (ParseNode $n) use ($o) { $o->setSerialNumber($n->getStringValue()); },
             'subscriberCarrier' => function (ParseNode $n) use ($o) { $o->setSubscriberCarrier($n->getStringValue()); },
             'totalStorageSpaceInBytes' => function (ParseNode $n) use ($o) { $o->setTotalStorageSpaceInBytes($n->getIntegerValue()); },
@@ -556,6 +573,7 @@ class ManagedDevice extends Entity implements Parsable
             'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
             'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
             'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'users' => function (ParseNode $n) use ($o) { $o->setUsers($n->getCollectionOfObjectValues(array(User::class, 'createFromDiscriminatorValue'))); },
             'wiFiMacAddress' => function (ParseNode $n) use ($o) { $o->setWiFiMacAddress($n->getStringValue()); },
         ]);
     }
@@ -638,6 +656,14 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function getManagementAgent(): ?ManagementAgentType {
         return $this->managementAgent;
+    }
+
+    /**
+     * Gets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
+     * @return DateTime|null
+    */
+    public function getManagementCertificateExpirationDate(): ?DateTime {
+        return $this->managementCertificateExpirationDate;
     }
 
     /**
@@ -729,6 +755,14 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Gets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     * @return bool|null
+    */
+    public function getRequireUserEnrollmentApproval(): ?bool {
+        return $this->requireUserEnrollmentApproval;
+    }
+
+    /**
      * Gets the serialNumber property value. SerialNumber. This property is read-only.
      * @return string|null
     */
@@ -785,6 +819,14 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Gets the users property value. The primary users associated with the managed device.
+     * @return array<User>|null
+    */
+    public function getUsers(): ?array {
+        return $this->users;
+    }
+
+    /**
      * Gets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @return string|null
     */
@@ -811,6 +853,7 @@ class ManagedDevice extends Entity implements Parsable
         $writer->writeEnumValue('managementAgent', $this->managementAgent);
         $writer->writeStringValue('notes', $this->notes);
         $writer->writeEnumValue('partnerReportedThreatState', $this->partnerReportedThreatState);
+        $writer->writeCollectionOfObjectValues('users', $this->users);
     }
 
     /**
@@ -1094,6 +1137,14 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Sets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
+     *  @param DateTime|null $value Value to set for the managementCertificateExpirationDate property.
+    */
+    public function setManagementCertificateExpirationDate(?DateTime $value ): void {
+        $this->managementCertificateExpirationDate = $value;
+    }
+
+    /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
      *  @param string|null $value Value to set for the manufacturer property.
     */
@@ -1182,6 +1233,14 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Sets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
+     *  @param bool|null $value Value to set for the requireUserEnrollmentApproval property.
+    */
+    public function setRequireUserEnrollmentApproval(?bool $value ): void {
+        $this->requireUserEnrollmentApproval = $value;
+    }
+
+    /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.
      *  @param string|null $value Value to set for the serialNumber property.
     */
@@ -1235,6 +1294,14 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setUserPrincipalName(?string $value ): void {
         $this->userPrincipalName = $value;
+    }
+
+    /**
+     * Sets the users property value. The primary users associated with the managed device.
+     *  @param array<User>|null $value Value to set for the users property.
+    */
+    public function setUsers(?array $value ): void {
+        $this->users = $value;
     }
 
     /**

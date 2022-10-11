@@ -39,7 +39,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     private ?string $underline = null;
     
     /**
-     * Instantiates a new workbookRangeFont and sets the default values.
+     * Instantiates a new WorkbookRangeFont and sets the default values.
     */
     public function __construct() {
         parent::__construct();

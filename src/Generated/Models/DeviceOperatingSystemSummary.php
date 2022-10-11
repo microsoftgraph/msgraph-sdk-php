@@ -15,9 +15,39 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
+     * @var int|null $androidCorporateWorkProfileCount The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+    */
+    private ?int $androidCorporateWorkProfileCount = null;
+    
+    /**
      * @var int|null $androidCount Number of android device count.
     */
     private ?int $androidCount = null;
+    
+    /**
+     * @var int|null $androidDedicatedCount Number of dedicated Android devices.
+    */
+    private ?int $androidDedicatedCount = null;
+    
+    /**
+     * @var int|null $androidDeviceAdminCount Number of device admin Android devices.
+    */
+    private ?int $androidDeviceAdminCount = null;
+    
+    /**
+     * @var int|null $androidFullyManagedCount Number of fully managed Android devices.
+    */
+    private ?int $androidFullyManagedCount = null;
+    
+    /**
+     * @var int|null $androidWorkProfileCount Number of work profile Android devices.
+    */
+    private ?int $androidWorkProfileCount = null;
+    
+    /**
+     * @var int|null $configMgrDeviceCount Number of ConfigMgr managed devices.
+    */
+    private ?int $configMgrDeviceCount = null;
     
     /**
      * @var int|null $iosCount Number of iOS device count.
@@ -75,11 +105,59 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     * @return int|null
+    */
+    public function getAndroidCorporateWorkProfileCount(): ?int {
+        return $this->androidCorporateWorkProfileCount;
+    }
+
+    /**
      * Gets the androidCount property value. Number of android device count.
      * @return int|null
     */
     public function getAndroidCount(): ?int {
         return $this->androidCount;
+    }
+
+    /**
+     * Gets the androidDedicatedCount property value. Number of dedicated Android devices.
+     * @return int|null
+    */
+    public function getAndroidDedicatedCount(): ?int {
+        return $this->androidDedicatedCount;
+    }
+
+    /**
+     * Gets the androidDeviceAdminCount property value. Number of device admin Android devices.
+     * @return int|null
+    */
+    public function getAndroidDeviceAdminCount(): ?int {
+        return $this->androidDeviceAdminCount;
+    }
+
+    /**
+     * Gets the androidFullyManagedCount property value. Number of fully managed Android devices.
+     * @return int|null
+    */
+    public function getAndroidFullyManagedCount(): ?int {
+        return $this->androidFullyManagedCount;
+    }
+
+    /**
+     * Gets the androidWorkProfileCount property value. Number of work profile Android devices.
+     * @return int|null
+    */
+    public function getAndroidWorkProfileCount(): ?int {
+        return $this->androidWorkProfileCount;
+    }
+
+    /**
+     * Gets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
+     * @return int|null
+    */
+    public function getConfigMgrDeviceCount(): ?int {
+        return $this->configMgrDeviceCount;
     }
 
     /**
@@ -89,7 +167,13 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'androidCorporateWorkProfileCount' => function (ParseNode $n) use ($o) { $o->setAndroidCorporateWorkProfileCount($n->getIntegerValue()); },
             'androidCount' => function (ParseNode $n) use ($o) { $o->setAndroidCount($n->getIntegerValue()); },
+            'androidDedicatedCount' => function (ParseNode $n) use ($o) { $o->setAndroidDedicatedCount($n->getIntegerValue()); },
+            'androidDeviceAdminCount' => function (ParseNode $n) use ($o) { $o->setAndroidDeviceAdminCount($n->getIntegerValue()); },
+            'androidFullyManagedCount' => function (ParseNode $n) use ($o) { $o->setAndroidFullyManagedCount($n->getIntegerValue()); },
+            'androidWorkProfileCount' => function (ParseNode $n) use ($o) { $o->setAndroidWorkProfileCount($n->getIntegerValue()); },
+            'configMgrDeviceCount' => function (ParseNode $n) use ($o) { $o->setConfigMgrDeviceCount($n->getIntegerValue()); },
             'iosCount' => function (ParseNode $n) use ($o) { $o->setIosCount($n->getIntegerValue()); },
             'macOSCount' => function (ParseNode $n) use ($o) { $o->setMacOSCount($n->getIntegerValue()); },
             '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
@@ -152,7 +236,13 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeIntegerValue('androidCorporateWorkProfileCount', $this->androidCorporateWorkProfileCount);
         $writer->writeIntegerValue('androidCount', $this->androidCount);
+        $writer->writeIntegerValue('androidDedicatedCount', $this->androidDedicatedCount);
+        $writer->writeIntegerValue('androidDeviceAdminCount', $this->androidDeviceAdminCount);
+        $writer->writeIntegerValue('androidFullyManagedCount', $this->androidFullyManagedCount);
+        $writer->writeIntegerValue('androidWorkProfileCount', $this->androidWorkProfileCount);
+        $writer->writeIntegerValue('configMgrDeviceCount', $this->configMgrDeviceCount);
         $writer->writeIntegerValue('iosCount', $this->iosCount);
         $writer->writeIntegerValue('macOSCount', $this->macOSCount);
         $writer->writeStringValue('@odata.type', $this->odataType);
@@ -171,11 +261,59 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Sets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
+     *  @param int|null $value Value to set for the androidCorporateWorkProfileCount property.
+    */
+    public function setAndroidCorporateWorkProfileCount(?int $value ): void {
+        $this->androidCorporateWorkProfileCount = $value;
+    }
+
+    /**
      * Sets the androidCount property value. Number of android device count.
      *  @param int|null $value Value to set for the androidCount property.
     */
     public function setAndroidCount(?int $value ): void {
         $this->androidCount = $value;
+    }
+
+    /**
+     * Sets the androidDedicatedCount property value. Number of dedicated Android devices.
+     *  @param int|null $value Value to set for the androidDedicatedCount property.
+    */
+    public function setAndroidDedicatedCount(?int $value ): void {
+        $this->androidDedicatedCount = $value;
+    }
+
+    /**
+     * Sets the androidDeviceAdminCount property value. Number of device admin Android devices.
+     *  @param int|null $value Value to set for the androidDeviceAdminCount property.
+    */
+    public function setAndroidDeviceAdminCount(?int $value ): void {
+        $this->androidDeviceAdminCount = $value;
+    }
+
+    /**
+     * Sets the androidFullyManagedCount property value. Number of fully managed Android devices.
+     *  @param int|null $value Value to set for the androidFullyManagedCount property.
+    */
+    public function setAndroidFullyManagedCount(?int $value ): void {
+        $this->androidFullyManagedCount = $value;
+    }
+
+    /**
+     * Sets the androidWorkProfileCount property value. Number of work profile Android devices.
+     *  @param int|null $value Value to set for the androidWorkProfileCount property.
+    */
+    public function setAndroidWorkProfileCount(?int $value ): void {
+        $this->androidWorkProfileCount = $value;
+    }
+
+    /**
+     * Sets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
+     *  @param int|null $value Value to set for the configMgrDeviceCount property.
+    */
+    public function setConfigMgrDeviceCount(?int $value ): void {
+        $this->configMgrDeviceCount = $value;
     }
 
     /**

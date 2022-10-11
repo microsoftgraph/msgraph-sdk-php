@@ -15,6 +15,11 @@ class BookingAppointment extends Entity implements Parsable
     private ?string $additionalInformation = null;
     
     /**
+     * @var string|null $anonymousJoinWebUrl The anonymousJoinWebUrl property
+    */
+    private ?string $anonymousJoinWebUrl = null;
+    
+    /**
      * @var array<BookingCustomerInformationBase>|null $customers It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
     */
     private ?array $customers = null;
@@ -150,6 +155,14 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
+     * Gets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * @return string|null
+    */
+    public function getAnonymousJoinWebUrl(): ?string {
+        return $this->anonymousJoinWebUrl;
+    }
+
+    /**
      * Gets the customers property value. It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return array<BookingCustomerInformationBase>|null
     */
@@ -189,6 +202,7 @@ class BookingAppointment extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'additionalInformation' => function (ParseNode $n) use ($o) { $o->setAdditionalInformation($n->getStringValue()); },
+            'anonymousJoinWebUrl' => function (ParseNode $n) use ($o) { $o->setAnonymousJoinWebUrl($n->getStringValue()); },
             'customers' => function (ParseNode $n) use ($o) { $o->setCustomers($n->getCollectionOfObjectValues(array(BookingCustomerInformationBase::class, 'createFromDiscriminatorValue'))); },
             'customerTimeZone' => function (ParseNode $n) use ($o) { $o->setCustomerTimeZone($n->getStringValue()); },
             'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getDateIntervalValue()); },
@@ -365,6 +379,7 @@ class BookingAppointment extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('additionalInformation', $this->additionalInformation);
+        $writer->writeStringValue('anonymousJoinWebUrl', $this->anonymousJoinWebUrl);
         $writer->writeCollectionOfObjectValues('customers', $this->customers);
         $writer->writeStringValue('customerTimeZone', $this->customerTimeZone);
         $writer->writeObjectValue('endDateTime', $this->endDateTime);
@@ -393,6 +408,14 @@ class BookingAppointment extends Entity implements Parsable
     */
     public function setAdditionalInformation(?string $value ): void {
         $this->additionalInformation = $value;
+    }
+
+    /**
+     * Sets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     *  @param string|null $value Value to set for the anonymousJoinWebUrl property.
+    */
+    public function setAnonymousJoinWebUrl(?string $value ): void {
+        $this->anonymousJoinWebUrl = $value;
     }
 
     /**

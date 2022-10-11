@@ -34,7 +34,7 @@ class DomainDnsRecord extends Entity implements Parsable
     private ?int $ttl = null;
     
     /**
-     * Instantiates a new domainDnsRecord and sets the default values.
+     * Instantiates a new DomainDnsRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

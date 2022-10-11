@@ -84,9 +84,9 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Gets the content property value. The page's HTML content.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContent(): ?StreamInterface {
+    public function getContent(): StreamInterface {
         return $this->content;
     }
 

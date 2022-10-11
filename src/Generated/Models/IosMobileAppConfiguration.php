@@ -38,9 +38,9 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
 
     /**
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getEncodedSettingXml(): ?StreamInterface {
+    public function getEncodedSettingXml(): StreamInterface {
         return $this->encodedSettingXml;
     }
 

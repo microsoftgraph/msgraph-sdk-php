@@ -100,9 +100,9 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getAttachmentsArchive(): ?StreamInterface {
+    public function getAttachmentsArchive(): StreamInterface {
         return $this->attachmentsArchive;
     }
 

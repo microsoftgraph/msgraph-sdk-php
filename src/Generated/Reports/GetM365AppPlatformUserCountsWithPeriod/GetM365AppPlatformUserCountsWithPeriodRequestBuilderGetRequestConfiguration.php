@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar;
+namespace Microsoft\Graph\Generated\Reports\GetM365AppPlatformUserCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class CalendarRequestBuilderPatchRequestConfiguration 
+class GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

@@ -54,9 +54,9 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Gets the content property value. The attachment content.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContent(): ?StreamInterface {
+    public function getContent(): StreamInterface {
         return $this->content;
     }
 

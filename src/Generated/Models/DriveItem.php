@@ -220,9 +220,9 @@ class DriveItem extends BaseItem implements Parsable
 
     /**
      * Gets the content property value. The content stream, if the item represents a file.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContent(): ?StreamInterface {
+    public function getContent(): StreamInterface {
         return $this->content;
     }
 

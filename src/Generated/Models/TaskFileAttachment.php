@@ -33,9 +33,9 @@ class TaskFileAttachment extends AttachmentBase implements Parsable
 
     /**
      * Gets the contentBytes property value. The contentBytes property
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContentBytes(): ?StreamInterface {
+    public function getContentBytes(): StreamInterface {
         return $this->contentBytes;
     }
 

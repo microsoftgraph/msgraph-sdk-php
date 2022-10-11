@@ -43,9 +43,9 @@ class FileAttachment extends Attachment implements Parsable
 
     /**
      * Gets the contentBytes property value. The base64-encoded contents of the file.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContentBytes(): ?StreamInterface {
+    public function getContentBytes(): StreamInterface {
         return $this->contentBytes;
     }
 

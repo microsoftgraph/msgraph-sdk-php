@@ -52,7 +52,7 @@ class AccessPackagesIncompatibleWithRequestBuilder
     }
 
     /**
-     * Get accessPackagesIncompatibleWith from identityGovernance
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -77,7 +77,7 @@ class AccessPackagesIncompatibleWithRequestBuilder
     }
 
     /**
-     * Get accessPackagesIncompatibleWith from identityGovernance
+     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
      * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

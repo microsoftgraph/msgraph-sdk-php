@@ -88,9 +88,9 @@ class KeyCredential implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the customKeyIdentifier property value. Custom key identifier
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getCustomKeyIdentifier(): ?StreamInterface {
+    public function getCustomKeyIdentifier(): StreamInterface {
         return $this->customKeyIdentifier;
     }
 
@@ -131,9 +131,9 @@ class KeyCredential implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getKey(): ?StreamInterface {
+    public function getKey(): StreamInterface {
         return $this->key;
     }
 

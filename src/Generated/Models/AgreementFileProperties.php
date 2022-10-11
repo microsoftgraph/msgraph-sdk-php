@@ -45,7 +45,7 @@ class AgreementFileProperties extends Entity implements Parsable
     private ?string $language = null;
     
     /**
-     * Instantiates a new agreementFileProperties and sets the default values.
+     * Instantiates a new AgreementFileProperties and sets the default values.
     */
     public function __construct() {
         parent::__construct();

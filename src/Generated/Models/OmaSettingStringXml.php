@@ -58,9 +58,9 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
 
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getValue(): ?StreamInterface {
+    public function getValue(): StreamInterface {
         return $this->value;
     }
 

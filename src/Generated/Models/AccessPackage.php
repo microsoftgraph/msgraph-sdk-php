@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackage extends Entity implements Parsable 
 {
     /**
-     * @var array<AccessPackage>|null $accessPackagesIncompatibleWith The accessPackagesIncompatibleWith property
+     * @var array<AccessPackage>|null $accessPackagesIncompatibleWith The access packages that are incompatible with this package. Read-only.
     */
     private ?array $accessPackagesIncompatibleWith = null;
     
@@ -40,12 +40,12 @@ class AccessPackage extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var array<AccessPackage>|null $incompatibleAccessPackages The incompatibleAccessPackages property
+     * @var array<AccessPackage>|null $incompatibleAccessPackages The access packages whose assigned users are ineligible to be assigned this access package.
     */
     private ?array $incompatibleAccessPackages = null;
     
     /**
-     * @var array<Group>|null $incompatibleGroups The incompatibleGroups property
+     * @var array<Group>|null $incompatibleGroups The groups whose members are ineligible to be assigned this access package.
     */
     private ?array $incompatibleGroups = null;
     
@@ -77,7 +77,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     * Gets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
      * @return array<AccessPackage>|null
     */
     public function getAccessPackagesIncompatibleWith(): ?array {
@@ -145,7 +145,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     * Gets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
      * @return array<AccessPackage>|null
     */
     public function getIncompatibleAccessPackages(): ?array {
@@ -153,7 +153,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the incompatibleGroups property value. The incompatibleGroups property
+     * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
      * @return array<Group>|null
     */
     public function getIncompatibleGroups(): ?array {
@@ -195,7 +195,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackagesIncompatibleWith property value. The accessPackagesIncompatibleWith property
+     * Sets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
      *  @param array<AccessPackage>|null $value Value to set for the accessPackagesIncompatibleWith property.
     */
     public function setAccessPackagesIncompatibleWith(?array $value ): void {
@@ -243,7 +243,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the incompatibleAccessPackages property value. The incompatibleAccessPackages property
+     * Sets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
      *  @param array<AccessPackage>|null $value Value to set for the incompatibleAccessPackages property.
     */
     public function setIncompatibleAccessPackages(?array $value ): void {
@@ -251,7 +251,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the incompatibleGroups property value. The incompatibleGroups property
+     * Sets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
      *  @param array<Group>|null $value Value to set for the incompatibleGroups property.
     */
     public function setIncompatibleGroups(?array $value ): void {

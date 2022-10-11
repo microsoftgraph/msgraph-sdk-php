@@ -45,7 +45,7 @@ class DeviceEnrollmentConfiguration extends Entity implements Parsable
     private ?int $version = null;
     
     /**
-     * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

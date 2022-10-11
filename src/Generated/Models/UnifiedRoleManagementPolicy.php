@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
     private ?string $scopeType = null;
     
     /**
-     * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -38,9 +38,9 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * Gets the content property value. The content stream for this version of the item.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContent(): ?StreamInterface {
+    public function getContent(): StreamInterface {
         return $this->content;
     }
 

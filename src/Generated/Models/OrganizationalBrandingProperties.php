@@ -94,9 +94,9 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
 
     /**
      * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getBackgroundImage(): ?StreamInterface {
+    public function getBackgroundImage(): StreamInterface {
         return $this->backgroundImage;
     }
 
@@ -110,9 +110,9 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
 
     /**
      * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getBannerLogo(): ?StreamInterface {
+    public function getBannerLogo(): StreamInterface {
         return $this->bannerLogo;
     }
 
@@ -162,9 +162,9 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
 
     /**
      * Gets the squareLogo property value. A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getSquareLogo(): ?StreamInterface {
+    public function getSquareLogo(): StreamInterface {
         return $this->squareLogo;
     }
 

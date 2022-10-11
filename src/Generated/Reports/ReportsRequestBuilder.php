@@ -24,6 +24,10 @@ use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithDate\GetEmai
 use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithPeriod\GetEmailAppUsageUserDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetEmailAppUsageVersionsUserCountsWithPeriod\GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetM365AppPlatformUserCountsWithPeriod\GetM365AppPlatformUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetM365AppUserCountsWithPeriod\GetM365AppUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithDate\GetM365AppUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithPeriod\GetM365AppUserDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetMailboxUsageDetailWithPeriod\GetMailboxUsageDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetMailboxUsageMailboxCountsWithPeriod\GetMailboxUsageMailboxCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetMailboxUsageQuotaStatusMailboxCountsWithPeriod\GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder;
@@ -370,13 +374,49 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getGroupArchivedPrintJobs method.
-     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
      * @param string $groupId Usage: groupId='{groupId}'
-     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @return GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
     public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $groupId, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getM365AppPlatformUserCounts method.
+     * @param string $period Usage: period='{period}'
+     * @return GetM365AppPlatformUserCountsWithPeriodRequestBuilder
+    */
+    public function getM365AppPlatformUserCountsWithPeriod(string $period): GetM365AppPlatformUserCountsWithPeriodRequestBuilder {
+        return new GetM365AppPlatformUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
+     * Provides operations to call the getM365AppUserCounts method.
+     * @param string $period Usage: period='{period}'
+     * @return GetM365AppUserCountsWithPeriodRequestBuilder
+    */
+    public function getM365AppUserCountsWithPeriod(string $period): GetM365AppUserCountsWithPeriodRequestBuilder {
+        return new GetM365AppUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
+     * Provides operations to call the getM365AppUserDetail method.
+     * @param Date $date Usage: date={date}
+     * @return GetM365AppUserDetailWithDateRequestBuilder
+    */
+    public function getM365AppUserDetailWithDate(Date $date): GetM365AppUserDetailWithDateRequestBuilder {
+        return new GetM365AppUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
+    }
+
+    /**
+     * Provides operations to call the getM365AppUserDetail method.
+     * @param string $period Usage: period='{period}'
+     * @return GetM365AppUserDetailWithPeriodRequestBuilder
+    */
+    public function getM365AppUserDetailWithPeriod(string $period): GetM365AppUserDetailWithPeriodRequestBuilder {
+        return new GetM365AppUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
@@ -612,9 +652,9 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getPrinterArchivedPrintJobs method.
-     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
      * @param string $printerId Usage: printerId='{printerId}'
-     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @return GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
     public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
@@ -947,8 +987,8 @@ class ReportsRequestBuilder
 
     /**
      * Provides operations to call the getUserArchivedPrintJobs method.
-     * @param DateTime $endDateTime Usage: endDateTime='{endDateTime}'
-     * @param DateTime $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
+     * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @param string $userId Usage: userId='{userId}'
      * @return GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */

@@ -93,9 +93,9 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the customKeyIdentifier property value. The customKeyIdentifier property
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getCustomKeyIdentifier(): ?StreamInterface {
+    public function getCustomKeyIdentifier(): StreamInterface {
         return $this->customKeyIdentifier;
     }
 
@@ -137,9 +137,9 @@ class SelfSignedCertificate implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the key property value. The key property
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getKey(): ?StreamInterface {
+    public function getKey(): StreamInterface {
         return $this->key;
     }
 

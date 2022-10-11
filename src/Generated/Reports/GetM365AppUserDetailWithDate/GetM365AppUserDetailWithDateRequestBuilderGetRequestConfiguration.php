@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule;
+namespace Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithDate;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class ScheduleRequestBuilderPatchRequestConfiguration 
+class GetM365AppUserDetailWithDateRequestBuilderGetRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

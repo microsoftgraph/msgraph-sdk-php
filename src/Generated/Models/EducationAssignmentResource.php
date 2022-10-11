@@ -19,7 +19,7 @@ class EducationAssignmentResource extends Entity implements Parsable
     private ?EducationResource $resource = null;
     
     /**
-     * Instantiates a new educationAssignmentResource and sets the default values.
+     * Instantiates a new EducationAssignmentResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

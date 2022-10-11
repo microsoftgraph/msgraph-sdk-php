@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule;
+namespace Microsoft\Graph\Generated\Education\Schools\Item\AdministrativeUnit;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class ScheduleRequestBuilderPatchRequestConfiguration 
+class AdministrativeUnitRequestBuilderPatchRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

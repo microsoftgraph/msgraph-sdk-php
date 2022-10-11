@@ -68,9 +68,9 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Gets the certificate property value. Data recovery Certificate
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getCertificate(): ?StreamInterface {
+    public function getCertificate(): StreamInterface {
         return $this->certificate;
     }
 

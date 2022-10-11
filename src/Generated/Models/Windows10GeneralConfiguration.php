@@ -2541,17 +2541,17 @@ class Windows10GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Gets the startMenuLayoutEdgeAssetsXml property value. This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getStartMenuLayoutEdgeAssetsXml(): ?StreamInterface {
+    public function getStartMenuLayoutEdgeAssetsXml(): StreamInterface {
         return $this->startMenuLayoutEdgeAssetsXml;
     }
 
     /**
      * Gets the startMenuLayoutXml property value. Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getStartMenuLayoutXml(): ?StreamInterface {
+    public function getStartMenuLayoutXml(): StreamInterface {
         return $this->startMenuLayoutXml;
     }
 

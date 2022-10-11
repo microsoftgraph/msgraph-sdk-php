@@ -192,9 +192,9 @@ class OnlineMeeting extends Entity implements Parsable
 
     /**
      * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getAttendeeReport(): ?StreamInterface {
+    public function getAttendeeReport(): StreamInterface {
         return $this->attendeeReport;
     }
 

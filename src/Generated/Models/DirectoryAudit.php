@@ -25,7 +25,7 @@ class DirectoryAudit extends Entity implements Parsable
     private ?array $additionalDetails = null;
     
     /**
-     * @var string|null $category Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * @var string|null $category Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
     */
     private ?string $category = null;
     
@@ -106,7 +106,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      * @return string|null
     */
     public function getCategory(): ?string {
@@ -234,7 +234,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      *  @param string|null $value Value to set for the category property.
     */
     public function setCategory(?string $value ): void {

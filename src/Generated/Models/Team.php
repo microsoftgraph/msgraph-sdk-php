@@ -120,7 +120,7 @@ class Team extends Entity implements Parsable
     private ?TeamSummary $summary = null;
     
     /**
-     * @var array<TeamworkTag>|null $tags The tags property
+     * @var array<TeamworkTag>|null $tags The tags associated with the team.
     */
     private ?array $tags = null;
     
@@ -375,7 +375,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. The tags associated with the team.
      * @return array<TeamworkTag>|null
     */
     public function getTags(): ?array {
@@ -626,7 +626,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. The tags associated with the team.
      *  @param array<TeamworkTag>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value ): void {
