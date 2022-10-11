@@ -53,6 +53,33 @@ class BookingAppointment extends Entity
         return $this;
     }
 
+    /**
+    * Gets the anonymousJoinWebUrl
+    *
+    * @return string|null The anonymousJoinWebUrl
+    */
+    public function getAnonymousJoinWebUrl()
+    {
+        if (array_key_exists("anonymousJoinWebUrl", $this->_propDict)) {
+            return $this->_propDict["anonymousJoinWebUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the anonymousJoinWebUrl
+    *
+    * @param string $val The anonymousJoinWebUrl
+    *
+    * @return BookingAppointment
+    */
+    public function setAnonymousJoinWebUrl($val)
+    {
+        $this->_propDict["anonymousJoinWebUrl"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the customers
@@ -663,7 +690,7 @@ class BookingAppointment extends Entity
     * Gets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
-    * @return array|null The staffMemberIds
+    * @return string|null The staffMemberIds
     */
     public function getStaffMemberIds()
     {
@@ -678,7 +705,7 @@ class BookingAppointment extends Entity
     * Sets the staffMemberIds
     * The ID of each bookingStaffMember who is scheduled in this appointment.
     *
-    * @param string[] $val The staffMemberIds
+    * @param string $val The staffMemberIds
     *
     * @return BookingAppointment
     */

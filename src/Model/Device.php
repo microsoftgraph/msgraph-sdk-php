@@ -476,7 +476,7 @@ class Device extends DirectoryObject
     * Gets the physicalIds
     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @return array|null The physicalIds
+    * @return string|null The physicalIds
     */
     public function getPhysicalIds()
     {
@@ -491,7 +491,7 @@ class Device extends DirectoryObject
     * Sets the physicalIds
     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @param string[] $val The physicalIds
+    * @param string $val The physicalIds
     *
     * @return Device
     */
@@ -534,7 +534,7 @@ class Device extends DirectoryObject
     * Gets the systemLabels
     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
     *
-    * @return array|null The systemLabels
+    * @return string|null The systemLabels
     */
     public function getSystemLabels()
     {
@@ -549,7 +549,7 @@ class Device extends DirectoryObject
     * Sets the systemLabels
     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
     *
-    * @param string[] $val The systemLabels
+    * @param string $val The systemLabels
     *
     * @return Device
     */

@@ -180,6 +180,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the accessPackagesIncompatibleWith
+    * The access packages that are incompatible with this package. Read-only.
      *
      * @return array|null The accessPackagesIncompatibleWith
      */
@@ -194,6 +195,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the accessPackagesIncompatibleWith
+    * The access packages that are incompatible with this package. Read-only.
     *
     * @param AccessPackage[] $val The accessPackagesIncompatibleWith
     *
@@ -267,6 +269,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the incompatibleAccessPackages
+    * The access packages whose assigned users are ineligible to be assigned this access package.
      *
      * @return array|null The incompatibleAccessPackages
      */
@@ -281,6 +284,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the incompatibleAccessPackages
+    * The access packages whose assigned users are ineligible to be assigned this access package.
     *
     * @param AccessPackage[] $val The incompatibleAccessPackages
     *
@@ -295,6 +299,7 @@ class AccessPackage extends Entity
 
      /**
      * Gets the incompatibleGroups
+    * The groups whose members are ineligible to be assigned this access package.
      *
      * @return array|null The incompatibleGroups
      */
@@ -309,6 +314,7 @@ class AccessPackage extends Entity
 
     /**
     * Sets the incompatibleGroups
+    * The groups whose members are ineligible to be assigned this access package.
     *
     * @param Group[] $val The incompatibleGroups
     *

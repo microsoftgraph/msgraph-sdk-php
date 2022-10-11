@@ -218,7 +218,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     * Gets the services
     * The affected services by the service message.
     *
-    * @return array|null The services
+    * @return string|null The services
     */
     public function getServices()
     {
@@ -233,7 +233,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     * Sets the services
     * The affected services by the service message.
     *
-    * @param string[] $val The services
+    * @param string $val The services
     *
     * @return ServiceUpdateMessage
     */
@@ -280,7 +280,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     * Gets the tags
     * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
-    * @return array|null The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -295,7 +295,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase
     * Sets the tags
     * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
     *
-    * @param string[] $val The tags
+    * @param string $val The tags
     *
     * @return ServiceUpdateMessage
     */

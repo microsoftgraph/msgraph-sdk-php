@@ -1010,6 +1010,39 @@ class ManagedDevice extends Entity
     }
 
     /**
+    * Gets the managementCertificateExpirationDate
+    * Reports device management certificate expiration date. This property is read-only.
+    *
+    * @return \DateTime|null The managementCertificateExpirationDate
+    */
+    public function getManagementCertificateExpirationDate()
+    {
+        if (array_key_exists("managementCertificateExpirationDate", $this->_propDict)) {
+            if (is_a($this->_propDict["managementCertificateExpirationDate"], "\DateTime") || is_null($this->_propDict["managementCertificateExpirationDate"])) {
+                return $this->_propDict["managementCertificateExpirationDate"];
+            } else {
+                $this->_propDict["managementCertificateExpirationDate"] = new \DateTime($this->_propDict["managementCertificateExpirationDate"]);
+                return $this->_propDict["managementCertificateExpirationDate"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the managementCertificateExpirationDate
+    * Reports device management certificate expiration date. This property is read-only.
+    *
+    * @param \DateTime $val The managementCertificateExpirationDate
+    *
+    * @return ManagedDevice
+    */
+    public function setManagementCertificateExpirationDate($val)
+    {
+        $this->_propDict["managementCertificateExpirationDate"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the manufacturer
     * Manufacturer of the device. This property is read-only.
     *
@@ -1329,6 +1362,35 @@ class ManagedDevice extends Entity
     public function setRemoteAssistanceSessionUrl($val)
     {
         $this->_propDict["remoteAssistanceSessionUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the requireUserEnrollmentApproval
+    * Reports if the managed iOS device is user approval enrollment. This property is read-only.
+    *
+    * @return bool|null The requireUserEnrollmentApproval
+    */
+    public function getRequireUserEnrollmentApproval()
+    {
+        if (array_key_exists("requireUserEnrollmentApproval", $this->_propDict)) {
+            return $this->_propDict["requireUserEnrollmentApproval"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requireUserEnrollmentApproval
+    * Reports if the managed iOS device is user approval enrollment. This property is read-only.
+    *
+    * @param bool $val The requireUserEnrollmentApproval
+    *
+    * @return ManagedDevice
+    */
+    public function setRequireUserEnrollmentApproval($val)
+    {
+        $this->_propDict["requireUserEnrollmentApproval"] = boolval($val);
         return $this;
     }
 
@@ -1654,6 +1716,36 @@ class ManagedDevice extends Entity
     public function setDeviceCategory($val)
     {
         $this->_propDict["deviceCategory"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the users
+    * The primary users associated with the managed device.
+     *
+     * @return array|null The users
+     */
+    public function getUsers()
+    {
+        if (array_key_exists("users", $this->_propDict)) {
+           return $this->_propDict["users"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the users
+    * The primary users associated with the managed device.
+    *
+    * @param User[] $val The users
+    *
+    * @return ManagedDevice
+    */
+    public function setUsers($val)
+    {
+        $this->_propDict["users"] = $val;
         return $this;
     }
 

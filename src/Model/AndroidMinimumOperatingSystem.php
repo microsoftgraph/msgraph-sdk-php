@@ -303,4 +303,172 @@ class AndroidMinimumOperatingSystem extends Entity
         $this->_propDict["v51"] = $val;
         return $this;
     }
+    /**
+    * Gets the v6_0
+    * Version 6.0 or later.
+    *
+    * @return bool|null The v6_0
+    */
+    public function getV6_0()
+    {
+        if (array_key_exists("v60", $this->_propDict)) {
+            return $this->_propDict["v60"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v6_0
+    * Version 6.0 or later.
+    *
+    * @param bool $val The value of the v6_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV6_0($val)
+    {
+        $this->_propDict["v60"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v7_0
+    * Version 7.0 or later.
+    *
+    * @return bool|null The v7_0
+    */
+    public function getV7_0()
+    {
+        if (array_key_exists("v70", $this->_propDict)) {
+            return $this->_propDict["v70"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v7_0
+    * Version 7.0 or later.
+    *
+    * @param bool $val The value of the v7_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV7_0($val)
+    {
+        $this->_propDict["v70"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v7_1
+    * Version 7.1 or later.
+    *
+    * @return bool|null The v7_1
+    */
+    public function getV7_1()
+    {
+        if (array_key_exists("v71", $this->_propDict)) {
+            return $this->_propDict["v71"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v7_1
+    * Version 7.1 or later.
+    *
+    * @param bool $val The value of the v7_1
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV7_1($val)
+    {
+        $this->_propDict["v71"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v8_0
+    * Version 8.0 or later.
+    *
+    * @return bool|null The v8_0
+    */
+    public function getV8_0()
+    {
+        if (array_key_exists("v80", $this->_propDict)) {
+            return $this->_propDict["v80"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v8_0
+    * Version 8.0 or later.
+    *
+    * @param bool $val The value of the v8_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV8_0($val)
+    {
+        $this->_propDict["v80"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v8_1
+    * Version 8.1 or later.
+    *
+    * @return bool|null The v8_1
+    */
+    public function getV8_1()
+    {
+        if (array_key_exists("v81", $this->_propDict)) {
+            return $this->_propDict["v81"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v8_1
+    * Version 8.1 or later.
+    *
+    * @param bool $val The value of the v8_1
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV8_1($val)
+    {
+        $this->_propDict["v81"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the v9_0
+    * Version 9.0 or later.
+    *
+    * @return bool|null The v9_0
+    */
+    public function getV9_0()
+    {
+        if (array_key_exists("v90", $this->_propDict)) {
+            return $this->_propDict["v90"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v9_0
+    * Version 9.0 or later.
+    *
+    * @param bool $val The value of the v9_0
+    *
+    * @return AndroidMinimumOperatingSystem
+    */
+    public function setV9_0($val)
+    {
+        $this->_propDict["v90"] = $val;
+        return $this;
+    }
 }

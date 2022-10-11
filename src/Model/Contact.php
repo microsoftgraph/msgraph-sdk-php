@@ -152,7 +152,7 @@ class Contact extends OutlookItem
     * Gets the businessPhones
     * The contact's business phone numbers.
     *
-    * @return array|null The businessPhones
+    * @return string|null The businessPhones
     */
     public function getBusinessPhones()
     {
@@ -167,7 +167,7 @@ class Contact extends OutlookItem
     * Sets the businessPhones
     * The contact's business phone numbers.
     *
-    * @param string[] $val The businessPhones
+    * @param string $val The businessPhones
     *
     * @return Contact
     */
@@ -181,7 +181,7 @@ class Contact extends OutlookItem
     * Gets the children
     * The names of the contact's children.
     *
-    * @return array|null The children
+    * @return string|null The children
     */
     public function getChildren()
     {
@@ -196,7 +196,7 @@ class Contact extends OutlookItem
     * Sets the children
     * The names of the contact's children.
     *
-    * @param string[] $val The children
+    * @param string $val The children
     *
     * @return Contact
     */
@@ -447,7 +447,7 @@ class Contact extends OutlookItem
     * Gets the homePhones
     * The contact's home phone numbers.
     *
-    * @return array|null The homePhones
+    * @return string|null The homePhones
     */
     public function getHomePhones()
     {
@@ -462,7 +462,7 @@ class Contact extends OutlookItem
     * Sets the homePhones
     * The contact's home phone numbers.
     *
-    * @param string[] $val The homePhones
+    * @param string $val The homePhones
     *
     * @return Contact
     */
@@ -475,7 +475,7 @@ class Contact extends OutlookItem
     /**
     * Gets the imAddresses
     *
-    * @return array|null The imAddresses
+    * @return string|null The imAddresses
     */
     public function getImAddresses()
     {
@@ -489,7 +489,7 @@ class Contact extends OutlookItem
     /**
     * Sets the imAddresses
     *
-    * @param string[] $val The imAddresses
+    * @param string $val The imAddresses
     *
     * @return Contact
     */

@@ -358,7 +358,7 @@ class OrgContact extends DirectoryObject
     /**
     * Gets the proxyAddresses
     *
-    * @return array|null The proxyAddresses
+    * @return string|null The proxyAddresses
     */
     public function getProxyAddresses()
     {
@@ -372,7 +372,7 @@ class OrgContact extends DirectoryObject
     /**
     * Sets the proxyAddresses
     *
-    * @param string[] $val The proxyAddresses
+    * @param string $val The proxyAddresses
     *
     * @return OrgContact
     */
