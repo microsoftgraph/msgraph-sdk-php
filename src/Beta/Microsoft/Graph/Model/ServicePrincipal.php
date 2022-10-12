@@ -120,7 +120,7 @@ class ServicePrincipal extends DirectoryObject
     * Gets the alternativeNames
     * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The alternativeNames
+    * @return string|null The alternativeNames
     */
     public function getAlternativeNames()
     {
@@ -135,7 +135,7 @@ class ServicePrincipal extends DirectoryObject
     * Sets the alternativeNames
     * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The alternativeNames
+    * @param string $val The alternativeNames
     *
     * @return ServicePrincipal
     */
@@ -681,7 +681,7 @@ class ServicePrincipal extends DirectoryObject
     * Gets the notificationEmailAddresses
     * Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
     *
-    * @return array|null The notificationEmailAddresses
+    * @return string|null The notificationEmailAddresses
     */
     public function getNotificationEmailAddresses()
     {
@@ -696,7 +696,7 @@ class ServicePrincipal extends DirectoryObject
     * Sets the notificationEmailAddresses
     * Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
     *
-    * @param string[] $val The notificationEmailAddresses
+    * @param string $val The notificationEmailAddresses
     *
     * @return ServicePrincipal
     */
@@ -890,7 +890,7 @@ class ServicePrincipal extends DirectoryObject
     * Gets the replyUrls
     * The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
     *
-    * @return array|null The replyUrls
+    * @return string|null The replyUrls
     */
     public function getReplyUrls()
     {
@@ -905,7 +905,7 @@ class ServicePrincipal extends DirectoryObject
     * Sets the replyUrls
     * The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.
     *
-    * @param string[] $val The replyUrls
+    * @param string $val The replyUrls
     *
     * @return ServicePrincipal
     */
@@ -981,7 +981,7 @@ class ServicePrincipal extends DirectoryObject
     * Gets the servicePrincipalNames
     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The servicePrincipalNames
+    * @return string|null The servicePrincipalNames
     */
     public function getServicePrincipalNames()
     {
@@ -996,7 +996,7 @@ class ServicePrincipal extends DirectoryObject
     * Sets the servicePrincipalNames
     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The servicePrincipalNames
+    * @param string $val The servicePrincipalNames
     *
     * @return ServicePrincipal
     */
@@ -1068,7 +1068,7 @@ class ServicePrincipal extends DirectoryObject
     * Gets the tags
     * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -1083,7 +1083,7 @@ class ServicePrincipal extends DirectoryObject
     * Sets the tags
     * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The tags
+    * @param string $val The tags
     *
     * @return ServicePrincipal
     */

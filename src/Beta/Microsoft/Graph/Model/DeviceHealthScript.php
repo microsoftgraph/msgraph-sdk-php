@@ -394,7 +394,7 @@ class DeviceHealthScript extends Entity
     * Gets the roleScopeTagIds
     * List of Scope Tag IDs for the device health script
     *
-    * @return array|null The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -409,7 +409,7 @@ class DeviceHealthScript extends Entity
     * Sets the roleScopeTagIds
     * List of Scope Tag IDs for the device health script
     *
-    * @param string[] $val The roleScopeTagIds
+    * @param string $val The roleScopeTagIds
     *
     * @return DeviceHealthScript
     */

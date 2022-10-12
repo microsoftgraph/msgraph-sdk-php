@@ -148,6 +148,7 @@ class ConditionalAccessRoot extends Entity
 
      /**
      * Gets the templates
+    * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      *
      * @return array|null The templates
      */
@@ -162,6 +163,7 @@ class ConditionalAccessRoot extends Entity
 
     /**
     * Sets the templates
+    * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
     *
     * @param ConditionalAccessTemplate[] $val The templates
     *

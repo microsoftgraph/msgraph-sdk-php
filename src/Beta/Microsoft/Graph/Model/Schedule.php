@@ -323,7 +323,7 @@ class Schedule extends Entity
     /**
     * Gets the workforceIntegrationIds
     *
-    * @return array|null The workforceIntegrationIds
+    * @return string|null The workforceIntegrationIds
     */
     public function getWorkforceIntegrationIds()
     {
@@ -337,7 +337,7 @@ class Schedule extends Entity
     /**
     * Sets the workforceIntegrationIds
     *
-    * @param string[] $val The workforceIntegrationIds
+    * @param string $val The workforceIntegrationIds
     *
     * @return Schedule
     */

@@ -26,6 +26,7 @@ class ConditionalAccessTemplate extends Entity
 {
     /**
     * Gets the description
+    * The user-friendly name of the template.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Sets the description
+    * The user-friendly name of the template.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Gets the details
+    * Complete list of policy details specific to the template. This property contains the JSON of policy settings for configuring a Conditional Access policy.
     *
     * @return ConditionalAccessPolicyDetail|null The details
     */
@@ -71,6 +74,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Sets the details
+    * Complete list of policy details specific to the template. This property contains the JSON of policy settings for configuring a Conditional Access policy.
     *
     * @param ConditionalAccessPolicyDetail $val The details
     *
@@ -84,6 +88,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Gets the name
+    * The user-friendly name of the template.
     *
     * @return string|null The name
     */
@@ -98,6 +103,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Sets the name
+    * The user-friendly name of the template.
     *
     * @param string $val The name
     *
@@ -111,6 +117,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Gets the scenarios
+    * List of conditional access scenarios that the template is recommended for. The possible values are: new, secureFoundation, zeroTrust, remoteWork, protectAdmins, emergingThreats, unknownFutureValue. This is a multi-valued enum. Supports $filter (has).
     *
     * @return TemplateScenarios|null The scenarios
     */
@@ -129,6 +136,7 @@ class ConditionalAccessTemplate extends Entity
 
     /**
     * Sets the scenarios
+    * List of conditional access scenarios that the template is recommended for. The possible values are: new, secureFoundation, zeroTrust, remoteWork, protectAdmins, emergingThreats, unknownFutureValue. This is a multi-valued enum. Supports $filter (has).
     *
     * @param TemplateScenarios $val The scenarios
     *
