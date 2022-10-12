@@ -300,6 +300,33 @@ class BookingService extends Entity
     }
 
     /**
+    * Gets the isAnonymousJoinEnabled
+    *
+    * @return bool|null The isAnonymousJoinEnabled
+    */
+    public function getIsAnonymousJoinEnabled()
+    {
+        if (array_key_exists("isAnonymousJoinEnabled", $this->_propDict)) {
+            return $this->_propDict["isAnonymousJoinEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAnonymousJoinEnabled
+    *
+    * @param bool $val The isAnonymousJoinEnabled
+    *
+    * @return BookingService
+    */
+    public function setIsAnonymousJoinEnabled($val)
+    {
+        $this->_propDict["isAnonymousJoinEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the isHiddenFromCustomers
     * True means this service is not available to customers for booking.
     *
@@ -354,6 +381,33 @@ class BookingService extends Entity
     public function setIsLocationOnline($val)
     {
         $this->_propDict["isLocationOnline"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the languageTag
+    *
+    * @return string|null The languageTag
+    */
+    public function getLanguageTag()
+    {
+        if (array_key_exists("languageTag", $this->_propDict)) {
+            return $this->_propDict["languageTag"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the languageTag
+    *
+    * @param string $val The languageTag
+    *
+    * @return BookingService
+    */
+    public function setLanguageTag($val)
+    {
+        $this->_propDict["languageTag"] = $val;
         return $this;
     }
 
@@ -547,7 +601,7 @@ class BookingService extends Entity
     * Gets the staffMemberIds
     * Represents those staff members who provide this service.
     *
-    * @return array|null The staffMemberIds
+    * @return string|null The staffMemberIds
     */
     public function getStaffMemberIds()
     {
@@ -562,7 +616,7 @@ class BookingService extends Entity
     * Sets the staffMemberIds
     * Represents those staff members who provide this service.
     *
-    * @param string[] $val The staffMemberIds
+    * @param string $val The staffMemberIds
     *
     * @return BookingService
     */

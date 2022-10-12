@@ -388,7 +388,7 @@ class Application extends DirectoryObject
     * Gets the identifierUris
     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
-    * @return array|null The identifierUris
+    * @return string|null The identifierUris
     */
     public function getIdentifierUris()
     {
@@ -403,7 +403,7 @@ class Application extends DirectoryObject
     * Sets the identifierUris
     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
     *
-    * @param string[] $val The identifierUris
+    * @param string $val The identifierUris
     *
     * @return Application
     */
@@ -935,7 +935,7 @@ class Application extends DirectoryObject
     * Gets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The tags
+    * @return string|null The tags
     */
     public function getTags()
     {
@@ -950,7 +950,7 @@ class Application extends DirectoryObject
     * Sets the tags
     * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The tags
+    * @param string $val The tags
     *
     * @return Application
     */

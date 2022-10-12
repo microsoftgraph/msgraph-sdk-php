@@ -769,6 +769,7 @@ class Team extends Entity
 
      /**
      * Gets the tags
+    * The tags associated with the team.
      *
      * @return array|null The tags
      */
@@ -783,6 +784,7 @@ class Team extends Entity
 
     /**
     * Sets the tags
+    * The tags associated with the team.
     *
     * @param TeamworkTag[] $val The tags
     *
