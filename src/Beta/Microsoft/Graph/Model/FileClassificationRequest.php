@@ -58,7 +58,7 @@ class FileClassificationRequest extends Entity
     /**
     * Gets the sensitiveTypeIds
     *
-    * @return array|null The sensitiveTypeIds
+    * @return string|null The sensitiveTypeIds
     */
     public function getSensitiveTypeIds()
     {
@@ -72,7 +72,7 @@ class FileClassificationRequest extends Entity
     /**
     * Sets the sensitiveTypeIds
     *
-    * @param string[] $val The sensitiveTypeIds
+    * @param string $val The sensitiveTypeIds
     *
     * @return FileClassificationRequest
     */

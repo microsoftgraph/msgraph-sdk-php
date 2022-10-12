@@ -262,7 +262,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Gets the keywords
     * Keywords associated with the setting
     *
-    * @return array|null The keywords
+    * @return string|null The keywords
     */
     public function getKeywords()
     {
@@ -277,7 +277,7 @@ class DeviceManagementSettingDefinition extends Entity
     * Sets the keywords
     * Keywords associated with the setting
     *
-    * @param string[] $val The keywords
+    * @param string $val The keywords
     *
     * @return DeviceManagementSettingDefinition
     */

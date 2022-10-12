@@ -26,6 +26,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Gets the conditions
+    * Represents the type of conditions that govern when the policy applies.
     *
     * @return ConditionalAccessConditionSet|null The conditions
     */
@@ -44,6 +45,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Sets the conditions
+    * Represents the type of conditions that govern when the policy applies.
     *
     * @param ConditionalAccessConditionSet $val The value to assign to the conditions
     *
@@ -57,6 +59,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Gets the grantControls
+    * Represents grant controls that must be fulfilled for the policy.
     *
     * @return ConditionalAccessGrantControls|null The grantControls
     */
@@ -75,6 +78,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Sets the grantControls
+    * Represents grant controls that must be fulfilled for the policy.
     *
     * @param ConditionalAccessGrantControls $val The value to assign to the grantControls
     *
@@ -88,6 +92,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Gets the sessionControls
+    * Represents a complex type of session controls that is enforced after sign-in.
     *
     * @return ConditionalAccessSessionControls|null The sessionControls
     */
@@ -106,6 +111,7 @@ class ConditionalAccessPolicyDetail extends Entity
 
     /**
     * Sets the sessionControls
+    * Represents a complex type of session controls that is enforced after sign-in.
     *
     * @param ConditionalAccessSessionControls $val The value to assign to the sessionControls
     *

@@ -28,7 +28,7 @@ class LearningContent extends Entity
     * Gets the additionalTags
     * Keywords, topics, and other tags associated with the learning content. Optional.
     *
-    * @return array|null The additionalTags
+    * @return string|null The additionalTags
     */
     public function getAdditionalTags()
     {
@@ -43,7 +43,7 @@ class LearningContent extends Entity
     * Sets the additionalTags
     * Keywords, topics, and other tags associated with the learning content. Optional.
     *
-    * @param string[] $val The additionalTags
+    * @param string $val The additionalTags
     *
     * @return LearningContent
     */
@@ -84,8 +84,9 @@ class LearningContent extends Entity
 
     /**
     * Gets the contributors
+    * The authors, creators, or contributors of the learning content. Optional.
     *
-    * @return array|null The contributors
+    * @return string|null The contributors
     */
     public function getContributors()
     {
@@ -98,8 +99,9 @@ class LearningContent extends Entity
 
     /**
     * Sets the contributors
+    * The authors, creators, or contributors of the learning content. Optional.
     *
-    * @param string[] $val The contributors
+    * @param string $val The contributors
     *
     * @return LearningContent
     */
@@ -444,7 +446,7 @@ class LearningContent extends Entity
     * Gets the skillTags
     * The skills tags associated with the learning content. Optional.
     *
-    * @return array|null The skillTags
+    * @return string|null The skillTags
     */
     public function getSkillTags()
     {
@@ -459,7 +461,7 @@ class LearningContent extends Entity
     * Sets the skillTags
     * The skills tags associated with the learning content. Optional.
     *
-    * @param string[] $val The skillTags
+    * @param string $val The skillTags
     *
     * @return LearningContent
     */

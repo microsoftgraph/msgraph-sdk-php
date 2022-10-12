@@ -143,7 +143,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the entityTypes
-    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
     *
     * @return EntityType|null The entityTypes
     */
@@ -162,7 +162,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the entityTypes
-    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
+    * One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
     *
     * @param EntityType $val The value to assign to the entityTypes
     *
@@ -297,6 +297,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the region
+    * Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
     *
     * @return string|null The region
     */
@@ -311,6 +312,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the region
+    * Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
     *
     * @param string $val The value of the region
     *
@@ -357,6 +359,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the sharePointOneDriveOptions
+    * Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
     *
     * @return SharePointOneDriveOptions|null The sharePointOneDriveOptions
     */
@@ -375,6 +378,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the sharePointOneDriveOptions
+    * Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
     *
     * @param SharePointOneDriveOptions $val The value to assign to the sharePointOneDriveOptions
     *

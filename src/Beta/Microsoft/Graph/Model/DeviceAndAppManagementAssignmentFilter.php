@@ -215,7 +215,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     * Gets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
     *
-    * @return array|null The roleScopeTags
+    * @return string|null The roleScopeTags
     */
     public function getRoleScopeTags()
     {
@@ -230,7 +230,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
     * Sets the roleScopeTags
     * RoleScopeTags of the Assignment Filter.
     *
-    * @param string[] $val The roleScopeTags
+    * @param string $val The roleScopeTags
     *
     * @return DeviceAndAppManagementAssignmentFilter
     */

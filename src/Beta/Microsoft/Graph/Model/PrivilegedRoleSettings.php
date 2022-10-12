@@ -57,7 +57,7 @@ class PrivilegedRoleSettings extends Entity
     * Gets the approverIds
     * List of Approval ids, if approval is required for activation.
     *
-    * @return array|null The approverIds
+    * @return string|null The approverIds
     */
     public function getApproverIds()
     {
@@ -72,7 +72,7 @@ class PrivilegedRoleSettings extends Entity
     * Sets the approverIds
     * List of Approval ids, if approval is required for activation.
     *
-    * @param string[] $val The approverIds
+    * @param string $val The approverIds
     *
     * @return PrivilegedRoleSettings
     */

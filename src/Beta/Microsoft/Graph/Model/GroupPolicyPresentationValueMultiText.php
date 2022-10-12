@@ -28,7 +28,7 @@ class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentationValue
     * Gets the values
     * A collection of non-empty strings for the associated presentation.
     *
-    * @return array|null The values
+    * @return string|null The values
     */
     public function getValues()
     {
@@ -43,7 +43,7 @@ class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentationValue
     * Sets the values
     * A collection of non-empty strings for the associated presentation.
     *
-    * @param string[] $val The values
+    * @param string $val The values
     *
     * @return GroupPolicyPresentationValueMultiText
     */

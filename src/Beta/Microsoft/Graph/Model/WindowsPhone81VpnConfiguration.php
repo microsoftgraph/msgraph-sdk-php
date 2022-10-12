@@ -119,7 +119,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Gets the dnsSuffixSearchList
     * DNS suffix search list.
     *
-    * @return array|null The dnsSuffixSearchList
+    * @return string|null The dnsSuffixSearchList
     */
     public function getDnsSuffixSearchList()
     {
@@ -134,7 +134,7 @@ class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration
     * Sets the dnsSuffixSearchList
     * DNS suffix search list.
     *
-    * @param string[] $val The dnsSuffixSearchList
+    * @param string $val The dnsSuffixSearchList
     *
     * @return WindowsPhone81VpnConfiguration
     */

@@ -28,7 +28,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the allowedDomainGuidsForSyncApp
     * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
-    * @return array|null The allowedDomainGuidsForSyncApp
+    * @return string|null The allowedDomainGuidsForSyncApp
     */
     public function getAllowedDomainGuidsForSyncApp()
     {
@@ -43,7 +43,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the allowedDomainGuidsForSyncApp
     * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
-    * @param string[] $val The allowedDomainGuidsForSyncApp
+    * @param string $val The allowedDomainGuidsForSyncApp
     *
     * @return Settings
     */
@@ -57,7 +57,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the availableManagedPathsForSiteCreation
     * Collection of managed paths available for site creation. Read-only.
     *
-    * @return array|null The availableManagedPathsForSiteCreation
+    * @return string|null The availableManagedPathsForSiteCreation
     */
     public function getAvailableManagedPathsForSiteCreation()
     {
@@ -72,7 +72,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the availableManagedPathsForSiteCreation
     * Collection of managed paths available for site creation. Read-only.
     *
-    * @param string[] $val The availableManagedPathsForSiteCreation
+    * @param string $val The availableManagedPathsForSiteCreation
     *
     * @return Settings
     */
@@ -115,7 +115,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the excludedFileExtensionsForSyncApp
     * Collection of file extensions not uploaded by the OneDrive sync app.
     *
-    * @return array|null The excludedFileExtensionsForSyncApp
+    * @return string|null The excludedFileExtensionsForSyncApp
     */
     public function getExcludedFileExtensionsForSyncApp()
     {
@@ -130,7 +130,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the excludedFileExtensionsForSyncApp
     * Collection of file extensions not uploaded by the OneDrive sync app.
     *
-    * @param string[] $val The excludedFileExtensionsForSyncApp
+    * @param string $val The excludedFileExtensionsForSyncApp
     *
     * @return Settings
     */
@@ -674,7 +674,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the sharingAllowedDomainList
     * Collection of email domains that are allowed for sharing outside the organization.
     *
-    * @return array|null The sharingAllowedDomainList
+    * @return string|null The sharingAllowedDomainList
     */
     public function getSharingAllowedDomainList()
     {
@@ -689,7 +689,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the sharingAllowedDomainList
     * Collection of email domains that are allowed for sharing outside the organization.
     *
-    * @param string[] $val The sharingAllowedDomainList
+    * @param string $val The sharingAllowedDomainList
     *
     * @return Settings
     */
@@ -703,7 +703,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the sharingBlockedDomainList
     * Collection of email domains that are blocked for sharing outside the organization.
     *
-    * @return array|null The sharingBlockedDomainList
+    * @return string|null The sharingBlockedDomainList
     */
     public function getSharingBlockedDomainList()
     {
@@ -718,7 +718,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the sharingBlockedDomainList
     * Collection of email domains that are blocked for sharing outside the organization.
     *
-    * @param string[] $val The sharingBlockedDomainList
+    * @param string $val The sharingBlockedDomainList
     *
     * @return Settings
     */
