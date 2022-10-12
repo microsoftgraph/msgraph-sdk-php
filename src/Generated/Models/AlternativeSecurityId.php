@@ -84,9 +84,9 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the key property value. For internal use only
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getKey(): ?StreamInterface {
+    public function getKey(): StreamInterface {
         return $this->key;
     }
 

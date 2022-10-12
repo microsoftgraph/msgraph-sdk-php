@@ -344,9 +344,9 @@ class Windows10EndpointProtectionConfiguration extends DeviceConfiguration imple
 
     /**
      * Gets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getDefenderExploitProtectionXml(): ?StreamInterface {
+    public function getDefenderExploitProtectionXml(): StreamInterface {
         return $this->defenderExploitProtectionXml;
     }
 

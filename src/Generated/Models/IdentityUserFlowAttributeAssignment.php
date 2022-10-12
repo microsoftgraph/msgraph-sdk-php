@@ -39,7 +39,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     private ?IdentityUserFlowAttributeInputType $userInputType = null;
     
     /**
-     * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
+     * Instantiates a new IdentityUserFlowAttributeAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

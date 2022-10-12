@@ -80,7 +80,7 @@ class EducationSubmission extends Entity implements Parsable
     private ?DateTime $unsubmittedDateTime = null;
     
     /**
-     * Instantiates a new educationSubmission and sets the default values.
+     * Instantiates a new EducationSubmission and sets the default values.
     */
     public function __construct() {
         parent::__construct();

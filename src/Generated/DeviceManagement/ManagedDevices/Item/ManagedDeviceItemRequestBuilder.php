@@ -25,6 +25,7 @@ use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Retire\Retire
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ShutDown\ShutDownRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\SyncDevice\SyncDeviceRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\UpdateWindowsDeviceAccount\UpdateWindowsDeviceAccountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Users\UsersRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\WindowsDefenderScan\WindowsDefenderScanRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\WindowsDefenderUpdateSignatures\WindowsDefenderUpdateSignaturesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Wipe\WipeRequestBuilder;
@@ -180,6 +181,13 @@ class ManagedDeviceItemRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * The users property
+    */
+    public function users(): UsersRequestBuilder {
+        return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * The windowsDefenderScan property

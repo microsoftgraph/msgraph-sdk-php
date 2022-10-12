@@ -24,6 +24,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     private ?string $emailAddress = null;
     
     /**
+     * @var bool|null $isEmailNotificationEnabled The isEmailNotificationEnabled property
+    */
+    private ?bool $isEmailNotificationEnabled = null;
+    
+    /**
      * @var BookingStaffRole|null $role The role property
     */
     private ?BookingStaffRole $role = null;
@@ -94,11 +99,20 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
             'availabilityIsAffectedByPersonalCalendar' => function (ParseNode $n) use ($o) { $o->setAvailabilityIsAffectedByPersonalCalendar($n->getBooleanValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
+            'isEmailNotificationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEmailNotificationEnabled($n->getBooleanValue()); },
             'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(BookingStaffRole::class)); },
             'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
             'useBusinessHours' => function (ParseNode $n) use ($o) { $o->setUseBusinessHours($n->getBooleanValue()); },
             'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getCollectionOfObjectValues(array(BookingWorkHours::class, 'createFromDiscriminatorValue'))); },
         ]);
+    }
+
+    /**
+     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * @return bool|null
+    */
+    public function getIsEmailNotificationEnabled(): ?bool {
+        return $this->isEmailNotificationEnabled;
     }
 
     /**
@@ -142,6 +156,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
         $writer->writeBooleanValue('availabilityIsAffectedByPersonalCalendar', $this->availabilityIsAffectedByPersonalCalendar);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('emailAddress', $this->emailAddress);
+        $writer->writeBooleanValue('isEmailNotificationEnabled', $this->isEmailNotificationEnabled);
         $writer->writeEnumValue('role', $this->role);
         $writer->writeStringValue('timeZone', $this->timeZone);
         $writer->writeBooleanValue('useBusinessHours', $this->useBusinessHours);
@@ -170,6 +185,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     */
     public function setEmailAddress(?string $value ): void {
         $this->emailAddress = $value;
+    }
+
+    /**
+     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     *  @param bool|null $value Value to set for the isEmailNotificationEnabled property.
+    */
+    public function setIsEmailNotificationEnabled(?bool $value ): void {
+        $this->isEmailNotificationEnabled = $value;
     }
 
     /**

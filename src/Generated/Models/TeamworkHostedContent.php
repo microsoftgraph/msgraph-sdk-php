@@ -45,9 +45,9 @@ class TeamworkHostedContent extends Entity implements Parsable
 
     /**
      * Gets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContentBytes(): ?StreamInterface {
+    public function getContentBytes(): StreamInterface {
         return $this->contentBytes;
     }
 

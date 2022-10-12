@@ -64,6 +64,11 @@ class BookingBusiness extends Entity implements Parsable
     private ?bool $isPublished = null;
     
     /**
+     * @var string|null $languageTag The languageTag property
+    */
+    private ?string $languageTag = null;
+    
+    /**
      * @var string|null $phone The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
     */
     private ?string $phone = null;
@@ -208,6 +213,7 @@ class BookingBusiness extends Entity implements Parsable
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
             'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
             'isPublished' => function (ParseNode $n) use ($o) { $o->setIsPublished($n->getBooleanValue()); },
+            'languageTag' => function (ParseNode $n) use ($o) { $o->setLanguageTag($n->getStringValue()); },
             'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
             'publicUrl' => function (ParseNode $n) use ($o) { $o->setPublicUrl($n->getStringValue()); },
             'schedulingPolicy' => function (ParseNode $n) use ($o) { $o->setSchedulingPolicy($n->getObjectValue(array(BookingSchedulingPolicy::class, 'createFromDiscriminatorValue'))); },
@@ -223,6 +229,14 @@ class BookingBusiness extends Entity implements Parsable
     */
     public function getIsPublished(): ?bool {
         return $this->isPublished;
+    }
+
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return string|null
+    */
+    public function getLanguageTag(): ?string {
+        return $this->languageTag;
     }
 
     /**
@@ -289,6 +303,7 @@ class BookingBusiness extends Entity implements Parsable
         $writer->writeStringValue('defaultCurrencyIso', $this->defaultCurrencyIso);
         $writer->writeStringValue('displayName', $this->displayName);
         $writer->writeStringValue('email', $this->email);
+        $writer->writeStringValue('languageTag', $this->languageTag);
         $writer->writeStringValue('phone', $this->phone);
         $writer->writeObjectValue('schedulingPolicy', $this->schedulingPolicy);
         $writer->writeCollectionOfObjectValues('services', $this->services);
@@ -382,6 +397,14 @@ class BookingBusiness extends Entity implements Parsable
     */
     public function setIsPublished(?bool $value ): void {
         $this->isPublished = $value;
+    }
+
+    /**
+     * Sets the languageTag property value. The languageTag property
+     *  @param string|null $value Value to set for the languageTag property.
+    */
+    public function setLanguageTag(?string $value ): void {
+        $this->languageTag = $value;
     }
 
     /**

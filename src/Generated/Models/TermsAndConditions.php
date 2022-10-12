@@ -60,7 +60,7 @@ class TermsAndConditions extends Entity implements Parsable
     private ?int $version = null;
     
     /**
-     * Instantiates a new termsAndConditions and sets the default values.
+     * Instantiates a new TermsAndConditions and sets the default values.
     */
     public function __construct() {
         parent::__construct();

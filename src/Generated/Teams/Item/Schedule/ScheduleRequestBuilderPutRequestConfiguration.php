@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Me\Outlook;
+namespace Microsoft\Graph\Generated\Teams\Item\Schedule;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class OutlookRequestBuilderPatchRequestConfiguration 
+class ScheduleRequestBuilderPutRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

@@ -9,17 +9,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkTagMember extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName The member's display name.
     */
     private ?string $displayName = null;
     
     /**
-     * @var string|null $tenantId The tenantId property
+     * @var string|null $tenantId The ID of the tenant that the tag member is a part of.
     */
     private ?string $tenantId = null;
     
     /**
-     * @var string|null $userId The userId property
+     * @var string|null $userId The user ID of the member.
     */
     private ?string $userId = null;
     
@@ -41,7 +41,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The member's display name.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -62,7 +62,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The ID of the tenant that the tag member is a part of.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -70,7 +70,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The user ID of the member.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -89,7 +89,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The member's display name.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -97,7 +97,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
      *  @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value ): void {
@@ -105,7 +105,7 @@ class TeamworkTagMember extends Entity implements Parsable
     }
 
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The user ID of the member.
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

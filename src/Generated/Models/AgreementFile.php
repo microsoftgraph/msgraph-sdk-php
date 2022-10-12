@@ -14,7 +14,7 @@ class AgreementFile extends AgreementFileProperties implements Parsable
     private ?array $localizations = null;
     
     /**
-     * Instantiates a new AgreementFile and sets the default values.
+     * Instantiates a new agreementFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

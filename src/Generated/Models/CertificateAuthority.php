@@ -77,9 +77,9 @@ class CertificateAuthority implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the certificate property value. Required. The base64 encoded string representing the public certificate.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getCertificate(): ?StreamInterface {
+    public function getCertificate(): StreamInterface {
         return $this->certificate;
     }
 

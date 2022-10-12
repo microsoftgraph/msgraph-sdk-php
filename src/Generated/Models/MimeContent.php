@@ -86,9 +86,9 @@ class MimeContent implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the value property value. The byte array that contains the actual content.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getValue(): ?StreamInterface {
+    public function getValue(): StreamInterface {
         return $this->value;
     }
 

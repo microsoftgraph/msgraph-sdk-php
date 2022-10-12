@@ -14,7 +14,7 @@ class AppCatalogs extends Entity implements Parsable
     private ?array $teamsApps = null;
     
     /**
-     * Instantiates a new appCatalogs and sets the default values.
+     * Instantiates a new AppCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();

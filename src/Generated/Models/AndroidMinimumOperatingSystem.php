@@ -70,6 +70,36 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     private ?bool $v5_1 = null;
     
     /**
+     * @var bool|null $v6_0 Version 6.0 or later.
+    */
+    private ?bool $v6_0 = null;
+    
+    /**
+     * @var bool|null $v7_0 Version 7.0 or later.
+    */
+    private ?bool $v7_0 = null;
+    
+    /**
+     * @var bool|null $v7_1 Version 7.1 or later.
+    */
+    private ?bool $v7_1 = null;
+    
+    /**
+     * @var bool|null $v8_0 Version 8.0 or later.
+    */
+    private ?bool $v8_0 = null;
+    
+    /**
+     * @var bool|null $v8_1 Version 8.1 or later.
+    */
+    private ?bool $v8_1 = null;
+    
+    /**
+     * @var bool|null $v9_0 Version 9.0 or later.
+    */
+    private ?bool $v9_0 = null;
+    
+    /**
      * Instantiates a new androidMinimumOperatingSystem and sets the default values.
     */
     public function __construct() {
@@ -112,6 +142,12 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
             'v4_4' => function (ParseNode $n) use ($o) { $o->setV4_4($n->getBooleanValue()); },
             'v5_0' => function (ParseNode $n) use ($o) { $o->setV5_0($n->getBooleanValue()); },
             'v5_1' => function (ParseNode $n) use ($o) { $o->setV5_1($n->getBooleanValue()); },
+            'v6_0' => function (ParseNode $n) use ($o) { $o->setV6_0($n->getBooleanValue()); },
+            'v7_0' => function (ParseNode $n) use ($o) { $o->setV7_0($n->getBooleanValue()); },
+            'v7_1' => function (ParseNode $n) use ($o) { $o->setV7_1($n->getBooleanValue()); },
+            'v8_0' => function (ParseNode $n) use ($o) { $o->setV8_0($n->getBooleanValue()); },
+            'v8_1' => function (ParseNode $n) use ($o) { $o->setV8_1($n->getBooleanValue()); },
+            'v9_0' => function (ParseNode $n) use ($o) { $o->setV9_0($n->getBooleanValue()); },
         ];
     }
 
@@ -204,6 +240,54 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
 
     /**
+     * Gets the v6_0 property value. Version 6.0 or later.
+     * @return bool|null
+    */
+    public function getV6_0(): ?bool {
+        return $this->v6_0;
+    }
+
+    /**
+     * Gets the v7_0 property value. Version 7.0 or later.
+     * @return bool|null
+    */
+    public function getV7_0(): ?bool {
+        return $this->v7_0;
+    }
+
+    /**
+     * Gets the v7_1 property value. Version 7.1 or later.
+     * @return bool|null
+    */
+    public function getV7_1(): ?bool {
+        return $this->v7_1;
+    }
+
+    /**
+     * Gets the v8_0 property value. Version 8.0 or later.
+     * @return bool|null
+    */
+    public function getV8_0(): ?bool {
+        return $this->v8_0;
+    }
+
+    /**
+     * Gets the v8_1 property value. Version 8.1 or later.
+     * @return bool|null
+    */
+    public function getV8_1(): ?bool {
+        return $this->v8_1;
+    }
+
+    /**
+     * Gets the v9_0 property value. Version 9.0 or later.
+     * @return bool|null
+    */
+    public function getV9_0(): ?bool {
+        return $this->v9_0;
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -219,6 +303,12 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
         $writer->writeBooleanValue('v4_4', $this->v4_4);
         $writer->writeBooleanValue('v5_0', $this->v5_0);
         $writer->writeBooleanValue('v5_1', $this->v5_1);
+        $writer->writeBooleanValue('v6_0', $this->v6_0);
+        $writer->writeBooleanValue('v7_0', $this->v7_0);
+        $writer->writeBooleanValue('v7_1', $this->v7_1);
+        $writer->writeBooleanValue('v8_0', $this->v8_0);
+        $writer->writeBooleanValue('v8_1', $this->v8_1);
+        $writer->writeBooleanValue('v9_0', $this->v9_0);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -316,6 +406,54 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     */
     public function setV5_1(?bool $value ): void {
         $this->v5_1 = $value;
+    }
+
+    /**
+     * Sets the v6_0 property value. Version 6.0 or later.
+     *  @param bool|null $value Value to set for the v6_0 property.
+    */
+    public function setV6_0(?bool $value ): void {
+        $this->v6_0 = $value;
+    }
+
+    /**
+     * Sets the v7_0 property value. Version 7.0 or later.
+     *  @param bool|null $value Value to set for the v7_0 property.
+    */
+    public function setV7_0(?bool $value ): void {
+        $this->v7_0 = $value;
+    }
+
+    /**
+     * Sets the v7_1 property value. Version 7.1 or later.
+     *  @param bool|null $value Value to set for the v7_1 property.
+    */
+    public function setV7_1(?bool $value ): void {
+        $this->v7_1 = $value;
+    }
+
+    /**
+     * Sets the v8_0 property value. Version 8.0 or later.
+     *  @param bool|null $value Value to set for the v8_0 property.
+    */
+    public function setV8_0(?bool $value ): void {
+        $this->v8_0 = $value;
+    }
+
+    /**
+     * Sets the v8_1 property value. Version 8.1 or later.
+     *  @param bool|null $value Value to set for the v8_1 property.
+    */
+    public function setV8_1(?bool $value ): void {
+        $this->v8_1 = $value;
+    }
+
+    /**
+     * Sets the v9_0 property value. Version 9.0 or later.
+     *  @param bool|null $value Value to set for the v9_0 property.
+    */
+    public function setV9_0(?bool $value ): void {
+        $this->v9_0 = $value;
     }
 
 }

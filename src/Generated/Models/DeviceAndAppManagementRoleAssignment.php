@@ -14,7 +14,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     private ?array $members = null;
     
     /**
-     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

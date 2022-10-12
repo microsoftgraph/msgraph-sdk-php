@@ -52,9 +52,9 @@ class AgreementFileData implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the data property value. Data that represents the terms of use PDF document. Read-only.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getData(): ?StreamInterface {
+    public function getData(): StreamInterface {
         return $this->data;
     }
 

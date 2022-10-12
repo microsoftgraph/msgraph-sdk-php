@@ -21,7 +21,7 @@ class ConnectionOperation extends Entity implements Parsable
     private ?ConnectionOperationStatus $status = null;
     
     /**
-     * Instantiates a new connectionOperation and sets the default values.
+     * Instantiates a new ConnectionOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

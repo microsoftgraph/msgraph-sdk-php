@@ -96,9 +96,9 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Gets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getHardwareIdentifier(): ?StreamInterface {
+    public function getHardwareIdentifier(): StreamInterface {
         return $this->hardwareIdentifier;
     }
 

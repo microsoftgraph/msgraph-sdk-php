@@ -25,6 +25,16 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     private ?string $certificateSerialNumber = null;
     
     /**
+     * @var string|null $certificateUploadFailureReason The reason the certificate upload failed.
+    */
+    private ?string $certificateUploadFailureReason = null;
+    
+    /**
+     * @var string|null $certificateUploadStatus The certificate upload status.
+    */
+    private ?string $certificateUploadStatus = null;
+    
+    /**
      * @var DateTime|null $expirationDateTime The expiration date and time for Apple push notification certificate.
     */
     private ?DateTime $expirationDateTime = null;
@@ -81,6 +91,22 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     }
 
     /**
+     * Gets the certificateUploadFailureReason property value. The reason the certificate upload failed.
+     * @return string|null
+    */
+    public function getCertificateUploadFailureReason(): ?string {
+        return $this->certificateUploadFailureReason;
+    }
+
+    /**
+     * Gets the certificateUploadStatus property value. The certificate upload status.
+     * @return string|null
+    */
+    public function getCertificateUploadStatus(): ?string {
+        return $this->certificateUploadStatus;
+    }
+
+    /**
      * Gets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
      * @return DateTime|null
     */
@@ -98,6 +124,8 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
             'appleIdentifier' => function (ParseNode $n) use ($o) { $o->setAppleIdentifier($n->getStringValue()); },
             'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getStringValue()); },
             'certificateSerialNumber' => function (ParseNode $n) use ($o) { $o->setCertificateSerialNumber($n->getStringValue()); },
+            'certificateUploadFailureReason' => function (ParseNode $n) use ($o) { $o->setCertificateUploadFailureReason($n->getStringValue()); },
+            'certificateUploadStatus' => function (ParseNode $n) use ($o) { $o->setCertificateUploadStatus($n->getStringValue()); },
             'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
             'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
             'topicIdentifier' => function (ParseNode $n) use ($o) { $o->setTopicIdentifier($n->getStringValue()); },
@@ -128,6 +156,8 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appleIdentifier', $this->appleIdentifier);
         $writer->writeStringValue('certificate', $this->certificate);
+        $writer->writeStringValue('certificateUploadFailureReason', $this->certificateUploadFailureReason);
+        $writer->writeStringValue('certificateUploadStatus', $this->certificateUploadStatus);
         $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
         $writer->writeStringValue('topicIdentifier', $this->topicIdentifier);
@@ -155,6 +185,22 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     */
     public function setCertificateSerialNumber(?string $value ): void {
         $this->certificateSerialNumber = $value;
+    }
+
+    /**
+     * Sets the certificateUploadFailureReason property value. The reason the certificate upload failed.
+     *  @param string|null $value Value to set for the certificateUploadFailureReason property.
+    */
+    public function setCertificateUploadFailureReason(?string $value ): void {
+        $this->certificateUploadFailureReason = $value;
+    }
+
+    /**
+     * Sets the certificateUploadStatus property value. The certificate upload status.
+     *  @param string|null $value Value to set for the certificateUploadStatus property.
+    */
+    public function setCertificateUploadStatus(?string $value ): void {
+        $this->certificateUploadStatus = $value;
     }
 
     /**

@@ -53,7 +53,7 @@ class TagsRequestBuilder
     }
 
     /**
-     * Get tags from users
+     * Get a list of the tag objects and their properties.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -78,7 +78,7 @@ class TagsRequestBuilder
     }
 
     /**
-     * Create new navigation property to tags for users
+     * Create a standard tag for members in a team.
      * @param TeamworkTag $body 
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -102,7 +102,7 @@ class TagsRequestBuilder
     }
 
     /**
-     * Get tags from users
+     * Get a list of the tag objects and their properties.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -121,7 +121,7 @@ class TagsRequestBuilder
     }
 
     /**
-     * Create new navigation property to tags for users
+     * Create a standard tag for members in a team.
      * @param TeamworkTag $body 
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

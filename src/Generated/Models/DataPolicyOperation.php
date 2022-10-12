@@ -40,7 +40,7 @@ class DataPolicyOperation extends Entity implements Parsable
     private ?string $userId = null;
     
     /**
-     * Instantiates a new dataPolicyOperation and sets the default values.
+     * Instantiates a new DataPolicyOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

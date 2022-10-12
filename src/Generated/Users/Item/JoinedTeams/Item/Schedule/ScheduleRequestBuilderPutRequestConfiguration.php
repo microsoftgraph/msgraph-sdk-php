@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker;
+namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class BitlockerRequestBuilderPatchRequestConfiguration 
+class ScheduleRequestBuilderPutRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

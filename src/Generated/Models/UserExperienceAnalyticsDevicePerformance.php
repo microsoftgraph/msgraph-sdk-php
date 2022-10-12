@@ -9,17 +9,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsable 
 {
     /**
-     * @var float|null $averageBlueScreens Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
+     * @var float|null $averageBlueScreens Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
     */
     private ?float $averageBlueScreens = null;
     
     /**
-     * @var float|null $averageRestarts Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
+     * @var float|null $averageRestarts Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
     */
     private ?float $averageRestarts = null;
     
     /**
-     * @var int|null $blueScreenCount Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
+     * @var int|null $blueScreenCount Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
     */
     private ?int $blueScreenCount = null;
     
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     private ?int $responsiveDesktopTimeInMs = null;
     
     /**
-     * @var int|null $restartCount Number of Restarts in the last 14 days. Valid values 0 to 9999999
+     * @var int|null $restartCount Number of Restarts in the last 30 days. Valid values 0 to 9999999
     */
     private ?int $restartCount = null;
     
@@ -126,7 +126,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
+     * Gets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
      * @return float|null
     */
     public function getAverageBlueScreens(): ?float {
@@ -134,7 +134,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
+     * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
      * @return float|null
     */
     public function getAverageRestarts(): ?float {
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the blueScreenCount property value. Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
+     * Gets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
      * @return int|null
     */
     public function getBlueScreenCount(): ?int {
@@ -300,7 +300,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the restartCount property value. Number of Restarts in the last 14 days. Valid values 0 to 9999999
+     * Gets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
      * @return int|null
     */
     public function getRestartCount(): ?int {
@@ -344,7 +344,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 14 days. Valid values 0 to 9999999
+     * Sets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
      *  @param float|null $value Value to set for the averageBlueScreens property.
     */
     public function setAverageBlueScreens(?float $value ): void {
@@ -352,7 +352,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the averageRestarts property value. Average (mean) number of Restarts per device in the last 14 days. Valid values 0 to 9999999
+     * Sets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
      *  @param float|null $value Value to set for the averageRestarts property.
     */
     public function setAverageRestarts(?float $value ): void {
@@ -360,7 +360,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the blueScreenCount property value. Number of Blue Screens in the last 14 days. Valid values 0 to 9999999
+     * Sets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
      *  @param int|null $value Value to set for the blueScreenCount property.
     */
     public function setBlueScreenCount(?int $value ): void {
@@ -488,7 +488,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the restartCount property value. Number of Restarts in the last 14 days. Valid values 0 to 9999999
+     * Sets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
      *  @param int|null $value Value to set for the restartCount property.
     */
     public function setRestartCount(?int $value ): void {

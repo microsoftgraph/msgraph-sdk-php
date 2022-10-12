@@ -55,6 +55,11 @@ class BookingService extends Entity implements Parsable
     private ?string $displayName = null;
     
     /**
+     * @var bool|null $isAnonymousJoinEnabled The isAnonymousJoinEnabled property
+    */
+    private ?bool $isAnonymousJoinEnabled = null;
+    
+    /**
      * @var bool|null $isHiddenFromCustomers True means this service is not available to customers for booking.
     */
     private ?bool $isHiddenFromCustomers = null;
@@ -63,6 +68,11 @@ class BookingService extends Entity implements Parsable
      * @var bool|null $isLocationOnline True indicates that the appointments for the service will be held online. Default value is false.
     */
     private ?bool $isLocationOnline = null;
+    
+    /**
+     * @var string|null $languageTag The languageTag property
+    */
+    private ?string $languageTag = null;
     
     /**
      * @var int|null $maximumAttendeesCount The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -209,8 +219,10 @@ class BookingService extends Entity implements Parsable
             'defaultReminders' => function (ParseNode $n) use ($o) { $o->setDefaultReminders($n->getCollectionOfObjectValues(array(BookingReminder::class, 'createFromDiscriminatorValue'))); },
             'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
             'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'isAnonymousJoinEnabled' => function (ParseNode $n) use ($o) { $o->setIsAnonymousJoinEnabled($n->getBooleanValue()); },
             'isHiddenFromCustomers' => function (ParseNode $n) use ($o) { $o->setIsHiddenFromCustomers($n->getBooleanValue()); },
             'isLocationOnline' => function (ParseNode $n) use ($o) { $o->setIsLocationOnline($n->getBooleanValue()); },
+            'languageTag' => function (ParseNode $n) use ($o) { $o->setLanguageTag($n->getStringValue()); },
             'maximumAttendeesCount' => function (ParseNode $n) use ($o) { $o->setMaximumAttendeesCount($n->getIntegerValue()); },
             'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
             'postBuffer' => function (ParseNode $n) use ($o) { $o->setPostBuffer($n->getDateIntervalValue()); },
@@ -220,6 +232,14 @@ class BookingService extends Entity implements Parsable
             'staffMemberIds' => function (ParseNode $n) use ($o) { $o->setStaffMemberIds($n->getCollectionOfPrimitiveValues()); },
             'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
         ]);
+    }
+
+    /**
+     * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * @return bool|null
+    */
+    public function getIsAnonymousJoinEnabled(): ?bool {
+        return $this->isAnonymousJoinEnabled;
     }
 
     /**
@@ -236,6 +256,14 @@ class BookingService extends Entity implements Parsable
     */
     public function getIsLocationOnline(): ?bool {
         return $this->isLocationOnline;
+    }
+
+    /**
+     * Gets the languageTag property value. The languageTag property
+     * @return string|null
+    */
+    public function getLanguageTag(): ?string {
+        return $this->languageTag;
     }
 
     /**
@@ -317,8 +345,10 @@ class BookingService extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('defaultReminders', $this->defaultReminders);
         $writer->writeStringValue('description', $this->description);
         $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeBooleanValue('isAnonymousJoinEnabled', $this->isAnonymousJoinEnabled);
         $writer->writeBooleanValue('isHiddenFromCustomers', $this->isHiddenFromCustomers);
         $writer->writeBooleanValue('isLocationOnline', $this->isLocationOnline);
+        $writer->writeStringValue('languageTag', $this->languageTag);
         $writer->writeIntegerValue('maximumAttendeesCount', $this->maximumAttendeesCount);
         $writer->writeStringValue('notes', $this->notes);
         $writer->writeDateIntervalValue('postBuffer', $this->postBuffer);
@@ -401,6 +431,14 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
+     * Sets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     *  @param bool|null $value Value to set for the isAnonymousJoinEnabled property.
+    */
+    public function setIsAnonymousJoinEnabled(?bool $value ): void {
+        $this->isAnonymousJoinEnabled = $value;
+    }
+
+    /**
      * Sets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
      *  @param bool|null $value Value to set for the isHiddenFromCustomers property.
     */
@@ -414,6 +452,14 @@ class BookingService extends Entity implements Parsable
     */
     public function setIsLocationOnline(?bool $value ): void {
         $this->isLocationOnline = $value;
+    }
+
+    /**
+     * Sets the languageTag property value. The languageTag property
+     *  @param string|null $value Value to set for the languageTag property.
+    */
+    public function setLanguageTag(?string $value ): void {
+        $this->languageTag = $value;
     }
 
     /**

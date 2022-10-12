@@ -36,12 +36,12 @@ class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeReques
      * Instantiates a new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param DateTime|null $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param DateTime|null $endDateTime Usage: endDateTime={endDateTime}
      * @param string|null $groupId Usage: groupId='{groupId}'
-     * @param DateTime|null $startDateTime Usage: startDateTime='{startDateTime}'
+     * @param DateTime|null $startDateTime Usage: startDateTime={startDateTime}
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?DateTime $endDateTime = null, ?string $groupId = null, ?DateTime $startDateTime = null) {
-        $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getGroupArchivedPrintJobs(groupId=\'{groupId}\',startDateTime=\'{startDateTime}\',endDateTime=\'{endDateTime}\'){?%24top,%24skip,%24search,%24filter,%24count}';
+        $this->urlTemplate = '{+baseurl}/reports/microsoft.graph.getGroupArchivedPrintJobs(groupId=\'{groupId}\',startDateTime={startDateTime},endDateTime={endDateTime}){?%24top,%24skip,%24search,%24filter,%24count}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
         $urlTplParams = $pathParameters;

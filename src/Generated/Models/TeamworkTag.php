@@ -9,32 +9,32 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkTag extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description The description property
+     * @var string|null $description The description of the tag as it will appear to the user in Microsoft Teams.
     */
     private ?string $description = null;
     
     /**
-     * @var string|null $displayName The displayName property
+     * @var string|null $displayName The name of the tag as it will appear to the user in Microsoft Teams.
     */
     private ?string $displayName = null;
     
     /**
-     * @var int|null $memberCount The memberCount property
+     * @var int|null $memberCount The number of users assigned to the tag.
     */
     private ?int $memberCount = null;
     
     /**
-     * @var array<TeamworkTagMember>|null $members The members property
+     * @var array<TeamworkTagMember>|null $members Users assigned to the tag.
     */
     private ?array $members = null;
     
     /**
-     * @var TeamworkTagType|null $tagType The tagType property
+     * @var TeamworkTagType|null $tagType The type of the tag. Default is standard.
     */
     private ?TeamworkTagType $tagType = null;
     
     /**
-     * @var string|null $teamId The teamId property
+     * @var string|null $teamId ID of the team in which the tag is defined.
     */
     private ?string $teamId = null;
     
@@ -56,7 +56,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the tag as it will appear to the user in Microsoft Teams.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -64,7 +64,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the tag as it will appear to the user in Microsoft Teams.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -88,7 +88,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the memberCount property value. The memberCount property
+     * Gets the memberCount property value. The number of users assigned to the tag.
      * @return int|null
     */
     public function getMemberCount(): ?int {
@@ -96,7 +96,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. Users assigned to the tag.
      * @return array<TeamworkTagMember>|null
     */
     public function getMembers(): ?array {
@@ -104,7 +104,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the tagType property value. The tagType property
+     * Gets the tagType property value. The type of the tag. Default is standard.
      * @return TeamworkTagType|null
     */
     public function getTagType(): ?TeamworkTagType {
@@ -112,7 +112,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the teamId property value. The teamId property
+     * Gets the teamId property value. ID of the team in which the tag is defined.
      * @return string|null
     */
     public function getTeamId(): ?string {
@@ -134,7 +134,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the tag as it will appear to the user in Microsoft Teams.
      *  @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value ): void {
@@ -142,7 +142,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the tag as it will appear to the user in Microsoft Teams.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value ): void {
@@ -150,7 +150,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the memberCount property value. The memberCount property
+     * Sets the memberCount property value. The number of users assigned to the tag.
      *  @param int|null $value Value to set for the memberCount property.
     */
     public function setMemberCount(?int $value ): void {
@@ -158,7 +158,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. Users assigned to the tag.
      *  @param array<TeamworkTagMember>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value ): void {
@@ -166,7 +166,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the tagType property value. The tagType property
+     * Sets the tagType property value. The type of the tag. Default is standard.
      *  @param TeamworkTagType|null $value Value to set for the tagType property.
     */
     public function setTagType(?TeamworkTagType $value ): void {
@@ -174,7 +174,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the teamId property value. The teamId property
+     * Sets the teamId property value. ID of the team in which the tag is defined.
      *  @param string|null $value Value to set for the teamId property.
     */
     public function setTeamId(?string $value ): void {

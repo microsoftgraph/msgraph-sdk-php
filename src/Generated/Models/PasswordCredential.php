@@ -83,9 +83,9 @@ class PasswordCredential implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the customKeyIdentifier property value. Do not use.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getCustomKeyIdentifier(): ?StreamInterface {
+    public function getCustomKeyIdentifier(): StreamInterface {
         return $this->customKeyIdentifier;
     }
 

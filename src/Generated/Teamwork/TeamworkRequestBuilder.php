@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
+use Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -28,6 +29,13 @@ class TeamworkRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * The sendActivityNotificationToRecipients property
+    */
+    public function sendActivityNotificationToRecipients(): SendActivityNotificationToRecipientsRequestBuilder {
+        return new SendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

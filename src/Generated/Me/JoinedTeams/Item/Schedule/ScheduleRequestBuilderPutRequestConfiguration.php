@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule;
+namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class ScheduleRequestBuilderPatchRequestConfiguration 
+class ScheduleRequestBuilderPutRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

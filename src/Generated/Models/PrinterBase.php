@@ -54,7 +54,7 @@ class PrinterBase extends Entity implements Parsable
     private ?PrinterStatus $status = null;
     
     /**
-     * Instantiates a new printerBase and sets the default values.
+     * Instantiates a new PrinterBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();

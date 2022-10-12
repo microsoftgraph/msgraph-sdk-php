@@ -72,9 +72,9 @@ class Thumbnail implements AdditionalDataHolder, Parsable
 
     /**
      * Gets the content property value. The content stream for the thumbnail.
-     * @return StreamInterface|null
+     * @return StreamInterface
     */
-    public function getContent(): ?StreamInterface {
+    public function getContent(): StreamInterface {
         return $this->content;
     }
 

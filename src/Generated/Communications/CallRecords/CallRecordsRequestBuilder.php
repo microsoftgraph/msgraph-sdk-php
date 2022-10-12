@@ -125,8 +125,8 @@ class CallRecordsRequestBuilder
 
     /**
      * Provides operations to call the getDirectRoutingCalls method.
-     * @param DateTime $fromDateTime Usage: fromDateTime='{fromDateTime}'
-     * @param DateTime $toDateTime Usage: toDateTime='{toDateTime}'
+     * @param DateTime $fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param DateTime $toDateTime Usage: toDateTime={toDateTime}
      * @return GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
     */
     public function getDirectRoutingCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder {
@@ -135,8 +135,8 @@ class CallRecordsRequestBuilder
 
     /**
      * Provides operations to call the getPstnCalls method.
-     * @param DateTime $fromDateTime Usage: fromDateTime='{fromDateTime}'
-     * @param DateTime $toDateTime Usage: toDateTime='{toDateTime}'
+     * @param DateTime $fromDateTime Usage: fromDateTime={fromDateTime}
+     * @param DateTime $toDateTime Usage: toDateTime={toDateTime}
      * @return GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
     */
     public function getPstnCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): GetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder {

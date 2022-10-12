@@ -2,19 +2,14 @@
 
 namespace Microsoft\Graph\Generated\Me\GetManagedAppDiagnosticStatuses;
 
+use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Graph\Generated\Models\ManagedAppDiagnosticStatus;
-use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class GetManagedAppDiagnosticStatusesResponse implements AdditionalDataHolder, Parsable 
+class GetManagedAppDiagnosticStatusesResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
     /**
      * @var array<ManagedAppDiagnosticStatus>|null $value The value property
     */
@@ -24,7 +19,7 @@ class GetManagedAppDiagnosticStatusesResponse implements AdditionalDataHolder, P
      * Instantiates a new getManagedAppDiagnosticStatusesResponse and sets the default values.
     */
     public function __construct() {
-        $this->setAdditionalData([]);
+        parent::__construct();
     }
 
     /**
@@ -37,22 +32,14 @@ class GetManagedAppDiagnosticStatusesResponse implements AdditionalDataHolder, P
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
-    */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
-        return  [
+        return array_merge(parent::getFieldDeserializers(), [
             'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(ManagedAppDiagnosticStatus::class, 'createFromDiscriminatorValue'))); },
-        ];
+        ]);
     }
 
     /**
@@ -68,16 +55,8 @@ class GetManagedAppDiagnosticStatusesResponse implements AdditionalDataHolder, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('value', $this->value);
-        $writer->writeAdditionalData($this->additionalData);
-    }
-
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
-    */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
     }
 
     /**
