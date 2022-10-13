@@ -446,7 +446,7 @@ class SubjectRightsRequest extends Entity
     * Gets the regulations
     * List of regulations that this request will fulfill.
     *
-    * @return array|null The regulations
+    * @return string|null The regulations
     */
     public function getRegulations()
     {
@@ -461,7 +461,7 @@ class SubjectRightsRequest extends Entity
     * Sets the regulations
     * List of regulations that this request will fulfill.
     *
-    * @param string[] $val The regulations
+    * @param string $val The regulations
     *
     * @return SubjectRightsRequest
     */

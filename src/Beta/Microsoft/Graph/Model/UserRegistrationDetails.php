@@ -264,7 +264,7 @@ class UserRegistrationDetails extends Entity
     * Gets the methodsRegistered
     * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
-    * @return array|null The methodsRegistered
+    * @return string|null The methodsRegistered
     */
     public function getMethodsRegistered()
     {
@@ -279,7 +279,7 @@ class UserRegistrationDetails extends Entity
     * Sets the methodsRegistered
     * Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
     *
-    * @param string[] $val The methodsRegistered
+    * @param string $val The methodsRegistered
     *
     * @return UserRegistrationDetails
     */

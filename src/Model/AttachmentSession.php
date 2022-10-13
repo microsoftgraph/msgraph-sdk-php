@@ -89,7 +89,7 @@ class AttachmentSession extends Entity
     /**
     * Gets the nextExpectedRanges
     *
-    * @return array|null The nextExpectedRanges
+    * @return string|null The nextExpectedRanges
     */
     public function getNextExpectedRanges()
     {
@@ -103,7 +103,7 @@ class AttachmentSession extends Entity
     /**
     * Sets the nextExpectedRanges
     *
-    * @param string[] $val The nextExpectedRanges
+    * @param string $val The nextExpectedRanges
     *
     * @return AttachmentSession
     */

@@ -26,6 +26,7 @@ class SharePointOneDriveOptions extends Entity
 
     /**
     * Gets the includeContent
+    * The type of search content. The possible values are: privateContent, sharedContent. Read-only.
     *
     * @return SearchContent|null The includeContent
     */
@@ -44,6 +45,7 @@ class SharePointOneDriveOptions extends Entity
 
     /**
     * Sets the includeContent
+    * The type of search content. The possible values are: privateContent, sharedContent. Read-only.
     *
     * @param SearchContent $val The value to assign to the includeContent
     *

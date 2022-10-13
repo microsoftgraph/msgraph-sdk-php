@@ -483,7 +483,7 @@ class SignIn extends Entity
     * Gets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
     *
-    * @return array|null The riskEventTypesV2
+    * @return string|null The riskEventTypesV2
     */
     public function getRiskEventTypesV2()
     {
@@ -498,7 +498,7 @@ class SignIn extends Entity
     * Sets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
     *
-    * @param string[] $val The riskEventTypesV2
+    * @param string $val The riskEventTypesV2
     *
     * @return SignIn
     */

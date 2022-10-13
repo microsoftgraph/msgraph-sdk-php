@@ -686,7 +686,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     * Gets the trustedServerCertificateNames
     * Specify trusted server certificate names.
     *
-    * @return array|null The trustedServerCertificateNames
+    * @return string|null The trustedServerCertificateNames
     */
     public function getTrustedServerCertificateNames()
     {
@@ -701,7 +701,7 @@ class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfiguration
     * Sets the trustedServerCertificateNames
     * Specify trusted server certificate names.
     *
-    * @param string[] $val The trustedServerCertificateNames
+    * @param string $val The trustedServerCertificateNames
     *
     * @return WindowsWifiEnterpriseEAPConfiguration
     */

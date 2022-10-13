@@ -436,7 +436,7 @@ class SecureScoreControlProfile extends Entity
     * Gets the threats
     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
-    * @return array|null The threats
+    * @return string|null The threats
     */
     public function getThreats()
     {
@@ -451,7 +451,7 @@ class SecureScoreControlProfile extends Entity
     * Sets the threats
     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
     *
-    * @param string[] $val The threats
+    * @param string $val The threats
     *
     * @return SecureScoreControlProfile
     */

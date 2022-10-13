@@ -148,7 +148,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     * Gets the cacheServerHostNames
     * Specifies cache servers host names.
     *
-    * @return array|null The cacheServerHostNames
+    * @return string|null The cacheServerHostNames
     */
     public function getCacheServerHostNames()
     {
@@ -163,7 +163,7 @@ class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration
     * Sets the cacheServerHostNames
     * Specifies cache servers host names.
     *
-    * @param string[] $val The cacheServerHostNames
+    * @param string $val The cacheServerHostNames
     *
     * @return WindowsDeliveryOptimizationConfiguration
     */

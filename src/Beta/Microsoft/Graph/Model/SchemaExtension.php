@@ -145,7 +145,7 @@ class SchemaExtension extends Entity
     * Gets the targetTypes
     * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
     *
-    * @return array|null The targetTypes
+    * @return string|null The targetTypes
     */
     public function getTargetTypes()
     {
@@ -160,7 +160,7 @@ class SchemaExtension extends Entity
     * Sets the targetTypes
     * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
     *
-    * @param string[] $val The targetTypes
+    * @param string $val The targetTypes
     *
     * @return SchemaExtension
     */

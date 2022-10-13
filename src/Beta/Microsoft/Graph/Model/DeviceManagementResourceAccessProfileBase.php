@@ -152,7 +152,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Gets the roleScopeTagIds
     * Scope Tags
     *
-    * @return array|null The roleScopeTagIds
+    * @return string|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -167,7 +167,7 @@ class DeviceManagementResourceAccessProfileBase extends Entity
     * Sets the roleScopeTagIds
     * Scope Tags
     *
-    * @param string[] $val The roleScopeTagIds
+    * @param string $val The roleScopeTagIds
     *
     * @return DeviceManagementResourceAccessProfileBase
     */

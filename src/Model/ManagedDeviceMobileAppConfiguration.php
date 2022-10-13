@@ -152,7 +152,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Gets the targetedMobileApps
     * the associated app.
     *
-    * @return array|null The targetedMobileApps
+    * @return string|null The targetedMobileApps
     */
     public function getTargetedMobileApps()
     {
@@ -167,7 +167,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity
     * Sets the targetedMobileApps
     * the associated app.
     *
-    * @param string[] $val The targetedMobileApps
+    * @param string $val The targetedMobileApps
     *
     * @return ManagedDeviceMobileAppConfiguration
     */

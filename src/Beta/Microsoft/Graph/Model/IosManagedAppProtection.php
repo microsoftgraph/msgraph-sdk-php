@@ -269,7 +269,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the exemptedUniversalLinks
     * A list of custom urls that are allowed to invocate an unmanaged app
     *
-    * @return array|null The exemptedUniversalLinks
+    * @return string|null The exemptedUniversalLinks
     */
     public function getExemptedUniversalLinks()
     {
@@ -284,7 +284,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Sets the exemptedUniversalLinks
     * A list of custom urls that are allowed to invocate an unmanaged app
     *
-    * @param string[] $val The exemptedUniversalLinks
+    * @param string $val The exemptedUniversalLinks
     *
     * @return IosManagedAppProtection
     */
@@ -356,7 +356,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Gets the managedUniversalLinks
     * A list of custom urls that are allowed to invocate a managed app
     *
-    * @return array|null The managedUniversalLinks
+    * @return string|null The managedUniversalLinks
     */
     public function getManagedUniversalLinks()
     {
@@ -371,7 +371,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     * Sets the managedUniversalLinks
     * A list of custom urls that are allowed to invocate a managed app
     *
-    * @param string[] $val The managedUniversalLinks
+    * @param string $val The managedUniversalLinks
     *
     * @return IosManagedAppProtection
     */

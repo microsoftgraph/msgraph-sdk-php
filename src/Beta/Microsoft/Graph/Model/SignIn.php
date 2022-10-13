@@ -204,7 +204,7 @@ class SignIn extends Entity
     * Gets the authenticationMethodsUsed
     * The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
     *
-    * @return array|null The authenticationMethodsUsed
+    * @return string|null The authenticationMethodsUsed
     */
     public function getAuthenticationMethodsUsed()
     {
@@ -219,7 +219,7 @@ class SignIn extends Entity
     * Sets the authenticationMethodsUsed
     * The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
     *
-    * @param string[] $val The authenticationMethodsUsed
+    * @param string $val The authenticationMethodsUsed
     *
     * @return SignIn
     */
@@ -1235,7 +1235,7 @@ class SignIn extends Entity
     * Gets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
     *
-    * @return array|null The riskEventTypesV2
+    * @return string|null The riskEventTypesV2
     */
     public function getRiskEventTypesV2()
     {
@@ -1250,7 +1250,7 @@ class SignIn extends Entity
     * Sets the riskEventTypesV2
     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
     *
-    * @param string[] $val The riskEventTypesV2
+    * @param string $val The riskEventTypesV2
     *
     * @return SignIn
     */
@@ -1509,7 +1509,7 @@ class SignIn extends Entity
     * Gets the signInEventTypes
     * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne).
     *
-    * @return array|null The signInEventTypes
+    * @return string|null The signInEventTypes
     */
     public function getSignInEventTypes()
     {
@@ -1524,7 +1524,7 @@ class SignIn extends Entity
     * Sets the signInEventTypes
     * Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue. Supports $filter (eq, ne).
     *
-    * @param string[] $val The signInEventTypes
+    * @param string $val The signInEventTypes
     *
     * @return SignIn
     */

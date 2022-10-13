@@ -177,7 +177,7 @@ class User extends DirectoryObject
     * Gets the businessPhones
     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The businessPhones
+    * @return string|null The businessPhones
     */
     public function getBusinessPhones()
     {
@@ -192,7 +192,7 @@ class User extends DirectoryObject
     * Sets the businessPhones
     * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property. Read-only for users synced from on-premises directory. Returned by default. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The businessPhones
+    * @param string $val The businessPhones
     *
     * @return User
     */
@@ -716,7 +716,7 @@ class User extends DirectoryObject
     * Gets the imAddresses
     * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @return array|null The imAddresses
+    * @return string|null The imAddresses
     */
     public function getImAddresses()
     {
@@ -731,7 +731,7 @@ class User extends DirectoryObject
     * Sets the imAddresses
     * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith).
     *
-    * @param string[] $val The imAddresses
+    * @param string $val The imAddresses
     *
     * @return User
     */
@@ -1310,7 +1310,7 @@ class User extends DirectoryObject
     * Gets the otherMails
     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
     *
-    * @return array|null The otherMails
+    * @return string|null The otherMails
     */
     public function getOtherMails()
     {
@@ -1325,7 +1325,7 @@ class User extends DirectoryObject
     * Sets the otherMails
     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: This property cannot contain accent characters. Returned only on $select. Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
     *
-    * @param string[] $val The otherMails
+    * @param string $val The otherMails
     *
     * @return User
     */
@@ -1518,7 +1518,7 @@ class User extends DirectoryObject
     * Gets the proxyAddresses
     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @return array|null The proxyAddresses
+    * @return string|null The proxyAddresses
     */
     public function getProxyAddresses()
     {
@@ -1533,7 +1533,7 @@ class User extends DirectoryObject
     * Sets the proxyAddresses
     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @param string[] $val The proxyAddresses
+    * @param string $val The proxyAddresses
     *
     * @return User
     */
@@ -1969,7 +1969,7 @@ class User extends DirectoryObject
     * Gets the interests
     * A list for the user to describe their interests. Returned only on $select.
     *
-    * @return array|null The interests
+    * @return string|null The interests
     */
     public function getInterests()
     {
@@ -1984,7 +1984,7 @@ class User extends DirectoryObject
     * Sets the interests
     * A list for the user to describe their interests. Returned only on $select.
     *
-    * @param string[] $val The interests
+    * @param string $val The interests
     *
     * @return User
     */
@@ -2027,7 +2027,7 @@ class User extends DirectoryObject
     * Gets the pastProjects
     * A list for the user to enumerate their past projects. Returned only on $select.
     *
-    * @return array|null The pastProjects
+    * @return string|null The pastProjects
     */
     public function getPastProjects()
     {
@@ -2042,7 +2042,7 @@ class User extends DirectoryObject
     * Sets the pastProjects
     * A list for the user to enumerate their past projects. Returned only on $select.
     *
-    * @param string[] $val The pastProjects
+    * @param string $val The pastProjects
     *
     * @return User
     */
@@ -2085,7 +2085,7 @@ class User extends DirectoryObject
     * Gets the responsibilities
     * A list for the user to enumerate their responsibilities. Returned only on $select.
     *
-    * @return array|null The responsibilities
+    * @return string|null The responsibilities
     */
     public function getResponsibilities()
     {
@@ -2100,7 +2100,7 @@ class User extends DirectoryObject
     * Sets the responsibilities
     * A list for the user to enumerate their responsibilities. Returned only on $select.
     *
-    * @param string[] $val The responsibilities
+    * @param string $val The responsibilities
     *
     * @return User
     */
@@ -2114,7 +2114,7 @@ class User extends DirectoryObject
     * Gets the schools
     * A list for the user to enumerate the schools they have attended. Returned only on $select.
     *
-    * @return array|null The schools
+    * @return string|null The schools
     */
     public function getSchools()
     {
@@ -2129,7 +2129,7 @@ class User extends DirectoryObject
     * Sets the schools
     * A list for the user to enumerate the schools they have attended. Returned only on $select.
     *
-    * @param string[] $val The schools
+    * @param string $val The schools
     *
     * @return User
     */
@@ -2143,7 +2143,7 @@ class User extends DirectoryObject
     * Gets the skills
     * A list for the user to enumerate their skills. Returned only on $select.
     *
-    * @return array|null The skills
+    * @return string|null The skills
     */
     public function getSkills()
     {
@@ -2158,7 +2158,7 @@ class User extends DirectoryObject
     * Sets the skills
     * A list for the user to enumerate their skills. Returned only on $select.
     *
-    * @param string[] $val The skills
+    * @param string $val The skills
     *
     * @return User
     */

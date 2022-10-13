@@ -57,7 +57,7 @@ class EdiscoveryHoldPolicy extends PolicyBase
     * Gets the errors
     * Lists any errors that happened while placing the hold.
     *
-    * @return array|null The errors
+    * @return string|null The errors
     */
     public function getErrors()
     {
@@ -72,7 +72,7 @@ class EdiscoveryHoldPolicy extends PolicyBase
     * Sets the errors
     * Lists any errors that happened while placing the hold.
     *
-    * @param string[] $val The errors
+    * @param string $val The errors
     *
     * @return EdiscoveryHoldPolicy
     */
