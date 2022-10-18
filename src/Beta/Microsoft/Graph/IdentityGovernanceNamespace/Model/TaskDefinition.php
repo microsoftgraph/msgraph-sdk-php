@@ -26,7 +26,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the category
-    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq).
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq, has).
     *
     * @return LifecycleTaskCategory|null The category
     */
@@ -45,7 +45,7 @@ class TaskDefinition extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
-    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq).
+    * The category of the HR function that the tasks created using this definition can be used with. The possible values are: joiner, leaver. This is a multi-valued enumeration whose allowed combinations are joiner, joiner,leaver, or leaver. Supports $filter (eq, has).
     *
     * @param LifecycleTaskCategory $val The category
     *
