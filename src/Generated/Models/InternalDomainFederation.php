@@ -83,13 +83,13 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeSignInUri' => function (ParseNode $n) use ($o) { $o->setActiveSignInUri($n->getStringValue()); },
-            'federatedIdpMfaBehavior' => function (ParseNode $n) use ($o) { $o->setFederatedIdpMfaBehavior($n->getEnumValue(FederatedIdpMfaBehavior::class)); },
-            'isSignedAuthenticationRequestRequired' => function (ParseNode $n) use ($o) { $o->setIsSignedAuthenticationRequestRequired($n->getBooleanValue()); },
-            'nextSigningCertificate' => function (ParseNode $n) use ($o) { $o->setNextSigningCertificate($n->getStringValue()); },
-            'promptLoginBehavior' => function (ParseNode $n) use ($o) { $o->setPromptLoginBehavior($n->getEnumValue(PromptLoginBehavior::class)); },
-            'signingCertificateUpdateStatus' => function (ParseNode $n) use ($o) { $o->setSigningCertificateUpdateStatus($n->getObjectValue(array(SigningCertificateUpdateStatus::class, 'createFromDiscriminatorValue'))); },
-            'signOutUri' => function (ParseNode $n) use ($o) { $o->setSignOutUri($n->getStringValue()); },
+            'activeSignInUri' => fn(ParseNode $n) => $o->setActiveSignInUri($n->getStringValue()),
+            'federatedIdpMfaBehavior' => fn(ParseNode $n) => $o->setFederatedIdpMfaBehavior($n->getEnumValue(FederatedIdpMfaBehavior::class)),
+            'isSignedAuthenticationRequestRequired' => fn(ParseNode $n) => $o->setIsSignedAuthenticationRequestRequired($n->getBooleanValue()),
+            'nextSigningCertificate' => fn(ParseNode $n) => $o->setNextSigningCertificate($n->getStringValue()),
+            'promptLoginBehavior' => fn(ParseNode $n) => $o->setPromptLoginBehavior($n->getEnumValue(PromptLoginBehavior::class)),
+            'signingCertificateUpdateStatus' => fn(ParseNode $n) => $o->setSigningCertificateUpdateStatus($n->getObjectValue([SigningCertificateUpdateStatus::class, 'createFromDiscriminatorValue'])),
+            'signOutUri' => fn(ParseNode $n) => $o->setSignOutUri($n->getStringValue()),
         ]);
     }
 

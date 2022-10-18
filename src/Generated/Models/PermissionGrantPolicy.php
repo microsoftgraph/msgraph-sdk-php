@@ -50,8 +50,8 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'excludes' => function (ParseNode $n) use ($o) { $o->setExcludes($n->getCollectionOfObjectValues(array(PermissionGrantConditionSet::class, 'createFromDiscriminatorValue'))); },
-            'includes' => function (ParseNode $n) use ($o) { $o->setIncludes($n->getCollectionOfObjectValues(array(PermissionGrantConditionSet::class, 'createFromDiscriminatorValue'))); },
+            'excludes' => fn(ParseNode $n) => $o->setExcludes($n->getCollectionOfObjectValues([PermissionGrantConditionSet::class, 'createFromDiscriminatorValue'])),
+            'includes' => fn(ParseNode $n) => $o->setIncludes($n->getCollectionOfObjectValues([PermissionGrantConditionSet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

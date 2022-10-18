@@ -82,10 +82,10 @@ class SearchBucket implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aggregationFilterToken' => function (ParseNode $n) use ($o) { $o->setAggregationFilterToken($n->getStringValue()); },
-            'count' => function (ParseNode $n) use ($o) { $o->setCount($n->getIntegerValue()); },
-            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'aggregationFilterToken' => fn(ParseNode $n) => $o->setAggregationFilterToken($n->getStringValue()),
+            'count' => fn(ParseNode $n) => $o->setCount($n->getIntegerValue()),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

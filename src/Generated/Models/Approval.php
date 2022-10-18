@@ -37,7 +37,7 @@ class Approval extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'stages' => function (ParseNode $n) use ($o) { $o->setStages($n->getCollectionOfObjectValues(array(ApprovalStage::class, 'createFromDiscriminatorValue'))); },
+            'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([ApprovalStage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

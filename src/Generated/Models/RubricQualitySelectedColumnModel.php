@@ -69,9 +69,9 @@ class RubricQualitySelectedColumnModel implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'columnId' => function (ParseNode $n) use ($o) { $o->setColumnId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'qualityId' => function (ParseNode $n) use ($o) { $o->setQualityId($n->getStringValue()); },
+            'columnId' => fn(ParseNode $n) => $o->setColumnId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'qualityId' => fn(ParseNode $n) => $o->setQualityId($n->getStringValue()),
         ];
     }
 

@@ -61,9 +61,9 @@ class IosDeviceType implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'iPad' => function (ParseNode $n) use ($o) { $o->setIPad($n->getBooleanValue()); },
-            'iPhoneAndIPod' => function (ParseNode $n) use ($o) { $o->setIPhoneAndIPod($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'iPad' => fn(ParseNode $n) => $o->setIPad($n->getBooleanValue()),
+            'iPhoneAndIPod' => fn(ParseNode $n) => $o->setIPhoneAndIPod($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

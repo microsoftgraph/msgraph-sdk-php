@@ -60,10 +60,10 @@ class WindowsMobileMSI extends MobileLobApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'commandLine' => function (ParseNode $n) use ($o) { $o->setCommandLine($n->getStringValue()); },
-            'ignoreVersionDetection' => function (ParseNode $n) use ($o) { $o->setIgnoreVersionDetection($n->getBooleanValue()); },
-            'productCode' => function (ParseNode $n) use ($o) { $o->setProductCode($n->getStringValue()); },
-            'productVersion' => function (ParseNode $n) use ($o) { $o->setProductVersion($n->getStringValue()); },
+            'commandLine' => fn(ParseNode $n) => $o->setCommandLine($n->getStringValue()),
+            'ignoreVersionDetection' => fn(ParseNode $n) => $o->setIgnoreVersionDetection($n->getBooleanValue()),
+            'productCode' => fn(ParseNode $n) => $o->setProductCode($n->getStringValue()),
+            'productVersion' => fn(ParseNode $n) => $o->setProductVersion($n->getStringValue()),
         ]);
     }
 

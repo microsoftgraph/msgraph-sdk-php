@@ -89,14 +89,14 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'androidDeviceBlockedOnMissingPartnerData' => function (ParseNode $n) use ($o) { $o->setAndroidDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
-            'androidEnabled' => function (ParseNode $n) use ($o) { $o->setAndroidEnabled($n->getBooleanValue()); },
-            'iosDeviceBlockedOnMissingPartnerData' => function (ParseNode $n) use ($o) { $o->setIosDeviceBlockedOnMissingPartnerData($n->getBooleanValue()); },
-            'iosEnabled' => function (ParseNode $n) use ($o) { $o->setIosEnabled($n->getBooleanValue()); },
-            'lastHeartbeatDateTime' => function (ParseNode $n) use ($o) { $o->setLastHeartbeatDateTime($n->getDateTimeValue()); },
-            'partnerState' => function (ParseNode $n) use ($o) { $o->setPartnerState($n->getEnumValue(MobileThreatPartnerTenantState::class)); },
-            'partnerUnresponsivenessThresholdInDays' => function (ParseNode $n) use ($o) { $o->setPartnerUnresponsivenessThresholdInDays($n->getIntegerValue()); },
-            'partnerUnsupportedOsVersionBlocked' => function (ParseNode $n) use ($o) { $o->setPartnerUnsupportedOsVersionBlocked($n->getBooleanValue()); },
+            'androidDeviceBlockedOnMissingPartnerData' => fn(ParseNode $n) => $o->setAndroidDeviceBlockedOnMissingPartnerData($n->getBooleanValue()),
+            'androidEnabled' => fn(ParseNode $n) => $o->setAndroidEnabled($n->getBooleanValue()),
+            'iosDeviceBlockedOnMissingPartnerData' => fn(ParseNode $n) => $o->setIosDeviceBlockedOnMissingPartnerData($n->getBooleanValue()),
+            'iosEnabled' => fn(ParseNode $n) => $o->setIosEnabled($n->getBooleanValue()),
+            'lastHeartbeatDateTime' => fn(ParseNode $n) => $o->setLastHeartbeatDateTime($n->getDateTimeValue()),
+            'partnerState' => fn(ParseNode $n) => $o->setPartnerState($n->getEnumValue(MobileThreatPartnerTenantState::class)),
+            'partnerUnresponsivenessThresholdInDays' => fn(ParseNode $n) => $o->setPartnerUnresponsivenessThresholdInDays($n->getIntegerValue()),
+            'partnerUnsupportedOsVersionBlocked' => fn(ParseNode $n) => $o->setPartnerUnsupportedOsVersionBlocked($n->getBooleanValue()),
         ]);
     }
 

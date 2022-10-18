@@ -69,9 +69,9 @@ class TimeConstraint implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'activityDomain' => function (ParseNode $n) use ($o) { $o->setActivityDomain($n->getEnumValue(ActivityDomain::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
+            'activityDomain' => fn(ParseNode $n) => $o->setActivityDomain($n->getEnumValue(ActivityDomain::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'timeSlots' => fn(ParseNode $n) => $o->setTimeSlots($n->getCollectionOfObjectValues([TimeSlot::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

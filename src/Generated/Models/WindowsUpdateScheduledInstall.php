@@ -43,8 +43,8 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'scheduledInstallDay' => function (ParseNode $n) use ($o) { $o->setScheduledInstallDay($n->getEnumValue(WeeklySchedule::class)); },
-            'scheduledInstallTime' => function (ParseNode $n) use ($o) { $o->setScheduledInstallTime($n->getTimeValue()); },
+            'scheduledInstallDay' => fn(ParseNode $n) => $o->setScheduledInstallDay($n->getEnumValue(WeeklySchedule::class)),
+            'scheduledInstallTime' => fn(ParseNode $n) => $o->setScheduledInstallTime($n->getTimeValue()),
         ]);
     }
 

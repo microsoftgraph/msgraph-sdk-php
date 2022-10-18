@@ -36,7 +36,7 @@ class SecureScoreControlStateUpdateCollectionResponse extends BaseCollectionPagi
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(SecureScoreControlStateUpdate::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([SecureScoreControlStateUpdate::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -71,11 +71,11 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'messageLanguage' => function (ParseNode $n) use ($o) { $o->setMessageLanguage($n->getObjectValue(array(LocaleInfo::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'scheduledEndTime' => function (ParseNode $n) use ($o) { $o->setScheduledEndTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'scheduledStartTime' => function (ParseNode $n) use ($o) { $o->setScheduledStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'messageLanguage' => fn(ParseNode $n) => $o->setMessageLanguage($n->getObjectValue([LocaleInfo::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'scheduledEndTime' => fn(ParseNode $n) => $o->setScheduledEndTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'scheduledStartTime' => fn(ParseNode $n) => $o->setScheduledStartTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

@@ -36,7 +36,7 @@ class WindowsPhone81CompliancePolicyCollectionResponse extends BaseCollectionPag
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(WindowsPhone81CompliancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([WindowsPhone81CompliancePolicy::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

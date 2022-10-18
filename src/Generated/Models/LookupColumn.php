@@ -100,12 +100,12 @@ class LookupColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowMultipleValues' => function (ParseNode $n) use ($o) { $o->setAllowMultipleValues($n->getBooleanValue()); },
-            'allowUnlimitedLength' => function (ParseNode $n) use ($o) { $o->setAllowUnlimitedLength($n->getBooleanValue()); },
-            'columnName' => function (ParseNode $n) use ($o) { $o->setColumnName($n->getStringValue()); },
-            'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'primaryLookupColumnId' => function (ParseNode $n) use ($o) { $o->setPrimaryLookupColumnId($n->getStringValue()); },
+            'allowMultipleValues' => fn(ParseNode $n) => $o->setAllowMultipleValues($n->getBooleanValue()),
+            'allowUnlimitedLength' => fn(ParseNode $n) => $o->setAllowUnlimitedLength($n->getBooleanValue()),
+            'columnName' => fn(ParseNode $n) => $o->setColumnName($n->getStringValue()),
+            'listId' => fn(ParseNode $n) => $o->setListId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'primaryLookupColumnId' => fn(ParseNode $n) => $o->setPrimaryLookupColumnId($n->getStringValue()),
         ];
     }
 

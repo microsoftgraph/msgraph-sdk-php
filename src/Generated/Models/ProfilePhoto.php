@@ -42,8 +42,8 @@ class ProfilePhoto extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
-            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
+            'height' => fn(ParseNode $n) => $o->setHeight($n->getIntegerValue()),
+            'width' => fn(ParseNode $n) => $o->setWidth($n->getIntegerValue()),
         ]);
     }
 

@@ -136,16 +136,16 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'alertType' => function (ParseNode $n) use ($o) { $o->setAlertType($n->getEnumValue(IosNotificationAlertType::class)); },
-            'appName' => function (ParseNode $n) use ($o) { $o->setAppName($n->getStringValue()); },
-            'badgesEnabled' => function (ParseNode $n) use ($o) { $o->setBadgesEnabled($n->getBooleanValue()); },
-            'bundleID' => function (ParseNode $n) use ($o) { $o->setBundleID($n->getStringValue()); },
-            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
-            'showInNotificationCenter' => function (ParseNode $n) use ($o) { $o->setShowInNotificationCenter($n->getBooleanValue()); },
-            'showOnLockScreen' => function (ParseNode $n) use ($o) { $o->setShowOnLockScreen($n->getBooleanValue()); },
-            'soundsEnabled' => function (ParseNode $n) use ($o) { $o->setSoundsEnabled($n->getBooleanValue()); },
+            'alertType' => fn(ParseNode $n) => $o->setAlertType($n->getEnumValue(IosNotificationAlertType::class)),
+            'appName' => fn(ParseNode $n) => $o->setAppName($n->getStringValue()),
+            'badgesEnabled' => fn(ParseNode $n) => $o->setBadgesEnabled($n->getBooleanValue()),
+            'bundleID' => fn(ParseNode $n) => $o->setBundleID($n->getStringValue()),
+            'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
+            'showInNotificationCenter' => fn(ParseNode $n) => $o->setShowInNotificationCenter($n->getBooleanValue()),
+            'showOnLockScreen' => fn(ParseNode $n) => $o->setShowOnLockScreen($n->getBooleanValue()),
+            'soundsEnabled' => fn(ParseNode $n) => $o->setSoundsEnabled($n->getBooleanValue()),
         ];
     }
 

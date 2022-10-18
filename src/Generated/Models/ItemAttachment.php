@@ -37,7 +37,7 @@ class ItemAttachment extends Attachment implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'item' => function (ParseNode $n) use ($o) { $o->setItem($n->getObjectValue(array(OutlookItem::class, 'createFromDiscriminatorValue'))); },
+            'item' => fn(ParseNode $n) => $o->setItem($n->getObjectValue([OutlookItem::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

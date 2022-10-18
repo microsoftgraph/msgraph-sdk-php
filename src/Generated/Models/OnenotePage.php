@@ -113,17 +113,17 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getBinaryContent()); },
-            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
-            'createdByAppId' => function (ParseNode $n) use ($o) { $o->setCreatedByAppId($n->getStringValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'level' => function (ParseNode $n) use ($o) { $o->setLevel($n->getIntegerValue()); },
-            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(PageLinks::class, 'createFromDiscriminatorValue'))); },
-            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getIntegerValue()); },
-            'parentNotebook' => function (ParseNode $n) use ($o) { $o->setParentNotebook($n->getObjectValue(array(Notebook::class, 'createFromDiscriminatorValue'))); },
-            'parentSection' => function (ParseNode $n) use ($o) { $o->setParentSection($n->getObjectValue(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
-            'userTags' => function (ParseNode $n) use ($o) { $o->setUserTags($n->getCollectionOfPrimitiveValues()); },
+            'content' => fn(ParseNode $n) => $o->setContent($n->getBinaryContent()),
+            'contentUrl' => fn(ParseNode $n) => $o->setContentUrl($n->getStringValue()),
+            'createdByAppId' => fn(ParseNode $n) => $o->setCreatedByAppId($n->getStringValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'level' => fn(ParseNode $n) => $o->setLevel($n->getIntegerValue()),
+            'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([PageLinks::class, 'createFromDiscriminatorValue'])),
+            'order' => fn(ParseNode $n) => $o->setOrder($n->getIntegerValue()),
+            'parentNotebook' => fn(ParseNode $n) => $o->setParentNotebook($n->getObjectValue([Notebook::class, 'createFromDiscriminatorValue'])),
+            'parentSection' => fn(ParseNode $n) => $o->setParentSection($n->getObjectValue([OnenoteSection::class, 'createFromDiscriminatorValue'])),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
+            'userTags' => fn(ParseNode $n) => $o->setUserTags($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

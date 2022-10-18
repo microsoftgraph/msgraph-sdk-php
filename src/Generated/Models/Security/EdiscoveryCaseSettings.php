@@ -48,9 +48,9 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ocr' => function (ParseNode $n) use ($o) { $o->setOcr($n->getObjectValue(array(OcrSettings::class, 'createFromDiscriminatorValue'))); },
-            'redundancyDetection' => function (ParseNode $n) use ($o) { $o->setRedundancyDetection($n->getObjectValue(array(RedundancyDetectionSettings::class, 'createFromDiscriminatorValue'))); },
-            'topicModeling' => function (ParseNode $n) use ($o) { $o->setTopicModeling($n->getObjectValue(array(TopicModelingSettings::class, 'createFromDiscriminatorValue'))); },
+            'ocr' => fn(ParseNode $n) => $o->setOcr($n->getObjectValue([OcrSettings::class, 'createFromDiscriminatorValue'])),
+            'redundancyDetection' => fn(ParseNode $n) => $o->setRedundancyDetection($n->getObjectValue([RedundancyDetectionSettings::class, 'createFromDiscriminatorValue'])),
+            'topicModeling' => fn(ParseNode $n) => $o->setTopicModeling($n->getObjectValue([TopicModelingSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

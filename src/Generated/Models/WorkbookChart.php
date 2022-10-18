@@ -108,18 +108,18 @@ class WorkbookChart extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'axes' => function (ParseNode $n) use ($o) { $o->setAxes($n->getObjectValue(array(WorkbookChartAxes::class, 'createFromDiscriminatorValue'))); },
-            'dataLabels' => function (ParseNode $n) use ($o) { $o->setDataLabels($n->getObjectValue(array(WorkbookChartDataLabels::class, 'createFromDiscriminatorValue'))); },
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartAreaFormat::class, 'createFromDiscriminatorValue'))); },
-            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getFloatValue()); },
-            'left' => function (ParseNode $n) use ($o) { $o->setLeft($n->getFloatValue()); },
-            'legend' => function (ParseNode $n) use ($o) { $o->setLegend($n->getObjectValue(array(WorkbookChartLegend::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'series' => function (ParseNode $n) use ($o) { $o->setSeries($n->getCollectionOfObjectValues(array(WorkbookChartSeries::class, 'createFromDiscriminatorValue'))); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getObjectValue(array(WorkbookChartTitle::class, 'createFromDiscriminatorValue'))); },
-            'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getFloatValue()); },
-            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getFloatValue()); },
-            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
+            'axes' => fn(ParseNode $n) => $o->setAxes($n->getObjectValue([WorkbookChartAxes::class, 'createFromDiscriminatorValue'])),
+            'dataLabels' => fn(ParseNode $n) => $o->setDataLabels($n->getObjectValue([WorkbookChartDataLabels::class, 'createFromDiscriminatorValue'])),
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartAreaFormat::class, 'createFromDiscriminatorValue'])),
+            'height' => fn(ParseNode $n) => $o->setHeight($n->getFloatValue()),
+            'left' => fn(ParseNode $n) => $o->setLeft($n->getFloatValue()),
+            'legend' => fn(ParseNode $n) => $o->setLegend($n->getObjectValue([WorkbookChartLegend::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'series' => fn(ParseNode $n) => $o->setSeries($n->getCollectionOfObjectValues([WorkbookChartSeries::class, 'createFromDiscriminatorValue'])),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getObjectValue([WorkbookChartTitle::class, 'createFromDiscriminatorValue'])),
+            'top' => fn(ParseNode $n) => $o->setTop($n->getFloatValue()),
+            'width' => fn(ParseNode $n) => $o->setWidth($n->getFloatValue()),
+            'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -86,11 +86,11 @@ class MainError implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfObjectValues(array(ErrorDetails::class, 'createFromDiscriminatorValue'))); },
-            'innererror' => function (ParseNode $n) use ($o) { $o->setInnererror($n->getObjectValue(array(InnerError::class, 'createFromDiscriminatorValue'))); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
+            'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
+            'details' => fn(ParseNode $n) => $o->setDetails($n->getCollectionOfObjectValues([ErrorDetails::class, 'createFromDiscriminatorValue'])),
+            'innererror' => fn(ParseNode $n) => $o->setInnererror($n->getObjectValue([InnerError::class, 'createFromDiscriminatorValue'])),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
 

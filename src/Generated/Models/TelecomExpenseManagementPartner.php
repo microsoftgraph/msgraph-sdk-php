@@ -35,7 +35,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
     private ?string $url = null;
     
     /**
-     * Instantiates a new TelecomExpenseManagementPartner and sets the default values.
+     * Instantiates a new telecomExpenseManagementPartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -82,11 +82,11 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appAuthorized' => function (ParseNode $n) use ($o) { $o->setAppAuthorized($n->getBooleanValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
-            'lastConnectionDateTime' => function (ParseNode $n) use ($o) { $o->setLastConnectionDateTime($n->getDateTimeValue()); },
-            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
+            'appAuthorized' => fn(ParseNode $n) => $o->setAppAuthorized($n->getBooleanValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getBooleanValue()),
+            'lastConnectionDateTime' => fn(ParseNode $n) => $o->setLastConnectionDateTime($n->getDateTimeValue()),
+            'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
     }
 

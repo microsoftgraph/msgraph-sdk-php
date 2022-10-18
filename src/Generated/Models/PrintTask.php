@@ -60,10 +60,10 @@ class PrintTask extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getObjectValue(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
-            'parentUrl' => function (ParseNode $n) use ($o) { $o->setParentUrl($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrintTaskStatus::class, 'createFromDiscriminatorValue'))); },
-            'trigger' => function (ParseNode $n) use ($o) { $o->setTrigger($n->getObjectValue(array(PrintTaskTrigger::class, 'createFromDiscriminatorValue'))); },
+            'definition' => fn(ParseNode $n) => $o->setDefinition($n->getObjectValue([PrintTaskDefinition::class, 'createFromDiscriminatorValue'])),
+            'parentUrl' => fn(ParseNode $n) => $o->setParentUrl($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([PrintTaskStatus::class, 'createFromDiscriminatorValue'])),
+            'trigger' => fn(ParseNode $n) => $o->setTrigger($n->getObjectValue([PrintTaskTrigger::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

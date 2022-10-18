@@ -82,10 +82,10 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'alias' => function (ParseNode $n) use ($o) { $o->setAlias($n->getStringValue()); },
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'objectId' => function (ParseNode $n) use ($o) { $o->setObjectId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'alias' => fn(ParseNode $n) => $o->setAlias($n->getStringValue()),
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'objectId' => fn(ParseNode $n) => $o->setObjectId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

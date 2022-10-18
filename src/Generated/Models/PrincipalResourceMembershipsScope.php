@@ -42,8 +42,8 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'principalScopes' => function (ParseNode $n) use ($o) { $o->setPrincipalScopes($n->getCollectionOfObjectValues(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
-            'resourceScopes' => function (ParseNode $n) use ($o) { $o->setResourceScopes($n->getCollectionOfObjectValues(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
+            'principalScopes' => fn(ParseNode $n) => $o->setPrincipalScopes($n->getCollectionOfObjectValues([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
+            'resourceScopes' => fn(ParseNode $n) => $o->setResourceScopes($n->getCollectionOfObjectValues([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

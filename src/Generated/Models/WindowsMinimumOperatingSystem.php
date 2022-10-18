@@ -66,10 +66,10 @@ class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'v10_0' => function (ParseNode $n) use ($o) { $o->setV10_0($n->getBooleanValue()); },
-            'v8_0' => function (ParseNode $n) use ($o) { $o->setV8_0($n->getBooleanValue()); },
-            'v8_1' => function (ParseNode $n) use ($o) { $o->setV8_1($n->getBooleanValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'v10_0' => fn(ParseNode $n) => $o->setV10_0($n->getBooleanValue()),
+            'v8_0' => fn(ParseNode $n) => $o->setV8_0($n->getBooleanValue()),
+            'v8_1' => fn(ParseNode $n) => $o->setV8_1($n->getBooleanValue()),
         ];
     }
 

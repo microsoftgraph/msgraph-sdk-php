@@ -52,10 +52,10 @@ class ThumbnailSet extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'large' => function (ParseNode $n) use ($o) { $o->setLarge($n->getObjectValue(array(Thumbnail::class, 'createFromDiscriminatorValue'))); },
-            'medium' => function (ParseNode $n) use ($o) { $o->setMedium($n->getObjectValue(array(Thumbnail::class, 'createFromDiscriminatorValue'))); },
-            'small' => function (ParseNode $n) use ($o) { $o->setSmall($n->getObjectValue(array(Thumbnail::class, 'createFromDiscriminatorValue'))); },
-            'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getObjectValue(array(Thumbnail::class, 'createFromDiscriminatorValue'))); },
+            'large' => fn(ParseNode $n) => $o->setLarge($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
+            'medium' => fn(ParseNode $n) => $o->setMedium($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
+            'small' => fn(ParseNode $n) => $o->setSmall($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getObjectValue([Thumbnail::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

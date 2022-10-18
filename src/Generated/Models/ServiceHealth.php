@@ -47,9 +47,9 @@ class ServiceHealth extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'issues' => function (ParseNode $n) use ($o) { $o->setIssues($n->getCollectionOfObjectValues(array(ServiceHealthIssue::class, 'createFromDiscriminatorValue'))); },
-            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)); },
+            'issues' => fn(ParseNode $n) => $o->setIssues($n->getCollectionOfObjectValues([ServiceHealthIssue::class, 'createFromDiscriminatorValue'])),
+            'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)),
         ]);
     }
 

@@ -55,8 +55,8 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.count' => function (ParseNode $n) use ($o) { $o->setOdataCount($n->getIntegerValue()); },
-            '@odata.nextLink' => function (ParseNode $n) use ($o) { $o->setOdataNextLink($n->getStringValue()); },
+            '@odata.count' => fn(ParseNode $n) => $o->setOdataCount($n->getIntegerValue()),
+            '@odata.nextLink' => fn(ParseNode $n) => $o->setOdataNextLink($n->getStringValue()),
         ];
     }
 

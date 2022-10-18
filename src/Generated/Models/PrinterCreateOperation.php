@@ -50,8 +50,8 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getStringValue()); },
-            'printer' => function (ParseNode $n) use ($o) { $o->setPrinter($n->getObjectValue(array(Printer::class, 'createFromDiscriminatorValue'))); },
+            'certificate' => fn(ParseNode $n) => $o->setCertificate($n->getStringValue()),
+            'printer' => fn(ParseNode $n) => $o->setPrinter($n->getObjectValue([Printer::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

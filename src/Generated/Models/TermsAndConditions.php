@@ -60,7 +60,7 @@ class TermsAndConditions extends Entity implements Parsable
     private ?int $version = null;
     
     /**
-     * Instantiates a new TermsAndConditions and sets the default values.
+     * Instantiates a new termsAndConditions and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -139,16 +139,16 @@ class TermsAndConditions extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acceptanceStatement' => function (ParseNode $n) use ($o) { $o->setAcceptanceStatement($n->getStringValue()); },
-            'acceptanceStatuses' => function (ParseNode $n) use ($o) { $o->setAcceptanceStatuses($n->getCollectionOfObjectValues(array(TermsAndConditionsAcceptanceStatus::class, 'createFromDiscriminatorValue'))); },
-            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(TermsAndConditionsAssignment::class, 'createFromDiscriminatorValue'))); },
-            'bodyText' => function (ParseNode $n) use ($o) { $o->setBodyText($n->getStringValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
+            'acceptanceStatement' => fn(ParseNode $n) => $o->setAcceptanceStatement($n->getStringValue()),
+            'acceptanceStatuses' => fn(ParseNode $n) => $o->setAcceptanceStatuses($n->getCollectionOfObjectValues([TermsAndConditionsAcceptanceStatus::class, 'createFromDiscriminatorValue'])),
+            'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([TermsAndConditionsAssignment::class, 'createFromDiscriminatorValue'])),
+            'bodyText' => fn(ParseNode $n) => $o->setBodyText($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getIntegerValue()),
         ]);
     }
 

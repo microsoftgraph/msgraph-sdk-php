@@ -69,9 +69,9 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attackSimulationUser' => function (ParseNode $n) use ($o) { $o->setAttackSimulationUser($n->getObjectValue(array(AttackSimulationUser::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'repeatOffenceCount' => function (ParseNode $n) use ($o) { $o->setRepeatOffenceCount($n->getIntegerValue()); },
+            'attackSimulationUser' => fn(ParseNode $n) => $o->setAttackSimulationUser($n->getObjectValue([AttackSimulationUser::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'repeatOffenceCount' => fn(ParseNode $n) => $o->setRepeatOffenceCount($n->getIntegerValue()),
         ];
     }
 

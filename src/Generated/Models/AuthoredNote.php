@@ -72,9 +72,9 @@ class AuthoredNote extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'author' => function (ParseNode $n) use ($o) { $o->setAuthor($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
+            'author' => fn(ParseNode $n) => $o->setAuthor($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
         ]);
     }
 

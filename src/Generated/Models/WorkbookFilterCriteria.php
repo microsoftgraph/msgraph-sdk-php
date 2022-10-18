@@ -123,15 +123,15 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
-            'criterion1' => function (ParseNode $n) use ($o) { $o->setCriterion1($n->getStringValue()); },
-            'criterion2' => function (ParseNode $n) use ($o) { $o->setCriterion2($n->getStringValue()); },
-            'dynamicCriteria' => function (ParseNode $n) use ($o) { $o->setDynamicCriteria($n->getStringValue()); },
-            'filterOn' => function (ParseNode $n) use ($o) { $o->setFilterOn($n->getStringValue()); },
-            'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
+            'criterion1' => fn(ParseNode $n) => $o->setCriterion1($n->getStringValue()),
+            'criterion2' => fn(ParseNode $n) => $o->setCriterion2($n->getStringValue()),
+            'dynamicCriteria' => fn(ParseNode $n) => $o->setDynamicCriteria($n->getStringValue()),
+            'filterOn' => fn(ParseNode $n) => $o->setFilterOn($n->getStringValue()),
+            'icon' => fn(ParseNode $n) => $o->setIcon($n->getObjectValue([WorkbookIcon::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'operator' => fn(ParseNode $n) => $o->setOperator($n->getStringValue()),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

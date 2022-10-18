@@ -82,10 +82,10 @@ class IosNetworkUsageRule implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cellularDataBlocked' => function (ParseNode $n) use ($o) { $o->setCellularDataBlocked($n->getBooleanValue()); },
-            'cellularDataBlockWhenRoaming' => function (ParseNode $n) use ($o) { $o->setCellularDataBlockWhenRoaming($n->getBooleanValue()); },
-            'managedApps' => function (ParseNode $n) use ($o) { $o->setManagedApps($n->getCollectionOfObjectValues(array(AppListItem::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'cellularDataBlocked' => fn(ParseNode $n) => $o->setCellularDataBlocked($n->getBooleanValue()),
+            'cellularDataBlockWhenRoaming' => fn(ParseNode $n) => $o->setCellularDataBlockWhenRoaming($n->getBooleanValue()),
+            'managedApps' => fn(ParseNode $n) => $o->setManagedApps($n->getCollectionOfObjectValues([AppListItem::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

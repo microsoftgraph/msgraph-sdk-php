@@ -36,7 +36,7 @@ class AvailabilityItemCollectionResponse extends BaseCollectionPaginationCountRe
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(AvailabilityItem::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([AvailabilityItem::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

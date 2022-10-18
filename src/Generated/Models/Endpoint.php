@@ -65,11 +65,11 @@ class Endpoint extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'capability' => function (ParseNode $n) use ($o) { $o->setCapability($n->getStringValue()); },
-            'providerId' => function (ParseNode $n) use ($o) { $o->setProviderId($n->getStringValue()); },
-            'providerName' => function (ParseNode $n) use ($o) { $o->setProviderName($n->getStringValue()); },
-            'providerResourceId' => function (ParseNode $n) use ($o) { $o->setProviderResourceId($n->getStringValue()); },
-            'uri' => function (ParseNode $n) use ($o) { $o->setUri($n->getStringValue()); },
+            'capability' => fn(ParseNode $n) => $o->setCapability($n->getStringValue()),
+            'providerId' => fn(ParseNode $n) => $o->setProviderId($n->getStringValue()),
+            'providerName' => fn(ParseNode $n) => $o->setProviderName($n->getStringValue()),
+            'providerResourceId' => fn(ParseNode $n) => $o->setProviderResourceId($n->getStringValue()),
+            'uri' => fn(ParseNode $n) => $o->setUri($n->getStringValue()),
         ]);
     }
 

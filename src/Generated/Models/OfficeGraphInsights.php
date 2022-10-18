@@ -47,9 +47,9 @@ class OfficeGraphInsights extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'shared' => function (ParseNode $n) use ($o) { $o->setShared($n->getCollectionOfObjectValues(array(SharedInsight::class, 'createFromDiscriminatorValue'))); },
-            'trending' => function (ParseNode $n) use ($o) { $o->setTrending($n->getCollectionOfObjectValues(array(Trending::class, 'createFromDiscriminatorValue'))); },
-            'used' => function (ParseNode $n) use ($o) { $o->setUsed($n->getCollectionOfObjectValues(array(UsedInsight::class, 'createFromDiscriminatorValue'))); },
+            'shared' => fn(ParseNode $n) => $o->setShared($n->getCollectionOfObjectValues([SharedInsight::class, 'createFromDiscriminatorValue'])),
+            'trending' => fn(ParseNode $n) => $o->setTrending($n->getCollectionOfObjectValues([Trending::class, 'createFromDiscriminatorValue'])),
+            'used' => fn(ParseNode $n) => $o->setUsed($n->getCollectionOfObjectValues([UsedInsight::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

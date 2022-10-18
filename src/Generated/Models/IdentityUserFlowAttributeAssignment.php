@@ -39,7 +39,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     private ?IdentityUserFlowAttributeInputType $userInputType = null;
     
     /**
-     * Instantiates a new IdentityUserFlowAttributeAssignment and sets the default values.
+     * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -70,12 +70,12 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isOptional' => function (ParseNode $n) use ($o) { $o->setIsOptional($n->getBooleanValue()); },
-            'requiresVerification' => function (ParseNode $n) use ($o) { $o->setRequiresVerification($n->getBooleanValue()); },
-            'userAttribute' => function (ParseNode $n) use ($o) { $o->setUserAttribute($n->getObjectValue(array(IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'))); },
-            'userAttributeValues' => function (ParseNode $n) use ($o) { $o->setUserAttributeValues($n->getCollectionOfObjectValues(array(UserAttributeValuesItem::class, 'createFromDiscriminatorValue'))); },
-            'userInputType' => function (ParseNode $n) use ($o) { $o->setUserInputType($n->getEnumValue(IdentityUserFlowAttributeInputType::class)); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isOptional' => fn(ParseNode $n) => $o->setIsOptional($n->getBooleanValue()),
+            'requiresVerification' => fn(ParseNode $n) => $o->setRequiresVerification($n->getBooleanValue()),
+            'userAttribute' => fn(ParseNode $n) => $o->setUserAttribute($n->getObjectValue([IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'])),
+            'userAttributeValues' => fn(ParseNode $n) => $o->setUserAttributeValues($n->getCollectionOfObjectValues([UserAttributeValuesItem::class, 'createFromDiscriminatorValue'])),
+            'userInputType' => fn(ParseNode $n) => $o->setUserInputType($n->getEnumValue(IdentityUserFlowAttributeInputType::class)),
         ]);
     }
 

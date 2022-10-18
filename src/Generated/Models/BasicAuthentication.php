@@ -42,8 +42,8 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
-            'username' => function (ParseNode $n) use ($o) { $o->setUsername($n->getStringValue()); },
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
+            'username' => fn(ParseNode $n) => $o->setUsername($n->getStringValue()),
         ]);
     }
 

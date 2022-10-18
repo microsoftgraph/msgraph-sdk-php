@@ -76,12 +76,12 @@ class InformationalUrl implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'logoUrl' => function (ParseNode $n) use ($o) { $o->setLogoUrl($n->getStringValue()); },
-            'marketingUrl' => function (ParseNode $n) use ($o) { $o->setMarketingUrl($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'privacyStatementUrl' => function (ParseNode $n) use ($o) { $o->setPrivacyStatementUrl($n->getStringValue()); },
-            'supportUrl' => function (ParseNode $n) use ($o) { $o->setSupportUrl($n->getStringValue()); },
-            'termsOfServiceUrl' => function (ParseNode $n) use ($o) { $o->setTermsOfServiceUrl($n->getStringValue()); },
+            'logoUrl' => fn(ParseNode $n) => $o->setLogoUrl($n->getStringValue()),
+            'marketingUrl' => fn(ParseNode $n) => $o->setMarketingUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'privacyStatementUrl' => fn(ParseNode $n) => $o->setPrivacyStatementUrl($n->getStringValue()),
+            'supportUrl' => fn(ParseNode $n) => $o->setSupportUrl($n->getStringValue()),
+            'termsOfServiceUrl' => fn(ParseNode $n) => $o->setTermsOfServiceUrl($n->getStringValue()),
         ];
     }
 

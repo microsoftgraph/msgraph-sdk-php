@@ -73,11 +73,11 @@ class OAuth2PermissionGrant extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientId' => function (ParseNode $n) use ($o) { $o->setClientId($n->getStringValue()); },
-            'consentType' => function (ParseNode $n) use ($o) { $o->setConsentType($n->getStringValue()); },
-            'principalId' => function (ParseNode $n) use ($o) { $o->setPrincipalId($n->getStringValue()); },
-            'resourceId' => function (ParseNode $n) use ($o) { $o->setResourceId($n->getStringValue()); },
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
+            'clientId' => fn(ParseNode $n) => $o->setClientId($n->getStringValue()),
+            'consentType' => fn(ParseNode $n) => $o->setConsentType($n->getStringValue()),
+            'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
+            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
         ]);
     }
 

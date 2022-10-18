@@ -119,14 +119,14 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
-            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
-            'comments' => function (ParseNode $n) use ($o) { $o->setComments($n->getCollectionOfPrimitiveValues()); },
-            'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getEnumValue(AlertFeedback::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AlertStatus::class)); },
-            'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
-            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getStringValue()); },
+            'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
+            'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfPrimitiveValues()),
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertFeedback::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertStatus::class)),
+            'updatedDateTime' => fn(ParseNode $n) => $o->setUpdatedDateTime($n->getDateTimeValue()),
+            'user' => fn(ParseNode $n) => $o->setUser($n->getStringValue()),
         ];
     }
 

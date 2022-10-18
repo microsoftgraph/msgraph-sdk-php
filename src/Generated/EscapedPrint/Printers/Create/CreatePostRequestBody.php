@@ -105,13 +105,13 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'certificateSigningRequest' => function (ParseNode $n) use ($o) { $o->setCertificateSigningRequest($n->getObjectValue(array(PrintCertificateSigningRequest::class, 'createFromDiscriminatorValue'))); },
-            'connectorId' => function (ParseNode $n) use ($o) { $o->setConnectorId($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'hasPhysicalDevice' => function (ParseNode $n) use ($o) { $o->setHasPhysicalDevice($n->getBooleanValue()); },
-            'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
-            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
-            'physicalDeviceId' => function (ParseNode $n) use ($o) { $o->setPhysicalDeviceId($n->getStringValue()); },
+            'certificateSigningRequest' => fn(ParseNode $n) => $o->setCertificateSigningRequest($n->getObjectValue([PrintCertificateSigningRequest::class, 'createFromDiscriminatorValue'])),
+            'connectorId' => fn(ParseNode $n) => $o->setConnectorId($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'hasPhysicalDevice' => fn(ParseNode $n) => $o->setHasPhysicalDevice($n->getBooleanValue()),
+            'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
+            'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
+            'physicalDeviceId' => fn(ParseNode $n) => $o->setPhysicalDeviceId($n->getStringValue()),
         ];
     }
 

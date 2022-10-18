@@ -91,16 +91,16 @@ class DeviceManagementExportJob extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'filter' => function (ParseNode $n) use ($o) { $o->setFilter($n->getStringValue()); },
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getEnumValue(DeviceManagementReportFileFormat::class)); },
-            'localizationType' => function (ParseNode $n) use ($o) { $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)); },
-            'reportName' => function (ParseNode $n) use ($o) { $o->setReportName($n->getStringValue()); },
-            'requestDateTime' => function (ParseNode $n) use ($o) { $o->setRequestDateTime($n->getDateTimeValue()); },
-            'select' => function (ParseNode $n) use ($o) { $o->setSelect($n->getCollectionOfPrimitiveValues()); },
-            'snapshotId' => function (ParseNode $n) use ($o) { $o->setSnapshotId($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DeviceManagementReportStatus::class)); },
-            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'filter' => fn(ParseNode $n) => $o->setFilter($n->getStringValue()),
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getEnumValue(DeviceManagementReportFileFormat::class)),
+            'localizationType' => fn(ParseNode $n) => $o->setLocalizationType($n->getEnumValue(DeviceManagementExportJobLocalizationType::class)),
+            'reportName' => fn(ParseNode $n) => $o->setReportName($n->getStringValue()),
+            'requestDateTime' => fn(ParseNode $n) => $o->setRequestDateTime($n->getDateTimeValue()),
+            'select' => fn(ParseNode $n) => $o->setSelect($n->getCollectionOfPrimitiveValues()),
+            'snapshotId' => fn(ParseNode $n) => $o->setSnapshotId($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DeviceManagementReportStatus::class)),
+            'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
     }
 

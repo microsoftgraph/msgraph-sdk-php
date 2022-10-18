@@ -80,14 +80,14 @@ class IosVppEBook extends ManagedEBook implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appleId' => function (ParseNode $n) use ($o) { $o->setAppleId($n->getStringValue()); },
-            'genres' => function (ParseNode $n) use ($o) { $o->setGenres($n->getCollectionOfPrimitiveValues()); },
-            'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getStringValue()); },
-            'seller' => function (ParseNode $n) use ($o) { $o->setSeller($n->getStringValue()); },
-            'totalLicenseCount' => function (ParseNode $n) use ($o) { $o->setTotalLicenseCount($n->getIntegerValue()); },
-            'usedLicenseCount' => function (ParseNode $n) use ($o) { $o->setUsedLicenseCount($n->getIntegerValue()); },
-            'vppOrganizationName' => function (ParseNode $n) use ($o) { $o->setVppOrganizationName($n->getStringValue()); },
-            'vppTokenId' => function (ParseNode $n) use ($o) { $o->setVppTokenId($n->getStringValue()); },
+            'appleId' => fn(ParseNode $n) => $o->setAppleId($n->getStringValue()),
+            'genres' => fn(ParseNode $n) => $o->setGenres($n->getCollectionOfPrimitiveValues()),
+            'language' => fn(ParseNode $n) => $o->setLanguage($n->getStringValue()),
+            'seller' => fn(ParseNode $n) => $o->setSeller($n->getStringValue()),
+            'totalLicenseCount' => fn(ParseNode $n) => $o->setTotalLicenseCount($n->getIntegerValue()),
+            'usedLicenseCount' => fn(ParseNode $n) => $o->setUsedLicenseCount($n->getIntegerValue()),
+            'vppOrganizationName' => fn(ParseNode $n) => $o->setVppOrganizationName($n->getStringValue()),
+            'vppTokenId' => fn(ParseNode $n) => $o->setVppTokenId($n->getStringValue()),
         ]);
     }
 

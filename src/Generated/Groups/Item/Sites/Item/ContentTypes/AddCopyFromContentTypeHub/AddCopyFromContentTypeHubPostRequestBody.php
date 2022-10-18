@@ -58,7 +58,7 @@ class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataHolder, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentTypeId' => function (ParseNode $n) use ($o) { $o->setContentTypeId($n->getStringValue()); },
+            'contentTypeId' => fn(ParseNode $n) => $o->setContentTypeId($n->getStringValue()),
         ];
     }
 

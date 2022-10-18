@@ -107,16 +107,16 @@ class IosVppApp extends MobileApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicableDeviceType' => function (ParseNode $n) use ($o) { $o->setApplicableDeviceType($n->getObjectValue(array(IosDeviceType::class, 'createFromDiscriminatorValue'))); },
-            'appStoreUrl' => function (ParseNode $n) use ($o) { $o->setAppStoreUrl($n->getStringValue()); },
-            'bundleId' => function (ParseNode $n) use ($o) { $o->setBundleId($n->getStringValue()); },
-            'licensingType' => function (ParseNode $n) use ($o) { $o->setLicensingType($n->getObjectValue(array(VppLicensingType::class, 'createFromDiscriminatorValue'))); },
-            'releaseDateTime' => function (ParseNode $n) use ($o) { $o->setReleaseDateTime($n->getDateTimeValue()); },
-            'totalLicenseCount' => function (ParseNode $n) use ($o) { $o->setTotalLicenseCount($n->getIntegerValue()); },
-            'usedLicenseCount' => function (ParseNode $n) use ($o) { $o->setUsedLicenseCount($n->getIntegerValue()); },
-            'vppTokenAccountType' => function (ParseNode $n) use ($o) { $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)); },
-            'vppTokenAppleId' => function (ParseNode $n) use ($o) { $o->setVppTokenAppleId($n->getStringValue()); },
-            'vppTokenOrganizationName' => function (ParseNode $n) use ($o) { $o->setVppTokenOrganizationName($n->getStringValue()); },
+            'applicableDeviceType' => fn(ParseNode $n) => $o->setApplicableDeviceType($n->getObjectValue([IosDeviceType::class, 'createFromDiscriminatorValue'])),
+            'appStoreUrl' => fn(ParseNode $n) => $o->setAppStoreUrl($n->getStringValue()),
+            'bundleId' => fn(ParseNode $n) => $o->setBundleId($n->getStringValue()),
+            'licensingType' => fn(ParseNode $n) => $o->setLicensingType($n->getObjectValue([VppLicensingType::class, 'createFromDiscriminatorValue'])),
+            'releaseDateTime' => fn(ParseNode $n) => $o->setReleaseDateTime($n->getDateTimeValue()),
+            'totalLicenseCount' => fn(ParseNode $n) => $o->setTotalLicenseCount($n->getIntegerValue()),
+            'usedLicenseCount' => fn(ParseNode $n) => $o->setUsedLicenseCount($n->getIntegerValue()),
+            'vppTokenAccountType' => fn(ParseNode $n) => $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)),
+            'vppTokenAppleId' => fn(ParseNode $n) => $o->setVppTokenAppleId($n->getStringValue()),
+            'vppTokenOrganizationName' => fn(ParseNode $n) => $o->setVppTokenOrganizationName($n->getStringValue()),
         ]);
     }
 

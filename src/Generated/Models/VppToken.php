@@ -120,17 +120,17 @@ class VppToken extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appleId' => function (ParseNode $n) use ($o) { $o->setAppleId($n->getStringValue()); },
-            'automaticallyUpdateApps' => function (ParseNode $n) use ($o) { $o->setAutomaticallyUpdateApps($n->getBooleanValue()); },
-            'countryOrRegion' => function (ParseNode $n) use ($o) { $o->setCountryOrRegion($n->getStringValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'lastSyncStatus' => function (ParseNode $n) use ($o) { $o->setLastSyncStatus($n->getEnumValue(VppTokenSyncStatus::class)); },
-            'organizationName' => function (ParseNode $n) use ($o) { $o->setOrganizationName($n->getStringValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(VppTokenState::class)); },
-            'token' => function (ParseNode $n) use ($o) { $o->setToken($n->getStringValue()); },
-            'vppTokenAccountType' => function (ParseNode $n) use ($o) { $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)); },
+            'appleId' => fn(ParseNode $n) => $o->setAppleId($n->getStringValue()),
+            'automaticallyUpdateApps' => fn(ParseNode $n) => $o->setAutomaticallyUpdateApps($n->getBooleanValue()),
+            'countryOrRegion' => fn(ParseNode $n) => $o->setCountryOrRegion($n->getStringValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'lastSyncDateTime' => fn(ParseNode $n) => $o->setLastSyncDateTime($n->getDateTimeValue()),
+            'lastSyncStatus' => fn(ParseNode $n) => $o->setLastSyncStatus($n->getEnumValue(VppTokenSyncStatus::class)),
+            'organizationName' => fn(ParseNode $n) => $o->setOrganizationName($n->getStringValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(VppTokenState::class)),
+            'token' => fn(ParseNode $n) => $o->setToken($n->getStringValue()),
+            'vppTokenAccountType' => fn(ParseNode $n) => $o->setVppTokenAccountType($n->getEnumValue(VppTokenAccountType::class)),
         ]);
     }
 

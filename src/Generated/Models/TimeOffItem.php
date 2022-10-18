@@ -37,7 +37,7 @@ class TimeOffItem extends ScheduleEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'timeOffReasonId' => function (ParseNode $n) use ($o) { $o->setTimeOffReasonId($n->getStringValue()); },
+            'timeOffReasonId' => fn(ParseNode $n) => $o->setTimeOffReasonId($n->getStringValue()),
         ]);
     }
 

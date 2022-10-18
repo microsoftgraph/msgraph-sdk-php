@@ -76,13 +76,13 @@ class Printer extends PrinterBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectors' => function (ParseNode $n) use ($o) { $o->setConnectors($n->getCollectionOfObjectValues(array(PrintConnector::class, 'createFromDiscriminatorValue'))); },
-            'hasPhysicalDevice' => function (ParseNode $n) use ($o) { $o->setHasPhysicalDevice($n->getBooleanValue()); },
-            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
-            'lastSeenDateTime' => function (ParseNode $n) use ($o) { $o->setLastSeenDateTime($n->getDateTimeValue()); },
-            'registeredDateTime' => function (ParseNode $n) use ($o) { $o->setRegisteredDateTime($n->getDateTimeValue()); },
-            'shares' => function (ParseNode $n) use ($o) { $o->setShares($n->getCollectionOfObjectValues(array(PrinterShare::class, 'createFromDiscriminatorValue'))); },
-            'taskTriggers' => function (ParseNode $n) use ($o) { $o->setTaskTriggers($n->getCollectionOfObjectValues(array(PrintTaskTrigger::class, 'createFromDiscriminatorValue'))); },
+            'connectors' => fn(ParseNode $n) => $o->setConnectors($n->getCollectionOfObjectValues([PrintConnector::class, 'createFromDiscriminatorValue'])),
+            'hasPhysicalDevice' => fn(ParseNode $n) => $o->setHasPhysicalDevice($n->getBooleanValue()),
+            'isShared' => fn(ParseNode $n) => $o->setIsShared($n->getBooleanValue()),
+            'lastSeenDateTime' => fn(ParseNode $n) => $o->setLastSeenDateTime($n->getDateTimeValue()),
+            'registeredDateTime' => fn(ParseNode $n) => $o->setRegisteredDateTime($n->getDateTimeValue()),
+            'shares' => fn(ParseNode $n) => $o->setShares($n->getCollectionOfObjectValues([PrinterShare::class, 'createFromDiscriminatorValue'])),
+            'taskTriggers' => fn(ParseNode $n) => $o->setTaskTriggers($n->getCollectionOfObjectValues([PrintTaskTrigger::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

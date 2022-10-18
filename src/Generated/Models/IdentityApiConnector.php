@@ -63,9 +63,9 @@ class IdentityApiConnector extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'authenticationConfiguration' => function (ParseNode $n) use ($o) { $o->setAuthenticationConfiguration($n->getObjectValue(array(ApiAuthenticationConfigurationBase::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'targetUrl' => function (ParseNode $n) use ($o) { $o->setTargetUrl($n->getStringValue()); },
+            'authenticationConfiguration' => fn(ParseNode $n) => $o->setAuthenticationConfiguration($n->getObjectValue([ApiAuthenticationConfigurationBase::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'targetUrl' => fn(ParseNode $n) => $o->setTargetUrl($n->getStringValue()),
         ]);
     }
 

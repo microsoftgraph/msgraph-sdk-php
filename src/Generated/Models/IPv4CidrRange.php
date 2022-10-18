@@ -45,7 +45,7 @@ class IPv4CidrRange extends IpRange implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'cidrAddress' => function (ParseNode $n) use ($o) { $o->setCidrAddress($n->getStringValue()); },
+            'cidrAddress' => fn(ParseNode $n) => $o->setCidrAddress($n->getStringValue()),
         ]);
     }
 

@@ -47,9 +47,9 @@ class TeamRenamedEventMessageDetail extends EventMessageDetail implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'teamDisplayName' => function (ParseNode $n) use ($o) { $o->setTeamDisplayName($n->getStringValue()); },
-            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'teamDisplayName' => fn(ParseNode $n) => $o->setTeamDisplayName($n->getStringValue()),
+            'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ]);
     }
 

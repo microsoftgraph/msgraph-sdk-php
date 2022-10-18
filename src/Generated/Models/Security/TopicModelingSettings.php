@@ -79,11 +79,11 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dynamicallyAdjustTopicCount' => function (ParseNode $n) use ($o) { $o->setDynamicallyAdjustTopicCount($n->getBooleanValue()); },
-            'ignoreNumbers' => function (ParseNode $n) use ($o) { $o->setIgnoreNumbers($n->getBooleanValue()); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'topicCount' => function (ParseNode $n) use ($o) { $o->setTopicCount($n->getIntegerValue()); },
+            'dynamicallyAdjustTopicCount' => fn(ParseNode $n) => $o->setDynamicallyAdjustTopicCount($n->getBooleanValue()),
+            'ignoreNumbers' => fn(ParseNode $n) => $o->setIgnoreNumbers($n->getBooleanValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'topicCount' => fn(ParseNode $n) => $o->setTopicCount($n->getIntegerValue()),
         ];
     }
 

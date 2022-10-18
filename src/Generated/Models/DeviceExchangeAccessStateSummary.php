@@ -92,12 +92,12 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedDeviceCount' => function (ParseNode $n) use ($o) { $o->setAllowedDeviceCount($n->getIntegerValue()); },
-            'blockedDeviceCount' => function (ParseNode $n) use ($o) { $o->setBlockedDeviceCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'quarantinedDeviceCount' => function (ParseNode $n) use ($o) { $o->setQuarantinedDeviceCount($n->getIntegerValue()); },
-            'unavailableDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnavailableDeviceCount($n->getIntegerValue()); },
-            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'allowedDeviceCount' => fn(ParseNode $n) => $o->setAllowedDeviceCount($n->getIntegerValue()),
+            'blockedDeviceCount' => fn(ParseNode $n) => $o->setBlockedDeviceCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'quarantinedDeviceCount' => fn(ParseNode $n) => $o->setQuarantinedDeviceCount($n->getIntegerValue()),
+            'unavailableDeviceCount' => fn(ParseNode $n) => $o->setUnavailableDeviceCount($n->getIntegerValue()),
+            'unknownDeviceCount' => fn(ParseNode $n) => $o->setUnknownDeviceCount($n->getIntegerValue()),
         ];
     }
 

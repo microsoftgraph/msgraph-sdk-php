@@ -45,7 +45,7 @@ class EmailIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
         ]);
     }
 

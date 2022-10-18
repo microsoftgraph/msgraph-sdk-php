@@ -25,6 +25,11 @@ class Chat extends Entity implements Parsable
     private ?array $installedApps = null;
     
     /**
+     * @var ChatMessageInfo|null $lastMessagePreview Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+    */
+    private ?ChatMessageInfo $lastMessagePreview = null;
+    
+    /**
      * @var DateTime|null $lastUpdatedDateTime Date and time at which the chat was renamed or list of members were last changed. Read-only.
     */
     private ?DateTime $lastUpdatedDateTime = null;
@@ -63,6 +68,11 @@ class Chat extends Entity implements Parsable
      * @var string|null $topic (Optional) Subject or topic for the chat. Only available for group chats.
     */
     private ?string $topic = null;
+    
+    /**
+     * @var ChatViewpoint|null $viewpoint Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+    */
+    private ?ChatViewpoint $viewpoint = null;
     
     /**
      * @var string|null $webUrl The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -109,18 +119,20 @@ class Chat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'chatType' => function (ParseNode $n) use ($o) { $o->setChatType($n->getEnumValue(ChatType::class)); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(TeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
-            'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
-            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
-            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
-            'onlineMeetingInfo' => function (ParseNode $n) use ($o) { $o->setOnlineMeetingInfo($n->getObjectValue(array(TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'))); },
-            'pinnedMessages' => function (ParseNode $n) use ($o) { $o->setPinnedMessages($n->getCollectionOfObjectValues(array(PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'))); },
-            'tabs' => function (ParseNode $n) use ($o) { $o->setTabs($n->getCollectionOfObjectValues(array(TeamsTab::class, 'createFromDiscriminatorValue'))); },
-            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
-            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
+            'chatType' => fn(ParseNode $n) => $o->setChatType($n->getEnumValue(ChatType::class)),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'installedApps' => fn(ParseNode $n) => $o->setInstalledApps($n->getCollectionOfObjectValues([TeamsAppInstallation::class, 'createFromDiscriminatorValue'])),
+            'lastMessagePreview' => fn(ParseNode $n) => $o->setLastMessagePreview($n->getObjectValue([ChatMessageInfo::class, 'createFromDiscriminatorValue'])),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
+            'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
+            'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
+            'onlineMeetingInfo' => fn(ParseNode $n) => $o->setOnlineMeetingInfo($n->getObjectValue([TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'])),
+            'pinnedMessages' => fn(ParseNode $n) => $o->setPinnedMessages($n->getCollectionOfObjectValues([PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'])),
+            'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
+            'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
+            'viewpoint' => fn(ParseNode $n) => $o->setViewpoint($n->getObjectValue([ChatViewpoint::class, 'createFromDiscriminatorValue'])),
+            'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
     }
 
@@ -130,6 +142,14 @@ class Chat extends Entity implements Parsable
     */
     public function getInstalledApps(): ?array {
         return $this->installedApps;
+    }
+
+    /**
+     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * @return ChatMessageInfo|null
+    */
+    public function getLastMessagePreview(): ?ChatMessageInfo {
+        return $this->lastMessagePreview;
     }
 
     /**
@@ -197,6 +217,14 @@ class Chat extends Entity implements Parsable
     }
 
     /**
+     * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * @return ChatViewpoint|null
+    */
+    public function getViewpoint(): ?ChatViewpoint {
+        return $this->viewpoint;
+    }
+
+    /**
      * Gets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
      * @return string|null
     */
@@ -213,6 +241,7 @@ class Chat extends Entity implements Parsable
         $writer->writeEnumValue('chatType', $this->chatType);
         $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
         $writer->writeCollectionOfObjectValues('installedApps', $this->installedApps);
+        $writer->writeObjectValue('lastMessagePreview', $this->lastMessagePreview);
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->lastUpdatedDateTime);
         $writer->writeCollectionOfObjectValues('members', $this->members);
         $writer->writeCollectionOfObjectValues('messages', $this->messages);
@@ -221,6 +250,7 @@ class Chat extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('tabs', $this->tabs);
         $writer->writeStringValue('tenantId', $this->tenantId);
         $writer->writeStringValue('topic', $this->topic);
+        $writer->writeObjectValue('viewpoint', $this->viewpoint);
         $writer->writeStringValue('webUrl', $this->webUrl);
     }
 
@@ -246,6 +276,14 @@ class Chat extends Entity implements Parsable
     */
     public function setInstalledApps(?array $value ): void {
         $this->installedApps = $value;
+    }
+
+    /**
+     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     *  @param ChatMessageInfo|null $value Value to set for the lastMessagePreview property.
+    */
+    public function setLastMessagePreview(?ChatMessageInfo $value ): void {
+        $this->lastMessagePreview = $value;
     }
 
     /**
@@ -310,6 +348,14 @@ class Chat extends Entity implements Parsable
     */
     public function setTopic(?string $value ): void {
         $this->topic = $value;
+    }
+
+    /**
+     * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     *  @param ChatViewpoint|null $value Value to set for the viewpoint property.
+    */
+    public function setViewpoint(?ChatViewpoint $value ): void {
+        $this->viewpoint = $value;
     }
 
     /**

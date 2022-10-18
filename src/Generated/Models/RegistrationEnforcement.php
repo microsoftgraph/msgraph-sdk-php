@@ -64,8 +64,8 @@ class RegistrationEnforcement implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'authenticationMethodsRegistrationCampaign' => function (ParseNode $n) use ($o) { $o->setAuthenticationMethodsRegistrationCampaign($n->getObjectValue(array(AuthenticationMethodsRegistrationCampaign::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'authenticationMethodsRegistrationCampaign' => fn(ParseNode $n) => $o->setAuthenticationMethodsRegistrationCampaign($n->getObjectValue([AuthenticationMethodsRegistrationCampaign::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

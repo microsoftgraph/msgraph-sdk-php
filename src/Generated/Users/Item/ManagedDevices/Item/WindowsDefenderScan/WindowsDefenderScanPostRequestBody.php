@@ -50,7 +50,7 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'quickScan' => function (ParseNode $n) use ($o) { $o->setQuickScan($n->getBooleanValue()); },
+            'quickScan' => fn(ParseNode $n) => $o->setQuickScan($n->getBooleanValue()),
         ];
     }
 

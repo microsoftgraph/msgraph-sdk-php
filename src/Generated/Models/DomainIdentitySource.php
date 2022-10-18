@@ -58,8 +58,8 @@ class DomainIdentitySource extends IdentitySource implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'domainName' => function (ParseNode $n) use ($o) { $o->setDomainName($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
         ]);
     }
 

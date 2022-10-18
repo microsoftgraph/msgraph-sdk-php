@@ -82,10 +82,10 @@ class AggregationOption implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bucketDefinition' => function (ParseNode $n) use ($o) { $o->setBucketDefinition($n->getObjectValue(array(BucketAggregationDefinition::class, 'createFromDiscriminatorValue'))); },
-            'field' => function (ParseNode $n) use ($o) { $o->setField($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'bucketDefinition' => fn(ParseNode $n) => $o->setBucketDefinition($n->getObjectValue([BucketAggregationDefinition::class, 'createFromDiscriminatorValue'])),
+            'field' => fn(ParseNode $n) => $o->setField($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
         ];
     }
 

@@ -66,10 +66,10 @@ class TeamworkActivityTopic implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'source' => function (ParseNode $n) use ($o) { $o->setSource($n->getEnumValue(TeamworkActivityTopicSource::class)); },
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(TeamworkActivityTopicSource::class)),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
+            'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ];
     }
 

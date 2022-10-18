@@ -68,10 +68,10 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activatedUsing' => function (ParseNode $n) use ($o) { $o->setActivatedUsing($n->getObjectValue(array(UnifiedRoleEligibilitySchedule::class, 'createFromDiscriminatorValue'))); },
-            'assignmentType' => function (ParseNode $n) use ($o) { $o->setAssignmentType($n->getStringValue()); },
-            'memberType' => function (ParseNode $n) use ($o) { $o->setMemberType($n->getStringValue()); },
-            'scheduleInfo' => function (ParseNode $n) use ($o) { $o->setScheduleInfo($n->getObjectValue(array(RequestSchedule::class, 'createFromDiscriminatorValue'))); },
+            'activatedUsing' => fn(ParseNode $n) => $o->setActivatedUsing($n->getObjectValue([UnifiedRoleEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
+            'assignmentType' => fn(ParseNode $n) => $o->setAssignmentType($n->getStringValue()),
+            'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getStringValue()),
+            'scheduleInfo' => fn(ParseNode $n) => $o->setScheduleInfo($n->getObjectValue([RequestSchedule::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

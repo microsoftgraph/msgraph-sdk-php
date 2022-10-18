@@ -82,11 +82,11 @@ class Security extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'alerts' => function (ParseNode $n) use ($o) { $o->setAlerts($n->getCollectionOfObjectValues(array(Alert::class, 'createFromDiscriminatorValue'))); },
-            'attackSimulation' => function (ParseNode $n) use ($o) { $o->setAttackSimulation($n->getObjectValue(array(AttackSimulationRoot::class, 'createFromDiscriminatorValue'))); },
-            'cases' => function (ParseNode $n) use ($o) { $o->setCases($n->getObjectValue(array(CasesRoot::class, 'createFromDiscriminatorValue'))); },
-            'secureScoreControlProfiles' => function (ParseNode $n) use ($o) { $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues(array(SecureScoreControlProfile::class, 'createFromDiscriminatorValue'))); },
-            'secureScores' => function (ParseNode $n) use ($o) { $o->setSecureScores($n->getCollectionOfObjectValues(array(SecureScore::class, 'createFromDiscriminatorValue'))); },
+            'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
+            'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
+            'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
+            'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

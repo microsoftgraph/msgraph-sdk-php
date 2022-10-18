@@ -61,10 +61,10 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'memberType' => function (ParseNode $n) use ($o) { $o->setMemberType($n->getStringValue()); },
-            'roleEligibilityScheduleId' => function (ParseNode $n) use ($o) { $o->setRoleEligibilityScheduleId($n->getStringValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getStringValue()),
+            'roleEligibilityScheduleId' => fn(ParseNode $n) => $o->setRoleEligibilityScheduleId($n->getStringValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
     }
 

@@ -69,10 +69,10 @@ class CloudCommunications extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callRecords' => function (ParseNode $n) use ($o) { $o->setCallRecords($n->getCollectionOfObjectValues(array(CallRecord::class, 'createFromDiscriminatorValue'))); },
-            'calls' => function (ParseNode $n) use ($o) { $o->setCalls($n->getCollectionOfObjectValues(array(Call::class, 'createFromDiscriminatorValue'))); },
-            'onlineMeetings' => function (ParseNode $n) use ($o) { $o->setOnlineMeetings($n->getCollectionOfObjectValues(array(OnlineMeeting::class, 'createFromDiscriminatorValue'))); },
-            'presences' => function (ParseNode $n) use ($o) { $o->setPresences($n->getCollectionOfObjectValues(array(Presence::class, 'createFromDiscriminatorValue'))); },
+            'callRecords' => fn(ParseNode $n) => $o->setCallRecords($n->getCollectionOfObjectValues([CallRecord::class, 'createFromDiscriminatorValue'])),
+            'calls' => fn(ParseNode $n) => $o->setCalls($n->getCollectionOfObjectValues([Call::class, 'createFromDiscriminatorValue'])),
+            'onlineMeetings' => fn(ParseNode $n) => $o->setOnlineMeetings($n->getCollectionOfObjectValues([OnlineMeeting::class, 'createFromDiscriminatorValue'])),
+            'presences' => fn(ParseNode $n) => $o->setPresences($n->getCollectionOfObjectValues([Presence::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

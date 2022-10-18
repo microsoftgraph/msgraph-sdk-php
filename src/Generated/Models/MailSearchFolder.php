@@ -52,10 +52,10 @@ class MailSearchFolder extends MailFolder implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'filterQuery' => function (ParseNode $n) use ($o) { $o->setFilterQuery($n->getStringValue()); },
-            'includeNestedFolders' => function (ParseNode $n) use ($o) { $o->setIncludeNestedFolders($n->getBooleanValue()); },
-            'isSupported' => function (ParseNode $n) use ($o) { $o->setIsSupported($n->getBooleanValue()); },
-            'sourceFolderIds' => function (ParseNode $n) use ($o) { $o->setSourceFolderIds($n->getCollectionOfPrimitiveValues()); },
+            'filterQuery' => fn(ParseNode $n) => $o->setFilterQuery($n->getStringValue()),
+            'includeNestedFolders' => fn(ParseNode $n) => $o->setIncludeNestedFolders($n->getBooleanValue()),
+            'isSupported' => fn(ParseNode $n) => $o->setIsSupported($n->getBooleanValue()),
+            'sourceFolderIds' => fn(ParseNode $n) => $o->setSourceFolderIds($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

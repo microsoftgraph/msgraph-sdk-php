@@ -38,7 +38,7 @@ class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionPaginati
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfEnumValues(CalendarRoleType::class)); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfEnumValues(CalendarRoleType::class)),
         ]);
     }
 

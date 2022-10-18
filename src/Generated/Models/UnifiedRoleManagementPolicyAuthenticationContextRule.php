@@ -50,8 +50,8 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'claimValue' => function (ParseNode $n) use ($o) { $o->setClaimValue($n->getStringValue()); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            'claimValue' => fn(ParseNode $n) => $o->setClaimValue($n->getStringValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
         ]);
     }
 

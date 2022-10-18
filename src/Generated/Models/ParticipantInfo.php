@@ -97,13 +97,13 @@ class ParticipantInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'countryCode' => function (ParseNode $n) use ($o) { $o->setCountryCode($n->getStringValue()); },
-            'endpointType' => function (ParseNode $n) use ($o) { $o->setEndpointType($n->getEnumValue(EndpointType::class)); },
-            'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'languageId' => function (ParseNode $n) use ($o) { $o->setLanguageId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
-            'region' => function (ParseNode $n) use ($o) { $o->setRegion($n->getStringValue()); },
+            'countryCode' => fn(ParseNode $n) => $o->setCountryCode($n->getStringValue()),
+            'endpointType' => fn(ParseNode $n) => $o->setEndpointType($n->getEnumValue(EndpointType::class)),
+            'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'languageId' => fn(ParseNode $n) => $o->setLanguageId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'participantId' => fn(ParseNode $n) => $o->setParticipantId($n->getStringValue()),
+            'region' => fn(ParseNode $n) => $o->setRegion($n->getStringValue()),
         ];
     }
 

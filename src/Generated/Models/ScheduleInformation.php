@@ -92,12 +92,12 @@ class ScheduleInformation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'availabilityView' => function (ParseNode $n) use ($o) { $o->setAvailabilityView($n->getStringValue()); },
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(FreeBusyError::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'scheduleId' => function (ParseNode $n) use ($o) { $o->setScheduleId($n->getStringValue()); },
-            'scheduleItems' => function (ParseNode $n) use ($o) { $o->setScheduleItems($n->getCollectionOfObjectValues(array(ScheduleItem::class, 'createFromDiscriminatorValue'))); },
-            'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getObjectValue(array(WorkingHours::class, 'createFromDiscriminatorValue'))); },
+            'availabilityView' => fn(ParseNode $n) => $o->setAvailabilityView($n->getStringValue()),
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([FreeBusyError::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'scheduleId' => fn(ParseNode $n) => $o->setScheduleId($n->getStringValue()),
+            'scheduleItems' => fn(ParseNode $n) => $o->setScheduleItems($n->getCollectionOfObjectValues([ScheduleItem::class, 'createFromDiscriminatorValue'])),
+            'workingHours' => fn(ParseNode $n) => $o->setWorkingHours($n->getObjectValue([WorkingHours::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

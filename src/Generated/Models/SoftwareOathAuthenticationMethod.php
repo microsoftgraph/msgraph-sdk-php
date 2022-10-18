@@ -37,7 +37,7 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements P
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'secretKey' => function (ParseNode $n) use ($o) { $o->setSecretKey($n->getStringValue()); },
+            'secretKey' => fn(ParseNode $n) => $o->setSecretKey($n->getStringValue()),
         ]);
     }
 

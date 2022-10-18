@@ -58,7 +58,7 @@ class ForceDeletePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'disableUserAccounts' => function (ParseNode $n) use ($o) { $o->setDisableUserAccounts($n->getBooleanValue()); },
+            'disableUserAccounts' => fn(ParseNode $n) => $o->setDisableUserAccounts($n->getBooleanValue()),
         ];
     }
 

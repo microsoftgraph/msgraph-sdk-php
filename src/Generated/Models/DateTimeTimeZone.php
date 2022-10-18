@@ -69,9 +69,9 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dateTime' => function (ParseNode $n) use ($o) { $o->setDateTime($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
+            'dateTime' => fn(ParseNode $n) => $o->setDateTime($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
         ];
     }
 

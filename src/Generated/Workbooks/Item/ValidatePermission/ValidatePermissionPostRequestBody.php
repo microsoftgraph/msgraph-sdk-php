@@ -63,8 +63,8 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'challengeToken' => function (ParseNode $n) use ($o) { $o->setChallengeToken($n->getStringValue()); },
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
+            'challengeToken' => fn(ParseNode $n) => $o->setChallengeToken($n->getStringValue()),
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
         ];
     }
 

@@ -61,9 +61,9 @@ class Image implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
+            'height' => fn(ParseNode $n) => $o->setHeight($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'width' => fn(ParseNode $n) => $o->setWidth($n->getIntegerValue()),
         ];
     }
 

@@ -45,7 +45,7 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'availability' => function (ParseNode $n) use ($o) { $o->setAvailability($n->getCollectionOfObjectValues(array(ShiftAvailability::class, 'createFromDiscriminatorValue'))); },
+            'availability' => fn(ParseNode $n) => $o->setAvailability($n->getCollectionOfObjectValues([ShiftAvailability::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

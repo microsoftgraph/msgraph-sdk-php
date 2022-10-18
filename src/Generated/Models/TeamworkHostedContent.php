@@ -66,8 +66,8 @@ class TeamworkHostedContent extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contentBytes' => function (ParseNode $n) use ($o) { $o->setContentBytes($n->getBinaryContent()); },
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'contentBytes' => fn(ParseNode $n) => $o->setContentBytes($n->getBinaryContent()),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
         ]);
     }
 

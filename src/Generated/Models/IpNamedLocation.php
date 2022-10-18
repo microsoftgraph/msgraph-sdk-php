@@ -42,8 +42,8 @@ class IpNamedLocation extends NamedLocation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ipRanges' => function (ParseNode $n) use ($o) { $o->setIpRanges($n->getCollectionOfObjectValues(array(IpRange::class, 'createFromDiscriminatorValue'))); },
-            'isTrusted' => function (ParseNode $n) use ($o) { $o->setIsTrusted($n->getBooleanValue()); },
+            'ipRanges' => fn(ParseNode $n) => $o->setIpRanges($n->getCollectionOfObjectValues([IpRange::class, 'createFromDiscriminatorValue'])),
+            'isTrusted' => fn(ParseNode $n) => $o->setIsTrusted($n->getBooleanValue()),
         ]);
     }
 

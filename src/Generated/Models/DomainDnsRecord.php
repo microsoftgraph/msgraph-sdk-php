@@ -34,7 +34,7 @@ class DomainDnsRecord extends Entity implements Parsable
     private ?int $ttl = null;
     
     /**
-     * Instantiates a new DomainDnsRecord and sets the default values.
+     * Instantiates a new domainDnsRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -68,11 +68,11 @@ class DomainDnsRecord extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isOptional' => function (ParseNode $n) use ($o) { $o->setIsOptional($n->getBooleanValue()); },
-            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
-            'recordType' => function (ParseNode $n) use ($o) { $o->setRecordType($n->getStringValue()); },
-            'supportedService' => function (ParseNode $n) use ($o) { $o->setSupportedService($n->getStringValue()); },
-            'ttl' => function (ParseNode $n) use ($o) { $o->setTtl($n->getIntegerValue()); },
+            'isOptional' => fn(ParseNode $n) => $o->setIsOptional($n->getBooleanValue()),
+            'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
+            'recordType' => fn(ParseNode $n) => $o->setRecordType($n->getStringValue()),
+            'supportedService' => fn(ParseNode $n) => $o->setSupportedService($n->getStringValue()),
+            'ttl' => fn(ParseNode $n) => $o->setTtl($n->getIntegerValue()),
         ]);
     }
 

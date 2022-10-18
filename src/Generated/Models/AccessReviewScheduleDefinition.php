@@ -164,21 +164,21 @@ class AccessReviewScheduleDefinition extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'additionalNotificationRecipients' => function (ParseNode $n) use ($o) { $o->setAdditionalNotificationRecipients($n->getCollectionOfObjectValues(array(AccessReviewNotificationRecipientItem::class, 'createFromDiscriminatorValue'))); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'descriptionForAdmins' => function (ParseNode $n) use ($o) { $o->setDescriptionForAdmins($n->getStringValue()); },
-            'descriptionForReviewers' => function (ParseNode $n) use ($o) { $o->setDescriptionForReviewers($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
-            'instanceEnumerationScope' => function (ParseNode $n) use ($o) { $o->setInstanceEnumerationScope($n->getObjectValue(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
-            'instances' => function (ParseNode $n) use ($o) { $o->setInstances($n->getCollectionOfObjectValues(array(AccessReviewInstance::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'reviewers' => function (ParseNode $n) use ($o) { $o->setReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getObjectValue(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
-            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(AccessReviewScheduleSettings::class, 'createFromDiscriminatorValue'))); },
-            'stageSettings' => function (ParseNode $n) use ($o) { $o->setStageSettings($n->getCollectionOfObjectValues(array(AccessReviewStageSettings::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
+            'additionalNotificationRecipients' => fn(ParseNode $n) => $o->setAdditionalNotificationRecipients($n->getCollectionOfObjectValues([AccessReviewNotificationRecipientItem::class, 'createFromDiscriminatorValue'])),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'descriptionForAdmins' => fn(ParseNode $n) => $o->setDescriptionForAdmins($n->getStringValue()),
+            'descriptionForReviewers' => fn(ParseNode $n) => $o->setDescriptionForReviewers($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            'instanceEnumerationScope' => fn(ParseNode $n) => $o->setInstanceEnumerationScope($n->getObjectValue([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
+            'instances' => fn(ParseNode $n) => $o->setInstances($n->getCollectionOfObjectValues([AccessReviewInstance::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getObjectValue([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([AccessReviewScheduleSettings::class, 'createFromDiscriminatorValue'])),
+            'stageSettings' => fn(ParseNode $n) => $o->setStageSettings($n->getCollectionOfObjectValues([AccessReviewStageSettings::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
     }
 

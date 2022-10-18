@@ -63,9 +63,9 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'channelDisplayName' => function (ParseNode $n) use ($o) { $o->setChannelDisplayName($n->getStringValue()); },
-            'channelId' => function (ParseNode $n) use ($o) { $o->setChannelId($n->getStringValue()); },
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'channelDisplayName' => fn(ParseNode $n) => $o->setChannelDisplayName($n->getStringValue()),
+            'channelId' => fn(ParseNode $n) => $o->setChannelId($n->getStringValue()),
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -36,7 +36,7 @@ class X509CertificateAuthenticationMethodConfigurationCollectionResponse extends
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(X509CertificateAuthenticationMethodConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([X509CertificateAuthenticationMethodConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

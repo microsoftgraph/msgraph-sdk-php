@@ -66,10 +66,10 @@ class File implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hashes' => function (ParseNode $n) use ($o) { $o->setHashes($n->getObjectValue(array(Hashes::class, 'createFromDiscriminatorValue'))); },
-            'mimeType' => function (ParseNode $n) use ($o) { $o->setMimeType($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'processingMetadata' => function (ParseNode $n) use ($o) { $o->setProcessingMetadata($n->getBooleanValue()); },
+            'hashes' => fn(ParseNode $n) => $o->setHashes($n->getObjectValue([Hashes::class, 'createFromDiscriminatorValue'])),
+            'mimeType' => fn(ParseNode $n) => $o->setMimeType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'processingMetadata' => fn(ParseNode $n) => $o->setProcessingMetadata($n->getBooleanValue()),
         ];
     }
 

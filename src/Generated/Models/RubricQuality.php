@@ -100,12 +100,12 @@ class RubricQuality implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'criteria' => function (ParseNode $n) use ($o) { $o->setCriteria($n->getCollectionOfObjectValues(array(RubricCriterion::class, 'createFromDiscriminatorValue'))); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'qualityId' => function (ParseNode $n) use ($o) { $o->setQualityId($n->getStringValue()); },
-            'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getFloatValue()); },
+            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getCollectionOfObjectValues([RubricCriterion::class, 'createFromDiscriminatorValue'])),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'qualityId' => fn(ParseNode $n) => $o->setQualityId($n->getStringValue()),
+            'weight' => fn(ParseNode $n) => $o->setWeight($n->getFloatValue()),
         ];
     }
 

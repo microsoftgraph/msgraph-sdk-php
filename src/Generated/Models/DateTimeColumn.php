@@ -69,9 +69,9 @@ class DateTimeColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'displayAs' => fn(ParseNode $n) => $o->setDisplayAs($n->getStringValue()),
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

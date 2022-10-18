@@ -64,8 +64,8 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'emailAddresses' => function (ParseNode $n) use ($o) { $o->setEmailAddresses($n->getCollectionOfPrimitiveValues()); },
-            'mailTipsOptions' => function (ParseNode $n) use ($o) { $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)); },
+            'emailAddresses' => fn(ParseNode $n) => $o->setEmailAddresses($n->getCollectionOfPrimitiveValues()),
+            'mailTipsOptions' => fn(ParseNode $n) => $o->setMailTipsOptions($n->getEnumValue(MailTipsType::class)),
         ];
     }
 

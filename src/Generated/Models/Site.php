@@ -105,7 +105,7 @@ class Site extends BaseItem implements Parsable
     private ?array $termStores = null;
     
     /**
-     * Instantiates a new site and sets the default values.
+     * Instantiates a new Site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -192,25 +192,25 @@ class Site extends BaseItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'analytics' => function (ParseNode $n) use ($o) { $o->setAnalytics($n->getObjectValue(array(ItemAnalytics::class, 'createFromDiscriminatorValue'))); },
-            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
-            'contentTypes' => function (ParseNode $n) use ($o) { $o->setContentTypes($n->getCollectionOfObjectValues(array(ContentType::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'drive' => function (ParseNode $n) use ($o) { $o->setDrive($n->getObjectValue(array(Drive::class, 'createFromDiscriminatorValue'))); },
-            'drives' => function (ParseNode $n) use ($o) { $o->setDrives($n->getCollectionOfObjectValues(array(Drive::class, 'createFromDiscriminatorValue'))); },
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(PublicError::class, 'createFromDiscriminatorValue'))); },
-            'externalColumns' => function (ParseNode $n) use ($o) { $o->setExternalColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
-            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(BaseItem::class, 'createFromDiscriminatorValue'))); },
-            'lists' => function (ParseNode $n) use ($o) { $o->setLists($n->getCollectionOfObjectValues(array(EscapedList::class, 'createFromDiscriminatorValue'))); },
-            'onenote' => function (ParseNode $n) use ($o) { $o->setOnenote($n->getObjectValue(array(Onenote::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(RichLongRunningOperation::class, 'createFromDiscriminatorValue'))); },
-            'permissions' => function (ParseNode $n) use ($o) { $o->setPermissions($n->getCollectionOfObjectValues(array(Permission::class, 'createFromDiscriminatorValue'))); },
-            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(Root::class, 'createFromDiscriminatorValue'))); },
-            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
-            'siteCollection' => function (ParseNode $n) use ($o) { $o->setSiteCollection($n->getObjectValue(array(SiteCollection::class, 'createFromDiscriminatorValue'))); },
-            'sites' => function (ParseNode $n) use ($o) { $o->setSites($n->getCollectionOfObjectValues(array(Site::class, 'createFromDiscriminatorValue'))); },
-            'termStore' => function (ParseNode $n) use ($o) { $o->setTermStore($n->getObjectValue(array(Store::class, 'createFromDiscriminatorValue'))); },
-            'termStores' => function (ParseNode $n) use ($o) { $o->setTermStores($n->getCollectionOfObjectValues(array(Store::class, 'createFromDiscriminatorValue'))); },
+            'analytics' => fn(ParseNode $n) => $o->setAnalytics($n->getObjectValue([ItemAnalytics::class, 'createFromDiscriminatorValue'])),
+            'columns' => fn(ParseNode $n) => $o->setColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'contentTypes' => fn(ParseNode $n) => $o->setContentTypes($n->getCollectionOfObjectValues([ContentType::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
+            'drives' => fn(ParseNode $n) => $o->setDrives($n->getCollectionOfObjectValues([Drive::class, 'createFromDiscriminatorValue'])),
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
+            'externalColumns' => fn(ParseNode $n) => $o->setExternalColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([BaseItem::class, 'createFromDiscriminatorValue'])),
+            'lists' => fn(ParseNode $n) => $o->setLists($n->getCollectionOfObjectValues([EscapedList::class, 'createFromDiscriminatorValue'])),
+            'onenote' => fn(ParseNode $n) => $o->setOnenote($n->getObjectValue([Onenote::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([RichLongRunningOperation::class, 'createFromDiscriminatorValue'])),
+            'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfObjectValues([Permission::class, 'createFromDiscriminatorValue'])),
+            'root' => fn(ParseNode $n) => $o->setRoot($n->getObjectValue([Root::class, 'createFromDiscriminatorValue'])),
+            'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
+            'siteCollection' => fn(ParseNode $n) => $o->setSiteCollection($n->getObjectValue([SiteCollection::class, 'createFromDiscriminatorValue'])),
+            'sites' => fn(ParseNode $n) => $o->setSites($n->getCollectionOfObjectValues([Site::class, 'createFromDiscriminatorValue'])),
+            'termStore' => fn(ParseNode $n) => $o->setTermStore($n->getObjectValue([Store::class, 'createFromDiscriminatorValue'])),
+            'termStores' => fn(ParseNode $n) => $o->setTermStores($n->getCollectionOfObjectValues([Store::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

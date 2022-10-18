@@ -64,9 +64,9 @@ class ExternalItem extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acl' => function (ParseNode $n) use ($o) { $o->setAcl($n->getCollectionOfObjectValues(array(Acl::class, 'createFromDiscriminatorValue'))); },
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(ExternalItemContent::class, 'createFromDiscriminatorValue'))); },
-            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getObjectValue(array(Properties::class, 'createFromDiscriminatorValue'))); },
+            'acl' => fn(ParseNode $n) => $o->setAcl($n->getCollectionOfObjectValues([Acl::class, 'createFromDiscriminatorValue'])),
+            'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([ExternalItemContent::class, 'createFromDiscriminatorValue'])),
+            'properties' => fn(ParseNode $n) => $o->setProperties($n->getObjectValue([Properties::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

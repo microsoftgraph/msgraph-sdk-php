@@ -97,13 +97,13 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'externalAudience' => function (ParseNode $n) use ($o) { $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)); },
-            'externalReplyMessage' => function (ParseNode $n) use ($o) { $o->setExternalReplyMessage($n->getStringValue()); },
-            'internalReplyMessage' => function (ParseNode $n) use ($o) { $o->setInternalReplyMessage($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'scheduledEndDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'scheduledStartDateTime' => function (ParseNode $n) use ($o) { $o->setScheduledStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)); },
+            'externalAudience' => fn(ParseNode $n) => $o->setExternalAudience($n->getEnumValue(ExternalAudienceScope::class)),
+            'externalReplyMessage' => fn(ParseNode $n) => $o->setExternalReplyMessage($n->getStringValue()),
+            'internalReplyMessage' => fn(ParseNode $n) => $o->setInternalReplyMessage($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'scheduledEndDateTime' => fn(ParseNode $n) => $o->setScheduledEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'scheduledStartDateTime' => fn(ParseNode $n) => $o->setScheduledStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AutomaticRepliesStatus::class)),
         ];
     }
 

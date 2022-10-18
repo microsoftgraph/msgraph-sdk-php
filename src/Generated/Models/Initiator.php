@@ -37,7 +37,7 @@ class Initiator extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiatorType' => function (ParseNode $n) use ($o) { $o->setInitiatorType($n->getEnumValue(InitiatorType::class)); },
+            'initiatorType' => fn(ParseNode $n) => $o->setInitiatorType($n->getEnumValue(InitiatorType::class)),
         ]);
     }
 

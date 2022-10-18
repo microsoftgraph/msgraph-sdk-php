@@ -114,16 +114,16 @@ class EscapedList extends BaseItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
-            'contentTypes' => function (ParseNode $n) use ($o) { $o->setContentTypes($n->getCollectionOfObjectValues(array(ContentType::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'drive' => function (ParseNode $n) use ($o) { $o->setDrive($n->getObjectValue(array(Drive::class, 'createFromDiscriminatorValue'))); },
-            'list' => function (ParseNode $n) use ($o) { $o->setList($n->getObjectValue(array(ListInfo::class, 'createFromDiscriminatorValue'))); },
-            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(ListItem::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(RichLongRunningOperation::class, 'createFromDiscriminatorValue'))); },
-            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
-            'subscriptions' => function (ParseNode $n) use ($o) { $o->setSubscriptions($n->getCollectionOfObjectValues(array(Subscription::class, 'createFromDiscriminatorValue'))); },
-            'system' => function (ParseNode $n) use ($o) { $o->setSystem($n->getObjectValue(array(SystemFacet::class, 'createFromDiscriminatorValue'))); },
+            'columns' => fn(ParseNode $n) => $o->setColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'contentTypes' => fn(ParseNode $n) => $o->setContentTypes($n->getCollectionOfObjectValues([ContentType::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
+            'list' => fn(ParseNode $n) => $o->setList($n->getObjectValue([ListInfo::class, 'createFromDiscriminatorValue'])),
+            'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([ListItem::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([RichLongRunningOperation::class, 'createFromDiscriminatorValue'])),
+            'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
+            'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([Subscription::class, 'createFromDiscriminatorValue'])),
+            'system' => fn(ParseNode $n) => $o->setSystem($n->getObjectValue([SystemFacet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

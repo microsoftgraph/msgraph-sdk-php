@@ -71,11 +71,11 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isActive' => function (ParseNode $n) use ($o) { $o->setIsActive($n->getBooleanValue()); },
-            'notAfter' => function (ParseNode $n) use ($o) { $o->setNotAfter($n->getIntegerValue()); },
-            'notBefore' => function (ParseNode $n) use ($o) { $o->setNotBefore($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'thumbprint' => function (ParseNode $n) use ($o) { $o->setThumbprint($n->getStringValue()); },
+            'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
+            'notAfter' => fn(ParseNode $n) => $o->setNotAfter($n->getIntegerValue()),
+            'notBefore' => fn(ParseNode $n) => $o->setNotBefore($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'thumbprint' => fn(ParseNode $n) => $o->setThumbprint($n->getStringValue()),
         ];
     }
 

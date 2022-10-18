@@ -50,8 +50,8 @@ class WorkbookFunctionResult extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getStringValue()); },
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'error' => fn(ParseNode $n) => $o->setError($n->getStringValue()),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

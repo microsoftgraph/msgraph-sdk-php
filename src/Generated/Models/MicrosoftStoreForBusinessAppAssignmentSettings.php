@@ -37,7 +37,7 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'useDeviceContext' => function (ParseNode $n) use ($o) { $o->setUseDeviceContext($n->getBooleanValue()); },
+            'useDeviceContext' => fn(ParseNode $n) => $o->setUseDeviceContext($n->getBooleanValue()),
         ]);
     }
 

@@ -37,7 +37,7 @@ class SingleValueLegacyExtendedProperty extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ]);
     }
 

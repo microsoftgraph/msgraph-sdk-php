@@ -90,7 +90,7 @@ class WindowsAutopilotDeviceIdentity extends Entity implements Parsable
     private ?string $userPrincipalName = null;
     
     /**
-     * Instantiates a new WindowsAutopilotDeviceIdentity and sets the default values.
+     * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -145,22 +145,22 @@ class WindowsAutopilotDeviceIdentity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addressableUserName' => function (ParseNode $n) use ($o) { $o->setAddressableUserName($n->getStringValue()); },
-            'azureActiveDirectoryDeviceId' => function (ParseNode $n) use ($o) { $o->setAzureActiveDirectoryDeviceId($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'enrollmentState' => function (ParseNode $n) use ($o) { $o->setEnrollmentState($n->getEnumValue(EnrollmentState::class)); },
-            'groupTag' => function (ParseNode $n) use ($o) { $o->setGroupTag($n->getStringValue()); },
-            'lastContactedDateTime' => function (ParseNode $n) use ($o) { $o->setLastContactedDateTime($n->getDateTimeValue()); },
-            'managedDeviceId' => function (ParseNode $n) use ($o) { $o->setManagedDeviceId($n->getStringValue()); },
-            'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
-            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
-            'productKey' => function (ParseNode $n) use ($o) { $o->setProductKey($n->getStringValue()); },
-            'purchaseOrderIdentifier' => function (ParseNode $n) use ($o) { $o->setPurchaseOrderIdentifier($n->getStringValue()); },
-            'resourceName' => function (ParseNode $n) use ($o) { $o->setResourceName($n->getStringValue()); },
-            'serialNumber' => function (ParseNode $n) use ($o) { $o->setSerialNumber($n->getStringValue()); },
-            'skuNumber' => function (ParseNode $n) use ($o) { $o->setSkuNumber($n->getStringValue()); },
-            'systemFamily' => function (ParseNode $n) use ($o) { $o->setSystemFamily($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'addressableUserName' => fn(ParseNode $n) => $o->setAddressableUserName($n->getStringValue()),
+            'azureActiveDirectoryDeviceId' => fn(ParseNode $n) => $o->setAzureActiveDirectoryDeviceId($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'enrollmentState' => fn(ParseNode $n) => $o->setEnrollmentState($n->getEnumValue(EnrollmentState::class)),
+            'groupTag' => fn(ParseNode $n) => $o->setGroupTag($n->getStringValue()),
+            'lastContactedDateTime' => fn(ParseNode $n) => $o->setLastContactedDateTime($n->getDateTimeValue()),
+            'managedDeviceId' => fn(ParseNode $n) => $o->setManagedDeviceId($n->getStringValue()),
+            'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
+            'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
+            'productKey' => fn(ParseNode $n) => $o->setProductKey($n->getStringValue()),
+            'purchaseOrderIdentifier' => fn(ParseNode $n) => $o->setPurchaseOrderIdentifier($n->getStringValue()),
+            'resourceName' => fn(ParseNode $n) => $o->setResourceName($n->getStringValue()),
+            'serialNumber' => fn(ParseNode $n) => $o->setSerialNumber($n->getStringValue()),
+            'skuNumber' => fn(ParseNode $n) => $o->setSkuNumber($n->getStringValue()),
+            'systemFamily' => fn(ParseNode $n) => $o->setSystemFamily($n->getStringValue()),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
     }
 

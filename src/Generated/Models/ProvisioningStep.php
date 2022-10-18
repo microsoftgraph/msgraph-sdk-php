@@ -92,12 +92,12 @@ class ProvisioningStep implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(DetailsInfo::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'provisioningStepType' => function (ParseNode $n) use ($o) { $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'details' => fn(ParseNode $n) => $o->setDetails($n->getObjectValue([DetailsInfo::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'provisioningStepType' => fn(ParseNode $n) => $o->setProvisioningStepType($n->getEnumValue(ProvisioningStepType::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningResult::class)),
         ];
     }
 

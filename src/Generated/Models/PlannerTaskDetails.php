@@ -68,10 +68,10 @@ class PlannerTaskDetails extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'checklist' => function (ParseNode $n) use ($o) { $o->setChecklist($n->getObjectValue(array(PlannerChecklistItems::class, 'createFromDiscriminatorValue'))); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'previewType' => function (ParseNode $n) use ($o) { $o->setPreviewType($n->getEnumValue(PlannerPreviewType::class)); },
-            'references' => function (ParseNode $n) use ($o) { $o->setReferences($n->getObjectValue(array(PlannerExternalReferences::class, 'createFromDiscriminatorValue'))); },
+            'checklist' => fn(ParseNode $n) => $o->setChecklist($n->getObjectValue([PlannerChecklistItems::class, 'createFromDiscriminatorValue'])),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'previewType' => fn(ParseNode $n) => $o->setPreviewType($n->getEnumValue(PlannerPreviewType::class)),
+            'references' => fn(ParseNode $n) => $o->setReferences($n->getObjectValue([PlannerExternalReferences::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

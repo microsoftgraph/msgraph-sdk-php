@@ -50,8 +50,8 @@ class GroupMembers extends SubjectSet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'groupId' => function (ParseNode $n) use ($o) { $o->setGroupId($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
         ]);
     }
 

@@ -246,22 +246,22 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'extensionAttribute1' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute1($n->getStringValue()); },
-            'extensionAttribute10' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute10($n->getStringValue()); },
-            'extensionAttribute11' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute11($n->getStringValue()); },
-            'extensionAttribute12' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute12($n->getStringValue()); },
-            'extensionAttribute13' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute13($n->getStringValue()); },
-            'extensionAttribute14' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute14($n->getStringValue()); },
-            'extensionAttribute15' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute15($n->getStringValue()); },
-            'extensionAttribute2' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute2($n->getStringValue()); },
-            'extensionAttribute3' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute3($n->getStringValue()); },
-            'extensionAttribute4' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute4($n->getStringValue()); },
-            'extensionAttribute5' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute5($n->getStringValue()); },
-            'extensionAttribute6' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute6($n->getStringValue()); },
-            'extensionAttribute7' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute7($n->getStringValue()); },
-            'extensionAttribute8' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute8($n->getStringValue()); },
-            'extensionAttribute9' => function (ParseNode $n) use ($o) { $o->setExtensionAttribute9($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'extensionAttribute1' => fn(ParseNode $n) => $o->setExtensionAttribute1($n->getStringValue()),
+            'extensionAttribute10' => fn(ParseNode $n) => $o->setExtensionAttribute10($n->getStringValue()),
+            'extensionAttribute11' => fn(ParseNode $n) => $o->setExtensionAttribute11($n->getStringValue()),
+            'extensionAttribute12' => fn(ParseNode $n) => $o->setExtensionAttribute12($n->getStringValue()),
+            'extensionAttribute13' => fn(ParseNode $n) => $o->setExtensionAttribute13($n->getStringValue()),
+            'extensionAttribute14' => fn(ParseNode $n) => $o->setExtensionAttribute14($n->getStringValue()),
+            'extensionAttribute15' => fn(ParseNode $n) => $o->setExtensionAttribute15($n->getStringValue()),
+            'extensionAttribute2' => fn(ParseNode $n) => $o->setExtensionAttribute2($n->getStringValue()),
+            'extensionAttribute3' => fn(ParseNode $n) => $o->setExtensionAttribute3($n->getStringValue()),
+            'extensionAttribute4' => fn(ParseNode $n) => $o->setExtensionAttribute4($n->getStringValue()),
+            'extensionAttribute5' => fn(ParseNode $n) => $o->setExtensionAttribute5($n->getStringValue()),
+            'extensionAttribute6' => fn(ParseNode $n) => $o->setExtensionAttribute6($n->getStringValue()),
+            'extensionAttribute7' => fn(ParseNode $n) => $o->setExtensionAttribute7($n->getStringValue()),
+            'extensionAttribute8' => fn(ParseNode $n) => $o->setExtensionAttribute8($n->getStringValue()),
+            'extensionAttribute9' => fn(ParseNode $n) => $o->setExtensionAttribute9($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

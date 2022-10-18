@@ -118,14 +118,14 @@ class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decisionsThatWillMoveToNextStage' => function (ParseNode $n) use ($o) { $o->setDecisionsThatWillMoveToNextStage($n->getCollectionOfPrimitiveValues()); },
-            'dependsOn' => function (ParseNode $n) use ($o) { $o->setDependsOn($n->getCollectionOfPrimitiveValues()); },
-            'durationInDays' => function (ParseNode $n) use ($o) { $o->setDurationInDays($n->getIntegerValue()); },
-            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'recommendationsEnabled' => function (ParseNode $n) use ($o) { $o->setRecommendationsEnabled($n->getBooleanValue()); },
-            'reviewers' => function (ParseNode $n) use ($o) { $o->setReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
-            'stageId' => function (ParseNode $n) use ($o) { $o->setStageId($n->getStringValue()); },
+            'decisionsThatWillMoveToNextStage' => fn(ParseNode $n) => $o->setDecisionsThatWillMoveToNextStage($n->getCollectionOfPrimitiveValues()),
+            'dependsOn' => fn(ParseNode $n) => $o->setDependsOn($n->getCollectionOfPrimitiveValues()),
+            'durationInDays' => fn(ParseNode $n) => $o->setDurationInDays($n->getIntegerValue()),
+            'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recommendationsEnabled' => fn(ParseNode $n) => $o->setRecommendationsEnabled($n->getBooleanValue()),
+            'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            'stageId' => fn(ParseNode $n) => $o->setStageId($n->getStringValue()),
         ];
     }
 

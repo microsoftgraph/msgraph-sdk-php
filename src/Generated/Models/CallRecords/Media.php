@@ -113,13 +113,13 @@ class Media implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'calleeDevice' => function (ParseNode $n) use ($o) { $o->setCalleeDevice($n->getObjectValue(array(DeviceInfo::class, 'createFromDiscriminatorValue'))); },
-            'calleeNetwork' => function (ParseNode $n) use ($o) { $o->setCalleeNetwork($n->getObjectValue(array(NetworkInfo::class, 'createFromDiscriminatorValue'))); },
-            'callerDevice' => function (ParseNode $n) use ($o) { $o->setCallerDevice($n->getObjectValue(array(DeviceInfo::class, 'createFromDiscriminatorValue'))); },
-            'callerNetwork' => function (ParseNode $n) use ($o) { $o->setCallerNetwork($n->getObjectValue(array(NetworkInfo::class, 'createFromDiscriminatorValue'))); },
-            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'streams' => function (ParseNode $n) use ($o) { $o->setStreams($n->getCollectionOfObjectValues(array(MediaStream::class, 'createFromDiscriminatorValue'))); },
+            'calleeDevice' => fn(ParseNode $n) => $o->setCalleeDevice($n->getObjectValue([DeviceInfo::class, 'createFromDiscriminatorValue'])),
+            'calleeNetwork' => fn(ParseNode $n) => $o->setCalleeNetwork($n->getObjectValue([NetworkInfo::class, 'createFromDiscriminatorValue'])),
+            'callerDevice' => fn(ParseNode $n) => $o->setCallerDevice($n->getObjectValue([DeviceInfo::class, 'createFromDiscriminatorValue'])),
+            'callerNetwork' => fn(ParseNode $n) => $o->setCallerNetwork($n->getObjectValue([NetworkInfo::class, 'createFromDiscriminatorValue'])),
+            'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'streams' => fn(ParseNode $n) => $o->setStreams($n->getCollectionOfObjectValues([MediaStream::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

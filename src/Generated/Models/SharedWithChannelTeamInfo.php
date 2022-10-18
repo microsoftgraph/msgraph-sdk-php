@@ -50,8 +50,8 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedMembers' => function (ParseNode $n) use ($o) { $o->setAllowedMembers($n->getCollectionOfObjectValues(array(ConversationMember::class, 'createFromDiscriminatorValue'))); },
-            'isHostTeam' => function (ParseNode $n) use ($o) { $o->setIsHostTeam($n->getBooleanValue()); },
+            'allowedMembers' => fn(ParseNode $n) => $o->setAllowedMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
+            'isHostTeam' => fn(ParseNode $n) => $o->setIsHostTeam($n->getBooleanValue()),
         ]);
     }
 

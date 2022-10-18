@@ -77,9 +77,9 @@ class EmployeeOrgData implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'costCenter' => function (ParseNode $n) use ($o) { $o->setCostCenter($n->getStringValue()); },
-            'division' => function (ParseNode $n) use ($o) { $o->setDivision($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'costCenter' => fn(ParseNode $n) => $o->setCostCenter($n->getStringValue()),
+            'division' => fn(ParseNode $n) => $o->setDivision($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

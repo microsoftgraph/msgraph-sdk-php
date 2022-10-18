@@ -36,7 +36,7 @@ class Windows10CompliancePolicyCollectionResponse extends BaseCollectionPaginati
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(Windows10CompliancePolicy::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([Windows10CompliancePolicy::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

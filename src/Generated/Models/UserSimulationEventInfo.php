@@ -101,12 +101,12 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'browser' => function (ParseNode $n) use ($o) { $o->setBrowser($n->getStringValue()); },
-            'eventDateTime' => function (ParseNode $n) use ($o) { $o->setEventDateTime($n->getDateTimeValue()); },
-            'eventName' => function (ParseNode $n) use ($o) { $o->setEventName($n->getStringValue()); },
-            'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'osPlatformDeviceDetails' => function (ParseNode $n) use ($o) { $o->setOsPlatformDeviceDetails($n->getStringValue()); },
+            'browser' => fn(ParseNode $n) => $o->setBrowser($n->getStringValue()),
+            'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
+            'eventName' => fn(ParseNode $n) => $o->setEventName($n->getStringValue()),
+            'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'osPlatformDeviceDetails' => fn(ParseNode $n) => $o->setOsPlatformDeviceDetails($n->getStringValue()),
         ];
     }
 

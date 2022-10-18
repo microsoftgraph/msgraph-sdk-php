@@ -69,9 +69,9 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'errorInformation' => function (ParseNode $n) use ($o) { $o->setErrorInformation($n->getObjectValue(array(ProvisioningErrorInfo::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ProvisioningResult::class)); },
+            'errorInformation' => fn(ParseNode $n) => $o->setErrorInformation($n->getObjectValue([ProvisioningErrorInfo::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProvisioningResult::class)),
         ];
     }
 

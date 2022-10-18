@@ -14,7 +14,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     private ?array $members = null;
     
     /**
-     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -37,7 +37,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfPrimitiveValues()); },
+            'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

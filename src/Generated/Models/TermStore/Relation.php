@@ -53,10 +53,10 @@ class Relation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'fromTerm' => function (ParseNode $n) use ($o) { $o->setFromTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
-            'relationship' => function (ParseNode $n) use ($o) { $o->setRelationship($n->getEnumValue(RelationType::class)); },
-            'set' => function (ParseNode $n) use ($o) { $o->setSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
-            'toTerm' => function (ParseNode $n) use ($o) { $o->setToTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'fromTerm' => fn(ParseNode $n) => $o->setFromTerm($n->getObjectValue([Term::class, 'createFromDiscriminatorValue'])),
+            'relationship' => fn(ParseNode $n) => $o->setRelationship($n->getEnumValue(RelationType::class)),
+            'set' => fn(ParseNode $n) => $o->setSet($n->getObjectValue([Set::class, 'createFromDiscriminatorValue'])),
+            'toTerm' => fn(ParseNode $n) => $o->setToTerm($n->getObjectValue([Term::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

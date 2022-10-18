@@ -77,9 +77,9 @@ class SearchAggregation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'buckets' => function (ParseNode $n) use ($o) { $o->setBuckets($n->getCollectionOfObjectValues(array(SearchBucket::class, 'createFromDiscriminatorValue'))); },
-            'field' => function (ParseNode $n) use ($o) { $o->setField($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'buckets' => fn(ParseNode $n) => $o->setBuckets($n->getCollectionOfObjectValues([SearchBucket::class, 'createFromDiscriminatorValue'])),
+            'field' => fn(ParseNode $n) => $o->setField($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

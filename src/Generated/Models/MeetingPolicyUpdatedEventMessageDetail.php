@@ -47,9 +47,9 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'meetingChatEnabled' => function (ParseNode $n) use ($o) { $o->setMeetingChatEnabled($n->getBooleanValue()); },
-            'meetingChatId' => function (ParseNode $n) use ($o) { $o->setMeetingChatId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'meetingChatEnabled' => fn(ParseNode $n) => $o->setMeetingChatEnabled($n->getBooleanValue()),
+            'meetingChatId' => fn(ParseNode $n) => $o->setMeetingChatId($n->getStringValue()),
         ]);
     }
 

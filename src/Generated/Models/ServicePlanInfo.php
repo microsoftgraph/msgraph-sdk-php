@@ -79,11 +79,11 @@ class ServicePlanInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'provisioningStatus' => function (ParseNode $n) use ($o) { $o->setProvisioningStatus($n->getStringValue()); },
-            'servicePlanId' => function (ParseNode $n) use ($o) { $o->setServicePlanId($n->getStringValue()); },
-            'servicePlanName' => function (ParseNode $n) use ($o) { $o->setServicePlanName($n->getStringValue()); },
+            'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'provisioningStatus' => fn(ParseNode $n) => $o->setProvisioningStatus($n->getStringValue()),
+            'servicePlanId' => fn(ParseNode $n) => $o->setServicePlanId($n->getStringValue()),
+            'servicePlanName' => fn(ParseNode $n) => $o->setServicePlanName($n->getStringValue()),
         ];
     }
 

@@ -82,10 +82,10 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'blockCrossOrganizationWriteAccess' => function (ParseNode $n) use ($o) { $o->setBlockCrossOrganizationWriteAccess($n->getBooleanValue()); },
-            'encryptionMethod' => function (ParseNode $n) use ($o) { $o->setEncryptionMethod($n->getEnumValue(BitLockerEncryptionMethod::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'requireEncryptionForWriteAccess' => function (ParseNode $n) use ($o) { $o->setRequireEncryptionForWriteAccess($n->getBooleanValue()); },
+            'blockCrossOrganizationWriteAccess' => fn(ParseNode $n) => $o->setBlockCrossOrganizationWriteAccess($n->getBooleanValue()),
+            'encryptionMethod' => fn(ParseNode $n) => $o->setEncryptionMethod($n->getEnumValue(BitLockerEncryptionMethod::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'requireEncryptionForWriteAccess' => fn(ParseNode $n) => $o->setRequireEncryptionForWriteAccess($n->getBooleanValue()),
         ];
     }
 

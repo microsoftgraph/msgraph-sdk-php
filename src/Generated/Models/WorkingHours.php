@@ -88,11 +88,11 @@ class WorkingHours implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
-            'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getTimeValue()); },
-            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getObjectValue(array(TimeZoneBase::class, 'createFromDiscriminatorValue'))); },
+            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)),
+            'endTime' => fn(ParseNode $n) => $o->setEndTime($n->getTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'startTime' => fn(ParseNode $n) => $o->setStartTime($n->getTimeValue()),
+            'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getObjectValue([TimeZoneBase::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

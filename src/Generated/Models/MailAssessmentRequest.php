@@ -55,9 +55,9 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'destinationRoutingReason' => function (ParseNode $n) use ($o) { $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)); },
-            'messageUri' => function (ParseNode $n) use ($o) { $o->setMessageUri($n->getStringValue()); },
-            'recipientEmail' => function (ParseNode $n) use ($o) { $o->setRecipientEmail($n->getStringValue()); },
+            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)),
+            'messageUri' => fn(ParseNode $n) => $o->setMessageUri($n->getStringValue()),
+            'recipientEmail' => fn(ParseNode $n) => $o->setRecipientEmail($n->getStringValue()),
         ]);
     }
 

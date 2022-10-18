@@ -47,9 +47,9 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'productCode' => function (ParseNode $n) use ($o) { $o->setProductCode($n->getStringValue()); },
-            'productVersion' => function (ParseNode $n) use ($o) { $o->setProductVersion($n->getStringValue()); },
-            'productVersionOperator' => function (ParseNode $n) use ($o) { $o->setProductVersionOperator($n->getEnumValue(Win32LobAppRuleOperator::class)); },
+            'productCode' => fn(ParseNode $n) => $o->setProductCode($n->getStringValue()),
+            'productVersion' => fn(ParseNode $n) => $o->setProductVersion($n->getStringValue()),
+            'productVersionOperator' => fn(ParseNode $n) => $o->setProductVersionOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
         ]);
     }
 

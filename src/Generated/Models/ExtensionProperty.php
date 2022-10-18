@@ -73,11 +73,11 @@ class ExtensionProperty extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
-            'dataType' => function (ParseNode $n) use ($o) { $o->setDataType($n->getStringValue()); },
-            'isSyncedFromOnPremises' => function (ParseNode $n) use ($o) { $o->setIsSyncedFromOnPremises($n->getBooleanValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'targetObjects' => function (ParseNode $n) use ($o) { $o->setTargetObjects($n->getCollectionOfPrimitiveValues()); },
+            'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
+            'dataType' => fn(ParseNode $n) => $o->setDataType($n->getStringValue()),
+            'isSyncedFromOnPremises' => fn(ParseNode $n) => $o->setIsSyncedFromOnPremises($n->getBooleanValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'targetObjects' => fn(ParseNode $n) => $o->setTargetObjects($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

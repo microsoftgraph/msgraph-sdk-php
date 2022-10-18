@@ -76,10 +76,10 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'externalPartnerTenantId' => function (ParseNode $n) use ($o) { $o->setExternalPartnerTenantId($n->getStringValue()); },
-            'objectType' => function (ParseNode $n) use ($o) { $o->setObjectType($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'externalPartnerTenantId' => fn(ParseNode $n) => $o->setExternalPartnerTenantId($n->getStringValue()),
+            'objectType' => fn(ParseNode $n) => $o->setObjectType($n->getStringValue()),
         ]);
     }
 

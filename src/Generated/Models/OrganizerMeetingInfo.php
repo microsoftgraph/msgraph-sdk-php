@@ -37,7 +37,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'organizer' => function (ParseNode $n) use ($o) { $o->setOrganizer($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'organizer' => fn(ParseNode $n) => $o->setOrganizer($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

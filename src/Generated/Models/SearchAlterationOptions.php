@@ -77,9 +77,9 @@ class SearchAlterationOptions implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'enableModification' => function (ParseNode $n) use ($o) { $o->setEnableModification($n->getBooleanValue()); },
-            'enableSuggestion' => function (ParseNode $n) use ($o) { $o->setEnableSuggestion($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'enableModification' => fn(ParseNode $n) => $o->setEnableModification($n->getBooleanValue()),
+            'enableSuggestion' => fn(ParseNode $n) => $o->setEnableSuggestion($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

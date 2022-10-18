@@ -74,10 +74,10 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'complianceUrl' => function (ParseNode $n) use ($o) { $o->setComplianceUrl($n->getStringValue()); },
-            'generalText' => function (ParseNode $n) use ($o) { $o->setGeneralText($n->getStringValue()); },
-            'matchedConditionDescriptions' => function (ParseNode $n) use ($o) { $o->setMatchedConditionDescriptions($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'complianceUrl' => fn(ParseNode $n) => $o->setComplianceUrl($n->getStringValue()),
+            'generalText' => fn(ParseNode $n) => $o->setGeneralText($n->getStringValue()),
+            'matchedConditionDescriptions' => fn(ParseNode $n) => $o->setMatchedConditionDescriptions($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

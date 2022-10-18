@@ -69,9 +69,9 @@ class ContentTypeOrder implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'default' => function (ParseNode $n) use ($o) { $o->setDefault($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getIntegerValue()); },
+            'default' => fn(ParseNode $n) => $o->setDefault($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getIntegerValue()),
         ];
     }
 

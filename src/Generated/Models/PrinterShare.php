@@ -90,11 +90,11 @@ class PrinterShare extends PrinterBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowAllUsers' => function (ParseNode $n) use ($o) { $o->setAllowAllUsers($n->getBooleanValue()); },
-            'allowedGroups' => function (ParseNode $n) use ($o) { $o->setAllowedGroups($n->getCollectionOfObjectValues(array(Group::class, 'createFromDiscriminatorValue'))); },
-            'allowedUsers' => function (ParseNode $n) use ($o) { $o->setAllowedUsers($n->getCollectionOfObjectValues(array(User::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'printer' => function (ParseNode $n) use ($o) { $o->setPrinter($n->getObjectValue(array(Printer::class, 'createFromDiscriminatorValue'))); },
+            'allowAllUsers' => fn(ParseNode $n) => $o->setAllowAllUsers($n->getBooleanValue()),
+            'allowedGroups' => fn(ParseNode $n) => $o->setAllowedGroups($n->getCollectionOfObjectValues([Group::class, 'createFromDiscriminatorValue'])),
+            'allowedUsers' => fn(ParseNode $n) => $o->setAllowedUsers($n->getCollectionOfObjectValues([User::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'printer' => fn(ParseNode $n) => $o->setPrinter($n->getObjectValue([Printer::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

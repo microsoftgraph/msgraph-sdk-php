@@ -42,8 +42,8 @@ class TeamArchivedEventMessageDetail extends EventMessageDetail implements Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ]);
     }
 

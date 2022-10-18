@@ -64,7 +64,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     private ?int $unknownDeviceCount = null;
     
     /**
-     * Instantiates a new DeviceCompliancePolicySettingStateSummary and sets the default values.
+     * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -119,17 +119,17 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'compliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setCompliantDeviceCount($n->getIntegerValue()); },
-            'conflictDeviceCount' => function (ParseNode $n) use ($o) { $o->setConflictDeviceCount($n->getIntegerValue()); },
-            'deviceComplianceSettingStates' => function (ParseNode $n) use ($o) { $o->setDeviceComplianceSettingStates($n->getCollectionOfObjectValues(array(DeviceComplianceSettingState::class, 'createFromDiscriminatorValue'))); },
-            'errorDeviceCount' => function (ParseNode $n) use ($o) { $o->setErrorDeviceCount($n->getIntegerValue()); },
-            'nonCompliantDeviceCount' => function (ParseNode $n) use ($o) { $o->setNonCompliantDeviceCount($n->getIntegerValue()); },
-            'notApplicableDeviceCount' => function (ParseNode $n) use ($o) { $o->setNotApplicableDeviceCount($n->getIntegerValue()); },
-            'platformType' => function (ParseNode $n) use ($o) { $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)); },
-            'remediatedDeviceCount' => function (ParseNode $n) use ($o) { $o->setRemediatedDeviceCount($n->getIntegerValue()); },
-            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
-            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
-            'unknownDeviceCount' => function (ParseNode $n) use ($o) { $o->setUnknownDeviceCount($n->getIntegerValue()); },
+            'compliantDeviceCount' => fn(ParseNode $n) => $o->setCompliantDeviceCount($n->getIntegerValue()),
+            'conflictDeviceCount' => fn(ParseNode $n) => $o->setConflictDeviceCount($n->getIntegerValue()),
+            'deviceComplianceSettingStates' => fn(ParseNode $n) => $o->setDeviceComplianceSettingStates($n->getCollectionOfObjectValues([DeviceComplianceSettingState::class, 'createFromDiscriminatorValue'])),
+            'errorDeviceCount' => fn(ParseNode $n) => $o->setErrorDeviceCount($n->getIntegerValue()),
+            'nonCompliantDeviceCount' => fn(ParseNode $n) => $o->setNonCompliantDeviceCount($n->getIntegerValue()),
+            'notApplicableDeviceCount' => fn(ParseNode $n) => $o->setNotApplicableDeviceCount($n->getIntegerValue()),
+            'platformType' => fn(ParseNode $n) => $o->setPlatformType($n->getEnumValue(PolicyPlatformType::class)),
+            'remediatedDeviceCount' => fn(ParseNode $n) => $o->setRemediatedDeviceCount($n->getIntegerValue()),
+            'setting' => fn(ParseNode $n) => $o->setSetting($n->getStringValue()),
+            'settingName' => fn(ParseNode $n) => $o->setSettingName($n->getStringValue()),
+            'unknownDeviceCount' => fn(ParseNode $n) => $o->setUnknownDeviceCount($n->getIntegerValue()),
         ]);
     }
 

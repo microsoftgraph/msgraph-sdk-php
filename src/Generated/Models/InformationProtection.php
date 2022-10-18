@@ -50,8 +50,8 @@ class InformationProtection extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bitlocker' => function (ParseNode $n) use ($o) { $o->setBitlocker($n->getObjectValue(array(Bitlocker::class, 'createFromDiscriminatorValue'))); },
-            'threatAssessmentRequests' => function (ParseNode $n) use ($o) { $o->setThreatAssessmentRequests($n->getCollectionOfObjectValues(array(ThreatAssessmentRequest::class, 'createFromDiscriminatorValue'))); },
+            'bitlocker' => fn(ParseNode $n) => $o->setBitlocker($n->getObjectValue([Bitlocker::class, 'createFromDiscriminatorValue'])),
+            'threatAssessmentRequests' => fn(ParseNode $n) => $o->setThreatAssessmentRequests($n->getCollectionOfObjectValues([ThreatAssessmentRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

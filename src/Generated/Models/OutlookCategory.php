@@ -58,8 +58,8 @@ class OutlookCategory extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getEnumValue(CategoryColor::class)); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'color' => fn(ParseNode $n) => $o->setColor($n->getEnumValue(CategoryColor::class)),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
         ]);
     }
 

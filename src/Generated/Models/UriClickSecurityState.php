@@ -98,13 +98,13 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'clickAction' => function (ParseNode $n) use ($o) { $o->setClickAction($n->getStringValue()); },
-            'clickDateTime' => function (ParseNode $n) use ($o) { $o->setClickDateTime($n->getDateTimeValue()); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
-            'uriDomain' => function (ParseNode $n) use ($o) { $o->setUriDomain($n->getStringValue()); },
-            'verdict' => function (ParseNode $n) use ($o) { $o->setVerdict($n->getStringValue()); },
+            'clickAction' => fn(ParseNode $n) => $o->setClickAction($n->getStringValue()),
+            'clickDateTime' => fn(ParseNode $n) => $o->setClickDateTime($n->getDateTimeValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sourceId' => fn(ParseNode $n) => $o->setSourceId($n->getStringValue()),
+            'uriDomain' => fn(ParseNode $n) => $o->setUriDomain($n->getStringValue()),
+            'verdict' => fn(ParseNode $n) => $o->setVerdict($n->getStringValue()),
         ];
     }
 

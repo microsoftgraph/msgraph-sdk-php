@@ -45,7 +45,7 @@ class LocateDeviceActionResult extends DeviceActionResult implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceLocation' => function (ParseNode $n) use ($o) { $o->setDeviceLocation($n->getObjectValue(array(DeviceGeoLocation::class, 'createFromDiscriminatorValue'))); },
+            'deviceLocation' => fn(ParseNode $n) => $o->setDeviceLocation($n->getObjectValue([DeviceGeoLocation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

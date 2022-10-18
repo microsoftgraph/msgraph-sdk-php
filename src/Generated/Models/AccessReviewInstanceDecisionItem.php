@@ -138,19 +138,19 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessReviewId' => function (ParseNode $n) use ($o) { $o->setAccessReviewId($n->getStringValue()); },
-            'appliedBy' => function (ParseNode $n) use ($o) { $o->setAppliedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'appliedDateTime' => function (ParseNode $n) use ($o) { $o->setAppliedDateTime($n->getDateTimeValue()); },
-            'applyResult' => function (ParseNode $n) use ($o) { $o->setApplyResult($n->getStringValue()); },
-            'decision' => function (ParseNode $n) use ($o) { $o->setDecision($n->getStringValue()); },
-            'justification' => function (ParseNode $n) use ($o) { $o->setJustification($n->getStringValue()); },
-            'principal' => function (ParseNode $n) use ($o) { $o->setPrincipal($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'principalLink' => function (ParseNode $n) use ($o) { $o->setPrincipalLink($n->getStringValue()); },
-            'recommendation' => function (ParseNode $n) use ($o) { $o->setRecommendation($n->getStringValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(AccessReviewInstanceDecisionItemResource::class, 'createFromDiscriminatorValue'))); },
-            'resourceLink' => function (ParseNode $n) use ($o) { $o->setResourceLink($n->getStringValue()); },
-            'reviewedBy' => function (ParseNode $n) use ($o) { $o->setReviewedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'reviewedDateTime' => function (ParseNode $n) use ($o) { $o->setReviewedDateTime($n->getDateTimeValue()); },
+            'accessReviewId' => fn(ParseNode $n) => $o->setAccessReviewId($n->getStringValue()),
+            'appliedBy' => fn(ParseNode $n) => $o->setAppliedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
+            'appliedDateTime' => fn(ParseNode $n) => $o->setAppliedDateTime($n->getDateTimeValue()),
+            'applyResult' => fn(ParseNode $n) => $o->setApplyResult($n->getStringValue()),
+            'decision' => fn(ParseNode $n) => $o->setDecision($n->getStringValue()),
+            'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'principalLink' => fn(ParseNode $n) => $o->setPrincipalLink($n->getStringValue()),
+            'recommendation' => fn(ParseNode $n) => $o->setRecommendation($n->getStringValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([AccessReviewInstanceDecisionItemResource::class, 'createFromDiscriminatorValue'])),
+            'resourceLink' => fn(ParseNode $n) => $o->setResourceLink($n->getStringValue()),
+            'reviewedBy' => fn(ParseNode $n) => $o->setReviewedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
+            'reviewedDateTime' => fn(ParseNode $n) => $o->setReviewedDateTime($n->getDateTimeValue()),
         ]);
     }
 

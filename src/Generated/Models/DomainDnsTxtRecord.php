@@ -37,7 +37,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getStringValue()); },
+            'text' => fn(ParseNode $n) => $o->setText($n->getStringValue()),
         ]);
     }
 

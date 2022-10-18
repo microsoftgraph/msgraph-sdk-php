@@ -74,10 +74,10 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'containerId' => function (ParseNode $n) use ($o) { $o->setContainerId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PlannerContainerType::class)); },
-            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
+            'containerId' => fn(ParseNode $n) => $o->setContainerId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(PlannerContainerType::class)),
+            'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ];
     }
 

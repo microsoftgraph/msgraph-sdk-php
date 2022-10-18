@@ -45,7 +45,7 @@ class AgreementFileProperties extends Entity implements Parsable
     private ?string $language = null;
     
     /**
-     * Instantiates a new AgreementFileProperties and sets the default values.
+     * Instantiates a new agreementFileProperties and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -93,13 +93,13 @@ class AgreementFileProperties extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'fileData' => function (ParseNode $n) use ($o) { $o->setFileData($n->getObjectValue(array(AgreementFileData::class, 'createFromDiscriminatorValue'))); },
-            'fileName' => function (ParseNode $n) use ($o) { $o->setFileName($n->getStringValue()); },
-            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
-            'isMajorVersion' => function (ParseNode $n) use ($o) { $o->setIsMajorVersion($n->getBooleanValue()); },
-            'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getStringValue()); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'fileData' => fn(ParseNode $n) => $o->setFileData($n->getObjectValue([AgreementFileData::class, 'createFromDiscriminatorValue'])),
+            'fileName' => fn(ParseNode $n) => $o->setFileName($n->getStringValue()),
+            'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
+            'isMajorVersion' => fn(ParseNode $n) => $o->setIsMajorVersion($n->getBooleanValue()),
+            'language' => fn(ParseNode $n) => $o->setLanguage($n->getStringValue()),
         ]);
     }
 

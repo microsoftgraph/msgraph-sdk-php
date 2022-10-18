@@ -102,14 +102,14 @@ class DocumentSet implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedContentTypes' => function (ParseNode $n) use ($o) { $o->setAllowedContentTypes($n->getCollectionOfObjectValues(array(ContentTypeInfo::class, 'createFromDiscriminatorValue'))); },
-            'defaultContents' => function (ParseNode $n) use ($o) { $o->setDefaultContents($n->getCollectionOfObjectValues(array(DocumentSetContent::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'propagateWelcomePageChanges' => function (ParseNode $n) use ($o) { $o->setPropagateWelcomePageChanges($n->getBooleanValue()); },
-            'sharedColumns' => function (ParseNode $n) use ($o) { $o->setSharedColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
-            'shouldPrefixNameToFile' => function (ParseNode $n) use ($o) { $o->setShouldPrefixNameToFile($n->getBooleanValue()); },
-            'welcomePageColumns' => function (ParseNode $n) use ($o) { $o->setWelcomePageColumns($n->getCollectionOfObjectValues(array(ColumnDefinition::class, 'createFromDiscriminatorValue'))); },
-            'welcomePageUrl' => function (ParseNode $n) use ($o) { $o->setWelcomePageUrl($n->getStringValue()); },
+            'allowedContentTypes' => fn(ParseNode $n) => $o->setAllowedContentTypes($n->getCollectionOfObjectValues([ContentTypeInfo::class, 'createFromDiscriminatorValue'])),
+            'defaultContents' => fn(ParseNode $n) => $o->setDefaultContents($n->getCollectionOfObjectValues([DocumentSetContent::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'propagateWelcomePageChanges' => fn(ParseNode $n) => $o->setPropagateWelcomePageChanges($n->getBooleanValue()),
+            'sharedColumns' => fn(ParseNode $n) => $o->setSharedColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'shouldPrefixNameToFile' => fn(ParseNode $n) => $o->setShouldPrefixNameToFile($n->getBooleanValue()),
+            'welcomePageColumns' => fn(ParseNode $n) => $o->setWelcomePageColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
+            'welcomePageUrl' => fn(ParseNode $n) => $o->setWelcomePageUrl($n->getStringValue()),
         ];
     }
 

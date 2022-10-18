@@ -42,8 +42,8 @@ class ManagedMobileApp extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mobileAppIdentifier' => function (ParseNode $n) use ($o) { $o->setMobileAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'mobileAppIdentifier' => fn(ParseNode $n) => $o->setMobileAppIdentifier($n->getObjectValue([MobileAppIdentifier::class, 'createFromDiscriminatorValue'])),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

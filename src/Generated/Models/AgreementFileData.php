@@ -65,8 +65,8 @@ class AgreementFileData implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'data' => function (ParseNode $n) use ($o) { $o->setData($n->getBinaryContent()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'data' => fn(ParseNode $n) => $o->setData($n->getBinaryContent()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

@@ -90,11 +90,11 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Device::class, 'createFromDiscriminatorValue'))); },
-            'deviceTag' => function (ParseNode $n) use ($o) { $o->setDeviceTag($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'phoneAppVersion' => function (ParseNode $n) use ($o) { $o->setPhoneAppVersion($n->getStringValue()); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Device::class, 'createFromDiscriminatorValue'])),
+            'deviceTag' => fn(ParseNode $n) => $o->setDeviceTag($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'phoneAppVersion' => fn(ParseNode $n) => $o->setPhoneAppVersion($n->getStringValue()),
         ]);
     }
 

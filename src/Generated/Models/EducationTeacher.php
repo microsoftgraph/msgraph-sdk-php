@@ -69,9 +69,9 @@ class EducationTeacher implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'teacherNumber' => function (ParseNode $n) use ($o) { $o->setTeacherNumber($n->getStringValue()); },
+            'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'teacherNumber' => fn(ParseNode $n) => $o->setTeacherNumber($n->getStringValue()),
         ];
     }
 

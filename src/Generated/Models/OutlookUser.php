@@ -37,7 +37,7 @@ class OutlookUser extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'masterCategories' => function (ParseNode $n) use ($o) { $o->setMasterCategories($n->getCollectionOfObjectValues(array(OutlookCategory::class, 'createFromDiscriminatorValue'))); },
+            'masterCategories' => fn(ParseNode $n) => $o->setMasterCategories($n->getCollectionOfObjectValues([OutlookCategory::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

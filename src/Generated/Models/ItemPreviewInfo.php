@@ -66,10 +66,10 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'getUrl' => function (ParseNode $n) use ($o) { $o->setGetUrl($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'postParameters' => function (ParseNode $n) use ($o) { $o->setPostParameters($n->getStringValue()); },
-            'postUrl' => function (ParseNode $n) use ($o) { $o->setPostUrl($n->getStringValue()); },
+            'getUrl' => fn(ParseNode $n) => $o->setGetUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'postParameters' => fn(ParseNode $n) => $o->setPostParameters($n->getStringValue()),
+            'postUrl' => fn(ParseNode $n) => $o->setPostUrl($n->getStringValue()),
         ];
     }
 

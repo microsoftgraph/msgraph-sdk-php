@@ -61,9 +61,9 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isDialInBypassEnabled' => function (ParseNode $n) use ($o) { $o->setIsDialInBypassEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getEnumValue(LobbyBypassScope::class)); },
+            'isDialInBypassEnabled' => fn(ParseNode $n) => $o->setIsDialInBypassEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getEnumValue(LobbyBypassScope::class)),
         ];
     }
 

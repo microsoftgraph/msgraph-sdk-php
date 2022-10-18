@@ -50,7 +50,7 @@ class DeleteUserFromSharedAppleDevicePostRequestBody implements AdditionalDataHo
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ];
     }
 

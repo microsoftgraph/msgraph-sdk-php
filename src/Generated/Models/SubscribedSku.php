@@ -91,13 +91,13 @@ class SubscribedSku extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getStringValue()); },
-            'capabilityStatus' => function (ParseNode $n) use ($o) { $o->setCapabilityStatus($n->getStringValue()); },
-            'consumedUnits' => function (ParseNode $n) use ($o) { $o->setConsumedUnits($n->getIntegerValue()); },
-            'prepaidUnits' => function (ParseNode $n) use ($o) { $o->setPrepaidUnits($n->getObjectValue(array(LicenseUnitsDetail::class, 'createFromDiscriminatorValue'))); },
-            'servicePlans' => function (ParseNode $n) use ($o) { $o->setServicePlans($n->getCollectionOfObjectValues(array(ServicePlanInfo::class, 'createFromDiscriminatorValue'))); },
-            'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
-            'skuPartNumber' => function (ParseNode $n) use ($o) { $o->setSkuPartNumber($n->getStringValue()); },
+            'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getStringValue()),
+            'capabilityStatus' => fn(ParseNode $n) => $o->setCapabilityStatus($n->getStringValue()),
+            'consumedUnits' => fn(ParseNode $n) => $o->setConsumedUnits($n->getIntegerValue()),
+            'prepaidUnits' => fn(ParseNode $n) => $o->setPrepaidUnits($n->getObjectValue([LicenseUnitsDetail::class, 'createFromDiscriminatorValue'])),
+            'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([ServicePlanInfo::class, 'createFromDiscriminatorValue'])),
+            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
+            'skuPartNumber' => fn(ParseNode $n) => $o->setSkuPartNumber($n->getStringValue()),
         ]);
     }
 

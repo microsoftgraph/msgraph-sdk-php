@@ -63,9 +63,9 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contentData' => function (ParseNode $n) use ($o) { $o->setContentData($n->getStringValue()); },
-            'destinationRoutingReason' => function (ParseNode $n) use ($o) { $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)); },
-            'recipientEmail' => function (ParseNode $n) use ($o) { $o->setRecipientEmail($n->getStringValue()); },
+            'contentData' => fn(ParseNode $n) => $o->setContentData($n->getStringValue()),
+            'destinationRoutingReason' => fn(ParseNode $n) => $o->setDestinationRoutingReason($n->getEnumValue(MailDestinationRoutingReason::class)),
+            'recipientEmail' => fn(ParseNode $n) => $o->setRecipientEmail($n->getStringValue()),
         ]);
     }
 

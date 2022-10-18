@@ -87,11 +87,11 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
-            'entityId' => function (ParseNode $n) use ($o) { $o->setEntityId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'removeUrl' => function (ParseNode $n) use ($o) { $o->setRemoveUrl($n->getStringValue()); },
-            'websiteUrl' => function (ParseNode $n) use ($o) { $o->setWebsiteUrl($n->getStringValue()); },
+            'contentUrl' => fn(ParseNode $n) => $o->setContentUrl($n->getStringValue()),
+            'entityId' => fn(ParseNode $n) => $o->setEntityId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'removeUrl' => fn(ParseNode $n) => $o->setRemoveUrl($n->getStringValue()),
+            'websiteUrl' => fn(ParseNode $n) => $o->setWebsiteUrl($n->getStringValue()),
         ];
     }
 

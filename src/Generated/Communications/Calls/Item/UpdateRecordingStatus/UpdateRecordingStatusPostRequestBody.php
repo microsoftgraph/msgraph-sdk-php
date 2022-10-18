@@ -64,8 +64,8 @@ class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolder, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'clientContext' => function (ParseNode $n) use ($o) { $o->setClientContext($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(RecordingStatus::class)); },
+            'clientContext' => fn(ParseNode $n) => $o->setClientContext($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(RecordingStatus::class)),
         ];
     }
 

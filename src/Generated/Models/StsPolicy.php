@@ -74,9 +74,9 @@ class StsPolicy extends PolicyBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getCollectionOfPrimitiveValues()); },
-            'isOrganizationDefault' => function (ParseNode $n) use ($o) { $o->setIsOrganizationDefault($n->getBooleanValue()); },
+            'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'definition' => fn(ParseNode $n) => $o->setDefinition($n->getCollectionOfPrimitiveValues()),
+            'isOrganizationDefault' => fn(ParseNode $n) => $o->setIsOrganizationDefault($n->getBooleanValue()),
         ]);
     }
 

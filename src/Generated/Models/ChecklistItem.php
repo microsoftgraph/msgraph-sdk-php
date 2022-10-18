@@ -77,10 +77,10 @@ class ChecklistItem extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'checkedDateTime' => function (ParseNode $n) use ($o) { $o->setCheckedDateTime($n->getDateTimeValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isChecked' => function (ParseNode $n) use ($o) { $o->setIsChecked($n->getBooleanValue()); },
+            'checkedDateTime' => fn(ParseNode $n) => $o->setCheckedDateTime($n->getDateTimeValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isChecked' => fn(ParseNode $n) => $o->setIsChecked($n->getBooleanValue()),
         ]);
     }
 

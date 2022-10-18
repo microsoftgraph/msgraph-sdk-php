@@ -133,17 +133,17 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'applications' => function (ParseNode $n) use ($o) { $o->setApplications($n->getObjectValue(array(ConditionalAccessApplications::class, 'createFromDiscriminatorValue'))); },
-            'clientApplications' => function (ParseNode $n) use ($o) { $o->setClientApplications($n->getObjectValue(array(ConditionalAccessClientApplications::class, 'createFromDiscriminatorValue'))); },
-            'clientAppTypes' => function (ParseNode $n) use ($o) { $o->setClientAppTypes($n->getCollectionOfEnumValues(ConditionalAccessClientApp::class)); },
-            'devices' => function (ParseNode $n) use ($o) { $o->setDevices($n->getObjectValue(array(ConditionalAccessDevices::class, 'createFromDiscriminatorValue'))); },
-            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getObjectValue(array(ConditionalAccessLocations::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'platforms' => function (ParseNode $n) use ($o) { $o->setPlatforms($n->getObjectValue(array(ConditionalAccessPlatforms::class, 'createFromDiscriminatorValue'))); },
-            'servicePrincipalRiskLevels' => function (ParseNode $n) use ($o) { $o->setServicePrincipalRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)); },
-            'signInRiskLevels' => function (ParseNode $n) use ($o) { $o->setSignInRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)); },
-            'userRiskLevels' => function (ParseNode $n) use ($o) { $o->setUserRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)); },
-            'users' => function (ParseNode $n) use ($o) { $o->setUsers($n->getObjectValue(array(ConditionalAccessUsers::class, 'createFromDiscriminatorValue'))); },
+            'applications' => fn(ParseNode $n) => $o->setApplications($n->getObjectValue([ConditionalAccessApplications::class, 'createFromDiscriminatorValue'])),
+            'clientApplications' => fn(ParseNode $n) => $o->setClientApplications($n->getObjectValue([ConditionalAccessClientApplications::class, 'createFromDiscriminatorValue'])),
+            'clientAppTypes' => fn(ParseNode $n) => $o->setClientAppTypes($n->getCollectionOfEnumValues(ConditionalAccessClientApp::class)),
+            'devices' => fn(ParseNode $n) => $o->setDevices($n->getObjectValue([ConditionalAccessDevices::class, 'createFromDiscriminatorValue'])),
+            'locations' => fn(ParseNode $n) => $o->setLocations($n->getObjectValue([ConditionalAccessLocations::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'platforms' => fn(ParseNode $n) => $o->setPlatforms($n->getObjectValue([ConditionalAccessPlatforms::class, 'createFromDiscriminatorValue'])),
+            'servicePrincipalRiskLevels' => fn(ParseNode $n) => $o->setServicePrincipalRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)),
+            'signInRiskLevels' => fn(ParseNode $n) => $o->setSignInRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)),
+            'userRiskLevels' => fn(ParseNode $n) => $o->setUserRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)),
+            'users' => fn(ParseNode $n) => $o->setUsers($n->getObjectValue([ConditionalAccessUsers::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

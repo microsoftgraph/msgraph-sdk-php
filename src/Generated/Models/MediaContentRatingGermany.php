@@ -61,9 +61,9 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'movieRating' => function (ParseNode $n) use ($o) { $o->setMovieRating($n->getEnumValue(RatingGermanyMoviesType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'tvRating' => function (ParseNode $n) use ($o) { $o->setTvRating($n->getEnumValue(RatingGermanyTelevisionType::class)); },
+            'movieRating' => fn(ParseNode $n) => $o->setMovieRating($n->getEnumValue(RatingGermanyMoviesType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'tvRating' => fn(ParseNode $n) => $o->setTvRating($n->getEnumValue(RatingGermanyTelevisionType::class)),
         ];
     }
 

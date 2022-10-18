@@ -40,7 +40,7 @@ class PrintConnector extends Entity implements Parsable
     private ?DateTime $registeredDateTime = null;
     
     /**
-     * Instantiates a new PrintConnector and sets the default values.
+     * Instantiates a new printConnector and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -79,12 +79,12 @@ class PrintConnector extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appVersion' => function (ParseNode $n) use ($o) { $o->setAppVersion($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'fullyQualifiedDomainName' => function (ParseNode $n) use ($o) { $o->setFullyQualifiedDomainName($n->getStringValue()); },
-            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(PrinterLocation::class, 'createFromDiscriminatorValue'))); },
-            'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
-            'registeredDateTime' => function (ParseNode $n) use ($o) { $o->setRegisteredDateTime($n->getDateTimeValue()); },
+            'appVersion' => fn(ParseNode $n) => $o->setAppVersion($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'fullyQualifiedDomainName' => fn(ParseNode $n) => $o->setFullyQualifiedDomainName($n->getStringValue()),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([PrinterLocation::class, 'createFromDiscriminatorValue'])),
+            'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
+            'registeredDateTime' => fn(ParseNode $n) => $o->setRegisteredDateTime($n->getDateTimeValue()),
         ]);
     }
 

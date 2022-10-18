@@ -101,12 +101,12 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attackSimulationUser' => function (ParseNode $n) use ($o) { $o->setAttackSimulationUser($n->getObjectValue(array(AttackSimulationUser::class, 'createFromDiscriminatorValue'))); },
-            'clickCount' => function (ParseNode $n) use ($o) { $o->setClickCount($n->getIntegerValue()); },
-            'compromisedCount' => function (ParseNode $n) use ($o) { $o->setCompromisedCount($n->getIntegerValue()); },
-            'latestSimulationDateTime' => function (ParseNode $n) use ($o) { $o->setLatestSimulationDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'simulationCount' => function (ParseNode $n) use ($o) { $o->setSimulationCount($n->getIntegerValue()); },
+            'attackSimulationUser' => fn(ParseNode $n) => $o->setAttackSimulationUser($n->getObjectValue([AttackSimulationUser::class, 'createFromDiscriminatorValue'])),
+            'clickCount' => fn(ParseNode $n) => $o->setClickCount($n->getIntegerValue()),
+            'compromisedCount' => fn(ParseNode $n) => $o->setCompromisedCount($n->getIntegerValue()),
+            'latestSimulationDateTime' => fn(ParseNode $n) => $o->setLatestSimulationDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'simulationCount' => fn(ParseNode $n) => $o->setSimulationCount($n->getIntegerValue()),
         ];
     }
 

@@ -96,14 +96,14 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'customerId' => function (ParseNode $n) use ($o) { $o->setCustomerId($n->getStringValue()); },
-            'customQuestionAnswers' => function (ParseNode $n) use ($o) { $o->setCustomQuestionAnswers($n->getCollectionOfObjectValues(array(BookingQuestionAnswer::class, 'createFromDiscriminatorValue'))); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
-            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
-            'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
-            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
+            'customerId' => fn(ParseNode $n) => $o->setCustomerId($n->getStringValue()),
+            'customQuestionAnswers' => fn(ParseNode $n) => $o->setCustomQuestionAnswers($n->getCollectionOfObjectValues([BookingQuestionAnswer::class, 'createFromDiscriminatorValue'])),
+            'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
+            'phone' => fn(ParseNode $n) => $o->setPhone($n->getStringValue()),
+            'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
         ]);
     }
 

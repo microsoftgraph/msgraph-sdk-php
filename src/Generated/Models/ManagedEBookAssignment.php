@@ -49,8 +49,8 @@ class ManagedEBookAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'installIntent' => function (ParseNode $n) use ($o) { $o->setInstallIntent($n->getEnumValue(InstallIntent::class)); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(DeviceAndAppManagementAssignmentTarget::class, 'createFromDiscriminatorValue'))); },
+            'installIntent' => fn(ParseNode $n) => $o->setInstallIntent($n->getEnumValue(InstallIntent::class)),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getObjectValue([DeviceAndAppManagementAssignmentTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

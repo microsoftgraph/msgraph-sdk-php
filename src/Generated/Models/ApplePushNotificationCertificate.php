@@ -121,14 +121,14 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appleIdentifier' => function (ParseNode $n) use ($o) { $o->setAppleIdentifier($n->getStringValue()); },
-            'certificate' => function (ParseNode $n) use ($o) { $o->setCertificate($n->getStringValue()); },
-            'certificateSerialNumber' => function (ParseNode $n) use ($o) { $o->setCertificateSerialNumber($n->getStringValue()); },
-            'certificateUploadFailureReason' => function (ParseNode $n) use ($o) { $o->setCertificateUploadFailureReason($n->getStringValue()); },
-            'certificateUploadStatus' => function (ParseNode $n) use ($o) { $o->setCertificateUploadStatus($n->getStringValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'topicIdentifier' => function (ParseNode $n) use ($o) { $o->setTopicIdentifier($n->getStringValue()); },
+            'appleIdentifier' => fn(ParseNode $n) => $o->setAppleIdentifier($n->getStringValue()),
+            'certificate' => fn(ParseNode $n) => $o->setCertificate($n->getStringValue()),
+            'certificateSerialNumber' => fn(ParseNode $n) => $o->setCertificateSerialNumber($n->getStringValue()),
+            'certificateUploadFailureReason' => fn(ParseNode $n) => $o->setCertificateUploadFailureReason($n->getStringValue()),
+            'certificateUploadStatus' => fn(ParseNode $n) => $o->setCertificateUploadStatus($n->getStringValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'topicIdentifier' => fn(ParseNode $n) => $o->setTopicIdentifier($n->getStringValue()),
         ]);
     }
 

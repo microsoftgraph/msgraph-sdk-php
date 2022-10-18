@@ -84,13 +84,13 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appRoleId' => function (ParseNode $n) use ($o) { $o->setAppRoleId($n->getStringValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'principalDisplayName' => function (ParseNode $n) use ($o) { $o->setPrincipalDisplayName($n->getStringValue()); },
-            'principalId' => function (ParseNode $n) use ($o) { $o->setPrincipalId($n->getStringValue()); },
-            'principalType' => function (ParseNode $n) use ($o) { $o->setPrincipalType($n->getStringValue()); },
-            'resourceDisplayName' => function (ParseNode $n) use ($o) { $o->setResourceDisplayName($n->getStringValue()); },
-            'resourceId' => function (ParseNode $n) use ($o) { $o->setResourceId($n->getStringValue()); },
+            'appRoleId' => fn(ParseNode $n) => $o->setAppRoleId($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'principalDisplayName' => fn(ParseNode $n) => $o->setPrincipalDisplayName($n->getStringValue()),
+            'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
+            'principalType' => fn(ParseNode $n) => $o->setPrincipalType($n->getStringValue()),
+            'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
+            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
         ]);
     }
 

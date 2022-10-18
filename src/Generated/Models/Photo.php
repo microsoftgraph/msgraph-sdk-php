@@ -129,16 +129,16 @@ class Photo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cameraMake' => function (ParseNode $n) use ($o) { $o->setCameraMake($n->getStringValue()); },
-            'cameraModel' => function (ParseNode $n) use ($o) { $o->setCameraModel($n->getStringValue()); },
-            'exposureDenominator' => function (ParseNode $n) use ($o) { $o->setExposureDenominator($n->getFloatValue()); },
-            'exposureNumerator' => function (ParseNode $n) use ($o) { $o->setExposureNumerator($n->getFloatValue()); },
-            'fNumber' => function (ParseNode $n) use ($o) { $o->setFNumber($n->getFloatValue()); },
-            'focalLength' => function (ParseNode $n) use ($o) { $o->setFocalLength($n->getFloatValue()); },
-            'iso' => function (ParseNode $n) use ($o) { $o->setIso($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'orientation' => function (ParseNode $n) use ($o) { $o->setOrientation($n->getIntegerValue()); },
-            'takenDateTime' => function (ParseNode $n) use ($o) { $o->setTakenDateTime($n->getDateTimeValue()); },
+            'cameraMake' => fn(ParseNode $n) => $o->setCameraMake($n->getStringValue()),
+            'cameraModel' => fn(ParseNode $n) => $o->setCameraModel($n->getStringValue()),
+            'exposureDenominator' => fn(ParseNode $n) => $o->setExposureDenominator($n->getFloatValue()),
+            'exposureNumerator' => fn(ParseNode $n) => $o->setExposureNumerator($n->getFloatValue()),
+            'fNumber' => fn(ParseNode $n) => $o->setFNumber($n->getFloatValue()),
+            'focalLength' => fn(ParseNode $n) => $o->setFocalLength($n->getFloatValue()),
+            'iso' => fn(ParseNode $n) => $o->setIso($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getIntegerValue()),
+            'takenDateTime' => fn(ParseNode $n) => $o->setTakenDateTime($n->getDateTimeValue()),
         ];
     }
 

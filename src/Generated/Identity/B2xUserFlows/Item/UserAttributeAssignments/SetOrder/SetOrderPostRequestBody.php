@@ -51,7 +51,7 @@ class SetOrderPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'newAssignmentOrder' => function (ParseNode $n) use ($o) { $o->setNewAssignmentOrder($n->getObjectValue(array(AssignmentOrder::class, 'createFromDiscriminatorValue'))); },
+            'newAssignmentOrder' => fn(ParseNode $n) => $o->setNewAssignmentOrder($n->getObjectValue([AssignmentOrder::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

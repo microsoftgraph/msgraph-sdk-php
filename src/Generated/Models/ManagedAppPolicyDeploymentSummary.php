@@ -82,11 +82,11 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'configurationDeployedUserCount' => function (ParseNode $n) use ($o) { $o->setConfigurationDeployedUserCount($n->getIntegerValue()); },
-            'configurationDeploymentSummaryPerApp' => function (ParseNode $n) use ($o) { $o->setConfigurationDeploymentSummaryPerApp($n->getCollectionOfObjectValues(array(ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastRefreshTime' => function (ParseNode $n) use ($o) { $o->setLastRefreshTime($n->getDateTimeValue()); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'configurationDeployedUserCount' => fn(ParseNode $n) => $o->setConfigurationDeployedUserCount($n->getIntegerValue()),
+            'configurationDeploymentSummaryPerApp' => fn(ParseNode $n) => $o->setConfigurationDeploymentSummaryPerApp($n->getCollectionOfObjectValues([ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastRefreshTime' => fn(ParseNode $n) => $o->setLastRefreshTime($n->getDateTimeValue()),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

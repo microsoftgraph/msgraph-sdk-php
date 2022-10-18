@@ -79,11 +79,11 @@ class SearchHitsContainer implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(SearchAggregation::class, 'createFromDiscriminatorValue'))); },
-            'hits' => function (ParseNode $n) use ($o) { $o->setHits($n->getCollectionOfObjectValues(array(SearchHit::class, 'createFromDiscriminatorValue'))); },
-            'moreResultsAvailable' => function (ParseNode $n) use ($o) { $o->setMoreResultsAvailable($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
+            'aggregations' => fn(ParseNode $n) => $o->setAggregations($n->getCollectionOfObjectValues([SearchAggregation::class, 'createFromDiscriminatorValue'])),
+            'hits' => fn(ParseNode $n) => $o->setHits($n->getCollectionOfObjectValues([SearchHit::class, 'createFromDiscriminatorValue'])),
+            'moreResultsAvailable' => fn(ParseNode $n) => $o->setMoreResultsAvailable($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'total' => fn(ParseNode $n) => $o->setTotal($n->getIntegerValue()),
         ];
     }
 

@@ -51,7 +51,7 @@ class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalDataHolder,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'updateWindowsDeviceAccountActionParameter' => function (ParseNode $n) use ($o) { $o->setUpdateWindowsDeviceAccountActionParameter($n->getObjectValue(array(UpdateWindowsDeviceAccountActionParameter::class, 'createFromDiscriminatorValue'))); },
+            'updateWindowsDeviceAccountActionParameter' => fn(ParseNode $n) => $o->setUpdateWindowsDeviceAccountActionParameter($n->getObjectValue([UpdateWindowsDeviceAccountActionParameter::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

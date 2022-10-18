@@ -93,12 +93,12 @@ class SecureScoreControlStateUpdate implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getStringValue()); },
-            'comment' => function (ParseNode $n) use ($o) { $o->setComment($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
-            'updatedBy' => function (ParseNode $n) use ($o) { $o->setUpdatedBy($n->getStringValue()); },
-            'updatedDateTime' => function (ParseNode $n) use ($o) { $o->setUpdatedDateTime($n->getDateTimeValue()); },
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
+            'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
+            'updatedBy' => fn(ParseNode $n) => $o->setUpdatedBy($n->getStringValue()),
+            'updatedDateTime' => fn(ParseNode $n) => $o->setUpdatedDateTime($n->getDateTimeValue()),
         ];
     }
 

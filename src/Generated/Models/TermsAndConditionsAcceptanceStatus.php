@@ -74,11 +74,11 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acceptedDateTime' => function (ParseNode $n) use ($o) { $o->setAcceptedDateTime($n->getDateTimeValue()); },
-            'acceptedVersion' => function (ParseNode $n) use ($o) { $o->setAcceptedVersion($n->getIntegerValue()); },
-            'termsAndConditions' => function (ParseNode $n) use ($o) { $o->setTermsAndConditions($n->getObjectValue(array(TermsAndConditions::class, 'createFromDiscriminatorValue'))); },
-            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'acceptedDateTime' => fn(ParseNode $n) => $o->setAcceptedDateTime($n->getDateTimeValue()),
+            'acceptedVersion' => fn(ParseNode $n) => $o->setAcceptedVersion($n->getIntegerValue()),
+            'termsAndConditions' => fn(ParseNode $n) => $o->setTermsAndConditions($n->getObjectValue([TermsAndConditions::class, 'createFromDiscriminatorValue'])),
+            'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
     }
 

@@ -37,7 +37,7 @@ class Windows10CustomConfiguration extends DeviceConfiguration implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'omaSettings' => function (ParseNode $n) use ($o) { $o->setOmaSettings($n->getCollectionOfObjectValues(array(OmaSetting::class, 'createFromDiscriminatorValue'))); },
+            'omaSettings' => fn(ParseNode $n) => $o->setOmaSettings($n->getCollectionOfObjectValues([OmaSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

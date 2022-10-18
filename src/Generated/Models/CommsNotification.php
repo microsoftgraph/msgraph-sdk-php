@@ -69,9 +69,9 @@ class CommsNotification implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'changeType' => function (ParseNode $n) use ($o) { $o->setChangeType($n->getEnumValue(ChangeType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'resourceUrl' => function (ParseNode $n) use ($o) { $o->setResourceUrl($n->getStringValue()); },
+            'changeType' => fn(ParseNode $n) => $o->setChangeType($n->getEnumValue(ChangeType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resourceUrl' => fn(ParseNode $n) => $o->setResourceUrl($n->getStringValue()),
         ];
     }
 

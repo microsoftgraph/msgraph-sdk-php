@@ -50,7 +50,7 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'self' => function (ParseNode $n) use ($o) { $o->setSelf($n->getStringValue()); },
+            'self' => fn(ParseNode $n) => $o->setSelf($n->getStringValue()),
         ]);
     }
 

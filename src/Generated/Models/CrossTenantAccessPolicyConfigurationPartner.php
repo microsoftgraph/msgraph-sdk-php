@@ -118,14 +118,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'b2bCollaborationInbound' => function (ParseNode $n) use ($o) { $o->setB2bCollaborationInbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bCollaborationOutbound' => function (ParseNode $n) use ($o) { $o->setB2bCollaborationOutbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bDirectConnectInbound' => function (ParseNode $n) use ($o) { $o->setB2bDirectConnectInbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bDirectConnectOutbound' => function (ParseNode $n) use ($o) { $o->setB2bDirectConnectOutbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'inboundTrust' => function (ParseNode $n) use ($o) { $o->setInboundTrust($n->getObjectValue(array(CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'))); },
-            'isServiceProvider' => function (ParseNode $n) use ($o) { $o->setIsServiceProvider($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'b2bCollaborationInbound' => fn(ParseNode $n) => $o->setB2bCollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bDirectConnectOutbound' => fn(ParseNode $n) => $o->setB2bDirectConnectOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
+            'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
         ];
     }
 

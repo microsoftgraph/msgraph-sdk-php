@@ -102,14 +102,14 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bargeInAllowed' => function (ParseNode $n) use ($o) { $o->setBargeInAllowed($n->getBooleanValue()); },
-            'clientContext' => function (ParseNode $n) use ($o) { $o->setClientContext($n->getStringValue()); },
-            'initialSilenceTimeoutInSeconds' => function (ParseNode $n) use ($o) { $o->setInitialSilenceTimeoutInSeconds($n->getIntegerValue()); },
-            'maxRecordDurationInSeconds' => function (ParseNode $n) use ($o) { $o->setMaxRecordDurationInSeconds($n->getIntegerValue()); },
-            'maxSilenceTimeoutInSeconds' => function (ParseNode $n) use ($o) { $o->setMaxSilenceTimeoutInSeconds($n->getIntegerValue()); },
-            'playBeep' => function (ParseNode $n) use ($o) { $o->setPlayBeep($n->getBooleanValue()); },
-            'prompts' => function (ParseNode $n) use ($o) { $o->setPrompts($n->getCollectionOfObjectValues(array(Prompt::class, 'createFromDiscriminatorValue'))); },
-            'stopTones' => function (ParseNode $n) use ($o) { $o->setStopTones($n->getCollectionOfPrimitiveValues()); },
+            'bargeInAllowed' => fn(ParseNode $n) => $o->setBargeInAllowed($n->getBooleanValue()),
+            'clientContext' => fn(ParseNode $n) => $o->setClientContext($n->getStringValue()),
+            'initialSilenceTimeoutInSeconds' => fn(ParseNode $n) => $o->setInitialSilenceTimeoutInSeconds($n->getIntegerValue()),
+            'maxRecordDurationInSeconds' => fn(ParseNode $n) => $o->setMaxRecordDurationInSeconds($n->getIntegerValue()),
+            'maxSilenceTimeoutInSeconds' => fn(ParseNode $n) => $o->setMaxSilenceTimeoutInSeconds($n->getIntegerValue()),
+            'playBeep' => fn(ParseNode $n) => $o->setPlayBeep($n->getBooleanValue()),
+            'prompts' => fn(ParseNode $n) => $o->setPrompts($n->getCollectionOfObjectValues([Prompt::class, 'createFromDiscriminatorValue'])),
+            'stopTones' => fn(ParseNode $n) => $o->setStopTones($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

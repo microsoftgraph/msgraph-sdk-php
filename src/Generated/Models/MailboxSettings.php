@@ -128,16 +128,16 @@ class MailboxSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'archiveFolder' => function (ParseNode $n) use ($o) { $o->setArchiveFolder($n->getStringValue()); },
-            'automaticRepliesSetting' => function (ParseNode $n) use ($o) { $o->setAutomaticRepliesSetting($n->getObjectValue(array(AutomaticRepliesSetting::class, 'createFromDiscriminatorValue'))); },
-            'dateFormat' => function (ParseNode $n) use ($o) { $o->setDateFormat($n->getStringValue()); },
-            'delegateMeetingMessageDeliveryOptions' => function (ParseNode $n) use ($o) { $o->setDelegateMeetingMessageDeliveryOptions($n->getEnumValue(DelegateMeetingMessageDeliveryOptions::class)); },
-            'language' => function (ParseNode $n) use ($o) { $o->setLanguage($n->getObjectValue(array(LocaleInfo::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'timeFormat' => function (ParseNode $n) use ($o) { $o->setTimeFormat($n->getStringValue()); },
-            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
-            'userPurpose' => function (ParseNode $n) use ($o) { $o->setUserPurpose($n->getEnumValue(UserPurpose::class)); },
-            'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getObjectValue(array(WorkingHours::class, 'createFromDiscriminatorValue'))); },
+            'archiveFolder' => fn(ParseNode $n) => $o->setArchiveFolder($n->getStringValue()),
+            'automaticRepliesSetting' => fn(ParseNode $n) => $o->setAutomaticRepliesSetting($n->getObjectValue([AutomaticRepliesSetting::class, 'createFromDiscriminatorValue'])),
+            'dateFormat' => fn(ParseNode $n) => $o->setDateFormat($n->getStringValue()),
+            'delegateMeetingMessageDeliveryOptions' => fn(ParseNode $n) => $o->setDelegateMeetingMessageDeliveryOptions($n->getEnumValue(DelegateMeetingMessageDeliveryOptions::class)),
+            'language' => fn(ParseNode $n) => $o->setLanguage($n->getObjectValue([LocaleInfo::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'timeFormat' => fn(ParseNode $n) => $o->setTimeFormat($n->getStringValue()),
+            'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
+            'userPurpose' => fn(ParseNode $n) => $o->setUserPurpose($n->getEnumValue(UserPurpose::class)),
+            'workingHours' => fn(ParseNode $n) => $o->setWorkingHours($n->getObjectValue([WorkingHours::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

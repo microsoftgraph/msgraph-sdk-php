@@ -47,9 +47,9 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'phoneNumber' => function (ParseNode $n) use ($o) { $o->setPhoneNumber($n->getStringValue()); },
-            'phoneType' => function (ParseNode $n) use ($o) { $o->setPhoneType($n->getEnumValue(AuthenticationPhoneType::class)); },
-            'smsSignInState' => function (ParseNode $n) use ($o) { $o->setSmsSignInState($n->getEnumValue(AuthenticationMethodSignInState::class)); },
+            'phoneNumber' => fn(ParseNode $n) => $o->setPhoneNumber($n->getStringValue()),
+            'phoneType' => fn(ParseNode $n) => $o->setPhoneType($n->getEnumValue(AuthenticationPhoneType::class)),
+            'smsSignInState' => fn(ParseNode $n) => $o->setSmsSignInState($n->getEnumValue(AuthenticationMethodSignInState::class)),
         ]);
     }
 

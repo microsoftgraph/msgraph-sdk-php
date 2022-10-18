@@ -89,13 +89,13 @@ class Quota implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'deleted' => function (ParseNode $n) use ($o) { $o->setDeleted($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'remaining' => function (ParseNode $n) use ($o) { $o->setRemaining($n->getIntegerValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
-            'storagePlanInformation' => function (ParseNode $n) use ($o) { $o->setStoragePlanInformation($n->getObjectValue(array(StoragePlanInformation::class, 'createFromDiscriminatorValue'))); },
-            'total' => function (ParseNode $n) use ($o) { $o->setTotal($n->getIntegerValue()); },
-            'used' => function (ParseNode $n) use ($o) { $o->setUsed($n->getIntegerValue()); },
+            'deleted' => fn(ParseNode $n) => $o->setDeleted($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'remaining' => fn(ParseNode $n) => $o->setRemaining($n->getIntegerValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
+            'storagePlanInformation' => fn(ParseNode $n) => $o->setStoragePlanInformation($n->getObjectValue([StoragePlanInformation::class, 'createFromDiscriminatorValue'])),
+            'total' => fn(ParseNode $n) => $o->setTotal($n->getIntegerValue()),
+            'used' => fn(ParseNode $n) => $o->setUsed($n->getIntegerValue()),
         ];
     }
 

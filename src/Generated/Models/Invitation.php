@@ -77,15 +77,15 @@ class Invitation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'invitedUser' => function (ParseNode $n) use ($o) { $o->setInvitedUser($n->getObjectValue(array(User::class, 'createFromDiscriminatorValue'))); },
-            'invitedUserDisplayName' => function (ParseNode $n) use ($o) { $o->setInvitedUserDisplayName($n->getStringValue()); },
-            'invitedUserEmailAddress' => function (ParseNode $n) use ($o) { $o->setInvitedUserEmailAddress($n->getStringValue()); },
-            'invitedUserMessageInfo' => function (ParseNode $n) use ($o) { $o->setInvitedUserMessageInfo($n->getObjectValue(array(InvitedUserMessageInfo::class, 'createFromDiscriminatorValue'))); },
-            'invitedUserType' => function (ParseNode $n) use ($o) { $o->setInvitedUserType($n->getStringValue()); },
-            'inviteRedeemUrl' => function (ParseNode $n) use ($o) { $o->setInviteRedeemUrl($n->getStringValue()); },
-            'inviteRedirectUrl' => function (ParseNode $n) use ($o) { $o->setInviteRedirectUrl($n->getStringValue()); },
-            'sendInvitationMessage' => function (ParseNode $n) use ($o) { $o->setSendInvitationMessage($n->getBooleanValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
+            'invitedUser' => fn(ParseNode $n) => $o->setInvitedUser($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
+            'invitedUserDisplayName' => fn(ParseNode $n) => $o->setInvitedUserDisplayName($n->getStringValue()),
+            'invitedUserEmailAddress' => fn(ParseNode $n) => $o->setInvitedUserEmailAddress($n->getStringValue()),
+            'invitedUserMessageInfo' => fn(ParseNode $n) => $o->setInvitedUserMessageInfo($n->getObjectValue([InvitedUserMessageInfo::class, 'createFromDiscriminatorValue'])),
+            'invitedUserType' => fn(ParseNode $n) => $o->setInvitedUserType($n->getStringValue()),
+            'inviteRedeemUrl' => fn(ParseNode $n) => $o->setInviteRedeemUrl($n->getStringValue()),
+            'inviteRedirectUrl' => fn(ParseNode $n) => $o->setInviteRedirectUrl($n->getStringValue()),
+            'sendInvitationMessage' => fn(ParseNode $n) => $o->setSendInvitationMessage($n->getBooleanValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
     }
 

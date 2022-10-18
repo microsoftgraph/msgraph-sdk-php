@@ -37,7 +37,7 @@ class TeamworkUserIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'userIdentityType' => function (ParseNode $n) use ($o) { $o->setUserIdentityType($n->getEnumValue(TeamworkUserIdentityType::class)); },
+            'userIdentityType' => fn(ParseNode $n) => $o->setUserIdentityType($n->getEnumValue(TeamworkUserIdentityType::class)),
         ]);
     }
 

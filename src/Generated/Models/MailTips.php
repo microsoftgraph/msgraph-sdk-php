@@ -159,19 +159,19 @@ class MailTips implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'automaticReplies' => function (ParseNode $n) use ($o) { $o->setAutomaticReplies($n->getObjectValue(array(AutomaticRepliesMailTips::class, 'createFromDiscriminatorValue'))); },
-            'customMailTip' => function (ParseNode $n) use ($o) { $o->setCustomMailTip($n->getStringValue()); },
-            'deliveryRestricted' => function (ParseNode $n) use ($o) { $o->setDeliveryRestricted($n->getBooleanValue()); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(MailTipsError::class, 'createFromDiscriminatorValue'))); },
-            'externalMemberCount' => function (ParseNode $n) use ($o) { $o->setExternalMemberCount($n->getIntegerValue()); },
-            'isModerated' => function (ParseNode $n) use ($o) { $o->setIsModerated($n->getBooleanValue()); },
-            'mailboxFull' => function (ParseNode $n) use ($o) { $o->setMailboxFull($n->getBooleanValue()); },
-            'maxMessageSize' => function (ParseNode $n) use ($o) { $o->setMaxMessageSize($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'recipientScope' => function (ParseNode $n) use ($o) { $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)); },
-            'recipientSuggestions' => function (ParseNode $n) use ($o) { $o->setRecipientSuggestions($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'totalMemberCount' => function (ParseNode $n) use ($o) { $o->setTotalMemberCount($n->getIntegerValue()); },
+            'automaticReplies' => fn(ParseNode $n) => $o->setAutomaticReplies($n->getObjectValue([AutomaticRepliesMailTips::class, 'createFromDiscriminatorValue'])),
+            'customMailTip' => fn(ParseNode $n) => $o->setCustomMailTip($n->getStringValue()),
+            'deliveryRestricted' => fn(ParseNode $n) => $o->setDeliveryRestricted($n->getBooleanValue()),
+            'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([MailTipsError::class, 'createFromDiscriminatorValue'])),
+            'externalMemberCount' => fn(ParseNode $n) => $o->setExternalMemberCount($n->getIntegerValue()),
+            'isModerated' => fn(ParseNode $n) => $o->setIsModerated($n->getBooleanValue()),
+            'mailboxFull' => fn(ParseNode $n) => $o->setMailboxFull($n->getBooleanValue()),
+            'maxMessageSize' => fn(ParseNode $n) => $o->setMaxMessageSize($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recipientScope' => fn(ParseNode $n) => $o->setRecipientScope($n->getEnumValue(RecipientScopeType::class)),
+            'recipientSuggestions' => fn(ParseNode $n) => $o->setRecipientSuggestions($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'totalMemberCount' => fn(ParseNode $n) => $o->setTotalMemberCount($n->getIntegerValue()),
         ];
     }
 

@@ -50,8 +50,8 @@ class EducationSubmissionResource extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignmentResourceUrl' => function (ParseNode $n) use ($o) { $o->setAssignmentResourceUrl($n->getStringValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(EducationResource::class, 'createFromDiscriminatorValue'))); },
+            'assignmentResourceUrl' => fn(ParseNode $n) => $o->setAssignmentResourceUrl($n->getStringValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([EducationResource::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

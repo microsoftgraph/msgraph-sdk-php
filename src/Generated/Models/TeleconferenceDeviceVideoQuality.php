@@ -91,10 +91,10 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'averageInboundBitRate' => function (ParseNode $n) use ($o) { $o->setAverageInboundBitRate($n->getFloatValue()); },
-            'averageInboundFrameRate' => function (ParseNode $n) use ($o) { $o->setAverageInboundFrameRate($n->getFloatValue()); },
-            'averageOutboundBitRate' => function (ParseNode $n) use ($o) { $o->setAverageOutboundBitRate($n->getFloatValue()); },
-            'averageOutboundFrameRate' => function (ParseNode $n) use ($o) { $o->setAverageOutboundFrameRate($n->getFloatValue()); },
+            'averageInboundBitRate' => fn(ParseNode $n) => $o->setAverageInboundBitRate($n->getFloatValue()),
+            'averageInboundFrameRate' => fn(ParseNode $n) => $o->setAverageInboundFrameRate($n->getFloatValue()),
+            'averageOutboundBitRate' => fn(ParseNode $n) => $o->setAverageOutboundBitRate($n->getFloatValue()),
+            'averageOutboundFrameRate' => fn(ParseNode $n) => $o->setAverageOutboundFrameRate($n->getFloatValue()),
         ]);
     }
 

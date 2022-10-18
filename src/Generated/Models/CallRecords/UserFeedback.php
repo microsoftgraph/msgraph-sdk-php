@@ -66,10 +66,10 @@ class UserFeedback implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'rating' => function (ParseNode $n) use ($o) { $o->setRating($n->getEnumValue(UserFeedbackRating::class)); },
-            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getStringValue()); },
-            'tokens' => function (ParseNode $n) use ($o) { $o->setTokens($n->getObjectValue(array(FeedbackTokenSet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'rating' => fn(ParseNode $n) => $o->setRating($n->getEnumValue(UserFeedbackRating::class)),
+            'text' => fn(ParseNode $n) => $o->setText($n->getStringValue()),
+            'tokens' => fn(ParseNode $n) => $o->setTokens($n->getObjectValue([FeedbackTokenSet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

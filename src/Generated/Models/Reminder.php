@@ -147,15 +147,15 @@ class Reminder implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'changeKey' => function (ParseNode $n) use ($o) { $o->setChangeKey($n->getStringValue()); },
-            'eventEndTime' => function (ParseNode $n) use ($o) { $o->setEventEndTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'eventId' => function (ParseNode $n) use ($o) { $o->setEventId($n->getStringValue()); },
-            'eventLocation' => function (ParseNode $n) use ($o) { $o->setEventLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
-            'eventStartTime' => function (ParseNode $n) use ($o) { $o->setEventStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'eventSubject' => function (ParseNode $n) use ($o) { $o->setEventSubject($n->getStringValue()); },
-            'eventWebLink' => function (ParseNode $n) use ($o) { $o->setEventWebLink($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'reminderFireTime' => function (ParseNode $n) use ($o) { $o->setReminderFireTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'changeKey' => fn(ParseNode $n) => $o->setChangeKey($n->getStringValue()),
+            'eventEndTime' => fn(ParseNode $n) => $o->setEventEndTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'eventId' => fn(ParseNode $n) => $o->setEventId($n->getStringValue()),
+            'eventLocation' => fn(ParseNode $n) => $o->setEventLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
+            'eventStartTime' => fn(ParseNode $n) => $o->setEventStartTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'eventSubject' => fn(ParseNode $n) => $o->setEventSubject($n->getStringValue()),
+            'eventWebLink' => fn(ParseNode $n) => $o->setEventWebLink($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'reminderFireTime' => fn(ParseNode $n) => $o->setReminderFireTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

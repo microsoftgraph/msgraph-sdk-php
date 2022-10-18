@@ -24,7 +24,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
     private ?array $values = null;
     
     /**
-     * Instantiates a new GroupSettingTemplate and sets the default values.
+     * Instantiates a new groupSettingTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -63,9 +63,9 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getCollectionOfObjectValues(array(SettingTemplateValue::class, 'createFromDiscriminatorValue'))); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getCollectionOfObjectValues([SettingTemplateValue::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

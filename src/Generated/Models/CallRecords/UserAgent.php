@@ -77,9 +77,9 @@ class UserAgent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'applicationVersion' => function (ParseNode $n) use ($o) { $o->setApplicationVersion($n->getStringValue()); },
-            'headerValue' => function (ParseNode $n) use ($o) { $o->setHeaderValue($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'applicationVersion' => fn(ParseNode $n) => $o->setApplicationVersion($n->getStringValue()),
+            'headerValue' => fn(ParseNode $n) => $o->setHeaderValue($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

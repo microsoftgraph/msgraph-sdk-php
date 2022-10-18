@@ -78,12 +78,12 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'check32BitOn64System' => function (ParseNode $n) use ($o) { $o->setCheck32BitOn64System($n->getBooleanValue()); },
-            'comparisonValue' => function (ParseNode $n) use ($o) { $o->setComparisonValue($n->getStringValue()); },
-            'fileOrFolderName' => function (ParseNode $n) use ($o) { $o->setFileOrFolderName($n->getStringValue()); },
-            'operationType' => function (ParseNode $n) use ($o) { $o->setOperationType($n->getEnumValue(Win32LobAppFileSystemOperationType::class)); },
-            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)); },
-            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
+            'check32BitOn64System' => fn(ParseNode $n) => $o->setCheck32BitOn64System($n->getBooleanValue()),
+            'comparisonValue' => fn(ParseNode $n) => $o->setComparisonValue($n->getStringValue()),
+            'fileOrFolderName' => fn(ParseNode $n) => $o->setFileOrFolderName($n->getStringValue()),
+            'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppFileSystemOperationType::class)),
+            'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
+            'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
         ]);
     }
 

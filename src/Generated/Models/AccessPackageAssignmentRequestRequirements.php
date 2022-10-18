@@ -94,14 +94,14 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowCustomAssignmentSchedule' => function (ParseNode $n) use ($o) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
-            'isApprovalRequiredForAdd' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForAdd($n->getBooleanValue()); },
-            'isApprovalRequiredForUpdate' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'policyDescription' => function (ParseNode $n) use ($o) { $o->setPolicyDescription($n->getStringValue()); },
-            'policyDisplayName' => function (ParseNode $n) use ($o) { $o->setPolicyDisplayName($n->getStringValue()); },
-            'policyId' => function (ParseNode $n) use ($o) { $o->setPolicyId($n->getStringValue()); },
-            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
+            'allowCustomAssignmentSchedule' => fn(ParseNode $n) => $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()),
+            'isApprovalRequiredForAdd' => fn(ParseNode $n) => $o->setIsApprovalRequiredForAdd($n->getBooleanValue()),
+            'isApprovalRequiredForUpdate' => fn(ParseNode $n) => $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'policyDescription' => fn(ParseNode $n) => $o->setPolicyDescription($n->getStringValue()),
+            'policyDisplayName' => fn(ParseNode $n) => $o->setPolicyDisplayName($n->getStringValue()),
+            'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
+            'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

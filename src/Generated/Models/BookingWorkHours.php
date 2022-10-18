@@ -69,9 +69,9 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'day' => function (ParseNode $n) use ($o) { $o->setDay($n->getEnumValue(DayOfWeek::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'timeSlots' => function (ParseNode $n) use ($o) { $o->setTimeSlots($n->getCollectionOfObjectValues(array(BookingWorkTimeSlot::class, 'createFromDiscriminatorValue'))); },
+            'day' => fn(ParseNode $n) => $o->setDay($n->getEnumValue(DayOfWeek::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'timeSlots' => fn(ParseNode $n) => $o->setTimeSlots($n->getCollectionOfObjectValues([BookingWorkTimeSlot::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

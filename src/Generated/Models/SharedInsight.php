@@ -62,12 +62,12 @@ class SharedInsight extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lastShared' => function (ParseNode $n) use ($o) { $o->setLastShared($n->getObjectValue(array(SharingDetail::class, 'createFromDiscriminatorValue'))); },
-            'lastSharedMethod' => function (ParseNode $n) use ($o) { $o->setLastSharedMethod($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
-            'resourceReference' => function (ParseNode $n) use ($o) { $o->setResourceReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
-            'resourceVisualization' => function (ParseNode $n) use ($o) { $o->setResourceVisualization($n->getObjectValue(array(ResourceVisualization::class, 'createFromDiscriminatorValue'))); },
-            'sharingHistory' => function (ParseNode $n) use ($o) { $o->setSharingHistory($n->getCollectionOfObjectValues(array(SharingDetail::class, 'createFromDiscriminatorValue'))); },
+            'lastShared' => fn(ParseNode $n) => $o->setLastShared($n->getObjectValue([SharingDetail::class, 'createFromDiscriminatorValue'])),
+            'lastSharedMethod' => fn(ParseNode $n) => $o->setLastSharedMethod($n->getObjectValue([Entity::class, 'createFromDiscriminatorValue'])),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([Entity::class, 'createFromDiscriminatorValue'])),
+            'resourceReference' => fn(ParseNode $n) => $o->setResourceReference($n->getObjectValue([ResourceReference::class, 'createFromDiscriminatorValue'])),
+            'resourceVisualization' => fn(ParseNode $n) => $o->setResourceVisualization($n->getObjectValue([ResourceVisualization::class, 'createFromDiscriminatorValue'])),
+            'sharingHistory' => fn(ParseNode $n) => $o->setSharingHistory($n->getCollectionOfObjectValues([SharingDetail::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

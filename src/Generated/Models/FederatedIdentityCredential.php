@@ -73,11 +73,11 @@ class FederatedIdentityCredential extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'audiences' => function (ParseNode $n) use ($o) { $o->setAudiences($n->getCollectionOfPrimitiveValues()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'issuer' => function (ParseNode $n) use ($o) { $o->setIssuer($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'audiences' => fn(ParseNode $n) => $o->setAudiences($n->getCollectionOfPrimitiveValues()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'issuer' => fn(ParseNode $n) => $o->setIssuer($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
         ]);
     }
 

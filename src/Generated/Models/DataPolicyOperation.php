@@ -71,12 +71,12 @@ class DataPolicyOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'completedDateTime' => function (ParseNode $n) use ($o) { $o->setCompletedDateTime($n->getDateTimeValue()); },
-            'progress' => function (ParseNode $n) use ($o) { $o->setProgress($n->getFloatValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)); },
-            'storageLocation' => function (ParseNode $n) use ($o) { $o->setStorageLocation($n->getStringValue()); },
-            'submittedDateTime' => function (ParseNode $n) use ($o) { $o->setSubmittedDateTime($n->getDateTimeValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
+            'progress' => fn(ParseNode $n) => $o->setProgress($n->getFloatValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)),
+            'storageLocation' => fn(ParseNode $n) => $o->setStorageLocation($n->getStringValue()),
+            'submittedDateTime' => fn(ParseNode $n) => $o->setSubmittedDateTime($n->getDateTimeValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
 

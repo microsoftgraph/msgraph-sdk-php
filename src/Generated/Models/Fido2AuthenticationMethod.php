@@ -103,12 +103,12 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'aaGuid' => function (ParseNode $n) use ($o) { $o->setAaGuid($n->getStringValue()); },
-            'attestationCertificates' => function (ParseNode $n) use ($o) { $o->setAttestationCertificates($n->getCollectionOfPrimitiveValues()); },
-            'attestationLevel' => function (ParseNode $n) use ($o) { $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
+            'aaGuid' => fn(ParseNode $n) => $o->setAaGuid($n->getStringValue()),
+            'attestationCertificates' => fn(ParseNode $n) => $o->setAttestationCertificates($n->getCollectionOfPrimitiveValues()),
+            'attestationLevel' => fn(ParseNode $n) => $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
         ]);
     }
 

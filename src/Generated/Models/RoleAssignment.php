@@ -29,7 +29,7 @@ class RoleAssignment extends Entity implements Parsable
     private ?RoleDefinition $roleDefinition = null;
     
     /**
-     * Instantiates a new RoleAssignment and sets the default values.
+     * Instantiates a new roleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -75,10 +75,10 @@ class RoleAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'resourceScopes' => function (ParseNode $n) use ($o) { $o->setResourceScopes($n->getCollectionOfPrimitiveValues()); },
-            'roleDefinition' => function (ParseNode $n) use ($o) { $o->setRoleDefinition($n->getObjectValue(array(RoleDefinition::class, 'createFromDiscriminatorValue'))); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'resourceScopes' => fn(ParseNode $n) => $o->setResourceScopes($n->getCollectionOfPrimitiveValues()),
+            'roleDefinition' => fn(ParseNode $n) => $o->setRoleDefinition($n->getObjectValue([RoleDefinition::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

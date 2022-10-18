@@ -65,11 +65,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'issuerUri' => function (ParseNode $n) use ($o) { $o->setIssuerUri($n->getStringValue()); },
-            'metadataExchangeUri' => function (ParseNode $n) use ($o) { $o->setMetadataExchangeUri($n->getStringValue()); },
-            'passiveSignInUri' => function (ParseNode $n) use ($o) { $o->setPassiveSignInUri($n->getStringValue()); },
-            'preferredAuthenticationProtocol' => function (ParseNode $n) use ($o) { $o->setPreferredAuthenticationProtocol($n->getEnumValue(AuthenticationProtocol::class)); },
-            'signingCertificate' => function (ParseNode $n) use ($o) { $o->setSigningCertificate($n->getStringValue()); },
+            'issuerUri' => fn(ParseNode $n) => $o->setIssuerUri($n->getStringValue()),
+            'metadataExchangeUri' => fn(ParseNode $n) => $o->setMetadataExchangeUri($n->getStringValue()),
+            'passiveSignInUri' => fn(ParseNode $n) => $o->setPassiveSignInUri($n->getStringValue()),
+            'preferredAuthenticationProtocol' => fn(ParseNode $n) => $o->setPreferredAuthenticationProtocol($n->getEnumValue(AuthenticationProtocol::class)),
+            'signingCertificate' => fn(ParseNode $n) => $o->setSigningCertificate($n->getStringValue()),
         ]);
     }
 

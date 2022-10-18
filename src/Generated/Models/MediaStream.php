@@ -84,12 +84,12 @@ class MediaStream implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'direction' => function (ParseNode $n) use ($o) { $o->setDirection($n->getEnumValue(MediaDirection::class)); },
-            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
-            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getEnumValue(Modality::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'serverMuted' => function (ParseNode $n) use ($o) { $o->setServerMuted($n->getBooleanValue()); },
-            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
+            'direction' => fn(ParseNode $n) => $o->setDirection($n->getEnumValue(MediaDirection::class)),
+            'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
+            'mediaType' => fn(ParseNode $n) => $o->setMediaType($n->getEnumValue(Modality::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'serverMuted' => fn(ParseNode $n) => $o->setServerMuted($n->getBooleanValue()),
+            'sourceId' => fn(ParseNode $n) => $o->setSourceId($n->getStringValue()),
         ];
     }
 

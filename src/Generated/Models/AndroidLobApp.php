@@ -52,10 +52,10 @@ class AndroidLobApp extends MobileLobApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'minimumSupportedOperatingSystem' => function (ParseNode $n) use ($o) { $o->setMinimumSupportedOperatingSystem($n->getObjectValue(array(AndroidMinimumOperatingSystem::class, 'createFromDiscriminatorValue'))); },
-            'packageId' => function (ParseNode $n) use ($o) { $o->setPackageId($n->getStringValue()); },
-            'versionCode' => function (ParseNode $n) use ($o) { $o->setVersionCode($n->getStringValue()); },
-            'versionName' => function (ParseNode $n) use ($o) { $o->setVersionName($n->getStringValue()); },
+            'minimumSupportedOperatingSystem' => fn(ParseNode $n) => $o->setMinimumSupportedOperatingSystem($n->getObjectValue([AndroidMinimumOperatingSystem::class, 'createFromDiscriminatorValue'])),
+            'packageId' => fn(ParseNode $n) => $o->setPackageId($n->getStringValue()),
+            'versionCode' => fn(ParseNode $n) => $o->setVersionCode($n->getStringValue()),
+            'versionName' => fn(ParseNode $n) => $o->setVersionName($n->getStringValue()),
         ]);
     }
 

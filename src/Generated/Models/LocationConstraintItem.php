@@ -37,7 +37,7 @@ class LocationConstraintItem extends Location implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'resolveAvailability' => function (ParseNode $n) use ($o) { $o->setResolveAvailability($n->getBooleanValue()); },
+            'resolveAvailability' => fn(ParseNode $n) => $o->setResolveAvailability($n->getBooleanValue()),
         ]);
     }
 

@@ -80,11 +80,11 @@ class RecentNotebook implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastAccessedTime' => function (ParseNode $n) use ($o) { $o->setLastAccessedTime($n->getDateTimeValue()); },
-            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(RecentNotebookLinks::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sourceService' => function (ParseNode $n) use ($o) { $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastAccessedTime' => fn(ParseNode $n) => $o->setLastAccessedTime($n->getDateTimeValue()),
+            'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([RecentNotebookLinks::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sourceService' => fn(ParseNode $n) => $o->setSourceService($n->getEnumValue(OnenoteSourceService::class)),
         ];
     }
 

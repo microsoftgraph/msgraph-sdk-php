@@ -130,7 +130,7 @@ class Device extends DirectoryObject implements Parsable
     private ?string $trustType = null;
     
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -225,30 +225,30 @@ class Device extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accountEnabled' => function (ParseNode $n) use ($o) { $o->setAccountEnabled($n->getBooleanValue()); },
-            'alternativeSecurityIds' => function (ParseNode $n) use ($o) { $o->setAlternativeSecurityIds($n->getCollectionOfObjectValues(array(AlternativeSecurityId::class, 'createFromDiscriminatorValue'))); },
-            'approximateLastSignInDateTime' => function (ParseNode $n) use ($o) { $o->setApproximateLastSignInDateTime($n->getDateTimeValue()); },
-            'complianceExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setComplianceExpirationDateTime($n->getDateTimeValue()); },
-            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
-            'deviceMetadata' => function (ParseNode $n) use ($o) { $o->setDeviceMetadata($n->getStringValue()); },
-            'deviceVersion' => function (ParseNode $n) use ($o) { $o->setDeviceVersion($n->getIntegerValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
-            'isCompliant' => function (ParseNode $n) use ($o) { $o->setIsCompliant($n->getBooleanValue()); },
-            'isManaged' => function (ParseNode $n) use ($o) { $o->setIsManaged($n->getBooleanValue()); },
-            'mdmAppId' => function (ParseNode $n) use ($o) { $o->setMdmAppId($n->getStringValue()); },
-            'memberOf' => function (ParseNode $n) use ($o) { $o->setMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'onPremisesLastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()); },
-            'onPremisesSyncEnabled' => function (ParseNode $n) use ($o) { $o->setOnPremisesSyncEnabled($n->getBooleanValue()); },
-            'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
-            'operatingSystemVersion' => function (ParseNode $n) use ($o) { $o->setOperatingSystemVersion($n->getStringValue()); },
-            'physicalIds' => function (ParseNode $n) use ($o) { $o->setPhysicalIds($n->getCollectionOfPrimitiveValues()); },
-            'profileType' => function (ParseNode $n) use ($o) { $o->setProfileType($n->getStringValue()); },
-            'registeredOwners' => function (ParseNode $n) use ($o) { $o->setRegisteredOwners($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'registeredUsers' => function (ParseNode $n) use ($o) { $o->setRegisteredUsers($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'systemLabels' => function (ParseNode $n) use ($o) { $o->setSystemLabels($n->getCollectionOfPrimitiveValues()); },
-            'transitiveMemberOf' => function (ParseNode $n) use ($o) { $o->setTransitiveMemberOf($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'trustType' => function (ParseNode $n) use ($o) { $o->setTrustType($n->getStringValue()); },
+            'accountEnabled' => fn(ParseNode $n) => $o->setAccountEnabled($n->getBooleanValue()),
+            'alternativeSecurityIds' => fn(ParseNode $n) => $o->setAlternativeSecurityIds($n->getCollectionOfObjectValues([AlternativeSecurityId::class, 'createFromDiscriminatorValue'])),
+            'approximateLastSignInDateTime' => fn(ParseNode $n) => $o->setApproximateLastSignInDateTime($n->getDateTimeValue()),
+            'complianceExpirationDateTime' => fn(ParseNode $n) => $o->setComplianceExpirationDateTime($n->getDateTimeValue()),
+            'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
+            'deviceMetadata' => fn(ParseNode $n) => $o->setDeviceMetadata($n->getStringValue()),
+            'deviceVersion' => fn(ParseNode $n) => $o->setDeviceVersion($n->getIntegerValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
+            'isCompliant' => fn(ParseNode $n) => $o->setIsCompliant($n->getBooleanValue()),
+            'isManaged' => fn(ParseNode $n) => $o->setIsManaged($n->getBooleanValue()),
+            'mdmAppId' => fn(ParseNode $n) => $o->setMdmAppId($n->getStringValue()),
+            'memberOf' => fn(ParseNode $n) => $o->setMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
+            'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
+            'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
+            'operatingSystemVersion' => fn(ParseNode $n) => $o->setOperatingSystemVersion($n->getStringValue()),
+            'physicalIds' => fn(ParseNode $n) => $o->setPhysicalIds($n->getCollectionOfPrimitiveValues()),
+            'profileType' => fn(ParseNode $n) => $o->setProfileType($n->getStringValue()),
+            'registeredOwners' => fn(ParseNode $n) => $o->setRegisteredOwners($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'registeredUsers' => fn(ParseNode $n) => $o->setRegisteredUsers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'systemLabels' => fn(ParseNode $n) => $o->setSystemLabels($n->getCollectionOfPrimitiveValues()),
+            'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'trustType' => fn(ParseNode $n) => $o->setTrustType($n->getStringValue()),
         ]);
     }
 

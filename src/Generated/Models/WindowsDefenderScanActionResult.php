@@ -37,7 +37,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'scanType' => function (ParseNode $n) use ($o) { $o->setScanType($n->getStringValue()); },
+            'scanType' => fn(ParseNode $n) => $o->setScanType($n->getStringValue()),
         ]);
     }
 

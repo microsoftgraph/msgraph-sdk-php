@@ -77,9 +77,9 @@ class EducationItemBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getEnumValue(BodyType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(BodyType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

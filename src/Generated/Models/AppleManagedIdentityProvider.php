@@ -68,10 +68,10 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'certificateData' => function (ParseNode $n) use ($o) { $o->setCertificateData($n->getStringValue()); },
-            'developerId' => function (ParseNode $n) use ($o) { $o->setDeveloperId($n->getStringValue()); },
-            'keyId' => function (ParseNode $n) use ($o) { $o->setKeyId($n->getStringValue()); },
-            'serviceId' => function (ParseNode $n) use ($o) { $o->setServiceId($n->getStringValue()); },
+            'certificateData' => fn(ParseNode $n) => $o->setCertificateData($n->getStringValue()),
+            'developerId' => fn(ParseNode $n) => $o->setDeveloperId($n->getStringValue()),
+            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getStringValue()),
+            'serviceId' => fn(ParseNode $n) => $o->setServiceId($n->getStringValue()),
         ]);
     }
 

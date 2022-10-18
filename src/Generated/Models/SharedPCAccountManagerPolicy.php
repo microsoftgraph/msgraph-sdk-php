@@ -87,11 +87,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accountDeletionPolicy' => function (ParseNode $n) use ($o) { $o->setAccountDeletionPolicy($n->getEnumValue(SharedPCAccountDeletionPolicyType::class)); },
-            'cacheAccountsAboveDiskFreePercentage' => function (ParseNode $n) use ($o) { $o->setCacheAccountsAboveDiskFreePercentage($n->getIntegerValue()); },
-            'inactiveThresholdDays' => function (ParseNode $n) use ($o) { $o->setInactiveThresholdDays($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'removeAccountsBelowDiskFreePercentage' => function (ParseNode $n) use ($o) { $o->setRemoveAccountsBelowDiskFreePercentage($n->getIntegerValue()); },
+            'accountDeletionPolicy' => fn(ParseNode $n) => $o->setAccountDeletionPolicy($n->getEnumValue(SharedPCAccountDeletionPolicyType::class)),
+            'cacheAccountsAboveDiskFreePercentage' => fn(ParseNode $n) => $o->setCacheAccountsAboveDiskFreePercentage($n->getIntegerValue()),
+            'inactiveThresholdDays' => fn(ParseNode $n) => $o->setInactiveThresholdDays($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'removeAccountsBelowDiskFreePercentage' => fn(ParseNode $n) => $o->setRemoveAccountsBelowDiskFreePercentage($n->getIntegerValue()),
         ];
     }
 

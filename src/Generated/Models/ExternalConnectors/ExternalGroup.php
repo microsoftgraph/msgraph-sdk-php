@@ -25,7 +25,7 @@ class ExternalGroup extends Entity implements Parsable
     private ?array $members = null;
     
     /**
-     * Instantiates a new ExternalGroup and sets the default values.
+     * Instantiates a new externalGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -64,9 +64,9 @@ class ExternalGroup extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([Identity::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

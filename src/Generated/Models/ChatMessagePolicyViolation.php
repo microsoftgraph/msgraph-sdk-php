@@ -84,12 +84,12 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dlpAction' => function (ParseNode $n) use ($o) { $o->setDlpAction($n->getEnumValue(ChatMessagePolicyViolationDlpActionTypes::class)); },
-            'justificationText' => function (ParseNode $n) use ($o) { $o->setJustificationText($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'policyTip' => function (ParseNode $n) use ($o) { $o->setPolicyTip($n->getObjectValue(array(ChatMessagePolicyViolationPolicyTip::class, 'createFromDiscriminatorValue'))); },
-            'userAction' => function (ParseNode $n) use ($o) { $o->setUserAction($n->getEnumValue(ChatMessagePolicyViolationUserActionTypes::class)); },
-            'verdictDetails' => function (ParseNode $n) use ($o) { $o->setVerdictDetails($n->getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes::class)); },
+            'dlpAction' => fn(ParseNode $n) => $o->setDlpAction($n->getEnumValue(ChatMessagePolicyViolationDlpActionTypes::class)),
+            'justificationText' => fn(ParseNode $n) => $o->setJustificationText($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'policyTip' => fn(ParseNode $n) => $o->setPolicyTip($n->getObjectValue([ChatMessagePolicyViolationPolicyTip::class, 'createFromDiscriminatorValue'])),
+            'userAction' => fn(ParseNode $n) => $o->setUserAction($n->getEnumValue(ChatMessagePolicyViolationUserActionTypes::class)),
+            'verdictDetails' => fn(ParseNode $n) => $o->setVerdictDetails($n->getEnumValue(ChatMessagePolicyViolationVerdictDetailsTypes::class)),
         ];
     }
 

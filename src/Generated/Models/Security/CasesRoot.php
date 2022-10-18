@@ -46,7 +46,7 @@ class CasesRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ediscoveryCases' => function (ParseNode $n) use ($o) { $o->setEdiscoveryCases($n->getCollectionOfObjectValues(array(EdiscoveryCase::class, 'createFromDiscriminatorValue'))); },
+            'ediscoveryCases' => fn(ParseNode $n) => $o->setEdiscoveryCases($n->getCollectionOfObjectValues([EdiscoveryCase::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

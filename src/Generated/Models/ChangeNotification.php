@@ -126,17 +126,17 @@ class ChangeNotification implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'changeType' => function (ParseNode $n) use ($o) { $o->setChangeType($n->getEnumValue(ChangeType::class)); },
-            'clientState' => function (ParseNode $n) use ($o) { $o->setClientState($n->getStringValue()); },
-            'encryptedContent' => function (ParseNode $n) use ($o) { $o->setEncryptedContent($n->getObjectValue(array(ChangeNotificationEncryptedContent::class, 'createFromDiscriminatorValue'))); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            'lifecycleEvent' => function (ParseNode $n) use ($o) { $o->setLifecycleEvent($n->getEnumValue(LifecycleEventType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getStringValue()); },
-            'resourceData' => function (ParseNode $n) use ($o) { $o->setResourceData($n->getObjectValue(array(ResourceData::class, 'createFromDiscriminatorValue'))); },
-            'subscriptionExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setSubscriptionExpirationDateTime($n->getDateTimeValue()); },
-            'subscriptionId' => function (ParseNode $n) use ($o) { $o->setSubscriptionId($n->getStringValue()); },
-            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'changeType' => fn(ParseNode $n) => $o->setChangeType($n->getEnumValue(ChangeType::class)),
+            'clientState' => fn(ParseNode $n) => $o->setClientState($n->getStringValue()),
+            'encryptedContent' => fn(ParseNode $n) => $o->setEncryptedContent($n->getObjectValue([ChangeNotificationEncryptedContent::class, 'createFromDiscriminatorValue'])),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'lifecycleEvent' => fn(ParseNode $n) => $o->setLifecycleEvent($n->getEnumValue(LifecycleEventType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getStringValue()),
+            'resourceData' => fn(ParseNode $n) => $o->setResourceData($n->getObjectValue([ResourceData::class, 'createFromDiscriminatorValue'])),
+            'subscriptionExpirationDateTime' => fn(ParseNode $n) => $o->setSubscriptionExpirationDateTime($n->getDateTimeValue()),
+            'subscriptionId' => fn(ParseNode $n) => $o->setSubscriptionId($n->getStringValue()),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
         ];
     }
 

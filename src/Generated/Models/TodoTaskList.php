@@ -78,12 +78,12 @@ class TodoTaskList extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
-            'isOwner' => function (ParseNode $n) use ($o) { $o->setIsOwner($n->getBooleanValue()); },
-            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
-            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(TodoTask::class, 'createFromDiscriminatorValue'))); },
-            'wellknownListName' => function (ParseNode $n) use ($o) { $o->setWellknownListName($n->getEnumValue(WellknownListName::class)); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
+            'isOwner' => fn(ParseNode $n) => $o->setIsOwner($n->getBooleanValue()),
+            'isShared' => fn(ParseNode $n) => $o->setIsShared($n->getBooleanValue()),
+            'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([TodoTask::class, 'createFromDiscriminatorValue'])),
+            'wellknownListName' => fn(ParseNode $n) => $o->setWellknownListName($n->getEnumValue(WellknownListName::class)),
         ]);
     }
 

@@ -93,12 +93,12 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'changedBy' => function (ParseNode $n) use ($o) { $o->setChangedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'eventDateTime' => function (ParseNode $n) use ($o) { $o->setEventDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)); },
-            'stageStatus' => function (ParseNode $n) use ($o) { $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'changedBy' => fn(ParseNode $n) => $o->setChangedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(SubjectRightsRequestStage::class)),
+            'stageStatus' => fn(ParseNode $n) => $o->setStageStatus($n->getEnumValue(SubjectRightsRequestStageStatus::class)),
+            'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
 

@@ -42,8 +42,8 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mailExchange' => function (ParseNode $n) use ($o) { $o->setMailExchange($n->getStringValue()); },
-            'preference' => function (ParseNode $n) use ($o) { $o->setPreference($n->getIntegerValue()); },
+            'mailExchange' => fn(ParseNode $n) => $o->setMailExchange($n->getStringValue()),
+            'preference' => fn(ParseNode $n) => $o->setPreference($n->getIntegerValue()),
         ]);
     }
 

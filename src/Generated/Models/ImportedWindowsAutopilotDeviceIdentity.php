@@ -76,13 +76,13 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedUserPrincipalName' => function (ParseNode $n) use ($o) { $o->setAssignedUserPrincipalName($n->getStringValue()); },
-            'groupTag' => function (ParseNode $n) use ($o) { $o->setGroupTag($n->getStringValue()); },
-            'hardwareIdentifier' => function (ParseNode $n) use ($o) { $o->setHardwareIdentifier($n->getBinaryContent()); },
-            'importId' => function (ParseNode $n) use ($o) { $o->setImportId($n->getStringValue()); },
-            'productKey' => function (ParseNode $n) use ($o) { $o->setProductKey($n->getStringValue()); },
-            'serialNumber' => function (ParseNode $n) use ($o) { $o->setSerialNumber($n->getStringValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getObjectValue(array(ImportedWindowsAutopilotDeviceIdentityState::class, 'createFromDiscriminatorValue'))); },
+            'assignedUserPrincipalName' => fn(ParseNode $n) => $o->setAssignedUserPrincipalName($n->getStringValue()),
+            'groupTag' => fn(ParseNode $n) => $o->setGroupTag($n->getStringValue()),
+            'hardwareIdentifier' => fn(ParseNode $n) => $o->setHardwareIdentifier($n->getBinaryContent()),
+            'importId' => fn(ParseNode $n) => $o->setImportId($n->getStringValue()),
+            'productKey' => fn(ParseNode $n) => $o->setProductKey($n->getStringValue()),
+            'serialNumber' => fn(ParseNode $n) => $o->setSerialNumber($n->getStringValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getObjectValue([ImportedWindowsAutopilotDeviceIdentityState::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

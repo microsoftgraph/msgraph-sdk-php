@@ -84,10 +84,10 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'dataType' => function (ParseNode $n) use ($o) { $o->setDataType($n->getEnumValue(IdentityUserFlowAttributeDataType::class)); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'userFlowAttributeType' => function (ParseNode $n) use ($o) { $o->setUserFlowAttributeType($n->getEnumValue(IdentityUserFlowAttributeType::class)); },
+            'dataType' => fn(ParseNode $n) => $o->setDataType($n->getEnumValue(IdentityUserFlowAttributeDataType::class)),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'userFlowAttributeType' => fn(ParseNode $n) => $o->setUserFlowAttributeType($n->getEnumValue(IdentityUserFlowAttributeType::class)),
         ]);
     }
 

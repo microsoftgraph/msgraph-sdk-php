@@ -96,11 +96,11 @@ class EducationTerm implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
-            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'endDate' => fn(ParseNode $n) => $o->setEndDate($n->getDateValue()),
+            'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'startDate' => fn(ParseNode $n) => $o->setStartDate($n->getDateValue()),
         ];
     }
 

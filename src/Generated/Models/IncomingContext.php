@@ -71,11 +71,11 @@ class IncomingContext implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'observedParticipantId' => function (ParseNode $n) use ($o) { $o->setObservedParticipantId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'onBehalfOf' => function (ParseNode $n) use ($o) { $o->setOnBehalfOf($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'sourceParticipantId' => function (ParseNode $n) use ($o) { $o->setSourceParticipantId($n->getStringValue()); },
-            'transferor' => function (ParseNode $n) use ($o) { $o->setTransferor($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'observedParticipantId' => fn(ParseNode $n) => $o->setObservedParticipantId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'onBehalfOf' => fn(ParseNode $n) => $o->setOnBehalfOf($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'sourceParticipantId' => fn(ParseNode $n) => $o->setSourceParticipantId($n->getStringValue()),
+            'transferor' => fn(ParseNode $n) => $o->setTransferor($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

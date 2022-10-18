@@ -68,10 +68,10 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appIconWebUrl' => function (ParseNode $n) use ($o) { $o->setAppIconWebUrl($n->getStringValue()); },
-            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
-            'teamsEmbeddedContentUrl' => function (ParseNode $n) use ($o) { $o->setTeamsEmbeddedContentUrl($n->getStringValue()); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
+            'appIconWebUrl' => fn(ParseNode $n) => $o->setAppIconWebUrl($n->getStringValue()),
+            'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
+            'teamsEmbeddedContentUrl' => fn(ParseNode $n) => $o->setTeamsEmbeddedContentUrl($n->getStringValue()),
+            'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
     }
 

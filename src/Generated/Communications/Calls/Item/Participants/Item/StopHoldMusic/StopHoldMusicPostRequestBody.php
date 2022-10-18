@@ -58,7 +58,7 @@ class StopHoldMusicPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'clientContext' => function (ParseNode $n) use ($o) { $o->setClientContext($n->getStringValue()); },
+            'clientContext' => fn(ParseNode $n) => $o->setClientContext($n->getStringValue()),
         ];
     }
 

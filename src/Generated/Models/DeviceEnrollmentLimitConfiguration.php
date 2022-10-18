@@ -37,7 +37,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'limit' => function (ParseNode $n) use ($o) { $o->setLimit($n->getIntegerValue()); },
+            'limit' => fn(ParseNode $n) => $o->setLimit($n->getIntegerValue()),
         ]);
     }
 

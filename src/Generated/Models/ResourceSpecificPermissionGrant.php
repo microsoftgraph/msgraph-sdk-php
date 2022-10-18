@@ -73,11 +73,11 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientAppId' => function (ParseNode $n) use ($o) { $o->setClientAppId($n->getStringValue()); },
-            'clientId' => function (ParseNode $n) use ($o) { $o->setClientId($n->getStringValue()); },
-            'permission' => function (ParseNode $n) use ($o) { $o->setPermission($n->getStringValue()); },
-            'permissionType' => function (ParseNode $n) use ($o) { $o->setPermissionType($n->getStringValue()); },
-            'resourceAppId' => function (ParseNode $n) use ($o) { $o->setResourceAppId($n->getStringValue()); },
+            'clientAppId' => fn(ParseNode $n) => $o->setClientAppId($n->getStringValue()),
+            'clientId' => fn(ParseNode $n) => $o->setClientId($n->getStringValue()),
+            'permission' => fn(ParseNode $n) => $o->setPermission($n->getStringValue()),
+            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getStringValue()),
+            'resourceAppId' => fn(ParseNode $n) => $o->setResourceAppId($n->getStringValue()),
         ]);
     }
 

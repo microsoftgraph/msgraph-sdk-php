@@ -93,12 +93,12 @@ class Certification implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'certificationDetailsUrl' => function (ParseNode $n) use ($o) { $o->setCertificationDetailsUrl($n->getStringValue()); },
-            'certificationExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setCertificationExpirationDateTime($n->getDateTimeValue()); },
-            'isCertifiedByMicrosoft' => function (ParseNode $n) use ($o) { $o->setIsCertifiedByMicrosoft($n->getBooleanValue()); },
-            'isPublisherAttested' => function (ParseNode $n) use ($o) { $o->setIsPublisherAttested($n->getBooleanValue()); },
-            'lastCertificationDateTime' => function (ParseNode $n) use ($o) { $o->setLastCertificationDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'certificationDetailsUrl' => fn(ParseNode $n) => $o->setCertificationDetailsUrl($n->getStringValue()),
+            'certificationExpirationDateTime' => fn(ParseNode $n) => $o->setCertificationExpirationDateTime($n->getDateTimeValue()),
+            'isCertifiedByMicrosoft' => fn(ParseNode $n) => $o->setIsCertifiedByMicrosoft($n->getBooleanValue()),
+            'isPublisherAttested' => fn(ParseNode $n) => $o->setIsPublisherAttested($n->getBooleanValue()),
+            'lastCertificationDateTime' => fn(ParseNode $n) => $o->setLastCertificationDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

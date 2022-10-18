@@ -92,10 +92,10 @@ class IdentitySet implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'user' => function (ParseNode $n) use ($o) { $o->setUser($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'application' => fn(ParseNode $n) => $o->setApplication($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'user' => fn(ParseNode $n) => $o->setUser($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

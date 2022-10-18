@@ -59,7 +59,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attachmentInfo' => function (ParseNode $n) use ($o) { $o->setAttachmentInfo($n->getObjectValue(array(AttachmentInfo::class, 'createFromDiscriminatorValue'))); },
+            'attachmentInfo' => fn(ParseNode $n) => $o->setAttachmentInfo($n->getObjectValue([AttachmentInfo::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

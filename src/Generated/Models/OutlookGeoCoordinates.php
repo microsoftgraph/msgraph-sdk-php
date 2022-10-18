@@ -100,12 +100,12 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accuracy' => function (ParseNode $n) use ($o) { $o->setAccuracy($n->getFloatValue()); },
-            'altitude' => function (ParseNode $n) use ($o) { $o->setAltitude($n->getFloatValue()); },
-            'altitudeAccuracy' => function (ParseNode $n) use ($o) { $o->setAltitudeAccuracy($n->getFloatValue()); },
-            'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
-            'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'accuracy' => fn(ParseNode $n) => $o->setAccuracy($n->getFloatValue()),
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
+            'altitudeAccuracy' => fn(ParseNode $n) => $o->setAltitudeAccuracy($n->getFloatValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

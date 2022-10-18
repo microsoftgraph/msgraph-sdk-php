@@ -162,19 +162,19 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessPackage' => function (ParseNode $n) use ($o) { $o->setAccessPackage($n->getObjectValue(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
-            'allowedTargetScope' => function (ParseNode $n) use ($o) { $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)); },
-            'automaticRequestSettings' => function (ParseNode $n) use ($o) { $o->setAutomaticRequestSettings($n->getObjectValue(array(AccessPackageAutomaticRequestSettings::class, 'createFromDiscriminatorValue'))); },
-            'catalog' => function (ParseNode $n) use ($o) { $o->setCatalog($n->getObjectValue(array(AccessPackageCatalog::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'expiration' => function (ParseNode $n) use ($o) { $o->setExpiration($n->getObjectValue(array(ExpirationPattern::class, 'createFromDiscriminatorValue'))); },
-            'modifiedDateTime' => function (ParseNode $n) use ($o) { $o->setModifiedDateTime($n->getDateTimeValue()); },
-            'requestApprovalSettings' => function (ParseNode $n) use ($o) { $o->setRequestApprovalSettings($n->getObjectValue(array(AccessPackageAssignmentApprovalSettings::class, 'createFromDiscriminatorValue'))); },
-            'requestorSettings' => function (ParseNode $n) use ($o) { $o->setRequestorSettings($n->getObjectValue(array(AccessPackageAssignmentRequestorSettings::class, 'createFromDiscriminatorValue'))); },
-            'reviewSettings' => function (ParseNode $n) use ($o) { $o->setReviewSettings($n->getObjectValue(array(AccessPackageAssignmentReviewSettings::class, 'createFromDiscriminatorValue'))); },
-            'specificAllowedTargets' => function (ParseNode $n) use ($o) { $o->setSpecificAllowedTargets($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'accessPackage' => fn(ParseNode $n) => $o->setAccessPackage($n->getObjectValue([AccessPackage::class, 'createFromDiscriminatorValue'])),
+            'allowedTargetScope' => fn(ParseNode $n) => $o->setAllowedTargetScope($n->getEnumValue(AllowedTargetScope::class)),
+            'automaticRequestSettings' => fn(ParseNode $n) => $o->setAutomaticRequestSettings($n->getObjectValue([AccessPackageAutomaticRequestSettings::class, 'createFromDiscriminatorValue'])),
+            'catalog' => fn(ParseNode $n) => $o->setCatalog($n->getObjectValue([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'expiration' => fn(ParseNode $n) => $o->setExpiration($n->getObjectValue([ExpirationPattern::class, 'createFromDiscriminatorValue'])),
+            'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            'requestApprovalSettings' => fn(ParseNode $n) => $o->setRequestApprovalSettings($n->getObjectValue([AccessPackageAssignmentApprovalSettings::class, 'createFromDiscriminatorValue'])),
+            'requestorSettings' => fn(ParseNode $n) => $o->setRequestorSettings($n->getObjectValue([AccessPackageAssignmentRequestorSettings::class, 'createFromDiscriminatorValue'])),
+            'reviewSettings' => fn(ParseNode $n) => $o->setReviewSettings($n->getObjectValue([AccessPackageAssignmentReviewSettings::class, 'createFromDiscriminatorValue'])),
+            'specificAllowedTargets' => fn(ParseNode $n) => $o->setSpecificAllowedTargets($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

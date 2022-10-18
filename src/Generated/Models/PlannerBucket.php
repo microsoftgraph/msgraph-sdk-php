@@ -52,10 +52,10 @@ class PlannerBucket extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'orderHint' => function (ParseNode $n) use ($o) { $o->setOrderHint($n->getStringValue()); },
-            'planId' => function (ParseNode $n) use ($o) { $o->setPlanId($n->getStringValue()); },
-            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PlannerTask::class, 'createFromDiscriminatorValue'))); },
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'orderHint' => fn(ParseNode $n) => $o->setOrderHint($n->getStringValue()),
+            'planId' => fn(ParseNode $n) => $o->setPlanId($n->getStringValue()),
+            'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([PlannerTask::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

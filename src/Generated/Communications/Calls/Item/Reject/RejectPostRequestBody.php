@@ -64,8 +64,8 @@ class RejectPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'callbackUri' => function (ParseNode $n) use ($o) { $o->setCallbackUri($n->getStringValue()); },
-            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getEnumValue(RejectReason::class)); },
+            'callbackUri' => fn(ParseNode $n) => $o->setCallbackUri($n->getStringValue()),
+            'reason' => fn(ParseNode $n) => $o->setReason($n->getEnumValue(RejectReason::class)),
         ];
     }
 

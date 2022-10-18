@@ -100,12 +100,12 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'applicationEnforcedRestrictions' => function (ParseNode $n) use ($o) { $o->setApplicationEnforcedRestrictions($n->getObjectValue(array(ApplicationEnforcedRestrictionsSessionControl::class, 'createFromDiscriminatorValue'))); },
-            'cloudAppSecurity' => function (ParseNode $n) use ($o) { $o->setCloudAppSecurity($n->getObjectValue(array(CloudAppSecuritySessionControl::class, 'createFromDiscriminatorValue'))); },
-            'disableResilienceDefaults' => function (ParseNode $n) use ($o) { $o->setDisableResilienceDefaults($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'persistentBrowser' => function (ParseNode $n) use ($o) { $o->setPersistentBrowser($n->getObjectValue(array(PersistentBrowserSessionControl::class, 'createFromDiscriminatorValue'))); },
-            'signInFrequency' => function (ParseNode $n) use ($o) { $o->setSignInFrequency($n->getObjectValue(array(SignInFrequencySessionControl::class, 'createFromDiscriminatorValue'))); },
+            'applicationEnforcedRestrictions' => fn(ParseNode $n) => $o->setApplicationEnforcedRestrictions($n->getObjectValue([ApplicationEnforcedRestrictionsSessionControl::class, 'createFromDiscriminatorValue'])),
+            'cloudAppSecurity' => fn(ParseNode $n) => $o->setCloudAppSecurity($n->getObjectValue([CloudAppSecuritySessionControl::class, 'createFromDiscriminatorValue'])),
+            'disableResilienceDefaults' => fn(ParseNode $n) => $o->setDisableResilienceDefaults($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'persistentBrowser' => fn(ParseNode $n) => $o->setPersistentBrowser($n->getObjectValue([PersistentBrowserSessionControl::class, 'createFromDiscriminatorValue'])),
+            'signInFrequency' => fn(ParseNode $n) => $o->setSignInFrequency($n->getObjectValue([SignInFrequencySessionControl::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

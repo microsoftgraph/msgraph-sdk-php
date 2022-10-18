@@ -66,8 +66,8 @@ class Win32LobAppRule implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'ruleType' => function (ParseNode $n) use ($o) { $o->setRuleType($n->getEnumValue(Win32LobAppRuleType::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'ruleType' => fn(ParseNode $n) => $o->setRuleType($n->getEnumValue(Win32LobAppRuleType::class)),
         ];
     }
 

@@ -81,11 +81,11 @@ class TermColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowMultipleValues' => function (ParseNode $n) use ($o) { $o->setAllowMultipleValues($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'parentTerm' => function (ParseNode $n) use ($o) { $o->setParentTerm($n->getObjectValue(array(Term::class, 'createFromDiscriminatorValue'))); },
-            'showFullyQualifiedName' => function (ParseNode $n) use ($o) { $o->setShowFullyQualifiedName($n->getBooleanValue()); },
-            'termSet' => function (ParseNode $n) use ($o) { $o->setTermSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
+            'allowMultipleValues' => fn(ParseNode $n) => $o->setAllowMultipleValues($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'parentTerm' => fn(ParseNode $n) => $o->setParentTerm($n->getObjectValue([Term::class, 'createFromDiscriminatorValue'])),
+            'showFullyQualifiedName' => fn(ParseNode $n) => $o->setShowFullyQualifiedName($n->getBooleanValue()),
+            'termSet' => fn(ParseNode $n) => $o->setTermSet($n->getObjectValue([Set::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

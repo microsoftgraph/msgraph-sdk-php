@@ -38,7 +38,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'inactiveDuration' => function (ParseNode $n) use ($o) { $o->setInactiveDuration($n->getDateIntervalValue()); },
+            'inactiveDuration' => fn(ParseNode $n) => $o->setInactiveDuration($n->getDateIntervalValue()),
         ]);
     }
 

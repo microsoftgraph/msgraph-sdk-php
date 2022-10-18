@@ -45,7 +45,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'chat' => function (ParseNode $n) use ($o) { $o->setChat($n->getObjectValue(array(Chat::class, 'createFromDiscriminatorValue'))); },
+            'chat' => fn(ParseNode $n) => $o->setChat($n->getObjectValue([Chat::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

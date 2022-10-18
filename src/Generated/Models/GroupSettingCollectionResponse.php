@@ -36,7 +36,7 @@ class GroupSettingCollectionResponse extends BaseCollectionPaginationCountRespon
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(GroupSetting::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([GroupSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

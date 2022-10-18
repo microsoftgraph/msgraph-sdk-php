@@ -100,18 +100,18 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'daysWithoutContactBeforeUnenroll' => function (ParseNode $n) use ($o) { $o->setDaysWithoutContactBeforeUnenroll($n->getIntegerValue()); },
-            'mdmEnrollmentUrl' => function (ParseNode $n) use ($o) { $o->setMdmEnrollmentUrl($n->getStringValue()); },
-            'minutesOfInactivityBeforeDeviceLock' => function (ParseNode $n) use ($o) { $o->setMinutesOfInactivityBeforeDeviceLock($n->getIntegerValue()); },
-            'numberOfPastPinsRemembered' => function (ParseNode $n) use ($o) { $o->setNumberOfPastPinsRemembered($n->getIntegerValue()); },
-            'passwordMaximumAttemptCount' => function (ParseNode $n) use ($o) { $o->setPasswordMaximumAttemptCount($n->getIntegerValue()); },
-            'pinExpirationDays' => function (ParseNode $n) use ($o) { $o->setPinExpirationDays($n->getIntegerValue()); },
-            'pinLowercaseLetters' => function (ParseNode $n) use ($o) { $o->setPinLowercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'pinMinimumLength' => function (ParseNode $n) use ($o) { $o->setPinMinimumLength($n->getIntegerValue()); },
-            'pinSpecialCharacters' => function (ParseNode $n) use ($o) { $o->setPinSpecialCharacters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'pinUppercaseLetters' => function (ParseNode $n) use ($o) { $o->setPinUppercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)); },
-            'revokeOnMdmHandoffDisabled' => function (ParseNode $n) use ($o) { $o->setRevokeOnMdmHandoffDisabled($n->getBooleanValue()); },
-            'windowsHelloForBusinessBlocked' => function (ParseNode $n) use ($o) { $o->setWindowsHelloForBusinessBlocked($n->getBooleanValue()); },
+            'daysWithoutContactBeforeUnenroll' => fn(ParseNode $n) => $o->setDaysWithoutContactBeforeUnenroll($n->getIntegerValue()),
+            'mdmEnrollmentUrl' => fn(ParseNode $n) => $o->setMdmEnrollmentUrl($n->getStringValue()),
+            'minutesOfInactivityBeforeDeviceLock' => fn(ParseNode $n) => $o->setMinutesOfInactivityBeforeDeviceLock($n->getIntegerValue()),
+            'numberOfPastPinsRemembered' => fn(ParseNode $n) => $o->setNumberOfPastPinsRemembered($n->getIntegerValue()),
+            'passwordMaximumAttemptCount' => fn(ParseNode $n) => $o->setPasswordMaximumAttemptCount($n->getIntegerValue()),
+            'pinExpirationDays' => fn(ParseNode $n) => $o->setPinExpirationDays($n->getIntegerValue()),
+            'pinLowercaseLetters' => fn(ParseNode $n) => $o->setPinLowercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)),
+            'pinMinimumLength' => fn(ParseNode $n) => $o->setPinMinimumLength($n->getIntegerValue()),
+            'pinSpecialCharacters' => fn(ParseNode $n) => $o->setPinSpecialCharacters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)),
+            'pinUppercaseLetters' => fn(ParseNode $n) => $o->setPinUppercaseLetters($n->getEnumValue(WindowsInformationProtectionPinCharacterRequirements::class)),
+            'revokeOnMdmHandoffDisabled' => fn(ParseNode $n) => $o->setRevokeOnMdmHandoffDisabled($n->getBooleanValue()),
+            'windowsHelloForBusinessBlocked' => fn(ParseNode $n) => $o->setWindowsHelloForBusinessBlocked($n->getBooleanValue()),
         ]);
     }
 

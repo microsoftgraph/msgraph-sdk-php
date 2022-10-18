@@ -66,10 +66,10 @@ class DocumentSetVersionItem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'itemId' => function (ParseNode $n) use ($o) { $o->setItemId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
-            'versionId' => function (ParseNode $n) use ($o) { $o->setVersionId($n->getStringValue()); },
+            'itemId' => fn(ParseNode $n) => $o->setItemId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
+            'versionId' => fn(ParseNode $n) => $o->setVersionId($n->getStringValue()),
         ];
     }
 

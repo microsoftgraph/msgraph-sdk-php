@@ -61,10 +61,10 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'file' => function (ParseNode $n) use ($o) { $o->setFile($n->getBinaryContent()); },
-            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getStringValue()); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'file' => fn(ParseNode $n) => $o->setFile($n->getBinaryContent()),
+            'fileHash' => fn(ParseNode $n) => $o->setFileHash($n->getStringValue()),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

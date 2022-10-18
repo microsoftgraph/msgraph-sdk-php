@@ -99,14 +99,14 @@ class Set extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'localizedNames' => function (ParseNode $n) use ($o) { $o->setLocalizedNames($n->getCollectionOfObjectValues(array(LocalizedName::class, 'createFromDiscriminatorValue'))); },
-            'parentGroup' => function (ParseNode $n) use ($o) { $o->setParentGroup($n->getObjectValue(array(Group::class, 'createFromDiscriminatorValue'))); },
-            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(KeyValue::class, 'createFromDiscriminatorValue'))); },
-            'relations' => function (ParseNode $n) use ($o) { $o->setRelations($n->getCollectionOfObjectValues(array(Relation::class, 'createFromDiscriminatorValue'))); },
-            'terms' => function (ParseNode $n) use ($o) { $o->setTerms($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
+            'children' => fn(ParseNode $n) => $o->setChildren($n->getCollectionOfObjectValues([Term::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'localizedNames' => fn(ParseNode $n) => $o->setLocalizedNames($n->getCollectionOfObjectValues([LocalizedName::class, 'createFromDiscriminatorValue'])),
+            'parentGroup' => fn(ParseNode $n) => $o->setParentGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
+            'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([KeyValue::class, 'createFromDiscriminatorValue'])),
+            'relations' => fn(ParseNode $n) => $o->setRelations($n->getCollectionOfObjectValues([Relation::class, 'createFromDiscriminatorValue'])),
+            'terms' => fn(ParseNode $n) => $o->setTerms($n->getCollectionOfObjectValues([Term::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

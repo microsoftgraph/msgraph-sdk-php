@@ -91,14 +91,14 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => function (ParseNode $n) use ($o) { $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequestActor::class)); },
-            'managerActionDateTime' => function (ParseNode $n) use ($o) { $o->setManagerActionDateTime($n->getDateTimeValue()); },
-            'managerActionMessage' => function (ParseNode $n) use ($o) { $o->setManagerActionMessage($n->getStringValue()); },
-            'managerUserId' => function (ParseNode $n) use ($o) { $o->setManagerUserId($n->getStringValue()); },
-            'senderDateTime' => function (ParseNode $n) use ($o) { $o->setSenderDateTime($n->getDateTimeValue()); },
-            'senderMessage' => function (ParseNode $n) use ($o) { $o->setSenderMessage($n->getStringValue()); },
-            'senderUserId' => function (ParseNode $n) use ($o) { $o->setSenderUserId($n->getStringValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ScheduleChangeState::class)); },
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getEnumValue(ScheduleChangeRequestActor::class)),
+            'managerActionDateTime' => fn(ParseNode $n) => $o->setManagerActionDateTime($n->getDateTimeValue()),
+            'managerActionMessage' => fn(ParseNode $n) => $o->setManagerActionMessage($n->getStringValue()),
+            'managerUserId' => fn(ParseNode $n) => $o->setManagerUserId($n->getStringValue()),
+            'senderDateTime' => fn(ParseNode $n) => $o->setSenderDateTime($n->getDateTimeValue()),
+            'senderMessage' => fn(ParseNode $n) => $o->setSenderMessage($n->getStringValue()),
+            'senderUserId' => fn(ParseNode $n) => $o->setSenderUserId($n->getStringValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ScheduleChangeState::class)),
         ]);
     }
 

@@ -62,12 +62,12 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'nameTarget' => function (ParseNode $n) use ($o) { $o->setNameTarget($n->getStringValue()); },
-            'port' => function (ParseNode $n) use ($o) { $o->setPort($n->getIntegerValue()); },
-            'priority' => function (ParseNode $n) use ($o) { $o->setPriority($n->getIntegerValue()); },
-            'protocol' => function (ParseNode $n) use ($o) { $o->setProtocol($n->getStringValue()); },
-            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
-            'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getIntegerValue()); },
+            'nameTarget' => fn(ParseNode $n) => $o->setNameTarget($n->getStringValue()),
+            'port' => fn(ParseNode $n) => $o->setPort($n->getIntegerValue()),
+            'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
+            'protocol' => fn(ParseNode $n) => $o->setProtocol($n->getStringValue()),
+            'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
+            'weight' => fn(ParseNode $n) => $o->setWeight($n->getIntegerValue()),
         ]);
     }
 

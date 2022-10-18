@@ -79,11 +79,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
-            'itemId' => function (ParseNode $n) use ($o) { $o->setItemId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'relevanceScore' => function (ParseNode $n) use ($o) { $o->setRelevanceScore($n->getFloatValue()); },
-            'selectionLikelihood' => function (ParseNode $n) use ($o) { $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)); },
+            'address' => fn(ParseNode $n) => $o->setAddress($n->getStringValue()),
+            'itemId' => fn(ParseNode $n) => $o->setItemId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'relevanceScore' => fn(ParseNode $n) => $o->setRelevanceScore($n->getFloatValue()),
+            'selectionLikelihood' => fn(ParseNode $n) => $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)),
         ];
     }
 

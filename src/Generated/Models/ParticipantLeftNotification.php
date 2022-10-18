@@ -50,8 +50,8 @@ class ParticipantLeftNotification extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'call' => function (ParseNode $n) use ($o) { $o->setCall($n->getObjectValue(array(Call::class, 'createFromDiscriminatorValue'))); },
-            'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
+            'call' => fn(ParseNode $n) => $o->setCall($n->getObjectValue([Call::class, 'createFromDiscriminatorValue'])),
+            'participantId' => fn(ParseNode $n) => $o->setParticipantId($n->getStringValue()),
         ]);
     }
 

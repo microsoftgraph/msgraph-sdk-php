@@ -45,7 +45,7 @@ class WorkbookApplication extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'calculationMode' => function (ParseNode $n) use ($o) { $o->setCalculationMode($n->getStringValue()); },
+            'calculationMode' => fn(ParseNode $n) => $o->setCalculationMode($n->getStringValue()),
         ]);
     }
 

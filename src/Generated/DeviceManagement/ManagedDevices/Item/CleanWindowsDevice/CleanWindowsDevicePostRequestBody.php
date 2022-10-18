@@ -50,7 +50,7 @@ class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'keepUserData' => function (ParseNode $n) use ($o) { $o->setKeepUserData($n->getBooleanValue()); },
+            'keepUserData' => fn(ParseNode $n) => $o->setKeepUserData($n->getBooleanValue()),
         ];
     }
 

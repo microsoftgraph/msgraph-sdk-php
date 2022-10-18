@@ -103,17 +103,17 @@ class Drive extends BaseItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bundles' => function (ParseNode $n) use ($o) { $o->setBundles($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
-            'driveType' => function (ParseNode $n) use ($o) { $o->setDriveType($n->getStringValue()); },
-            'list' => function (ParseNode $n) use ($o) { $o->setList($n->getObjectValue(array(EscapedList::class, 'createFromDiscriminatorValue'))); },
-            'following' => function (ParseNode $n) use ($o) { $o->setFollowing($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
-            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
-            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'quota' => function (ParseNode $n) use ($o) { $o->setQuota($n->getObjectValue(array(Quota::class, 'createFromDiscriminatorValue'))); },
-            'root' => function (ParseNode $n) use ($o) { $o->setRoot($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
-            'sharePointIds' => function (ParseNode $n) use ($o) { $o->setSharePointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
-            'special' => function (ParseNode $n) use ($o) { $o->setSpecial($n->getCollectionOfObjectValues(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
-            'system' => function (ParseNode $n) use ($o) { $o->setSystem($n->getObjectValue(array(SystemFacet::class, 'createFromDiscriminatorValue'))); },
+            'bundles' => fn(ParseNode $n) => $o->setBundles($n->getCollectionOfObjectValues([DriveItem::class, 'createFromDiscriminatorValue'])),
+            'driveType' => fn(ParseNode $n) => $o->setDriveType($n->getStringValue()),
+            'list' => fn(ParseNode $n) => $o->setList($n->getObjectValue([EscapedList::class, 'createFromDiscriminatorValue'])),
+            'following' => fn(ParseNode $n) => $o->setFollowing($n->getCollectionOfObjectValues([DriveItem::class, 'createFromDiscriminatorValue'])),
+            'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([DriveItem::class, 'createFromDiscriminatorValue'])),
+            'owner' => fn(ParseNode $n) => $o->setOwner($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'quota' => fn(ParseNode $n) => $o->setQuota($n->getObjectValue([Quota::class, 'createFromDiscriminatorValue'])),
+            'root' => fn(ParseNode $n) => $o->setRoot($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
+            'sharePointIds' => fn(ParseNode $n) => $o->setSharePointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
+            'special' => fn(ParseNode $n) => $o->setSpecial($n->getCollectionOfObjectValues([DriveItem::class, 'createFromDiscriminatorValue'])),
+            'system' => fn(ParseNode $n) => $o->setSystem($n->getObjectValue([SystemFacet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -147,15 +147,15 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowCustomAssignmentSchedule' => function (ParseNode $n) use ($o) { $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToAddAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToAddAccess($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToRemoveAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToRemoveAccess($n->getBooleanValue()); },
-            'enableOnBehalfRequestorsToUpdateAccess' => function (ParseNode $n) use ($o) { $o->setEnableOnBehalfRequestorsToUpdateAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfAddAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfAddAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfRemoveAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfRemoveAccess($n->getBooleanValue()); },
-            'enableTargetsToSelfUpdateAccess' => function (ParseNode $n) use ($o) { $o->setEnableTargetsToSelfUpdateAccess($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'onBehalfRequestors' => function (ParseNode $n) use ($o) { $o->setOnBehalfRequestors($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'allowCustomAssignmentSchedule' => fn(ParseNode $n) => $o->setAllowCustomAssignmentSchedule($n->getBooleanValue()),
+            'enableOnBehalfRequestorsToAddAccess' => fn(ParseNode $n) => $o->setEnableOnBehalfRequestorsToAddAccess($n->getBooleanValue()),
+            'enableOnBehalfRequestorsToRemoveAccess' => fn(ParseNode $n) => $o->setEnableOnBehalfRequestorsToRemoveAccess($n->getBooleanValue()),
+            'enableOnBehalfRequestorsToUpdateAccess' => fn(ParseNode $n) => $o->setEnableOnBehalfRequestorsToUpdateAccess($n->getBooleanValue()),
+            'enableTargetsToSelfAddAccess' => fn(ParseNode $n) => $o->setEnableTargetsToSelfAddAccess($n->getBooleanValue()),
+            'enableTargetsToSelfRemoveAccess' => fn(ParseNode $n) => $o->setEnableTargetsToSelfRemoveAccess($n->getBooleanValue()),
+            'enableTargetsToSelfUpdateAccess' => fn(ParseNode $n) => $o->setEnableTargetsToSelfUpdateAccess($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'onBehalfRequestors' => fn(ParseNode $n) => $o->setOnBehalfRequestors($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

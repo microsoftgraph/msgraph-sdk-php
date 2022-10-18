@@ -60,7 +60,7 @@ class SecureScore extends Entity implements Parsable
     private ?SecurityVendorInformation $vendorInformation = null;
     
     /**
-     * Instantiates a new SecureScore and sets the default values.
+     * Instantiates a new secureScore and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -139,16 +139,16 @@ class SecureScore extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeUserCount' => function (ParseNode $n) use ($o) { $o->setActiveUserCount($n->getIntegerValue()); },
-            'averageComparativeScores' => function (ParseNode $n) use ($o) { $o->setAverageComparativeScores($n->getCollectionOfObjectValues(array(AverageComparativeScore::class, 'createFromDiscriminatorValue'))); },
-            'azureTenantId' => function (ParseNode $n) use ($o) { $o->setAzureTenantId($n->getStringValue()); },
-            'controlScores' => function (ParseNode $n) use ($o) { $o->setControlScores($n->getCollectionOfObjectValues(array(ControlScore::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'currentScore' => function (ParseNode $n) use ($o) { $o->setCurrentScore($n->getFloatValue()); },
-            'enabledServices' => function (ParseNode $n) use ($o) { $o->setEnabledServices($n->getCollectionOfPrimitiveValues()); },
-            'licensedUserCount' => function (ParseNode $n) use ($o) { $o->setLicensedUserCount($n->getIntegerValue()); },
-            'maxScore' => function (ParseNode $n) use ($o) { $o->setMaxScore($n->getFloatValue()); },
-            'vendorInformation' => function (ParseNode $n) use ($o) { $o->setVendorInformation($n->getObjectValue(array(SecurityVendorInformation::class, 'createFromDiscriminatorValue'))); },
+            'activeUserCount' => fn(ParseNode $n) => $o->setActiveUserCount($n->getIntegerValue()),
+            'averageComparativeScores' => fn(ParseNode $n) => $o->setAverageComparativeScores($n->getCollectionOfObjectValues([AverageComparativeScore::class, 'createFromDiscriminatorValue'])),
+            'azureTenantId' => fn(ParseNode $n) => $o->setAzureTenantId($n->getStringValue()),
+            'controlScores' => fn(ParseNode $n) => $o->setControlScores($n->getCollectionOfObjectValues([ControlScore::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'currentScore' => fn(ParseNode $n) => $o->setCurrentScore($n->getFloatValue()),
+            'enabledServices' => fn(ParseNode $n) => $o->setEnabledServices($n->getCollectionOfPrimitiveValues()),
+            'licensedUserCount' => fn(ParseNode $n) => $o->setLicensedUserCount($n->getIntegerValue()),
+            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getFloatValue()),
+            'vendorInformation' => fn(ParseNode $n) => $o->setVendorInformation($n->getObjectValue([SecurityVendorInformation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

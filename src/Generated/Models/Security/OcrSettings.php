@@ -67,10 +67,10 @@ class OcrSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'maxImageSize' => function (ParseNode $n) use ($o) { $o->setMaxImageSize($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'timeout' => function (ParseNode $n) use ($o) { $o->setTimeout($n->getDateIntervalValue()); },
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'maxImageSize' => fn(ParseNode $n) => $o->setMaxImageSize($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'timeout' => fn(ParseNode $n) => $o->setTimeout($n->getDateIntervalValue()),
         ];
     }
 

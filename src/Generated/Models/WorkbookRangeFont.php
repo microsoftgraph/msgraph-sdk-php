@@ -39,7 +39,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     private ?string $underline = null;
     
     /**
-     * Instantiates a new WorkbookRangeFont and sets the default values.
+     * Instantiates a new workbookRangeFont and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -78,12 +78,12 @@ class WorkbookRangeFont extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bold' => function (ParseNode $n) use ($o) { $o->setBold($n->getBooleanValue()); },
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
-            'italic' => function (ParseNode $n) use ($o) { $o->setItalic($n->getBooleanValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getFloatValue()); },
-            'underline' => function (ParseNode $n) use ($o) { $o->setUnderline($n->getStringValue()); },
+            'bold' => fn(ParseNode $n) => $o->setBold($n->getBooleanValue()),
+            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
+            'italic' => fn(ParseNode $n) => $o->setItalic($n->getBooleanValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getFloatValue()),
+            'underline' => fn(ParseNode $n) => $o->setUnderline($n->getStringValue()),
         ]);
     }
 

@@ -65,11 +65,11 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assetTagTemplate' => function (ParseNode $n) use ($o) { $o->setAssetTagTemplate($n->getStringValue()); },
-            'homeScreenDockIcons' => function (ParseNode $n) use ($o) { $o->setHomeScreenDockIcons($n->getCollectionOfObjectValues(array(IosHomeScreenItem::class, 'createFromDiscriminatorValue'))); },
-            'homeScreenPages' => function (ParseNode $n) use ($o) { $o->setHomeScreenPages($n->getCollectionOfObjectValues(array(IosHomeScreenPage::class, 'createFromDiscriminatorValue'))); },
-            'lockScreenFootnote' => function (ParseNode $n) use ($o) { $o->setLockScreenFootnote($n->getStringValue()); },
-            'notificationSettings' => function (ParseNode $n) use ($o) { $o->setNotificationSettings($n->getCollectionOfObjectValues(array(IosNotificationSettings::class, 'createFromDiscriminatorValue'))); },
+            'assetTagTemplate' => fn(ParseNode $n) => $o->setAssetTagTemplate($n->getStringValue()),
+            'homeScreenDockIcons' => fn(ParseNode $n) => $o->setHomeScreenDockIcons($n->getCollectionOfObjectValues([IosHomeScreenItem::class, 'createFromDiscriminatorValue'])),
+            'homeScreenPages' => fn(ParseNode $n) => $o->setHomeScreenPages($n->getCollectionOfObjectValues([IosHomeScreenPage::class, 'createFromDiscriminatorValue'])),
+            'lockScreenFootnote' => fn(ParseNode $n) => $o->setLockScreenFootnote($n->getStringValue()),
+            'notificationSettings' => fn(ParseNode $n) => $o->setNotificationSettings($n->getCollectionOfObjectValues([IosNotificationSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

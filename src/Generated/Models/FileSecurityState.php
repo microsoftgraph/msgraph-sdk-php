@@ -71,11 +71,11 @@ class FileSecurityState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getObjectValue(array(FileHash::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
-            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
+            'fileHash' => fn(ParseNode $n) => $o->setFileHash($n->getObjectValue([FileHash::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
+            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getStringValue()),
         ];
     }
 

@@ -61,9 +61,9 @@ class FailureInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
-            'stage' => function (ParseNode $n) use ($o) { $o->setStage($n->getEnumValue(FailureStage::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'reason' => fn(ParseNode $n) => $o->setReason($n->getStringValue()),
+            'stage' => fn(ParseNode $n) => $o->setStage($n->getEnumValue(FailureStage::class)),
         ];
     }
 

@@ -79,11 +79,11 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'invitedBy' => function (ParseNode $n) use ($o) { $o->setInvitedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'redeemedBy' => function (ParseNode $n) use ($o) { $o->setRedeemedBy($n->getStringValue()); },
-            'signInRequired' => function (ParseNode $n) use ($o) { $o->setSignInRequired($n->getBooleanValue()); },
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'invitedBy' => fn(ParseNode $n) => $o->setInvitedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'redeemedBy' => fn(ParseNode $n) => $o->setRedeemedBy($n->getStringValue()),
+            'signInRequired' => fn(ParseNode $n) => $o->setSignInRequired($n->getBooleanValue()),
         ];
     }
 

@@ -65,11 +65,11 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apiConnectorConfiguration' => function (ParseNode $n) use ($o) { $o->setApiConnectorConfiguration($n->getObjectValue(array(UserFlowApiConnectorConfiguration::class, 'createFromDiscriminatorValue'))); },
-            'identityProviders' => function (ParseNode $n) use ($o) { $o->setIdentityProviders($n->getCollectionOfObjectValues(array(IdentityProvider::class, 'createFromDiscriminatorValue'))); },
-            'languages' => function (ParseNode $n) use ($o) { $o->setLanguages($n->getCollectionOfObjectValues(array(UserFlowLanguageConfiguration::class, 'createFromDiscriminatorValue'))); },
-            'userAttributeAssignments' => function (ParseNode $n) use ($o) { $o->setUserAttributeAssignments($n->getCollectionOfObjectValues(array(IdentityUserFlowAttributeAssignment::class, 'createFromDiscriminatorValue'))); },
-            'userFlowIdentityProviders' => function (ParseNode $n) use ($o) { $o->setUserFlowIdentityProviders($n->getCollectionOfObjectValues(array(IdentityProviderBase::class, 'createFromDiscriminatorValue'))); },
+            'apiConnectorConfiguration' => fn(ParseNode $n) => $o->setApiConnectorConfiguration($n->getObjectValue([UserFlowApiConnectorConfiguration::class, 'createFromDiscriminatorValue'])),
+            'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProvider::class, 'createFromDiscriminatorValue'])),
+            'languages' => fn(ParseNode $n) => $o->setLanguages($n->getCollectionOfObjectValues([UserFlowLanguageConfiguration::class, 'createFromDiscriminatorValue'])),
+            'userAttributeAssignments' => fn(ParseNode $n) => $o->setUserAttributeAssignments($n->getCollectionOfObjectValues([IdentityUserFlowAttributeAssignment::class, 'createFromDiscriminatorValue'])),
+            'userFlowIdentityProviders' => fn(ParseNode $n) => $o->setUserFlowIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

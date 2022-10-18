@@ -97,11 +97,11 @@ class AnswerPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'acceptedModalities' => function (ParseNode $n) use ($o) { $o->setAcceptedModalities($n->getCollectionOfEnumValues(Modality::class)); },
-            'callbackUri' => function (ParseNode $n) use ($o) { $o->setCallbackUri($n->getStringValue()); },
-            'callOptions' => function (ParseNode $n) use ($o) { $o->setCallOptions($n->getObjectValue(array(IncomingCallOptions::class, 'createFromDiscriminatorValue'))); },
-            'mediaConfig' => function (ParseNode $n) use ($o) { $o->setMediaConfig($n->getObjectValue(array(MediaConfig::class, 'createFromDiscriminatorValue'))); },
-            'participantCapacity' => function (ParseNode $n) use ($o) { $o->setParticipantCapacity($n->getIntegerValue()); },
+            'acceptedModalities' => fn(ParseNode $n) => $o->setAcceptedModalities($n->getCollectionOfEnumValues(Modality::class)),
+            'callbackUri' => fn(ParseNode $n) => $o->setCallbackUri($n->getStringValue()),
+            'callOptions' => fn(ParseNode $n) => $o->setCallOptions($n->getObjectValue([IncomingCallOptions::class, 'createFromDiscriminatorValue'])),
+            'mediaConfig' => fn(ParseNode $n) => $o->setMediaConfig($n->getObjectValue([MediaConfig::class, 'createFromDiscriminatorValue'])),
+            'participantCapacity' => fn(ParseNode $n) => $o->setParticipantCapacity($n->getIntegerValue()),
         ];
     }
 

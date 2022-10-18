@@ -51,8 +51,8 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getObjectValue(array(UserFeedback::class, 'createFromDiscriminatorValue'))); },
-            'identity' => function (ParseNode $n) use ($o) { $o->setIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getObjectValue([UserFeedback::class, 'createFromDiscriminatorValue'])),
+            'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

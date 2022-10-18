@@ -64,8 +64,8 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'addLicenses' => function (ParseNode $n) use ($o) { $o->setAddLicenses($n->getCollectionOfObjectValues(array(AssignedLicense::class, 'createFromDiscriminatorValue'))); },
-            'removeLicenses' => function (ParseNode $n) use ($o) { $o->setRemoveLicenses($n->getCollectionOfPrimitiveValues()); },
+            'addLicenses' => fn(ParseNode $n) => $o->setAddLicenses($n->getCollectionOfObjectValues([AssignedLicense::class, 'createFromDiscriminatorValue'])),
+            'removeLicenses' => fn(ParseNode $n) => $o->setRemoveLicenses($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

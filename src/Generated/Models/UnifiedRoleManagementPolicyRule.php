@@ -48,7 +48,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(UnifiedRoleManagementPolicyRuleTarget::class, 'createFromDiscriminatorValue'))); },
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getObjectValue([UnifiedRoleManagementPolicyRuleTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

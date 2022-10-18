@@ -5,8 +5,12 @@ namespace Microsoft\Graph\Generated\Chats\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Chats\Item\HideForUser\HideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
@@ -16,6 +20,7 @@ use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBui
 use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,10 +34,38 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChatItemRequestBuilder 
 {
     /**
+     * The hideForUser property
+    */
+    public function hideForUser(): HideForUserRequestBuilder {
+        return new HideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The installedApps property
     */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The lastMessagePreview property
+    */
+    public function lastMessagePreview(): LastMessagePreviewRequestBuilder {
+        return new LastMessagePreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The markChatReadForUser property
+    */
+    public function markChatReadForUser(): MarkChatReadForUserRequestBuilder {
+        return new MarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The markChatUnreadForUser property
+    */
+    public function markChatUnreadForUser(): MarkChatUnreadForUserRequestBuilder {
+        return new MarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -81,6 +114,13 @@ class ChatItemRequestBuilder
     }
     
     /**
+     * The unhideForUser property
+    */
+    public function unhideForUser(): UnhideForUserRequestBuilder {
+        return new UnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -118,7 +158,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param ChatItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -176,8 +216,8 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -186,7 +226,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Retrieve a single chat (without its messages).
+     * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param ChatItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -195,10 +235,10 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, array(Chat::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [Chat::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -248,10 +288,10 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, array(Chat::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [Chat::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

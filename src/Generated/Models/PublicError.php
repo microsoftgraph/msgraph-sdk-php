@@ -92,12 +92,12 @@ class PublicError implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getCollectionOfObjectValues(array(PublicErrorDetail::class, 'createFromDiscriminatorValue'))); },
-            'innerError' => function (ParseNode $n) use ($o) { $o->setInnerError($n->getObjectValue(array(PublicInnerError::class, 'createFromDiscriminatorValue'))); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
+            'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
+            'details' => fn(ParseNode $n) => $o->setDetails($n->getCollectionOfObjectValues([PublicErrorDetail::class, 'createFromDiscriminatorValue'])),
+            'innerError' => fn(ParseNode $n) => $o->setInnerError($n->getObjectValue([PublicInnerError::class, 'createFromDiscriminatorValue'])),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
 

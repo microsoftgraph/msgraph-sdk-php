@@ -77,9 +77,9 @@ class Bundle implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'album' => function (ParseNode $n) use ($o) { $o->setAlbum($n->getObjectValue(array(Album::class, 'createFromDiscriminatorValue'))); },
-            'childCount' => function (ParseNode $n) use ($o) { $o->setChildCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'album' => fn(ParseNode $n) => $o->setAlbum($n->getObjectValue([Album::class, 'createFromDiscriminatorValue'])),
+            'childCount' => fn(ParseNode $n) => $o->setChildCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

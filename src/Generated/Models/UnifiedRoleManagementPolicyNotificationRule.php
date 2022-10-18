@@ -57,11 +57,11 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefaultRecipientsEnabled' => function (ParseNode $n) use ($o) { $o->setIsDefaultRecipientsEnabled($n->getBooleanValue()); },
-            'notificationLevel' => function (ParseNode $n) use ($o) { $o->setNotificationLevel($n->getStringValue()); },
-            'notificationRecipients' => function (ParseNode $n) use ($o) { $o->setNotificationRecipients($n->getCollectionOfPrimitiveValues()); },
-            'notificationType' => function (ParseNode $n) use ($o) { $o->setNotificationType($n->getStringValue()); },
-            'recipientType' => function (ParseNode $n) use ($o) { $o->setRecipientType($n->getStringValue()); },
+            'isDefaultRecipientsEnabled' => fn(ParseNode $n) => $o->setIsDefaultRecipientsEnabled($n->getBooleanValue()),
+            'notificationLevel' => fn(ParseNode $n) => $o->setNotificationLevel($n->getStringValue()),
+            'notificationRecipients' => fn(ParseNode $n) => $o->setNotificationRecipients($n->getCollectionOfPrimitiveValues()),
+            'notificationType' => fn(ParseNode $n) => $o->setNotificationType($n->getStringValue()),
+            'recipientType' => fn(ParseNode $n) => $o->setRecipientType($n->getStringValue()),
         ]);
     }
 

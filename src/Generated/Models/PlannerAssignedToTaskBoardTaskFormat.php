@@ -42,8 +42,8 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'orderHintsByAssignee' => function (ParseNode $n) use ($o) { $o->setOrderHintsByAssignee($n->getObjectValue(array(PlannerOrderHintsByAssignee::class, 'createFromDiscriminatorValue'))); },
-            'unassignedOrderHint' => function (ParseNode $n) use ($o) { $o->setUnassignedOrderHint($n->getStringValue()); },
+            'orderHintsByAssignee' => fn(ParseNode $n) => $o->setOrderHintsByAssignee($n->getObjectValue([PlannerOrderHintsByAssignee::class, 'createFromDiscriminatorValue'])),
+            'unassignedOrderHint' => fn(ParseNode $n) => $o->setUnassignedOrderHint($n->getStringValue()),
         ]);
     }
 

@@ -71,9 +71,9 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'binaryName' => function (ParseNode $n) use ($o) { $o->setBinaryName($n->getStringValue()); },
-            'binaryVersionHigh' => function (ParseNode $n) use ($o) { $o->setBinaryVersionHigh($n->getStringValue()); },
-            'binaryVersionLow' => function (ParseNode $n) use ($o) { $o->setBinaryVersionLow($n->getStringValue()); },
+            'binaryName' => fn(ParseNode $n) => $o->setBinaryName($n->getStringValue()),
+            'binaryVersionHigh' => fn(ParseNode $n) => $o->setBinaryVersionHigh($n->getStringValue()),
+            'binaryVersionLow' => fn(ParseNode $n) => $o->setBinaryVersionLow($n->getStringValue()),
         ]);
     }
 

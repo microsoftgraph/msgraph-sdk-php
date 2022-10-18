@@ -42,8 +42,8 @@ class WorkbookPivotTable extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

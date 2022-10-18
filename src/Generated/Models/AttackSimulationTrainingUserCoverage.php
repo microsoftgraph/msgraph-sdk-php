@@ -69,9 +69,9 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attackSimulationUser' => function (ParseNode $n) use ($o) { $o->setAttackSimulationUser($n->getObjectValue(array(AttackSimulationUser::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'userTrainings' => function (ParseNode $n) use ($o) { $o->setUserTrainings($n->getCollectionOfObjectValues(array(UserTrainingStatusInfo::class, 'createFromDiscriminatorValue'))); },
+            'attackSimulationUser' => fn(ParseNode $n) => $o->setAttackSimulationUser($n->getObjectValue([AttackSimulationUser::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'userTrainings' => fn(ParseNode $n) => $o->setUserTrainings($n->getCollectionOfObjectValues([UserTrainingStatusInfo::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

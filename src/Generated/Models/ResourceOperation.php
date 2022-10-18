@@ -24,7 +24,7 @@ class ResourceOperation extends Entity implements Parsable
     private ?string $resourceName = null;
     
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Instantiates a new resourceOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -63,9 +63,9 @@ class ResourceOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionName' => function (ParseNode $n) use ($o) { $o->setActionName($n->getStringValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'resourceName' => function (ParseNode $n) use ($o) { $o->setResourceName($n->getStringValue()); },
+            'actionName' => fn(ParseNode $n) => $o->setActionName($n->getStringValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'resourceName' => fn(ParseNode $n) => $o->setResourceName($n->getStringValue()),
         ]);
     }
 

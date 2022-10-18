@@ -99,15 +99,15 @@ class Property implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aliases' => function (ParseNode $n) use ($o) { $o->setAliases($n->getCollectionOfPrimitiveValues()); },
-            'isQueryable' => function (ParseNode $n) use ($o) { $o->setIsQueryable($n->getBooleanValue()); },
-            'isRefinable' => function (ParseNode $n) use ($o) { $o->setIsRefinable($n->getBooleanValue()); },
-            'isRetrievable' => function (ParseNode $n) use ($o) { $o->setIsRetrievable($n->getBooleanValue()); },
-            'isSearchable' => function (ParseNode $n) use ($o) { $o->setIsSearchable($n->getBooleanValue()); },
-            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfEnumValues(Label::class)); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(PropertyType::class)); },
+            'aliases' => fn(ParseNode $n) => $o->setAliases($n->getCollectionOfPrimitiveValues()),
+            'isQueryable' => fn(ParseNode $n) => $o->setIsQueryable($n->getBooleanValue()),
+            'isRefinable' => fn(ParseNode $n) => $o->setIsRefinable($n->getBooleanValue()),
+            'isRetrievable' => fn(ParseNode $n) => $o->setIsRetrievable($n->getBooleanValue()),
+            'isSearchable' => fn(ParseNode $n) => $o->setIsSearchable($n->getBooleanValue()),
+            'labels' => fn(ParseNode $n) => $o->setLabels($n->getCollectionOfEnumValues(Label::class)),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(PropertyType::class)),
         ];
     }
 

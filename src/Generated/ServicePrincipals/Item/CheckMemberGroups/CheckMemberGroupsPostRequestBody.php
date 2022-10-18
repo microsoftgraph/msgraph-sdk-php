@@ -50,7 +50,7 @@ class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'groupIds' => function (ParseNode $n) use ($o) { $o->setGroupIds($n->getCollectionOfPrimitiveValues()); },
+            'groupIds' => fn(ParseNode $n) => $o->setGroupIds($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

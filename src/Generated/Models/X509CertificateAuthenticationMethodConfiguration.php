@@ -9,17 +9,17 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var X509CertificateAuthenticationModeConfiguration|null $authenticationModeConfiguration The authenticationModeConfiguration property
+     * @var X509CertificateAuthenticationModeConfiguration|null $authenticationModeConfiguration Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
     */
     private ?X509CertificateAuthenticationModeConfiguration $authenticationModeConfiguration = null;
     
     /**
-     * @var array<X509CertificateUserBinding>|null $certificateUserBindings The certificateUserBindings property
+     * @var array<X509CertificateUserBinding>|null $certificateUserBindings Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
     */
     private ?array $certificateUserBindings = null;
     
     /**
-     * @var array<AuthenticationMethodTarget>|null $includeTargets The includeTargets property
+     * @var array<AuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method.
     */
     private ?array $includeTargets = null;
     
@@ -41,7 +41,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Gets the authenticationModeConfiguration property value. The authenticationModeConfiguration property
+     * Gets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
      * @return X509CertificateAuthenticationModeConfiguration|null
     */
     public function getAuthenticationModeConfiguration(): ?X509CertificateAuthenticationModeConfiguration {
@@ -49,7 +49,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Gets the certificateUserBindings property value. The certificateUserBindings property
+     * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @return array<X509CertificateUserBinding>|null
     */
     public function getCertificateUserBindings(): ?array {
@@ -63,14 +63,14 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'authenticationModeConfiguration' => function (ParseNode $n) use ($o) { $o->setAuthenticationModeConfiguration($n->getObjectValue(array(X509CertificateAuthenticationModeConfiguration::class, 'createFromDiscriminatorValue'))); },
-            'certificateUserBindings' => function (ParseNode $n) use ($o) { $o->setCertificateUserBindings($n->getCollectionOfObjectValues(array(X509CertificateUserBinding::class, 'createFromDiscriminatorValue'))); },
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'))); },
+            'authenticationModeConfiguration' => fn(ParseNode $n) => $o->setAuthenticationModeConfiguration($n->getObjectValue([X509CertificateAuthenticationModeConfiguration::class, 'createFromDiscriminatorValue'])),
+            'certificateUserBindings' => fn(ParseNode $n) => $o->setCertificateUserBindings($n->getCollectionOfObjectValues([X509CertificateUserBinding::class, 'createFromDiscriminatorValue'])),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the includeTargets property value. The includeTargets property
+     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
@@ -89,7 +89,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Sets the authenticationModeConfiguration property value. The authenticationModeConfiguration property
+     * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
      *  @param X509CertificateAuthenticationModeConfiguration|null $value Value to set for the authenticationModeConfiguration property.
     */
     public function setAuthenticationModeConfiguration(?X509CertificateAuthenticationModeConfiguration $value ): void {
@@ -97,7 +97,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Sets the certificateUserBindings property value. The certificateUserBindings property
+     * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      *  @param array<X509CertificateUserBinding>|null $value Value to set for the certificateUserBindings property.
     */
     public function setCertificateUserBindings(?array $value ): void {
@@ -105,7 +105,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Sets the includeTargets property value. The includeTargets property
+     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
      *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value ): void {

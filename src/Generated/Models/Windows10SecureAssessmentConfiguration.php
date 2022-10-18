@@ -89,11 +89,11 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowPrinting' => function (ParseNode $n) use ($o) { $o->setAllowPrinting($n->getBooleanValue()); },
-            'allowScreenCapture' => function (ParseNode $n) use ($o) { $o->setAllowScreenCapture($n->getBooleanValue()); },
-            'allowTextSuggestion' => function (ParseNode $n) use ($o) { $o->setAllowTextSuggestion($n->getBooleanValue()); },
-            'configurationAccount' => function (ParseNode $n) use ($o) { $o->setConfigurationAccount($n->getStringValue()); },
-            'launchUri' => function (ParseNode $n) use ($o) { $o->setLaunchUri($n->getStringValue()); },
+            'allowPrinting' => fn(ParseNode $n) => $o->setAllowPrinting($n->getBooleanValue()),
+            'allowScreenCapture' => fn(ParseNode $n) => $o->setAllowScreenCapture($n->getBooleanValue()),
+            'allowTextSuggestion' => fn(ParseNode $n) => $o->setAllowTextSuggestion($n->getBooleanValue()),
+            'configurationAccount' => fn(ParseNode $n) => $o->setConfigurationAccount($n->getStringValue()),
+            'launchUri' => fn(ParseNode $n) => $o->setLaunchUri($n->getStringValue()),
         ]);
     }
 

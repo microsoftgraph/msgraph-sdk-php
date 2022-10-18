@@ -90,11 +90,11 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callDuration' => function (ParseNode $n) use ($o) { $o->setCallDuration($n->getDateIntervalValue()); },
-            'callEventType' => function (ParseNode $n) use ($o) { $o->setCallEventType($n->getEnumValue(TeamworkCallEventType::class)); },
-            'callId' => function (ParseNode $n) use ($o) { $o->setCallId($n->getStringValue()); },
-            'callParticipants' => function (ParseNode $n) use ($o) { $o->setCallParticipants($n->getCollectionOfObjectValues(array(CallParticipantInfo::class, 'createFromDiscriminatorValue'))); },
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'callDuration' => fn(ParseNode $n) => $o->setCallDuration($n->getDateIntervalValue()),
+            'callEventType' => fn(ParseNode $n) => $o->setCallEventType($n->getEnumValue(TeamworkCallEventType::class)),
+            'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
+            'callParticipants' => fn(ParseNode $n) => $o->setCallParticipants($n->getCollectionOfObjectValues([CallParticipantInfo::class, 'createFromDiscriminatorValue'])),
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

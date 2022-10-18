@@ -135,19 +135,19 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'currentValue' => function (ParseNode $n) use ($o) { $o->setCurrentValue($n->getStringValue()); },
-            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getIntegerValue()); },
-            'errorDescription' => function (ParseNode $n) use ($o) { $o->setErrorDescription($n->getStringValue()); },
-            'instanceDisplayName' => function (ParseNode $n) use ($o) { $o->setInstanceDisplayName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getStringValue()); },
-            'settingName' => function (ParseNode $n) use ($o) { $o->setSettingName($n->getStringValue()); },
-            'sources' => function (ParseNode $n) use ($o) { $o->setSources($n->getCollectionOfObjectValues(array(SettingSource::class, 'createFromDiscriminatorValue'))); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(ComplianceStatus::class)); },
-            'userEmail' => function (ParseNode $n) use ($o) { $o->setUserEmail($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
-            'userName' => function (ParseNode $n) use ($o) { $o->setUserName($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'currentValue' => fn(ParseNode $n) => $o->setCurrentValue($n->getStringValue()),
+            'errorCode' => fn(ParseNode $n) => $o->setErrorCode($n->getIntegerValue()),
+            'errorDescription' => fn(ParseNode $n) => $o->setErrorDescription($n->getStringValue()),
+            'instanceDisplayName' => fn(ParseNode $n) => $o->setInstanceDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'setting' => fn(ParseNode $n) => $o->setSetting($n->getStringValue()),
+            'settingName' => fn(ParseNode $n) => $o->setSettingName($n->getStringValue()),
+            'sources' => fn(ParseNode $n) => $o->setSources($n->getCollectionOfObjectValues([SettingSource::class, 'createFromDiscriminatorValue'])),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ComplianceStatus::class)),
+            'userEmail' => fn(ParseNode $n) => $o->setUserEmail($n->getStringValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
+            'userName' => fn(ParseNode $n) => $o->setUserName($n->getStringValue()),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ];
     }
 

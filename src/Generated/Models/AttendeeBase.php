@@ -44,7 +44,7 @@ class AttendeeBase extends Recipient implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(AttendeeType::class)); },
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(AttendeeType::class)),
         ]);
     }
 

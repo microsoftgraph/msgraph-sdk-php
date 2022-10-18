@@ -69,9 +69,9 @@ class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'applications' => function (ParseNode $n) use ($o) { $o->setApplications($n->getObjectValue(array(CrossTenantAccessPolicyTargetConfiguration::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'usersAndGroups' => function (ParseNode $n) use ($o) { $o->setUsersAndGroups($n->getObjectValue(array(CrossTenantAccessPolicyTargetConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'applications' => fn(ParseNode $n) => $o->setApplications($n->getObjectValue([CrossTenantAccessPolicyTargetConfiguration::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'usersAndGroups' => fn(ParseNode $n) => $o->setUsersAndGroups($n->getObjectValue([CrossTenantAccessPolicyTargetConfiguration::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

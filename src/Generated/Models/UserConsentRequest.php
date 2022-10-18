@@ -50,8 +50,8 @@ class UserConsentRequest extends Request implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'approval' => function (ParseNode $n) use ($o) { $o->setApproval($n->getObjectValue(array(Approval::class, 'createFromDiscriminatorValue'))); },
-            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
+            'approval' => fn(ParseNode $n) => $o->setApproval($n->getObjectValue([Approval::class, 'createFromDiscriminatorValue'])),
+            'reason' => fn(ParseNode $n) => $o->setReason($n->getStringValue()),
         ]);
     }
 

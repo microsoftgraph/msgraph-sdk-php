@@ -66,10 +66,10 @@ class TeamSummary implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'guestsCount' => function (ParseNode $n) use ($o) { $o->setGuestsCount($n->getIntegerValue()); },
-            'membersCount' => function (ParseNode $n) use ($o) { $o->setMembersCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'ownersCount' => function (ParseNode $n) use ($o) { $o->setOwnersCount($n->getIntegerValue()); },
+            'guestsCount' => fn(ParseNode $n) => $o->setGuestsCount($n->getIntegerValue()),
+            'membersCount' => fn(ParseNode $n) => $o->setMembersCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'ownersCount' => fn(ParseNode $n) => $o->setOwnersCount($n->getIntegerValue()),
         ];
     }
 

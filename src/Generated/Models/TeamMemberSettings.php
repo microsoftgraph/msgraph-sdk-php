@@ -129,13 +129,13 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowAddRemoveApps' => function (ParseNode $n) use ($o) { $o->setAllowAddRemoveApps($n->getBooleanValue()); },
-            'allowCreatePrivateChannels' => function (ParseNode $n) use ($o) { $o->setAllowCreatePrivateChannels($n->getBooleanValue()); },
-            'allowCreateUpdateChannels' => function (ParseNode $n) use ($o) { $o->setAllowCreateUpdateChannels($n->getBooleanValue()); },
-            'allowCreateUpdateRemoveConnectors' => function (ParseNode $n) use ($o) { $o->setAllowCreateUpdateRemoveConnectors($n->getBooleanValue()); },
-            'allowCreateUpdateRemoveTabs' => function (ParseNode $n) use ($o) { $o->setAllowCreateUpdateRemoveTabs($n->getBooleanValue()); },
-            'allowDeleteChannels' => function (ParseNode $n) use ($o) { $o->setAllowDeleteChannels($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowAddRemoveApps' => fn(ParseNode $n) => $o->setAllowAddRemoveApps($n->getBooleanValue()),
+            'allowCreatePrivateChannels' => fn(ParseNode $n) => $o->setAllowCreatePrivateChannels($n->getBooleanValue()),
+            'allowCreateUpdateChannels' => fn(ParseNode $n) => $o->setAllowCreateUpdateChannels($n->getBooleanValue()),
+            'allowCreateUpdateRemoveConnectors' => fn(ParseNode $n) => $o->setAllowCreateUpdateRemoveConnectors($n->getBooleanValue()),
+            'allowCreateUpdateRemoveTabs' => fn(ParseNode $n) => $o->setAllowCreateUpdateRemoveTabs($n->getBooleanValue()),
+            'allowDeleteChannels' => fn(ParseNode $n) => $o->setAllowDeleteChannels($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

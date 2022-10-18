@@ -116,12 +116,12 @@ class ChangeNotificationEncryptedContent implements AdditionalDataHolder, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'data' => function (ParseNode $n) use ($o) { $o->setData($n->getStringValue()); },
-            'dataKey' => function (ParseNode $n) use ($o) { $o->setDataKey($n->getStringValue()); },
-            'dataSignature' => function (ParseNode $n) use ($o) { $o->setDataSignature($n->getStringValue()); },
-            'encryptionCertificateId' => function (ParseNode $n) use ($o) { $o->setEncryptionCertificateId($n->getStringValue()); },
-            'encryptionCertificateThumbprint' => function (ParseNode $n) use ($o) { $o->setEncryptionCertificateThumbprint($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'data' => fn(ParseNode $n) => $o->setData($n->getStringValue()),
+            'dataKey' => fn(ParseNode $n) => $o->setDataKey($n->getStringValue()),
+            'dataSignature' => fn(ParseNode $n) => $o->setDataSignature($n->getStringValue()),
+            'encryptionCertificateId' => fn(ParseNode $n) => $o->setEncryptionCertificateId($n->getStringValue()),
+            'encryptionCertificateThumbprint' => fn(ParseNode $n) => $o->setEncryptionCertificateThumbprint($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

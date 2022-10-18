@@ -77,10 +77,10 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'addedStudentAction' => function (ParseNode $n) use ($o) { $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)); },
-            'addToCalendarAction' => function (ParseNode $n) use ($o) { $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)); },
-            'dueTime' => function (ParseNode $n) use ($o) { $o->setDueTime($n->getTimeValue()); },
-            'notificationChannelUrl' => function (ParseNode $n) use ($o) { $o->setNotificationChannelUrl($n->getStringValue()); },
+            'addedStudentAction' => fn(ParseNode $n) => $o->setAddedStudentAction($n->getEnumValue(EducationAddedStudentAction::class)),
+            'addToCalendarAction' => fn(ParseNode $n) => $o->setAddToCalendarAction($n->getEnumValue(EducationAddToCalendarOptions::class)),
+            'dueTime' => fn(ParseNode $n) => $o->setDueTime($n->getTimeValue()),
+            'notificationChannelUrl' => fn(ParseNode $n) => $o->setNotificationChannelUrl($n->getStringValue()),
         ]);
     }
 

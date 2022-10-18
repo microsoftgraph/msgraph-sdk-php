@@ -71,11 +71,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'provider' => function (ParseNode $n) use ($o) { $o->setProvider($n->getStringValue()); },
-            'providerVersion' => function (ParseNode $n) use ($o) { $o->setProviderVersion($n->getStringValue()); },
-            'subProvider' => function (ParseNode $n) use ($o) { $o->setSubProvider($n->getStringValue()); },
-            'vendor' => function (ParseNode $n) use ($o) { $o->setVendor($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'provider' => fn(ParseNode $n) => $o->setProvider($n->getStringValue()),
+            'providerVersion' => fn(ParseNode $n) => $o->setProviderVersion($n->getStringValue()),
+            'subProvider' => fn(ParseNode $n) => $o->setSubProvider($n->getStringValue()),
+            'vendor' => fn(ParseNode $n) => $o->setVendor($n->getStringValue()),
         ];
     }
 

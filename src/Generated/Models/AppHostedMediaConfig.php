@@ -45,7 +45,7 @@ class AppHostedMediaConfig extends MediaConfig implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'blob' => function (ParseNode $n) use ($o) { $o->setBlob($n->getStringValue()); },
+            'blob' => fn(ParseNode $n) => $o->setBlob($n->getStringValue()),
         ]);
     }
 

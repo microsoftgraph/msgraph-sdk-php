@@ -77,9 +77,9 @@ class SimulationEvent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'count' => function (ParseNode $n) use ($o) { $o->setCount($n->getIntegerValue()); },
-            'eventName' => function (ParseNode $n) use ($o) { $o->setEventName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'count' => fn(ParseNode $n) => $o->setCount($n->getIntegerValue()),
+            'eventName' => fn(ParseNode $n) => $o->setEventName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

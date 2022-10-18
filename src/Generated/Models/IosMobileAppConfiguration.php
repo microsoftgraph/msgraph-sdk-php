@@ -51,8 +51,8 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'encodedSettingXml' => function (ParseNode $n) use ($o) { $o->setEncodedSettingXml($n->getBinaryContent()); },
-            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getCollectionOfObjectValues(array(AppConfigurationSettingItem::class, 'createFromDiscriminatorValue'))); },
+            'encodedSettingXml' => fn(ParseNode $n) => $o->setEncodedSettingXml($n->getBinaryContent()),
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getCollectionOfObjectValues([AppConfigurationSettingItem::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

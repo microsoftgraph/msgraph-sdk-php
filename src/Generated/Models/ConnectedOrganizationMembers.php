@@ -58,8 +58,8 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectedOrganizationId' => function (ParseNode $n) use ($o) { $o->setConnectedOrganizationId($n->getStringValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
+            'connectedOrganizationId' => fn(ParseNode $n) => $o->setConnectedOrganizationId($n->getStringValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
         ]);
     }
 

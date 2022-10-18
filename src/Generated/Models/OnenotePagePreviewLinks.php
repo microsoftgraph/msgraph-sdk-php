@@ -56,8 +56,8 @@ class OnenotePagePreviewLinks implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'previewImageUrl' => function (ParseNode $n) use ($o) { $o->setPreviewImageUrl($n->getObjectValue(array(ExternalLink::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'previewImageUrl' => fn(ParseNode $n) => $o->setPreviewImageUrl($n->getObjectValue([ExternalLink::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

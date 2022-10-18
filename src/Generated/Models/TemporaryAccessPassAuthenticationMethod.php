@@ -76,13 +76,13 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'isUsable' => function (ParseNode $n) use ($o) { $o->setIsUsable($n->getBooleanValue()); },
-            'isUsableOnce' => function (ParseNode $n) use ($o) { $o->setIsUsableOnce($n->getBooleanValue()); },
-            'lifetimeInMinutes' => function (ParseNode $n) use ($o) { $o->setLifetimeInMinutes($n->getIntegerValue()); },
-            'methodUsabilityReason' => function (ParseNode $n) use ($o) { $o->setMethodUsabilityReason($n->getStringValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'temporaryAccessPass' => function (ParseNode $n) use ($o) { $o->setTemporaryAccessPass($n->getStringValue()); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'isUsable' => fn(ParseNode $n) => $o->setIsUsable($n->getBooleanValue()),
+            'isUsableOnce' => fn(ParseNode $n) => $o->setIsUsableOnce($n->getBooleanValue()),
+            'lifetimeInMinutes' => fn(ParseNode $n) => $o->setLifetimeInMinutes($n->getIntegerValue()),
+            'methodUsabilityReason' => fn(ParseNode $n) => $o->setMethodUsabilityReason($n->getStringValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
+            'temporaryAccessPass' => fn(ParseNode $n) => $o->setTemporaryAccessPass($n->getStringValue()),
         ]);
     }
 

@@ -55,9 +55,9 @@ class ScopedRoleMembership extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'administrativeUnitId' => function (ParseNode $n) use ($o) { $o->setAdministrativeUnitId($n->getStringValue()); },
-            'roleId' => function (ParseNode $n) use ($o) { $o->setRoleId($n->getStringValue()); },
-            'roleMemberInfo' => function (ParseNode $n) use ($o) { $o->setRoleMemberInfo($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
+            'administrativeUnitId' => fn(ParseNode $n) => $o->setAdministrativeUnitId($n->getStringValue()),
+            'roleId' => fn(ParseNode $n) => $o->setRoleId($n->getStringValue()),
+            'roleMemberInfo' => fn(ParseNode $n) => $o->setRoleMemberInfo($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

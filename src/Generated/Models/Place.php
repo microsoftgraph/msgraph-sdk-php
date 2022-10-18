@@ -29,7 +29,7 @@ class Place extends Entity implements Parsable
     private ?string $phone = null;
     
     /**
-     * Instantiates a new Place and sets the default values.
+     * Instantiates a new place and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -76,10 +76,10 @@ class Place extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'geoCoordinates' => function (ParseNode $n) use ($o) { $o->setGeoCoordinates($n->getObjectValue(array(OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'))); },
-            'phone' => function (ParseNode $n) use ($o) { $o->setPhone($n->getStringValue()); },
+            'address' => fn(ParseNode $n) => $o->setAddress($n->getObjectValue([PhysicalAddress::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'geoCoordinates' => fn(ParseNode $n) => $o->setGeoCoordinates($n->getObjectValue([OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'])),
+            'phone' => fn(ParseNode $n) => $o->setPhone($n->getStringValue()),
         ]);
     }
 

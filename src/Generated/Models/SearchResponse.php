@@ -71,11 +71,11 @@ class SearchResponse implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hitsContainers' => function (ParseNode $n) use ($o) { $o->setHitsContainers($n->getCollectionOfObjectValues(array(SearchHitsContainer::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'queryAlterationResponse' => function (ParseNode $n) use ($o) { $o->setQueryAlterationResponse($n->getObjectValue(array(AlterationResponse::class, 'createFromDiscriminatorValue'))); },
-            'resultTemplates' => function (ParseNode $n) use ($o) { $o->setResultTemplates($n->getObjectValue(array(ResultTemplateDictionary::class, 'createFromDiscriminatorValue'))); },
-            'searchTerms' => function (ParseNode $n) use ($o) { $o->setSearchTerms($n->getCollectionOfPrimitiveValues()); },
+            'hitsContainers' => fn(ParseNode $n) => $o->setHitsContainers($n->getCollectionOfObjectValues([SearchHitsContainer::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'queryAlterationResponse' => fn(ParseNode $n) => $o->setQueryAlterationResponse($n->getObjectValue([AlterationResponse::class, 'createFromDiscriminatorValue'])),
+            'resultTemplates' => fn(ParseNode $n) => $o->setResultTemplates($n->getObjectValue([ResultTemplateDictionary::class, 'createFromDiscriminatorValue'])),
+            'searchTerms' => fn(ParseNode $n) => $o->setSearchTerms($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

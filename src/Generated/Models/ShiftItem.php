@@ -70,9 +70,9 @@ class ShiftItem extends ScheduleEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activities' => function (ParseNode $n) use ($o) { $o->setActivities($n->getCollectionOfObjectValues(array(ShiftActivity::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'notes' => function (ParseNode $n) use ($o) { $o->setNotes($n->getStringValue()); },
+            'activities' => fn(ParseNode $n) => $o->setActivities($n->getCollectionOfObjectValues([ShiftActivity::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
         ]);
     }
 

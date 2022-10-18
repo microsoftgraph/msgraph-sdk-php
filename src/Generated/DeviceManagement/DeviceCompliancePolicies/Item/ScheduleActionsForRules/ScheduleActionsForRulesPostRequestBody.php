@@ -59,7 +59,7 @@ class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHolder, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'deviceComplianceScheduledActionForRules' => function (ParseNode $n) use ($o) { $o->setDeviceComplianceScheduledActionForRules($n->getCollectionOfObjectValues(array(DeviceComplianceScheduledActionForRule::class, 'createFromDiscriminatorValue'))); },
+            'deviceComplianceScheduledActionForRules' => fn(ParseNode $n) => $o->setDeviceComplianceScheduledActionForRules($n->getCollectionOfObjectValues([DeviceComplianceScheduledActionForRule::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

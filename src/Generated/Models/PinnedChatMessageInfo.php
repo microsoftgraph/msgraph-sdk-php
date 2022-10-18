@@ -37,7 +37,7 @@ class PinnedChatMessageInfo extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getObjectValue(array(ChatMessage::class, 'createFromDiscriminatorValue'))); },
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([ChatMessage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -55,8 +55,8 @@ class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.deltaLink' => function (ParseNode $n) use ($o) { $o->setOdataDeltaLink($n->getStringValue()); },
-            '@odata.nextLink' => function (ParseNode $n) use ($o) { $o->setOdataNextLink($n->getStringValue()); },
+            '@odata.deltaLink' => fn(ParseNode $n) => $o->setOdataDeltaLink($n->getStringValue()),
+            '@odata.nextLink' => fn(ParseNode $n) => $o->setOdataNextLink($n->getStringValue()),
         ];
     }
 

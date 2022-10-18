@@ -45,7 +45,7 @@ class PrintService extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'endpoints' => function (ParseNode $n) use ($o) { $o->setEndpoints($n->getCollectionOfObjectValues(array(PrintServiceEndpoint::class, 'createFromDiscriminatorValue'))); },
+            'endpoints' => fn(ParseNode $n) => $o->setEndpoints($n->getCollectionOfObjectValues([PrintServiceEndpoint::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

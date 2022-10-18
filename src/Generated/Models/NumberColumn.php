@@ -87,11 +87,11 @@ class NumberColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decimalPlaces' => function (ParseNode $n) use ($o) { $o->setDecimalPlaces($n->getStringValue()); },
-            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
-            'maximum' => function (ParseNode $n) use ($o) { $o->setMaximum($n->getFloatValue()); },
-            'minimum' => function (ParseNode $n) use ($o) { $o->setMinimum($n->getFloatValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'decimalPlaces' => fn(ParseNode $n) => $o->setDecimalPlaces($n->getStringValue()),
+            'displayAs' => fn(ParseNode $n) => $o->setDisplayAs($n->getStringValue()),
+            'maximum' => fn(ParseNode $n) => $o->setMaximum($n->getFloatValue()),
+            'minimum' => fn(ParseNode $n) => $o->setMinimum($n->getFloatValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

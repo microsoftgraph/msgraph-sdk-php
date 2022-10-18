@@ -97,13 +97,13 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'caller' => function (ParseNode $n) use ($o) { $o->setCaller($n->getStringValue()); },
-            'enforcedSettings' => function (ParseNode $n) use ($o) { $o->setEnforcedSettings($n->getCollectionOfPrimitiveValues()); },
-            'inheritableSettings' => function (ParseNode $n) use ($o) { $o->setInheritableSettings($n->getCollectionOfPrimitiveValues()); },
-            'level' => function (ParseNode $n) use ($o) { $o->setLevel($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::class)); },
-            'targetObjects' => function (ParseNode $n) use ($o) { $o->setTargetObjects($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
+            'caller' => fn(ParseNode $n) => $o->setCaller($n->getStringValue()),
+            'enforcedSettings' => fn(ParseNode $n) => $o->setEnforcedSettings($n->getCollectionOfPrimitiveValues()),
+            'inheritableSettings' => fn(ParseNode $n) => $o->setInheritableSettings($n->getCollectionOfPrimitiveValues()),
+            'level' => fn(ParseNode $n) => $o->setLevel($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::class)),
+            'targetObjects' => fn(ParseNode $n) => $o->setTargetObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

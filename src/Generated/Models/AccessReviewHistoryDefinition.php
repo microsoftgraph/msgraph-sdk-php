@@ -115,16 +115,16 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'decisions' => function (ParseNode $n) use ($o) { $o->setDecisions($n->getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::class)); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'instances' => function (ParseNode $n) use ($o) { $o->setInstances($n->getCollectionOfObjectValues(array(AccessReviewHistoryInstance::class, 'createFromDiscriminatorValue'))); },
-            'reviewHistoryPeriodEndDateTime' => function (ParseNode $n) use ($o) { $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()); },
-            'reviewHistoryPeriodStartDateTime' => function (ParseNode $n) use ($o) { $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()); },
-            'scheduleSettings' => function (ParseNode $n) use ($o) { $o->setScheduleSettings($n->getObjectValue(array(AccessReviewHistoryScheduleSettings::class, 'createFromDiscriminatorValue'))); },
-            'scopes' => function (ParseNode $n) use ($o) { $o->setScopes($n->getCollectionOfObjectValues(array(AccessReviewScope::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)); },
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::class)),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'instances' => fn(ParseNode $n) => $o->setInstances($n->getCollectionOfObjectValues([AccessReviewHistoryInstance::class, 'createFromDiscriminatorValue'])),
+            'reviewHistoryPeriodEndDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()),
+            'reviewHistoryPeriodStartDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()),
+            'scheduleSettings' => fn(ParseNode $n) => $o->setScheduleSettings($n->getObjectValue([AccessReviewHistoryScheduleSettings::class, 'createFromDiscriminatorValue'])),
+            'scopes' => fn(ParseNode $n) => $o->setScopes($n->getCollectionOfObjectValues([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)),
         ]);
     }
 

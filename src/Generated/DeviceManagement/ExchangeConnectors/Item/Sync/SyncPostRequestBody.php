@@ -51,7 +51,7 @@ class SyncPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'syncType' => function (ParseNode $n) use ($o) { $o->setSyncType($n->getEnumValue(DeviceManagementExchangeConnectorSyncType::class)); },
+            'syncType' => fn(ParseNode $n) => $o->setSyncType($n->getEnumValue(DeviceManagementExchangeConnectorSyncType::class)),
         ];
     }
 

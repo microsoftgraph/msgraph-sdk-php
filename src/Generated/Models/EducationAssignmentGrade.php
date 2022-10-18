@@ -69,9 +69,9 @@ class EducationAssignmentGrade implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'gradedBy' => function (ParseNode $n) use ($o) { $o->setGradedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'gradedDateTime' => function (ParseNode $n) use ($o) { $o->setGradedDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'gradedBy' => fn(ParseNode $n) => $o->setGradedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'gradedDateTime' => fn(ParseNode $n) => $o->setGradedDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

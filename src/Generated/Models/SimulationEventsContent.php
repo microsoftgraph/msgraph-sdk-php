@@ -77,9 +77,9 @@ class SimulationEventsContent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'compromisedRate' => function (ParseNode $n) use ($o) { $o->setCompromisedRate($n->getFloatValue()); },
-            'events' => function (ParseNode $n) use ($o) { $o->setEvents($n->getCollectionOfObjectValues(array(SimulationEvent::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'compromisedRate' => fn(ParseNode $n) => $o->setCompromisedRate($n->getFloatValue()),
+            'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([SimulationEvent::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

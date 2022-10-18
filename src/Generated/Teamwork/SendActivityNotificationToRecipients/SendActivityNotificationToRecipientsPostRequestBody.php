@@ -100,13 +100,13 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'activityType' => function (ParseNode $n) use ($o) { $o->setActivityType($n->getStringValue()); },
-            'chainId' => function (ParseNode $n) use ($o) { $o->setChainId($n->getIntegerValue()); },
-            'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
-            'recipients' => function (ParseNode $n) use ($o) { $o->setRecipients($n->getCollectionOfObjectValues(array(TeamworkNotificationRecipient::class, 'createFromDiscriminatorValue'))); },
-            'teamsAppId' => function (ParseNode $n) use ($o) { $o->setTeamsAppId($n->getStringValue()); },
-            'templateParameters' => function (ParseNode $n) use ($o) { $o->setTemplateParameters($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
-            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getObjectValue(array(TeamworkActivityTopic::class, 'createFromDiscriminatorValue'))); },
+            'activityType' => fn(ParseNode $n) => $o->setActivityType($n->getStringValue()),
+            'chainId' => fn(ParseNode $n) => $o->setChainId($n->getIntegerValue()),
+            'previewText' => fn(ParseNode $n) => $o->setPreviewText($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfObjectValues([TeamworkNotificationRecipient::class, 'createFromDiscriminatorValue'])),
+            'teamsAppId' => fn(ParseNode $n) => $o->setTeamsAppId($n->getStringValue()),
+            'templateParameters' => fn(ParseNode $n) => $o->setTemplateParameters($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
+            'topic' => fn(ParseNode $n) => $o->setTopic($n->getObjectValue([TeamworkActivityTopic::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

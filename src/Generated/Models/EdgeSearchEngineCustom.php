@@ -45,7 +45,7 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'edgeSearchEngineOpenSearchXmlUrl' => function (ParseNode $n) use ($o) { $o->setEdgeSearchEngineOpenSearchXmlUrl($n->getStringValue()); },
+            'edgeSearchEngineOpenSearchXmlUrl' => fn(ParseNode $n) => $o->setEdgeSearchEngineOpenSearchXmlUrl($n->getStringValue()),
         ]);
     }
 

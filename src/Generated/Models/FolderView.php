@@ -66,10 +66,10 @@ class FolderView implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sortBy' => function (ParseNode $n) use ($o) { $o->setSortBy($n->getStringValue()); },
-            'sortOrder' => function (ParseNode $n) use ($o) { $o->setSortOrder($n->getStringValue()); },
-            'viewType' => function (ParseNode $n) use ($o) { $o->setViewType($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sortBy' => fn(ParseNode $n) => $o->setSortBy($n->getStringValue()),
+            'sortOrder' => fn(ParseNode $n) => $o->setSortOrder($n->getStringValue()),
+            'viewType' => fn(ParseNode $n) => $o->setViewType($n->getStringValue()),
         ];
     }
 

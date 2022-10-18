@@ -55,8 +55,8 @@ class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'newPassword' => function (ParseNode $n) use ($o) { $o->setNewPassword($n->getStringValue()); },
-            'requireChangeOnNextSignIn' => function (ParseNode $n) use ($o) { $o->setRequireChangeOnNextSignIn($n->getBooleanValue()); },
+            'newPassword' => fn(ParseNode $n) => $o->setNewPassword($n->getStringValue()),
+            'requireChangeOnNextSignIn' => fn(ParseNode $n) => $o->setRequireChangeOnNextSignIn($n->getBooleanValue()),
         ];
     }
 

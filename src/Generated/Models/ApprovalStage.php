@@ -84,13 +84,13 @@ class ApprovalStage extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedToMe' => function (ParseNode $n) use ($o) { $o->setAssignedToMe($n->getBooleanValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'justification' => function (ParseNode $n) use ($o) { $o->setJustification($n->getStringValue()); },
-            'reviewedBy' => function (ParseNode $n) use ($o) { $o->setReviewedBy($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'reviewedDateTime' => function (ParseNode $n) use ($o) { $o->setReviewedDateTime($n->getDateTimeValue()); },
-            'reviewResult' => function (ParseNode $n) use ($o) { $o->setReviewResult($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
+            'assignedToMe' => fn(ParseNode $n) => $o->setAssignedToMe($n->getBooleanValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            'reviewedBy' => fn(ParseNode $n) => $o->setReviewedBy($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'reviewedDateTime' => fn(ParseNode $n) => $o->setReviewedDateTime($n->getDateTimeValue()),
+            'reviewResult' => fn(ParseNode $n) => $o->setReviewResult($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
     }
 

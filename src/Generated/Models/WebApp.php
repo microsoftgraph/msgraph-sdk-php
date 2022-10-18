@@ -50,8 +50,8 @@ class WebApp extends MobileApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appUrl' => function (ParseNode $n) use ($o) { $o->setAppUrl($n->getStringValue()); },
-            'useManagedBrowser' => function (ParseNode $n) use ($o) { $o->setUseManagedBrowser($n->getBooleanValue()); },
+            'appUrl' => fn(ParseNode $n) => $o->setAppUrl($n->getStringValue()),
+            'useManagedBrowser' => fn(ParseNode $n) => $o->setUseManagedBrowser($n->getBooleanValue()),
         ]);
     }
 

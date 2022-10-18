@@ -51,7 +51,7 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(ScreenSharingRole::class)); },
+            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(ScreenSharingRole::class)),
         ];
     }
 

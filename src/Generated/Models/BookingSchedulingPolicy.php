@@ -85,12 +85,12 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowStaffSelection' => function (ParseNode $n) use ($o) { $o->setAllowStaffSelection($n->getBooleanValue()); },
-            'maximumAdvance' => function (ParseNode $n) use ($o) { $o->setMaximumAdvance($n->getDateIntervalValue()); },
-            'minimumLeadTime' => function (ParseNode $n) use ($o) { $o->setMinimumLeadTime($n->getDateIntervalValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sendConfirmationsToOwner' => function (ParseNode $n) use ($o) { $o->setSendConfirmationsToOwner($n->getBooleanValue()); },
-            'timeSlotInterval' => function (ParseNode $n) use ($o) { $o->setTimeSlotInterval($n->getDateIntervalValue()); },
+            'allowStaffSelection' => fn(ParseNode $n) => $o->setAllowStaffSelection($n->getBooleanValue()),
+            'maximumAdvance' => fn(ParseNode $n) => $o->setMaximumAdvance($n->getDateIntervalValue()),
+            'minimumLeadTime' => fn(ParseNode $n) => $o->setMinimumLeadTime($n->getDateIntervalValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sendConfirmationsToOwner' => fn(ParseNode $n) => $o->setSendConfirmationsToOwner($n->getBooleanValue()),
+            'timeSlotInterval' => fn(ParseNode $n) => $o->setTimeSlotInterval($n->getDateIntervalValue()),
         ];
     }
 

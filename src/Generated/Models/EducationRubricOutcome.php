@@ -52,10 +52,10 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'publishedRubricQualityFeedback' => function (ParseNode $n) use ($o) { $o->setPublishedRubricQualityFeedback($n->getCollectionOfObjectValues(array(RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'))); },
-            'publishedRubricQualitySelectedLevels' => function (ParseNode $n) use ($o) { $o->setPublishedRubricQualitySelectedLevels($n->getCollectionOfObjectValues(array(RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'))); },
-            'rubricQualityFeedback' => function (ParseNode $n) use ($o) { $o->setRubricQualityFeedback($n->getCollectionOfObjectValues(array(RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'))); },
-            'rubricQualitySelectedLevels' => function (ParseNode $n) use ($o) { $o->setRubricQualitySelectedLevels($n->getCollectionOfObjectValues(array(RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'))); },
+            'publishedRubricQualityFeedback' => fn(ParseNode $n) => $o->setPublishedRubricQualityFeedback($n->getCollectionOfObjectValues([RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'])),
+            'publishedRubricQualitySelectedLevels' => fn(ParseNode $n) => $o->setPublishedRubricQualitySelectedLevels($n->getCollectionOfObjectValues([RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'])),
+            'rubricQualityFeedback' => fn(ParseNode $n) => $o->setRubricQualityFeedback($n->getCollectionOfObjectValues([RubricQualityFeedbackModel::class, 'createFromDiscriminatorValue'])),
+            'rubricQualitySelectedLevels' => fn(ParseNode $n) => $o->setRubricQualitySelectedLevels($n->getCollectionOfObjectValues([RubricQualitySelectedColumnModel::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

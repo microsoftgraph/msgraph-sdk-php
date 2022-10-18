@@ -58,8 +58,8 @@ class PrintTaskTrigger extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definition' => function (ParseNode $n) use ($o) { $o->setDefinition($n->getObjectValue(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
-            'event' => function (ParseNode $n) use ($o) { $o->setEvent($n->getEnumValue(PrintEvent::class)); },
+            'definition' => fn(ParseNode $n) => $o->setDefinition($n->getObjectValue([PrintTaskDefinition::class, 'createFromDiscriminatorValue'])),
+            'event' => fn(ParseNode $n) => $o->setEvent($n->getEnumValue(PrintEvent::class)),
         ]);
     }
 

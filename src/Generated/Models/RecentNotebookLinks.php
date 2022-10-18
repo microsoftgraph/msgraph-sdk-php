@@ -61,9 +61,9 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'oneNoteClientUrl' => function (ParseNode $n) use ($o) { $o->setOneNoteClientUrl($n->getObjectValue(array(ExternalLink::class, 'createFromDiscriminatorValue'))); },
-            'oneNoteWebUrl' => function (ParseNode $n) use ($o) { $o->setOneNoteWebUrl($n->getObjectValue(array(ExternalLink::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'oneNoteClientUrl' => fn(ParseNode $n) => $o->setOneNoteClientUrl($n->getObjectValue([ExternalLink::class, 'createFromDiscriminatorValue'])),
+            'oneNoteWebUrl' => fn(ParseNode $n) => $o->setOneNoteWebUrl($n->getObjectValue([ExternalLink::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

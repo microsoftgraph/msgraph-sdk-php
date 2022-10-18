@@ -50,7 +50,7 @@ class GetPresencesByUserIdPostRequestBody implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'ids' => function (ParseNode $n) use ($o) { $o->setIds($n->getCollectionOfPrimitiveValues()); },
+            'ids' => fn(ParseNode $n) => $o->setIds($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

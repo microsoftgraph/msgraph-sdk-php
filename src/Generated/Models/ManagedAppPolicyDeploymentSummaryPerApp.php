@@ -69,9 +69,9 @@ class ManagedAppPolicyDeploymentSummaryPerApp implements AdditionalDataHolder, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'configurationAppliedUserCount' => function (ParseNode $n) use ($o) { $o->setConfigurationAppliedUserCount($n->getIntegerValue()); },
-            'mobileAppIdentifier' => function (ParseNode $n) use ($o) { $o->setMobileAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'configurationAppliedUserCount' => fn(ParseNode $n) => $o->setConfigurationAppliedUserCount($n->getIntegerValue()),
+            'mobileAppIdentifier' => fn(ParseNode $n) => $o->setMobileAppIdentifier($n->getObjectValue([MobileAppIdentifier::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

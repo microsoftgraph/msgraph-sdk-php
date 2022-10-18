@@ -68,9 +68,9 @@ class ErrorDetails implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
+            'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
 

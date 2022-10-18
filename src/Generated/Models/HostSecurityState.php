@@ -96,16 +96,16 @@ class HostSecurityState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fqdn' => function (ParseNode $n) use ($o) { $o->setFqdn($n->getStringValue()); },
-            'isAzureAdJoined' => function (ParseNode $n) use ($o) { $o->setIsAzureAdJoined($n->getBooleanValue()); },
-            'isAzureAdRegistered' => function (ParseNode $n) use ($o) { $o->setIsAzureAdRegistered($n->getBooleanValue()); },
-            'isHybridAzureDomainJoined' => function (ParseNode $n) use ($o) { $o->setIsHybridAzureDomainJoined($n->getBooleanValue()); },
-            'netBiosName' => function (ParseNode $n) use ($o) { $o->setNetBiosName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'os' => function (ParseNode $n) use ($o) { $o->setOs($n->getStringValue()); },
-            'privateIpAddress' => function (ParseNode $n) use ($o) { $o->setPrivateIpAddress($n->getStringValue()); },
-            'publicIpAddress' => function (ParseNode $n) use ($o) { $o->setPublicIpAddress($n->getStringValue()); },
-            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
+            'fqdn' => fn(ParseNode $n) => $o->setFqdn($n->getStringValue()),
+            'isAzureAdJoined' => fn(ParseNode $n) => $o->setIsAzureAdJoined($n->getBooleanValue()),
+            'isAzureAdRegistered' => fn(ParseNode $n) => $o->setIsAzureAdRegistered($n->getBooleanValue()),
+            'isHybridAzureDomainJoined' => fn(ParseNode $n) => $o->setIsHybridAzureDomainJoined($n->getBooleanValue()),
+            'netBiosName' => fn(ParseNode $n) => $o->setNetBiosName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'os' => fn(ParseNode $n) => $o->setOs($n->getStringValue()),
+            'privateIpAddress' => fn(ParseNode $n) => $o->setPrivateIpAddress($n->getStringValue()),
+            'publicIpAddress' => fn(ParseNode $n) => $o->setPublicIpAddress($n->getStringValue()),
+            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getStringValue()),
         ];
     }
 

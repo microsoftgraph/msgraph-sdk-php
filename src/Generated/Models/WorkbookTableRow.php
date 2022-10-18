@@ -42,8 +42,8 @@ class WorkbookTableRow extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

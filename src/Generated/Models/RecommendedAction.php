@@ -74,10 +74,10 @@ class RecommendedAction implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'actionWebUrl' => function (ParseNode $n) use ($o) { $o->setActionWebUrl($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'potentialScoreImpact' => function (ParseNode $n) use ($o) { $o->setPotentialScoreImpact($n->getFloatValue()); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'actionWebUrl' => fn(ParseNode $n) => $o->setActionWebUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'potentialScoreImpact' => fn(ParseNode $n) => $o->setPotentialScoreImpact($n->getFloatValue()),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
         ];
     }
 

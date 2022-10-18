@@ -70,11 +70,11 @@ class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'groupId' => function (ParseNode $n) use ($o) { $o->setGroupId($n->getStringValue()); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            'renameAs' => function (ParseNode $n) use ($o) { $o->setRenameAs($n->getStringValue()); },
-            'siteCollectionId' => function (ParseNode $n) use ($o) { $o->setSiteCollectionId($n->getStringValue()); },
-            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
+            'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'renameAs' => fn(ParseNode $n) => $o->setRenameAs($n->getStringValue()),
+            'siteCollectionId' => fn(ParseNode $n) => $o->setSiteCollectionId($n->getStringValue()),
+            'siteId' => fn(ParseNode $n) => $o->setSiteId($n->getStringValue()),
         ];
     }
 

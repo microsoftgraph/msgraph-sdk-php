@@ -64,9 +64,9 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTimeUtc' => function (ParseNode $n) use ($o) { $o->setCreatedDateTimeUtc($n->getDateTimeValue()); },
-            'deviceIdentities' => function (ParseNode $n) use ($o) { $o->setDeviceIdentities($n->getCollectionOfObjectValues(array(ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus::class)); },
+            'createdDateTimeUtc' => fn(ParseNode $n) => $o->setCreatedDateTimeUtc($n->getDateTimeValue()),
+            'deviceIdentities' => fn(ParseNode $n) => $o->setDeviceIdentities($n->getCollectionOfObjectValues([ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus::class)),
         ]);
     }
 

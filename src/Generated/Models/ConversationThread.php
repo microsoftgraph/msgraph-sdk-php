@@ -86,15 +86,15 @@ class ConversationThread extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
-            'isLocked' => function (ParseNode $n) use ($o) { $o->setIsLocked($n->getBooleanValue()); },
-            'lastDeliveredDateTime' => function (ParseNode $n) use ($o) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
-            'posts' => function (ParseNode $n) use ($o) { $o->setPosts($n->getCollectionOfObjectValues(array(Post::class, 'createFromDiscriminatorValue'))); },
-            'preview' => function (ParseNode $n) use ($o) { $o->setPreview($n->getStringValue()); },
-            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
-            'toRecipients' => function (ParseNode $n) use ($o) { $o->setToRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'uniqueSenders' => function (ParseNode $n) use ($o) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
+            'ccRecipients' => fn(ParseNode $n) => $o->setCcRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
+            'isLocked' => fn(ParseNode $n) => $o->setIsLocked($n->getBooleanValue()),
+            'lastDeliveredDateTime' => fn(ParseNode $n) => $o->setLastDeliveredDateTime($n->getDateTimeValue()),
+            'posts' => fn(ParseNode $n) => $o->setPosts($n->getCollectionOfObjectValues([Post::class, 'createFromDiscriminatorValue'])),
+            'preview' => fn(ParseNode $n) => $o->setPreview($n->getStringValue()),
+            'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
+            'toRecipients' => fn(ParseNode $n) => $o->setToRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'uniqueSenders' => fn(ParseNode $n) => $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

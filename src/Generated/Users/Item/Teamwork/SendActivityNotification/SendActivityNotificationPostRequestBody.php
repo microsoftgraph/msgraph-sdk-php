@@ -89,11 +89,11 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'activityType' => function (ParseNode $n) use ($o) { $o->setActivityType($n->getStringValue()); },
-            'chainId' => function (ParseNode $n) use ($o) { $o->setChainId($n->getIntegerValue()); },
-            'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
-            'templateParameters' => function (ParseNode $n) use ($o) { $o->setTemplateParameters($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
-            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getObjectValue(array(TeamworkActivityTopic::class, 'createFromDiscriminatorValue'))); },
+            'activityType' => fn(ParseNode $n) => $o->setActivityType($n->getStringValue()),
+            'chainId' => fn(ParseNode $n) => $o->setChainId($n->getIntegerValue()),
+            'previewText' => fn(ParseNode $n) => $o->setPreviewText($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'templateParameters' => fn(ParseNode $n) => $o->setTemplateParameters($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
+            'topic' => fn(ParseNode $n) => $o->setTopic($n->getObjectValue([TeamworkActivityTopic::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

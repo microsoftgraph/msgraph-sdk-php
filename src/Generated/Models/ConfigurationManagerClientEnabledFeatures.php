@@ -97,13 +97,13 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'compliancePolicy' => function (ParseNode $n) use ($o) { $o->setCompliancePolicy($n->getBooleanValue()); },
-            'deviceConfiguration' => function (ParseNode $n) use ($o) { $o->setDeviceConfiguration($n->getBooleanValue()); },
-            'inventory' => function (ParseNode $n) use ($o) { $o->setInventory($n->getBooleanValue()); },
-            'modernApps' => function (ParseNode $n) use ($o) { $o->setModernApps($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'resourceAccess' => function (ParseNode $n) use ($o) { $o->setResourceAccess($n->getBooleanValue()); },
-            'windowsUpdateForBusiness' => function (ParseNode $n) use ($o) { $o->setWindowsUpdateForBusiness($n->getBooleanValue()); },
+            'compliancePolicy' => fn(ParseNode $n) => $o->setCompliancePolicy($n->getBooleanValue()),
+            'deviceConfiguration' => fn(ParseNode $n) => $o->setDeviceConfiguration($n->getBooleanValue()),
+            'inventory' => fn(ParseNode $n) => $o->setInventory($n->getBooleanValue()),
+            'modernApps' => fn(ParseNode $n) => $o->setModernApps($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resourceAccess' => fn(ParseNode $n) => $o->setResourceAccess($n->getBooleanValue()),
+            'windowsUpdateForBusiness' => fn(ParseNode $n) => $o->setWindowsUpdateForBusiness($n->getBooleanValue()),
         ];
     }
 

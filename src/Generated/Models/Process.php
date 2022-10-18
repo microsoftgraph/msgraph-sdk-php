@@ -136,19 +136,19 @@ class Process implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accountName' => function (ParseNode $n) use ($o) { $o->setAccountName($n->getStringValue()); },
-            'commandLine' => function (ParseNode $n) use ($o) { $o->setCommandLine($n->getStringValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'fileHash' => function (ParseNode $n) use ($o) { $o->setFileHash($n->getObjectValue(array(FileHash::class, 'createFromDiscriminatorValue'))); },
-            'integrityLevel' => function (ParseNode $n) use ($o) { $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)); },
-            'isElevated' => function (ParseNode $n) use ($o) { $o->setIsElevated($n->getBooleanValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'parentProcessCreatedDateTime' => function (ParseNode $n) use ($o) { $o->setParentProcessCreatedDateTime($n->getDateTimeValue()); },
-            'parentProcessId' => function (ParseNode $n) use ($o) { $o->setParentProcessId($n->getIntegerValue()); },
-            'parentProcessName' => function (ParseNode $n) use ($o) { $o->setParentProcessName($n->getStringValue()); },
-            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
-            'processId' => function (ParseNode $n) use ($o) { $o->setProcessId($n->getIntegerValue()); },
+            'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
+            'commandLine' => fn(ParseNode $n) => $o->setCommandLine($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'fileHash' => fn(ParseNode $n) => $o->setFileHash($n->getObjectValue([FileHash::class, 'createFromDiscriminatorValue'])),
+            'integrityLevel' => fn(ParseNode $n) => $o->setIntegrityLevel($n->getEnumValue(ProcessIntegrityLevel::class)),
+            'isElevated' => fn(ParseNode $n) => $o->setIsElevated($n->getBooleanValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'parentProcessCreatedDateTime' => fn(ParseNode $n) => $o->setParentProcessCreatedDateTime($n->getDateTimeValue()),
+            'parentProcessId' => fn(ParseNode $n) => $o->setParentProcessId($n->getIntegerValue()),
+            'parentProcessName' => fn(ParseNode $n) => $o->setParentProcessName($n->getStringValue()),
+            'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
+            'processId' => fn(ParseNode $n) => $o->setProcessId($n->getIntegerValue()),
         ];
     }
 

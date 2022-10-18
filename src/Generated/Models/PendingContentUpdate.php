@@ -57,8 +57,8 @@ class PendingContentUpdate implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'queuedDateTime' => function (ParseNode $n) use ($o) { $o->setQueuedDateTime($n->getDateTimeValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'queuedDateTime' => fn(ParseNode $n) => $o->setQueuedDateTime($n->getDateTimeValue()),
         ];
     }
 

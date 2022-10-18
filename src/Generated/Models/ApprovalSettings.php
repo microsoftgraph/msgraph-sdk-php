@@ -92,12 +92,12 @@ class ApprovalSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'approvalMode' => function (ParseNode $n) use ($o) { $o->setApprovalMode($n->getStringValue()); },
-            'approvalStages' => function (ParseNode $n) use ($o) { $o->setApprovalStages($n->getCollectionOfObjectValues(array(UnifiedApprovalStage::class, 'createFromDiscriminatorValue'))); },
-            'isApprovalRequired' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequired($n->getBooleanValue()); },
-            'isApprovalRequiredForExtension' => function (ParseNode $n) use ($o) { $o->setIsApprovalRequiredForExtension($n->getBooleanValue()); },
-            'isRequestorJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsRequestorJustificationRequired($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'approvalMode' => fn(ParseNode $n) => $o->setApprovalMode($n->getStringValue()),
+            'approvalStages' => fn(ParseNode $n) => $o->setApprovalStages($n->getCollectionOfObjectValues([UnifiedApprovalStage::class, 'createFromDiscriminatorValue'])),
+            'isApprovalRequired' => fn(ParseNode $n) => $o->setIsApprovalRequired($n->getBooleanValue()),
+            'isApprovalRequiredForExtension' => fn(ParseNode $n) => $o->setIsApprovalRequiredForExtension($n->getBooleanValue()),
+            'isRequestorJustificationRequired' => fn(ParseNode $n) => $o->setIsRequestorJustificationRequired($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

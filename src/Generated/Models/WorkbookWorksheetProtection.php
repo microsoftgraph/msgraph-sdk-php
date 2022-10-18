@@ -42,8 +42,8 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'protected' => function (ParseNode $n) use ($o) { $o->setProtected($n->getBooleanValue()); },
-            'options' => function (ParseNode $n) use ($o) { $o->setOptions($n->getObjectValue(array(WorkbookWorksheetProtectionOptions::class, 'createFromDiscriminatorValue'))); },
+            'protected' => fn(ParseNode $n) => $o->setProtected($n->getBooleanValue()),
+            'options' => fn(ParseNode $n) => $o->setOptions($n->getObjectValue([WorkbookWorksheetProtectionOptions::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

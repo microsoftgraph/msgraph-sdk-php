@@ -61,8 +61,8 @@ class ManagedApp extends MobileApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appAvailability' => function (ParseNode $n) use ($o) { $o->setAppAvailability($n->getEnumValue(ManagedAppAvailability::class)); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'appAvailability' => fn(ParseNode $n) => $o->setAppAvailability($n->getEnumValue(ManagedAppAvailability::class)),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

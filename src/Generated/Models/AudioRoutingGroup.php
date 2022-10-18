@@ -47,9 +47,9 @@ class AudioRoutingGroup extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'receivers' => function (ParseNode $n) use ($o) { $o->setReceivers($n->getCollectionOfPrimitiveValues()); },
-            'routingMode' => function (ParseNode $n) use ($o) { $o->setRoutingMode($n->getEnumValue(RoutingMode::class)); },
-            'sources' => function (ParseNode $n) use ($o) { $o->setSources($n->getCollectionOfPrimitiveValues()); },
+            'receivers' => fn(ParseNode $n) => $o->setReceivers($n->getCollectionOfPrimitiveValues()),
+            'routingMode' => fn(ParseNode $n) => $o->setRoutingMode($n->getEnumValue(RoutingMode::class)),
+            'sources' => fn(ParseNode $n) => $o->setSources($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

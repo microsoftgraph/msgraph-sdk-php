@@ -56,8 +56,8 @@ class SendMailPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getObjectValue(array(Message::class, 'createFromDiscriminatorValue'))); },
-            'saveToSentItems' => function (ParseNode $n) use ($o) { $o->setSaveToSentItems($n->getBooleanValue()); },
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getObjectValue([Message::class, 'createFromDiscriminatorValue'])),
+            'saveToSentItems' => fn(ParseNode $n) => $o->setSaveToSentItems($n->getBooleanValue()),
         ];
     }
 

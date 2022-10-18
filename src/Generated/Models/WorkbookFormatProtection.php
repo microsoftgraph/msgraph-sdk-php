@@ -42,8 +42,8 @@ class WorkbookFormatProtection extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'formulaHidden' => function (ParseNode $n) use ($o) { $o->setFormulaHidden($n->getBooleanValue()); },
-            'locked' => function (ParseNode $n) use ($o) { $o->setLocked($n->getBooleanValue()); },
+            'formulaHidden' => fn(ParseNode $n) => $o->setFormulaHidden($n->getBooleanValue()),
+            'locked' => fn(ParseNode $n) => $o->setLocked($n->getBooleanValue()),
         ]);
     }
 

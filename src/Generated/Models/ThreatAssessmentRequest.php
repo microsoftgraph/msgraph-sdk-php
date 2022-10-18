@@ -123,14 +123,14 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getEnumValue(ThreatCategory::class)); },
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getEnumValue(ThreatAssessmentContentType::class)); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'expectedAssessment' => function (ParseNode $n) use ($o) { $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)); },
-            'requestSource' => function (ParseNode $n) use ($o) { $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)); },
-            'results' => function (ParseNode $n) use ($o) { $o->setResults($n->getCollectionOfObjectValues(array(ThreatAssessmentResult::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)); },
+            'category' => fn(ParseNode $n) => $o->setCategory($n->getEnumValue(ThreatCategory::class)),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getEnumValue(ThreatAssessmentContentType::class)),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'expectedAssessment' => fn(ParseNode $n) => $o->setExpectedAssessment($n->getEnumValue(ThreatExpectedAssessment::class)),
+            'requestSource' => fn(ParseNode $n) => $o->setRequestSource($n->getEnumValue(ThreatAssessmentRequestSource::class)),
+            'results' => fn(ParseNode $n) => $o->setResults($n->getCollectionOfObjectValues([ThreatAssessmentResult::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ThreatAssessmentStatus::class)),
         ]);
     }
 

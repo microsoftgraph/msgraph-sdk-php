@@ -47,9 +47,9 @@ class TeamDescriptionUpdatedEventMessageDetail extends EventMessageDetail implem
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'teamDescription' => function (ParseNode $n) use ($o) { $o->setTeamDescription($n->getStringValue()); },
-            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'teamDescription' => fn(ParseNode $n) => $o->setTeamDescription($n->getStringValue()),
+            'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ]);
     }
 

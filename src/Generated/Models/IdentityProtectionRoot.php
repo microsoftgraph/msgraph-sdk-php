@@ -61,9 +61,9 @@ class IdentityProtectionRoot implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'riskDetections' => function (ParseNode $n) use ($o) { $o->setRiskDetections($n->getCollectionOfObjectValues(array(RiskDetection::class, 'createFromDiscriminatorValue'))); },
-            'riskyUsers' => function (ParseNode $n) use ($o) { $o->setRiskyUsers($n->getCollectionOfObjectValues(array(RiskyUser::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'riskDetections' => fn(ParseNode $n) => $o->setRiskDetections($n->getCollectionOfObjectValues([RiskDetection::class, 'createFromDiscriminatorValue'])),
+            'riskyUsers' => fn(ParseNode $n) => $o->setRiskyUsers($n->getCollectionOfObjectValues([RiskyUser::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

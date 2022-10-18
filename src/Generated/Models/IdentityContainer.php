@@ -81,11 +81,11 @@ class IdentityContainer extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apiConnectors' => function (ParseNode $n) use ($o) { $o->setApiConnectors($n->getCollectionOfObjectValues(array(IdentityApiConnector::class, 'createFromDiscriminatorValue'))); },
-            'b2xUserFlows' => function (ParseNode $n) use ($o) { $o->setB2xUserFlows($n->getCollectionOfObjectValues(array(B2xIdentityUserFlow::class, 'createFromDiscriminatorValue'))); },
-            'conditionalAccess' => function (ParseNode $n) use ($o) { $o->setConditionalAccess($n->getObjectValue(array(ConditionalAccessRoot::class, 'createFromDiscriminatorValue'))); },
-            'identityProviders' => function (ParseNode $n) use ($o) { $o->setIdentityProviders($n->getCollectionOfObjectValues(array(IdentityProviderBase::class, 'createFromDiscriminatorValue'))); },
-            'userFlowAttributes' => function (ParseNode $n) use ($o) { $o->setUserFlowAttributes($n->getCollectionOfObjectValues(array(IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'))); },
+            'apiConnectors' => fn(ParseNode $n) => $o->setApiConnectors($n->getCollectionOfObjectValues([IdentityApiConnector::class, 'createFromDiscriminatorValue'])),
+            'b2xUserFlows' => fn(ParseNode $n) => $o->setB2xUserFlows($n->getCollectionOfObjectValues([B2xIdentityUserFlow::class, 'createFromDiscriminatorValue'])),
+            'conditionalAccess' => fn(ParseNode $n) => $o->setConditionalAccess($n->getObjectValue([ConditionalAccessRoot::class, 'createFromDiscriminatorValue'])),
+            'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
+            'userFlowAttributes' => fn(ParseNode $n) => $o->setUserFlowAttributes($n->getCollectionOfObjectValues([IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

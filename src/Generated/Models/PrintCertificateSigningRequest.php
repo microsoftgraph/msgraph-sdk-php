@@ -69,9 +69,9 @@ class PrintCertificateSigningRequest implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'transportKey' => function (ParseNode $n) use ($o) { $o->setTransportKey($n->getStringValue()); },
+            'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'transportKey' => fn(ParseNode $n) => $o->setTransportKey($n->getStringValue()),
         ];
     }
 

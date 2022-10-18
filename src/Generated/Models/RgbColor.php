@@ -74,10 +74,10 @@ class RgbColor implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'b' => function (ParseNode $n) use ($o) { $o->setB($n->getStringValue()); },
-            'g' => function (ParseNode $n) use ($o) { $o->setG($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'r' => function (ParseNode $n) use ($o) { $o->setR($n->getStringValue()); },
+            'b' => fn(ParseNode $n) => $o->setB($n->getStringValue()),
+            'g' => fn(ParseNode $n) => $o->setG($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'r' => fn(ParseNode $n) => $o->setR($n->getStringValue()),
         ];
     }
 

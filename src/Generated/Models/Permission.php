@@ -96,17 +96,17 @@ class Permission extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'grantedTo' => function (ParseNode $n) use ($o) { $o->setGrantedTo($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'grantedToIdentities' => function (ParseNode $n) use ($o) { $o->setGrantedToIdentities($n->getCollectionOfObjectValues(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'grantedToIdentitiesV2' => function (ParseNode $n) use ($o) { $o->setGrantedToIdentitiesV2($n->getCollectionOfObjectValues(array(SharePointIdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'grantedToV2' => function (ParseNode $n) use ($o) { $o->setGrantedToV2($n->getObjectValue(array(SharePointIdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'hasPassword' => function (ParseNode $n) use ($o) { $o->setHasPassword($n->getBooleanValue()); },
-            'inheritedFrom' => function (ParseNode $n) use ($o) { $o->setInheritedFrom($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
-            'invitation' => function (ParseNode $n) use ($o) { $o->setInvitation($n->getObjectValue(array(SharingInvitation::class, 'createFromDiscriminatorValue'))); },
-            'link' => function (ParseNode $n) use ($o) { $o->setLink($n->getObjectValue(array(SharingLink::class, 'createFromDiscriminatorValue'))); },
-            'roles' => function (ParseNode $n) use ($o) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
-            'shareId' => function (ParseNode $n) use ($o) { $o->setShareId($n->getStringValue()); },
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'grantedTo' => fn(ParseNode $n) => $o->setGrantedTo($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'grantedToIdentities' => fn(ParseNode $n) => $o->setGrantedToIdentities($n->getCollectionOfObjectValues([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'grantedToIdentitiesV2' => fn(ParseNode $n) => $o->setGrantedToIdentitiesV2($n->getCollectionOfObjectValues([SharePointIdentitySet::class, 'createFromDiscriminatorValue'])),
+            'grantedToV2' => fn(ParseNode $n) => $o->setGrantedToV2($n->getObjectValue([SharePointIdentitySet::class, 'createFromDiscriminatorValue'])),
+            'hasPassword' => fn(ParseNode $n) => $o->setHasPassword($n->getBooleanValue()),
+            'inheritedFrom' => fn(ParseNode $n) => $o->setInheritedFrom($n->getObjectValue([ItemReference::class, 'createFromDiscriminatorValue'])),
+            'invitation' => fn(ParseNode $n) => $o->setInvitation($n->getObjectValue([SharingInvitation::class, 'createFromDiscriminatorValue'])),
+            'link' => fn(ParseNode $n) => $o->setLink($n->getObjectValue([SharingLink::class, 'createFromDiscriminatorValue'])),
+            'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfPrimitiveValues()),
+            'shareId' => fn(ParseNode $n) => $o->setShareId($n->getStringValue()),
         ]);
     }
 

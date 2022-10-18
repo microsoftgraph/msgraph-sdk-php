@@ -63,9 +63,9 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callEventType' => function (ParseNode $n) use ($o) { $o->setCallEventType($n->getEnumValue(TeamworkCallEventType::class)); },
-            'callId' => function (ParseNode $n) use ($o) { $o->setCallId($n->getStringValue()); },
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'callEventType' => fn(ParseNode $n) => $o->setCallEventType($n->getEnumValue(TeamworkCallEventType::class)),
+            'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -104,14 +104,14 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
-            'enrollmentType' => function (ParseNode $n) use ($o) { $o->setEnrollmentType($n->getEnumValue(DeviceEnrollmentType::class)); },
-            'failureCategory' => function (ParseNode $n) use ($o) { $o->setFailureCategory($n->getEnumValue(DeviceEnrollmentFailureReason::class)); },
-            'failureReason' => function (ParseNode $n) use ($o) { $o->setFailureReason($n->getStringValue()); },
-            'managedDeviceIdentifier' => function (ParseNode $n) use ($o) { $o->setManagedDeviceIdentifier($n->getStringValue()); },
-            'operatingSystem' => function (ParseNode $n) use ($o) { $o->setOperatingSystem($n->getStringValue()); },
-            'osVersion' => function (ParseNode $n) use ($o) { $o->setOsVersion($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
+            'enrollmentType' => fn(ParseNode $n) => $o->setEnrollmentType($n->getEnumValue(DeviceEnrollmentType::class)),
+            'failureCategory' => fn(ParseNode $n) => $o->setFailureCategory($n->getEnumValue(DeviceEnrollmentFailureReason::class)),
+            'failureReason' => fn(ParseNode $n) => $o->setFailureReason($n->getStringValue()),
+            'managedDeviceIdentifier' => fn(ParseNode $n) => $o->setManagedDeviceIdentifier($n->getStringValue()),
+            'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
+            'osVersion' => fn(ParseNode $n) => $o->setOsVersion($n->getStringValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
 

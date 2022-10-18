@@ -64,8 +64,8 @@ class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

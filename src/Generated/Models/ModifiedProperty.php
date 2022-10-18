@@ -74,10 +74,10 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'newValue' => function (ParseNode $n) use ($o) { $o->setNewValue($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'oldValue' => function (ParseNode $n) use ($o) { $o->setOldValue($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'newValue' => fn(ParseNode $n) => $o->setNewValue($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'oldValue' => fn(ParseNode $n) => $o->setOldValue($n->getStringValue()),
         ];
     }
 

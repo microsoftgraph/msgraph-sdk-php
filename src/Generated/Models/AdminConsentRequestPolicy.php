@@ -62,12 +62,12 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'notifyReviewers' => function (ParseNode $n) use ($o) { $o->setNotifyReviewers($n->getBooleanValue()); },
-            'remindersEnabled' => function (ParseNode $n) use ($o) { $o->setRemindersEnabled($n->getBooleanValue()); },
-            'requestDurationInDays' => function (ParseNode $n) use ($o) { $o->setRequestDurationInDays($n->getIntegerValue()); },
-            'reviewers' => function (ParseNode $n) use ($o) { $o->setReviewers($n->getCollectionOfObjectValues(array(AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'))); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'notifyReviewers' => fn(ParseNode $n) => $o->setNotifyReviewers($n->getBooleanValue()),
+            'remindersEnabled' => fn(ParseNode $n) => $o->setRemindersEnabled($n->getBooleanValue()),
+            'requestDurationInDays' => fn(ParseNode $n) => $o->setRequestDurationInDays($n->getIntegerValue()),
+            'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getIntegerValue()),
         ]);
     }
 

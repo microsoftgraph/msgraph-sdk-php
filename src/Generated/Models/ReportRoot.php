@@ -73,11 +73,11 @@ class ReportRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'dailyPrintUsageByPrinter' => function (ParseNode $n) use ($o) { $o->setDailyPrintUsageByPrinter($n->getCollectionOfObjectValues(array(PrintUsageByPrinter::class, 'createFromDiscriminatorValue'))); },
-            'dailyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
-            'monthlyPrintUsageByPrinter' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues(array(PrintUsageByPrinter::class, 'createFromDiscriminatorValue'))); },
-            'monthlyPrintUsageByUser' => function (ParseNode $n) use ($o) { $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues(array(PrintUsageByUser::class, 'createFromDiscriminatorValue'))); },
-            'security' => function (ParseNode $n) use ($o) { $o->setSecurity($n->getObjectValue(array(SecurityReportsRoot::class, 'createFromDiscriminatorValue'))); },
+            'dailyPrintUsageByPrinter' => fn(ParseNode $n) => $o->setDailyPrintUsageByPrinter($n->getCollectionOfObjectValues([PrintUsageByPrinter::class, 'createFromDiscriminatorValue'])),
+            'dailyPrintUsageByUser' => fn(ParseNode $n) => $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues([PrintUsageByUser::class, 'createFromDiscriminatorValue'])),
+            'monthlyPrintUsageByPrinter' => fn(ParseNode $n) => $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues([PrintUsageByPrinter::class, 'createFromDiscriminatorValue'])),
+            'monthlyPrintUsageByUser' => fn(ParseNode $n) => $o->setMonthlyPrintUsageByUser($n->getCollectionOfObjectValues([PrintUsageByUser::class, 'createFromDiscriminatorValue'])),
+            'security' => fn(ParseNode $n) => $o->setSecurity($n->getObjectValue([SecurityReportsRoot::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

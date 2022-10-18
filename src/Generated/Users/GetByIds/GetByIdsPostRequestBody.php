@@ -55,8 +55,8 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'ids' => function (ParseNode $n) use ($o) { $o->setIds($n->getCollectionOfPrimitiveValues()); },
-            'types' => function (ParseNode $n) use ($o) { $o->setTypes($n->getCollectionOfPrimitiveValues()); },
+            'ids' => fn(ParseNode $n) => $o->setIds($n->getCollectionOfPrimitiveValues()),
+            'types' => fn(ParseNode $n) => $o->setTypes($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

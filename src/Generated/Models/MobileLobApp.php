@@ -79,10 +79,10 @@ class MobileLobApp extends MobileApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'committedContentVersion' => function (ParseNode $n) use ($o) { $o->setCommittedContentVersion($n->getStringValue()); },
-            'contentVersions' => function (ParseNode $n) use ($o) { $o->setContentVersions($n->getCollectionOfObjectValues(array(MobileAppContent::class, 'createFromDiscriminatorValue'))); },
-            'fileName' => function (ParseNode $n) use ($o) { $o->setFileName($n->getStringValue()); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'committedContentVersion' => fn(ParseNode $n) => $o->setCommittedContentVersion($n->getStringValue()),
+            'contentVersions' => fn(ParseNode $n) => $o->setContentVersions($n->getCollectionOfObjectValues([MobileAppContent::class, 'createFromDiscriminatorValue'])),
+            'fileName' => fn(ParseNode $n) => $o->setFileName($n->getStringValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
         ]);
     }
 

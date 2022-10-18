@@ -60,10 +60,10 @@ class Shift extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'draftShift' => function (ParseNode $n) use ($o) { $o->setDraftShift($n->getObjectValue(array(ShiftItem::class, 'createFromDiscriminatorValue'))); },
-            'schedulingGroupId' => function (ParseNode $n) use ($o) { $o->setSchedulingGroupId($n->getStringValue()); },
-            'sharedShift' => function (ParseNode $n) use ($o) { $o->setSharedShift($n->getObjectValue(array(ShiftItem::class, 'createFromDiscriminatorValue'))); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'draftShift' => fn(ParseNode $n) => $o->setDraftShift($n->getObjectValue([ShiftItem::class, 'createFromDiscriminatorValue'])),
+            'schedulingGroupId' => fn(ParseNode $n) => $o->setSchedulingGroupId($n->getStringValue()),
+            'sharedShift' => fn(ParseNode $n) => $o->setSharedShift($n->getObjectValue([ShiftItem::class, 'createFromDiscriminatorValue'])),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
 

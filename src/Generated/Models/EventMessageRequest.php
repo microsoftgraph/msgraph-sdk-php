@@ -70,12 +70,12 @@ class EventMessageRequest extends EventMessage implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowNewTimeProposals' => function (ParseNode $n) use ($o) { $o->setAllowNewTimeProposals($n->getBooleanValue()); },
-            'meetingRequestType' => function (ParseNode $n) use ($o) { $o->setMeetingRequestType($n->getEnumValue(MeetingRequestType::class)); },
-            'previousEndDateTime' => function (ParseNode $n) use ($o) { $o->setPreviousEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'previousLocation' => function (ParseNode $n) use ($o) { $o->setPreviousLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
-            'previousStartDateTime' => function (ParseNode $n) use ($o) { $o->setPreviousStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'responseRequested' => function (ParseNode $n) use ($o) { $o->setResponseRequested($n->getBooleanValue()); },
+            'allowNewTimeProposals' => fn(ParseNode $n) => $o->setAllowNewTimeProposals($n->getBooleanValue()),
+            'meetingRequestType' => fn(ParseNode $n) => $o->setMeetingRequestType($n->getEnumValue(MeetingRequestType::class)),
+            'previousEndDateTime' => fn(ParseNode $n) => $o->setPreviousEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'previousLocation' => fn(ParseNode $n) => $o->setPreviousLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
+            'previousStartDateTime' => fn(ParseNode $n) => $o->setPreviousStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'responseRequested' => fn(ParseNode $n) => $o->setResponseRequested($n->getBooleanValue()),
         ]);
     }
 

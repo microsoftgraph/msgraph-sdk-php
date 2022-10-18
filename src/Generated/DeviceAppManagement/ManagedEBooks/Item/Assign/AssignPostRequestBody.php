@@ -51,7 +51,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'managedEBookAssignments' => function (ParseNode $n) use ($o) { $o->setManagedEBookAssignments($n->getCollectionOfObjectValues(array(ManagedEBookAssignment::class, 'createFromDiscriminatorValue'))); },
+            'managedEBookAssignments' => fn(ParseNode $n) => $o->setManagedEBookAssignments($n->getCollectionOfObjectValues([ManagedEBookAssignment::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

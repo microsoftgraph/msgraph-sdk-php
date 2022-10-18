@@ -74,10 +74,10 @@ class GeoCoordinates implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'altitude' => function (ParseNode $n) use ($o) { $o->setAltitude($n->getFloatValue()); },
-            'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
-            'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

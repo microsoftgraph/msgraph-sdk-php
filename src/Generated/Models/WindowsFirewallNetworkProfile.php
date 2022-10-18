@@ -127,19 +127,19 @@ class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'authorizedApplicationRulesFromGroupPolicyMerged' => function (ParseNode $n) use ($o) { $o->setAuthorizedApplicationRulesFromGroupPolicyMerged($n->getBooleanValue()); },
-            'connectionSecurityRulesFromGroupPolicyMerged' => function (ParseNode $n) use ($o) { $o->setConnectionSecurityRulesFromGroupPolicyMerged($n->getBooleanValue()); },
-            'firewallEnabled' => function (ParseNode $n) use ($o) { $o->setFirewallEnabled($n->getEnumValue(StateManagementSetting::class)); },
-            'globalPortRulesFromGroupPolicyMerged' => function (ParseNode $n) use ($o) { $o->setGlobalPortRulesFromGroupPolicyMerged($n->getBooleanValue()); },
-            'inboundConnectionsBlocked' => function (ParseNode $n) use ($o) { $o->setInboundConnectionsBlocked($n->getBooleanValue()); },
-            'inboundNotificationsBlocked' => function (ParseNode $n) use ($o) { $o->setInboundNotificationsBlocked($n->getBooleanValue()); },
-            'incomingTrafficBlocked' => function (ParseNode $n) use ($o) { $o->setIncomingTrafficBlocked($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'outboundConnectionsBlocked' => function (ParseNode $n) use ($o) { $o->setOutboundConnectionsBlocked($n->getBooleanValue()); },
-            'policyRulesFromGroupPolicyMerged' => function (ParseNode $n) use ($o) { $o->setPolicyRulesFromGroupPolicyMerged($n->getBooleanValue()); },
-            'securedPacketExemptionAllowed' => function (ParseNode $n) use ($o) { $o->setSecuredPacketExemptionAllowed($n->getBooleanValue()); },
-            'stealthModeBlocked' => function (ParseNode $n) use ($o) { $o->setStealthModeBlocked($n->getBooleanValue()); },
-            'unicastResponsesToMulticastBroadcastsBlocked' => function (ParseNode $n) use ($o) { $o->setUnicastResponsesToMulticastBroadcastsBlocked($n->getBooleanValue()); },
+            'authorizedApplicationRulesFromGroupPolicyMerged' => fn(ParseNode $n) => $o->setAuthorizedApplicationRulesFromGroupPolicyMerged($n->getBooleanValue()),
+            'connectionSecurityRulesFromGroupPolicyMerged' => fn(ParseNode $n) => $o->setConnectionSecurityRulesFromGroupPolicyMerged($n->getBooleanValue()),
+            'firewallEnabled' => fn(ParseNode $n) => $o->setFirewallEnabled($n->getEnumValue(StateManagementSetting::class)),
+            'globalPortRulesFromGroupPolicyMerged' => fn(ParseNode $n) => $o->setGlobalPortRulesFromGroupPolicyMerged($n->getBooleanValue()),
+            'inboundConnectionsBlocked' => fn(ParseNode $n) => $o->setInboundConnectionsBlocked($n->getBooleanValue()),
+            'inboundNotificationsBlocked' => fn(ParseNode $n) => $o->setInboundNotificationsBlocked($n->getBooleanValue()),
+            'incomingTrafficBlocked' => fn(ParseNode $n) => $o->setIncomingTrafficBlocked($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'outboundConnectionsBlocked' => fn(ParseNode $n) => $o->setOutboundConnectionsBlocked($n->getBooleanValue()),
+            'policyRulesFromGroupPolicyMerged' => fn(ParseNode $n) => $o->setPolicyRulesFromGroupPolicyMerged($n->getBooleanValue()),
+            'securedPacketExemptionAllowed' => fn(ParseNode $n) => $o->setSecuredPacketExemptionAllowed($n->getBooleanValue()),
+            'stealthModeBlocked' => fn(ParseNode $n) => $o->setStealthModeBlocked($n->getBooleanValue()),
+            'unicastResponsesToMulticastBroadcastsBlocked' => fn(ParseNode $n) => $o->setUnicastResponsesToMulticastBroadcastsBlocked($n->getBooleanValue()),
         ];
     }
 

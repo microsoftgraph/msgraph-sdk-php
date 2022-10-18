@@ -82,10 +82,10 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'ccRecipients' => function (ParseNode $n) use ($o) { $o->setCcRecipients($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'customizedMessageBody' => function (ParseNode $n) use ($o) { $o->setCustomizedMessageBody($n->getStringValue()); },
-            'messageLanguage' => function (ParseNode $n) use ($o) { $o->setMessageLanguage($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'ccRecipients' => fn(ParseNode $n) => $o->setCcRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'customizedMessageBody' => fn(ParseNode $n) => $o->setCustomizedMessageBody($n->getStringValue()),
+            'messageLanguage' => fn(ParseNode $n) => $o->setMessageLanguage($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

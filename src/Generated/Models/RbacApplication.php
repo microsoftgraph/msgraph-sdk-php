@@ -72,14 +72,14 @@ class RbacApplication extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'roleAssignments' => function (ParseNode $n) use ($o) { $o->setRoleAssignments($n->getCollectionOfObjectValues(array(UnifiedRoleAssignment::class, 'createFromDiscriminatorValue'))); },
-            'roleAssignmentScheduleInstances' => function (ParseNode $n) use ($o) { $o->setRoleAssignmentScheduleInstances($n->getCollectionOfObjectValues(array(UnifiedRoleAssignmentScheduleInstance::class, 'createFromDiscriminatorValue'))); },
-            'roleAssignmentScheduleRequests' => function (ParseNode $n) use ($o) { $o->setRoleAssignmentScheduleRequests($n->getCollectionOfObjectValues(array(UnifiedRoleAssignmentScheduleRequest::class, 'createFromDiscriminatorValue'))); },
-            'roleAssignmentSchedules' => function (ParseNode $n) use ($o) { $o->setRoleAssignmentSchedules($n->getCollectionOfObjectValues(array(UnifiedRoleAssignmentSchedule::class, 'createFromDiscriminatorValue'))); },
-            'roleDefinitions' => function (ParseNode $n) use ($o) { $o->setRoleDefinitions($n->getCollectionOfObjectValues(array(UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'))); },
-            'roleEligibilityScheduleInstances' => function (ParseNode $n) use ($o) { $o->setRoleEligibilityScheduleInstances($n->getCollectionOfObjectValues(array(UnifiedRoleEligibilityScheduleInstance::class, 'createFromDiscriminatorValue'))); },
-            'roleEligibilityScheduleRequests' => function (ParseNode $n) use ($o) { $o->setRoleEligibilityScheduleRequests($n->getCollectionOfObjectValues(array(UnifiedRoleEligibilityScheduleRequest::class, 'createFromDiscriminatorValue'))); },
-            'roleEligibilitySchedules' => function (ParseNode $n) use ($o) { $o->setRoleEligibilitySchedules($n->getCollectionOfObjectValues(array(UnifiedRoleEligibilitySchedule::class, 'createFromDiscriminatorValue'))); },
+            'roleAssignments' => fn(ParseNode $n) => $o->setRoleAssignments($n->getCollectionOfObjectValues([UnifiedRoleAssignment::class, 'createFromDiscriminatorValue'])),
+            'roleAssignmentScheduleInstances' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleInstances($n->getCollectionOfObjectValues([UnifiedRoleAssignmentScheduleInstance::class, 'createFromDiscriminatorValue'])),
+            'roleAssignmentScheduleRequests' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleRequests($n->getCollectionOfObjectValues([UnifiedRoleAssignmentScheduleRequest::class, 'createFromDiscriminatorValue'])),
+            'roleAssignmentSchedules' => fn(ParseNode $n) => $o->setRoleAssignmentSchedules($n->getCollectionOfObjectValues([UnifiedRoleAssignmentSchedule::class, 'createFromDiscriminatorValue'])),
+            'roleDefinitions' => fn(ParseNode $n) => $o->setRoleDefinitions($n->getCollectionOfObjectValues([UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'])),
+            'roleEligibilityScheduleInstances' => fn(ParseNode $n) => $o->setRoleEligibilityScheduleInstances($n->getCollectionOfObjectValues([UnifiedRoleEligibilityScheduleInstance::class, 'createFromDiscriminatorValue'])),
+            'roleEligibilityScheduleRequests' => fn(ParseNode $n) => $o->setRoleEligibilityScheduleRequests($n->getCollectionOfObjectValues([UnifiedRoleEligibilityScheduleRequest::class, 'createFromDiscriminatorValue'])),
+            'roleEligibilitySchedules' => fn(ParseNode $n) => $o->setRoleEligibilitySchedules($n->getCollectionOfObjectValues([UnifiedRoleEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

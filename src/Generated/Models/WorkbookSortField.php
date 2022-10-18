@@ -105,13 +105,13 @@ class WorkbookSortField implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'ascending' => function (ParseNode $n) use ($o) { $o->setAscending($n->getBooleanValue()); },
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
-            'dataOption' => function (ParseNode $n) use ($o) { $o->setDataOption($n->getStringValue()); },
-            'icon' => function (ParseNode $n) use ($o) { $o->setIcon($n->getObjectValue(array(WorkbookIcon::class, 'createFromDiscriminatorValue'))); },
-            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sortOn' => function (ParseNode $n) use ($o) { $o->setSortOn($n->getStringValue()); },
+            'ascending' => fn(ParseNode $n) => $o->setAscending($n->getBooleanValue()),
+            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
+            'dataOption' => fn(ParseNode $n) => $o->setDataOption($n->getStringValue()),
+            'icon' => fn(ParseNode $n) => $o->setIcon($n->getObjectValue([WorkbookIcon::class, 'createFromDiscriminatorValue'])),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sortOn' => fn(ParseNode $n) => $o->setSortOn($n->getStringValue()),
         ];
     }
 

@@ -84,12 +84,12 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
-            'retainInheritedPermissions' => function (ParseNode $n) use ($o) { $o->setRetainInheritedPermissions($n->getBooleanValue()); },
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
+            'retainInheritedPermissions' => fn(ParseNode $n) => $o->setRetainInheritedPermissions($n->getBooleanValue()),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
 

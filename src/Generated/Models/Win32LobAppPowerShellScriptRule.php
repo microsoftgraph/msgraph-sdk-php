@@ -96,14 +96,14 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'comparisonValue' => function (ParseNode $n) use ($o) { $o->setComparisonValue($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'enforceSignatureCheck' => function (ParseNode $n) use ($o) { $o->setEnforceSignatureCheck($n->getBooleanValue()); },
-            'operationType' => function (ParseNode $n) use ($o) { $o->setOperationType($n->getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::class)); },
-            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)); },
-            'runAs32Bit' => function (ParseNode $n) use ($o) { $o->setRunAs32Bit($n->getBooleanValue()); },
-            'runAsAccount' => function (ParseNode $n) use ($o) { $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)); },
-            'scriptContent' => function (ParseNode $n) use ($o) { $o->setScriptContent($n->getStringValue()); },
+            'comparisonValue' => fn(ParseNode $n) => $o->setComparisonValue($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'enforceSignatureCheck' => fn(ParseNode $n) => $o->setEnforceSignatureCheck($n->getBooleanValue()),
+            'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppPowerShellScriptRuleOperationType::class)),
+            'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
+            'runAs32Bit' => fn(ParseNode $n) => $o->setRunAs32Bit($n->getBooleanValue()),
+            'runAsAccount' => fn(ParseNode $n) => $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)),
+            'scriptContent' => fn(ParseNode $n) => $o->setScriptContent($n->getStringValue()),
         ]);
     }
 

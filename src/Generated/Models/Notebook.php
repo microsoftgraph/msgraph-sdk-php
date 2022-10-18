@@ -72,14 +72,14 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
-            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
-            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(NotebookLinks::class, 'createFromDiscriminatorValue'))); },
-            'sectionGroups' => function (ParseNode $n) use ($o) { $o->setSectionGroups($n->getCollectionOfObjectValues(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
-            'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
-            'sections' => function (ParseNode $n) use ($o) { $o->setSections($n->getCollectionOfObjectValues(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
-            'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
-            'userRole' => function (ParseNode $n) use ($o) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
+            'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
+            'isShared' => fn(ParseNode $n) => $o->setIsShared($n->getBooleanValue()),
+            'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([NotebookLinks::class, 'createFromDiscriminatorValue'])),
+            'sectionGroups' => fn(ParseNode $n) => $o->setSectionGroups($n->getCollectionOfObjectValues([SectionGroup::class, 'createFromDiscriminatorValue'])),
+            'sectionGroupsUrl' => fn(ParseNode $n) => $o->setSectionGroupsUrl($n->getStringValue()),
+            'sections' => fn(ParseNode $n) => $o->setSections($n->getCollectionOfObjectValues([OnenoteSection::class, 'createFromDiscriminatorValue'])),
+            'sectionsUrl' => fn(ParseNode $n) => $o->setSectionsUrl($n->getStringValue()),
+            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)),
         ]);
     }
 

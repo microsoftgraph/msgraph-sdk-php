@@ -50,8 +50,8 @@ class UserTeamwork extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'associatedTeams' => function (ParseNode $n) use ($o) { $o->setAssociatedTeams($n->getCollectionOfObjectValues(array(AssociatedTeamInfo::class, 'createFromDiscriminatorValue'))); },
-            'installedApps' => function (ParseNode $n) use ($o) { $o->setInstalledApps($n->getCollectionOfObjectValues(array(UserScopeTeamsAppInstallation::class, 'createFromDiscriminatorValue'))); },
+            'associatedTeams' => fn(ParseNode $n) => $o->setAssociatedTeams($n->getCollectionOfObjectValues([AssociatedTeamInfo::class, 'createFromDiscriminatorValue'])),
+            'installedApps' => fn(ParseNode $n) => $o->setInstalledApps($n->getCollectionOfObjectValues([UserScopeTeamsAppInstallation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

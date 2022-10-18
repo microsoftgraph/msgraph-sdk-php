@@ -63,9 +63,9 @@ class EdiscoveryReviewTag extends Tag implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'childSelectability' => function (ParseNode $n) use ($o) { $o->setChildSelectability($n->getEnumValue(ChildSelectability::class)); },
-            'childTags' => function (ParseNode $n) use ($o) { $o->setChildTags($n->getCollectionOfObjectValues(array(EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'))); },
-            'parent' => function (ParseNode $n) use ($o) { $o->setParent($n->getObjectValue(array(EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'))); },
+            'childSelectability' => fn(ParseNode $n) => $o->setChildSelectability($n->getEnumValue(ChildSelectability::class)),
+            'childTags' => fn(ParseNode $n) => $o->setChildTags($n->getCollectionOfObjectValues([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
+            'parent' => fn(ParseNode $n) => $o->setParent($n->getObjectValue([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

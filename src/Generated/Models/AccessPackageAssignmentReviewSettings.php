@@ -107,15 +107,15 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'expirationBehavior' => function (ParseNode $n) use ($o) { $o->setExpirationBehavior($n->getEnumValue(AccessReviewExpirationBehavior::class)); },
-            'fallbackReviewers' => function (ParseNode $n) use ($o) { $o->setFallbackReviewers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'isRecommendationEnabled' => function (ParseNode $n) use ($o) { $o->setIsRecommendationEnabled($n->getBooleanValue()); },
-            'isReviewerJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsReviewerJustificationRequired($n->getBooleanValue()); },
-            'isSelfReview' => function (ParseNode $n) use ($o) { $o->setIsSelfReview($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'primaryReviewers' => function (ParseNode $n) use ($o) { $o->setPrimaryReviewers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
+            'expirationBehavior' => fn(ParseNode $n) => $o->setExpirationBehavior($n->getEnumValue(AccessReviewExpirationBehavior::class)),
+            'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'isRecommendationEnabled' => fn(ParseNode $n) => $o->setIsRecommendationEnabled($n->getBooleanValue()),
+            'isReviewerJustificationRequired' => fn(ParseNode $n) => $o->setIsReviewerJustificationRequired($n->getBooleanValue()),
+            'isSelfReview' => fn(ParseNode $n) => $o->setIsSelfReview($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'primaryReviewers' => fn(ParseNode $n) => $o->setPrimaryReviewers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

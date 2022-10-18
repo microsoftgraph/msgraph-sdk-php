@@ -92,13 +92,13 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activatedUsing' => function (ParseNode $n) use ($o) { $o->setActivatedUsing($n->getObjectValue(array(UnifiedRoleEligibilityScheduleInstance::class, 'createFromDiscriminatorValue'))); },
-            'assignmentType' => function (ParseNode $n) use ($o) { $o->setAssignmentType($n->getStringValue()); },
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'memberType' => function (ParseNode $n) use ($o) { $o->setMemberType($n->getStringValue()); },
-            'roleAssignmentOriginId' => function (ParseNode $n) use ($o) { $o->setRoleAssignmentOriginId($n->getStringValue()); },
-            'roleAssignmentScheduleId' => function (ParseNode $n) use ($o) { $o->setRoleAssignmentScheduleId($n->getStringValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'activatedUsing' => fn(ParseNode $n) => $o->setActivatedUsing($n->getObjectValue([UnifiedRoleEligibilityScheduleInstance::class, 'createFromDiscriminatorValue'])),
+            'assignmentType' => fn(ParseNode $n) => $o->setAssignmentType($n->getStringValue()),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'memberType' => fn(ParseNode $n) => $o->setMemberType($n->getStringValue()),
+            'roleAssignmentOriginId' => fn(ParseNode $n) => $o->setRoleAssignmentOriginId($n->getStringValue()),
+            'roleAssignmentScheduleId' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleId($n->getStringValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
     }
 

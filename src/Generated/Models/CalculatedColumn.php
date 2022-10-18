@@ -66,10 +66,10 @@ class CalculatedColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getStringValue()); },
-            'formula' => function (ParseNode $n) use ($o) { $o->setFormula($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'outputType' => function (ParseNode $n) use ($o) { $o->setOutputType($n->getStringValue()); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getStringValue()),
+            'formula' => fn(ParseNode $n) => $o->setFormula($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'outputType' => fn(ParseNode $n) => $o->setOutputType($n->getStringValue()),
         ];
     }
 

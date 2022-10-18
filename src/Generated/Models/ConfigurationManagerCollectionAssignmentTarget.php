@@ -45,7 +45,7 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'collectionId' => function (ParseNode $n) use ($o) { $o->setCollectionId($n->getStringValue()); },
+            'collectionId' => fn(ParseNode $n) => $o->setCollectionId($n->getStringValue()),
         ]);
     }
 

@@ -113,14 +113,14 @@ class PlannerPlan extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'buckets' => function (ParseNode $n) use ($o) { $o->setBuckets($n->getCollectionOfObjectValues(array(PlannerBucket::class, 'createFromDiscriminatorValue'))); },
-            'container' => function (ParseNode $n) use ($o) { $o->setContainer($n->getObjectValue(array(PlannerPlanContainer::class, 'createFromDiscriminatorValue'))); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(PlannerPlanDetails::class, 'createFromDiscriminatorValue'))); },
-            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getStringValue()); },
-            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PlannerTask::class, 'createFromDiscriminatorValue'))); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
+            'buckets' => fn(ParseNode $n) => $o->setBuckets($n->getCollectionOfObjectValues([PlannerBucket::class, 'createFromDiscriminatorValue'])),
+            'container' => fn(ParseNode $n) => $o->setContainer($n->getObjectValue([PlannerPlanContainer::class, 'createFromDiscriminatorValue'])),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'details' => fn(ParseNode $n) => $o->setDetails($n->getObjectValue([PlannerPlanDetails::class, 'createFromDiscriminatorValue'])),
+            'owner' => fn(ParseNode $n) => $o->setOwner($n->getStringValue()),
+            'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([PlannerTask::class, 'createFromDiscriminatorValue'])),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
         ]);
     }
 

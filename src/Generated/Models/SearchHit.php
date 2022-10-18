@@ -89,13 +89,13 @@ class SearchHit implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentSource' => function (ParseNode $n) use ($o) { $o->setContentSource($n->getStringValue()); },
-            'hitId' => function (ParseNode $n) use ($o) { $o->setHitId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'rank' => function (ParseNode $n) use ($o) { $o->setRank($n->getIntegerValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(Entity::class, 'createFromDiscriminatorValue'))); },
-            'resultTemplateId' => function (ParseNode $n) use ($o) { $o->setResultTemplateId($n->getStringValue()); },
-            'summary' => function (ParseNode $n) use ($o) { $o->setSummary($n->getStringValue()); },
+            'contentSource' => fn(ParseNode $n) => $o->setContentSource($n->getStringValue()),
+            'hitId' => fn(ParseNode $n) => $o->setHitId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'rank' => fn(ParseNode $n) => $o->setRank($n->getIntegerValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([Entity::class, 'createFromDiscriminatorValue'])),
+            'resultTemplateId' => fn(ParseNode $n) => $o->setResultTemplateId($n->getStringValue()),
+            'summary' => fn(ParseNode $n) => $o->setSummary($n->getStringValue()),
         ];
     }
 

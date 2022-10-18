@@ -37,7 +37,7 @@ class AgreementFileLocalization extends AgreementFileProperties implements Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'versions' => function (ParseNode $n) use ($o) { $o->setVersions($n->getCollectionOfObjectValues(array(AgreementFileVersion::class, 'createFromDiscriminatorValue'))); },
+            'versions' => fn(ParseNode $n) => $o->setVersions($n->getCollectionOfObjectValues([AgreementFileVersion::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -118,17 +118,17 @@ class MailFolder extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'childFolderCount' => function (ParseNode $n) use ($o) { $o->setChildFolderCount($n->getIntegerValue()); },
-            'childFolders' => function (ParseNode $n) use ($o) { $o->setChildFolders($n->getCollectionOfObjectValues(array(MailFolder::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isHidden' => function (ParseNode $n) use ($o) { $o->setIsHidden($n->getBooleanValue()); },
-            'messageRules' => function (ParseNode $n) use ($o) { $o->setMessageRules($n->getCollectionOfObjectValues(array(MessageRule::class, 'createFromDiscriminatorValue'))); },
-            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(Message::class, 'createFromDiscriminatorValue'))); },
-            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
-            'parentFolderId' => function (ParseNode $n) use ($o) { $o->setParentFolderId($n->getStringValue()); },
-            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
-            'totalItemCount' => function (ParseNode $n) use ($o) { $o->setTotalItemCount($n->getIntegerValue()); },
-            'unreadItemCount' => function (ParseNode $n) use ($o) { $o->setUnreadItemCount($n->getIntegerValue()); },
+            'childFolderCount' => fn(ParseNode $n) => $o->setChildFolderCount($n->getIntegerValue()),
+            'childFolders' => fn(ParseNode $n) => $o->setChildFolders($n->getCollectionOfObjectValues([MailFolder::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isHidden' => fn(ParseNode $n) => $o->setIsHidden($n->getBooleanValue()),
+            'messageRules' => fn(ParseNode $n) => $o->setMessageRules($n->getCollectionOfObjectValues([MessageRule::class, 'createFromDiscriminatorValue'])),
+            'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([Message::class, 'createFromDiscriminatorValue'])),
+            'multiValueExtendedProperties' => fn(ParseNode $n) => $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues([MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
+            'parentFolderId' => fn(ParseNode $n) => $o->setParentFolderId($n->getStringValue()),
+            'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
+            'totalItemCount' => fn(ParseNode $n) => $o->setTotalItemCount($n->getIntegerValue()),
+            'unreadItemCount' => fn(ParseNode $n) => $o->setUnreadItemCount($n->getIntegerValue()),
         ]);
     }
 

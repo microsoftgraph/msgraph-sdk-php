@@ -96,12 +96,12 @@ class Segment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callee' => function (ParseNode $n) use ($o) { $o->setCallee($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
-            'caller' => function (ParseNode $n) use ($o) { $o->setCaller($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'failureInfo' => function (ParseNode $n) use ($o) { $o->setFailureInfo($n->getObjectValue(array(FailureInfo::class, 'createFromDiscriminatorValue'))); },
-            'media' => function (ParseNode $n) use ($o) { $o->setMedia($n->getCollectionOfObjectValues(array(Media::class, 'createFromDiscriminatorValue'))); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'callee' => fn(ParseNode $n) => $o->setCallee($n->getObjectValue([Endpoint::class, 'createFromDiscriminatorValue'])),
+            'caller' => fn(ParseNode $n) => $o->setCaller($n->getObjectValue([Endpoint::class, 'createFromDiscriminatorValue'])),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'failureInfo' => fn(ParseNode $n) => $o->setFailureInfo($n->getObjectValue([FailureInfo::class, 'createFromDiscriminatorValue'])),
+            'media' => fn(ParseNode $n) => $o->setMedia($n->getCollectionOfObjectValues([Media::class, 'createFromDiscriminatorValue'])),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
     }
 

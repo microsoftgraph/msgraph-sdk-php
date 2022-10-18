@@ -151,22 +151,22 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getStringValue()); },
-            'createdByIdentity' => function (ParseNode $n) use ($o) { $o->setCreatedByIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdTime' => function (ParseNode $n) use ($o) { $o->setCreatedTime($n->getDateTimeValue()); },
-            'self' => function (ParseNode $n) use ($o) { $o->setSelf($n->getStringValue()); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
-            'isShared' => function (ParseNode $n) use ($o) { $o->setIsShared($n->getBooleanValue()); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getStringValue()); },
-            'lastModifiedByIdentity' => function (ParseNode $n) use ($o) { $o->setLastModifiedByIdentity($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedTime($n->getDateTimeValue()); },
-            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(NotebookLinks::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sectionGroupsUrl' => function (ParseNode $n) use ($o) { $o->setSectionGroupsUrl($n->getStringValue()); },
-            'sectionsUrl' => function (ParseNode $n) use ($o) { $o->setSectionsUrl($n->getStringValue()); },
-            'userRole' => function (ParseNode $n) use ($o) { $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)); },
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getStringValue()),
+            'createdByIdentity' => fn(ParseNode $n) => $o->setCreatedByIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'createdTime' => fn(ParseNode $n) => $o->setCreatedTime($n->getDateTimeValue()),
+            'self' => fn(ParseNode $n) => $o->setSelf($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
+            'isShared' => fn(ParseNode $n) => $o->setIsShared($n->getBooleanValue()),
+            'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getStringValue()),
+            'lastModifiedByIdentity' => fn(ParseNode $n) => $o->setLastModifiedByIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedTime' => fn(ParseNode $n) => $o->setLastModifiedTime($n->getDateTimeValue()),
+            'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([NotebookLinks::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sectionGroupsUrl' => fn(ParseNode $n) => $o->setSectionGroupsUrl($n->getStringValue()),
+            'sectionsUrl' => fn(ParseNode $n) => $o->setSectionsUrl($n->getStringValue()),
+            'userRole' => fn(ParseNode $n) => $o->setUserRole($n->getEnumValue(OnenoteUserRole::class)),
         ];
     }
 

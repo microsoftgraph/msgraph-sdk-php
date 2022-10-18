@@ -64,8 +64,8 @@ class Endpoint implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'userAgent' => function (ParseNode $n) use ($o) { $o->setUserAgent($n->getObjectValue(array(UserAgent::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'userAgent' => fn(ParseNode $n) => $o->setUserAgent($n->getObjectValue([UserAgent::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

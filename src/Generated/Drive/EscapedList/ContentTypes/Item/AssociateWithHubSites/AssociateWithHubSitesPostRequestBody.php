@@ -55,8 +55,8 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hubSiteUrls' => function (ParseNode $n) use ($o) { $o->setHubSiteUrls($n->getCollectionOfPrimitiveValues()); },
-            'propagateToExistingLists' => function (ParseNode $n) use ($o) { $o->setPropagateToExistingLists($n->getBooleanValue()); },
+            'hubSiteUrls' => fn(ParseNode $n) => $o->setHubSiteUrls($n->getCollectionOfPrimitiveValues()),
+            'propagateToExistingLists' => fn(ParseNode $n) => $o->setPropagateToExistingLists($n->getBooleanValue()),
         ];
     }
 

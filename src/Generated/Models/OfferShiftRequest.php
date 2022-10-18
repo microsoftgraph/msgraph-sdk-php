@@ -60,10 +60,10 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recipientActionDateTime' => function (ParseNode $n) use ($o) { $o->setRecipientActionDateTime($n->getDateTimeValue()); },
-            'recipientActionMessage' => function (ParseNode $n) use ($o) { $o->setRecipientActionMessage($n->getStringValue()); },
-            'recipientUserId' => function (ParseNode $n) use ($o) { $o->setRecipientUserId($n->getStringValue()); },
-            'senderShiftId' => function (ParseNode $n) use ($o) { $o->setSenderShiftId($n->getStringValue()); },
+            'recipientActionDateTime' => fn(ParseNode $n) => $o->setRecipientActionDateTime($n->getDateTimeValue()),
+            'recipientActionMessage' => fn(ParseNode $n) => $o->setRecipientActionMessage($n->getStringValue()),
+            'recipientUserId' => fn(ParseNode $n) => $o->setRecipientUserId($n->getStringValue()),
+            'senderShiftId' => fn(ParseNode $n) => $o->setSenderShiftId($n->getStringValue()),
         ]);
     }
 

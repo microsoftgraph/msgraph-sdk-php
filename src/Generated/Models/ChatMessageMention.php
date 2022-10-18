@@ -66,10 +66,10 @@ class ChatMessageMention implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getIntegerValue()); },
-            'mentioned' => function (ParseNode $n) use ($o) { $o->setMentioned($n->getObjectValue(array(ChatMessageMentionedIdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'mentionText' => function (ParseNode $n) use ($o) { $o->setMentionText($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'id' => fn(ParseNode $n) => $o->setId($n->getIntegerValue()),
+            'mentioned' => fn(ParseNode $n) => $o->setMentioned($n->getObjectValue([ChatMessageMentionedIdentitySet::class, 'createFromDiscriminatorValue'])),
+            'mentionText' => fn(ParseNode $n) => $o->setMentionText($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

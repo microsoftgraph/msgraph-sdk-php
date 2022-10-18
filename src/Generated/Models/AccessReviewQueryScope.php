@@ -54,9 +54,9 @@ class AccessReviewQueryScope extends AccessReviewScope implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'query' => function (ParseNode $n) use ($o) { $o->setQuery($n->getStringValue()); },
-            'queryRoot' => function (ParseNode $n) use ($o) { $o->setQueryRoot($n->getStringValue()); },
-            'queryType' => function (ParseNode $n) use ($o) { $o->setQueryType($n->getStringValue()); },
+            'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
+            'queryRoot' => fn(ParseNode $n) => $o->setQueryRoot($n->getStringValue()),
+            'queryType' => fn(ParseNode $n) => $o->setQueryType($n->getStringValue()),
         ]);
     }
 

@@ -106,13 +106,13 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignedByGroup' => function (ParseNode $n) use ($o) { $o->setAssignedByGroup($n->getStringValue()); },
-            'disabledPlans' => function (ParseNode $n) use ($o) { $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()); },
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getStringValue()); },
-            'lastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setLastUpdatedDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'skuId' => function (ParseNode $n) use ($o) { $o->setSkuId($n->getStringValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getStringValue()); },
+            'assignedByGroup' => fn(ParseNode $n) => $o->setAssignedByGroup($n->getStringValue()),
+            'disabledPlans' => fn(ParseNode $n) => $o->setDisabledPlans($n->getCollectionOfPrimitiveValues()),
+            'error' => fn(ParseNode $n) => $o->setError($n->getStringValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
         ];
     }
 

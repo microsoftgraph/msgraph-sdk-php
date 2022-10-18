@@ -60,7 +60,7 @@ class ODataError extends ApiException implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(MainError::class, 'createFromDiscriminatorValue'))); },
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([MainError::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

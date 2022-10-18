@@ -50,8 +50,8 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'membershipRule' => function (ParseNode $n) use ($o) { $o->setMembershipRule($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'membershipRule' => fn(ParseNode $n) => $o->setMembershipRule($n->getStringValue()),
         ]);
     }
 

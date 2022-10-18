@@ -149,17 +149,17 @@ class Video implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'audioBitsPerSample' => function (ParseNode $n) use ($o) { $o->setAudioBitsPerSample($n->getIntegerValue()); },
-            'audioChannels' => function (ParseNode $n) use ($o) { $o->setAudioChannels($n->getIntegerValue()); },
-            'audioFormat' => function (ParseNode $n) use ($o) { $o->setAudioFormat($n->getStringValue()); },
-            'audioSamplesPerSecond' => function (ParseNode $n) use ($o) { $o->setAudioSamplesPerSecond($n->getIntegerValue()); },
-            'bitrate' => function (ParseNode $n) use ($o) { $o->setBitrate($n->getIntegerValue()); },
-            'duration' => function (ParseNode $n) use ($o) { $o->setDuration($n->getIntegerValue()); },
-            'fourCC' => function (ParseNode $n) use ($o) { $o->setFourCC($n->getStringValue()); },
-            'frameRate' => function (ParseNode $n) use ($o) { $o->setFrameRate($n->getFloatValue()); },
-            'height' => function (ParseNode $n) use ($o) { $o->setHeight($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'width' => function (ParseNode $n) use ($o) { $o->setWidth($n->getIntegerValue()); },
+            'audioBitsPerSample' => fn(ParseNode $n) => $o->setAudioBitsPerSample($n->getIntegerValue()),
+            'audioChannels' => fn(ParseNode $n) => $o->setAudioChannels($n->getIntegerValue()),
+            'audioFormat' => fn(ParseNode $n) => $o->setAudioFormat($n->getStringValue()),
+            'audioSamplesPerSecond' => fn(ParseNode $n) => $o->setAudioSamplesPerSecond($n->getIntegerValue()),
+            'bitrate' => fn(ParseNode $n) => $o->setBitrate($n->getIntegerValue()),
+            'duration' => fn(ParseNode $n) => $o->setDuration($n->getIntegerValue()),
+            'fourCC' => fn(ParseNode $n) => $o->setFourCC($n->getStringValue()),
+            'frameRate' => fn(ParseNode $n) => $o->setFrameRate($n->getFloatValue()),
+            'height' => fn(ParseNode $n) => $o->setHeight($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'width' => fn(ParseNode $n) => $o->setWidth($n->getIntegerValue()),
         ];
     }
 

@@ -90,10 +90,10 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowTextEntry' => function (ParseNode $n) use ($o) { $o->setAllowTextEntry($n->getBooleanValue()); },
-            'choices' => function (ParseNode $n) use ($o) { $o->setChoices($n->getCollectionOfPrimitiveValues()); },
-            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowTextEntry' => fn(ParseNode $n) => $o->setAllowTextEntry($n->getBooleanValue()),
+            'choices' => fn(ParseNode $n) => $o->setChoices($n->getCollectionOfPrimitiveValues()),
+            'displayAs' => fn(ParseNode $n) => $o->setDisplayAs($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

@@ -92,13 +92,13 @@ class AccessPackageAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessPackage' => function (ParseNode $n) use ($o) { $o->setAccessPackage($n->getObjectValue(array(AccessPackage::class, 'createFromDiscriminatorValue'))); },
-            'assignmentPolicy' => function (ParseNode $n) use ($o) { $o->setAssignmentPolicy($n->getObjectValue(array(AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'))); },
-            'expiredDateTime' => function (ParseNode $n) use ($o) { $o->setExpiredDateTime($n->getDateTimeValue()); },
-            'schedule' => function (ParseNode $n) use ($o) { $o->setSchedule($n->getObjectValue(array(EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'))); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getObjectValue(array(AccessPackageSubject::class, 'createFromDiscriminatorValue'))); },
+            'accessPackage' => fn(ParseNode $n) => $o->setAccessPackage($n->getObjectValue([AccessPackage::class, 'createFromDiscriminatorValue'])),
+            'assignmentPolicy' => fn(ParseNode $n) => $o->setAssignmentPolicy($n->getObjectValue([AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'])),
+            'expiredDateTime' => fn(ParseNode $n) => $o->setExpiredDateTime($n->getDateTimeValue()),
+            'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageAssignmentState::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

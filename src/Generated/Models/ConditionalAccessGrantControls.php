@@ -87,11 +87,11 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'builtInControls' => function (ParseNode $n) use ($o) { $o->setBuiltInControls($n->getCollectionOfEnumValues(ConditionalAccessGrantControl::class)); },
-            'customAuthenticationFactors' => function (ParseNode $n) use ($o) { $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getStringValue()); },
-            'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()); },
+            'builtInControls' => fn(ParseNode $n) => $o->setBuiltInControls($n->getCollectionOfEnumValues(ConditionalAccessGrantControl::class)),
+            'customAuthenticationFactors' => fn(ParseNode $n) => $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'operator' => fn(ParseNode $n) => $o->setOperator($n->getStringValue()),
+            'termsOfUse' => fn(ParseNode $n) => $o->setTermsOfUse($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

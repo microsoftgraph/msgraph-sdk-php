@@ -69,9 +69,9 @@ class ResourceAction implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedResourceActions' => function (ParseNode $n) use ($o) { $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
-            'notAllowedResourceActions' => function (ParseNode $n) use ($o) { $o->setNotAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowedResourceActions' => fn(ParseNode $n) => $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()),
+            'notAllowedResourceActions' => fn(ParseNode $n) => $o->setNotAllowedResourceActions($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

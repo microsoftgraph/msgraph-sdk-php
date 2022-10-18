@@ -64,8 +64,8 @@ class PrintSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'documentConversionEnabled' => function (ParseNode $n) use ($o) { $o->setDocumentConversionEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'documentConversionEnabled' => fn(ParseNode $n) => $o->setDocumentConversionEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

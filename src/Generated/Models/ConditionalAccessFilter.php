@@ -61,9 +61,9 @@ class ConditionalAccessFilter implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'mode' => function (ParseNode $n) use ($o) { $o->setMode($n->getEnumValue(FilterMode::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'rule' => function (ParseNode $n) use ($o) { $o->setRule($n->getStringValue()); },
+            'mode' => fn(ParseNode $n) => $o->setMode($n->getEnumValue(FilterMode::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'rule' => fn(ParseNode $n) => $o->setRule($n->getStringValue()),
         ];
     }
 
