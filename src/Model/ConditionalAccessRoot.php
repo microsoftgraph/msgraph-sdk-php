@@ -114,4 +114,34 @@ class ConditionalAccessRoot extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the templates
+    * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     *
+     * @return array|null The templates
+     */
+    public function getTemplates()
+    {
+        if (array_key_exists("templates", $this->_propDict)) {
+           return $this->_propDict["templates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the templates
+    * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+    *
+    * @param ConditionalAccessTemplate[] $val The templates
+    *
+    * @return ConditionalAccessRoot
+    */
+    public function setTemplates($val)
+    {
+        $this->_propDict["templates"] = $val;
+        return $this;
+    }
+
 }
