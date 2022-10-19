@@ -116,16 +116,16 @@ class EdiscoveryCase extends EscapedCase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'closedBy' => function (ParseNode $n) use ($o) { $o->setClosedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'closedDateTime' => function (ParseNode $n) use ($o) { $o->setClosedDateTime($n->getDateTimeValue()); },
-            'custodians' => function (ParseNode $n) use ($o) { $o->setCustodians($n->getCollectionOfObjectValues(array(EdiscoveryCustodian::class, 'createFromDiscriminatorValue'))); },
-            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
-            'noncustodialDataSources' => function (ParseNode $n) use ($o) { $o->setNoncustodialDataSources($n->getCollectionOfObjectValues(array(EdiscoveryNoncustodialDataSource::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(CaseOperation::class, 'createFromDiscriminatorValue'))); },
-            'reviewSets' => function (ParseNode $n) use ($o) { $o->setReviewSets($n->getCollectionOfObjectValues(array(EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'))); },
-            'searches' => function (ParseNode $n) use ($o) { $o->setSearches($n->getCollectionOfObjectValues(array(EdiscoverySearch::class, 'createFromDiscriminatorValue'))); },
-            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(EdiscoveryCaseSettings::class, 'createFromDiscriminatorValue'))); },
-            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfObjectValues(array(EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'))); },
+            'closedBy' => fn(ParseNode $n) => $o->setClosedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'closedDateTime' => fn(ParseNode $n) => $o->setClosedDateTime($n->getDateTimeValue()),
+            'custodians' => fn(ParseNode $n) => $o->setCustodians($n->getCollectionOfObjectValues([EdiscoveryCustodian::class, 'createFromDiscriminatorValue'])),
+            'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
+            'noncustodialDataSources' => fn(ParseNode $n) => $o->setNoncustodialDataSources($n->getCollectionOfObjectValues([EdiscoveryNoncustodialDataSource::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([CaseOperation::class, 'createFromDiscriminatorValue'])),
+            'reviewSets' => fn(ParseNode $n) => $o->setReviewSets($n->getCollectionOfObjectValues([EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'])),
+            'searches' => fn(ParseNode $n) => $o->setSearches($n->getCollectionOfObjectValues([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([EdiscoveryCaseSettings::class, 'createFromDiscriminatorValue'])),
+            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfObjectValues([EdiscoveryReviewTag::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

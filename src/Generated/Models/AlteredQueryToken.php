@@ -66,10 +66,10 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'length' => function (ParseNode $n) use ($o) { $o->setLength($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'offset' => function (ParseNode $n) use ($o) { $o->setOffset($n->getIntegerValue()); },
-            'suggestion' => function (ParseNode $n) use ($o) { $o->setSuggestion($n->getStringValue()); },
+            'length' => fn(ParseNode $n) => $o->setLength($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'offset' => fn(ParseNode $n) => $o->setOffset($n->getIntegerValue()),
+            'suggestion' => fn(ParseNode $n) => $o->setSuggestion($n->getStringValue()),
         ];
     }
 

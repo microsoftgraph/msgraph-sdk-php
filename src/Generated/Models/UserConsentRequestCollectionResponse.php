@@ -36,7 +36,7 @@ class UserConsentRequestCollectionResponse extends BaseCollectionPaginationCount
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(UserConsentRequest::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([UserConsentRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -66,10 +66,10 @@ class ServiceUpdateMessageViewpoint implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isArchived' => function (ParseNode $n) use ($o) { $o->setIsArchived($n->getBooleanValue()); },
-            'isFavorited' => function (ParseNode $n) use ($o) { $o->setIsFavorited($n->getBooleanValue()); },
-            'isRead' => function (ParseNode $n) use ($o) { $o->setIsRead($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
+            'isFavorited' => fn(ParseNode $n) => $o->setIsFavorited($n->getBooleanValue()),
+            'isRead' => fn(ParseNode $n) => $o->setIsRead($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

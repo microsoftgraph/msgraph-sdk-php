@@ -67,13 +67,13 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'indexedItemCount' => function (ParseNode $n) use ($o) { $o->setIndexedItemCount($n->getIntegerValue()); },
-            'indexedItemsSize' => function (ParseNode $n) use ($o) { $o->setIndexedItemsSize($n->getIntegerValue()); },
-            'mailboxCount' => function (ParseNode $n) use ($o) { $o->setMailboxCount($n->getIntegerValue()); },
-            'search' => function (ParseNode $n) use ($o) { $o->setSearch($n->getObjectValue(array(EdiscoverySearch::class, 'createFromDiscriminatorValue'))); },
-            'siteCount' => function (ParseNode $n) use ($o) { $o->setSiteCount($n->getIntegerValue()); },
-            'unindexedItemCount' => function (ParseNode $n) use ($o) { $o->setUnindexedItemCount($n->getIntegerValue()); },
-            'unindexedItemsSize' => function (ParseNode $n) use ($o) { $o->setUnindexedItemsSize($n->getIntegerValue()); },
+            'indexedItemCount' => fn(ParseNode $n) => $o->setIndexedItemCount($n->getIntegerValue()),
+            'indexedItemsSize' => fn(ParseNode $n) => $o->setIndexedItemsSize($n->getIntegerValue()),
+            'mailboxCount' => fn(ParseNode $n) => $o->setMailboxCount($n->getIntegerValue()),
+            'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
+            'siteCount' => fn(ParseNode $n) => $o->setSiteCount($n->getIntegerValue()),
+            'unindexedItemCount' => fn(ParseNode $n) => $o->setUnindexedItemCount($n->getIntegerValue()),
+            'unindexedItemsSize' => fn(ParseNode $n) => $o->setUnindexedItemsSize($n->getIntegerValue()),
         ]);
     }
 

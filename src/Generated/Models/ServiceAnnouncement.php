@@ -24,7 +24,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     private ?array $messages = null;
     
     /**
-     * Instantiates a new serviceAnnouncement and sets the default values.
+     * Instantiates a new ServiceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -47,9 +47,9 @@ class ServiceAnnouncement extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'healthOverviews' => function (ParseNode $n) use ($o) { $o->setHealthOverviews($n->getCollectionOfObjectValues(array(ServiceHealth::class, 'createFromDiscriminatorValue'))); },
-            'issues' => function (ParseNode $n) use ($o) { $o->setIssues($n->getCollectionOfObjectValues(array(ServiceHealthIssue::class, 'createFromDiscriminatorValue'))); },
-            'messages' => function (ParseNode $n) use ($o) { $o->setMessages($n->getCollectionOfObjectValues(array(ServiceUpdateMessage::class, 'createFromDiscriminatorValue'))); },
+            'healthOverviews' => fn(ParseNode $n) => $o->setHealthOverviews($n->getCollectionOfObjectValues([ServiceHealth::class, 'createFromDiscriminatorValue'])),
+            'issues' => fn(ParseNode $n) => $o->setIssues($n->getCollectionOfObjectValues([ServiceHealthIssue::class, 'createFromDiscriminatorValue'])),
+            'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ServiceUpdateMessage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

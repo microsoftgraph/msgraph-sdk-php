@@ -56,8 +56,8 @@ class SearchResult implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'onClickTelemetryUrl' => function (ParseNode $n) use ($o) { $o->setOnClickTelemetryUrl($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'onClickTelemetryUrl' => fn(ParseNode $n) => $o->setOnClickTelemetryUrl($n->getStringValue()),
         ];
     }
 

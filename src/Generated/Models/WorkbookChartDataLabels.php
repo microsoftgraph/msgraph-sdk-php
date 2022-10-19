@@ -77,15 +77,15 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartDataLabelFormat::class, 'createFromDiscriminatorValue'))); },
-            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getStringValue()); },
-            'separator' => function (ParseNode $n) use ($o) { $o->setSeparator($n->getStringValue()); },
-            'showBubbleSize' => function (ParseNode $n) use ($o) { $o->setShowBubbleSize($n->getBooleanValue()); },
-            'showCategoryName' => function (ParseNode $n) use ($o) { $o->setShowCategoryName($n->getBooleanValue()); },
-            'showLegendKey' => function (ParseNode $n) use ($o) { $o->setShowLegendKey($n->getBooleanValue()); },
-            'showPercentage' => function (ParseNode $n) use ($o) { $o->setShowPercentage($n->getBooleanValue()); },
-            'showSeriesName' => function (ParseNode $n) use ($o) { $o->setShowSeriesName($n->getBooleanValue()); },
-            'showValue' => function (ParseNode $n) use ($o) { $o->setShowValue($n->getBooleanValue()); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartDataLabelFormat::class, 'createFromDiscriminatorValue'])),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getStringValue()),
+            'separator' => fn(ParseNode $n) => $o->setSeparator($n->getStringValue()),
+            'showBubbleSize' => fn(ParseNode $n) => $o->setShowBubbleSize($n->getBooleanValue()),
+            'showCategoryName' => fn(ParseNode $n) => $o->setShowCategoryName($n->getBooleanValue()),
+            'showLegendKey' => fn(ParseNode $n) => $o->setShowLegendKey($n->getBooleanValue()),
+            'showPercentage' => fn(ParseNode $n) => $o->setShowPercentage($n->getBooleanValue()),
+            'showSeriesName' => fn(ParseNode $n) => $o->setShowSeriesName($n->getBooleanValue()),
+            'showValue' => fn(ParseNode $n) => $o->setShowValue($n->getBooleanValue()),
         ]);
     }
 

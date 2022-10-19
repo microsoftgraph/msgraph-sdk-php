@@ -102,14 +102,14 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attendeeAvailability' => function (ParseNode $n) use ($o) { $o->setAttendeeAvailability($n->getCollectionOfObjectValues(array(AttendeeAvailability::class, 'createFromDiscriminatorValue'))); },
-            'confidence' => function (ParseNode $n) use ($o) { $o->setConfidence($n->getFloatValue()); },
-            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(Location::class, 'createFromDiscriminatorValue'))); },
-            'meetingTimeSlot' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSlot($n->getObjectValue(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getIntegerValue()); },
-            'organizerAvailability' => function (ParseNode $n) use ($o) { $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)); },
-            'suggestionReason' => function (ParseNode $n) use ($o) { $o->setSuggestionReason($n->getStringValue()); },
+            'attendeeAvailability' => fn(ParseNode $n) => $o->setAttendeeAvailability($n->getCollectionOfObjectValues([AttendeeAvailability::class, 'createFromDiscriminatorValue'])),
+            'confidence' => fn(ParseNode $n) => $o->setConfidence($n->getFloatValue()),
+            'locations' => fn(ParseNode $n) => $o->setLocations($n->getCollectionOfObjectValues([Location::class, 'createFromDiscriminatorValue'])),
+            'meetingTimeSlot' => fn(ParseNode $n) => $o->setMeetingTimeSlot($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'order' => fn(ParseNode $n) => $o->setOrder($n->getIntegerValue()),
+            'organizerAvailability' => fn(ParseNode $n) => $o->setOrganizerAvailability($n->getEnumValue(FreeBusyStatus::class)),
+            'suggestionReason' => fn(ParseNode $n) => $o->setSuggestionReason($n->getStringValue()),
         ];
     }
 

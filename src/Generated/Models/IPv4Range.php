@@ -42,8 +42,8 @@ class IPv4Range extends IpRange implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lowerAddress' => function (ParseNode $n) use ($o) { $o->setLowerAddress($n->getStringValue()); },
-            'upperAddress' => function (ParseNode $n) use ($o) { $o->setUpperAddress($n->getStringValue()); },
+            'lowerAddress' => fn(ParseNode $n) => $o->setLowerAddress($n->getStringValue()),
+            'upperAddress' => fn(ParseNode $n) => $o->setUpperAddress($n->getStringValue()),
         ]);
     }
 

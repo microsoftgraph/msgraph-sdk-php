@@ -77,12 +77,12 @@ class SharingDetail implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sharedBy' => function (ParseNode $n) use ($o) { $o->setSharedBy($n->getObjectValue(array(InsightIdentity::class, 'createFromDiscriminatorValue'))); },
-            'sharedDateTime' => function (ParseNode $n) use ($o) { $o->setSharedDateTime($n->getDateTimeValue()); },
-            'sharingReference' => function (ParseNode $n) use ($o) { $o->setSharingReference($n->getObjectValue(array(ResourceReference::class, 'createFromDiscriminatorValue'))); },
-            'sharingSubject' => function (ParseNode $n) use ($o) { $o->setSharingSubject($n->getStringValue()); },
-            'sharingType' => function (ParseNode $n) use ($o) { $o->setSharingType($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sharedBy' => fn(ParseNode $n) => $o->setSharedBy($n->getObjectValue([InsightIdentity::class, 'createFromDiscriminatorValue'])),
+            'sharedDateTime' => fn(ParseNode $n) => $o->setSharedDateTime($n->getDateTimeValue()),
+            'sharingReference' => fn(ParseNode $n) => $o->setSharingReference($n->getObjectValue([ResourceReference::class, 'createFromDiscriminatorValue'])),
+            'sharingSubject' => fn(ParseNode $n) => $o->setSharingSubject($n->getStringValue()),
+            'sharingType' => fn(ParseNode $n) => $o->setSharingType($n->getStringValue()),
         ];
     }
 

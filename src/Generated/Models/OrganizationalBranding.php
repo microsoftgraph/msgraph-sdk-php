@@ -37,7 +37,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'localizations' => function (ParseNode $n) use ($o) { $o->setLocalizations($n->getCollectionOfObjectValues(array(OrganizationalBrandingLocalization::class, 'createFromDiscriminatorValue'))); },
+            'localizations' => fn(ParseNode $n) => $o->setLocalizations($n->getCollectionOfObjectValues([OrganizationalBrandingLocalization::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -14,7 +14,7 @@ class WorkbookRangeFill extends Entity implements Parsable
     private ?string $color = null;
     
     /**
-     * Instantiates a new WorkbookRangeFill and sets the default values.
+     * Instantiates a new workbookRangeFill and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -45,7 +45,7 @@ class WorkbookRangeFill extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
+            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
         ]);
     }
 

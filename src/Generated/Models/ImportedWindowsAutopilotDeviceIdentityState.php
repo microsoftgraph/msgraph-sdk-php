@@ -103,11 +103,11 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'deviceErrorCode' => function (ParseNode $n) use ($o) { $o->setDeviceErrorCode($n->getIntegerValue()); },
-            'deviceErrorName' => function (ParseNode $n) use ($o) { $o->setDeviceErrorName($n->getStringValue()); },
-            'deviceImportStatus' => function (ParseNode $n) use ($o) { $o->setDeviceImportStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::class)); },
-            'deviceRegistrationId' => function (ParseNode $n) use ($o) { $o->setDeviceRegistrationId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'deviceErrorCode' => fn(ParseNode $n) => $o->setDeviceErrorCode($n->getIntegerValue()),
+            'deviceErrorName' => fn(ParseNode $n) => $o->setDeviceErrorName($n->getStringValue()),
+            'deviceImportStatus' => fn(ParseNode $n) => $o->setDeviceImportStatus($n->getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus::class)),
+            'deviceRegistrationId' => fn(ParseNode $n) => $o->setDeviceRegistrationId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

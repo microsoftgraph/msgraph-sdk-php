@@ -100,12 +100,12 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dayOccurrence' => function (ParseNode $n) use ($o) { $o->setDayOccurrence($n->getIntegerValue()); },
-            'dayOfWeek' => function (ParseNode $n) use ($o) { $o->setDayOfWeek($n->getEnumValue(DayOfWeek::class)); },
-            'month' => function (ParseNode $n) use ($o) { $o->setMonth($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'time' => function (ParseNode $n) use ($o) { $o->setTime($n->getTimeValue()); },
-            'year' => function (ParseNode $n) use ($o) { $o->setYear($n->getIntegerValue()); },
+            'dayOccurrence' => fn(ParseNode $n) => $o->setDayOccurrence($n->getIntegerValue()),
+            'dayOfWeek' => fn(ParseNode $n) => $o->setDayOfWeek($n->getEnumValue(DayOfWeek::class)),
+            'month' => fn(ParseNode $n) => $o->setMonth($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'time' => fn(ParseNode $n) => $o->setTime($n->getTimeValue()),
+            'year' => fn(ParseNode $n) => $o->setYear($n->getIntegerValue()),
         ];
     }
 

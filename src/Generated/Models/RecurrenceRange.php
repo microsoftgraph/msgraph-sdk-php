@@ -85,12 +85,12 @@ class RecurrenceRange implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'endDate' => function (ParseNode $n) use ($o) { $o->setEndDate($n->getDateValue()); },
-            'numberOfOccurrences' => function (ParseNode $n) use ($o) { $o->setNumberOfOccurrences($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'recurrenceTimeZone' => function (ParseNode $n) use ($o) { $o->setRecurrenceTimeZone($n->getStringValue()); },
-            'startDate' => function (ParseNode $n) use ($o) { $o->setStartDate($n->getDateValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrenceRangeType::class)); },
+            'endDate' => fn(ParseNode $n) => $o->setEndDate($n->getDateValue()),
+            'numberOfOccurrences' => fn(ParseNode $n) => $o->setNumberOfOccurrences($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recurrenceTimeZone' => fn(ParseNode $n) => $o->setRecurrenceTimeZone($n->getStringValue()),
+            'startDate' => fn(ParseNode $n) => $o->setStartDate($n->getDateValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrenceRangeType::class)),
         ];
     }
 

@@ -66,10 +66,10 @@ class AlterationResponse implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'originalQueryString' => function (ParseNode $n) use ($o) { $o->setOriginalQueryString($n->getStringValue()); },
-            'queryAlteration' => function (ParseNode $n) use ($o) { $o->setQueryAlteration($n->getObjectValue(array(SearchAlteration::class, 'createFromDiscriminatorValue'))); },
-            'queryAlterationType' => function (ParseNode $n) use ($o) { $o->setQueryAlterationType($n->getEnumValue(SearchAlterationType::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'originalQueryString' => fn(ParseNode $n) => $o->setOriginalQueryString($n->getStringValue()),
+            'queryAlteration' => fn(ParseNode $n) => $o->setQueryAlteration($n->getObjectValue([SearchAlteration::class, 'createFromDiscriminatorValue'])),
+            'queryAlterationType' => fn(ParseNode $n) => $o->setQueryAlterationType($n->getEnumValue(SearchAlterationType::class)),
         ];
     }
 

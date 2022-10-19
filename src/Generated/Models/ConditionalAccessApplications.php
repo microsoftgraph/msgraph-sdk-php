@@ -79,11 +79,11 @@ class ConditionalAccessApplications implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeApplications' => function (ParseNode $n) use ($o) { $o->setExcludeApplications($n->getCollectionOfPrimitiveValues()); },
-            'includeApplications' => function (ParseNode $n) use ($o) { $o->setIncludeApplications($n->getCollectionOfPrimitiveValues()); },
-            'includeAuthenticationContextClassReferences' => function (ParseNode $n) use ($o) { $o->setIncludeAuthenticationContextClassReferences($n->getCollectionOfPrimitiveValues()); },
-            'includeUserActions' => function (ParseNode $n) use ($o) { $o->setIncludeUserActions($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'excludeApplications' => fn(ParseNode $n) => $o->setExcludeApplications($n->getCollectionOfPrimitiveValues()),
+            'includeApplications' => fn(ParseNode $n) => $o->setIncludeApplications($n->getCollectionOfPrimitiveValues()),
+            'includeAuthenticationContextClassReferences' => fn(ParseNode $n) => $o->setIncludeAuthenticationContextClassReferences($n->getCollectionOfPrimitiveValues()),
+            'includeUserActions' => fn(ParseNode $n) => $o->setIncludeUserActions($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

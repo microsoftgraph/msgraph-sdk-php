@@ -61,9 +61,9 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'returnCode' => function (ParseNode $n) use ($o) { $o->setReturnCode($n->getIntegerValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(Win32LobAppReturnCodeType::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'returnCode' => fn(ParseNode $n) => $o->setReturnCode($n->getIntegerValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(Win32LobAppReturnCodeType::class)),
         ];
     }
 

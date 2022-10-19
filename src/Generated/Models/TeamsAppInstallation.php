@@ -49,8 +49,8 @@ class TeamsAppInstallation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'teamsApp' => function (ParseNode $n) use ($o) { $o->setTeamsApp($n->getObjectValue(array(TeamsApp::class, 'createFromDiscriminatorValue'))); },
-            'teamsAppDefinition' => function (ParseNode $n) use ($o) { $o->setTeamsAppDefinition($n->getObjectValue(array(TeamsAppDefinition::class, 'createFromDiscriminatorValue'))); },
+            'teamsApp' => fn(ParseNode $n) => $o->setTeamsApp($n->getObjectValue([TeamsApp::class, 'createFromDiscriminatorValue'])),
+            'teamsAppDefinition' => fn(ParseNode $n) => $o->setTeamsAppDefinition($n->getObjectValue([TeamsAppDefinition::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

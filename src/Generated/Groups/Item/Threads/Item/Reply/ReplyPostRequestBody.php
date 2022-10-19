@@ -51,7 +51,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'post' => function (ParseNode $n) use ($o) { $o->setPost($n->getObjectValue(array(Post::class, 'createFromDiscriminatorValue'))); },
+            'post' => fn(ParseNode $n) => $o->setPost($n->getObjectValue([Post::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

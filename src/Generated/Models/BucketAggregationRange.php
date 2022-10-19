@@ -61,9 +61,9 @@ class BucketAggregationRange implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'to' => function (ParseNode $n) use ($o) { $o->setTo($n->getStringValue()); },
+            'from' => fn(ParseNode $n) => $o->setFrom($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'to' => fn(ParseNode $n) => $o->setTo($n->getStringValue()),
         ];
     }
 

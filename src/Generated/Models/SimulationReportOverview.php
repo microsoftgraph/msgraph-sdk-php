@@ -71,11 +71,11 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'recommendedActions' => function (ParseNode $n) use ($o) { $o->setRecommendedActions($n->getCollectionOfObjectValues(array(RecommendedAction::class, 'createFromDiscriminatorValue'))); },
-            'resolvedTargetsCount' => function (ParseNode $n) use ($o) { $o->setResolvedTargetsCount($n->getIntegerValue()); },
-            'simulationEventsContent' => function (ParseNode $n) use ($o) { $o->setSimulationEventsContent($n->getObjectValue(array(SimulationEventsContent::class, 'createFromDiscriminatorValue'))); },
-            'trainingEventsContent' => function (ParseNode $n) use ($o) { $o->setTrainingEventsContent($n->getObjectValue(array(TrainingEventsContent::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recommendedActions' => fn(ParseNode $n) => $o->setRecommendedActions($n->getCollectionOfObjectValues([RecommendedAction::class, 'createFromDiscriminatorValue'])),
+            'resolvedTargetsCount' => fn(ParseNode $n) => $o->setResolvedTargetsCount($n->getIntegerValue()),
+            'simulationEventsContent' => fn(ParseNode $n) => $o->setSimulationEventsContent($n->getObjectValue([SimulationEventsContent::class, 'createFromDiscriminatorValue'])),
+            'trainingEventsContent' => fn(ParseNode $n) => $o->setTrainingEventsContent($n->getObjectValue([TrainingEventsContent::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

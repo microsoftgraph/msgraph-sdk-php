@@ -61,9 +61,9 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'notificationRecipientScope' => function (ParseNode $n) use ($o) { $o->setNotificationRecipientScope($n->getObjectValue(array(AccessReviewNotificationRecipientScope::class, 'createFromDiscriminatorValue'))); },
-            'notificationTemplateType' => function (ParseNode $n) use ($o) { $o->setNotificationTemplateType($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'notificationRecipientScope' => fn(ParseNode $n) => $o->setNotificationRecipientScope($n->getObjectValue([AccessReviewNotificationRecipientScope::class, 'createFromDiscriminatorValue'])),
+            'notificationTemplateType' => fn(ParseNode $n) => $o->setNotificationTemplateType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

@@ -74,10 +74,10 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'countdownDisplayBeforeRestartInMinutes' => function (ParseNode $n) use ($o) { $o->setCountdownDisplayBeforeRestartInMinutes($n->getIntegerValue()); },
-            'gracePeriodInMinutes' => function (ParseNode $n) use ($o) { $o->setGracePeriodInMinutes($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'restartNotificationSnoozeDurationInMinutes' => function (ParseNode $n) use ($o) { $o->setRestartNotificationSnoozeDurationInMinutes($n->getIntegerValue()); },
+            'countdownDisplayBeforeRestartInMinutes' => fn(ParseNode $n) => $o->setCountdownDisplayBeforeRestartInMinutes($n->getIntegerValue()),
+            'gracePeriodInMinutes' => fn(ParseNode $n) => $o->setGracePeriodInMinutes($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'restartNotificationSnoozeDurationInMinutes' => fn(ParseNode $n) => $o->setRestartNotificationSnoozeDurationInMinutes($n->getIntegerValue()),
         ];
     }
 

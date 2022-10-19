@@ -103,15 +103,15 @@ class MobileAppContentFile extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'azureStorageUri' => function (ParseNode $n) use ($o) { $o->setAzureStorageUri($n->getStringValue()); },
-            'azureStorageUriExpirationDateTime' => function (ParseNode $n) use ($o) { $o->setAzureStorageUriExpirationDateTime($n->getDateTimeValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'isCommitted' => function (ParseNode $n) use ($o) { $o->setIsCommitted($n->getBooleanValue()); },
-            'manifest' => function (ParseNode $n) use ($o) { $o->setManifest($n->getBinaryContent()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
-            'sizeEncrypted' => function (ParseNode $n) use ($o) { $o->setSizeEncrypted($n->getIntegerValue()); },
-            'uploadState' => function (ParseNode $n) use ($o) { $o->setUploadState($n->getEnumValue(MobileAppContentFileUploadState::class)); },
+            'azureStorageUri' => fn(ParseNode $n) => $o->setAzureStorageUri($n->getStringValue()),
+            'azureStorageUriExpirationDateTime' => fn(ParseNode $n) => $o->setAzureStorageUriExpirationDateTime($n->getDateTimeValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'isCommitted' => fn(ParseNode $n) => $o->setIsCommitted($n->getBooleanValue()),
+            'manifest' => fn(ParseNode $n) => $o->setManifest($n->getBinaryContent()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
+            'sizeEncrypted' => fn(ParseNode $n) => $o->setSizeEncrypted($n->getIntegerValue()),
+            'uploadState' => fn(ParseNode $n) => $o->setUploadState($n->getEnumValue(MobileAppContentFileUploadState::class)),
         ]);
     }
 

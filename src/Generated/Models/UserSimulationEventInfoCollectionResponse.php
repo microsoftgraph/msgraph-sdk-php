@@ -36,7 +36,7 @@ class UserSimulationEventInfoCollectionResponse extends BaseCollectionPagination
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(UserSimulationEventInfo::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([UserSimulationEventInfo::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

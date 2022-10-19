@@ -78,12 +78,12 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'defaultLength' => function (ParseNode $n) use ($o) { $o->setDefaultLength($n->getIntegerValue()); },
-            'defaultLifetimeInMinutes' => function (ParseNode $n) use ($o) { $o->setDefaultLifetimeInMinutes($n->getIntegerValue()); },
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'))); },
-            'isUsableOnce' => function (ParseNode $n) use ($o) { $o->setIsUsableOnce($n->getBooleanValue()); },
-            'maximumLifetimeInMinutes' => function (ParseNode $n) use ($o) { $o->setMaximumLifetimeInMinutes($n->getIntegerValue()); },
-            'minimumLifetimeInMinutes' => function (ParseNode $n) use ($o) { $o->setMinimumLifetimeInMinutes($n->getIntegerValue()); },
+            'defaultLength' => fn(ParseNode $n) => $o->setDefaultLength($n->getIntegerValue()),
+            'defaultLifetimeInMinutes' => fn(ParseNode $n) => $o->setDefaultLifetimeInMinutes($n->getIntegerValue()),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'isUsableOnce' => fn(ParseNode $n) => $o->setIsUsableOnce($n->getBooleanValue()),
+            'maximumLifetimeInMinutes' => fn(ParseNode $n) => $o->setMaximumLifetimeInMinutes($n->getIntegerValue()),
+            'minimumLifetimeInMinutes' => fn(ParseNode $n) => $o->setMinimumLifetimeInMinutes($n->getIntegerValue()),
         ]);
     }
 

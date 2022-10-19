@@ -68,10 +68,10 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'defaultPages' => function (ParseNode $n) use ($o) { $o->setDefaultPages($n->getCollectionOfObjectValues(array(UserFlowLanguagePage::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'overridesPages' => function (ParseNode $n) use ($o) { $o->setOverridesPages($n->getCollectionOfObjectValues(array(UserFlowLanguagePage::class, 'createFromDiscriminatorValue'))); },
+            'defaultPages' => fn(ParseNode $n) => $o->setDefaultPages($n->getCollectionOfObjectValues([UserFlowLanguagePage::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'overridesPages' => fn(ParseNode $n) => $o->setOverridesPages($n->getCollectionOfObjectValues([UserFlowLanguagePage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

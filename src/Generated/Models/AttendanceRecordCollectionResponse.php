@@ -36,7 +36,7 @@ class AttendanceRecordCollectionResponse extends BaseCollectionPaginationCountRe
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(AttendanceRecord::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([AttendanceRecord::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -55,9 +55,9 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classification' => function (ParseNode $n) use ($o) { $o->setClassification($n->getEnumValue(PermissionClassificationType::class)); },
-            'permissionId' => function (ParseNode $n) use ($o) { $o->setPermissionId($n->getStringValue()); },
-            'permissionName' => function (ParseNode $n) use ($o) { $o->setPermissionName($n->getStringValue()); },
+            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(PermissionClassificationType::class)),
+            'permissionId' => fn(ParseNode $n) => $o->setPermissionId($n->getStringValue()),
+            'permissionName' => fn(ParseNode $n) => $o->setPermissionName($n->getStringValue()),
         ]);
     }
 

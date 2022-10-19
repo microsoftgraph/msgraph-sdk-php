@@ -55,9 +55,9 @@ class UserSource extends DataSource implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'includedSources' => function (ParseNode $n) use ($o) { $o->setIncludedSources($n->getEnumValue(SourceType::class)); },
-            'siteWebUrl' => function (ParseNode $n) use ($o) { $o->setSiteWebUrl($n->getStringValue()); },
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'includedSources' => fn(ParseNode $n) => $o->setIncludedSources($n->getEnumValue(SourceType::class)),
+            'siteWebUrl' => fn(ParseNode $n) => $o->setSiteWebUrl($n->getStringValue()),
         ]);
     }
 

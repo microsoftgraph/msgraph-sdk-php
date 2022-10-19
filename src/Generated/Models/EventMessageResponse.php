@@ -42,8 +42,8 @@ class EventMessageResponse extends EventMessage implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'proposedNewTime' => function (ParseNode $n) use ($o) { $o->setProposedNewTime($n->getObjectValue(array(TimeSlot::class, 'createFromDiscriminatorValue'))); },
-            'responseType' => function (ParseNode $n) use ($o) { $o->setResponseType($n->getEnumValue(ResponseType::class)); },
+            'proposedNewTime' => fn(ParseNode $n) => $o->setProposedNewTime($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
+            'responseType' => fn(ParseNode $n) => $o->setResponseType($n->getEnumValue(ResponseType::class)),
         ]);
     }
 

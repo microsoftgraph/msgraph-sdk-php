@@ -63,9 +63,9 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientId' => function (ParseNode $n) use ($o) { $o->setClientId($n->getStringValue()); },
-            'clientSecret' => function (ParseNode $n) use ($o) { $o->setClientSecret($n->getStringValue()); },
-            'identityProviderType' => function (ParseNode $n) use ($o) { $o->setIdentityProviderType($n->getStringValue()); },
+            'clientId' => fn(ParseNode $n) => $o->setClientId($n->getStringValue()),
+            'clientSecret' => fn(ParseNode $n) => $o->setClientSecret($n->getStringValue()),
+            'identityProviderType' => fn(ParseNode $n) => $o->setIdentityProviderType($n->getStringValue()),
         ]);
     }
 

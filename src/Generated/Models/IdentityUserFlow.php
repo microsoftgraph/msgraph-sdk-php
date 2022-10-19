@@ -49,8 +49,8 @@ class IdentityUserFlow extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'userFlowType' => function (ParseNode $n) use ($o) { $o->setUserFlowType($n->getEnumValue(UserFlowType::class)); },
-            'userFlowTypeVersion' => function (ParseNode $n) use ($o) { $o->setUserFlowTypeVersion($n->getFloatValue()); },
+            'userFlowType' => fn(ParseNode $n) => $o->setUserFlowType($n->getEnumValue(UserFlowType::class)),
+            'userFlowTypeVersion' => fn(ParseNode $n) => $o->setUserFlowTypeVersion($n->getFloatValue()),
         ]);
     }
 

@@ -108,12 +108,12 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'denied' => function (ParseNode $n) use ($o) { $o->setDenied($n->getBooleanValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'productName' => function (ParseNode $n) use ($o) { $o->setProductName($n->getStringValue()); },
-            'publisherName' => function (ParseNode $n) use ($o) { $o->setPublisherName($n->getStringValue()); },
+            'denied' => fn(ParseNode $n) => $o->setDenied($n->getBooleanValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'productName' => fn(ParseNode $n) => $o->setProductName($n->getStringValue()),
+            'publisherName' => fn(ParseNode $n) => $o->setPublisherName($n->getStringValue()),
         ];
     }
 

@@ -58,8 +58,8 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowSampleSharing' => function (ParseNode $n) use ($o) { $o->setAllowSampleSharing($n->getBooleanValue()); },
-            'enableExpeditedTelemetryReporting' => function (ParseNode $n) use ($o) { $o->setEnableExpeditedTelemetryReporting($n->getBooleanValue()); },
+            'allowSampleSharing' => fn(ParseNode $n) => $o->setAllowSampleSharing($n->getBooleanValue()),
+            'enableExpeditedTelemetryReporting' => fn(ParseNode $n) => $o->setEnableExpeditedTelemetryReporting($n->getBooleanValue()),
         ]);
     }
 

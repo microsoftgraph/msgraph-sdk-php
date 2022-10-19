@@ -37,7 +37,7 @@ class Bitlocker extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recoveryKeys' => function (ParseNode $n) use ($o) { $o->setRecoveryKeys($n->getCollectionOfObjectValues(array(BitlockerRecoveryKey::class, 'createFromDiscriminatorValue'))); },
+            'recoveryKeys' => fn(ParseNode $n) => $o->setRecoveryKeys($n->getCollectionOfObjectValues([BitlockerRecoveryKey::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

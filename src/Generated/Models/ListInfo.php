@@ -74,10 +74,10 @@ class ListInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentTypesEnabled' => function (ParseNode $n) use ($o) { $o->setContentTypesEnabled($n->getBooleanValue()); },
-            'hidden' => function (ParseNode $n) use ($o) { $o->setHidden($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'template' => function (ParseNode $n) use ($o) { $o->setTemplate($n->getStringValue()); },
+            'contentTypesEnabled' => fn(ParseNode $n) => $o->setContentTypesEnabled($n->getBooleanValue()),
+            'hidden' => fn(ParseNode $n) => $o->setHidden($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'template' => fn(ParseNode $n) => $o->setTemplate($n->getStringValue()),
         ];
     }
 

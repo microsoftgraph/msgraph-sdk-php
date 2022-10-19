@@ -157,17 +157,17 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'callChainId' => function (ParseNode $n) use ($o) { $o->setCallChainId($n->getStringValue()); },
-            'cloudServiceDeploymentEnvironment' => function (ParseNode $n) use ($o) { $o->setCloudServiceDeploymentEnvironment($n->getStringValue()); },
-            'cloudServiceDeploymentId' => function (ParseNode $n) use ($o) { $o->setCloudServiceDeploymentId($n->getStringValue()); },
-            'cloudServiceInstanceName' => function (ParseNode $n) use ($o) { $o->setCloudServiceInstanceName($n->getStringValue()); },
-            'cloudServiceName' => function (ParseNode $n) use ($o) { $o->setCloudServiceName($n->getStringValue()); },
-            'deviceDescription' => function (ParseNode $n) use ($o) { $o->setDeviceDescription($n->getStringValue()); },
-            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
-            'mediaLegId' => function (ParseNode $n) use ($o) { $o->setMediaLegId($n->getStringValue()); },
-            'mediaQualityList' => function (ParseNode $n) use ($o) { $o->setMediaQualityList($n->getCollectionOfObjectValues(array(TeleconferenceDeviceMediaQuality::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'participantId' => function (ParseNode $n) use ($o) { $o->setParticipantId($n->getStringValue()); },
+            'callChainId' => fn(ParseNode $n) => $o->setCallChainId($n->getStringValue()),
+            'cloudServiceDeploymentEnvironment' => fn(ParseNode $n) => $o->setCloudServiceDeploymentEnvironment($n->getStringValue()),
+            'cloudServiceDeploymentId' => fn(ParseNode $n) => $o->setCloudServiceDeploymentId($n->getStringValue()),
+            'cloudServiceInstanceName' => fn(ParseNode $n) => $o->setCloudServiceInstanceName($n->getStringValue()),
+            'cloudServiceName' => fn(ParseNode $n) => $o->setCloudServiceName($n->getStringValue()),
+            'deviceDescription' => fn(ParseNode $n) => $o->setDeviceDescription($n->getStringValue()),
+            'deviceName' => fn(ParseNode $n) => $o->setDeviceName($n->getStringValue()),
+            'mediaLegId' => fn(ParseNode $n) => $o->setMediaLegId($n->getStringValue()),
+            'mediaQualityList' => fn(ParseNode $n) => $o->setMediaQualityList($n->getCollectionOfObjectValues([TeleconferenceDeviceMediaQuality::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'participantId' => fn(ParseNode $n) => $o->setParticipantId($n->getStringValue()),
         ];
     }
 

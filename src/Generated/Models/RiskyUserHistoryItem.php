@@ -24,7 +24,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     private ?string $userId = null;
     
     /**
-     * Instantiates a new RiskyUserHistoryItem and sets the default values.
+     * Instantiates a new riskyUserHistoryItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,9 +55,9 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activity' => function (ParseNode $n) use ($o) { $o->setActivity($n->getObjectValue(array(RiskUserActivity::class, 'createFromDiscriminatorValue'))); },
-            'initiatedBy' => function (ParseNode $n) use ($o) { $o->setInitiatedBy($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'activity' => fn(ParseNode $n) => $o->setActivity($n->getObjectValue([RiskUserActivity::class, 'createFromDiscriminatorValue'])),
+            'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getStringValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
 

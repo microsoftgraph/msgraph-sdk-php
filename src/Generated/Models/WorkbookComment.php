@@ -63,9 +63,9 @@ class WorkbookComment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
-            'replies' => function (ParseNode $n) use ($o) { $o->setReplies($n->getCollectionOfObjectValues(array(WorkbookCommentReply::class, 'createFromDiscriminatorValue'))); },
+            'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
+            'replies' => fn(ParseNode $n) => $o->setReplies($n->getCollectionOfObjectValues([WorkbookCommentReply::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

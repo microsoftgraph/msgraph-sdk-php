@@ -55,9 +55,9 @@ class ItemAnalytics extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allTime' => function (ParseNode $n) use ($o) { $o->setAllTime($n->getObjectValue(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
-            'itemActivityStats' => function (ParseNode $n) use ($o) { $o->setItemActivityStats($n->getCollectionOfObjectValues(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
-            'lastSevenDays' => function (ParseNode $n) use ($o) { $o->setLastSevenDays($n->getObjectValue(array(ItemActivityStat::class, 'createFromDiscriminatorValue'))); },
+            'allTime' => fn(ParseNode $n) => $o->setAllTime($n->getObjectValue([ItemActivityStat::class, 'createFromDiscriminatorValue'])),
+            'itemActivityStats' => fn(ParseNode $n) => $o->setItemActivityStats($n->getCollectionOfObjectValues([ItemActivityStat::class, 'createFromDiscriminatorValue'])),
+            'lastSevenDays' => fn(ParseNode $n) => $o->setLastSevenDays($n->getObjectValue([ItemActivityStat::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

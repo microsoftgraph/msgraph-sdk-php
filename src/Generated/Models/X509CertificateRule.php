@@ -15,7 +15,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     private array $additionalData;
     
     /**
-     * @var string|null $identifier The identifier property
+     * @var string|null $identifier The identifier of the X.509 certificate. Required.
     */
     private ?string $identifier = null;
     
@@ -25,12 +25,12 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var X509CertificateAuthenticationMode|null $x509CertificateAuthenticationMode The x509CertificateAuthenticationMode property
+     * @var X509CertificateAuthenticationMode|null $x509CertificateAuthenticationMode The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
     */
     private ?X509CertificateAuthenticationMode $x509CertificateAuthenticationMode = null;
     
     /**
-     * @var X509CertificateRuleType|null $x509CertificateRuleType The x509CertificateRuleType property
+     * @var X509CertificateRuleType|null $x509CertificateRuleType The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
     */
     private ?X509CertificateRuleType $x509CertificateRuleType = null;
     
@@ -66,15 +66,15 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'identifier' => function (ParseNode $n) use ($o) { $o->setIdentifier($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'x509CertificateAuthenticationMode' => function (ParseNode $n) use ($o) { $o->setX509CertificateAuthenticationMode($n->getEnumValue(X509CertificateAuthenticationMode::class)); },
-            'x509CertificateRuleType' => function (ParseNode $n) use ($o) { $o->setX509CertificateRuleType($n->getEnumValue(X509CertificateRuleType::class)); },
+            'identifier' => fn(ParseNode $n) => $o->setIdentifier($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'x509CertificateAuthenticationMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationMode($n->getEnumValue(X509CertificateAuthenticationMode::class)),
+            'x509CertificateRuleType' => fn(ParseNode $n) => $o->setX509CertificateRuleType($n->getEnumValue(X509CertificateRuleType::class)),
         ];
     }
 
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The identifier of the X.509 certificate. Required.
      * @return string|null
     */
     public function getIdentifier(): ?string {
@@ -90,7 +90,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the x509CertificateAuthenticationMode property value. The x509CertificateAuthenticationMode property
+     * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @return X509CertificateAuthenticationMode|null
     */
     public function getX509CertificateAuthenticationMode(): ?X509CertificateAuthenticationMode {
@@ -98,7 +98,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the x509CertificateRuleType property value. The x509CertificateRuleType property
+     * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
      * @return X509CertificateRuleType|null
     */
     public function getX509CertificateRuleType(): ?X509CertificateRuleType {
@@ -126,7 +126,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The identifier of the X.509 certificate. Required.
      *  @param string|null $value Value to set for the identifier property.
     */
     public function setIdentifier(?string $value ): void {
@@ -142,7 +142,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the x509CertificateAuthenticationMode property value. The x509CertificateAuthenticationMode property
+     * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      *  @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationMode property.
     */
     public function setX509CertificateAuthenticationMode(?X509CertificateAuthenticationMode $value ): void {
@@ -150,7 +150,7 @@ class X509CertificateRule implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the x509CertificateRuleType property value. The x509CertificateRuleType property
+     * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
      *  @param X509CertificateRuleType|null $value Value to set for the x509CertificateRuleType property.
     */
     public function setX509CertificateRuleType(?X509CertificateRuleType $value ): void {

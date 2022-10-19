@@ -49,8 +49,8 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isRegistrationRequired' => function (ParseNode $n) use ($o) { $o->setIsRegistrationRequired($n->getBooleanValue()); },
-            'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
+            'isRegistrationRequired' => fn(ParseNode $n) => $o->setIsRegistrationRequired($n->getBooleanValue()),
+            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)),
         ]);
     }
 

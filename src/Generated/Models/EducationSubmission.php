@@ -80,7 +80,7 @@ class EducationSubmission extends Entity implements Parsable
     private ?DateTime $unsubmittedDateTime = null;
     
     /**
-     * Instantiates a new EducationSubmission and sets the default values.
+     * Instantiates a new educationSubmission and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -103,20 +103,20 @@ class EducationSubmission extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'outcomes' => function (ParseNode $n) use ($o) { $o->setOutcomes($n->getCollectionOfObjectValues(array(EducationOutcome::class, 'createFromDiscriminatorValue'))); },
-            'reassignedBy' => function (ParseNode $n) use ($o) { $o->setReassignedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'reassignedDateTime' => function (ParseNode $n) use ($o) { $o->setReassignedDateTime($n->getDateTimeValue()); },
-            'recipient' => function (ParseNode $n) use ($o) { $o->setRecipient($n->getObjectValue(array(EducationSubmissionRecipient::class, 'createFromDiscriminatorValue'))); },
-            'resources' => function (ParseNode $n) use ($o) { $o->setResources($n->getCollectionOfObjectValues(array(EducationSubmissionResource::class, 'createFromDiscriminatorValue'))); },
-            'resourcesFolderUrl' => function (ParseNode $n) use ($o) { $o->setResourcesFolderUrl($n->getStringValue()); },
-            'returnedBy' => function (ParseNode $n) use ($o) { $o->setReturnedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'returnedDateTime' => function (ParseNode $n) use ($o) { $o->setReturnedDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(EducationSubmissionStatus::class)); },
-            'submittedBy' => function (ParseNode $n) use ($o) { $o->setSubmittedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'submittedDateTime' => function (ParseNode $n) use ($o) { $o->setSubmittedDateTime($n->getDateTimeValue()); },
-            'submittedResources' => function (ParseNode $n) use ($o) { $o->setSubmittedResources($n->getCollectionOfObjectValues(array(EducationSubmissionResource::class, 'createFromDiscriminatorValue'))); },
-            'unsubmittedBy' => function (ParseNode $n) use ($o) { $o->setUnsubmittedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'unsubmittedDateTime' => function (ParseNode $n) use ($o) { $o->setUnsubmittedDateTime($n->getDateTimeValue()); },
+            'outcomes' => fn(ParseNode $n) => $o->setOutcomes($n->getCollectionOfObjectValues([EducationOutcome::class, 'createFromDiscriminatorValue'])),
+            'reassignedBy' => fn(ParseNode $n) => $o->setReassignedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'reassignedDateTime' => fn(ParseNode $n) => $o->setReassignedDateTime($n->getDateTimeValue()),
+            'recipient' => fn(ParseNode $n) => $o->setRecipient($n->getObjectValue([EducationSubmissionRecipient::class, 'createFromDiscriminatorValue'])),
+            'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([EducationSubmissionResource::class, 'createFromDiscriminatorValue'])),
+            'resourcesFolderUrl' => fn(ParseNode $n) => $o->setResourcesFolderUrl($n->getStringValue()),
+            'returnedBy' => fn(ParseNode $n) => $o->setReturnedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'returnedDateTime' => fn(ParseNode $n) => $o->setReturnedDateTime($n->getDateTimeValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(EducationSubmissionStatus::class)),
+            'submittedBy' => fn(ParseNode $n) => $o->setSubmittedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'submittedDateTime' => fn(ParseNode $n) => $o->setSubmittedDateTime($n->getDateTimeValue()),
+            'submittedResources' => fn(ParseNode $n) => $o->setSubmittedResources($n->getCollectionOfObjectValues([EducationSubmissionResource::class, 'createFromDiscriminatorValue'])),
+            'unsubmittedBy' => fn(ParseNode $n) => $o->setUnsubmittedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'unsubmittedDateTime' => fn(ParseNode $n) => $o->setUnsubmittedDateTime($n->getDateTimeValue()),
         ]);
     }
 

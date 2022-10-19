@@ -97,14 +97,14 @@ class TeamsAsyncOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attemptsCount' => function (ParseNode $n) use ($o) { $o->setAttemptsCount($n->getIntegerValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(OperationError::class, 'createFromDiscriminatorValue'))); },
-            'lastActionDateTime' => function (ParseNode $n) use ($o) { $o->setLastActionDateTime($n->getDateTimeValue()); },
-            'operationType' => function (ParseNode $n) use ($o) { $o->setOperationType($n->getEnumValue(TeamsAsyncOperationType::class)); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(TeamsAsyncOperationStatus::class)); },
-            'targetResourceId' => function (ParseNode $n) use ($o) { $o->setTargetResourceId($n->getStringValue()); },
-            'targetResourceLocation' => function (ParseNode $n) use ($o) { $o->setTargetResourceLocation($n->getStringValue()); },
+            'attemptsCount' => fn(ParseNode $n) => $o->setAttemptsCount($n->getIntegerValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([OperationError::class, 'createFromDiscriminatorValue'])),
+            'lastActionDateTime' => fn(ParseNode $n) => $o->setLastActionDateTime($n->getDateTimeValue()),
+            'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(TeamsAsyncOperationType::class)),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(TeamsAsyncOperationStatus::class)),
+            'targetResourceId' => fn(ParseNode $n) => $o->setTargetResourceId($n->getStringValue()),
+            'targetResourceLocation' => fn(ParseNode $n) => $o->setTargetResourceLocation($n->getStringValue()),
         ]);
     }
 

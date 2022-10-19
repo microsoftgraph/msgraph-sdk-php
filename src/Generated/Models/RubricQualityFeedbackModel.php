@@ -69,9 +69,9 @@ class RubricQualityFeedbackModel implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'qualityId' => function (ParseNode $n) use ($o) { $o->setQualityId($n->getStringValue()); },
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'qualityId' => fn(ParseNode $n) => $o->setQualityId($n->getStringValue()),
         ];
     }
 

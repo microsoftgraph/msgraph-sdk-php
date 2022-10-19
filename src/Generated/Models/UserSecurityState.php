@@ -154,21 +154,21 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aadUserId' => function (ParseNode $n) use ($o) { $o->setAadUserId($n->getStringValue()); },
-            'accountName' => function (ParseNode $n) use ($o) { $o->setAccountName($n->getStringValue()); },
-            'domainName' => function (ParseNode $n) use ($o) { $o->setDomainName($n->getStringValue()); },
-            'emailRole' => function (ParseNode $n) use ($o) { $o->setEmailRole($n->getEnumValue(EmailRole::class)); },
-            'isVpn' => function (ParseNode $n) use ($o) { $o->setIsVpn($n->getBooleanValue()); },
-            'logonDateTime' => function (ParseNode $n) use ($o) { $o->setLogonDateTime($n->getDateTimeValue()); },
-            'logonId' => function (ParseNode $n) use ($o) { $o->setLogonId($n->getStringValue()); },
-            'logonIp' => function (ParseNode $n) use ($o) { $o->setLogonIp($n->getStringValue()); },
-            'logonLocation' => function (ParseNode $n) use ($o) { $o->setLogonLocation($n->getStringValue()); },
-            'logonType' => function (ParseNode $n) use ($o) { $o->setLogonType($n->getEnumValue(LogonType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'onPremisesSecurityIdentifier' => function (ParseNode $n) use ($o) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
-            'riskScore' => function (ParseNode $n) use ($o) { $o->setRiskScore($n->getStringValue()); },
-            'userAccountType' => function (ParseNode $n) use ($o) { $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'aadUserId' => fn(ParseNode $n) => $o->setAadUserId($n->getStringValue()),
+            'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
+            'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
+            'emailRole' => fn(ParseNode $n) => $o->setEmailRole($n->getEnumValue(EmailRole::class)),
+            'isVpn' => fn(ParseNode $n) => $o->setIsVpn($n->getBooleanValue()),
+            'logonDateTime' => fn(ParseNode $n) => $o->setLogonDateTime($n->getDateTimeValue()),
+            'logonId' => fn(ParseNode $n) => $o->setLogonId($n->getStringValue()),
+            'logonIp' => fn(ParseNode $n) => $o->setLogonIp($n->getStringValue()),
+            'logonLocation' => fn(ParseNode $n) => $o->setLogonLocation($n->getStringValue()),
+            'logonType' => fn(ParseNode $n) => $o->setLogonType($n->getEnumValue(LogonType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
+            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getStringValue()),
+            'userAccountType' => fn(ParseNode $n) => $o->setUserAccountType($n->getEnumValue(UserAccountSecurityType::class)),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ];
     }
 

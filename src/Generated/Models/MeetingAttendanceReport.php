@@ -61,10 +61,10 @@ class MeetingAttendanceReport extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attendanceRecords' => function (ParseNode $n) use ($o) { $o->setAttendanceRecords($n->getCollectionOfObjectValues(array(AttendanceRecord::class, 'createFromDiscriminatorValue'))); },
-            'meetingEndDateTime' => function (ParseNode $n) use ($o) { $o->setMeetingEndDateTime($n->getDateTimeValue()); },
-            'meetingStartDateTime' => function (ParseNode $n) use ($o) { $o->setMeetingStartDateTime($n->getDateTimeValue()); },
-            'totalParticipantCount' => function (ParseNode $n) use ($o) { $o->setTotalParticipantCount($n->getIntegerValue()); },
+            'attendanceRecords' => fn(ParseNode $n) => $o->setAttendanceRecords($n->getCollectionOfObjectValues([AttendanceRecord::class, 'createFromDiscriminatorValue'])),
+            'meetingEndDateTime' => fn(ParseNode $n) => $o->setMeetingEndDateTime($n->getDateTimeValue()),
+            'meetingStartDateTime' => fn(ParseNode $n) => $o->setMeetingStartDateTime($n->getDateTimeValue()),
+            'totalParticipantCount' => fn(ParseNode $n) => $o->setTotalParticipantCount($n->getIntegerValue()),
         ]);
     }
 

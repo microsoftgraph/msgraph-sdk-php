@@ -108,18 +108,18 @@ class WorkbookRangeView extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'cellAddresses' => function (ParseNode $n) use ($o) { $o->setCellAddresses($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'columnCount' => function (ParseNode $n) use ($o) { $o->setColumnCount($n->getIntegerValue()); },
-            'formulas' => function (ParseNode $n) use ($o) { $o->setFormulas($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'formulasLocal' => function (ParseNode $n) use ($o) { $o->setFormulasLocal($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'formulasR1C1' => function (ParseNode $n) use ($o) { $o->setFormulasR1C1($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
-            'numberFormat' => function (ParseNode $n) use ($o) { $o->setNumberFormat($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'rowCount' => function (ParseNode $n) use ($o) { $o->setRowCount($n->getIntegerValue()); },
-            'rows' => function (ParseNode $n) use ($o) { $o->setRows($n->getCollectionOfObjectValues(array(WorkbookRangeView::class, 'createFromDiscriminatorValue'))); },
-            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'valueTypes' => function (ParseNode $n) use ($o) { $o->setValueTypes($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'cellAddresses' => fn(ParseNode $n) => $o->setCellAddresses($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'columnCount' => fn(ParseNode $n) => $o->setColumnCount($n->getIntegerValue()),
+            'formulas' => fn(ParseNode $n) => $o->setFormulas($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'formulasLocal' => fn(ParseNode $n) => $o->setFormulasLocal($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'formulasR1C1' => fn(ParseNode $n) => $o->setFormulasR1C1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
+            'numberFormat' => fn(ParseNode $n) => $o->setNumberFormat($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'rowCount' => fn(ParseNode $n) => $o->setRowCount($n->getIntegerValue()),
+            'rows' => fn(ParseNode $n) => $o->setRows($n->getCollectionOfObjectValues([WorkbookRangeView::class, 'createFromDiscriminatorValue'])),
+            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'valueTypes' => fn(ParseNode $n) => $o->setValueTypes($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

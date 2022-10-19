@@ -94,14 +94,14 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludedItemCount' => function (ParseNode $n) use ($o) { $o->setExcludedItemCount($n->getIntegerValue()); },
-            'insightCounts' => function (ParseNode $n) use ($o) { $o->setInsightCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
-            'itemCount' => function (ParseNode $n) use ($o) { $o->setItemCount($n->getIntegerValue()); },
-            'itemNeedReview' => function (ParseNode $n) use ($o) { $o->setItemNeedReview($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'productItemCounts' => function (ParseNode $n) use ($o) { $o->setProductItemCounts($n->getCollectionOfObjectValues(array(KeyValuePair::class, 'createFromDiscriminatorValue'))); },
-            'signedOffItemCount' => function (ParseNode $n) use ($o) { $o->setSignedOffItemCount($n->getIntegerValue()); },
-            'totalItemSize' => function (ParseNode $n) use ($o) { $o->setTotalItemSize($n->getIntegerValue()); },
+            'excludedItemCount' => fn(ParseNode $n) => $o->setExcludedItemCount($n->getIntegerValue()),
+            'insightCounts' => fn(ParseNode $n) => $o->setInsightCounts($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
+            'itemCount' => fn(ParseNode $n) => $o->setItemCount($n->getIntegerValue()),
+            'itemNeedReview' => fn(ParseNode $n) => $o->setItemNeedReview($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'productItemCounts' => fn(ParseNode $n) => $o->setProductItemCounts($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
+            'signedOffItemCount' => fn(ParseNode $n) => $o->setSignedOffItemCount($n->getIntegerValue()),
+            'totalItemSize' => fn(ParseNode $n) => $o->setTotalItemSize($n->getIntegerValue()),
         ];
     }
 

@@ -86,14 +86,14 @@ class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'v10_0' => function (ParseNode $n) use ($o) { $o->setV10_0($n->getBooleanValue()); },
-            'v11_0' => function (ParseNode $n) use ($o) { $o->setV11_0($n->getBooleanValue()); },
-            'v12_0' => function (ParseNode $n) use ($o) { $o->setV12_0($n->getBooleanValue()); },
-            'v13_0' => function (ParseNode $n) use ($o) { $o->setV13_0($n->getBooleanValue()); },
-            'v14_0' => function (ParseNode $n) use ($o) { $o->setV14_0($n->getBooleanValue()); },
-            'v8_0' => function (ParseNode $n) use ($o) { $o->setV8_0($n->getBooleanValue()); },
-            'v9_0' => function (ParseNode $n) use ($o) { $o->setV9_0($n->getBooleanValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'v10_0' => fn(ParseNode $n) => $o->setV10_0($n->getBooleanValue()),
+            'v11_0' => fn(ParseNode $n) => $o->setV11_0($n->getBooleanValue()),
+            'v12_0' => fn(ParseNode $n) => $o->setV12_0($n->getBooleanValue()),
+            'v13_0' => fn(ParseNode $n) => $o->setV13_0($n->getBooleanValue()),
+            'v14_0' => fn(ParseNode $n) => $o->setV14_0($n->getBooleanValue()),
+            'v8_0' => fn(ParseNode $n) => $o->setV8_0($n->getBooleanValue()),
+            'v9_0' => fn(ParseNode $n) => $o->setV9_0($n->getBooleanValue()),
         ];
     }
 

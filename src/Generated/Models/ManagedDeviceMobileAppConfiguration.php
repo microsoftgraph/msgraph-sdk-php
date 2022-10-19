@@ -65,7 +65,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
     private ?int $version = null;
     
     /**
-     * Instantiates a new ManagedDeviceMobileAppConfiguration and sets the default values.
+     * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -143,17 +143,17 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignments' => function (ParseNode $n) use ($o) { $o->setAssignments($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationAssignment::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'deviceStatuses' => function (ParseNode $n) use ($o) { $o->setDeviceStatuses($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationDeviceStatus::class, 'createFromDiscriminatorValue'))); },
-            'deviceStatusSummary' => function (ParseNode $n) use ($o) { $o->setDeviceStatusSummary($n->getObjectValue(array(ManagedDeviceMobileAppConfigurationDeviceSummary::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'targetedMobileApps' => function (ParseNode $n) use ($o) { $o->setTargetedMobileApps($n->getCollectionOfPrimitiveValues()); },
-            'userStatuses' => function (ParseNode $n) use ($o) { $o->setUserStatuses($n->getCollectionOfObjectValues(array(ManagedDeviceMobileAppConfigurationUserStatus::class, 'createFromDiscriminatorValue'))); },
-            'userStatusSummary' => function (ParseNode $n) use ($o) { $o->setUserStatusSummary($n->getObjectValue(array(ManagedDeviceMobileAppConfigurationUserSummary::class, 'createFromDiscriminatorValue'))); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getIntegerValue()); },
+            'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([ManagedDeviceMobileAppConfigurationAssignment::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'deviceStatuses' => fn(ParseNode $n) => $o->setDeviceStatuses($n->getCollectionOfObjectValues([ManagedDeviceMobileAppConfigurationDeviceStatus::class, 'createFromDiscriminatorValue'])),
+            'deviceStatusSummary' => fn(ParseNode $n) => $o->setDeviceStatusSummary($n->getObjectValue([ManagedDeviceMobileAppConfigurationDeviceSummary::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'targetedMobileApps' => fn(ParseNode $n) => $o->setTargetedMobileApps($n->getCollectionOfPrimitiveValues()),
+            'userStatuses' => fn(ParseNode $n) => $o->setUserStatuses($n->getCollectionOfObjectValues([ManagedDeviceMobileAppConfigurationUserStatus::class, 'createFromDiscriminatorValue'])),
+            'userStatusSummary' => fn(ParseNode $n) => $o->setUserStatusSummary($n->getObjectValue([ManagedDeviceMobileAppConfigurationUserSummary::class, 'createFromDiscriminatorValue'])),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getIntegerValue()),
         ]);
     }
 

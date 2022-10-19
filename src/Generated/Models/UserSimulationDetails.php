@@ -121,16 +121,16 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignedTrainingsCount' => function (ParseNode $n) use ($o) { $o->setAssignedTrainingsCount($n->getIntegerValue()); },
-            'completedTrainingsCount' => function (ParseNode $n) use ($o) { $o->setCompletedTrainingsCount($n->getIntegerValue()); },
-            'compromisedDateTime' => function (ParseNode $n) use ($o) { $o->setCompromisedDateTime($n->getDateTimeValue()); },
-            'inProgressTrainingsCount' => function (ParseNode $n) use ($o) { $o->setInProgressTrainingsCount($n->getIntegerValue()); },
-            'isCompromised' => function (ParseNode $n) use ($o) { $o->setIsCompromised($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'reportedPhishDateTime' => function (ParseNode $n) use ($o) { $o->setReportedPhishDateTime($n->getDateTimeValue()); },
-            'simulationEvents' => function (ParseNode $n) use ($o) { $o->setSimulationEvents($n->getCollectionOfObjectValues(array(UserSimulationEventInfo::class, 'createFromDiscriminatorValue'))); },
-            'simulationUser' => function (ParseNode $n) use ($o) { $o->setSimulationUser($n->getObjectValue(array(AttackSimulationUser::class, 'createFromDiscriminatorValue'))); },
-            'trainingEvents' => function (ParseNode $n) use ($o) { $o->setTrainingEvents($n->getCollectionOfObjectValues(array(UserTrainingEventInfo::class, 'createFromDiscriminatorValue'))); },
+            'assignedTrainingsCount' => fn(ParseNode $n) => $o->setAssignedTrainingsCount($n->getIntegerValue()),
+            'completedTrainingsCount' => fn(ParseNode $n) => $o->setCompletedTrainingsCount($n->getIntegerValue()),
+            'compromisedDateTime' => fn(ParseNode $n) => $o->setCompromisedDateTime($n->getDateTimeValue()),
+            'inProgressTrainingsCount' => fn(ParseNode $n) => $o->setInProgressTrainingsCount($n->getIntegerValue()),
+            'isCompromised' => fn(ParseNode $n) => $o->setIsCompromised($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'reportedPhishDateTime' => fn(ParseNode $n) => $o->setReportedPhishDateTime($n->getDateTimeValue()),
+            'simulationEvents' => fn(ParseNode $n) => $o->setSimulationEvents($n->getCollectionOfObjectValues([UserSimulationEventInfo::class, 'createFromDiscriminatorValue'])),
+            'simulationUser' => fn(ParseNode $n) => $o->setSimulationUser($n->getObjectValue([AttackSimulationUser::class, 'createFromDiscriminatorValue'])),
+            'trainingEvents' => fn(ParseNode $n) => $o->setTrainingEvents($n->getCollectionOfObjectValues([UserTrainingEventInfo::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

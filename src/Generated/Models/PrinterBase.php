@@ -54,7 +54,7 @@ class PrinterBase extends Entity implements Parsable
     private ?PrinterStatus $status = null;
     
     /**
-     * Instantiates a new PrinterBase and sets the default values.
+     * Instantiates a new printerBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -109,15 +109,15 @@ class PrinterBase extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'capabilities' => function (ParseNode $n) use ($o) { $o->setCapabilities($n->getObjectValue(array(PrinterCapabilities::class, 'createFromDiscriminatorValue'))); },
-            'defaults' => function (ParseNode $n) use ($o) { $o->setDefaults($n->getObjectValue(array(PrinterDefaults::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isAcceptingJobs' => function (ParseNode $n) use ($o) { $o->setIsAcceptingJobs($n->getBooleanValue()); },
-            'jobs' => function (ParseNode $n) use ($o) { $o->setJobs($n->getCollectionOfObjectValues(array(PrintJob::class, 'createFromDiscriminatorValue'))); },
-            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(PrinterLocation::class, 'createFromDiscriminatorValue'))); },
-            'manufacturer' => function (ParseNode $n) use ($o) { $o->setManufacturer($n->getStringValue()); },
-            'model' => function (ParseNode $n) use ($o) { $o->setModel($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrinterStatus::class, 'createFromDiscriminatorValue'))); },
+            'capabilities' => fn(ParseNode $n) => $o->setCapabilities($n->getObjectValue([PrinterCapabilities::class, 'createFromDiscriminatorValue'])),
+            'defaults' => fn(ParseNode $n) => $o->setDefaults($n->getObjectValue([PrinterDefaults::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isAcceptingJobs' => fn(ParseNode $n) => $o->setIsAcceptingJobs($n->getBooleanValue()),
+            'jobs' => fn(ParseNode $n) => $o->setJobs($n->getCollectionOfObjectValues([PrintJob::class, 'createFromDiscriminatorValue'])),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([PrinterLocation::class, 'createFromDiscriminatorValue'])),
+            'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
+            'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([PrinterStatus::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

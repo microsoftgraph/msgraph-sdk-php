@@ -122,15 +122,15 @@ class Location implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getObjectValue(array(PhysicalAddress::class, 'createFromDiscriminatorValue'))); },
-            'coordinates' => function (ParseNode $n) use ($o) { $o->setCoordinates($n->getObjectValue(array(OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'locationEmailAddress' => function (ParseNode $n) use ($o) { $o->setLocationEmailAddress($n->getStringValue()); },
-            'locationType' => function (ParseNode $n) use ($o) { $o->setLocationType($n->getEnumValue(LocationType::class)); },
-            'locationUri' => function (ParseNode $n) use ($o) { $o->setLocationUri($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'uniqueId' => function (ParseNode $n) use ($o) { $o->setUniqueId($n->getStringValue()); },
-            'uniqueIdType' => function (ParseNode $n) use ($o) { $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)); },
+            'address' => fn(ParseNode $n) => $o->setAddress($n->getObjectValue([PhysicalAddress::class, 'createFromDiscriminatorValue'])),
+            'coordinates' => fn(ParseNode $n) => $o->setCoordinates($n->getObjectValue([OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'locationEmailAddress' => fn(ParseNode $n) => $o->setLocationEmailAddress($n->getStringValue()),
+            'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(LocationType::class)),
+            'locationUri' => fn(ParseNode $n) => $o->setLocationUri($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'uniqueId' => fn(ParseNode $n) => $o->setUniqueId($n->getStringValue()),
+            'uniqueIdType' => fn(ParseNode $n) => $o->setUniqueIdType($n->getEnumValue(LocationUniqueIdType::class)),
         ];
     }
 

@@ -50,8 +50,8 @@ class PlannerPlanDetails extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'categoryDescriptions' => function (ParseNode $n) use ($o) { $o->setCategoryDescriptions($n->getObjectValue(array(PlannerCategoryDescriptions::class, 'createFromDiscriminatorValue'))); },
-            'sharedWith' => function (ParseNode $n) use ($o) { $o->setSharedWith($n->getObjectValue(array(PlannerUserIds::class, 'createFromDiscriminatorValue'))); },
+            'categoryDescriptions' => fn(ParseNode $n) => $o->setCategoryDescriptions($n->getObjectValue([PlannerCategoryDescriptions::class, 'createFromDiscriminatorValue'])),
+            'sharedWith' => fn(ParseNode $n) => $o->setSharedWith($n->getObjectValue([PlannerUserIds::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

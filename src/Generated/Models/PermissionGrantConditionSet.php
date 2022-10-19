@@ -104,14 +104,14 @@ class PermissionGrantConditionSet extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'clientApplicationIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationIds($n->getCollectionOfPrimitiveValues()); },
-            'clientApplicationPublisherIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationPublisherIds($n->getCollectionOfPrimitiveValues()); },
-            'clientApplicationsFromVerifiedPublisherOnly' => function (ParseNode $n) use ($o) { $o->setClientApplicationsFromVerifiedPublisherOnly($n->getBooleanValue()); },
-            'clientApplicationTenantIds' => function (ParseNode $n) use ($o) { $o->setClientApplicationTenantIds($n->getCollectionOfPrimitiveValues()); },
-            'permissionClassification' => function (ParseNode $n) use ($o) { $o->setPermissionClassification($n->getStringValue()); },
-            'permissions' => function (ParseNode $n) use ($o) { $o->setPermissions($n->getCollectionOfPrimitiveValues()); },
-            'permissionType' => function (ParseNode $n) use ($o) { $o->setPermissionType($n->getEnumValue(PermissionType::class)); },
-            'resourceApplication' => function (ParseNode $n) use ($o) { $o->setResourceApplication($n->getStringValue()); },
+            'clientApplicationIds' => fn(ParseNode $n) => $o->setClientApplicationIds($n->getCollectionOfPrimitiveValues()),
+            'clientApplicationPublisherIds' => fn(ParseNode $n) => $o->setClientApplicationPublisherIds($n->getCollectionOfPrimitiveValues()),
+            'clientApplicationsFromVerifiedPublisherOnly' => fn(ParseNode $n) => $o->setClientApplicationsFromVerifiedPublisherOnly($n->getBooleanValue()),
+            'clientApplicationTenantIds' => fn(ParseNode $n) => $o->setClientApplicationTenantIds($n->getCollectionOfPrimitiveValues()),
+            'permissionClassification' => fn(ParseNode $n) => $o->setPermissionClassification($n->getStringValue()),
+            'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfPrimitiveValues()),
+            'permissionType' => fn(ParseNode $n) => $o->setPermissionType($n->getEnumValue(PermissionType::class)),
+            'resourceApplication' => fn(ParseNode $n) => $o->setResourceApplication($n->getStringValue()),
         ]);
     }
 

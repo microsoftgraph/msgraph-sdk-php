@@ -138,19 +138,19 @@ class Post extends OutlookItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(Attachment::class, 'createFromDiscriminatorValue'))); },
-            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
-            'conversationId' => function (ParseNode $n) use ($o) { $o->setConversationId($n->getStringValue()); },
-            'conversationThreadId' => function (ParseNode $n) use ($o) { $o->setConversationThreadId($n->getStringValue()); },
-            'extensions' => function (ParseNode $n) use ($o) { $o->setExtensions($n->getCollectionOfObjectValues(array(Extension::class, 'createFromDiscriminatorValue'))); },
-            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
-            'inReplyTo' => function (ParseNode $n) use ($o) { $o->setInReplyTo($n->getObjectValue(array(Post::class, 'createFromDiscriminatorValue'))); },
-            'multiValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues(array(MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
-            'newParticipants' => function (ParseNode $n) use ($o) { $o->setNewParticipants($n->getCollectionOfObjectValues(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'receivedDateTime' => function (ParseNode $n) use ($o) { $o->setReceivedDateTime($n->getDateTimeValue()); },
-            'sender' => function (ParseNode $n) use ($o) { $o->setSender($n->getObjectValue(array(Recipient::class, 'createFromDiscriminatorValue'))); },
-            'singleValueExtendedProperties' => function (ParseNode $n) use ($o) { $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues(array(SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'))); },
+            'attachments' => fn(ParseNode $n) => $o->setAttachments($n->getCollectionOfObjectValues([Attachment::class, 'createFromDiscriminatorValue'])),
+            'body' => fn(ParseNode $n) => $o->setBody($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'conversationId' => fn(ParseNode $n) => $o->setConversationId($n->getStringValue()),
+            'conversationThreadId' => fn(ParseNode $n) => $o->setConversationThreadId($n->getStringValue()),
+            'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
+            'from' => fn(ParseNode $n) => $o->setFrom($n->getObjectValue([Recipient::class, 'createFromDiscriminatorValue'])),
+            'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
+            'inReplyTo' => fn(ParseNode $n) => $o->setInReplyTo($n->getObjectValue([Post::class, 'createFromDiscriminatorValue'])),
+            'multiValueExtendedProperties' => fn(ParseNode $n) => $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues([MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
+            'newParticipants' => fn(ParseNode $n) => $o->setNewParticipants($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
+            'receivedDateTime' => fn(ParseNode $n) => $o->setReceivedDateTime($n->getDateTimeValue()),
+            'sender' => fn(ParseNode $n) => $o->setSender($n->getObjectValue([Recipient::class, 'createFromDiscriminatorValue'])),
+            'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

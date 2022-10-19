@@ -37,7 +37,7 @@ class EducationFileResource extends EducationResource implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'fileUrl' => function (ParseNode $n) use ($o) { $o->setFileUrl($n->getStringValue()); },
+            'fileUrl' => fn(ParseNode $n) => $o->setFileUrl($n->getStringValue()),
         ]);
     }
 

@@ -61,9 +61,9 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'ipAddressOrFQDN' => function (ParseNode $n) use ($o) { $o->setIpAddressOrFQDN($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'proxy' => function (ParseNode $n) use ($o) { $o->setProxy($n->getStringValue()); },
+            'ipAddressOrFQDN' => fn(ParseNode $n) => $o->setIpAddressOrFQDN($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'proxy' => fn(ParseNode $n) => $o->setProxy($n->getStringValue()),
         ];
     }
 

@@ -64,8 +64,8 @@ class AuthorizationInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'certificateUserIds' => function (ParseNode $n) use ($o) { $o->setCertificateUserIds($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'certificateUserIds' => fn(ParseNode $n) => $o->setCertificateUserIds($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

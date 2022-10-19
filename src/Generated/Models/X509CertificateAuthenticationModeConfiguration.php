@@ -20,12 +20,12 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     private ?string $odataType = null;
     
     /**
-     * @var array<X509CertificateRule>|null $rules The rules property
+     * @var array<X509CertificateRule>|null $rules Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
     */
     private ?array $rules = null;
     
     /**
-     * @var X509CertificateAuthenticationMode|null $x509CertificateAuthenticationDefaultMode The x509CertificateAuthenticationDefaultMode property
+     * @var X509CertificateAuthenticationMode|null $x509CertificateAuthenticationDefaultMode The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
     */
     private ?X509CertificateAuthenticationMode $x509CertificateAuthenticationDefaultMode = null;
     
@@ -61,9 +61,9 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'rules' => function (ParseNode $n) use ($o) { $o->setRules($n->getCollectionOfObjectValues(array(X509CertificateRule::class, 'createFromDiscriminatorValue'))); },
-            'x509CertificateAuthenticationDefaultMode' => function (ParseNode $n) use ($o) { $o->setX509CertificateAuthenticationDefaultMode($n->getEnumValue(X509CertificateAuthenticationMode::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([X509CertificateRule::class, 'createFromDiscriminatorValue'])),
+            'x509CertificateAuthenticationDefaultMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationDefaultMode($n->getEnumValue(X509CertificateAuthenticationMode::class)),
         ];
     }
 
@@ -76,7 +76,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     }
 
     /**
-     * Gets the rules property value. The rules property
+     * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      * @return array<X509CertificateRule>|null
     */
     public function getRules(): ?array {
@@ -84,7 +84,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     }
 
     /**
-     * Gets the x509CertificateAuthenticationDefaultMode property value. The x509CertificateAuthenticationDefaultMode property
+     * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @return X509CertificateAuthenticationMode|null
     */
     public function getX509CertificateAuthenticationDefaultMode(): ?X509CertificateAuthenticationMode {
@@ -119,7 +119,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     }
 
     /**
-     * Sets the rules property value. The rules property
+     * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      *  @param array<X509CertificateRule>|null $value Value to set for the rules property.
     */
     public function setRules(?array $value ): void {
@@ -127,7 +127,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     }
 
     /**
-     * Sets the x509CertificateAuthenticationDefaultMode property value. The x509CertificateAuthenticationDefaultMode property
+     * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      *  @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationDefaultMode property.
     */
     public function setX509CertificateAuthenticationDefaultMode(?X509CertificateAuthenticationMode $value ): void {

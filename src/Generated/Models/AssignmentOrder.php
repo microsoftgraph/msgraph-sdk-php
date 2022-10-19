@@ -56,8 +56,8 @@ class AssignmentOrder implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'order' => function (ParseNode $n) use ($o) { $o->setOrder($n->getCollectionOfPrimitiveValues()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'order' => fn(ParseNode $n) => $o->setOrder($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

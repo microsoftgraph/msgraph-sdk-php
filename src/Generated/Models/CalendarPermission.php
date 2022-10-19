@@ -73,11 +73,11 @@ class CalendarPermission extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedRoles' => function (ParseNode $n) use ($o) { $o->setAllowedRoles($n->getCollectionOfEnumValues(CalendarRoleType::class)); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
-            'isInsideOrganization' => function (ParseNode $n) use ($o) { $o->setIsInsideOrganization($n->getBooleanValue()); },
-            'isRemovable' => function (ParseNode $n) use ($o) { $o->setIsRemovable($n->getBooleanValue()); },
-            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(CalendarRoleType::class)); },
+            'allowedRoles' => fn(ParseNode $n) => $o->setAllowedRoles($n->getCollectionOfEnumValues(CalendarRoleType::class)),
+            'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
+            'isInsideOrganization' => fn(ParseNode $n) => $o->setIsInsideOrganization($n->getBooleanValue()),
+            'isRemovable' => fn(ParseNode $n) => $o->setIsRemovable($n->getBooleanValue()),
+            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(CalendarRoleType::class)),
         ]);
     }
 

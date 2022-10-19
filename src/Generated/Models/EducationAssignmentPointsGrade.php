@@ -37,7 +37,7 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'points' => function (ParseNode $n) use ($o) { $o->setPoints($n->getFloatValue()); },
+            'points' => fn(ParseNode $n) => $o->setPoints($n->getFloatValue()),
         ]);
     }
 

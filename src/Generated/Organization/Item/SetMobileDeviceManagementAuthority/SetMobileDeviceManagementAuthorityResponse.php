@@ -50,7 +50,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getIntegerValue()); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getIntegerValue()),
         ];
     }
 

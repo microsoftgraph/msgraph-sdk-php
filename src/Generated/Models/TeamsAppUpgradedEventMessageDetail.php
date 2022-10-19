@@ -47,9 +47,9 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'teamsAppDisplayName' => function (ParseNode $n) use ($o) { $o->setTeamsAppDisplayName($n->getStringValue()); },
-            'teamsAppId' => function (ParseNode $n) use ($o) { $o->setTeamsAppId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'teamsAppDisplayName' => fn(ParseNode $n) => $o->setTeamsAppDisplayName($n->getStringValue()),
+            'teamsAppId' => fn(ParseNode $n) => $o->setTeamsAppId($n->getStringValue()),
         ]);
     }
 

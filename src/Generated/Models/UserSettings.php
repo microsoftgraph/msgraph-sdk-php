@@ -63,9 +63,9 @@ class UserSettings extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contributionToContentDiscoveryAsOrganizationDisabled' => function (ParseNode $n) use ($o) { $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()); },
-            'contributionToContentDiscoveryDisabled' => function (ParseNode $n) use ($o) { $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()); },
-            'shiftPreferences' => function (ParseNode $n) use ($o) { $o->setShiftPreferences($n->getObjectValue(array(ShiftPreferences::class, 'createFromDiscriminatorValue'))); },
+            'contributionToContentDiscoveryAsOrganizationDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()),
+            'contributionToContentDiscoveryDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()),
+            'shiftPreferences' => fn(ParseNode $n) => $o->setShiftPreferences($n->getObjectValue([ShiftPreferences::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -100,18 +100,18 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'enhancedBiometricsState' => function (ParseNode $n) use ($o) { $o->setEnhancedBiometricsState($n->getEnumValue(Enablement::class)); },
-            'pinExpirationInDays' => function (ParseNode $n) use ($o) { $o->setPinExpirationInDays($n->getIntegerValue()); },
-            'pinLowercaseCharactersUsage' => function (ParseNode $n) use ($o) { $o->setPinLowercaseCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)); },
-            'pinMaximumLength' => function (ParseNode $n) use ($o) { $o->setPinMaximumLength($n->getIntegerValue()); },
-            'pinMinimumLength' => function (ParseNode $n) use ($o) { $o->setPinMinimumLength($n->getIntegerValue()); },
-            'pinPreviousBlockCount' => function (ParseNode $n) use ($o) { $o->setPinPreviousBlockCount($n->getIntegerValue()); },
-            'pinSpecialCharactersUsage' => function (ParseNode $n) use ($o) { $o->setPinSpecialCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)); },
-            'pinUppercaseCharactersUsage' => function (ParseNode $n) use ($o) { $o->setPinUppercaseCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)); },
-            'remotePassportEnabled' => function (ParseNode $n) use ($o) { $o->setRemotePassportEnabled($n->getBooleanValue()); },
-            'securityDeviceRequired' => function (ParseNode $n) use ($o) { $o->setSecurityDeviceRequired($n->getBooleanValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(Enablement::class)); },
-            'unlockWithBiometricsEnabled' => function (ParseNode $n) use ($o) { $o->setUnlockWithBiometricsEnabled($n->getBooleanValue()); },
+            'enhancedBiometricsState' => fn(ParseNode $n) => $o->setEnhancedBiometricsState($n->getEnumValue(Enablement::class)),
+            'pinExpirationInDays' => fn(ParseNode $n) => $o->setPinExpirationInDays($n->getIntegerValue()),
+            'pinLowercaseCharactersUsage' => fn(ParseNode $n) => $o->setPinLowercaseCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)),
+            'pinMaximumLength' => fn(ParseNode $n) => $o->setPinMaximumLength($n->getIntegerValue()),
+            'pinMinimumLength' => fn(ParseNode $n) => $o->setPinMinimumLength($n->getIntegerValue()),
+            'pinPreviousBlockCount' => fn(ParseNode $n) => $o->setPinPreviousBlockCount($n->getIntegerValue()),
+            'pinSpecialCharactersUsage' => fn(ParseNode $n) => $o->setPinSpecialCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)),
+            'pinUppercaseCharactersUsage' => fn(ParseNode $n) => $o->setPinUppercaseCharactersUsage($n->getEnumValue(WindowsHelloForBusinessPinUsage::class)),
+            'remotePassportEnabled' => fn(ParseNode $n) => $o->setRemotePassportEnabled($n->getBooleanValue()),
+            'securityDeviceRequired' => fn(ParseNode $n) => $o->setSecurityDeviceRequired($n->getBooleanValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(Enablement::class)),
+            'unlockWithBiometricsEnabled' => fn(ParseNode $n) => $o->setUnlockWithBiometricsEnabled($n->getBooleanValue()),
         ]);
     }
 

@@ -61,10 +61,10 @@ class RemoteAssistancePartner extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'lastConnectionDateTime' => function (ParseNode $n) use ($o) { $o->setLastConnectionDateTime($n->getDateTimeValue()); },
-            'onboardingStatus' => function (ParseNode $n) use ($o) { $o->setOnboardingStatus($n->getEnumValue(RemoteAssistanceOnboardingStatus::class)); },
-            'onboardingUrl' => function (ParseNode $n) use ($o) { $o->setOnboardingUrl($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastConnectionDateTime' => fn(ParseNode $n) => $o->setLastConnectionDateTime($n->getDateTimeValue()),
+            'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(RemoteAssistanceOnboardingStatus::class)),
+            'onboardingUrl' => fn(ParseNode $n) => $o->setOnboardingUrl($n->getStringValue()),
         ]);
     }
 

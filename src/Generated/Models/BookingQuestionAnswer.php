@@ -110,14 +110,14 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'answer' => function (ParseNode $n) use ($o) { $o->setAnswer($n->getStringValue()); },
-            'answerInputType' => function (ParseNode $n) use ($o) { $o->setAnswerInputType($n->getEnumValue(AnswerInputType::class)); },
-            'answerOptions' => function (ParseNode $n) use ($o) { $o->setAnswerOptions($n->getCollectionOfPrimitiveValues()); },
-            'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'question' => function (ParseNode $n) use ($o) { $o->setQuestion($n->getStringValue()); },
-            'questionId' => function (ParseNode $n) use ($o) { $o->setQuestionId($n->getStringValue()); },
-            'selectedOptions' => function (ParseNode $n) use ($o) { $o->setSelectedOptions($n->getCollectionOfPrimitiveValues()); },
+            'answer' => fn(ParseNode $n) => $o->setAnswer($n->getStringValue()),
+            'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(AnswerInputType::class)),
+            'answerOptions' => fn(ParseNode $n) => $o->setAnswerOptions($n->getCollectionOfPrimitiveValues()),
+            'isRequired' => fn(ParseNode $n) => $o->setIsRequired($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'question' => fn(ParseNode $n) => $o->setQuestion($n->getStringValue()),
+            'questionId' => fn(ParseNode $n) => $o->setQuestionId($n->getStringValue()),
+            'selectedOptions' => fn(ParseNode $n) => $o->setSelectedOptions($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

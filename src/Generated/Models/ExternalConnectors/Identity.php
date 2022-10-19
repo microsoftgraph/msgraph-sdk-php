@@ -38,7 +38,7 @@ class Identity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(IdentityType::class)); },
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(IdentityType::class)),
         ]);
     }
 

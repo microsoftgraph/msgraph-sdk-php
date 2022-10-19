@@ -60,10 +60,10 @@ class WorkbookRangeBorder extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'color' => function (ParseNode $n) use ($o) { $o->setColor($n->getStringValue()); },
-            'sideIndex' => function (ParseNode $n) use ($o) { $o->setSideIndex($n->getStringValue()); },
-            'style' => function (ParseNode $n) use ($o) { $o->setStyle($n->getStringValue()); },
-            'weight' => function (ParseNode $n) use ($o) { $o->setWeight($n->getStringValue()); },
+            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
+            'sideIndex' => fn(ParseNode $n) => $o->setSideIndex($n->getStringValue()),
+            'style' => fn(ParseNode $n) => $o->setStyle($n->getStringValue()),
+            'weight' => fn(ParseNode $n) => $o->setWeight($n->getStringValue()),
         ]);
     }
 

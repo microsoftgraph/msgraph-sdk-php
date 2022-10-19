@@ -45,7 +45,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -69,9 +69,9 @@ class Folder implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'childCount' => function (ParseNode $n) use ($o) { $o->setChildCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'view' => function (ParseNode $n) use ($o) { $o->setView($n->getObjectValue(array(FolderView::class, 'createFromDiscriminatorValue'))); },
+            'childCount' => fn(ParseNode $n) => $o->setChildCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'view' => fn(ParseNode $n) => $o->setView($n->getObjectValue([FolderView::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

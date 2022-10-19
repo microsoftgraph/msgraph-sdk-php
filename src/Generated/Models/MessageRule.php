@@ -104,14 +104,14 @@ class MessageRule extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actions' => function (ParseNode $n) use ($o) { $o->setActions($n->getObjectValue(array(MessageRuleActions::class, 'createFromDiscriminatorValue'))); },
-            'conditions' => function (ParseNode $n) use ($o) { $o->setConditions($n->getObjectValue(array(MessageRulePredicates::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'exceptions' => function (ParseNode $n) use ($o) { $o->setExceptions($n->getObjectValue(array(MessageRulePredicates::class, 'createFromDiscriminatorValue'))); },
-            'hasError' => function (ParseNode $n) use ($o) { $o->setHasError($n->getBooleanValue()); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'isReadOnly' => function (ParseNode $n) use ($o) { $o->setIsReadOnly($n->getBooleanValue()); },
-            'sequence' => function (ParseNode $n) use ($o) { $o->setSequence($n->getIntegerValue()); },
+            'actions' => fn(ParseNode $n) => $o->setActions($n->getObjectValue([MessageRuleActions::class, 'createFromDiscriminatorValue'])),
+            'conditions' => fn(ParseNode $n) => $o->setConditions($n->getObjectValue([MessageRulePredicates::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'exceptions' => fn(ParseNode $n) => $o->setExceptions($n->getObjectValue([MessageRulePredicates::class, 'createFromDiscriminatorValue'])),
+            'hasError' => fn(ParseNode $n) => $o->setHasError($n->getBooleanValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'isReadOnly' => fn(ParseNode $n) => $o->setIsReadOnly($n->getBooleanValue()),
+            'sequence' => fn(ParseNode $n) => $o->setSequence($n->getIntegerValue()),
         ]);
     }
 

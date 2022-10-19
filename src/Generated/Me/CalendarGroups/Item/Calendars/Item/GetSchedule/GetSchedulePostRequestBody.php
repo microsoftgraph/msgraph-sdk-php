@@ -82,10 +82,10 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'availabilityViewInterval' => function (ParseNode $n) use ($o) { $o->setAvailabilityViewInterval($n->getIntegerValue()); },
-            'endTime' => function (ParseNode $n) use ($o) { $o->setEndTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'schedules' => function (ParseNode $n) use ($o) { $o->setSchedules($n->getCollectionOfPrimitiveValues()); },
-            'startTime' => function (ParseNode $n) use ($o) { $o->setStartTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
+            'availabilityViewInterval' => fn(ParseNode $n) => $o->setAvailabilityViewInterval($n->getIntegerValue()),
+            'endTime' => fn(ParseNode $n) => $o->setEndTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'schedules' => fn(ParseNode $n) => $o->setSchedules($n->getCollectionOfPrimitiveValues()),
+            'startTime' => fn(ParseNode $n) => $o->setStartTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

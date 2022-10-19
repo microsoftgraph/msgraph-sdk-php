@@ -145,19 +145,19 @@ class Room extends Place implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'audioDeviceName' => function (ParseNode $n) use ($o) { $o->setAudioDeviceName($n->getStringValue()); },
-            'bookingType' => function (ParseNode $n) use ($o) { $o->setBookingType($n->getEnumValue(BookingType::class)); },
-            'building' => function (ParseNode $n) use ($o) { $o->setBuilding($n->getStringValue()); },
-            'capacity' => function (ParseNode $n) use ($o) { $o->setCapacity($n->getIntegerValue()); },
-            'displayDeviceName' => function (ParseNode $n) use ($o) { $o->setDisplayDeviceName($n->getStringValue()); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
-            'floorLabel' => function (ParseNode $n) use ($o) { $o->setFloorLabel($n->getStringValue()); },
-            'floorNumber' => function (ParseNode $n) use ($o) { $o->setFloorNumber($n->getIntegerValue()); },
-            'isWheelChairAccessible' => function (ParseNode $n) use ($o) { $o->setIsWheelChairAccessible($n->getBooleanValue()); },
-            'label' => function (ParseNode $n) use ($o) { $o->setLabel($n->getStringValue()); },
-            'nickname' => function (ParseNode $n) use ($o) { $o->setNickname($n->getStringValue()); },
-            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
-            'videoDeviceName' => function (ParseNode $n) use ($o) { $o->setVideoDeviceName($n->getStringValue()); },
+            'audioDeviceName' => fn(ParseNode $n) => $o->setAudioDeviceName($n->getStringValue()),
+            'bookingType' => fn(ParseNode $n) => $o->setBookingType($n->getEnumValue(BookingType::class)),
+            'building' => fn(ParseNode $n) => $o->setBuilding($n->getStringValue()),
+            'capacity' => fn(ParseNode $n) => $o->setCapacity($n->getIntegerValue()),
+            'displayDeviceName' => fn(ParseNode $n) => $o->setDisplayDeviceName($n->getStringValue()),
+            'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'floorLabel' => fn(ParseNode $n) => $o->setFloorLabel($n->getStringValue()),
+            'floorNumber' => fn(ParseNode $n) => $o->setFloorNumber($n->getIntegerValue()),
+            'isWheelChairAccessible' => fn(ParseNode $n) => $o->setIsWheelChairAccessible($n->getBooleanValue()),
+            'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
+            'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
+            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'videoDeviceName' => fn(ParseNode $n) => $o->setVideoDeviceName($n->getStringValue()),
         ]);
     }
 

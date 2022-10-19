@@ -78,12 +78,12 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'check32BitOn64System' => function (ParseNode $n) use ($o) { $o->setCheck32BitOn64System($n->getBooleanValue()); },
-            'comparisonValue' => function (ParseNode $n) use ($o) { $o->setComparisonValue($n->getStringValue()); },
-            'keyPath' => function (ParseNode $n) use ($o) { $o->setKeyPath($n->getStringValue()); },
-            'operationType' => function (ParseNode $n) use ($o) { $o->setOperationType($n->getEnumValue(Win32LobAppRegistryRuleOperationType::class)); },
-            'operator' => function (ParseNode $n) use ($o) { $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)); },
-            'valueName' => function (ParseNode $n) use ($o) { $o->setValueName($n->getStringValue()); },
+            'check32BitOn64System' => fn(ParseNode $n) => $o->setCheck32BitOn64System($n->getBooleanValue()),
+            'comparisonValue' => fn(ParseNode $n) => $o->setComparisonValue($n->getStringValue()),
+            'keyPath' => fn(ParseNode $n) => $o->setKeyPath($n->getStringValue()),
+            'operationType' => fn(ParseNode $n) => $o->setOperationType($n->getEnumValue(Win32LobAppRegistryRuleOperationType::class)),
+            'operator' => fn(ParseNode $n) => $o->setOperator($n->getEnumValue(Win32LobAppRuleOperator::class)),
+            'valueName' => fn(ParseNode $n) => $o->setValueName($n->getStringValue()),
         ]);
     }
 

@@ -20,17 +20,17 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     private ?string $odataType = null;
     
     /**
-     * @var int|null $priority The priority property
+     * @var int|null $priority The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
     */
     private ?int $priority = null;
     
     /**
-     * @var string|null $userProperty The userProperty property
+     * @var string|null $userProperty Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
     */
     private ?string $userProperty = null;
     
     /**
-     * @var string|null $x509CertificateField The x509CertificateField property
+     * @var string|null $x509CertificateField The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
     */
     private ?string $x509CertificateField = null;
     
@@ -66,10 +66,10 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'priority' => function (ParseNode $n) use ($o) { $o->setPriority($n->getIntegerValue()); },
-            'userProperty' => function (ParseNode $n) use ($o) { $o->setUserProperty($n->getStringValue()); },
-            'x509CertificateField' => function (ParseNode $n) use ($o) { $o->setX509CertificateField($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
+            'userProperty' => fn(ParseNode $n) => $o->setUserProperty($n->getStringValue()),
+            'x509CertificateField' => fn(ParseNode $n) => $o->setX509CertificateField($n->getStringValue()),
         ];
     }
 
@@ -82,7 +82,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      * @return int|null
     */
     public function getPriority(): ?int {
@@ -90,7 +90,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the userProperty property value. The userProperty property
+     * Gets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      * @return string|null
     */
     public function getUserProperty(): ?string {
@@ -98,7 +98,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the x509CertificateField property value. The x509CertificateField property
+     * Gets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
      * @return string|null
     */
     public function getX509CertificateField(): ?string {
@@ -134,7 +134,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
      *  @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value ): void {
@@ -142,7 +142,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the userProperty property value. The userProperty property
+     * Sets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
      *  @param string|null $value Value to set for the userProperty property.
     */
     public function setUserProperty(?string $value ): void {
@@ -150,7 +150,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Sets the x509CertificateField property value. The x509CertificateField property
+     * Sets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
      *  @param string|null $value Value to set for the x509CertificateField property.
     */
     public function setX509CertificateField(?string $value ): void {

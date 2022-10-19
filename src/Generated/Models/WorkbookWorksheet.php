@@ -80,14 +80,14 @@ class WorkbookWorksheet extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'charts' => function (ParseNode $n) use ($o) { $o->setCharts($n->getCollectionOfObjectValues(array(WorkbookChart::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'names' => function (ParseNode $n) use ($o) { $o->setNames($n->getCollectionOfObjectValues(array(WorkbookNamedItem::class, 'createFromDiscriminatorValue'))); },
-            'pivotTables' => function (ParseNode $n) use ($o) { $o->setPivotTables($n->getCollectionOfObjectValues(array(WorkbookPivotTable::class, 'createFromDiscriminatorValue'))); },
-            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getIntegerValue()); },
-            'protection' => function (ParseNode $n) use ($o) { $o->setProtection($n->getObjectValue(array(WorkbookWorksheetProtection::class, 'createFromDiscriminatorValue'))); },
-            'tables' => function (ParseNode $n) use ($o) { $o->setTables($n->getCollectionOfObjectValues(array(WorkbookTable::class, 'createFromDiscriminatorValue'))); },
-            'visibility' => function (ParseNode $n) use ($o) { $o->setVisibility($n->getStringValue()); },
+            'charts' => fn(ParseNode $n) => $o->setCharts($n->getCollectionOfObjectValues([WorkbookChart::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'names' => fn(ParseNode $n) => $o->setNames($n->getCollectionOfObjectValues([WorkbookNamedItem::class, 'createFromDiscriminatorValue'])),
+            'pivotTables' => fn(ParseNode $n) => $o->setPivotTables($n->getCollectionOfObjectValues([WorkbookPivotTable::class, 'createFromDiscriminatorValue'])),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getIntegerValue()),
+            'protection' => fn(ParseNode $n) => $o->setProtection($n->getObjectValue([WorkbookWorksheetProtection::class, 'createFromDiscriminatorValue'])),
+            'tables' => fn(ParseNode $n) => $o->setTables($n->getCollectionOfObjectValues([WorkbookTable::class, 'createFromDiscriminatorValue'])),
+            'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getStringValue()),
         ]);
     }
 

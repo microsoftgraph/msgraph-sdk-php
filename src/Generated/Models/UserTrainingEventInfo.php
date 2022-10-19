@@ -84,12 +84,12 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'latestTrainingStatus' => function (ParseNode $n) use ($o) { $o->setLatestTrainingStatus($n->getEnumValue(TrainingStatus::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'trainingAssignedProperties' => function (ParseNode $n) use ($o) { $o->setTrainingAssignedProperties($n->getObjectValue(array(UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'))); },
-            'trainingCompletedProperties' => function (ParseNode $n) use ($o) { $o->setTrainingCompletedProperties($n->getObjectValue(array(UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'))); },
-            'trainingUpdatedProperties' => function (ParseNode $n) use ($o) { $o->setTrainingUpdatedProperties($n->getObjectValue(array(UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'latestTrainingStatus' => fn(ParseNode $n) => $o->setLatestTrainingStatus($n->getEnumValue(TrainingStatus::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'trainingAssignedProperties' => fn(ParseNode $n) => $o->setTrainingAssignedProperties($n->getObjectValue([UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'])),
+            'trainingCompletedProperties' => fn(ParseNode $n) => $o->setTrainingCompletedProperties($n->getObjectValue([UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'])),
+            'trainingUpdatedProperties' => fn(ParseNode $n) => $o->setTrainingUpdatedProperties($n->getObjectValue([UserTrainingContentEventInfo::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

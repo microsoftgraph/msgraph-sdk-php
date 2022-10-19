@@ -45,7 +45,7 @@ class CertificateBasedAuthConfiguration extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'certificateAuthorities' => function (ParseNode $n) use ($o) { $o->setCertificateAuthorities($n->getCollectionOfObjectValues(array(CertificateAuthority::class, 'createFromDiscriminatorValue'))); },
+            'certificateAuthorities' => fn(ParseNode $n) => $o->setCertificateAuthorities($n->getCollectionOfObjectValues([CertificateAuthority::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

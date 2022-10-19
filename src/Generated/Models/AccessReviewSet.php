@@ -50,8 +50,8 @@ class AccessReviewSet extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'definitions' => function (ParseNode $n) use ($o) { $o->setDefinitions($n->getCollectionOfObjectValues(array(AccessReviewScheduleDefinition::class, 'createFromDiscriminatorValue'))); },
-            'historyDefinitions' => function (ParseNode $n) use ($o) { $o->setHistoryDefinitions($n->getCollectionOfObjectValues(array(AccessReviewHistoryDefinition::class, 'createFromDiscriminatorValue'))); },
+            'definitions' => fn(ParseNode $n) => $o->setDefinitions($n->getCollectionOfObjectValues([AccessReviewScheduleDefinition::class, 'createFromDiscriminatorValue'])),
+            'historyDefinitions' => fn(ParseNode $n) => $o->setHistoryDefinitions($n->getCollectionOfObjectValues([AccessReviewHistoryDefinition::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

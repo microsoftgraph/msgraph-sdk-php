@@ -77,9 +77,9 @@ class SolutionsRoot implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bookingBusinesses' => function (ParseNode $n) use ($o) { $o->setBookingBusinesses($n->getCollectionOfObjectValues(array(BookingBusiness::class, 'createFromDiscriminatorValue'))); },
-            'bookingCurrencies' => function (ParseNode $n) use ($o) { $o->setBookingCurrencies($n->getCollectionOfObjectValues(array(BookingCurrency::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'bookingBusinesses' => fn(ParseNode $n) => $o->setBookingBusinesses($n->getCollectionOfObjectValues([BookingBusiness::class, 'createFromDiscriminatorValue'])),
+            'bookingCurrencies' => fn(ParseNode $n) => $o->setBookingCurrencies($n->getCollectionOfObjectValues([BookingCurrency::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

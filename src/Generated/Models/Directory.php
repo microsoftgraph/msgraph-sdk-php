@@ -71,9 +71,9 @@ class Directory extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'administrativeUnits' => function (ParseNode $n) use ($o) { $o->setAdministrativeUnits($n->getCollectionOfObjectValues(array(AdministrativeUnit::class, 'createFromDiscriminatorValue'))); },
-            'deletedItems' => function (ParseNode $n) use ($o) { $o->setDeletedItems($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'federationConfigurations' => function (ParseNode $n) use ($o) { $o->setFederationConfigurations($n->getCollectionOfObjectValues(array(IdentityProviderBase::class, 'createFromDiscriminatorValue'))); },
+            'administrativeUnits' => fn(ParseNode $n) => $o->setAdministrativeUnits($n->getCollectionOfObjectValues([AdministrativeUnit::class, 'createFromDiscriminatorValue'])),
+            'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

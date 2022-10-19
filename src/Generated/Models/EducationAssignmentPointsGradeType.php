@@ -37,7 +37,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'maxPoints' => function (ParseNode $n) use ($o) { $o->setMaxPoints($n->getFloatValue()); },
+            'maxPoints' => fn(ParseNode $n) => $o->setMaxPoints($n->getFloatValue()),
         ]);
     }
 

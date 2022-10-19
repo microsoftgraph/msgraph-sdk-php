@@ -36,7 +36,7 @@ class Windows10EnterpriseModernAppManagementConfigurationCollectionResponse exte
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(Windows10EnterpriseModernAppManagementConfiguration::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([Windows10EnterpriseModernAppManagementConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

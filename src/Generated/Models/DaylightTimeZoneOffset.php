@@ -45,7 +45,7 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'daylightBias' => function (ParseNode $n) use ($o) { $o->setDaylightBias($n->getIntegerValue()); },
+            'daylightBias' => fn(ParseNode $n) => $o->setDaylightBias($n->getIntegerValue()),
         ]);
     }
 

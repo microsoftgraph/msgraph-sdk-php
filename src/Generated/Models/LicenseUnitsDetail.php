@@ -74,10 +74,10 @@ class LicenseUnitsDetail implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'suspended' => function (ParseNode $n) use ($o) { $o->setSuspended($n->getIntegerValue()); },
-            'warning' => function (ParseNode $n) use ($o) { $o->setWarning($n->getIntegerValue()); },
+            'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'suspended' => fn(ParseNode $n) => $o->setSuspended($n->getIntegerValue()),
+            'warning' => fn(ParseNode $n) => $o->setWarning($n->getIntegerValue()),
         ];
     }
 

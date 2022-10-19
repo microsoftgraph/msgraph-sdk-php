@@ -115,15 +115,15 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'containerDisplayName' => function (ParseNode $n) use ($o) { $o->setContainerDisplayName($n->getStringValue()); },
-            'containerType' => function (ParseNode $n) use ($o) { $o->setContainerType($n->getStringValue()); },
-            'containerWebUrl' => function (ParseNode $n) use ($o) { $o->setContainerWebUrl($n->getStringValue()); },
-            'mediaType' => function (ParseNode $n) use ($o) { $o->setMediaType($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'previewImageUrl' => function (ParseNode $n) use ($o) { $o->setPreviewImageUrl($n->getStringValue()); },
-            'previewText' => function (ParseNode $n) use ($o) { $o->setPreviewText($n->getStringValue()); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
+            'containerDisplayName' => fn(ParseNode $n) => $o->setContainerDisplayName($n->getStringValue()),
+            'containerType' => fn(ParseNode $n) => $o->setContainerType($n->getStringValue()),
+            'containerWebUrl' => fn(ParseNode $n) => $o->setContainerWebUrl($n->getStringValue()),
+            'mediaType' => fn(ParseNode $n) => $o->setMediaType($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'previewImageUrl' => fn(ParseNode $n) => $o->setPreviewImageUrl($n->getStringValue()),
+            'previewText' => fn(ParseNode $n) => $o->setPreviewText($n->getStringValue()),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
 

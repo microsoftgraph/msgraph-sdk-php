@@ -64,8 +64,8 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'destinationFileName' => function (ParseNode $n) use ($o) { $o->setDestinationFileName($n->getStringValue()); },
-            'sourceFile' => function (ParseNode $n) use ($o) { $o->setSourceFile($n->getObjectValue(array(ItemReference::class, 'createFromDiscriminatorValue'))); },
+            'destinationFileName' => fn(ParseNode $n) => $o->setDestinationFileName($n->getStringValue()),
+            'sourceFile' => fn(ParseNode $n) => $o->setSourceFile($n->getObjectValue([ItemReference::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

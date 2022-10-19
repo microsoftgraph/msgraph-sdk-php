@@ -61,10 +61,10 @@ class Store extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'defaultLanguageTag' => function (ParseNode $n) use ($o) { $o->setDefaultLanguageTag($n->getStringValue()); },
-            'groups' => function (ParseNode $n) use ($o) { $o->setGroups($n->getCollectionOfObjectValues(array(Group::class, 'createFromDiscriminatorValue'))); },
-            'languageTags' => function (ParseNode $n) use ($o) { $o->setLanguageTags($n->getCollectionOfPrimitiveValues()); },
-            'sets' => function (ParseNode $n) use ($o) { $o->setSets($n->getCollectionOfObjectValues(array(Set::class, 'createFromDiscriminatorValue'))); },
+            'defaultLanguageTag' => fn(ParseNode $n) => $o->setDefaultLanguageTag($n->getStringValue()),
+            'groups' => fn(ParseNode $n) => $o->setGroups($n->getCollectionOfObjectValues([Group::class, 'createFromDiscriminatorValue'])),
+            'languageTags' => fn(ParseNode $n) => $o->setLanguageTags($n->getCollectionOfPrimitiveValues()),
+            'sets' => fn(ParseNode $n) => $o->setSets($n->getCollectionOfObjectValues([Set::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -80,13 +80,13 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'groupBy' => function (ParseNode $n) use ($o) { $o->setGroupBy($n->getCollectionOfPrimitiveValues()); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            'orderBy' => function (ParseNode $n) use ($o) { $o->setOrderBy($n->getCollectionOfPrimitiveValues()); },
-            'search' => function (ParseNode $n) use ($o) { $o->setSearch($n->getStringValue()); },
-            'select' => function (ParseNode $n) use ($o) { $o->setSelect($n->getCollectionOfPrimitiveValues()); },
-            'skip' => function (ParseNode $n) use ($o) { $o->setSkip($n->getIntegerValue()); },
-            'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getIntegerValue()); },
+            'groupBy' => fn(ParseNode $n) => $o->setGroupBy($n->getCollectionOfPrimitiveValues()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'orderBy' => fn(ParseNode $n) => $o->setOrderBy($n->getCollectionOfPrimitiveValues()),
+            'search' => fn(ParseNode $n) => $o->setSearch($n->getStringValue()),
+            'select' => fn(ParseNode $n) => $o->setSelect($n->getCollectionOfPrimitiveValues()),
+            'skip' => fn(ParseNode $n) => $o->setSkip($n->getIntegerValue()),
+            'top' => fn(ParseNode $n) => $o->setTop($n->getIntegerValue()),
         ];
     }
 

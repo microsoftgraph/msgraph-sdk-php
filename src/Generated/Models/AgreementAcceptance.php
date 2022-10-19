@@ -154,19 +154,19 @@ class AgreementAcceptance extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'agreementFileId' => function (ParseNode $n) use ($o) { $o->setAgreementFileId($n->getStringValue()); },
-            'agreementId' => function (ParseNode $n) use ($o) { $o->setAgreementId($n->getStringValue()); },
-            'deviceDisplayName' => function (ParseNode $n) use ($o) { $o->setDeviceDisplayName($n->getStringValue()); },
-            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
-            'deviceOSType' => function (ParseNode $n) use ($o) { $o->setDeviceOSType($n->getStringValue()); },
-            'deviceOSVersion' => function (ParseNode $n) use ($o) { $o->setDeviceOSVersion($n->getStringValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'recordedDateTime' => function (ParseNode $n) use ($o) { $o->setRecordedDateTime($n->getDateTimeValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AgreementAcceptanceState::class)); },
-            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
-            'userEmail' => function (ParseNode $n) use ($o) { $o->setUserEmail($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'agreementFileId' => fn(ParseNode $n) => $o->setAgreementFileId($n->getStringValue()),
+            'agreementId' => fn(ParseNode $n) => $o->setAgreementId($n->getStringValue()),
+            'deviceDisplayName' => fn(ParseNode $n) => $o->setDeviceDisplayName($n->getStringValue()),
+            'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
+            'deviceOSType' => fn(ParseNode $n) => $o->setDeviceOSType($n->getStringValue()),
+            'deviceOSVersion' => fn(ParseNode $n) => $o->setDeviceOSVersion($n->getStringValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'recordedDateTime' => fn(ParseNode $n) => $o->setRecordedDateTime($n->getDateTimeValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AgreementAcceptanceState::class)),
+            'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
+            'userEmail' => fn(ParseNode $n) => $o->setUserEmail($n->getStringValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
     }
 

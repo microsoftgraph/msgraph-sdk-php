@@ -37,7 +37,7 @@ class TargetManager extends SubjectSet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'managerLevel' => function (ParseNode $n) use ($o) { $o->setManagerLevel($n->getIntegerValue()); },
+            'managerLevel' => fn(ParseNode $n) => $o->setManagerLevel($n->getIntegerValue()),
         ]);
     }
 

@@ -94,14 +94,14 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getStringValue()); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
-            'recipients' => function (ParseNode $n) use ($o) { $o->setRecipients($n->getCollectionOfObjectValues(array(DriveRecipient::class, 'createFromDiscriminatorValue'))); },
-            'requireSignIn' => function (ParseNode $n) use ($o) { $o->setRequireSignIn($n->getBooleanValue()); },
-            'retainInheritedPermissions' => function (ParseNode $n) use ($o) { $o->setRetainInheritedPermissions($n->getBooleanValue()); },
-            'roles' => function (ParseNode $n) use ($o) { $o->setRoles($n->getCollectionOfPrimitiveValues()); },
-            'sendInvitation' => function (ParseNode $n) use ($o) { $o->setSendInvitation($n->getBooleanValue()); },
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getStringValue()),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
+            'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfObjectValues([DriveRecipient::class, 'createFromDiscriminatorValue'])),
+            'requireSignIn' => fn(ParseNode $n) => $o->setRequireSignIn($n->getBooleanValue()),
+            'retainInheritedPermissions' => fn(ParseNode $n) => $o->setRetainInheritedPermissions($n->getBooleanValue()),
+            'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfPrimitiveValues()),
+            'sendInvitation' => fn(ParseNode $n) => $o->setSendInvitation($n->getBooleanValue()),
         ];
     }
 

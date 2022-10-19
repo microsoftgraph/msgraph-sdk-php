@@ -60,10 +60,10 @@ class CalendarSharingMessage extends Message implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'canAccept' => function (ParseNode $n) use ($o) { $o->setCanAccept($n->getBooleanValue()); },
-            'sharingMessageAction' => function (ParseNode $n) use ($o) { $o->setSharingMessageAction($n->getObjectValue(array(CalendarSharingMessageAction::class, 'createFromDiscriminatorValue'))); },
-            'sharingMessageActions' => function (ParseNode $n) use ($o) { $o->setSharingMessageActions($n->getCollectionOfObjectValues(array(CalendarSharingMessageAction::class, 'createFromDiscriminatorValue'))); },
-            'suggestedCalendarName' => function (ParseNode $n) use ($o) { $o->setSuggestedCalendarName($n->getStringValue()); },
+            'canAccept' => fn(ParseNode $n) => $o->setCanAccept($n->getBooleanValue()),
+            'sharingMessageAction' => fn(ParseNode $n) => $o->setSharingMessageAction($n->getObjectValue([CalendarSharingMessageAction::class, 'createFromDiscriminatorValue'])),
+            'sharingMessageActions' => fn(ParseNode $n) => $o->setSharingMessageActions($n->getCollectionOfObjectValues([CalendarSharingMessageAction::class, 'createFromDiscriminatorValue'])),
+            'suggestedCalendarName' => fn(ParseNode $n) => $o->setSuggestedCalendarName($n->getStringValue()),
         ]);
     }
 

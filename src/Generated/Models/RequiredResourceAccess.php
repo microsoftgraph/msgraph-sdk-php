@@ -61,9 +61,9 @@ class RequiredResourceAccess implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'resourceAccess' => function (ParseNode $n) use ($o) { $o->setResourceAccess($n->getCollectionOfObjectValues(array(ResourceAccess::class, 'createFromDiscriminatorValue'))); },
-            'resourceAppId' => function (ParseNode $n) use ($o) { $o->setResourceAppId($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resourceAccess' => fn(ParseNode $n) => $o->setResourceAccess($n->getCollectionOfObjectValues([ResourceAccess::class, 'createFromDiscriminatorValue'])),
+            'resourceAppId' => fn(ParseNode $n) => $o->setResourceAppId($n->getStringValue()),
         ];
     }
 

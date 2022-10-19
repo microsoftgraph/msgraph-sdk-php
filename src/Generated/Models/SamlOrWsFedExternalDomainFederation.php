@@ -45,7 +45,7 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'domains' => function (ParseNode $n) use ($o) { $o->setDomains($n->getCollectionOfObjectValues(array(ExternalDomainName::class, 'createFromDiscriminatorValue'))); },
+            'domains' => fn(ParseNode $n) => $o->setDomains($n->getCollectionOfObjectValues([ExternalDomainName::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

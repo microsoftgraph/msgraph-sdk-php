@@ -77,9 +77,9 @@ class ItemActionStat implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'actionCount' => function (ParseNode $n) use ($o) { $o->setActionCount($n->getIntegerValue()); },
-            'actorCount' => function (ParseNode $n) use ($o) { $o->setActorCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'actionCount' => fn(ParseNode $n) => $o->setActionCount($n->getIntegerValue()),
+            'actorCount' => fn(ParseNode $n) => $o->setActorCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

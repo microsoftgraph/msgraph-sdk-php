@@ -58,8 +58,8 @@ class Presence extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activity' => function (ParseNode $n) use ($o) { $o->setActivity($n->getStringValue()); },
-            'availability' => function (ParseNode $n) use ($o) { $o->setAvailability($n->getStringValue()); },
+            'activity' => fn(ParseNode $n) => $o->setActivity($n->getStringValue()),
+            'availability' => fn(ParseNode $n) => $o->setAvailability($n->getStringValue()),
         ]);
     }
 

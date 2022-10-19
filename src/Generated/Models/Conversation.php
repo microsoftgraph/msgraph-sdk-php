@@ -63,12 +63,12 @@ class Conversation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
-            'lastDeliveredDateTime' => function (ParseNode $n) use ($o) { $o->setLastDeliveredDateTime($n->getDateTimeValue()); },
-            'preview' => function (ParseNode $n) use ($o) { $o->setPreview($n->getStringValue()); },
-            'threads' => function (ParseNode $n) use ($o) { $o->setThreads($n->getCollectionOfObjectValues(array(ConversationThread::class, 'createFromDiscriminatorValue'))); },
-            'topic' => function (ParseNode $n) use ($o) { $o->setTopic($n->getStringValue()); },
-            'uniqueSenders' => function (ParseNode $n) use ($o) { $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()); },
+            'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
+            'lastDeliveredDateTime' => fn(ParseNode $n) => $o->setLastDeliveredDateTime($n->getDateTimeValue()),
+            'preview' => fn(ParseNode $n) => $o->setPreview($n->getStringValue()),
+            'threads' => fn(ParseNode $n) => $o->setThreads($n->getCollectionOfObjectValues([ConversationThread::class, 'createFromDiscriminatorValue'])),
+            'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
+            'uniqueSenders' => fn(ParseNode $n) => $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

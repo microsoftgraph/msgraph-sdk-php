@@ -132,15 +132,15 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'durationBeforeAutomaticDenial' => function (ParseNode $n) use ($o) { $o->setDurationBeforeAutomaticDenial($n->getDateIntervalValue()); },
-            'durationBeforeEscalation' => function (ParseNode $n) use ($o) { $o->setDurationBeforeEscalation($n->getDateIntervalValue()); },
-            'escalationApprovers' => function (ParseNode $n) use ($o) { $o->setEscalationApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'fallbackEscalationApprovers' => function (ParseNode $n) use ($o) { $o->setFallbackEscalationApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'fallbackPrimaryApprovers' => function (ParseNode $n) use ($o) { $o->setFallbackPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'isApproverJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsApproverJustificationRequired($n->getBooleanValue()); },
-            'isEscalationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEscalationEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'primaryApprovers' => function (ParseNode $n) use ($o) { $o->setPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'durationBeforeAutomaticDenial' => fn(ParseNode $n) => $o->setDurationBeforeAutomaticDenial($n->getDateIntervalValue()),
+            'durationBeforeEscalation' => fn(ParseNode $n) => $o->setDurationBeforeEscalation($n->getDateIntervalValue()),
+            'escalationApprovers' => fn(ParseNode $n) => $o->setEscalationApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'fallbackEscalationApprovers' => fn(ParseNode $n) => $o->setFallbackEscalationApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'fallbackPrimaryApprovers' => fn(ParseNode $n) => $o->setFallbackPrimaryApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'isApproverJustificationRequired' => fn(ParseNode $n) => $o->setIsApproverJustificationRequired($n->getBooleanValue()),
+            'isEscalationEnabled' => fn(ParseNode $n) => $o->setIsEscalationEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'primaryApprovers' => fn(ParseNode $n) => $o->setPrimaryApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

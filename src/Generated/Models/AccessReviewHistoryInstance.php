@@ -84,13 +84,13 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'downloadUri' => function (ParseNode $n) use ($o) { $o->setDownloadUri($n->getStringValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'fulfilledDateTime' => function (ParseNode $n) use ($o) { $o->setFulfilledDateTime($n->getDateTimeValue()); },
-            'reviewHistoryPeriodEndDateTime' => function (ParseNode $n) use ($o) { $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()); },
-            'reviewHistoryPeriodStartDateTime' => function (ParseNode $n) use ($o) { $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()); },
-            'runDateTime' => function (ParseNode $n) use ($o) { $o->setRunDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)); },
+            'downloadUri' => fn(ParseNode $n) => $o->setDownloadUri($n->getStringValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'fulfilledDateTime' => fn(ParseNode $n) => $o->setFulfilledDateTime($n->getDateTimeValue()),
+            'reviewHistoryPeriodEndDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodEndDateTime($n->getDateTimeValue()),
+            'reviewHistoryPeriodStartDateTime' => fn(ParseNode $n) => $o->setReviewHistoryPeriodStartDateTime($n->getDateTimeValue()),
+            'runDateTime' => fn(ParseNode $n) => $o->setRunDateTime($n->getDateTimeValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AccessReviewHistoryStatus::class)),
         ]);
     }
 

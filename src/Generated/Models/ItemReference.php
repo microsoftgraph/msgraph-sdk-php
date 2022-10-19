@@ -107,15 +107,15 @@ class ItemReference implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'driveId' => function (ParseNode $n) use ($o) { $o->setDriveId($n->getStringValue()); },
-            'driveType' => function (ParseNode $n) use ($o) { $o->setDriveType($n->getStringValue()); },
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'path' => function (ParseNode $n) use ($o) { $o->setPath($n->getStringValue()); },
-            'shareId' => function (ParseNode $n) use ($o) { $o->setShareId($n->getStringValue()); },
-            'sharepointIds' => function (ParseNode $n) use ($o) { $o->setSharepointIds($n->getObjectValue(array(SharepointIds::class, 'createFromDiscriminatorValue'))); },
-            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
+            'driveId' => fn(ParseNode $n) => $o->setDriveId($n->getStringValue()),
+            'driveType' => fn(ParseNode $n) => $o->setDriveType($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'path' => fn(ParseNode $n) => $o->setPath($n->getStringValue()),
+            'shareId' => fn(ParseNode $n) => $o->setShareId($n->getStringValue()),
+            'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
+            'siteId' => fn(ParseNode $n) => $o->setSiteId($n->getStringValue()),
         ];
     }
 

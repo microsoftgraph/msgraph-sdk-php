@@ -69,9 +69,9 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeLocations' => function (ParseNode $n) use ($o) { $o->setExcludeLocations($n->getCollectionOfPrimitiveValues()); },
-            'includeLocations' => function (ParseNode $n) use ($o) { $o->setIncludeLocations($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'excludeLocations' => fn(ParseNode $n) => $o->setExcludeLocations($n->getCollectionOfPrimitiveValues()),
+            'includeLocations' => fn(ParseNode $n) => $o->setIncludeLocations($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

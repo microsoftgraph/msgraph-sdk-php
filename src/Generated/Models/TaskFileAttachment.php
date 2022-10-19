@@ -46,7 +46,7 @@ class TaskFileAttachment extends AttachmentBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contentBytes' => function (ParseNode $n) use ($o) { $o->setContentBytes($n->getBinaryContent()); },
+            'contentBytes' => fn(ParseNode $n) => $o->setContentBytes($n->getBinaryContent()),
         ]);
     }
 

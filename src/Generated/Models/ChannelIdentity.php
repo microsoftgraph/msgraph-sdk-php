@@ -69,9 +69,9 @@ class ChannelIdentity implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'channelId' => function (ParseNode $n) use ($o) { $o->setChannelId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
+            'channelId' => fn(ParseNode $n) => $o->setChannelId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ];
     }
 

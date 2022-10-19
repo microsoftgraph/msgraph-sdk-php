@@ -94,12 +94,12 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appliesTo' => function (ParseNode $n) use ($o) { $o->setAppliesTo($n->getCollectionOfObjectValues(array(DirectoryObject::class, 'createFromDiscriminatorValue'))); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'feature' => function (ParseNode $n) use ($o) { $o->setFeature($n->getEnumValue(StagedFeatureName::class)); },
-            'isAppliedToOrganization' => function (ParseNode $n) use ($o) { $o->setIsAppliedToOrganization($n->getBooleanValue()); },
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
+            'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'feature' => fn(ParseNode $n) => $o->setFeature($n->getEnumValue(StagedFeatureName::class)),
+            'isAppliedToOrganization' => fn(ParseNode $n) => $o->setIsAppliedToOrganization($n->getBooleanValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
         ]);
     }
 

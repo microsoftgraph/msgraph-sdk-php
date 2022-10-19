@@ -87,11 +87,11 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'action' => function (ParseNode $n) use ($o) { $o->setAction($n->getEnumValue(OnenotePatchActionType::class)); },
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getEnumValue(OnenotePatchInsertPosition::class)); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
+            'action' => fn(ParseNode $n) => $o->setAction($n->getEnumValue(OnenotePatchActionType::class)),
+            'content' => fn(ParseNode $n) => $o->setContent($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getEnumValue(OnenotePatchInsertPosition::class)),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
 

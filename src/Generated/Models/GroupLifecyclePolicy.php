@@ -55,9 +55,9 @@ class GroupLifecyclePolicy extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'alternateNotificationEmails' => function (ParseNode $n) use ($o) { $o->setAlternateNotificationEmails($n->getStringValue()); },
-            'groupLifetimeInDays' => function (ParseNode $n) use ($o) { $o->setGroupLifetimeInDays($n->getIntegerValue()); },
-            'managedGroupTypes' => function (ParseNode $n) use ($o) { $o->setManagedGroupTypes($n->getStringValue()); },
+            'alternateNotificationEmails' => fn(ParseNode $n) => $o->setAlternateNotificationEmails($n->getStringValue()),
+            'groupLifetimeInDays' => fn(ParseNode $n) => $o->setGroupLifetimeInDays($n->getIntegerValue()),
+            'managedGroupTypes' => fn(ParseNode $n) => $o->setManagedGroupTypes($n->getStringValue()),
         ]);
     }
 

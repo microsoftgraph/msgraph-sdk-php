@@ -90,15 +90,15 @@ class GetCompliancePolicyNonComplianceSummaryReportPostRequestBody implements Ad
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'filter' => function (ParseNode $n) use ($o) { $o->setFilter($n->getStringValue()); },
-            'groupBy' => function (ParseNode $n) use ($o) { $o->setGroupBy($n->getCollectionOfPrimitiveValues()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'orderBy' => function (ParseNode $n) use ($o) { $o->setOrderBy($n->getCollectionOfPrimitiveValues()); },
-            'search' => function (ParseNode $n) use ($o) { $o->setSearch($n->getStringValue()); },
-            'select' => function (ParseNode $n) use ($o) { $o->setSelect($n->getCollectionOfPrimitiveValues()); },
-            'sessionId' => function (ParseNode $n) use ($o) { $o->setSessionId($n->getStringValue()); },
-            'skip' => function (ParseNode $n) use ($o) { $o->setSkip($n->getIntegerValue()); },
-            'top' => function (ParseNode $n) use ($o) { $o->setTop($n->getIntegerValue()); },
+            'filter' => fn(ParseNode $n) => $o->setFilter($n->getStringValue()),
+            'groupBy' => fn(ParseNode $n) => $o->setGroupBy($n->getCollectionOfPrimitiveValues()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'orderBy' => fn(ParseNode $n) => $o->setOrderBy($n->getCollectionOfPrimitiveValues()),
+            'search' => fn(ParseNode $n) => $o->setSearch($n->getStringValue()),
+            'select' => fn(ParseNode $n) => $o->setSelect($n->getCollectionOfPrimitiveValues()),
+            'sessionId' => fn(ParseNode $n) => $o->setSessionId($n->getStringValue()),
+            'skip' => fn(ParseNode $n) => $o->setSkip($n->getIntegerValue()),
+            'top' => fn(ParseNode $n) => $o->setTop($n->getIntegerValue()),
         ];
     }
 

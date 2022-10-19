@@ -58,8 +58,8 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accessPackageDisplayName' => function (ParseNode $n) use ($o) { $o->setAccessPackageDisplayName($n->getStringValue()); },
-            'accessPackageId' => function (ParseNode $n) use ($o) { $o->setAccessPackageId($n->getStringValue()); },
+            'accessPackageDisplayName' => fn(ParseNode $n) => $o->setAccessPackageDisplayName($n->getStringValue()),
+            'accessPackageId' => fn(ParseNode $n) => $o->setAccessPackageId($n->getStringValue()),
         ]);
     }
 

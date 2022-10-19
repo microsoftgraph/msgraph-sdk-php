@@ -106,16 +106,16 @@ class EventMessage extends Message implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'event' => function (ParseNode $n) use ($o) { $o->setEvent($n->getObjectValue(array(Event::class, 'createFromDiscriminatorValue'))); },
-            'isAllDay' => function (ParseNode $n) use ($o) { $o->setIsAllDay($n->getBooleanValue()); },
-            'isDelegated' => function (ParseNode $n) use ($o) { $o->setIsDelegated($n->getBooleanValue()); },
-            'isOutOfDate' => function (ParseNode $n) use ($o) { $o->setIsOutOfDate($n->getBooleanValue()); },
-            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getObjectValue(array(Location::class, 'createFromDiscriminatorValue'))); },
-            'meetingMessageType' => function (ParseNode $n) use ($o) { $o->setMeetingMessageType($n->getEnumValue(MeetingMessageType::class)); },
-            'recurrence' => function (ParseNode $n) use ($o) { $o->setRecurrence($n->getObjectValue(array(PatternedRecurrence::class, 'createFromDiscriminatorValue'))); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(EventType::class)); },
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'event' => fn(ParseNode $n) => $o->setEvent($n->getObjectValue([Event::class, 'createFromDiscriminatorValue'])),
+            'isAllDay' => fn(ParseNode $n) => $o->setIsAllDay($n->getBooleanValue()),
+            'isDelegated' => fn(ParseNode $n) => $o->setIsDelegated($n->getBooleanValue()),
+            'isOutOfDate' => fn(ParseNode $n) => $o->setIsOutOfDate($n->getBooleanValue()),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
+            'meetingMessageType' => fn(ParseNode $n) => $o->setMeetingMessageType($n->getEnumValue(MeetingMessageType::class)),
+            'recurrence' => fn(ParseNode $n) => $o->setRecurrence($n->getObjectValue([PatternedRecurrence::class, 'createFromDiscriminatorValue'])),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(EventType::class)),
         ]);
     }
 

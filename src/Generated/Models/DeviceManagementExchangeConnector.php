@@ -110,15 +110,15 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectorServerName' => function (ParseNode $n) use ($o) { $o->setConnectorServerName($n->getStringValue()); },
-            'exchangeAlias' => function (ParseNode $n) use ($o) { $o->setExchangeAlias($n->getStringValue()); },
-            'exchangeConnectorType' => function (ParseNode $n) use ($o) { $o->setExchangeConnectorType($n->getEnumValue(DeviceManagementExchangeConnectorType::class)); },
-            'exchangeOrganization' => function (ParseNode $n) use ($o) { $o->setExchangeOrganization($n->getStringValue()); },
-            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'primarySmtpAddress' => function (ParseNode $n) use ($o) { $o->setPrimarySmtpAddress($n->getStringValue()); },
-            'serverName' => function (ParseNode $n) use ($o) { $o->setServerName($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(DeviceManagementExchangeConnectorStatus::class)); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'connectorServerName' => fn(ParseNode $n) => $o->setConnectorServerName($n->getStringValue()),
+            'exchangeAlias' => fn(ParseNode $n) => $o->setExchangeAlias($n->getStringValue()),
+            'exchangeConnectorType' => fn(ParseNode $n) => $o->setExchangeConnectorType($n->getEnumValue(DeviceManagementExchangeConnectorType::class)),
+            'exchangeOrganization' => fn(ParseNode $n) => $o->setExchangeOrganization($n->getStringValue()),
+            'lastSyncDateTime' => fn(ParseNode $n) => $o->setLastSyncDateTime($n->getDateTimeValue()),
+            'primarySmtpAddress' => fn(ParseNode $n) => $o->setPrimarySmtpAddress($n->getStringValue()),
+            'serverName' => fn(ParseNode $n) => $o->setServerName($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DeviceManagementExchangeConnectorStatus::class)),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

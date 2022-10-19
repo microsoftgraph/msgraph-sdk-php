@@ -129,16 +129,16 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'connectingIP' => function (ParseNode $n) use ($o) { $o->setConnectingIP($n->getStringValue()); },
-            'deliveryAction' => function (ParseNode $n) use ($o) { $o->setDeliveryAction($n->getStringValue()); },
-            'deliveryLocation' => function (ParseNode $n) use ($o) { $o->setDeliveryLocation($n->getStringValue()); },
-            'directionality' => function (ParseNode $n) use ($o) { $o->setDirectionality($n->getStringValue()); },
-            'internetMessageId' => function (ParseNode $n) use ($o) { $o->setInternetMessageId($n->getStringValue()); },
-            'messageFingerprint' => function (ParseNode $n) use ($o) { $o->setMessageFingerprint($n->getStringValue()); },
-            'messageReceivedDateTime' => function (ParseNode $n) use ($o) { $o->setMessageReceivedDateTime($n->getDateTimeValue()); },
-            'messageSubject' => function (ParseNode $n) use ($o) { $o->setMessageSubject($n->getStringValue()); },
-            'networkMessageId' => function (ParseNode $n) use ($o) { $o->setNetworkMessageId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'connectingIP' => fn(ParseNode $n) => $o->setConnectingIP($n->getStringValue()),
+            'deliveryAction' => fn(ParseNode $n) => $o->setDeliveryAction($n->getStringValue()),
+            'deliveryLocation' => fn(ParseNode $n) => $o->setDeliveryLocation($n->getStringValue()),
+            'directionality' => fn(ParseNode $n) => $o->setDirectionality($n->getStringValue()),
+            'internetMessageId' => fn(ParseNode $n) => $o->setInternetMessageId($n->getStringValue()),
+            'messageFingerprint' => fn(ParseNode $n) => $o->setMessageFingerprint($n->getStringValue()),
+            'messageReceivedDateTime' => fn(ParseNode $n) => $o->setMessageReceivedDateTime($n->getDateTimeValue()),
+            'messageSubject' => fn(ParseNode $n) => $o->setMessageSubject($n->getStringValue()),
+            'networkMessageId' => fn(ParseNode $n) => $o->setNetworkMessageId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

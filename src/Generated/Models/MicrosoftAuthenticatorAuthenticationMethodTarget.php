@@ -45,7 +45,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'authenticationMode' => function (ParseNode $n) use ($o) { $o->setAuthenticationMode($n->getEnumValue(MicrosoftAuthenticatorAuthenticationMode::class)); },
+            'authenticationMode' => fn(ParseNode $n) => $o->setAuthenticationMode($n->getEnumValue(MicrosoftAuthenticatorAuthenticationMode::class)),
         ]);
     }
 

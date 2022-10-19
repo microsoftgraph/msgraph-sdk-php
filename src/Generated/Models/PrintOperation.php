@@ -20,7 +20,7 @@ class PrintOperation extends Entity implements Parsable
     private ?PrintOperationStatus $status = null;
     
     /**
-     * Instantiates a new PrintOperation and sets the default values.
+     * Instantiates a new printOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -58,8 +58,8 @@ class PrintOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrintOperationStatus::class, 'createFromDiscriminatorValue'))); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([PrintOperationStatus::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

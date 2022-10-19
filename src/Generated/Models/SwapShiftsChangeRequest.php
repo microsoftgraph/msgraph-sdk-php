@@ -37,7 +37,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recipientShiftId' => function (ParseNode $n) use ($o) { $o->setRecipientShiftId($n->getStringValue()); },
+            'recipientShiftId' => fn(ParseNode $n) => $o->setRecipientShiftId($n->getStringValue()),
         ]);
     }
 

@@ -61,9 +61,9 @@ class SimulationReport implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'overview' => function (ParseNode $n) use ($o) { $o->setOverview($n->getObjectValue(array(SimulationReportOverview::class, 'createFromDiscriminatorValue'))); },
-            'simulationUsers' => function (ParseNode $n) use ($o) { $o->setSimulationUsers($n->getCollectionOfObjectValues(array(UserSimulationDetails::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'overview' => fn(ParseNode $n) => $o->setOverview($n->getObjectValue([SimulationReportOverview::class, 'createFromDiscriminatorValue'])),
+            'simulationUsers' => fn(ParseNode $n) => $o->setSimulationUsers($n->getCollectionOfObjectValues([UserSimulationDetails::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

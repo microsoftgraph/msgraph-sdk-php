@@ -101,15 +101,15 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classification' => function (ParseNode $n) use ($o) { $o->setClassification($n->getEnumValue(ServiceHealthClassificationType::class)); },
-            'feature' => function (ParseNode $n) use ($o) { $o->setFeature($n->getStringValue()); },
-            'featureGroup' => function (ParseNode $n) use ($o) { $o->setFeatureGroup($n->getStringValue()); },
-            'impactDescription' => function (ParseNode $n) use ($o) { $o->setImpactDescription($n->getStringValue()); },
-            'isResolved' => function (ParseNode $n) use ($o) { $o->setIsResolved($n->getBooleanValue()); },
-            'origin' => function (ParseNode $n) use ($o) { $o->setOrigin($n->getEnumValue(ServiceHealthOrigin::class)); },
-            'posts' => function (ParseNode $n) use ($o) { $o->setPosts($n->getCollectionOfObjectValues(array(ServiceHealthIssuePost::class, 'createFromDiscriminatorValue'))); },
-            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)); },
+            'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(ServiceHealthClassificationType::class)),
+            'feature' => fn(ParseNode $n) => $o->setFeature($n->getStringValue()),
+            'featureGroup' => fn(ParseNode $n) => $o->setFeatureGroup($n->getStringValue()),
+            'impactDescription' => fn(ParseNode $n) => $o->setImpactDescription($n->getStringValue()),
+            'isResolved' => fn(ParseNode $n) => $o->setIsResolved($n->getBooleanValue()),
+            'origin' => fn(ParseNode $n) => $o->setOrigin($n->getEnumValue(ServiceHealthOrigin::class)),
+            'posts' => fn(ParseNode $n) => $o->setPosts($n->getCollectionOfObjectValues([ServiceHealthIssuePost::class, 'createFromDiscriminatorValue'])),
+            'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ServiceHealthStatus::class)),
         ]);
     }
 

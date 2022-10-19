@@ -69,9 +69,9 @@ class PersonType implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'class' => function (ParseNode $n) use ($o) { $o->setClass($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'subclass' => function (ParseNode $n) use ($o) { $o->setSubclass($n->getStringValue()); },
+            'class' => fn(ParseNode $n) => $o->setClass($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'subclass' => fn(ParseNode $n) => $o->setSubclass($n->getStringValue()),
         ];
     }
 

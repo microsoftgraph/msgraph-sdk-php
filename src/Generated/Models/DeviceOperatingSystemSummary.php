@@ -167,19 +167,19 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'androidCorporateWorkProfileCount' => function (ParseNode $n) use ($o) { $o->setAndroidCorporateWorkProfileCount($n->getIntegerValue()); },
-            'androidCount' => function (ParseNode $n) use ($o) { $o->setAndroidCount($n->getIntegerValue()); },
-            'androidDedicatedCount' => function (ParseNode $n) use ($o) { $o->setAndroidDedicatedCount($n->getIntegerValue()); },
-            'androidDeviceAdminCount' => function (ParseNode $n) use ($o) { $o->setAndroidDeviceAdminCount($n->getIntegerValue()); },
-            'androidFullyManagedCount' => function (ParseNode $n) use ($o) { $o->setAndroidFullyManagedCount($n->getIntegerValue()); },
-            'androidWorkProfileCount' => function (ParseNode $n) use ($o) { $o->setAndroidWorkProfileCount($n->getIntegerValue()); },
-            'configMgrDeviceCount' => function (ParseNode $n) use ($o) { $o->setConfigMgrDeviceCount($n->getIntegerValue()); },
-            'iosCount' => function (ParseNode $n) use ($o) { $o->setIosCount($n->getIntegerValue()); },
-            'macOSCount' => function (ParseNode $n) use ($o) { $o->setMacOSCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'unknownCount' => function (ParseNode $n) use ($o) { $o->setUnknownCount($n->getIntegerValue()); },
-            'windowsCount' => function (ParseNode $n) use ($o) { $o->setWindowsCount($n->getIntegerValue()); },
-            'windowsMobileCount' => function (ParseNode $n) use ($o) { $o->setWindowsMobileCount($n->getIntegerValue()); },
+            'androidCorporateWorkProfileCount' => fn(ParseNode $n) => $o->setAndroidCorporateWorkProfileCount($n->getIntegerValue()),
+            'androidCount' => fn(ParseNode $n) => $o->setAndroidCount($n->getIntegerValue()),
+            'androidDedicatedCount' => fn(ParseNode $n) => $o->setAndroidDedicatedCount($n->getIntegerValue()),
+            'androidDeviceAdminCount' => fn(ParseNode $n) => $o->setAndroidDeviceAdminCount($n->getIntegerValue()),
+            'androidFullyManagedCount' => fn(ParseNode $n) => $o->setAndroidFullyManagedCount($n->getIntegerValue()),
+            'androidWorkProfileCount' => fn(ParseNode $n) => $o->setAndroidWorkProfileCount($n->getIntegerValue()),
+            'configMgrDeviceCount' => fn(ParseNode $n) => $o->setConfigMgrDeviceCount($n->getIntegerValue()),
+            'iosCount' => fn(ParseNode $n) => $o->setIosCount($n->getIntegerValue()),
+            'macOSCount' => fn(ParseNode $n) => $o->setMacOSCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'unknownCount' => fn(ParseNode $n) => $o->setUnknownCount($n->getIntegerValue()),
+            'windowsCount' => fn(ParseNode $n) => $o->setWindowsCount($n->getIntegerValue()),
+            'windowsMobileCount' => fn(ParseNode $n) => $o->setWindowsMobileCount($n->getIntegerValue()),
         ];
     }
 

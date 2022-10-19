@@ -84,12 +84,12 @@ class ApiApplication implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'acceptMappedClaims' => function (ParseNode $n) use ($o) { $o->setAcceptMappedClaims($n->getBooleanValue()); },
-            'knownClientApplications' => function (ParseNode $n) use ($o) { $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()); },
-            'oauth2PermissionScopes' => function (ParseNode $n) use ($o) { $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues(array(PermissionScope::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'preAuthorizedApplications' => function (ParseNode $n) use ($o) { $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues(array(PreAuthorizedApplication::class, 'createFromDiscriminatorValue'))); },
-            'requestedAccessTokenVersion' => function (ParseNode $n) use ($o) { $o->setRequestedAccessTokenVersion($n->getIntegerValue()); },
+            'acceptMappedClaims' => fn(ParseNode $n) => $o->setAcceptMappedClaims($n->getBooleanValue()),
+            'knownClientApplications' => fn(ParseNode $n) => $o->setKnownClientApplications($n->getCollectionOfPrimitiveValues()),
+            'oauth2PermissionScopes' => fn(ParseNode $n) => $o->setOauth2PermissionScopes($n->getCollectionOfObjectValues([PermissionScope::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'preAuthorizedApplications' => fn(ParseNode $n) => $o->setPreAuthorizedApplications($n->getCollectionOfObjectValues([PreAuthorizedApplication::class, 'createFromDiscriminatorValue'])),
+            'requestedAccessTokenVersion' => fn(ParseNode $n) => $o->setRequestedAccessTokenVersion($n->getIntegerValue()),
         ];
     }
 

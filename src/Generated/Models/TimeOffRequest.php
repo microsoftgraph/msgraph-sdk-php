@@ -56,9 +56,9 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'timeOffReasonId' => function (ParseNode $n) use ($o) { $o->setTimeOffReasonId($n->getStringValue()); },
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
+            'timeOffReasonId' => fn(ParseNode $n) => $o->setTimeOffReasonId($n->getStringValue()),
         ]);
     }
 

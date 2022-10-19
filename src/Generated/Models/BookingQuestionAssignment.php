@@ -61,9 +61,9 @@ class BookingQuestionAssignment implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'questionId' => function (ParseNode $n) use ($o) { $o->setQuestionId($n->getStringValue()); },
+            'isRequired' => fn(ParseNode $n) => $o->setIsRequired($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'questionId' => fn(ParseNode $n) => $o->setQuestionId($n->getStringValue()),
         ];
     }
 

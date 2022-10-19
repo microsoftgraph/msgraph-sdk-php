@@ -69,10 +69,10 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeHoursEnd' => function (ParseNode $n) use ($o) { $o->setActiveHoursEnd($n->getTimeValue()); },
-            'activeHoursStart' => function (ParseNode $n) use ($o) { $o->setActiveHoursStart($n->getTimeValue()); },
-            'scheduledInstallDays' => function (ParseNode $n) use ($o) { $o->setScheduledInstallDays($n->getCollectionOfEnumValues(DayOfWeek::class)); },
-            'utcTimeOffsetInMinutes' => function (ParseNode $n) use ($o) { $o->setUtcTimeOffsetInMinutes($n->getIntegerValue()); },
+            'activeHoursEnd' => fn(ParseNode $n) => $o->setActiveHoursEnd($n->getTimeValue()),
+            'activeHoursStart' => fn(ParseNode $n) => $o->setActiveHoursStart($n->getTimeValue()),
+            'scheduledInstallDays' => fn(ParseNode $n) => $o->setScheduledInstallDays($n->getCollectionOfEnumValues(DayOfWeek::class)),
+            'utcTimeOffsetInMinutes' => fn(ParseNode $n) => $o->setUtcTimeOffsetInMinutes($n->getIntegerValue()),
         ]);
     }
 

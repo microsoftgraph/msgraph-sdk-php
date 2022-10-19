@@ -94,12 +94,12 @@ class EdiscoverySearch extends Search implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'additionalSources' => function (ParseNode $n) use ($o) { $o->setAdditionalSources($n->getCollectionOfObjectValues(array(DataSource::class, 'createFromDiscriminatorValue'))); },
-            'addToReviewSetOperation' => function (ParseNode $n) use ($o) { $o->setAddToReviewSetOperation($n->getObjectValue(array(EdiscoveryAddToReviewSetOperation::class, 'createFromDiscriminatorValue'))); },
-            'custodianSources' => function (ParseNode $n) use ($o) { $o->setCustodianSources($n->getCollectionOfObjectValues(array(DataSource::class, 'createFromDiscriminatorValue'))); },
-            'dataSourceScopes' => function (ParseNode $n) use ($o) { $o->setDataSourceScopes($n->getEnumValue(DataSourceScopes::class)); },
-            'lastEstimateStatisticsOperation' => function (ParseNode $n) use ($o) { $o->setLastEstimateStatisticsOperation($n->getObjectValue(array(EdiscoveryEstimateOperation::class, 'createFromDiscriminatorValue'))); },
-            'noncustodialSources' => function (ParseNode $n) use ($o) { $o->setNoncustodialSources($n->getCollectionOfObjectValues(array(EdiscoveryNoncustodialDataSource::class, 'createFromDiscriminatorValue'))); },
+            'additionalSources' => fn(ParseNode $n) => $o->setAdditionalSources($n->getCollectionOfObjectValues([DataSource::class, 'createFromDiscriminatorValue'])),
+            'addToReviewSetOperation' => fn(ParseNode $n) => $o->setAddToReviewSetOperation($n->getObjectValue([EdiscoveryAddToReviewSetOperation::class, 'createFromDiscriminatorValue'])),
+            'custodianSources' => fn(ParseNode $n) => $o->setCustodianSources($n->getCollectionOfObjectValues([DataSource::class, 'createFromDiscriminatorValue'])),
+            'dataSourceScopes' => fn(ParseNode $n) => $o->setDataSourceScopes($n->getEnumValue(DataSourceScopes::class)),
+            'lastEstimateStatisticsOperation' => fn(ParseNode $n) => $o->setLastEstimateStatisticsOperation($n->getObjectValue([EdiscoveryEstimateOperation::class, 'createFromDiscriminatorValue'])),
+            'noncustodialSources' => fn(ParseNode $n) => $o->setNoncustodialSources($n->getCollectionOfObjectValues([EdiscoveryNoncustodialDataSource::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

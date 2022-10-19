@@ -55,9 +55,9 @@ class WorkbookChartAxes extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'categoryAxis' => function (ParseNode $n) use ($o) { $o->setCategoryAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
-            'seriesAxis' => function (ParseNode $n) use ($o) { $o->setSeriesAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
-            'valueAxis' => function (ParseNode $n) use ($o) { $o->setValueAxis($n->getObjectValue(array(WorkbookChartAxis::class, 'createFromDiscriminatorValue'))); },
+            'categoryAxis' => fn(ParseNode $n) => $o->setCategoryAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
+            'seriesAxis' => fn(ParseNode $n) => $o->setSeriesAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
+            'valueAxis' => fn(ParseNode $n) => $o->setValueAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

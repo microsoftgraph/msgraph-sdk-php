@@ -45,7 +45,7 @@ class AppConsentApprovalRoute extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appConsentRequests' => function (ParseNode $n) use ($o) { $o->setAppConsentRequests($n->getCollectionOfObjectValues(array(AppConsentRequest::class, 'createFromDiscriminatorValue'))); },
+            'appConsentRequests' => fn(ParseNode $n) => $o->setAppConsentRequests($n->getCollectionOfObjectValues([AppConsentRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -98,13 +98,13 @@ class EducationStudent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'birthDate' => function (ParseNode $n) use ($o) { $o->setBirthDate($n->getDateValue()); },
-            'externalId' => function (ParseNode $n) use ($o) { $o->setExternalId($n->getStringValue()); },
-            'gender' => function (ParseNode $n) use ($o) { $o->setGender($n->getEnumValue(EducationGender::class)); },
-            'grade' => function (ParseNode $n) use ($o) { $o->setGrade($n->getStringValue()); },
-            'graduationYear' => function (ParseNode $n) use ($o) { $o->setGraduationYear($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'studentNumber' => function (ParseNode $n) use ($o) { $o->setStudentNumber($n->getStringValue()); },
+            'birthDate' => fn(ParseNode $n) => $o->setBirthDate($n->getDateValue()),
+            'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
+            'gender' => fn(ParseNode $n) => $o->setGender($n->getEnumValue(EducationGender::class)),
+            'grade' => fn(ParseNode $n) => $o->setGrade($n->getStringValue()),
+            'graduationYear' => fn(ParseNode $n) => $o->setGraduationYear($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'studentNumber' => fn(ParseNode $n) => $o->setStudentNumber($n->getStringValue()),
         ];
     }
 

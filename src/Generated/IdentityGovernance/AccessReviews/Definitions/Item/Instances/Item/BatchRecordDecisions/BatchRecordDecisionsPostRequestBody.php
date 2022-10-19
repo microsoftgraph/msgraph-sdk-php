@@ -73,10 +73,10 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decision' => function (ParseNode $n) use ($o) { $o->setDecision($n->getStringValue()); },
-            'justification' => function (ParseNode $n) use ($o) { $o->setJustification($n->getStringValue()); },
-            'principalId' => function (ParseNode $n) use ($o) { $o->setPrincipalId($n->getStringValue()); },
-            'resourceId' => function (ParseNode $n) use ($o) { $o->setResourceId($n->getStringValue()); },
+            'decision' => fn(ParseNode $n) => $o->setDecision($n->getStringValue()),
+            'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
+            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
         ];
     }
 

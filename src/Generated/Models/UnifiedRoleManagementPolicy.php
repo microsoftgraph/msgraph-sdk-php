@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
     private ?string $scopeType = null;
     
     /**
-     * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
+     * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -102,15 +102,15 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'effectiveRules' => function (ParseNode $n) use ($o) { $o->setEffectiveRules($n->getCollectionOfObjectValues(array(UnifiedRoleManagementPolicyRule::class, 'createFromDiscriminatorValue'))); },
-            'isOrganizationDefault' => function (ParseNode $n) use ($o) { $o->setIsOrganizationDefault($n->getBooleanValue()); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'rules' => function (ParseNode $n) use ($o) { $o->setRules($n->getCollectionOfObjectValues(array(UnifiedRoleManagementPolicyRule::class, 'createFromDiscriminatorValue'))); },
-            'scopeId' => function (ParseNode $n) use ($o) { $o->setScopeId($n->getStringValue()); },
-            'scopeType' => function (ParseNode $n) use ($o) { $o->setScopeType($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'effectiveRules' => fn(ParseNode $n) => $o->setEffectiveRules($n->getCollectionOfObjectValues([UnifiedRoleManagementPolicyRule::class, 'createFromDiscriminatorValue'])),
+            'isOrganizationDefault' => fn(ParseNode $n) => $o->setIsOrganizationDefault($n->getBooleanValue()),
+            'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([UnifiedRoleManagementPolicyRule::class, 'createFromDiscriminatorValue'])),
+            'scopeId' => fn(ParseNode $n) => $o->setScopeId($n->getStringValue()),
+            'scopeType' => fn(ParseNode $n) => $o->setScopeType($n->getStringValue()),
         ]);
     }
 

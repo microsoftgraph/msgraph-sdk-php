@@ -70,11 +70,11 @@ class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'groupId' => function (ParseNode $n) use ($o) { $o->setGroupId($n->getStringValue()); },
-            'notebookFolder' => function (ParseNode $n) use ($o) { $o->setNotebookFolder($n->getStringValue()); },
-            'renameAs' => function (ParseNode $n) use ($o) { $o->setRenameAs($n->getStringValue()); },
-            'siteCollectionId' => function (ParseNode $n) use ($o) { $o->setSiteCollectionId($n->getStringValue()); },
-            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
+            'groupId' => fn(ParseNode $n) => $o->setGroupId($n->getStringValue()),
+            'notebookFolder' => fn(ParseNode $n) => $o->setNotebookFolder($n->getStringValue()),
+            'renameAs' => fn(ParseNode $n) => $o->setRenameAs($n->getStringValue()),
+            'siteCollectionId' => fn(ParseNode $n) => $o->setSiteCollectionId($n->getStringValue()),
+            'siteId' => fn(ParseNode $n) => $o->setSiteId($n->getStringValue()),
         ];
     }
 

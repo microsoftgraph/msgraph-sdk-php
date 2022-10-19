@@ -86,12 +86,12 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'apiVersion' => function (ParseNode $n) use ($o) { $o->setApiVersion($n->getIntegerValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'encryption' => function (ParseNode $n) use ($o) { $o->setEncryption($n->getObjectValue(array(WorkforceIntegrationEncryption::class, 'createFromDiscriminatorValue'))); },
-            'isActive' => function (ParseNode $n) use ($o) { $o->setIsActive($n->getBooleanValue()); },
-            'supportedEntities' => function (ParseNode $n) use ($o) { $o->setSupportedEntities($n->getEnumValue(WorkforceIntegrationSupportedEntities::class)); },
-            'url' => function (ParseNode $n) use ($o) { $o->setUrl($n->getStringValue()); },
+            'apiVersion' => fn(ParseNode $n) => $o->setApiVersion($n->getIntegerValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'encryption' => fn(ParseNode $n) => $o->setEncryption($n->getObjectValue([WorkforceIntegrationEncryption::class, 'createFromDiscriminatorValue'])),
+            'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
+            'supportedEntities' => fn(ParseNode $n) => $o->setSupportedEntities($n->getEnumValue(WorkforceIntegrationSupportedEntities::class)),
+            'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
     }
 

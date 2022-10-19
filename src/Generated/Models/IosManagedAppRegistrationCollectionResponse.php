@@ -36,7 +36,7 @@ class IosManagedAppRegistrationCollectionResponse extends BaseCollectionPaginati
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(IosManagedAppRegistration::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([IosManagedAppRegistration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

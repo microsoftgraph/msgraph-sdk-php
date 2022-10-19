@@ -83,10 +83,10 @@ class VerifiedPublisher implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'addedDateTime' => function (ParseNode $n) use ($o) { $o->setAddedDateTime($n->getDateTimeValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'verifiedPublisherId' => function (ParseNode $n) use ($o) { $o->setVerifiedPublisherId($n->getStringValue()); },
+            'addedDateTime' => fn(ParseNode $n) => $o->setAddedDateTime($n->getDateTimeValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'verifiedPublisherId' => fn(ParseNode $n) => $o->setVerifiedPublisherId($n->getStringValue()),
         ];
     }
 

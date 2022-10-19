@@ -89,13 +89,13 @@ class SharingLink implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'preventsDownload' => function (ParseNode $n) use ($o) { $o->setPreventsDownload($n->getBooleanValue()); },
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getStringValue()); },
-            'webHtml' => function (ParseNode $n) use ($o) { $o->setWebHtml($n->getStringValue()); },
-            'webUrl' => function (ParseNode $n) use ($o) { $o->setWebUrl($n->getStringValue()); },
+            'application' => fn(ParseNode $n) => $o->setApplication($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'preventsDownload' => fn(ParseNode $n) => $o->setPreventsDownload($n->getBooleanValue()),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
+            'webHtml' => fn(ParseNode $n) => $o->setWebHtml($n->getStringValue()),
+            'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ];
     }
 

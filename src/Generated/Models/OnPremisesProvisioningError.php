@@ -80,11 +80,11 @@ class OnPremisesProvisioningError implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getStringValue()); },
-            'occurredDateTime' => function (ParseNode $n) use ($o) { $o->setOccurredDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'propertyCausingError' => function (ParseNode $n) use ($o) { $o->setPropertyCausingError($n->getStringValue()); },
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getStringValue()); },
+            'category' => fn(ParseNode $n) => $o->setCategory($n->getStringValue()),
+            'occurredDateTime' => fn(ParseNode $n) => $o->setOccurredDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'propertyCausingError' => fn(ParseNode $n) => $o->setPropertyCausingError($n->getStringValue()),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
         ];
     }
 

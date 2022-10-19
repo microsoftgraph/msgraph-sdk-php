@@ -60,10 +60,10 @@ class DeviceComplianceActionItem extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionType' => function (ParseNode $n) use ($o) { $o->setActionType($n->getEnumValue(DeviceComplianceActionType::class)); },
-            'gracePeriodHours' => function (ParseNode $n) use ($o) { $o->setGracePeriodHours($n->getIntegerValue()); },
-            'notificationMessageCCList' => function (ParseNode $n) use ($o) { $o->setNotificationMessageCCList($n->getCollectionOfPrimitiveValues()); },
-            'notificationTemplateId' => function (ParseNode $n) use ($o) { $o->setNotificationTemplateId($n->getStringValue()); },
+            'actionType' => fn(ParseNode $n) => $o->setActionType($n->getEnumValue(DeviceComplianceActionType::class)),
+            'gracePeriodHours' => fn(ParseNode $n) => $o->setGracePeriodHours($n->getIntegerValue()),
+            'notificationMessageCCList' => fn(ParseNode $n) => $o->setNotificationMessageCCList($n->getCollectionOfPrimitiveValues()),
+            'notificationTemplateId' => fn(ParseNode $n) => $o->setNotificationTemplateId($n->getStringValue()),
         ]);
     }
 

@@ -66,10 +66,10 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isCompliantDeviceAccepted' => function (ParseNode $n) use ($o) { $o->setIsCompliantDeviceAccepted($n->getBooleanValue()); },
-            'isHybridAzureADJoinedDeviceAccepted' => function (ParseNode $n) use ($o) { $o->setIsHybridAzureADJoinedDeviceAccepted($n->getBooleanValue()); },
-            'isMfaAccepted' => function (ParseNode $n) use ($o) { $o->setIsMfaAccepted($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'isCompliantDeviceAccepted' => fn(ParseNode $n) => $o->setIsCompliantDeviceAccepted($n->getBooleanValue()),
+            'isHybridAzureADJoinedDeviceAccepted' => fn(ParseNode $n) => $o->setIsHybridAzureADJoinedDeviceAccepted($n->getBooleanValue()),
+            'isMfaAccepted' => fn(ParseNode $n) => $o->setIsMfaAccepted($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

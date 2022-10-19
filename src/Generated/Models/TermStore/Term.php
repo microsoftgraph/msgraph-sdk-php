@@ -99,14 +99,14 @@ class Term extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'children' => function (ParseNode $n) use ($o) { $o->setChildren($n->getCollectionOfObjectValues(array(Term::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'descriptions' => function (ParseNode $n) use ($o) { $o->setDescriptions($n->getCollectionOfObjectValues(array(LocalizedDescription::class, 'createFromDiscriminatorValue'))); },
-            'labels' => function (ParseNode $n) use ($o) { $o->setLabels($n->getCollectionOfObjectValues(array(LocalizedLabel::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(KeyValue::class, 'createFromDiscriminatorValue'))); },
-            'relations' => function (ParseNode $n) use ($o) { $o->setRelations($n->getCollectionOfObjectValues(array(Relation::class, 'createFromDiscriminatorValue'))); },
-            'set' => function (ParseNode $n) use ($o) { $o->setSet($n->getObjectValue(array(Set::class, 'createFromDiscriminatorValue'))); },
+            'children' => fn(ParseNode $n) => $o->setChildren($n->getCollectionOfObjectValues([Term::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'descriptions' => fn(ParseNode $n) => $o->setDescriptions($n->getCollectionOfObjectValues([LocalizedDescription::class, 'createFromDiscriminatorValue'])),
+            'labels' => fn(ParseNode $n) => $o->setLabels($n->getCollectionOfObjectValues([LocalizedLabel::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([KeyValue::class, 'createFromDiscriminatorValue'])),
+            'relations' => fn(ParseNode $n) => $o->setRelations($n->getCollectionOfObjectValues([Relation::class, 'createFromDiscriminatorValue'])),
+            'set' => fn(ParseNode $n) => $o->setSet($n->getObjectValue([Set::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

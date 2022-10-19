@@ -94,12 +94,12 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'b2bCollaborationInbound' => function (ParseNode $n) use ($o) { $o->setB2bCollaborationInbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bCollaborationOutbound' => function (ParseNode $n) use ($o) { $o->setB2bCollaborationOutbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bDirectConnectInbound' => function (ParseNode $n) use ($o) { $o->setB2bDirectConnectInbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'b2bDirectConnectOutbound' => function (ParseNode $n) use ($o) { $o->setB2bDirectConnectOutbound($n->getObjectValue(array(CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'))); },
-            'inboundTrust' => function (ParseNode $n) use ($o) { $o->setInboundTrust($n->getObjectValue(array(CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'))); },
-            'isServiceDefault' => function (ParseNode $n) use ($o) { $o->setIsServiceDefault($n->getBooleanValue()); },
+            'b2bCollaborationInbound' => fn(ParseNode $n) => $o->setB2bCollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'b2bDirectConnectOutbound' => fn(ParseNode $n) => $o->setB2bDirectConnectOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
+            'isServiceDefault' => fn(ParseNode $n) => $o->setIsServiceDefault($n->getBooleanValue()),
         ]);
     }
 

@@ -95,11 +95,11 @@ class ImageInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'addImageQuery' => function (ParseNode $n) use ($o) { $o->setAddImageQuery($n->getBooleanValue()); },
-            'alternateText' => function (ParseNode $n) use ($o) { $o->setAlternateText($n->getStringValue()); },
-            'alternativeText' => function (ParseNode $n) use ($o) { $o->setAlternativeText($n->getStringValue()); },
-            'iconUrl' => function (ParseNode $n) use ($o) { $o->setIconUrl($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'addImageQuery' => fn(ParseNode $n) => $o->setAddImageQuery($n->getBooleanValue()),
+            'alternateText' => fn(ParseNode $n) => $o->setAlternateText($n->getStringValue()),
+            'alternativeText' => fn(ParseNode $n) => $o->setAlternativeText($n->getStringValue()),
+            'iconUrl' => fn(ParseNode $n) => $o->setIconUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

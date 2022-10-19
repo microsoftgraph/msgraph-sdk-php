@@ -37,7 +37,7 @@ class Todo extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'lists' => function (ParseNode $n) use ($o) { $o->setLists($n->getCollectionOfObjectValues(array(TodoTaskList::class, 'createFromDiscriminatorValue'))); },
+            'lists' => fn(ParseNode $n) => $o->setLists($n->getCollectionOfObjectValues([TodoTaskList::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

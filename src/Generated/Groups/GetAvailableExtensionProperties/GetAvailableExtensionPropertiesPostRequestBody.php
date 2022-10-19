@@ -50,7 +50,7 @@ class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHo
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isSyncedFromOnPremises' => function (ParseNode $n) use ($o) { $o->setIsSyncedFromOnPremises($n->getBooleanValue()); },
+            'isSyncedFromOnPremises' => fn(ParseNode $n) => $o->setIsSyncedFromOnPremises($n->getBooleanValue()),
         ];
     }
 

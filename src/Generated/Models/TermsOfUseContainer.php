@@ -58,8 +58,8 @@ class TermsOfUseContainer extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'agreementAcceptances' => function (ParseNode $n) use ($o) { $o->setAgreementAcceptances($n->getCollectionOfObjectValues(array(AgreementAcceptance::class, 'createFromDiscriminatorValue'))); },
-            'agreements' => function (ParseNode $n) use ($o) { $o->setAgreements($n->getCollectionOfObjectValues(array(Agreement::class, 'createFromDiscriminatorValue'))); },
+            'agreementAcceptances' => fn(ParseNode $n) => $o->setAgreementAcceptances($n->getCollectionOfObjectValues([AgreementAcceptance::class, 'createFromDiscriminatorValue'])),
+            'agreements' => fn(ParseNode $n) => $o->setAgreements($n->getCollectionOfObjectValues([Agreement::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

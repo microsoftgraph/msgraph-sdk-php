@@ -96,14 +96,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'availabilityIsAffectedByPersonalCalendar' => function (ParseNode $n) use ($o) { $o->setAvailabilityIsAffectedByPersonalCalendar($n->getBooleanValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'emailAddress' => function (ParseNode $n) use ($o) { $o->setEmailAddress($n->getStringValue()); },
-            'isEmailNotificationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEmailNotificationEnabled($n->getBooleanValue()); },
-            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(BookingStaffRole::class)); },
-            'timeZone' => function (ParseNode $n) use ($o) { $o->setTimeZone($n->getStringValue()); },
-            'useBusinessHours' => function (ParseNode $n) use ($o) { $o->setUseBusinessHours($n->getBooleanValue()); },
-            'workingHours' => function (ParseNode $n) use ($o) { $o->setWorkingHours($n->getCollectionOfObjectValues(array(BookingWorkHours::class, 'createFromDiscriminatorValue'))); },
+            'availabilityIsAffectedByPersonalCalendar' => fn(ParseNode $n) => $o->setAvailabilityIsAffectedByPersonalCalendar($n->getBooleanValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'isEmailNotificationEnabled' => fn(ParseNode $n) => $o->setIsEmailNotificationEnabled($n->getBooleanValue()),
+            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(BookingStaffRole::class)),
+            'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
+            'useBusinessHours' => fn(ParseNode $n) => $o->setUseBusinessHours($n->getBooleanValue()),
+            'workingHours' => fn(ParseNode $n) => $o->setWorkingHours($n->getCollectionOfObjectValues([BookingWorkHours::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -57,11 +57,11 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'policy' => function (ParseNode $n) use ($o) { $o->setPolicy($n->getObjectValue(array(UnifiedRoleManagementPolicy::class, 'createFromDiscriminatorValue'))); },
-            'policyId' => function (ParseNode $n) use ($o) { $o->setPolicyId($n->getStringValue()); },
-            'roleDefinitionId' => function (ParseNode $n) use ($o) { $o->setRoleDefinitionId($n->getStringValue()); },
-            'scopeId' => function (ParseNode $n) use ($o) { $o->setScopeId($n->getStringValue()); },
-            'scopeType' => function (ParseNode $n) use ($o) { $o->setScopeType($n->getStringValue()); },
+            'policy' => fn(ParseNode $n) => $o->setPolicy($n->getObjectValue([UnifiedRoleManagementPolicy::class, 'createFromDiscriminatorValue'])),
+            'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
+            'roleDefinitionId' => fn(ParseNode $n) => $o->setRoleDefinitionId($n->getStringValue()),
+            'scopeId' => fn(ParseNode $n) => $o->setScopeId($n->getStringValue()),
+            'scopeType' => fn(ParseNode $n) => $o->setScopeType($n->getStringValue()),
         ]);
     }
 

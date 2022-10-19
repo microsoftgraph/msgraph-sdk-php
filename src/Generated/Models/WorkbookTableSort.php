@@ -47,9 +47,9 @@ class WorkbookTableSort extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getCollectionOfObjectValues(array(WorkbookSortField::class, 'createFromDiscriminatorValue'))); },
-            'matchCase' => function (ParseNode $n) use ($o) { $o->setMatchCase($n->getBooleanValue()); },
-            'method' => function (ParseNode $n) use ($o) { $o->setMethod($n->getStringValue()); },
+            'fields' => fn(ParseNode $n) => $o->setFields($n->getCollectionOfObjectValues([WorkbookSortField::class, 'createFromDiscriminatorValue'])),
+            'matchCase' => fn(ParseNode $n) => $o->setMatchCase($n->getBooleanValue()),
+            'method' => fn(ParseNode $n) => $o->setMethod($n->getStringValue()),
         ]);
     }
 

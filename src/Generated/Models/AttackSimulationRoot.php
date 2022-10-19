@@ -19,7 +19,7 @@ class AttackSimulationRoot extends Entity implements Parsable
     private ?array $simulations = null;
     
     /**
-     * Instantiates a new AttackSimulationRoot and sets the default values.
+     * Instantiates a new attackSimulationRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -42,8 +42,8 @@ class AttackSimulationRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'simulationAutomations' => function (ParseNode $n) use ($o) { $o->setSimulationAutomations($n->getCollectionOfObjectValues(array(SimulationAutomation::class, 'createFromDiscriminatorValue'))); },
-            'simulations' => function (ParseNode $n) use ($o) { $o->setSimulations($n->getCollectionOfObjectValues(array(Simulation::class, 'createFromDiscriminatorValue'))); },
+            'simulationAutomations' => fn(ParseNode $n) => $o->setSimulationAutomations($n->getCollectionOfObjectValues([SimulationAutomation::class, 'createFromDiscriminatorValue'])),
+            'simulations' => fn(ParseNode $n) => $o->setSimulations($n->getCollectionOfObjectValues([Simulation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

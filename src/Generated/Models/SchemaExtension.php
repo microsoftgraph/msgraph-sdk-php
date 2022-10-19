@@ -65,11 +65,11 @@ class SchemaExtension extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'owner' => function (ParseNode $n) use ($o) { $o->setOwner($n->getStringValue()); },
-            'properties' => function (ParseNode $n) use ($o) { $o->setProperties($n->getCollectionOfObjectValues(array(ExtensionSchemaProperty::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getStringValue()); },
-            'targetTypes' => function (ParseNode $n) use ($o) { $o->setTargetTypes($n->getCollectionOfPrimitiveValues()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'owner' => fn(ParseNode $n) => $o->setOwner($n->getStringValue()),
+            'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([ExtensionSchemaProperty::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
+            'targetTypes' => fn(ParseNode $n) => $o->setTargetTypes($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

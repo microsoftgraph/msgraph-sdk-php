@@ -9,7 +9,12 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method.
+     * @var MicrosoftAuthenticatorFeatureSettings|null $featureSettings A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
+    */
+    private ?MicrosoftAuthenticatorFeatureSettings $featureSettings = null;
+    
+    /**
+     * @var array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method. Expanded by default.
     */
     private ?array $includeTargets = null;
     
@@ -31,18 +36,27 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
     }
 
     /**
+     * Gets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
+     * @return MicrosoftAuthenticatorFeatureSettings|null
+    */
+    public function getFeatureSettings(): ?MicrosoftAuthenticatorFeatureSettings {
+        return $this->featureSettings;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(MicrosoftAuthenticatorAuthenticationMethodTarget::class, 'createFromDiscriminatorValue'))); },
+            'featureSettings' => fn(ParseNode $n) => $o->setFeatureSettings($n->getObjectValue([MicrosoftAuthenticatorFeatureSettings::class, 'createFromDiscriminatorValue'])),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([MicrosoftAuthenticatorAuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.
      * @return array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
@@ -55,11 +69,20 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('featureSettings', $this->featureSettings);
         $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
     }
 
     /**
-     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Sets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
+     *  @param MicrosoftAuthenticatorFeatureSettings|null $value Value to set for the featureSettings property.
+    */
+    public function setFeatureSettings(?MicrosoftAuthenticatorFeatureSettings $value ): void {
+        $this->featureSettings = $value;
+    }
+
+    /**
+     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.
      *  @param array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value ): void {

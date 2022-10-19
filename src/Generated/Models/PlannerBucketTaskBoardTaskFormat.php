@@ -37,7 +37,7 @@ class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'orderHint' => function (ParseNode $n) use ($o) { $o->setOrderHint($n->getStringValue()); },
+            'orderHint' => fn(ParseNode $n) => $o->setOrderHint($n->getStringValue()),
         ]);
     }
 

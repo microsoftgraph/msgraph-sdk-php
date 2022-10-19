@@ -79,11 +79,11 @@ class Hashes implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'crc32Hash' => function (ParseNode $n) use ($o) { $o->setCrc32Hash($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'quickXorHash' => function (ParseNode $n) use ($o) { $o->setQuickXorHash($n->getStringValue()); },
-            'sha1Hash' => function (ParseNode $n) use ($o) { $o->setSha1Hash($n->getStringValue()); },
-            'sha256Hash' => function (ParseNode $n) use ($o) { $o->setSha256Hash($n->getStringValue()); },
+            'crc32Hash' => fn(ParseNode $n) => $o->setCrc32Hash($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'quickXorHash' => fn(ParseNode $n) => $o->setQuickXorHash($n->getStringValue()),
+            'sha1Hash' => fn(ParseNode $n) => $o->setSha1Hash($n->getStringValue()),
+            'sha256Hash' => fn(ParseNode $n) => $o->setSha256Hash($n->getStringValue()),
         ];
     }
 

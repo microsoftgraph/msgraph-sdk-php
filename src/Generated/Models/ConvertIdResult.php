@@ -74,10 +74,10 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'errorDetails' => function (ParseNode $n) use ($o) { $o->setErrorDetails($n->getObjectValue(array(GenericError::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'sourceId' => function (ParseNode $n) use ($o) { $o->setSourceId($n->getStringValue()); },
-            'targetId' => function (ParseNode $n) use ($o) { $o->setTargetId($n->getStringValue()); },
+            'errorDetails' => fn(ParseNode $n) => $o->setErrorDetails($n->getObjectValue([GenericError::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sourceId' => fn(ParseNode $n) => $o->setSourceId($n->getStringValue()),
+            'targetId' => fn(ParseNode $n) => $o->setTargetId($n->getStringValue()),
         ];
     }
 

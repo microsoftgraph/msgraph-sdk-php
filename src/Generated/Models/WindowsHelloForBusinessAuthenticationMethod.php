@@ -77,10 +77,10 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'device' => function (ParseNode $n) use ($o) { $o->setDevice($n->getObjectValue(array(Device::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'keyStrength' => function (ParseNode $n) use ($o) { $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Device::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'keyStrength' => fn(ParseNode $n) => $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)),
         ]);
     }
 

@@ -58,11 +58,11 @@ class LocalizedNotificationMessage extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'locale' => function (ParseNode $n) use ($o) { $o->setLocale($n->getStringValue()); },
-            'messageTemplate' => function (ParseNode $n) use ($o) { $o->setMessageTemplate($n->getStringValue()); },
-            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'locale' => fn(ParseNode $n) => $o->setLocale($n->getStringValue()),
+            'messageTemplate' => fn(ParseNode $n) => $o->setMessageTemplate($n->getStringValue()),
+            'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
         ]);
     }
 

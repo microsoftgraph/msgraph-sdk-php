@@ -7,8 +7,12 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\HideForUser\HideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
@@ -18,6 +22,7 @@ use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\PinnedMessage
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -29,10 +34,38 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChatItemRequestBuilder 
 {
     /**
+     * The hideForUser property
+    */
+    public function hideForUser(): HideForUserRequestBuilder {
+        return new HideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * The installedApps property
     */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The lastMessagePreview property
+    */
+    public function lastMessagePreview(): LastMessagePreviewRequestBuilder {
+        return new LastMessagePreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The markChatReadForUser property
+    */
+    public function markChatReadForUser(): MarkChatReadForUserRequestBuilder {
+        return new MarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The markChatUnreadForUser property
+    */
+    public function markChatUnreadForUser(): MarkChatUnreadForUserRequestBuilder {
+        return new MarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -78,6 +111,13 @@ class ChatItemRequestBuilder
     */
     public function tabs(): TabsRequestBuilder {
         return new TabsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The unhideForUser property
+    */
+    public function unhideForUser(): UnhideForUserRequestBuilder {
+        return new UnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -176,8 +216,8 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createDeleteRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $responseHandler, $errorMappings);
         } catch(Exception $ex) {
@@ -195,10 +235,10 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createGetRequestInformation($requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, array(Chat::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [Chat::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -248,10 +288,10 @@ class ChatItemRequestBuilder
         $requestInfo = $this->createPatchRequestInformation($body, $requestConfiguration);
         try {
             $errorMappings = [
-                    '4XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
-                    '5XX' => array(ODataError::class, 'createFromDiscriminatorValue'),
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendAsync($requestInfo, array(Chat::class, 'createFromDiscriminatorValue'), $responseHandler, $errorMappings);
+            return $this->requestAdapter->sendAsync($requestInfo, [Chat::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

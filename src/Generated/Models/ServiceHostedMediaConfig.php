@@ -37,7 +37,7 @@ class ServiceHostedMediaConfig extends MediaConfig implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'preFetchMedia' => function (ParseNode $n) use ($o) { $o->setPreFetchMedia($n->getCollectionOfObjectValues(array(MediaInfo::class, 'createFromDiscriminatorValue'))); },
+            'preFetchMedia' => fn(ParseNode $n) => $o->setPreFetchMedia($n->getCollectionOfObjectValues([MediaInfo::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

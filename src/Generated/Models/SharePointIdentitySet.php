@@ -47,9 +47,9 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'group' => function (ParseNode $n) use ($o) { $o->setGroup($n->getObjectValue(array(Identity::class, 'createFromDiscriminatorValue'))); },
-            'siteGroup' => function (ParseNode $n) use ($o) { $o->setSiteGroup($n->getObjectValue(array(SharePointIdentity::class, 'createFromDiscriminatorValue'))); },
-            'siteUser' => function (ParseNode $n) use ($o) { $o->setSiteUser($n->getObjectValue(array(SharePointIdentity::class, 'createFromDiscriminatorValue'))); },
+            'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'siteGroup' => fn(ParseNode $n) => $o->setSiteGroup($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
+            'siteUser' => fn(ParseNode $n) => $o->setSiteUser($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

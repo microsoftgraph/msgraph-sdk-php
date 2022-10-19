@@ -42,8 +42,8 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
-            'pkcs12Value' => function (ParseNode $n) use ($o) { $o->setPkcs12Value($n->getStringValue()); },
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
+            'pkcs12Value' => fn(ParseNode $n) => $o->setPkcs12Value($n->getStringValue()),
         ]);
     }
 

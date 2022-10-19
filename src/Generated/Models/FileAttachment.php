@@ -72,9 +72,9 @@ class FileAttachment extends Attachment implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contentBytes' => function (ParseNode $n) use ($o) { $o->setContentBytes($n->getBinaryContent()); },
-            'contentId' => function (ParseNode $n) use ($o) { $o->setContentId($n->getStringValue()); },
-            'contentLocation' => function (ParseNode $n) use ($o) { $o->setContentLocation($n->getStringValue()); },
+            'contentBytes' => fn(ParseNode $n) => $o->setContentBytes($n->getBinaryContent()),
+            'contentId' => fn(ParseNode $n) => $o->setContentId($n->getStringValue()),
+            'contentLocation' => fn(ParseNode $n) => $o->setContentLocation($n->getStringValue()),
         ]);
     }
 

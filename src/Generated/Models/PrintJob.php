@@ -110,15 +110,15 @@ class PrintJob extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'configuration' => function (ParseNode $n) use ($o) { $o->setConfiguration($n->getObjectValue(array(PrintJobConfiguration::class, 'createFromDiscriminatorValue'))); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(UserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'documents' => function (ParseNode $n) use ($o) { $o->setDocuments($n->getCollectionOfObjectValues(array(PrintDocument::class, 'createFromDiscriminatorValue'))); },
-            'isFetchable' => function (ParseNode $n) use ($o) { $o->setIsFetchable($n->getBooleanValue()); },
-            'redirectedFrom' => function (ParseNode $n) use ($o) { $o->setRedirectedFrom($n->getStringValue()); },
-            'redirectedTo' => function (ParseNode $n) use ($o) { $o->setRedirectedTo($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getObjectValue(array(PrintJobStatus::class, 'createFromDiscriminatorValue'))); },
-            'tasks' => function (ParseNode $n) use ($o) { $o->setTasks($n->getCollectionOfObjectValues(array(PrintTask::class, 'createFromDiscriminatorValue'))); },
+            'configuration' => fn(ParseNode $n) => $o->setConfiguration($n->getObjectValue([PrintJobConfiguration::class, 'createFromDiscriminatorValue'])),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'documents' => fn(ParseNode $n) => $o->setDocuments($n->getCollectionOfObjectValues([PrintDocument::class, 'createFromDiscriminatorValue'])),
+            'isFetchable' => fn(ParseNode $n) => $o->setIsFetchable($n->getBooleanValue()),
+            'redirectedFrom' => fn(ParseNode $n) => $o->setRedirectedFrom($n->getStringValue()),
+            'redirectedTo' => fn(ParseNode $n) => $o->setRedirectedTo($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([PrintJobStatus::class, 'createFromDiscriminatorValue'])),
+            'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([PrintTask::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

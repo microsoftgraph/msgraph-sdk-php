@@ -62,9 +62,9 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'keyCredential' => function (ParseNode $n) use ($o) { $o->setKeyCredential($n->getObjectValue(array(KeyCredential::class, 'createFromDiscriminatorValue'))); },
-            'passwordCredential' => function (ParseNode $n) use ($o) { $o->setPasswordCredential($n->getObjectValue(array(PasswordCredential::class, 'createFromDiscriminatorValue'))); },
-            'proof' => function (ParseNode $n) use ($o) { $o->setProof($n->getStringValue()); },
+            'keyCredential' => fn(ParseNode $n) => $o->setKeyCredential($n->getObjectValue([KeyCredential::class, 'createFromDiscriminatorValue'])),
+            'passwordCredential' => fn(ParseNode $n) => $o->setPasswordCredential($n->getObjectValue([PasswordCredential::class, 'createFromDiscriminatorValue'])),
+            'proof' => fn(ParseNode $n) => $o->setProof($n->getStringValue()),
         ];
     }
 

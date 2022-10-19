@@ -68,9 +68,9 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'mailNickname' => function (ParseNode $n) use ($o) { $o->setMailNickname($n->getStringValue()); },
-            'onBehalfOfUserId' => function (ParseNode $n) use ($o) { $o->setOnBehalfOfUserId($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'mailNickname' => fn(ParseNode $n) => $o->setMailNickname($n->getStringValue()),
+            'onBehalfOfUserId' => fn(ParseNode $n) => $o->setOnBehalfOfUserId($n->getStringValue()),
         ];
     }
 

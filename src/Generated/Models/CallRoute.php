@@ -66,10 +66,10 @@ class CallRoute implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'final' => function (ParseNode $n) use ($o) { $o->setFinal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'original' => function (ParseNode $n) use ($o) { $o->setOriginal($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'routingType' => function (ParseNode $n) use ($o) { $o->setRoutingType($n->getEnumValue(RoutingType::class)); },
+            'final' => fn(ParseNode $n) => $o->setFinal($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'original' => fn(ParseNode $n) => $o->setOriginal($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'routingType' => fn(ParseNode $n) => $o->setRoutingType($n->getEnumValue(RoutingType::class)),
         ];
     }
 

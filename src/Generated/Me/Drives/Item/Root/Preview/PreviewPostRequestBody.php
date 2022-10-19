@@ -55,8 +55,8 @@ class PreviewPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'page' => function (ParseNode $n) use ($o) { $o->setPage($n->getStringValue()); },
-            'zoom' => function (ParseNode $n) use ($o) { $o->setZoom($n->getFloatValue()); },
+            'page' => fn(ParseNode $n) => $o->setPage($n->getStringValue()),
+            'zoom' => fn(ParseNode $n) => $o->setZoom($n->getFloatValue()),
         ];
     }
 

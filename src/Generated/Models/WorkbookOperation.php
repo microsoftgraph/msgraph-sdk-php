@@ -55,9 +55,9 @@ class WorkbookOperation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(WorkbookOperationError::class, 'createFromDiscriminatorValue'))); },
-            'resourceLocation' => function (ParseNode $n) use ($o) { $o->setResourceLocation($n->getStringValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(WorkbookOperationStatus::class)); },
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([WorkbookOperationError::class, 'createFromDiscriminatorValue'])),
+            'resourceLocation' => fn(ParseNode $n) => $o->setResourceLocation($n->getStringValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(WorkbookOperationStatus::class)),
         ]);
     }
 

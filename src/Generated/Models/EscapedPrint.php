@@ -94,14 +94,14 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'connectors' => function (ParseNode $n) use ($o) { $o->setConnectors($n->getCollectionOfObjectValues(array(PrintConnector::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(PrintOperation::class, 'createFromDiscriminatorValue'))); },
-            'printers' => function (ParseNode $n) use ($o) { $o->setPrinters($n->getCollectionOfObjectValues(array(Printer::class, 'createFromDiscriminatorValue'))); },
-            'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfObjectValues(array(PrintService::class, 'createFromDiscriminatorValue'))); },
-            'settings' => function (ParseNode $n) use ($o) { $o->setSettings($n->getObjectValue(array(PrintSettings::class, 'createFromDiscriminatorValue'))); },
-            'shares' => function (ParseNode $n) use ($o) { $o->setShares($n->getCollectionOfObjectValues(array(PrinterShare::class, 'createFromDiscriminatorValue'))); },
-            'taskDefinitions' => function (ParseNode $n) use ($o) { $o->setTaskDefinitions($n->getCollectionOfObjectValues(array(PrintTaskDefinition::class, 'createFromDiscriminatorValue'))); },
+            'connectors' => fn(ParseNode $n) => $o->setConnectors($n->getCollectionOfObjectValues([PrintConnector::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([PrintOperation::class, 'createFromDiscriminatorValue'])),
+            'printers' => fn(ParseNode $n) => $o->setPrinters($n->getCollectionOfObjectValues([Printer::class, 'createFromDiscriminatorValue'])),
+            'services' => fn(ParseNode $n) => $o->setServices($n->getCollectionOfObjectValues([PrintService::class, 'createFromDiscriminatorValue'])),
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([PrintSettings::class, 'createFromDiscriminatorValue'])),
+            'shares' => fn(ParseNode $n) => $o->setShares($n->getCollectionOfObjectValues([PrinterShare::class, 'createFromDiscriminatorValue'])),
+            'taskDefinitions' => fn(ParseNode $n) => $o->setTaskDefinitions($n->getCollectionOfObjectValues([PrintTaskDefinition::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

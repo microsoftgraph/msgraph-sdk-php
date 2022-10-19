@@ -64,8 +64,8 @@ class ResultTemplateOption implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'enableResultTemplate' => function (ParseNode $n) use ($o) { $o->setEnableResultTemplate($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'enableResultTemplate' => fn(ParseNode $n) => $o->setEnableResultTemplate($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

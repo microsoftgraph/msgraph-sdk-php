@@ -36,7 +36,7 @@ class ManagedAppPolicyDeploymentSummaryPerAppCollectionResponse extends BaseColl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([ManagedAppPolicyDeploymentSummaryPerApp::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

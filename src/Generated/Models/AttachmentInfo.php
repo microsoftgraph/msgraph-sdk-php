@@ -87,11 +87,11 @@ class AttachmentInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attachmentType' => function (ParseNode $n) use ($o) { $o->setAttachmentType($n->getEnumValue(AttachmentType::class)); },
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
+            'attachmentType' => fn(ParseNode $n) => $o->setAttachmentType($n->getEnumValue(AttachmentType::class)),
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
         ];
     }
 

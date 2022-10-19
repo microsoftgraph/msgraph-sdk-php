@@ -42,8 +42,8 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'tabId' => function (ParseNode $n) use ($o) { $o->setTabId($n->getStringValue()); },
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'tabId' => fn(ParseNode $n) => $o->setTabId($n->getStringValue()),
         ]);
     }
 

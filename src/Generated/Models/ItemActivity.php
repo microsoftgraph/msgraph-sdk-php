@@ -85,10 +85,10 @@ class ItemActivity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'access' => function (ParseNode $n) use ($o) { $o->setAccess($n->getObjectValue(array(AccessAction::class, 'createFromDiscriminatorValue'))); },
-            'activityDateTime' => function (ParseNode $n) use ($o) { $o->setActivityDateTime($n->getDateTimeValue()); },
-            'actor' => function (ParseNode $n) use ($o) { $o->setActor($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'driveItem' => function (ParseNode $n) use ($o) { $o->setDriveItem($n->getObjectValue(array(DriveItem::class, 'createFromDiscriminatorValue'))); },
+            'access' => fn(ParseNode $n) => $o->setAccess($n->getObjectValue([AccessAction::class, 'createFromDiscriminatorValue'])),
+            'activityDateTime' => fn(ParseNode $n) => $o->setActivityDateTime($n->getDateTimeValue()),
+            'actor' => fn(ParseNode $n) => $o->setActor($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'driveItem' => fn(ParseNode $n) => $o->setDriveItem($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

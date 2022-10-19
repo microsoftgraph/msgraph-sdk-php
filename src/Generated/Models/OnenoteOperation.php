@@ -60,10 +60,10 @@ class OnenoteOperation extends Operation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'error' => function (ParseNode $n) use ($o) { $o->setError($n->getObjectValue(array(OnenoteOperationError::class, 'createFromDiscriminatorValue'))); },
-            'percentComplete' => function (ParseNode $n) use ($o) { $o->setPercentComplete($n->getStringValue()); },
-            'resourceId' => function (ParseNode $n) use ($o) { $o->setResourceId($n->getStringValue()); },
-            'resourceLocation' => function (ParseNode $n) use ($o) { $o->setResourceLocation($n->getStringValue()); },
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([OnenoteOperationError::class, 'createFromDiscriminatorValue'])),
+            'percentComplete' => fn(ParseNode $n) => $o->setPercentComplete($n->getStringValue()),
+            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
+            'resourceLocation' => fn(ParseNode $n) => $o->setResourceLocation($n->getStringValue()),
         ]);
     }
 

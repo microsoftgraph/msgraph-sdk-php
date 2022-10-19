@@ -57,11 +57,11 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'licenseType' => function (ParseNode $n) use ($o) { $o->setLicenseType($n->getEnumValue(MicrosoftStoreForBusinessLicenseType::class)); },
-            'packageIdentityName' => function (ParseNode $n) use ($o) { $o->setPackageIdentityName($n->getStringValue()); },
-            'productKey' => function (ParseNode $n) use ($o) { $o->setProductKey($n->getStringValue()); },
-            'totalLicenseCount' => function (ParseNode $n) use ($o) { $o->setTotalLicenseCount($n->getIntegerValue()); },
-            'usedLicenseCount' => function (ParseNode $n) use ($o) { $o->setUsedLicenseCount($n->getIntegerValue()); },
+            'licenseType' => fn(ParseNode $n) => $o->setLicenseType($n->getEnumValue(MicrosoftStoreForBusinessLicenseType::class)),
+            'packageIdentityName' => fn(ParseNode $n) => $o->setPackageIdentityName($n->getStringValue()),
+            'productKey' => fn(ParseNode $n) => $o->setProductKey($n->getStringValue()),
+            'totalLicenseCount' => fn(ParseNode $n) => $o->setTotalLicenseCount($n->getIntegerValue()),
+            'usedLicenseCount' => fn(ParseNode $n) => $o->setUsedLicenseCount($n->getIntegerValue()),
         ]);
     }
 

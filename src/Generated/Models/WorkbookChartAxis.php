@@ -72,14 +72,14 @@ class WorkbookChartAxis extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartAxisFormat::class, 'createFromDiscriminatorValue'))); },
-            'majorGridlines' => function (ParseNode $n) use ($o) { $o->setMajorGridlines($n->getObjectValue(array(WorkbookChartGridlines::class, 'createFromDiscriminatorValue'))); },
-            'majorUnit' => function (ParseNode $n) use ($o) { $o->setMajorUnit($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'maximum' => function (ParseNode $n) use ($o) { $o->setMaximum($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'minimum' => function (ParseNode $n) use ($o) { $o->setMinimum($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'minorGridlines' => function (ParseNode $n) use ($o) { $o->setMinorGridlines($n->getObjectValue(array(WorkbookChartGridlines::class, 'createFromDiscriminatorValue'))); },
-            'minorUnit' => function (ParseNode $n) use ($o) { $o->setMinorUnit($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getObjectValue(array(WorkbookChartAxisTitle::class, 'createFromDiscriminatorValue'))); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartAxisFormat::class, 'createFromDiscriminatorValue'])),
+            'majorGridlines' => fn(ParseNode $n) => $o->setMajorGridlines($n->getObjectValue([WorkbookChartGridlines::class, 'createFromDiscriminatorValue'])),
+            'majorUnit' => fn(ParseNode $n) => $o->setMajorUnit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'maximum' => fn(ParseNode $n) => $o->setMaximum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'minimum' => fn(ParseNode $n) => $o->setMinimum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'minorGridlines' => fn(ParseNode $n) => $o->setMinorGridlines($n->getObjectValue([WorkbookChartGridlines::class, 'createFromDiscriminatorValue'])),
+            'minorUnit' => fn(ParseNode $n) => $o->setMinorUnit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getObjectValue([WorkbookChartAxisTitle::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

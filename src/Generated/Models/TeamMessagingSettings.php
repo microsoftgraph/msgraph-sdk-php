@@ -116,12 +116,12 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowChannelMentions' => function (ParseNode $n) use ($o) { $o->setAllowChannelMentions($n->getBooleanValue()); },
-            'allowOwnerDeleteMessages' => function (ParseNode $n) use ($o) { $o->setAllowOwnerDeleteMessages($n->getBooleanValue()); },
-            'allowTeamMentions' => function (ParseNode $n) use ($o) { $o->setAllowTeamMentions($n->getBooleanValue()); },
-            'allowUserDeleteMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserDeleteMessages($n->getBooleanValue()); },
-            'allowUserEditMessages' => function (ParseNode $n) use ($o) { $o->setAllowUserEditMessages($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowChannelMentions' => fn(ParseNode $n) => $o->setAllowChannelMentions($n->getBooleanValue()),
+            'allowOwnerDeleteMessages' => fn(ParseNode $n) => $o->setAllowOwnerDeleteMessages($n->getBooleanValue()),
+            'allowTeamMentions' => fn(ParseNode $n) => $o->setAllowTeamMentions($n->getBooleanValue()),
+            'allowUserDeleteMessages' => fn(ParseNode $n) => $o->setAllowUserDeleteMessages($n->getBooleanValue()),
+            'allowUserEditMessages' => fn(ParseNode $n) => $o->setAllowUserEditMessages($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

@@ -51,7 +51,7 @@ class QueryPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'requests' => function (ParseNode $n) use ($o) { $o->setRequests($n->getCollectionOfObjectValues(array(SearchRequest::class, 'createFromDiscriminatorValue'))); },
+            'requests' => fn(ParseNode $n) => $o->setRequests($n->getCollectionOfObjectValues([SearchRequest::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

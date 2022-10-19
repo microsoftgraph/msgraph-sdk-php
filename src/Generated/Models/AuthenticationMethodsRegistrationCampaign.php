@@ -79,11 +79,11 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeTargets' => function (ParseNode $n) use ($o) { $o->setExcludeTargets($n->getCollectionOfObjectValues(array(ExcludeTarget::class, 'createFromDiscriminatorValue'))); },
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodsRegistrationCampaignIncludeTarget::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'snoozeDurationInDays' => function (ParseNode $n) use ($o) { $o->setSnoozeDurationInDays($n->getIntegerValue()); },
-            'state' => function (ParseNode $n) use ($o) { $o->setState($n->getEnumValue(AdvancedConfigState::class)); },
+            'excludeTargets' => fn(ParseNode $n) => $o->setExcludeTargets($n->getCollectionOfObjectValues([ExcludeTarget::class, 'createFromDiscriminatorValue'])),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodsRegistrationCampaignIncludeTarget::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'snoozeDurationInDays' => fn(ParseNode $n) => $o->setSnoozeDurationInDays($n->getIntegerValue()),
+            'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AdvancedConfigState::class)),
         ];
     }
 

@@ -37,7 +37,7 @@ class ColumnLink extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
         ]);
     }
 

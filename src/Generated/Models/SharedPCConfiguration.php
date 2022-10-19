@@ -157,18 +157,18 @@ class SharedPCConfiguration extends DeviceConfiguration implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'accountManagerPolicy' => function (ParseNode $n) use ($o) { $o->setAccountManagerPolicy($n->getObjectValue(array(SharedPCAccountManagerPolicy::class, 'createFromDiscriminatorValue'))); },
-            'allowedAccounts' => function (ParseNode $n) use ($o) { $o->setAllowedAccounts($n->getEnumValue(SharedPCAllowedAccountType::class)); },
-            'allowLocalStorage' => function (ParseNode $n) use ($o) { $o->setAllowLocalStorage($n->getBooleanValue()); },
-            'disableAccountManager' => function (ParseNode $n) use ($o) { $o->setDisableAccountManager($n->getBooleanValue()); },
-            'disableEduPolicies' => function (ParseNode $n) use ($o) { $o->setDisableEduPolicies($n->getBooleanValue()); },
-            'disablePowerPolicies' => function (ParseNode $n) use ($o) { $o->setDisablePowerPolicies($n->getBooleanValue()); },
-            'disableSignInOnResume' => function (ParseNode $n) use ($o) { $o->setDisableSignInOnResume($n->getBooleanValue()); },
-            'enabled' => function (ParseNode $n) use ($o) { $o->setEnabled($n->getBooleanValue()); },
-            'idleTimeBeforeSleepInSeconds' => function (ParseNode $n) use ($o) { $o->setIdleTimeBeforeSleepInSeconds($n->getIntegerValue()); },
-            'kioskAppDisplayName' => function (ParseNode $n) use ($o) { $o->setKioskAppDisplayName($n->getStringValue()); },
-            'kioskAppUserModelId' => function (ParseNode $n) use ($o) { $o->setKioskAppUserModelId($n->getStringValue()); },
-            'maintenanceStartTime' => function (ParseNode $n) use ($o) { $o->setMaintenanceStartTime($n->getTimeValue()); },
+            'accountManagerPolicy' => fn(ParseNode $n) => $o->setAccountManagerPolicy($n->getObjectValue([SharedPCAccountManagerPolicy::class, 'createFromDiscriminatorValue'])),
+            'allowedAccounts' => fn(ParseNode $n) => $o->setAllowedAccounts($n->getEnumValue(SharedPCAllowedAccountType::class)),
+            'allowLocalStorage' => fn(ParseNode $n) => $o->setAllowLocalStorage($n->getBooleanValue()),
+            'disableAccountManager' => fn(ParseNode $n) => $o->setDisableAccountManager($n->getBooleanValue()),
+            'disableEduPolicies' => fn(ParseNode $n) => $o->setDisableEduPolicies($n->getBooleanValue()),
+            'disablePowerPolicies' => fn(ParseNode $n) => $o->setDisablePowerPolicies($n->getBooleanValue()),
+            'disableSignInOnResume' => fn(ParseNode $n) => $o->setDisableSignInOnResume($n->getBooleanValue()),
+            'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getBooleanValue()),
+            'idleTimeBeforeSleepInSeconds' => fn(ParseNode $n) => $o->setIdleTimeBeforeSleepInSeconds($n->getIntegerValue()),
+            'kioskAppDisplayName' => fn(ParseNode $n) => $o->setKioskAppDisplayName($n->getStringValue()),
+            'kioskAppUserModelId' => fn(ParseNode $n) => $o->setKioskAppUserModelId($n->getStringValue()),
+            'maintenanceStartTime' => fn(ParseNode $n) => $o->setMaintenanceStartTime($n->getTimeValue()),
         ]);
     }
 

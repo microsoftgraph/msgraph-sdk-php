@@ -90,10 +90,10 @@ class AssignedTrainingInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignedUserCount' => function (ParseNode $n) use ($o) { $o->setAssignedUserCount($n->getIntegerValue()); },
-            'completedUserCount' => function (ParseNode $n) use ($o) { $o->setCompletedUserCount($n->getIntegerValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'assignedUserCount' => fn(ParseNode $n) => $o->setAssignedUserCount($n->getIntegerValue()),
+            'completedUserCount' => fn(ParseNode $n) => $o->setCompletedUserCount($n->getIntegerValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

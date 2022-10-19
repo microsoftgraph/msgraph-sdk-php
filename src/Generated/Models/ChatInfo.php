@@ -66,10 +66,10 @@ class ChatInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'messageId' => function (ParseNode $n) use ($o) { $o->setMessageId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'replyChainMessageId' => function (ParseNode $n) use ($o) { $o->setReplyChainMessageId($n->getStringValue()); },
-            'threadId' => function (ParseNode $n) use ($o) { $o->setThreadId($n->getStringValue()); },
+            'messageId' => fn(ParseNode $n) => $o->setMessageId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'replyChainMessageId' => fn(ParseNode $n) => $o->setReplyChainMessageId($n->getStringValue()),
+            'threadId' => fn(ParseNode $n) => $o->setThreadId($n->getStringValue()),
         ];
     }
 

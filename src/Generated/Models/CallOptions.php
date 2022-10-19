@@ -69,9 +69,9 @@ class CallOptions implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hideBotAfterEscalation' => function (ParseNode $n) use ($o) { $o->setHideBotAfterEscalation($n->getBooleanValue()); },
-            'isContentSharingNotificationEnabled' => function (ParseNode $n) use ($o) { $o->setIsContentSharingNotificationEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'hideBotAfterEscalation' => fn(ParseNode $n) => $o->setHideBotAfterEscalation($n->getBooleanValue()),
+            'isContentSharingNotificationEnabled' => fn(ParseNode $n) => $o->setIsContentSharingNotificationEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

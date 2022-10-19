@@ -37,7 +37,7 @@ class RemoteLockActionResult extends DeviceActionResult implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'unlockPin' => function (ParseNode $n) use ($o) { $o->setUnlockPin($n->getStringValue()); },
+            'unlockPin' => fn(ParseNode $n) => $o->setUnlockPin($n->getStringValue()),
         ]);
     }
 

@@ -38,7 +38,7 @@ class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(MailFolder::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([MailFolder::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

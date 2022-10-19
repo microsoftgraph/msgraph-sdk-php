@@ -51,7 +51,7 @@ class LogTeleconferenceDeviceQualityPostRequestBody implements AdditionalDataHol
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'quality' => function (ParseNode $n) use ($o) { $o->setQuality($n->getObjectValue(array(TeleconferenceDeviceQuality::class, 'createFromDiscriminatorValue'))); },
+            'quality' => fn(ParseNode $n) => $o->setQuality($n->getObjectValue([TeleconferenceDeviceQuality::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

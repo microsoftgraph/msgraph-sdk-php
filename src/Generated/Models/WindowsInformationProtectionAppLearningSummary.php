@@ -24,7 +24,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
     private ?int $deviceCount = null;
     
     /**
-     * Instantiates a new WindowsInformationProtectionAppLearningSummary and sets the default values.
+     * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -71,9 +71,9 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicationName' => function (ParseNode $n) use ($o) { $o->setApplicationName($n->getStringValue()); },
-            'applicationType' => function (ParseNode $n) use ($o) { $o->setApplicationType($n->getEnumValue(ApplicationType::class)); },
-            'deviceCount' => function (ParseNode $n) use ($o) { $o->setDeviceCount($n->getIntegerValue()); },
+            'applicationName' => fn(ParseNode $n) => $o->setApplicationName($n->getStringValue()),
+            'applicationType' => fn(ParseNode $n) => $o->setApplicationType($n->getEnumValue(ApplicationType::class)),
+            'deviceCount' => fn(ParseNode $n) => $o->setDeviceCount($n->getIntegerValue()),
         ]);
     }
 

@@ -61,9 +61,9 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'target' => function (ParseNode $n) use ($o) { $o->setTarget($n->getStringValue()); },
-            'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(CrossTenantAccessPolicyTargetType::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
+            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(CrossTenantAccessPolicyTargetType::class)),
         ];
     }
 

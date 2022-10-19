@@ -45,7 +45,7 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'certificateList' => function (ParseNode $n) use ($o) { $o->setCertificateList($n->getCollectionOfObjectValues(array(Pkcs12CertificateInformation::class, 'createFromDiscriminatorValue'))); },
+            'certificateList' => fn(ParseNode $n) => $o->setCertificateList($n->getCollectionOfObjectValues([Pkcs12CertificateInformation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

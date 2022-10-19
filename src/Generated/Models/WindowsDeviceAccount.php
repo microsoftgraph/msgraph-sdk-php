@@ -64,8 +64,8 @@ class WindowsDeviceAccount implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'password' => function (ParseNode $n) use ($o) { $o->setPassword($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'password' => fn(ParseNode $n) => $o->setPassword($n->getStringValue()),
         ];
     }
 

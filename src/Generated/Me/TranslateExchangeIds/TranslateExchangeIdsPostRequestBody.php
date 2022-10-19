@@ -61,9 +61,9 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'inputIds' => function (ParseNode $n) use ($o) { $o->setInputIds($n->getCollectionOfPrimitiveValues()); },
-            'sourceIdType' => function (ParseNode $n) use ($o) { $o->setSourceIdType($n->getEnumValue(ExchangeIdFormat::class)); },
-            'targetIdType' => function (ParseNode $n) use ($o) { $o->setTargetIdType($n->getEnumValue(ExchangeIdFormat::class)); },
+            'inputIds' => fn(ParseNode $n) => $o->setInputIds($n->getCollectionOfPrimitiveValues()),
+            'sourceIdType' => fn(ParseNode $n) => $o->setSourceIdType($n->getEnumValue(ExchangeIdFormat::class)),
+            'targetIdType' => fn(ParseNode $n) => $o->setTargetIdType($n->getEnumValue(ExchangeIdFormat::class)),
         ];
     }
 

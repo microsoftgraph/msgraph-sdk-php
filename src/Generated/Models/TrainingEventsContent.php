@@ -69,9 +69,9 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignedTrainingsInfos' => function (ParseNode $n) use ($o) { $o->setAssignedTrainingsInfos($n->getCollectionOfObjectValues(array(AssignedTrainingInfo::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'trainingsAssignedUserCount' => function (ParseNode $n) use ($o) { $o->setTrainingsAssignedUserCount($n->getIntegerValue()); },
+            'assignedTrainingsInfos' => fn(ParseNode $n) => $o->setAssignedTrainingsInfos($n->getCollectionOfObjectValues([AssignedTrainingInfo::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'trainingsAssignedUserCount' => fn(ParseNode $n) => $o->setTrainingsAssignedUserCount($n->getIntegerValue()),
         ];
     }
 

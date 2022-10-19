@@ -67,10 +67,10 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'gracePeriodBeforeAccessRemoval' => function (ParseNode $n) use ($o) { $o->setGracePeriodBeforeAccessRemoval($n->getDateIntervalValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'removeAccessWhenTargetLeavesAllowedTargets' => function (ParseNode $n) use ($o) { $o->setRemoveAccessWhenTargetLeavesAllowedTargets($n->getBooleanValue()); },
-            'requestAccessForAllowedTargets' => function (ParseNode $n) use ($o) { $o->setRequestAccessForAllowedTargets($n->getBooleanValue()); },
+            'gracePeriodBeforeAccessRemoval' => fn(ParseNode $n) => $o->setGracePeriodBeforeAccessRemoval($n->getDateIntervalValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'removeAccessWhenTargetLeavesAllowedTargets' => fn(ParseNode $n) => $o->setRemoveAccessWhenTargetLeavesAllowedTargets($n->getBooleanValue()),
+            'requestAccessForAllowedTargets' => fn(ParseNode $n) => $o->setRequestAccessForAllowedTargets($n->getBooleanValue()),
         ];
     }
 

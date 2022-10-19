@@ -37,7 +37,7 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'scope' => function (ParseNode $n) use ($o) { $o->setScope($n->getObjectValue(array(AccessReviewInstanceDecisionItemResource::class, 'createFromDiscriminatorValue'))); },
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getObjectValue([AccessReviewInstanceDecisionItemResource::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

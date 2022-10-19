@@ -45,7 +45,7 @@ class ParticipantJoiningNotification extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'call' => function (ParseNode $n) use ($o) { $o->setCall($n->getObjectValue(array(Call::class, 'createFromDiscriminatorValue'))); },
+            'call' => fn(ParseNode $n) => $o->setCall($n->getObjectValue([Call::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

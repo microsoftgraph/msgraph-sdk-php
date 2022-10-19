@@ -93,12 +93,12 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'browser' => function (ParseNode $n) use ($o) { $o->setBrowser($n->getStringValue()); },
-            'contentDateTime' => function (ParseNode $n) use ($o) { $o->setContentDateTime($n->getDateTimeValue()); },
-            'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'osPlatformDeviceDetails' => function (ParseNode $n) use ($o) { $o->setOsPlatformDeviceDetails($n->getStringValue()); },
-            'potentialScoreImpact' => function (ParseNode $n) use ($o) { $o->setPotentialScoreImpact($n->getFloatValue()); },
+            'browser' => fn(ParseNode $n) => $o->setBrowser($n->getStringValue()),
+            'contentDateTime' => fn(ParseNode $n) => $o->setContentDateTime($n->getDateTimeValue()),
+            'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'osPlatformDeviceDetails' => fn(ParseNode $n) => $o->setOsPlatformDeviceDetails($n->getStringValue()),
+            'potentialScoreImpact' => fn(ParseNode $n) => $o->setPotentialScoreImpact($n->getFloatValue()),
         ];
     }
 

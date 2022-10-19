@@ -84,10 +84,10 @@ class Contract extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'contractType' => function (ParseNode $n) use ($o) { $o->setContractType($n->getStringValue()); },
-            'customerId' => function (ParseNode $n) use ($o) { $o->setCustomerId($n->getStringValue()); },
-            'defaultDomainName' => function (ParseNode $n) use ($o) { $o->setDefaultDomainName($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
+            'contractType' => fn(ParseNode $n) => $o->setContractType($n->getStringValue()),
+            'customerId' => fn(ParseNode $n) => $o->setCustomerId($n->getStringValue()),
+            'defaultDomainName' => fn(ParseNode $n) => $o->setDefaultDomainName($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
         ]);
     }
 

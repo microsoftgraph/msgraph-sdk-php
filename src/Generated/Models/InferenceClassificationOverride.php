@@ -50,8 +50,8 @@ class InferenceClassificationOverride extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'classifyAs' => function (ParseNode $n) use ($o) { $o->setClassifyAs($n->getEnumValue(InferenceClassificationType::class)); },
-            'senderEmailAddress' => function (ParseNode $n) use ($o) { $o->setSenderEmailAddress($n->getObjectValue(array(EmailAddress::class, 'createFromDiscriminatorValue'))); },
+            'classifyAs' => fn(ParseNode $n) => $o->setClassifyAs($n->getEnumValue(InferenceClassificationType::class)),
+            'senderEmailAddress' => fn(ParseNode $n) => $o->setSenderEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

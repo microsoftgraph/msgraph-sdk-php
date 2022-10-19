@@ -172,21 +172,21 @@ class ManagedAppRegistration extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appIdentifier' => function (ParseNode $n) use ($o) { $o->setAppIdentifier($n->getObjectValue(array(MobileAppIdentifier::class, 'createFromDiscriminatorValue'))); },
-            'applicationVersion' => function (ParseNode $n) use ($o) { $o->setApplicationVersion($n->getStringValue()); },
-            'appliedPolicies' => function (ParseNode $n) use ($o) { $o->setAppliedPolicies($n->getCollectionOfObjectValues(array(ManagedAppPolicy::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'deviceName' => function (ParseNode $n) use ($o) { $o->setDeviceName($n->getStringValue()); },
-            'deviceTag' => function (ParseNode $n) use ($o) { $o->setDeviceTag($n->getStringValue()); },
-            'deviceType' => function (ParseNode $n) use ($o) { $o->setDeviceType($n->getStringValue()); },
-            'flaggedReasons' => function (ParseNode $n) use ($o) { $o->setFlaggedReasons($n->getCollectionOfEnumValues(ManagedAppFlaggedReason::class)); },
-            'intendedPolicies' => function (ParseNode $n) use ($o) { $o->setIntendedPolicies($n->getCollectionOfObjectValues(array(ManagedAppPolicy::class, 'createFromDiscriminatorValue'))); },
-            'lastSyncDateTime' => function (ParseNode $n) use ($o) { $o->setLastSyncDateTime($n->getDateTimeValue()); },
-            'managementSdkVersion' => function (ParseNode $n) use ($o) { $o->setManagementSdkVersion($n->getStringValue()); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(ManagedAppOperation::class, 'createFromDiscriminatorValue'))); },
-            'platformVersion' => function (ParseNode $n) use ($o) { $o->setPlatformVersion($n->getStringValue()); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
-            'version' => function (ParseNode $n) use ($o) { $o->setVersion($n->getStringValue()); },
+            'appIdentifier' => fn(ParseNode $n) => $o->setAppIdentifier($n->getObjectValue([MobileAppIdentifier::class, 'createFromDiscriminatorValue'])),
+            'applicationVersion' => fn(ParseNode $n) => $o->setApplicationVersion($n->getStringValue()),
+            'appliedPolicies' => fn(ParseNode $n) => $o->setAppliedPolicies($n->getCollectionOfObjectValues([ManagedAppPolicy::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'deviceName' => fn(ParseNode $n) => $o->setDeviceName($n->getStringValue()),
+            'deviceTag' => fn(ParseNode $n) => $o->setDeviceTag($n->getStringValue()),
+            'deviceType' => fn(ParseNode $n) => $o->setDeviceType($n->getStringValue()),
+            'flaggedReasons' => fn(ParseNode $n) => $o->setFlaggedReasons($n->getCollectionOfEnumValues(ManagedAppFlaggedReason::class)),
+            'intendedPolicies' => fn(ParseNode $n) => $o->setIntendedPolicies($n->getCollectionOfObjectValues([ManagedAppPolicy::class, 'createFromDiscriminatorValue'])),
+            'lastSyncDateTime' => fn(ParseNode $n) => $o->setLastSyncDateTime($n->getDateTimeValue()),
+            'managementSdkVersion' => fn(ParseNode $n) => $o->setManagementSdkVersion($n->getStringValue()),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([ManagedAppOperation::class, 'createFromDiscriminatorValue'])),
+            'platformVersion' => fn(ParseNode $n) => $o->setPlatformVersion($n->getStringValue()),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
+            'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
     }
 

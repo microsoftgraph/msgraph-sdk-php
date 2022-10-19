@@ -45,7 +45,7 @@ class WorkbookFilter extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'criteria' => function (ParseNode $n) use ($o) { $o->setCriteria($n->getObjectValue(array(WorkbookFilterCriteria::class, 'createFromDiscriminatorValue'))); },
+            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getObjectValue([WorkbookFilterCriteria::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

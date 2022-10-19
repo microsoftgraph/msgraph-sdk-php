@@ -66,10 +66,10 @@ class LocationConstraint implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isRequired' => function (ParseNode $n) use ($o) { $o->setIsRequired($n->getBooleanValue()); },
-            'locations' => function (ParseNode $n) use ($o) { $o->setLocations($n->getCollectionOfObjectValues(array(LocationConstraintItem::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'suggestLocation' => function (ParseNode $n) use ($o) { $o->setSuggestLocation($n->getBooleanValue()); },
+            'isRequired' => fn(ParseNode $n) => $o->setIsRequired($n->getBooleanValue()),
+            'locations' => fn(ParseNode $n) => $o->setLocations($n->getCollectionOfObjectValues([LocationConstraintItem::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'suggestLocation' => fn(ParseNode $n) => $o->setSuggestLocation($n->getBooleanValue()),
         ];
     }
 

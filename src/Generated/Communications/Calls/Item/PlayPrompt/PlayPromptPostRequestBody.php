@@ -64,8 +64,8 @@ class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'clientContext' => function (ParseNode $n) use ($o) { $o->setClientContext($n->getStringValue()); },
-            'prompts' => function (ParseNode $n) use ($o) { $o->setPrompts($n->getCollectionOfObjectValues(array(Prompt::class, 'createFromDiscriminatorValue'))); },
+            'clientContext' => fn(ParseNode $n) => $o->setClientContext($n->getStringValue()),
+            'prompts' => fn(ParseNode $n) => $o->setPrompts($n->getCollectionOfObjectValues([Prompt::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

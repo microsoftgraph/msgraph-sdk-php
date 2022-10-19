@@ -70,9 +70,9 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'certificateUpdateResult' => function (ParseNode $n) use ($o) { $o->setCertificateUpdateResult($n->getStringValue()); },
-            'lastRunDateTime' => function (ParseNode $n) use ($o) { $o->setLastRunDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'certificateUpdateResult' => fn(ParseNode $n) => $o->setCertificateUpdateResult($n->getStringValue()),
+            'lastRunDateTime' => fn(ParseNode $n) => $o->setLastRunDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

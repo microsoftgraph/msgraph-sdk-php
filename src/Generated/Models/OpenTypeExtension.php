@@ -45,7 +45,7 @@ class OpenTypeExtension extends Extension implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'extensionName' => function (ParseNode $n) use ($o) { $o->setExtensionName($n->getStringValue()); },
+            'extensionName' => fn(ParseNode $n) => $o->setExtensionName($n->getStringValue()),
         ]);
     }
 

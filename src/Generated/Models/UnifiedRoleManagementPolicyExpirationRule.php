@@ -43,8 +43,8 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isExpirationRequired' => function (ParseNode $n) use ($o) { $o->setIsExpirationRequired($n->getBooleanValue()); },
-            'maximumDuration' => function (ParseNode $n) use ($o) { $o->setMaximumDuration($n->getDateIntervalValue()); },
+            'isExpirationRequired' => fn(ParseNode $n) => $o->setIsExpirationRequired($n->getBooleanValue()),
+            'maximumDuration' => fn(ParseNode $n) => $o->setMaximumDuration($n->getDateIntervalValue()),
         ]);
     }
 

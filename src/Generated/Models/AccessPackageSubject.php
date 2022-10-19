@@ -91,13 +91,13 @@ class AccessPackageSubject extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'connectedOrganization' => function (ParseNode $n) use ($o) { $o->setConnectedOrganization($n->getObjectValue(array(ConnectedOrganization::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'objectId' => function (ParseNode $n) use ($o) { $o->setObjectId($n->getStringValue()); },
-            'onPremisesSecurityIdentifier' => function (ParseNode $n) use ($o) { $o->setOnPremisesSecurityIdentifier($n->getStringValue()); },
-            'principalName' => function (ParseNode $n) use ($o) { $o->setPrincipalName($n->getStringValue()); },
-            'subjectType' => function (ParseNode $n) use ($o) { $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)); },
+            'connectedOrganization' => fn(ParseNode $n) => $o->setConnectedOrganization($n->getObjectValue([ConnectedOrganization::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'objectId' => fn(ParseNode $n) => $o->setObjectId($n->getStringValue()),
+            'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
+            'principalName' => fn(ParseNode $n) => $o->setPrincipalName($n->getStringValue()),
+            'subjectType' => fn(ParseNode $n) => $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)),
         ]);
     }
 

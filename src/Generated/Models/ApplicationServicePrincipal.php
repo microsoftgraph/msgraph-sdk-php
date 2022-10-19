@@ -69,9 +69,9 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(Application::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'servicePrincipal' => function (ParseNode $n) use ($o) { $o->setServicePrincipal($n->getObjectValue(array(ServicePrincipal::class, 'createFromDiscriminatorValue'))); },
+            'application' => fn(ParseNode $n) => $o->setApplication($n->getObjectValue([Application::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'servicePrincipal' => fn(ParseNode $n) => $o->setServicePrincipal($n->getObjectValue([ServicePrincipal::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

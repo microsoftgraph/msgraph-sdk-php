@@ -77,10 +77,10 @@ class PrintUsage extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'completedBlackAndWhiteJobCount' => function (ParseNode $n) use ($o) { $o->setCompletedBlackAndWhiteJobCount($n->getIntegerValue()); },
-            'completedColorJobCount' => function (ParseNode $n) use ($o) { $o->setCompletedColorJobCount($n->getIntegerValue()); },
-            'incompleteJobCount' => function (ParseNode $n) use ($o) { $o->setIncompleteJobCount($n->getIntegerValue()); },
-            'usageDate' => function (ParseNode $n) use ($o) { $o->setUsageDate($n->getDateValue()); },
+            'completedBlackAndWhiteJobCount' => fn(ParseNode $n) => $o->setCompletedBlackAndWhiteJobCount($n->getIntegerValue()),
+            'completedColorJobCount' => fn(ParseNode $n) => $o->setCompletedColorJobCount($n->getIntegerValue()),
+            'incompleteJobCount' => fn(ParseNode $n) => $o->setIncompleteJobCount($n->getIntegerValue()),
+            'usageDate' => fn(ParseNode $n) => $o->setUsageDate($n->getDateValue()),
         ]);
     }
 

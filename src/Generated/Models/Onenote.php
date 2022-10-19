@@ -62,12 +62,12 @@ class Onenote extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'notebooks' => function (ParseNode $n) use ($o) { $o->setNotebooks($n->getCollectionOfObjectValues(array(Notebook::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(OnenoteOperation::class, 'createFromDiscriminatorValue'))); },
-            'pages' => function (ParseNode $n) use ($o) { $o->setPages($n->getCollectionOfObjectValues(array(OnenotePage::class, 'createFromDiscriminatorValue'))); },
-            'resources' => function (ParseNode $n) use ($o) { $o->setResources($n->getCollectionOfObjectValues(array(OnenoteResource::class, 'createFromDiscriminatorValue'))); },
-            'sectionGroups' => function (ParseNode $n) use ($o) { $o->setSectionGroups($n->getCollectionOfObjectValues(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
-            'sections' => function (ParseNode $n) use ($o) { $o->setSections($n->getCollectionOfObjectValues(array(OnenoteSection::class, 'createFromDiscriminatorValue'))); },
+            'notebooks' => fn(ParseNode $n) => $o->setNotebooks($n->getCollectionOfObjectValues([Notebook::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([OnenoteOperation::class, 'createFromDiscriminatorValue'])),
+            'pages' => fn(ParseNode $n) => $o->setPages($n->getCollectionOfObjectValues([OnenotePage::class, 'createFromDiscriminatorValue'])),
+            'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([OnenoteResource::class, 'createFromDiscriminatorValue'])),
+            'sectionGroups' => fn(ParseNode $n) => $o->setSectionGroups($n->getCollectionOfObjectValues([SectionGroup::class, 'createFromDiscriminatorValue'])),
+            'sections' => fn(ParseNode $n) => $o->setSections($n->getCollectionOfObjectValues([OnenoteSection::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -79,11 +79,11 @@ class DataSubject implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'email' => function (ParseNode $n) use ($o) { $o->setEmail($n->getStringValue()); },
-            'firstName' => function (ParseNode $n) use ($o) { $o->setFirstName($n->getStringValue()); },
-            'lastName' => function (ParseNode $n) use ($o) { $o->setLastName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'residency' => function (ParseNode $n) use ($o) { $o->setResidency($n->getStringValue()); },
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'firstName' => fn(ParseNode $n) => $o->setFirstName($n->getStringValue()),
+            'lastName' => fn(ParseNode $n) => $o->setLastName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'residency' => fn(ParseNode $n) => $o->setResidency($n->getStringValue()),
         ];
     }
 

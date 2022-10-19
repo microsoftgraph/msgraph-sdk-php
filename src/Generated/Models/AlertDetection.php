@@ -74,10 +74,10 @@ class AlertDetection implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'detectionType' => function (ParseNode $n) use ($o) { $o->setDetectionType($n->getStringValue()); },
-            'method' => function (ParseNode $n) use ($o) { $o->setMethod($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'detectionType' => fn(ParseNode $n) => $o->setDetectionType($n->getStringValue()),
+            'method' => fn(ParseNode $n) => $o->setMethod($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

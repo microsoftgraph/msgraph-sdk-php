@@ -61,9 +61,9 @@ class SizeRange implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'maximumSize' => function (ParseNode $n) use ($o) { $o->setMaximumSize($n->getIntegerValue()); },
-            'minimumSize' => function (ParseNode $n) use ($o) { $o->setMinimumSize($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'maximumSize' => fn(ParseNode $n) => $o->setMaximumSize($n->getIntegerValue()),
+            'minimumSize' => fn(ParseNode $n) => $o->setMinimumSize($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

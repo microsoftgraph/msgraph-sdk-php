@@ -37,7 +37,7 @@ class SharePointIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'loginName' => function (ParseNode $n) use ($o) { $o->setLoginName($n->getStringValue()); },
+            'loginName' => fn(ParseNode $n) => $o->setLoginName($n->getStringValue()),
         ]);
     }
 

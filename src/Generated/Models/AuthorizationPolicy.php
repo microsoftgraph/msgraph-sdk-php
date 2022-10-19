@@ -115,13 +115,13 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedToSignUpEmailBasedSubscriptions' => function (ParseNode $n) use ($o) { $o->setAllowedToSignUpEmailBasedSubscriptions($n->getBooleanValue()); },
-            'allowedToUseSSPR' => function (ParseNode $n) use ($o) { $o->setAllowedToUseSSPR($n->getBooleanValue()); },
-            'allowEmailVerifiedUsersToJoinOrganization' => function (ParseNode $n) use ($o) { $o->setAllowEmailVerifiedUsersToJoinOrganization($n->getBooleanValue()); },
-            'allowInvitesFrom' => function (ParseNode $n) use ($o) { $o->setAllowInvitesFrom($n->getEnumValue(AllowInvitesFrom::class)); },
-            'blockMsolPowerShell' => function (ParseNode $n) use ($o) { $o->setBlockMsolPowerShell($n->getBooleanValue()); },
-            'defaultUserRolePermissions' => function (ParseNode $n) use ($o) { $o->setDefaultUserRolePermissions($n->getObjectValue(array(DefaultUserRolePermissions::class, 'createFromDiscriminatorValue'))); },
-            'guestUserRoleId' => function (ParseNode $n) use ($o) { $o->setGuestUserRoleId($n->getStringValue()); },
+            'allowedToSignUpEmailBasedSubscriptions' => fn(ParseNode $n) => $o->setAllowedToSignUpEmailBasedSubscriptions($n->getBooleanValue()),
+            'allowedToUseSSPR' => fn(ParseNode $n) => $o->setAllowedToUseSSPR($n->getBooleanValue()),
+            'allowEmailVerifiedUsersToJoinOrganization' => fn(ParseNode $n) => $o->setAllowEmailVerifiedUsersToJoinOrganization($n->getBooleanValue()),
+            'allowInvitesFrom' => fn(ParseNode $n) => $o->setAllowInvitesFrom($n->getEnumValue(AllowInvitesFrom::class)),
+            'blockMsolPowerShell' => fn(ParseNode $n) => $o->setBlockMsolPowerShell($n->getBooleanValue()),
+            'defaultUserRolePermissions' => fn(ParseNode $n) => $o->setDefaultUserRolePermissions($n->getObjectValue([DefaultUserRolePermissions::class, 'createFromDiscriminatorValue'])),
+            'guestUserRoleId' => fn(ParseNode $n) => $o->setGuestUserRoleId($n->getStringValue()),
         ]);
     }
 

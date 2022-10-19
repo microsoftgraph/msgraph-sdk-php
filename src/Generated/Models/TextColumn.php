@@ -92,12 +92,12 @@ class TextColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowMultipleLines' => function (ParseNode $n) use ($o) { $o->setAllowMultipleLines($n->getBooleanValue()); },
-            'appendChangesToExistingText' => function (ParseNode $n) use ($o) { $o->setAppendChangesToExistingText($n->getBooleanValue()); },
-            'linesForEditing' => function (ParseNode $n) use ($o) { $o->setLinesForEditing($n->getIntegerValue()); },
-            'maxLength' => function (ParseNode $n) use ($o) { $o->setMaxLength($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'textType' => function (ParseNode $n) use ($o) { $o->setTextType($n->getStringValue()); },
+            'allowMultipleLines' => fn(ParseNode $n) => $o->setAllowMultipleLines($n->getBooleanValue()),
+            'appendChangesToExistingText' => fn(ParseNode $n) => $o->setAppendChangesToExistingText($n->getBooleanValue()),
+            'linesForEditing' => fn(ParseNode $n) => $o->setLinesForEditing($n->getIntegerValue()),
+            'maxLength' => fn(ParseNode $n) => $o->setMaxLength($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'textType' => fn(ParseNode $n) => $o->setTextType($n->getStringValue()),
         ];
     }
 

@@ -59,7 +59,7 @@ class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'commands' => function (ParseNode $n) use ($o) { $o->setCommands($n->getCollectionOfObjectValues(array(OnenotePatchContentCommand::class, 'createFromDiscriminatorValue'))); },
+            'commands' => fn(ParseNode $n) => $o->setCommands($n->getCollectionOfObjectValues([OnenotePatchContentCommand::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

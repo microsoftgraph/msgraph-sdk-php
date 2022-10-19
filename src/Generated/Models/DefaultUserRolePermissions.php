@@ -95,11 +95,11 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedToCreateApps' => function (ParseNode $n) use ($o) { $o->setAllowedToCreateApps($n->getBooleanValue()); },
-            'allowedToCreateSecurityGroups' => function (ParseNode $n) use ($o) { $o->setAllowedToCreateSecurityGroups($n->getBooleanValue()); },
-            'allowedToReadOtherUsers' => function (ParseNode $n) use ($o) { $o->setAllowedToReadOtherUsers($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'permissionGrantPoliciesAssigned' => function (ParseNode $n) use ($o) { $o->setPermissionGrantPoliciesAssigned($n->getCollectionOfPrimitiveValues()); },
+            'allowedToCreateApps' => fn(ParseNode $n) => $o->setAllowedToCreateApps($n->getBooleanValue()),
+            'allowedToCreateSecurityGroups' => fn(ParseNode $n) => $o->setAllowedToCreateSecurityGroups($n->getBooleanValue()),
+            'allowedToReadOtherUsers' => fn(ParseNode $n) => $o->setAllowedToReadOtherUsers($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'permissionGrantPoliciesAssigned' => fn(ParseNode $n) => $o->setPermissionGrantPoliciesAssigned($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

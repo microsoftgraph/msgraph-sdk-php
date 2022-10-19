@@ -37,7 +37,7 @@ class EdiscoveryReviewSet extends DataSet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'queries' => function (ParseNode $n) use ($o) { $o->setQueries($n->getCollectionOfObjectValues(array(EdiscoveryReviewSetQuery::class, 'createFromDiscriminatorValue'))); },
+            'queries' => fn(ParseNode $n) => $o->setQueries($n->getCollectionOfObjectValues([EdiscoveryReviewSetQuery::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

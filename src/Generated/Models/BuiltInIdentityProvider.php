@@ -37,7 +37,7 @@ class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'identityProviderType' => function (ParseNode $n) use ($o) { $o->setIdentityProviderType($n->getStringValue()); },
+            'identityProviderType' => fn(ParseNode $n) => $o->setIdentityProviderType($n->getStringValue()),
         ]);
     }
 

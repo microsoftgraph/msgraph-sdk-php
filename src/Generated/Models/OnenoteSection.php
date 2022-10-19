@@ -62,12 +62,12 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isDefault' => function (ParseNode $n) use ($o) { $o->setIsDefault($n->getBooleanValue()); },
-            'links' => function (ParseNode $n) use ($o) { $o->setLinks($n->getObjectValue(array(SectionLinks::class, 'createFromDiscriminatorValue'))); },
-            'pages' => function (ParseNode $n) use ($o) { $o->setPages($n->getCollectionOfObjectValues(array(OnenotePage::class, 'createFromDiscriminatorValue'))); },
-            'pagesUrl' => function (ParseNode $n) use ($o) { $o->setPagesUrl($n->getStringValue()); },
-            'parentNotebook' => function (ParseNode $n) use ($o) { $o->setParentNotebook($n->getObjectValue(array(Notebook::class, 'createFromDiscriminatorValue'))); },
-            'parentSectionGroup' => function (ParseNode $n) use ($o) { $o->setParentSectionGroup($n->getObjectValue(array(SectionGroup::class, 'createFromDiscriminatorValue'))); },
+            'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
+            'links' => fn(ParseNode $n) => $o->setLinks($n->getObjectValue([SectionLinks::class, 'createFromDiscriminatorValue'])),
+            'pages' => fn(ParseNode $n) => $o->setPages($n->getCollectionOfObjectValues([OnenotePage::class, 'createFromDiscriminatorValue'])),
+            'pagesUrl' => fn(ParseNode $n) => $o->setPagesUrl($n->getStringValue()),
+            'parentNotebook' => fn(ParseNode $n) => $o->setParentNotebook($n->getObjectValue([Notebook::class, 'createFromDiscriminatorValue'])),
+            'parentSectionGroup' => fn(ParseNode $n) => $o->setParentSectionGroup($n->getObjectValue([SectionGroup::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

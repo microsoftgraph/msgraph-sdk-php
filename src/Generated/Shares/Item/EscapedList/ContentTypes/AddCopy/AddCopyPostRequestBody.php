@@ -58,7 +58,7 @@ class AddCopyPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'contentType' => function (ParseNode $n) use ($o) { $o->setContentType($n->getStringValue()); },
+            'contentType' => fn(ParseNode $n) => $o->setContentType($n->getStringValue()),
         ];
     }
 

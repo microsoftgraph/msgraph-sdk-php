@@ -19,7 +19,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     private ?EdiscoveryIndexOperation $lastIndexOperation = null;
     
     /**
-     * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
+     * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -50,8 +50,8 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'dataSource' => function (ParseNode $n) use ($o) { $o->setDataSource($n->getObjectValue(array(DataSource::class, 'createFromDiscriminatorValue'))); },
-            'lastIndexOperation' => function (ParseNode $n) use ($o) { $o->setLastIndexOperation($n->getObjectValue(array(EdiscoveryIndexOperation::class, 'createFromDiscriminatorValue'))); },
+            'dataSource' => fn(ParseNode $n) => $o->setDataSource($n->getObjectValue([DataSource::class, 'createFromDiscriminatorValue'])),
+            'lastIndexOperation' => fn(ParseNode $n) => $o->setLastIndexOperation($n->getObjectValue([EdiscoveryIndexOperation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

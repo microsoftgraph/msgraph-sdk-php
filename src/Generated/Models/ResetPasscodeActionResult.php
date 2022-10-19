@@ -37,7 +37,7 @@ class ResetPasscodeActionResult extends DeviceActionResult implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'passcode' => function (ParseNode $n) use ($o) { $o->setPasscode($n->getStringValue()); },
+            'passcode' => fn(ParseNode $n) => $o->setPasscode($n->getStringValue()),
         ]);
     }
 

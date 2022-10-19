@@ -19,7 +19,7 @@ class EducationAssignmentResource extends Entity implements Parsable
     private ?EducationResource $resource = null;
     
     /**
-     * Instantiates a new EducationAssignmentResource and sets the default values.
+     * Instantiates a new educationAssignmentResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -50,8 +50,8 @@ class EducationAssignmentResource extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'distributeForStudentWork' => function (ParseNode $n) use ($o) { $o->setDistributeForStudentWork($n->getBooleanValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getObjectValue(array(EducationResource::class, 'createFromDiscriminatorValue'))); },
+            'distributeForStudentWork' => fn(ParseNode $n) => $o->setDistributeForStudentWork($n->getBooleanValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([EducationResource::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

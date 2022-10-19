@@ -69,9 +69,9 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'emptySuggestionsReason' => function (ParseNode $n) use ($o) { $o->setEmptySuggestionsReason($n->getStringValue()); },
-            'meetingTimeSuggestions' => function (ParseNode $n) use ($o) { $o->setMeetingTimeSuggestions($n->getCollectionOfObjectValues(array(MeetingTimeSuggestion::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'emptySuggestionsReason' => fn(ParseNode $n) => $o->setEmptySuggestionsReason($n->getStringValue()),
+            'meetingTimeSuggestions' => fn(ParseNode $n) => $o->setMeetingTimeSuggestions($n->getCollectionOfObjectValues([MeetingTimeSuggestion::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

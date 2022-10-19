@@ -76,10 +76,10 @@ class CalendarGroup extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'calendars' => function (ParseNode $n) use ($o) { $o->setCalendars($n->getCollectionOfObjectValues(array(Calendar::class, 'createFromDiscriminatorValue'))); },
-            'changeKey' => function (ParseNode $n) use ($o) { $o->setChangeKey($n->getStringValue()); },
-            'classId' => function (ParseNode $n) use ($o) { $o->setClassId($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
+            'calendars' => fn(ParseNode $n) => $o->setCalendars($n->getCollectionOfObjectValues([Calendar::class, 'createFromDiscriminatorValue'])),
+            'changeKey' => fn(ParseNode $n) => $o->setChangeKey($n->getStringValue()),
+            'classId' => fn(ParseNode $n) => $o->setClassId($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
         ]);
     }
 

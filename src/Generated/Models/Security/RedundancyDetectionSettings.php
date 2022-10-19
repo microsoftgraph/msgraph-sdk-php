@@ -71,11 +71,11 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isEnabled' => function (ParseNode $n) use ($o) { $o->setIsEnabled($n->getBooleanValue()); },
-            'maxWords' => function (ParseNode $n) use ($o) { $o->setMaxWords($n->getIntegerValue()); },
-            'minWords' => function (ParseNode $n) use ($o) { $o->setMinWords($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'similarityThreshold' => function (ParseNode $n) use ($o) { $o->setSimilarityThreshold($n->getIntegerValue()); },
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'maxWords' => fn(ParseNode $n) => $o->setMaxWords($n->getIntegerValue()),
+            'minWords' => fn(ParseNode $n) => $o->setMinWords($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'similarityThreshold' => fn(ParseNode $n) => $o->setSimilarityThreshold($n->getIntegerValue()),
         ];
     }
 

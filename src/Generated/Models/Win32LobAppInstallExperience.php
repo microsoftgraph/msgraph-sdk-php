@@ -69,9 +69,9 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'deviceRestartBehavior' => function (ParseNode $n) use ($o) { $o->setDeviceRestartBehavior($n->getEnumValue(Win32LobAppRestartBehavior::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'runAsAccount' => function (ParseNode $n) use ($o) { $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)); },
+            'deviceRestartBehavior' => fn(ParseNode $n) => $o->setDeviceRestartBehavior($n->getEnumValue(Win32LobAppRestartBehavior::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'runAsAccount' => fn(ParseNode $n) => $o->setRunAsAccount($n->getEnumValue(RunAsAccountType::class)),
         ];
     }
 

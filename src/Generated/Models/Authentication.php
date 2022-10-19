@@ -98,16 +98,16 @@ class Authentication extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'emailMethods' => function (ParseNode $n) use ($o) { $o->setEmailMethods($n->getCollectionOfObjectValues(array(EmailAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'fido2Methods' => function (ParseNode $n) use ($o) { $o->setFido2Methods($n->getCollectionOfObjectValues(array(Fido2AuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'methods' => function (ParseNode $n) use ($o) { $o->setMethods($n->getCollectionOfObjectValues(array(AuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'microsoftAuthenticatorMethods' => function (ParseNode $n) use ($o) { $o->setMicrosoftAuthenticatorMethods($n->getCollectionOfObjectValues(array(MicrosoftAuthenticatorAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(LongRunningOperation::class, 'createFromDiscriminatorValue'))); },
-            'passwordMethods' => function (ParseNode $n) use ($o) { $o->setPasswordMethods($n->getCollectionOfObjectValues(array(PasswordAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'phoneMethods' => function (ParseNode $n) use ($o) { $o->setPhoneMethods($n->getCollectionOfObjectValues(array(PhoneAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'softwareOathMethods' => function (ParseNode $n) use ($o) { $o->setSoftwareOathMethods($n->getCollectionOfObjectValues(array(SoftwareOathAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'temporaryAccessPassMethods' => function (ParseNode $n) use ($o) { $o->setTemporaryAccessPassMethods($n->getCollectionOfObjectValues(array(TemporaryAccessPassAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
-            'windowsHelloForBusinessMethods' => function (ParseNode $n) use ($o) { $o->setWindowsHelloForBusinessMethods($n->getCollectionOfObjectValues(array(WindowsHelloForBusinessAuthenticationMethod::class, 'createFromDiscriminatorValue'))); },
+            'emailMethods' => fn(ParseNode $n) => $o->setEmailMethods($n->getCollectionOfObjectValues([EmailAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'fido2Methods' => fn(ParseNode $n) => $o->setFido2Methods($n->getCollectionOfObjectValues([Fido2AuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'methods' => fn(ParseNode $n) => $o->setMethods($n->getCollectionOfObjectValues([AuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'microsoftAuthenticatorMethods' => fn(ParseNode $n) => $o->setMicrosoftAuthenticatorMethods($n->getCollectionOfObjectValues([MicrosoftAuthenticatorAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([LongRunningOperation::class, 'createFromDiscriminatorValue'])),
+            'passwordMethods' => fn(ParseNode $n) => $o->setPasswordMethods($n->getCollectionOfObjectValues([PasswordAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'phoneMethods' => fn(ParseNode $n) => $o->setPhoneMethods($n->getCollectionOfObjectValues([PhoneAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'softwareOathMethods' => fn(ParseNode $n) => $o->setSoftwareOathMethods($n->getCollectionOfObjectValues([SoftwareOathAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'temporaryAccessPassMethods' => fn(ParseNode $n) => $o->setTemporaryAccessPassMethods($n->getCollectionOfObjectValues([TemporaryAccessPassAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'windowsHelloForBusinessMethods' => fn(ParseNode $n) => $o->setWindowsHelloForBusinessMethods($n->getCollectionOfObjectValues([WindowsHelloForBusinessAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

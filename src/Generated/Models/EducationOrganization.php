@@ -29,7 +29,7 @@ class EducationOrganization extends Entity implements Parsable
     private ?string $externalSourceDetail = null;
     
     /**
-     * Instantiates a new EducationOrganization and sets the default values.
+     * Instantiates a new educationOrganization and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -91,10 +91,10 @@ class EducationOrganization extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'externalSource' => function (ParseNode $n) use ($o) { $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)); },
-            'externalSourceDetail' => function (ParseNode $n) use ($o) { $o->setExternalSourceDetail($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'externalSource' => fn(ParseNode $n) => $o->setExternalSource($n->getEnumValue(EducationExternalSource::class)),
+            'externalSourceDetail' => fn(ParseNode $n) => $o->setExternalSourceDetail($n->getStringValue()),
         ]);
     }
 

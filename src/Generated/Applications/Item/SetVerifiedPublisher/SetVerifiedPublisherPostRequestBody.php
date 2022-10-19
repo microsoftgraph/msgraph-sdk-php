@@ -50,7 +50,7 @@ class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'verifiedPublisherId' => function (ParseNode $n) use ($o) { $o->setVerifiedPublisherId($n->getStringValue()); },
+            'verifiedPublisherId' => fn(ParseNode $n) => $o->setVerifiedPublisherId($n->getStringValue()),
         ];
     }
 

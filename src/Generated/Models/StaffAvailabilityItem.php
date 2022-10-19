@@ -69,9 +69,9 @@ class StaffAvailabilityItem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'availabilityItems' => function (ParseNode $n) use ($o) { $o->setAvailabilityItems($n->getCollectionOfObjectValues(array(AvailabilityItem::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'staffId' => function (ParseNode $n) use ($o) { $o->setStaffId($n->getStringValue()); },
+            'availabilityItems' => fn(ParseNode $n) => $o->setAvailabilityItems($n->getCollectionOfObjectValues([AvailabilityItem::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'staffId' => fn(ParseNode $n) => $o->setStaffId($n->getStringValue()),
         ];
     }
 

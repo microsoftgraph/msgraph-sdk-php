@@ -52,10 +52,10 @@ class WorkbookTableColumn extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'filter' => function (ParseNode $n) use ($o) { $o->setFilter($n->getObjectValue(array(WorkbookFilter::class, 'createFromDiscriminatorValue'))); },
-            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
+            'filter' => fn(ParseNode $n) => $o->setFilter($n->getObjectValue([WorkbookFilter::class, 'createFromDiscriminatorValue'])),
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -63,9 +63,9 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversationMemberRoles' => function (ParseNode $n) use ($o) { $o->setConversationMemberRoles($n->getCollectionOfPrimitiveValues()); },
-            'conversationMemberUser' => function (ParseNode $n) use ($o) { $o->setConversationMemberUser($n->getObjectValue(array(TeamworkUserIdentity::class, 'createFromDiscriminatorValue'))); },
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'conversationMemberRoles' => fn(ParseNode $n) => $o->setConversationMemberRoles($n->getCollectionOfPrimitiveValues()),
+            'conversationMemberUser' => fn(ParseNode $n) => $o->setConversationMemberUser($n->getObjectValue([TeamworkUserIdentity::class, 'createFromDiscriminatorValue'])),
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

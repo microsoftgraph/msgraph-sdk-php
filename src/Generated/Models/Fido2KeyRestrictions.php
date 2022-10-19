@@ -82,10 +82,10 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aaGuids' => function (ParseNode $n) use ($o) { $o->setAaGuids($n->getCollectionOfPrimitiveValues()); },
-            'enforcementType' => function (ParseNode $n) use ($o) { $o->setEnforcementType($n->getEnumValue(Fido2RestrictionEnforcementType::class)); },
-            'isEnforced' => function (ParseNode $n) use ($o) { $o->setIsEnforced($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'aaGuids' => fn(ParseNode $n) => $o->setAaGuids($n->getCollectionOfPrimitiveValues()),
+            'enforcementType' => fn(ParseNode $n) => $o->setEnforcementType($n->getEnumValue(Fido2RestrictionEnforcementType::class)),
+            'isEnforced' => fn(ParseNode $n) => $o->setIsEnforced($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

@@ -89,14 +89,14 @@ class Agreement extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'acceptances' => function (ParseNode $n) use ($o) { $o->setAcceptances($n->getCollectionOfObjectValues(array(AgreementAcceptance::class, 'createFromDiscriminatorValue'))); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'file' => function (ParseNode $n) use ($o) { $o->setFile($n->getObjectValue(array(AgreementFile::class, 'createFromDiscriminatorValue'))); },
-            'files' => function (ParseNode $n) use ($o) { $o->setFiles($n->getCollectionOfObjectValues(array(AgreementFileLocalization::class, 'createFromDiscriminatorValue'))); },
-            'isPerDeviceAcceptanceRequired' => function (ParseNode $n) use ($o) { $o->setIsPerDeviceAcceptanceRequired($n->getBooleanValue()); },
-            'isViewingBeforeAcceptanceRequired' => function (ParseNode $n) use ($o) { $o->setIsViewingBeforeAcceptanceRequired($n->getBooleanValue()); },
-            'termsExpiration' => function (ParseNode $n) use ($o) { $o->setTermsExpiration($n->getObjectValue(array(TermsExpiration::class, 'createFromDiscriminatorValue'))); },
-            'userReacceptRequiredFrequency' => function (ParseNode $n) use ($o) { $o->setUserReacceptRequiredFrequency($n->getDateIntervalValue()); },
+            'acceptances' => fn(ParseNode $n) => $o->setAcceptances($n->getCollectionOfObjectValues([AgreementAcceptance::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'file' => fn(ParseNode $n) => $o->setFile($n->getObjectValue([AgreementFile::class, 'createFromDiscriminatorValue'])),
+            'files' => fn(ParseNode $n) => $o->setFiles($n->getCollectionOfObjectValues([AgreementFileLocalization::class, 'createFromDiscriminatorValue'])),
+            'isPerDeviceAcceptanceRequired' => fn(ParseNode $n) => $o->setIsPerDeviceAcceptanceRequired($n->getBooleanValue()),
+            'isViewingBeforeAcceptanceRequired' => fn(ParseNode $n) => $o->setIsViewingBeforeAcceptanceRequired($n->getBooleanValue()),
+            'termsExpiration' => fn(ParseNode $n) => $o->setTermsExpiration($n->getObjectValue([TermsExpiration::class, 'createFromDiscriminatorValue'])),
+            'userReacceptRequiredFrequency' => fn(ParseNode $n) => $o->setUserReacceptRequiredFrequency($n->getDateIntervalValue()),
         ]);
     }
 

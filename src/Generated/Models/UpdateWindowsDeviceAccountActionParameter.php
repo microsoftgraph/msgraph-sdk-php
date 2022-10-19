@@ -113,13 +113,13 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'calendarSyncEnabled' => function (ParseNode $n) use ($o) { $o->setCalendarSyncEnabled($n->getBooleanValue()); },
-            'deviceAccount' => function (ParseNode $n) use ($o) { $o->setDeviceAccount($n->getObjectValue(array(WindowsDeviceAccount::class, 'createFromDiscriminatorValue'))); },
-            'deviceAccountEmail' => function (ParseNode $n) use ($o) { $o->setDeviceAccountEmail($n->getStringValue()); },
-            'exchangeServer' => function (ParseNode $n) use ($o) { $o->setExchangeServer($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'passwordRotationEnabled' => function (ParseNode $n) use ($o) { $o->setPasswordRotationEnabled($n->getBooleanValue()); },
-            'sessionInitiationProtocalAddress' => function (ParseNode $n) use ($o) { $o->setSessionInitiationProtocalAddress($n->getStringValue()); },
+            'calendarSyncEnabled' => fn(ParseNode $n) => $o->setCalendarSyncEnabled($n->getBooleanValue()),
+            'deviceAccount' => fn(ParseNode $n) => $o->setDeviceAccount($n->getObjectValue([WindowsDeviceAccount::class, 'createFromDiscriminatorValue'])),
+            'deviceAccountEmail' => fn(ParseNode $n) => $o->setDeviceAccountEmail($n->getStringValue()),
+            'exchangeServer' => fn(ParseNode $n) => $o->setExchangeServer($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'passwordRotationEnabled' => fn(ParseNode $n) => $o->setPasswordRotationEnabled($n->getBooleanValue()),
+            'sessionInitiationProtocalAddress' => fn(ParseNode $n) => $o->setSessionInitiationProtocalAddress($n->getStringValue()),
         ];
     }
 

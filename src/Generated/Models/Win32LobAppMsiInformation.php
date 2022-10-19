@@ -86,14 +86,14 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'packageType' => function (ParseNode $n) use ($o) { $o->setPackageType($n->getEnumValue(Win32LobAppMsiPackageType::class)); },
-            'productCode' => function (ParseNode $n) use ($o) { $o->setProductCode($n->getStringValue()); },
-            'productName' => function (ParseNode $n) use ($o) { $o->setProductName($n->getStringValue()); },
-            'productVersion' => function (ParseNode $n) use ($o) { $o->setProductVersion($n->getStringValue()); },
-            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
-            'requiresReboot' => function (ParseNode $n) use ($o) { $o->setRequiresReboot($n->getBooleanValue()); },
-            'upgradeCode' => function (ParseNode $n) use ($o) { $o->setUpgradeCode($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'packageType' => fn(ParseNode $n) => $o->setPackageType($n->getEnumValue(Win32LobAppMsiPackageType::class)),
+            'productCode' => fn(ParseNode $n) => $o->setProductCode($n->getStringValue()),
+            'productName' => fn(ParseNode $n) => $o->setProductName($n->getStringValue()),
+            'productVersion' => fn(ParseNode $n) => $o->setProductVersion($n->getStringValue()),
+            'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
+            'requiresReboot' => fn(ParseNode $n) => $o->setRequiresReboot($n->getBooleanValue()),
+            'upgradeCode' => fn(ParseNode $n) => $o->setUpgradeCode($n->getStringValue()),
         ];
     }
 

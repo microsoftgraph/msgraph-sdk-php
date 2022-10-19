@@ -68,10 +68,10 @@ class AppConsentRequest extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
-            'appId' => function (ParseNode $n) use ($o) { $o->setAppId($n->getStringValue()); },
-            'pendingScopes' => function (ParseNode $n) use ($o) { $o->setPendingScopes($n->getCollectionOfObjectValues(array(AppConsentRequestScope::class, 'createFromDiscriminatorValue'))); },
-            'userConsentRequests' => function (ParseNode $n) use ($o) { $o->setUserConsentRequests($n->getCollectionOfObjectValues(array(UserConsentRequest::class, 'createFromDiscriminatorValue'))); },
+            'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
+            'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
+            'pendingScopes' => fn(ParseNode $n) => $o->setPendingScopes($n->getCollectionOfObjectValues([AppConsentRequestScope::class, 'createFromDiscriminatorValue'])),
+            'userConsentRequests' => fn(ParseNode $n) => $o->setUserConsentRequests($n->getCollectionOfObjectValues([UserConsentRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

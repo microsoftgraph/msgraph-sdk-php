@@ -110,15 +110,15 @@ class ActivityHistoryItem extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activeDurationSeconds' => function (ParseNode $n) use ($o) { $o->setActiveDurationSeconds($n->getIntegerValue()); },
-            'activity' => function (ParseNode $n) use ($o) { $o->setActivity($n->getObjectValue(array(UserActivity::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'lastActiveDateTime' => function (ParseNode $n) use ($o) { $o->setLastActiveDateTime($n->getDateTimeValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'startedDateTime' => function (ParseNode $n) use ($o) { $o->setStartedDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(Status::class)); },
-            'userTimezone' => function (ParseNode $n) use ($o) { $o->setUserTimezone($n->getStringValue()); },
+            'activeDurationSeconds' => fn(ParseNode $n) => $o->setActiveDurationSeconds($n->getIntegerValue()),
+            'activity' => fn(ParseNode $n) => $o->setActivity($n->getObjectValue([UserActivity::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'lastActiveDateTime' => fn(ParseNode $n) => $o->setLastActiveDateTime($n->getDateTimeValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Status::class)),
+            'userTimezone' => fn(ParseNode $n) => $o->setUserTimezone($n->getStringValue()),
         ]);
     }
 

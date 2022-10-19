@@ -105,19 +105,19 @@ class Win32LobApp extends MobileLobApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicableArchitectures' => function (ParseNode $n) use ($o) { $o->setApplicableArchitectures($n->getEnumValue(WindowsArchitecture::class)); },
-            'installCommandLine' => function (ParseNode $n) use ($o) { $o->setInstallCommandLine($n->getStringValue()); },
-            'installExperience' => function (ParseNode $n) use ($o) { $o->setInstallExperience($n->getObjectValue(array(Win32LobAppInstallExperience::class, 'createFromDiscriminatorValue'))); },
-            'minimumCpuSpeedInMHz' => function (ParseNode $n) use ($o) { $o->setMinimumCpuSpeedInMHz($n->getIntegerValue()); },
-            'minimumFreeDiskSpaceInMB' => function (ParseNode $n) use ($o) { $o->setMinimumFreeDiskSpaceInMB($n->getIntegerValue()); },
-            'minimumMemoryInMB' => function (ParseNode $n) use ($o) { $o->setMinimumMemoryInMB($n->getIntegerValue()); },
-            'minimumNumberOfProcessors' => function (ParseNode $n) use ($o) { $o->setMinimumNumberOfProcessors($n->getIntegerValue()); },
-            'minimumSupportedWindowsRelease' => function (ParseNode $n) use ($o) { $o->setMinimumSupportedWindowsRelease($n->getStringValue()); },
-            'msiInformation' => function (ParseNode $n) use ($o) { $o->setMsiInformation($n->getObjectValue(array(Win32LobAppMsiInformation::class, 'createFromDiscriminatorValue'))); },
-            'returnCodes' => function (ParseNode $n) use ($o) { $o->setReturnCodes($n->getCollectionOfObjectValues(array(Win32LobAppReturnCode::class, 'createFromDiscriminatorValue'))); },
-            'rules' => function (ParseNode $n) use ($o) { $o->setRules($n->getCollectionOfObjectValues(array(Win32LobAppRule::class, 'createFromDiscriminatorValue'))); },
-            'setupFilePath' => function (ParseNode $n) use ($o) { $o->setSetupFilePath($n->getStringValue()); },
-            'uninstallCommandLine' => function (ParseNode $n) use ($o) { $o->setUninstallCommandLine($n->getStringValue()); },
+            'applicableArchitectures' => fn(ParseNode $n) => $o->setApplicableArchitectures($n->getEnumValue(WindowsArchitecture::class)),
+            'installCommandLine' => fn(ParseNode $n) => $o->setInstallCommandLine($n->getStringValue()),
+            'installExperience' => fn(ParseNode $n) => $o->setInstallExperience($n->getObjectValue([Win32LobAppInstallExperience::class, 'createFromDiscriminatorValue'])),
+            'minimumCpuSpeedInMHz' => fn(ParseNode $n) => $o->setMinimumCpuSpeedInMHz($n->getIntegerValue()),
+            'minimumFreeDiskSpaceInMB' => fn(ParseNode $n) => $o->setMinimumFreeDiskSpaceInMB($n->getIntegerValue()),
+            'minimumMemoryInMB' => fn(ParseNode $n) => $o->setMinimumMemoryInMB($n->getIntegerValue()),
+            'minimumNumberOfProcessors' => fn(ParseNode $n) => $o->setMinimumNumberOfProcessors($n->getIntegerValue()),
+            'minimumSupportedWindowsRelease' => fn(ParseNode $n) => $o->setMinimumSupportedWindowsRelease($n->getStringValue()),
+            'msiInformation' => fn(ParseNode $n) => $o->setMsiInformation($n->getObjectValue([Win32LobAppMsiInformation::class, 'createFromDiscriminatorValue'])),
+            'returnCodes' => fn(ParseNode $n) => $o->setReturnCodes($n->getCollectionOfObjectValues([Win32LobAppReturnCode::class, 'createFromDiscriminatorValue'])),
+            'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([Win32LobAppRule::class, 'createFromDiscriminatorValue'])),
+            'setupFilePath' => fn(ParseNode $n) => $o->setSetupFilePath($n->getStringValue()),
+            'uninstallCommandLine' => fn(ParseNode $n) => $o->setUninstallCommandLine($n->getStringValue()),
         ]);
     }
 

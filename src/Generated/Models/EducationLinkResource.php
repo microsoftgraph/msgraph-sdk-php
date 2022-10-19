@@ -37,7 +37,7 @@ class EducationLinkResource extends EducationResource implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'link' => function (ParseNode $n) use ($o) { $o->setLink($n->getStringValue()); },
+            'link' => fn(ParseNode $n) => $o->setLink($n->getStringValue()),
         ]);
     }
 

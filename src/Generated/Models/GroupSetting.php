@@ -55,9 +55,9 @@ class GroupSetting extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'templateId' => function (ParseNode $n) use ($o) { $o->setTemplateId($n->getStringValue()); },
-            'values' => function (ParseNode $n) use ($o) { $o->setValues($n->getCollectionOfObjectValues(array(SettingValue::class, 'createFromDiscriminatorValue'))); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'templateId' => fn(ParseNode $n) => $o->setTemplateId($n->getStringValue()),
+            'values' => fn(ParseNode $n) => $o->setValues($n->getCollectionOfObjectValues([SettingValue::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

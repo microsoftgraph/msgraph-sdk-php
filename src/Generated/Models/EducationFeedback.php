@@ -83,10 +83,10 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'feedbackBy' => function (ParseNode $n) use ($o) { $o->setFeedbackBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'feedbackDateTime' => function (ParseNode $n) use ($o) { $o->setFeedbackDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'text' => function (ParseNode $n) use ($o) { $o->setText($n->getObjectValue(array(EducationItemBody::class, 'createFromDiscriminatorValue'))); },
+            'feedbackBy' => fn(ParseNode $n) => $o->setFeedbackBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'feedbackDateTime' => fn(ParseNode $n) => $o->setFeedbackDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

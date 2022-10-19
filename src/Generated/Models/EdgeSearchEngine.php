@@ -45,7 +45,7 @@ class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'edgeSearchEngineType' => function (ParseNode $n) use ($o) { $o->setEdgeSearchEngineType($n->getEnumValue(EdgeSearchEngineType::class)); },
+            'edgeSearchEngineType' => fn(ParseNode $n) => $o->setEdgeSearchEngineType($n->getEnumValue(EdgeSearchEngineType::class)),
         ]);
     }
 

@@ -83,13 +83,13 @@ class Workbook extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'application' => function (ParseNode $n) use ($o) { $o->setApplication($n->getObjectValue(array(WorkbookApplication::class, 'createFromDiscriminatorValue'))); },
-            'comments' => function (ParseNode $n) use ($o) { $o->setComments($n->getCollectionOfObjectValues(array(WorkbookComment::class, 'createFromDiscriminatorValue'))); },
-            'functions' => function (ParseNode $n) use ($o) { $o->setFunctions($n->getObjectValue(array(WorkbookFunctions::class, 'createFromDiscriminatorValue'))); },
-            'names' => function (ParseNode $n) use ($o) { $o->setNames($n->getCollectionOfObjectValues(array(WorkbookNamedItem::class, 'createFromDiscriminatorValue'))); },
-            'operations' => function (ParseNode $n) use ($o) { $o->setOperations($n->getCollectionOfObjectValues(array(WorkbookOperation::class, 'createFromDiscriminatorValue'))); },
-            'tables' => function (ParseNode $n) use ($o) { $o->setTables($n->getCollectionOfObjectValues(array(WorkbookTable::class, 'createFromDiscriminatorValue'))); },
-            'worksheets' => function (ParseNode $n) use ($o) { $o->setWorksheets($n->getCollectionOfObjectValues(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
+            'application' => fn(ParseNode $n) => $o->setApplication($n->getObjectValue([WorkbookApplication::class, 'createFromDiscriminatorValue'])),
+            'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfObjectValues([WorkbookComment::class, 'createFromDiscriminatorValue'])),
+            'functions' => fn(ParseNode $n) => $o->setFunctions($n->getObjectValue([WorkbookFunctions::class, 'createFromDiscriminatorValue'])),
+            'names' => fn(ParseNode $n) => $o->setNames($n->getCollectionOfObjectValues([WorkbookNamedItem::class, 'createFromDiscriminatorValue'])),
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([WorkbookOperation::class, 'createFromDiscriminatorValue'])),
+            'tables' => fn(ParseNode $n) => $o->setTables($n->getCollectionOfObjectValues([WorkbookTable::class, 'createFromDiscriminatorValue'])),
+            'worksheets' => fn(ParseNode $n) => $o->setWorksheets($n->getCollectionOfObjectValues([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

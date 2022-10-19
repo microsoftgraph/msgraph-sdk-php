@@ -69,10 +69,10 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'deviceId' => function (ParseNode $n) use ($o) { $o->setDeviceId($n->getStringValue()); },
-            'key' => function (ParseNode $n) use ($o) { $o->setKey($n->getStringValue()); },
-            'volumeType' => function (ParseNode $n) use ($o) { $o->setVolumeType($n->getEnumValue(VolumeType::class)); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
+            'key' => fn(ParseNode $n) => $o->setKey($n->getStringValue()),
+            'volumeType' => fn(ParseNode $n) => $o->setVolumeType($n->getEnumValue(VolumeType::class)),
         ]);
     }
 

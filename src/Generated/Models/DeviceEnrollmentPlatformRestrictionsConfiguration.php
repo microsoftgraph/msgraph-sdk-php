@@ -65,11 +65,11 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'androidRestriction' => function (ParseNode $n) use ($o) { $o->setAndroidRestriction($n->getObjectValue(array(DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'))); },
-            'iosRestriction' => function (ParseNode $n) use ($o) { $o->setIosRestriction($n->getObjectValue(array(DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'))); },
-            'macOSRestriction' => function (ParseNode $n) use ($o) { $o->setMacOSRestriction($n->getObjectValue(array(DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'))); },
-            'windowsMobileRestriction' => function (ParseNode $n) use ($o) { $o->setWindowsMobileRestriction($n->getObjectValue(array(DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'))); },
-            'windowsRestriction' => function (ParseNode $n) use ($o) { $o->setWindowsRestriction($n->getObjectValue(array(DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'))); },
+            'androidRestriction' => fn(ParseNode $n) => $o->setAndroidRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
+            'iosRestriction' => fn(ParseNode $n) => $o->setIosRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
+            'macOSRestriction' => fn(ParseNode $n) => $o->setMacOSRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
+            'windowsMobileRestriction' => fn(ParseNode $n) => $o->setWindowsMobileRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
+            'windowsRestriction' => fn(ParseNode $n) => $o->setWindowsRestriction($n->getObjectValue([DeviceEnrollmentPlatformRestriction::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -66,10 +66,10 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'targetedAuthenticationMethod' => function (ParseNode $n) use ($o) { $o->setTargetedAuthenticationMethod($n->getStringValue()); },
-            'targetType' => function (ParseNode $n) use ($o) { $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)); },
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'targetedAuthenticationMethod' => fn(ParseNode $n) => $o->setTargetedAuthenticationMethod($n->getStringValue()),
+            'targetType' => fn(ParseNode $n) => $o->setTargetType($n->getEnumValue(AuthenticationMethodTargetType::class)),
         ];
     }
 

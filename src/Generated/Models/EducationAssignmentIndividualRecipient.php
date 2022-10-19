@@ -37,7 +37,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'recipients' => function (ParseNode $n) use ($o) { $o->setRecipients($n->getCollectionOfPrimitiveValues()); },
+            'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

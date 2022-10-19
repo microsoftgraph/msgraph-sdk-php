@@ -52,10 +52,10 @@ class WorkbookChartLegend extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartLegendFormat::class, 'createFromDiscriminatorValue'))); },
-            'overlay' => function (ParseNode $n) use ($o) { $o->setOverlay($n->getBooleanValue()); },
-            'position' => function (ParseNode $n) use ($o) { $o->setPosition($n->getStringValue()); },
-            'visible' => function (ParseNode $n) use ($o) { $o->setVisible($n->getBooleanValue()); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartLegendFormat::class, 'createFromDiscriminatorValue'])),
+            'overlay' => fn(ParseNode $n) => $o->setOverlay($n->getBooleanValue()),
+            'position' => fn(ParseNode $n) => $o->setPosition($n->getStringValue()),
+            'visible' => fn(ParseNode $n) => $o->setVisible($n->getBooleanValue()),
         ]);
     }
 

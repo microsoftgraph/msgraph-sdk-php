@@ -61,9 +61,9 @@ class SecurityResource implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'resource' => function (ParseNode $n) use ($o) { $o->setResource($n->getStringValue()); },
-            'resourceType' => function (ParseNode $n) use ($o) { $o->setResourceType($n->getEnumValue(SecurityResourceType::class)); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resource' => fn(ParseNode $n) => $o->setResource($n->getStringValue()),
+            'resourceType' => fn(ParseNode $n) => $o->setResourceType($n->getEnumValue(SecurityResourceType::class)),
         ];
     }
 

@@ -42,8 +42,8 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'points' => function (ParseNode $n) use ($o) { $o->setPoints($n->getObjectValue(array(EducationAssignmentPointsGrade::class, 'createFromDiscriminatorValue'))); },
-            'publishedPoints' => function (ParseNode $n) use ($o) { $o->setPublishedPoints($n->getObjectValue(array(EducationAssignmentPointsGrade::class, 'createFromDiscriminatorValue'))); },
+            'points' => fn(ParseNode $n) => $o->setPoints($n->getObjectValue([EducationAssignmentPointsGrade::class, 'createFromDiscriminatorValue'])),
+            'publishedPoints' => fn(ParseNode $n) => $o->setPublishedPoints($n->getObjectValue([EducationAssignmentPointsGrade::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

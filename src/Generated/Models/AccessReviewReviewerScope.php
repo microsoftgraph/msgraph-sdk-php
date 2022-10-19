@@ -66,10 +66,10 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'query' => function (ParseNode $n) use ($o) { $o->setQuery($n->getStringValue()); },
-            'queryRoot' => function (ParseNode $n) use ($o) { $o->setQueryRoot($n->getStringValue()); },
-            'queryType' => function (ParseNode $n) use ($o) { $o->setQueryType($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
+            'queryRoot' => fn(ParseNode $n) => $o->setQueryRoot($n->getStringValue()),
+            'queryType' => fn(ParseNode $n) => $o->setQueryType($n->getStringValue()),
         ];
     }
 

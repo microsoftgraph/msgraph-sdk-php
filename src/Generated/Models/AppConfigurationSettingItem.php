@@ -90,10 +90,10 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'appConfigKey' => function (ParseNode $n) use ($o) { $o->setAppConfigKey($n->getStringValue()); },
-            'appConfigKeyType' => function (ParseNode $n) use ($o) { $o->setAppConfigKeyType($n->getEnumValue(MdmAppConfigKeyType::class)); },
-            'appConfigKeyValue' => function (ParseNode $n) use ($o) { $o->setAppConfigKeyValue($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'appConfigKey' => fn(ParseNode $n) => $o->setAppConfigKey($n->getStringValue()),
+            'appConfigKeyType' => fn(ParseNode $n) => $o->setAppConfigKeyType($n->getEnumValue(MdmAppConfigKeyType::class)),
+            'appConfigKeyValue' => fn(ParseNode $n) => $o->setAppConfigKeyValue($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

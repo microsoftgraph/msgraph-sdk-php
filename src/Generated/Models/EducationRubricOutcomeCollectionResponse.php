@@ -36,7 +36,7 @@ class EducationRubricOutcomeCollectionResponse extends BaseCollectionPaginationC
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(EducationRubricOutcome::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([EducationRubricOutcome::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

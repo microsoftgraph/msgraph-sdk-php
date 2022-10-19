@@ -139,16 +139,16 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'backgroundColor' => function (ParseNode $n) use ($o) { $o->setBackgroundColor($n->getStringValue()); },
-            'backgroundImage' => function (ParseNode $n) use ($o) { $o->setBackgroundImage($n->getBinaryContent()); },
-            'backgroundImageRelativeUrl' => function (ParseNode $n) use ($o) { $o->setBackgroundImageRelativeUrl($n->getStringValue()); },
-            'bannerLogo' => function (ParseNode $n) use ($o) { $o->setBannerLogo($n->getBinaryContent()); },
-            'bannerLogoRelativeUrl' => function (ParseNode $n) use ($o) { $o->setBannerLogoRelativeUrl($n->getStringValue()); },
-            'cdnList' => function (ParseNode $n) use ($o) { $o->setCdnList($n->getCollectionOfPrimitiveValues()); },
-            'signInPageText' => function (ParseNode $n) use ($o) { $o->setSignInPageText($n->getStringValue()); },
-            'squareLogo' => function (ParseNode $n) use ($o) { $o->setSquareLogo($n->getBinaryContent()); },
-            'squareLogoRelativeUrl' => function (ParseNode $n) use ($o) { $o->setSquareLogoRelativeUrl($n->getStringValue()); },
-            'usernameHintText' => function (ParseNode $n) use ($o) { $o->setUsernameHintText($n->getStringValue()); },
+            'backgroundColor' => fn(ParseNode $n) => $o->setBackgroundColor($n->getStringValue()),
+            'backgroundImage' => fn(ParseNode $n) => $o->setBackgroundImage($n->getBinaryContent()),
+            'backgroundImageRelativeUrl' => fn(ParseNode $n) => $o->setBackgroundImageRelativeUrl($n->getStringValue()),
+            'bannerLogo' => fn(ParseNode $n) => $o->setBannerLogo($n->getBinaryContent()),
+            'bannerLogoRelativeUrl' => fn(ParseNode $n) => $o->setBannerLogoRelativeUrl($n->getStringValue()),
+            'cdnList' => fn(ParseNode $n) => $o->setCdnList($n->getCollectionOfPrimitiveValues()),
+            'signInPageText' => fn(ParseNode $n) => $o->setSignInPageText($n->getStringValue()),
+            'squareLogo' => fn(ParseNode $n) => $o->setSquareLogo($n->getBinaryContent()),
+            'squareLogoRelativeUrl' => fn(ParseNode $n) => $o->setSquareLogoRelativeUrl($n->getStringValue()),
+            'usernameHintText' => fn(ParseNode $n) => $o->setUsernameHintText($n->getStringValue()),
         ]);
     }
 

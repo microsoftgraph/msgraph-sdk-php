@@ -63,9 +63,9 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'chatDisplayName' => function (ParseNode $n) use ($o) { $o->setChatDisplayName($n->getStringValue()); },
-            'chatId' => function (ParseNode $n) use ($o) { $o->setChatId($n->getStringValue()); },
-            'initiator' => function (ParseNode $n) use ($o) { $o->setInitiator($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'chatDisplayName' => fn(ParseNode $n) => $o->setChatDisplayName($n->getStringValue()),
+            'chatId' => fn(ParseNode $n) => $o->setChatId($n->getStringValue()),
+            'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

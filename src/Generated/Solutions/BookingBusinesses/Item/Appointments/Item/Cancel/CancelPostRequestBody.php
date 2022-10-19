@@ -58,7 +58,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cancellationMessage' => function (ParseNode $n) use ($o) { $o->setCancellationMessage($n->getStringValue()); },
+            'cancellationMessage' => fn(ParseNode $n) => $o->setCancellationMessage($n->getStringValue()),
         ];
     }
 

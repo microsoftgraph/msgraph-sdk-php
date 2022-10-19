@@ -55,9 +55,9 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'draftOpenShift' => function (ParseNode $n) use ($o) { $o->setDraftOpenShift($n->getObjectValue(array(OpenShiftItem::class, 'createFromDiscriminatorValue'))); },
-            'schedulingGroupId' => function (ParseNode $n) use ($o) { $o->setSchedulingGroupId($n->getStringValue()); },
-            'sharedOpenShift' => function (ParseNode $n) use ($o) { $o->setSharedOpenShift($n->getObjectValue(array(OpenShiftItem::class, 'createFromDiscriminatorValue'))); },
+            'draftOpenShift' => fn(ParseNode $n) => $o->setDraftOpenShift($n->getObjectValue([OpenShiftItem::class, 'createFromDiscriminatorValue'])),
+            'schedulingGroupId' => fn(ParseNode $n) => $o->setSchedulingGroupId($n->getStringValue()),
+            'sharedOpenShift' => fn(ParseNode $n) => $o->setSharedOpenShift($n->getObjectValue([OpenShiftItem::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

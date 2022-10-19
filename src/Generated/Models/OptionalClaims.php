@@ -74,10 +74,10 @@ class OptionalClaims implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accessToken' => function (ParseNode $n) use ($o) { $o->setAccessToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
-            'idToken' => function (ParseNode $n) use ($o) { $o->setIdToken($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'saml2Token' => function (ParseNode $n) use ($o) { $o->setSaml2Token($n->getCollectionOfObjectValues(array(OptionalClaim::class, 'createFromDiscriminatorValue'))); },
+            'accessToken' => fn(ParseNode $n) => $o->setAccessToken($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
+            'idToken' => fn(ParseNode $n) => $o->setIdToken($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'saml2Token' => fn(ParseNode $n) => $o->setSaml2Token($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

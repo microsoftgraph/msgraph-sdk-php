@@ -56,8 +56,8 @@ class PasswordResetResponse implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'newPassword' => function (ParseNode $n) use ($o) { $o->setNewPassword($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'newPassword' => fn(ParseNode $n) => $o->setNewPassword($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

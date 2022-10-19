@@ -75,10 +75,10 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'deadlineDateTime' => function (ParseNode $n) use ($o) { $o->setDeadlineDateTime($n->getDateTimeValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'useLocalTime' => function (ParseNode $n) use ($o) { $o->setUseLocalTime($n->getBooleanValue()); },
+            'deadlineDateTime' => fn(ParseNode $n) => $o->setDeadlineDateTime($n->getDateTimeValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
+            'useLocalTime' => fn(ParseNode $n) => $o->setUseLocalTime($n->getBooleanValue()),
         ];
     }
 

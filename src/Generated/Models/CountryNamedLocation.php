@@ -63,9 +63,9 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'countriesAndRegions' => function (ParseNode $n) use ($o) { $o->setCountriesAndRegions($n->getCollectionOfPrimitiveValues()); },
-            'countryLookupMethod' => function (ParseNode $n) use ($o) { $o->setCountryLookupMethod($n->getEnumValue(CountryLookupMethodType::class)); },
-            'includeUnknownCountriesAndRegions' => function (ParseNode $n) use ($o) { $o->setIncludeUnknownCountriesAndRegions($n->getBooleanValue()); },
+            'countriesAndRegions' => fn(ParseNode $n) => $o->setCountriesAndRegions($n->getCollectionOfPrimitiveValues()),
+            'countryLookupMethod' => fn(ParseNode $n) => $o->setCountryLookupMethod($n->getEnumValue(CountryLookupMethodType::class)),
+            'includeUnknownCountriesAndRegions' => fn(ParseNode $n) => $o->setIncludeUnknownCountriesAndRegions($n->getBooleanValue()),
         ]);
     }
 

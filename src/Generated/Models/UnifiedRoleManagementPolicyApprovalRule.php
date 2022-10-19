@@ -37,7 +37,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'setting' => function (ParseNode $n) use ($o) { $o->setSetting($n->getObjectValue(array(ApprovalSettings::class, 'createFromDiscriminatorValue'))); },
+            'setting' => fn(ParseNode $n) => $o->setSetting($n->getObjectValue([ApprovalSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

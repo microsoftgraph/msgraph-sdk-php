@@ -172,21 +172,21 @@ class Simulation extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'attackTechnique' => function (ParseNode $n) use ($o) { $o->setAttackTechnique($n->getEnumValue(SimulationAttackTechnique::class)); },
-            'attackType' => function (ParseNode $n) use ($o) { $o->setAttackType($n->getEnumValue(SimulationAttackType::class)); },
-            'automationId' => function (ParseNode $n) use ($o) { $o->setAutomationId($n->getStringValue()); },
-            'completionDateTime' => function (ParseNode $n) use ($o) { $o->setCompletionDateTime($n->getDateTimeValue()); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(EmailIdentity::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isAutomated' => function (ParseNode $n) use ($o) { $o->setIsAutomated($n->getBooleanValue()); },
-            'lastModifiedBy' => function (ParseNode $n) use ($o) { $o->setLastModifiedBy($n->getObjectValue(array(EmailIdentity::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'launchDateTime' => function (ParseNode $n) use ($o) { $o->setLaunchDateTime($n->getDateTimeValue()); },
-            'payloadDeliveryPlatform' => function (ParseNode $n) use ($o) { $o->setPayloadDeliveryPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)); },
-            'report' => function (ParseNode $n) use ($o) { $o->setReport($n->getObjectValue(array(SimulationReport::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(SimulationStatus::class)); },
+            'attackTechnique' => fn(ParseNode $n) => $o->setAttackTechnique($n->getEnumValue(SimulationAttackTechnique::class)),
+            'attackType' => fn(ParseNode $n) => $o->setAttackType($n->getEnumValue(SimulationAttackType::class)),
+            'automationId' => fn(ParseNode $n) => $o->setAutomationId($n->getStringValue()),
+            'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isAutomated' => fn(ParseNode $n) => $o->setIsAutomated($n->getBooleanValue()),
+            'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([EmailIdentity::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'launchDateTime' => fn(ParseNode $n) => $o->setLaunchDateTime($n->getDateTimeValue()),
+            'payloadDeliveryPlatform' => fn(ParseNode $n) => $o->setPayloadDeliveryPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)),
+            'report' => fn(ParseNode $n) => $o->setReport($n->getObjectValue([SimulationReport::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationStatus::class)),
         ]);
     }
 

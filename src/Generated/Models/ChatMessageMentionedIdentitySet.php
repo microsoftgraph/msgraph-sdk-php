@@ -45,7 +45,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversation' => function (ParseNode $n) use ($o) { $o->setConversation($n->getObjectValue(array(TeamworkConversationIdentity::class, 'createFromDiscriminatorValue'))); },
+            'conversation' => fn(ParseNode $n) => $o->setConversation($n->getObjectValue([TeamworkConversationIdentity::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

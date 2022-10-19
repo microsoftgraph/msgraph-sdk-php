@@ -151,19 +151,19 @@ class SearchRequest implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aggregationFilters' => function (ParseNode $n) use ($o) { $o->setAggregationFilters($n->getCollectionOfPrimitiveValues()); },
-            'aggregations' => function (ParseNode $n) use ($o) { $o->setAggregations($n->getCollectionOfObjectValues(array(AggregationOption::class, 'createFromDiscriminatorValue'))); },
-            'contentSources' => function (ParseNode $n) use ($o) { $o->setContentSources($n->getCollectionOfPrimitiveValues()); },
-            'enableTopResults' => function (ParseNode $n) use ($o) { $o->setEnableTopResults($n->getBooleanValue()); },
-            'entityTypes' => function (ParseNode $n) use ($o) { $o->setEntityTypes($n->getCollectionOfEnumValues(EntityType::class)); },
-            'fields' => function (ParseNode $n) use ($o) { $o->setFields($n->getCollectionOfPrimitiveValues()); },
-            'from' => function (ParseNode $n) use ($o) { $o->setFrom($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'query' => function (ParseNode $n) use ($o) { $o->setQuery($n->getObjectValue(array(SearchQuery::class, 'createFromDiscriminatorValue'))); },
-            'queryAlterationOptions' => function (ParseNode $n) use ($o) { $o->setQueryAlterationOptions($n->getObjectValue(array(SearchAlterationOptions::class, 'createFromDiscriminatorValue'))); },
-            'resultTemplateOptions' => function (ParseNode $n) use ($o) { $o->setResultTemplateOptions($n->getObjectValue(array(ResultTemplateOption::class, 'createFromDiscriminatorValue'))); },
-            'size' => function (ParseNode $n) use ($o) { $o->setSize($n->getIntegerValue()); },
-            'sortProperties' => function (ParseNode $n) use ($o) { $o->setSortProperties($n->getCollectionOfObjectValues(array(SortProperty::class, 'createFromDiscriminatorValue'))); },
+            'aggregationFilters' => fn(ParseNode $n) => $o->setAggregationFilters($n->getCollectionOfPrimitiveValues()),
+            'aggregations' => fn(ParseNode $n) => $o->setAggregations($n->getCollectionOfObjectValues([AggregationOption::class, 'createFromDiscriminatorValue'])),
+            'contentSources' => fn(ParseNode $n) => $o->setContentSources($n->getCollectionOfPrimitiveValues()),
+            'enableTopResults' => fn(ParseNode $n) => $o->setEnableTopResults($n->getBooleanValue()),
+            'entityTypes' => fn(ParseNode $n) => $o->setEntityTypes($n->getCollectionOfEnumValues(EntityType::class)),
+            'fields' => fn(ParseNode $n) => $o->setFields($n->getCollectionOfPrimitiveValues()),
+            'from' => fn(ParseNode $n) => $o->setFrom($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'query' => fn(ParseNode $n) => $o->setQuery($n->getObjectValue([SearchQuery::class, 'createFromDiscriminatorValue'])),
+            'queryAlterationOptions' => fn(ParseNode $n) => $o->setQueryAlterationOptions($n->getObjectValue([SearchAlterationOptions::class, 'createFromDiscriminatorValue'])),
+            'resultTemplateOptions' => fn(ParseNode $n) => $o->setResultTemplateOptions($n->getObjectValue([ResultTemplateOption::class, 'createFromDiscriminatorValue'])),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
+            'sortProperties' => fn(ParseNode $n) => $o->setSortProperties($n->getCollectionOfObjectValues([SortProperty::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

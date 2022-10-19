@@ -102,14 +102,14 @@ class RecurrencePattern implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dayOfMonth' => function (ParseNode $n) use ($o) { $o->setDayOfMonth($n->getIntegerValue()); },
-            'daysOfWeek' => function (ParseNode $n) use ($o) { $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)); },
-            'firstDayOfWeek' => function (ParseNode $n) use ($o) { $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)); },
-            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getEnumValue(WeekIndex::class)); },
-            'interval' => function (ParseNode $n) use ($o) { $o->setInterval($n->getIntegerValue()); },
-            'month' => function (ParseNode $n) use ($o) { $o->setMonth($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'type' => function (ParseNode $n) use ($o) { $o->setType($n->getEnumValue(RecurrencePatternType::class)); },
+            'dayOfMonth' => fn(ParseNode $n) => $o->setDayOfMonth($n->getIntegerValue()),
+            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)),
+            'firstDayOfWeek' => fn(ParseNode $n) => $o->setFirstDayOfWeek($n->getEnumValue(DayOfWeek::class)),
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getEnumValue(WeekIndex::class)),
+            'interval' => fn(ParseNode $n) => $o->setInterval($n->getIntegerValue()),
+            'month' => fn(ParseNode $n) => $o->setMonth($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RecurrencePatternType::class)),
         ];
     }
 

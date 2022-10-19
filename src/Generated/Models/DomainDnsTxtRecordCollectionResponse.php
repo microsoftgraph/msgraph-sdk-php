@@ -36,7 +36,7 @@ class DomainDnsTxtRecordCollectionResponse extends BaseCollectionPaginationCount
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(DomainDnsTxtRecord::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([DomainDnsTxtRecord::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

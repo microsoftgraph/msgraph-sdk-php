@@ -42,8 +42,8 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'reviewSet' => function (ParseNode $n) use ($o) { $o->setReviewSet($n->getObjectValue(array(EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'))); },
-            'search' => function (ParseNode $n) use ($o) { $o->setSearch($n->getObjectValue(array(EdiscoverySearch::class, 'createFromDiscriminatorValue'))); },
+            'reviewSet' => fn(ParseNode $n) => $o->setReviewSet($n->getObjectValue([EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'])),
+            'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

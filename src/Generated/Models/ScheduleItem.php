@@ -89,13 +89,13 @@ class ScheduleItem implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'end' => function (ParseNode $n) use ($o) { $o->setEnd($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'isPrivate' => function (ParseNode $n) use ($o) { $o->setIsPrivate($n->getBooleanValue()); },
-            'location' => function (ParseNode $n) use ($o) { $o->setLocation($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'start' => function (ParseNode $n) use ($o) { $o->setStart($n->getObjectValue(array(DateTimeTimeZone::class, 'createFromDiscriminatorValue'))); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(FreeBusyStatus::class)); },
-            'subject' => function (ParseNode $n) use ($o) { $o->setSubject($n->getStringValue()); },
+            'end' => fn(ParseNode $n) => $o->setEnd($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'isPrivate' => fn(ParseNode $n) => $o->setIsPrivate($n->getBooleanValue()),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'start' => fn(ParseNode $n) => $o->setStart($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(FreeBusyStatus::class)),
+            'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
         ];
     }
 

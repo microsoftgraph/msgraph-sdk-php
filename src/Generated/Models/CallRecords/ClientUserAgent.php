@@ -68,10 +68,10 @@ class ClientUserAgent extends UserAgent implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'azureADAppId' => function (ParseNode $n) use ($o) { $o->setAzureADAppId($n->getStringValue()); },
-            'communicationServiceId' => function (ParseNode $n) use ($o) { $o->setCommunicationServiceId($n->getStringValue()); },
-            'platform' => function (ParseNode $n) use ($o) { $o->setPlatform($n->getEnumValue(ClientPlatform::class)); },
-            'productFamily' => function (ParseNode $n) use ($o) { $o->setProductFamily($n->getEnumValue(ProductFamily::class)); },
+            'azureADAppId' => fn(ParseNode $n) => $o->setAzureADAppId($n->getStringValue()),
+            'communicationServiceId' => fn(ParseNode $n) => $o->setCommunicationServiceId($n->getStringValue()),
+            'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(ClientPlatform::class)),
+            'productFamily' => fn(ParseNode $n) => $o->setProductFamily($n->getEnumValue(ProductFamily::class)),
         ]);
     }
 

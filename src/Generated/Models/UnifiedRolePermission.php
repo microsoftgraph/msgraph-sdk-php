@@ -90,10 +90,10 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedResourceActions' => function (ParseNode $n) use ($o) { $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()); },
-            'condition' => function (ParseNode $n) use ($o) { $o->setCondition($n->getStringValue()); },
-            'excludedResourceActions' => function (ParseNode $n) use ($o) { $o->setExcludedResourceActions($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowedResourceActions' => fn(ParseNode $n) => $o->setAllowedResourceActions($n->getCollectionOfPrimitiveValues()),
+            'condition' => fn(ParseNode $n) => $o->setCondition($n->getStringValue()),
+            'excludedResourceActions' => fn(ParseNode $n) => $o->setExcludedResourceActions($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

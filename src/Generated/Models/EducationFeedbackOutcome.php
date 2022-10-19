@@ -50,8 +50,8 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'feedback' => function (ParseNode $n) use ($o) { $o->setFeedback($n->getObjectValue(array(EducationFeedback::class, 'createFromDiscriminatorValue'))); },
-            'publishedFeedback' => function (ParseNode $n) use ($o) { $o->setPublishedFeedback($n->getObjectValue(array(EducationFeedback::class, 'createFromDiscriminatorValue'))); },
+            'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getObjectValue([EducationFeedback::class, 'createFromDiscriminatorValue'])),
+            'publishedFeedback' => fn(ParseNode $n) => $o->setPublishedFeedback($n->getObjectValue([EducationFeedback::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

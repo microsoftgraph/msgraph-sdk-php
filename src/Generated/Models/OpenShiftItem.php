@@ -37,7 +37,7 @@ class OpenShiftItem extends ShiftItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'openSlotCount' => function (ParseNode $n) use ($o) { $o->setOpenSlotCount($n->getIntegerValue()); },
+            'openSlotCount' => fn(ParseNode $n) => $o->setOpenSlotCount($n->getIntegerValue()),
         ]);
     }
 

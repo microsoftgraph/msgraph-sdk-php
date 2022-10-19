@@ -55,9 +55,9 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'draftTimeOff' => function (ParseNode $n) use ($o) { $o->setDraftTimeOff($n->getObjectValue(array(TimeOffItem::class, 'createFromDiscriminatorValue'))); },
-            'sharedTimeOff' => function (ParseNode $n) use ($o) { $o->setSharedTimeOff($n->getObjectValue(array(TimeOffItem::class, 'createFromDiscriminatorValue'))); },
-            'userId' => function (ParseNode $n) use ($o) { $o->setUserId($n->getStringValue()); },
+            'draftTimeOff' => fn(ParseNode $n) => $o->setDraftTimeOff($n->getObjectValue([TimeOffItem::class, 'createFromDiscriminatorValue'])),
+            'sharedTimeOff' => fn(ParseNode $n) => $o->setSharedTimeOff($n->getObjectValue([TimeOffItem::class, 'createFromDiscriminatorValue'])),
+            'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
     }
 

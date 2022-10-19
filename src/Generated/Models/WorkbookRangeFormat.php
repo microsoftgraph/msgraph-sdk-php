@@ -93,15 +93,15 @@ class WorkbookRangeFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'borders' => function (ParseNode $n) use ($o) { $o->setBorders($n->getCollectionOfObjectValues(array(WorkbookRangeBorder::class, 'createFromDiscriminatorValue'))); },
-            'columnWidth' => function (ParseNode $n) use ($o) { $o->setColumnWidth($n->getFloatValue()); },
-            'fill' => function (ParseNode $n) use ($o) { $o->setFill($n->getObjectValue(array(WorkbookRangeFill::class, 'createFromDiscriminatorValue'))); },
-            'font' => function (ParseNode $n) use ($o) { $o->setFont($n->getObjectValue(array(WorkbookRangeFont::class, 'createFromDiscriminatorValue'))); },
-            'horizontalAlignment' => function (ParseNode $n) use ($o) { $o->setHorizontalAlignment($n->getStringValue()); },
-            'protection' => function (ParseNode $n) use ($o) { $o->setProtection($n->getObjectValue(array(WorkbookFormatProtection::class, 'createFromDiscriminatorValue'))); },
-            'rowHeight' => function (ParseNode $n) use ($o) { $o->setRowHeight($n->getFloatValue()); },
-            'verticalAlignment' => function (ParseNode $n) use ($o) { $o->setVerticalAlignment($n->getStringValue()); },
-            'wrapText' => function (ParseNode $n) use ($o) { $o->setWrapText($n->getBooleanValue()); },
+            'borders' => fn(ParseNode $n) => $o->setBorders($n->getCollectionOfObjectValues([WorkbookRangeBorder::class, 'createFromDiscriminatorValue'])),
+            'columnWidth' => fn(ParseNode $n) => $o->setColumnWidth($n->getFloatValue()),
+            'fill' => fn(ParseNode $n) => $o->setFill($n->getObjectValue([WorkbookRangeFill::class, 'createFromDiscriminatorValue'])),
+            'font' => fn(ParseNode $n) => $o->setFont($n->getObjectValue([WorkbookRangeFont::class, 'createFromDiscriminatorValue'])),
+            'horizontalAlignment' => fn(ParseNode $n) => $o->setHorizontalAlignment($n->getStringValue()),
+            'protection' => fn(ParseNode $n) => $o->setProtection($n->getObjectValue([WorkbookFormatProtection::class, 'createFromDiscriminatorValue'])),
+            'rowHeight' => fn(ParseNode $n) => $o->setRowHeight($n->getFloatValue()),
+            'verticalAlignment' => fn(ParseNode $n) => $o->setVerticalAlignment($n->getStringValue()),
+            'wrapText' => fn(ParseNode $n) => $o->setWrapText($n->getBooleanValue()),
         ]);
     }
 

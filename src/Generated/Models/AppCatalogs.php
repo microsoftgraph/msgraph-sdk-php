@@ -14,7 +14,7 @@ class AppCatalogs extends Entity implements Parsable
     private ?array $teamsApps = null;
     
     /**
-     * Instantiates a new AppCatalogs and sets the default values.
+     * Instantiates a new appCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -37,7 +37,7 @@ class AppCatalogs extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'teamsApps' => function (ParseNode $n) use ($o) { $o->setTeamsApps($n->getCollectionOfObjectValues(array(TeamsApp::class, 'createFromDiscriminatorValue'))); },
+            'teamsApps' => fn(ParseNode $n) => $o->setTeamsApps($n->getCollectionOfObjectValues([TeamsApp::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

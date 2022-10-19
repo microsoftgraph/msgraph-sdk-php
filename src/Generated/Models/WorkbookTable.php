@@ -110,20 +110,20 @@ class WorkbookTable extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'columns' => function (ParseNode $n) use ($o) { $o->setColumns($n->getCollectionOfObjectValues(array(WorkbookTableColumn::class, 'createFromDiscriminatorValue'))); },
-            'highlightFirstColumn' => function (ParseNode $n) use ($o) { $o->setHighlightFirstColumn($n->getBooleanValue()); },
-            'highlightLastColumn' => function (ParseNode $n) use ($o) { $o->setHighlightLastColumn($n->getBooleanValue()); },
-            'legacyId' => function (ParseNode $n) use ($o) { $o->setLegacyId($n->getStringValue()); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'rows' => function (ParseNode $n) use ($o) { $o->setRows($n->getCollectionOfObjectValues(array(WorkbookTableRow::class, 'createFromDiscriminatorValue'))); },
-            'showBandedColumns' => function (ParseNode $n) use ($o) { $o->setShowBandedColumns($n->getBooleanValue()); },
-            'showBandedRows' => function (ParseNode $n) use ($o) { $o->setShowBandedRows($n->getBooleanValue()); },
-            'showFilterButton' => function (ParseNode $n) use ($o) { $o->setShowFilterButton($n->getBooleanValue()); },
-            'showHeaders' => function (ParseNode $n) use ($o) { $o->setShowHeaders($n->getBooleanValue()); },
-            'showTotals' => function (ParseNode $n) use ($o) { $o->setShowTotals($n->getBooleanValue()); },
-            'sort' => function (ParseNode $n) use ($o) { $o->setSort($n->getObjectValue(array(WorkbookTableSort::class, 'createFromDiscriminatorValue'))); },
-            'style' => function (ParseNode $n) use ($o) { $o->setStyle($n->getStringValue()); },
-            'worksheet' => function (ParseNode $n) use ($o) { $o->setWorksheet($n->getObjectValue(array(WorkbookWorksheet::class, 'createFromDiscriminatorValue'))); },
+            'columns' => fn(ParseNode $n) => $o->setColumns($n->getCollectionOfObjectValues([WorkbookTableColumn::class, 'createFromDiscriminatorValue'])),
+            'highlightFirstColumn' => fn(ParseNode $n) => $o->setHighlightFirstColumn($n->getBooleanValue()),
+            'highlightLastColumn' => fn(ParseNode $n) => $o->setHighlightLastColumn($n->getBooleanValue()),
+            'legacyId' => fn(ParseNode $n) => $o->setLegacyId($n->getStringValue()),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'rows' => fn(ParseNode $n) => $o->setRows($n->getCollectionOfObjectValues([WorkbookTableRow::class, 'createFromDiscriminatorValue'])),
+            'showBandedColumns' => fn(ParseNode $n) => $o->setShowBandedColumns($n->getBooleanValue()),
+            'showBandedRows' => fn(ParseNode $n) => $o->setShowBandedRows($n->getBooleanValue()),
+            'showFilterButton' => fn(ParseNode $n) => $o->setShowFilterButton($n->getBooleanValue()),
+            'showHeaders' => fn(ParseNode $n) => $o->setShowHeaders($n->getBooleanValue()),
+            'showTotals' => fn(ParseNode $n) => $o->setShowTotals($n->getBooleanValue()),
+            'sort' => fn(ParseNode $n) => $o->setSort($n->getObjectValue([WorkbookTableSort::class, 'createFromDiscriminatorValue'])),
+            'style' => fn(ParseNode $n) => $o->setStyle($n->getStringValue()),
+            'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -86,14 +86,14 @@ class SharepointIds implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'listId' => function (ParseNode $n) use ($o) { $o->setListId($n->getStringValue()); },
-            'listItemId' => function (ParseNode $n) use ($o) { $o->setListItemId($n->getStringValue()); },
-            'listItemUniqueId' => function (ParseNode $n) use ($o) { $o->setListItemUniqueId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'siteId' => function (ParseNode $n) use ($o) { $o->setSiteId($n->getStringValue()); },
-            'siteUrl' => function (ParseNode $n) use ($o) { $o->setSiteUrl($n->getStringValue()); },
-            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
-            'webId' => function (ParseNode $n) use ($o) { $o->setWebId($n->getStringValue()); },
+            'listId' => fn(ParseNode $n) => $o->setListId($n->getStringValue()),
+            'listItemId' => fn(ParseNode $n) => $o->setListItemId($n->getStringValue()),
+            'listItemUniqueId' => fn(ParseNode $n) => $o->setListItemUniqueId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'siteId' => fn(ParseNode $n) => $o->setSiteId($n->getStringValue()),
+            'siteUrl' => fn(ParseNode $n) => $o->setSiteUrl($n->getStringValue()),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
+            'webId' => fn(ParseNode $n) => $o->setWebId($n->getStringValue()),
         ];
     }
 

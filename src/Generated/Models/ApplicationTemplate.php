@@ -96,14 +96,14 @@ class ApplicationTemplate extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'categories' => function (ParseNode $n) use ($o) { $o->setCategories($n->getCollectionOfPrimitiveValues()); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'homePageUrl' => function (ParseNode $n) use ($o) { $o->setHomePageUrl($n->getStringValue()); },
-            'logoUrl' => function (ParseNode $n) use ($o) { $o->setLogoUrl($n->getStringValue()); },
-            'publisher' => function (ParseNode $n) use ($o) { $o->setPublisher($n->getStringValue()); },
-            'supportedProvisioningTypes' => function (ParseNode $n) use ($o) { $o->setSupportedProvisioningTypes($n->getCollectionOfPrimitiveValues()); },
-            'supportedSingleSignOnModes' => function (ParseNode $n) use ($o) { $o->setSupportedSingleSignOnModes($n->getCollectionOfPrimitiveValues()); },
+            'categories' => fn(ParseNode $n) => $o->setCategories($n->getCollectionOfPrimitiveValues()),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'homePageUrl' => fn(ParseNode $n) => $o->setHomePageUrl($n->getStringValue()),
+            'logoUrl' => fn(ParseNode $n) => $o->setLogoUrl($n->getStringValue()),
+            'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
+            'supportedProvisioningTypes' => fn(ParseNode $n) => $o->setSupportedProvisioningTypes($n->getCollectionOfPrimitiveValues()),
+            'supportedSingleSignOnModes' => fn(ParseNode $n) => $o->setSupportedSingleSignOnModes($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

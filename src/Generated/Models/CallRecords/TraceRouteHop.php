@@ -67,10 +67,10 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hopCount' => function (ParseNode $n) use ($o) { $o->setHopCount($n->getIntegerValue()); },
-            'ipAddress' => function (ParseNode $n) use ($o) { $o->setIpAddress($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'roundTripTime' => function (ParseNode $n) use ($o) { $o->setRoundTripTime($n->getDateIntervalValue()); },
+            'hopCount' => fn(ParseNode $n) => $o->setHopCount($n->getIntegerValue()),
+            'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'roundTripTime' => fn(ParseNode $n) => $o->setRoundTripTime($n->getDateIntervalValue()),
         ];
     }
 

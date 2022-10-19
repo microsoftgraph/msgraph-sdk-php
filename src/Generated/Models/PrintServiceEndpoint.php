@@ -50,8 +50,8 @@ class PrintServiceEndpoint extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'uri' => function (ParseNode $n) use ($o) { $o->setUri($n->getStringValue()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'uri' => fn(ParseNode $n) => $o->setUri($n->getStringValue()),
         ]);
     }
 

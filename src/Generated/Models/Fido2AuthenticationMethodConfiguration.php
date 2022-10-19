@@ -52,10 +52,10 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'))); },
-            'isAttestationEnforced' => function (ParseNode $n) use ($o) { $o->setIsAttestationEnforced($n->getBooleanValue()); },
-            'isSelfServiceRegistrationAllowed' => function (ParseNode $n) use ($o) { $o->setIsSelfServiceRegistrationAllowed($n->getBooleanValue()); },
-            'keyRestrictions' => function (ParseNode $n) use ($o) { $o->setKeyRestrictions($n->getObjectValue(array(Fido2KeyRestrictions::class, 'createFromDiscriminatorValue'))); },
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'isAttestationEnforced' => fn(ParseNode $n) => $o->setIsAttestationEnforced($n->getBooleanValue()),
+            'isSelfServiceRegistrationAllowed' => fn(ParseNode $n) => $o->setIsSelfServiceRegistrationAllowed($n->getBooleanValue()),
+            'keyRestrictions' => fn(ParseNode $n) => $o->setKeyRestrictions($n->getObjectValue([Fido2KeyRestrictions::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

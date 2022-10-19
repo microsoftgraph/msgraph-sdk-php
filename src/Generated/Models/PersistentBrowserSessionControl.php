@@ -37,7 +37,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'mode' => function (ParseNode $n) use ($o) { $o->setMode($n->getEnumValue(PersistentBrowserSessionMode::class)); },
+            'mode' => fn(ParseNode $n) => $o->setMode($n->getEnumValue(PersistentBrowserSessionMode::class)),
         ]);
     }
 

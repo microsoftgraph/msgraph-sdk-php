@@ -101,13 +101,13 @@ class Session extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callee' => function (ParseNode $n) use ($o) { $o->setCallee($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
-            'caller' => function (ParseNode $n) use ($o) { $o->setCaller($n->getObjectValue(array(Endpoint::class, 'createFromDiscriminatorValue'))); },
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'failureInfo' => function (ParseNode $n) use ($o) { $o->setFailureInfo($n->getObjectValue(array(FailureInfo::class, 'createFromDiscriminatorValue'))); },
-            'modalities' => function (ParseNode $n) use ($o) { $o->setModalities($n->getCollectionOfEnumValues(Modality::class)); },
-            'segments' => function (ParseNode $n) use ($o) { $o->setSegments($n->getCollectionOfObjectValues(array(Segment::class, 'createFromDiscriminatorValue'))); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'callee' => fn(ParseNode $n) => $o->setCallee($n->getObjectValue([Endpoint::class, 'createFromDiscriminatorValue'])),
+            'caller' => fn(ParseNode $n) => $o->setCaller($n->getObjectValue([Endpoint::class, 'createFromDiscriminatorValue'])),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'failureInfo' => fn(ParseNode $n) => $o->setFailureInfo($n->getObjectValue([FailureInfo::class, 'createFromDiscriminatorValue'])),
+            'modalities' => fn(ParseNode $n) => $o->setModalities($n->getCollectionOfEnumValues(Modality::class)),
+            'segments' => fn(ParseNode $n) => $o->setSegments($n->getCollectionOfObjectValues([Segment::class, 'createFromDiscriminatorValue'])),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
     }
 

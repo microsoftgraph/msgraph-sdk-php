@@ -90,10 +90,10 @@ class PersonOrGroupColumn implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowMultipleSelection' => function (ParseNode $n) use ($o) { $o->setAllowMultipleSelection($n->getBooleanValue()); },
-            'chooseFromType' => function (ParseNode $n) use ($o) { $o->setChooseFromType($n->getStringValue()); },
-            'displayAs' => function (ParseNode $n) use ($o) { $o->setDisplayAs($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowMultipleSelection' => fn(ParseNode $n) => $o->setAllowMultipleSelection($n->getBooleanValue()),
+            'chooseFromType' => fn(ParseNode $n) => $o->setChooseFromType($n->getStringValue()),
+            'displayAs' => fn(ParseNode $n) => $o->setDisplayAs($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

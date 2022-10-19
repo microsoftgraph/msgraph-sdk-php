@@ -105,7 +105,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     private ?SecurityVendorInformation $vendorInformation = null;
     
     /**
-     * Instantiates a new SecureScoreControlProfile and sets the default values.
+     * Instantiates a new secureScoreControlProfile and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -184,25 +184,25 @@ class SecureScoreControlProfile extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionType' => function (ParseNode $n) use ($o) { $o->setActionType($n->getStringValue()); },
-            'actionUrl' => function (ParseNode $n) use ($o) { $o->setActionUrl($n->getStringValue()); },
-            'azureTenantId' => function (ParseNode $n) use ($o) { $o->setAzureTenantId($n->getStringValue()); },
-            'complianceInformation' => function (ParseNode $n) use ($o) { $o->setComplianceInformation($n->getCollectionOfObjectValues(array(ComplianceInformation::class, 'createFromDiscriminatorValue'))); },
-            'controlCategory' => function (ParseNode $n) use ($o) { $o->setControlCategory($n->getStringValue()); },
-            'controlStateUpdates' => function (ParseNode $n) use ($o) { $o->setControlStateUpdates($n->getCollectionOfObjectValues(array(SecureScoreControlStateUpdate::class, 'createFromDiscriminatorValue'))); },
-            'deprecated' => function (ParseNode $n) use ($o) { $o->setDeprecated($n->getBooleanValue()); },
-            'implementationCost' => function (ParseNode $n) use ($o) { $o->setImplementationCost($n->getStringValue()); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'maxScore' => function (ParseNode $n) use ($o) { $o->setMaxScore($n->getFloatValue()); },
-            'rank' => function (ParseNode $n) use ($o) { $o->setRank($n->getIntegerValue()); },
-            'remediation' => function (ParseNode $n) use ($o) { $o->setRemediation($n->getStringValue()); },
-            'remediationImpact' => function (ParseNode $n) use ($o) { $o->setRemediationImpact($n->getStringValue()); },
-            'service' => function (ParseNode $n) use ($o) { $o->setService($n->getStringValue()); },
-            'threats' => function (ParseNode $n) use ($o) { $o->setThreats($n->getCollectionOfPrimitiveValues()); },
-            'tier' => function (ParseNode $n) use ($o) { $o->setTier($n->getStringValue()); },
-            'title' => function (ParseNode $n) use ($o) { $o->setTitle($n->getStringValue()); },
-            'userImpact' => function (ParseNode $n) use ($o) { $o->setUserImpact($n->getStringValue()); },
-            'vendorInformation' => function (ParseNode $n) use ($o) { $o->setVendorInformation($n->getObjectValue(array(SecurityVendorInformation::class, 'createFromDiscriminatorValue'))); },
+            'actionType' => fn(ParseNode $n) => $o->setActionType($n->getStringValue()),
+            'actionUrl' => fn(ParseNode $n) => $o->setActionUrl($n->getStringValue()),
+            'azureTenantId' => fn(ParseNode $n) => $o->setAzureTenantId($n->getStringValue()),
+            'complianceInformation' => fn(ParseNode $n) => $o->setComplianceInformation($n->getCollectionOfObjectValues([ComplianceInformation::class, 'createFromDiscriminatorValue'])),
+            'controlCategory' => fn(ParseNode $n) => $o->setControlCategory($n->getStringValue()),
+            'controlStateUpdates' => fn(ParseNode $n) => $o->setControlStateUpdates($n->getCollectionOfObjectValues([SecureScoreControlStateUpdate::class, 'createFromDiscriminatorValue'])),
+            'deprecated' => fn(ParseNode $n) => $o->setDeprecated($n->getBooleanValue()),
+            'implementationCost' => fn(ParseNode $n) => $o->setImplementationCost($n->getStringValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getFloatValue()),
+            'rank' => fn(ParseNode $n) => $o->setRank($n->getIntegerValue()),
+            'remediation' => fn(ParseNode $n) => $o->setRemediation($n->getStringValue()),
+            'remediationImpact' => fn(ParseNode $n) => $o->setRemediationImpact($n->getStringValue()),
+            'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
+            'threats' => fn(ParseNode $n) => $o->setThreats($n->getCollectionOfPrimitiveValues()),
+            'tier' => fn(ParseNode $n) => $o->setTier($n->getStringValue()),
+            'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
+            'userImpact' => fn(ParseNode $n) => $o->setUserImpact($n->getStringValue()),
+            'vendorInformation' => fn(ParseNode $n) => $o->setVendorInformation($n->getObjectValue([SecurityVendorInformation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

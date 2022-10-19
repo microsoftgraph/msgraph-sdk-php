@@ -61,9 +61,9 @@ class VppLicensingType implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'supportsDeviceLicensing' => function (ParseNode $n) use ($o) { $o->setSupportsDeviceLicensing($n->getBooleanValue()); },
-            'supportsUserLicensing' => function (ParseNode $n) use ($o) { $o->setSupportsUserLicensing($n->getBooleanValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'supportsDeviceLicensing' => fn(ParseNode $n) => $o->setSupportsDeviceLicensing($n->getBooleanValue()),
+            'supportsUserLicensing' => fn(ParseNode $n) => $o->setSupportsUserLicensing($n->getBooleanValue()),
         ];
     }
 

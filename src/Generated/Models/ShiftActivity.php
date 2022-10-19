@@ -106,13 +106,13 @@ class ShiftActivity implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'code' => function (ParseNode $n) use ($o) { $o->setCode($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'isPaid' => function (ParseNode $n) use ($o) { $o->setIsPaid($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
-            'theme' => function (ParseNode $n) use ($o) { $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)); },
+            'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'isPaid' => fn(ParseNode $n) => $o->setIsPaid($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
+            'theme' => fn(ParseNode $n) => $o->setTheme($n->getEnumValue(ScheduleEntityTheme::class)),
         ];
     }
 

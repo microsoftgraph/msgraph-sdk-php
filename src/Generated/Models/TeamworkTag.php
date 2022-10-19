@@ -78,12 +78,12 @@ class TeamworkTag extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'memberCount' => function (ParseNode $n) use ($o) { $o->setMemberCount($n->getIntegerValue()); },
-            'members' => function (ParseNode $n) use ($o) { $o->setMembers($n->getCollectionOfObjectValues(array(TeamworkTagMember::class, 'createFromDiscriminatorValue'))); },
-            'tagType' => function (ParseNode $n) use ($o) { $o->setTagType($n->getEnumValue(TeamworkTagType::class)); },
-            'teamId' => function (ParseNode $n) use ($o) { $o->setTeamId($n->getStringValue()); },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'memberCount' => fn(ParseNode $n) => $o->setMemberCount($n->getIntegerValue()),
+            'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([TeamworkTagMember::class, 'createFromDiscriminatorValue'])),
+            'tagType' => fn(ParseNode $n) => $o->setTagType($n->getEnumValue(TeamworkTagType::class)),
+            'teamId' => fn(ParseNode $n) => $o->setTeamId($n->getStringValue()),
         ]);
     }
 

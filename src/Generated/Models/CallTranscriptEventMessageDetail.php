@@ -63,9 +63,9 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'callId' => function (ParseNode $n) use ($o) { $o->setCallId($n->getStringValue()); },
-            'callTranscriptICalUid' => function (ParseNode $n) use ($o) { $o->setCallTranscriptICalUid($n->getStringValue()); },
-            'meetingOrganizer' => function (ParseNode $n) use ($o) { $o->setMeetingOrganizer($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
+            'callTranscriptICalUid' => fn(ParseNode $n) => $o->setCallTranscriptICalUid($n->getStringValue()),
+            'meetingOrganizer' => fn(ParseNode $n) => $o->setMeetingOrganizer($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

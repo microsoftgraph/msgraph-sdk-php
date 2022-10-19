@@ -82,10 +82,10 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'address' => function (ParseNode $n) use ($o) { $o->setAddress($n->getStringValue()); },
-            'exceptions' => function (ParseNode $n) use ($o) { $o->setExceptions($n->getCollectionOfPrimitiveValues()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'useForLocalAddresses' => function (ParseNode $n) use ($o) { $o->setUseForLocalAddresses($n->getBooleanValue()); },
+            'address' => fn(ParseNode $n) => $o->setAddress($n->getStringValue()),
+            'exceptions' => fn(ParseNode $n) => $o->setExceptions($n->getCollectionOfPrimitiveValues()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'useForLocalAddresses' => fn(ParseNode $n) => $o->setUseForLocalAddresses($n->getBooleanValue()),
         ];
     }
 

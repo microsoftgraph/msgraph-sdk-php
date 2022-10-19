@@ -56,8 +56,8 @@ class CallParticipantInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'participant' => function (ParseNode $n) use ($o) { $o->setParticipant($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'participant' => fn(ParseNode $n) => $o->setParticipant($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

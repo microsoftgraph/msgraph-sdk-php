@@ -60,10 +60,10 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deliveryOptimizationPriority' => function (ParseNode $n) use ($o) { $o->setDeliveryOptimizationPriority($n->getEnumValue(Win32LobAppDeliveryOptimizationPriority::class)); },
-            'installTimeSettings' => function (ParseNode $n) use ($o) { $o->setInstallTimeSettings($n->getObjectValue(array(MobileAppInstallTimeSettings::class, 'createFromDiscriminatorValue'))); },
-            'notifications' => function (ParseNode $n) use ($o) { $o->setNotifications($n->getEnumValue(Win32LobAppNotification::class)); },
-            'restartSettings' => function (ParseNode $n) use ($o) { $o->setRestartSettings($n->getObjectValue(array(Win32LobAppRestartSettings::class, 'createFromDiscriminatorValue'))); },
+            'deliveryOptimizationPriority' => fn(ParseNode $n) => $o->setDeliveryOptimizationPriority($n->getEnumValue(Win32LobAppDeliveryOptimizationPriority::class)),
+            'installTimeSettings' => fn(ParseNode $n) => $o->setInstallTimeSettings($n->getObjectValue([MobileAppInstallTimeSettings::class, 'createFromDiscriminatorValue'])),
+            'notifications' => fn(ParseNode $n) => $o->setNotifications($n->getEnumValue(Win32LobAppNotification::class)),
+            'restartSettings' => fn(ParseNode $n) => $o->setRestartSettings($n->getObjectValue([Win32LobAppRestartSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

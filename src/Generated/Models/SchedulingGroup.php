@@ -55,9 +55,9 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'displayName' => function (ParseNode $n) use ($o) { $o->setDisplayName($n->getStringValue()); },
-            'isActive' => function (ParseNode $n) use ($o) { $o->setIsActive($n->getBooleanValue()); },
-            'userIds' => function (ParseNode $n) use ($o) { $o->setUserIds($n->getCollectionOfPrimitiveValues()); },
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
+            'userIds' => fn(ParseNode $n) => $o->setUserIds($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 

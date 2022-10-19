@@ -42,8 +42,8 @@ class WorkbookChartGridlines extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartGridlinesFormat::class, 'createFromDiscriminatorValue'))); },
-            'visible' => function (ParseNode $n) use ($o) { $o->setVisible($n->getBooleanValue()); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartGridlinesFormat::class, 'createFromDiscriminatorValue'])),
+            'visible' => fn(ParseNode $n) => $o->setVisible($n->getBooleanValue()),
         ]);
     }
 

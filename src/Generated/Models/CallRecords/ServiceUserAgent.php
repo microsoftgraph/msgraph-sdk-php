@@ -37,7 +37,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'role' => function (ParseNode $n) use ($o) { $o->setRole($n->getEnumValue(ServiceRole::class)); },
+            'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(ServiceRole::class)),
         ]);
     }
 

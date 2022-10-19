@@ -95,11 +95,11 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accessReviews' => function (ParseNode $n) use ($o) { $o->setAccessReviews($n->getObjectValue(array(AccessReviewSet::class, 'createFromDiscriminatorValue'))); },
-            'appConsent' => function (ParseNode $n) use ($o) { $o->setAppConsent($n->getObjectValue(array(AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'))); },
-            'entitlementManagement' => function (ParseNode $n) use ($o) { $o->setEntitlementManagement($n->getObjectValue(array(EntitlementManagement::class, 'createFromDiscriminatorValue'))); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'termsOfUse' => function (ParseNode $n) use ($o) { $o->setTermsOfUse($n->getObjectValue(array(TermsOfUseContainer::class, 'createFromDiscriminatorValue'))); },
+            'accessReviews' => fn(ParseNode $n) => $o->setAccessReviews($n->getObjectValue([AccessReviewSet::class, 'createFromDiscriminatorValue'])),
+            'appConsent' => fn(ParseNode $n) => $o->setAppConsent($n->getObjectValue([AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'])),
+            'entitlementManagement' => fn(ParseNode $n) => $o->setEntitlementManagement($n->getObjectValue([EntitlementManagement::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'termsOfUse' => fn(ParseNode $n) => $o->setTermsOfUse($n->getObjectValue([TermsOfUseContainer::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

@@ -145,22 +145,22 @@ class ProvisioningObjectSummary extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activityDateTime' => function (ParseNode $n) use ($o) { $o->setActivityDateTime($n->getDateTimeValue()); },
-            'changeId' => function (ParseNode $n) use ($o) { $o->setChangeId($n->getStringValue()); },
-            'cycleId' => function (ParseNode $n) use ($o) { $o->setCycleId($n->getStringValue()); },
-            'durationInMilliseconds' => function (ParseNode $n) use ($o) { $o->setDurationInMilliseconds($n->getIntegerValue()); },
-            'initiatedBy' => function (ParseNode $n) use ($o) { $o->setInitiatedBy($n->getObjectValue(array(Initiator::class, 'createFromDiscriminatorValue'))); },
-            'jobId' => function (ParseNode $n) use ($o) { $o->setJobId($n->getStringValue()); },
-            'modifiedProperties' => function (ParseNode $n) use ($o) { $o->setModifiedProperties($n->getCollectionOfObjectValues(array(ModifiedProperty::class, 'createFromDiscriminatorValue'))); },
-            'provisioningAction' => function (ParseNode $n) use ($o) { $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)); },
-            'provisioningStatusInfo' => function (ParseNode $n) use ($o) { $o->setProvisioningStatusInfo($n->getObjectValue(array(ProvisioningStatusInfo::class, 'createFromDiscriminatorValue'))); },
-            'provisioningSteps' => function (ParseNode $n) use ($o) { $o->setProvisioningSteps($n->getCollectionOfObjectValues(array(ProvisioningStep::class, 'createFromDiscriminatorValue'))); },
-            'servicePrincipal' => function (ParseNode $n) use ($o) { $o->setServicePrincipal($n->getObjectValue(array(ProvisioningServicePrincipal::class, 'createFromDiscriminatorValue'))); },
-            'sourceIdentity' => function (ParseNode $n) use ($o) { $o->setSourceIdentity($n->getObjectValue(array(ProvisionedIdentity::class, 'createFromDiscriminatorValue'))); },
-            'sourceSystem' => function (ParseNode $n) use ($o) { $o->setSourceSystem($n->getObjectValue(array(ProvisioningSystem::class, 'createFromDiscriminatorValue'))); },
-            'targetIdentity' => function (ParseNode $n) use ($o) { $o->setTargetIdentity($n->getObjectValue(array(ProvisionedIdentity::class, 'createFromDiscriminatorValue'))); },
-            'targetSystem' => function (ParseNode $n) use ($o) { $o->setTargetSystem($n->getObjectValue(array(ProvisioningSystem::class, 'createFromDiscriminatorValue'))); },
-            'tenantId' => function (ParseNode $n) use ($o) { $o->setTenantId($n->getStringValue()); },
+            'activityDateTime' => fn(ParseNode $n) => $o->setActivityDateTime($n->getDateTimeValue()),
+            'changeId' => fn(ParseNode $n) => $o->setChangeId($n->getStringValue()),
+            'cycleId' => fn(ParseNode $n) => $o->setCycleId($n->getStringValue()),
+            'durationInMilliseconds' => fn(ParseNode $n) => $o->setDurationInMilliseconds($n->getIntegerValue()),
+            'initiatedBy' => fn(ParseNode $n) => $o->setInitiatedBy($n->getObjectValue([Initiator::class, 'createFromDiscriminatorValue'])),
+            'jobId' => fn(ParseNode $n) => $o->setJobId($n->getStringValue()),
+            'modifiedProperties' => fn(ParseNode $n) => $o->setModifiedProperties($n->getCollectionOfObjectValues([ModifiedProperty::class, 'createFromDiscriminatorValue'])),
+            'provisioningAction' => fn(ParseNode $n) => $o->setProvisioningAction($n->getEnumValue(ProvisioningAction::class)),
+            'provisioningStatusInfo' => fn(ParseNode $n) => $o->setProvisioningStatusInfo($n->getObjectValue([ProvisioningStatusInfo::class, 'createFromDiscriminatorValue'])),
+            'provisioningSteps' => fn(ParseNode $n) => $o->setProvisioningSteps($n->getCollectionOfObjectValues([ProvisioningStep::class, 'createFromDiscriminatorValue'])),
+            'servicePrincipal' => fn(ParseNode $n) => $o->setServicePrincipal($n->getObjectValue([ProvisioningServicePrincipal::class, 'createFromDiscriminatorValue'])),
+            'sourceIdentity' => fn(ParseNode $n) => $o->setSourceIdentity($n->getObjectValue([ProvisionedIdentity::class, 'createFromDiscriminatorValue'])),
+            'sourceSystem' => fn(ParseNode $n) => $o->setSourceSystem($n->getObjectValue([ProvisioningSystem::class, 'createFromDiscriminatorValue'])),
+            'targetIdentity' => fn(ParseNode $n) => $o->setTargetIdentity($n->getObjectValue([ProvisionedIdentity::class, 'createFromDiscriminatorValue'])),
+            'targetSystem' => fn(ParseNode $n) => $o->setTargetSystem($n->getObjectValue([ProvisioningSystem::class, 'createFromDiscriminatorValue'])),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
         ]);
     }
 

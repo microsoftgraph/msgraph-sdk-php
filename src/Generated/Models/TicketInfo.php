@@ -61,9 +61,9 @@ class TicketInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'ticketNumber' => function (ParseNode $n) use ($o) { $o->setTicketNumber($n->getStringValue()); },
-            'ticketSystem' => function (ParseNode $n) use ($o) { $o->setTicketSystem($n->getStringValue()); },
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'ticketNumber' => fn(ParseNode $n) => $o->setTicketNumber($n->getStringValue()),
+            'ticketSystem' => fn(ParseNode $n) => $o->setTicketSystem($n->getStringValue()),
         ];
     }
 

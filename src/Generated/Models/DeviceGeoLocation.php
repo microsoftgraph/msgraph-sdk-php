@@ -100,15 +100,15 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'altitude' => function (ParseNode $n) use ($o) { $o->setAltitude($n->getFloatValue()); },
-            'heading' => function (ParseNode $n) use ($o) { $o->setHeading($n->getFloatValue()); },
-            'horizontalAccuracy' => function (ParseNode $n) use ($o) { $o->setHorizontalAccuracy($n->getFloatValue()); },
-            'lastCollectedDateTime' => function (ParseNode $n) use ($o) { $o->setLastCollectedDateTime($n->getDateTimeValue()); },
-            'latitude' => function (ParseNode $n) use ($o) { $o->setLatitude($n->getFloatValue()); },
-            'longitude' => function (ParseNode $n) use ($o) { $o->setLongitude($n->getFloatValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'speed' => function (ParseNode $n) use ($o) { $o->setSpeed($n->getFloatValue()); },
-            'verticalAccuracy' => function (ParseNode $n) use ($o) { $o->setVerticalAccuracy($n->getFloatValue()); },
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
+            'heading' => fn(ParseNode $n) => $o->setHeading($n->getFloatValue()),
+            'horizontalAccuracy' => fn(ParseNode $n) => $o->setHorizontalAccuracy($n->getFloatValue()),
+            'lastCollectedDateTime' => fn(ParseNode $n) => $o->setLastCollectedDateTime($n->getDateTimeValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'speed' => fn(ParseNode $n) => $o->setSpeed($n->getFloatValue()),
+            'verticalAccuracy' => fn(ParseNode $n) => $o->setVerticalAccuracy($n->getFloatValue()),
         ];
     }
 

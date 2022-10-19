@@ -45,7 +45,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicationIdentityType' => function (ParseNode $n) use ($o) { $o->setApplicationIdentityType($n->getEnumValue(TeamworkApplicationIdentityType::class)); },
+            'applicationIdentityType' => fn(ParseNode $n) => $o->setApplicationIdentityType($n->getEnumValue(TeamworkApplicationIdentityType::class)),
         ]);
     }
 

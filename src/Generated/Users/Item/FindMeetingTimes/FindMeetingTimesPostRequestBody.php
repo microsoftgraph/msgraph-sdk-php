@@ -97,14 +97,14 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attendees' => function (ParseNode $n) use ($o) { $o->setAttendees($n->getCollectionOfObjectValues(array(AttendeeBase::class, 'createFromDiscriminatorValue'))); },
-            'isOrganizerOptional' => function (ParseNode $n) use ($o) { $o->setIsOrganizerOptional($n->getBooleanValue()); },
-            'locationConstraint' => function (ParseNode $n) use ($o) { $o->setLocationConstraint($n->getObjectValue(array(LocationConstraint::class, 'createFromDiscriminatorValue'))); },
-            'maxCandidates' => function (ParseNode $n) use ($o) { $o->setMaxCandidates($n->getIntegerValue()); },
-            'meetingDuration' => function (ParseNode $n) use ($o) { $o->setMeetingDuration($n->getDateIntervalValue()); },
-            'minimumAttendeePercentage' => function (ParseNode $n) use ($o) { $o->setMinimumAttendeePercentage($n->getFloatValue()); },
-            'returnSuggestionReasons' => function (ParseNode $n) use ($o) { $o->setReturnSuggestionReasons($n->getBooleanValue()); },
-            'timeConstraint' => function (ParseNode $n) use ($o) { $o->setTimeConstraint($n->getObjectValue(array(TimeConstraint::class, 'createFromDiscriminatorValue'))); },
+            'attendees' => fn(ParseNode $n) => $o->setAttendees($n->getCollectionOfObjectValues([AttendeeBase::class, 'createFromDiscriminatorValue'])),
+            'isOrganizerOptional' => fn(ParseNode $n) => $o->setIsOrganizerOptional($n->getBooleanValue()),
+            'locationConstraint' => fn(ParseNode $n) => $o->setLocationConstraint($n->getObjectValue([LocationConstraint::class, 'createFromDiscriminatorValue'])),
+            'maxCandidates' => fn(ParseNode $n) => $o->setMaxCandidates($n->getIntegerValue()),
+            'meetingDuration' => fn(ParseNode $n) => $o->setMeetingDuration($n->getDateIntervalValue()),
+            'minimumAttendeePercentage' => fn(ParseNode $n) => $o->setMinimumAttendeePercentage($n->getFloatValue()),
+            'returnSuggestionReasons' => fn(ParseNode $n) => $o->setReturnSuggestionReasons($n->getBooleanValue()),
+            'timeConstraint' => fn(ParseNode $n) => $o->setTimeConstraint($n->getObjectValue([TimeConstraint::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

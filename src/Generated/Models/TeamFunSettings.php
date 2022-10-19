@@ -95,11 +95,11 @@ class TeamFunSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowCustomMemes' => function (ParseNode $n) use ($o) { $o->setAllowCustomMemes($n->getBooleanValue()); },
-            'allowGiphy' => function (ParseNode $n) use ($o) { $o->setAllowGiphy($n->getBooleanValue()); },
-            'allowStickersAndMemes' => function (ParseNode $n) use ($o) { $o->setAllowStickersAndMemes($n->getBooleanValue()); },
-            'giphyContentRating' => function (ParseNode $n) use ($o) { $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowCustomMemes' => fn(ParseNode $n) => $o->setAllowCustomMemes($n->getBooleanValue()),
+            'allowGiphy' => fn(ParseNode $n) => $o->setAllowGiphy($n->getBooleanValue()),
+            'allowStickersAndMemes' => fn(ParseNode $n) => $o->setAllowStickersAndMemes($n->getBooleanValue()),
+            'giphyContentRating' => fn(ParseNode $n) => $o->setGiphyContentRating($n->getEnumValue(GiphyRatingType::class)),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

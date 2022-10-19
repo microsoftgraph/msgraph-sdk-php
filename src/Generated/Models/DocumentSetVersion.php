@@ -82,11 +82,11 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'comment' => function (ParseNode $n) use ($o) { $o->setComment($n->getStringValue()); },
-            'createdBy' => function (ParseNode $n) use ($o) { $o->setCreatedBy($n->getObjectValue(array(IdentitySet::class, 'createFromDiscriminatorValue'))); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'items' => function (ParseNode $n) use ($o) { $o->setItems($n->getCollectionOfObjectValues(array(DocumentSetVersionItem::class, 'createFromDiscriminatorValue'))); },
-            'shouldCaptureMinorVersion' => function (ParseNode $n) use ($o) { $o->setShouldCaptureMinorVersion($n->getBooleanValue()); },
+            'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([DocumentSetVersionItem::class, 'createFromDiscriminatorValue'])),
+            'shouldCaptureMinorVersion' => fn(ParseNode $n) => $o->setShouldCaptureMinorVersion($n->getBooleanValue()),
         ]);
     }
 

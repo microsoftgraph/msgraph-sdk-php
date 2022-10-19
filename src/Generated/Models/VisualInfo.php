@@ -116,12 +116,12 @@ class VisualInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'attribution' => function (ParseNode $n) use ($o) { $o->setAttribution($n->getObjectValue(array(ImageInfo::class, 'createFromDiscriminatorValue'))); },
-            'backgroundColor' => function (ParseNode $n) use ($o) { $o->setBackgroundColor($n->getStringValue()); },
-            'content' => function (ParseNode $n) use ($o) { $o->setContent($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'description' => function (ParseNode $n) use ($o) { $o->setDescription($n->getStringValue()); },
-            'displayText' => function (ParseNode $n) use ($o) { $o->setDisplayText($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'attribution' => fn(ParseNode $n) => $o->setAttribution($n->getObjectValue([ImageInfo::class, 'createFromDiscriminatorValue'])),
+            'backgroundColor' => fn(ParseNode $n) => $o->setBackgroundColor($n->getStringValue()),
+            'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'displayText' => fn(ParseNode $n) => $o->setDisplayText($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

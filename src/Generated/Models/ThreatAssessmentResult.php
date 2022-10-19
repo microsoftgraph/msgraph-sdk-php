@@ -56,9 +56,9 @@ class ThreatAssessmentResult extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'message' => function (ParseNode $n) use ($o) { $o->setMessage($n->getStringValue()); },
-            'resultType' => function (ParseNode $n) use ($o) { $o->setResultType($n->getEnumValue(ThreatAssessmentResultType::class)); },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
+            'resultType' => fn(ParseNode $n) => $o->setResultType($n->getEnumValue(ThreatAssessmentResultType::class)),
         ]);
     }
 

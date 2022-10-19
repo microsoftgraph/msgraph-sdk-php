@@ -89,13 +89,13 @@ class OnlineMeetingInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'conferenceId' => function (ParseNode $n) use ($o) { $o->setConferenceId($n->getStringValue()); },
-            'joinUrl' => function (ParseNode $n) use ($o) { $o->setJoinUrl($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'phones' => function (ParseNode $n) use ($o) { $o->setPhones($n->getCollectionOfObjectValues(array(Phone::class, 'createFromDiscriminatorValue'))); },
-            'quickDial' => function (ParseNode $n) use ($o) { $o->setQuickDial($n->getStringValue()); },
-            'tollFreeNumbers' => function (ParseNode $n) use ($o) { $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()); },
-            'tollNumber' => function (ParseNode $n) use ($o) { $o->setTollNumber($n->getStringValue()); },
+            'conferenceId' => fn(ParseNode $n) => $o->setConferenceId($n->getStringValue()),
+            'joinUrl' => fn(ParseNode $n) => $o->setJoinUrl($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'phones' => fn(ParseNode $n) => $o->setPhones($n->getCollectionOfObjectValues([Phone::class, 'createFromDiscriminatorValue'])),
+            'quickDial' => fn(ParseNode $n) => $o->setQuickDial($n->getStringValue()),
+            'tollFreeNumbers' => fn(ParseNode $n) => $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()),
+            'tollNumber' => fn(ParseNode $n) => $o->setTollNumber($n->getStringValue()),
         ];
     }
 

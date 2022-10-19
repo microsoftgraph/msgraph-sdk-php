@@ -14,7 +14,7 @@ class AgreementFile extends AgreementFileProperties implements Parsable
     private ?array $localizations = null;
     
     /**
-     * Instantiates a new agreementFile and sets the default values.
+     * Instantiates a new AgreementFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -37,7 +37,7 @@ class AgreementFile extends AgreementFileProperties implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'localizations' => function (ParseNode $n) use ($o) { $o->setLocalizations($n->getCollectionOfObjectValues(array(AgreementFileLocalization::class, 'createFromDiscriminatorValue'))); },
+            'localizations' => fn(ParseNode $n) => $o->setLocalizations($n->getCollectionOfObjectValues([AgreementFileLocalization::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -37,7 +37,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'pages' => function (ParseNode $n) use ($o) { $o->setPages($n->getCollectionOfObjectValues(array(IosHomeScreenFolderPage::class, 'createFromDiscriminatorValue'))); },
+            'pages' => fn(ParseNode $n) => $o->setPages($n->getCollectionOfObjectValues([IosHomeScreenFolderPage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

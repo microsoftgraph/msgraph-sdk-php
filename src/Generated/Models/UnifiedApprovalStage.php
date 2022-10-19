@@ -105,13 +105,13 @@ class UnifiedApprovalStage implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'approvalStageTimeOutInDays' => function (ParseNode $n) use ($o) { $o->setApprovalStageTimeOutInDays($n->getIntegerValue()); },
-            'escalationApprovers' => function (ParseNode $n) use ($o) { $o->setEscalationApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
-            'escalationTimeInMinutes' => function (ParseNode $n) use ($o) { $o->setEscalationTimeInMinutes($n->getIntegerValue()); },
-            'isApproverJustificationRequired' => function (ParseNode $n) use ($o) { $o->setIsApproverJustificationRequired($n->getBooleanValue()); },
-            'isEscalationEnabled' => function (ParseNode $n) use ($o) { $o->setIsEscalationEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'primaryApprovers' => function (ParseNode $n) use ($o) { $o->setPrimaryApprovers($n->getCollectionOfObjectValues(array(SubjectSet::class, 'createFromDiscriminatorValue'))); },
+            'approvalStageTimeOutInDays' => fn(ParseNode $n) => $o->setApprovalStageTimeOutInDays($n->getIntegerValue()),
+            'escalationApprovers' => fn(ParseNode $n) => $o->setEscalationApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
+            'escalationTimeInMinutes' => fn(ParseNode $n) => $o->setEscalationTimeInMinutes($n->getIntegerValue()),
+            'isApproverJustificationRequired' => fn(ParseNode $n) => $o->setIsApproverJustificationRequired($n->getBooleanValue()),
+            'isEscalationEnabled' => fn(ParseNode $n) => $o->setIsEscalationEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'primaryApprovers' => fn(ParseNode $n) => $o->setPrimaryApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

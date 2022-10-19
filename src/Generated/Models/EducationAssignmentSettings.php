@@ -37,7 +37,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'submissionAnimationDisabled' => function (ParseNode $n) use ($o) { $o->setSubmissionAnimationDisabled($n->getBooleanValue()); },
+            'submissionAnimationDisabled' => fn(ParseNode $n) => $o->setSubmissionAnimationDisabled($n->getBooleanValue()),
         ]);
     }
 

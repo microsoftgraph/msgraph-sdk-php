@@ -50,8 +50,8 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowExternalIdToUseEmailOtp' => function (ParseNode $n) use ($o) { $o->setAllowExternalIdToUseEmailOtp($n->getEnumValue(ExternalEmailOtpState::class)); },
-            'includeTargets' => function (ParseNode $n) use ($o) { $o->setIncludeTargets($n->getCollectionOfObjectValues(array(AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'))); },
+            'allowExternalIdToUseEmailOtp' => fn(ParseNode $n) => $o->setAllowExternalIdToUseEmailOtp($n->getEnumValue(ExternalEmailOtpState::class)),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

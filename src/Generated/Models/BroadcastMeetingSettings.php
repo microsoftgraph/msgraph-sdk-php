@@ -97,13 +97,13 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedAudience' => function (ParseNode $n) use ($o) { $o->setAllowedAudience($n->getEnumValue(BroadcastMeetingAudience::class)); },
-            'captions' => function (ParseNode $n) use ($o) { $o->setCaptions($n->getObjectValue(array(BroadcastMeetingCaptionSettings::class, 'createFromDiscriminatorValue'))); },
-            'isAttendeeReportEnabled' => function (ParseNode $n) use ($o) { $o->setIsAttendeeReportEnabled($n->getBooleanValue()); },
-            'isQuestionAndAnswerEnabled' => function (ParseNode $n) use ($o) { $o->setIsQuestionAndAnswerEnabled($n->getBooleanValue()); },
-            'isRecordingEnabled' => function (ParseNode $n) use ($o) { $o->setIsRecordingEnabled($n->getBooleanValue()); },
-            'isVideoOnDemandEnabled' => function (ParseNode $n) use ($o) { $o->setIsVideoOnDemandEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'allowedAudience' => fn(ParseNode $n) => $o->setAllowedAudience($n->getEnumValue(BroadcastMeetingAudience::class)),
+            'captions' => fn(ParseNode $n) => $o->setCaptions($n->getObjectValue([BroadcastMeetingCaptionSettings::class, 'createFromDiscriminatorValue'])),
+            'isAttendeeReportEnabled' => fn(ParseNode $n) => $o->setIsAttendeeReportEnabled($n->getBooleanValue()),
+            'isQuestionAndAnswerEnabled' => fn(ParseNode $n) => $o->setIsQuestionAndAnswerEnabled($n->getBooleanValue()),
+            'isRecordingEnabled' => fn(ParseNode $n) => $o->setIsRecordingEnabled($n->getBooleanValue()),
+            'isVideoOnDemandEnabled' => fn(ParseNode $n) => $o->setIsVideoOnDemandEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

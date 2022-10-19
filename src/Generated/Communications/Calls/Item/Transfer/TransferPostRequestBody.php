@@ -57,8 +57,8 @@ class TransferPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'transferee' => function (ParseNode $n) use ($o) { $o->setTransferee($n->getObjectValue(array(ParticipantInfo::class, 'createFromDiscriminatorValue'))); },
-            'transferTarget' => function (ParseNode $n) use ($o) { $o->setTransferTarget($n->getObjectValue(array(InvitationParticipantInfo::class, 'createFromDiscriminatorValue'))); },
+            'transferee' => fn(ParseNode $n) => $o->setTransferee($n->getObjectValue([ParticipantInfo::class, 'createFromDiscriminatorValue'])),
+            'transferTarget' => fn(ParseNode $n) => $o->setTransferTarget($n->getObjectValue([InvitationParticipantInfo::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

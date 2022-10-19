@@ -61,9 +61,9 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'index' => function (ParseNode $n) use ($o) { $o->setIndex($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'uri' => function (ParseNode $n) use ($o) { $o->setUri($n->getStringValue()); },
+            'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'uri' => fn(ParseNode $n) => $o->setUri($n->getStringValue()),
         ];
     }
 

@@ -138,6 +138,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.chat': return new Chat();
                 case '#microsoft.graph.chatMessage': return new ChatMessage();
                 case '#microsoft.graph.chatMessageHostedContent': return new ChatMessageHostedContent();
+                case '#microsoft.graph.chatMessageInfo': return new ChatMessageInfo();
                 case '#microsoft.graph.checklistItem': return new ChecklistItem();
                 case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
                 case '#microsoft.graph.cloudCommunications': return new CloudCommunications();
@@ -147,6 +148,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.complianceManagementPartner': return new ComplianceManagementPartner();
                 case '#microsoft.graph.conditionalAccessPolicy': return new ConditionalAccessPolicy();
                 case '#microsoft.graph.conditionalAccessRoot': return new ConditionalAccessRoot();
+                case '#microsoft.graph.conditionalAccessTemplate': return new ConditionalAccessTemplate();
                 case '#microsoft.graph.connectedOrganization': return new ConnectedOrganization();
                 case '#microsoft.graph.contact': return new Contact();
                 case '#microsoft.graph.contactFolder': return new ContactFolder();
@@ -687,8 +689,8 @@ class Entity implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'id' => function (ParseNode $n) use ($o) { $o->setId($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 

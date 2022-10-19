@@ -100,12 +100,12 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'additionalDetails' => function (ParseNode $n) use ($o) { $o->setAdditionalDetails($n->getStringValue()); },
-            'errorCategory' => function (ParseNode $n) use ($o) { $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)); },
-            'errorCode' => function (ParseNode $n) use ($o) { $o->setErrorCode($n->getStringValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'reason' => function (ParseNode $n) use ($o) { $o->setReason($n->getStringValue()); },
-            'recommendedAction' => function (ParseNode $n) use ($o) { $o->setRecommendedAction($n->getStringValue()); },
+            'additionalDetails' => fn(ParseNode $n) => $o->setAdditionalDetails($n->getStringValue()),
+            'errorCategory' => fn(ParseNode $n) => $o->setErrorCategory($n->getEnumValue(ProvisioningStatusErrorCategory::class)),
+            'errorCode' => fn(ParseNode $n) => $o->setErrorCode($n->getStringValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'reason' => fn(ParseNode $n) => $o->setReason($n->getStringValue()),
+            'recommendedAction' => fn(ParseNode $n) => $o->setRecommendedAction($n->getStringValue()),
         ];
     }
 

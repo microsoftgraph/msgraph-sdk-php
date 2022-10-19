@@ -55,8 +55,8 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'keyId' => function (ParseNode $n) use ($o) { $o->setKeyId($n->getStringValue()); },
-            'proof' => function (ParseNode $n) use ($o) { $o->setProof($n->getStringValue()); },
+            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getStringValue()),
+            'proof' => fn(ParseNode $n) => $o->setProof($n->getStringValue()),
         ];
     }
 

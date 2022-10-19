@@ -175,20 +175,20 @@ class UserActivity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'activationUrl' => function (ParseNode $n) use ($o) { $o->setActivationUrl($n->getStringValue()); },
-            'activitySourceHost' => function (ParseNode $n) use ($o) { $o->setActivitySourceHost($n->getStringValue()); },
-            'appActivityId' => function (ParseNode $n) use ($o) { $o->setAppActivityId($n->getStringValue()); },
-            'appDisplayName' => function (ParseNode $n) use ($o) { $o->setAppDisplayName($n->getStringValue()); },
-            'contentInfo' => function (ParseNode $n) use ($o) { $o->setContentInfo($n->getObjectValue(array(Json::class, 'createFromDiscriminatorValue'))); },
-            'contentUrl' => function (ParseNode $n) use ($o) { $o->setContentUrl($n->getStringValue()); },
-            'createdDateTime' => function (ParseNode $n) use ($o) { $o->setCreatedDateTime($n->getDateTimeValue()); },
-            'expirationDateTime' => function (ParseNode $n) use ($o) { $o->setExpirationDateTime($n->getDateTimeValue()); },
-            'fallbackUrl' => function (ParseNode $n) use ($o) { $o->setFallbackUrl($n->getStringValue()); },
-            'historyItems' => function (ParseNode $n) use ($o) { $o->setHistoryItems($n->getCollectionOfObjectValues(array(ActivityHistoryItem::class, 'createFromDiscriminatorValue'))); },
-            'lastModifiedDateTime' => function (ParseNode $n) use ($o) { $o->setLastModifiedDateTime($n->getDateTimeValue()); },
-            'status' => function (ParseNode $n) use ($o) { $o->setStatus($n->getEnumValue(Status::class)); },
-            'userTimezone' => function (ParseNode $n) use ($o) { $o->setUserTimezone($n->getStringValue()); },
-            'visualElements' => function (ParseNode $n) use ($o) { $o->setVisualElements($n->getObjectValue(array(VisualInfo::class, 'createFromDiscriminatorValue'))); },
+            'activationUrl' => fn(ParseNode $n) => $o->setActivationUrl($n->getStringValue()),
+            'activitySourceHost' => fn(ParseNode $n) => $o->setActivitySourceHost($n->getStringValue()),
+            'appActivityId' => fn(ParseNode $n) => $o->setAppActivityId($n->getStringValue()),
+            'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
+            'contentInfo' => fn(ParseNode $n) => $o->setContentInfo($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
+            'contentUrl' => fn(ParseNode $n) => $o->setContentUrl($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
+            'fallbackUrl' => fn(ParseNode $n) => $o->setFallbackUrl($n->getStringValue()),
+            'historyItems' => fn(ParseNode $n) => $o->setHistoryItems($n->getCollectionOfObjectValues([ActivityHistoryItem::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(Status::class)),
+            'userTimezone' => fn(ParseNode $n) => $o->setUserTimezone($n->getStringValue()),
+            'visualElements' => fn(ParseNode $n) => $o->setVisualElements($n->getObjectValue([VisualInfo::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

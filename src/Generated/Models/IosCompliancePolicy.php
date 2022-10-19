@@ -118,20 +118,20 @@ class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'deviceThreatProtectionEnabled' => function (ParseNode $n) use ($o) { $o->setDeviceThreatProtectionEnabled($n->getBooleanValue()); },
-            'deviceThreatProtectionRequiredSecurityLevel' => function (ParseNode $n) use ($o) { $o->setDeviceThreatProtectionRequiredSecurityLevel($n->getEnumValue(DeviceThreatProtectionLevel::class)); },
-            'managedEmailProfileRequired' => function (ParseNode $n) use ($o) { $o->setManagedEmailProfileRequired($n->getBooleanValue()); },
-            'osMaximumVersion' => function (ParseNode $n) use ($o) { $o->setOsMaximumVersion($n->getStringValue()); },
-            'osMinimumVersion' => function (ParseNode $n) use ($o) { $o->setOsMinimumVersion($n->getStringValue()); },
-            'passcodeBlockSimple' => function (ParseNode $n) use ($o) { $o->setPasscodeBlockSimple($n->getBooleanValue()); },
-            'passcodeExpirationDays' => function (ParseNode $n) use ($o) { $o->setPasscodeExpirationDays($n->getIntegerValue()); },
-            'passcodeMinimumCharacterSetCount' => function (ParseNode $n) use ($o) { $o->setPasscodeMinimumCharacterSetCount($n->getIntegerValue()); },
-            'passcodeMinimumLength' => function (ParseNode $n) use ($o) { $o->setPasscodeMinimumLength($n->getIntegerValue()); },
-            'passcodeMinutesOfInactivityBeforeLock' => function (ParseNode $n) use ($o) { $o->setPasscodeMinutesOfInactivityBeforeLock($n->getIntegerValue()); },
-            'passcodePreviousPasscodeBlockCount' => function (ParseNode $n) use ($o) { $o->setPasscodePreviousPasscodeBlockCount($n->getIntegerValue()); },
-            'passcodeRequired' => function (ParseNode $n) use ($o) { $o->setPasscodeRequired($n->getBooleanValue()); },
-            'passcodeRequiredType' => function (ParseNode $n) use ($o) { $o->setPasscodeRequiredType($n->getEnumValue(RequiredPasswordType::class)); },
-            'securityBlockJailbrokenDevices' => function (ParseNode $n) use ($o) { $o->setSecurityBlockJailbrokenDevices($n->getBooleanValue()); },
+            'deviceThreatProtectionEnabled' => fn(ParseNode $n) => $o->setDeviceThreatProtectionEnabled($n->getBooleanValue()),
+            'deviceThreatProtectionRequiredSecurityLevel' => fn(ParseNode $n) => $o->setDeviceThreatProtectionRequiredSecurityLevel($n->getEnumValue(DeviceThreatProtectionLevel::class)),
+            'managedEmailProfileRequired' => fn(ParseNode $n) => $o->setManagedEmailProfileRequired($n->getBooleanValue()),
+            'osMaximumVersion' => fn(ParseNode $n) => $o->setOsMaximumVersion($n->getStringValue()),
+            'osMinimumVersion' => fn(ParseNode $n) => $o->setOsMinimumVersion($n->getStringValue()),
+            'passcodeBlockSimple' => fn(ParseNode $n) => $o->setPasscodeBlockSimple($n->getBooleanValue()),
+            'passcodeExpirationDays' => fn(ParseNode $n) => $o->setPasscodeExpirationDays($n->getIntegerValue()),
+            'passcodeMinimumCharacterSetCount' => fn(ParseNode $n) => $o->setPasscodeMinimumCharacterSetCount($n->getIntegerValue()),
+            'passcodeMinimumLength' => fn(ParseNode $n) => $o->setPasscodeMinimumLength($n->getIntegerValue()),
+            'passcodeMinutesOfInactivityBeforeLock' => fn(ParseNode $n) => $o->setPasscodeMinutesOfInactivityBeforeLock($n->getIntegerValue()),
+            'passcodePreviousPasscodeBlockCount' => fn(ParseNode $n) => $o->setPasscodePreviousPasscodeBlockCount($n->getIntegerValue()),
+            'passcodeRequired' => fn(ParseNode $n) => $o->setPasscodeRequired($n->getBooleanValue()),
+            'passcodeRequiredType' => fn(ParseNode $n) => $o->setPasscodeRequiredType($n->getEnumValue(RequiredPasswordType::class)),
+            'securityBlockJailbrokenDevices' => fn(ParseNode $n) => $o->setSecurityBlockJailbrokenDevices($n->getBooleanValue()),
         ]);
     }
 

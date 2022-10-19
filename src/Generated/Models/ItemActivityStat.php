@@ -131,16 +131,16 @@ class ItemActivityStat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'access' => function (ParseNode $n) use ($o) { $o->setAccess($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
-            'activities' => function (ParseNode $n) use ($o) { $o->setActivities($n->getCollectionOfObjectValues(array(ItemActivity::class, 'createFromDiscriminatorValue'))); },
-            'create' => function (ParseNode $n) use ($o) { $o->setCreate($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
-            'delete' => function (ParseNode $n) use ($o) { $o->setDelete($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
-            'edit' => function (ParseNode $n) use ($o) { $o->setEdit($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
-            'endDateTime' => function (ParseNode $n) use ($o) { $o->setEndDateTime($n->getDateTimeValue()); },
-            'incompleteData' => function (ParseNode $n) use ($o) { $o->setIncompleteData($n->getObjectValue(array(IncompleteData::class, 'createFromDiscriminatorValue'))); },
-            'isTrending' => function (ParseNode $n) use ($o) { $o->setIsTrending($n->getBooleanValue()); },
-            'move' => function (ParseNode $n) use ($o) { $o->setMove($n->getObjectValue(array(ItemActionStat::class, 'createFromDiscriminatorValue'))); },
-            'startDateTime' => function (ParseNode $n) use ($o) { $o->setStartDateTime($n->getDateTimeValue()); },
+            'access' => fn(ParseNode $n) => $o->setAccess($n->getObjectValue([ItemActionStat::class, 'createFromDiscriminatorValue'])),
+            'activities' => fn(ParseNode $n) => $o->setActivities($n->getCollectionOfObjectValues([ItemActivity::class, 'createFromDiscriminatorValue'])),
+            'create' => fn(ParseNode $n) => $o->setCreate($n->getObjectValue([ItemActionStat::class, 'createFromDiscriminatorValue'])),
+            'delete' => fn(ParseNode $n) => $o->setDelete($n->getObjectValue([ItemActionStat::class, 'createFromDiscriminatorValue'])),
+            'edit' => fn(ParseNode $n) => $o->setEdit($n->getObjectValue([ItemActionStat::class, 'createFromDiscriminatorValue'])),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'incompleteData' => fn(ParseNode $n) => $o->setIncompleteData($n->getObjectValue([IncompleteData::class, 'createFromDiscriminatorValue'])),
+            'isTrending' => fn(ParseNode $n) => $o->setIsTrending($n->getBooleanValue()),
+            'move' => fn(ParseNode $n) => $o->setMove($n->getObjectValue([ItemActionStat::class, 'createFromDiscriminatorValue'])),
+            'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
     }
 

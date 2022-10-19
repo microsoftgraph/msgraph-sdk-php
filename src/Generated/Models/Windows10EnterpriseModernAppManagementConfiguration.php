@@ -37,7 +37,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'uninstallBuiltInApps' => function (ParseNode $n) use ($o) { $o->setUninstallBuiltInApps($n->getBooleanValue()); },
+            'uninstallBuiltInApps' => fn(ParseNode $n) => $o->setUninstallBuiltInApps($n->getBooleanValue()),
         ]);
     }
 

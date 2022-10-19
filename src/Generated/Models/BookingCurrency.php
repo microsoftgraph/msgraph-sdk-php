@@ -37,7 +37,7 @@ class BookingCurrency extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'symbol' => function (ParseNode $n) use ($o) { $o->setSymbol($n->getStringValue()); },
+            'symbol' => fn(ParseNode $n) => $o->setSymbol($n->getStringValue()),
         ]);
     }
 

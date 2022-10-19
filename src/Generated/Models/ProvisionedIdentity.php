@@ -50,8 +50,8 @@ class ProvisionedIdentity extends Identity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'details' => function (ParseNode $n) use ($o) { $o->setDetails($n->getObjectValue(array(DetailsInfo::class, 'createFromDiscriminatorValue'))); },
-            'identityType' => function (ParseNode $n) use ($o) { $o->setIdentityType($n->getStringValue()); },
+            'details' => fn(ParseNode $n) => $o->setDetails($n->getObjectValue([DetailsInfo::class, 'createFromDiscriminatorValue'])),
+            'identityType' => fn(ParseNode $n) => $o->setIdentityType($n->getStringValue()),
         ]);
     }
 

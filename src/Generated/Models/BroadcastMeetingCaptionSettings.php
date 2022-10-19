@@ -66,10 +66,10 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isCaptionEnabled' => function (ParseNode $n) use ($o) { $o->setIsCaptionEnabled($n->getBooleanValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'spokenLanguage' => function (ParseNode $n) use ($o) { $o->setSpokenLanguage($n->getStringValue()); },
-            'translationLanguages' => function (ParseNode $n) use ($o) { $o->setTranslationLanguages($n->getCollectionOfPrimitiveValues()); },
+            'isCaptionEnabled' => fn(ParseNode $n) => $o->setIsCaptionEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'spokenLanguage' => fn(ParseNode $n) => $o->setSpokenLanguage($n->getStringValue()),
+            'translationLanguages' => fn(ParseNode $n) => $o->setTranslationLanguages($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

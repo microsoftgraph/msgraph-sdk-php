@@ -129,17 +129,17 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'actionRequiredByDateTime' => function (ParseNode $n) use ($o) { $o->setActionRequiredByDateTime($n->getDateTimeValue()); },
-            'attachments' => function (ParseNode $n) use ($o) { $o->setAttachments($n->getCollectionOfObjectValues(array(ServiceAnnouncementAttachment::class, 'createFromDiscriminatorValue'))); },
-            'attachmentsArchive' => function (ParseNode $n) use ($o) { $o->setAttachmentsArchive($n->getBinaryContent()); },
-            'body' => function (ParseNode $n) use ($o) { $o->setBody($n->getObjectValue(array(ItemBody::class, 'createFromDiscriminatorValue'))); },
-            'category' => function (ParseNode $n) use ($o) { $o->setCategory($n->getEnumValue(ServiceUpdateCategory::class)); },
-            'hasAttachments' => function (ParseNode $n) use ($o) { $o->setHasAttachments($n->getBooleanValue()); },
-            'isMajorChange' => function (ParseNode $n) use ($o) { $o->setIsMajorChange($n->getBooleanValue()); },
-            'services' => function (ParseNode $n) use ($o) { $o->setServices($n->getCollectionOfPrimitiveValues()); },
-            'severity' => function (ParseNode $n) use ($o) { $o->setSeverity($n->getEnumValue(ServiceUpdateSeverity::class)); },
-            'tags' => function (ParseNode $n) use ($o) { $o->setTags($n->getCollectionOfPrimitiveValues()); },
-            'viewPoint' => function (ParseNode $n) use ($o) { $o->setViewPoint($n->getObjectValue(array(ServiceUpdateMessageViewpoint::class, 'createFromDiscriminatorValue'))); },
+            'actionRequiredByDateTime' => fn(ParseNode $n) => $o->setActionRequiredByDateTime($n->getDateTimeValue()),
+            'attachments' => fn(ParseNode $n) => $o->setAttachments($n->getCollectionOfObjectValues([ServiceAnnouncementAttachment::class, 'createFromDiscriminatorValue'])),
+            'attachmentsArchive' => fn(ParseNode $n) => $o->setAttachmentsArchive($n->getBinaryContent()),
+            'body' => fn(ParseNode $n) => $o->setBody($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'category' => fn(ParseNode $n) => $o->setCategory($n->getEnumValue(ServiceUpdateCategory::class)),
+            'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
+            'isMajorChange' => fn(ParseNode $n) => $o->setIsMajorChange($n->getBooleanValue()),
+            'services' => fn(ParseNode $n) => $o->setServices($n->getCollectionOfPrimitiveValues()),
+            'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(ServiceUpdateSeverity::class)),
+            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'viewPoint' => fn(ParseNode $n) => $o->setViewPoint($n->getObjectValue([ServiceUpdateMessageViewpoint::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

@@ -76,12 +76,12 @@ class BucketAggregationDefinition implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'isDescending' => function (ParseNode $n) use ($o) { $o->setIsDescending($n->getBooleanValue()); },
-            'minimumCount' => function (ParseNode $n) use ($o) { $o->setMinimumCount($n->getIntegerValue()); },
-            '@odata.type' => function (ParseNode $n) use ($o) { $o->setOdataType($n->getStringValue()); },
-            'prefixFilter' => function (ParseNode $n) use ($o) { $o->setPrefixFilter($n->getStringValue()); },
-            'ranges' => function (ParseNode $n) use ($o) { $o->setRanges($n->getCollectionOfObjectValues(array(BucketAggregationRange::class, 'createFromDiscriminatorValue'))); },
-            'sortBy' => function (ParseNode $n) use ($o) { $o->setSortBy($n->getEnumValue(BucketAggregationSortProperty::class)); },
+            'isDescending' => fn(ParseNode $n) => $o->setIsDescending($n->getBooleanValue()),
+            'minimumCount' => fn(ParseNode $n) => $o->setMinimumCount($n->getIntegerValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'prefixFilter' => fn(ParseNode $n) => $o->setPrefixFilter($n->getStringValue()),
+            'ranges' => fn(ParseNode $n) => $o->setRanges($n->getCollectionOfObjectValues([BucketAggregationRange::class, 'createFromDiscriminatorValue'])),
+            'sortBy' => fn(ParseNode $n) => $o->setSortBy($n->getEnumValue(BucketAggregationSortProperty::class)),
         ];
     }
 

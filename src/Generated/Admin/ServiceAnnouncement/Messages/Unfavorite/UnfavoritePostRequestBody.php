@@ -50,7 +50,7 @@ class UnfavoritePostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'messageIds' => function (ParseNode $n) use ($o) { $o->setMessageIds($n->getCollectionOfPrimitiveValues()); },
+            'messageIds' => fn(ParseNode $n) => $o->setMessageIds($n->getCollectionOfPrimitiveValues()),
         ];
     }
 

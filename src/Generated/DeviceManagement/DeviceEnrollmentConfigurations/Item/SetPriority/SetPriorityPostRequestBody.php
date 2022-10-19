@@ -50,7 +50,7 @@ class SetPriorityPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'priority' => function (ParseNode $n) use ($o) { $o->setPriority($n->getIntegerValue()); },
+            'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
         ];
     }
 

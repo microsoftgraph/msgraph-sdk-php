@@ -47,9 +47,9 @@ class WorkbookChartSeries extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => function (ParseNode $n) use ($o) { $o->setFormat($n->getObjectValue(array(WorkbookChartSeriesFormat::class, 'createFromDiscriminatorValue'))); },
-            'name' => function (ParseNode $n) use ($o) { $o->setName($n->getStringValue()); },
-            'points' => function (ParseNode $n) use ($o) { $o->setPoints($n->getCollectionOfObjectValues(array(WorkbookChartPoint::class, 'createFromDiscriminatorValue'))); },
+            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartSeriesFormat::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
+            'points' => fn(ParseNode $n) => $o->setPoints($n->getCollectionOfObjectValues([WorkbookChartPoint::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

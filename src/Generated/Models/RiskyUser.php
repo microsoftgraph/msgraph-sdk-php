@@ -85,15 +85,15 @@ class RiskyUser extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'history' => function (ParseNode $n) use ($o) { $o->setHistory($n->getCollectionOfObjectValues(array(RiskyUserHistoryItem::class, 'createFromDiscriminatorValue'))); },
-            'isDeleted' => function (ParseNode $n) use ($o) { $o->setIsDeleted($n->getBooleanValue()); },
-            'isProcessing' => function (ParseNode $n) use ($o) { $o->setIsProcessing($n->getBooleanValue()); },
-            'riskDetail' => function (ParseNode $n) use ($o) { $o->setRiskDetail($n->getEnumValue(RiskDetail::class)); },
-            'riskLastUpdatedDateTime' => function (ParseNode $n) use ($o) { $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()); },
-            'riskLevel' => function (ParseNode $n) use ($o) { $o->setRiskLevel($n->getEnumValue(RiskLevel::class)); },
-            'riskState' => function (ParseNode $n) use ($o) { $o->setRiskState($n->getEnumValue(RiskState::class)); },
-            'userDisplayName' => function (ParseNode $n) use ($o) { $o->setUserDisplayName($n->getStringValue()); },
-            'userPrincipalName' => function (ParseNode $n) use ($o) { $o->setUserPrincipalName($n->getStringValue()); },
+            'history' => fn(ParseNode $n) => $o->setHistory($n->getCollectionOfObjectValues([RiskyUserHistoryItem::class, 'createFromDiscriminatorValue'])),
+            'isDeleted' => fn(ParseNode $n) => $o->setIsDeleted($n->getBooleanValue()),
+            'isProcessing' => fn(ParseNode $n) => $o->setIsProcessing($n->getBooleanValue()),
+            'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
+            'riskLastUpdatedDateTime' => fn(ParseNode $n) => $o->setRiskLastUpdatedDateTime($n->getDateTimeValue()),
+            'riskLevel' => fn(ParseNode $n) => $o->setRiskLevel($n->getEnumValue(RiskLevel::class)),
+            'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
+            'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
     }
 

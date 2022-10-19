@@ -50,8 +50,8 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'default' => function (ParseNode $n) use ($o) { $o->setDefault($n->getObjectValue(array(CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'))); },
-            'partners' => function (ParseNode $n) use ($o) { $o->setPartners($n->getCollectionOfObjectValues(array(CrossTenantAccessPolicyConfigurationPartner::class, 'createFromDiscriminatorValue'))); },
+            'default' => fn(ParseNode $n) => $o->setDefault($n->getObjectValue([CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'])),
+            'partners' => fn(ParseNode $n) => $o->setPartners($n->getCollectionOfObjectValues([CrossTenantAccessPolicyConfigurationPartner::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

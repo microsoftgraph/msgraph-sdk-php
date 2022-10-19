@@ -63,9 +63,9 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'bias' => function (ParseNode $n) use ($o) { $o->setBias($n->getIntegerValue()); },
-            'daylightOffset' => function (ParseNode $n) use ($o) { $o->setDaylightOffset($n->getObjectValue(array(DaylightTimeZoneOffset::class, 'createFromDiscriminatorValue'))); },
-            'standardOffset' => function (ParseNode $n) use ($o) { $o->setStandardOffset($n->getObjectValue(array(StandardTimeZoneOffset::class, 'createFromDiscriminatorValue'))); },
+            'bias' => fn(ParseNode $n) => $o->setBias($n->getIntegerValue()),
+            'daylightOffset' => fn(ParseNode $n) => $o->setDaylightOffset($n->getObjectValue([DaylightTimeZoneOffset::class, 'createFromDiscriminatorValue'])),
+            'standardOffset' => fn(ParseNode $n) => $o->setStandardOffset($n->getObjectValue([StandardTimeZoneOffset::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 

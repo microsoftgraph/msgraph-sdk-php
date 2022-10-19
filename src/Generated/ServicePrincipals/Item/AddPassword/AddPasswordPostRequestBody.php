@@ -51,7 +51,7 @@ class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'passwordCredential' => function (ParseNode $n) use ($o) { $o->setPasswordCredential($n->getObjectValue(array(PasswordCredential::class, 'createFromDiscriminatorValue'))); },
+            'passwordCredential' => fn(ParseNode $n) => $o->setPasswordCredential($n->getObjectValue([PasswordCredential::class, 'createFromDiscriminatorValue'])),
         ];
     }
 

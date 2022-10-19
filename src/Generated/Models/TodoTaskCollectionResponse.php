@@ -36,7 +36,7 @@ class TodoTaskCollectionResponse extends BaseCollectionPaginationCountResponse i
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => function (ParseNode $n) use ($o) { $o->setValue($n->getCollectionOfObjectValues(array(TodoTask::class, 'createFromDiscriminatorValue'))); },
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([TodoTask::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
