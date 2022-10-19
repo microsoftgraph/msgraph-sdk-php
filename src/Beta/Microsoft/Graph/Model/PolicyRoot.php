@@ -91,6 +91,7 @@ class PolicyRoot implements \JsonSerializable
 
      /**
      * Gets the authenticationStrengthPolicies
+    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
      *
      * @return array|null The authenticationStrengthPolicies
      */
@@ -105,6 +106,7 @@ class PolicyRoot implements \JsonSerializable
 
     /**
     * Sets the authenticationStrengthPolicies
+    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
     *
     * @param AuthenticationStrengthPolicy[] $val The authenticationStrengthPolicies
     *

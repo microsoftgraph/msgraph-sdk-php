@@ -113,7 +113,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the allowInvitesFrom
-    * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+    * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
     *
     * @return AllowInvitesFrom|null The allowInvitesFrom
     */
@@ -132,7 +132,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the allowInvitesFrom
-    * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+    * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
     *
     * @param AllowInvitesFrom $val The allowInvitesFrom
     *
@@ -146,6 +146,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the allowUserConsentForRiskyApps
+    * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
     *
     * @return bool|null The allowUserConsentForRiskyApps
     */
@@ -160,6 +161,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the allowUserConsentForRiskyApps
+    * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
     *
     * @param bool $val The allowUserConsentForRiskyApps
     *
@@ -173,7 +175,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the blockMsolPowerShell
-    * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+    * To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph.
     *
     * @return bool|null The blockMsolPowerShell
     */
@@ -188,7 +190,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the blockMsolPowerShell
-    * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+    * To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This does not affect Azure AD Connect or Microsoft Graph.
     *
     * @param bool $val The blockMsolPowerShell
     *

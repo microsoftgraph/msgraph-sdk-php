@@ -140,6 +140,65 @@ class SignIn extends Entity
         return $this;
     }
 
+    /**
+    * Gets the authenticationAppDeviceDetails
+    *
+    * @return AuthenticationAppDeviceDetails|null The authenticationAppDeviceDetails
+    */
+    public function getAuthenticationAppDeviceDetails()
+    {
+        if (array_key_exists("authenticationAppDeviceDetails", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationAppDeviceDetails"], "\Beta\Microsoft\Graph\Model\AuthenticationAppDeviceDetails") || is_null($this->_propDict["authenticationAppDeviceDetails"])) {
+                return $this->_propDict["authenticationAppDeviceDetails"];
+            } else {
+                $this->_propDict["authenticationAppDeviceDetails"] = new AuthenticationAppDeviceDetails($this->_propDict["authenticationAppDeviceDetails"]);
+                return $this->_propDict["authenticationAppDeviceDetails"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationAppDeviceDetails
+    *
+    * @param AuthenticationAppDeviceDetails $val The authenticationAppDeviceDetails
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationAppDeviceDetails($val)
+    {
+        $this->_propDict["authenticationAppDeviceDetails"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the authenticationAppPolicyEvaluationDetails
+     *
+     * @return array|null The authenticationAppPolicyEvaluationDetails
+     */
+    public function getAuthenticationAppPolicyEvaluationDetails()
+    {
+        if (array_key_exists("authenticationAppPolicyEvaluationDetails", $this->_propDict)) {
+           return $this->_propDict["authenticationAppPolicyEvaluationDetails"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationAppPolicyEvaluationDetails
+    *
+    * @param AuthenticationAppPolicyDetails[] $val The authenticationAppPolicyEvaluationDetails
+    *
+    * @return SignIn
+    */
+    public function setAuthenticationAppPolicyEvaluationDetails($val)
+    {
+        $this->_propDict["authenticationAppPolicyEvaluationDetails"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the authenticationContextClassReferences
