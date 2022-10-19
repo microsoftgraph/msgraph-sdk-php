@@ -84,6 +84,39 @@ class VirtualEndpoint extends Entity
         return $this;
     }
 
+    /**
+    * Gets the crossCloudGovernmentOrganizationMapping
+    * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+    *
+    * @return CloudPcCrossCloudGovernmentOrganizationMapping|null The crossCloudGovernmentOrganizationMapping
+    */
+    public function getCrossCloudGovernmentOrganizationMapping()
+    {
+        if (array_key_exists("crossCloudGovernmentOrganizationMapping", $this->_propDict)) {
+            if (is_a($this->_propDict["crossCloudGovernmentOrganizationMapping"], "\Beta\Microsoft\Graph\Model\CloudPcCrossCloudGovernmentOrganizationMapping") || is_null($this->_propDict["crossCloudGovernmentOrganizationMapping"])) {
+                return $this->_propDict["crossCloudGovernmentOrganizationMapping"];
+            } else {
+                $this->_propDict["crossCloudGovernmentOrganizationMapping"] = new CloudPcCrossCloudGovernmentOrganizationMapping($this->_propDict["crossCloudGovernmentOrganizationMapping"]);
+                return $this->_propDict["crossCloudGovernmentOrganizationMapping"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the crossCloudGovernmentOrganizationMapping
+    * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+    *
+    * @param CloudPcCrossCloudGovernmentOrganizationMapping $val The crossCloudGovernmentOrganizationMapping
+    *
+    * @return VirtualEndpoint
+    */
+    public function setCrossCloudGovernmentOrganizationMapping($val)
+    {
+        $this->_propDict["crossCloudGovernmentOrganizationMapping"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the deviceImages

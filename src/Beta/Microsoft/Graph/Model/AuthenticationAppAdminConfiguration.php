@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TeamworkUserIdentityType File
+* AuthenticationAppAdminConfiguration File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TeamworkUserIdentityType class
+* AuthenticationAppAdminConfiguration class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,19 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TeamworkUserIdentityType extends Enum
+class AuthenticationAppAdminConfiguration extends Enum
 {
     /**
-    * The Enum TeamworkUserIdentityType
+    * The Enum AuthenticationAppAdminConfiguration
     */
-    const AAD_USER = "aadUser";
-    const ON_PREMISE_AAD_USER = "onPremiseAadUser";
-    const ANONYMOUS_GUEST = "anonymousGuest";
-    const FEDERATED_USER = "federatedUser";
-    const PERSONAL_MICROSOFT_ACCOUNT_USER = "personalMicrosoftAccountUser";
-    const SKYPE_USER = "skypeUser";
-    const PHONE_USER = "phoneUser";
+    const NOT_APPLICABLE = "notApplicable";
+    const ENABLED = "enabled";
+    const DISABLED = "disabled";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const EMAIL_USER = "emailUser";
-    const AZURE_COMMUNICATION_SERVICES_USER = "azureCommunicationServicesUser";
 }
