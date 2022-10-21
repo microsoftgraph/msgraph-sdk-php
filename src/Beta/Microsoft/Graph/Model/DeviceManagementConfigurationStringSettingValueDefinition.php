@@ -142,7 +142,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
     }
     /**
     * Gets the maximumLength
-    * Maximum length of string. Valid values 0 to 87516
+    * Maximum length of string
     *
     * @return int|null The maximumLength
     */
@@ -157,7 +157,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the maximumLength
-    * Maximum length of string. Valid values 0 to 87516
+    * Maximum length of string
     *
     * @param int $val The value of the maximumLength
     *
@@ -170,7 +170,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
     }
     /**
     * Gets the minimumLength
-    * Minimum length of string. Valid values 0 to 87516
+    * Minimum length of string
     *
     * @return int|null The minimumLength
     */
@@ -185,7 +185,7 @@ class DeviceManagementConfigurationStringSettingValueDefinition extends DeviceMa
 
     /**
     * Sets the minimumLength
-    * Minimum length of string. Valid values 0 to 87516
+    * Minimum length of string
     *
     * @param int $val The value of the minimumLength
     *

@@ -27,6 +27,7 @@ class AuthenticationStrengthRoot extends Entity
 
      /**
      * Gets the authenticationCombinations
+    * A collection of all valid authentication method combinations in the system.
      *
      * @return array|null The authenticationCombinations
      */
@@ -41,6 +42,7 @@ class AuthenticationStrengthRoot extends Entity
 
     /**
     * Sets the authenticationCombinations
+    * A collection of all valid authentication method combinations in the system.
     *
     * @param AuthenticationMethodModes[] $val The authenticationCombinations
     *
@@ -55,6 +57,7 @@ class AuthenticationStrengthRoot extends Entity
 
      /**
      * Gets the authenticationMethodModes
+    * Names and descriptions of all valid authentication method modes in the system.
      *
      * @return array|null The authenticationMethodModes
      */
@@ -69,6 +72,7 @@ class AuthenticationStrengthRoot extends Entity
 
     /**
     * Sets the authenticationMethodModes
+    * Names and descriptions of all valid authentication method modes in the system.
     *
     * @param AuthenticationMethodModeDetail[] $val The authenticationMethodModes
     *
@@ -83,6 +87,7 @@ class AuthenticationStrengthRoot extends Entity
 
      /**
      * Gets the policies
+    * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      *
      * @return array|null The policies
      */
@@ -97,6 +102,7 @@ class AuthenticationStrengthRoot extends Entity
 
     /**
     * Sets the policies
+    * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
     *
     * @param AuthenticationStrengthPolicy[] $val The policies
     *

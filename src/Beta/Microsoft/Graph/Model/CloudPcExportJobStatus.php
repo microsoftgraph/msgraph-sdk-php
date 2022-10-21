@@ -32,5 +32,6 @@ class CloudPcExportJobStatus extends Enum
     const NOT_STARTED = "notStarted";
     const IN_PROGRESS = "inProgress";
     const COMPLETED = "completed";
+    const FAILED = "failed";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
