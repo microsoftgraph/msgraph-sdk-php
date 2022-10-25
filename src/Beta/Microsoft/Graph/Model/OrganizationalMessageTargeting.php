@@ -82,7 +82,7 @@ class OrganizationalMessageTargeting extends Entity
 
     /**
     * Gets the targetingType
-    * Indicates the type of targeting. Possible values are: aadGroup, unknownFutureValue.
+    * Indicates the type of targeting
     *
     * @return OrganizationalMessageTargetingType|null The targetingType
     */
@@ -101,7 +101,7 @@ class OrganizationalMessageTargeting extends Entity
 
     /**
     * Sets the targetingType
-    * Indicates the type of targeting. Possible values are: aadGroup, unknownFutureValue.
+    * Indicates the type of targeting
     *
     * @param OrganizationalMessageTargetingType $val The value to assign to the targetingType
     *

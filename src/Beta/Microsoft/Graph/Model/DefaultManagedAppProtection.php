@@ -57,7 +57,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     * Gets the allowedAndroidDeviceModels
     * List of device models allowed, as a string, for the managed app to work. (Android Only)
     *
-    * @return string|null The allowedAndroidDeviceModels
+    * @return array|null The allowedAndroidDeviceModels
     */
     public function getAllowedAndroidDeviceModels()
     {
@@ -72,7 +72,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     * Sets the allowedAndroidDeviceModels
     * List of device models allowed, as a string, for the managed app to work. (Android Only)
     *
-    * @param string $val The allowedAndroidDeviceModels
+    * @param string[] $val The allowedAndroidDeviceModels
     *
     * @return DefaultManagedAppProtection
     */

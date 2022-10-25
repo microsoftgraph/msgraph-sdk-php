@@ -26,7 +26,7 @@ class OrganizationalMessagePlacementDetail extends Entity
 
     /**
     * Gets the placement
-    * Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue.
+    * Indicates the name of the placement
     *
     * @return OrganizationalMessagePlacement|null The placement
     */
@@ -45,7 +45,7 @@ class OrganizationalMessagePlacementDetail extends Entity
 
     /**
     * Sets the placement
-    * Indicates the name of the placement. Possible values are: default, card0, card1, card2, card3, unknownFutureValue.
+    * Indicates the name of the placement
     *
     * @param OrganizationalMessagePlacement $val The value to assign to the placement
     *
