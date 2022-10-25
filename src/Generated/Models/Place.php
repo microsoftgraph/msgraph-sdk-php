@@ -29,7 +29,7 @@ class Place extends Entity implements Parsable
     private ?string $phone = null;
     
     /**
-     * Instantiates a new place and sets the default values.
+     * Instantiates a new Place and sets the default values.
     */
     public function __construct() {
         parent::__construct();

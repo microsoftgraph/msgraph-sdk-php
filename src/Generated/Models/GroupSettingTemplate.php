@@ -24,7 +24,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
     private ?array $values = null;
     
     /**
-     * Instantiates a new groupSettingTemplate and sets the default values.
+     * Instantiates a new GroupSettingTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

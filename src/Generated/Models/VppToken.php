@@ -65,7 +65,7 @@ class VppToken extends Entity implements Parsable
     private ?VppTokenAccountType $vppTokenAccountType = null;
     
     /**
-     * Instantiates a new vppToken and sets the default values.
+     * Instantiates a new VppToken and sets the default values.
     */
     public function __construct() {
         parent::__construct();
