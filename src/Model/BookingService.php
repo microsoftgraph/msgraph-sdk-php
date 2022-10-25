@@ -601,7 +601,7 @@ class BookingService extends Entity
     * Gets the staffMemberIds
     * Represents those staff members who provide this service.
     *
-    * @return string|null The staffMemberIds
+    * @return array|null The staffMemberIds
     */
     public function getStaffMemberIds()
     {
@@ -616,7 +616,7 @@ class BookingService extends Entity
     * Sets the staffMemberIds
     * Represents those staff members who provide this service.
     *
-    * @param string $val The staffMemberIds
+    * @param string[] $val The staffMemberIds
     *
     * @return BookingService
     */
