@@ -26,6 +26,7 @@ class CloudPcExportJob extends Entity
 {
     /**
     * Gets the expirationDateTime
+    * The date time when the export job expires.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -44,6 +45,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the expirationDateTime
+    * The date time when the export job expires.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -57,6 +59,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the exportJobStatus
+    * The status of the export job.The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
     *
     * @return CloudPcExportJobStatus|null The exportJobStatus
     */
@@ -75,6 +78,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the exportJobStatus
+    * The status of the export job.The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
     *
     * @param CloudPcExportJobStatus $val The exportJobStatus
     *
@@ -88,6 +92,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the exportUrl
+    * The storage account url of the exported report, it can be used to download the file.
     *
     * @return string|null The exportUrl
     */
@@ -102,6 +107,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the exportUrl
+    * The storage account url of the exported report, it can be used to download the file.
     *
     * @param string $val The exportUrl
     *
@@ -115,6 +121,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the filter
+    * The filter applied on the report.
     *
     * @return string|null The filter
     */
@@ -129,6 +136,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the filter
+    * The filter applied on the report.
     *
     * @param string $val The filter
     *
@@ -142,6 +150,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the format
+    * The format of the exported report.
     *
     * @return string|null The format
     */
@@ -156,6 +165,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the format
+    * The format of the exported report.
     *
     * @param string $val The format
     *
@@ -169,6 +179,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the reportName
+    * The report name.The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
     *
     * @return CloudPcReportName|null The reportName
     */
@@ -187,6 +198,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the reportName
+    * The report name.The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
     *
     * @param CloudPcReportName $val The reportName
     *
@@ -200,6 +212,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the requestDateTime
+    * The date time when the export job was requested.
     *
     * @return \DateTime|null The requestDateTime
     */
@@ -218,6 +231,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the requestDateTime
+    * The date time when the export job was requested.
     *
     * @param \DateTime $val The requestDateTime
     *
@@ -231,8 +245,9 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the select
+    * The selected columns of the report.
     *
-    * @return string|null The select
+    * @return array|null The select
     */
     public function getSelect()
     {
@@ -245,8 +260,9 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the select
+    * The selected columns of the report.
     *
-    * @param string $val The select
+    * @param string[] $val The select
     *
     * @return CloudPcExportJob
     */

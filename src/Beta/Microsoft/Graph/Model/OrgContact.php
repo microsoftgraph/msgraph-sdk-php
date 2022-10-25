@@ -383,7 +383,7 @@ class OrgContact extends DirectoryObject
     * Gets the proxyAddresses
     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @return string|null The proxyAddresses
+    * @return array|null The proxyAddresses
     */
     public function getProxyAddresses()
     {
@@ -398,7 +398,7 @@ class OrgContact extends DirectoryObject
     * Sets the proxyAddresses
     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @param string $val The proxyAddresses
+    * @param string[] $val The proxyAddresses
     *
     * @return OrgContact
     */

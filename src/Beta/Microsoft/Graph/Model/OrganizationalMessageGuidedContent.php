@@ -89,7 +89,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Gets the scenario
-    * Indicates the scenario for the guided content. Possible values are: onboarding, lifecycle, unknownFutureValue.
+    * Indicates the scenario for the guided content
     *
     * @return OrganizationalMessageScenario|null The scenario
     */
@@ -108,7 +108,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Sets the scenario
-    * Indicates the scenario for the guided content. Possible values are: onboarding, lifecycle, unknownFutureValue.
+    * Indicates the scenario for the guided content
     *
     * @param OrganizationalMessageScenario $val The scenario
     *
@@ -122,7 +122,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Gets the surface
-    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
+    * Indicates the area where content will be displayed to customers
     *
     * @return OrganizationalMessageSurface|null The surface
     */
@@ -141,7 +141,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Sets the surface
-    * Indicates the area where content will be displayed to customers. Possible values are: actionCenter, getStarted, softLanding, unknownFutureValue.
+    * Indicates the area where content will be displayed to customers
     *
     * @param OrganizationalMessageSurface $val The surface
     *
@@ -155,7 +155,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Gets the theme
-    * Indicates the theme for the guided content. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
+    * Indicates the theme for the guided content
     *
     * @return OrganizationalMessageTheme|null The theme
     */
@@ -174,7 +174,7 @@ class OrganizationalMessageGuidedContent extends Entity
 
     /**
     * Sets the theme
-    * Indicates the theme for the guided content. Possible values are: update, training, welcomeToWindows, explore, unknownFutureValue.
+    * Indicates the theme for the guided content
     *
     * @param OrganizationalMessageTheme $val The theme
     *

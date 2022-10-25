@@ -28,7 +28,7 @@ class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity
     * Gets the organizationIdsInUSGovCloud
     * The tenant ID in the Azure Government cloud corresponding to the GCC tenant in the public cloud. Currently, 1:1 mappings are supported, so this collection can only contain one tenant ID.
     *
-    * @return string|null The organizationIdsInUSGovCloud
+    * @return array|null The organizationIdsInUSGovCloud
     */
     public function getOrganizationIdsInUSGovCloud()
     {
@@ -43,7 +43,7 @@ class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity
     * Sets the organizationIdsInUSGovCloud
     * The tenant ID in the Azure Government cloud corresponding to the GCC tenant in the public cloud. Currently, 1:1 mappings are supported, so this collection can only contain one tenant ID.
     *
-    * @param string $val The organizationIdsInUSGovCloud
+    * @param string[] $val The organizationIdsInUSGovCloud
     *
     * @return CloudPcCrossCloudGovernmentOrganizationMapping
     */
