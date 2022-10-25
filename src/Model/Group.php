@@ -241,7 +241,7 @@ class Group extends DirectoryObject
     * Gets the groupTypes
     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
-    * @return string|null The groupTypes
+    * @return array|null The groupTypes
     */
     public function getGroupTypes()
     {
@@ -256,7 +256,7 @@ class Group extends DirectoryObject
     * Sets the groupTypes
     * Specifies the group type and its membership. If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static. Returned by default. Supports $filter (eq, not).
     *
-    * @param string $val The groupTypes
+    * @param string[] $val The groupTypes
     *
     * @return Group
     */
@@ -768,7 +768,7 @@ class Group extends DirectoryObject
     * Gets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @return string|null The proxyAddresses
+    * @return array|null The proxyAddresses
     */
     public function getProxyAddresses()
     {
@@ -783,7 +783,7 @@ class Group extends DirectoryObject
     * Sets the proxyAddresses
     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
     *
-    * @param string $val The proxyAddresses
+    * @param string[] $val The proxyAddresses
     *
     * @return Group
     */
