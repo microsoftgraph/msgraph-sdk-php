@@ -482,7 +482,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param Group $body 
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -632,7 +632,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Update the properties of a group object.
+     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
      * @param Group $body 
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

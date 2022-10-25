@@ -249,7 +249,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     private ?VerifiedPublisher $verifiedPublisher = null;
     
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
     */
     public function __construct() {
         parent::__construct();

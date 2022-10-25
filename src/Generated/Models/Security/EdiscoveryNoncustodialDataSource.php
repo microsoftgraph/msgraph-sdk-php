@@ -19,7 +19,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     private ?EdiscoveryIndexOperation $lastIndexOperation = null;
     
     /**
-     * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
+     * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

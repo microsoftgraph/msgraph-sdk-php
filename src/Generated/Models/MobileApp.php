@@ -85,7 +85,7 @@ class MobileApp extends Entity implements Parsable
     private ?MobileAppPublishingState $publishingState = null;
     
     /**
-     * Instantiates a new mobileApp and sets the default values.
+     * Instantiates a new MobileApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
