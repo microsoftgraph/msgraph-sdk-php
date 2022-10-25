@@ -716,7 +716,7 @@ class IntuneBrandingProfile extends Entity
     * Gets the roleScopeTagIds
     * List of scope tags assigned to the branding profile
     *
-    * @return string|null The roleScopeTagIds
+    * @return array|null The roleScopeTagIds
     */
     public function getRoleScopeTagIds()
     {
@@ -731,7 +731,7 @@ class IntuneBrandingProfile extends Entity
     * Sets the roleScopeTagIds
     * List of scope tags assigned to the branding profile
     *
-    * @param string $val The roleScopeTagIds
+    * @param string[] $val The roleScopeTagIds
     *
     * @return IntuneBrandingProfile
     */

@@ -302,6 +302,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Gets the reports
+    * Cloud PC related reports.
     *
     * @return CloudPcReports|null The reports
     */
@@ -320,6 +321,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the reports
+    * Cloud PC related reports.
     *
     * @param CloudPcReports $val The reports
     *

@@ -58,7 +58,7 @@ class TeamTemplateDefinition extends Entity
     /**
     * Gets the categories
     *
-    * @return string|null The categories
+    * @return array|null The categories
     */
     public function getCategories()
     {
@@ -72,7 +72,7 @@ class TeamTemplateDefinition extends Entity
     /**
     * Sets the categories
     *
-    * @param string $val The categories
+    * @param string[] $val The categories
     *
     * @return TeamTemplateDefinition
     */

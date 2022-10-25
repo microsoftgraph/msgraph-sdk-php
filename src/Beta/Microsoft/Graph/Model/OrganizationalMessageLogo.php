@@ -26,7 +26,7 @@ class OrganizationalMessageLogo extends Entity
 
     /**
     * Gets the contentType
-    * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
+    * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo
     *
     * @return OrganizationalMessageLogoType|null The contentType
     */
@@ -45,7 +45,7 @@ class OrganizationalMessageLogo extends Entity
 
     /**
     * Sets the contentType
-    * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo. Possible values are: png, unknownFutureValue.
+    * The content type of the logo that is contained in the logo array. This is null when logoCdnUrl is used to send the logo
     *
     * @param OrganizationalMessageLogoType $val The value to assign to the contentType
     *

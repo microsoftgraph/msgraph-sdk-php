@@ -447,7 +447,7 @@ class Device extends DirectoryObject
     * Gets the hostnames
     * List of hostNames for the device.
     *
-    * @return string|null The hostnames
+    * @return array|null The hostnames
     */
     public function getHostnames()
     {
@@ -462,7 +462,7 @@ class Device extends DirectoryObject
     * Sets the hostnames
     * List of hostNames for the device.
     *
-    * @param string $val The hostnames
+    * @param string[] $val The hostnames
     *
     * @return Device
     */
@@ -768,7 +768,7 @@ class Device extends DirectoryObject
     * Gets the physicalIds
     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @return string|null The physicalIds
+    * @return array|null The physicalIds
     */
     public function getPhysicalIds()
     {
@@ -783,7 +783,7 @@ class Device extends DirectoryObject
     * Sets the physicalIds
     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
     *
-    * @param string $val The physicalIds
+    * @param string[] $val The physicalIds
     *
     * @return Device
     */
@@ -859,7 +859,7 @@ class Device extends DirectoryObject
     * Gets the systemLabels
     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
     *
-    * @return string|null The systemLabels
+    * @return array|null The systemLabels
     */
     public function getSystemLabels()
     {
@@ -874,7 +874,7 @@ class Device extends DirectoryObject
     * Sets the systemLabels
     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
     *
-    * @param string $val The systemLabels
+    * @param string[] $val The systemLabels
     *
     * @return Device
     */

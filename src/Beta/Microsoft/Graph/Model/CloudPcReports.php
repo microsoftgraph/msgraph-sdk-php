@@ -27,6 +27,7 @@ class CloudPcReports extends Entity
 
      /**
      * Gets the exportJobs
+    * The export jobs created for downloading reports.
      *
      * @return array|null The exportJobs
      */
@@ -41,6 +42,7 @@ class CloudPcReports extends Entity
 
     /**
     * Sets the exportJobs
+    * The export jobs created for downloading reports.
     *
     * @param CloudPcExportJob[] $val The exportJobs
     *
