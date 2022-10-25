@@ -19,7 +19,7 @@ class AppScope extends Entity implements Parsable
     private ?string $type = null;
     
     /**
-     * Instantiates a new AppScope and sets the default values.
+     * Instantiates a new appScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();

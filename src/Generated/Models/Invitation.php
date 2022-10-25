@@ -44,6 +44,11 @@ class Invitation extends Entity implements Parsable
     private ?string $inviteRedirectUrl = null;
     
     /**
+     * @var bool|null $resetRedemption The resetRedemption property
+    */
+    private ?bool $resetRedemption = null;
+    
+    /**
      * @var bool|null $sendInvitationMessage Indicates whether an email should be sent to the user being invited. The default is false.
     */
     private ?bool $sendInvitationMessage = null;
@@ -84,6 +89,7 @@ class Invitation extends Entity implements Parsable
             'invitedUserType' => fn(ParseNode $n) => $o->setInvitedUserType($n->getStringValue()),
             'inviteRedeemUrl' => fn(ParseNode $n) => $o->setInviteRedeemUrl($n->getStringValue()),
             'inviteRedirectUrl' => fn(ParseNode $n) => $o->setInviteRedirectUrl($n->getStringValue()),
+            'resetRedemption' => fn(ParseNode $n) => $o->setResetRedemption($n->getBooleanValue()),
             'sendInvitationMessage' => fn(ParseNode $n) => $o->setSendInvitationMessage($n->getBooleanValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
@@ -146,6 +152,14 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
+     * Gets the resetRedemption property value. The resetRedemption property
+     * @return bool|null
+    */
+    public function getResetRedemption(): ?bool {
+        return $this->resetRedemption;
+    }
+
+    /**
      * Gets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
      * @return bool|null
     */
@@ -174,6 +188,7 @@ class Invitation extends Entity implements Parsable
         $writer->writeStringValue('invitedUserType', $this->invitedUserType);
         $writer->writeStringValue('inviteRedeemUrl', $this->inviteRedeemUrl);
         $writer->writeStringValue('inviteRedirectUrl', $this->inviteRedirectUrl);
+        $writer->writeBooleanValue('resetRedemption', $this->resetRedemption);
         $writer->writeBooleanValue('sendInvitationMessage', $this->sendInvitationMessage);
         $writer->writeStringValue('status', $this->status);
     }
@@ -232,6 +247,14 @@ class Invitation extends Entity implements Parsable
     */
     public function setInviteRedirectUrl(?string $value ): void {
         $this->inviteRedirectUrl = $value;
+    }
+
+    /**
+     * Sets the resetRedemption property value. The resetRedemption property
+     *  @param bool|null $value Value to set for the resetRedemption property.
+    */
+    public function setResetRedemption(?bool $value ): void {
+        $this->resetRedemption = $value;
     }
 
     /**
