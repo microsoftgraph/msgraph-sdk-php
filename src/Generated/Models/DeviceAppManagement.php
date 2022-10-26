@@ -100,7 +100,7 @@ class DeviceAppManagement extends Entity implements Parsable
     private ?array $windowsInformationProtectionPolicies = null;
     
     /**
-     * Instantiates a new deviceAppManagement and sets the default values.
+     * Instantiates a new DeviceAppManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
