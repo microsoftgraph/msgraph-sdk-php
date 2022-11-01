@@ -34,7 +34,7 @@ class SchemaExtension extends Entity implements Parsable
     private ?array $targetTypes = null;
     
     /**
-     * Instantiates a new SchemaExtension and sets the default values.
+     * Instantiates a new schemaExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();

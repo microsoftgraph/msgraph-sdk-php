@@ -216,7 +216,7 @@ class Application extends DirectoryObject implements Parsable
     private ?WebApplication $web = null;
     
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
     */
     public function __construct() {
         parent::__construct();

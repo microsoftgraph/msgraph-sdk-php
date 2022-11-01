@@ -14,7 +14,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
     private ?AuthenticationMethodState $state = null;
     
     /**
-     * Instantiates a new authenticationMethodConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
