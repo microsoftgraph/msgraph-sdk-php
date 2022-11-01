@@ -175,7 +175,7 @@ class LearningContent extends Entity
 
     /**
     * Gets the duration
-    * The duration of the learning content in seconds. Optional.
+    * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
     *
     * @return \DateInterval|null The duration
     */
@@ -194,7 +194,7 @@ class LearningContent extends Entity
 
     /**
     * Sets the duration
-    * The duration of the learning content in seconds. Optional.
+    * The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.
     *
     * @param \DateInterval $val The duration
     *

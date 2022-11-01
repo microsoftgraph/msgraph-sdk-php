@@ -54,6 +54,33 @@ class UnifiedRbacResourceAction extends Entity
     }
 
     /**
+    * Gets the authenticationContextId
+    *
+    * @return string|null The authenticationContextId
+    */
+    public function getAuthenticationContextId()
+    {
+        if (array_key_exists("authenticationContextId", $this->_propDict)) {
+            return $this->_propDict["authenticationContextId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationContextId
+    *
+    * @param string $val The authenticationContextId
+    *
+    * @return UnifiedRbacResourceAction
+    */
+    public function setAuthenticationContextId($val)
+    {
+        $this->_propDict["authenticationContextId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * Description for the action. Supports $filter (eq).
     *
@@ -79,6 +106,33 @@ class UnifiedRbacResourceAction extends Entity
     public function setDescription($val)
     {
         $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the isAuthenticationContextSettable
+    *
+    * @return bool|null The isAuthenticationContextSettable
+    */
+    public function getIsAuthenticationContextSettable()
+    {
+        if (array_key_exists("isAuthenticationContextSettable", $this->_propDict)) {
+            return $this->_propDict["isAuthenticationContextSettable"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAuthenticationContextSettable
+    *
+    * @param bool $val The isAuthenticationContextSettable
+    *
+    * @return UnifiedRbacResourceAction
+    */
+    public function setIsAuthenticationContextSettable($val)
+    {
+        $this->_propDict["isAuthenticationContextSettable"] = boolval($val);
         return $this;
     }
 
