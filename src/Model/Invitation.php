@@ -203,6 +203,33 @@ class Invitation extends Entity
     }
 
     /**
+    * Gets the resetRedemption
+    *
+    * @return bool|null The resetRedemption
+    */
+    public function getResetRedemption()
+    {
+        if (array_key_exists("resetRedemption", $this->_propDict)) {
+            return $this->_propDict["resetRedemption"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the resetRedemption
+    *
+    * @param bool $val The resetRedemption
+    *
+    * @return Invitation
+    */
+    public function setResetRedemption($val)
+    {
+        $this->_propDict["resetRedemption"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the sendInvitationMessage
     * Indicates whether an email should be sent to the user being invited. The default is false.
     *
