@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalMessagePlacement File
+* ChatMessageActions File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OrganizationalMessagePlacement class
+* ChatMessageActions class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalMessagePlacement extends Enum
+class ChatMessageActions extends Enum
 {
     /**
-    * The Enum OrganizationalMessagePlacement
+    * The Enum ChatMessageActions
     */
-    const GRAPHDEFAULT = "default";
-    const CARD0 = "card0";
-    const CARD1 = "card1";
-    const CARD2 = "card2";
-    const CARD3 = "card3";
+    const REACTION_ADDED = "reactionAdded";
+    const REACTION_REMOVED = "reactionRemoved";
+    const ACTION_UNDEFINED = "actionUndefined";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

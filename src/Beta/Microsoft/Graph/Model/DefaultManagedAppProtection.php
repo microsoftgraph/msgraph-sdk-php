@@ -1170,6 +1170,35 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
 
     /**
+    * Gets the minimumWarningSdkVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only)
+    *
+    * @return string|null The minimumWarningSdkVersion
+    */
+    public function getMinimumWarningSdkVersion()
+    {
+        if (array_key_exists("minimumWarningSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWarningSdkVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumWarningSdkVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data. (iOS only)
+    *
+    * @param string $val The minimumWarningSdkVersion
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setMinimumWarningSdkVersion($val)
+    {
+        $this->_propDict["minimumWarningSdkVersion"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the minimumWipeCompanyPortalVersion
     * Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
     *

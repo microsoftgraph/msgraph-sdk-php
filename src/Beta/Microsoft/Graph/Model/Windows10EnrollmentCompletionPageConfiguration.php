@@ -257,6 +257,35 @@ class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentCon
     }
 
     /**
+    * Gets the installQualityUpdates
+    * Allows quality updates installation during OOBE
+    *
+    * @return bool|null The installQualityUpdates
+    */
+    public function getInstallQualityUpdates()
+    {
+        if (array_key_exists("installQualityUpdates", $this->_propDict)) {
+            return $this->_propDict["installQualityUpdates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the installQualityUpdates
+    * Allows quality updates installation during OOBE
+    *
+    * @param bool $val The installQualityUpdates
+    *
+    * @return Windows10EnrollmentCompletionPageConfiguration
+    */
+    public function setInstallQualityUpdates($val)
+    {
+        $this->_propDict["installQualityUpdates"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the selectedMobileAppIds
     * Selected applications to track the installation status
     *

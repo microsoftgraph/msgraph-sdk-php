@@ -365,6 +365,34 @@ class VirtualEndpoint extends Entity
 
 
      /**
+     * Gets the sharedUseServicePlans
+     *
+     * @return array|null The sharedUseServicePlans
+     */
+    public function getSharedUseServicePlans()
+    {
+        if (array_key_exists("sharedUseServicePlans", $this->_propDict)) {
+           return $this->_propDict["sharedUseServicePlans"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sharedUseServicePlans
+    *
+    * @param CloudPcSharedUseServicePlan[] $val The sharedUseServicePlans
+    *
+    * @return VirtualEndpoint
+    */
+    public function setSharedUseServicePlans($val)
+    {
+        $this->_propDict["sharedUseServicePlans"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the snapshots
     * Cloud PC snapshots.
      *

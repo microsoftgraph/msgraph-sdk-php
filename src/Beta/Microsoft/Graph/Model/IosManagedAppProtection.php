@@ -411,6 +411,35 @@ class IosManagedAppProtection extends TargetedManagedAppProtection
     }
 
     /**
+    * Gets the minimumWarningSdkVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+    *
+    * @return string|null The minimumWarningSdkVersion
+    */
+    public function getMinimumWarningSdkVersion()
+    {
+        if (array_key_exists("minimumWarningSdkVersion", $this->_propDict)) {
+            return $this->_propDict["minimumWarningSdkVersion"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the minimumWarningSdkVersion
+    * Versions less than the specified version will result in warning message on the managed app from accessing company data.
+    *
+    * @param string $val The minimumWarningSdkVersion
+    *
+    * @return IosManagedAppProtection
+    */
+    public function setMinimumWarningSdkVersion($val)
+    {
+        $this->_propDict["minimumWarningSdkVersion"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the minimumWipeSdkVersion
     * Versions less than the specified version will block the managed app from accessing company data.
     *
