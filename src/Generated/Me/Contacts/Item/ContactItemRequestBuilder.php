@@ -25,14 +25,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContactItemRequestBuilder 
 {
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.contact entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The multiValueExtendedProperties property
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contact entity.
     */
     public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
         return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -44,7 +44,7 @@ class ContactItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The photo property
+     * Provides operations to manage the photo property of the microsoft.graph.contact entity.
     */
     public function photo(): PhotoRequestBuilder {
         return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -56,7 +56,7 @@ class ContactItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The singleValueExtendedProperties property
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contact entity.
     */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -145,6 +145,7 @@ class ContactItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -168,7 +169,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.contact entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -198,7 +199,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contact entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -229,7 +230,7 @@ class ContactItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.contacts.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contact entity.
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

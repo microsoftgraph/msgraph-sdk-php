@@ -23,21 +23,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AgreementItemRequestBuilder 
 {
     /**
-     * The acceptances property
+     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
     */
     public function acceptances(): AcceptancesRequestBuilder {
         return new AcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The file property
+     * Provides operations to manage the file property of the microsoft.graph.agreement entity.
     */
     public function file(): FileRequestBuilder {
         return new FileRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The files property
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
     */
     public function files(): FilesRequestBuilder {
         return new FilesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -59,7 +59,7 @@ class AgreementItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.acceptances.item collection
+     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -147,6 +147,7 @@ class AgreementItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -170,7 +171,7 @@ class AgreementItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.files.item collection
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
      * @param string $id Unique identifier of the item
      * @return AgreementFileLocalizationItemRequestBuilder
     */

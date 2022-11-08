@@ -84,6 +84,7 @@ class BackgroundImageRequestBuilder
             }
         }
         $requestInfo->setStreamContent($body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "", $body);
         return $requestInfo;
     }
 

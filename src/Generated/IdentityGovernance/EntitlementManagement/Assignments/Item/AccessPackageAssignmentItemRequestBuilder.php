@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessPackageAssignmentItemRequestBuilder 
 {
     /**
-     * The accessPackage property
+     * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity.
     */
     public function accessPackage(): AccessPackageRequestBuilder {
         return new AccessPackageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentPolicy property
+     * Provides operations to manage the assignmentPolicy property of the microsoft.graph.accessPackageAssignment entity.
     */
     public function assignmentPolicy(): AssignmentPolicyRequestBuilder {
         return new AssignmentPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -41,7 +41,7 @@ class AccessPackageAssignmentItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The reprocess property
+     * Provides operations to call the reprocess method.
     */
     public function reprocess(): ReprocessRequestBuilder {
         return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -53,7 +53,7 @@ class AccessPackageAssignmentItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The target property
+     * Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity.
     */
     public function target(): TargetRequestBuilder {
         return new TargetRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,6 +142,7 @@ class AccessPackageAssignmentItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

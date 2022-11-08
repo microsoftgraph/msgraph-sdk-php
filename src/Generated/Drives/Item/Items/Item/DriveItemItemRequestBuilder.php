@@ -46,77 +46,77 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DriveItemItemRequestBuilder 
 {
     /**
-     * The analytics property
+     * Provides operations to manage the analytics property of the microsoft.graph.driveItem entity.
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkin property
+     * Provides operations to call the checkin method.
     */
     public function checkin(): CheckinRequestBuilder {
         return new CheckinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkout property
+     * Provides operations to call the checkout method.
     */
     public function checkout(): CheckoutRequestBuilder {
         return new CheckoutRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The children property
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
     */
     public function children(): ChildrenRequestBuilder {
         return new ChildrenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The content property
+     * Provides operations to manage the media for the drive entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The copy property
+     * Provides operations to call the copy method.
     */
     public function copy(): CopyRequestBuilder {
         return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The createLink property
+     * Provides operations to call the createLink method.
     */
     public function createLink(): CreateLinkRequestBuilder {
         return new CreateLinkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The createUploadSession property
+     * Provides operations to call the createUploadSession method.
     */
     public function createUploadSession(): CreateUploadSessionRequestBuilder {
         return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The follow property
+     * Provides operations to call the follow method.
     */
     public function follow(): FollowRequestBuilder {
         return new FollowRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The invite property
+     * Provides operations to call the invite method.
     */
     public function invite(): InviteRequestBuilder {
         return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The listItem property
+     * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
     */
     public function listItem(): ListItemRequestBuilder {
         return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,14 +128,14 @@ class DriveItemItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The permissions property
+     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
     */
     public function permissions(): PermissionsRequestBuilder {
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The preview property
+     * Provides operations to call the preview method.
     */
     public function preview(): PreviewRequestBuilder {
         return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -147,28 +147,28 @@ class DriveItemItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The subscriptions property
+     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
     */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The thumbnails property
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
     */
     public function thumbnails(): ThumbnailsRequestBuilder {
         return new ThumbnailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unfollow property
+     * Provides operations to call the unfollow method.
     */
     public function unfollow(): UnfollowRequestBuilder {
         return new UnfollowRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -180,21 +180,21 @@ class DriveItemItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The validatePermission property
+     * Provides operations to call the validatePermission method.
     */
     public function validatePermission(): ValidatePermissionRequestBuilder {
         return new ValidatePermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The versions property
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
     */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.children.item collection
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
@@ -282,6 +282,7 @@ class DriveItemItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -380,7 +381,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.permissions.item collection
+     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -400,7 +401,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.subscriptions.item collection
+     * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -411,7 +412,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.thumbnails.item collection
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
      * @return ThumbnailSetItemRequestBuilder
     */
@@ -422,7 +423,7 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
      * @return DriveItemVersionItemRequestBuilder
     */

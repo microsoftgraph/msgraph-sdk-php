@@ -20,14 +20,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PhoneAuthenticationMethodItemRequestBuilder 
 {
     /**
-     * The disableSmsSignIn property
+     * Provides operations to call the disableSmsSignIn method.
     */
     public function disableSmsSignIn(): DisableSmsSignInRequestBuilder {
         return new DisableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The enableSmsSignIn property
+     * Provides operations to call the enableSmsSignIn method.
     */
     public function enableSmsSignIn(): EnableSmsSignInRequestBuilder {
         return new EnableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -126,6 +126,7 @@ class PhoneAuthenticationMethodItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

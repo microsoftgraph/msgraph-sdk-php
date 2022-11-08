@@ -32,14 +32,14 @@ class AttackSimulationRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The simulationAutomations property
+     * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
     */
     public function simulationAutomations(): SimulationAutomationsRequestBuilder {
         return new SimulationAutomationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The simulations property
+     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
     */
     public function simulations(): SimulationsRequestBuilder {
         return new SimulationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,6 +128,7 @@ class AttackSimulationRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -190,7 +191,7 @@ class AttackSimulationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.attackSimulation.simulationAutomations.item collection
+     * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
      * @param string $id Unique identifier of the item
      * @return SimulationAutomationItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class AttackSimulationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.attackSimulation.simulations.item collection
+     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
      * @param string $id Unique identifier of the item
      * @return SimulationItemRequestBuilder
     */

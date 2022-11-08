@@ -30,21 +30,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EdiscoveryCustodianItemRequestBuilder 
 {
     /**
-     * The activate property
+     * Provides operations to call the activate method.
     */
     public function activate(): ActivateRequestBuilder {
         return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The applyHold property
+     * Provides operations to call the applyHold method.
     */
     public function applyHold(): ApplyHoldRequestBuilder {
         return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The lastIndexOperation property
+     * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity.
     */
     public function lastIndexOperation(): LastIndexOperationRequestBuilder {
         return new LastIndexOperationRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -56,14 +56,14 @@ class EdiscoveryCustodianItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The release property
+     * Provides operations to call the release method.
     */
     public function release(): ReleaseRequestBuilder {
         return new ReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removeHold property
+     * Provides operations to call the removeHold method.
     */
     public function removeHold(): RemoveHoldRequestBuilder {
         return new RemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -75,21 +75,21 @@ class EdiscoveryCustodianItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The siteSources property
+     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
     */
     public function siteSources(): SiteSourcesRequestBuilder {
         return new SiteSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unifiedGroupSources property
+     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
     */
     public function unifiedGroupSources(): UnifiedGroupSourcesRequestBuilder {
         return new UnifiedGroupSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The updateIndex property
+     * Provides operations to call the updateIndex method.
     */
     public function updateIndex(): UpdateIndexRequestBuilder {
         return new UpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -101,7 +101,7 @@ class EdiscoveryCustodianItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userSources property
+     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
     */
     public function userSources(): UserSourcesRequestBuilder {
         return new UserSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -185,6 +185,7 @@ class EdiscoveryCustodianItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -247,7 +248,7 @@ class EdiscoveryCustodianItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.cases.ediscoveryCases.item.custodians.item.siteSources.item collection
+     * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param string $id Unique identifier of the item
      * @return SiteSourceItemRequestBuilder
     */
@@ -258,7 +259,7 @@ class EdiscoveryCustodianItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.cases.ediscoveryCases.item.custodians.item.unifiedGroupSources.item collection
+     * Provides operations to manage the unifiedGroupSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedGroupSourceItemRequestBuilder
     */
@@ -269,7 +270,7 @@ class EdiscoveryCustodianItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.cases.ediscoveryCases.item.custodians.item.userSources.item collection
+     * Provides operations to manage the userSources property of the microsoft.graph.security.ediscoveryCustodian entity.
      * @param string $id Unique identifier of the item
      * @return UserSourceItemRequestBuilder
     */

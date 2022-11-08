@@ -19,7 +19,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
     private ?bool $isHostTeam = null;
     
     /**
-     * Instantiates a new SharedWithChannelTeamInfo and sets the default values.
+     * Instantiates a new sharedWithChannelTeamInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

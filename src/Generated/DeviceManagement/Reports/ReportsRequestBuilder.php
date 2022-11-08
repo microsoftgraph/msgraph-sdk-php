@@ -37,126 +37,126 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ReportsRequestBuilder 
 {
     /**
-     * The exportJobs property
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
     */
     public function exportJobs(): ExportJobsRequestBuilder {
         return new ExportJobsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getCachedReport property
+     * Provides operations to call the getCachedReport method.
     */
     public function getCachedReport(): GetCachedReportRequestBuilder {
         return new GetCachedReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getCompliancePolicyNonComplianceReport property
+     * Provides operations to call the getCompliancePolicyNonComplianceReport method.
     */
     public function getCompliancePolicyNonComplianceReport(): GetCompliancePolicyNonComplianceReportRequestBuilder {
         return new GetCompliancePolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getCompliancePolicyNonComplianceSummaryReport property
+     * Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method.
     */
     public function getCompliancePolicyNonComplianceSummaryReport(): GetCompliancePolicyNonComplianceSummaryReportRequestBuilder {
         return new GetCompliancePolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getComplianceSettingNonComplianceReport property
+     * Provides operations to call the getComplianceSettingNonComplianceReport method.
     */
     public function getComplianceSettingNonComplianceReport(): GetComplianceSettingNonComplianceReportRequestBuilder {
         return new GetComplianceSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getConfigurationPolicyNonComplianceReport property
+     * Provides operations to call the getConfigurationPolicyNonComplianceReport method.
     */
     public function getConfigurationPolicyNonComplianceReport(): GetConfigurationPolicyNonComplianceReportRequestBuilder {
         return new GetConfigurationPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getConfigurationPolicyNonComplianceSummaryReport property
+     * Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method.
     */
     public function getConfigurationPolicyNonComplianceSummaryReport(): GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder {
         return new GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getConfigurationSettingNonComplianceReport property
+     * Provides operations to call the getConfigurationSettingNonComplianceReport method.
     */
     public function getConfigurationSettingNonComplianceReport(): GetConfigurationSettingNonComplianceReportRequestBuilder {
         return new GetConfigurationSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getDeviceManagementIntentPerSettingContributingProfiles property
+     * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
     */
     public function getDeviceManagementIntentPerSettingContributingProfiles(): GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder {
         return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getDeviceManagementIntentSettingsReport property
+     * Provides operations to call the getDeviceManagementIntentSettingsReport method.
     */
     public function getDeviceManagementIntentSettingsReport(): GetDeviceManagementIntentSettingsReportRequestBuilder {
         return new GetDeviceManagementIntentSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getDeviceNonComplianceReport property
+     * Provides operations to call the getDeviceNonComplianceReport method.
     */
     public function getDeviceNonComplianceReport(): GetDeviceNonComplianceReportRequestBuilder {
         return new GetDeviceNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getHistoricalReport property
+     * Provides operations to call the getHistoricalReport method.
     */
     public function getHistoricalReport(): GetHistoricalReportRequestBuilder {
         return new GetHistoricalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getNoncompliantDevicesAndSettingsReport property
+     * Provides operations to call the getNoncompliantDevicesAndSettingsReport method.
     */
     public function getNoncompliantDevicesAndSettingsReport(): GetNoncompliantDevicesAndSettingsReportRequestBuilder {
         return new GetNoncompliantDevicesAndSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getPolicyNonComplianceMetadata property
+     * Provides operations to call the getPolicyNonComplianceMetadata method.
     */
     public function getPolicyNonComplianceMetadata(): GetPolicyNonComplianceMetadataRequestBuilder {
         return new GetPolicyNonComplianceMetadataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getPolicyNonComplianceReport property
+     * Provides operations to call the getPolicyNonComplianceReport method.
     */
     public function getPolicyNonComplianceReport(): GetPolicyNonComplianceReportRequestBuilder {
         return new GetPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getPolicyNonComplianceSummaryReport property
+     * Provides operations to call the getPolicyNonComplianceSummaryReport method.
     */
     public function getPolicyNonComplianceSummaryReport(): GetPolicyNonComplianceSummaryReportRequestBuilder {
         return new GetPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getReportFilters property
+     * Provides operations to call the getReportFilters method.
     */
     public function getReportFilters(): GetReportFiltersRequestBuilder {
         return new GetReportFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getSettingNonComplianceReport property
+     * Provides operations to call the getSettingNonComplianceReport method.
     */
     public function getSettingNonComplianceReport(): GetSettingNonComplianceReportRequestBuilder {
         return new GetSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -255,6 +255,7 @@ class ReportsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -278,7 +279,7 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.reports.exportJobs.item collection
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
      * @param string $id Unique identifier of the item
      * @return DeviceManagementExportJobItemRequestBuilder
     */

@@ -24,7 +24,7 @@ class SearchRequestBuilder
     private array $pathParameters;
     
     /**
-     * The query property
+     * Provides operations to call the query method.
     */
     public function query(): QueryRequestBuilder {
         return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -97,6 +97,7 @@ class SearchRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

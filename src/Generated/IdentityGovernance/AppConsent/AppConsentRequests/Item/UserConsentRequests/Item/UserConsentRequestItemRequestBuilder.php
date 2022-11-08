@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserConsentRequestItemRequestBuilder 
 {
     /**
-     * The approval property
+     * Provides operations to manage the approval property of the microsoft.graph.userConsentRequest entity.
     */
     public function approval(): ApprovalRequestBuilder {
         return new ApprovalRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class UserConsentRequestItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

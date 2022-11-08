@@ -27,28 +27,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CommunicationsRequestBuilder 
 {
     /**
-     * The callRecords property
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
     */
     public function callRecords(): CallRecordsRequestBuilder {
         return new CallRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calls property
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
     */
     public function calls(): CallsRequestBuilder {
         return new CallsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getPresencesByUserId property
+     * Provides operations to call the getPresencesByUserId method.
     */
     public function getPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
         return new GetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The onlineMeetings property
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
     */
     public function onlineMeetings(): OnlineMeetingsRequestBuilder {
         return new OnlineMeetingsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,7 +60,7 @@ class CommunicationsRequestBuilder
     private array $pathParameters;
     
     /**
-     * The presences property
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
     */
     public function presences(): PresencesRequestBuilder {
         return new PresencesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -77,7 +77,7 @@ class CommunicationsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.callRecords.item collection
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
      * @return CallRecordItemRequestBuilder
     */
@@ -88,7 +88,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item collection
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
      * @return CallItemRequestBuilder
     */
@@ -155,6 +155,7 @@ class CommunicationsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -178,7 +179,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.onlineMeetings.item collection
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
      * @return OnlineMeetingItemRequestBuilder
     */
@@ -209,7 +210,7 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.presences.item collection
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
      * @return PresenceItemRequestBuilder
     */

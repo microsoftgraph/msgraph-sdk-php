@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class InvitationItemRequestBuilder 
 {
     /**
-     * The invitedUser property
+     * Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity.
     */
     public function invitedUser(): InvitedUserRequestBuilder {
         return new InvitedUserRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class InvitationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

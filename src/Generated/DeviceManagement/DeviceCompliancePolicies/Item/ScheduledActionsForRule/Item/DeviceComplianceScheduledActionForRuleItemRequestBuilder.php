@@ -30,7 +30,7 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The scheduledActionConfigurations property
+     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
     */
     public function scheduledActionConfigurations(): ScheduledActionConfigurationsRequestBuilder {
         return new ScheduledActionConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item.scheduledActionConfigurations.item collection
+     * Provides operations to manage the scheduledActionConfigurations property of the microsoft.graph.deviceComplianceScheduledActionForRule entity.
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceActionItemItemRequestBuilder
     */

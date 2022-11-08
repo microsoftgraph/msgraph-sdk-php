@@ -14,7 +14,7 @@ class PrintService extends Entity implements Parsable
     private ?array $endpoints = null;
     
     /**
-     * Instantiates a new PrintService and sets the default values.
+     * Instantiates a new printService and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -23,14 +23,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrinterShareItemRequestBuilder 
 {
     /**
-     * The allowedGroups property
+     * Provides operations to manage the allowedGroups property of the microsoft.graph.printerShare entity.
     */
     public function allowedGroups(): AllowedGroupsRequestBuilder {
         return new AllowedGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The allowedUsers property
+     * Provides operations to manage the allowedUsers property of the microsoft.graph.printerShare entity.
     */
     public function allowedUsers(): AllowedUsersRequestBuilder {
         return new AllowedUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class PrinterShareItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The printer property
+     * Provides operations to manage the printer property of the microsoft.graph.printerShare entity.
     */
     public function printer(): PrinterRequestBuilder {
         return new PrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -158,6 +158,7 @@ class PrinterShareItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -44,7 +44,7 @@ class AddLargeGalleryViewRequestBuilder
     }
 
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param AddLargeGalleryViewPostRequestBody $body 
      * @param AddLargeGalleryViewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -64,11 +64,12 @@ class AddLargeGalleryViewRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Add the large gallery view to a call.
+     * Add the large gallery view to a call.  For details about how to identify a large gallery view participant in a roster so that you can retrieve the relevant data to subscribe to the video feed, see Identify large gallery view participants in a roster.
      * @param AddLargeGalleryViewPostRequestBody $body 
      * @param AddLargeGalleryViewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

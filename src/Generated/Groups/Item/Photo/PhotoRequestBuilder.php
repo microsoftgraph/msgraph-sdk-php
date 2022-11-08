@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PhotoRequestBuilder 
 {
     /**
-     * The Content property
+     * Provides operations to manage the media for the group entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -97,6 +97,7 @@ class PhotoRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

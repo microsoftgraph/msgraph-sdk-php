@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChatMessageItemRequestBuilder 
 {
     /**
-     * The hostedContents property
+     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
     */
     public function hostedContents(): HostedContentsRequestBuilder {
         return new HostedContentsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class ChatMessageItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -161,7 +162,7 @@ class ChatMessageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.channels.item.messages.item.replies.item.hostedContents.item collection
+     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
      * @return ChatMessageHostedContentItemRequestBuilder
     */

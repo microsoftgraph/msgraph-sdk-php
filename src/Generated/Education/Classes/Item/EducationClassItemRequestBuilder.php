@@ -31,42 +31,42 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EducationClassItemRequestBuilder 
 {
     /**
-     * The assignmentCategories property
+     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
     */
     public function assignmentCategories(): AssignmentCategoriesRequestBuilder {
         return new AssignmentCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentDefaults property
+     * Provides operations to manage the assignmentDefaults property of the microsoft.graph.educationClass entity.
     */
     public function assignmentDefaults(): AssignmentDefaultsRequestBuilder {
         return new AssignmentDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentSettings property
+     * Provides operations to manage the assignmentSettings property of the microsoft.graph.educationClass entity.
     */
     public function assignmentSettings(): AssignmentSettingsRequestBuilder {
         return new AssignmentSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The group property
+     * Provides operations to manage the group property of the microsoft.graph.educationClass entity.
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.educationClass entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -83,14 +83,14 @@ class EducationClassItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The schools property
+     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
     */
     public function schools(): SchoolsRequestBuilder {
         return new SchoolsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The teachers property
+     * Provides operations to manage the teachers property of the microsoft.graph.educationClass entity.
     */
     public function teachers(): TeachersRequestBuilder {
         return new TeachersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -102,7 +102,7 @@ class EducationClassItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.assignmentCategories.item collection
+     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
      * @return EducationCategoryItemRequestBuilder
     */
@@ -113,7 +113,7 @@ class EducationClassItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
      * @return EducationAssignmentItemRequestBuilder
     */
@@ -201,6 +201,7 @@ class EducationClassItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -274,7 +275,7 @@ class EducationClassItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.classes.item.schools.item collection
+     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
      * @return EducationSchoolItemRequestBuilder
     */

@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder 
 {
     /**
-     * The activatedUsing property
+     * Provides operations to manage the activatedUsing property of the microsoft.graph.unifiedRoleAssignmentScheduleInstance entity.
     */
     public function activatedUsing(): ActivatedUsingRequestBuilder {
         return new ActivatedUsingRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

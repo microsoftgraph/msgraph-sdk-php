@@ -20,11 +20,6 @@ class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsable
     private ?string $newPassword = null;
     
     /**
-     * @var bool|null $requireChangeOnNextSignIn The requireChangeOnNextSignIn property
-    */
-    private ?bool $requireChangeOnNextSignIn = null;
-    
-    /**
      * Instantiates a new resetPasswordPostRequestBody and sets the default values.
     */
     public function __construct() {
@@ -56,7 +51,6 @@ class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsable
         $o = $this;
         return  [
             'newPassword' => fn(ParseNode $n) => $o->setNewPassword($n->getStringValue()),
-            'requireChangeOnNextSignIn' => fn(ParseNode $n) => $o->setRequireChangeOnNextSignIn($n->getBooleanValue()),
         ];
     }
 
@@ -69,20 +63,11 @@ class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsable
     }
 
     /**
-     * Gets the requireChangeOnNextSignIn property value. The requireChangeOnNextSignIn property
-     * @return bool|null
-    */
-    public function getRequireChangeOnNextSignIn(): ?bool {
-        return $this->requireChangeOnNextSignIn;
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('newPassword', $this->newPassword);
-        $writer->writeBooleanValue('requireChangeOnNextSignIn', $this->requireChangeOnNextSignIn);
         $writer->writeAdditionalData($this->additionalData);
     }
 
@@ -100,14 +85,6 @@ class ResetPasswordPostRequestBody implements AdditionalDataHolder, Parsable
     */
     public function setNewPassword(?string $value ): void {
         $this->newPassword = $value;
-    }
-
-    /**
-     * Sets the requireChangeOnNextSignIn property value. The requireChangeOnNextSignIn property
-     *  @param bool|null $value Value to set for the requireChangeOnNextSignIn property.
-    */
-    public function setRequireChangeOnNextSignIn(?bool $value ): void {
-        $this->requireChangeOnNextSignIn = $value;
     }
 
 }

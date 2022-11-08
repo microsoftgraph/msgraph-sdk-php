@@ -30,7 +30,7 @@ class PlannerBucketItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The tasks property
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
     */
     public function tasks(): TasksRequestBuilder {
         return new TasksRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class PlannerBucketItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class PlannerBucketItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.planner.plans.item.buckets.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ExternalRequestBuilder 
 {
     /**
-     * The connections property
+     * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
     */
     public function connections(): ConnectionsRequestBuilder {
         return new ConnectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class ExternalRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.external.connections.item collection
+     * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
      * @param string $id Unique identifier of the item
      * @return ExternalConnectionItemRequestBuilder
     */
@@ -109,6 +109,7 @@ class ExternalRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

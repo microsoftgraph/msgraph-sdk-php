@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PresenceRequestBuilder 
 {
     /**
-     * The clearPresence property
+     * Provides operations to call the clearPresence method.
     */
     public function clearPresence(): ClearPresenceRequestBuilder {
         return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The clearUserPreferredPresence property
+     * Provides operations to call the clearUserPreferredPresence method.
     */
     public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
         return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -46,14 +46,14 @@ class PresenceRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The setPresence property
+     * Provides operations to call the setPresence method.
     */
     public function setPresence(): SetPresenceRequestBuilder {
         return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The setUserPreferredPresence property
+     * Provides operations to call the setUserPreferredPresence method.
     */
     public function setUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
         return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,6 +142,7 @@ class PresenceRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

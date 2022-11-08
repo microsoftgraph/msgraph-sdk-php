@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessReviewScheduleDefinitionItemRequestBuilder 
 {
     /**
-     * The instances property
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,7 +38,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The stop property
+     * Provides operations to call the stop method.
     */
     public function stop(): StopRequestBuilder {
         return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -127,6 +127,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -169,7 +170,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item collection
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewInstanceItemRequestBuilder
     */

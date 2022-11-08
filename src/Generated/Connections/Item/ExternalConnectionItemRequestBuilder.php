@@ -25,21 +25,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ExternalConnectionItemRequestBuilder 
 {
     /**
-     * The groups property
+     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
     */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The items property
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -56,7 +56,7 @@ class ExternalConnectionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The schema property
+     * Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity.
     */
     public function schema(): SchemaRequestBuilder {
         return new SchemaRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -145,6 +145,7 @@ class ExternalConnectionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -187,7 +188,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item.groups.item collection
+     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
      * @return ExternalGroupItemRequestBuilder
     */
@@ -198,7 +199,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
      * @return ExternalItemItemRequestBuilder
     */
@@ -209,7 +210,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
      * @return ConnectionOperationItemRequestBuilder
     */

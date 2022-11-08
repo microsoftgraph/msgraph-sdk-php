@@ -23,14 +23,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SectionGroupItemRequestBuilder 
 {
     /**
-     * The parentNotebook property
+     * Provides operations to manage the parentNotebook property of the microsoft.graph.sectionGroup entity.
     */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parentSectionGroup property
+     * Provides operations to manage the parentSectionGroup property of the microsoft.graph.sectionGroup entity.
     */
     public function parentSectionGroup(): ParentSectionGroupRequestBuilder {
         return new ParentSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -47,14 +47,14 @@ class SectionGroupItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sectionGroups property
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
     */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sections property
+     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
     */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -143,6 +143,7 @@ class SectionGroupItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -205,7 +206,7 @@ class SectionGroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.notebooks.item.sectionGroups.item.sectionGroups.item collection
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
      * @return SectionGroupItemRequestBuilder
     */
@@ -216,7 +217,7 @@ class SectionGroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.onenote.notebooks.item.sectionGroups.item.sections.item collection
+     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
      * @return OnenoteSectionItemRequestBuilder
     */

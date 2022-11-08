@@ -32,35 +32,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceCompliancePolicyItemRequestBuilder 
 {
     /**
-     * The assign property
+     * Provides operations to call the assign method.
     */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceSettingStateSummaries property
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function deviceSettingStateSummaries(): DeviceSettingStateSummariesRequestBuilder {
         return new DeviceSettingStateSummariesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceStatuses property
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function deviceStatuses(): DeviceStatusesRequestBuilder {
         return new DeviceStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceStatusOverview property
+     * Provides operations to manage the deviceStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function deviceStatusOverview(): DeviceStatusOverviewRequestBuilder {
         return new DeviceStatusOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -77,14 +77,14 @@ class DeviceCompliancePolicyItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The scheduleActionsForRules property
+     * Provides operations to call the scheduleActionsForRules method.
     */
     public function scheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
         return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The scheduledActionsForRule property
+     * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function scheduledActionsForRule(): ScheduledActionsForRuleRequestBuilder {
         return new ScheduledActionsForRuleRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -96,21 +96,21 @@ class DeviceCompliancePolicyItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userStatuses property
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function userStatuses(): UserStatusesRequestBuilder {
         return new UserStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The userStatusOverview property
+     * Provides operations to manage the userStatusOverview property of the microsoft.graph.deviceCompliancePolicy entity.
     */
     public function userStatusOverview(): UserStatusOverviewRequestBuilder {
         return new UserStatusOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicyAssignmentItemRequestBuilder
     */
@@ -198,6 +198,7 @@ class DeviceCompliancePolicyItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -221,7 +222,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.deviceSettingStateSummaries.item collection
+     * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
      * @return SettingStateDeviceSummaryItemRequestBuilder
     */
@@ -232,7 +233,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.deviceStatuses.item collection
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceDeviceStatusItemRequestBuilder
     */
@@ -282,7 +283,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.scheduledActionsForRule.item collection
+     * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceScheduledActionForRuleItemRequestBuilder
     */
@@ -293,7 +294,7 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicies.item.userStatuses.item collection
+     * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceUserStatusItemRequestBuilder
     */

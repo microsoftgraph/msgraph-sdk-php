@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessReviewStageItemRequestBuilder 
 {
     /**
-     * The decisions property
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
     */
     public function decisions(): DecisionsRequestBuilder {
         return new DecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,7 +38,7 @@ class AccessReviewStageItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The stop property
+     * Provides operations to call the stop method.
     */
     public function stop(): StopRequestBuilder {
         return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -127,11 +127,12 @@ class AccessReviewStageItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.stages.item.decisions.item collection
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewInstanceDecisionItemItemRequestBuilder
     */

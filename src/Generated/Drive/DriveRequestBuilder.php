@@ -31,28 +31,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DriveRequestBuilder 
 {
     /**
-     * The bundles property
+     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
     */
     public function bundles(): BundlesRequestBuilder {
         return new BundlesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The list property
+     * Provides operations to manage the list property of the microsoft.graph.drive entity.
     */
     public function escapedList(): ListRequestBuilder {
         return new ListRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The following property
+     * Provides operations to manage the following property of the microsoft.graph.drive entity.
     */
     public function following(): FollowingRequestBuilder {
         return new FollowingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The items property
+     * Provides operations to manage the items property of the microsoft.graph.drive entity.
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -69,14 +69,14 @@ class DriveRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The root property
+     * Provides operations to manage the root property of the microsoft.graph.drive entity.
     */
     public function root(): RootRequestBuilder {
         return new RootRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The special property
+     * Provides operations to manage the special property of the microsoft.graph.drive entity.
     */
     public function special(): SpecialRequestBuilder {
         return new SpecialRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -88,7 +88,7 @@ class DriveRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.bundles.item collection
+     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDriveBundlesItemDriveItemItemRequestBuilder
     */
@@ -155,11 +155,12 @@ class DriveRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.following.item collection
+     * Provides operations to manage the following property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDriveFollowingItemDriveItemItemRequestBuilder
     */
@@ -189,7 +190,7 @@ class DriveRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDriveItemsItemDriveItemItemRequestBuilder
     */
@@ -245,7 +246,7 @@ class DriveRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drive.special.item collection
+     * Provides operations to manage the special property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDriveSpecialItemDriveItemItemRequestBuilder
     */

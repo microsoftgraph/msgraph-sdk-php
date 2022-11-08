@@ -29,7 +29,7 @@ class SiteSourceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The site property
+     * Provides operations to manage the site property of the microsoft.graph.security.siteSource entity.
     */
     public function site(): SiteRequestBuilder {
         return new SiteRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class SiteSourceItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -30,7 +30,7 @@ class GroupItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sets property
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
     */
     public function sets(): SetsRequestBuilder {
         return new SetsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class GroupItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item.groups.item.sets.item collection
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

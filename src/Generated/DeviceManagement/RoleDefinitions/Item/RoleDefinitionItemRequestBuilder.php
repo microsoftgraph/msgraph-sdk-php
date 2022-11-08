@@ -30,7 +30,7 @@ class RoleDefinitionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The roleAssignments property
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
     */
     public function roleAssignments(): RoleAssignmentsRequestBuilder {
         return new RoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class RoleDefinitionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class RoleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.roleDefinitions.item.roleAssignments.item collection
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
      * @param string $id Unique identifier of the item
      * @return RoleAssignmentItemRequestBuilder
     */

@@ -26,14 +26,14 @@ class ConversationThreadItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The posts property
+     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
     */
     public function posts(): PostsRequestBuilder {
         return new PostsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The reply property
+     * Provides operations to call the reply method.
     */
     public function reply(): ReplyRequestBuilder {
         return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -127,6 +127,7 @@ class ConversationThreadItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -189,7 +190,7 @@ class ConversationThreadItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item.posts.item collection
+     * Provides operations to manage the posts property of the microsoft.graph.conversationThread entity.
      * @param string $id Unique identifier of the item
      * @return PostItemRequestBuilder
     */

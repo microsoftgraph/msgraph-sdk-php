@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamsAppDefinitionItemRequestBuilder 
 {
     /**
-     * The bot property
+     * Provides operations to manage the bot property of the microsoft.graph.teamsAppDefinition entity.
     */
     public function bot(): BotRequestBuilder {
         return new BotRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class TeamsAppDefinitionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -40,70 +40,70 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CallItemRequestBuilder 
 {
     /**
-     * The addLargeGalleryView property
+     * Provides operations to call the addLargeGalleryView method.
     */
     public function addLargeGalleryView(): AddLargeGalleryViewRequestBuilder {
         return new AddLargeGalleryViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The answer property
+     * Provides operations to call the answer method.
     */
     public function answer(): AnswerRequestBuilder {
         return new AnswerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The audioRoutingGroups property
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
     */
     public function audioRoutingGroups(): AudioRoutingGroupsRequestBuilder {
         return new AudioRoutingGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cancelMediaProcessing property
+     * Provides operations to call the cancelMediaProcessing method.
     */
     public function cancelMediaProcessing(): CancelMediaProcessingRequestBuilder {
         return new CancelMediaProcessingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The changeScreenSharingRole property
+     * Provides operations to call the changeScreenSharingRole method.
     */
     public function changeScreenSharingRole(): ChangeScreenSharingRoleRequestBuilder {
         return new ChangeScreenSharingRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contentSharingSessions property
+     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
     */
     public function contentSharingSessions(): ContentSharingSessionsRequestBuilder {
         return new ContentSharingSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The keepAlive property
+     * Provides operations to call the keepAlive method.
     */
     public function keepAlive(): KeepAliveRequestBuilder {
         return new KeepAliveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The mute property
+     * Provides operations to call the mute method.
     */
     public function mute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The participants property
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
     */
     public function participants(): ParticipantsRequestBuilder {
         return new ParticipantsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -115,28 +115,28 @@ class CallItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The playPrompt property
+     * Provides operations to call the playPrompt method.
     */
     public function playPrompt(): PlayPromptRequestBuilder {
         return new PlayPromptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The recordResponse property
+     * Provides operations to call the recordResponse method.
     */
     public function recordResponse(): RecordResponseRequestBuilder {
         return new RecordResponseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The redirect property
+     * Provides operations to call the redirect method.
     */
     public function redirect(): RedirectRequestBuilder {
         return new RedirectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The reject property
+     * Provides operations to call the reject method.
     */
     public function reject(): RejectRequestBuilder {
         return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -148,28 +148,28 @@ class CallItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The subscribeToTone property
+     * Provides operations to call the subscribeToTone method.
     */
     public function subscribeToTone(): SubscribeToToneRequestBuilder {
         return new SubscribeToToneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The transfer property
+     * Provides operations to call the transfer method.
     */
     public function transfer(): TransferRequestBuilder {
         return new TransferRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unmute property
+     * Provides operations to call the unmute method.
     */
     public function unmute(): UnmuteRequestBuilder {
         return new UnmuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The updateRecordingStatus property
+     * Provides operations to call the updateRecordingStatus method.
     */
     public function updateRecordingStatus(): UpdateRecordingStatusRequestBuilder {
         return new UpdateRecordingStatusRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class CallItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.audioRoutingGroups.item collection
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
      * @return AudioRoutingGroupItemRequestBuilder
     */
@@ -203,7 +203,7 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.contentSharingSessions.item collection
+     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
      * @return ContentSharingSessionItemRequestBuilder
     */
@@ -280,6 +280,7 @@ class CallItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -322,7 +323,7 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
      * @return CommsOperationItemRequestBuilder
     */
@@ -333,7 +334,7 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.calls.item.participants.item collection
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
      * @return ParticipantItemRequestBuilder
     */

@@ -27,28 +27,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ManagedDeviceMobileAppConfigurationItemRequestBuilder 
 {
     /**
-     * The assign property
+     * Provides operations to call the assign method.
     */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceStatuses property
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
     public function deviceStatuses(): DeviceStatusesRequestBuilder {
         return new DeviceStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceStatusSummary property
+     * Provides operations to manage the deviceStatusSummary property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
     public function deviceStatusSummary(): DeviceStatusSummaryRequestBuilder {
         return new DeviceStatusSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -70,21 +70,21 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userStatuses property
+     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
     public function userStatuses(): UserStatusesRequestBuilder {
         return new UserStatusesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The userStatusSummary property
+     * Provides operations to manage the userStatusSummary property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
     public function userStatusSummary(): UserStatusSummaryRequestBuilder {
         return new UserStatusSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
     */
@@ -172,6 +172,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -195,7 +196,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.deviceStatuses.item collection
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
     */
@@ -245,7 +246,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.mobileAppConfigurations.item.userStatuses.item collection
+     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
     */

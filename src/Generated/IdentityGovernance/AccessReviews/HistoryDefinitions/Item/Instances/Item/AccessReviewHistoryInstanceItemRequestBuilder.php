@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessReviewHistoryInstanceItemRequestBuilder 
 {
     /**
-     * The generateDownloadUri property
+     * Provides operations to call the generateDownloadUri method.
     */
     public function generateDownloadUri(): GenerateDownloadUriRequestBuilder {
         return new GenerateDownloadUriRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class AccessReviewHistoryInstanceItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

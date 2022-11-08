@@ -45,70 +45,70 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SiteItemRequestBuilder 
 {
     /**
-     * The analytics property
+     * Provides operations to manage the analytics property of the microsoft.graph.site entity.
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The columns property
+     * Provides operations to manage the columns property of the microsoft.graph.site entity.
     */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contentTypes property
+     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
     */
     public function contentTypes(): ContentTypesRequestBuilder {
         return new ContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drive property
+     * Provides operations to manage the drive property of the microsoft.graph.site entity.
     */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drives property
+     * Provides operations to manage the drives property of the microsoft.graph.site entity.
     */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The externalColumns property
+     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
     */
     public function externalColumns(): ExternalColumnsRequestBuilder {
         return new ExternalColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The items property
+     * Provides operations to manage the items property of the microsoft.graph.site entity.
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The lists property
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
     */
     public function lists(): ListsRequestBuilder {
         return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The onenote property
+     * Provides operations to manage the onenote property of the microsoft.graph.site entity.
     */
     public function onenote(): OnenoteRequestBuilder {
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.site entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -120,7 +120,7 @@ class SiteItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The permissions property
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
     */
     public function permissions(): PermissionsRequestBuilder {
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -132,21 +132,21 @@ class SiteItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sites property
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
     */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The termStore property
+     * Provides operations to manage the termStore property of the microsoft.graph.site entity.
     */
     public function termStore(): TermStoreRequestBuilder {
         return new TermStoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The termStores property
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
     */
     public function termStores(): TermStoresRequestBuilder {
         return new TermStoresRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -158,7 +158,7 @@ class SiteItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.columns.item collection
+     * Provides operations to manage the columns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
@@ -180,7 +180,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.contentTypes.item collection
+     * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -236,11 +236,12 @@ class SiteItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.drives.item collection
+     * Provides operations to manage the drives property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -251,7 +252,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.externalColumns.item collection
+     * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
     */
@@ -318,7 +319,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return BaseItemItemRequestBuilder
     */
@@ -329,7 +330,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item collection
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return ListItemRequestBuilder
     */
@@ -340,7 +341,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -371,7 +372,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.permissions.item collection
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return PermissionItemRequestBuilder
     */
@@ -382,7 +383,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.sites.item collection
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -393,7 +394,7 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item collection
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return StoreItemRequestBuilder
     */

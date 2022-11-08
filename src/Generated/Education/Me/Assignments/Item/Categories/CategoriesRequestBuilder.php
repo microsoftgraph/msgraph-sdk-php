@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CategoriesRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -34,7 +34,7 @@ class CategoriesRequestBuilder
     private array $pathParameters;
     
     /**
-     * The Ref property
+     * Provides operations to manage the collection of educationRoot entities.
     */
     public function ref(): RefRequestBuilder {
         return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -107,6 +107,7 @@ class CategoriesRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

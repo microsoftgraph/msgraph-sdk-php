@@ -126,7 +126,7 @@ class OnlineMeeting extends Entity implements Parsable
     private ?string $videoTeleconferenceId = null;
     
     /**
-     * Instantiates a new onlineMeeting and sets the default values.
+     * Instantiates a new OnlineMeeting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

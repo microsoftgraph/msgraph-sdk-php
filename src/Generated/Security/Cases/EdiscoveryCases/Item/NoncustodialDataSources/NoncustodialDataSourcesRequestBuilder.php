@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class NoncustodialDataSourcesRequestBuilder 
 {
     /**
-     * The applyHold property
+     * Provides operations to call the applyHold method.
     */
     public function applyHold(): ApplyHoldRequestBuilder {
         return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -41,7 +41,7 @@ class NoncustodialDataSourcesRequestBuilder
     private array $pathParameters;
     
     /**
-     * The removeHold property
+     * Provides operations to call the removeHold method.
     */
     public function removeHold(): RemoveHoldRequestBuilder {
         return new RemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -114,6 +114,7 @@ class NoncustodialDataSourcesRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

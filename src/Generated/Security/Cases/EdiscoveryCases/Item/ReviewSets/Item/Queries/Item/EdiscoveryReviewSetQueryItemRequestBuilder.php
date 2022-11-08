@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EdiscoveryReviewSetQueryItemRequestBuilder 
 {
     /**
-     * The applyTags property
+     * Provides operations to call the applyTags method.
     */
     public function applyTags(): ApplyTagsRequestBuilder {
         return new ApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

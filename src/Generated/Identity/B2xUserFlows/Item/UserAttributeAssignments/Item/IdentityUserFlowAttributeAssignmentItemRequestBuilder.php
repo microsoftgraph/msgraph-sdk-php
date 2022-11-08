@@ -34,7 +34,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userAttribute property
+     * Provides operations to manage the userAttribute property of the microsoft.graph.identityUserFlowAttributeAssignment entity.
     */
     public function userAttribute(): UserAttributeRequestBuilder {
         return new UserAttributeRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

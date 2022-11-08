@@ -125,28 +125,28 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class ReportsRequestBuilder 
 {
     /**
-     * The dailyPrintUsageByPrinter property
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
     */
     public function dailyPrintUsageByPrinter(): DailyPrintUsageByPrinterRequestBuilder {
         return new DailyPrintUsageByPrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The dailyPrintUsageByUser property
+     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
     */
     public function dailyPrintUsageByUser(): DailyPrintUsageByUserRequestBuilder {
         return new DailyPrintUsageByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The monthlyPrintUsageByPrinter property
+     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
     */
     public function monthlyPrintUsageByPrinter(): MonthlyPrintUsageByPrinterRequestBuilder {
         return new MonthlyPrintUsageByPrinterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The monthlyPrintUsageByUser property
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
     */
     public function monthlyPrintUsageByUser(): MonthlyPrintUsageByUserRequestBuilder {
         return new MonthlyPrintUsageByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -163,7 +163,7 @@ class ReportsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The security property
+     * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
     */
     public function security(): SecurityRequestBuilder {
         return new SecurityRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -231,11 +231,12 @@ class ReportsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.reports.dailyPrintUsageByPrinter.item collection
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder
     */
@@ -246,7 +247,7 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.reports.dailyPrintUsageByUser.item collection
+     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedReportsDailyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder
     */
@@ -1142,7 +1143,7 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.reports.monthlyPrintUsageByPrinter.item collection
+     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedReportsMonthlyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder
     */
@@ -1153,7 +1154,7 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.reports.monthlyPrintUsageByUser.item collection
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedReportsMonthlyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder
     */

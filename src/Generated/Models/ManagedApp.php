@@ -19,7 +19,7 @@ class ManagedApp extends MobileApp implements Parsable
     private ?string $version = null;
     
     /**
-     * Instantiates a new ManagedApp and sets the default values.
+     * Instantiates a new managedApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

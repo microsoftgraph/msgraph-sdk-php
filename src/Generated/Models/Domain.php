@@ -94,7 +94,7 @@ class Domain extends Entity implements Parsable
     private ?array $verificationDnsRecords = null;
     
     /**
-     * Instantiates a new Domain and sets the default values.
+     * Instantiates a new domain and sets the default values.
     */
     public function __construct() {
         parent::__construct();

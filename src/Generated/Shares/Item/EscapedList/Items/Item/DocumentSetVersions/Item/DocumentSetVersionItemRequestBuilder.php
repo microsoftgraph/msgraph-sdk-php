@@ -29,7 +29,7 @@ class DocumentSetVersionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class DocumentSetVersionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

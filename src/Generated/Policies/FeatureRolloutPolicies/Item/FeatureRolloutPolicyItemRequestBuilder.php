@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class FeatureRolloutPolicyItemRequestBuilder 
 {
     /**
-     * The appliesTo property
+     * Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity.
     */
     public function appliesTo(): AppliesToRequestBuilder {
         return new AppliesToRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -130,6 +130,7 @@ class FeatureRolloutPolicyItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

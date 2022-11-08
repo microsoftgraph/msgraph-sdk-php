@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserActivityItemRequestBuilder 
 {
     /**
-     * The historyItems property
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
     */
     public function historyItems(): HistoryItemsRequestBuilder {
         return new HistoryItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class UserActivityItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -161,7 +162,7 @@ class UserActivityItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.activities.item.historyItems.item collection
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
      * @param string $id Unique identifier of the item
      * @return ActivityHistoryItemItemRequestBuilder
     */

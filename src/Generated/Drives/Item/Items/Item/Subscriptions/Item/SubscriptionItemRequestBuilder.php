@@ -24,7 +24,7 @@ class SubscriptionItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The reauthorize property
+     * Provides operations to call the reauthorize method.
     */
     public function reauthorize(): ReauthorizeRequestBuilder {
         return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class SubscriptionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class IosManagedAppProtectionItemRequestBuilder 
 {
     /**
-     * The apps property
+     * Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity.
     */
     public function apps(): AppsRequestBuilder {
         return new AppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deploymentSummary property
+     * Provides operations to manage the deploymentSummary property of the microsoft.graph.iosManagedAppProtection entity.
     */
     public function deploymentSummary(): DeploymentSummaryRequestBuilder {
         return new DeploymentSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -50,7 +50,7 @@ class IosManagedAppProtectionItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.iosManagedAppProtections.item.apps.item collection
+     * Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity.
      * @param string $id Unique identifier of the item
      * @return ManagedMobileAppItemRequestBuilder
     */
@@ -138,6 +138,7 @@ class IosManagedAppProtectionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

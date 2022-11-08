@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TermStoreRequestBuilder 
 {
     /**
-     * The groups property
+     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
     */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -39,7 +39,7 @@ class TermStoreRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sets property
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
     */
     public function sets(): SetsRequestBuilder {
         return new SetsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,6 +128,7 @@ class TermStoreRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -170,7 +171,7 @@ class TermStoreRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStore.groups.item collection
+     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
      * @param string $id Unique identifier of the item
      * @return GroupItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class TermStoreRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStore.sets.item collection
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

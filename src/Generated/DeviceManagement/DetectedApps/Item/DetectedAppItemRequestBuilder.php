@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DetectedAppItemRequestBuilder 
 {
     /**
-     * The managedDevices property
+     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
     */
     public function managedDevices(): ManagedDevicesRequestBuilder {
         return new ManagedDevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class DetectedAppItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -161,7 +162,7 @@ class DetectedAppItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.detectedApps.item.managedDevices.item collection
+     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
      * @param string $id Unique identifier of the item
      * @return ManagedDeviceItemRequestBuilder
     */

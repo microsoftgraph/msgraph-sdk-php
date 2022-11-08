@@ -23,7 +23,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OutlookRequestBuilder 
 {
     /**
-     * The masterCategories property
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
     */
     public function masterCategories(): MasterCategoriesRequestBuilder {
         return new MasterCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -100,7 +100,7 @@ class OutlookRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.outlook.masterCategories.item collection
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
      * @param string $id Unique identifier of the item
      * @return OutlookCategoryItemRequestBuilder
     */

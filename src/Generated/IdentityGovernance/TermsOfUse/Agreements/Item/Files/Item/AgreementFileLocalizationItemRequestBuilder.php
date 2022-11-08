@@ -35,7 +35,7 @@ class AgreementFileLocalizationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The versions property
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
     */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class AgreementFileLocalizationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class AgreementFileLocalizationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.files.item.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
      * @param string $id Unique identifier of the item
      * @return AgreementFileVersionItemRequestBuilder
     */

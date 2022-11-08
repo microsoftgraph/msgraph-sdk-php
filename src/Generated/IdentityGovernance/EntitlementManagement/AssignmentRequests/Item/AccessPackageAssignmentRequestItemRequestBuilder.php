@@ -23,21 +23,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessPackageAssignmentRequestItemRequestBuilder 
 {
     /**
-     * The accessPackage property
+     * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentRequest entity.
     */
     public function accessPackage(): AccessPackageRequestBuilder {
         return new AccessPackageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignment property
+     * Provides operations to manage the assignment property of the microsoft.graph.accessPackageAssignmentRequest entity.
     */
     public function assignment(): AssignmentRequestBuilder {
         return new AssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cancel property
+     * Provides operations to call the cancel method.
     */
     public function cancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -49,7 +49,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The reprocess property
+     * Provides operations to call the reprocess method.
     */
     public function reprocess(): ReprocessRequestBuilder {
         return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -61,7 +61,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The requestor property
+     * Provides operations to manage the requestor property of the microsoft.graph.accessPackageAssignmentRequest entity.
     */
     public function requestor(): RequestorRequestBuilder {
         return new RequestorRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -150,6 +150,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

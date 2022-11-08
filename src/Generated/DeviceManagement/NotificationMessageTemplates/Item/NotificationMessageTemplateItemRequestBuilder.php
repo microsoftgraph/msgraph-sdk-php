@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class NotificationMessageTemplateItemRequestBuilder 
 {
     /**
-     * The localizedNotificationMessages property
+     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
     */
     public function localizedNotificationMessages(): LocalizedNotificationMessagesRequestBuilder {
         return new LocalizedNotificationMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,7 +38,7 @@ class NotificationMessageTemplateItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sendTestMessage property
+     * Provides operations to call the sendTestMessage method.
     */
     public function sendTestMessage(): SendTestMessageRequestBuilder {
         return new SendTestMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -127,6 +127,7 @@ class NotificationMessageTemplateItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -169,7 +170,7 @@ class NotificationMessageTemplateItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.notificationMessageTemplates.item.localizedNotificationMessages.item collection
+     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
      * @param string $id Unique identifier of the item
      * @return LocalizedNotificationMessageItemRequestBuilder
     */

@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryRequestBuilder 
 {
     /**
-     * The administrativeUnits property
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
     */
     public function administrativeUnits(): AdministrativeUnitsRequestBuilder {
         return new AdministrativeUnitsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deletedItems property
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
     */
     public function deletedItems(): DeletedItemsRequestBuilder {
         return new DeletedItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The federationConfigurations property
+     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
     */
     public function federationConfigurations(): FederationConfigurationsRequestBuilder {
         return new FederationConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,7 +60,7 @@ class DirectoryRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item collection
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
      * @return AdministrativeUnitItemRequestBuilder
     */
@@ -127,11 +127,12 @@ class DirectoryRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.deletedItems.item collection
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -142,7 +143,7 @@ class DirectoryRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.federationConfigurations.item collection
+     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
      * @return IdentityProviderBaseItemRequestBuilder
     */

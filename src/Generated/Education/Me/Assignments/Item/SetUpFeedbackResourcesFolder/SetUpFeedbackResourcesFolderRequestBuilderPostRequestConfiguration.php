@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\Item;
+namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpFeedbackResourcesFolder;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class ConditionalAccessTemplateItemRequestBuilderDeleteRequestConfiguration 
+class SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

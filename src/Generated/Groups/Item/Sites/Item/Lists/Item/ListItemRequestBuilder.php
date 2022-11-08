@@ -29,35 +29,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ListItemRequestBuilder 
 {
     /**
-     * The columns property
+     * Provides operations to manage the columns property of the microsoft.graph.list entity.
     */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contentTypes property
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
     */
     public function contentTypes(): ContentTypesRequestBuilder {
         return new ContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drive property
+     * Provides operations to manage the drive property of the microsoft.graph.list entity.
     */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The items property
+     * Provides operations to manage the items property of the microsoft.graph.list entity.
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.list entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -74,7 +74,7 @@ class ListItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The subscriptions property
+     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
     */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -86,7 +86,7 @@ class ListItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item.columns.item collection
+     * Provides operations to manage the columns property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
      * @return ColumnDefinitionItemRequestBuilder
     */
@@ -108,7 +108,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item.contentTypes.item collection
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -185,6 +185,7 @@ class ListItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -227,7 +228,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
      * @return ListItemItemRequestBuilder
     */
@@ -238,7 +239,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
     */
@@ -269,7 +270,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.lists.item.subscriptions.item collection
+     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */

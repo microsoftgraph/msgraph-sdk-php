@@ -31,28 +31,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChannelItemRequestBuilder 
 {
     /**
-     * The completeMigration property
+     * Provides operations to call the completeMigration method.
     */
     public function completeMigration(): CompleteMigrationRequestBuilder {
         return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The filesFolder property
+     * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
     */
     public function filesFolder(): FilesFolderRequestBuilder {
         return new FilesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The messages property
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
     */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -64,14 +64,14 @@ class ChannelItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The provisionEmail property
+     * Provides operations to call the provisionEmail method.
     */
     public function provisionEmail(): ProvisionEmailRequestBuilder {
         return new ProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removeEmail property
+     * Provides operations to call the removeEmail method.
     */
     public function removeEmail(): RemoveEmailRequestBuilder {
         return new RemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -83,14 +83,14 @@ class ChannelItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sharedWithTeams property
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
     */
     public function sharedWithTeams(): SharedWithTeamsRequestBuilder {
         return new SharedWithTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tabs property
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
     */
     public function tabs(): TabsRequestBuilder {
         return new TabsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -179,6 +179,7 @@ class ChannelItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -229,7 +230,7 @@ class ChannelItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.channels.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -240,7 +241,7 @@ class ChannelItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.channels.item.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
      * @return ChatMessageItemRequestBuilder
     */
@@ -271,7 +272,7 @@ class ChannelItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.channels.item.sharedWithTeams.item collection
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
      * @return SharedWithChannelTeamInfoItemRequestBuilder
     */
@@ -282,7 +283,7 @@ class ChannelItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.joinedTeams.item.channels.item.tabs.item collection
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
      * @return TeamsTabItemRequestBuilder
     */

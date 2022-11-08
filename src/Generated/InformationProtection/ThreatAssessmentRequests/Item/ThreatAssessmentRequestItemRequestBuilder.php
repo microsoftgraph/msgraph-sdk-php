@@ -30,7 +30,7 @@ class ThreatAssessmentRequestItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The results property
+     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
     */
     public function results(): ResultsRequestBuilder {
         return new ResultsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class ThreatAssessmentRequestItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class ThreatAssessmentRequestItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.informationProtection.threatAssessmentRequests.item.results.item collection
+     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
      * @param string $id Unique identifier of the item
      * @return ThreatAssessmentResultItemRequestBuilder
     */

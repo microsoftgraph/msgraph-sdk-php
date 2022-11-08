@@ -29,7 +29,7 @@ class TeamsTabItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The teamsApp property
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsTab entity.
     */
     public function teamsApp(): TeamsAppRequestBuilder {
         return new TeamsAppRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class TeamsTabItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

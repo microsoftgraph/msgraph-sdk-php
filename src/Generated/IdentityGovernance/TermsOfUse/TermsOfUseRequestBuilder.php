@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TermsOfUseRequestBuilder 
 {
     /**
-     * The agreementAcceptances property
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
     */
     public function agreementAcceptances(): AgreementAcceptancesRequestBuilder {
         return new AgreementAcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The agreements property
+     * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
     */
     public function agreements(): AgreementsRequestBuilder {
         return new AgreementsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -51,7 +51,7 @@ class TermsOfUseRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreementAcceptances.item collection
+     * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -62,7 +62,7 @@ class TermsOfUseRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item collection
+     * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
      * @param string $id Unique identifier of the item
      * @return AgreementItemRequestBuilder
     */
@@ -150,6 +150,7 @@ class TermsOfUseRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

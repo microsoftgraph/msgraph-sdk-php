@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryObjectItemRequestBuilder 
 {
     /**
-     * The orgContact property
+     * Casts the previous resource to orgContact.
     */
     public function orgContact(): OrgContactRequestBuilder {
         return new OrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class DirectoryObjectItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The user property
+     * Casts the previous resource to user.
     */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);

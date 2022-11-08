@@ -29,14 +29,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EducationUserItemRequestBuilder 
 {
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The classes property
+     * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
     */
     public function classes(): ClassesRequestBuilder {
         return new ClassesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -53,21 +53,21 @@ class EducationUserItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The rubrics property
+     * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
     */
     public function rubrics(): RubricsRequestBuilder {
         return new RubricsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The schools property
+     * Provides operations to manage the schools property of the microsoft.graph.educationUser entity.
     */
     public function schools(): SchoolsRequestBuilder {
         return new SchoolsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The taughtClasses property
+     * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
     */
     public function taughtClasses(): TaughtClassesRequestBuilder {
         return new TaughtClassesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -79,14 +79,14 @@ class EducationUserItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The user property
+     * Provides operations to manage the user property of the microsoft.graph.educationUser entity.
     */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.users.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
      * @return EducationAssignmentItemRequestBuilder
     */
@@ -97,7 +97,7 @@ class EducationUserItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.users.item.classes.item collection
+     * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedEducationUsersItemClassesItemEducationClassItemRequestBuilder
     */
@@ -185,6 +185,7 @@ class EducationUserItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -247,7 +248,7 @@ class EducationUserItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.users.item.rubrics.item collection
+     * Provides operations to manage the rubrics property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
      * @return EducationRubricItemRequestBuilder
     */
@@ -258,7 +259,7 @@ class EducationUserItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.users.item.schools.item collection
+     * Provides operations to manage the schools property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
      * @return EducationSchoolItemRequestBuilder
     */
@@ -269,7 +270,7 @@ class EducationUserItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.users.item.taughtClasses.item collection
+     * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedEducationUsersItemTaughtClassesItemEducationClassItemRequestBuilder
     */

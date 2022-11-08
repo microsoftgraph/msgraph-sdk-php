@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TermItemRequestBuilder 
 {
     /**
-     * The children property
+     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
     */
     public function children(): ChildrenRequestBuilder {
         return new ChildrenRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -34,7 +34,7 @@ class TermItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The relations property
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
     */
     public function relations(): RelationsRequestBuilder {
         return new RelationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -46,7 +46,7 @@ class TermItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The set property
+     * Provides operations to manage the set property of the microsoft.graph.termStore.term entity.
     */
     public function set(): SetRequestBuilder {
         return new SetRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -58,7 +58,7 @@ class TermItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStores.item.groups.item.sets.item.terms.item.children.item collection
+     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
      * @param string $id Unique identifier of the item
      * @return TermItemRequestBuilder
     */
@@ -146,6 +146,7 @@ class TermItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -208,7 +209,7 @@ class TermItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStores.item.groups.item.sets.item.terms.item.relations.item collection
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
      * @param string $id Unique identifier of the item
      * @return RelationItemRequestBuilder
     */

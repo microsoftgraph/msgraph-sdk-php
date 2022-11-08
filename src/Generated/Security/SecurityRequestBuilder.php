@@ -26,21 +26,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SecurityRequestBuilder 
 {
     /**
-     * The alerts property
+     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
     */
     public function alerts(): AlertsRequestBuilder {
         return new AlertsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The attackSimulation property
+     * Provides operations to manage the attackSimulation property of the microsoft.graph.security entity.
     */
     public function attackSimulation(): AttackSimulationRequestBuilder {
         return new AttackSimulationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cases property
+     * Provides operations to manage the cases property of the microsoft.graph.security entity.
     */
     public function cases(): CasesRequestBuilder {
         return new CasesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -57,14 +57,14 @@ class SecurityRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The secureScoreControlProfiles property
+     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
     */
     public function secureScoreControlProfiles(): SecureScoreControlProfilesRequestBuilder {
         return new SecureScoreControlProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The secureScores property
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
     */
     public function secureScores(): SecureScoresRequestBuilder {
         return new SecureScoresRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -76,7 +76,7 @@ class SecurityRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.alerts.item collection
+     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @param string $id Unique identifier of the item
      * @return AlertItemRequestBuilder
     */
@@ -143,6 +143,7 @@ class SecurityRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -186,7 +187,7 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.secureScoreControlProfiles.item collection
+     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
      * @param string $id Unique identifier of the item
      * @return SecureScoreControlProfileItemRequestBuilder
     */
@@ -197,7 +198,7 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.secureScores.item collection
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
      * @param string $id Unique identifier of the item
      * @return SecureScoreItemRequestBuilder
     */

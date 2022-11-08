@@ -49,7 +49,7 @@ class ApplicationTemplate extends Entity implements Parsable
     private ?array $supportedSingleSignOnModes = null;
     
     /**
-     * Instantiates a new applicationTemplate and sets the default values.
+     * Instantiates a new ApplicationTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

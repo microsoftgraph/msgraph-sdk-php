@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PermissionGrantPolicyItemRequestBuilder 
 {
     /**
-     * The excludes property
+     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
     */
     public function excludes(): ExcludesRequestBuilder {
         return new ExcludesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The includes property
+     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
     */
     public function includes(): IncludesRequestBuilder {
         return new IncludesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,6 +128,7 @@ class PermissionGrantPolicyItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -151,7 +152,7 @@ class PermissionGrantPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.permissionGrantPolicies.item.excludes.item collection
+     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemExcludesItemPermissionGrantConditionSetItemRequestBuilder
     */
@@ -181,7 +182,7 @@ class PermissionGrantPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.permissionGrantPolicies.item.includes.item collection
+     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedPoliciesPermissionGrantPoliciesItemIncludesItemPermissionGrantConditionSetItemRequestBuilder
     */

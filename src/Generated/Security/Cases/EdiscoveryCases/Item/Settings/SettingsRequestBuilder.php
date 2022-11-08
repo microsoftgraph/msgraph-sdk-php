@@ -29,7 +29,7 @@ class SettingsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resetToDefault property
+     * Provides operations to call the resetToDefault method.
     */
     public function resetToDefault(): ResetToDefaultRequestBuilder {
         return new ResetToDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class SettingsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

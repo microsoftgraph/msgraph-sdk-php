@@ -29,7 +29,7 @@ class VppTokenItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The syncLicenses property
+     * Provides operations to call the syncLicenses method.
     */
     public function syncLicenses(): SyncLicensesRequestBuilder {
         return new SyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class VppTokenItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

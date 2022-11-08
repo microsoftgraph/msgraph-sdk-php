@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ManagedAppRegistrationItemRequestBuilder 
 {
     /**
-     * The appliedPolicies property
+     * Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity.
     */
     public function appliedPolicies(): AppliedPoliciesRequestBuilder {
         return new AppliedPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The intendedPolicies property
+     * Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity.
     */
     public function intendedPolicies(): IntendedPoliciesRequestBuilder {
         return new IntendedPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,7 +60,7 @@ class ManagedAppRegistrationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppRegistrations.item.appliedPolicies.item collection
+     * Provides operations to manage the appliedPolicies property of the microsoft.graph.managedAppRegistration entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDeviceAppManagementManagedAppRegistrationsItemAppliedPoliciesItemManagedAppPolicyItemRequestBuilder
     */
@@ -148,6 +148,7 @@ class ManagedAppRegistrationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -190,7 +191,7 @@ class ManagedAppRegistrationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppRegistrations.item.intendedPolicies.item collection
+     * Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDeviceAppManagementManagedAppRegistrationsItemIntendedPoliciesItemManagedAppPolicyItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class ManagedAppRegistrationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedAppRegistrations.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.managedAppRegistration entity.
      * @param string $id Unique identifier of the item
      * @return ManagedAppOperationItemRequestBuilder
     */

@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServiceAnnouncementRequestBuilder 
 {
     /**
-     * The healthOverviews property
+     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
     */
     public function healthOverviews(): HealthOverviewsRequestBuilder {
         return new HealthOverviewsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The issues property
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
     */
     public function issues(): IssuesRequestBuilder {
         return new IssuesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The messages property
+     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
     */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -137,6 +137,7 @@ class ServiceAnnouncementRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -179,7 +180,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.healthOverviews.item collection
+     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
      * @return ServiceHealthItemRequestBuilder
     */
@@ -190,7 +191,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.issues.item collection
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
      * @return ServiceHealthIssueItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class ServiceAnnouncementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.messages.item collection
+     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
      * @return ServiceUpdateMessageItemRequestBuilder
     */

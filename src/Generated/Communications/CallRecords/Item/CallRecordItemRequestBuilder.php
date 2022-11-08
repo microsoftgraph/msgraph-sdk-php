@@ -30,7 +30,7 @@ class CallRecordItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sessions property
+     * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
     */
     public function sessions(): SessionsRequestBuilder {
         return new SessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class CallRecordItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -181,7 +182,7 @@ class CallRecordItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.callRecords.item.sessions.item collection
+     * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
      * @param string $id Unique identifier of the item
      * @return SessionItemRequestBuilder
     */

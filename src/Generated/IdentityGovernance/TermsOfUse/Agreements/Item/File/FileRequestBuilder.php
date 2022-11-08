@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class FileRequestBuilder 
 {
     /**
-     * The localizations property
+     * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
     */
     public function localizations(): LocalizationsRequestBuilder {
         return new LocalizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class FileRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -161,7 +162,7 @@ class FileRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.termsOfUse.agreements.item.file.localizations.item collection
+     * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
      * @param string $id Unique identifier of the item
      * @return AgreementFileLocalizationItemRequestBuilder
     */

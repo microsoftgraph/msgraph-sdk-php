@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserAttributeAssignmentsRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -39,7 +39,7 @@ class UserAttributeAssignmentsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The setOrder property
+     * Provides operations to call the setOrder method.
     */
     public function setOrder(): SetOrderRequestBuilder {
         return new SetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -107,6 +107,7 @@ class UserAttributeAssignmentsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

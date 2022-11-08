@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PinnedChatMessageInfoItemRequestBuilder 
 {
     /**
-     * The message property
+     * Provides operations to manage the message property of the microsoft.graph.pinnedChatMessageInfo entity.
     */
     public function message(): MessageRequestBuilder {
         return new MessageRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class PinnedChatMessageInfoItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

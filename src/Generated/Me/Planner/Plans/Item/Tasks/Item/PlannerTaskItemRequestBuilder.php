@@ -22,21 +22,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PlannerTaskItemRequestBuilder 
 {
     /**
-     * The assignedToTaskBoardFormat property
+     * Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity.
     */
     public function assignedToTaskBoardFormat(): AssignedToTaskBoardFormatRequestBuilder {
         return new AssignedToTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The bucketTaskBoardFormat property
+     * Provides operations to manage the bucketTaskBoardFormat property of the microsoft.graph.plannerTask entity.
     */
     public function bucketTaskBoardFormat(): BucketTaskBoardFormatRequestBuilder {
         return new BucketTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The details property
+     * Provides operations to manage the details property of the microsoft.graph.plannerTask entity.
     */
     public function details(): DetailsRequestBuilder {
         return new DetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -48,7 +48,7 @@ class PlannerTaskItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The progressTaskBoardFormat property
+     * Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity.
     */
     public function progressTaskBoardFormat(): ProgressTaskBoardFormatRequestBuilder {
         return new ProgressTaskBoardFormatRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,6 +142,7 @@ class PlannerTaskItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

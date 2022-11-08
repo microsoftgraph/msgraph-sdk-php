@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TodoTaskListItemRequestBuilder 
 {
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -39,7 +39,7 @@ class TodoTaskListItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The tasks property
+     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
     */
     public function tasks(): TasksRequestBuilder {
         return new TasksRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,6 +128,7 @@ class TodoTaskListItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -151,7 +152,7 @@ class TodoTaskListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class TodoTaskListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
      * @param string $id Unique identifier of the item
      * @return TodoTaskItemRequestBuilder
     */

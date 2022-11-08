@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ListItemVersionItemRequestBuilder 
 {
     /**
-     * The fields property
+     * Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity.
     */
     public function fields(): FieldsRequestBuilder {
         return new FieldsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -37,7 +37,7 @@ class ListItemVersionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restoreVersion property
+     * Provides operations to call the restoreVersion method.
     */
     public function restoreVersion(): RestoreVersionRequestBuilder {
         return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -126,6 +126,7 @@ class ListItemVersionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

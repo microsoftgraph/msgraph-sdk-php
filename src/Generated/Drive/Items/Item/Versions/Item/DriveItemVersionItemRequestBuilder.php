@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DriveItemVersionItemRequestBuilder 
 {
     /**
-     * The content property
+     * Provides operations to manage the media for the drive entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -37,7 +37,7 @@ class DriveItemVersionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restoreVersion property
+     * Provides operations to call the restoreVersion method.
     */
     public function restoreVersion(): RestoreVersionRequestBuilder {
         return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -126,6 +126,7 @@ class DriveItemVersionItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

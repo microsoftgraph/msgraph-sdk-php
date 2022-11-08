@@ -42,63 +42,63 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ManagedDeviceItemRequestBuilder 
 {
     /**
-     * The bypassActivationLock property
+     * Provides operations to call the bypassActivationLock method.
     */
     public function bypassActivationLock(): BypassActivationLockRequestBuilder {
         return new BypassActivationLockRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cleanWindowsDevice property
+     * Provides operations to call the cleanWindowsDevice method.
     */
     public function cleanWindowsDevice(): CleanWindowsDeviceRequestBuilder {
         return new CleanWindowsDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deleteUserFromSharedAppleDevice property
+     * Provides operations to call the deleteUserFromSharedAppleDevice method.
     */
     public function deleteUserFromSharedAppleDevice(): DeleteUserFromSharedAppleDeviceRequestBuilder {
         return new DeleteUserFromSharedAppleDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceCategory property
+     * Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity.
     */
     public function deviceCategory(): DeviceCategoryRequestBuilder {
         return new DeviceCategoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceCompliancePolicyStates property
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
     */
     public function deviceCompliancePolicyStates(): DeviceCompliancePolicyStatesRequestBuilder {
         return new DeviceCompliancePolicyStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceConfigurationStates property
+     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
     */
     public function deviceConfigurationStates(): DeviceConfigurationStatesRequestBuilder {
         return new DeviceConfigurationStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The disableLostMode property
+     * Provides operations to call the disableLostMode method.
     */
     public function disableLostMode(): DisableLostModeRequestBuilder {
         return new DisableLostModeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The locateDevice property
+     * Provides operations to call the locateDevice method.
     */
     public function locateDevice(): LocateDeviceRequestBuilder {
         return new LocateDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The logoutSharedAppleDeviceActiveUser property
+     * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
     */
     public function logoutSharedAppleDeviceActiveUser(): LogoutSharedAppleDeviceActiveUserRequestBuilder {
         return new LogoutSharedAppleDeviceActiveUserRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -110,21 +110,21 @@ class ManagedDeviceItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The rebootNow property
+     * Provides operations to call the rebootNow method.
     */
     public function rebootNow(): RebootNowRequestBuilder {
         return new RebootNowRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The recoverPasscode property
+     * Provides operations to call the recoverPasscode method.
     */
     public function recoverPasscode(): RecoverPasscodeRequestBuilder {
         return new RecoverPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The remoteLock property
+     * Provides operations to call the remoteLock method.
     */
     public function remoteLock(): RemoteLockRequestBuilder {
         return new RemoteLockRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -136,42 +136,42 @@ class ManagedDeviceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The requestRemoteAssistance property
+     * Provides operations to call the requestRemoteAssistance method.
     */
     public function requestRemoteAssistance(): RequestRemoteAssistanceRequestBuilder {
         return new RequestRemoteAssistanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The resetPasscode property
+     * Provides operations to call the resetPasscode method.
     */
     public function resetPasscode(): ResetPasscodeRequestBuilder {
         return new ResetPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The retire property
+     * Provides operations to call the retire method.
     */
     public function retire(): RetireRequestBuilder {
         return new RetireRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The shutDown property
+     * Provides operations to call the shutDown method.
     */
     public function shutDown(): ShutDownRequestBuilder {
         return new ShutDownRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The syncDevice property
+     * Provides operations to call the syncDevice method.
     */
     public function syncDevice(): SyncDeviceRequestBuilder {
         return new SyncDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The updateWindowsDeviceAccount property
+     * Provides operations to call the updateWindowsDeviceAccount method.
     */
     public function updateWindowsDeviceAccount(): UpdateWindowsDeviceAccountRequestBuilder {
         return new UpdateWindowsDeviceAccountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -183,28 +183,28 @@ class ManagedDeviceItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The users property
+     * Provides operations to manage the users property of the microsoft.graph.managedDevice entity.
     */
     public function users(): UsersRequestBuilder {
         return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The windowsDefenderScan property
+     * Provides operations to call the windowsDefenderScan method.
     */
     public function windowsDefenderScan(): WindowsDefenderScanRequestBuilder {
         return new WindowsDefenderScanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The windowsDefenderUpdateSignatures property
+     * Provides operations to call the windowsDefenderUpdateSignatures method.
     */
     public function windowsDefenderUpdateSignatures(): WindowsDefenderUpdateSignaturesRequestBuilder {
         return new WindowsDefenderUpdateSignaturesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The wipe property
+     * Provides operations to call the wipe method.
     */
     public function wipe(): WipeRequestBuilder {
         return new WipeRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -288,6 +288,7 @@ class ManagedDeviceItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -311,7 +312,7 @@ class ManagedDeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.managedDevices.item.deviceCompliancePolicyStates.item collection
+     * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
      * @param string $id Unique identifier of the item
      * @return DeviceCompliancePolicyStateItemRequestBuilder
     */
@@ -322,7 +323,7 @@ class ManagedDeviceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.managedDevices.item.deviceConfigurationStates.item collection
+     * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @param string $id Unique identifier of the item
      * @return DeviceConfigurationStateItemRequestBuilder
     */

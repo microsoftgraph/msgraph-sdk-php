@@ -29,7 +29,7 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The termsAndConditions property
+     * Provides operations to manage the termsAndConditions property of the microsoft.graph.termsAndConditionsAcceptanceStatus entity.
     */
     public function termsAndConditions(): TermsAndConditionsRequestBuilder {
         return new TermsAndConditionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class TermsAndConditionsAcceptanceStatusItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

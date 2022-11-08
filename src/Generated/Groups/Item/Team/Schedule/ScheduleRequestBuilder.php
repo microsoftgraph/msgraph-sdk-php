@@ -37,21 +37,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ScheduleRequestBuilder 
 {
     /**
-     * The offerShiftRequests property
+     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
     */
     public function offerShiftRequests(): OfferShiftRequestsRequestBuilder {
         return new OfferShiftRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The openShiftChangeRequests property
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
     */
     public function openShiftChangeRequests(): OpenShiftChangeRequestsRequestBuilder {
         return new OpenShiftChangeRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The openShifts property
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
     */
     public function openShifts(): OpenShiftsRequestBuilder {
         return new OpenShiftsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -68,49 +68,49 @@ class ScheduleRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The schedulingGroups property
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
     */
     public function schedulingGroups(): SchedulingGroupsRequestBuilder {
         return new SchedulingGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The share property
+     * Provides operations to call the share method.
     */
     public function share(): ShareRequestBuilder {
         return new ShareRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The shifts property
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
     */
     public function shifts(): ShiftsRequestBuilder {
         return new ShiftsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The swapShiftsChangeRequests property
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
     */
     public function swapShiftsChangeRequests(): SwapShiftsChangeRequestsRequestBuilder {
         return new SwapShiftsChangeRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The timeOffReasons property
+     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
     */
     public function timeOffReasons(): TimeOffReasonsRequestBuilder {
         return new TimeOffReasonsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The timeOffRequests property
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
     */
     public function timeOffRequests(): TimeOffRequestsRequestBuilder {
         return new TimeOffRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The timesOff property
+     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
     */
     public function timesOff(): TimesOffRequestBuilder {
         return new TimesOffRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -199,6 +199,7 @@ class ScheduleRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -241,7 +242,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.offerShiftRequests.item collection
+     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return OfferShiftRequestItemRequestBuilder
     */
@@ -252,7 +253,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.openShiftChangeRequests.item collection
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return OpenShiftChangeRequestItemRequestBuilder
     */
@@ -263,7 +264,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.openShifts.item collection
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return OpenShiftItemRequestBuilder
     */
@@ -294,7 +295,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.schedulingGroups.item collection
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return SchedulingGroupItemRequestBuilder
     */
@@ -305,7 +306,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.shifts.item collection
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return ShiftItemRequestBuilder
     */
@@ -316,7 +317,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.swapShiftsChangeRequests.item collection
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return SwapShiftsChangeRequestItemRequestBuilder
     */
@@ -327,7 +328,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.timeOffReasons.item collection
+     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return TimeOffReasonItemRequestBuilder
     */
@@ -338,7 +339,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.timeOffRequests.item collection
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return TimeOffRequestItemRequestBuilder
     */
@@ -349,7 +350,7 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.schedule.timesOff.item collection
+     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
      * @return TimeOffItemRequestBuilder
     */

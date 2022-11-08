@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder 
 {
     /**
-     * The appScope property
+     * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function appScope(): AppScopeRequestBuilder {
         return new AppScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cancel property
+     * Provides operations to call the cancel method.
     */
     public function cancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The directoryScope property
+     * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -50,7 +50,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The principal property
+     * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function principal(): PrincipalRequestBuilder {
         return new PrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -62,14 +62,14 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The roleDefinition property
+     * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function roleDefinition(): RoleDefinitionRequestBuilder {
         return new RoleDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The targetSchedule property
+     * Provides operations to manage the targetSchedule property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function targetSchedule(): TargetScheduleRequestBuilder {
         return new TargetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -158,6 +158,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

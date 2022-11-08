@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ParticipantsRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The invite property
+     * Provides operations to call the invite method.
     */
     public function invite(): InviteRequestBuilder {
         return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -106,6 +106,7 @@ class ParticipantsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

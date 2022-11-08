@@ -31,21 +31,21 @@ class TeamsAppInstallationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The teamsApp property
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
     */
     public function teamsApp(): TeamsAppRequestBuilder {
         return new TeamsAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The teamsAppDefinition property
+     * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
     */
     public function teamsAppDefinition(): TeamsAppDefinitionRequestBuilder {
         return new TeamsAppDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The upgrade property
+     * Provides operations to call the upgrade method.
     */
     public function upgrade(): UpgradeRequestBuilder {
         return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -134,6 +134,7 @@ class TeamsAppInstallationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

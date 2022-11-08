@@ -31,7 +31,7 @@ class TeamworkRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sendActivityNotificationToRecipients property
+     * Provides operations to call the sendActivityNotificationToRecipients method.
     */
     public function sendActivityNotificationToRecipients(): SendActivityNotificationToRecipientsRequestBuilder {
         return new SendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -43,7 +43,7 @@ class TeamworkRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The workforceIntegrations property
+     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
     */
     public function workforceIntegrations(): WorkforceIntegrationsRequestBuilder {
         return new WorkforceIntegrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -106,6 +106,7 @@ class TeamworkRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -149,7 +150,7 @@ class TeamworkRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teamwork.workforceIntegrations.item collection
+     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
      * @param string $id Unique identifier of the item
      * @return WorkforceIntegrationItemRequestBuilder
     */

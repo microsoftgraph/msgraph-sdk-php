@@ -30,7 +30,7 @@ class AppCatalogsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The teamsApps property
+     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
     */
     public function teamsApps(): TeamsAppsRequestBuilder {
         return new TeamsAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -98,6 +98,7 @@ class AppCatalogsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -141,7 +142,7 @@ class AppCatalogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.appCatalogs.teamsApps.item collection
+     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
      * @param string $id Unique identifier of the item
      * @return TeamsAppItemRequestBuilder
     */

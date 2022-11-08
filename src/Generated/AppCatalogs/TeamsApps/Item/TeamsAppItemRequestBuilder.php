@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamsAppItemRequestBuilder 
 {
     /**
-     * The appDefinitions property
+     * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
     */
     public function appDefinitions(): AppDefinitionsRequestBuilder {
         return new AppDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class TeamsAppItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.appCatalogs.teamsApps.item.appDefinitions.item collection
+     * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
      * @param string $id Unique identifier of the item
      * @return TeamsAppDefinitionItemRequestBuilder
     */
@@ -130,6 +130,7 @@ class TeamsAppItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -27,35 +27,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryRoleItemRequestBuilder 
 {
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -72,14 +72,14 @@ class DirectoryRoleItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The scopedMembers property
+     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
     */
     public function scopedMembers(): ScopedMembersRequestBuilder {
         return new ScopedMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -168,6 +168,7 @@ class DirectoryRoleItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -241,7 +242,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item.scopedMembers.item collection
+     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */

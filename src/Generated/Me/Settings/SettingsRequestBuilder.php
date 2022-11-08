@@ -29,7 +29,7 @@ class SettingsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The shiftPreferences property
+     * Provides operations to manage the shiftPreferences property of the microsoft.graph.userSettings entity.
     */
     public function shiftPreferences(): ShiftPreferencesRequestBuilder {
         return new ShiftPreferencesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class SettingsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

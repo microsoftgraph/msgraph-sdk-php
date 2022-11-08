@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DevicesRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getAvailableExtensionProperties property
+     * Provides operations to call the getAvailableExtensionProperties method.
     */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getByIds property
+     * Provides operations to call the getByIds method.
     */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,7 +60,7 @@ class DevicesRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The validateProperties property
+     * Provides operations to call the validateProperties method.
     */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -123,6 +123,7 @@ class DevicesRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

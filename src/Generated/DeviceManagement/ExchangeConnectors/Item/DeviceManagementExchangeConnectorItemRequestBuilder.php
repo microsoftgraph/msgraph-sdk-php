@@ -29,7 +29,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sync property
+     * Provides operations to call the sync method.
     */
     public function sync(): SyncRequestBuilder {
         return new SyncRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

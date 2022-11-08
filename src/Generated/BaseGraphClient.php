@@ -120,322 +120,322 @@ use Microsoft\Kiota\Serialization\Text\TextSerializationWriterFactory;
 class BaseGraphClient 
 {
     /**
-     * The admin property
+     * Provides operations to manage the admin singleton.
     */
     public function admin(): AdminRequestBuilder {
         return new AdminRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The agreementAcceptances property
+     * Provides operations to manage the collection of agreementAcceptance entities.
     */
     public function agreementAcceptances(): AgreementAcceptancesRequestBuilder {
         return new AgreementAcceptancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The agreements property
+     * Provides operations to manage the collection of agreement entities.
     */
     public function agreements(): AgreementsRequestBuilder {
         return new AgreementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The appCatalogs property
+     * Provides operations to manage the appCatalogs singleton.
     */
     public function appCatalogs(): AppCatalogsRequestBuilder {
         return new AppCatalogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The applications property
+     * Provides operations to manage the collection of application entities.
     */
     public function applications(): ApplicationsRequestBuilder {
         return new ApplicationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The applicationTemplates property
+     * Provides operations to manage the collection of applicationTemplate entities.
     */
     public function applicationTemplates(): ApplicationTemplatesRequestBuilder {
         return new ApplicationTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The auditLogs property
+     * Provides operations to manage the auditLogRoot singleton.
     */
     public function auditLogs(): AuditLogsRequestBuilder {
         return new AuditLogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The authenticationMethodConfigurations property
+     * Provides operations to manage the collection of authenticationMethodConfiguration entities.
     */
     public function authenticationMethodConfigurations(): AuthenticationMethodConfigurationsRequestBuilder {
         return new AuthenticationMethodConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The authenticationMethodsPolicy property
+     * Provides operations to manage the authenticationMethodsPolicy singleton.
     */
     public function authenticationMethodsPolicy(): AuthenticationMethodsPolicyRequestBuilder {
         return new AuthenticationMethodsPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The branding property
+     * Provides operations to manage the organizationalBranding singleton.
     */
     public function branding(): BrandingRequestBuilder {
         return new BrandingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The certificateBasedAuthConfiguration property
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
     */
     public function certificateBasedAuthConfiguration(): CertificateBasedAuthConfigurationRequestBuilder {
         return new CertificateBasedAuthConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The chats property
+     * Provides operations to manage the collection of chat entities.
     */
     public function chats(): ChatsRequestBuilder {
         return new ChatsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The communications property
+     * Provides operations to manage the cloudCommunications singleton.
     */
     public function communications(): CommunicationsRequestBuilder {
         return new CommunicationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The compliance property
+     * Provides operations to manage the compliance singleton.
     */
     public function compliance(): ComplianceRequestBuilder {
         return new ComplianceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The connections property
+     * Provides operations to manage the collection of externalConnection entities.
     */
     public function connections(): ConnectionsRequestBuilder {
         return new ConnectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contacts property
+     * Provides operations to manage the collection of orgContact entities.
     */
     public function contacts(): ContactsRequestBuilder {
         return new ContactsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contracts property
+     * Provides operations to manage the collection of contract entities.
     */
     public function contracts(): ContractsRequestBuilder {
         return new ContractsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The dataPolicyOperations property
+     * Provides operations to manage the collection of dataPolicyOperation entities.
     */
     public function dataPolicyOperations(): DataPolicyOperationsRequestBuilder {
         return new DataPolicyOperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceAppManagement property
+     * Provides operations to manage the deviceAppManagement singleton.
     */
     public function deviceAppManagement(): DeviceAppManagementRequestBuilder {
         return new DeviceAppManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceManagement property
+     * Provides operations to manage the deviceManagement singleton.
     */
     public function deviceManagement(): DeviceManagementRequestBuilder {
         return new DeviceManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The devices property
+     * Provides operations to manage the collection of device entities.
     */
     public function devices(): DevicesRequestBuilder {
         return new DevicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The directory property
+     * Provides operations to manage the directory singleton.
     */
     public function directory(): DirectoryRequestBuilder {
         return new DirectoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The directoryObjects property
+     * Provides operations to manage the collection of directoryObject entities.
     */
     public function directoryObjects(): DirectoryObjectsRequestBuilder {
         return new DirectoryObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The directoryRoles property
+     * Provides operations to manage the collection of directoryRole entities.
     */
     public function directoryRoles(): DirectoryRolesRequestBuilder {
         return new DirectoryRolesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The directoryRoleTemplates property
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
     */
     public function directoryRoleTemplates(): DirectoryRoleTemplatesRequestBuilder {
         return new DirectoryRoleTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The domainDnsRecords property
+     * Provides operations to manage the collection of domainDnsRecord entities.
     */
     public function domainDnsRecords(): DomainDnsRecordsRequestBuilder {
         return new DomainDnsRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The domains property
+     * Provides operations to manage the collection of domain entities.
     */
     public function domains(): DomainsRequestBuilder {
         return new DomainsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drive property
+     * Provides operations to manage the drive singleton.
     */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drives property
+     * Provides operations to manage the collection of drive entities.
     */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The education property
+     * Provides operations to manage the educationRoot singleton.
     */
     public function education(): EducationRequestBuilder {
         return new EducationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The print property
+     * Provides operations to manage the print singleton.
     */
     public function escapedPrint(): PrintRequestBuilder {
         return new PrintRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The external property
+     * Provides operations to manage the external singleton.
     */
     public function external(): ExternalRequestBuilder {
         return new ExternalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The groupLifecyclePolicies property
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
     */
     public function groupLifecyclePolicies(): GroupLifecyclePoliciesRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The groups property
+     * Provides operations to manage the collection of group entities.
     */
     public function groups(): GroupsRequestBuilder {
         return new GroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The groupSettings property
+     * Provides operations to manage the collection of groupSetting entities.
     */
     public function groupSettings(): GroupSettingsRequestBuilder {
         return new GroupSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The groupSettingTemplates property
+     * Provides operations to manage the collection of groupSettingTemplate entities.
     */
     public function groupSettingTemplates(): GroupSettingTemplatesRequestBuilder {
         return new GroupSettingTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The identity property
+     * Provides operations to manage the identityContainer singleton.
     */
     public function identity(): IdentityRequestBuilder {
         return new IdentityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The identityGovernance property
+     * Provides operations to manage the identityGovernance singleton.
     */
     public function identityGovernance(): IdentityGovernanceRequestBuilder {
         return new IdentityGovernanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The identityProtection property
+     * Provides operations to manage the identityProtectionRoot singleton.
     */
     public function identityProtection(): IdentityProtectionRequestBuilder {
         return new IdentityProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The identityProviders property
+     * Provides operations to manage the collection of identityProvider entities.
     */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The informationProtection property
+     * Provides operations to manage the informationProtection singleton.
     */
     public function informationProtection(): InformationProtectionRequestBuilder {
         return new InformationProtectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The invitations property
+     * Provides operations to manage the collection of invitation entities.
     */
     public function invitations(): InvitationsRequestBuilder {
         return new InvitationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The localizations property
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
     */
     public function localizations(): LocalizationsRequestBuilder {
         return new LocalizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The me property
+     * Provides operations to manage the user singleton.
     */
     public function me(): MeRequestBuilder {
         return new MeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The oauth2PermissionGrants property
+     * Provides operations to manage the collection of oAuth2PermissionGrant entities.
     */
     public function oauth2PermissionGrants(): Oauth2PermissionGrantsRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The organization property
+     * Provides operations to manage the collection of organization entities.
     */
     public function organization(): OrganizationRequestBuilder {
         return new OrganizationRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -447,42 +447,42 @@ class BaseGraphClient
     private array $pathParameters;
     
     /**
-     * The permissionGrants property
+     * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
     */
     public function permissionGrants(): PermissionGrantsRequestBuilder {
         return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The places property
+     * Provides operations to manage the collection of place entities.
     */
     public function places(): PlacesRequestBuilder {
         return new PlacesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The planner property
+     * Provides operations to manage the planner singleton.
     */
     public function planner(): PlannerRequestBuilder {
         return new PlannerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The policies property
+     * Provides operations to manage the policyRoot singleton.
     */
     public function policies(): PoliciesRequestBuilder {
         return new PoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The privacy property
+     * Provides operations to manage the privacy singleton.
     */
     public function privacy(): PrivacyRequestBuilder {
         return new PrivacyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The reports property
+     * Provides operations to manage the reportRoot singleton.
     */
     public function reports(): ReportsRequestBuilder {
         return new ReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -494,98 +494,98 @@ class BaseGraphClient
     private RequestAdapter $requestAdapter;
     
     /**
-     * The roleManagement property
+     * Provides operations to manage the roleManagement singleton.
     */
     public function roleManagement(): RoleManagementRequestBuilder {
         return new RoleManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The schemaExtensions property
+     * Provides operations to manage the collection of schemaExtension entities.
     */
     public function schemaExtensions(): SchemaExtensionsRequestBuilder {
         return new SchemaExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The scopedRoleMemberships property
+     * Provides operations to manage the collection of scopedRoleMembership entities.
     */
     public function scopedRoleMemberships(): ScopedRoleMembershipsRequestBuilder {
         return new ScopedRoleMembershipsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The search property
+     * Provides operations to manage the searchEntity singleton.
     */
     public function search(): SearchRequestBuilder {
         return new SearchRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The security property
+     * Provides operations to manage the security singleton.
     */
     public function security(): SecurityRequestBuilder {
         return new SecurityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The servicePrincipals property
+     * Provides operations to manage the collection of servicePrincipal entities.
     */
     public function servicePrincipals(): ServicePrincipalsRequestBuilder {
         return new ServicePrincipalsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The shares property
+     * Provides operations to manage the collection of sharedDriveItem entities.
     */
     public function shares(): SharesRequestBuilder {
         return new SharesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sites property
+     * Provides operations to manage the collection of site entities.
     */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The solutions property
+     * Provides operations to manage the solutionsRoot singleton.
     */
     public function solutions(): SolutionsRequestBuilder {
         return new SolutionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The subscribedSkus property
+     * Provides operations to manage the collection of subscribedSku entities.
     */
     public function subscribedSkus(): SubscribedSkusRequestBuilder {
         return new SubscribedSkusRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The subscriptions property
+     * Provides operations to manage the collection of subscription entities.
     */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The teams property
+     * Provides operations to manage the collection of team entities.
     */
     public function teams(): TeamsRequestBuilder {
         return new TeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The teamsTemplates property
+     * Provides operations to manage the collection of teamsTemplate entities.
     */
     public function teamsTemplates(): TeamsTemplatesRequestBuilder {
         return new TeamsTemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The teamwork property
+     * Provides operations to manage the teamwork singleton.
     */
     public function teamwork(): TeamworkRequestBuilder {
         return new TeamworkRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -597,21 +597,21 @@ class BaseGraphClient
     private string $urlTemplate;
     
     /**
-     * The users property
+     * Provides operations to manage the collection of user entities.
     */
     public function users(): UsersRequestBuilder {
         return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The workbooks property
+     * Provides operations to manage the collection of driveItem entities.
     */
     public function workbooks(): WorkbooksRequestBuilder {
         return new WorkbooksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.agreementAcceptances.item collection
+     * Provides operations to manage the collection of agreementAcceptance entities.
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
     */
@@ -622,7 +622,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.agreements.item collection
+     * Provides operations to manage the collection of agreement entities.
      * @param string $id Unique identifier of the item
      * @return AgreementItemRequestBuilder
     */
@@ -633,7 +633,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applications.item collection
+     * Provides operations to manage the collection of application entities.
      * @param string $id Unique identifier of the item
      * @return ApplicationItemRequestBuilder
     */
@@ -644,7 +644,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applicationTemplates.item collection
+     * Provides operations to manage the collection of applicationTemplate entities.
      * @param string $id Unique identifier of the item
      * @return ApplicationTemplateItemRequestBuilder
     */
@@ -655,7 +655,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.authenticationMethodConfigurations.item collection
+     * Provides operations to manage the collection of authenticationMethodConfiguration entities.
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodConfigurationItemRequestBuilder
     */
@@ -666,7 +666,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.certificateBasedAuthConfiguration.item collection
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
      * @param string $id Unique identifier of the item
      * @return CertificateBasedAuthConfigurationItemRequestBuilder
     */
@@ -677,7 +677,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.chats.item collection
+     * Provides operations to manage the collection of chat entities.
      * @param string $id Unique identifier of the item
      * @return ChatItemRequestBuilder
     */
@@ -688,7 +688,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item collection
+     * Provides operations to manage the collection of externalConnection entities.
      * @param string $id Unique identifier of the item
      * @return ExternalConnectionItemRequestBuilder
     */
@@ -716,7 +716,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.contacts.item collection
+     * Provides operations to manage the collection of orgContact entities.
      * @param string $id Unique identifier of the item
      * @return OrgContactItemRequestBuilder
     */
@@ -727,7 +727,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.contracts.item collection
+     * Provides operations to manage the collection of contract entities.
      * @param string $id Unique identifier of the item
      * @return ContractItemRequestBuilder
     */
@@ -738,7 +738,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.dataPolicyOperations.item collection
+     * Provides operations to manage the collection of dataPolicyOperation entities.
      * @param string $id Unique identifier of the item
      * @return DataPolicyOperationItemRequestBuilder
     */
@@ -749,7 +749,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.devices.item collection
+     * Provides operations to manage the collection of device entities.
      * @param string $id Unique identifier of the item
      * @return DeviceItemRequestBuilder
     */
@@ -760,7 +760,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryObjects.item collection
+     * Provides operations to manage the collection of directoryObject entities.
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -771,7 +771,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item collection
+     * Provides operations to manage the collection of directoryRole entities.
      * @param string $id Unique identifier of the item
      * @return DirectoryRoleItemRequestBuilder
     */
@@ -782,7 +782,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoleTemplates.item collection
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
      * @param string $id Unique identifier of the item
      * @return DirectoryRoleTemplateItemRequestBuilder
     */
@@ -793,7 +793,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domainDnsRecords.item collection
+     * Provides operations to manage the collection of domainDnsRecord entities.
      * @param string $id Unique identifier of the item
      * @return DomainDnsRecordItemRequestBuilder
     */
@@ -804,7 +804,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item collection
+     * Provides operations to manage the collection of domain entities.
      * @param string $id Unique identifier of the item
      * @return DomainItemRequestBuilder
     */
@@ -815,7 +815,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item collection
+     * Provides operations to manage the collection of drive entities.
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -826,7 +826,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupLifecyclePolicies.item collection
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
      * @param string $id Unique identifier of the item
      * @return GroupLifecyclePolicyItemRequestBuilder
     */
@@ -837,7 +837,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item collection
+     * Provides operations to manage the collection of group entities.
      * @param string $id Unique identifier of the item
      * @return GroupItemRequestBuilder
     */
@@ -848,7 +848,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupSettings.item collection
+     * Provides operations to manage the collection of groupSetting entities.
      * @param string $id Unique identifier of the item
      * @return GroupSettingItemRequestBuilder
     */
@@ -859,7 +859,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groupSettingTemplates.item collection
+     * Provides operations to manage the collection of groupSettingTemplate entities.
      * @param string $id Unique identifier of the item
      * @return GroupSettingTemplateItemRequestBuilder
     */
@@ -870,7 +870,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProviders.item collection
+     * Provides operations to manage the collection of identityProvider entities.
      * @param string $id Unique identifier of the item
      * @return IdentityProviderItemRequestBuilder
     */
@@ -881,7 +881,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.invitations.item collection
+     * Provides operations to manage the collection of invitation entities.
      * @param string $id Unique identifier of the item
      * @return InvitationItemRequestBuilder
     */
@@ -892,7 +892,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.localizations.item collection
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
      * @param string $id Unique identifier of the item
      * @return OrganizationalBrandingLocalizationItemRequestBuilder
     */
@@ -903,7 +903,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.oauth2PermissionGrants.item collection
+     * Provides operations to manage the collection of oAuth2PermissionGrant entities.
      * @param string $id Unique identifier of the item
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
@@ -914,7 +914,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.organization.item collection
+     * Provides operations to manage the collection of organization entities.
      * @param string $id Unique identifier of the item
      * @return OrganizationItemRequestBuilder
     */
@@ -925,7 +925,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.permissionGrants.item collection
+     * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
      * @param string $id Unique identifier of the item
      * @return ResourceSpecificPermissionGrantItemRequestBuilder
     */
@@ -936,7 +936,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.places.item collection
+     * Provides operations to manage the collection of place entities.
      * @param string $id Unique identifier of the item
      * @return PlaceItemRequestBuilder
     */
@@ -947,7 +947,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.schemaExtensions.item collection
+     * Provides operations to manage the collection of schemaExtension entities.
      * @param string $id Unique identifier of the item
      * @return SchemaExtensionItemRequestBuilder
     */
@@ -958,7 +958,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.scopedRoleMemberships.item collection
+     * Provides operations to manage the collection of scopedRoleMembership entities.
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */
@@ -969,7 +969,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item collection
+     * Provides operations to manage the collection of servicePrincipal entities.
      * @param string $id Unique identifier of the item
      * @return ServicePrincipalItemRequestBuilder
     */
@@ -980,7 +980,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.shares.item collection
+     * Provides operations to manage the collection of sharedDriveItem entities.
      * @param string $id Unique identifier of the item
      * @return SharedDriveItemItemRequestBuilder
     */
@@ -991,7 +991,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item collection
+     * Provides operations to manage the collection of site entities.
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -1002,7 +1002,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.subscribedSkus.item collection
+     * Provides operations to manage the collection of subscribedSku entities.
      * @param string $id Unique identifier of the item
      * @return SubscribedSkuItemRequestBuilder
     */
@@ -1013,7 +1013,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.subscriptions.item collection
+     * Provides operations to manage the collection of subscription entities.
      * @param string $id Unique identifier of the item
      * @return SubscriptionItemRequestBuilder
     */
@@ -1024,7 +1024,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item collection
+     * Provides operations to manage the collection of team entities.
      * @param string $id Unique identifier of the item
      * @return TeamItemRequestBuilder
     */
@@ -1035,7 +1035,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teamsTemplates.item collection
+     * Provides operations to manage the collection of teamsTemplate entities.
      * @param string $id Unique identifier of the item
      * @return TeamsTemplateItemRequestBuilder
     */
@@ -1046,7 +1046,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item collection
+     * Provides operations to manage the collection of user entities.
      * @param string $id Unique identifier of the item
      * @return UserItemRequestBuilder
     */
@@ -1057,7 +1057,7 @@ class BaseGraphClient
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.workbooks.item collection
+     * Provides operations to manage the collection of driveItem entities.
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */

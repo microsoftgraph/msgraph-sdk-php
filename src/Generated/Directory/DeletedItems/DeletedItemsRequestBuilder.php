@@ -26,35 +26,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeletedItemsRequestBuilder 
 {
     /**
-     * The application property
+     * Casts the previous resource to application.
     */
     public function application(): ApplicationRequestBuilder {
         return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getAvailableExtensionProperties property
+     * Provides operations to call the getAvailableExtensionProperties method.
     */
     public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getByIds property
+     * Provides operations to call the getByIds method.
     */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The group property
+     * Casts the previous resource to group.
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -76,14 +76,14 @@ class DeletedItemsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The user property
+     * Casts the previous resource to user.
     */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The validateProperties property
+     * Provides operations to call the validateProperties method.
     */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -146,6 +146,7 @@ class DeletedItemsRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

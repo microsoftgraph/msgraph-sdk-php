@@ -28,35 +28,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TodoTaskItemRequestBuilder 
 {
     /**
-     * The attachments property
+     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
     */
     public function attachments(): AttachmentsRequestBuilder {
         return new AttachmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The attachmentSessions property
+     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
     */
     public function attachmentSessions(): AttachmentSessionsRequestBuilder {
         return new AttachmentSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checklistItems property
+     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
     */
     public function checklistItems(): ChecklistItemsRequestBuilder {
         return new ChecklistItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTask entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The linkedResources property
+     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
     */
     public function linkedResources(): LinkedResourcesRequestBuilder {
         return new LinkedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -78,7 +78,7 @@ class TodoTaskItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
      * @return AttachmentBaseItemRequestBuilder
     */
@@ -89,7 +89,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item.attachmentSessions.item collection
+     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
      * @return AttachmentSessionItemRequestBuilder
     */
@@ -100,7 +100,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item.checklistItems.item collection
+     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
      * @return ChecklistItemItemRequestBuilder
     */
@@ -188,6 +188,7 @@ class TodoTaskItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -211,7 +212,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -241,7 +242,7 @@ class TodoTaskItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.todo.lists.item.tasks.item.linkedResources.item collection
+     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
      * @return LinkedResourceItemRequestBuilder
     */

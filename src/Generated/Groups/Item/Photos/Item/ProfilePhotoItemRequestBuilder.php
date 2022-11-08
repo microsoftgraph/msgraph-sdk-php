@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ProfilePhotoItemRequestBuilder 
 {
     /**
-     * The Content property
+     * Provides operations to manage the media for the group entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);

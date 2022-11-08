@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SharedInsightItemRequestBuilder 
 {
     /**
-     * The lastSharedMethod property
+     * Provides operations to manage the lastSharedMethod property of the microsoft.graph.sharedInsight entity.
     */
     public function lastSharedMethod(): LastSharedMethodRequestBuilder {
         return new LastSharedMethodRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -37,7 +37,7 @@ class SharedInsightItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resource property
+     * Provides operations to manage the resource property of the microsoft.graph.sharedInsight entity.
     */
     public function resource(): ResourceRequestBuilder {
         return new ResourceRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -126,6 +126,7 @@ class SharedInsightItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

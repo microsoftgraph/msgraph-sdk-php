@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessPackageCatalogItemRequestBuilder 
 {
     /**
-     * The accessPackages property
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
     */
     public function accessPackages(): AccessPackagesRequestBuilder {
         return new AccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class AccessPackageCatalogItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item collection
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageItemRequestBuilder
     */
@@ -130,6 +130,7 @@ class AccessPackageCatalogItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

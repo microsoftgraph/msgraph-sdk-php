@@ -33,35 +33,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class BookingBusinessItemRequestBuilder 
 {
     /**
-     * The appointments property
+     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
     */
     public function appointments(): AppointmentsRequestBuilder {
         return new AppointmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calendarView property
+     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
     */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The customers property
+     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
     */
     public function customers(): CustomersRequestBuilder {
         return new CustomersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The customQuestions property
+     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
     */
     public function customQuestions(): CustomQuestionsRequestBuilder {
         return new CustomQuestionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getStaffAvailability property
+     * Provides operations to call the getStaffAvailability method.
     */
     public function getStaffAvailability(): GetStaffAvailabilityRequestBuilder {
         return new GetStaffAvailabilityRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -73,7 +73,7 @@ class BookingBusinessItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The publish property
+     * Provides operations to call the publish method.
     */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -85,21 +85,21 @@ class BookingBusinessItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The services property
+     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
     */
     public function services(): ServicesRequestBuilder {
         return new ServicesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The staffMembers property
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
     */
     public function staffMembers(): StaffMembersRequestBuilder {
         return new StaffMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unpublish property
+     * Provides operations to call the unpublish method.
     */
     public function unpublish(): UnpublishRequestBuilder {
         return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -111,7 +111,7 @@ class BookingBusinessItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.appointments.item collection
+     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedSolutionsBookingBusinessesItemAppointmentsItemBookingAppointmentItemRequestBuilder
     */
@@ -122,7 +122,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.calendarView.item collection
+     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedSolutionsBookingBusinessesItemCalendarViewItemBookingAppointmentItemRequestBuilder
     */
@@ -210,11 +210,12 @@ class BookingBusinessItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.customers.item collection
+     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return BookingCustomerBaseItemRequestBuilder
     */
@@ -225,7 +226,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.customQuestions.item collection
+     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return BookingCustomQuestionItemRequestBuilder
     */
@@ -294,7 +295,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.services.item collection
+     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return BookingServiceItemRequestBuilder
     */
@@ -305,7 +306,7 @@ class BookingBusinessItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item.staffMembers.item collection
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
      * @param string $id Unique identifier of the item
      * @return BookingStaffMemberBaseItemRequestBuilder
     */

@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RelationItemRequestBuilder 
 {
     /**
-     * The fromTerm property
+     * Provides operations to manage the fromTerm property of the microsoft.graph.termStore.relation entity.
     */
     public function fromTerm(): FromTermRequestBuilder {
         return new FromTermRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,14 +38,14 @@ class RelationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The set property
+     * Provides operations to manage the set property of the microsoft.graph.termStore.relation entity.
     */
     public function set(): SetRequestBuilder {
         return new SetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The toTerm property
+     * Provides operations to manage the toTerm property of the microsoft.graph.termStore.relation entity.
     */
     public function toTerm(): ToTermRequestBuilder {
         return new ToTermRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -134,6 +134,7 @@ class RelationItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

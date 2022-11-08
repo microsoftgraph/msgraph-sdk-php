@@ -20,14 +20,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EdiscoveryReviewTagItemRequestBuilder 
 {
     /**
-     * The childTags property
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
     */
     public function childTags(): ChildTagsRequestBuilder {
         return new ChildTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parent property
+     * Provides operations to manage the parent property of the microsoft.graph.security.ediscoveryReviewTag entity.
     */
     public function parent(): ParentRequestBuilder {
         return new ParentRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -49,7 +49,7 @@ class EdiscoveryReviewTagItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.cases.ediscoveryCases.item.tags.item.childTags.item collection
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
      * @param string $id Unique identifier of the item
      * @return EdiscoveryReviewTagItemRequestBuilder
     */
@@ -137,6 +137,7 @@ class EdiscoveryReviewTagItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

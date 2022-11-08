@@ -24,21 +24,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EdiscoveryNoncustodialDataSourceItemRequestBuilder 
 {
     /**
-     * The applyHold property
+     * Provides operations to call the applyHold method.
     */
     public function applyHold(): ApplyHoldRequestBuilder {
         return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The dataSource property
+     * Provides operations to manage the dataSource property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity.
     */
     public function dataSource(): DataSourceRequestBuilder {
         return new DataSourceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The lastIndexOperation property
+     * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryNoncustodialDataSource entity.
     */
     public function lastIndexOperation(): LastIndexOperationRequestBuilder {
         return new LastIndexOperationRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -50,14 +50,14 @@ class EdiscoveryNoncustodialDataSourceItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The release property
+     * Provides operations to call the release method.
     */
     public function release(): ReleaseRequestBuilder {
         return new ReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removeHold property
+     * Provides operations to call the removeHold method.
     */
     public function removeHold(): RemoveHoldRequestBuilder {
         return new RemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -69,7 +69,7 @@ class EdiscoveryNoncustodialDataSourceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The updateIndex property
+     * Provides operations to call the updateIndex method.
     */
     public function updateIndex(): UpdateIndexRequestBuilder {
         return new UpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -158,6 +158,7 @@ class EdiscoveryNoncustodialDataSourceItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

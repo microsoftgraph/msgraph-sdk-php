@@ -27,7 +27,7 @@ class PlannerRequestBuilder
     private array $pathParameters;
     
     /**
-     * The plans property
+     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
     */
     public function plans(): PlansRequestBuilder {
         return new PlansRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -39,7 +39,7 @@ class PlannerRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The tasks property
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
     */
     public function tasks(): TasksRequestBuilder {
         return new TasksRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -128,6 +128,7 @@ class PlannerRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -190,7 +191,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.planner.plans.item collection
+     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
      * @param string $id Unique identifier of the item
      * @return PlannerPlanItemRequestBuilder
     */
@@ -201,7 +202,7 @@ class PlannerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.planner.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

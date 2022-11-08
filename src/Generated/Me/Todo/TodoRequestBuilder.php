@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TodoRequestBuilder 
 {
     /**
-     * The lists property
+     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
     */
     public function lists(): ListsRequestBuilder {
         return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,6 +119,7 @@ class TodoRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
@@ -161,7 +162,7 @@ class TodoRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.todo.lists.item collection
+     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
      * @param string $id Unique identifier of the item
      * @return TodoTaskListItemRequestBuilder
     */

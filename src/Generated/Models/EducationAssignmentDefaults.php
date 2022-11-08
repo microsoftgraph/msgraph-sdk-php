@@ -30,7 +30,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     private ?string $notificationChannelUrl = null;
     
     /**
-     * Instantiates a new educationAssignmentDefaults and sets the default values.
+     * Instantiates a new EducationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
         parent::__construct();

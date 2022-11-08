@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ApplicationTemplateItemRequestBuilder 
 {
     /**
-     * The instantiate property
+     * Provides operations to call the instantiate method.
     */
     public function instantiate(): InstantiateRequestBuilder {
         return new InstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -118,6 +118,7 @@ class ApplicationTemplateItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -25,7 +25,7 @@ class BitlockerRequestBuilder
     private array $pathParameters;
     
     /**
-     * The recoveryKeys property
+     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
     */
     public function recoveryKeys(): RecoveryKeysRequestBuilder {
         return new RecoveryKeysRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -97,7 +97,7 @@ class BitlockerRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.informationProtection.bitlocker.recoveryKeys.item collection
+     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
      * @param string $id Unique identifier of the item
      * @return BitlockerRecoveryKeyItemRequestBuilder
     */

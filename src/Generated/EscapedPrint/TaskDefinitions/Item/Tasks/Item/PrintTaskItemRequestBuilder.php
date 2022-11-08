@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrintTaskItemRequestBuilder 
 {
     /**
-     * The definition property
+     * Provides operations to manage the definition property of the microsoft.graph.printTask entity.
     */
     public function definition(): DefinitionRequestBuilder {
         return new DefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -37,7 +37,7 @@ class PrintTaskItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The trigger property
+     * Provides operations to manage the trigger property of the microsoft.graph.printTask entity.
     */
     public function trigger(): TriggerRequestBuilder {
         return new TriggerRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -126,6 +126,7 @@ class PrintTaskItemRequestBuilder
             }
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        $requestInfo->setContentFromScalar($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

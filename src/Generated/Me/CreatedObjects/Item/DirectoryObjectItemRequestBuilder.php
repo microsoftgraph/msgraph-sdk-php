@@ -29,7 +29,7 @@ class DirectoryObjectItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The servicePrincipal property
+     * Casts the previous resource to servicePrincipal.
     */
     public function servicePrincipal(): ServicePrincipalRequestBuilder {
         return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
