@@ -85,7 +85,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the assignedLicenses
-    * The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
      *
      * @return array|null The assignedLicenses
      */
@@ -100,7 +100,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the assignedLicenses
-    * The licenses that are assigned to the user, including inherited (group-based) licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
+    * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses.  Not nullable. Returned only on $select. Supports $filter (eq, not, and counting empty collections).
     *
     * @param AssignedLicense[] $val The assignedLicenses
     *
@@ -320,7 +320,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the createdDateTime
-    * The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only.  Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -339,7 +339,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the createdDateTime
-    * The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
+    * The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only.  Read-only. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -864,7 +864,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the licenseAssignmentStates
-    * State of license assignments for this user. Read-only. Returned only on $select.
+    * State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      *
      * @return array|null The licenseAssignmentStates
      */
@@ -879,7 +879,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the licenseAssignmentStates
-    * State of license assignments for this user. Read-only. Returned only on $select.
+    * State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
     *
     * @param LicenseAssignmentState[] $val The licenseAssignmentStates
     *
