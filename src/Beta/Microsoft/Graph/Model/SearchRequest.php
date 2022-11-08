@@ -87,6 +87,7 @@ class SearchRequest extends Entity
 
     /**
     * Gets the collapseProperties
+    * Contains the ordered collection of fields and limit to collapse results. Optional.
     *
     * @return CollapseProperty|null The collapseProperties
     */
@@ -105,6 +106,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the collapseProperties
+    * Contains the ordered collection of fields and limit to collapse results. Optional.
     *
     * @param CollapseProperty $val The value to assign to the collapseProperties
     *

@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceLogCollectionResponse extends Entity
 {
     /**
+    * Gets the enrolledByUser
+    * The User Principal Name (UPN) of the user that enrolled the device
+    *
+    * @return string|null The enrolledByUser
+    */
+    public function getEnrolledByUser()
+    {
+        if (array_key_exists("enrolledByUser", $this->_propDict)) {
+            return $this->_propDict["enrolledByUser"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enrolledByUser
+    * The User Principal Name (UPN) of the user that enrolled the device
+    *
+    * @param string $val The enrolledByUser
+    *
+    * @return DeviceLogCollectionResponse
+    */
+    public function setEnrolledByUser($val)
+    {
+        $this->_propDict["enrolledByUser"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the errorCode
     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
     *

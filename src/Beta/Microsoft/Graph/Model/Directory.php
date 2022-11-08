@@ -258,6 +258,34 @@ class Directory extends Entity
 
 
      /**
+     * Gets the onPremisesSynchronization
+     *
+     * @return array|null The onPremisesSynchronization
+     */
+    public function getOnPremisesSynchronization()
+    {
+        if (array_key_exists("onPremisesSynchronization", $this->_propDict)) {
+           return $this->_propDict["onPremisesSynchronization"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the onPremisesSynchronization
+    *
+    * @param OnPremisesDirectorySynchronization[] $val The onPremisesSynchronization
+    *
+    * @return Directory
+    */
+    public function setOnPremisesSynchronization($val)
+    {
+        $this->_propDict["onPremisesSynchronization"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the outboundSharedUserProfiles
      *
      * @return array|null The outboundSharedUserProfiles

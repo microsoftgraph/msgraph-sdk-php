@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalMessageStatus File
+* BrowserSharedCookieSourceEnvironment File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OrganizationalMessageStatus class
+* BrowserSharedCookieSourceEnvironment class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalMessageStatus extends Enum
+class BrowserSharedCookieSourceEnvironment extends Enum
 {
     /**
-    * The Enum OrganizationalMessageStatus
+    * The Enum BrowserSharedCookieSourceEnvironment
     */
-    const SCHEDULED = "scheduled";
-    const ACTIVE = "active";
-    const COMPLETED = "completed";
-    const CANCELLED = "cancelled";
+    const MICROSOFT_EDGE = "microsoftEdge";
+    const INTERNET_EXPLORER11 = "internetExplorer11";
+    const BOTH = "both";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

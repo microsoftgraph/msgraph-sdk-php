@@ -82,6 +82,7 @@ class ConditionalAccessClientApplications extends Entity
 
     /**
     * Gets the servicePrincipalFilter
+    * Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
     *
     * @return ConditionalAccessFilter|null The servicePrincipalFilter
     */
@@ -100,6 +101,7 @@ class ConditionalAccessClientApplications extends Entity
 
     /**
     * Sets the servicePrincipalFilter
+    * Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
     *
     * @param ConditionalAccessFilter $val The value to assign to the servicePrincipalFilter
     *

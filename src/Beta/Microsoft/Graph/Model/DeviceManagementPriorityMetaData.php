@@ -23,4 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class DeviceManagementPriorityMetaData extends Entity
 {
+    /**
+    * Gets the priority
+    * Priority of the policy. Valid values 1 to 500
+    *
+    * @return int|null The priority
+    */
+    public function getPriority()
+    {
+        if (array_key_exists("priority", $this->_propDict)) {
+            return $this->_propDict["priority"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the priority
+    * Priority of the policy. Valid values 1 to 500
+    *
+    * @param int $val The value of the priority
+    *
+    * @return DeviceManagementPriorityMetaData
+    */
+    public function setPriority($val)
+    {
+        $this->_propDict["priority"] = $val;
+        return $this;
+    }
 }

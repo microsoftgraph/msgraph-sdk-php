@@ -154,8 +154,6 @@ class TrustFramework implements \JsonSerializable
                 $serializableProperties[$property] = $val->value();
             } else if (is_a($val, "\Entity")) {
                 $serializableProperties[$property] = $val->jsonSerialize();
-            } else if (is_a($val, "\GuzzleHttp\Psr7\Stream")) {
-                $serializableProperties[$property] = (string) $val;
             }
         }
         return $serializableProperties;

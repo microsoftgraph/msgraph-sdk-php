@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalMessageSurface File
+* BrowserSiteMergeType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OrganizationalMessageSurface class
+* BrowserSiteMergeType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalMessageSurface extends Enum
+class BrowserSiteMergeType extends Enum
 {
     /**
-    * The Enum OrganizationalMessageSurface
+    * The Enum BrowserSiteMergeType
     */
-    const ACTION_CENTER = "actionCenter";
-    const GET_STARTED = "getStarted";
-    const SOFT_LANDING = "softLanding";
+    const NO_MERGE = "noMerge";
+    const GRAPHDEFAULT = "default";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

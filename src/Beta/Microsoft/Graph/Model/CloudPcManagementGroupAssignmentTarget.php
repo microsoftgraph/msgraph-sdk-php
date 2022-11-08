@@ -62,4 +62,30 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
         $this->_propDict["groupId"] = $val;
         return $this;
     }
+    /**
+    * Gets the servicePlanId
+    *
+    * @return string|null The servicePlanId
+    */
+    public function getServicePlanId()
+    {
+        if (array_key_exists("servicePlanId", $this->_propDict)) {
+            return $this->_propDict["servicePlanId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePlanId
+    *
+    * @param string $val The value of the servicePlanId
+    *
+    * @return CloudPcManagementGroupAssignmentTarget
+    */
+    public function setServicePlanId($val)
+    {
+        $this->_propDict["servicePlanId"] = $val;
+        return $this;
+    }
 }
