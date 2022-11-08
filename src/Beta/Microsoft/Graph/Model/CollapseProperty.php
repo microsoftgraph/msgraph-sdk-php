@@ -25,6 +25,7 @@ class CollapseProperty extends Entity
 {
     /**
     * Gets the fields
+    * Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
     *
     * @return string|null The fields
     */
@@ -39,6 +40,7 @@ class CollapseProperty extends Entity
 
     /**
     * Sets the fields
+    * Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
     *
     * @param string $val The value of the fields
     *
@@ -51,6 +53,7 @@ class CollapseProperty extends Entity
     }
     /**
     * Gets the limit
+    * Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
     *
     * @return int|null The limit
     */
@@ -65,6 +68,7 @@ class CollapseProperty extends Entity
 
     /**
     * Sets the limit
+    * Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
     *
     * @param int $val The value of the limit
     *

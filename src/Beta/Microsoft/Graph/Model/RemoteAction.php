@@ -57,4 +57,5 @@ class RemoteAction extends Enum
     const DISABLE = "disable";
     const REENABLE = "reenable";
     const MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT = "moveDeviceToOrganizationalUnit";
+    const INITIATE_MOBILE_DEVICE_MANAGEMENT_KEY_RECOVERY = "initiateMobileDeviceManagementKeyRecovery";
 }

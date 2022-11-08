@@ -26,6 +26,7 @@ class ConditionalAccessApplications extends Entity
 
     /**
     * Gets the applicationFilter
+    * Filter that defines the dynamic-application-syntax rule to include/exclude cloud applications. A filter can use custom security attributes to include/exclude applications.
     *
     * @return ConditionalAccessFilter|null The applicationFilter
     */
@@ -44,6 +45,7 @@ class ConditionalAccessApplications extends Entity
 
     /**
     * Sets the applicationFilter
+    * Filter that defines the dynamic-application-syntax rule to include/exclude cloud applications. A filter can use custom security attributes to include/exclude applications.
     *
     * @param ConditionalAccessFilter $val The value to assign to the applicationFilter
     *

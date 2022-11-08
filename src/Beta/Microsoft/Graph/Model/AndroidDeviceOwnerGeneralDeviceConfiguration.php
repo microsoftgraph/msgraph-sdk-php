@@ -2419,7 +2419,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
 
      /**
      * Gets the passwordBlockKeyguardFeatures
-    * List of device keyguard features to block. This collection can contain a maximum of 7 elements.
+    * List of device keyguard features to block. This collection can contain a maximum of 11 elements.
      *
      * @return array|null The passwordBlockKeyguardFeatures
      */
@@ -2434,7 +2434,7 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
 
     /**
     * Sets the passwordBlockKeyguardFeatures
-    * List of device keyguard features to block. This collection can contain a maximum of 7 elements.
+    * List of device keyguard features to block. This collection can contain a maximum of 11 elements.
     *
     * @param AndroidKeyguardFeature[] $val The passwordBlockKeyguardFeatures
     *

@@ -299,7 +299,7 @@ class DeviceManagementCompliancePolicy extends Entity
 
     /**
     * Gets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, unknownFutureValue.
+    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
     *
     * @return DeviceManagementConfigurationTechnologies|null The technologies
     */
@@ -318,7 +318,7 @@ class DeviceManagementCompliancePolicy extends Entity
 
     /**
     * Sets the technologies
-    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, unknownFutureValue.
+    * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
     *
     * @param DeviceManagementConfigurationTechnologies $val The technologies
     *

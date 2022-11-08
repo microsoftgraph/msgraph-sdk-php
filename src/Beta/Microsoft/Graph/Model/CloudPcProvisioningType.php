@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalMessageFrequency File
+* CloudPcProvisioningType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OrganizationalMessageFrequency class
+* CloudPcProvisioningType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalMessageFrequency extends Enum
+class CloudPcProvisioningType extends Enum
 {
     /**
-    * The Enum OrganizationalMessageFrequency
+    * The Enum CloudPcProvisioningType
     */
-    const WEEKLY_ONCE = "weeklyOnce";
-    const MONTHLY_ONCE = "monthlyOnce";
-    const MONTHLY_TWICE = "monthlyTwice";
+    const DEDICATED = "dedicated";
+    const SHARED = "shared";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

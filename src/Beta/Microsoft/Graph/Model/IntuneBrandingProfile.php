@@ -800,6 +800,35 @@ class IntuneBrandingProfile extends Entity
     }
 
     /**
+    * Gets the showConfigurationManagerApps
+    * Boolean that indicates if Configuration Manager Apps will be shown in Company Portal
+    *
+    * @return bool|null The showConfigurationManagerApps
+    */
+    public function getShowConfigurationManagerApps()
+    {
+        if (array_key_exists("showConfigurationManagerApps", $this->_propDict)) {
+            return $this->_propDict["showConfigurationManagerApps"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the showConfigurationManagerApps
+    * Boolean that indicates if Configuration Manager Apps will be shown in Company Portal
+    *
+    * @param bool $val The showConfigurationManagerApps
+    *
+    * @return IntuneBrandingProfile
+    */
+    public function setShowConfigurationManagerApps($val)
+    {
+        $this->_propDict["showConfigurationManagerApps"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the showDisplayNameNextToLogo
     * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
     *

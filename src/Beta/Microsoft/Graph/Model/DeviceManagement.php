@@ -3775,39 +3775,6 @@ class DeviceManagement extends Entity
         return $this;
     }
 
-    /**
-    * Gets the userExperienceAnalyticsRegressionSummary
-    * User experience analytics regression summary
-    *
-    * @return UserExperienceAnalyticsRegressionSummary|null The userExperienceAnalyticsRegressionSummary
-    */
-    public function getUserExperienceAnalyticsRegressionSummary()
-    {
-        if (array_key_exists("userExperienceAnalyticsRegressionSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["userExperienceAnalyticsRegressionSummary"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsRegressionSummary") || is_null($this->_propDict["userExperienceAnalyticsRegressionSummary"])) {
-                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
-            } else {
-                $this->_propDict["userExperienceAnalyticsRegressionSummary"] = new UserExperienceAnalyticsRegressionSummary($this->_propDict["userExperienceAnalyticsRegressionSummary"]);
-                return $this->_propDict["userExperienceAnalyticsRegressionSummary"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the userExperienceAnalyticsRegressionSummary
-    * User experience analytics regression summary
-    *
-    * @param UserExperienceAnalyticsRegressionSummary $val The userExperienceAnalyticsRegressionSummary
-    *
-    * @return DeviceManagement
-    */
-    public function setUserExperienceAnalyticsRegressionSummary($val)
-    {
-        $this->_propDict["userExperienceAnalyticsRegressionSummary"] = $val;
-        return $this;
-    }
-
 
      /**
      * Gets the userExperienceAnalyticsRemoteConnection
@@ -4804,66 +4771,6 @@ class DeviceManagement extends Entity
     public function setConfigManagerCollections($val)
     {
         $this->_propDict["configManagerCollections"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the organizationalMessageDetails
-    * A list of OrganizationalMessageDetails
-     *
-     * @return array|null The organizationalMessageDetails
-     */
-    public function getOrganizationalMessageDetails()
-    {
-        if (array_key_exists("organizationalMessageDetails", $this->_propDict)) {
-           return $this->_propDict["organizationalMessageDetails"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the organizationalMessageDetails
-    * A list of OrganizationalMessageDetails
-    *
-    * @param OrganizationalMessageDetail[] $val The organizationalMessageDetails
-    *
-    * @return DeviceManagement
-    */
-    public function setOrganizationalMessageDetails($val)
-    {
-        $this->_propDict["organizationalMessageDetails"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the organizationalMessageGuidedContents
-    * A list of OrganizationalMessageGuidedContents
-     *
-     * @return array|null The organizationalMessageGuidedContents
-     */
-    public function getOrganizationalMessageGuidedContents()
-    {
-        if (array_key_exists("organizationalMessageGuidedContents", $this->_propDict)) {
-           return $this->_propDict["organizationalMessageGuidedContents"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the organizationalMessageGuidedContents
-    * A list of OrganizationalMessageGuidedContents
-    *
-    * @param OrganizationalMessageGuidedContent[] $val The organizationalMessageGuidedContents
-    *
-    * @return DeviceManagement
-    */
-    public function setOrganizationalMessageGuidedContents($val)
-    {
-        $this->_propDict["organizationalMessageGuidedContents"] = $val;
         return $this;
     }
 

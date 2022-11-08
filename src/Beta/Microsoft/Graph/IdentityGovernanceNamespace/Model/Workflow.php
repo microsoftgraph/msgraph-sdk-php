@@ -26,7 +26,7 @@ class Workflow extends WorkflowBase
 {
     /**
     * Gets the deletedDateTime
-    * When the workflow was deleted. Supports $filter(lt,gt) and $orderBy.
+    * When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
     * @return \DateTime|null The deletedDateTime
     */
@@ -45,7 +45,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the deletedDateTime
-    * When the workflow was deleted. Supports $filter(lt,gt) and $orderBy.
+    * When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
     * @param \DateTime $val The deletedDateTime
     *
@@ -59,7 +59,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the id
-    * Identifier used for individually addressing a specific workflow. Supports $filter(eq, ne).
+    * Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
     *
     * @return string|null The id
     */
@@ -74,7 +74,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the id
-    * Identifier used for individually addressing a specific workflow. Supports $filter(eq, ne).
+    * Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
     *
     * @param string $val The id
     *
@@ -121,7 +121,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Gets the version
-    * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq, ne).
+    * The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
     * @return int|null The version
     */
@@ -136,7 +136,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the version
-    * The current version number of the workflow. Value is 1 when the workflow is first created. Supports $filter(eq, ne).
+    * The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
     * @param int $val The version
     *

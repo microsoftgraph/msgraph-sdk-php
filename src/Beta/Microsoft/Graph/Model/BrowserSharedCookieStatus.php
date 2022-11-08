@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OrganizationalMessageLogoType File
+* BrowserSharedCookieStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OrganizationalMessageLogoType class
+* BrowserSharedCookieStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,11 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OrganizationalMessageLogoType extends Enum
+class BrowserSharedCookieStatus extends Enum
 {
     /**
-    * The Enum OrganizationalMessageLogoType
+    * The Enum BrowserSharedCookieStatus
     */
-    const PNG = "png";
+    const PUBLISHED = "published";
+    const PENDING_ADD = "pendingAdd";
+    const PENDING_EDIT = "pendingEdit";
+    const PENDING_DELETE = "pendingDelete";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
