@@ -709,7 +709,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the freeStorageSpaceInBytes
-    * Free Storage in Bytes. This property is read-only.
+    * Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
     *
     * @return int|null The freeStorageSpaceInBytes
     */
@@ -724,7 +724,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the freeStorageSpaceInBytes
-    * Free Storage in Bytes. This property is read-only.
+    * Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
     *
     * @param int $val The freeStorageSpaceInBytes
     *
@@ -738,7 +738,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the iccid
-    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @return string|null The iccid
     */
@@ -753,7 +753,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the iccid
-    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+    * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @param string $val The iccid
     *
@@ -1131,7 +1131,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the notes
-    * Notes on the device created by IT Admin
+    * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
     *
     * @return string|null The notes
     */
@@ -1146,7 +1146,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the notes
-    * Notes on the device created by IT Admin
+    * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
     *
     * @param string $val The notes
     *
@@ -1280,7 +1280,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the physicalMemoryInBytes
-    * Total Memory in Bytes. This property is read-only.
+    * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
     *
     * @return int|null The physicalMemoryInBytes
     */
@@ -1295,7 +1295,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the physicalMemoryInBytes
-    * Total Memory in Bytes. This property is read-only.
+    * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
     *
     * @param int $val The physicalMemoryInBytes
     *
@@ -1483,7 +1483,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the udid
-    * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+    * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @return string|null The udid
     */
@@ -1498,7 +1498,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the udid
-    * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+    * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @param string $val The udid
     *
