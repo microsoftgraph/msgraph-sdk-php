@@ -150,7 +150,7 @@ class IosLobApp extends MobileLobApp
 
     /**
     * Gets the identityVersion
-    * The identity version.
+    * The identity version. This property is being deprecated in 2211(November 2022)
     *
     * @return string|null The identityVersion
     */
@@ -165,7 +165,7 @@ class IosLobApp extends MobileLobApp
 
     /**
     * Sets the identityVersion
-    * The identity version.
+    * The identity version. This property is being deprecated in 2211(November 2022)
     *
     * @param string $val The identityVersion
     *

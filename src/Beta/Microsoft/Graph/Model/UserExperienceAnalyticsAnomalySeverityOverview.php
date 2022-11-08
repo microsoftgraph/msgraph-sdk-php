@@ -135,32 +135,4 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
         $this->_propDict["mediumSeverityAnomalyCount"] = $val;
         return $this;
     }
-    /**
-    * Gets the otherSeverityAnomalyCount
-    * The number of anomalies which have been detected with undefined severity. Valid values -2147483648 to 2147483647
-    *
-    * @return int|null The otherSeverityAnomalyCount
-    */
-    public function getOtherSeverityAnomalyCount()
-    {
-        if (array_key_exists("otherSeverityAnomalyCount", $this->_propDict)) {
-            return $this->_propDict["otherSeverityAnomalyCount"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the otherSeverityAnomalyCount
-    * The number of anomalies which have been detected with undefined severity. Valid values -2147483648 to 2147483647
-    *
-    * @param int $val The value of the otherSeverityAnomalyCount
-    *
-    * @return UserExperienceAnalyticsAnomalySeverityOverview
-    */
-    public function setOtherSeverityAnomalyCount($val)
-    {
-        $this->_propDict["otherSeverityAnomalyCount"] = $val;
-        return $this;
-    }
 }

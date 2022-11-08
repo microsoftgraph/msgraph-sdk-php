@@ -56,6 +56,39 @@ class Admin implements \JsonSerializable
     }
 
     /**
+    * Gets the edge
+    * A container for Microsoft Edge resources. Read-only.
+    *
+    * @return Edge|null The edge
+    */
+    public function getEdge()
+    {
+        if (array_key_exists("edge", $this->_propDict)) {
+            if (is_a($this->_propDict["edge"], "\Beta\Microsoft\Graph\Model\Edge") || is_null($this->_propDict["edge"])) {
+                return $this->_propDict["edge"];
+            } else {
+                $this->_propDict["edge"] = new Edge($this->_propDict["edge"]);
+                return $this->_propDict["edge"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the edge
+    * A container for Microsoft Edge resources. Read-only.
+    *
+    * @param Edge $val The edge
+    *
+    * @return Admin
+    */
+    public function setEdge($val)
+    {
+        $this->_propDict["edge"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the sharepoint
     * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
     *
@@ -230,8 +263,6 @@ class Admin implements \JsonSerializable
                 $serializableProperties[$property] = $val->value();
             } else if (is_a($val, "\Entity")) {
                 $serializableProperties[$property] = $val->jsonSerialize();
-            } else if (is_a($val, "\GuzzleHttp\Psr7\Stream")) {
-                $serializableProperties[$property] = (string) $val;
             }
         }
         return $serializableProperties;

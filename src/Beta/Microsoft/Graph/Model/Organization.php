@@ -204,6 +204,35 @@ class Organization extends DirectoryObject
     }
 
     /**
+    * Gets the defaultUsageLocation
+    * Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+    *
+    * @return string|null The defaultUsageLocation
+    */
+    public function getDefaultUsageLocation()
+    {
+        if (array_key_exists("defaultUsageLocation", $this->_propDict)) {
+            return $this->_propDict["defaultUsageLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the defaultUsageLocation
+    * Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+    *
+    * @param string $val The defaultUsageLocation
+    *
+    * @return Organization
+    */
+    public function setDefaultUsageLocation($val)
+    {
+        $this->_propDict["defaultUsageLocation"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the directorySizeQuota
     * The directory size quota information of an organization.
     *
