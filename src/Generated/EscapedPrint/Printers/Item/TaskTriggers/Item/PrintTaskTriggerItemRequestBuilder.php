@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrintTaskTriggerItemRequestBuilder 
 {
     /**
-     * The definition property
+     * Provides operations to manage the definition property of the microsoft.graph.printTaskTrigger entity.
     */
     public function definition(): DefinitionRequestBuilder {
         return new DefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);

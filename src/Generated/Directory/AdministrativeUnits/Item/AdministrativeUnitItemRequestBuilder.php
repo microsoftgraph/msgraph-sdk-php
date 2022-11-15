@@ -24,14 +24,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AdministrativeUnitItemRequestBuilder 
 {
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.administrativeUnit entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -48,7 +48,7 @@ class AdministrativeUnitItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The scopedRoleMembers property
+     * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
     */
     public function scopedRoleMembers(): ScopedRoleMembersRequestBuilder {
         return new ScopedRoleMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -160,7 +160,7 @@ class AdministrativeUnitItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -221,7 +221,7 @@ class AdministrativeUnitItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.scopedRoleMembers.item collection
+     * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
      * @param string $id Unique identifier of the item
      * @return ScopedRoleMembershipItemRequestBuilder
     */

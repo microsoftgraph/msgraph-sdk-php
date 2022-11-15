@@ -24,35 +24,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OnenoteSectionItemRequestBuilder 
 {
     /**
-     * The copyToNotebook property
+     * Provides operations to call the copyToNotebook method.
     */
     public function copyToNotebook(): CopyToNotebookRequestBuilder {
         return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The copyToSectionGroup property
+     * Provides operations to call the copyToSectionGroup method.
     */
     public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
         return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The pages property
+     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
     */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parentNotebook property
+     * Provides operations to manage the parentNotebook property of the microsoft.graph.onenoteSection entity.
     */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parentSectionGroup property
+     * Provides operations to manage the parentSectionGroup property of the microsoft.graph.onenoteSection entity.
     */
     public function parentSectionGroup(): ParentSectionGroupRequestBuilder {
         return new ParentSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -193,7 +193,7 @@ class OnenoteSectionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.onenote.notebooks.item.sectionGroups.item.sections.item.pages.item collection
+     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
      * @param string $id Unique identifier of the item
      * @return OnenotePageItemRequestBuilder
     */

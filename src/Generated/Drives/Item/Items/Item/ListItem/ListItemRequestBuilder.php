@@ -27,28 +27,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ListItemRequestBuilder 
 {
     /**
-     * The analytics property
+     * Provides operations to manage the analytics property of the microsoft.graph.listItem entity.
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The documentSetVersions property
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
     */
     public function documentSetVersions(): DocumentSetVersionsRequestBuilder {
         return new DocumentSetVersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The driveItem property
+     * Provides operations to manage the driveItem property of the microsoft.graph.listItem entity.
     */
     public function driveItem(): DriveItemRequestBuilder {
         return new DriveItemRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The fields property
+     * Provides operations to manage the fields property of the microsoft.graph.listItem entity.
     */
     public function fields(): FieldsRequestBuilder {
         return new FieldsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -70,7 +70,7 @@ class ListItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The versions property
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
     */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -177,7 +177,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.listItem.documentSetVersions.item collection
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
      * @param string $id Unique identifier of the item
      * @return DocumentSetVersionItemRequestBuilder
     */
@@ -246,7 +246,7 @@ class ListItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.drives.item.items.item.listItem.versions.item collection
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
      * @param string $id Unique identifier of the item
      * @return ListItemVersionItemRequestBuilder
     */

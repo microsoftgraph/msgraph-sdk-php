@@ -29,7 +29,7 @@ class DefaultRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resetToSystemDefault property
+     * Provides operations to call the resetToSystemDefault method.
     */
     public function resetToSystemDefault(): ResetToSystemDefaultRequestBuilder {
         return new ResetToSystemDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);

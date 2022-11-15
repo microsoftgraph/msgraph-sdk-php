@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WindowsAutopilotDeviceIdentityItemRequestBuilder 
 {
     /**
-     * The assignUserToDevice property
+     * Provides operations to call the assignUserToDevice method.
     */
     public function assignUserToDevice(): AssignUserToDeviceRequestBuilder {
         return new AssignUserToDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,14 +38,14 @@ class WindowsAutopilotDeviceIdentityItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The unassignUserFromDevice property
+     * Provides operations to call the unassignUserFromDevice method.
     */
     public function unassignUserFromDevice(): UnassignUserFromDeviceRequestBuilder {
         return new UnassignUserFromDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The updateDeviceProperties property
+     * Provides operations to call the updateDeviceProperties method.
     */
     public function updateDeviceProperties(): UpdateDevicePropertiesRequestBuilder {
         return new UpdateDevicePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -79,161 +79,161 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class GroupItemRequestBuilder 
 {
     /**
-     * The acceptedSenders property
+     * Provides operations to manage the acceptedSenders property of the microsoft.graph.group entity.
     */
     public function acceptedSenders(): AcceptedSendersRequestBuilder {
         return new AcceptedSendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The addFavorite property
+     * Provides operations to call the addFavorite method.
     */
     public function addFavorite(): AddFavoriteRequestBuilder {
         return new AddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The appRoleAssignments property
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
     */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignLicense property
+     * Provides operations to call the assignLicense method.
     */
     public function assignLicense(): AssignLicenseRequestBuilder {
         return new AssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calendar property
+     * Provides operations to manage the calendar property of the microsoft.graph.group entity.
     */
     public function calendar(): CalendarRequestBuilder {
         return new CalendarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calendarView property
+     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
     */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkGrantedPermissionsForApp property
+     * Provides operations to call the checkGrantedPermissionsForApp method.
     */
     public function checkGrantedPermissionsForApp(): CheckGrantedPermissionsForAppRequestBuilder {
         return new CheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The conversations property
+     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
     */
     public function conversations(): ConversationsRequestBuilder {
         return new ConversationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The createdOnBehalfOf property
+     * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.group entity.
     */
     public function createdOnBehalfOf(): CreatedOnBehalfOfRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drive property
+     * Provides operations to manage the drive property of the microsoft.graph.group entity.
     */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The drives property
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
     */
     public function drives(): DrivesRequestBuilder {
         return new DrivesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The events property
+     * Provides operations to manage the events property of the microsoft.graph.group entity.
     */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.group entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The groupLifecyclePolicies property
+     * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
     */
     public function groupLifecyclePolicies(): GroupLifecyclePoliciesRequestBuilder {
         return new GroupLifecyclePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The memberOf property
+     * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
     */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.group entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The membersWithLicenseErrors property
+     * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
     */
     public function membersWithLicenseErrors(): MembersWithLicenseErrorsRequestBuilder {
         return new MembersWithLicenseErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The onenote property
+     * Provides operations to manage the onenote property of the microsoft.graph.group entity.
     */
     public function onenote(): OnenoteRequestBuilder {
         return new OnenoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The owners property
+     * Provides operations to manage the owners property of the microsoft.graph.group entity.
     */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -245,49 +245,49 @@ class GroupItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The permissionGrants property
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
     */
     public function permissionGrants(): PermissionGrantsRequestBuilder {
         return new PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The photo property
+     * Provides operations to manage the photo property of the microsoft.graph.group entity.
     */
     public function photo(): PhotoRequestBuilder {
         return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The photos property
+     * Provides operations to manage the photos property of the microsoft.graph.group entity.
     */
     public function photos(): PhotosRequestBuilder {
         return new PhotosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The planner property
+     * Provides operations to manage the planner property of the microsoft.graph.group entity.
     */
     public function planner(): PlannerRequestBuilder {
         return new PlannerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The rejectedSenders property
+     * Provides operations to manage the rejectedSenders property of the microsoft.graph.group entity.
     */
     public function rejectedSenders(): RejectedSendersRequestBuilder {
         return new RejectedSendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removeFavorite property
+     * Provides operations to call the removeFavorite method.
     */
     public function removeFavorite(): RemoveFavoriteRequestBuilder {
         return new RemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The renew property
+     * Provides operations to call the renew method.
     */
     public function renew(): RenewRequestBuilder {
         return new RenewRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -299,70 +299,70 @@ class GroupItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resetUnseenCount property
+     * Provides operations to call the resetUnseenCount method.
     */
     public function resetUnseenCount(): ResetUnseenCountRequestBuilder {
         return new ResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The settings property
+     * Provides operations to manage the settings property of the microsoft.graph.group entity.
     */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sites property
+     * Provides operations to manage the sites property of the microsoft.graph.group entity.
     */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The subscribeByMail property
+     * Provides operations to call the subscribeByMail method.
     */
     public function subscribeByMail(): SubscribeByMailRequestBuilder {
         return new SubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The team property
+     * Provides operations to manage the team property of the microsoft.graph.group entity.
     */
     public function team(): TeamRequestBuilder {
         return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The threads property
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
     */
     public function threads(): ThreadsRequestBuilder {
         return new ThreadsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The transitiveMemberOf property
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
     */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The transitiveMembers property
+     * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
     */
     public function transitiveMembers(): TransitiveMembersRequestBuilder {
         return new TransitiveMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unsubscribeByMail property
+     * Provides operations to call the unsubscribeByMail method.
     */
     public function unsubscribeByMail(): UnsubscribeByMailRequestBuilder {
         return new UnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -374,7 +374,7 @@ class GroupItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The validateProperties property
+     * Provides operations to call the validateProperties method.
     */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -392,7 +392,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.appRoleAssignments.item collection
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return AppRoleAssignmentItemRequestBuilder
     */
@@ -403,7 +403,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.calendarView.item collection
+     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemCalendarViewItemEventItemRequestBuilder
     */
@@ -425,7 +425,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item collection
+     * Provides operations to manage the conversations property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return ConversationItemRequestBuilder
     */
@@ -525,7 +525,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item collection
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return DriveItemRequestBuilder
     */
@@ -536,7 +536,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.events.item collection
+     * Provides operations to manage the events property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemEventsItemEventItemRequestBuilder
     */
@@ -547,7 +547,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -577,7 +577,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.groupLifecyclePolicies.item collection
+     * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return GroupLifecyclePolicyItemRequestBuilder
     */
@@ -588,7 +588,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
@@ -610,7 +610,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.membersWithLicenseErrors.item collection
+     * Provides operations to manage the membersWithLicenseErrors property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemMembersWithLicenseErrorsItemDirectoryObjectItemRequestBuilder
     */
@@ -652,7 +652,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.permissionGrants.item collection
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return ResourceSpecificPermissionGrantItemRequestBuilder
     */
@@ -663,7 +663,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.photos.item collection
+     * Provides operations to manage the photos property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return ProfilePhotoItemRequestBuilder
     */
@@ -685,7 +685,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.settings.item collection
+     * Provides operations to manage the settings property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return GroupSettingItemRequestBuilder
     */
@@ -696,7 +696,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item collection
+     * Provides operations to manage the sites property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return SiteItemRequestBuilder
     */
@@ -707,7 +707,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.threads.item collection
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return ConversationThreadItemRequestBuilder
     */
@@ -718,7 +718,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
@@ -729,7 +729,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.transitiveMembers.item collection
+     * Provides operations to manage the transitiveMembers property of the microsoft.graph.group entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemTransitiveMembersItemDirectoryObjectItemRequestBuilder
     */

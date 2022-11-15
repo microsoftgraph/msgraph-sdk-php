@@ -30,7 +30,7 @@ class PlannerBucketItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The tasks property
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
     */
     public function tasks(): TasksRequestBuilder {
         return new TasksRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class PlannerBucketItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.planner.buckets.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

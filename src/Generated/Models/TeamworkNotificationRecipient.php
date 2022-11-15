@@ -38,6 +38,9 @@ class TeamworkNotificationRecipient implements AdditionalDataHolder, Parsable
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
                 case '#microsoft.graph.aadUserNotificationRecipient': return new AadUserNotificationRecipient();
+                case '#microsoft.graph.channelMembersNotificationRecipient': return new ChannelMembersNotificationRecipient();
+                case '#microsoft.graph.chatMembersNotificationRecipient': return new ChatMembersNotificationRecipient();
+                case '#microsoft.graph.teamMembersNotificationRecipient': return new TeamMembersNotificationRecipient();
             }
         }
         return new TeamworkNotificationRecipient();

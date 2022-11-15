@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class InformationProtectionRequestBuilder 
 {
     /**
-     * The bitlocker property
+     * Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity.
     */
     public function bitlocker(): BitlockerRequestBuilder {
         return new BitlockerRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,7 +38,7 @@ class InformationProtectionRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The threatAssessmentRequests property
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
     */
     public function threatAssessmentRequests(): ThreatAssessmentRequestsRequestBuilder {
         return new ThreatAssessmentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -149,7 +149,7 @@ class InformationProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.informationProtection.threatAssessmentRequests.item collection
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
      * @param string $id Unique identifier of the item
      * @return ThreatAssessmentRequestItemRequestBuilder
     */

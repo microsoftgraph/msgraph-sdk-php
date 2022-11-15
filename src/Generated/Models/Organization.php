@@ -135,7 +135,7 @@ class Organization extends DirectoryObject implements Parsable
     private ?array $verifiedDomains = null;
     
     /**
-     * Instantiates a new Organization and sets the default values.
+     * Instantiates a new organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

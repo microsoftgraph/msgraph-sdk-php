@@ -29,7 +29,7 @@ class AdminRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The serviceAnnouncement property
+     * Provides operations to manage the serviceAnnouncement property of the microsoft.graph.admin entity.
     */
     public function serviceAnnouncement(): ServiceAnnouncementRequestBuilder {
         return new ServiceAnnouncementRequestBuilder($this->pathParameters, $this->requestAdapter);

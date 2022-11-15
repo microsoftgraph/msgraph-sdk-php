@@ -20,14 +20,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RoleManagementRequestBuilder 
 {
     /**
-     * The directory property
+     * Provides operations to manage the directory property of the microsoft.graph.roleManagement entity.
     */
     public function directory(): DirectoryRequestBuilder {
         return new DirectoryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The entitlementManagement property
+     * Provides operations to manage the entitlementManagement property of the microsoft.graph.roleManagement entity.
     */
     public function entitlementManagement(): EntitlementManagementRequestBuilder {
         return new EntitlementManagementRequestBuilder($this->pathParameters, $this->requestAdapter);

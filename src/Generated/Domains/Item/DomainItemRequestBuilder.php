@@ -28,21 +28,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DomainItemRequestBuilder 
 {
     /**
-     * The domainNameReferences property
+     * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
     */
     public function domainNameReferences(): DomainNameReferencesRequestBuilder {
         return new DomainNameReferencesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The federationConfiguration property
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
     */
     public function federationConfiguration(): FederationConfigurationRequestBuilder {
         return new FederationConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The forceDelete property
+     * Provides operations to call the forceDelete method.
     */
     public function forceDelete(): ForceDeleteRequestBuilder {
         return new ForceDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -59,7 +59,7 @@ class DomainItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The serviceConfigurationRecords property
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
     */
     public function serviceConfigurationRecords(): ServiceConfigurationRecordsRequestBuilder {
         return new ServiceConfigurationRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -71,14 +71,14 @@ class DomainItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The verificationDnsRecords property
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
     */
     public function verificationDnsRecords(): VerificationDnsRecordsRequestBuilder {
         return new VerificationDnsRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The verify property
+     * Provides operations to call the verify method.
     */
     public function verify(): VerifyRequestBuilder {
         return new VerifyRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -185,7 +185,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.domainNameReferences.item collection
+     * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -196,7 +196,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.federationConfiguration.item collection
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
      * @return InternalDomainFederationItemRequestBuilder
     */
@@ -246,7 +246,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.serviceConfigurationRecords.item collection
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder
     */
@@ -257,7 +257,7 @@ class DomainItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.domains.item.verificationDnsRecords.item collection
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder
     */

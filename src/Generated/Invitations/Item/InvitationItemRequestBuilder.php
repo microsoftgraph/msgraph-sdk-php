@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class InvitationItemRequestBuilder 
 {
     /**
-     * The invitedUser property
+     * Provides operations to manage the invitedUser property of the microsoft.graph.invitation entity.
     */
     public function invitedUser(): InvitedUserRequestBuilder {
         return new InvitedUserRequestBuilder($this->pathParameters, $this->requestAdapter);

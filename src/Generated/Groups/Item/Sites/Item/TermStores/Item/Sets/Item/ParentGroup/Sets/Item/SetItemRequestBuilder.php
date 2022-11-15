@@ -24,7 +24,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SetItemRequestBuilder 
 {
     /**
-     * The children property
+     * Provides operations to manage the children property of the microsoft.graph.termStore.set entity.
     */
     public function children(): ChildrenRequestBuilder {
         return new ChildrenRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -36,7 +36,7 @@ class SetItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The relations property
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.set entity.
     */
     public function relations(): RelationsRequestBuilder {
         return new RelationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -48,7 +48,7 @@ class SetItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The terms property
+     * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
     */
     public function terms(): TermsRequestBuilder {
         return new TermsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,7 +60,7 @@ class SetItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item.sets.item.parentGroup.sets.item.children.item collection
+     * Provides operations to manage the children property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemSetsItemParentGroupSetsItemChildrenItemTermItemRequestBuilder
     */
@@ -210,7 +210,7 @@ class SetItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item.sets.item.parentGroup.sets.item.relations.item collection
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
      * @return RelationItemRequestBuilder
     */
@@ -221,7 +221,7 @@ class SetItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.termStores.item.sets.item.parentGroup.sets.item.terms.item collection
+     * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemSetsItemParentGroupSetsItemTermsItemTermItemRequestBuilder
     */

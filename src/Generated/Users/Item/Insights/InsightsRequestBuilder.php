@@ -34,14 +34,14 @@ class InsightsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The shared property
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
     */
     public function shared(): SharedRequestBuilder {
         return new SharedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The trending property
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
     */
     public function trending(): TrendingRequestBuilder {
         return new TrendingRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -53,7 +53,7 @@ class InsightsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The used property
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
     */
     public function used(): UsedRequestBuilder {
         return new UsedRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -199,7 +199,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.shared.item collection
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
      * @return SharedInsightItemRequestBuilder
     */
@@ -210,7 +210,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.trending.item collection
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
      * @return TrendingItemRequestBuilder
     */
@@ -221,7 +221,7 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.insights.used.item collection
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
      * @return UsedInsightItemRequestBuilder
     */

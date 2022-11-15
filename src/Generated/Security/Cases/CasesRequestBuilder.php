@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CasesRequestBuilder 
 {
     /**
-     * The ediscoveryCases property
+     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
     */
     public function ediscoveryCases(): EdiscoveryCasesRequestBuilder {
         return new EdiscoveryCasesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,7 +142,7 @@ class CasesRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.cases.ediscoveryCases.item collection
+     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
      * @param string $id Unique identifier of the item
      * @return EdiscoveryCaseItemRequestBuilder
     */

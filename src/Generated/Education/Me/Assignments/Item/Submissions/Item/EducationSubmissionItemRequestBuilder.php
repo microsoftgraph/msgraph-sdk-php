@@ -29,14 +29,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EducationSubmissionItemRequestBuilder 
 {
     /**
-     * The return property
+     * Provides operations to call the return method.
     */
     public function escapedReturn(): ReturnRequestBuilder {
         return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The outcomes property
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
     */
     public function outcomes(): OutcomesRequestBuilder {
         return new OutcomesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -48,7 +48,7 @@ class EducationSubmissionItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The reassign property
+     * Provides operations to call the reassign method.
     */
     public function reassign(): ReassignRequestBuilder {
         return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -60,35 +60,35 @@ class EducationSubmissionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resources property
+     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
     */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The setUpResourcesFolder property
+     * Provides operations to call the setUpResourcesFolder method.
     */
     public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
         return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The submit property
+     * Provides operations to call the submit method.
     */
     public function submit(): SubmitRequestBuilder {
         return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The submittedResources property
+     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
     */
     public function submittedResources(): SubmittedResourcesRequestBuilder {
         return new SubmittedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unsubmit property
+     * Provides operations to call the unsubmit method.
     */
     public function unsubmit(): UnsubmitRequestBuilder {
         return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -219,7 +219,7 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.submissions.item.outcomes.item collection
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
      * @return EducationOutcomeItemRequestBuilder
     */
@@ -250,7 +250,7 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.submissions.item.resources.item collection
+     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedEducationMeAssignmentsItemSubmissionsItemResourcesItemEducationSubmissionResourceItemRequestBuilder
     */
@@ -261,7 +261,7 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.education.me.assignments.item.submissions.item.submittedResources.item collection
+     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedEducationMeAssignmentsItemSubmissionsItemSubmittedResourcesItemEducationSubmissionResourceItemRequestBuilder
     */

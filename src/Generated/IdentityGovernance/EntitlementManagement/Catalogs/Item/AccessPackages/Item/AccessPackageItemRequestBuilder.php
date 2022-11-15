@@ -26,42 +26,42 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessPackageItemRequestBuilder 
 {
     /**
-     * The accessPackagesIncompatibleWith property
+     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
     */
     public function accessPackagesIncompatibleWith(): AccessPackagesIncompatibleWithRequestBuilder {
         return new AccessPackagesIncompatibleWithRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentPolicies property
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity.
     */
     public function assignmentPolicies(): AssignmentPoliciesRequestBuilder {
         return new AssignmentPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The catalog property
+     * Provides operations to manage the catalog property of the microsoft.graph.accessPackage entity.
     */
     public function catalog(): CatalogRequestBuilder {
         return new CatalogRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getApplicablePolicyRequirements property
+     * Provides operations to call the getApplicablePolicyRequirements method.
     */
     public function getApplicablePolicyRequirements(): GetApplicablePolicyRequirementsRequestBuilder {
         return new GetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The incompatibleAccessPackages property
+     * Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity.
     */
     public function incompatibleAccessPackages(): IncompatibleAccessPackagesRequestBuilder {
         return new IncompatibleAccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The incompatibleGroups property
+     * Provides operations to manage the incompatibleGroups property of the microsoft.graph.accessPackage entity.
     */
     public function incompatibleGroups(): IncompatibleGroupsRequestBuilder {
         return new IncompatibleGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -83,7 +83,7 @@ class AccessPackageItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.accessPackagesIncompatibleWith.item collection
+     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemAccessPackagesIncompatibleWithItemAccessPackageItemRequestBuilder
     */
@@ -94,7 +94,7 @@ class AccessPackageItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.assignmentPolicies.item collection
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.accessPackage entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentPolicyItemRequestBuilder
     */

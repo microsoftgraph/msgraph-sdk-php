@@ -26,35 +26,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MessagesRequestBuilder 
 {
     /**
-     * The archive property
+     * Provides operations to call the archive method.
     */
     public function archive(): ArchiveRequestBuilder {
         return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The favorite property
+     * Provides operations to call the favorite method.
     */
     public function favorite(): FavoriteRequestBuilder {
         return new FavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The markRead property
+     * Provides operations to call the markRead method.
     */
     public function markRead(): MarkReadRequestBuilder {
         return new MarkReadRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The markUnread property
+     * Provides operations to call the markUnread method.
     */
     public function markUnread(): MarkUnreadRequestBuilder {
         return new MarkUnreadRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -71,14 +71,14 @@ class MessagesRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The unarchive property
+     * Provides operations to call the unarchive method.
     */
     public function unarchive(): UnarchiveRequestBuilder {
         return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unfavorite property
+     * Provides operations to call the unfavorite method.
     */
     public function unfavorite(): UnfavoriteRequestBuilder {
         return new UnfavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -30,35 +30,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CalendarItemRequestBuilder 
 {
     /**
-     * The calendarPermissions property
+     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
     */
     public function calendarPermissions(): CalendarPermissionsRequestBuilder {
         return new CalendarPermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calendarView property
+     * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
     */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The events property
+     * Provides operations to manage the events property of the microsoft.graph.calendar entity.
     */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getSchedule property
+     * Provides operations to call the getSchedule method.
     */
     public function getSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The multiValueExtendedProperties property
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
     */
     public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
         return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -75,7 +75,7 @@ class CalendarItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The singleValueExtendedProperties property
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
     */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -96,7 +96,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarPermissions.item collection
+     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return CalendarPermissionItemRequestBuilder
     */
@@ -107,7 +107,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.calendarView.item collection
+     * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder
     */
@@ -218,7 +218,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.events.item collection
+     * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder
     */
@@ -248,7 +248,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -279,7 +279,7 @@ class CalendarItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

@@ -14,12 +14,12 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     private ?RiskUserActivity $activity = null;
     
     /**
-     * @var string|null $initiatedBy The id of actor that does the operation.
+     * @var string|null $initiatedBy The ID of actor that does the operation.
     */
     private ?string $initiatedBy = null;
     
     /**
-     * @var string|null $userId The id of the user.
+     * @var string|null $userId The ID of the user.
     */
     private ?string $userId = null;
     
@@ -62,7 +62,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     }
 
     /**
-     * Gets the initiatedBy property value. The id of actor that does the operation.
+     * Gets the initiatedBy property value. The ID of actor that does the operation.
      * @return string|null
     */
     public function getInitiatedBy(): ?string {
@@ -70,7 +70,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     }
 
     /**
-     * Gets the userId property value. The id of the user.
+     * Gets the userId property value. The ID of the user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -97,7 +97,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     }
 
     /**
-     * Sets the initiatedBy property value. The id of actor that does the operation.
+     * Sets the initiatedBy property value. The ID of actor that does the operation.
      *  @param string|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?string $value ): void {
@@ -105,7 +105,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     }
 
     /**
-     * Sets the userId property value. The id of the user.
+     * Sets the userId property value. The ID of the user.
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

@@ -30,7 +30,7 @@ class ApprovalItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The stages property
+     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
     */
     public function stages(): StagesRequestBuilder {
         return new StagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class ApprovalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item.stages.item collection
+     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
      * @param string $id Unique identifier of the item
      * @return ApprovalStageItemRequestBuilder
     */

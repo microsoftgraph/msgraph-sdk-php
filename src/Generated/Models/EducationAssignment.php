@@ -80,6 +80,11 @@ class EducationAssignment extends Entity implements Parsable
     private ?DateTime $dueDateTime = null;
     
     /**
+     * @var string|null $feedbackResourcesFolderUrl Folder URL where all the feedback file resources for this assignment are stored.
+    */
+    private ?string $feedbackResourcesFolderUrl = null;
+    
+    /**
      * @var EducationAssignmentGradeType|null $grading How the assignment will be graded.
     */
     private ?EducationAssignmentGradeType $grading = null;
@@ -264,6 +269,14 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
+     * Gets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
+     * @return string|null
+    */
+    public function getFeedbackResourcesFolderUrl(): ?string {
+        return $this->feedbackResourcesFolderUrl;
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -284,6 +297,7 @@ class EducationAssignment extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'dueDateTime' => fn(ParseNode $n) => $o->setDueDateTime($n->getDateTimeValue()),
+            'feedbackResourcesFolderUrl' => fn(ParseNode $n) => $o->setFeedbackResourcesFolderUrl($n->getStringValue()),
             'grading' => fn(ParseNode $n) => $o->setGrading($n->getObjectValue([EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'])),
             'instructions' => fn(ParseNode $n) => $o->setInstructions($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
@@ -520,6 +534,14 @@ class EducationAssignment extends Entity implements Parsable
     */
     public function setDueDateTime(?DateTime $value ): void {
         $this->dueDateTime = $value;
+    }
+
+    /**
+     * Sets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
+     *  @param string|null $value Value to set for the feedbackResourcesFolderUrl property.
+    */
+    public function setFeedbackResourcesFolderUrl(?string $value ): void {
+        $this->feedbackResourcesFolderUrl = $value;
     }
 
     /**

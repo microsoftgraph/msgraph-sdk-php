@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrintersRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The create property
+     * Provides operations to call the create method.
     */
     public function create(): CreateRequestBuilder {
         return new CreateRequestBuilder($this->pathParameters, $this->requestAdapter);

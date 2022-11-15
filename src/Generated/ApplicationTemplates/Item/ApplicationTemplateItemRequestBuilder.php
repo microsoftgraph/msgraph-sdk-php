@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ApplicationTemplateItemRequestBuilder 
 {
     /**
-     * The instantiate property
+     * Provides operations to call the instantiate method.
     */
     public function instantiate(): InstantiateRequestBuilder {
         return new InstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);

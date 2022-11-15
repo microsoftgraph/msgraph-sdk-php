@@ -26,14 +26,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ConditionalAccessRequestBuilder 
 {
     /**
-     * The authenticationContextClassReferences property
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
     */
     public function authenticationContextClassReferences(): AuthenticationContextClassReferencesRequestBuilder {
         return new AuthenticationContextClassReferencesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The namedLocations property
+     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
     */
     public function namedLocations(): NamedLocationsRequestBuilder {
         return new NamedLocationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -45,7 +45,7 @@ class ConditionalAccessRequestBuilder
     private array $pathParameters;
     
     /**
-     * The policies property
+     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
     */
     public function policies(): PoliciesRequestBuilder {
         return new PoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -57,7 +57,7 @@ class ConditionalAccessRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The templates property
+     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
     */
     public function templates(): TemplatesRequestBuilder {
         return new TemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -69,7 +69,7 @@ class ConditionalAccessRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.authenticationContextClassReferences.item collection
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
      * @param string $id Unique identifier of the item
      * @return AuthenticationContextClassReferenceItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class ConditionalAccessRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.namedLocations.item collection
+     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
      * @param string $id Unique identifier of the item
      * @return NamedLocationItemRequestBuilder
     */
@@ -230,7 +230,7 @@ class ConditionalAccessRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.policies.item collection
+     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
      * @param string $id Unique identifier of the item
      * @return ConditionalAccessPolicyItemRequestBuilder
     */
@@ -241,7 +241,7 @@ class ConditionalAccessRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.conditionalAccess.templates.item collection
+     * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
      * @param string $id Unique identifier of the item
      * @return ConditionalAccessTemplateItemRequestBuilder
     */

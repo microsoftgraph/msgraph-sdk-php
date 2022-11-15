@@ -29,7 +29,7 @@ class AuthenticationMethodItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resetPassword property
+     * Provides operations to call the resetPassword method.
     */
     public function resetPassword(): ResetPasswordRequestBuilder {
         return new ResetPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);

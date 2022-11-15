@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessReviewsRequestBuilder 
 {
     /**
-     * The definitions property
+     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
     */
     public function definitions(): DefinitionsRequestBuilder {
         return new DefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The historyDefinitions property
+     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
     */
     public function historyDefinitions(): HistoryDefinitionsRequestBuilder {
         return new HistoryDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -132,7 +132,7 @@ class AccessReviewsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item collection
+     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewScheduleDefinitionItemRequestBuilder
     */
@@ -181,7 +181,7 @@ class AccessReviewsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.historyDefinitions.item collection
+     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewHistoryDefinitionItemRequestBuilder
     */

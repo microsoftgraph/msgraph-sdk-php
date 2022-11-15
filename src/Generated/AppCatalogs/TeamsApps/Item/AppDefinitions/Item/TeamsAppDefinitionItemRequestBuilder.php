@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamsAppDefinitionItemRequestBuilder 
 {
     /**
-     * The bot property
+     * Provides operations to manage the bot property of the microsoft.graph.teamsAppDefinition entity.
     */
     public function bot(): BotRequestBuilder {
         return new BotRequestBuilder($this->pathParameters, $this->requestAdapter);

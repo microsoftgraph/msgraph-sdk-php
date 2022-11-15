@@ -32,14 +32,14 @@ class IdentityProtectionRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The riskDetections property
+     * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
     */
     public function riskDetections(): RiskDetectionsRequestBuilder {
         return new RiskDetectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The riskyUsers property
+     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
     */
     public function riskyUsers(): RiskyUsersRequestBuilder {
         return new RiskyUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -150,7 +150,7 @@ class IdentityProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProtection.riskDetections.item collection
+     * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
      * @param string $id Unique identifier of the item
      * @return RiskDetectionItemRequestBuilder
     */
@@ -161,7 +161,7 @@ class IdentityProtectionRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityProtection.riskyUsers.item collection
+     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
      * @param string $id Unique identifier of the item
      * @return RiskyUserItemRequestBuilder
     */

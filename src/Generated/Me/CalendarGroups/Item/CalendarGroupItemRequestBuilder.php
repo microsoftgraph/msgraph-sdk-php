@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CalendarGroupItemRequestBuilder 
 {
     /**
-     * The calendars property
+     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
     */
     public function calendars(): CalendarsRequestBuilder {
         return new CalendarsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class CalendarGroupItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.calendarGroups.item.calendars.item collection
+     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
      * @param string $id Unique identifier of the item
      * @return CalendarItemRequestBuilder
     */

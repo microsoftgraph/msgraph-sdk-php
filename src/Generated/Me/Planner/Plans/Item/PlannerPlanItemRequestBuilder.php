@@ -23,14 +23,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PlannerPlanItemRequestBuilder 
 {
     /**
-     * The buckets property
+     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
     */
     public function buckets(): BucketsRequestBuilder {
         return new BucketsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The details property
+     * Provides operations to manage the details property of the microsoft.graph.plannerPlan entity.
     */
     public function details(): DetailsRequestBuilder {
         return new DetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -47,7 +47,7 @@ class PlannerPlanItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The tasks property
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
     */
     public function tasks(): TasksRequestBuilder {
         return new TasksRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -59,7 +59,7 @@ class PlannerPlanItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.planner.plans.item.buckets.item collection
+     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
      * @param string $id Unique identifier of the item
      * @return PlannerBucketItemRequestBuilder
     */
@@ -209,7 +209,7 @@ class PlannerPlanItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.planner.plans.item.tasks.item collection
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
      * @param string $id Unique identifier of the item
      * @return PlannerTaskItemRequestBuilder
     */

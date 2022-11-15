@@ -26,14 +26,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class B2xIdentityUserFlowItemRequestBuilder 
 {
     /**
-     * The identityProviders property
+     * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
     */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The languages property
+     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
     */
     public function languages(): LanguagesRequestBuilder {
         return new LanguagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -55,14 +55,14 @@ class B2xIdentityUserFlowItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userAttributeAssignments property
+     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
     */
     public function userAttributeAssignments(): UserAttributeAssignmentsRequestBuilder {
         return new UserAttributeAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The userFlowIdentityProviders property
+     * Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
     */
     public function userFlowIdentityProviders(): UserFlowIdentityProvidersRequestBuilder {
         return new UserFlowIdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -188,7 +188,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.identityProviders.item collection
+     * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
      * @return IdentityProviderItemRequestBuilder
     */
@@ -199,7 +199,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item collection
+     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
      * @return UserFlowLanguageConfigurationItemRequestBuilder
     */
@@ -230,7 +230,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.userAttributeAssignments.item collection
+     * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
      * @return IdentityUserFlowAttributeAssignmentItemRequestBuilder
     */

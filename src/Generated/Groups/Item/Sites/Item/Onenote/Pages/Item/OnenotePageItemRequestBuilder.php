@@ -24,35 +24,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OnenotePageItemRequestBuilder 
 {
     /**
-     * The content property
+     * Provides operations to manage the media for the group entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The copyToSection property
+     * Provides operations to call the copyToSection method.
     */
     public function copyToSection(): CopyToSectionRequestBuilder {
         return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The onenotePatchContent property
+     * Provides operations to call the onenotePatchContent method.
     */
     public function onenotePatchContent(): OnenotePatchContentRequestBuilder {
         return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parentNotebook property
+     * Provides operations to manage the parentNotebook property of the microsoft.graph.onenotePage entity.
     */
     public function parentNotebook(): ParentNotebookRequestBuilder {
         return new ParentNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The parentSection property
+     * Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity.
     */
     public function parentSection(): ParentSectionRequestBuilder {
         return new ParentSectionRequestBuilder($this->pathParameters, $this->requestAdapter);

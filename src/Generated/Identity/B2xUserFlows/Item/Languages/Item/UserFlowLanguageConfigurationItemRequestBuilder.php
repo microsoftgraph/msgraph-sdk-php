@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserFlowLanguageConfigurationItemRequestBuilder 
 {
     /**
-     * The defaultPages property
+     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
     */
     public function defaultPages(): DefaultPagesRequestBuilder {
         return new DefaultPagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The overridesPages property
+     * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
     */
     public function overridesPages(): OverridesPagesRequestBuilder {
         return new OverridesPagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -132,7 +132,7 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item.defaultPages.item collection
+     * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder
     */
@@ -181,7 +181,7 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.languages.item.overridesPages.item collection
+     * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder
     */

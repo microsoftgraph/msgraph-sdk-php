@@ -23,14 +23,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamworkRequestBuilder 
 {
     /**
-     * The associatedTeams property
+     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
     */
     public function associatedTeams(): AssociatedTeamsRequestBuilder {
         return new AssociatedTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The installedApps property
+     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
     */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -47,7 +47,7 @@ class TeamworkRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sendActivityNotification property
+     * Provides operations to call the sendActivityNotification method.
     */
     public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
         return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -59,7 +59,7 @@ class TeamworkRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.teamwork.associatedTeams.item collection
+     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
      * @param string $id Unique identifier of the item
      * @return AssociatedTeamInfoItemRequestBuilder
     */
@@ -189,7 +189,7 @@ class TeamworkRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.teamwork.installedApps.item collection
+     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
      * @param string $id Unique identifier of the item
      * @return UserScopeTeamsAppInstallationItemRequestBuilder
     */

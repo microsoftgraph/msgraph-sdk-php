@@ -33,49 +33,49 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EntitlementManagementRequestBuilder 
 {
     /**
-     * The accessPackageAssignmentApprovals property
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
     */
     public function accessPackageAssignmentApprovals(): AccessPackageAssignmentApprovalsRequestBuilder {
         return new AccessPackageAssignmentApprovalsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The accessPackages property
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
     */
     public function accessPackages(): AccessPackagesRequestBuilder {
         return new AccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentPolicies property
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
     */
     public function assignmentPolicies(): AssignmentPoliciesRequestBuilder {
         return new AssignmentPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignmentRequests property
+     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
     */
     public function assignmentRequests(): AssignmentRequestsRequestBuilder {
         return new AssignmentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The catalogs property
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
     */
     public function catalogs(): CatalogsRequestBuilder {
         return new CatalogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The connectedOrganizations property
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
     */
     public function connectedOrganizations(): ConnectedOrganizationsRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -92,7 +92,7 @@ class EntitlementManagementRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The settings property
+     * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.
     */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -104,7 +104,7 @@ class EntitlementManagementRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackageAssignmentApprovals.item collection
+     * Provides operations to manage the accessPackageAssignmentApprovals property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return ApprovalItemRequestBuilder
     */
@@ -115,7 +115,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.accessPackages.item collection
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageItemRequestBuilder
     */
@@ -126,7 +126,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignmentPolicies.item collection
+     * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentPolicyItemRequestBuilder
     */
@@ -137,7 +137,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignmentRequests.item collection
+     * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentRequestItemRequestBuilder
     */
@@ -148,7 +148,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageAssignmentItemRequestBuilder
     */
@@ -159,7 +159,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item collection
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return AccessPackageCatalogItemRequestBuilder
     */
@@ -170,7 +170,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.connectedOrganizations.item collection
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
      * @param string $id Unique identifier of the item
      * @return ConnectedOrganizationItemRequestBuilder
     */

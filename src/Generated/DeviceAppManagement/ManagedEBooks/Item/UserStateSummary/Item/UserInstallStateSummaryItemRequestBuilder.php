@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserInstallStateSummaryItemRequestBuilder 
 {
     /**
-     * The deviceStates property
+     * Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity.
     */
     public function deviceStates(): DeviceStatesRequestBuilder {
         return new DeviceStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,7 +142,7 @@ class UserInstallStateSummaryItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.userStateSummary.item.deviceStates.item collection
+     * Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity.
      * @param string $id Unique identifier of the item
      * @return DeviceInstallStateItemRequestBuilder
     */

@@ -25,21 +25,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContactFolderItemRequestBuilder 
 {
     /**
-     * The childFolders property
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
     */
     public function childFolders(): ChildFoldersRequestBuilder {
         return new ChildFoldersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contacts property
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
     */
     public function contacts(): ContactsRequestBuilder {
         return new ContactsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The multiValueExtendedProperties property
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
     */
     public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
         return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -56,7 +56,7 @@ class ContactFolderItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The singleValueExtendedProperties property
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
     */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -68,7 +68,7 @@ class ContactFolderItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.childFolders.item collection
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
      * @return ContactFolderItemRequestBuilder
     */
@@ -90,7 +90,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.contacts.item collection
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
      * @return ContactItemRequestBuilder
     */
@@ -209,7 +209,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -240,7 +240,7 @@ class ContactFolderItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.contactFolders.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

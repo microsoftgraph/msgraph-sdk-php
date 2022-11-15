@@ -20,14 +20,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RemoteAssistancePartnerItemRequestBuilder 
 {
     /**
-     * The beginOnboarding property
+     * Provides operations to call the beginOnboarding method.
     */
     public function beginOnboarding(): BeginOnboardingRequestBuilder {
         return new BeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The disconnect property
+     * Provides operations to call the disconnect method.
     */
     public function disconnect(): DisconnectRequestBuilder {
         return new DisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);

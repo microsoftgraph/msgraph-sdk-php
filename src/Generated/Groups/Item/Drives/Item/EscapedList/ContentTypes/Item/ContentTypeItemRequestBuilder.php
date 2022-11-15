@@ -31,49 +31,49 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContentTypeItemRequestBuilder 
 {
     /**
-     * The associateWithHubSites property
+     * Provides operations to call the associateWithHubSites method.
     */
     public function associateWithHubSites(): AssociateWithHubSitesRequestBuilder {
         return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The base property
+     * Provides operations to manage the base property of the microsoft.graph.contentType entity.
     */
     public function base(): BaseRequestBuilder {
         return new BaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The baseTypes property
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
     */
     public function baseTypes(): BaseTypesRequestBuilder {
         return new BaseTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The columnLinks property
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
     */
     public function columnLinks(): ColumnLinksRequestBuilder {
         return new ColumnLinksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The columnPositions property
+     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
     */
     public function columnPositions(): ColumnPositionsRequestBuilder {
         return new ColumnPositionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The columns property
+     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
     */
     public function columns(): ColumnsRequestBuilder {
         return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The copyToDefaultContentLocation property
+     * Provides operations to call the copyToDefaultContentLocation method.
     */
     public function copyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
         return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -85,7 +85,7 @@ class ContentTypeItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The publish property
+     * Provides operations to call the publish method.
     */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -97,7 +97,7 @@ class ContentTypeItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The unpublish property
+     * Provides operations to call the unpublish method.
     */
     public function unpublish(): UnpublishRequestBuilder {
         return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -109,7 +109,7 @@ class ContentTypeItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.contentTypes.item.baseTypes.item collection
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
      * @return ContentTypeItemRequestBuilder
     */
@@ -120,7 +120,7 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.contentTypes.item.columnLinks.item collection
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
      * @return ColumnLinkItemRequestBuilder
     */
@@ -131,7 +131,7 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.contentTypes.item.columnPositions.item collection
+     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemDrivesItemEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder
     */
@@ -142,7 +142,7 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.drives.item.list.contentTypes.item.columns.item collection
+     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedGroupsItemDrivesItemEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder
     */

@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class InferenceClassificationRequestBuilder 
 {
     /**
-     * The overrides property
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
     */
     public function overrides(): OverridesRequestBuilder {
         return new OverridesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -121,7 +121,7 @@ class InferenceClassificationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.inferenceClassification.overrides.item collection
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
      * @param string $id Unique identifier of the item
      * @return InferenceClassificationOverrideItemRequestBuilder
     */

@@ -40,6 +40,7 @@ class MobileAppAssignmentSettings implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.iosLobAppAssignmentSettings': return new IosLobAppAssignmentSettings();
                 case '#microsoft.graph.iosStoreAppAssignmentSettings': return new IosStoreAppAssignmentSettings();
                 case '#microsoft.graph.iosVppAppAssignmentSettings': return new IosVppAppAssignmentSettings();
+                case '#microsoft.graph.macOsLobAppAssignmentSettings': return new MacOsLobAppAssignmentSettings();
                 case '#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings': return new MicrosoftStoreForBusinessAppAssignmentSettings();
                 case '#microsoft.graph.win32LobAppAssignmentSettings': return new Win32LobAppAssignmentSettings();
             }

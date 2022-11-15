@@ -29,7 +29,7 @@ class IdentityApiConnectorItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The uploadClientCertificate property
+     * Provides operations to call the uploadClientCertificate method.
     */
     public function uploadClientCertificate(): UploadClientCertificateRequestBuilder {
         return new UploadClientCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);

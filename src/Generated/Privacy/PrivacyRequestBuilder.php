@@ -30,7 +30,7 @@ class PrivacyRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The subjectRightsRequests property
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
     */
     public function subjectRightsRequests(): SubjectRightsRequestsRequestBuilder {
         return new SubjectRightsRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -141,7 +141,7 @@ class PrivacyRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.privacy.subjectRightsRequests.item collection
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
      * @param string $id Unique identifier of the item
      * @return SubjectRightsRequestItemRequestBuilder
     */

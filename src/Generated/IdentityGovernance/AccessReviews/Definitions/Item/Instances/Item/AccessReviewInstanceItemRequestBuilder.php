@@ -30,35 +30,35 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AccessReviewInstanceItemRequestBuilder 
 {
     /**
-     * The acceptRecommendations property
+     * Provides operations to call the acceptRecommendations method.
     */
     public function acceptRecommendations(): AcceptRecommendationsRequestBuilder {
         return new AcceptRecommendationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The applyDecisions property
+     * Provides operations to call the applyDecisions method.
     */
     public function applyDecisions(): ApplyDecisionsRequestBuilder {
         return new ApplyDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The batchRecordDecisions property
+     * Provides operations to call the batchRecordDecisions method.
     */
     public function batchRecordDecisions(): BatchRecordDecisionsRequestBuilder {
         return new BatchRecordDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The contactedReviewers property
+     * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
     */
     public function contactedReviewers(): ContactedReviewersRequestBuilder {
         return new ContactedReviewersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The decisions property
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
     */
     public function decisions(): DecisionsRequestBuilder {
         return new DecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -75,28 +75,28 @@ class AccessReviewInstanceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resetDecisions property
+     * Provides operations to call the resetDecisions method.
     */
     public function resetDecisions(): ResetDecisionsRequestBuilder {
         return new ResetDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sendReminder property
+     * Provides operations to call the sendReminder method.
     */
     public function sendReminder(): SendReminderRequestBuilder {
         return new SendReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The stages property
+     * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
     */
     public function stages(): StagesRequestBuilder {
         return new StagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The stop property
+     * Provides operations to call the stop method.
     */
     public function stop(): StopRequestBuilder {
         return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -119,7 +119,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.contactedReviewers.item collection
+     * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewReviewerItemRequestBuilder
     */
@@ -200,7 +200,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.decisions.item collection
+     * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewInstanceDecisionItemItemRequestBuilder
     */
@@ -269,7 +269,7 @@ class AccessReviewInstanceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.accessReviews.definitions.item.instances.item.stages.item collection
+     * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
      * @param string $id Unique identifier of the item
      * @return AccessReviewStageItemRequestBuilder
     */

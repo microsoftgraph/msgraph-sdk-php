@@ -14,7 +14,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     private ?string $displayName = null;
     
     /**
-     * @var TimeOffReasonIconType|null $iconType Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * @var TimeOffReasonIconType|null $iconType Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
     */
     private ?TimeOffReasonIconType $iconType = null;
     
@@ -62,7 +62,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @return TimeOffReasonIconType|null
     */
     public function getIconType(): ?TimeOffReasonIconType {
@@ -97,7 +97,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      *  @param TimeOffReasonIconType|null $value Value to set for the iconType property.
     */
     public function setIconType(?TimeOffReasonIconType $value ): void {

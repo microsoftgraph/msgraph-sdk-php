@@ -22,7 +22,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UnifiedRoleManagementPolicyItemRequestBuilder 
 {
     /**
-     * The effectiveRules property
+     * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
     */
     public function effectiveRules(): EffectiveRulesRequestBuilder {
         return new EffectiveRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -39,7 +39,7 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The rules property
+     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
     */
     public function rules(): RulesRequestBuilder {
         return new RulesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -151,7 +151,7 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.roleManagementPolicies.item.effectiveRules.item collection
+     * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemEffectiveRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder
     */
@@ -201,7 +201,7 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.roleManagementPolicies.item.rules.item collection
+     * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder
     */

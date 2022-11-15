@@ -25,7 +25,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrinterItemRequestBuilder 
 {
     /**
-     * The connectors property
+     * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
     */
     public function connectors(): ConnectorsRequestBuilder {
         return new ConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,21 +42,21 @@ class PrinterItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restoreFactoryDefaults property
+     * Provides operations to call the restoreFactoryDefaults method.
     */
     public function restoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
         return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The shares property
+     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
     */
     public function shares(): SharesRequestBuilder {
         return new SharesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The taskTriggers property
+     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
     */
     public function taskTriggers(): TaskTriggersRequestBuilder {
         return new TaskTriggersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -68,7 +68,7 @@ class PrinterItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.connectors.item collection
+     * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
      * @return PrintConnectorItemRequestBuilder
     */
@@ -218,7 +218,7 @@ class PrinterItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.shares.item collection
+     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
      * @return PrinterShareItemRequestBuilder
     */
@@ -229,7 +229,7 @@ class PrinterItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.printers.item.taskTriggers.item collection
+     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
      * @return PrintTaskTriggerItemRequestBuilder
     */

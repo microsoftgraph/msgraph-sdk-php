@@ -29,7 +29,7 @@ class RoleAssignmentItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The roleDefinition property
+     * Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity.
     */
     public function roleDefinition(): RoleDefinitionRequestBuilder {
         return new RoleDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -43,84 +43,84 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ApplicationItemRequestBuilder 
 {
     /**
-     * The addKey property
+     * Provides operations to call the addKey method.
     */
     public function addKey(): AddKeyRequestBuilder {
         return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The addPassword property
+     * Provides operations to call the addPassword method.
     */
     public function addPassword(): AddPasswordRequestBuilder {
         return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The createdOnBehalfOf property
+     * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.application entity.
     */
     public function createdOnBehalfOf(): CreatedOnBehalfOfRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The extensionProperties property
+     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
     */
     public function extensionProperties(): ExtensionPropertiesRequestBuilder {
         return new ExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The federatedIdentityCredentials property
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
     */
     public function federatedIdentityCredentials(): FederatedIdentityCredentialsRequestBuilder {
         return new FederatedIdentityCredentialsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The homeRealmDiscoveryPolicies property
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
     */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
         return new HomeRealmDiscoveryPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The logo property
+     * Provides operations to manage the media for the application entity.
     */
     public function logo(): LogoRequestBuilder {
         return new LogoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The owners property
+     * Provides operations to manage the owners property of the microsoft.graph.application entity.
     */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -132,14 +132,14 @@ class ApplicationItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The removeKey property
+     * Provides operations to call the removeKey method.
     */
     public function removeKey(): RemoveKeyRequestBuilder {
         return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removePassword property
+     * Provides operations to call the removePassword method.
     */
     public function removePassword(): RemovePasswordRequestBuilder {
         return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -151,35 +151,35 @@ class ApplicationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The setVerifiedPublisher property
+     * Provides operations to call the setVerifiedPublisher method.
     */
     public function setVerifiedPublisher(): SetVerifiedPublisherRequestBuilder {
         return new SetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tokenIssuancePolicies property
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity.
     */
     public function tokenIssuancePolicies(): TokenIssuancePoliciesRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tokenLifetimePolicies property
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity.
     */
     public function tokenLifetimePolicies(): TokenLifetimePoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unsetVerifiedPublisher property
+     * Provides operations to call the unsetVerifiedPublisher method.
     */
     public function unsetVerifiedPublisher(): UnsetVerifiedPublisherRequestBuilder {
         return new UnsetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -291,7 +291,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applications.item.extensionProperties.item collection
+     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionPropertyItemRequestBuilder
     */
@@ -302,7 +302,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applications.item.federatedIdentityCredentials.item collection
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
      * @return FederatedIdentityCredentialItemRequestBuilder
     */
@@ -332,7 +332,7 @@ class ApplicationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.applications.item.homeRealmDiscoveryPolicies.item collection
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */

@@ -30,7 +30,7 @@ class SessionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The segments property
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
     */
     public function segments(): SegmentsRequestBuilder {
         return new SegmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class SessionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.communications.callRecords.item.sessions.item.segments.item collection
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
      * @param string $id Unique identifier of the item
      * @return SegmentItemRequestBuilder
     */

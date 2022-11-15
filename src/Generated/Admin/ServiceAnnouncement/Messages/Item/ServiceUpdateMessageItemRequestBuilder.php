@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServiceUpdateMessageItemRequestBuilder 
 {
     /**
-     * The attachments property
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
     */
     public function attachments(): AttachmentsRequestBuilder {
         return new AttachmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The attachmentsArchive property
+     * Provides operations to manage the media for the admin entity.
     */
     public function attachmentsArchive(): AttachmentsArchiveRequestBuilder {
         return new AttachmentsArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -50,7 +50,7 @@ class ServiceUpdateMessageItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.messages.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
      * @param string $id Unique identifier of the item
      * @return ServiceAnnouncementAttachmentItemRequestBuilder
     */

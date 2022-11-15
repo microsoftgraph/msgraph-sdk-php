@@ -29,7 +29,7 @@ class UsedInsightItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resource property
+     * Provides operations to manage the resource property of the microsoft.graph.usedInsight entity.
     */
     public function resource(): ResourceRequestBuilder {
         return new ResourceRequestBuilder($this->pathParameters, $this->requestAdapter);
