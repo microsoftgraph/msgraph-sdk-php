@@ -820,6 +820,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the servicePrincipalLockConfiguration
+    * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
     *
     * @return ServicePrincipalLockConfiguration|null The servicePrincipalLockConfiguration
     */
@@ -838,6 +839,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the servicePrincipalLockConfiguration
+    * Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
     *
     * @param ServicePrincipalLockConfiguration $val The servicePrincipalLockConfiguration
     *
