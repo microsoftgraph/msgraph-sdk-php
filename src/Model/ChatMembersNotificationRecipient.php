@@ -25,6 +25,7 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient
 {
     /**
     * Gets the chatId
+    * The unique identifier for the chat whose members should receive the notifications.
     *
     * @return string|null The chatId
     */
@@ -39,6 +40,7 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient
 
     /**
     * Sets the chatId
+    * The unique identifier for the chat whose members should receive the notifications.
     *
     * @param string $val The value of the chatId
     *
