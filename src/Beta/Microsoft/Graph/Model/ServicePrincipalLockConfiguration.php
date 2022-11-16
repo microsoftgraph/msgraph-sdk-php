@@ -25,6 +25,7 @@ class ServicePrincipalLockConfiguration extends Entity
 {
     /**
     * Gets the allProperties
+    * Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
     *
     * @return bool|null The allProperties
     */
@@ -39,6 +40,7 @@ class ServicePrincipalLockConfiguration extends Entity
 
     /**
     * Sets the allProperties
+    * Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
     *
     * @param bool $val The value of the allProperties
     *
@@ -51,6 +53,7 @@ class ServicePrincipalLockConfiguration extends Entity
     }
     /**
     * Gets the credentialsWithUsageSign
+    * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
     *
     * @return bool|null The credentialsWithUsageSign
     */
@@ -65,6 +68,7 @@ class ServicePrincipalLockConfiguration extends Entity
 
     /**
     * Sets the credentialsWithUsageSign
+    * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
     *
     * @param bool $val The value of the credentialsWithUsageSign
     *
@@ -77,6 +81,7 @@ class ServicePrincipalLockConfiguration extends Entity
     }
     /**
     * Gets the credentialsWithUsageVerify
+    * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
     *
     * @return bool|null The credentialsWithUsageVerify
     */
@@ -91,6 +96,7 @@ class ServicePrincipalLockConfiguration extends Entity
 
     /**
     * Sets the credentialsWithUsageVerify
+    * Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
     *
     * @param bool $val The value of the credentialsWithUsageVerify
     *
@@ -103,6 +109,7 @@ class ServicePrincipalLockConfiguration extends Entity
     }
     /**
     * Gets the isEnabled
+    * Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
     *
     * @return bool|null The isEnabled
     */
@@ -117,6 +124,7 @@ class ServicePrincipalLockConfiguration extends Entity
 
     /**
     * Sets the isEnabled
+    * Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -129,6 +137,7 @@ class ServicePrincipalLockConfiguration extends Entity
     }
     /**
     * Gets the tokenEncryptionKeyId
+    * Locks the tokenEncryptionKeyId property for modification on the service principal.
     *
     * @return bool|null The tokenEncryptionKeyId
     */
@@ -143,6 +152,7 @@ class ServicePrincipalLockConfiguration extends Entity
 
     /**
     * Sets the tokenEncryptionKeyId
+    * Locks the tokenEncryptionKeyId property for modification on the service principal.
     *
     * @param bool $val The value of the tokenEncryptionKeyId
     *
