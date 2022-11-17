@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ObjectIdentity implements AdditionalDataHolder, Parsable 
+class ObjectIdentity implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $issuer Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType is not federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For external users from other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
-    */
-    private ?string $issuer = null;
-    
-    /**
-     * @var string|null $issuerAssignedId Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit.
-    */
-    private ?string $issuerAssignedId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $signInType Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
-    */
-    private ?string $signInType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new objectIdentity and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.objectIdentity');
     }
@@ -55,8 +39,16 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIssuer(): ?string {
-        return $this->issuer;
+        return $this->getBackingStore()->get('issuer');
     }
 
     /**
@@ -86,7 +78,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIssuerAssignedId(): ?string {
-        return $this->issuerAssignedId;
+        return $this->getBackingStore()->get('issuerAssignedId');
     }
 
     /**
@@ -94,7 +86,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +94,7 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSignInType(): ?string {
-        return $this->signInType;
+        return $this->getBackingStore()->get('signInType');
     }
 
     /**
@@ -110,51 +102,51 @@ class ObjectIdentity implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('issuer', $this->issuer);
-        $writer->writeStringValue('issuerAssignedId', $this->issuerAssignedId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('signInType', $this->signInType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('issuer', $this->getIssuer());
+        $writer->writeStringValue('issuerAssignedId', $this->getIssuerAssignedId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('signInType', $this->getSignInType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the issuer property value. Specifies the issuer of the identity, for example facebook.com.For local accounts (where signInType is not federated), this property is the local B2C tenant default domain name, for example contoso.onmicrosoft.com.For external users from other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports $filter. 512 character limit.
      *  @param string|null $value Value to set for the issuer property.
     */
-    public function setIssuer(?string $value ): void {
-        $this->issuer = $value;
+    public function setIssuer(?string $value): void {
+        $this->getBackingStore()->set('issuer', $value);
     }
 
     /**
      * Sets the issuerAssignedId property value. Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must be unique within the organization. Represents the sign-in name for the user, when signInType is set to emailAddress or userName (also known as local accounts).When signInType is set to: emailAddress, (or a custom string that starts with emailAddress like emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of an email addressSupports $filter. 100 character limit.
      *  @param string|null $value Value to set for the issuerAssignedId property.
     */
-    public function setIssuerAssignedId(?string $value ): void {
-        $this->issuerAssignedId = $value;
+    public function setIssuerAssignedId(?string $value): void {
+        $this->getBackingStore()->set('issuerAssignedId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the signInType property value. Specifies the user sign-in types in your directory, such as emailAddress, userName, federated, or userPrincipalName. federated represents a unique identifier for a user from an issuer, that can be in any format chosen by the issuer. Setting or updating a userPrincipalName identity will update the value of the userPrincipalName property on the user object. The validations performed on the userPrincipalName property on the user object, for example, verified domains and acceptable characters, will be performed when setting or updating a userPrincipalName identity. Additional validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can also be set to any custom string.
      *  @param string|null $value Value to set for the signInType property.
     */
-    public function setSignInType(?string $value ): void {
-        $this->signInType = $value;
+    public function setSignInType(?string $value): void {
+        $this->getBackingStore()->set('signInType', $value);
     }
 
 }

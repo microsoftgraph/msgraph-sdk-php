@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
 {
     /**
-     * @var UnifiedRoleManagementPolicyRuleTarget|null $target Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
-    */
-    private ?UnifiedRoleManagementPolicyRuleTarget $target = null;
-    
-    /**
      * Instantiates a new unifiedRoleManagementPolicyRule and sets the default values.
     */
     public function __construct() {
@@ -57,7 +52,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
      * @return UnifiedRoleManagementPolicyRuleTarget|null
     */
     public function getTarget(): ?UnifiedRoleManagementPolicyRuleTarget {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -66,15 +61,15 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      *  @param UnifiedRoleManagementPolicyRuleTarget|null $value Value to set for the target property.
     */
-    public function setTarget(?UnifiedRoleManagementPolicyRuleTarget $value ): void {
-        $this->target = $value;
+    public function setTarget(?UnifiedRoleManagementPolicyRuleTarget $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var string|null $tabId Unique identifier of the tab.
-    */
-    private ?string $tabId = null;
-    
-    /**
      * Instantiates a new TabUpdatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -60,7 +50,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
      * @return string|null
     */
     public function getTabId(): ?string {
-        return $this->tabId;
+        return $this->getBackingStore()->get('tabId');
     }
 
     /**
@@ -69,24 +59,24 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeStringValue('tabId', $this->tabId);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('tabId', $this->getTabId());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the tabId property value. Unique identifier of the tab.
      *  @param string|null $value Value to set for the tabId property.
     */
-    public function setTabId(?string $value ): void {
-        $this->tabId = $value;
+    public function setTabId(?string $value): void {
+        $this->getBackingStore()->set('tabId', $value);
     }
 
 }

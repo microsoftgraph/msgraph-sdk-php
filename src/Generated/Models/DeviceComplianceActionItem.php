@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceActionItem extends Entity implements Parsable 
 {
     /**
-     * @var DeviceComplianceActionType|null $actionType Scheduled Action Type Enum
-    */
-    private ?DeviceComplianceActionType $actionType = null;
-    
-    /**
-     * @var int|null $gracePeriodHours Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-    */
-    private ?int $gracePeriodHours = null;
-    
-    /**
-     * @var array<string>|null $notificationMessageCCList A list of group IDs to speicify who to CC this notification message to.
-    */
-    private ?array $notificationMessageCCList = null;
-    
-    /**
-     * @var string|null $notificationTemplateId What notification Message template to use
-    */
-    private ?string $notificationTemplateId = null;
-    
-    /**
      * Instantiates a new deviceComplianceActionItem and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
      * @return DeviceComplianceActionType|null
     */
     public function getActionType(): ?DeviceComplianceActionType {
-        return $this->actionType;
+        return $this->getBackingStore()->get('actionType');
     }
 
     /**
@@ -72,7 +52,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
      * @return int|null
     */
     public function getGracePeriodHours(): ?int {
-        return $this->gracePeriodHours;
+        return $this->getBackingStore()->get('gracePeriodHours');
     }
 
     /**
@@ -80,7 +60,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getNotificationMessageCCList(): ?array {
-        return $this->notificationMessageCCList;
+        return $this->getBackingStore()->get('notificationMessageCCList');
     }
 
     /**
@@ -88,7 +68,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationTemplateId(): ?string {
-        return $this->notificationTemplateId;
+        return $this->getBackingStore()->get('notificationTemplateId');
     }
 
     /**
@@ -97,42 +77,42 @@ class DeviceComplianceActionItem extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('actionType', $this->actionType);
-        $writer->writeIntegerValue('gracePeriodHours', $this->gracePeriodHours);
-        $writer->writeCollectionOfPrimitiveValues('notificationMessageCCList', $this->notificationMessageCCList);
-        $writer->writeStringValue('notificationTemplateId', $this->notificationTemplateId);
+        $writer->writeEnumValue('actionType', $this->getActionType());
+        $writer->writeIntegerValue('gracePeriodHours', $this->getGracePeriodHours());
+        $writer->writeCollectionOfPrimitiveValues('notificationMessageCCList', $this->getNotificationMessageCCList());
+        $writer->writeStringValue('notificationTemplateId', $this->getNotificationTemplateId());
     }
 
     /**
      * Sets the actionType property value. Scheduled Action Type Enum
      *  @param DeviceComplianceActionType|null $value Value to set for the actionType property.
     */
-    public function setActionType(?DeviceComplianceActionType $value ): void {
-        $this->actionType = $value;
+    public function setActionType(?DeviceComplianceActionType $value): void {
+        $this->getBackingStore()->set('actionType', $value);
     }
 
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      *  @param int|null $value Value to set for the gracePeriodHours property.
     */
-    public function setGracePeriodHours(?int $value ): void {
-        $this->gracePeriodHours = $value;
+    public function setGracePeriodHours(?int $value): void {
+        $this->getBackingStore()->set('gracePeriodHours', $value);
     }
 
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
      *  @param array<string>|null $value Value to set for the notificationMessageCCList property.
     */
-    public function setNotificationMessageCCList(?array $value ): void {
-        $this->notificationMessageCCList = $value;
+    public function setNotificationMessageCCList(?array $value): void {
+        $this->getBackingStore()->set('notificationMessageCCList', $value);
     }
 
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
      *  @param string|null $value Value to set for the notificationTemplateId property.
     */
-    public function setNotificationTemplateId(?string $value ): void {
-        $this->notificationTemplateId = $value;
+    public function setNotificationTemplateId(?string $value): void {
+        $this->getBackingStore()->set('notificationTemplateId', $value);
     }
 
 }

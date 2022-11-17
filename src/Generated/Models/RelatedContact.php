@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class RelatedContact implements AdditionalDataHolder, Parsable 
+class RelatedContact implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var bool|null $accessConsent Indicates whether the user has been consented to access student data.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?bool $accessConsent = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $displayName Name of the contact. Required.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $emailAddress Primary email address of the contact. Required.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var string|null $mobilePhone Mobile phone number of the contact.
-    */
-    private ?string $mobilePhone = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var ContactRelationship|null $relationship The relationship property
-    */
-    private ?ContactRelationship $relationship = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new relatedContact and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.relatedContact');
     }
@@ -66,15 +40,23 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAccessConsent(): ?bool {
-        return $this->accessConsent;
+        return $this->getBackingStore()->get('accessConsent');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -82,7 +64,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -90,7 +72,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -114,7 +96,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMobilePhone(): ?string {
-        return $this->mobilePhone;
+        return $this->getBackingStore()->get('mobilePhone');
     }
 
     /**
@@ -122,7 +104,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -130,7 +112,7 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @return ContactRelationship|null
     */
     public function getRelationship(): ?ContactRelationship {
-        return $this->relationship;
+        return $this->getBackingStore()->get('relationship');
     }
 
     /**
@@ -138,69 +120,69 @@ class RelatedContact implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('accessConsent', $this->accessConsent);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeStringValue('mobilePhone', $this->mobilePhone);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('relationship', $this->relationship);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('accessConsent', $this->getAccessConsent());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeStringValue('mobilePhone', $this->getMobilePhone());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('relationship', $this->getRelationship());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the accessConsent property value. Indicates whether the user has been consented to access student data.
      *  @param bool|null $value Value to set for the accessConsent property.
     */
-    public function setAccessConsent(?bool $value ): void {
-        $this->accessConsent = $value;
+    public function setAccessConsent(?bool $value): void {
+        $this->getBackingStore()->set('accessConsent', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the displayName property value. Name of the contact. Required.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the emailAddress property value. Primary email address of the contact. Required.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the mobilePhone property value. Mobile phone number of the contact.
      *  @param string|null $value Value to set for the mobilePhone property.
     */
-    public function setMobilePhone(?string $value ): void {
-        $this->mobilePhone = $value;
+    public function setMobilePhone(?string $value): void {
+        $this->getBackingStore()->set('mobilePhone', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the relationship property value. The relationship property
      *  @param ContactRelationship|null $value Value to set for the relationship property.
     */
-    public function setRelationship(?ContactRelationship $value ): void {
-        $this->relationship = $value;
+    public function setRelationship(?ContactRelationship $value): void {
+        $this->getBackingStore()->set('relationship', $value);
     }
 
 }

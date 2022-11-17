@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UsedInsight extends Entity implements Parsable 
 {
     /**
-     * @var UsageDetails|null $lastUsed Information about when the item was last viewed or modified by the user. Read only.
-    */
-    private ?UsageDetails $lastUsed = null;
-    
-    /**
-     * @var Entity|null $resource Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-    */
-    private ?Entity $resource = null;
-    
-    /**
-     * @var ResourceReference|null $resourceReference Reference properties of the used document, such as the url and type of the document. Read-only
-    */
-    private ?ResourceReference $resourceReference = null;
-    
-    /**
-     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only
-    */
-    private ?ResourceVisualization $resourceVisualization = null;
-    
-    /**
      * Instantiates a new usedInsight and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class UsedInsight extends Entity implements Parsable
      * @return UsageDetails|null
     */
     public function getLastUsed(): ?UsageDetails {
-        return $this->lastUsed;
+        return $this->getBackingStore()->get('lastUsed');
     }
 
     /**
@@ -72,7 +52,7 @@ class UsedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->resource;
+        return $this->getBackingStore()->get('resource');
     }
 
     /**
@@ -80,7 +60,7 @@ class UsedInsight extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->resourceReference;
+        return $this->getBackingStore()->get('resourceReference');
     }
 
     /**
@@ -88,7 +68,7 @@ class UsedInsight extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->resourceVisualization;
+        return $this->getBackingStore()->get('resourceVisualization');
     }
 
     /**
@@ -97,40 +77,40 @@ class UsedInsight extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('lastUsed', $this->lastUsed);
-        $writer->writeObjectValue('resource', $this->resource);
+        $writer->writeObjectValue('lastUsed', $this->getLastUsed());
+        $writer->writeObjectValue('resource', $this->getResource());
     }
 
     /**
      * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
      *  @param UsageDetails|null $value Value to set for the lastUsed property.
     */
-    public function setLastUsed(?UsageDetails $value ): void {
-        $this->lastUsed = $value;
+    public function setLastUsed(?UsageDetails $value): void {
+        $this->getBackingStore()->set('lastUsed', $value);
     }
 
     /**
      * Sets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      *  @param Entity|null $value Value to set for the resource property.
     */
-    public function setResource(?Entity $value ): void {
-        $this->resource = $value;
+    public function setResource(?Entity $value): void {
+        $this->getBackingStore()->set('resource', $value);
     }
 
     /**
      * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
      *  @param ResourceReference|null $value Value to set for the resourceReference property.
     */
-    public function setResourceReference(?ResourceReference $value ): void {
-        $this->resourceReference = $value;
+    public function setResourceReference(?ResourceReference $value): void {
+        $this->getBackingStore()->set('resourceReference', $value);
     }
 
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
     */
-    public function setResourceVisualization(?ResourceVisualization $value ): void {
-        $this->resourceVisualization = $value;
+    public function setResourceVisualization(?ResourceVisualization $value): void {
+        $this->getBackingStore()->set('resourceVisualization', $value);
     }
 
 }

@@ -10,46 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAsyncOperation extends Entity implements Parsable 
 {
     /**
-     * @var int|null $attemptsCount Number of times the operation was attempted before being marked successful or failed.
-    */
-    private ?int $attemptsCount = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Time when the operation was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var OperationError|null $error Any error that causes the async operation to fail.
-    */
-    private ?OperationError $error = null;
-    
-    /**
-     * @var DateTime|null $lastActionDateTime Time when the async operation was last updated.
-    */
-    private ?DateTime $lastActionDateTime = null;
-    
-    /**
-     * @var TeamsAsyncOperationType|null $operationType The operationType property
-    */
-    private ?TeamsAsyncOperationType $operationType = null;
-    
-    /**
-     * @var TeamsAsyncOperationStatus|null $status The status property
-    */
-    private ?TeamsAsyncOperationStatus $status = null;
-    
-    /**
-     * @var string|null $targetResourceId The ID of the object that's created or modified as result of this async operation, typically a team.
-    */
-    private ?string $targetResourceId = null;
-    
-    /**
-     * @var string|null $targetResourceLocation The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
-    */
-    private ?string $targetResourceLocation = null;
-    
-    /**
      * Instantiates a new teamsAsyncOperation and sets the default values.
     */
     public function __construct() {
@@ -71,7 +31,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return int|null
     */
     public function getAttemptsCount(): ?int {
-        return $this->attemptsCount;
+        return $this->getBackingStore()->get('attemptsCount');
     }
 
     /**
@@ -79,7 +39,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -87,7 +47,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return OperationError|null
     */
     public function getError(): ?OperationError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -113,7 +73,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastActionDateTime(): ?DateTime {
-        return $this->lastActionDateTime;
+        return $this->getBackingStore()->get('lastActionDateTime');
     }
 
     /**
@@ -121,7 +81,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return TeamsAsyncOperationType|null
     */
     public function getOperationType(): ?TeamsAsyncOperationType {
-        return $this->operationType;
+        return $this->getBackingStore()->get('operationType');
     }
 
     /**
@@ -129,7 +89,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return TeamsAsyncOperationStatus|null
     */
     public function getStatus(): ?TeamsAsyncOperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -137,7 +97,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetResourceId(): ?string {
-        return $this->targetResourceId;
+        return $this->getBackingStore()->get('targetResourceId');
     }
 
     /**
@@ -145,7 +105,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetResourceLocation(): ?string {
-        return $this->targetResourceLocation;
+        return $this->getBackingStore()->get('targetResourceLocation');
     }
 
     /**
@@ -154,78 +114,78 @@ class TeamsAsyncOperation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('attemptsCount', $this->attemptsCount);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeDateTimeValue('lastActionDateTime', $this->lastActionDateTime);
-        $writer->writeEnumValue('operationType', $this->operationType);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeStringValue('targetResourceId', $this->targetResourceId);
-        $writer->writeStringValue('targetResourceLocation', $this->targetResourceLocation);
+        $writer->writeIntegerValue('attemptsCount', $this->getAttemptsCount());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeDateTimeValue('lastActionDateTime', $this->getLastActionDateTime());
+        $writer->writeEnumValue('operationType', $this->getOperationType());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeStringValue('targetResourceId', $this->getTargetResourceId());
+        $writer->writeStringValue('targetResourceLocation', $this->getTargetResourceLocation());
     }
 
     /**
      * Sets the attemptsCount property value. Number of times the operation was attempted before being marked successful or failed.
      *  @param int|null $value Value to set for the attemptsCount property.
     */
-    public function setAttemptsCount(?int $value ): void {
-        $this->attemptsCount = $value;
+    public function setAttemptsCount(?int $value): void {
+        $this->getBackingStore()->set('attemptsCount', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Time when the operation was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the error property value. Any error that causes the async operation to fail.
      *  @param OperationError|null $value Value to set for the error property.
     */
-    public function setError(?OperationError $value ): void {
-        $this->error = $value;
+    public function setError(?OperationError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the lastActionDateTime property value. Time when the async operation was last updated.
      *  @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
-    public function setLastActionDateTime(?DateTime $value ): void {
-        $this->lastActionDateTime = $value;
+    public function setLastActionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastActionDateTime', $value);
     }
 
     /**
      * Sets the operationType property value. The operationType property
      *  @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
     */
-    public function setOperationType(?TeamsAsyncOperationType $value ): void {
-        $this->operationType = $value;
+    public function setOperationType(?TeamsAsyncOperationType $value): void {
+        $this->getBackingStore()->set('operationType', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param TeamsAsyncOperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?TeamsAsyncOperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?TeamsAsyncOperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
      *  @param string|null $value Value to set for the targetResourceId property.
     */
-    public function setTargetResourceId(?string $value ): void {
-        $this->targetResourceId = $value;
+    public function setTargetResourceId(?string $value): void {
+        $this->getBackingStore()->set('targetResourceId', $value);
     }
 
     /**
      * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      *  @param string|null $value Value to set for the targetResourceLocation property.
     */
-    public function setTargetResourceLocation(?string $value ): void {
-        $this->targetResourceLocation = $value;
+    public function setTargetResourceLocation(?string $value): void {
+        $this->getBackingStore()->set('targetResourceLocation', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedMobileApp extends Entity implements Parsable 
 {
     /**
-     * @var MobileAppIdentifier|null $mobileAppIdentifier The identifier for an app with it's operating system type.
-    */
-    private ?MobileAppIdentifier $mobileAppIdentifier = null;
-    
-    /**
-     * @var string|null $version Version of the entity.
-    */
-    private ?string $version = null;
-    
-    /**
      * Instantiates a new managedMobileApp and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class ManagedMobileApp extends Entity implements Parsable
      * @return MobileAppIdentifier|null
     */
     public function getMobileAppIdentifier(): ?MobileAppIdentifier {
-        return $this->mobileAppIdentifier;
+        return $this->getBackingStore()->get('mobileAppIdentifier');
     }
 
     /**
@@ -60,7 +50,7 @@ class ManagedMobileApp extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -69,24 +59,24 @@ class ManagedMobileApp extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('mobileAppIdentifier', $this->mobileAppIdentifier);
-        $writer->writeStringValue('version', $this->version);
+        $writer->writeObjectValue('mobileAppIdentifier', $this->getMobileAppIdentifier());
+        $writer->writeStringValue('version', $this->getVersion());
     }
 
     /**
      * Sets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
      *  @param MobileAppIdentifier|null $value Value to set for the mobileAppIdentifier property.
     */
-    public function setMobileAppIdentifier(?MobileAppIdentifier $value ): void {
-        $this->mobileAppIdentifier = $value;
+    public function setMobileAppIdentifier(?MobileAppIdentifier $value): void {
+        $this->getBackingStore()->set('mobileAppIdentifier', $value);
     }
 
     /**
      * Sets the version property value. Version of the entity.
      *  @param string|null $value Value to set for the version property.
     */
-    public function setVersion(?string $value ): void {
-        $this->version = $value;
+    public function setVersion(?string $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

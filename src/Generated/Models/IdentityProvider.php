@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityProvider extends Entity implements Parsable 
 {
     /**
-     * @var string|null $clientId The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
-    */
-    private ?string $clientId = null;
-    
-    /**
-     * @var string|null $clientSecret The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
-    */
-    private ?string $clientSecret = null;
-    
-    /**
-     * @var string|null $name The display name of the identity provider. Not nullable.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $type The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
-    */
-    private ?string $type = null;
-    
-    /**
      * Instantiates a new identityProvider and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class IdentityProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getClientId(): ?string {
-        return $this->clientId;
+        return $this->getBackingStore()->get('clientId');
     }
 
     /**
@@ -58,7 +38,7 @@ class IdentityProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getClientSecret(): ?string {
-        return $this->clientSecret;
+        return $this->getBackingStore()->get('clientSecret');
     }
 
     /**
@@ -80,7 +60,7 @@ class IdentityProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -88,7 +68,7 @@ class IdentityProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -97,42 +77,42 @@ class IdentityProvider extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('clientId', $this->clientId);
-        $writer->writeStringValue('clientSecret', $this->clientSecret);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('type', $this->type);
+        $writer->writeStringValue('clientId', $this->getClientId());
+        $writer->writeStringValue('clientSecret', $this->getClientSecret());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('type', $this->getType());
     }
 
     /**
      * Sets the clientId property value. The client ID for the application. This is the client ID obtained when registering the application with the identity provider. Required. Not nullable.
      *  @param string|null $value Value to set for the clientId property.
     */
-    public function setClientId(?string $value ): void {
-        $this->clientId = $value;
+    public function setClientId(?string $value): void {
+        $this->getBackingStore()->set('clientId', $value);
     }
 
     /**
      * Sets the clientSecret property value. The client secret for the application. This is the client secret obtained when registering the application with the identity provider. This is write-only. A read operation will return ****.  Required. Not nullable.
      *  @param string|null $value Value to set for the clientSecret property.
     */
-    public function setClientSecret(?string $value ): void {
-        $this->clientSecret = $value;
+    public function setClientSecret(?string $value): void {
+        $this->getBackingStore()->set('clientSecret', $value);
     }
 
     /**
      * Sets the name property value. The display name of the identity provider. Not nullable.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat, OpenIDConnect. Not nullable.
      *  @param string|null $value Value to set for the type property.
     */
-    public function setType(?string $value ): void {
-        $this->type = $value;
+    public function setType(?string $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

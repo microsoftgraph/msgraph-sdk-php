@@ -10,61 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class VppToken extends Entity implements Parsable 
 {
     /**
-     * @var string|null $appleId The apple Id associated with the given Apple Volume Purchase Program Token.
-    */
-    private ?string $appleId = null;
-    
-    /**
-     * @var bool|null $automaticallyUpdateApps Whether or not apps for the VPP token will be automatically updated.
-    */
-    private ?bool $automaticallyUpdateApps = null;
-    
-    /**
-     * @var string|null $countryOrRegion Whether or not apps for the VPP token will be automatically updated.
-    */
-    private ?string $countryOrRegion = null;
-    
-    /**
-     * @var DateTime|null $expirationDateTime The expiration date time of the Apple Volume Purchase Program Token.
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Last modification date time associated with the Apple Volume Purchase Program Token.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastSyncDateTime The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
-    */
-    private ?DateTime $lastSyncDateTime = null;
-    
-    /**
-     * @var VppTokenSyncStatus|null $lastSyncStatus Possible sync statuses associated with an Apple Volume Purchase Program token.
-    */
-    private ?VppTokenSyncStatus $lastSyncStatus = null;
-    
-    /**
-     * @var string|null $organizationName The organization associated with the Apple Volume Purchase Program Token
-    */
-    private ?string $organizationName = null;
-    
-    /**
-     * @var VppTokenState|null $state Possible states associated with an Apple Volume Purchase Program token.
-    */
-    private ?VppTokenState $state = null;
-    
-    /**
-     * @var string|null $token The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
-    */
-    private ?string $token = null;
-    
-    /**
-     * @var VppTokenAccountType|null $vppTokenAccountType Possible types of an Apple Volume Purchase Program token.
-    */
-    private ?VppTokenAccountType $vppTokenAccountType = null;
-    
-    /**
      * Instantiates a new vppToken and sets the default values.
     */
     public function __construct() {
@@ -86,7 +31,7 @@ class VppToken extends Entity implements Parsable
      * @return string|null
     */
     public function getAppleId(): ?string {
-        return $this->appleId;
+        return $this->getBackingStore()->get('appleId');
     }
 
     /**
@@ -94,7 +39,7 @@ class VppToken extends Entity implements Parsable
      * @return bool|null
     */
     public function getAutomaticallyUpdateApps(): ?bool {
-        return $this->automaticallyUpdateApps;
+        return $this->getBackingStore()->get('automaticallyUpdateApps');
     }
 
     /**
@@ -102,7 +47,7 @@ class VppToken extends Entity implements Parsable
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
-        return $this->countryOrRegion;
+        return $this->getBackingStore()->get('countryOrRegion');
     }
 
     /**
@@ -110,7 +55,7 @@ class VppToken extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -139,7 +84,7 @@ class VppToken extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -147,7 +92,7 @@ class VppToken extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
-        return $this->lastSyncDateTime;
+        return $this->getBackingStore()->get('lastSyncDateTime');
     }
 
     /**
@@ -155,7 +100,7 @@ class VppToken extends Entity implements Parsable
      * @return VppTokenSyncStatus|null
     */
     public function getLastSyncStatus(): ?VppTokenSyncStatus {
-        return $this->lastSyncStatus;
+        return $this->getBackingStore()->get('lastSyncStatus');
     }
 
     /**
@@ -163,7 +108,7 @@ class VppToken extends Entity implements Parsable
      * @return string|null
     */
     public function getOrganizationName(): ?string {
-        return $this->organizationName;
+        return $this->getBackingStore()->get('organizationName');
     }
 
     /**
@@ -171,7 +116,7 @@ class VppToken extends Entity implements Parsable
      * @return VppTokenState|null
     */
     public function getState(): ?VppTokenState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -179,7 +124,7 @@ class VppToken extends Entity implements Parsable
      * @return string|null
     */
     public function getToken(): ?string {
-        return $this->token;
+        return $this->getBackingStore()->get('token');
     }
 
     /**
@@ -187,7 +132,7 @@ class VppToken extends Entity implements Parsable
      * @return VppTokenAccountType|null
     */
     public function getVppTokenAccountType(): ?VppTokenAccountType {
-        return $this->vppTokenAccountType;
+        return $this->getBackingStore()->get('vppTokenAccountType');
     }
 
     /**
@@ -196,105 +141,105 @@ class VppToken extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appleId', $this->appleId);
-        $writer->writeBooleanValue('automaticallyUpdateApps', $this->automaticallyUpdateApps);
-        $writer->writeStringValue('countryOrRegion', $this->countryOrRegion);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeDateTimeValue('lastSyncDateTime', $this->lastSyncDateTime);
-        $writer->writeEnumValue('lastSyncStatus', $this->lastSyncStatus);
-        $writer->writeStringValue('organizationName', $this->organizationName);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeStringValue('token', $this->token);
-        $writer->writeEnumValue('vppTokenAccountType', $this->vppTokenAccountType);
+        $writer->writeStringValue('appleId', $this->getAppleId());
+        $writer->writeBooleanValue('automaticallyUpdateApps', $this->getAutomaticallyUpdateApps());
+        $writer->writeStringValue('countryOrRegion', $this->getCountryOrRegion());
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
+        $writer->writeEnumValue('lastSyncStatus', $this->getLastSyncStatus());
+        $writer->writeStringValue('organizationName', $this->getOrganizationName());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('token', $this->getToken());
+        $writer->writeEnumValue('vppTokenAccountType', $this->getVppTokenAccountType());
     }
 
     /**
      * Sets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
      *  @param string|null $value Value to set for the appleId property.
     */
-    public function setAppleId(?string $value ): void {
-        $this->appleId = $value;
+    public function setAppleId(?string $value): void {
+        $this->getBackingStore()->set('appleId', $value);
     }
 
     /**
      * Sets the automaticallyUpdateApps property value. Whether or not apps for the VPP token will be automatically updated.
      *  @param bool|null $value Value to set for the automaticallyUpdateApps property.
     */
-    public function setAutomaticallyUpdateApps(?bool $value ): void {
-        $this->automaticallyUpdateApps = $value;
+    public function setAutomaticallyUpdateApps(?bool $value): void {
+        $this->getBackingStore()->set('automaticallyUpdateApps', $value);
     }
 
     /**
      * Sets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
      *  @param string|null $value Value to set for the countryOrRegion property.
     */
-    public function setCountryOrRegion(?string $value ): void {
-        $this->countryOrRegion = $value;
+    public function setCountryOrRegion(?string $value): void {
+        $this->getBackingStore()->set('countryOrRegion', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. The expiration date time of the Apple Volume Purchase Program Token.
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Last modification date time associated with the Apple Volume Purchase Program Token.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the lastSyncDateTime property value. The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
      *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
-    public function setLastSyncDateTime(?DateTime $value ): void {
-        $this->lastSyncDateTime = $value;
+    public function setLastSyncDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastSyncDateTime', $value);
     }
 
     /**
      * Sets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
      *  @param VppTokenSyncStatus|null $value Value to set for the lastSyncStatus property.
     */
-    public function setLastSyncStatus(?VppTokenSyncStatus $value ): void {
-        $this->lastSyncStatus = $value;
+    public function setLastSyncStatus(?VppTokenSyncStatus $value): void {
+        $this->getBackingStore()->set('lastSyncStatus', $value);
     }
 
     /**
      * Sets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token
      *  @param string|null $value Value to set for the organizationName property.
     */
-    public function setOrganizationName(?string $value ): void {
-        $this->organizationName = $value;
+    public function setOrganizationName(?string $value): void {
+        $this->getBackingStore()->set('organizationName', $value);
     }
 
     /**
      * Sets the state property value. Possible states associated with an Apple Volume Purchase Program token.
      *  @param VppTokenState|null $value Value to set for the state property.
     */
-    public function setState(?VppTokenState $value ): void {
-        $this->state = $value;
+    public function setState(?VppTokenState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the token property value. The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
      *  @param string|null $value Value to set for the token property.
     */
-    public function setToken(?string $value ): void {
-        $this->token = $value;
+    public function setToken(?string $value): void {
+        $this->getBackingStore()->set('token', $value);
     }
 
     /**
      * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      *  @param VppTokenAccountType|null $value Value to set for the vppTokenAccountType property.
     */
-    public function setVppTokenAccountType(?VppTokenAccountType $value ): void {
-        $this->vppTokenAccountType = $value;
+    public function setVppTokenAccountType(?VppTokenAccountType $value): void {
+        $this->getBackingStore()->set('vppTokenAccountType', $value);
     }
 
 }

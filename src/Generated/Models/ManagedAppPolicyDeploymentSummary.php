@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable 
 {
     /**
-     * @var int|null $configurationDeployedUserCount Not yet documented
-    */
-    private ?int $configurationDeployedUserCount = null;
-    
-    /**
-     * @var array<ManagedAppPolicyDeploymentSummaryPerApp>|null $configurationDeploymentSummaryPerApp Not yet documented
-    */
-    private ?array $configurationDeploymentSummaryPerApp = null;
-    
-    /**
-     * @var string|null $displayName Not yet documented
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var DateTime|null $lastRefreshTime Not yet documented
-    */
-    private ?DateTime $lastRefreshTime = null;
-    
-    /**
-     * @var string|null $version Version of the entity.
-    */
-    private ?string $version = null;
-    
-    /**
      * Instantiates a new managedAppPolicyDeploymentSummary and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConfigurationDeployedUserCount(): ?int {
-        return $this->configurationDeployedUserCount;
+        return $this->getBackingStore()->get('configurationDeployedUserCount');
     }
 
     /**
@@ -64,7 +39,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return array<ManagedAppPolicyDeploymentSummaryPerApp>|null
     */
     public function getConfigurationDeploymentSummaryPerApp(): ?array {
-        return $this->configurationDeploymentSummaryPerApp;
+        return $this->getBackingStore()->get('configurationDeploymentSummaryPerApp');
     }
 
     /**
@@ -72,7 +47,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -95,7 +70,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastRefreshTime(): ?DateTime {
-        return $this->lastRefreshTime;
+        return $this->getBackingStore()->get('lastRefreshTime');
     }
 
     /**
@@ -103,7 +78,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -112,51 +87,51 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('configurationDeployedUserCount', $this->configurationDeployedUserCount);
-        $writer->writeCollectionOfObjectValues('configurationDeploymentSummaryPerApp', $this->configurationDeploymentSummaryPerApp);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeDateTimeValue('lastRefreshTime', $this->lastRefreshTime);
-        $writer->writeStringValue('version', $this->version);
+        $writer->writeIntegerValue('configurationDeployedUserCount', $this->getConfigurationDeployedUserCount());
+        $writer->writeCollectionOfObjectValues('configurationDeploymentSummaryPerApp', $this->getConfigurationDeploymentSummaryPerApp());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeDateTimeValue('lastRefreshTime', $this->getLastRefreshTime());
+        $writer->writeStringValue('version', $this->getVersion());
     }
 
     /**
      * Sets the configurationDeployedUserCount property value. Not yet documented
      *  @param int|null $value Value to set for the configurationDeployedUserCount property.
     */
-    public function setConfigurationDeployedUserCount(?int $value ): void {
-        $this->configurationDeployedUserCount = $value;
+    public function setConfigurationDeployedUserCount(?int $value): void {
+        $this->getBackingStore()->set('configurationDeployedUserCount', $value);
     }
 
     /**
      * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
      *  @param array<ManagedAppPolicyDeploymentSummaryPerApp>|null $value Value to set for the configurationDeploymentSummaryPerApp property.
     */
-    public function setConfigurationDeploymentSummaryPerApp(?array $value ): void {
-        $this->configurationDeploymentSummaryPerApp = $value;
+    public function setConfigurationDeploymentSummaryPerApp(?array $value): void {
+        $this->getBackingStore()->set('configurationDeploymentSummaryPerApp', $value);
     }
 
     /**
      * Sets the displayName property value. Not yet documented
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the lastRefreshTime property value. Not yet documented
      *  @param DateTime|null $value Value to set for the lastRefreshTime property.
     */
-    public function setLastRefreshTime(?DateTime $value ): void {
-        $this->lastRefreshTime = $value;
+    public function setLastRefreshTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastRefreshTime', $value);
     }
 
     /**
      * Sets the version property value. Version of the entity.
      *  @param string|null $value Value to set for the version property.
     */
-    public function setVersion(?string $value ): void {
-        $this->version = $value;
+    public function setVersion(?string $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

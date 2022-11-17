@@ -11,12 +11,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     /**
      * @var bool|null $escapedProtected Indicates if the worksheet is protected.  Read-only.
     */
-    private ?bool $escapedProtected = null;
-    
-    /**
-     * @var WorkbookWorksheetProtectionOptions|null $options Sheet protection options. Read-only.
-    */
-    private ?WorkbookWorksheetProtectionOptions $options = null;
+    public ?bool $escapedProtected = null;
     
     /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.
@@ -52,7 +47,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
      * @return WorkbookWorksheetProtectionOptions|null
     */
     public function getOptions(): ?WorkbookWorksheetProtectionOptions {
-        return $this->options;
+        return $this->getBackingStore()->get('options');
     }
 
     /**
@@ -60,7 +55,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
      * @return bool|null
     */
     public function getProtected(): ?bool {
-        return $this->escapedProtected;
+        return $this->getBackingStore()->get('escapedProtected');
     }
 
     /**
@@ -69,24 +64,24 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('protected', $this->escapedProtected);
-        $writer->writeObjectValue('options', $this->options);
+        $writer->writeBooleanValue('protected', $this->getEscapedProtected());
+        $writer->writeObjectValue('options', $this->getOptions());
     }
 
     /**
      * Sets the options property value. Sheet protection options. Read-only.
      *  @param WorkbookWorksheetProtectionOptions|null $value Value to set for the options property.
     */
-    public function setOptions(?WorkbookWorksheetProtectionOptions $value ): void {
-        $this->options = $value;
+    public function setOptions(?WorkbookWorksheetProtectionOptions $value): void {
+        $this->getBackingStore()->set('options', $value);
     }
 
     /**
      * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
      *  @param bool|null $value Value to set for the EscapedProtected property.
     */
-    public function setProtected(?bool $value ): void {
-        $this->escapedProtected = $value;
+    public function setProtected(?bool $value): void {
+        $this->getBackingStore()->set('escapedProtected', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Teamwork extends Entity implements Parsable 
 {
     /**
-     * @var array<WorkforceIntegration>|null $workforceIntegrations The workforceIntegrations property
-    */
-    private ?array $workforceIntegrations = null;
-    
-    /**
      * Instantiates a new Teamwork and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class Teamwork extends Entity implements Parsable
      * @return array<WorkforceIntegration>|null
     */
     public function getWorkforceIntegrations(): ?array {
-        return $this->workforceIntegrations;
+        return $this->getBackingStore()->get('workforceIntegrations');
     }
 
     /**
@@ -55,15 +50,15 @@ class Teamwork extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('workforceIntegrations', $this->workforceIntegrations);
+        $writer->writeCollectionOfObjectValues('workforceIntegrations', $this->getWorkforceIntegrations());
     }
 
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property
      *  @param array<WorkforceIntegration>|null $value Value to set for the workforceIntegrations property.
     */
-    public function setWorkforceIntegrations(?array $value ): void {
-        $this->workforceIntegrations = $value;
+    public function setWorkforceIntegrations(?array $value): void {
+        $this->getBackingStore()->set('workforceIntegrations', $value);
     }
 
 }

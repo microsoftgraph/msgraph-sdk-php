@@ -7,98 +7,27 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CopyNotebookModel implements AdditionalDataHolder, Parsable 
+class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $createdBy The createdBy property
-    */
-    private ?string $createdBy = null;
-    
-    /**
-     * @var IdentitySet|null $createdByIdentity The createdByIdentity property
-    */
-    private ?IdentitySet $createdByIdentity = null;
-    
-    /**
-     * @var DateTime|null $createdTime The createdTime property
-    */
-    private ?DateTime $createdTime = null;
+    private BackingStore $backingStore;
     
     /**
      * @var string|null $escapedSelf The self property
     */
-    private ?string $escapedSelf = null;
-    
-    /**
-     * @var string|null $id The id property
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var bool|null $isDefault The isDefault property
-    */
-    private ?bool $isDefault = null;
-    
-    /**
-     * @var bool|null $isShared The isShared property
-    */
-    private ?bool $isShared = null;
-    
-    /**
-     * @var string|null $lastModifiedBy The lastModifiedBy property
-    */
-    private ?string $lastModifiedBy = null;
-    
-    /**
-     * @var IdentitySet|null $lastModifiedByIdentity The lastModifiedByIdentity property
-    */
-    private ?IdentitySet $lastModifiedByIdentity = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedTime The lastModifiedTime property
-    */
-    private ?DateTime $lastModifiedTime = null;
-    
-    /**
-     * @var NotebookLinks|null $links The links property
-    */
-    private ?NotebookLinks $links = null;
-    
-    /**
-     * @var string|null $name The name property
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $sectionGroupsUrl The sectionGroupsUrl property
-    */
-    private ?string $sectionGroupsUrl = null;
-    
-    /**
-     * @var string|null $sectionsUrl The sectionsUrl property
-    */
-    private ?string $sectionsUrl = null;
-    
-    /**
-     * @var OnenoteUserRole|null $userRole The userRole property
-    */
-    private ?OnenoteUserRole $userRole = null;
+    public ?string $escapedSelf = null;
     
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.CopyNotebookModel');
     }
@@ -116,8 +45,16 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -125,7 +62,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCreatedBy(): ?string {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -133,7 +70,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getCreatedByIdentity(): ?IdentitySet {
-        return $this->createdByIdentity;
+        return $this->getBackingStore()->get('createdByIdentity');
     }
 
     /**
@@ -141,7 +78,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCreatedTime(): ?DateTime {
-        return $this->createdTime;
+        return $this->getBackingStore()->get('createdTime');
     }
 
     /**
@@ -175,7 +112,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -183,7 +120,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->isDefault;
+        return $this->getBackingStore()->get('isDefault');
     }
 
     /**
@@ -191,7 +128,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->isShared;
+        return $this->getBackingStore()->get('isShared');
     }
 
     /**
@@ -199,7 +136,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLastModifiedBy(): ?string {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -207,7 +144,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedByIdentity(): ?IdentitySet {
-        return $this->lastModifiedByIdentity;
+        return $this->getBackingStore()->get('lastModifiedByIdentity');
     }
 
     /**
@@ -215,7 +152,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLastModifiedTime(): ?DateTime {
-        return $this->lastModifiedTime;
+        return $this->getBackingStore()->get('lastModifiedTime');
     }
 
     /**
@@ -223,7 +160,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return NotebookLinks|null
     */
     public function getLinks(): ?NotebookLinks {
-        return $this->links;
+        return $this->getBackingStore()->get('links');
     }
 
     /**
@@ -231,7 +168,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -239,7 +176,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -247,7 +184,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
-        return $this->sectionGroupsUrl;
+        return $this->getBackingStore()->get('sectionGroupsUrl');
     }
 
     /**
@@ -255,7 +192,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
-        return $this->sectionsUrl;
+        return $this->getBackingStore()->get('sectionsUrl');
     }
 
     /**
@@ -263,7 +200,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSelf(): ?string {
-        return $this->escapedSelf;
+        return $this->getBackingStore()->get('escapedSelf');
     }
 
     /**
@@ -271,7 +208,7 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @return OnenoteUserRole|null
     */
     public function getUserRole(): ?OnenoteUserRole {
-        return $this->userRole;
+        return $this->getBackingStore()->get('userRole');
     }
 
     /**
@@ -279,159 +216,159 @@ class CopyNotebookModel implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('createdBy', $this->createdBy);
-        $writer->writeObjectValue('createdByIdentity', $this->createdByIdentity);
-        $writer->writeDateTimeValue('createdTime', $this->createdTime);
-        $writer->writeStringValue('self', $this->escapedSelf);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeBooleanValue('isDefault', $this->isDefault);
-        $writer->writeBooleanValue('isShared', $this->isShared);
-        $writer->writeStringValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeObjectValue('lastModifiedByIdentity', $this->lastModifiedByIdentity);
-        $writer->writeDateTimeValue('lastModifiedTime', $this->lastModifiedTime);
-        $writer->writeObjectValue('links', $this->links);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('sectionGroupsUrl', $this->sectionGroupsUrl);
-        $writer->writeStringValue('sectionsUrl', $this->sectionsUrl);
-        $writer->writeEnumValue('userRole', $this->userRole);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('createdBy', $this->getCreatedBy());
+        $writer->writeObjectValue('createdByIdentity', $this->getCreatedByIdentity());
+        $writer->writeDateTimeValue('createdTime', $this->getCreatedTime());
+        $writer->writeStringValue('self', $this->getEscapedSelf());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeBooleanValue('isDefault', $this->getIsDefault());
+        $writer->writeBooleanValue('isShared', $this->getIsShared());
+        $writer->writeStringValue('lastModifiedBy', $this->getLastModifiedBy());
+        $writer->writeObjectValue('lastModifiedByIdentity', $this->getLastModifiedByIdentity());
+        $writer->writeDateTimeValue('lastModifiedTime', $this->getLastModifiedTime());
+        $writer->writeObjectValue('links', $this->getLinks());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('sectionGroupsUrl', $this->getSectionGroupsUrl());
+        $writer->writeStringValue('sectionsUrl', $this->getSectionsUrl());
+        $writer->writeEnumValue('userRole', $this->getUserRole());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the createdBy property value. The createdBy property
      *  @param string|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?string $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?string $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdByIdentity property value. The createdByIdentity property
      *  @param IdentitySet|null $value Value to set for the createdByIdentity property.
     */
-    public function setCreatedByIdentity(?IdentitySet $value ): void {
-        $this->createdByIdentity = $value;
+    public function setCreatedByIdentity(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdByIdentity', $value);
     }
 
     /**
      * Sets the createdTime property value. The createdTime property
      *  @param DateTime|null $value Value to set for the createdTime property.
     */
-    public function setCreatedTime(?DateTime $value ): void {
-        $this->createdTime = $value;
+    public function setCreatedTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdTime', $value);
     }
 
     /**
      * Sets the id property value. The id property
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the isDefault property value. The isDefault property
      *  @param bool|null $value Value to set for the isDefault property.
     */
-    public function setIsDefault(?bool $value ): void {
-        $this->isDefault = $value;
+    public function setIsDefault(?bool $value): void {
+        $this->getBackingStore()->set('isDefault', $value);
     }
 
     /**
      * Sets the isShared property value. The isShared property
      *  @param bool|null $value Value to set for the isShared property.
     */
-    public function setIsShared(?bool $value ): void {
-        $this->isShared = $value;
+    public function setIsShared(?bool $value): void {
+        $this->getBackingStore()->set('isShared', $value);
     }
 
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      *  @param string|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?string $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?string $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      *  @param IdentitySet|null $value Value to set for the lastModifiedByIdentity property.
     */
-    public function setLastModifiedByIdentity(?IdentitySet $value ): void {
-        $this->lastModifiedByIdentity = $value;
+    public function setLastModifiedByIdentity(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedByIdentity', $value);
     }
 
     /**
      * Sets the lastModifiedTime property value. The lastModifiedTime property
      *  @param DateTime|null $value Value to set for the lastModifiedTime property.
     */
-    public function setLastModifiedTime(?DateTime $value ): void {
-        $this->lastModifiedTime = $value;
+    public function setLastModifiedTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedTime', $value);
     }
 
     /**
      * Sets the links property value. The links property
      *  @param NotebookLinks|null $value Value to set for the links property.
     */
-    public function setLinks(?NotebookLinks $value ): void {
-        $this->links = $value;
+    public function setLinks(?NotebookLinks $value): void {
+        $this->getBackingStore()->set('links', $value);
     }
 
     /**
      * Sets the name property value. The name property
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
      *  @param string|null $value Value to set for the sectionGroupsUrl property.
     */
-    public function setSectionGroupsUrl(?string $value ): void {
-        $this->sectionGroupsUrl = $value;
+    public function setSectionGroupsUrl(?string $value): void {
+        $this->getBackingStore()->set('sectionGroupsUrl', $value);
     }
 
     /**
      * Sets the sectionsUrl property value. The sectionsUrl property
      *  @param string|null $value Value to set for the sectionsUrl property.
     */
-    public function setSectionsUrl(?string $value ): void {
-        $this->sectionsUrl = $value;
+    public function setSectionsUrl(?string $value): void {
+        $this->getBackingStore()->set('sectionsUrl', $value);
     }
 
     /**
      * Sets the self property value. The self property
      *  @param string|null $value Value to set for the EscapedSelf property.
     */
-    public function setSelf(?string $value ): void {
-        $this->escapedSelf = $value;
+    public function setSelf(?string $value): void {
+        $this->getBackingStore()->set('escapedSelf', $value);
     }
 
     /**
      * Sets the userRole property value. The userRole property
      *  @param OnenoteUserRole|null $value Value to set for the userRole property.
     */
-    public function setUserRole(?OnenoteUserRole $value ): void {
-        $this->userRole = $value;
+    public function setUserRole(?OnenoteUserRole $value): void {
+        $this->getBackingStore()->set('userRole', $value);
     }
 
 }

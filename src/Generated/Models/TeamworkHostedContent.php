@@ -10,16 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class TeamworkHostedContent extends Entity implements Parsable 
 {
     /**
-     * @var StreamInterface|null $contentBytes Write only. Bytes for the hosted content (such as images).
-    */
-    private ?StreamInterface $contentBytes = null;
-    
-    /**
-     * @var string|null $contentType Write only. Content type. sicj as image/png, image/jpg.
-    */
-    private ?string $contentType = null;
-    
-    /**
      * Instantiates a new teamworkHostedContent and sets the default values.
     */
     public function __construct() {
@@ -45,10 +35,10 @@ class TeamworkHostedContent extends Entity implements Parsable
 
     /**
      * Gets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContentBytes(): StreamInterface {
-        return $this->contentBytes;
+    public function getContentBytes(): ?StreamInterface {
+        return $this->getBackingStore()->get('contentBytes');
     }
 
     /**
@@ -56,7 +46,7 @@ class TeamworkHostedContent extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -77,24 +67,24 @@ class TeamworkHostedContent extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('contentBytes', $this->contentBytes);
-        $writer->writeStringValue('contentType', $this->contentType);
+        $writer->writeBinaryContent('contentBytes', $this->getContentBytes());
+        $writer->writeStringValue('contentType', $this->getContentType());
     }
 
     /**
      * Sets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
      *  @param StreamInterface|null $value Value to set for the contentBytes property.
     */
-    public function setContentBytes(?StreamInterface $value ): void {
-        $this->contentBytes = $value;
+    public function setContentBytes(?StreamInterface $value): void {
+        $this->getBackingStore()->set('contentBytes', $value);
     }
 
     /**
      * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
 }

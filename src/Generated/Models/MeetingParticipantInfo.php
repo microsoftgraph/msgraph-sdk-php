@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MeetingParticipantInfo implements AdditionalDataHolder, Parsable 
+class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var IdentitySet|null $identity Identity information of the participant.
-    */
-    private ?IdentitySet $identity = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var OnlineMeetingRole|null $role Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
-    */
-    private ?OnlineMeetingRole $role = null;
-    
-    /**
-     * @var string|null $upn User principal name of the participant.
-    */
-    private ?string $upn = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new meetingParticipantInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.meetingParticipantInfo');
     }
@@ -55,8 +39,16 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getIdentity(): ?IdentitySet {
-        return $this->identity;
+        return $this->getBackingStore()->get('identity');
     }
 
     /**
@@ -86,7 +78,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +86,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @return OnlineMeetingRole|null
     */
     public function getRole(): ?OnlineMeetingRole {
-        return $this->role;
+        return $this->getBackingStore()->get('role');
     }
 
     /**
@@ -102,7 +94,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUpn(): ?string {
-        return $this->upn;
+        return $this->getBackingStore()->get('upn');
     }
 
     /**
@@ -110,51 +102,51 @@ class MeetingParticipantInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('identity', $this->identity);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('role', $this->role);
-        $writer->writeStringValue('upn', $this->upn);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('identity', $this->getIdentity());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('role', $this->getRole());
+        $writer->writeStringValue('upn', $this->getUpn());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the identity property value. Identity information of the participant.
      *  @param IdentitySet|null $value Value to set for the identity property.
     */
-    public function setIdentity(?IdentitySet $value ): void {
-        $this->identity = $value;
+    public function setIdentity(?IdentitySet $value): void {
+        $this->getBackingStore()->set('identity', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
      *  @param OnlineMeetingRole|null $value Value to set for the role property.
     */
-    public function setRole(?OnlineMeetingRole $value ): void {
-        $this->role = $value;
+    public function setRole(?OnlineMeetingRole $value): void {
+        $this->getBackingStore()->set('role', $value);
     }
 
     /**
      * Sets the upn property value. User principal name of the participant.
      *  @param string|null $value Value to set for the upn property.
     */
-    public function setUpn(?string $value ): void {
-        $this->upn = $value;
+    public function setUpn(?string $value): void {
+        $this->getBackingStore()->set('upn', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable 
 {
     /**
-     * @var string|null $domainName Not yet documented
-    */
-    private ?string $domainName = null;
-    
-    /**
-     * @var string|null $userName Not yet documented
-    */
-    private ?string $userName = null;
-    
-    /**
      * Instantiates a new WindowsDeviceADAccount and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
      * @return string|null
     */
     public function getDomainName(): ?string {
-        return $this->domainName;
+        return $this->getBackingStore()->get('domainName');
     }
 
     /**
@@ -60,7 +50,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->userName;
+        return $this->getBackingStore()->get('userName');
     }
 
     /**
@@ -69,24 +59,24 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('domainName', $this->domainName);
-        $writer->writeStringValue('userName', $this->userName);
+        $writer->writeStringValue('domainName', $this->getDomainName());
+        $writer->writeStringValue('userName', $this->getUserName());
     }
 
     /**
      * Sets the domainName property value. Not yet documented
      *  @param string|null $value Value to set for the domainName property.
     */
-    public function setDomainName(?string $value ): void {
-        $this->domainName = $value;
+    public function setDomainName(?string $value): void {
+        $this->getBackingStore()->set('domainName', $value);
     }
 
     /**
      * Sets the userName property value. Not yet documented
      *  @param string|null $value Value to set for the userName property.
     */
-    public function setUserName(?string $value ): void {
-        $this->userName = $value;
+    public function setUserName(?string $value): void {
+        $this->getBackingStore()->set('userName', $value);
     }
 
 }

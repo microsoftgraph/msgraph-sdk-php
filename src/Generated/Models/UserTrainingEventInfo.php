@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UserTrainingEventInfo implements AdditionalDataHolder, Parsable 
+class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $displayName Display name of the training.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var TrainingStatus|null $latestTrainingStatus Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-    */
-    private ?TrainingStatus $latestTrainingStatus = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var UserTrainingContentEventInfo|null $trainingAssignedProperties Event details of the training when it was assigned to the user.
-    */
-    private ?UserTrainingContentEventInfo $trainingAssignedProperties = null;
-    
-    /**
-     * @var UserTrainingContentEventInfo|null $trainingCompletedProperties Event details of the training when it was completed by the user.
-    */
-    private ?UserTrainingContentEventInfo $trainingCompletedProperties = null;
-    
-    /**
-     * @var UserTrainingContentEventInfo|null $trainingUpdatedProperties Event details of the training when it was updated/in-progress by the user.
-    */
-    private ?UserTrainingContentEventInfo $trainingUpdatedProperties = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new userTrainingEventInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.userTrainingEventInfo');
     }
@@ -65,8 +39,16 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -74,7 +56,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -98,7 +80,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return TrainingStatus|null
     */
     public function getLatestTrainingStatus(): ?TrainingStatus {
-        return $this->latestTrainingStatus;
+        return $this->getBackingStore()->get('latestTrainingStatus');
     }
 
     /**
@@ -106,7 +88,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -114,7 +96,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingAssignedProperties(): ?UserTrainingContentEventInfo {
-        return $this->trainingAssignedProperties;
+        return $this->getBackingStore()->get('trainingAssignedProperties');
     }
 
     /**
@@ -122,7 +104,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingCompletedProperties(): ?UserTrainingContentEventInfo {
-        return $this->trainingCompletedProperties;
+        return $this->getBackingStore()->get('trainingCompletedProperties');
     }
 
     /**
@@ -130,7 +112,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingUpdatedProperties(): ?UserTrainingContentEventInfo {
-        return $this->trainingUpdatedProperties;
+        return $this->getBackingStore()->get('trainingUpdatedProperties');
     }
 
     /**
@@ -138,69 +120,69 @@ class UserTrainingEventInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('latestTrainingStatus', $this->latestTrainingStatus);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('trainingAssignedProperties', $this->trainingAssignedProperties);
-        $writer->writeObjectValue('trainingCompletedProperties', $this->trainingCompletedProperties);
-        $writer->writeObjectValue('trainingUpdatedProperties', $this->trainingUpdatedProperties);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('latestTrainingStatus', $this->getLatestTrainingStatus());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('trainingAssignedProperties', $this->getTrainingAssignedProperties());
+        $writer->writeObjectValue('trainingCompletedProperties', $this->getTrainingCompletedProperties());
+        $writer->writeObjectValue('trainingUpdatedProperties', $this->getTrainingUpdatedProperties());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the displayName property value. Display name of the training.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      *  @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
     */
-    public function setLatestTrainingStatus(?TrainingStatus $value ): void {
-        $this->latestTrainingStatus = $value;
+    public function setLatestTrainingStatus(?TrainingStatus $value): void {
+        $this->getBackingStore()->set('latestTrainingStatus', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingAssignedProperties property.
     */
-    public function setTrainingAssignedProperties(?UserTrainingContentEventInfo $value ): void {
-        $this->trainingAssignedProperties = $value;
+    public function setTrainingAssignedProperties(?UserTrainingContentEventInfo $value): void {
+        $this->getBackingStore()->set('trainingAssignedProperties', $value);
     }
 
     /**
      * Sets the trainingCompletedProperties property value. Event details of the training when it was completed by the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingCompletedProperties property.
     */
-    public function setTrainingCompletedProperties(?UserTrainingContentEventInfo $value ): void {
-        $this->trainingCompletedProperties = $value;
+    public function setTrainingCompletedProperties(?UserTrainingContentEventInfo $value): void {
+        $this->getBackingStore()->set('trainingCompletedProperties', $value);
     }
 
     /**
      * Sets the trainingUpdatedProperties property value. Event details of the training when it was updated/in-progress by the user.
      *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingUpdatedProperties property.
     */
-    public function setTrainingUpdatedProperties(?UserTrainingContentEventInfo $value ): void {
-        $this->trainingUpdatedProperties = $value;
+    public function setTrainingUpdatedProperties(?UserTrainingContentEventInfo $value): void {
+        $this->getBackingStore()->set('trainingUpdatedProperties', $value);
     }
 
 }

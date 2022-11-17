@@ -6,39 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
-class AlternativeSecurityId implements AdditionalDataHolder, Parsable 
+class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $identityProvider For internal use only
-    */
-    private ?string $identityProvider = null;
-    
-    /**
-     * @var StreamInterface|null $key For internal use only
-    */
-    private ?StreamInterface $key = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $type For internal use only
-    */
-    private ?int $type = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new alternativeSecurityId and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.alternativeSecurityId');
     }
@@ -56,8 +40,16 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,15 +71,15 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIdentityProvider(): ?string {
-        return $this->identityProvider;
+        return $this->getBackingStore()->get('identityProvider');
     }
 
     /**
      * Gets the key property value. For internal use only
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getKey(): StreamInterface {
-        return $this->key;
+    public function getKey(): ?StreamInterface {
+        return $this->getBackingStore()->get('key');
     }
 
     /**
@@ -95,7 +87,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -103,7 +95,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getType(): ?int {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -111,51 +103,51 @@ class AlternativeSecurityId implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('identityProvider', $this->identityProvider);
-        $writer->writeBinaryContent('key', $this->key);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('type', $this->type);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('identityProvider', $this->getIdentityProvider());
+        $writer->writeBinaryContent('key', $this->getKey());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('type', $this->getType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the identityProvider property value. For internal use only
      *  @param string|null $value Value to set for the identityProvider property.
     */
-    public function setIdentityProvider(?string $value ): void {
-        $this->identityProvider = $value;
+    public function setIdentityProvider(?string $value): void {
+        $this->getBackingStore()->set('identityProvider', $value);
     }
 
     /**
      * Sets the key property value. For internal use only
      *  @param StreamInterface|null $value Value to set for the key property.
     */
-    public function setKey(?StreamInterface $value ): void {
-        $this->key = $value;
+    public function setKey(?StreamInterface $value): void {
+        $this->getBackingStore()->set('key', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the type property value. For internal use only
      *  @param int|null $value Value to set for the type property.
     */
-    public function setType(?int $value ): void {
-        $this->type = $value;
+    public function setType(?int $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

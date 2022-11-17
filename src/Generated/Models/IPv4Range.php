@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IPv4Range extends IpRange implements Parsable 
 {
     /**
-     * @var string|null $lowerAddress Lower address.
-    */
-    private ?string $lowerAddress = null;
-    
-    /**
-     * @var string|null $upperAddress Upper address.
-    */
-    private ?string $upperAddress = null;
-    
-    /**
      * Instantiates a new IPv4Range and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class IPv4Range extends IpRange implements Parsable
      * @return string|null
     */
     public function getLowerAddress(): ?string {
-        return $this->lowerAddress;
+        return $this->getBackingStore()->get('lowerAddress');
     }
 
     /**
@@ -60,7 +50,7 @@ class IPv4Range extends IpRange implements Parsable
      * @return string|null
     */
     public function getUpperAddress(): ?string {
-        return $this->upperAddress;
+        return $this->getBackingStore()->get('upperAddress');
     }
 
     /**
@@ -69,24 +59,24 @@ class IPv4Range extends IpRange implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('lowerAddress', $this->lowerAddress);
-        $writer->writeStringValue('upperAddress', $this->upperAddress);
+        $writer->writeStringValue('lowerAddress', $this->getLowerAddress());
+        $writer->writeStringValue('upperAddress', $this->getUpperAddress());
     }
 
     /**
      * Sets the lowerAddress property value. Lower address.
      *  @param string|null $value Value to set for the lowerAddress property.
     */
-    public function setLowerAddress(?string $value ): void {
-        $this->lowerAddress = $value;
+    public function setLowerAddress(?string $value): void {
+        $this->getBackingStore()->set('lowerAddress', $value);
     }
 
     /**
      * Sets the upperAddress property value. Upper address.
      *  @param string|null $value Value to set for the upperAddress property.
     */
-    public function setUpperAddress(?string $value ): void {
-        $this->upperAddress = $value;
+    public function setUpperAddress(?string $value): void {
+        $this->getBackingStore()->set('upperAddress', $value);
     }
 
 }

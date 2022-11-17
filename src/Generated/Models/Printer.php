@@ -10,41 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Printer extends PrinterBase implements Parsable 
 {
     /**
-     * @var array<PrintConnector>|null $connectors The connectors that are associated with the printer.
-    */
-    private ?array $connectors = null;
-    
-    /**
-     * @var bool|null $hasPhysicalDevice True if the printer has a physical device for printing. Read-only.
-    */
-    private ?bool $hasPhysicalDevice = null;
-    
-    /**
-     * @var bool|null $isShared True if the printer is shared; false otherwise. Read-only.
-    */
-    private ?bool $isShared = null;
-    
-    /**
-     * @var DateTime|null $lastSeenDateTime The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
-    */
-    private ?DateTime $lastSeenDateTime = null;
-    
-    /**
-     * @var DateTime|null $registeredDateTime The DateTimeOffset when the printer was registered. Read-only.
-    */
-    private ?DateTime $registeredDateTime = null;
-    
-    /**
-     * @var array<PrinterShare>|null $shares The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-    */
-    private ?array $shares = null;
-    
-    /**
-     * @var array<PrintTaskTrigger>|null $taskTriggers A list of task triggers that are associated with the printer.
-    */
-    private ?array $taskTriggers = null;
-    
-    /**
      * Instantiates a new Printer and sets the default values.
     */
     public function __construct() {
@@ -66,7 +31,7 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrintConnector>|null
     */
     public function getConnectors(): ?array {
-        return $this->connectors;
+        return $this->getBackingStore()->get('connectors');
     }
 
     /**
@@ -91,7 +56,7 @@ class Printer extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
-        return $this->hasPhysicalDevice;
+        return $this->getBackingStore()->get('hasPhysicalDevice');
     }
 
     /**
@@ -99,7 +64,7 @@ class Printer extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->isShared;
+        return $this->getBackingStore()->get('isShared');
     }
 
     /**
@@ -107,7 +72,7 @@ class Printer extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getLastSeenDateTime(): ?DateTime {
-        return $this->lastSeenDateTime;
+        return $this->getBackingStore()->get('lastSeenDateTime');
     }
 
     /**
@@ -115,7 +80,7 @@ class Printer extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getRegisteredDateTime(): ?DateTime {
-        return $this->registeredDateTime;
+        return $this->getBackingStore()->get('registeredDateTime');
     }
 
     /**
@@ -123,7 +88,7 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrinterShare>|null
     */
     public function getShares(): ?array {
-        return $this->shares;
+        return $this->getBackingStore()->get('shares');
     }
 
     /**
@@ -131,7 +96,7 @@ class Printer extends PrinterBase implements Parsable
      * @return array<PrintTaskTrigger>|null
     */
     public function getTaskTriggers(): ?array {
-        return $this->taskTriggers;
+        return $this->getBackingStore()->get('taskTriggers');
     }
 
     /**
@@ -140,69 +105,69 @@ class Printer extends PrinterBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('connectors', $this->connectors);
-        $writer->writeBooleanValue('hasPhysicalDevice', $this->hasPhysicalDevice);
-        $writer->writeBooleanValue('isShared', $this->isShared);
-        $writer->writeDateTimeValue('lastSeenDateTime', $this->lastSeenDateTime);
-        $writer->writeDateTimeValue('registeredDateTime', $this->registeredDateTime);
-        $writer->writeCollectionOfObjectValues('shares', $this->shares);
-        $writer->writeCollectionOfObjectValues('taskTriggers', $this->taskTriggers);
+        $writer->writeCollectionOfObjectValues('connectors', $this->getConnectors());
+        $writer->writeBooleanValue('hasPhysicalDevice', $this->getHasPhysicalDevice());
+        $writer->writeBooleanValue('isShared', $this->getIsShared());
+        $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
+        $writer->writeDateTimeValue('registeredDateTime', $this->getRegisteredDateTime());
+        $writer->writeCollectionOfObjectValues('shares', $this->getShares());
+        $writer->writeCollectionOfObjectValues('taskTriggers', $this->getTaskTriggers());
     }
 
     /**
      * Sets the connectors property value. The connectors that are associated with the printer.
      *  @param array<PrintConnector>|null $value Value to set for the connectors property.
     */
-    public function setConnectors(?array $value ): void {
-        $this->connectors = $value;
+    public function setConnectors(?array $value): void {
+        $this->getBackingStore()->set('connectors', $value);
     }
 
     /**
      * Sets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
      *  @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
-    public function setHasPhysicalDevice(?bool $value ): void {
-        $this->hasPhysicalDevice = $value;
+    public function setHasPhysicalDevice(?bool $value): void {
+        $this->getBackingStore()->set('hasPhysicalDevice', $value);
     }
 
     /**
      * Sets the isShared property value. True if the printer is shared; false otherwise. Read-only.
      *  @param bool|null $value Value to set for the isShared property.
     */
-    public function setIsShared(?bool $value ): void {
-        $this->isShared = $value;
+    public function setIsShared(?bool $value): void {
+        $this->getBackingStore()->set('isShared', $value);
     }
 
     /**
      * Sets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
      *  @param DateTime|null $value Value to set for the lastSeenDateTime property.
     */
-    public function setLastSeenDateTime(?DateTime $value ): void {
-        $this->lastSeenDateTime = $value;
+    public function setLastSeenDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastSeenDateTime', $value);
     }
 
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
      *  @param DateTime|null $value Value to set for the registeredDateTime property.
     */
-    public function setRegisteredDateTime(?DateTime $value ): void {
-        $this->registeredDateTime = $value;
+    public function setRegisteredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('registeredDateTime', $value);
     }
 
     /**
      * Sets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      *  @param array<PrinterShare>|null $value Value to set for the shares property.
     */
-    public function setShares(?array $value ): void {
-        $this->shares = $value;
+    public function setShares(?array $value): void {
+        $this->getBackingStore()->set('shares', $value);
     }
 
     /**
      * Sets the taskTriggers property value. A list of task triggers that are associated with the printer.
      *  @param array<PrintTaskTrigger>|null $value Value to set for the taskTriggers property.
     */
-    public function setTaskTriggers(?array $value ): void {
-        $this->taskTriggers = $value;
+    public function setTaskTriggers(?array $value): void {
+        $this->getBackingStore()->set('taskTriggers', $value);
     }
 
 }

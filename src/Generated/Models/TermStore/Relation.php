@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Relation extends Entity implements Parsable 
 {
     /**
-     * @var Term|null $fromTerm The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
-    */
-    private ?Term $fromTerm = null;
-    
-    /**
-     * @var RelationType|null $relationship The type of relation. Possible values are: pin, reuse.
-    */
-    private ?RelationType $relationship = null;
-    
-    /**
-     * @var Set|null $set The [set] in which the relation is relevant.
-    */
-    private ?Set $set = null;
-    
-    /**
-     * @var Term|null $toTerm The to [term] of the relation. The term to which the relationship is defined.
-    */
-    private ?Term $toTerm = null;
-    
-    /**
      * Instantiates a new relation and sets the default values.
     */
     public function __construct() {
@@ -65,7 +45,7 @@ class Relation extends Entity implements Parsable
      * @return Term|null
     */
     public function getFromTerm(): ?Term {
-        return $this->fromTerm;
+        return $this->getBackingStore()->get('fromTerm');
     }
 
     /**
@@ -73,7 +53,7 @@ class Relation extends Entity implements Parsable
      * @return RelationType|null
     */
     public function getRelationship(): ?RelationType {
-        return $this->relationship;
+        return $this->getBackingStore()->get('relationship');
     }
 
     /**
@@ -81,7 +61,7 @@ class Relation extends Entity implements Parsable
      * @return Set|null
     */
     public function getSet(): ?Set {
-        return $this->set;
+        return $this->getBackingStore()->get('set');
     }
 
     /**
@@ -89,7 +69,7 @@ class Relation extends Entity implements Parsable
      * @return Term|null
     */
     public function getToTerm(): ?Term {
-        return $this->toTerm;
+        return $this->getBackingStore()->get('toTerm');
     }
 
     /**
@@ -98,42 +78,42 @@ class Relation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('fromTerm', $this->fromTerm);
-        $writer->writeEnumValue('relationship', $this->relationship);
-        $writer->writeObjectValue('set', $this->set);
-        $writer->writeObjectValue('toTerm', $this->toTerm);
+        $writer->writeObjectValue('fromTerm', $this->getFromTerm());
+        $writer->writeEnumValue('relationship', $this->getRelationship());
+        $writer->writeObjectValue('set', $this->getSet());
+        $writer->writeObjectValue('toTerm', $this->getToTerm());
     }
 
     /**
      * Sets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      *  @param Term|null $value Value to set for the fromTerm property.
     */
-    public function setFromTerm(?Term $value ): void {
-        $this->fromTerm = $value;
+    public function setFromTerm(?Term $value): void {
+        $this->getBackingStore()->set('fromTerm', $value);
     }
 
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
      *  @param RelationType|null $value Value to set for the relationship property.
     */
-    public function setRelationship(?RelationType $value ): void {
-        $this->relationship = $value;
+    public function setRelationship(?RelationType $value): void {
+        $this->getBackingStore()->set('relationship', $value);
     }
 
     /**
      * Sets the set property value. The [set] in which the relation is relevant.
      *  @param Set|null $value Value to set for the set property.
     */
-    public function setSet(?Set $value ): void {
-        $this->set = $value;
+    public function setSet(?Set $value): void {
+        $this->getBackingStore()->set('set', $value);
     }
 
     /**
      * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
      *  @param Term|null $value Value to set for the toTerm property.
     */
-    public function setToTerm(?Term $value ): void {
-        $this->toTerm = $value;
+    public function setToTerm(?Term $value): void {
+        $this->getBackingStore()->set('toTerm', $value);
     }
 
 }

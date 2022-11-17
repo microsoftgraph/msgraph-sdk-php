@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable 
+class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $isActive Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
-    */
-    private ?bool $isActive = null;
-    
-    /**
-     * @var int|null $notAfter The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-    */
-    private ?int $notAfter = null;
-    
-    /**
-     * @var int|null $notBefore The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-    */
-    private ?int $notBefore = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $thumbprint The certificate thumbprint.
-    */
-    private ?string $thumbprint = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new pkcs12CertificateInformation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.pkcs12CertificateInformation');
     }
@@ -60,8 +39,16 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +71,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->isActive;
+        return $this->getBackingStore()->get('isActive');
     }
 
     /**
@@ -92,7 +79,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getNotAfter(): ?int {
-        return $this->notAfter;
+        return $this->getBackingStore()->get('notAfter');
     }
 
     /**
@@ -100,7 +87,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getNotBefore(): ?int {
-        return $this->notBefore;
+        return $this->getBackingStore()->get('notBefore');
     }
 
     /**
@@ -108,7 +95,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -116,7 +103,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getThumbprint(): ?string {
-        return $this->thumbprint;
+        return $this->getBackingStore()->get('thumbprint');
     }
 
     /**
@@ -124,60 +111,60 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('isActive', $this->isActive);
-        $writer->writeIntegerValue('notAfter', $this->notAfter);
-        $writer->writeIntegerValue('notBefore', $this->notBefore);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('thumbprint', $this->thumbprint);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('isActive', $this->getIsActive());
+        $writer->writeIntegerValue('notAfter', $this->getNotAfter());
+        $writer->writeIntegerValue('notBefore', $this->getNotBefore());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('thumbprint', $this->getThumbprint());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
      *  @param bool|null $value Value to set for the isActive property.
     */
-    public function setIsActive(?bool $value ): void {
-        $this->isActive = $value;
+    public function setIsActive(?bool $value): void {
+        $this->getBackingStore()->set('isActive', $value);
     }
 
     /**
      * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      *  @param int|null $value Value to set for the notAfter property.
     */
-    public function setNotAfter(?int $value ): void {
-        $this->notAfter = $value;
+    public function setNotAfter(?int $value): void {
+        $this->getBackingStore()->set('notAfter', $value);
     }
 
     /**
      * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      *  @param int|null $value Value to set for the notBefore property.
     */
-    public function setNotBefore(?int $value ): void {
-        $this->notBefore = $value;
+    public function setNotBefore(?int $value): void {
+        $this->getBackingStore()->set('notBefore', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the thumbprint property value. The certificate thumbprint.
      *  @param string|null $value Value to set for the thumbprint property.
     */
-    public function setThumbprint(?string $value ): void {
-        $this->thumbprint = $value;
+    public function setThumbprint(?string $value): void {
+        $this->getBackingStore()->set('thumbprint', $value);
     }
 
 }

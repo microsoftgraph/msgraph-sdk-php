@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MobileLobApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $committedContentVersion The internal committed content version.
-    */
-    private ?string $committedContentVersion = null;
-    
-    /**
-     * @var array<MobileAppContent>|null $contentVersions The list of content versions for this app.
-    */
-    private ?array $contentVersions = null;
-    
-    /**
-     * @var string|null $fileName The name of the main Lob application file.
-    */
-    private ?string $fileName = null;
-    
-    /**
-     * @var int|null $size The total size, including all uploaded files.
-    */
-    private ?int $size = null;
-    
-    /**
      * Instantiates a new MobileLobApp and sets the default values.
     */
     public function __construct() {
@@ -62,7 +42,7 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getCommittedContentVersion(): ?string {
-        return $this->committedContentVersion;
+        return $this->getBackingStore()->get('committedContentVersion');
     }
 
     /**
@@ -70,7 +50,7 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return array<MobileAppContent>|null
     */
     public function getContentVersions(): ?array {
-        return $this->contentVersions;
+        return $this->getBackingStore()->get('contentVersions');
     }
 
     /**
@@ -92,7 +72,7 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->fileName;
+        return $this->getBackingStore()->get('fileName');
     }
 
     /**
@@ -100,7 +80,7 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -109,42 +89,42 @@ class MobileLobApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('committedContentVersion', $this->committedContentVersion);
-        $writer->writeCollectionOfObjectValues('contentVersions', $this->contentVersions);
-        $writer->writeStringValue('fileName', $this->fileName);
-        $writer->writeIntegerValue('size', $this->size);
+        $writer->writeStringValue('committedContentVersion', $this->getCommittedContentVersion());
+        $writer->writeCollectionOfObjectValues('contentVersions', $this->getContentVersions());
+        $writer->writeStringValue('fileName', $this->getFileName());
+        $writer->writeIntegerValue('size', $this->getSize());
     }
 
     /**
      * Sets the committedContentVersion property value. The internal committed content version.
      *  @param string|null $value Value to set for the committedContentVersion property.
     */
-    public function setCommittedContentVersion(?string $value ): void {
-        $this->committedContentVersion = $value;
+    public function setCommittedContentVersion(?string $value): void {
+        $this->getBackingStore()->set('committedContentVersion', $value);
     }
 
     /**
      * Sets the contentVersions property value. The list of content versions for this app.
      *  @param array<MobileAppContent>|null $value Value to set for the contentVersions property.
     */
-    public function setContentVersions(?array $value ): void {
-        $this->contentVersions = $value;
+    public function setContentVersions(?array $value): void {
+        $this->getBackingStore()->set('contentVersions', $value);
     }
 
     /**
      * Sets the fileName property value. The name of the main Lob application file.
      *  @param string|null $value Value to set for the fileName property.
     */
-    public function setFileName(?string $value ): void {
-        $this->fileName = $value;
+    public function setFileName(?string $value): void {
+        $this->getBackingStore()->set('fileName', $value);
     }
 
     /**
      * Sets the size property value. The total size, including all uploaded files.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
 }

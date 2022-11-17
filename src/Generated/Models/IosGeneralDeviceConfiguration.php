@@ -9,661 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var bool|null $accountBlockModification Indicates whether or not to allow account modification when the device is in supervised mode.
-    */
-    private ?bool $accountBlockModification = null;
-    
-    /**
-     * @var bool|null $activationLockAllowWhenSupervised Indicates whether or not to allow activation lock when the device is in the supervised mode.
-    */
-    private ?bool $activationLockAllowWhenSupervised = null;
-    
-    /**
-     * @var bool|null $airDropBlocked Indicates whether or not to allow AirDrop when the device is in supervised mode.
-    */
-    private ?bool $airDropBlocked = null;
-    
-    /**
-     * @var bool|null $airDropForceUnmanagedDropTarget Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
-    */
-    private ?bool $airDropForceUnmanagedDropTarget = null;
-    
-    /**
-     * @var bool|null $airPlayForcePairingPasswordForOutgoingRequests Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
-    */
-    private ?bool $airPlayForcePairingPasswordForOutgoingRequests = null;
-    
-    /**
-     * @var bool|null $appleNewsBlocked Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-    */
-    private ?bool $appleNewsBlocked = null;
-    
-    /**
-     * @var bool|null $appleWatchBlockPairing Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
-    */
-    private ?bool $appleWatchBlockPairing = null;
-    
-    /**
-     * @var bool|null $appleWatchForceWristDetection Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
-    */
-    private ?bool $appleWatchForceWristDetection = null;
-    
-    /**
-     * @var array<AppListItem>|null $appsSingleAppModeList Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
-    */
-    private ?array $appsSingleAppModeList = null;
-    
-    /**
-     * @var bool|null $appStoreBlockAutomaticDownloads Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
-    */
-    private ?bool $appStoreBlockAutomaticDownloads = null;
-    
-    /**
-     * @var bool|null $appStoreBlocked Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $appStoreBlocked = null;
-    
-    /**
-     * @var bool|null $appStoreBlockInAppPurchases Indicates whether or not to block the user from making in app purchases.
-    */
-    private ?bool $appStoreBlockInAppPurchases = null;
-    
-    /**
-     * @var bool|null $appStoreBlockUIAppInstallation Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
-    */
-    private ?bool $appStoreBlockUIAppInstallation = null;
-    
-    /**
-     * @var bool|null $appStoreRequirePassword Indicates whether or not to require a password when using the app store.
-    */
-    private ?bool $appStoreRequirePassword = null;
-    
-    /**
-     * @var array<AppListItem>|null $appsVisibilityList List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-    */
-    private ?array $appsVisibilityList = null;
-    
-    /**
-     * @var AppListType|null $appsVisibilityListType Possible values of the compliance app list.
-    */
-    private ?AppListType $appsVisibilityListType = null;
-    
-    /**
-     * @var bool|null $bluetoothBlockModification Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
-    */
-    private ?bool $bluetoothBlockModification = null;
-    
-    /**
-     * @var bool|null $cameraBlocked Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $cameraBlocked = null;
-    
-    /**
-     * @var bool|null $cellularBlockDataRoaming Indicates whether or not to block data roaming.
-    */
-    private ?bool $cellularBlockDataRoaming = null;
-    
-    /**
-     * @var bool|null $cellularBlockGlobalBackgroundFetchWhileRoaming Indicates whether or not to block global background fetch while roaming.
-    */
-    private ?bool $cellularBlockGlobalBackgroundFetchWhileRoaming = null;
-    
-    /**
-     * @var bool|null $cellularBlockPerAppDataModification Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
-    */
-    private ?bool $cellularBlockPerAppDataModification = null;
-    
-    /**
-     * @var bool|null $cellularBlockPersonalHotspot Indicates whether or not to block Personal Hotspot.
-    */
-    private ?bool $cellularBlockPersonalHotspot = null;
-    
-    /**
-     * @var bool|null $cellularBlockVoiceRoaming Indicates whether or not to block voice roaming.
-    */
-    private ?bool $cellularBlockVoiceRoaming = null;
-    
-    /**
-     * @var bool|null $certificatesBlockUntrustedTlsCertificates Indicates whether or not to block untrusted TLS certificates.
-    */
-    private ?bool $certificatesBlockUntrustedTlsCertificates = null;
-    
-    /**
-     * @var bool|null $classroomAppBlockRemoteScreenObservation Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
-    */
-    private ?bool $classroomAppBlockRemoteScreenObservation = null;
-    
-    /**
-     * @var bool|null $classroomAppForceUnpromptedScreenObservation Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
-    */
-    private ?bool $classroomAppForceUnpromptedScreenObservation = null;
-    
-    /**
-     * @var AppListType|null $compliantAppListType Possible values of the compliance app list.
-    */
-    private ?AppListType $compliantAppListType = null;
-    
-    /**
-     * @var array<AppListItem>|null $compliantAppsList List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-    */
-    private ?array $compliantAppsList = null;
-    
-    /**
-     * @var bool|null $configurationProfileBlockChanges Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
-    */
-    private ?bool $configurationProfileBlockChanges = null;
-    
-    /**
-     * @var bool|null $definitionLookupBlocked Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
-    */
-    private ?bool $definitionLookupBlocked = null;
-    
-    /**
-     * @var bool|null $deviceBlockEnableRestrictions Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
-    */
-    private ?bool $deviceBlockEnableRestrictions = null;
-    
-    /**
-     * @var bool|null $deviceBlockEraseContentAndSettings Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
-    */
-    private ?bool $deviceBlockEraseContentAndSettings = null;
-    
-    /**
-     * @var bool|null $deviceBlockNameModification Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
-    */
-    private ?bool $deviceBlockNameModification = null;
-    
-    /**
-     * @var bool|null $diagnosticDataBlockSubmission Indicates whether or not to block diagnostic data submission.
-    */
-    private ?bool $diagnosticDataBlockSubmission = null;
-    
-    /**
-     * @var bool|null $diagnosticDataBlockSubmissionModification Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
-    */
-    private ?bool $diagnosticDataBlockSubmissionModification = null;
-    
-    /**
-     * @var bool|null $documentsBlockManagedDocumentsInUnmanagedApps Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
-    */
-    private ?bool $documentsBlockManagedDocumentsInUnmanagedApps = null;
-    
-    /**
-     * @var bool|null $documentsBlockUnmanagedDocumentsInManagedApps Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
-    */
-    private ?bool $documentsBlockUnmanagedDocumentsInManagedApps = null;
-    
-    /**
-     * @var array<string>|null $emailInDomainSuffixes An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-    */
-    private ?array $emailInDomainSuffixes = null;
-    
-    /**
-     * @var bool|null $enterpriseAppBlockTrust Indicates whether or not to block the user from trusting an enterprise app.
-    */
-    private ?bool $enterpriseAppBlockTrust = null;
-    
-    /**
-     * @var bool|null $enterpriseAppBlockTrustModification [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
-    */
-    private ?bool $enterpriseAppBlockTrustModification = null;
-    
-    /**
-     * @var bool|null $faceTimeBlocked Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $faceTimeBlocked = null;
-    
-    /**
-     * @var bool|null $findMyFriendsBlocked Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
-    */
-    private ?bool $findMyFriendsBlocked = null;
-    
-    /**
-     * @var bool|null $gameCenterBlocked Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-    */
-    private ?bool $gameCenterBlocked = null;
-    
-    /**
-     * @var bool|null $gamingBlockGameCenterFriends Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $gamingBlockGameCenterFriends = null;
-    
-    /**
-     * @var bool|null $gamingBlockMultiplayer Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $gamingBlockMultiplayer = null;
-    
-    /**
-     * @var bool|null $hostPairingBlocked indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
-    */
-    private ?bool $hostPairingBlocked = null;
-    
-    /**
-     * @var bool|null $iBooksStoreBlocked Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
-    */
-    private ?bool $iBooksStoreBlocked = null;
-    
-    /**
-     * @var bool|null $iBooksStoreBlockErotica Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
-    */
-    private ?bool $iBooksStoreBlockErotica = null;
-    
-    /**
-     * @var bool|null $iCloudBlockActivityContinuation Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
-    */
-    private ?bool $iCloudBlockActivityContinuation = null;
-    
-    /**
-     * @var bool|null $iCloudBlockBackup Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $iCloudBlockBackup = null;
-    
-    /**
-     * @var bool|null $iCloudBlockDocumentSync Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $iCloudBlockDocumentSync = null;
-    
-    /**
-     * @var bool|null $iCloudBlockManagedAppsSync Indicates whether or not to block Managed Apps Cloud Sync.
-    */
-    private ?bool $iCloudBlockManagedAppsSync = null;
-    
-    /**
-     * @var bool|null $iCloudBlockPhotoLibrary Indicates whether or not to block iCloud Photo Library.
-    */
-    private ?bool $iCloudBlockPhotoLibrary = null;
-    
-    /**
-     * @var bool|null $iCloudBlockPhotoStreamSync Indicates whether or not to block iCloud Photo Stream Sync.
-    */
-    private ?bool $iCloudBlockPhotoStreamSync = null;
-    
-    /**
-     * @var bool|null $iCloudBlockSharedPhotoStream Indicates whether or not to block Shared Photo Stream.
-    */
-    private ?bool $iCloudBlockSharedPhotoStream = null;
-    
-    /**
-     * @var bool|null $iCloudRequireEncryptedBackup Indicates whether or not to require backups to iCloud be encrypted.
-    */
-    private ?bool $iCloudRequireEncryptedBackup = null;
-    
-    /**
-     * @var bool|null $iTunesBlockExplicitContent Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $iTunesBlockExplicitContent = null;
-    
-    /**
-     * @var bool|null $iTunesBlockMusicService Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
-    */
-    private ?bool $iTunesBlockMusicService = null;
-    
-    /**
-     * @var bool|null $iTunesBlockRadio Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
-    */
-    private ?bool $iTunesBlockRadio = null;
-    
-    /**
-     * @var bool|null $keyboardBlockAutoCorrect Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
-    */
-    private ?bool $keyboardBlockAutoCorrect = null;
-    
-    /**
-     * @var bool|null $keyboardBlockDictation Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
-    */
-    private ?bool $keyboardBlockDictation = null;
-    
-    /**
-     * @var bool|null $keyboardBlockPredictive Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
-    */
-    private ?bool $keyboardBlockPredictive = null;
-    
-    /**
-     * @var bool|null $keyboardBlockShortcuts Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
-    */
-    private ?bool $keyboardBlockShortcuts = null;
-    
-    /**
-     * @var bool|null $keyboardBlockSpellCheck Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
-    */
-    private ?bool $keyboardBlockSpellCheck = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowAssistiveSpeak Indicates whether or not to allow assistive speak while in kiosk mode.
-    */
-    private ?bool $kioskModeAllowAssistiveSpeak = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowAssistiveTouchSettings Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
-    */
-    private ?bool $kioskModeAllowAssistiveTouchSettings = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowAutoLock Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
-    */
-    private ?bool $kioskModeAllowAutoLock = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowColorInversionSettings Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
-    */
-    private ?bool $kioskModeAllowColorInversionSettings = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowRingerSwitch Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
-    */
-    private ?bool $kioskModeAllowRingerSwitch = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowScreenRotation Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
-    */
-    private ?bool $kioskModeAllowScreenRotation = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowSleepButton Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
-    */
-    private ?bool $kioskModeAllowSleepButton = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowTouchscreen Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
-    */
-    private ?bool $kioskModeAllowTouchscreen = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowVoiceOverSettings Indicates whether or not to allow access to the voice over settings while in kiosk mode.
-    */
-    private ?bool $kioskModeAllowVoiceOverSettings = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowVolumeButtons Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
-    */
-    private ?bool $kioskModeAllowVolumeButtons = null;
-    
-    /**
-     * @var bool|null $kioskModeAllowZoomSettings Indicates whether or not to allow access to the zoom settings while in kiosk mode.
-    */
-    private ?bool $kioskModeAllowZoomSettings = null;
-    
-    /**
-     * @var string|null $kioskModeAppStoreUrl URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-    */
-    private ?string $kioskModeAppStoreUrl = null;
-    
-    /**
-     * @var string|null $kioskModeBuiltInAppId ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-    */
-    private ?string $kioskModeBuiltInAppId = null;
-    
-    /**
-     * @var string|null $kioskModeManagedAppId Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-    */
-    private ?string $kioskModeManagedAppId = null;
-    
-    /**
-     * @var bool|null $kioskModeRequireAssistiveTouch Indicates whether or not to require assistive touch while in kiosk mode.
-    */
-    private ?bool $kioskModeRequireAssistiveTouch = null;
-    
-    /**
-     * @var bool|null $kioskModeRequireColorInversion Indicates whether or not to require color inversion while in kiosk mode.
-    */
-    private ?bool $kioskModeRequireColorInversion = null;
-    
-    /**
-     * @var bool|null $kioskModeRequireMonoAudio Indicates whether or not to require mono audio while in kiosk mode.
-    */
-    private ?bool $kioskModeRequireMonoAudio = null;
-    
-    /**
-     * @var bool|null $kioskModeRequireVoiceOver Indicates whether or not to require voice over while in kiosk mode.
-    */
-    private ?bool $kioskModeRequireVoiceOver = null;
-    
-    /**
-     * @var bool|null $kioskModeRequireZoom Indicates whether or not to require zoom while in kiosk mode.
-    */
-    private ?bool $kioskModeRequireZoom = null;
-    
-    /**
-     * @var bool|null $lockScreenBlockControlCenter Indicates whether or not to block the user from using control center on the lock screen.
-    */
-    private ?bool $lockScreenBlockControlCenter = null;
-    
-    /**
-     * @var bool|null $lockScreenBlockNotificationView Indicates whether or not to block the user from using the notification view on the lock screen.
-    */
-    private ?bool $lockScreenBlockNotificationView = null;
-    
-    /**
-     * @var bool|null $lockScreenBlockPassbook Indicates whether or not to block the user from using passbook when the device is locked.
-    */
-    private ?bool $lockScreenBlockPassbook = null;
-    
-    /**
-     * @var bool|null $lockScreenBlockTodayView Indicates whether or not to block the user from using the Today View on the lock screen.
-    */
-    private ?bool $lockScreenBlockTodayView = null;
-    
-    /**
-     * @var RatingAppsType|null $mediaContentRatingApps Apps rating as in media content
-    */
-    private ?RatingAppsType $mediaContentRatingApps = null;
-    
-    /**
-     * @var MediaContentRatingAustralia|null $mediaContentRatingAustralia Media content rating settings for Australia
-    */
-    private ?MediaContentRatingAustralia $mediaContentRatingAustralia = null;
-    
-    /**
-     * @var MediaContentRatingCanada|null $mediaContentRatingCanada Media content rating settings for Canada
-    */
-    private ?MediaContentRatingCanada $mediaContentRatingCanada = null;
-    
-    /**
-     * @var MediaContentRatingFrance|null $mediaContentRatingFrance Media content rating settings for France
-    */
-    private ?MediaContentRatingFrance $mediaContentRatingFrance = null;
-    
-    /**
-     * @var MediaContentRatingGermany|null $mediaContentRatingGermany Media content rating settings for Germany
-    */
-    private ?MediaContentRatingGermany $mediaContentRatingGermany = null;
-    
-    /**
-     * @var MediaContentRatingIreland|null $mediaContentRatingIreland Media content rating settings for Ireland
-    */
-    private ?MediaContentRatingIreland $mediaContentRatingIreland = null;
-    
-    /**
-     * @var MediaContentRatingJapan|null $mediaContentRatingJapan Media content rating settings for Japan
-    */
-    private ?MediaContentRatingJapan $mediaContentRatingJapan = null;
-    
-    /**
-     * @var MediaContentRatingNewZealand|null $mediaContentRatingNewZealand Media content rating settings for New Zealand
-    */
-    private ?MediaContentRatingNewZealand $mediaContentRatingNewZealand = null;
-    
-    /**
-     * @var MediaContentRatingUnitedKingdom|null $mediaContentRatingUnitedKingdom Media content rating settings for United Kingdom
-    */
-    private ?MediaContentRatingUnitedKingdom $mediaContentRatingUnitedKingdom = null;
-    
-    /**
-     * @var MediaContentRatingUnitedStates|null $mediaContentRatingUnitedStates Media content rating settings for United States
-    */
-    private ?MediaContentRatingUnitedStates $mediaContentRatingUnitedStates = null;
-    
-    /**
-     * @var bool|null $messagesBlocked Indicates whether or not to block the user from using the Messages app on the supervised device.
-    */
-    private ?bool $messagesBlocked = null;
-    
-    /**
-     * @var array<IosNetworkUsageRule>|null $networkUsageRules List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-    */
-    private ?array $networkUsageRules = null;
-    
-    /**
-     * @var bool|null $notificationsBlockSettingsModification Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
-    */
-    private ?bool $notificationsBlockSettingsModification = null;
-    
-    /**
-     * @var bool|null $passcodeBlockFingerprintModification Block modification of registered Touch ID fingerprints when in supervised mode.
-    */
-    private ?bool $passcodeBlockFingerprintModification = null;
-    
-    /**
-     * @var bool|null $passcodeBlockFingerprintUnlock Indicates whether or not to block fingerprint unlock.
-    */
-    private ?bool $passcodeBlockFingerprintUnlock = null;
-    
-    /**
-     * @var bool|null $passcodeBlockModification Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
-    */
-    private ?bool $passcodeBlockModification = null;
-    
-    /**
-     * @var bool|null $passcodeBlockSimple Indicates whether or not to block simple passcodes.
-    */
-    private ?bool $passcodeBlockSimple = null;
-    
-    /**
-     * @var int|null $passcodeExpirationDays Number of days before the passcode expires. Valid values 1 to 65535
-    */
-    private ?int $passcodeExpirationDays = null;
-    
-    /**
-     * @var int|null $passcodeMinimumCharacterSetCount Number of character sets a passcode must contain. Valid values 0 to 4
-    */
-    private ?int $passcodeMinimumCharacterSetCount = null;
-    
-    /**
-     * @var int|null $passcodeMinimumLength Minimum length of passcode. Valid values 4 to 14
-    */
-    private ?int $passcodeMinimumLength = null;
-    
-    /**
-     * @var int|null $passcodeMinutesOfInactivityBeforeLock Minutes of inactivity before a passcode is required.
-    */
-    private ?int $passcodeMinutesOfInactivityBeforeLock = null;
-    
-    /**
-     * @var int|null $passcodeMinutesOfInactivityBeforeScreenTimeout Minutes of inactivity before the screen times out.
-    */
-    private ?int $passcodeMinutesOfInactivityBeforeScreenTimeout = null;
-    
-    /**
-     * @var int|null $passcodePreviousPasscodeBlockCount Number of previous passcodes to block. Valid values 1 to 24
-    */
-    private ?int $passcodePreviousPasscodeBlockCount = null;
-    
-    /**
-     * @var bool|null $passcodeRequired Indicates whether or not to require a passcode.
-    */
-    private ?bool $passcodeRequired = null;
-    
-    /**
-     * @var RequiredPasswordType|null $passcodeRequiredType Possible values of required passwords.
-    */
-    private ?RequiredPasswordType $passcodeRequiredType = null;
-    
-    /**
-     * @var int|null $passcodeSignInFailureCountBeforeWipe Number of sign in failures allowed before wiping the device. Valid values 2 to 11
-    */
-    private ?int $passcodeSignInFailureCountBeforeWipe = null;
-    
-    /**
-     * @var bool|null $podcastsBlocked Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
-    */
-    private ?bool $podcastsBlocked = null;
-    
-    /**
-     * @var bool|null $safariBlockAutofill Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $safariBlockAutofill = null;
-    
-    /**
-     * @var bool|null $safariBlocked Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
-    */
-    private ?bool $safariBlocked = null;
-    
-    /**
-     * @var bool|null $safariBlockJavaScript Indicates whether or not to block JavaScript in Safari.
-    */
-    private ?bool $safariBlockJavaScript = null;
-    
-    /**
-     * @var bool|null $safariBlockPopups Indicates whether or not to block popups in Safari.
-    */
-    private ?bool $safariBlockPopups = null;
-    
-    /**
-     * @var WebBrowserCookieSettings|null $safariCookieSettings Web Browser Cookie Settings.
-    */
-    private ?WebBrowserCookieSettings $safariCookieSettings = null;
-    
-    /**
-     * @var array<string>|null $safariManagedDomains URLs matching the patterns listed here will be considered managed.
-    */
-    private ?array $safariManagedDomains = null;
-    
-    /**
-     * @var array<string>|null $safariPasswordAutoFillDomains Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
-    */
-    private ?array $safariPasswordAutoFillDomains = null;
-    
-    /**
-     * @var bool|null $safariRequireFraudWarning Indicates whether or not to require fraud warning in Safari.
-    */
-    private ?bool $safariRequireFraudWarning = null;
-    
-    /**
-     * @var bool|null $screenCaptureBlocked Indicates whether or not to block the user from taking Screenshots.
-    */
-    private ?bool $screenCaptureBlocked = null;
-    
-    /**
-     * @var bool|null $siriBlocked Indicates whether or not to block the user from using Siri.
-    */
-    private ?bool $siriBlocked = null;
-    
-    /**
-     * @var bool|null $siriBlockedWhenLocked Indicates whether or not to block the user from using Siri when locked.
-    */
-    private ?bool $siriBlockedWhenLocked = null;
-    
-    /**
-     * @var bool|null $siriBlockUserGeneratedContent Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
-    */
-    private ?bool $siriBlockUserGeneratedContent = null;
-    
-    /**
-     * @var bool|null $siriRequireProfanityFilter Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
-    */
-    private ?bool $siriRequireProfanityFilter = null;
-    
-    /**
-     * @var bool|null $spotlightBlockInternetResults Indicates whether or not to block Spotlight search from returning internet results on supervised device.
-    */
-    private ?bool $spotlightBlockInternetResults = null;
-    
-    /**
-     * @var bool|null $voiceDialingBlocked Indicates whether or not to block voice dialing.
-    */
-    private ?bool $voiceDialingBlocked = null;
-    
-    /**
-     * @var bool|null $wallpaperBlockModification Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
-    */
-    private ?bool $wallpaperBlockModification = null;
-    
-    /**
-     * @var bool|null $wiFiConnectOnlyToConfiguredNetworks Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
-    */
-    private ?bool $wiFiConnectOnlyToConfiguredNetworks = null;
-    
-    /**
      * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -685,7 +30,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAccountBlockModification(): ?bool {
-        return $this->accountBlockModification;
+        return $this->getBackingStore()->get('accountBlockModification');
     }
 
     /**
@@ -693,7 +38,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getActivationLockAllowWhenSupervised(): ?bool {
-        return $this->activationLockAllowWhenSupervised;
+        return $this->getBackingStore()->get('activationLockAllowWhenSupervised');
     }
 
     /**
@@ -701,7 +46,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAirDropBlocked(): ?bool {
-        return $this->airDropBlocked;
+        return $this->getBackingStore()->get('airDropBlocked');
     }
 
     /**
@@ -709,7 +54,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAirDropForceUnmanagedDropTarget(): ?bool {
-        return $this->airDropForceUnmanagedDropTarget;
+        return $this->getBackingStore()->get('airDropForceUnmanagedDropTarget');
     }
 
     /**
@@ -717,7 +62,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAirPlayForcePairingPasswordForOutgoingRequests(): ?bool {
-        return $this->airPlayForcePairingPasswordForOutgoingRequests;
+        return $this->getBackingStore()->get('airPlayForcePairingPasswordForOutgoingRequests');
     }
 
     /**
@@ -725,7 +70,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppleNewsBlocked(): ?bool {
-        return $this->appleNewsBlocked;
+        return $this->getBackingStore()->get('appleNewsBlocked');
     }
 
     /**
@@ -733,7 +78,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppleWatchBlockPairing(): ?bool {
-        return $this->appleWatchBlockPairing;
+        return $this->getBackingStore()->get('appleWatchBlockPairing');
     }
 
     /**
@@ -741,7 +86,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppleWatchForceWristDetection(): ?bool {
-        return $this->appleWatchForceWristDetection;
+        return $this->getBackingStore()->get('appleWatchForceWristDetection');
     }
 
     /**
@@ -749,7 +94,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<AppListItem>|null
     */
     public function getAppsSingleAppModeList(): ?array {
-        return $this->appsSingleAppModeList;
+        return $this->getBackingStore()->get('appsSingleAppModeList');
     }
 
     /**
@@ -757,7 +102,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppStoreBlockAutomaticDownloads(): ?bool {
-        return $this->appStoreBlockAutomaticDownloads;
+        return $this->getBackingStore()->get('appStoreBlockAutomaticDownloads');
     }
 
     /**
@@ -765,7 +110,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppStoreBlocked(): ?bool {
-        return $this->appStoreBlocked;
+        return $this->getBackingStore()->get('appStoreBlocked');
     }
 
     /**
@@ -773,7 +118,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppStoreBlockInAppPurchases(): ?bool {
-        return $this->appStoreBlockInAppPurchases;
+        return $this->getBackingStore()->get('appStoreBlockInAppPurchases');
     }
 
     /**
@@ -781,7 +126,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppStoreBlockUIAppInstallation(): ?bool {
-        return $this->appStoreBlockUIAppInstallation;
+        return $this->getBackingStore()->get('appStoreBlockUIAppInstallation');
     }
 
     /**
@@ -789,7 +134,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAppStoreRequirePassword(): ?bool {
-        return $this->appStoreRequirePassword;
+        return $this->getBackingStore()->get('appStoreRequirePassword');
     }
 
     /**
@@ -797,7 +142,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<AppListItem>|null
     */
     public function getAppsVisibilityList(): ?array {
-        return $this->appsVisibilityList;
+        return $this->getBackingStore()->get('appsVisibilityList');
     }
 
     /**
@@ -805,7 +150,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return AppListType|null
     */
     public function getAppsVisibilityListType(): ?AppListType {
-        return $this->appsVisibilityListType;
+        return $this->getBackingStore()->get('appsVisibilityListType');
     }
 
     /**
@@ -813,7 +158,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBluetoothBlockModification(): ?bool {
-        return $this->bluetoothBlockModification;
+        return $this->getBackingStore()->get('bluetoothBlockModification');
     }
 
     /**
@@ -821,7 +166,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCameraBlocked(): ?bool {
-        return $this->cameraBlocked;
+        return $this->getBackingStore()->get('cameraBlocked');
     }
 
     /**
@@ -829,7 +174,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockDataRoaming(): ?bool {
-        return $this->cellularBlockDataRoaming;
+        return $this->getBackingStore()->get('cellularBlockDataRoaming');
     }
 
     /**
@@ -837,7 +182,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockGlobalBackgroundFetchWhileRoaming(): ?bool {
-        return $this->cellularBlockGlobalBackgroundFetchWhileRoaming;
+        return $this->getBackingStore()->get('cellularBlockGlobalBackgroundFetchWhileRoaming');
     }
 
     /**
@@ -845,7 +190,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockPerAppDataModification(): ?bool {
-        return $this->cellularBlockPerAppDataModification;
+        return $this->getBackingStore()->get('cellularBlockPerAppDataModification');
     }
 
     /**
@@ -853,7 +198,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockPersonalHotspot(): ?bool {
-        return $this->cellularBlockPersonalHotspot;
+        return $this->getBackingStore()->get('cellularBlockPersonalHotspot');
     }
 
     /**
@@ -861,7 +206,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockVoiceRoaming(): ?bool {
-        return $this->cellularBlockVoiceRoaming;
+        return $this->getBackingStore()->get('cellularBlockVoiceRoaming');
     }
 
     /**
@@ -869,7 +214,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCertificatesBlockUntrustedTlsCertificates(): ?bool {
-        return $this->certificatesBlockUntrustedTlsCertificates;
+        return $this->getBackingStore()->get('certificatesBlockUntrustedTlsCertificates');
     }
 
     /**
@@ -877,7 +222,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getClassroomAppBlockRemoteScreenObservation(): ?bool {
-        return $this->classroomAppBlockRemoteScreenObservation;
+        return $this->getBackingStore()->get('classroomAppBlockRemoteScreenObservation');
     }
 
     /**
@@ -885,7 +230,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getClassroomAppForceUnpromptedScreenObservation(): ?bool {
-        return $this->classroomAppForceUnpromptedScreenObservation;
+        return $this->getBackingStore()->get('classroomAppForceUnpromptedScreenObservation');
     }
 
     /**
@@ -893,7 +238,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
-        return $this->compliantAppListType;
+        return $this->getBackingStore()->get('compliantAppListType');
     }
 
     /**
@@ -901,7 +246,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<AppListItem>|null
     */
     public function getCompliantAppsList(): ?array {
-        return $this->compliantAppsList;
+        return $this->getBackingStore()->get('compliantAppsList');
     }
 
     /**
@@ -909,7 +254,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getConfigurationProfileBlockChanges(): ?bool {
-        return $this->configurationProfileBlockChanges;
+        return $this->getBackingStore()->get('configurationProfileBlockChanges');
     }
 
     /**
@@ -917,7 +262,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDefinitionLookupBlocked(): ?bool {
-        return $this->definitionLookupBlocked;
+        return $this->getBackingStore()->get('definitionLookupBlocked');
     }
 
     /**
@@ -925,7 +270,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDeviceBlockEnableRestrictions(): ?bool {
-        return $this->deviceBlockEnableRestrictions;
+        return $this->getBackingStore()->get('deviceBlockEnableRestrictions');
     }
 
     /**
@@ -933,7 +278,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDeviceBlockEraseContentAndSettings(): ?bool {
-        return $this->deviceBlockEraseContentAndSettings;
+        return $this->getBackingStore()->get('deviceBlockEraseContentAndSettings');
     }
 
     /**
@@ -941,7 +286,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDeviceBlockNameModification(): ?bool {
-        return $this->deviceBlockNameModification;
+        return $this->getBackingStore()->get('deviceBlockNameModification');
     }
 
     /**
@@ -949,7 +294,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDiagnosticDataBlockSubmission(): ?bool {
-        return $this->diagnosticDataBlockSubmission;
+        return $this->getBackingStore()->get('diagnosticDataBlockSubmission');
     }
 
     /**
@@ -957,7 +302,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDiagnosticDataBlockSubmissionModification(): ?bool {
-        return $this->diagnosticDataBlockSubmissionModification;
+        return $this->getBackingStore()->get('diagnosticDataBlockSubmissionModification');
     }
 
     /**
@@ -965,7 +310,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDocumentsBlockManagedDocumentsInUnmanagedApps(): ?bool {
-        return $this->documentsBlockManagedDocumentsInUnmanagedApps;
+        return $this->getBackingStore()->get('documentsBlockManagedDocumentsInUnmanagedApps');
     }
 
     /**
@@ -973,7 +318,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDocumentsBlockUnmanagedDocumentsInManagedApps(): ?bool {
-        return $this->documentsBlockUnmanagedDocumentsInManagedApps;
+        return $this->getBackingStore()->get('documentsBlockUnmanagedDocumentsInManagedApps');
     }
 
     /**
@@ -981,7 +326,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<string>|null
     */
     public function getEmailInDomainSuffixes(): ?array {
-        return $this->emailInDomainSuffixes;
+        return $this->getBackingStore()->get('emailInDomainSuffixes');
     }
 
     /**
@@ -989,7 +334,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getEnterpriseAppBlockTrust(): ?bool {
-        return $this->enterpriseAppBlockTrust;
+        return $this->getBackingStore()->get('enterpriseAppBlockTrust');
     }
 
     /**
@@ -997,7 +342,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getEnterpriseAppBlockTrustModification(): ?bool {
-        return $this->enterpriseAppBlockTrustModification;
+        return $this->getBackingStore()->get('enterpriseAppBlockTrustModification');
     }
 
     /**
@@ -1005,7 +350,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getFaceTimeBlocked(): ?bool {
-        return $this->faceTimeBlocked;
+        return $this->getBackingStore()->get('faceTimeBlocked');
     }
 
     /**
@@ -1154,7 +499,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getFindMyFriendsBlocked(): ?bool {
-        return $this->findMyFriendsBlocked;
+        return $this->getBackingStore()->get('findMyFriendsBlocked');
     }
 
     /**
@@ -1162,7 +507,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getGameCenterBlocked(): ?bool {
-        return $this->gameCenterBlocked;
+        return $this->getBackingStore()->get('gameCenterBlocked');
     }
 
     /**
@@ -1170,7 +515,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getGamingBlockGameCenterFriends(): ?bool {
-        return $this->gamingBlockGameCenterFriends;
+        return $this->getBackingStore()->get('gamingBlockGameCenterFriends');
     }
 
     /**
@@ -1178,7 +523,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getGamingBlockMultiplayer(): ?bool {
-        return $this->gamingBlockMultiplayer;
+        return $this->getBackingStore()->get('gamingBlockMultiplayer');
     }
 
     /**
@@ -1186,7 +531,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getHostPairingBlocked(): ?bool {
-        return $this->hostPairingBlocked;
+        return $this->getBackingStore()->get('hostPairingBlocked');
     }
 
     /**
@@ -1194,7 +539,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getIBooksStoreBlocked(): ?bool {
-        return $this->iBooksStoreBlocked;
+        return $this->getBackingStore()->get('iBooksStoreBlocked');
     }
 
     /**
@@ -1202,7 +547,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getIBooksStoreBlockErotica(): ?bool {
-        return $this->iBooksStoreBlockErotica;
+        return $this->getBackingStore()->get('iBooksStoreBlockErotica');
     }
 
     /**
@@ -1210,7 +555,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockActivityContinuation(): ?bool {
-        return $this->iCloudBlockActivityContinuation;
+        return $this->getBackingStore()->get('iCloudBlockActivityContinuation');
     }
 
     /**
@@ -1218,7 +563,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockBackup(): ?bool {
-        return $this->iCloudBlockBackup;
+        return $this->getBackingStore()->get('iCloudBlockBackup');
     }
 
     /**
@@ -1226,7 +571,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockDocumentSync(): ?bool {
-        return $this->iCloudBlockDocumentSync;
+        return $this->getBackingStore()->get('iCloudBlockDocumentSync');
     }
 
     /**
@@ -1234,7 +579,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockManagedAppsSync(): ?bool {
-        return $this->iCloudBlockManagedAppsSync;
+        return $this->getBackingStore()->get('iCloudBlockManagedAppsSync');
     }
 
     /**
@@ -1242,7 +587,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockPhotoLibrary(): ?bool {
-        return $this->iCloudBlockPhotoLibrary;
+        return $this->getBackingStore()->get('iCloudBlockPhotoLibrary');
     }
 
     /**
@@ -1250,7 +595,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockPhotoStreamSync(): ?bool {
-        return $this->iCloudBlockPhotoStreamSync;
+        return $this->getBackingStore()->get('iCloudBlockPhotoStreamSync');
     }
 
     /**
@@ -1258,7 +603,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudBlockSharedPhotoStream(): ?bool {
-        return $this->iCloudBlockSharedPhotoStream;
+        return $this->getBackingStore()->get('iCloudBlockSharedPhotoStream');
     }
 
     /**
@@ -1266,7 +611,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getICloudRequireEncryptedBackup(): ?bool {
-        return $this->iCloudRequireEncryptedBackup;
+        return $this->getBackingStore()->get('iCloudRequireEncryptedBackup');
     }
 
     /**
@@ -1274,7 +619,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getITunesBlockExplicitContent(): ?bool {
-        return $this->iTunesBlockExplicitContent;
+        return $this->getBackingStore()->get('iTunesBlockExplicitContent');
     }
 
     /**
@@ -1282,7 +627,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getITunesBlockMusicService(): ?bool {
-        return $this->iTunesBlockMusicService;
+        return $this->getBackingStore()->get('iTunesBlockMusicService');
     }
 
     /**
@@ -1290,7 +635,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getITunesBlockRadio(): ?bool {
-        return $this->iTunesBlockRadio;
+        return $this->getBackingStore()->get('iTunesBlockRadio');
     }
 
     /**
@@ -1298,7 +643,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKeyboardBlockAutoCorrect(): ?bool {
-        return $this->keyboardBlockAutoCorrect;
+        return $this->getBackingStore()->get('keyboardBlockAutoCorrect');
     }
 
     /**
@@ -1306,7 +651,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKeyboardBlockDictation(): ?bool {
-        return $this->keyboardBlockDictation;
+        return $this->getBackingStore()->get('keyboardBlockDictation');
     }
 
     /**
@@ -1314,7 +659,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKeyboardBlockPredictive(): ?bool {
-        return $this->keyboardBlockPredictive;
+        return $this->getBackingStore()->get('keyboardBlockPredictive');
     }
 
     /**
@@ -1322,7 +667,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKeyboardBlockShortcuts(): ?bool {
-        return $this->keyboardBlockShortcuts;
+        return $this->getBackingStore()->get('keyboardBlockShortcuts');
     }
 
     /**
@@ -1330,7 +675,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKeyboardBlockSpellCheck(): ?bool {
-        return $this->keyboardBlockSpellCheck;
+        return $this->getBackingStore()->get('keyboardBlockSpellCheck');
     }
 
     /**
@@ -1338,7 +683,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowAssistiveSpeak(): ?bool {
-        return $this->kioskModeAllowAssistiveSpeak;
+        return $this->getBackingStore()->get('kioskModeAllowAssistiveSpeak');
     }
 
     /**
@@ -1346,7 +691,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowAssistiveTouchSettings(): ?bool {
-        return $this->kioskModeAllowAssistiveTouchSettings;
+        return $this->getBackingStore()->get('kioskModeAllowAssistiveTouchSettings');
     }
 
     /**
@@ -1354,7 +699,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowAutoLock(): ?bool {
-        return $this->kioskModeAllowAutoLock;
+        return $this->getBackingStore()->get('kioskModeAllowAutoLock');
     }
 
     /**
@@ -1362,7 +707,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowColorInversionSettings(): ?bool {
-        return $this->kioskModeAllowColorInversionSettings;
+        return $this->getBackingStore()->get('kioskModeAllowColorInversionSettings');
     }
 
     /**
@@ -1370,7 +715,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowRingerSwitch(): ?bool {
-        return $this->kioskModeAllowRingerSwitch;
+        return $this->getBackingStore()->get('kioskModeAllowRingerSwitch');
     }
 
     /**
@@ -1378,7 +723,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowScreenRotation(): ?bool {
-        return $this->kioskModeAllowScreenRotation;
+        return $this->getBackingStore()->get('kioskModeAllowScreenRotation');
     }
 
     /**
@@ -1386,7 +731,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowSleepButton(): ?bool {
-        return $this->kioskModeAllowSleepButton;
+        return $this->getBackingStore()->get('kioskModeAllowSleepButton');
     }
 
     /**
@@ -1394,7 +739,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowTouchscreen(): ?bool {
-        return $this->kioskModeAllowTouchscreen;
+        return $this->getBackingStore()->get('kioskModeAllowTouchscreen');
     }
 
     /**
@@ -1402,7 +747,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowVoiceOverSettings(): ?bool {
-        return $this->kioskModeAllowVoiceOverSettings;
+        return $this->getBackingStore()->get('kioskModeAllowVoiceOverSettings');
     }
 
     /**
@@ -1410,7 +755,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowVolumeButtons(): ?bool {
-        return $this->kioskModeAllowVolumeButtons;
+        return $this->getBackingStore()->get('kioskModeAllowVolumeButtons');
     }
 
     /**
@@ -1418,7 +763,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeAllowZoomSettings(): ?bool {
-        return $this->kioskModeAllowZoomSettings;
+        return $this->getBackingStore()->get('kioskModeAllowZoomSettings');
     }
 
     /**
@@ -1426,7 +771,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getKioskModeAppStoreUrl(): ?string {
-        return $this->kioskModeAppStoreUrl;
+        return $this->getBackingStore()->get('kioskModeAppStoreUrl');
     }
 
     /**
@@ -1434,7 +779,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getKioskModeBuiltInAppId(): ?string {
-        return $this->kioskModeBuiltInAppId;
+        return $this->getBackingStore()->get('kioskModeBuiltInAppId');
     }
 
     /**
@@ -1442,7 +787,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getKioskModeManagedAppId(): ?string {
-        return $this->kioskModeManagedAppId;
+        return $this->getBackingStore()->get('kioskModeManagedAppId');
     }
 
     /**
@@ -1450,7 +795,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeRequireAssistiveTouch(): ?bool {
-        return $this->kioskModeRequireAssistiveTouch;
+        return $this->getBackingStore()->get('kioskModeRequireAssistiveTouch');
     }
 
     /**
@@ -1458,7 +803,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeRequireColorInversion(): ?bool {
-        return $this->kioskModeRequireColorInversion;
+        return $this->getBackingStore()->get('kioskModeRequireColorInversion');
     }
 
     /**
@@ -1466,7 +811,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeRequireMonoAudio(): ?bool {
-        return $this->kioskModeRequireMonoAudio;
+        return $this->getBackingStore()->get('kioskModeRequireMonoAudio');
     }
 
     /**
@@ -1474,7 +819,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeRequireVoiceOver(): ?bool {
-        return $this->kioskModeRequireVoiceOver;
+        return $this->getBackingStore()->get('kioskModeRequireVoiceOver');
     }
 
     /**
@@ -1482,7 +827,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getKioskModeRequireZoom(): ?bool {
-        return $this->kioskModeRequireZoom;
+        return $this->getBackingStore()->get('kioskModeRequireZoom');
     }
 
     /**
@@ -1490,7 +835,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getLockScreenBlockControlCenter(): ?bool {
-        return $this->lockScreenBlockControlCenter;
+        return $this->getBackingStore()->get('lockScreenBlockControlCenter');
     }
 
     /**
@@ -1498,7 +843,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getLockScreenBlockNotificationView(): ?bool {
-        return $this->lockScreenBlockNotificationView;
+        return $this->getBackingStore()->get('lockScreenBlockNotificationView');
     }
 
     /**
@@ -1506,7 +851,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getLockScreenBlockPassbook(): ?bool {
-        return $this->lockScreenBlockPassbook;
+        return $this->getBackingStore()->get('lockScreenBlockPassbook');
     }
 
     /**
@@ -1514,7 +859,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getLockScreenBlockTodayView(): ?bool {
-        return $this->lockScreenBlockTodayView;
+        return $this->getBackingStore()->get('lockScreenBlockTodayView');
     }
 
     /**
@@ -1522,7 +867,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return RatingAppsType|null
     */
     public function getMediaContentRatingApps(): ?RatingAppsType {
-        return $this->mediaContentRatingApps;
+        return $this->getBackingStore()->get('mediaContentRatingApps');
     }
 
     /**
@@ -1530,7 +875,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingAustralia|null
     */
     public function getMediaContentRatingAustralia(): ?MediaContentRatingAustralia {
-        return $this->mediaContentRatingAustralia;
+        return $this->getBackingStore()->get('mediaContentRatingAustralia');
     }
 
     /**
@@ -1538,7 +883,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingCanada|null
     */
     public function getMediaContentRatingCanada(): ?MediaContentRatingCanada {
-        return $this->mediaContentRatingCanada;
+        return $this->getBackingStore()->get('mediaContentRatingCanada');
     }
 
     /**
@@ -1546,7 +891,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingFrance|null
     */
     public function getMediaContentRatingFrance(): ?MediaContentRatingFrance {
-        return $this->mediaContentRatingFrance;
+        return $this->getBackingStore()->get('mediaContentRatingFrance');
     }
 
     /**
@@ -1554,7 +899,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingGermany|null
     */
     public function getMediaContentRatingGermany(): ?MediaContentRatingGermany {
-        return $this->mediaContentRatingGermany;
+        return $this->getBackingStore()->get('mediaContentRatingGermany');
     }
 
     /**
@@ -1562,7 +907,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingIreland|null
     */
     public function getMediaContentRatingIreland(): ?MediaContentRatingIreland {
-        return $this->mediaContentRatingIreland;
+        return $this->getBackingStore()->get('mediaContentRatingIreland');
     }
 
     /**
@@ -1570,7 +915,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingJapan|null
     */
     public function getMediaContentRatingJapan(): ?MediaContentRatingJapan {
-        return $this->mediaContentRatingJapan;
+        return $this->getBackingStore()->get('mediaContentRatingJapan');
     }
 
     /**
@@ -1578,7 +923,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingNewZealand|null
     */
     public function getMediaContentRatingNewZealand(): ?MediaContentRatingNewZealand {
-        return $this->mediaContentRatingNewZealand;
+        return $this->getBackingStore()->get('mediaContentRatingNewZealand');
     }
 
     /**
@@ -1586,7 +931,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingUnitedKingdom|null
     */
     public function getMediaContentRatingUnitedKingdom(): ?MediaContentRatingUnitedKingdom {
-        return $this->mediaContentRatingUnitedKingdom;
+        return $this->getBackingStore()->get('mediaContentRatingUnitedKingdom');
     }
 
     /**
@@ -1594,7 +939,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return MediaContentRatingUnitedStates|null
     */
     public function getMediaContentRatingUnitedStates(): ?MediaContentRatingUnitedStates {
-        return $this->mediaContentRatingUnitedStates;
+        return $this->getBackingStore()->get('mediaContentRatingUnitedStates');
     }
 
     /**
@@ -1602,7 +947,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getMessagesBlocked(): ?bool {
-        return $this->messagesBlocked;
+        return $this->getBackingStore()->get('messagesBlocked');
     }
 
     /**
@@ -1610,7 +955,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<IosNetworkUsageRule>|null
     */
     public function getNetworkUsageRules(): ?array {
-        return $this->networkUsageRules;
+        return $this->getBackingStore()->get('networkUsageRules');
     }
 
     /**
@@ -1618,7 +963,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getNotificationsBlockSettingsModification(): ?bool {
-        return $this->notificationsBlockSettingsModification;
+        return $this->getBackingStore()->get('notificationsBlockSettingsModification');
     }
 
     /**
@@ -1626,7 +971,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasscodeBlockFingerprintModification(): ?bool {
-        return $this->passcodeBlockFingerprintModification;
+        return $this->getBackingStore()->get('passcodeBlockFingerprintModification');
     }
 
     /**
@@ -1634,7 +979,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasscodeBlockFingerprintUnlock(): ?bool {
-        return $this->passcodeBlockFingerprintUnlock;
+        return $this->getBackingStore()->get('passcodeBlockFingerprintUnlock');
     }
 
     /**
@@ -1642,7 +987,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasscodeBlockModification(): ?bool {
-        return $this->passcodeBlockModification;
+        return $this->getBackingStore()->get('passcodeBlockModification');
     }
 
     /**
@@ -1650,7 +995,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasscodeBlockSimple(): ?bool {
-        return $this->passcodeBlockSimple;
+        return $this->getBackingStore()->get('passcodeBlockSimple');
     }
 
     /**
@@ -1658,7 +1003,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeExpirationDays(): ?int {
-        return $this->passcodeExpirationDays;
+        return $this->getBackingStore()->get('passcodeExpirationDays');
     }
 
     /**
@@ -1666,7 +1011,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeMinimumCharacterSetCount(): ?int {
-        return $this->passcodeMinimumCharacterSetCount;
+        return $this->getBackingStore()->get('passcodeMinimumCharacterSetCount');
     }
 
     /**
@@ -1674,7 +1019,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeMinimumLength(): ?int {
-        return $this->passcodeMinimumLength;
+        return $this->getBackingStore()->get('passcodeMinimumLength');
     }
 
     /**
@@ -1682,7 +1027,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeMinutesOfInactivityBeforeLock(): ?int {
-        return $this->passcodeMinutesOfInactivityBeforeLock;
+        return $this->getBackingStore()->get('passcodeMinutesOfInactivityBeforeLock');
     }
 
     /**
@@ -1690,7 +1035,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->passcodeMinutesOfInactivityBeforeScreenTimeout;
+        return $this->getBackingStore()->get('passcodeMinutesOfInactivityBeforeScreenTimeout');
     }
 
     /**
@@ -1698,7 +1043,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodePreviousPasscodeBlockCount(): ?int {
-        return $this->passcodePreviousPasscodeBlockCount;
+        return $this->getBackingStore()->get('passcodePreviousPasscodeBlockCount');
     }
 
     /**
@@ -1706,7 +1051,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasscodeRequired(): ?bool {
-        return $this->passcodeRequired;
+        return $this->getBackingStore()->get('passcodeRequired');
     }
 
     /**
@@ -1714,7 +1059,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return RequiredPasswordType|null
     */
     public function getPasscodeRequiredType(): ?RequiredPasswordType {
-        return $this->passcodeRequiredType;
+        return $this->getBackingStore()->get('passcodeRequiredType');
     }
 
     /**
@@ -1722,7 +1067,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasscodeSignInFailureCountBeforeWipe(): ?int {
-        return $this->passcodeSignInFailureCountBeforeWipe;
+        return $this->getBackingStore()->get('passcodeSignInFailureCountBeforeWipe');
     }
 
     /**
@@ -1730,7 +1075,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPodcastsBlocked(): ?bool {
-        return $this->podcastsBlocked;
+        return $this->getBackingStore()->get('podcastsBlocked');
     }
 
     /**
@@ -1738,7 +1083,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSafariBlockAutofill(): ?bool {
-        return $this->safariBlockAutofill;
+        return $this->getBackingStore()->get('safariBlockAutofill');
     }
 
     /**
@@ -1746,7 +1091,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSafariBlocked(): ?bool {
-        return $this->safariBlocked;
+        return $this->getBackingStore()->get('safariBlocked');
     }
 
     /**
@@ -1754,7 +1099,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSafariBlockJavaScript(): ?bool {
-        return $this->safariBlockJavaScript;
+        return $this->getBackingStore()->get('safariBlockJavaScript');
     }
 
     /**
@@ -1762,7 +1107,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSafariBlockPopups(): ?bool {
-        return $this->safariBlockPopups;
+        return $this->getBackingStore()->get('safariBlockPopups');
     }
 
     /**
@@ -1770,7 +1115,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return WebBrowserCookieSettings|null
     */
     public function getSafariCookieSettings(): ?WebBrowserCookieSettings {
-        return $this->safariCookieSettings;
+        return $this->getBackingStore()->get('safariCookieSettings');
     }
 
     /**
@@ -1778,7 +1123,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<string>|null
     */
     public function getSafariManagedDomains(): ?array {
-        return $this->safariManagedDomains;
+        return $this->getBackingStore()->get('safariManagedDomains');
     }
 
     /**
@@ -1786,7 +1131,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return array<string>|null
     */
     public function getSafariPasswordAutoFillDomains(): ?array {
-        return $this->safariPasswordAutoFillDomains;
+        return $this->getBackingStore()->get('safariPasswordAutoFillDomains');
     }
 
     /**
@@ -1794,7 +1139,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSafariRequireFraudWarning(): ?bool {
-        return $this->safariRequireFraudWarning;
+        return $this->getBackingStore()->get('safariRequireFraudWarning');
     }
 
     /**
@@ -1802,7 +1147,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getScreenCaptureBlocked(): ?bool {
-        return $this->screenCaptureBlocked;
+        return $this->getBackingStore()->get('screenCaptureBlocked');
     }
 
     /**
@@ -1810,7 +1155,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSiriBlocked(): ?bool {
-        return $this->siriBlocked;
+        return $this->getBackingStore()->get('siriBlocked');
     }
 
     /**
@@ -1818,7 +1163,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSiriBlockedWhenLocked(): ?bool {
-        return $this->siriBlockedWhenLocked;
+        return $this->getBackingStore()->get('siriBlockedWhenLocked');
     }
 
     /**
@@ -1826,7 +1171,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSiriBlockUserGeneratedContent(): ?bool {
-        return $this->siriBlockUserGeneratedContent;
+        return $this->getBackingStore()->get('siriBlockUserGeneratedContent');
     }
 
     /**
@@ -1834,7 +1179,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSiriRequireProfanityFilter(): ?bool {
-        return $this->siriRequireProfanityFilter;
+        return $this->getBackingStore()->get('siriRequireProfanityFilter');
     }
 
     /**
@@ -1842,7 +1187,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getSpotlightBlockInternetResults(): ?bool {
-        return $this->spotlightBlockInternetResults;
+        return $this->getBackingStore()->get('spotlightBlockInternetResults');
     }
 
     /**
@@ -1850,7 +1195,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getVoiceDialingBlocked(): ?bool {
-        return $this->voiceDialingBlocked;
+        return $this->getBackingStore()->get('voiceDialingBlocked');
     }
 
     /**
@@ -1858,7 +1203,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getWallpaperBlockModification(): ?bool {
-        return $this->wallpaperBlockModification;
+        return $this->getBackingStore()->get('wallpaperBlockModification');
     }
 
     /**
@@ -1866,7 +1211,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getWiFiConnectOnlyToConfiguredNetworks(): ?bool {
-        return $this->wiFiConnectOnlyToConfiguredNetworks;
+        return $this->getBackingStore()->get('wiFiConnectOnlyToConfiguredNetworks');
     }
 
     /**
@@ -1875,1185 +1220,1185 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('accountBlockModification', $this->accountBlockModification);
-        $writer->writeBooleanValue('activationLockAllowWhenSupervised', $this->activationLockAllowWhenSupervised);
-        $writer->writeBooleanValue('airDropBlocked', $this->airDropBlocked);
-        $writer->writeBooleanValue('airDropForceUnmanagedDropTarget', $this->airDropForceUnmanagedDropTarget);
-        $writer->writeBooleanValue('airPlayForcePairingPasswordForOutgoingRequests', $this->airPlayForcePairingPasswordForOutgoingRequests);
-        $writer->writeBooleanValue('appleNewsBlocked', $this->appleNewsBlocked);
-        $writer->writeBooleanValue('appleWatchBlockPairing', $this->appleWatchBlockPairing);
-        $writer->writeBooleanValue('appleWatchForceWristDetection', $this->appleWatchForceWristDetection);
-        $writer->writeCollectionOfObjectValues('appsSingleAppModeList', $this->appsSingleAppModeList);
-        $writer->writeBooleanValue('appStoreBlockAutomaticDownloads', $this->appStoreBlockAutomaticDownloads);
-        $writer->writeBooleanValue('appStoreBlocked', $this->appStoreBlocked);
-        $writer->writeBooleanValue('appStoreBlockInAppPurchases', $this->appStoreBlockInAppPurchases);
-        $writer->writeBooleanValue('appStoreBlockUIAppInstallation', $this->appStoreBlockUIAppInstallation);
-        $writer->writeBooleanValue('appStoreRequirePassword', $this->appStoreRequirePassword);
-        $writer->writeCollectionOfObjectValues('appsVisibilityList', $this->appsVisibilityList);
-        $writer->writeEnumValue('appsVisibilityListType', $this->appsVisibilityListType);
-        $writer->writeBooleanValue('bluetoothBlockModification', $this->bluetoothBlockModification);
-        $writer->writeBooleanValue('cameraBlocked', $this->cameraBlocked);
-        $writer->writeBooleanValue('cellularBlockDataRoaming', $this->cellularBlockDataRoaming);
-        $writer->writeBooleanValue('cellularBlockGlobalBackgroundFetchWhileRoaming', $this->cellularBlockGlobalBackgroundFetchWhileRoaming);
-        $writer->writeBooleanValue('cellularBlockPerAppDataModification', $this->cellularBlockPerAppDataModification);
-        $writer->writeBooleanValue('cellularBlockPersonalHotspot', $this->cellularBlockPersonalHotspot);
-        $writer->writeBooleanValue('cellularBlockVoiceRoaming', $this->cellularBlockVoiceRoaming);
-        $writer->writeBooleanValue('certificatesBlockUntrustedTlsCertificates', $this->certificatesBlockUntrustedTlsCertificates);
-        $writer->writeBooleanValue('classroomAppBlockRemoteScreenObservation', $this->classroomAppBlockRemoteScreenObservation);
-        $writer->writeBooleanValue('classroomAppForceUnpromptedScreenObservation', $this->classroomAppForceUnpromptedScreenObservation);
-        $writer->writeEnumValue('compliantAppListType', $this->compliantAppListType);
-        $writer->writeCollectionOfObjectValues('compliantAppsList', $this->compliantAppsList);
-        $writer->writeBooleanValue('configurationProfileBlockChanges', $this->configurationProfileBlockChanges);
-        $writer->writeBooleanValue('definitionLookupBlocked', $this->definitionLookupBlocked);
-        $writer->writeBooleanValue('deviceBlockEnableRestrictions', $this->deviceBlockEnableRestrictions);
-        $writer->writeBooleanValue('deviceBlockEraseContentAndSettings', $this->deviceBlockEraseContentAndSettings);
-        $writer->writeBooleanValue('deviceBlockNameModification', $this->deviceBlockNameModification);
-        $writer->writeBooleanValue('diagnosticDataBlockSubmission', $this->diagnosticDataBlockSubmission);
-        $writer->writeBooleanValue('diagnosticDataBlockSubmissionModification', $this->diagnosticDataBlockSubmissionModification);
-        $writer->writeBooleanValue('documentsBlockManagedDocumentsInUnmanagedApps', $this->documentsBlockManagedDocumentsInUnmanagedApps);
-        $writer->writeBooleanValue('documentsBlockUnmanagedDocumentsInManagedApps', $this->documentsBlockUnmanagedDocumentsInManagedApps);
-        $writer->writeCollectionOfPrimitiveValues('emailInDomainSuffixes', $this->emailInDomainSuffixes);
-        $writer->writeBooleanValue('enterpriseAppBlockTrust', $this->enterpriseAppBlockTrust);
-        $writer->writeBooleanValue('enterpriseAppBlockTrustModification', $this->enterpriseAppBlockTrustModification);
-        $writer->writeBooleanValue('faceTimeBlocked', $this->faceTimeBlocked);
-        $writer->writeBooleanValue('findMyFriendsBlocked', $this->findMyFriendsBlocked);
-        $writer->writeBooleanValue('gameCenterBlocked', $this->gameCenterBlocked);
-        $writer->writeBooleanValue('gamingBlockGameCenterFriends', $this->gamingBlockGameCenterFriends);
-        $writer->writeBooleanValue('gamingBlockMultiplayer', $this->gamingBlockMultiplayer);
-        $writer->writeBooleanValue('hostPairingBlocked', $this->hostPairingBlocked);
-        $writer->writeBooleanValue('iBooksStoreBlocked', $this->iBooksStoreBlocked);
-        $writer->writeBooleanValue('iBooksStoreBlockErotica', $this->iBooksStoreBlockErotica);
-        $writer->writeBooleanValue('iCloudBlockActivityContinuation', $this->iCloudBlockActivityContinuation);
-        $writer->writeBooleanValue('iCloudBlockBackup', $this->iCloudBlockBackup);
-        $writer->writeBooleanValue('iCloudBlockDocumentSync', $this->iCloudBlockDocumentSync);
-        $writer->writeBooleanValue('iCloudBlockManagedAppsSync', $this->iCloudBlockManagedAppsSync);
-        $writer->writeBooleanValue('iCloudBlockPhotoLibrary', $this->iCloudBlockPhotoLibrary);
-        $writer->writeBooleanValue('iCloudBlockPhotoStreamSync', $this->iCloudBlockPhotoStreamSync);
-        $writer->writeBooleanValue('iCloudBlockSharedPhotoStream', $this->iCloudBlockSharedPhotoStream);
-        $writer->writeBooleanValue('iCloudRequireEncryptedBackup', $this->iCloudRequireEncryptedBackup);
-        $writer->writeBooleanValue('iTunesBlockExplicitContent', $this->iTunesBlockExplicitContent);
-        $writer->writeBooleanValue('iTunesBlockMusicService', $this->iTunesBlockMusicService);
-        $writer->writeBooleanValue('iTunesBlockRadio', $this->iTunesBlockRadio);
-        $writer->writeBooleanValue('keyboardBlockAutoCorrect', $this->keyboardBlockAutoCorrect);
-        $writer->writeBooleanValue('keyboardBlockDictation', $this->keyboardBlockDictation);
-        $writer->writeBooleanValue('keyboardBlockPredictive', $this->keyboardBlockPredictive);
-        $writer->writeBooleanValue('keyboardBlockShortcuts', $this->keyboardBlockShortcuts);
-        $writer->writeBooleanValue('keyboardBlockSpellCheck', $this->keyboardBlockSpellCheck);
-        $writer->writeBooleanValue('kioskModeAllowAssistiveSpeak', $this->kioskModeAllowAssistiveSpeak);
-        $writer->writeBooleanValue('kioskModeAllowAssistiveTouchSettings', $this->kioskModeAllowAssistiveTouchSettings);
-        $writer->writeBooleanValue('kioskModeAllowAutoLock', $this->kioskModeAllowAutoLock);
-        $writer->writeBooleanValue('kioskModeAllowColorInversionSettings', $this->kioskModeAllowColorInversionSettings);
-        $writer->writeBooleanValue('kioskModeAllowRingerSwitch', $this->kioskModeAllowRingerSwitch);
-        $writer->writeBooleanValue('kioskModeAllowScreenRotation', $this->kioskModeAllowScreenRotation);
-        $writer->writeBooleanValue('kioskModeAllowSleepButton', $this->kioskModeAllowSleepButton);
-        $writer->writeBooleanValue('kioskModeAllowTouchscreen', $this->kioskModeAllowTouchscreen);
-        $writer->writeBooleanValue('kioskModeAllowVoiceOverSettings', $this->kioskModeAllowVoiceOverSettings);
-        $writer->writeBooleanValue('kioskModeAllowVolumeButtons', $this->kioskModeAllowVolumeButtons);
-        $writer->writeBooleanValue('kioskModeAllowZoomSettings', $this->kioskModeAllowZoomSettings);
-        $writer->writeStringValue('kioskModeAppStoreUrl', $this->kioskModeAppStoreUrl);
-        $writer->writeStringValue('kioskModeBuiltInAppId', $this->kioskModeBuiltInAppId);
-        $writer->writeStringValue('kioskModeManagedAppId', $this->kioskModeManagedAppId);
-        $writer->writeBooleanValue('kioskModeRequireAssistiveTouch', $this->kioskModeRequireAssistiveTouch);
-        $writer->writeBooleanValue('kioskModeRequireColorInversion', $this->kioskModeRequireColorInversion);
-        $writer->writeBooleanValue('kioskModeRequireMonoAudio', $this->kioskModeRequireMonoAudio);
-        $writer->writeBooleanValue('kioskModeRequireVoiceOver', $this->kioskModeRequireVoiceOver);
-        $writer->writeBooleanValue('kioskModeRequireZoom', $this->kioskModeRequireZoom);
-        $writer->writeBooleanValue('lockScreenBlockControlCenter', $this->lockScreenBlockControlCenter);
-        $writer->writeBooleanValue('lockScreenBlockNotificationView', $this->lockScreenBlockNotificationView);
-        $writer->writeBooleanValue('lockScreenBlockPassbook', $this->lockScreenBlockPassbook);
-        $writer->writeBooleanValue('lockScreenBlockTodayView', $this->lockScreenBlockTodayView);
-        $writer->writeEnumValue('mediaContentRatingApps', $this->mediaContentRatingApps);
-        $writer->writeObjectValue('mediaContentRatingAustralia', $this->mediaContentRatingAustralia);
-        $writer->writeObjectValue('mediaContentRatingCanada', $this->mediaContentRatingCanada);
-        $writer->writeObjectValue('mediaContentRatingFrance', $this->mediaContentRatingFrance);
-        $writer->writeObjectValue('mediaContentRatingGermany', $this->mediaContentRatingGermany);
-        $writer->writeObjectValue('mediaContentRatingIreland', $this->mediaContentRatingIreland);
-        $writer->writeObjectValue('mediaContentRatingJapan', $this->mediaContentRatingJapan);
-        $writer->writeObjectValue('mediaContentRatingNewZealand', $this->mediaContentRatingNewZealand);
-        $writer->writeObjectValue('mediaContentRatingUnitedKingdom', $this->mediaContentRatingUnitedKingdom);
-        $writer->writeObjectValue('mediaContentRatingUnitedStates', $this->mediaContentRatingUnitedStates);
-        $writer->writeBooleanValue('messagesBlocked', $this->messagesBlocked);
-        $writer->writeCollectionOfObjectValues('networkUsageRules', $this->networkUsageRules);
-        $writer->writeBooleanValue('notificationsBlockSettingsModification', $this->notificationsBlockSettingsModification);
-        $writer->writeBooleanValue('passcodeBlockFingerprintModification', $this->passcodeBlockFingerprintModification);
-        $writer->writeBooleanValue('passcodeBlockFingerprintUnlock', $this->passcodeBlockFingerprintUnlock);
-        $writer->writeBooleanValue('passcodeBlockModification', $this->passcodeBlockModification);
-        $writer->writeBooleanValue('passcodeBlockSimple', $this->passcodeBlockSimple);
-        $writer->writeIntegerValue('passcodeExpirationDays', $this->passcodeExpirationDays);
-        $writer->writeIntegerValue('passcodeMinimumCharacterSetCount', $this->passcodeMinimumCharacterSetCount);
-        $writer->writeIntegerValue('passcodeMinimumLength', $this->passcodeMinimumLength);
-        $writer->writeIntegerValue('passcodeMinutesOfInactivityBeforeLock', $this->passcodeMinutesOfInactivityBeforeLock);
-        $writer->writeIntegerValue('passcodeMinutesOfInactivityBeforeScreenTimeout', $this->passcodeMinutesOfInactivityBeforeScreenTimeout);
-        $writer->writeIntegerValue('passcodePreviousPasscodeBlockCount', $this->passcodePreviousPasscodeBlockCount);
-        $writer->writeBooleanValue('passcodeRequired', $this->passcodeRequired);
-        $writer->writeEnumValue('passcodeRequiredType', $this->passcodeRequiredType);
-        $writer->writeIntegerValue('passcodeSignInFailureCountBeforeWipe', $this->passcodeSignInFailureCountBeforeWipe);
-        $writer->writeBooleanValue('podcastsBlocked', $this->podcastsBlocked);
-        $writer->writeBooleanValue('safariBlockAutofill', $this->safariBlockAutofill);
-        $writer->writeBooleanValue('safariBlocked', $this->safariBlocked);
-        $writer->writeBooleanValue('safariBlockJavaScript', $this->safariBlockJavaScript);
-        $writer->writeBooleanValue('safariBlockPopups', $this->safariBlockPopups);
-        $writer->writeEnumValue('safariCookieSettings', $this->safariCookieSettings);
-        $writer->writeCollectionOfPrimitiveValues('safariManagedDomains', $this->safariManagedDomains);
-        $writer->writeCollectionOfPrimitiveValues('safariPasswordAutoFillDomains', $this->safariPasswordAutoFillDomains);
-        $writer->writeBooleanValue('safariRequireFraudWarning', $this->safariRequireFraudWarning);
-        $writer->writeBooleanValue('screenCaptureBlocked', $this->screenCaptureBlocked);
-        $writer->writeBooleanValue('siriBlocked', $this->siriBlocked);
-        $writer->writeBooleanValue('siriBlockedWhenLocked', $this->siriBlockedWhenLocked);
-        $writer->writeBooleanValue('siriBlockUserGeneratedContent', $this->siriBlockUserGeneratedContent);
-        $writer->writeBooleanValue('siriRequireProfanityFilter', $this->siriRequireProfanityFilter);
-        $writer->writeBooleanValue('spotlightBlockInternetResults', $this->spotlightBlockInternetResults);
-        $writer->writeBooleanValue('voiceDialingBlocked', $this->voiceDialingBlocked);
-        $writer->writeBooleanValue('wallpaperBlockModification', $this->wallpaperBlockModification);
-        $writer->writeBooleanValue('wiFiConnectOnlyToConfiguredNetworks', $this->wiFiConnectOnlyToConfiguredNetworks);
+        $writer->writeBooleanValue('accountBlockModification', $this->getAccountBlockModification());
+        $writer->writeBooleanValue('activationLockAllowWhenSupervised', $this->getActivationLockAllowWhenSupervised());
+        $writer->writeBooleanValue('airDropBlocked', $this->getAirDropBlocked());
+        $writer->writeBooleanValue('airDropForceUnmanagedDropTarget', $this->getAirDropForceUnmanagedDropTarget());
+        $writer->writeBooleanValue('airPlayForcePairingPasswordForOutgoingRequests', $this->getAirPlayForcePairingPasswordForOutgoingRequests());
+        $writer->writeBooleanValue('appleNewsBlocked', $this->getAppleNewsBlocked());
+        $writer->writeBooleanValue('appleWatchBlockPairing', $this->getAppleWatchBlockPairing());
+        $writer->writeBooleanValue('appleWatchForceWristDetection', $this->getAppleWatchForceWristDetection());
+        $writer->writeCollectionOfObjectValues('appsSingleAppModeList', $this->getAppsSingleAppModeList());
+        $writer->writeBooleanValue('appStoreBlockAutomaticDownloads', $this->getAppStoreBlockAutomaticDownloads());
+        $writer->writeBooleanValue('appStoreBlocked', $this->getAppStoreBlocked());
+        $writer->writeBooleanValue('appStoreBlockInAppPurchases', $this->getAppStoreBlockInAppPurchases());
+        $writer->writeBooleanValue('appStoreBlockUIAppInstallation', $this->getAppStoreBlockUIAppInstallation());
+        $writer->writeBooleanValue('appStoreRequirePassword', $this->getAppStoreRequirePassword());
+        $writer->writeCollectionOfObjectValues('appsVisibilityList', $this->getAppsVisibilityList());
+        $writer->writeEnumValue('appsVisibilityListType', $this->getAppsVisibilityListType());
+        $writer->writeBooleanValue('bluetoothBlockModification', $this->getBluetoothBlockModification());
+        $writer->writeBooleanValue('cameraBlocked', $this->getCameraBlocked());
+        $writer->writeBooleanValue('cellularBlockDataRoaming', $this->getCellularBlockDataRoaming());
+        $writer->writeBooleanValue('cellularBlockGlobalBackgroundFetchWhileRoaming', $this->getCellularBlockGlobalBackgroundFetchWhileRoaming());
+        $writer->writeBooleanValue('cellularBlockPerAppDataModification', $this->getCellularBlockPerAppDataModification());
+        $writer->writeBooleanValue('cellularBlockPersonalHotspot', $this->getCellularBlockPersonalHotspot());
+        $writer->writeBooleanValue('cellularBlockVoiceRoaming', $this->getCellularBlockVoiceRoaming());
+        $writer->writeBooleanValue('certificatesBlockUntrustedTlsCertificates', $this->getCertificatesBlockUntrustedTlsCertificates());
+        $writer->writeBooleanValue('classroomAppBlockRemoteScreenObservation', $this->getClassroomAppBlockRemoteScreenObservation());
+        $writer->writeBooleanValue('classroomAppForceUnpromptedScreenObservation', $this->getClassroomAppForceUnpromptedScreenObservation());
+        $writer->writeEnumValue('compliantAppListType', $this->getCompliantAppListType());
+        $writer->writeCollectionOfObjectValues('compliantAppsList', $this->getCompliantAppsList());
+        $writer->writeBooleanValue('configurationProfileBlockChanges', $this->getConfigurationProfileBlockChanges());
+        $writer->writeBooleanValue('definitionLookupBlocked', $this->getDefinitionLookupBlocked());
+        $writer->writeBooleanValue('deviceBlockEnableRestrictions', $this->getDeviceBlockEnableRestrictions());
+        $writer->writeBooleanValue('deviceBlockEraseContentAndSettings', $this->getDeviceBlockEraseContentAndSettings());
+        $writer->writeBooleanValue('deviceBlockNameModification', $this->getDeviceBlockNameModification());
+        $writer->writeBooleanValue('diagnosticDataBlockSubmission', $this->getDiagnosticDataBlockSubmission());
+        $writer->writeBooleanValue('diagnosticDataBlockSubmissionModification', $this->getDiagnosticDataBlockSubmissionModification());
+        $writer->writeBooleanValue('documentsBlockManagedDocumentsInUnmanagedApps', $this->getDocumentsBlockManagedDocumentsInUnmanagedApps());
+        $writer->writeBooleanValue('documentsBlockUnmanagedDocumentsInManagedApps', $this->getDocumentsBlockUnmanagedDocumentsInManagedApps());
+        $writer->writeCollectionOfPrimitiveValues('emailInDomainSuffixes', $this->getEmailInDomainSuffixes());
+        $writer->writeBooleanValue('enterpriseAppBlockTrust', $this->getEnterpriseAppBlockTrust());
+        $writer->writeBooleanValue('enterpriseAppBlockTrustModification', $this->getEnterpriseAppBlockTrustModification());
+        $writer->writeBooleanValue('faceTimeBlocked', $this->getFaceTimeBlocked());
+        $writer->writeBooleanValue('findMyFriendsBlocked', $this->getFindMyFriendsBlocked());
+        $writer->writeBooleanValue('gameCenterBlocked', $this->getGameCenterBlocked());
+        $writer->writeBooleanValue('gamingBlockGameCenterFriends', $this->getGamingBlockGameCenterFriends());
+        $writer->writeBooleanValue('gamingBlockMultiplayer', $this->getGamingBlockMultiplayer());
+        $writer->writeBooleanValue('hostPairingBlocked', $this->getHostPairingBlocked());
+        $writer->writeBooleanValue('iBooksStoreBlocked', $this->getIBooksStoreBlocked());
+        $writer->writeBooleanValue('iBooksStoreBlockErotica', $this->getIBooksStoreBlockErotica());
+        $writer->writeBooleanValue('iCloudBlockActivityContinuation', $this->getICloudBlockActivityContinuation());
+        $writer->writeBooleanValue('iCloudBlockBackup', $this->getICloudBlockBackup());
+        $writer->writeBooleanValue('iCloudBlockDocumentSync', $this->getICloudBlockDocumentSync());
+        $writer->writeBooleanValue('iCloudBlockManagedAppsSync', $this->getICloudBlockManagedAppsSync());
+        $writer->writeBooleanValue('iCloudBlockPhotoLibrary', $this->getICloudBlockPhotoLibrary());
+        $writer->writeBooleanValue('iCloudBlockPhotoStreamSync', $this->getICloudBlockPhotoStreamSync());
+        $writer->writeBooleanValue('iCloudBlockSharedPhotoStream', $this->getICloudBlockSharedPhotoStream());
+        $writer->writeBooleanValue('iCloudRequireEncryptedBackup', $this->getICloudRequireEncryptedBackup());
+        $writer->writeBooleanValue('iTunesBlockExplicitContent', $this->getITunesBlockExplicitContent());
+        $writer->writeBooleanValue('iTunesBlockMusicService', $this->getITunesBlockMusicService());
+        $writer->writeBooleanValue('iTunesBlockRadio', $this->getITunesBlockRadio());
+        $writer->writeBooleanValue('keyboardBlockAutoCorrect', $this->getKeyboardBlockAutoCorrect());
+        $writer->writeBooleanValue('keyboardBlockDictation', $this->getKeyboardBlockDictation());
+        $writer->writeBooleanValue('keyboardBlockPredictive', $this->getKeyboardBlockPredictive());
+        $writer->writeBooleanValue('keyboardBlockShortcuts', $this->getKeyboardBlockShortcuts());
+        $writer->writeBooleanValue('keyboardBlockSpellCheck', $this->getKeyboardBlockSpellCheck());
+        $writer->writeBooleanValue('kioskModeAllowAssistiveSpeak', $this->getKioskModeAllowAssistiveSpeak());
+        $writer->writeBooleanValue('kioskModeAllowAssistiveTouchSettings', $this->getKioskModeAllowAssistiveTouchSettings());
+        $writer->writeBooleanValue('kioskModeAllowAutoLock', $this->getKioskModeAllowAutoLock());
+        $writer->writeBooleanValue('kioskModeAllowColorInversionSettings', $this->getKioskModeAllowColorInversionSettings());
+        $writer->writeBooleanValue('kioskModeAllowRingerSwitch', $this->getKioskModeAllowRingerSwitch());
+        $writer->writeBooleanValue('kioskModeAllowScreenRotation', $this->getKioskModeAllowScreenRotation());
+        $writer->writeBooleanValue('kioskModeAllowSleepButton', $this->getKioskModeAllowSleepButton());
+        $writer->writeBooleanValue('kioskModeAllowTouchscreen', $this->getKioskModeAllowTouchscreen());
+        $writer->writeBooleanValue('kioskModeAllowVoiceOverSettings', $this->getKioskModeAllowVoiceOverSettings());
+        $writer->writeBooleanValue('kioskModeAllowVolumeButtons', $this->getKioskModeAllowVolumeButtons());
+        $writer->writeBooleanValue('kioskModeAllowZoomSettings', $this->getKioskModeAllowZoomSettings());
+        $writer->writeStringValue('kioskModeAppStoreUrl', $this->getKioskModeAppStoreUrl());
+        $writer->writeStringValue('kioskModeBuiltInAppId', $this->getKioskModeBuiltInAppId());
+        $writer->writeStringValue('kioskModeManagedAppId', $this->getKioskModeManagedAppId());
+        $writer->writeBooleanValue('kioskModeRequireAssistiveTouch', $this->getKioskModeRequireAssistiveTouch());
+        $writer->writeBooleanValue('kioskModeRequireColorInversion', $this->getKioskModeRequireColorInversion());
+        $writer->writeBooleanValue('kioskModeRequireMonoAudio', $this->getKioskModeRequireMonoAudio());
+        $writer->writeBooleanValue('kioskModeRequireVoiceOver', $this->getKioskModeRequireVoiceOver());
+        $writer->writeBooleanValue('kioskModeRequireZoom', $this->getKioskModeRequireZoom());
+        $writer->writeBooleanValue('lockScreenBlockControlCenter', $this->getLockScreenBlockControlCenter());
+        $writer->writeBooleanValue('lockScreenBlockNotificationView', $this->getLockScreenBlockNotificationView());
+        $writer->writeBooleanValue('lockScreenBlockPassbook', $this->getLockScreenBlockPassbook());
+        $writer->writeBooleanValue('lockScreenBlockTodayView', $this->getLockScreenBlockTodayView());
+        $writer->writeEnumValue('mediaContentRatingApps', $this->getMediaContentRatingApps());
+        $writer->writeObjectValue('mediaContentRatingAustralia', $this->getMediaContentRatingAustralia());
+        $writer->writeObjectValue('mediaContentRatingCanada', $this->getMediaContentRatingCanada());
+        $writer->writeObjectValue('mediaContentRatingFrance', $this->getMediaContentRatingFrance());
+        $writer->writeObjectValue('mediaContentRatingGermany', $this->getMediaContentRatingGermany());
+        $writer->writeObjectValue('mediaContentRatingIreland', $this->getMediaContentRatingIreland());
+        $writer->writeObjectValue('mediaContentRatingJapan', $this->getMediaContentRatingJapan());
+        $writer->writeObjectValue('mediaContentRatingNewZealand', $this->getMediaContentRatingNewZealand());
+        $writer->writeObjectValue('mediaContentRatingUnitedKingdom', $this->getMediaContentRatingUnitedKingdom());
+        $writer->writeObjectValue('mediaContentRatingUnitedStates', $this->getMediaContentRatingUnitedStates());
+        $writer->writeBooleanValue('messagesBlocked', $this->getMessagesBlocked());
+        $writer->writeCollectionOfObjectValues('networkUsageRules', $this->getNetworkUsageRules());
+        $writer->writeBooleanValue('notificationsBlockSettingsModification', $this->getNotificationsBlockSettingsModification());
+        $writer->writeBooleanValue('passcodeBlockFingerprintModification', $this->getPasscodeBlockFingerprintModification());
+        $writer->writeBooleanValue('passcodeBlockFingerprintUnlock', $this->getPasscodeBlockFingerprintUnlock());
+        $writer->writeBooleanValue('passcodeBlockModification', $this->getPasscodeBlockModification());
+        $writer->writeBooleanValue('passcodeBlockSimple', $this->getPasscodeBlockSimple());
+        $writer->writeIntegerValue('passcodeExpirationDays', $this->getPasscodeExpirationDays());
+        $writer->writeIntegerValue('passcodeMinimumCharacterSetCount', $this->getPasscodeMinimumCharacterSetCount());
+        $writer->writeIntegerValue('passcodeMinimumLength', $this->getPasscodeMinimumLength());
+        $writer->writeIntegerValue('passcodeMinutesOfInactivityBeforeLock', $this->getPasscodeMinutesOfInactivityBeforeLock());
+        $writer->writeIntegerValue('passcodeMinutesOfInactivityBeforeScreenTimeout', $this->getPasscodeMinutesOfInactivityBeforeScreenTimeout());
+        $writer->writeIntegerValue('passcodePreviousPasscodeBlockCount', $this->getPasscodePreviousPasscodeBlockCount());
+        $writer->writeBooleanValue('passcodeRequired', $this->getPasscodeRequired());
+        $writer->writeEnumValue('passcodeRequiredType', $this->getPasscodeRequiredType());
+        $writer->writeIntegerValue('passcodeSignInFailureCountBeforeWipe', $this->getPasscodeSignInFailureCountBeforeWipe());
+        $writer->writeBooleanValue('podcastsBlocked', $this->getPodcastsBlocked());
+        $writer->writeBooleanValue('safariBlockAutofill', $this->getSafariBlockAutofill());
+        $writer->writeBooleanValue('safariBlocked', $this->getSafariBlocked());
+        $writer->writeBooleanValue('safariBlockJavaScript', $this->getSafariBlockJavaScript());
+        $writer->writeBooleanValue('safariBlockPopups', $this->getSafariBlockPopups());
+        $writer->writeEnumValue('safariCookieSettings', $this->getSafariCookieSettings());
+        $writer->writeCollectionOfPrimitiveValues('safariManagedDomains', $this->getSafariManagedDomains());
+        $writer->writeCollectionOfPrimitiveValues('safariPasswordAutoFillDomains', $this->getSafariPasswordAutoFillDomains());
+        $writer->writeBooleanValue('safariRequireFraudWarning', $this->getSafariRequireFraudWarning());
+        $writer->writeBooleanValue('screenCaptureBlocked', $this->getScreenCaptureBlocked());
+        $writer->writeBooleanValue('siriBlocked', $this->getSiriBlocked());
+        $writer->writeBooleanValue('siriBlockedWhenLocked', $this->getSiriBlockedWhenLocked());
+        $writer->writeBooleanValue('siriBlockUserGeneratedContent', $this->getSiriBlockUserGeneratedContent());
+        $writer->writeBooleanValue('siriRequireProfanityFilter', $this->getSiriRequireProfanityFilter());
+        $writer->writeBooleanValue('spotlightBlockInternetResults', $this->getSpotlightBlockInternetResults());
+        $writer->writeBooleanValue('voiceDialingBlocked', $this->getVoiceDialingBlocked());
+        $writer->writeBooleanValue('wallpaperBlockModification', $this->getWallpaperBlockModification());
+        $writer->writeBooleanValue('wiFiConnectOnlyToConfiguredNetworks', $this->getWiFiConnectOnlyToConfiguredNetworks());
     }
 
     /**
      * Sets the accountBlockModification property value. Indicates whether or not to allow account modification when the device is in supervised mode.
      *  @param bool|null $value Value to set for the accountBlockModification property.
     */
-    public function setAccountBlockModification(?bool $value ): void {
-        $this->accountBlockModification = $value;
+    public function setAccountBlockModification(?bool $value): void {
+        $this->getBackingStore()->set('accountBlockModification', $value);
     }
 
     /**
      * Sets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
      *  @param bool|null $value Value to set for the activationLockAllowWhenSupervised property.
     */
-    public function setActivationLockAllowWhenSupervised(?bool $value ): void {
-        $this->activationLockAllowWhenSupervised = $value;
+    public function setActivationLockAllowWhenSupervised(?bool $value): void {
+        $this->getBackingStore()->set('activationLockAllowWhenSupervised', $value);
     }
 
     /**
      * Sets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
      *  @param bool|null $value Value to set for the airDropBlocked property.
     */
-    public function setAirDropBlocked(?bool $value ): void {
-        $this->airDropBlocked = $value;
+    public function setAirDropBlocked(?bool $value): void {
+        $this->getBackingStore()->set('airDropBlocked', $value);
     }
 
     /**
      * Sets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the airDropForceUnmanagedDropTarget property.
     */
-    public function setAirDropForceUnmanagedDropTarget(?bool $value ): void {
-        $this->airDropForceUnmanagedDropTarget = $value;
+    public function setAirDropForceUnmanagedDropTarget(?bool $value): void {
+        $this->getBackingStore()->set('airDropForceUnmanagedDropTarget', $value);
     }
 
     /**
      * Sets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
      *  @param bool|null $value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
     */
-    public function setAirPlayForcePairingPasswordForOutgoingRequests(?bool $value ): void {
-        $this->airPlayForcePairingPasswordForOutgoingRequests = $value;
+    public function setAirPlayForcePairingPasswordForOutgoingRequests(?bool $value): void {
+        $this->getBackingStore()->set('airPlayForcePairingPasswordForOutgoingRequests', $value);
     }
 
     /**
      * Sets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the appleNewsBlocked property.
     */
-    public function setAppleNewsBlocked(?bool $value ): void {
-        $this->appleNewsBlocked = $value;
+    public function setAppleNewsBlocked(?bool $value): void {
+        $this->getBackingStore()->set('appleNewsBlocked', $value);
     }
 
     /**
      * Sets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the appleWatchBlockPairing property.
     */
-    public function setAppleWatchBlockPairing(?bool $value ): void {
-        $this->appleWatchBlockPairing = $value;
+    public function setAppleWatchBlockPairing(?bool $value): void {
+        $this->getBackingStore()->set('appleWatchBlockPairing', $value);
     }
 
     /**
      * Sets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
      *  @param bool|null $value Value to set for the appleWatchForceWristDetection property.
     */
-    public function setAppleWatchForceWristDetection(?bool $value ): void {
-        $this->appleWatchForceWristDetection = $value;
+    public function setAppleWatchForceWristDetection(?bool $value): void {
+        $this->getBackingStore()->set('appleWatchForceWristDetection', $value);
     }
 
     /**
      * Sets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      *  @param array<AppListItem>|null $value Value to set for the appsSingleAppModeList property.
     */
-    public function setAppsSingleAppModeList(?array $value ): void {
-        $this->appsSingleAppModeList = $value;
+    public function setAppsSingleAppModeList(?array $value): void {
+        $this->getBackingStore()->set('appsSingleAppModeList', $value);
     }
 
     /**
      * Sets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the appStoreBlockAutomaticDownloads property.
     */
-    public function setAppStoreBlockAutomaticDownloads(?bool $value ): void {
-        $this->appStoreBlockAutomaticDownloads = $value;
+    public function setAppStoreBlockAutomaticDownloads(?bool $value): void {
+        $this->getBackingStore()->set('appStoreBlockAutomaticDownloads', $value);
     }
 
     /**
      * Sets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the appStoreBlocked property.
     */
-    public function setAppStoreBlocked(?bool $value ): void {
-        $this->appStoreBlocked = $value;
+    public function setAppStoreBlocked(?bool $value): void {
+        $this->getBackingStore()->set('appStoreBlocked', $value);
     }
 
     /**
      * Sets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
      *  @param bool|null $value Value to set for the appStoreBlockInAppPurchases property.
     */
-    public function setAppStoreBlockInAppPurchases(?bool $value ): void {
-        $this->appStoreBlockInAppPurchases = $value;
+    public function setAppStoreBlockInAppPurchases(?bool $value): void {
+        $this->getBackingStore()->set('appStoreBlockInAppPurchases', $value);
     }
 
     /**
      * Sets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the appStoreBlockUIAppInstallation property.
     */
-    public function setAppStoreBlockUIAppInstallation(?bool $value ): void {
-        $this->appStoreBlockUIAppInstallation = $value;
+    public function setAppStoreBlockUIAppInstallation(?bool $value): void {
+        $this->getBackingStore()->set('appStoreBlockUIAppInstallation', $value);
     }
 
     /**
      * Sets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
      *  @param bool|null $value Value to set for the appStoreRequirePassword property.
     */
-    public function setAppStoreRequirePassword(?bool $value ): void {
-        $this->appStoreRequirePassword = $value;
+    public function setAppStoreRequirePassword(?bool $value): void {
+        $this->getBackingStore()->set('appStoreRequirePassword', $value);
     }
 
     /**
      * Sets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
      *  @param array<AppListItem>|null $value Value to set for the appsVisibilityList property.
     */
-    public function setAppsVisibilityList(?array $value ): void {
-        $this->appsVisibilityList = $value;
+    public function setAppsVisibilityList(?array $value): void {
+        $this->getBackingStore()->set('appsVisibilityList', $value);
     }
 
     /**
      * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the appsVisibilityListType property.
     */
-    public function setAppsVisibilityListType(?AppListType $value ): void {
-        $this->appsVisibilityListType = $value;
+    public function setAppsVisibilityListType(?AppListType $value): void {
+        $this->getBackingStore()->set('appsVisibilityListType', $value);
     }
 
     /**
      * Sets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
      *  @param bool|null $value Value to set for the bluetoothBlockModification property.
     */
-    public function setBluetoothBlockModification(?bool $value ): void {
-        $this->bluetoothBlockModification = $value;
+    public function setBluetoothBlockModification(?bool $value): void {
+        $this->getBackingStore()->set('bluetoothBlockModification', $value);
     }
 
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the cameraBlocked property.
     */
-    public function setCameraBlocked(?bool $value ): void {
-        $this->cameraBlocked = $value;
+    public function setCameraBlocked(?bool $value): void {
+        $this->getBackingStore()->set('cameraBlocked', $value);
     }
 
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      *  @param bool|null $value Value to set for the cellularBlockDataRoaming property.
     */
-    public function setCellularBlockDataRoaming(?bool $value ): void {
-        $this->cellularBlockDataRoaming = $value;
+    public function setCellularBlockDataRoaming(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockDataRoaming', $value);
     }
 
     /**
      * Sets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
      *  @param bool|null $value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
     */
-    public function setCellularBlockGlobalBackgroundFetchWhileRoaming(?bool $value ): void {
-        $this->cellularBlockGlobalBackgroundFetchWhileRoaming = $value;
+    public function setCellularBlockGlobalBackgroundFetchWhileRoaming(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockGlobalBackgroundFetchWhileRoaming', $value);
     }
 
     /**
      * Sets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
      *  @param bool|null $value Value to set for the cellularBlockPerAppDataModification property.
     */
-    public function setCellularBlockPerAppDataModification(?bool $value ): void {
-        $this->cellularBlockPerAppDataModification = $value;
+    public function setCellularBlockPerAppDataModification(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockPerAppDataModification', $value);
     }
 
     /**
      * Sets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
      *  @param bool|null $value Value to set for the cellularBlockPersonalHotspot property.
     */
-    public function setCellularBlockPersonalHotspot(?bool $value ): void {
-        $this->cellularBlockPersonalHotspot = $value;
+    public function setCellularBlockPersonalHotspot(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockPersonalHotspot', $value);
     }
 
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
      *  @param bool|null $value Value to set for the cellularBlockVoiceRoaming property.
     */
-    public function setCellularBlockVoiceRoaming(?bool $value ): void {
-        $this->cellularBlockVoiceRoaming = $value;
+    public function setCellularBlockVoiceRoaming(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockVoiceRoaming', $value);
     }
 
     /**
      * Sets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
      *  @param bool|null $value Value to set for the certificatesBlockUntrustedTlsCertificates property.
     */
-    public function setCertificatesBlockUntrustedTlsCertificates(?bool $value ): void {
-        $this->certificatesBlockUntrustedTlsCertificates = $value;
+    public function setCertificatesBlockUntrustedTlsCertificates(?bool $value): void {
+        $this->getBackingStore()->set('certificatesBlockUntrustedTlsCertificates', $value);
     }
 
     /**
      * Sets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
      *  @param bool|null $value Value to set for the classroomAppBlockRemoteScreenObservation property.
     */
-    public function setClassroomAppBlockRemoteScreenObservation(?bool $value ): void {
-        $this->classroomAppBlockRemoteScreenObservation = $value;
+    public function setClassroomAppBlockRemoteScreenObservation(?bool $value): void {
+        $this->getBackingStore()->set('classroomAppBlockRemoteScreenObservation', $value);
     }
 
     /**
      * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
      *  @param bool|null $value Value to set for the classroomAppForceUnpromptedScreenObservation property.
     */
-    public function setClassroomAppForceUnpromptedScreenObservation(?bool $value ): void {
-        $this->classroomAppForceUnpromptedScreenObservation = $value;
+    public function setClassroomAppForceUnpromptedScreenObservation(?bool $value): void {
+        $this->getBackingStore()->set('classroomAppForceUnpromptedScreenObservation', $value);
     }
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the compliantAppListType property.
     */
-    public function setCompliantAppListType(?AppListType $value ): void {
-        $this->compliantAppListType = $value;
+    public function setCompliantAppListType(?AppListType $value): void {
+        $this->getBackingStore()->set('compliantAppListType', $value);
     }
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
-    public function setCompliantAppsList(?array $value ): void {
-        $this->compliantAppsList = $value;
+    public function setCompliantAppsList(?array $value): void {
+        $this->getBackingStore()->set('compliantAppsList', $value);
     }
 
     /**
      * Sets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
      *  @param bool|null $value Value to set for the configurationProfileBlockChanges property.
     */
-    public function setConfigurationProfileBlockChanges(?bool $value ): void {
-        $this->configurationProfileBlockChanges = $value;
+    public function setConfigurationProfileBlockChanges(?bool $value): void {
+        $this->getBackingStore()->set('configurationProfileBlockChanges', $value);
     }
 
     /**
      * Sets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
      *  @param bool|null $value Value to set for the definitionLookupBlocked property.
     */
-    public function setDefinitionLookupBlocked(?bool $value ): void {
-        $this->definitionLookupBlocked = $value;
+    public function setDefinitionLookupBlocked(?bool $value): void {
+        $this->getBackingStore()->set('definitionLookupBlocked', $value);
     }
 
     /**
      * Sets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
      *  @param bool|null $value Value to set for the deviceBlockEnableRestrictions property.
     */
-    public function setDeviceBlockEnableRestrictions(?bool $value ): void {
-        $this->deviceBlockEnableRestrictions = $value;
+    public function setDeviceBlockEnableRestrictions(?bool $value): void {
+        $this->getBackingStore()->set('deviceBlockEnableRestrictions', $value);
     }
 
     /**
      * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
      *  @param bool|null $value Value to set for the deviceBlockEraseContentAndSettings property.
     */
-    public function setDeviceBlockEraseContentAndSettings(?bool $value ): void {
-        $this->deviceBlockEraseContentAndSettings = $value;
+    public function setDeviceBlockEraseContentAndSettings(?bool $value): void {
+        $this->getBackingStore()->set('deviceBlockEraseContentAndSettings', $value);
     }
 
     /**
      * Sets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the deviceBlockNameModification property.
     */
-    public function setDeviceBlockNameModification(?bool $value ): void {
-        $this->deviceBlockNameModification = $value;
+    public function setDeviceBlockNameModification(?bool $value): void {
+        $this->getBackingStore()->set('deviceBlockNameModification', $value);
     }
 
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
      *  @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
     */
-    public function setDiagnosticDataBlockSubmission(?bool $value ): void {
-        $this->diagnosticDataBlockSubmission = $value;
+    public function setDiagnosticDataBlockSubmission(?bool $value): void {
+        $this->getBackingStore()->set('diagnosticDataBlockSubmission', $value);
     }
 
     /**
      * Sets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
      *  @param bool|null $value Value to set for the diagnosticDataBlockSubmissionModification property.
     */
-    public function setDiagnosticDataBlockSubmissionModification(?bool $value ): void {
-        $this->diagnosticDataBlockSubmissionModification = $value;
+    public function setDiagnosticDataBlockSubmissionModification(?bool $value): void {
+        $this->getBackingStore()->set('diagnosticDataBlockSubmissionModification', $value);
     }
 
     /**
      * Sets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
      *  @param bool|null $value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
     */
-    public function setDocumentsBlockManagedDocumentsInUnmanagedApps(?bool $value ): void {
-        $this->documentsBlockManagedDocumentsInUnmanagedApps = $value;
+    public function setDocumentsBlockManagedDocumentsInUnmanagedApps(?bool $value): void {
+        $this->getBackingStore()->set('documentsBlockManagedDocumentsInUnmanagedApps', $value);
     }
 
     /**
      * Sets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
      *  @param bool|null $value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
     */
-    public function setDocumentsBlockUnmanagedDocumentsInManagedApps(?bool $value ): void {
-        $this->documentsBlockUnmanagedDocumentsInManagedApps = $value;
+    public function setDocumentsBlockUnmanagedDocumentsInManagedApps(?bool $value): void {
+        $this->getBackingStore()->set('documentsBlockUnmanagedDocumentsInManagedApps', $value);
     }
 
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      *  @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
     */
-    public function setEmailInDomainSuffixes(?array $value ): void {
-        $this->emailInDomainSuffixes = $value;
+    public function setEmailInDomainSuffixes(?array $value): void {
+        $this->getBackingStore()->set('emailInDomainSuffixes', $value);
     }
 
     /**
      * Sets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
      *  @param bool|null $value Value to set for the enterpriseAppBlockTrust property.
     */
-    public function setEnterpriseAppBlockTrust(?bool $value ): void {
-        $this->enterpriseAppBlockTrust = $value;
+    public function setEnterpriseAppBlockTrust(?bool $value): void {
+        $this->getBackingStore()->set('enterpriseAppBlockTrust', $value);
     }
 
     /**
      * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
      *  @param bool|null $value Value to set for the enterpriseAppBlockTrustModification property.
     */
-    public function setEnterpriseAppBlockTrustModification(?bool $value ): void {
-        $this->enterpriseAppBlockTrustModification = $value;
+    public function setEnterpriseAppBlockTrustModification(?bool $value): void {
+        $this->getBackingStore()->set('enterpriseAppBlockTrustModification', $value);
     }
 
     /**
      * Sets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the faceTimeBlocked property.
     */
-    public function setFaceTimeBlocked(?bool $value ): void {
-        $this->faceTimeBlocked = $value;
+    public function setFaceTimeBlocked(?bool $value): void {
+        $this->getBackingStore()->set('faceTimeBlocked', $value);
     }
 
     /**
      * Sets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
      *  @param bool|null $value Value to set for the findMyFriendsBlocked property.
     */
-    public function setFindMyFriendsBlocked(?bool $value ): void {
-        $this->findMyFriendsBlocked = $value;
+    public function setFindMyFriendsBlocked(?bool $value): void {
+        $this->getBackingStore()->set('findMyFriendsBlocked', $value);
     }
 
     /**
      * Sets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
      *  @param bool|null $value Value to set for the gameCenterBlocked property.
     */
-    public function setGameCenterBlocked(?bool $value ): void {
-        $this->gameCenterBlocked = $value;
+    public function setGameCenterBlocked(?bool $value): void {
+        $this->getBackingStore()->set('gameCenterBlocked', $value);
     }
 
     /**
      * Sets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the gamingBlockGameCenterFriends property.
     */
-    public function setGamingBlockGameCenterFriends(?bool $value ): void {
-        $this->gamingBlockGameCenterFriends = $value;
+    public function setGamingBlockGameCenterFriends(?bool $value): void {
+        $this->getBackingStore()->set('gamingBlockGameCenterFriends', $value);
     }
 
     /**
      * Sets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the gamingBlockMultiplayer property.
     */
-    public function setGamingBlockMultiplayer(?bool $value ): void {
-        $this->gamingBlockMultiplayer = $value;
+    public function setGamingBlockMultiplayer(?bool $value): void {
+        $this->getBackingStore()->set('gamingBlockMultiplayer', $value);
     }
 
     /**
      * Sets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
      *  @param bool|null $value Value to set for the hostPairingBlocked property.
     */
-    public function setHostPairingBlocked(?bool $value ): void {
-        $this->hostPairingBlocked = $value;
+    public function setHostPairingBlocked(?bool $value): void {
+        $this->getBackingStore()->set('hostPairingBlocked', $value);
     }
 
     /**
      * Sets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
      *  @param bool|null $value Value to set for the iBooksStoreBlocked property.
     */
-    public function setIBooksStoreBlocked(?bool $value ): void {
-        $this->iBooksStoreBlocked = $value;
+    public function setIBooksStoreBlocked(?bool $value): void {
+        $this->getBackingStore()->set('iBooksStoreBlocked', $value);
     }
 
     /**
      * Sets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
      *  @param bool|null $value Value to set for the iBooksStoreBlockErotica property.
     */
-    public function setIBooksStoreBlockErotica(?bool $value ): void {
-        $this->iBooksStoreBlockErotica = $value;
+    public function setIBooksStoreBlockErotica(?bool $value): void {
+        $this->getBackingStore()->set('iBooksStoreBlockErotica', $value);
     }
 
     /**
      * Sets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
      *  @param bool|null $value Value to set for the iCloudBlockActivityContinuation property.
     */
-    public function setICloudBlockActivityContinuation(?bool $value ): void {
-        $this->iCloudBlockActivityContinuation = $value;
+    public function setICloudBlockActivityContinuation(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockActivityContinuation', $value);
     }
 
     /**
      * Sets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the iCloudBlockBackup property.
     */
-    public function setICloudBlockBackup(?bool $value ): void {
-        $this->iCloudBlockBackup = $value;
+    public function setICloudBlockBackup(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockBackup', $value);
     }
 
     /**
      * Sets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the iCloudBlockDocumentSync property.
     */
-    public function setICloudBlockDocumentSync(?bool $value ): void {
-        $this->iCloudBlockDocumentSync = $value;
+    public function setICloudBlockDocumentSync(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockDocumentSync', $value);
     }
 
     /**
      * Sets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
      *  @param bool|null $value Value to set for the iCloudBlockManagedAppsSync property.
     */
-    public function setICloudBlockManagedAppsSync(?bool $value ): void {
-        $this->iCloudBlockManagedAppsSync = $value;
+    public function setICloudBlockManagedAppsSync(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockManagedAppsSync', $value);
     }
 
     /**
      * Sets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
      *  @param bool|null $value Value to set for the iCloudBlockPhotoLibrary property.
     */
-    public function setICloudBlockPhotoLibrary(?bool $value ): void {
-        $this->iCloudBlockPhotoLibrary = $value;
+    public function setICloudBlockPhotoLibrary(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockPhotoLibrary', $value);
     }
 
     /**
      * Sets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
      *  @param bool|null $value Value to set for the iCloudBlockPhotoStreamSync property.
     */
-    public function setICloudBlockPhotoStreamSync(?bool $value ): void {
-        $this->iCloudBlockPhotoStreamSync = $value;
+    public function setICloudBlockPhotoStreamSync(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockPhotoStreamSync', $value);
     }
 
     /**
      * Sets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
      *  @param bool|null $value Value to set for the iCloudBlockSharedPhotoStream property.
     */
-    public function setICloudBlockSharedPhotoStream(?bool $value ): void {
-        $this->iCloudBlockSharedPhotoStream = $value;
+    public function setICloudBlockSharedPhotoStream(?bool $value): void {
+        $this->getBackingStore()->set('iCloudBlockSharedPhotoStream', $value);
     }
 
     /**
      * Sets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
      *  @param bool|null $value Value to set for the iCloudRequireEncryptedBackup property.
     */
-    public function setICloudRequireEncryptedBackup(?bool $value ): void {
-        $this->iCloudRequireEncryptedBackup = $value;
+    public function setICloudRequireEncryptedBackup(?bool $value): void {
+        $this->getBackingStore()->set('iCloudRequireEncryptedBackup', $value);
     }
 
     /**
      * Sets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the iTunesBlockExplicitContent property.
     */
-    public function setITunesBlockExplicitContent(?bool $value ): void {
-        $this->iTunesBlockExplicitContent = $value;
+    public function setITunesBlockExplicitContent(?bool $value): void {
+        $this->getBackingStore()->set('iTunesBlockExplicitContent', $value);
     }
 
     /**
      * Sets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
      *  @param bool|null $value Value to set for the iTunesBlockMusicService property.
     */
-    public function setITunesBlockMusicService(?bool $value ): void {
-        $this->iTunesBlockMusicService = $value;
+    public function setITunesBlockMusicService(?bool $value): void {
+        $this->getBackingStore()->set('iTunesBlockMusicService', $value);
     }
 
     /**
      * Sets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
      *  @param bool|null $value Value to set for the iTunesBlockRadio property.
     */
-    public function setITunesBlockRadio(?bool $value ): void {
-        $this->iTunesBlockRadio = $value;
+    public function setITunesBlockRadio(?bool $value): void {
+        $this->getBackingStore()->set('iTunesBlockRadio', $value);
     }
 
     /**
      * Sets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
      *  @param bool|null $value Value to set for the keyboardBlockAutoCorrect property.
     */
-    public function setKeyboardBlockAutoCorrect(?bool $value ): void {
-        $this->keyboardBlockAutoCorrect = $value;
+    public function setKeyboardBlockAutoCorrect(?bool $value): void {
+        $this->getBackingStore()->set('keyboardBlockAutoCorrect', $value);
     }
 
     /**
      * Sets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
      *  @param bool|null $value Value to set for the keyboardBlockDictation property.
     */
-    public function setKeyboardBlockDictation(?bool $value ): void {
-        $this->keyboardBlockDictation = $value;
+    public function setKeyboardBlockDictation(?bool $value): void {
+        $this->getBackingStore()->set('keyboardBlockDictation', $value);
     }
 
     /**
      * Sets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
      *  @param bool|null $value Value to set for the keyboardBlockPredictive property.
     */
-    public function setKeyboardBlockPredictive(?bool $value ): void {
-        $this->keyboardBlockPredictive = $value;
+    public function setKeyboardBlockPredictive(?bool $value): void {
+        $this->getBackingStore()->set('keyboardBlockPredictive', $value);
     }
 
     /**
      * Sets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the keyboardBlockShortcuts property.
     */
-    public function setKeyboardBlockShortcuts(?bool $value ): void {
-        $this->keyboardBlockShortcuts = $value;
+    public function setKeyboardBlockShortcuts(?bool $value): void {
+        $this->getBackingStore()->set('keyboardBlockShortcuts', $value);
     }
 
     /**
      * Sets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
      *  @param bool|null $value Value to set for the keyboardBlockSpellCheck property.
     */
-    public function setKeyboardBlockSpellCheck(?bool $value ): void {
-        $this->keyboardBlockSpellCheck = $value;
+    public function setKeyboardBlockSpellCheck(?bool $value): void {
+        $this->getBackingStore()->set('keyboardBlockSpellCheck', $value);
     }
 
     /**
      * Sets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeAllowAssistiveSpeak property.
     */
-    public function setKioskModeAllowAssistiveSpeak(?bool $value ): void {
-        $this->kioskModeAllowAssistiveSpeak = $value;
+    public function setKioskModeAllowAssistiveSpeak(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowAssistiveSpeak', $value);
     }
 
     /**
      * Sets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeAllowAssistiveTouchSettings property.
     */
-    public function setKioskModeAllowAssistiveTouchSettings(?bool $value ): void {
-        $this->kioskModeAllowAssistiveTouchSettings = $value;
+    public function setKioskModeAllowAssistiveTouchSettings(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowAssistiveTouchSettings', $value);
     }
 
     /**
      * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
      *  @param bool|null $value Value to set for the kioskModeAllowAutoLock property.
     */
-    public function setKioskModeAllowAutoLock(?bool $value ): void {
-        $this->kioskModeAllowAutoLock = $value;
+    public function setKioskModeAllowAutoLock(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowAutoLock', $value);
     }
 
     /**
      * Sets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeAllowColorInversionSettings property.
     */
-    public function setKioskModeAllowColorInversionSettings(?bool $value ): void {
-        $this->kioskModeAllowColorInversionSettings = $value;
+    public function setKioskModeAllowColorInversionSettings(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowColorInversionSettings', $value);
     }
 
     /**
      * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
      *  @param bool|null $value Value to set for the kioskModeAllowRingerSwitch property.
     */
-    public function setKioskModeAllowRingerSwitch(?bool $value ): void {
-        $this->kioskModeAllowRingerSwitch = $value;
+    public function setKioskModeAllowRingerSwitch(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowRingerSwitch', $value);
     }
 
     /**
      * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
      *  @param bool|null $value Value to set for the kioskModeAllowScreenRotation property.
     */
-    public function setKioskModeAllowScreenRotation(?bool $value ): void {
-        $this->kioskModeAllowScreenRotation = $value;
+    public function setKioskModeAllowScreenRotation(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowScreenRotation', $value);
     }
 
     /**
      * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
      *  @param bool|null $value Value to set for the kioskModeAllowSleepButton property.
     */
-    public function setKioskModeAllowSleepButton(?bool $value ): void {
-        $this->kioskModeAllowSleepButton = $value;
+    public function setKioskModeAllowSleepButton(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowSleepButton', $value);
     }
 
     /**
      * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
      *  @param bool|null $value Value to set for the kioskModeAllowTouchscreen property.
     */
-    public function setKioskModeAllowTouchscreen(?bool $value ): void {
-        $this->kioskModeAllowTouchscreen = $value;
+    public function setKioskModeAllowTouchscreen(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowTouchscreen', $value);
     }
 
     /**
      * Sets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeAllowVoiceOverSettings property.
     */
-    public function setKioskModeAllowVoiceOverSettings(?bool $value ): void {
-        $this->kioskModeAllowVoiceOverSettings = $value;
+    public function setKioskModeAllowVoiceOverSettings(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowVoiceOverSettings', $value);
     }
 
     /**
      * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
      *  @param bool|null $value Value to set for the kioskModeAllowVolumeButtons property.
     */
-    public function setKioskModeAllowVolumeButtons(?bool $value ): void {
-        $this->kioskModeAllowVolumeButtons = $value;
+    public function setKioskModeAllowVolumeButtons(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowVolumeButtons', $value);
     }
 
     /**
      * Sets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeAllowZoomSettings property.
     */
-    public function setKioskModeAllowZoomSettings(?bool $value ): void {
-        $this->kioskModeAllowZoomSettings = $value;
+    public function setKioskModeAllowZoomSettings(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeAllowZoomSettings', $value);
     }
 
     /**
      * Sets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
      *  @param string|null $value Value to set for the kioskModeAppStoreUrl property.
     */
-    public function setKioskModeAppStoreUrl(?string $value ): void {
-        $this->kioskModeAppStoreUrl = $value;
+    public function setKioskModeAppStoreUrl(?string $value): void {
+        $this->getBackingStore()->set('kioskModeAppStoreUrl', $value);
     }
 
     /**
      * Sets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      *  @param string|null $value Value to set for the kioskModeBuiltInAppId property.
     */
-    public function setKioskModeBuiltInAppId(?string $value ): void {
-        $this->kioskModeBuiltInAppId = $value;
+    public function setKioskModeBuiltInAppId(?string $value): void {
+        $this->getBackingStore()->set('kioskModeBuiltInAppId', $value);
     }
 
     /**
      * Sets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
      *  @param string|null $value Value to set for the kioskModeManagedAppId property.
     */
-    public function setKioskModeManagedAppId(?string $value ): void {
-        $this->kioskModeManagedAppId = $value;
+    public function setKioskModeManagedAppId(?string $value): void {
+        $this->getBackingStore()->set('kioskModeManagedAppId', $value);
     }
 
     /**
      * Sets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeRequireAssistiveTouch property.
     */
-    public function setKioskModeRequireAssistiveTouch(?bool $value ): void {
-        $this->kioskModeRequireAssistiveTouch = $value;
+    public function setKioskModeRequireAssistiveTouch(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeRequireAssistiveTouch', $value);
     }
 
     /**
      * Sets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeRequireColorInversion property.
     */
-    public function setKioskModeRequireColorInversion(?bool $value ): void {
-        $this->kioskModeRequireColorInversion = $value;
+    public function setKioskModeRequireColorInversion(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeRequireColorInversion', $value);
     }
 
     /**
      * Sets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeRequireMonoAudio property.
     */
-    public function setKioskModeRequireMonoAudio(?bool $value ): void {
-        $this->kioskModeRequireMonoAudio = $value;
+    public function setKioskModeRequireMonoAudio(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeRequireMonoAudio', $value);
     }
 
     /**
      * Sets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeRequireVoiceOver property.
     */
-    public function setKioskModeRequireVoiceOver(?bool $value ): void {
-        $this->kioskModeRequireVoiceOver = $value;
+    public function setKioskModeRequireVoiceOver(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeRequireVoiceOver', $value);
     }
 
     /**
      * Sets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
      *  @param bool|null $value Value to set for the kioskModeRequireZoom property.
     */
-    public function setKioskModeRequireZoom(?bool $value ): void {
-        $this->kioskModeRequireZoom = $value;
+    public function setKioskModeRequireZoom(?bool $value): void {
+        $this->getBackingStore()->set('kioskModeRequireZoom', $value);
     }
 
     /**
      * Sets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
      *  @param bool|null $value Value to set for the lockScreenBlockControlCenter property.
     */
-    public function setLockScreenBlockControlCenter(?bool $value ): void {
-        $this->lockScreenBlockControlCenter = $value;
+    public function setLockScreenBlockControlCenter(?bool $value): void {
+        $this->getBackingStore()->set('lockScreenBlockControlCenter', $value);
     }
 
     /**
      * Sets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
      *  @param bool|null $value Value to set for the lockScreenBlockNotificationView property.
     */
-    public function setLockScreenBlockNotificationView(?bool $value ): void {
-        $this->lockScreenBlockNotificationView = $value;
+    public function setLockScreenBlockNotificationView(?bool $value): void {
+        $this->getBackingStore()->set('lockScreenBlockNotificationView', $value);
     }
 
     /**
      * Sets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
      *  @param bool|null $value Value to set for the lockScreenBlockPassbook property.
     */
-    public function setLockScreenBlockPassbook(?bool $value ): void {
-        $this->lockScreenBlockPassbook = $value;
+    public function setLockScreenBlockPassbook(?bool $value): void {
+        $this->getBackingStore()->set('lockScreenBlockPassbook', $value);
     }
 
     /**
      * Sets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
      *  @param bool|null $value Value to set for the lockScreenBlockTodayView property.
     */
-    public function setLockScreenBlockTodayView(?bool $value ): void {
-        $this->lockScreenBlockTodayView = $value;
+    public function setLockScreenBlockTodayView(?bool $value): void {
+        $this->getBackingStore()->set('lockScreenBlockTodayView', $value);
     }
 
     /**
      * Sets the mediaContentRatingApps property value. Apps rating as in media content
      *  @param RatingAppsType|null $value Value to set for the mediaContentRatingApps property.
     */
-    public function setMediaContentRatingApps(?RatingAppsType $value ): void {
-        $this->mediaContentRatingApps = $value;
+    public function setMediaContentRatingApps(?RatingAppsType $value): void {
+        $this->getBackingStore()->set('mediaContentRatingApps', $value);
     }
 
     /**
      * Sets the mediaContentRatingAustralia property value. Media content rating settings for Australia
      *  @param MediaContentRatingAustralia|null $value Value to set for the mediaContentRatingAustralia property.
     */
-    public function setMediaContentRatingAustralia(?MediaContentRatingAustralia $value ): void {
-        $this->mediaContentRatingAustralia = $value;
+    public function setMediaContentRatingAustralia(?MediaContentRatingAustralia $value): void {
+        $this->getBackingStore()->set('mediaContentRatingAustralia', $value);
     }
 
     /**
      * Sets the mediaContentRatingCanada property value. Media content rating settings for Canada
      *  @param MediaContentRatingCanada|null $value Value to set for the mediaContentRatingCanada property.
     */
-    public function setMediaContentRatingCanada(?MediaContentRatingCanada $value ): void {
-        $this->mediaContentRatingCanada = $value;
+    public function setMediaContentRatingCanada(?MediaContentRatingCanada $value): void {
+        $this->getBackingStore()->set('mediaContentRatingCanada', $value);
     }
 
     /**
      * Sets the mediaContentRatingFrance property value. Media content rating settings for France
      *  @param MediaContentRatingFrance|null $value Value to set for the mediaContentRatingFrance property.
     */
-    public function setMediaContentRatingFrance(?MediaContentRatingFrance $value ): void {
-        $this->mediaContentRatingFrance = $value;
+    public function setMediaContentRatingFrance(?MediaContentRatingFrance $value): void {
+        $this->getBackingStore()->set('mediaContentRatingFrance', $value);
     }
 
     /**
      * Sets the mediaContentRatingGermany property value. Media content rating settings for Germany
      *  @param MediaContentRatingGermany|null $value Value to set for the mediaContentRatingGermany property.
     */
-    public function setMediaContentRatingGermany(?MediaContentRatingGermany $value ): void {
-        $this->mediaContentRatingGermany = $value;
+    public function setMediaContentRatingGermany(?MediaContentRatingGermany $value): void {
+        $this->getBackingStore()->set('mediaContentRatingGermany', $value);
     }
 
     /**
      * Sets the mediaContentRatingIreland property value. Media content rating settings for Ireland
      *  @param MediaContentRatingIreland|null $value Value to set for the mediaContentRatingIreland property.
     */
-    public function setMediaContentRatingIreland(?MediaContentRatingIreland $value ): void {
-        $this->mediaContentRatingIreland = $value;
+    public function setMediaContentRatingIreland(?MediaContentRatingIreland $value): void {
+        $this->getBackingStore()->set('mediaContentRatingIreland', $value);
     }
 
     /**
      * Sets the mediaContentRatingJapan property value. Media content rating settings for Japan
      *  @param MediaContentRatingJapan|null $value Value to set for the mediaContentRatingJapan property.
     */
-    public function setMediaContentRatingJapan(?MediaContentRatingJapan $value ): void {
-        $this->mediaContentRatingJapan = $value;
+    public function setMediaContentRatingJapan(?MediaContentRatingJapan $value): void {
+        $this->getBackingStore()->set('mediaContentRatingJapan', $value);
     }
 
     /**
      * Sets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
      *  @param MediaContentRatingNewZealand|null $value Value to set for the mediaContentRatingNewZealand property.
     */
-    public function setMediaContentRatingNewZealand(?MediaContentRatingNewZealand $value ): void {
-        $this->mediaContentRatingNewZealand = $value;
+    public function setMediaContentRatingNewZealand(?MediaContentRatingNewZealand $value): void {
+        $this->getBackingStore()->set('mediaContentRatingNewZealand', $value);
     }
 
     /**
      * Sets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
      *  @param MediaContentRatingUnitedKingdom|null $value Value to set for the mediaContentRatingUnitedKingdom property.
     */
-    public function setMediaContentRatingUnitedKingdom(?MediaContentRatingUnitedKingdom $value ): void {
-        $this->mediaContentRatingUnitedKingdom = $value;
+    public function setMediaContentRatingUnitedKingdom(?MediaContentRatingUnitedKingdom $value): void {
+        $this->getBackingStore()->set('mediaContentRatingUnitedKingdom', $value);
     }
 
     /**
      * Sets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
      *  @param MediaContentRatingUnitedStates|null $value Value to set for the mediaContentRatingUnitedStates property.
     */
-    public function setMediaContentRatingUnitedStates(?MediaContentRatingUnitedStates $value ): void {
-        $this->mediaContentRatingUnitedStates = $value;
+    public function setMediaContentRatingUnitedStates(?MediaContentRatingUnitedStates $value): void {
+        $this->getBackingStore()->set('mediaContentRatingUnitedStates', $value);
     }
 
     /**
      * Sets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
      *  @param bool|null $value Value to set for the messagesBlocked property.
     */
-    public function setMessagesBlocked(?bool $value ): void {
-        $this->messagesBlocked = $value;
+    public function setMessagesBlocked(?bool $value): void {
+        $this->getBackingStore()->set('messagesBlocked', $value);
     }
 
     /**
      * Sets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
      *  @param array<IosNetworkUsageRule>|null $value Value to set for the networkUsageRules property.
     */
-    public function setNetworkUsageRules(?array $value ): void {
-        $this->networkUsageRules = $value;
+    public function setNetworkUsageRules(?array $value): void {
+        $this->getBackingStore()->set('networkUsageRules', $value);
     }
 
     /**
      * Sets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
      *  @param bool|null $value Value to set for the notificationsBlockSettingsModification property.
     */
-    public function setNotificationsBlockSettingsModification(?bool $value ): void {
-        $this->notificationsBlockSettingsModification = $value;
+    public function setNotificationsBlockSettingsModification(?bool $value): void {
+        $this->getBackingStore()->set('notificationsBlockSettingsModification', $value);
     }
 
     /**
      * Sets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
      *  @param bool|null $value Value to set for the passcodeBlockFingerprintModification property.
     */
-    public function setPasscodeBlockFingerprintModification(?bool $value ): void {
-        $this->passcodeBlockFingerprintModification = $value;
+    public function setPasscodeBlockFingerprintModification(?bool $value): void {
+        $this->getBackingStore()->set('passcodeBlockFingerprintModification', $value);
     }
 
     /**
      * Sets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
      *  @param bool|null $value Value to set for the passcodeBlockFingerprintUnlock property.
     */
-    public function setPasscodeBlockFingerprintUnlock(?bool $value ): void {
-        $this->passcodeBlockFingerprintUnlock = $value;
+    public function setPasscodeBlockFingerprintUnlock(?bool $value): void {
+        $this->getBackingStore()->set('passcodeBlockFingerprintUnlock', $value);
     }
 
     /**
      * Sets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
      *  @param bool|null $value Value to set for the passcodeBlockModification property.
     */
-    public function setPasscodeBlockModification(?bool $value ): void {
-        $this->passcodeBlockModification = $value;
+    public function setPasscodeBlockModification(?bool $value): void {
+        $this->getBackingStore()->set('passcodeBlockModification', $value);
     }
 
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
      *  @param bool|null $value Value to set for the passcodeBlockSimple property.
     */
-    public function setPasscodeBlockSimple(?bool $value ): void {
-        $this->passcodeBlockSimple = $value;
+    public function setPasscodeBlockSimple(?bool $value): void {
+        $this->getBackingStore()->set('passcodeBlockSimple', $value);
     }
 
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
      *  @param int|null $value Value to set for the passcodeExpirationDays property.
     */
-    public function setPasscodeExpirationDays(?int $value ): void {
-        $this->passcodeExpirationDays = $value;
+    public function setPasscodeExpirationDays(?int $value): void {
+        $this->getBackingStore()->set('passcodeExpirationDays', $value);
     }
 
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
      *  @param int|null $value Value to set for the passcodeMinimumCharacterSetCount property.
     */
-    public function setPasscodeMinimumCharacterSetCount(?int $value ): void {
-        $this->passcodeMinimumCharacterSetCount = $value;
+    public function setPasscodeMinimumCharacterSetCount(?int $value): void {
+        $this->getBackingStore()->set('passcodeMinimumCharacterSetCount', $value);
     }
 
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
      *  @param int|null $value Value to set for the passcodeMinimumLength property.
     */
-    public function setPasscodeMinimumLength(?int $value ): void {
-        $this->passcodeMinimumLength = $value;
+    public function setPasscodeMinimumLength(?int $value): void {
+        $this->getBackingStore()->set('passcodeMinimumLength', $value);
     }
 
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
      *  @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
     */
-    public function setPasscodeMinutesOfInactivityBeforeLock(?int $value ): void {
-        $this->passcodeMinutesOfInactivityBeforeLock = $value;
+    public function setPasscodeMinutesOfInactivityBeforeLock(?int $value): void {
+        $this->getBackingStore()->set('passcodeMinutesOfInactivityBeforeLock', $value);
     }
 
     /**
      * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      *  @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
     */
-    public function setPasscodeMinutesOfInactivityBeforeScreenTimeout(?int $value ): void {
-        $this->passcodeMinutesOfInactivityBeforeScreenTimeout = $value;
+    public function setPasscodeMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
+        $this->getBackingStore()->set('passcodeMinutesOfInactivityBeforeScreenTimeout', $value);
     }
 
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
      *  @param int|null $value Value to set for the passcodePreviousPasscodeBlockCount property.
     */
-    public function setPasscodePreviousPasscodeBlockCount(?int $value ): void {
-        $this->passcodePreviousPasscodeBlockCount = $value;
+    public function setPasscodePreviousPasscodeBlockCount(?int $value): void {
+        $this->getBackingStore()->set('passcodePreviousPasscodeBlockCount', $value);
     }
 
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
      *  @param bool|null $value Value to set for the passcodeRequired property.
     */
-    public function setPasscodeRequired(?bool $value ): void {
-        $this->passcodeRequired = $value;
+    public function setPasscodeRequired(?bool $value): void {
+        $this->getBackingStore()->set('passcodeRequired', $value);
     }
 
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passcodeRequiredType property.
     */
-    public function setPasscodeRequiredType(?RequiredPasswordType $value ): void {
-        $this->passcodeRequiredType = $value;
+    public function setPasscodeRequiredType(?RequiredPasswordType $value): void {
+        $this->getBackingStore()->set('passcodeRequiredType', $value);
     }
 
     /**
      * Sets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
      *  @param int|null $value Value to set for the passcodeSignInFailureCountBeforeWipe property.
     */
-    public function setPasscodeSignInFailureCountBeforeWipe(?int $value ): void {
-        $this->passcodeSignInFailureCountBeforeWipe = $value;
+    public function setPasscodeSignInFailureCountBeforeWipe(?int $value): void {
+        $this->getBackingStore()->set('passcodeSignInFailureCountBeforeWipe', $value);
     }
 
     /**
      * Sets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
      *  @param bool|null $value Value to set for the podcastsBlocked property.
     */
-    public function setPodcastsBlocked(?bool $value ): void {
-        $this->podcastsBlocked = $value;
+    public function setPodcastsBlocked(?bool $value): void {
+        $this->getBackingStore()->set('podcastsBlocked', $value);
     }
 
     /**
      * Sets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the safariBlockAutofill property.
     */
-    public function setSafariBlockAutofill(?bool $value ): void {
-        $this->safariBlockAutofill = $value;
+    public function setSafariBlockAutofill(?bool $value): void {
+        $this->getBackingStore()->set('safariBlockAutofill', $value);
     }
 
     /**
      * Sets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
      *  @param bool|null $value Value to set for the safariBlocked property.
     */
-    public function setSafariBlocked(?bool $value ): void {
-        $this->safariBlocked = $value;
+    public function setSafariBlocked(?bool $value): void {
+        $this->getBackingStore()->set('safariBlocked', $value);
     }
 
     /**
      * Sets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
      *  @param bool|null $value Value to set for the safariBlockJavaScript property.
     */
-    public function setSafariBlockJavaScript(?bool $value ): void {
-        $this->safariBlockJavaScript = $value;
+    public function setSafariBlockJavaScript(?bool $value): void {
+        $this->getBackingStore()->set('safariBlockJavaScript', $value);
     }
 
     /**
      * Sets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
      *  @param bool|null $value Value to set for the safariBlockPopups property.
     */
-    public function setSafariBlockPopups(?bool $value ): void {
-        $this->safariBlockPopups = $value;
+    public function setSafariBlockPopups(?bool $value): void {
+        $this->getBackingStore()->set('safariBlockPopups', $value);
     }
 
     /**
      * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
      *  @param WebBrowserCookieSettings|null $value Value to set for the safariCookieSettings property.
     */
-    public function setSafariCookieSettings(?WebBrowserCookieSettings $value ): void {
-        $this->safariCookieSettings = $value;
+    public function setSafariCookieSettings(?WebBrowserCookieSettings $value): void {
+        $this->getBackingStore()->set('safariCookieSettings', $value);
     }
 
     /**
      * Sets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
      *  @param array<string>|null $value Value to set for the safariManagedDomains property.
     */
-    public function setSafariManagedDomains(?array $value ): void {
-        $this->safariManagedDomains = $value;
+    public function setSafariManagedDomains(?array $value): void {
+        $this->getBackingStore()->set('safariManagedDomains', $value);
     }
 
     /**
      * Sets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
      *  @param array<string>|null $value Value to set for the safariPasswordAutoFillDomains property.
     */
-    public function setSafariPasswordAutoFillDomains(?array $value ): void {
-        $this->safariPasswordAutoFillDomains = $value;
+    public function setSafariPasswordAutoFillDomains(?array $value): void {
+        $this->getBackingStore()->set('safariPasswordAutoFillDomains', $value);
     }
 
     /**
      * Sets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
      *  @param bool|null $value Value to set for the safariRequireFraudWarning property.
     */
-    public function setSafariRequireFraudWarning(?bool $value ): void {
-        $this->safariRequireFraudWarning = $value;
+    public function setSafariRequireFraudWarning(?bool $value): void {
+        $this->getBackingStore()->set('safariRequireFraudWarning', $value);
     }
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
      *  @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
-    public function setScreenCaptureBlocked(?bool $value ): void {
-        $this->screenCaptureBlocked = $value;
+    public function setScreenCaptureBlocked(?bool $value): void {
+        $this->getBackingStore()->set('screenCaptureBlocked', $value);
     }
 
     /**
      * Sets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
      *  @param bool|null $value Value to set for the siriBlocked property.
     */
-    public function setSiriBlocked(?bool $value ): void {
-        $this->siriBlocked = $value;
+    public function setSiriBlocked(?bool $value): void {
+        $this->getBackingStore()->set('siriBlocked', $value);
     }
 
     /**
      * Sets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
      *  @param bool|null $value Value to set for the siriBlockedWhenLocked property.
     */
-    public function setSiriBlockedWhenLocked(?bool $value ): void {
-        $this->siriBlockedWhenLocked = $value;
+    public function setSiriBlockedWhenLocked(?bool $value): void {
+        $this->getBackingStore()->set('siriBlockedWhenLocked', $value);
     }
 
     /**
      * Sets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
      *  @param bool|null $value Value to set for the siriBlockUserGeneratedContent property.
     */
-    public function setSiriBlockUserGeneratedContent(?bool $value ): void {
-        $this->siriBlockUserGeneratedContent = $value;
+    public function setSiriBlockUserGeneratedContent(?bool $value): void {
+        $this->getBackingStore()->set('siriBlockUserGeneratedContent', $value);
     }
 
     /**
      * Sets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
      *  @param bool|null $value Value to set for the siriRequireProfanityFilter property.
     */
-    public function setSiriRequireProfanityFilter(?bool $value ): void {
-        $this->siriRequireProfanityFilter = $value;
+    public function setSiriRequireProfanityFilter(?bool $value): void {
+        $this->getBackingStore()->set('siriRequireProfanityFilter', $value);
     }
 
     /**
      * Sets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
      *  @param bool|null $value Value to set for the spotlightBlockInternetResults property.
     */
-    public function setSpotlightBlockInternetResults(?bool $value ): void {
-        $this->spotlightBlockInternetResults = $value;
+    public function setSpotlightBlockInternetResults(?bool $value): void {
+        $this->getBackingStore()->set('spotlightBlockInternetResults', $value);
     }
 
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
      *  @param bool|null $value Value to set for the voiceDialingBlocked property.
     */
-    public function setVoiceDialingBlocked(?bool $value ): void {
-        $this->voiceDialingBlocked = $value;
+    public function setVoiceDialingBlocked(?bool $value): void {
+        $this->getBackingStore()->set('voiceDialingBlocked', $value);
     }
 
     /**
      * Sets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
      *  @param bool|null $value Value to set for the wallpaperBlockModification property.
     */
-    public function setWallpaperBlockModification(?bool $value ): void {
-        $this->wallpaperBlockModification = $value;
+    public function setWallpaperBlockModification(?bool $value): void {
+        $this->getBackingStore()->set('wallpaperBlockModification', $value);
     }
 
     /**
      * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
      *  @param bool|null $value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
     */
-    public function setWiFiConnectOnlyToConfiguredNetworks(?bool $value ): void {
-        $this->wiFiConnectOnlyToConfiguredNetworks = $value;
+    public function setWiFiConnectOnlyToConfiguredNetworks(?bool $value): void {
+        $this->getBackingStore()->set('wiFiConnectOnlyToConfiguredNetworks', $value);
     }
 
 }

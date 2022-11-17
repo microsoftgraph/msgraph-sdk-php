@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Approval extends Entity implements Parsable 
 {
     /**
-     * @var array<ApprovalStage>|null $stages A collection of stages in the approval decision.
-    */
-    private ?array $stages = null;
-    
-    /**
      * Instantiates a new approval and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class Approval extends Entity implements Parsable
      * @return array<ApprovalStage>|null
     */
     public function getStages(): ?array {
-        return $this->stages;
+        return $this->getBackingStore()->get('stages');
     }
 
     /**
@@ -55,15 +50,15 @@ class Approval extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('stages', $this->stages);
+        $writer->writeCollectionOfObjectValues('stages', $this->getStages());
     }
 
     /**
      * Sets the stages property value. A collection of stages in the approval decision.
      *  @param array<ApprovalStage>|null $value Value to set for the stages property.
     */
-    public function setStages(?array $value ): void {
-        $this->stages = $value;
+    public function setStages(?array $value): void {
+        $this->getBackingStore()->set('stages', $value);
     }
 
 }

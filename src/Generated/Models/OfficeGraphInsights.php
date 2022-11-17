@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OfficeGraphInsights extends Entity implements Parsable 
 {
     /**
-     * @var array<SharedInsight>|null $shared Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
-    */
-    private ?array $shared = null;
-    
-    /**
-     * @var array<Trending>|null $trending Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
-    */
-    private ?array $trending = null;
-    
-    /**
-     * @var array<UsedInsight>|null $used Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
-    */
-    private ?array $used = null;
-    
-    /**
      * Instantiates a new officeGraphInsights and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class OfficeGraphInsights extends Entity implements Parsable
      * @return array<SharedInsight>|null
     */
     public function getShared(): ?array {
-        return $this->shared;
+        return $this->getBackingStore()->get('shared');
     }
 
     /**
@@ -66,7 +51,7 @@ class OfficeGraphInsights extends Entity implements Parsable
      * @return array<Trending>|null
     */
     public function getTrending(): ?array {
-        return $this->trending;
+        return $this->getBackingStore()->get('trending');
     }
 
     /**
@@ -74,7 +59,7 @@ class OfficeGraphInsights extends Entity implements Parsable
      * @return array<UsedInsight>|null
     */
     public function getUsed(): ?array {
-        return $this->used;
+        return $this->getBackingStore()->get('used');
     }
 
     /**
@@ -83,33 +68,33 @@ class OfficeGraphInsights extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('shared', $this->shared);
-        $writer->writeCollectionOfObjectValues('trending', $this->trending);
-        $writer->writeCollectionOfObjectValues('used', $this->used);
+        $writer->writeCollectionOfObjectValues('shared', $this->getShared());
+        $writer->writeCollectionOfObjectValues('trending', $this->getTrending());
+        $writer->writeCollectionOfObjectValues('used', $this->getUsed());
     }
 
     /**
      * Sets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      *  @param array<SharedInsight>|null $value Value to set for the shared property.
     */
-    public function setShared(?array $value ): void {
-        $this->shared = $value;
+    public function setShared(?array $value): void {
+        $this->getBackingStore()->set('shared', $value);
     }
 
     /**
      * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      *  @param array<Trending>|null $value Value to set for the trending property.
     */
-    public function setTrending(?array $value ): void {
-        $this->trending = $value;
+    public function setTrending(?array $value): void {
+        $this->getBackingStore()->set('trending', $value);
     }
 
     /**
      * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      *  @param array<UsedInsight>|null $value Value to set for the used property.
     */
-    public function setUsed(?array $value ): void {
-        $this->used = $value;
+    public function setUsed(?array $value): void {
+        $this->getBackingStore()->set('used', $value);
     }
 
 }

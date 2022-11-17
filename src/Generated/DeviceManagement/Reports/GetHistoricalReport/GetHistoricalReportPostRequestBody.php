@@ -6,58 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsable 
+class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $filter The filter property
-    */
-    private ?string $filter = null;
-    
-    /**
-     * @var array<string>|null $groupBy The groupBy property
-    */
-    private ?array $groupBy = null;
-    
-    /**
-     * @var string|null $name The name property
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<string>|null $orderBy The orderBy property
-    */
-    private ?array $orderBy = null;
-    
-    /**
-     * @var string|null $search The search property
-    */
-    private ?string $search = null;
-    
-    /**
-     * @var array<string>|null $select The select property
-    */
-    private ?array $select = null;
-    
-    /**
-     * @var int|null $skip The skip property
-    */
-    private ?int $skip = null;
-    
-    /**
-     * @var int|null $top The top property
-    */
-    private ?int $top = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new getHistoricalReportPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -74,8 +38,16 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -101,7 +73,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return string|null
     */
     public function getFilter(): ?string {
-        return $this->filter;
+        return $this->getBackingStore()->get('filter');
     }
 
     /**
@@ -109,7 +81,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return array<string>|null
     */
     public function getGroupBy(): ?array {
-        return $this->groupBy;
+        return $this->getBackingStore()->get('groupBy');
     }
 
     /**
@@ -117,7 +89,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -125,7 +97,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return array<string>|null
     */
     public function getOrderBy(): ?array {
-        return $this->orderBy;
+        return $this->getBackingStore()->get('orderBy');
     }
 
     /**
@@ -133,7 +105,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return string|null
     */
     public function getSearch(): ?string {
-        return $this->search;
+        return $this->getBackingStore()->get('search');
     }
 
     /**
@@ -141,7 +113,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return array<string>|null
     */
     public function getSelect(): ?array {
-        return $this->select;
+        return $this->getBackingStore()->get('select');
     }
 
     /**
@@ -149,7 +121,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return int|null
     */
     public function getSkip(): ?int {
-        return $this->skip;
+        return $this->getBackingStore()->get('skip');
     }
 
     /**
@@ -157,7 +129,7 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @return int|null
     */
     public function getTop(): ?int {
-        return $this->top;
+        return $this->getBackingStore()->get('top');
     }
 
     /**
@@ -165,87 +137,87 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('filter', $this->filter);
-        $writer->writeCollectionOfPrimitiveValues('groupBy', $this->groupBy);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfPrimitiveValues('orderBy', $this->orderBy);
-        $writer->writeStringValue('search', $this->search);
-        $writer->writeCollectionOfPrimitiveValues('select', $this->select);
-        $writer->writeIntegerValue('skip', $this->skip);
-        $writer->writeIntegerValue('top', $this->top);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('filter', $this->getFilter());
+        $writer->writeCollectionOfPrimitiveValues('groupBy', $this->getGroupBy());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfPrimitiveValues('orderBy', $this->getOrderBy());
+        $writer->writeStringValue('search', $this->getSearch());
+        $writer->writeCollectionOfPrimitiveValues('select', $this->getSelect());
+        $writer->writeIntegerValue('skip', $this->getSkip());
+        $writer->writeIntegerValue('top', $this->getTop());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the filter property value. The filter property
      *  @param string|null $value Value to set for the filter property.
     */
-    public function setFilter(?string $value ): void {
-        $this->filter = $value;
+    public function setFilter(?string $value): void {
+        $this->getBackingStore()->set('filter', $value);
     }
 
     /**
      * Sets the groupBy property value. The groupBy property
      *  @param array<string>|null $value Value to set for the groupBy property.
     */
-    public function setGroupBy(?array $value ): void {
-        $this->groupBy = $value;
+    public function setGroupBy(?array $value): void {
+        $this->getBackingStore()->set('groupBy', $value);
     }
 
     /**
      * Sets the name property value. The name property
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the orderBy property value. The orderBy property
      *  @param array<string>|null $value Value to set for the orderBy property.
     */
-    public function setOrderBy(?array $value ): void {
-        $this->orderBy = $value;
+    public function setOrderBy(?array $value): void {
+        $this->getBackingStore()->set('orderBy', $value);
     }
 
     /**
      * Sets the search property value. The search property
      *  @param string|null $value Value to set for the search property.
     */
-    public function setSearch(?string $value ): void {
-        $this->search = $value;
+    public function setSearch(?string $value): void {
+        $this->getBackingStore()->set('search', $value);
     }
 
     /**
      * Sets the select property value. The select property
      *  @param array<string>|null $value Value to set for the select property.
     */
-    public function setSelect(?array $value ): void {
-        $this->select = $value;
+    public function setSelect(?array $value): void {
+        $this->getBackingStore()->set('select', $value);
     }
 
     /**
      * Sets the skip property value. The skip property
      *  @param int|null $value Value to set for the skip property.
     */
-    public function setSkip(?int $value ): void {
-        $this->skip = $value;
+    public function setSkip(?int $value): void {
+        $this->getBackingStore()->set('skip', $value);
     }
 
     /**
      * Sets the top property value. The top property
      *  @param int|null $value Value to set for the top property.
     */
-    public function setTop(?int $value ): void {
-        $this->top = $value;
+    public function setTop(?int $value): void {
+        $this->getBackingStore()->set('top', $value);
     }
 
 }

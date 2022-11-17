@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ScoredEmailAddress implements AdditionalDataHolder, Parsable 
+class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $address The email address.
-    */
-    private ?string $address = null;
-    
-    /**
-     * @var string|null $itemId The itemId property
-    */
-    private ?string $itemId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var float|null $relevanceScore The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
-    */
-    private ?float $relevanceScore = null;
-    
-    /**
-     * @var SelectionLikelihoodInfo|null $selectionLikelihood The selectionLikelihood property
-    */
-    private ?SelectionLikelihoodInfo $selectionLikelihood = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new scoredEmailAddress and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.scoredEmailAddress');
     }
@@ -60,8 +39,8 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -69,7 +48,15 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAddress(): ?string {
-        return $this->address;
+        return $this->getBackingStore()->get('address');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -92,7 +79,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getItemId(): ?string {
-        return $this->itemId;
+        return $this->getBackingStore()->get('itemId');
     }
 
     /**
@@ -100,7 +87,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -108,7 +95,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getRelevanceScore(): ?float {
-        return $this->relevanceScore;
+        return $this->getBackingStore()->get('relevanceScore');
     }
 
     /**
@@ -116,7 +103,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @return SelectionLikelihoodInfo|null
     */
     public function getSelectionLikelihood(): ?SelectionLikelihoodInfo {
-        return $this->selectionLikelihood;
+        return $this->getBackingStore()->get('selectionLikelihood');
     }
 
     /**
@@ -124,60 +111,60 @@ class ScoredEmailAddress implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('address', $this->address);
-        $writer->writeStringValue('itemId', $this->itemId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeFloatValue('relevanceScore', $this->relevanceScore);
-        $writer->writeEnumValue('selectionLikelihood', $this->selectionLikelihood);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('address', $this->getAddress());
+        $writer->writeStringValue('itemId', $this->getItemId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeFloatValue('relevanceScore', $this->getRelevanceScore());
+        $writer->writeEnumValue('selectionLikelihood', $this->getSelectionLikelihood());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the address property value. The email address.
      *  @param string|null $value Value to set for the address property.
     */
-    public function setAddress(?string $value ): void {
-        $this->address = $value;
+    public function setAddress(?string $value): void {
+        $this->getBackingStore()->set('address', $value);
     }
 
     /**
      * Sets the itemId property value. The itemId property
      *  @param string|null $value Value to set for the itemId property.
     */
-    public function setItemId(?string $value ): void {
-        $this->itemId = $value;
+    public function setItemId(?string $value): void {
+        $this->getBackingStore()->set('itemId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
      *  @param float|null $value Value to set for the relevanceScore property.
     */
-    public function setRelevanceScore(?float $value ): void {
-        $this->relevanceScore = $value;
+    public function setRelevanceScore(?float $value): void {
+        $this->getBackingStore()->set('relevanceScore', $value);
     }
 
     /**
      * Sets the selectionLikelihood property value. The selectionLikelihood property
      *  @param SelectionLikelihoodInfo|null $value Value to set for the selectionLikelihood property.
     */
-    public function setSelectionLikelihood(?SelectionLikelihoodInfo $value ): void {
-        $this->selectionLikelihood = $value;
+    public function setSelectionLikelihood(?SelectionLikelihoodInfo $value): void {
+        $this->getBackingStore()->set('selectionLikelihood', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartLegend extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartLegendFormat|null $format Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-    */
-    private ?WorkbookChartLegendFormat $format = null;
-    
-    /**
-     * @var bool|null $overlay Boolean value for whether the chart legend should overlap with the main body of the chart.
-    */
-    private ?bool $overlay = null;
-    
-    /**
-     * @var string|null $position Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-    */
-    private ?string $position = null;
-    
-    /**
-     * @var bool|null $visible A boolean value the represents the visibility of a ChartLegend object.
-    */
-    private ?bool $visible = null;
-    
-    /**
      * Instantiates a new workbookChartLegend and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return WorkbookChartLegendFormat|null
     */
     public function getFormat(): ?WorkbookChartLegendFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -72,7 +52,7 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return bool|null
     */
     public function getOverlay(): ?bool {
-        return $this->overlay;
+        return $this->getBackingStore()->get('overlay');
     }
 
     /**
@@ -80,7 +60,7 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return string|null
     */
     public function getPosition(): ?string {
-        return $this->position;
+        return $this->getBackingStore()->get('position');
     }
 
     /**
@@ -88,7 +68,7 @@ class WorkbookChartLegend extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->visible;
+        return $this->getBackingStore()->get('visible');
     }
 
     /**
@@ -97,42 +77,42 @@ class WorkbookChartLegend extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeBooleanValue('overlay', $this->overlay);
-        $writer->writeStringValue('position', $this->position);
-        $writer->writeBooleanValue('visible', $this->visible);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeBooleanValue('overlay', $this->getOverlay());
+        $writer->writeStringValue('position', $this->getPosition());
+        $writer->writeBooleanValue('visible', $this->getVisible());
     }
 
     /**
      * Sets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
      *  @param WorkbookChartLegendFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartLegendFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartLegendFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
      *  @param bool|null $value Value to set for the overlay property.
     */
-    public function setOverlay(?bool $value ): void {
-        $this->overlay = $value;
+    public function setOverlay(?bool $value): void {
+        $this->getBackingStore()->set('overlay', $value);
     }
 
     /**
      * Sets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
      *  @param string|null $value Value to set for the position property.
     */
-    public function setPosition(?string $value ): void {
-        $this->position = $value;
+    public function setPosition(?string $value): void {
+        $this->getBackingStore()->set('position', $value);
     }
 
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
      *  @param bool|null $value Value to set for the visible property.
     */
-    public function setVisible(?bool $value ): void {
-        $this->visible = $value;
+    public function setVisible(?bool $value): void {
+        $this->getBackingStore()->set('visible', $value);
     }
 
 }

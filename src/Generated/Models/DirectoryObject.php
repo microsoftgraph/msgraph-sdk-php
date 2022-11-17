@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObject extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $deletedDateTime Date and time when this object was deleted. Always null when the object hasn't been deleted.
-    */
-    private ?DateTime $deletedDateTime = null;
-    
-    /**
      * Instantiates a new directoryObject and sets the default values.
     */
     public function __construct() {
@@ -70,7 +65,7 @@ class DirectoryObject extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
-        return $this->deletedDateTime;
+        return $this->getBackingStore()->get('deletedDateTime');
     }
 
     /**
@@ -90,15 +85,15 @@ class DirectoryObject extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('deletedDateTime', $this->deletedDateTime);
+        $writer->writeDateTimeValue('deletedDateTime', $this->getDeletedDateTime());
     }
 
     /**
      * Sets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
      *  @param DateTime|null $value Value to set for the deletedDateTime property.
     */
-    public function setDeletedDateTime(?DateTime $value ): void {
-        $this->deletedDateTime = $value;
+    public function setDeletedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('deletedDateTime', $value);
     }
 
 }

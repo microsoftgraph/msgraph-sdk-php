@@ -7,24 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ODataError extends ApiException implements AdditionalDataHolder, Parsable 
+class ODataError extends ApiException implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var MainError|null $error The error property
-    */
-    private ?MainError $error = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new ODataError and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -41,8 +40,16 @@ class ODataError extends ApiException implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -50,7 +57,7 @@ class ODataError extends ApiException implements AdditionalDataHolder, Parsable
      * @return MainError|null
     */
     public function getError(): ?MainError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -69,24 +76,24 @@ class ODataError extends ApiException implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the error property value. The error property
      *  @param MainError|null $value Value to set for the error property.
     */
-    public function setError(?MainError $value ): void {
-        $this->error = $value;
+    public function setError(?MainError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
 }

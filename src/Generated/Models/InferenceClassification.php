@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InferenceClassification extends Entity implements Parsable 
 {
     /**
-     * @var array<InferenceClassificationOverride>|null $overrides A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
-    */
-    private ?array $overrides = null;
-    
-    /**
      * Instantiates a new inferenceClassification and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class InferenceClassification extends Entity implements Parsable
      * @return array<InferenceClassificationOverride>|null
     */
     public function getOverrides(): ?array {
-        return $this->overrides;
+        return $this->getBackingStore()->get('overrides');
     }
 
     /**
@@ -55,15 +50,15 @@ class InferenceClassification extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('overrides', $this->overrides);
+        $writer->writeCollectionOfObjectValues('overrides', $this->getOverrides());
     }
 
     /**
      * Sets the overrides property value. A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      *  @param array<InferenceClassificationOverride>|null $value Value to set for the overrides property.
     */
-    public function setOverrides(?array $value ): void {
-        $this->overrides = $value;
+    public function setOverrides(?array $value): void {
+        $this->getBackingStore()->set('overrides', $value);
     }
 
 }

@@ -6,53 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, Parsable 
+class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $calendarSyncEnabled Not yet documented
-    */
-    private ?bool $calendarSyncEnabled = null;
-    
-    /**
-     * @var WindowsDeviceAccount|null $deviceAccount Not yet documented
-    */
-    private ?WindowsDeviceAccount $deviceAccount = null;
-    
-    /**
-     * @var string|null $deviceAccountEmail Not yet documented
-    */
-    private ?string $deviceAccountEmail = null;
-    
-    /**
-     * @var string|null $exchangeServer Not yet documented
-    */
-    private ?string $exchangeServer = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $passwordRotationEnabled Not yet documented
-    */
-    private ?bool $passwordRotationEnabled = null;
-    
-    /**
-     * @var string|null $sessionInitiationProtocalAddress Not yet documented
-    */
-    private ?string $sessionInitiationProtocalAddress = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new updateWindowsDeviceAccountActionParameter and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.updateWindowsDeviceAccountActionParameter');
     }
@@ -70,8 +39,16 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +56,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getCalendarSyncEnabled(): ?bool {
-        return $this->calendarSyncEnabled;
+        return $this->getBackingStore()->get('calendarSyncEnabled');
     }
 
     /**
@@ -87,7 +64,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return WindowsDeviceAccount|null
     */
     public function getDeviceAccount(): ?WindowsDeviceAccount {
-        return $this->deviceAccount;
+        return $this->getBackingStore()->get('deviceAccount');
     }
 
     /**
@@ -95,7 +72,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return string|null
     */
     public function getDeviceAccountEmail(): ?string {
-        return $this->deviceAccountEmail;
+        return $this->getBackingStore()->get('deviceAccountEmail');
     }
 
     /**
@@ -103,7 +80,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return string|null
     */
     public function getExchangeServer(): ?string {
-        return $this->exchangeServer;
+        return $this->getBackingStore()->get('exchangeServer');
     }
 
     /**
@@ -128,7 +105,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -136,7 +113,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getPasswordRotationEnabled(): ?bool {
-        return $this->passwordRotationEnabled;
+        return $this->getBackingStore()->get('passwordRotationEnabled');
     }
 
     /**
@@ -144,7 +121,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @return string|null
     */
     public function getSessionInitiationProtocalAddress(): ?string {
-        return $this->sessionInitiationProtocalAddress;
+        return $this->getBackingStore()->get('sessionInitiationProtocalAddress');
     }
 
     /**
@@ -152,78 +129,78 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('calendarSyncEnabled', $this->calendarSyncEnabled);
-        $writer->writeObjectValue('deviceAccount', $this->deviceAccount);
-        $writer->writeStringValue('deviceAccountEmail', $this->deviceAccountEmail);
-        $writer->writeStringValue('exchangeServer', $this->exchangeServer);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('passwordRotationEnabled', $this->passwordRotationEnabled);
-        $writer->writeStringValue('sessionInitiationProtocalAddress', $this->sessionInitiationProtocalAddress);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('calendarSyncEnabled', $this->getCalendarSyncEnabled());
+        $writer->writeObjectValue('deviceAccount', $this->getDeviceAccount());
+        $writer->writeStringValue('deviceAccountEmail', $this->getDeviceAccountEmail());
+        $writer->writeStringValue('exchangeServer', $this->getExchangeServer());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('passwordRotationEnabled', $this->getPasswordRotationEnabled());
+        $writer->writeStringValue('sessionInitiationProtocalAddress', $this->getSessionInitiationProtocalAddress());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the calendarSyncEnabled property value. Not yet documented
      *  @param bool|null $value Value to set for the calendarSyncEnabled property.
     */
-    public function setCalendarSyncEnabled(?bool $value ): void {
-        $this->calendarSyncEnabled = $value;
+    public function setCalendarSyncEnabled(?bool $value): void {
+        $this->getBackingStore()->set('calendarSyncEnabled', $value);
     }
 
     /**
      * Sets the deviceAccount property value. Not yet documented
      *  @param WindowsDeviceAccount|null $value Value to set for the deviceAccount property.
     */
-    public function setDeviceAccount(?WindowsDeviceAccount $value ): void {
-        $this->deviceAccount = $value;
+    public function setDeviceAccount(?WindowsDeviceAccount $value): void {
+        $this->getBackingStore()->set('deviceAccount', $value);
     }
 
     /**
      * Sets the deviceAccountEmail property value. Not yet documented
      *  @param string|null $value Value to set for the deviceAccountEmail property.
     */
-    public function setDeviceAccountEmail(?string $value ): void {
-        $this->deviceAccountEmail = $value;
+    public function setDeviceAccountEmail(?string $value): void {
+        $this->getBackingStore()->set('deviceAccountEmail', $value);
     }
 
     /**
      * Sets the exchangeServer property value. Not yet documented
      *  @param string|null $value Value to set for the exchangeServer property.
     */
-    public function setExchangeServer(?string $value ): void {
-        $this->exchangeServer = $value;
+    public function setExchangeServer(?string $value): void {
+        $this->getBackingStore()->set('exchangeServer', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the passwordRotationEnabled property value. Not yet documented
      *  @param bool|null $value Value to set for the passwordRotationEnabled property.
     */
-    public function setPasswordRotationEnabled(?bool $value ): void {
-        $this->passwordRotationEnabled = $value;
+    public function setPasswordRotationEnabled(?bool $value): void {
+        $this->getBackingStore()->set('passwordRotationEnabled', $value);
     }
 
     /**
      * Sets the sessionInitiationProtocalAddress property value. Not yet documented
      *  @param string|null $value Value to set for the sessionInitiationProtocalAddress property.
     */
-    public function setSessionInitiationProtocalAddress(?string $value ): void {
-        $this->sessionInitiationProtocalAddress = $value;
+    public function setSessionInitiationProtocalAddress(?string $value): void {
+        $this->getBackingStore()->set('sessionInitiationProtocalAddress', $value);
     }
 
 }

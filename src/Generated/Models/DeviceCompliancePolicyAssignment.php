@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicyAssignment extends Entity implements Parsable 
 {
     /**
-     * @var DeviceAndAppManagementAssignmentTarget|null $target Target for the compliance policy assignment.
-    */
-    private ?DeviceAndAppManagementAssignmentTarget $target = null;
-    
-    /**
      * Instantiates a new deviceCompliancePolicyAssignment and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class DeviceCompliancePolicyAssignment extends Entity implements Parsable
      * @return DeviceAndAppManagementAssignmentTarget|null
     */
     public function getTarget(): ?DeviceAndAppManagementAssignmentTarget {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -55,15 +50,15 @@ class DeviceCompliancePolicyAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the target property value. Target for the compliance policy assignment.
      *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
-    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value ): void {
-        $this->target = $value;
+    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

@@ -7,58 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class InvitePostRequestBody implements AdditionalDataHolder, Parsable 
+class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $expirationDateTime The expirationDateTime property
-    */
-    private ?string $expirationDateTime = null;
-    
-    /**
-     * @var string|null $message The message property
-    */
-    private ?string $message = null;
-    
-    /**
-     * @var string|null $password The password property
-    */
-    private ?string $password = null;
-    
-    /**
-     * @var array<DriveRecipient>|null $recipients The recipients property
-    */
-    private ?array $recipients = null;
-    
-    /**
-     * @var bool|null $requireSignIn The requireSignIn property
-    */
-    private ?bool $requireSignIn = null;
-    
-    /**
-     * @var bool|null $retainInheritedPermissions The retainInheritedPermissions property
-    */
-    private ?bool $retainInheritedPermissions = null;
-    
-    /**
-     * @var array<string>|null $roles The roles property
-    */
-    private ?array $roles = null;
-    
-    /**
-     * @var bool|null $sendInvitation The sendInvitation property
-    */
-    private ?bool $sendInvitation = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -75,8 +39,16 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +56,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExpirationDateTime(): ?string {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -110,7 +82,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMessage(): ?string {
-        return $this->message;
+        return $this->getBackingStore()->get('message');
     }
 
     /**
@@ -118,7 +90,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->password;
+        return $this->getBackingStore()->get('password');
     }
 
     /**
@@ -126,7 +98,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
-        return $this->recipients;
+        return $this->getBackingStore()->get('recipients');
     }
 
     /**
@@ -134,7 +106,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getRequireSignIn(): ?bool {
-        return $this->requireSignIn;
+        return $this->getBackingStore()->get('requireSignIn');
     }
 
     /**
@@ -142,7 +114,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getRetainInheritedPermissions(): ?bool {
-        return $this->retainInheritedPermissions;
+        return $this->getBackingStore()->get('retainInheritedPermissions');
     }
 
     /**
@@ -150,7 +122,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getRoles(): ?array {
-        return $this->roles;
+        return $this->getBackingStore()->get('roles');
     }
 
     /**
@@ -158,7 +130,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSendInvitation(): ?bool {
-        return $this->sendInvitation;
+        return $this->getBackingStore()->get('sendInvitation');
     }
 
     /**
@@ -166,87 +138,87 @@ class InvitePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeStringValue('message', $this->message);
-        $writer->writeStringValue('password', $this->password);
-        $writer->writeCollectionOfObjectValues('recipients', $this->recipients);
-        $writer->writeBooleanValue('requireSignIn', $this->requireSignIn);
-        $writer->writeBooleanValue('retainInheritedPermissions', $this->retainInheritedPermissions);
-        $writer->writeCollectionOfPrimitiveValues('roles', $this->roles);
-        $writer->writeBooleanValue('sendInvitation', $this->sendInvitation);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeStringValue('message', $this->getMessage());
+        $writer->writeStringValue('password', $this->getPassword());
+        $writer->writeCollectionOfObjectValues('recipients', $this->getRecipients());
+        $writer->writeBooleanValue('requireSignIn', $this->getRequireSignIn());
+        $writer->writeBooleanValue('retainInheritedPermissions', $this->getRetainInheritedPermissions());
+        $writer->writeCollectionOfPrimitiveValues('roles', $this->getRoles());
+        $writer->writeBooleanValue('sendInvitation', $this->getSendInvitation());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      *  @param string|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?string $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?string $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the message property value. The message property
      *  @param string|null $value Value to set for the message property.
     */
-    public function setMessage(?string $value ): void {
-        $this->message = $value;
+    public function setMessage(?string $value): void {
+        $this->getBackingStore()->set('message', $value);
     }
 
     /**
      * Sets the password property value. The password property
      *  @param string|null $value Value to set for the password property.
     */
-    public function setPassword(?string $value ): void {
-        $this->password = $value;
+    public function setPassword(?string $value): void {
+        $this->getBackingStore()->set('password', $value);
     }
 
     /**
      * Sets the recipients property value. The recipients property
      *  @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
-    public function setRecipients(?array $value ): void {
-        $this->recipients = $value;
+    public function setRecipients(?array $value): void {
+        $this->getBackingStore()->set('recipients', $value);
     }
 
     /**
      * Sets the requireSignIn property value. The requireSignIn property
      *  @param bool|null $value Value to set for the requireSignIn property.
     */
-    public function setRequireSignIn(?bool $value ): void {
-        $this->requireSignIn = $value;
+    public function setRequireSignIn(?bool $value): void {
+        $this->getBackingStore()->set('requireSignIn', $value);
     }
 
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      *  @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
-    public function setRetainInheritedPermissions(?bool $value ): void {
-        $this->retainInheritedPermissions = $value;
+    public function setRetainInheritedPermissions(?bool $value): void {
+        $this->getBackingStore()->set('retainInheritedPermissions', $value);
     }
 
     /**
      * Sets the roles property value. The roles property
      *  @param array<string>|null $value Value to set for the roles property.
     */
-    public function setRoles(?array $value ): void {
-        $this->roles = $value;
+    public function setRoles(?array $value): void {
+        $this->getBackingStore()->set('roles', $value);
     }
 
     /**
      * Sets the sendInvitation property value. The sendInvitation property
      *  @param bool|null $value Value to set for the sendInvitation property.
     */
-    public function setSendInvitation(?bool $value ): void {
-        $this->sendInvitation = $value;
+    public function setSendInvitation(?bool $value): void {
+        $this->getBackingStore()->set('sendInvitation', $value);
     }
 
 }

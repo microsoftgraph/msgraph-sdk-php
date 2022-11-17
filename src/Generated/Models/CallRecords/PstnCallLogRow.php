@@ -7,138 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PstnCallLogRow implements AdditionalDataHolder, Parsable 
+class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var PstnCallDurationSource|null $callDurationSource The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-    */
-    private ?PstnCallDurationSource $callDurationSource = null;
-    
-    /**
-     * @var string|null $calleeNumber Number dialed in E.164 format.
-    */
-    private ?string $calleeNumber = null;
-    
-    /**
-     * @var string|null $callerNumber Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
-    */
-    private ?string $callerNumber = null;
-    
-    /**
-     * @var string|null $callId Call identifier. Not guaranteed to be unique.
-    */
-    private ?string $callId = null;
-    
-    /**
-     * @var string|null $callType Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
-    */
-    private ?string $callType = null;
-    
-    /**
-     * @var string|null $charge Amount of money or cost of the call that is charged to your account.
-    */
-    private ?string $charge = null;
-    
-    /**
-     * @var string|null $conferenceId ID of the audio conference.
-    */
-    private ?string $conferenceId = null;
-    
-    /**
-     * @var string|null $connectionCharge Connection fee price.
-    */
-    private ?string $connectionCharge = null;
-    
-    /**
-     * @var string|null $currency Type of currency used to calculate the cost of the call (ISO 4217).
-    */
-    private ?string $currency = null;
-    
-    /**
-     * @var string|null $destinationContext Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
-    */
-    private ?string $destinationContext = null;
-    
-    /**
-     * @var string|null $destinationName Country or region dialed.
-    */
-    private ?string $destinationName = null;
-    
-    /**
-     * @var int|null $duration How long the call was connected, in seconds.
-    */
-    private ?int $duration = null;
-    
-    /**
-     * @var DateTime|null $endDateTime Call end time.
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var string|null $id Unique call identifier. GUID.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var string|null $inventoryType User's phone number type, such as a service of toll-free number.
-    */
-    private ?string $inventoryType = null;
-    
-    /**
-     * @var string|null $licenseCapability The license used for the call.
-    */
-    private ?string $licenseCapability = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $operator The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
-    */
-    private ?string $operator = null;
-    
-    /**
-     * @var DateTime|null $startDateTime Call start time.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $tenantCountryCode Country code of the tenant, ISO 3166-1 alpha-2.
-    */
-    private ?string $tenantCountryCode = null;
-    
-    /**
-     * @var string|null $usageCountryCode Country code of the user, ISO 3166-1 alpha-2.
-    */
-    private ?string $usageCountryCode = null;
-    
-    /**
-     * @var string|null $userDisplayName Display name of the user.
-    */
-    private ?string $userDisplayName = null;
-    
-    /**
-     * @var string|null $userId Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $userPrincipalName UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
-    */
-    private ?string $userPrincipalName = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new pstnCallLogRow and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.callRecords.pstnCallLogRow');
     }
@@ -156,8 +40,16 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -165,7 +57,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return PstnCallDurationSource|null
     */
     public function getCallDurationSource(): ?PstnCallDurationSource {
-        return $this->callDurationSource;
+        return $this->getBackingStore()->get('callDurationSource');
     }
 
     /**
@@ -173,7 +65,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCalleeNumber(): ?string {
-        return $this->calleeNumber;
+        return $this->getBackingStore()->get('calleeNumber');
     }
 
     /**
@@ -181,7 +73,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallerNumber(): ?string {
-        return $this->callerNumber;
+        return $this->getBackingStore()->get('callerNumber');
     }
 
     /**
@@ -189,7 +81,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->callId;
+        return $this->getBackingStore()->get('callId');
     }
 
     /**
@@ -197,7 +89,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallType(): ?string {
-        return $this->callType;
+        return $this->getBackingStore()->get('callType');
     }
 
     /**
@@ -205,7 +97,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCharge(): ?string {
-        return $this->charge;
+        return $this->getBackingStore()->get('charge');
     }
 
     /**
@@ -213,7 +105,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getConferenceId(): ?string {
-        return $this->conferenceId;
+        return $this->getBackingStore()->get('conferenceId');
     }
 
     /**
@@ -221,7 +113,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getConnectionCharge(): ?string {
-        return $this->connectionCharge;
+        return $this->getBackingStore()->get('connectionCharge');
     }
 
     /**
@@ -229,7 +121,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCurrency(): ?string {
-        return $this->currency;
+        return $this->getBackingStore()->get('currency');
     }
 
     /**
@@ -237,7 +129,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDestinationContext(): ?string {
-        return $this->destinationContext;
+        return $this->getBackingStore()->get('destinationContext');
     }
 
     /**
@@ -245,7 +137,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDestinationName(): ?string {
-        return $this->destinationName;
+        return $this->getBackingStore()->get('destinationName');
     }
 
     /**
@@ -253,7 +145,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->duration;
+        return $this->getBackingStore()->get('duration');
     }
 
     /**
@@ -261,7 +153,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -303,7 +195,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -311,7 +203,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getInventoryType(): ?string {
-        return $this->inventoryType;
+        return $this->getBackingStore()->get('inventoryType');
     }
 
     /**
@@ -319,7 +211,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLicenseCapability(): ?string {
-        return $this->licenseCapability;
+        return $this->getBackingStore()->get('licenseCapability');
     }
 
     /**
@@ -327,7 +219,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -335,7 +227,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOperator(): ?string {
-        return $this->operator;
+        return $this->getBackingStore()->get('operator');
     }
 
     /**
@@ -343,7 +235,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -351,7 +243,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTenantCountryCode(): ?string {
-        return $this->tenantCountryCode;
+        return $this->getBackingStore()->get('tenantCountryCode');
     }
 
     /**
@@ -359,7 +251,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUsageCountryCode(): ?string {
-        return $this->usageCountryCode;
+        return $this->getBackingStore()->get('usageCountryCode');
     }
 
     /**
@@ -367,7 +259,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->userDisplayName;
+        return $this->getBackingStore()->get('userDisplayName');
     }
 
     /**
@@ -375,7 +267,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -383,7 +275,7 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -391,231 +283,231 @@ class PstnCallLogRow implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('callDurationSource', $this->callDurationSource);
-        $writer->writeStringValue('calleeNumber', $this->calleeNumber);
-        $writer->writeStringValue('callerNumber', $this->callerNumber);
-        $writer->writeStringValue('callId', $this->callId);
-        $writer->writeStringValue('callType', $this->callType);
-        $writer->writeStringValue('charge', $this->charge);
-        $writer->writeStringValue('conferenceId', $this->conferenceId);
-        $writer->writeStringValue('connectionCharge', $this->connectionCharge);
-        $writer->writeStringValue('currency', $this->currency);
-        $writer->writeStringValue('destinationContext', $this->destinationContext);
-        $writer->writeStringValue('destinationName', $this->destinationName);
-        $writer->writeIntegerValue('duration', $this->duration);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeStringValue('inventoryType', $this->inventoryType);
-        $writer->writeStringValue('licenseCapability', $this->licenseCapability);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('operator', $this->operator);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('tenantCountryCode', $this->tenantCountryCode);
-        $writer->writeStringValue('usageCountryCode', $this->usageCountryCode);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('callDurationSource', $this->getCallDurationSource());
+        $writer->writeStringValue('calleeNumber', $this->getCalleeNumber());
+        $writer->writeStringValue('callerNumber', $this->getCallerNumber());
+        $writer->writeStringValue('callId', $this->getCallId());
+        $writer->writeStringValue('callType', $this->getCallType());
+        $writer->writeStringValue('charge', $this->getCharge());
+        $writer->writeStringValue('conferenceId', $this->getConferenceId());
+        $writer->writeStringValue('connectionCharge', $this->getConnectionCharge());
+        $writer->writeStringValue('currency', $this->getCurrency());
+        $writer->writeStringValue('destinationContext', $this->getDestinationContext());
+        $writer->writeStringValue('destinationName', $this->getDestinationName());
+        $writer->writeIntegerValue('duration', $this->getDuration());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeStringValue('inventoryType', $this->getInventoryType());
+        $writer->writeStringValue('licenseCapability', $this->getLicenseCapability());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('operator', $this->getOperator());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('tenantCountryCode', $this->getTenantCountryCode());
+        $writer->writeStringValue('usageCountryCode', $this->getUsageCountryCode());
+        $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      *  @param PstnCallDurationSource|null $value Value to set for the callDurationSource property.
     */
-    public function setCallDurationSource(?PstnCallDurationSource $value ): void {
-        $this->callDurationSource = $value;
+    public function setCallDurationSource(?PstnCallDurationSource $value): void {
+        $this->getBackingStore()->set('callDurationSource', $value);
     }
 
     /**
      * Sets the calleeNumber property value. Number dialed in E.164 format.
      *  @param string|null $value Value to set for the calleeNumber property.
     */
-    public function setCalleeNumber(?string $value ): void {
-        $this->calleeNumber = $value;
+    public function setCalleeNumber(?string $value): void {
+        $this->getBackingStore()->set('calleeNumber', $value);
     }
 
     /**
      * Sets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
      *  @param string|null $value Value to set for the callerNumber property.
     */
-    public function setCallerNumber(?string $value ): void {
-        $this->callerNumber = $value;
+    public function setCallerNumber(?string $value): void {
+        $this->getBackingStore()->set('callerNumber', $value);
     }
 
     /**
      * Sets the callId property value. Call identifier. Not guaranteed to be unique.
      *  @param string|null $value Value to set for the callId property.
     */
-    public function setCallId(?string $value ): void {
-        $this->callId = $value;
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
      * Sets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
      *  @param string|null $value Value to set for the callType property.
     */
-    public function setCallType(?string $value ): void {
-        $this->callType = $value;
+    public function setCallType(?string $value): void {
+        $this->getBackingStore()->set('callType', $value);
     }
 
     /**
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
      *  @param string|null $value Value to set for the charge property.
     */
-    public function setCharge(?string $value ): void {
-        $this->charge = $value;
+    public function setCharge(?string $value): void {
+        $this->getBackingStore()->set('charge', $value);
     }
 
     /**
      * Sets the conferenceId property value. ID of the audio conference.
      *  @param string|null $value Value to set for the conferenceId property.
     */
-    public function setConferenceId(?string $value ): void {
-        $this->conferenceId = $value;
+    public function setConferenceId(?string $value): void {
+        $this->getBackingStore()->set('conferenceId', $value);
     }
 
     /**
      * Sets the connectionCharge property value. Connection fee price.
      *  @param string|null $value Value to set for the connectionCharge property.
     */
-    public function setConnectionCharge(?string $value ): void {
-        $this->connectionCharge = $value;
+    public function setConnectionCharge(?string $value): void {
+        $this->getBackingStore()->set('connectionCharge', $value);
     }
 
     /**
      * Sets the currency property value. Type of currency used to calculate the cost of the call (ISO 4217).
      *  @param string|null $value Value to set for the currency property.
     */
-    public function setCurrency(?string $value ): void {
-        $this->currency = $value;
+    public function setCurrency(?string $value): void {
+        $this->getBackingStore()->set('currency', $value);
     }
 
     /**
      * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
      *  @param string|null $value Value to set for the destinationContext property.
     */
-    public function setDestinationContext(?string $value ): void {
-        $this->destinationContext = $value;
+    public function setDestinationContext(?string $value): void {
+        $this->getBackingStore()->set('destinationContext', $value);
     }
 
     /**
      * Sets the destinationName property value. Country or region dialed.
      *  @param string|null $value Value to set for the destinationName property.
     */
-    public function setDestinationName(?string $value ): void {
-        $this->destinationName = $value;
+    public function setDestinationName(?string $value): void {
+        $this->getBackingStore()->set('destinationName', $value);
     }
 
     /**
      * Sets the duration property value. How long the call was connected, in seconds.
      *  @param int|null $value Value to set for the duration property.
     */
-    public function setDuration(?int $value ): void {
-        $this->duration = $value;
+    public function setDuration(?int $value): void {
+        $this->getBackingStore()->set('duration', $value);
     }
 
     /**
      * Sets the endDateTime property value. Call end time.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the id property value. Unique call identifier. GUID.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
      *  @param string|null $value Value to set for the inventoryType property.
     */
-    public function setInventoryType(?string $value ): void {
-        $this->inventoryType = $value;
+    public function setInventoryType(?string $value): void {
+        $this->getBackingStore()->set('inventoryType', $value);
     }
 
     /**
      * Sets the licenseCapability property value. The license used for the call.
      *  @param string|null $value Value to set for the licenseCapability property.
     */
-    public function setLicenseCapability(?string $value ): void {
-        $this->licenseCapability = $value;
+    public function setLicenseCapability(?string $value): void {
+        $this->getBackingStore()->set('licenseCapability', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      *  @param string|null $value Value to set for the operator property.
     */
-    public function setOperator(?string $value ): void {
-        $this->operator = $value;
+    public function setOperator(?string $value): void {
+        $this->getBackingStore()->set('operator', $value);
     }
 
     /**
      * Sets the startDateTime property value. Call start time.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the tenantCountryCode property value. Country code of the tenant, ISO 3166-1 alpha-2.
      *  @param string|null $value Value to set for the tenantCountryCode property.
     */
-    public function setTenantCountryCode(?string $value ): void {
-        $this->tenantCountryCode = $value;
+    public function setTenantCountryCode(?string $value): void {
+        $this->getBackingStore()->set('tenantCountryCode', $value);
     }
 
     /**
      * Sets the usageCountryCode property value. Country code of the user, ISO 3166-1 alpha-2.
      *  @param string|null $value Value to set for the usageCountryCode property.
     */
-    public function setUsageCountryCode(?string $value ): void {
-        $this->usageCountryCode = $value;
+    public function setUsageCountryCode(?string $value): void {
+        $this->getBackingStore()->set('usageCountryCode', $value);
     }
 
     /**
      * Sets the userDisplayName property value. Display name of the user.
      *  @param string|null $value Value to set for the userDisplayName property.
     */
-    public function setUserDisplayName(?string $value ): void {
-        $this->userDisplayName = $value;
+    public function setUserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('userDisplayName', $value);
     }
 
     /**
      * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserConsentRequest extends Request implements Parsable 
 {
     /**
-     * @var Approval|null $approval Approval decisions associated with a request.
-    */
-    private ?Approval $approval = null;
-    
-    /**
-     * @var string|null $reason The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
-    */
-    private ?string $reason = null;
-    
-    /**
      * Instantiates a new UserConsentRequest and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class UserConsentRequest extends Request implements Parsable
      * @return Approval|null
     */
     public function getApproval(): ?Approval {
-        return $this->approval;
+        return $this->getBackingStore()->get('approval');
     }
 
     /**
@@ -60,7 +50,7 @@ class UserConsentRequest extends Request implements Parsable
      * @return string|null
     */
     public function getReason(): ?string {
-        return $this->reason;
+        return $this->getBackingStore()->get('reason');
     }
 
     /**
@@ -69,24 +59,24 @@ class UserConsentRequest extends Request implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('approval', $this->approval);
-        $writer->writeStringValue('reason', $this->reason);
+        $writer->writeObjectValue('approval', $this->getApproval());
+        $writer->writeStringValue('reason', $this->getReason());
     }
 
     /**
      * Sets the approval property value. Approval decisions associated with a request.
      *  @param Approval|null $value Value to set for the approval property.
     */
-    public function setApproval(?Approval $value ): void {
-        $this->approval = $value;
+    public function setApproval(?Approval $value): void {
+        $this->getBackingStore()->set('approval', $value);
     }
 
     /**
      * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      *  @param string|null $value Value to set for the reason property.
     */
-    public function setReason(?string $value ): void {
-        $this->reason = $value;
+    public function setReason(?string $value): void {
+        $this->getBackingStore()->set('reason', $value);
     }
 
 }

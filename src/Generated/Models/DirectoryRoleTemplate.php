@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryRoleTemplate extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $description The description to set for the directory role. Read-only.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The display name to set for the directory role. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new DirectoryRoleTemplate and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class DirectoryRoleTemplate extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -48,7 +38,7 @@ class DirectoryRoleTemplate extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -69,24 +59,24 @@ class DirectoryRoleTemplate extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the description property value. The description to set for the directory role. Read-only.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The display name to set for the directory role. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

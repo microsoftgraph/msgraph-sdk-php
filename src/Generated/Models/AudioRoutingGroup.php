@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AudioRoutingGroup extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $receivers The receivers property
-    */
-    private ?array $receivers = null;
-    
-    /**
-     * @var RoutingMode|null $routingMode The routingMode property
-    */
-    private ?RoutingMode $routingMode = null;
-    
-    /**
-     * @var array<string>|null $sources The sources property
-    */
-    private ?array $sources = null;
-    
-    /**
      * Instantiates a new audioRoutingGroup and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getReceivers(): ?array {
-        return $this->receivers;
+        return $this->getBackingStore()->get('receivers');
     }
 
     /**
@@ -66,7 +51,7 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return RoutingMode|null
     */
     public function getRoutingMode(): ?RoutingMode {
-        return $this->routingMode;
+        return $this->getBackingStore()->get('routingMode');
     }
 
     /**
@@ -74,7 +59,7 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSources(): ?array {
-        return $this->sources;
+        return $this->getBackingStore()->get('sources');
     }
 
     /**
@@ -83,33 +68,33 @@ class AudioRoutingGroup extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('receivers', $this->receivers);
-        $writer->writeEnumValue('routingMode', $this->routingMode);
-        $writer->writeCollectionOfPrimitiveValues('sources', $this->sources);
+        $writer->writeCollectionOfPrimitiveValues('receivers', $this->getReceivers());
+        $writer->writeEnumValue('routingMode', $this->getRoutingMode());
+        $writer->writeCollectionOfPrimitiveValues('sources', $this->getSources());
     }
 
     /**
      * Sets the receivers property value. The receivers property
      *  @param array<string>|null $value Value to set for the receivers property.
     */
-    public function setReceivers(?array $value ): void {
-        $this->receivers = $value;
+    public function setReceivers(?array $value): void {
+        $this->getBackingStore()->set('receivers', $value);
     }
 
     /**
      * Sets the routingMode property value. The routingMode property
      *  @param RoutingMode|null $value Value to set for the routingMode property.
     */
-    public function setRoutingMode(?RoutingMode $value ): void {
-        $this->routingMode = $value;
+    public function setRoutingMode(?RoutingMode $value): void {
+        $this->getBackingStore()->set('routingMode', $value);
     }
 
     /**
      * Sets the sources property value. The sources property
      *  @param array<string>|null $value Value to set for the sources property.
     */
-    public function setSources(?array $value ): void {
-        $this->sources = $value;
+    public function setSources(?array $value): void {
+        $this->getBackingStore()->set('sources', $value);
     }
 
 }

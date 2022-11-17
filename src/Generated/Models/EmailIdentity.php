@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $email Email address of the user.
-    */
-    private ?string $email = null;
-    
-    /**
      * Instantiates a new EmailIdentity and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class EmailIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -55,15 +50,15 @@ class EmailIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('email', $this->email);
+        $writer->writeStringValue('email', $this->getEmail());
     }
 
     /**
      * Sets the email property value. Email address of the user.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
 }

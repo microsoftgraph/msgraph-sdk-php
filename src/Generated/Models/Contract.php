@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Contract extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $contractType Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
-    */
-    private ?string $contractType = null;
-    
-    /**
-     * @var string|null $customerId The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
-    */
-    private ?string $customerId = null;
-    
-    /**
-     * @var string|null $defaultDomainName A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
-    */
-    private ?string $defaultDomainName = null;
-    
-    /**
-     * @var string|null $displayName A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new Contract and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getContractType(): ?string {
-        return $this->contractType;
+        return $this->getBackingStore()->get('contractType');
     }
 
     /**
@@ -58,7 +38,7 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getCustomerId(): ?string {
-        return $this->customerId;
+        return $this->getBackingStore()->get('customerId');
     }
 
     /**
@@ -66,7 +46,7 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDefaultDomainName(): ?string {
-        return $this->defaultDomainName;
+        return $this->getBackingStore()->get('defaultDomainName');
     }
 
     /**
@@ -74,7 +54,7 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -97,42 +77,42 @@ class Contract extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('contractType', $this->contractType);
-        $writer->writeStringValue('customerId', $this->customerId);
-        $writer->writeStringValue('defaultDomainName', $this->defaultDomainName);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('contractType', $this->getContractType());
+        $writer->writeStringValue('customerId', $this->getCustomerId());
+        $writer->writeStringValue('defaultDomainName', $this->getDefaultDomainName());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      *  @param string|null $value Value to set for the contractType property.
     */
-    public function setContractType(?string $value ): void {
-        $this->contractType = $value;
+    public function setContractType(?string $value): void {
+        $this->getBackingStore()->set('contractType', $value);
     }
 
     /**
      * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
      *  @param string|null $value Value to set for the customerId property.
     */
-    public function setCustomerId(?string $value ): void {
-        $this->customerId = $value;
+    public function setCustomerId(?string $value): void {
+        $this->getBackingStore()->set('customerId', $value);
     }
 
     /**
      * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
      *  @param string|null $value Value to set for the defaultDomainName property.
     */
-    public function setDefaultDomainName(?string $value ): void {
-        $this->defaultDomainName = $value;
+    public function setDefaultDomainName(?string $value): void {
+        $this->getBackingStore()->set('defaultDomainName', $value);
     }
 
     /**
      * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

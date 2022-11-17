@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ListItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * @var FieldValueSet|null $fields A collection of the fields and values for this version of the list item.
-    */
-    private ?FieldValueSet $fields = null;
-    
-    /**
      * Instantiates a new ListItemVersion and sets the default values.
     */
     public function __construct() {
@@ -53,7 +48,7 @@ class ListItemVersion extends BaseItemVersion implements Parsable
      * @return FieldValueSet|null
     */
     public function getFields(): ?FieldValueSet {
-        return $this->fields;
+        return $this->getBackingStore()->get('fields');
     }
 
     /**
@@ -62,15 +57,15 @@ class ListItemVersion extends BaseItemVersion implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('fields', $this->fields);
+        $writer->writeObjectValue('fields', $this->getFields());
     }
 
     /**
      * Sets the fields property value. A collection of the fields and values for this version of the list item.
      *  @param FieldValueSet|null $value Value to set for the fields property.
     */
-    public function setFields(?FieldValueSet $value ): void {
-        $this->fields = $value;
+    public function setFields(?FieldValueSet $value): void {
+        $this->getBackingStore()->set('fields', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserSource extends DataSource implements Parsable 
 {
     /**
-     * @var string|null $email Email address of the user's mailbox.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var SourceType|null $includedSources Specifies which sources are included in this group. Possible values are: mailbox, site.
-    */
-    private ?SourceType $includedSources = null;
-    
-    /**
-     * @var string|null $siteWebUrl The URL of the user's OneDrive for Business site. Read-only.
-    */
-    private ?string $siteWebUrl = null;
-    
-    /**
      * Instantiates a new UserSource and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class UserSource extends DataSource implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -66,7 +51,7 @@ class UserSource extends DataSource implements Parsable
      * @return SourceType|null
     */
     public function getIncludedSources(): ?SourceType {
-        return $this->includedSources;
+        return $this->getBackingStore()->get('includedSources');
     }
 
     /**
@@ -74,7 +59,7 @@ class UserSource extends DataSource implements Parsable
      * @return string|null
     */
     public function getSiteWebUrl(): ?string {
-        return $this->siteWebUrl;
+        return $this->getBackingStore()->get('siteWebUrl');
     }
 
     /**
@@ -83,33 +68,33 @@ class UserSource extends DataSource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeEnumValue('includedSources', $this->includedSources);
-        $writer->writeStringValue('siteWebUrl', $this->siteWebUrl);
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeEnumValue('includedSources', $this->getIncludedSources());
+        $writer->writeStringValue('siteWebUrl', $this->getSiteWebUrl());
     }
 
     /**
      * Sets the email property value. Email address of the user's mailbox.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      *  @param SourceType|null $value Value to set for the includedSources property.
     */
-    public function setIncludedSources(?SourceType $value ): void {
-        $this->includedSources = $value;
+    public function setIncludedSources(?SourceType $value): void {
+        $this->getBackingStore()->set('includedSources', $value);
     }
 
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      *  @param string|null $value Value to set for the siteWebUrl property.
     */
-    public function setSiteWebUrl(?string $value ): void {
-        $this->siteWebUrl = $value;
+    public function setSiteWebUrl(?string $value): void {
+        $this->getBackingStore()->set('siteWebUrl', $value);
     }
 
 }

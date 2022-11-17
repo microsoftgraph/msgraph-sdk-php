@@ -6,53 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Media implements AdditionalDataHolder, Parsable 
+class Media implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DeviceInfo|null $calleeDevice Device information associated with the callee endpoint of this media.
-    */
-    private ?DeviceInfo $calleeDevice = null;
-    
-    /**
-     * @var NetworkInfo|null $calleeNetwork Network information associated with the callee endpoint of this media.
-    */
-    private ?NetworkInfo $calleeNetwork = null;
-    
-    /**
-     * @var DeviceInfo|null $callerDevice Device information associated with the caller endpoint of this media.
-    */
-    private ?DeviceInfo $callerDevice = null;
-    
-    /**
-     * @var NetworkInfo|null $callerNetwork Network information associated with the caller endpoint of this media.
-    */
-    private ?NetworkInfo $callerNetwork = null;
-    
-    /**
-     * @var string|null $label How the media was identified during media negotiation stage.
-    */
-    private ?string $label = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<MediaStream>|null $streams Network streams associated with this media.
-    */
-    private ?array $streams = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new media and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.callRecords.media');
     }
@@ -70,8 +39,16 @@ class Media implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +56,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return DeviceInfo|null
     */
     public function getCalleeDevice(): ?DeviceInfo {
-        return $this->calleeDevice;
+        return $this->getBackingStore()->get('calleeDevice');
     }
 
     /**
@@ -87,7 +64,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return NetworkInfo|null
     */
     public function getCalleeNetwork(): ?NetworkInfo {
-        return $this->calleeNetwork;
+        return $this->getBackingStore()->get('calleeNetwork');
     }
 
     /**
@@ -95,7 +72,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return DeviceInfo|null
     */
     public function getCallerDevice(): ?DeviceInfo {
-        return $this->callerDevice;
+        return $this->getBackingStore()->get('callerDevice');
     }
 
     /**
@@ -103,7 +80,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return NetworkInfo|null
     */
     public function getCallerNetwork(): ?NetworkInfo {
-        return $this->callerNetwork;
+        return $this->getBackingStore()->get('callerNetwork');
     }
 
     /**
@@ -128,7 +105,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLabel(): ?string {
-        return $this->label;
+        return $this->getBackingStore()->get('label');
     }
 
     /**
@@ -136,7 +113,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -144,7 +121,7 @@ class Media implements AdditionalDataHolder, Parsable
      * @return array<MediaStream>|null
     */
     public function getStreams(): ?array {
-        return $this->streams;
+        return $this->getBackingStore()->get('streams');
     }
 
     /**
@@ -152,78 +129,78 @@ class Media implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('calleeDevice', $this->calleeDevice);
-        $writer->writeObjectValue('calleeNetwork', $this->calleeNetwork);
-        $writer->writeObjectValue('callerDevice', $this->callerDevice);
-        $writer->writeObjectValue('callerNetwork', $this->callerNetwork);
-        $writer->writeStringValue('label', $this->label);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('streams', $this->streams);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('calleeDevice', $this->getCalleeDevice());
+        $writer->writeObjectValue('calleeNetwork', $this->getCalleeNetwork());
+        $writer->writeObjectValue('callerDevice', $this->getCallerDevice());
+        $writer->writeObjectValue('callerNetwork', $this->getCallerNetwork());
+        $writer->writeStringValue('label', $this->getLabel());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('streams', $this->getStreams());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the calleeDevice property value. Device information associated with the callee endpoint of this media.
      *  @param DeviceInfo|null $value Value to set for the calleeDevice property.
     */
-    public function setCalleeDevice(?DeviceInfo $value ): void {
-        $this->calleeDevice = $value;
+    public function setCalleeDevice(?DeviceInfo $value): void {
+        $this->getBackingStore()->set('calleeDevice', $value);
     }
 
     /**
      * Sets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
      *  @param NetworkInfo|null $value Value to set for the calleeNetwork property.
     */
-    public function setCalleeNetwork(?NetworkInfo $value ): void {
-        $this->calleeNetwork = $value;
+    public function setCalleeNetwork(?NetworkInfo $value): void {
+        $this->getBackingStore()->set('calleeNetwork', $value);
     }
 
     /**
      * Sets the callerDevice property value. Device information associated with the caller endpoint of this media.
      *  @param DeviceInfo|null $value Value to set for the callerDevice property.
     */
-    public function setCallerDevice(?DeviceInfo $value ): void {
-        $this->callerDevice = $value;
+    public function setCallerDevice(?DeviceInfo $value): void {
+        $this->getBackingStore()->set('callerDevice', $value);
     }
 
     /**
      * Sets the callerNetwork property value. Network information associated with the caller endpoint of this media.
      *  @param NetworkInfo|null $value Value to set for the callerNetwork property.
     */
-    public function setCallerNetwork(?NetworkInfo $value ): void {
-        $this->callerNetwork = $value;
+    public function setCallerNetwork(?NetworkInfo $value): void {
+        $this->getBackingStore()->set('callerNetwork', $value);
     }
 
     /**
      * Sets the label property value. How the media was identified during media negotiation stage.
      *  @param string|null $value Value to set for the label property.
     */
-    public function setLabel(?string $value ): void {
-        $this->label = $value;
+    public function setLabel(?string $value): void {
+        $this->getBackingStore()->set('label', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the streams property value. Network streams associated with this media.
      *  @param array<MediaStream>|null $value Value to set for the streams property.
     */
-    public function setStreams(?array $value ): void {
-        $this->streams = $value;
+    public function setStreams(?array $value): void {
+        $this->getBackingStore()->set('streams', $value);
     }
 
 }

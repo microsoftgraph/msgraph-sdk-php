@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
+class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $deviceComplianceCheckinThresholdDays The number of days a device is allowed to go without checking in to remain compliant.
-    */
-    private ?int $deviceComplianceCheckinThresholdDays = null;
-    
-    /**
-     * @var bool|null $isScheduledActionEnabled Is feature enabled or not for scheduled action for rule.
-    */
-    private ?bool $isScheduledActionEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $secureByDefault Device should be noncompliant when there is no compliance policy targeted when this is true
-    */
-    private ?bool $secureByDefault = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceManagementSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.deviceManagementSettings');
     }
@@ -55,8 +39,16 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +56,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDeviceComplianceCheckinThresholdDays(): ?int {
-        return $this->deviceComplianceCheckinThresholdDays;
+        return $this->getBackingStore()->get('deviceComplianceCheckinThresholdDays');
     }
 
     /**
@@ -86,7 +78,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsScheduledActionEnabled(): ?bool {
-        return $this->isScheduledActionEnabled;
+        return $this->getBackingStore()->get('isScheduledActionEnabled');
     }
 
     /**
@@ -94,7 +86,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +94,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSecureByDefault(): ?bool {
-        return $this->secureByDefault;
+        return $this->getBackingStore()->get('secureByDefault');
     }
 
     /**
@@ -110,51 +102,51 @@ class DeviceManagementSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('deviceComplianceCheckinThresholdDays', $this->deviceComplianceCheckinThresholdDays);
-        $writer->writeBooleanValue('isScheduledActionEnabled', $this->isScheduledActionEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('secureByDefault', $this->secureByDefault);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('deviceComplianceCheckinThresholdDays', $this->getDeviceComplianceCheckinThresholdDays());
+        $writer->writeBooleanValue('isScheduledActionEnabled', $this->getIsScheduledActionEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('secureByDefault', $this->getSecureByDefault());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
      *  @param int|null $value Value to set for the deviceComplianceCheckinThresholdDays property.
     */
-    public function setDeviceComplianceCheckinThresholdDays(?int $value ): void {
-        $this->deviceComplianceCheckinThresholdDays = $value;
+    public function setDeviceComplianceCheckinThresholdDays(?int $value): void {
+        $this->getBackingStore()->set('deviceComplianceCheckinThresholdDays', $value);
     }
 
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
      *  @param bool|null $value Value to set for the isScheduledActionEnabled property.
     */
-    public function setIsScheduledActionEnabled(?bool $value ): void {
-        $this->isScheduledActionEnabled = $value;
+    public function setIsScheduledActionEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isScheduledActionEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
      *  @param bool|null $value Value to set for the secureByDefault property.
     */
-    public function setSecureByDefault(?bool $value ): void {
-        $this->secureByDefault = $value;
+    public function setSecureByDefault(?bool $value): void {
+        $this->getBackingStore()->set('secureByDefault', $value);
     }
 
 }

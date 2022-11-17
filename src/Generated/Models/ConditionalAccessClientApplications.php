@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsable 
+class ConditionalAccessClientApplications implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $excludeServicePrincipals Service principal IDs excluded from the policy scope.
-    */
-    private ?array $excludeServicePrincipals = null;
-    
-    /**
-     * @var array<string>|null $includeServicePrincipals Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-    */
-    private ?array $includeServicePrincipals = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new conditionalAccessClientApplications and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.conditionalAccessClientApplications');
     }
@@ -50,8 +39,16 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsa
      * @return array<string>|null
     */
     public function getExcludeServicePrincipals(): ?array {
-        return $this->excludeServicePrincipals;
+        return $this->getBackingStore()->get('excludeServicePrincipals');
     }
 
     /**
@@ -80,7 +77,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsa
      * @return array<string>|null
     */
     public function getIncludeServicePrincipals(): ?array {
-        return $this->includeServicePrincipals;
+        return $this->getBackingStore()->get('includeServicePrincipals');
     }
 
     /**
@@ -88,7 +85,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +93,42 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('excludeServicePrincipals', $this->excludeServicePrincipals);
-        $writer->writeCollectionOfPrimitiveValues('includeServicePrincipals', $this->includeServicePrincipals);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('excludeServicePrincipals', $this->getExcludeServicePrincipals());
+        $writer->writeCollectionOfPrimitiveValues('includeServicePrincipals', $this->getIncludeServicePrincipals());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
      *  @param array<string>|null $value Value to set for the excludeServicePrincipals property.
     */
-    public function setExcludeServicePrincipals(?array $value ): void {
-        $this->excludeServicePrincipals = $value;
+    public function setExcludeServicePrincipals(?array $value): void {
+        $this->getBackingStore()->set('excludeServicePrincipals', $value);
     }
 
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
      *  @param array<string>|null $value Value to set for the includeServicePrincipals property.
     */
-    public function setIncludeServicePrincipals(?array $value ): void {
-        $this->includeServicePrincipals = $value;
+    public function setIncludeServicePrincipals(?array $value): void {
+        $this->getBackingStore()->set('includeServicePrincipals', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

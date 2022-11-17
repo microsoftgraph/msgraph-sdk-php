@@ -6,148 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable 
+class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $category1 The label associated with Category 1
-    */
-    private ?string $category1 = null;
-    
-    /**
-     * @var string|null $category10 The label associated with Category 10
-    */
-    private ?string $category10 = null;
-    
-    /**
-     * @var string|null $category11 The label associated with Category 11
-    */
-    private ?string $category11 = null;
-    
-    /**
-     * @var string|null $category12 The label associated with Category 12
-    */
-    private ?string $category12 = null;
-    
-    /**
-     * @var string|null $category13 The label associated with Category 13
-    */
-    private ?string $category13 = null;
-    
-    /**
-     * @var string|null $category14 The label associated with Category 14
-    */
-    private ?string $category14 = null;
-    
-    /**
-     * @var string|null $category15 The label associated with Category 15
-    */
-    private ?string $category15 = null;
-    
-    /**
-     * @var string|null $category16 The label associated with Category 16
-    */
-    private ?string $category16 = null;
-    
-    /**
-     * @var string|null $category17 The label associated with Category 17
-    */
-    private ?string $category17 = null;
-    
-    /**
-     * @var string|null $category18 The label associated with Category 18
-    */
-    private ?string $category18 = null;
-    
-    /**
-     * @var string|null $category19 The label associated with Category 19
-    */
-    private ?string $category19 = null;
-    
-    /**
-     * @var string|null $category2 The label associated with Category 2
-    */
-    private ?string $category2 = null;
-    
-    /**
-     * @var string|null $category20 The label associated with Category 20
-    */
-    private ?string $category20 = null;
-    
-    /**
-     * @var string|null $category21 The label associated with Category 21
-    */
-    private ?string $category21 = null;
-    
-    /**
-     * @var string|null $category22 The label associated with Category 22
-    */
-    private ?string $category22 = null;
-    
-    /**
-     * @var string|null $category23 The label associated with Category 23
-    */
-    private ?string $category23 = null;
-    
-    /**
-     * @var string|null $category24 The label associated with Category 24
-    */
-    private ?string $category24 = null;
-    
-    /**
-     * @var string|null $category25 The label associated with Category 25
-    */
-    private ?string $category25 = null;
-    
-    /**
-     * @var string|null $category3 The label associated with Category 3
-    */
-    private ?string $category3 = null;
-    
-    /**
-     * @var string|null $category4 The label associated with Category 4
-    */
-    private ?string $category4 = null;
-    
-    /**
-     * @var string|null $category5 The label associated with Category 5
-    */
-    private ?string $category5 = null;
-    
-    /**
-     * @var string|null $category6 The label associated with Category 6
-    */
-    private ?string $category6 = null;
-    
-    /**
-     * @var string|null $category7 The label associated with Category 7
-    */
-    private ?string $category7 = null;
-    
-    /**
-     * @var string|null $category8 The label associated with Category 8
-    */
-    private ?string $category8 = null;
-    
-    /**
-     * @var string|null $category9 The label associated with Category 9
-    */
-    private ?string $category9 = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.plannerCategoryDescriptions');
     }
@@ -165,8 +39,16 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -174,7 +56,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory1(): ?string {
-        return $this->category1;
+        return $this->getBackingStore()->get('category1');
     }
 
     /**
@@ -182,7 +64,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory10(): ?string {
-        return $this->category10;
+        return $this->getBackingStore()->get('category10');
     }
 
     /**
@@ -190,7 +72,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory11(): ?string {
-        return $this->category11;
+        return $this->getBackingStore()->get('category11');
     }
 
     /**
@@ -198,7 +80,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory12(): ?string {
-        return $this->category12;
+        return $this->getBackingStore()->get('category12');
     }
 
     /**
@@ -206,7 +88,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory13(): ?string {
-        return $this->category13;
+        return $this->getBackingStore()->get('category13');
     }
 
     /**
@@ -214,7 +96,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory14(): ?string {
-        return $this->category14;
+        return $this->getBackingStore()->get('category14');
     }
 
     /**
@@ -222,7 +104,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory15(): ?string {
-        return $this->category15;
+        return $this->getBackingStore()->get('category15');
     }
 
     /**
@@ -230,7 +112,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory16(): ?string {
-        return $this->category16;
+        return $this->getBackingStore()->get('category16');
     }
 
     /**
@@ -238,7 +120,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory17(): ?string {
-        return $this->category17;
+        return $this->getBackingStore()->get('category17');
     }
 
     /**
@@ -246,7 +128,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory18(): ?string {
-        return $this->category18;
+        return $this->getBackingStore()->get('category18');
     }
 
     /**
@@ -254,7 +136,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory19(): ?string {
-        return $this->category19;
+        return $this->getBackingStore()->get('category19');
     }
 
     /**
@@ -262,7 +144,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory2(): ?string {
-        return $this->category2;
+        return $this->getBackingStore()->get('category2');
     }
 
     /**
@@ -270,7 +152,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory20(): ?string {
-        return $this->category20;
+        return $this->getBackingStore()->get('category20');
     }
 
     /**
@@ -278,7 +160,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory21(): ?string {
-        return $this->category21;
+        return $this->getBackingStore()->get('category21');
     }
 
     /**
@@ -286,7 +168,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory22(): ?string {
-        return $this->category22;
+        return $this->getBackingStore()->get('category22');
     }
 
     /**
@@ -294,7 +176,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory23(): ?string {
-        return $this->category23;
+        return $this->getBackingStore()->get('category23');
     }
 
     /**
@@ -302,7 +184,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory24(): ?string {
-        return $this->category24;
+        return $this->getBackingStore()->get('category24');
     }
 
     /**
@@ -310,7 +192,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory25(): ?string {
-        return $this->category25;
+        return $this->getBackingStore()->get('category25');
     }
 
     /**
@@ -318,7 +200,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory3(): ?string {
-        return $this->category3;
+        return $this->getBackingStore()->get('category3');
     }
 
     /**
@@ -326,7 +208,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory4(): ?string {
-        return $this->category4;
+        return $this->getBackingStore()->get('category4');
     }
 
     /**
@@ -334,7 +216,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory5(): ?string {
-        return $this->category5;
+        return $this->getBackingStore()->get('category5');
     }
 
     /**
@@ -342,7 +224,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory6(): ?string {
-        return $this->category6;
+        return $this->getBackingStore()->get('category6');
     }
 
     /**
@@ -350,7 +232,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory7(): ?string {
-        return $this->category7;
+        return $this->getBackingStore()->get('category7');
     }
 
     /**
@@ -358,7 +240,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory8(): ?string {
-        return $this->category8;
+        return $this->getBackingStore()->get('category8');
     }
 
     /**
@@ -366,7 +248,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCategory9(): ?string {
-        return $this->category9;
+        return $this->getBackingStore()->get('category9');
     }
 
     /**
@@ -410,7 +292,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -418,249 +300,249 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('category1', $this->category1);
-        $writer->writeStringValue('category10', $this->category10);
-        $writer->writeStringValue('category11', $this->category11);
-        $writer->writeStringValue('category12', $this->category12);
-        $writer->writeStringValue('category13', $this->category13);
-        $writer->writeStringValue('category14', $this->category14);
-        $writer->writeStringValue('category15', $this->category15);
-        $writer->writeStringValue('category16', $this->category16);
-        $writer->writeStringValue('category17', $this->category17);
-        $writer->writeStringValue('category18', $this->category18);
-        $writer->writeStringValue('category19', $this->category19);
-        $writer->writeStringValue('category2', $this->category2);
-        $writer->writeStringValue('category20', $this->category20);
-        $writer->writeStringValue('category21', $this->category21);
-        $writer->writeStringValue('category22', $this->category22);
-        $writer->writeStringValue('category23', $this->category23);
-        $writer->writeStringValue('category24', $this->category24);
-        $writer->writeStringValue('category25', $this->category25);
-        $writer->writeStringValue('category3', $this->category3);
-        $writer->writeStringValue('category4', $this->category4);
-        $writer->writeStringValue('category5', $this->category5);
-        $writer->writeStringValue('category6', $this->category6);
-        $writer->writeStringValue('category7', $this->category7);
-        $writer->writeStringValue('category8', $this->category8);
-        $writer->writeStringValue('category9', $this->category9);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('category1', $this->getCategory1());
+        $writer->writeStringValue('category10', $this->getCategory10());
+        $writer->writeStringValue('category11', $this->getCategory11());
+        $writer->writeStringValue('category12', $this->getCategory12());
+        $writer->writeStringValue('category13', $this->getCategory13());
+        $writer->writeStringValue('category14', $this->getCategory14());
+        $writer->writeStringValue('category15', $this->getCategory15());
+        $writer->writeStringValue('category16', $this->getCategory16());
+        $writer->writeStringValue('category17', $this->getCategory17());
+        $writer->writeStringValue('category18', $this->getCategory18());
+        $writer->writeStringValue('category19', $this->getCategory19());
+        $writer->writeStringValue('category2', $this->getCategory2());
+        $writer->writeStringValue('category20', $this->getCategory20());
+        $writer->writeStringValue('category21', $this->getCategory21());
+        $writer->writeStringValue('category22', $this->getCategory22());
+        $writer->writeStringValue('category23', $this->getCategory23());
+        $writer->writeStringValue('category24', $this->getCategory24());
+        $writer->writeStringValue('category25', $this->getCategory25());
+        $writer->writeStringValue('category3', $this->getCategory3());
+        $writer->writeStringValue('category4', $this->getCategory4());
+        $writer->writeStringValue('category5', $this->getCategory5());
+        $writer->writeStringValue('category6', $this->getCategory6());
+        $writer->writeStringValue('category7', $this->getCategory7());
+        $writer->writeStringValue('category8', $this->getCategory8());
+        $writer->writeStringValue('category9', $this->getCategory9());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the category1 property value. The label associated with Category 1
      *  @param string|null $value Value to set for the category1 property.
     */
-    public function setCategory1(?string $value ): void {
-        $this->category1 = $value;
+    public function setCategory1(?string $value): void {
+        $this->getBackingStore()->set('category1', $value);
     }
 
     /**
      * Sets the category10 property value. The label associated with Category 10
      *  @param string|null $value Value to set for the category10 property.
     */
-    public function setCategory10(?string $value ): void {
-        $this->category10 = $value;
+    public function setCategory10(?string $value): void {
+        $this->getBackingStore()->set('category10', $value);
     }
 
     /**
      * Sets the category11 property value. The label associated with Category 11
      *  @param string|null $value Value to set for the category11 property.
     */
-    public function setCategory11(?string $value ): void {
-        $this->category11 = $value;
+    public function setCategory11(?string $value): void {
+        $this->getBackingStore()->set('category11', $value);
     }
 
     /**
      * Sets the category12 property value. The label associated with Category 12
      *  @param string|null $value Value to set for the category12 property.
     */
-    public function setCategory12(?string $value ): void {
-        $this->category12 = $value;
+    public function setCategory12(?string $value): void {
+        $this->getBackingStore()->set('category12', $value);
     }
 
     /**
      * Sets the category13 property value. The label associated with Category 13
      *  @param string|null $value Value to set for the category13 property.
     */
-    public function setCategory13(?string $value ): void {
-        $this->category13 = $value;
+    public function setCategory13(?string $value): void {
+        $this->getBackingStore()->set('category13', $value);
     }
 
     /**
      * Sets the category14 property value. The label associated with Category 14
      *  @param string|null $value Value to set for the category14 property.
     */
-    public function setCategory14(?string $value ): void {
-        $this->category14 = $value;
+    public function setCategory14(?string $value): void {
+        $this->getBackingStore()->set('category14', $value);
     }
 
     /**
      * Sets the category15 property value. The label associated with Category 15
      *  @param string|null $value Value to set for the category15 property.
     */
-    public function setCategory15(?string $value ): void {
-        $this->category15 = $value;
+    public function setCategory15(?string $value): void {
+        $this->getBackingStore()->set('category15', $value);
     }
 
     /**
      * Sets the category16 property value. The label associated with Category 16
      *  @param string|null $value Value to set for the category16 property.
     */
-    public function setCategory16(?string $value ): void {
-        $this->category16 = $value;
+    public function setCategory16(?string $value): void {
+        $this->getBackingStore()->set('category16', $value);
     }
 
     /**
      * Sets the category17 property value. The label associated with Category 17
      *  @param string|null $value Value to set for the category17 property.
     */
-    public function setCategory17(?string $value ): void {
-        $this->category17 = $value;
+    public function setCategory17(?string $value): void {
+        $this->getBackingStore()->set('category17', $value);
     }
 
     /**
      * Sets the category18 property value. The label associated with Category 18
      *  @param string|null $value Value to set for the category18 property.
     */
-    public function setCategory18(?string $value ): void {
-        $this->category18 = $value;
+    public function setCategory18(?string $value): void {
+        $this->getBackingStore()->set('category18', $value);
     }
 
     /**
      * Sets the category19 property value. The label associated with Category 19
      *  @param string|null $value Value to set for the category19 property.
     */
-    public function setCategory19(?string $value ): void {
-        $this->category19 = $value;
+    public function setCategory19(?string $value): void {
+        $this->getBackingStore()->set('category19', $value);
     }
 
     /**
      * Sets the category2 property value. The label associated with Category 2
      *  @param string|null $value Value to set for the category2 property.
     */
-    public function setCategory2(?string $value ): void {
-        $this->category2 = $value;
+    public function setCategory2(?string $value): void {
+        $this->getBackingStore()->set('category2', $value);
     }
 
     /**
      * Sets the category20 property value. The label associated with Category 20
      *  @param string|null $value Value to set for the category20 property.
     */
-    public function setCategory20(?string $value ): void {
-        $this->category20 = $value;
+    public function setCategory20(?string $value): void {
+        $this->getBackingStore()->set('category20', $value);
     }
 
     /**
      * Sets the category21 property value. The label associated with Category 21
      *  @param string|null $value Value to set for the category21 property.
     */
-    public function setCategory21(?string $value ): void {
-        $this->category21 = $value;
+    public function setCategory21(?string $value): void {
+        $this->getBackingStore()->set('category21', $value);
     }
 
     /**
      * Sets the category22 property value. The label associated with Category 22
      *  @param string|null $value Value to set for the category22 property.
     */
-    public function setCategory22(?string $value ): void {
-        $this->category22 = $value;
+    public function setCategory22(?string $value): void {
+        $this->getBackingStore()->set('category22', $value);
     }
 
     /**
      * Sets the category23 property value. The label associated with Category 23
      *  @param string|null $value Value to set for the category23 property.
     */
-    public function setCategory23(?string $value ): void {
-        $this->category23 = $value;
+    public function setCategory23(?string $value): void {
+        $this->getBackingStore()->set('category23', $value);
     }
 
     /**
      * Sets the category24 property value. The label associated with Category 24
      *  @param string|null $value Value to set for the category24 property.
     */
-    public function setCategory24(?string $value ): void {
-        $this->category24 = $value;
+    public function setCategory24(?string $value): void {
+        $this->getBackingStore()->set('category24', $value);
     }
 
     /**
      * Sets the category25 property value. The label associated with Category 25
      *  @param string|null $value Value to set for the category25 property.
     */
-    public function setCategory25(?string $value ): void {
-        $this->category25 = $value;
+    public function setCategory25(?string $value): void {
+        $this->getBackingStore()->set('category25', $value);
     }
 
     /**
      * Sets the category3 property value. The label associated with Category 3
      *  @param string|null $value Value to set for the category3 property.
     */
-    public function setCategory3(?string $value ): void {
-        $this->category3 = $value;
+    public function setCategory3(?string $value): void {
+        $this->getBackingStore()->set('category3', $value);
     }
 
     /**
      * Sets the category4 property value. The label associated with Category 4
      *  @param string|null $value Value to set for the category4 property.
     */
-    public function setCategory4(?string $value ): void {
-        $this->category4 = $value;
+    public function setCategory4(?string $value): void {
+        $this->getBackingStore()->set('category4', $value);
     }
 
     /**
      * Sets the category5 property value. The label associated with Category 5
      *  @param string|null $value Value to set for the category5 property.
     */
-    public function setCategory5(?string $value ): void {
-        $this->category5 = $value;
+    public function setCategory5(?string $value): void {
+        $this->getBackingStore()->set('category5', $value);
     }
 
     /**
      * Sets the category6 property value. The label associated with Category 6
      *  @param string|null $value Value to set for the category6 property.
     */
-    public function setCategory6(?string $value ): void {
-        $this->category6 = $value;
+    public function setCategory6(?string $value): void {
+        $this->getBackingStore()->set('category6', $value);
     }
 
     /**
      * Sets the category7 property value. The label associated with Category 7
      *  @param string|null $value Value to set for the category7 property.
     */
-    public function setCategory7(?string $value ): void {
-        $this->category7 = $value;
+    public function setCategory7(?string $value): void {
+        $this->getBackingStore()->set('category7', $value);
     }
 
     /**
      * Sets the category8 property value. The label associated with Category 8
      *  @param string|null $value Value to set for the category8 property.
     */
-    public function setCategory8(?string $value ): void {
-        $this->category8 = $value;
+    public function setCategory8(?string $value): void {
+        $this->getBackingStore()->set('category8', $value);
     }
 
     /**
      * Sets the category9 property value. The label associated with Category 9
      *  @param string|null $value Value to set for the category9 property.
     */
-    public function setCategory9(?string $value ): void {
-        $this->category9 = $value;
+    public function setCategory9(?string $value): void {
+        $this->getBackingStore()->set('category9', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

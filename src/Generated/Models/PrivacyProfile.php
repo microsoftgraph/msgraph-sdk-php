@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PrivacyProfile implements AdditionalDataHolder, Parsable 
+class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $contactEmail A valid smtp email address for the privacy statement contact. Not required.
-    */
-    private ?string $contactEmail = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $statementUrl A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
-    */
-    private ?string $statementUrl = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new privacyProfile and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.privacyProfile');
     }
@@ -50,8 +39,16 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContactEmail(): ?string {
-        return $this->contactEmail;
+        return $this->getBackingStore()->get('contactEmail');
     }
 
     /**
@@ -80,7 +77,7 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getStatementUrl(): ?string {
-        return $this->statementUrl;
+        return $this->getBackingStore()->get('statementUrl');
     }
 
     /**
@@ -96,42 +93,42 @@ class PrivacyProfile implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('contactEmail', $this->contactEmail);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('statementUrl', $this->statementUrl);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('contactEmail', $this->getContactEmail());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('statementUrl', $this->getStatementUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the contactEmail property value. A valid smtp email address for the privacy statement contact. Not required.
      *  @param string|null $value Value to set for the contactEmail property.
     */
-    public function setContactEmail(?string $value ): void {
-        $this->contactEmail = $value;
+    public function setContactEmail(?string $value): void {
+        $this->getBackingStore()->set('contactEmail', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the statementUrl property value. A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
      *  @param string|null $value Value to set for the statementUrl property.
     */
-    public function setStatementUrl(?string $value ): void {
-        $this->statementUrl = $value;
+    public function setStatementUrl(?string $value): void {
+        $this->getBackingStore()->set('statementUrl', $value);
     }
 
 }

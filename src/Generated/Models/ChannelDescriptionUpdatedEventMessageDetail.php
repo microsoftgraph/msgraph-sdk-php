@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $channelDescription The updated description of the channel.
-    */
-    private ?string $channelDescription = null;
-    
-    /**
-     * @var string|null $channelId Unique identifier of the channel.
-    */
-    private ?string $channelId = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new ChannelDescriptionUpdatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail imp
      * @return string|null
     */
     public function getChannelDescription(): ?string {
-        return $this->channelDescription;
+        return $this->getBackingStore()->get('channelDescription');
     }
 
     /**
@@ -53,7 +38,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail imp
      * @return string|null
     */
     public function getChannelId(): ?string {
-        return $this->channelId;
+        return $this->getBackingStore()->get('channelId');
     }
 
     /**
@@ -74,7 +59,7 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail imp
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -83,33 +68,33 @@ class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDetail imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('channelDescription', $this->channelDescription);
-        $writer->writeStringValue('channelId', $this->channelId);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeStringValue('channelDescription', $this->getChannelDescription());
+        $writer->writeStringValue('channelId', $this->getChannelId());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the channelDescription property value. The updated description of the channel.
      *  @param string|null $value Value to set for the channelDescription property.
     */
-    public function setChannelDescription(?string $value ): void {
-        $this->channelDescription = $value;
+    public function setChannelDescription(?string $value): void {
+        $this->getBackingStore()->set('channelDescription', $value);
     }
 
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      *  @param string|null $value Value to set for the channelId property.
     */
-    public function setChannelId(?string $value ): void {
-        $this->channelId = $value;
+    public function setChannelId(?string $value): void {
+        $this->getBackingStore()->set('channelId', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

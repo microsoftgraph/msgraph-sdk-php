@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThumbnailSet extends Entity implements Parsable 
 {
     /**
-     * @var Thumbnail|null $large A 1920x1920 scaled thumbnail.
-    */
-    private ?Thumbnail $large = null;
-    
-    /**
-     * @var Thumbnail|null $medium A 176x176 scaled thumbnail.
-    */
-    private ?Thumbnail $medium = null;
-    
-    /**
-     * @var Thumbnail|null $small A 48x48 cropped thumbnail.
-    */
-    private ?Thumbnail $small = null;
-    
-    /**
-     * @var Thumbnail|null $source A custom thumbnail image or the original image used to generate other thumbnails.
-    */
-    private ?Thumbnail $source = null;
-    
-    /**
      * Instantiates a new thumbnailSet and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getLarge(): ?Thumbnail {
-        return $this->large;
+        return $this->getBackingStore()->get('large');
     }
 
     /**
@@ -72,7 +52,7 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getMedium(): ?Thumbnail {
-        return $this->medium;
+        return $this->getBackingStore()->get('medium');
     }
 
     /**
@@ -80,7 +60,7 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getSmall(): ?Thumbnail {
-        return $this->small;
+        return $this->getBackingStore()->get('small');
     }
 
     /**
@@ -88,7 +68,7 @@ class ThumbnailSet extends Entity implements Parsable
      * @return Thumbnail|null
     */
     public function getSource(): ?Thumbnail {
-        return $this->source;
+        return $this->getBackingStore()->get('source');
     }
 
     /**
@@ -97,42 +77,42 @@ class ThumbnailSet extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('large', $this->large);
-        $writer->writeObjectValue('medium', $this->medium);
-        $writer->writeObjectValue('small', $this->small);
-        $writer->writeObjectValue('source', $this->source);
+        $writer->writeObjectValue('large', $this->getLarge());
+        $writer->writeObjectValue('medium', $this->getMedium());
+        $writer->writeObjectValue('small', $this->getSmall());
+        $writer->writeObjectValue('source', $this->getSource());
     }
 
     /**
      * Sets the large property value. A 1920x1920 scaled thumbnail.
      *  @param Thumbnail|null $value Value to set for the large property.
     */
-    public function setLarge(?Thumbnail $value ): void {
-        $this->large = $value;
+    public function setLarge(?Thumbnail $value): void {
+        $this->getBackingStore()->set('large', $value);
     }
 
     /**
      * Sets the medium property value. A 176x176 scaled thumbnail.
      *  @param Thumbnail|null $value Value to set for the medium property.
     */
-    public function setMedium(?Thumbnail $value ): void {
-        $this->medium = $value;
+    public function setMedium(?Thumbnail $value): void {
+        $this->getBackingStore()->set('medium', $value);
     }
 
     /**
      * Sets the small property value. A 48x48 cropped thumbnail.
      *  @param Thumbnail|null $value Value to set for the small property.
     */
-    public function setSmall(?Thumbnail $value ): void {
-        $this->small = $value;
+    public function setSmall(?Thumbnail $value): void {
+        $this->getBackingStore()->set('small', $value);
     }
 
     /**
      * Sets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
      *  @param Thumbnail|null $value Value to set for the source property.
     */
-    public function setSource(?Thumbnail $value ): void {
-        $this->source = $value;
+    public function setSource(?Thumbnail $value): void {
+        $this->getBackingStore()->set('source', $value);
     }
 
 }

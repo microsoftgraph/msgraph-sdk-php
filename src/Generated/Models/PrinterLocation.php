@@ -6,108 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PrinterLocation implements AdditionalDataHolder, Parsable 
+class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $altitudeInMeters The altitude, in meters, that the printer is located at.
-    */
-    private ?int $altitudeInMeters = null;
-    
-    /**
-     * @var string|null $building The building that the printer is located in.
-    */
-    private ?string $building = null;
-    
-    /**
-     * @var string|null $city The city that the printer is located in.
-    */
-    private ?string $city = null;
-    
-    /**
-     * @var string|null $countryOrRegion The country or region that the printer is located in.
-    */
-    private ?string $countryOrRegion = null;
-    
-    /**
-     * @var string|null $floor The floor that the printer is located on. Only numerical values are supported right now.
-    */
-    private ?string $floor = null;
-    
-    /**
-     * @var string|null $floorDescription The description of the floor that the printer is located on.
-    */
-    private ?string $floorDescription = null;
-    
-    /**
-     * @var float|null $latitude The latitude that the printer is located at.
-    */
-    private ?float $latitude = null;
-    
-    /**
-     * @var float|null $longitude The longitude that the printer is located at.
-    */
-    private ?float $longitude = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<string>|null $organization The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
-    */
-    private ?array $organization = null;
-    
-    /**
-     * @var string|null $postalCode The postal code that the printer is located in.
-    */
-    private ?string $postalCode = null;
-    
-    /**
-     * @var string|null $roomDescription The description of the room that the printer is located in.
-    */
-    private ?string $roomDescription = null;
-    
-    /**
-     * @var string|null $roomName The room that the printer is located in. Only numerical values are supported right now.
-    */
-    private ?string $roomName = null;
-    
-    /**
-     * @var string|null $site The site that the printer is located in.
-    */
-    private ?string $site = null;
-    
-    /**
-     * @var string|null $stateOrProvince The state or province that the printer is located in.
-    */
-    private ?string $stateOrProvince = null;
-    
-    /**
-     * @var string|null $streetAddress The street address where the printer is located.
-    */
-    private ?string $streetAddress = null;
-    
-    /**
-     * @var array<string>|null $subdivision The subdivision that the printer is located in. The elements should be in hierarchical order.
-    */
-    private ?array $subdivision = null;
-    
-    /**
-     * @var array<string>|null $subunit The subunit property
-    */
-    private ?array $subunit = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new printerLocation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.printerLocation');
     }
@@ -125,8 +39,8 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -134,7 +48,15 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAltitudeInMeters(): ?int {
-        return $this->altitudeInMeters;
+        return $this->getBackingStore()->get('altitudeInMeters');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -142,7 +64,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBuilding(): ?string {
-        return $this->building;
+        return $this->getBackingStore()->get('building');
     }
 
     /**
@@ -150,7 +72,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCity(): ?string {
-        return $this->city;
+        return $this->getBackingStore()->get('city');
     }
 
     /**
@@ -158,7 +80,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
-        return $this->countryOrRegion;
+        return $this->getBackingStore()->get('countryOrRegion');
     }
 
     /**
@@ -194,7 +116,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getFloor(): ?string {
-        return $this->floor;
+        return $this->getBackingStore()->get('floor');
     }
 
     /**
@@ -202,7 +124,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getFloorDescription(): ?string {
-        return $this->floorDescription;
+        return $this->getBackingStore()->get('floorDescription');
     }
 
     /**
@@ -210,7 +132,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLatitude(): ?float {
-        return $this->latitude;
+        return $this->getBackingStore()->get('latitude');
     }
 
     /**
@@ -218,7 +140,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLongitude(): ?float {
-        return $this->longitude;
+        return $this->getBackingStore()->get('longitude');
     }
 
     /**
@@ -226,7 +148,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -234,7 +156,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getOrganization(): ?array {
-        return $this->organization;
+        return $this->getBackingStore()->get('organization');
     }
 
     /**
@@ -242,7 +164,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPostalCode(): ?string {
-        return $this->postalCode;
+        return $this->getBackingStore()->get('postalCode');
     }
 
     /**
@@ -250,7 +172,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRoomDescription(): ?string {
-        return $this->roomDescription;
+        return $this->getBackingStore()->get('roomDescription');
     }
 
     /**
@@ -258,7 +180,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRoomName(): ?string {
-        return $this->roomName;
+        return $this->getBackingStore()->get('roomName');
     }
 
     /**
@@ -266,7 +188,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSite(): ?string {
-        return $this->site;
+        return $this->getBackingStore()->get('site');
     }
 
     /**
@@ -274,7 +196,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getStateOrProvince(): ?string {
-        return $this->stateOrProvince;
+        return $this->getBackingStore()->get('stateOrProvince');
     }
 
     /**
@@ -282,7 +204,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getStreetAddress(): ?string {
-        return $this->streetAddress;
+        return $this->getBackingStore()->get('streetAddress');
     }
 
     /**
@@ -290,7 +212,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getSubdivision(): ?array {
-        return $this->subdivision;
+        return $this->getBackingStore()->get('subdivision');
     }
 
     /**
@@ -298,7 +220,7 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getSubunit(): ?array {
-        return $this->subunit;
+        return $this->getBackingStore()->get('subunit');
     }
 
     /**
@@ -306,177 +228,177 @@ class PrinterLocation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('altitudeInMeters', $this->altitudeInMeters);
-        $writer->writeStringValue('building', $this->building);
-        $writer->writeStringValue('city', $this->city);
-        $writer->writeStringValue('countryOrRegion', $this->countryOrRegion);
-        $writer->writeStringValue('floor', $this->floor);
-        $writer->writeStringValue('floorDescription', $this->floorDescription);
-        $writer->writeFloatValue('latitude', $this->latitude);
-        $writer->writeFloatValue('longitude', $this->longitude);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfPrimitiveValues('organization', $this->organization);
-        $writer->writeStringValue('postalCode', $this->postalCode);
-        $writer->writeStringValue('roomDescription', $this->roomDescription);
-        $writer->writeStringValue('roomName', $this->roomName);
-        $writer->writeStringValue('site', $this->site);
-        $writer->writeStringValue('stateOrProvince', $this->stateOrProvince);
-        $writer->writeStringValue('streetAddress', $this->streetAddress);
-        $writer->writeCollectionOfPrimitiveValues('subdivision', $this->subdivision);
-        $writer->writeCollectionOfPrimitiveValues('subunit', $this->subunit);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('altitudeInMeters', $this->getAltitudeInMeters());
+        $writer->writeStringValue('building', $this->getBuilding());
+        $writer->writeStringValue('city', $this->getCity());
+        $writer->writeStringValue('countryOrRegion', $this->getCountryOrRegion());
+        $writer->writeStringValue('floor', $this->getFloor());
+        $writer->writeStringValue('floorDescription', $this->getFloorDescription());
+        $writer->writeFloatValue('latitude', $this->getLatitude());
+        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfPrimitiveValues('organization', $this->getOrganization());
+        $writer->writeStringValue('postalCode', $this->getPostalCode());
+        $writer->writeStringValue('roomDescription', $this->getRoomDescription());
+        $writer->writeStringValue('roomName', $this->getRoomName());
+        $writer->writeStringValue('site', $this->getSite());
+        $writer->writeStringValue('stateOrProvince', $this->getStateOrProvince());
+        $writer->writeStringValue('streetAddress', $this->getStreetAddress());
+        $writer->writeCollectionOfPrimitiveValues('subdivision', $this->getSubdivision());
+        $writer->writeCollectionOfPrimitiveValues('subunit', $this->getSubunit());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
      *  @param int|null $value Value to set for the altitudeInMeters property.
     */
-    public function setAltitudeInMeters(?int $value ): void {
-        $this->altitudeInMeters = $value;
+    public function setAltitudeInMeters(?int $value): void {
+        $this->getBackingStore()->set('altitudeInMeters', $value);
     }
 
     /**
      * Sets the building property value. The building that the printer is located in.
      *  @param string|null $value Value to set for the building property.
     */
-    public function setBuilding(?string $value ): void {
-        $this->building = $value;
+    public function setBuilding(?string $value): void {
+        $this->getBackingStore()->set('building', $value);
     }
 
     /**
      * Sets the city property value. The city that the printer is located in.
      *  @param string|null $value Value to set for the city property.
     */
-    public function setCity(?string $value ): void {
-        $this->city = $value;
+    public function setCity(?string $value): void {
+        $this->getBackingStore()->set('city', $value);
     }
 
     /**
      * Sets the countryOrRegion property value. The country or region that the printer is located in.
      *  @param string|null $value Value to set for the countryOrRegion property.
     */
-    public function setCountryOrRegion(?string $value ): void {
-        $this->countryOrRegion = $value;
+    public function setCountryOrRegion(?string $value): void {
+        $this->getBackingStore()->set('countryOrRegion', $value);
     }
 
     /**
      * Sets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
      *  @param string|null $value Value to set for the floor property.
     */
-    public function setFloor(?string $value ): void {
-        $this->floor = $value;
+    public function setFloor(?string $value): void {
+        $this->getBackingStore()->set('floor', $value);
     }
 
     /**
      * Sets the floorDescription property value. The description of the floor that the printer is located on.
      *  @param string|null $value Value to set for the floorDescription property.
     */
-    public function setFloorDescription(?string $value ): void {
-        $this->floorDescription = $value;
+    public function setFloorDescription(?string $value): void {
+        $this->getBackingStore()->set('floorDescription', $value);
     }
 
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
      *  @param float|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value ): void {
-        $this->latitude = $value;
+    public function setLatitude(?float $value): void {
+        $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
      *  @param float|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value ): void {
-        $this->longitude = $value;
+    public function setLongitude(?float $value): void {
+        $this->getBackingStore()->set('longitude', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
      *  @param array<string>|null $value Value to set for the organization property.
     */
-    public function setOrganization(?array $value ): void {
-        $this->organization = $value;
+    public function setOrganization(?array $value): void {
+        $this->getBackingStore()->set('organization', $value);
     }
 
     /**
      * Sets the postalCode property value. The postal code that the printer is located in.
      *  @param string|null $value Value to set for the postalCode property.
     */
-    public function setPostalCode(?string $value ): void {
-        $this->postalCode = $value;
+    public function setPostalCode(?string $value): void {
+        $this->getBackingStore()->set('postalCode', $value);
     }
 
     /**
      * Sets the roomDescription property value. The description of the room that the printer is located in.
      *  @param string|null $value Value to set for the roomDescription property.
     */
-    public function setRoomDescription(?string $value ): void {
-        $this->roomDescription = $value;
+    public function setRoomDescription(?string $value): void {
+        $this->getBackingStore()->set('roomDescription', $value);
     }
 
     /**
      * Sets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
      *  @param string|null $value Value to set for the roomName property.
     */
-    public function setRoomName(?string $value ): void {
-        $this->roomName = $value;
+    public function setRoomName(?string $value): void {
+        $this->getBackingStore()->set('roomName', $value);
     }
 
     /**
      * Sets the site property value. The site that the printer is located in.
      *  @param string|null $value Value to set for the site property.
     */
-    public function setSite(?string $value ): void {
-        $this->site = $value;
+    public function setSite(?string $value): void {
+        $this->getBackingStore()->set('site', $value);
     }
 
     /**
      * Sets the stateOrProvince property value. The state or province that the printer is located in.
      *  @param string|null $value Value to set for the stateOrProvince property.
     */
-    public function setStateOrProvince(?string $value ): void {
-        $this->stateOrProvince = $value;
+    public function setStateOrProvince(?string $value): void {
+        $this->getBackingStore()->set('stateOrProvince', $value);
     }
 
     /**
      * Sets the streetAddress property value. The street address where the printer is located.
      *  @param string|null $value Value to set for the streetAddress property.
     */
-    public function setStreetAddress(?string $value ): void {
-        $this->streetAddress = $value;
+    public function setStreetAddress(?string $value): void {
+        $this->getBackingStore()->set('streetAddress', $value);
     }
 
     /**
      * Sets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
      *  @param array<string>|null $value Value to set for the subdivision property.
     */
-    public function setSubdivision(?array $value ): void {
-        $this->subdivision = $value;
+    public function setSubdivision(?array $value): void {
+        $this->getBackingStore()->set('subdivision', $value);
     }
 
     /**
      * Sets the subunit property value. The subunit property
      *  @param array<string>|null $value Value to set for the subunit property.
     */
-    public function setSubunit(?array $value ): void {
-        $this->subunit = $value;
+    public function setSubunit(?array $value): void {
+        $this->getBackingStore()->set('subunit', $value);
     }
 
 }

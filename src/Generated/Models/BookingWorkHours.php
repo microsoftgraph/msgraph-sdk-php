@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BookingWorkHours implements AdditionalDataHolder, Parsable 
+class BookingWorkHours implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DayOfWeek|null $day The day property
-    */
-    private ?DayOfWeek $day = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<BookingWorkTimeSlot>|null $timeSlots A list of start/end times during a day.
-    */
-    private ?array $timeSlots = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new bookingWorkHours and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.bookingWorkHours');
     }
@@ -50,8 +39,16 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @return DayOfWeek|null
     */
     public function getDay(): ?DayOfWeek {
-        return $this->day;
+        return $this->getBackingStore()->get('day');
     }
 
     /**
@@ -80,7 +77,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @return array<BookingWorkTimeSlot>|null
     */
     public function getTimeSlots(): ?array {
-        return $this->timeSlots;
+        return $this->getBackingStore()->get('timeSlots');
     }
 
     /**
@@ -96,42 +93,42 @@ class BookingWorkHours implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('day', $this->day);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('timeSlots', $this->timeSlots);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('day', $this->getDay());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('timeSlots', $this->getTimeSlots());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the day property value. The day property
      *  @param DayOfWeek|null $value Value to set for the day property.
     */
-    public function setDay(?DayOfWeek $value ): void {
-        $this->day = $value;
+    public function setDay(?DayOfWeek $value): void {
+        $this->getBackingStore()->set('day', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the timeSlots property value. A list of start/end times during a day.
      *  @param array<BookingWorkTimeSlot>|null $value Value to set for the timeSlots property.
     */
-    public function setTimeSlots(?array $value ): void {
-        $this->timeSlots = $value;
+    public function setTimeSlots(?array $value): void {
+        $this->getBackingStore()->set('timeSlots', $value);
     }
 
 }

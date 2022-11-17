@@ -7,28 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, Parsable 
+class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $destinationFileName The destinationFileName property
-    */
-    private ?string $destinationFileName = null;
-    
-    /**
-     * @var ItemReference|null $sourceFile The sourceFile property
-    */
-    private ?ItemReference $sourceFile = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new copyToDefaultContentLocationPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -45,8 +39,16 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -54,7 +56,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @return string|null
     */
     public function getDestinationFileName(): ?string {
-        return $this->destinationFileName;
+        return $this->getBackingStore()->get('destinationFileName');
     }
 
     /**
@@ -74,7 +76,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @return ItemReference|null
     */
     public function getSourceFile(): ?ItemReference {
-        return $this->sourceFile;
+        return $this->getBackingStore()->get('sourceFile');
     }
 
     /**
@@ -82,33 +84,33 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('destinationFileName', $this->destinationFileName);
-        $writer->writeObjectValue('sourceFile', $this->sourceFile);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('destinationFileName', $this->getDestinationFileName());
+        $writer->writeObjectValue('sourceFile', $this->getSourceFile());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the destinationFileName property value. The destinationFileName property
      *  @param string|null $value Value to set for the destinationFileName property.
     */
-    public function setDestinationFileName(?string $value ): void {
-        $this->destinationFileName = $value;
+    public function setDestinationFileName(?string $value): void {
+        $this->getBackingStore()->set('destinationFileName', $value);
     }
 
     /**
      * Sets the sourceFile property value. The sourceFile property
      *  @param ItemReference|null $value Value to set for the sourceFile property.
     */
-    public function setSourceFile(?ItemReference $value ): void {
-        $this->sourceFile = $value;
+    public function setSourceFile(?ItemReference $value): void {
+        $this->getBackingStore()->set('sourceFile', $value);
     }
 
 }

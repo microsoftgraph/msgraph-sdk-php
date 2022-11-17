@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalGroup extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description The description of the external group. Optional.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The friendly name of the external group. Optional.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<Identity>|null $members A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-    */
-    private ?array $members = null;
-    
-    /**
      * Instantiates a new externalGroup and sets the default values.
     */
     public function __construct() {
@@ -46,7 +31,7 @@ class ExternalGroup extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -54,7 +39,7 @@ class ExternalGroup extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -75,7 +60,7 @@ class ExternalGroup extends Entity implements Parsable
      * @return array<Identity>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -84,33 +69,33 @@ class ExternalGroup extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
     }
 
     /**
      * Sets the description property value. The description of the external group. Optional.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The friendly name of the external group. Optional.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
      *  @param array<Identity>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
 }

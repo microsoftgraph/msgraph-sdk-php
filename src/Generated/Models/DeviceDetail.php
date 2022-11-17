@@ -6,58 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceDetail implements AdditionalDataHolder, Parsable 
+class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $browser Indicates the browser information of the used for signing in.
-    */
-    private ?string $browser = null;
-    
-    /**
-     * @var string|null $deviceId Refers to the UniqueID of the device used for signing in.
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $displayName Refers to the name of the device used for signing in.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isCompliant Indicates whether the device is compliant.
-    */
-    private ?bool $isCompliant = null;
-    
-    /**
-     * @var bool|null $isManaged Indicates whether the device is managed.
-    */
-    private ?bool $isManaged = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $operatingSystem Indicates the operating system name and version used for signing in.
-    */
-    private ?string $operatingSystem = null;
-    
-    /**
-     * @var string|null $trustType Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
-    */
-    private ?string $trustType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceDetail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.deviceDetail');
     }
@@ -75,8 +39,16 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +56,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBrowser(): ?string {
-        return $this->browser;
+        return $this->getBackingStore()->get('browser');
     }
 
     /**
@@ -92,7 +64,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -100,7 +72,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -126,7 +98,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsCompliant(): ?bool {
-        return $this->isCompliant;
+        return $this->getBackingStore()->get('isCompliant');
     }
 
     /**
@@ -134,7 +106,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsManaged(): ?bool {
-        return $this->isManaged;
+        return $this->getBackingStore()->get('isManaged');
     }
 
     /**
@@ -142,7 +114,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -150,7 +122,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->operatingSystem;
+        return $this->getBackingStore()->get('operatingSystem');
     }
 
     /**
@@ -158,7 +130,7 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTrustType(): ?string {
-        return $this->trustType;
+        return $this->getBackingStore()->get('trustType');
     }
 
     /**
@@ -166,87 +138,87 @@ class DeviceDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('browser', $this->browser);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isCompliant', $this->isCompliant);
-        $writer->writeBooleanValue('isManaged', $this->isManaged);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('operatingSystem', $this->operatingSystem);
-        $writer->writeStringValue('trustType', $this->trustType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('browser', $this->getBrowser());
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isCompliant', $this->getIsCompliant());
+        $writer->writeBooleanValue('isManaged', $this->getIsManaged());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
+        $writer->writeStringValue('trustType', $this->getTrustType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the browser property value. Indicates the browser information of the used for signing in.
      *  @param string|null $value Value to set for the browser property.
     */
-    public function setBrowser(?string $value ): void {
-        $this->browser = $value;
+    public function setBrowser(?string $value): void {
+        $this->getBackingStore()->set('browser', $value);
     }
 
     /**
      * Sets the deviceId property value. Refers to the UniqueID of the device used for signing in.
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the displayName property value. Refers to the name of the device used for signing in.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isCompliant property value. Indicates whether the device is compliant.
      *  @param bool|null $value Value to set for the isCompliant property.
     */
-    public function setIsCompliant(?bool $value ): void {
-        $this->isCompliant = $value;
+    public function setIsCompliant(?bool $value): void {
+        $this->getBackingStore()->set('isCompliant', $value);
     }
 
     /**
      * Sets the isManaged property value. Indicates whether the device is managed.
      *  @param bool|null $value Value to set for the isManaged property.
     */
-    public function setIsManaged(?bool $value ): void {
-        $this->isManaged = $value;
+    public function setIsManaged(?bool $value): void {
+        $this->getBackingStore()->set('isManaged', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the operatingSystem property value. Indicates the operating system name and version used for signing in.
      *  @param string|null $value Value to set for the operatingSystem property.
     */
-    public function setOperatingSystem(?string $value ): void {
-        $this->operatingSystem = $value;
+    public function setOperatingSystem(?string $value): void {
+        $this->getBackingStore()->set('operatingSystem', $value);
     }
 
     /**
      * Sets the trustType property value. Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      *  @param string|null $value Value to set for the trustType property.
     */
-    public function setTrustType(?string $value ): void {
-        $this->trustType = $value;
+    public function setTrustType(?string $value): void {
+        $this->getBackingStore()->set('trustType', $value);
     }
 
 }

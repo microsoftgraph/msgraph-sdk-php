@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteOperation extends Operation implements Parsable 
 {
     /**
-     * @var OnenoteOperationError|null $error The error returned by the operation.
-    */
-    private ?OnenoteOperationError $error = null;
-    
-    /**
-     * @var string|null $percentComplete The operation percent complete if the operation is still in running status.
-    */
-    private ?string $percentComplete = null;
-    
-    /**
-     * @var string|null $resourceId The resource id.
-    */
-    private ?string $resourceId = null;
-    
-    /**
-     * @var string|null $resourceLocation The resource URI for the object. For example, the resource URI for a copied page or section.
-    */
-    private ?string $resourceLocation = null;
-    
-    /**
      * Instantiates a new OnenoteOperation and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class OnenoteOperation extends Operation implements Parsable
      * @return OnenoteOperationError|null
     */
     public function getError(): ?OnenoteOperationError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -72,7 +52,7 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getPercentComplete(): ?string {
-        return $this->percentComplete;
+        return $this->getBackingStore()->get('percentComplete');
     }
 
     /**
@@ -80,7 +60,7 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->resourceId;
+        return $this->getBackingStore()->get('resourceId');
     }
 
     /**
@@ -88,7 +68,7 @@ class OnenoteOperation extends Operation implements Parsable
      * @return string|null
     */
     public function getResourceLocation(): ?string {
-        return $this->resourceLocation;
+        return $this->getBackingStore()->get('resourceLocation');
     }
 
     /**
@@ -97,42 +77,42 @@ class OnenoteOperation extends Operation implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeStringValue('percentComplete', $this->percentComplete);
-        $writer->writeStringValue('resourceId', $this->resourceId);
-        $writer->writeStringValue('resourceLocation', $this->resourceLocation);
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeStringValue('percentComplete', $this->getPercentComplete());
+        $writer->writeStringValue('resourceId', $this->getResourceId());
+        $writer->writeStringValue('resourceLocation', $this->getResourceLocation());
     }
 
     /**
      * Sets the error property value. The error returned by the operation.
      *  @param OnenoteOperationError|null $value Value to set for the error property.
     */
-    public function setError(?OnenoteOperationError $value ): void {
-        $this->error = $value;
+    public function setError(?OnenoteOperationError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
      *  @param string|null $value Value to set for the percentComplete property.
     */
-    public function setPercentComplete(?string $value ): void {
-        $this->percentComplete = $value;
+    public function setPercentComplete(?string $value): void {
+        $this->getBackingStore()->set('percentComplete', $value);
     }
 
     /**
      * Sets the resourceId property value. The resource id.
      *  @param string|null $value Value to set for the resourceId property.
     */
-    public function setResourceId(?string $value ): void {
-        $this->resourceId = $value;
+    public function setResourceId(?string $value): void {
+        $this->getBackingStore()->set('resourceId', $value);
     }
 
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      *  @param string|null $value Value to set for the resourceLocation property.
     */
-    public function setResourceLocation(?string $value ): void {
-        $this->resourceLocation = $value;
+    public function setResourceLocation(?string $value): void {
+        $this->getBackingStore()->set('resourceLocation', $value);
     }
 
 }

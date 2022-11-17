@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChecklistItem extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $checkedDateTime The date and time when the checklistItem was finished.
-    */
-    private ?DateTime $checkedDateTime = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The date and time when the checklistItem was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $displayName Field indicating the title of checklistItem.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isChecked State indicating whether the item is checked off or not.
-    */
-    private ?bool $isChecked = null;
-    
-    /**
      * Instantiates a new checklistItem and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class ChecklistItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCheckedDateTime(): ?DateTime {
-        return $this->checkedDateTime;
+        return $this->getBackingStore()->get('checkedDateTime');
     }
 
     /**
@@ -59,7 +39,7 @@ class ChecklistItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -67,7 +47,7 @@ class ChecklistItem extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -89,7 +69,7 @@ class ChecklistItem extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsChecked(): ?bool {
-        return $this->isChecked;
+        return $this->getBackingStore()->get('isChecked');
     }
 
     /**
@@ -98,42 +78,42 @@ class ChecklistItem extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('checkedDateTime', $this->checkedDateTime);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isChecked', $this->isChecked);
+        $writer->writeDateTimeValue('checkedDateTime', $this->getCheckedDateTime());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isChecked', $this->getIsChecked());
     }
 
     /**
      * Sets the checkedDateTime property value. The date and time when the checklistItem was finished.
      *  @param DateTime|null $value Value to set for the checkedDateTime property.
     */
-    public function setCheckedDateTime(?DateTime $value ): void {
-        $this->checkedDateTime = $value;
+    public function setCheckedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('checkedDateTime', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The date and time when the checklistItem was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the displayName property value. Field indicating the title of checklistItem.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isChecked property value. State indicating whether the item is checked off or not.
      *  @param bool|null $value Value to set for the isChecked property.
     */
-    public function setIsChecked(?bool $value ): void {
-        $this->isChecked = $value;
+    public function setIsChecked(?bool $value): void {
+        $this->getBackingStore()->set('isChecked', $value);
     }
 
 }

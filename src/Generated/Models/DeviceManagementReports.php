@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementReports extends Entity implements Parsable 
 {
     /**
-     * @var array<DeviceManagementExportJob>|null $exportJobs Entity representing a job to export a report
-    */
-    private ?array $exportJobs = null;
-    
-    /**
      * Instantiates a new deviceManagementReports and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class DeviceManagementReports extends Entity implements Parsable
      * @return array<DeviceManagementExportJob>|null
     */
     public function getExportJobs(): ?array {
-        return $this->exportJobs;
+        return $this->getBackingStore()->get('exportJobs');
     }
 
     /**
@@ -55,15 +50,15 @@ class DeviceManagementReports extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('exportJobs', $this->exportJobs);
+        $writer->writeCollectionOfObjectValues('exportJobs', $this->getExportJobs());
     }
 
     /**
      * Sets the exportJobs property value. Entity representing a job to export a report
      *  @param array<DeviceManagementExportJob>|null $value Value to set for the exportJobs property.
     */
-    public function setExportJobs(?array $value ): void {
-        $this->exportJobs = $value;
+    public function setExportJobs(?array $value): void {
+        $this->getBackingStore()->set('exportJobs', $value);
     }
 
 }

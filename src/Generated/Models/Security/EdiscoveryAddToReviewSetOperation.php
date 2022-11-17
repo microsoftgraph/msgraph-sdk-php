@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable 
 {
     /**
-     * @var EdiscoveryReviewSet|null $reviewSet eDiscovery review set to which items matching source collection query gets added.
-    */
-    private ?EdiscoveryReviewSet $reviewSet = null;
-    
-    /**
-     * @var EdiscoverySearch|null $search eDiscovery search that gets added to review set.
-    */
-    private ?EdiscoverySearch $search = null;
-    
-    /**
      * Instantiates a new EdiscoveryAddToReviewSetOperation and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
      * @return EdiscoveryReviewSet|null
     */
     public function getReviewSet(): ?EdiscoveryReviewSet {
-        return $this->reviewSet;
+        return $this->getBackingStore()->get('reviewSet');
     }
 
     /**
@@ -60,7 +50,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
      * @return EdiscoverySearch|null
     */
     public function getSearch(): ?EdiscoverySearch {
-        return $this->search;
+        return $this->getBackingStore()->get('search');
     }
 
     /**
@@ -69,24 +59,24 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('reviewSet', $this->reviewSet);
-        $writer->writeObjectValue('search', $this->search);
+        $writer->writeObjectValue('reviewSet', $this->getReviewSet());
+        $writer->writeObjectValue('search', $this->getSearch());
     }
 
     /**
      * Sets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
      *  @param EdiscoveryReviewSet|null $value Value to set for the reviewSet property.
     */
-    public function setReviewSet(?EdiscoveryReviewSet $value ): void {
-        $this->reviewSet = $value;
+    public function setReviewSet(?EdiscoveryReviewSet $value): void {
+        $this->getBackingStore()->set('reviewSet', $value);
     }
 
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
      *  @param EdiscoverySearch|null $value Value to set for the search property.
     */
-    public function setSearch(?EdiscoverySearch $value ): void {
-        $this->search = $value;
+    public function setSearch(?EdiscoverySearch $value): void {
+        $this->getBackingStore()->set('search', $value);
     }
 
 }

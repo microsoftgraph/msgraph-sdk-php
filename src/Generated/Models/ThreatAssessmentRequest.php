@@ -10,46 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var ThreatCategory|null $category The category property
-    */
-    private ?ThreatCategory $category = null;
-    
-    /**
-     * @var ThreatAssessmentContentType|null $contentType The content type of threat assessment. Possible values are: mail, url, file.
-    */
-    private ?ThreatAssessmentContentType $contentType = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy The threat assessment request creator.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var ThreatExpectedAssessment|null $expectedAssessment The expectedAssessment property
-    */
-    private ?ThreatExpectedAssessment $expectedAssessment = null;
-    
-    /**
-     * @var ThreatAssessmentRequestSource|null $requestSource The source of the threat assessment request. Possible values are: administrator.
-    */
-    private ?ThreatAssessmentRequestSource $requestSource = null;
-    
-    /**
-     * @var array<ThreatAssessmentResult>|null $results A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-    */
-    private ?array $results = null;
-    
-    /**
-     * @var ThreatAssessmentStatus|null $status The assessment process status. Possible values are: pending, completed.
-    */
-    private ?ThreatAssessmentStatus $status = null;
-    
-    /**
      * Instantiates a new threatAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -81,7 +41,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatCategory|null
     */
     public function getCategory(): ?ThreatCategory {
-        return $this->category;
+        return $this->getBackingStore()->get('category');
     }
 
     /**
@@ -89,7 +49,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentContentType|null
     */
     public function getContentType(): ?ThreatAssessmentContentType {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -97,7 +57,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -105,7 +65,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -113,7 +73,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatExpectedAssessment|null
     */
     public function getExpectedAssessment(): ?ThreatExpectedAssessment {
-        return $this->expectedAssessment;
+        return $this->getBackingStore()->get('expectedAssessment');
     }
 
     /**
@@ -139,7 +99,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentRequestSource|null
     */
     public function getRequestSource(): ?ThreatAssessmentRequestSource {
-        return $this->requestSource;
+        return $this->getBackingStore()->get('requestSource');
     }
 
     /**
@@ -147,7 +107,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return array<ThreatAssessmentResult>|null
     */
     public function getResults(): ?array {
-        return $this->results;
+        return $this->getBackingStore()->get('results');
     }
 
     /**
@@ -155,7 +115,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentStatus|null
     */
     public function getStatus(): ?ThreatAssessmentStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -164,78 +124,78 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('category', $this->category);
-        $writer->writeEnumValue('contentType', $this->contentType);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeEnumValue('expectedAssessment', $this->expectedAssessment);
-        $writer->writeEnumValue('requestSource', $this->requestSource);
-        $writer->writeCollectionOfObjectValues('results', $this->results);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeEnumValue('category', $this->getCategory());
+        $writer->writeEnumValue('contentType', $this->getContentType());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeEnumValue('expectedAssessment', $this->getExpectedAssessment());
+        $writer->writeEnumValue('requestSource', $this->getRequestSource());
+        $writer->writeCollectionOfObjectValues('results', $this->getResults());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the category property value. The category property
      *  @param ThreatCategory|null $value Value to set for the category property.
     */
-    public function setCategory(?ThreatCategory $value ): void {
-        $this->category = $value;
+    public function setCategory(?ThreatCategory $value): void {
+        $this->getBackingStore()->set('category', $value);
     }
 
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
      *  @param ThreatAssessmentContentType|null $value Value to set for the contentType property.
     */
-    public function setContentType(?ThreatAssessmentContentType $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?ThreatAssessmentContentType $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the createdBy property value. The threat assessment request creator.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the expectedAssessment property value. The expectedAssessment property
      *  @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
     */
-    public function setExpectedAssessment(?ThreatExpectedAssessment $value ): void {
-        $this->expectedAssessment = $value;
+    public function setExpectedAssessment(?ThreatExpectedAssessment $value): void {
+        $this->getBackingStore()->set('expectedAssessment', $value);
     }
 
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
      *  @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
     */
-    public function setRequestSource(?ThreatAssessmentRequestSource $value ): void {
-        $this->requestSource = $value;
+    public function setRequestSource(?ThreatAssessmentRequestSource $value): void {
+        $this->getBackingStore()->set('requestSource', $value);
     }
 
     /**
      * Sets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
      *  @param array<ThreatAssessmentResult>|null $value Value to set for the results property.
     */
-    public function setResults(?array $value ): void {
-        $this->results = $value;
+    public function setResults(?array $value): void {
+        $this->getBackingStore()->set('results', $value);
     }
 
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
      *  @param ThreatAssessmentStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ThreatAssessmentStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ThreatAssessmentStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

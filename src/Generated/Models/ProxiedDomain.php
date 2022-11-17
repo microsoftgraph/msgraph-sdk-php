@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ProxiedDomain implements AdditionalDataHolder, Parsable 
+class ProxiedDomain implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $ipAddressOrFQDN The IP address or FQDN
-    */
-    private ?string $ipAddressOrFQDN = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $proxy Proxy IP or FQDN
-    */
-    private ?string $proxy = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new proxiedDomain and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.proxiedDomain');
     }
@@ -50,8 +39,16 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +69,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIpAddressOrFQDN(): ?string {
-        return $this->ipAddressOrFQDN;
+        return $this->getBackingStore()->get('ipAddressOrFQDN');
     }
 
     /**
@@ -80,7 +77,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProxy(): ?string {
-        return $this->proxy;
+        return $this->getBackingStore()->get('proxy');
     }
 
     /**
@@ -96,42 +93,42 @@ class ProxiedDomain implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('ipAddressOrFQDN', $this->ipAddressOrFQDN);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('proxy', $this->proxy);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('ipAddressOrFQDN', $this->getIpAddressOrFQDN());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('proxy', $this->getProxy());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the ipAddressOrFQDN property value. The IP address or FQDN
      *  @param string|null $value Value to set for the ipAddressOrFQDN property.
     */
-    public function setIpAddressOrFQDN(?string $value ): void {
-        $this->ipAddressOrFQDN = $value;
+    public function setIpAddressOrFQDN(?string $value): void {
+        $this->getBackingStore()->set('ipAddressOrFQDN', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the proxy property value. Proxy IP or FQDN
      *  @param string|null $value Value to set for the proxy property.
     */
-    public function setProxy(?string $value ): void {
-        $this->proxy = $value;
+    public function setProxy(?string $value): void {
+        $this->getBackingStore()->set('proxy', $value);
     }
 
 }

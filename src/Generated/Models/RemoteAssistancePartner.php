@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RemoteAssistancePartner extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName Display name of the partner.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var DateTime|null $lastConnectionDateTime Timestamp of the last request sent to Intune by the TEM partner.
-    */
-    private ?DateTime $lastConnectionDateTime = null;
-    
-    /**
-     * @var RemoteAssistanceOnboardingStatus|null $onboardingStatus The current TeamViewer connector status
-    */
-    private ?RemoteAssistanceOnboardingStatus $onboardingStatus = null;
-    
-    /**
-     * @var string|null $onboardingUrl URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-    */
-    private ?string $onboardingUrl = null;
-    
-    /**
      * Instantiates a new remoteAssistancePartner and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -73,7 +53,7 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastConnectionDateTime(): ?DateTime {
-        return $this->lastConnectionDateTime;
+        return $this->getBackingStore()->get('lastConnectionDateTime');
     }
 
     /**
@@ -81,7 +61,7 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return RemoteAssistanceOnboardingStatus|null
     */
     public function getOnboardingStatus(): ?RemoteAssistanceOnboardingStatus {
-        return $this->onboardingStatus;
+        return $this->getBackingStore()->get('onboardingStatus');
     }
 
     /**
@@ -89,7 +69,7 @@ class RemoteAssistancePartner extends Entity implements Parsable
      * @return string|null
     */
     public function getOnboardingUrl(): ?string {
-        return $this->onboardingUrl;
+        return $this->getBackingStore()->get('onboardingUrl');
     }
 
     /**
@@ -98,42 +78,42 @@ class RemoteAssistancePartner extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeDateTimeValue('lastConnectionDateTime', $this->lastConnectionDateTime);
-        $writer->writeEnumValue('onboardingStatus', $this->onboardingStatus);
-        $writer->writeStringValue('onboardingUrl', $this->onboardingUrl);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeDateTimeValue('lastConnectionDateTime', $this->getLastConnectionDateTime());
+        $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
+        $writer->writeStringValue('onboardingUrl', $this->getOnboardingUrl());
     }
 
     /**
      * Sets the displayName property value. Display name of the partner.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      *  @param DateTime|null $value Value to set for the lastConnectionDateTime property.
     */
-    public function setLastConnectionDateTime(?DateTime $value ): void {
-        $this->lastConnectionDateTime = $value;
+    public function setLastConnectionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastConnectionDateTime', $value);
     }
 
     /**
      * Sets the onboardingStatus property value. The current TeamViewer connector status
      *  @param RemoteAssistanceOnboardingStatus|null $value Value to set for the onboardingStatus property.
     */
-    public function setOnboardingStatus(?RemoteAssistanceOnboardingStatus $value ): void {
-        $this->onboardingStatus = $value;
+    public function setOnboardingStatus(?RemoteAssistanceOnboardingStatus $value): void {
+        $this->getBackingStore()->set('onboardingStatus', $value);
     }
 
     /**
      * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
      *  @param string|null $value Value to set for the onboardingUrl property.
     */
-    public function setOnboardingUrl(?string $value ): void {
-        $this->onboardingUrl = $value;
+    public function setOnboardingUrl(?string $value): void {
+        $this->getBackingStore()->set('onboardingUrl', $value);
     }
 
 }

@@ -7,68 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MessageSecurityState implements AdditionalDataHolder, Parsable 
+class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $connectingIP The connectingIP property
-    */
-    private ?string $connectingIP = null;
-    
-    /**
-     * @var string|null $deliveryAction The deliveryAction property
-    */
-    private ?string $deliveryAction = null;
-    
-    /**
-     * @var string|null $deliveryLocation The deliveryLocation property
-    */
-    private ?string $deliveryLocation = null;
-    
-    /**
-     * @var string|null $directionality The directionality property
-    */
-    private ?string $directionality = null;
-    
-    /**
-     * @var string|null $internetMessageId The internetMessageId property
-    */
-    private ?string $internetMessageId = null;
-    
-    /**
-     * @var string|null $messageFingerprint The messageFingerprint property
-    */
-    private ?string $messageFingerprint = null;
-    
-    /**
-     * @var DateTime|null $messageReceivedDateTime The messageReceivedDateTime property
-    */
-    private ?DateTime $messageReceivedDateTime = null;
-    
-    /**
-     * @var string|null $messageSubject The messageSubject property
-    */
-    private ?string $messageSubject = null;
-    
-    /**
-     * @var string|null $networkMessageId The networkMessageId property
-    */
-    private ?string $networkMessageId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new messageSecurityState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.messageSecurityState');
     }
@@ -86,8 +40,16 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -95,7 +57,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getConnectingIP(): ?string {
-        return $this->connectingIP;
+        return $this->getBackingStore()->get('connectingIP');
     }
 
     /**
@@ -103,7 +65,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeliveryAction(): ?string {
-        return $this->deliveryAction;
+        return $this->getBackingStore()->get('deliveryAction');
     }
 
     /**
@@ -111,7 +73,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeliveryLocation(): ?string {
-        return $this->deliveryLocation;
+        return $this->getBackingStore()->get('deliveryLocation');
     }
 
     /**
@@ -119,7 +81,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDirectionality(): ?string {
-        return $this->directionality;
+        return $this->getBackingStore()->get('directionality');
     }
 
     /**
@@ -147,7 +109,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getInternetMessageId(): ?string {
-        return $this->internetMessageId;
+        return $this->getBackingStore()->get('internetMessageId');
     }
 
     /**
@@ -155,7 +117,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMessageFingerprint(): ?string {
-        return $this->messageFingerprint;
+        return $this->getBackingStore()->get('messageFingerprint');
     }
 
     /**
@@ -163,7 +125,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getMessageReceivedDateTime(): ?DateTime {
-        return $this->messageReceivedDateTime;
+        return $this->getBackingStore()->get('messageReceivedDateTime');
     }
 
     /**
@@ -171,7 +133,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMessageSubject(): ?string {
-        return $this->messageSubject;
+        return $this->getBackingStore()->get('messageSubject');
     }
 
     /**
@@ -179,7 +141,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getNetworkMessageId(): ?string {
-        return $this->networkMessageId;
+        return $this->getBackingStore()->get('networkMessageId');
     }
 
     /**
@@ -187,7 +149,7 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -195,105 +157,105 @@ class MessageSecurityState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('connectingIP', $this->connectingIP);
-        $writer->writeStringValue('deliveryAction', $this->deliveryAction);
-        $writer->writeStringValue('deliveryLocation', $this->deliveryLocation);
-        $writer->writeStringValue('directionality', $this->directionality);
-        $writer->writeStringValue('internetMessageId', $this->internetMessageId);
-        $writer->writeStringValue('messageFingerprint', $this->messageFingerprint);
-        $writer->writeDateTimeValue('messageReceivedDateTime', $this->messageReceivedDateTime);
-        $writer->writeStringValue('messageSubject', $this->messageSubject);
-        $writer->writeStringValue('networkMessageId', $this->networkMessageId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('connectingIP', $this->getConnectingIP());
+        $writer->writeStringValue('deliveryAction', $this->getDeliveryAction());
+        $writer->writeStringValue('deliveryLocation', $this->getDeliveryLocation());
+        $writer->writeStringValue('directionality', $this->getDirectionality());
+        $writer->writeStringValue('internetMessageId', $this->getInternetMessageId());
+        $writer->writeStringValue('messageFingerprint', $this->getMessageFingerprint());
+        $writer->writeDateTimeValue('messageReceivedDateTime', $this->getMessageReceivedDateTime());
+        $writer->writeStringValue('messageSubject', $this->getMessageSubject());
+        $writer->writeStringValue('networkMessageId', $this->getNetworkMessageId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the connectingIP property value. The connectingIP property
      *  @param string|null $value Value to set for the connectingIP property.
     */
-    public function setConnectingIP(?string $value ): void {
-        $this->connectingIP = $value;
+    public function setConnectingIP(?string $value): void {
+        $this->getBackingStore()->set('connectingIP', $value);
     }
 
     /**
      * Sets the deliveryAction property value. The deliveryAction property
      *  @param string|null $value Value to set for the deliveryAction property.
     */
-    public function setDeliveryAction(?string $value ): void {
-        $this->deliveryAction = $value;
+    public function setDeliveryAction(?string $value): void {
+        $this->getBackingStore()->set('deliveryAction', $value);
     }
 
     /**
      * Sets the deliveryLocation property value. The deliveryLocation property
      *  @param string|null $value Value to set for the deliveryLocation property.
     */
-    public function setDeliveryLocation(?string $value ): void {
-        $this->deliveryLocation = $value;
+    public function setDeliveryLocation(?string $value): void {
+        $this->getBackingStore()->set('deliveryLocation', $value);
     }
 
     /**
      * Sets the directionality property value. The directionality property
      *  @param string|null $value Value to set for the directionality property.
     */
-    public function setDirectionality(?string $value ): void {
-        $this->directionality = $value;
+    public function setDirectionality(?string $value): void {
+        $this->getBackingStore()->set('directionality', $value);
     }
 
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      *  @param string|null $value Value to set for the internetMessageId property.
     */
-    public function setInternetMessageId(?string $value ): void {
-        $this->internetMessageId = $value;
+    public function setInternetMessageId(?string $value): void {
+        $this->getBackingStore()->set('internetMessageId', $value);
     }
 
     /**
      * Sets the messageFingerprint property value. The messageFingerprint property
      *  @param string|null $value Value to set for the messageFingerprint property.
     */
-    public function setMessageFingerprint(?string $value ): void {
-        $this->messageFingerprint = $value;
+    public function setMessageFingerprint(?string $value): void {
+        $this->getBackingStore()->set('messageFingerprint', $value);
     }
 
     /**
      * Sets the messageReceivedDateTime property value. The messageReceivedDateTime property
      *  @param DateTime|null $value Value to set for the messageReceivedDateTime property.
     */
-    public function setMessageReceivedDateTime(?DateTime $value ): void {
-        $this->messageReceivedDateTime = $value;
+    public function setMessageReceivedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('messageReceivedDateTime', $value);
     }
 
     /**
      * Sets the messageSubject property value. The messageSubject property
      *  @param string|null $value Value to set for the messageSubject property.
     */
-    public function setMessageSubject(?string $value ): void {
-        $this->messageSubject = $value;
+    public function setMessageSubject(?string $value): void {
+        $this->getBackingStore()->set('messageSubject', $value);
     }
 
     /**
      * Sets the networkMessageId property value. The networkMessageId property
      *  @param string|null $value Value to set for the networkMessageId property.
     */
-    public function setNetworkMessageId(?string $value ): void {
-        $this->networkMessageId = $value;
+    public function setNetworkMessageId(?string $value): void {
+        $this->getBackingStore()->set('networkMessageId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

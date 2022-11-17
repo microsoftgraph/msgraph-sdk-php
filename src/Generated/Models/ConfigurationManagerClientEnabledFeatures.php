@@ -6,53 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, Parsable 
+class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $compliancePolicy Whether compliance policy is managed by Intune
-    */
-    private ?bool $compliancePolicy = null;
-    
-    /**
-     * @var bool|null $deviceConfiguration Whether device configuration is managed by Intune
-    */
-    private ?bool $deviceConfiguration = null;
-    
-    /**
-     * @var bool|null $inventory Whether inventory is managed by Intune
-    */
-    private ?bool $inventory = null;
-    
-    /**
-     * @var bool|null $modernApps Whether modern application is managed by Intune
-    */
-    private ?bool $modernApps = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $resourceAccess Whether resource access is managed by Intune
-    */
-    private ?bool $resourceAccess = null;
-    
-    /**
-     * @var bool|null $windowsUpdateForBusiness Whether Windows Update for Business is managed by Intune
-    */
-    private ?bool $windowsUpdateForBusiness = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.configurationManagerClientEnabledFeatures');
     }
@@ -70,8 +39,16 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +56,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getCompliancePolicy(): ?bool {
-        return $this->compliancePolicy;
+        return $this->getBackingStore()->get('compliancePolicy');
     }
 
     /**
@@ -87,7 +64,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getDeviceConfiguration(): ?bool {
-        return $this->deviceConfiguration;
+        return $this->getBackingStore()->get('deviceConfiguration');
     }
 
     /**
@@ -112,7 +89,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getInventory(): ?bool {
-        return $this->inventory;
+        return $this->getBackingStore()->get('inventory');
     }
 
     /**
@@ -120,7 +97,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getModernApps(): ?bool {
-        return $this->modernApps;
+        return $this->getBackingStore()->get('modernApps');
     }
 
     /**
@@ -128,7 +105,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -136,7 +113,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getResourceAccess(): ?bool {
-        return $this->resourceAccess;
+        return $this->getBackingStore()->get('resourceAccess');
     }
 
     /**
@@ -144,7 +121,7 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @return bool|null
     */
     public function getWindowsUpdateForBusiness(): ?bool {
-        return $this->windowsUpdateForBusiness;
+        return $this->getBackingStore()->get('windowsUpdateForBusiness');
     }
 
     /**
@@ -152,78 +129,78 @@ class ConfigurationManagerClientEnabledFeatures implements AdditionalDataHolder,
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('compliancePolicy', $this->compliancePolicy);
-        $writer->writeBooleanValue('deviceConfiguration', $this->deviceConfiguration);
-        $writer->writeBooleanValue('inventory', $this->inventory);
-        $writer->writeBooleanValue('modernApps', $this->modernApps);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('resourceAccess', $this->resourceAccess);
-        $writer->writeBooleanValue('windowsUpdateForBusiness', $this->windowsUpdateForBusiness);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('compliancePolicy', $this->getCompliancePolicy());
+        $writer->writeBooleanValue('deviceConfiguration', $this->getDeviceConfiguration());
+        $writer->writeBooleanValue('inventory', $this->getInventory());
+        $writer->writeBooleanValue('modernApps', $this->getModernApps());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('resourceAccess', $this->getResourceAccess());
+        $writer->writeBooleanValue('windowsUpdateForBusiness', $this->getWindowsUpdateForBusiness());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the compliancePolicy property value. Whether compliance policy is managed by Intune
      *  @param bool|null $value Value to set for the compliancePolicy property.
     */
-    public function setCompliancePolicy(?bool $value ): void {
-        $this->compliancePolicy = $value;
+    public function setCompliancePolicy(?bool $value): void {
+        $this->getBackingStore()->set('compliancePolicy', $value);
     }
 
     /**
      * Sets the deviceConfiguration property value. Whether device configuration is managed by Intune
      *  @param bool|null $value Value to set for the deviceConfiguration property.
     */
-    public function setDeviceConfiguration(?bool $value ): void {
-        $this->deviceConfiguration = $value;
+    public function setDeviceConfiguration(?bool $value): void {
+        $this->getBackingStore()->set('deviceConfiguration', $value);
     }
 
     /**
      * Sets the inventory property value. Whether inventory is managed by Intune
      *  @param bool|null $value Value to set for the inventory property.
     */
-    public function setInventory(?bool $value ): void {
-        $this->inventory = $value;
+    public function setInventory(?bool $value): void {
+        $this->getBackingStore()->set('inventory', $value);
     }
 
     /**
      * Sets the modernApps property value. Whether modern application is managed by Intune
      *  @param bool|null $value Value to set for the modernApps property.
     */
-    public function setModernApps(?bool $value ): void {
-        $this->modernApps = $value;
+    public function setModernApps(?bool $value): void {
+        $this->getBackingStore()->set('modernApps', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the resourceAccess property value. Whether resource access is managed by Intune
      *  @param bool|null $value Value to set for the resourceAccess property.
     */
-    public function setResourceAccess(?bool $value ): void {
-        $this->resourceAccess = $value;
+    public function setResourceAccess(?bool $value): void {
+        $this->getBackingStore()->set('resourceAccess', $value);
     }
 
     /**
      * Sets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
      *  @param bool|null $value Value to set for the windowsUpdateForBusiness property.
     */
-    public function setWindowsUpdateForBusiness(?bool $value ): void {
-        $this->windowsUpdateForBusiness = $value;
+    public function setWindowsUpdateForBusiness(?bool $value): void {
+        $this->getBackingStore()->set('windowsUpdateForBusiness', $value);
     }
 
 }

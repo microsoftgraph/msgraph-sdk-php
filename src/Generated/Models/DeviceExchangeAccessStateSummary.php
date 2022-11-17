@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable 
+class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $allowedDeviceCount Total count of devices with Exchange Access State: Allowed.
-    */
-    private ?int $allowedDeviceCount = null;
-    
-    /**
-     * @var int|null $blockedDeviceCount Total count of devices with Exchange Access State: Blocked.
-    */
-    private ?int $blockedDeviceCount = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $quarantinedDeviceCount Total count of devices with Exchange Access State: Quarantined.
-    */
-    private ?int $quarantinedDeviceCount = null;
-    
-    /**
-     * @var int|null $unavailableDeviceCount Total count of devices for which no Exchange Access State could be found.
-    */
-    private ?int $unavailableDeviceCount = null;
-    
-    /**
-     * @var int|null $unknownDeviceCount Total count of devices with Exchange Access State: Unknown.
-    */
-    private ?int $unknownDeviceCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceExchangeAccessStateSummary and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.deviceExchangeAccessStateSummary');
     }
@@ -65,8 +39,8 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -74,7 +48,15 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAllowedDeviceCount(): ?int {
-        return $this->allowedDeviceCount;
+        return $this->getBackingStore()->get('allowedDeviceCount');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -82,7 +64,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getBlockedDeviceCount(): ?int {
-        return $this->blockedDeviceCount;
+        return $this->getBackingStore()->get('blockedDeviceCount');
     }
 
     /**
@@ -106,7 +88,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -114,7 +96,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getQuarantinedDeviceCount(): ?int {
-        return $this->quarantinedDeviceCount;
+        return $this->getBackingStore()->get('quarantinedDeviceCount');
     }
 
     /**
@@ -122,7 +104,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getUnavailableDeviceCount(): ?int {
-        return $this->unavailableDeviceCount;
+        return $this->getBackingStore()->get('unavailableDeviceCount');
     }
 
     /**
@@ -130,7 +112,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->unknownDeviceCount;
+        return $this->getBackingStore()->get('unknownDeviceCount');
     }
 
     /**
@@ -138,69 +120,69 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('allowedDeviceCount', $this->allowedDeviceCount);
-        $writer->writeIntegerValue('blockedDeviceCount', $this->blockedDeviceCount);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('quarantinedDeviceCount', $this->quarantinedDeviceCount);
-        $writer->writeIntegerValue('unavailableDeviceCount', $this->unavailableDeviceCount);
-        $writer->writeIntegerValue('unknownDeviceCount', $this->unknownDeviceCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('allowedDeviceCount', $this->getAllowedDeviceCount());
+        $writer->writeIntegerValue('blockedDeviceCount', $this->getBlockedDeviceCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('quarantinedDeviceCount', $this->getQuarantinedDeviceCount());
+        $writer->writeIntegerValue('unavailableDeviceCount', $this->getUnavailableDeviceCount());
+        $writer->writeIntegerValue('unknownDeviceCount', $this->getUnknownDeviceCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowedDeviceCount property value. Total count of devices with Exchange Access State: Allowed.
      *  @param int|null $value Value to set for the allowedDeviceCount property.
     */
-    public function setAllowedDeviceCount(?int $value ): void {
-        $this->allowedDeviceCount = $value;
+    public function setAllowedDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('allowedDeviceCount', $value);
     }
 
     /**
      * Sets the blockedDeviceCount property value. Total count of devices with Exchange Access State: Blocked.
      *  @param int|null $value Value to set for the blockedDeviceCount property.
     */
-    public function setBlockedDeviceCount(?int $value ): void {
-        $this->blockedDeviceCount = $value;
+    public function setBlockedDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('blockedDeviceCount', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the quarantinedDeviceCount property value. Total count of devices with Exchange Access State: Quarantined.
      *  @param int|null $value Value to set for the quarantinedDeviceCount property.
     */
-    public function setQuarantinedDeviceCount(?int $value ): void {
-        $this->quarantinedDeviceCount = $value;
+    public function setQuarantinedDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('quarantinedDeviceCount', $value);
     }
 
     /**
      * Sets the unavailableDeviceCount property value. Total count of devices for which no Exchange Access State could be found.
      *  @param int|null $value Value to set for the unavailableDeviceCount property.
     */
-    public function setUnavailableDeviceCount(?int $value ): void {
-        $this->unavailableDeviceCount = $value;
+    public function setUnavailableDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('unavailableDeviceCount', $value);
     }
 
     /**
      * Sets the unknownDeviceCount property value. Total count of devices with Exchange Access State: Unknown.
      *  @param int|null $value Value to set for the unknownDeviceCount property.
     */
-    public function setUnknownDeviceCount(?int $value ): void {
-        $this->unknownDeviceCount = $value;
+    public function setUnknownDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('unknownDeviceCount', $value);
     }
 
 }

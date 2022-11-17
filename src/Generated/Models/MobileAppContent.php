@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MobileAppContent extends Entity implements Parsable 
 {
     /**
-     * @var array<MobileAppContentFile>|null $files The list of files for this app content version.
-    */
-    private ?array $files = null;
-    
-    /**
      * Instantiates a new mobileAppContent and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class MobileAppContent extends Entity implements Parsable
      * @return array<MobileAppContentFile>|null
     */
     public function getFiles(): ?array {
-        return $this->files;
+        return $this->getBackingStore()->get('files');
     }
 
     /**
@@ -55,15 +50,15 @@ class MobileAppContent extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('files', $this->files);
+        $writer->writeCollectionOfObjectValues('files', $this->getFiles());
     }
 
     /**
      * Sets the files property value. The list of files for this app content version.
      *  @param array<MobileAppContentFile>|null $value Value to set for the files property.
     */
-    public function setFiles(?array $value ): void {
-        $this->files = $value;
+    public function setFiles(?array $value): void {
+        $this->getBackingStore()->set('files', $value);
     }
 
 }

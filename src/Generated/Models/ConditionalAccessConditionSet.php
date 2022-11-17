@@ -6,73 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable 
+class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ConditionalAccessApplications|null $applications Applications and user actions included in and excluded from the policy. Required.
-    */
-    private ?ConditionalAccessApplications $applications = null;
-    
-    /**
-     * @var ConditionalAccessClientApplications|null $clientApplications Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
-    */
-    private ?ConditionalAccessClientApplications $clientApplications = null;
-    
-    /**
-     * @var array<ConditionalAccessClientApp>|null $clientAppTypes Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
-    */
-    private ?array $clientAppTypes = null;
-    
-    /**
-     * @var ConditionalAccessDevices|null $devices Devices in the policy.
-    */
-    private ?ConditionalAccessDevices $devices = null;
-    
-    /**
-     * @var ConditionalAccessLocations|null $locations Locations included in and excluded from the policy.
-    */
-    private ?ConditionalAccessLocations $locations = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var ConditionalAccessPlatforms|null $platforms Platforms included in and excluded from the policy.
-    */
-    private ?ConditionalAccessPlatforms $platforms = null;
-    
-    /**
-     * @var array<RiskLevel>|null $servicePrincipalRiskLevels The servicePrincipalRiskLevels property
-    */
-    private ?array $servicePrincipalRiskLevels = null;
-    
-    /**
-     * @var array<RiskLevel>|null $signInRiskLevels Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-    */
-    private ?array $signInRiskLevels = null;
-    
-    /**
-     * @var array<RiskLevel>|null $userRiskLevels User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
-    */
-    private ?array $userRiskLevels = null;
-    
-    /**
-     * @var ConditionalAccessUsers|null $users Users, groups, and roles included in and excluded from the policy. Required.
-    */
-    private ?ConditionalAccessUsers $users = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.conditionalAccessConditionSet');
     }
@@ -90,8 +39,8 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -99,7 +48,15 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessApplications|null
     */
     public function getApplications(): ?ConditionalAccessApplications {
-        return $this->applications;
+        return $this->getBackingStore()->get('applications');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -107,7 +64,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessClientApplications|null
     */
     public function getClientApplications(): ?ConditionalAccessClientApplications {
-        return $this->clientApplications;
+        return $this->getBackingStore()->get('clientApplications');
     }
 
     /**
@@ -115,7 +72,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return array<ConditionalAccessClientApp>|null
     */
     public function getClientAppTypes(): ?array {
-        return $this->clientAppTypes;
+        return $this->getBackingStore()->get('clientAppTypes');
     }
 
     /**
@@ -123,7 +80,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessDevices|null
     */
     public function getDevices(): ?ConditionalAccessDevices {
-        return $this->devices;
+        return $this->getBackingStore()->get('devices');
     }
 
     /**
@@ -152,7 +109,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessLocations|null
     */
     public function getLocations(): ?ConditionalAccessLocations {
-        return $this->locations;
+        return $this->getBackingStore()->get('locations');
     }
 
     /**
@@ -160,7 +117,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -168,7 +125,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessPlatforms|null
     */
     public function getPlatforms(): ?ConditionalAccessPlatforms {
-        return $this->platforms;
+        return $this->getBackingStore()->get('platforms');
     }
 
     /**
@@ -176,7 +133,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return array<RiskLevel>|null
     */
     public function getServicePrincipalRiskLevels(): ?array {
-        return $this->servicePrincipalRiskLevels;
+        return $this->getBackingStore()->get('servicePrincipalRiskLevels');
     }
 
     /**
@@ -184,7 +141,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return array<RiskLevel>|null
     */
     public function getSignInRiskLevels(): ?array {
-        return $this->signInRiskLevels;
+        return $this->getBackingStore()->get('signInRiskLevels');
     }
 
     /**
@@ -192,7 +149,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return array<RiskLevel>|null
     */
     public function getUserRiskLevels(): ?array {
-        return $this->userRiskLevels;
+        return $this->getBackingStore()->get('userRiskLevels');
     }
 
     /**
@@ -200,7 +157,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessUsers|null
     */
     public function getUsers(): ?ConditionalAccessUsers {
-        return $this->users;
+        return $this->getBackingStore()->get('users');
     }
 
     /**
@@ -208,114 +165,114 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('applications', $this->applications);
-        $writer->writeObjectValue('clientApplications', $this->clientApplications);
-        $writer->writeCollectionOfEnumValues('clientAppTypes', $this->clientAppTypes);
-        $writer->writeObjectValue('devices', $this->devices);
-        $writer->writeObjectValue('locations', $this->locations);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('platforms', $this->platforms);
-        $writer->writeCollectionOfEnumValues('servicePrincipalRiskLevels', $this->servicePrincipalRiskLevels);
-        $writer->writeCollectionOfEnumValues('signInRiskLevels', $this->signInRiskLevels);
-        $writer->writeCollectionOfEnumValues('userRiskLevels', $this->userRiskLevels);
-        $writer->writeObjectValue('users', $this->users);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('applications', $this->getApplications());
+        $writer->writeObjectValue('clientApplications', $this->getClientApplications());
+        $writer->writeCollectionOfEnumValues('clientAppTypes', $this->getClientAppTypes());
+        $writer->writeObjectValue('devices', $this->getDevices());
+        $writer->writeObjectValue('locations', $this->getLocations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('platforms', $this->getPlatforms());
+        $writer->writeCollectionOfEnumValues('servicePrincipalRiskLevels', $this->getServicePrincipalRiskLevels());
+        $writer->writeCollectionOfEnumValues('signInRiskLevels', $this->getSignInRiskLevels());
+        $writer->writeCollectionOfEnumValues('userRiskLevels', $this->getUserRiskLevels());
+        $writer->writeObjectValue('users', $this->getUsers());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the applications property value. Applications and user actions included in and excluded from the policy. Required.
      *  @param ConditionalAccessApplications|null $value Value to set for the applications property.
     */
-    public function setApplications(?ConditionalAccessApplications $value ): void {
-        $this->applications = $value;
+    public function setApplications(?ConditionalAccessApplications $value): void {
+        $this->getBackingStore()->set('applications', $value);
     }
 
     /**
      * Sets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
      *  @param ConditionalAccessClientApplications|null $value Value to set for the clientApplications property.
     */
-    public function setClientApplications(?ConditionalAccessClientApplications $value ): void {
-        $this->clientApplications = $value;
+    public function setClientApplications(?ConditionalAccessClientApplications $value): void {
+        $this->getBackingStore()->set('clientApplications', $value);
     }
 
     /**
      * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
      *  @param array<ConditionalAccessClientApp>|null $value Value to set for the clientAppTypes property.
     */
-    public function setClientAppTypes(?array $value ): void {
-        $this->clientAppTypes = $value;
+    public function setClientAppTypes(?array $value): void {
+        $this->getBackingStore()->set('clientAppTypes', $value);
     }
 
     /**
      * Sets the devices property value. Devices in the policy.
      *  @param ConditionalAccessDevices|null $value Value to set for the devices property.
     */
-    public function setDevices(?ConditionalAccessDevices $value ): void {
-        $this->devices = $value;
+    public function setDevices(?ConditionalAccessDevices $value): void {
+        $this->getBackingStore()->set('devices', $value);
     }
 
     /**
      * Sets the locations property value. Locations included in and excluded from the policy.
      *  @param ConditionalAccessLocations|null $value Value to set for the locations property.
     */
-    public function setLocations(?ConditionalAccessLocations $value ): void {
-        $this->locations = $value;
+    public function setLocations(?ConditionalAccessLocations $value): void {
+        $this->getBackingStore()->set('locations', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the platforms property value. Platforms included in and excluded from the policy.
      *  @param ConditionalAccessPlatforms|null $value Value to set for the platforms property.
     */
-    public function setPlatforms(?ConditionalAccessPlatforms $value ): void {
-        $this->platforms = $value;
+    public function setPlatforms(?ConditionalAccessPlatforms $value): void {
+        $this->getBackingStore()->set('platforms', $value);
     }
 
     /**
      * Sets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
      *  @param array<RiskLevel>|null $value Value to set for the servicePrincipalRiskLevels property.
     */
-    public function setServicePrincipalRiskLevels(?array $value ): void {
-        $this->servicePrincipalRiskLevels = $value;
+    public function setServicePrincipalRiskLevels(?array $value): void {
+        $this->getBackingStore()->set('servicePrincipalRiskLevels', $value);
     }
 
     /**
      * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      *  @param array<RiskLevel>|null $value Value to set for the signInRiskLevels property.
     */
-    public function setSignInRiskLevels(?array $value ): void {
-        $this->signInRiskLevels = $value;
+    public function setSignInRiskLevels(?array $value): void {
+        $this->getBackingStore()->set('signInRiskLevels', $value);
     }
 
     /**
      * Sets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      *  @param array<RiskLevel>|null $value Value to set for the userRiskLevels property.
     */
-    public function setUserRiskLevels(?array $value ): void {
-        $this->userRiskLevels = $value;
+    public function setUserRiskLevels(?array $value): void {
+        $this->getBackingStore()->set('userRiskLevels', $value);
     }
 
     /**
      * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
      *  @param ConditionalAccessUsers|null $value Value to set for the users property.
     */
-    public function setUsers(?ConditionalAccessUsers $value ): void {
-        $this->users = $value;
+    public function setUsers(?ConditionalAccessUsers $value): void {
+        $this->getBackingStore()->set('users', $value);
     }
 
 }

@@ -6,73 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable 
+class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $callChainId A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-    */
-    private ?string $callChainId = null;
-    
-    /**
-     * @var string|null $cloudServiceDeploymentEnvironment A geo-region where the service is deployed, such as ProdNoam.
-    */
-    private ?string $cloudServiceDeploymentEnvironment = null;
-    
-    /**
-     * @var string|null $cloudServiceDeploymentId A unique deployment identifier assigned by Azure.
-    */
-    private ?string $cloudServiceDeploymentId = null;
-    
-    /**
-     * @var string|null $cloudServiceInstanceName The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-    */
-    private ?string $cloudServiceInstanceName = null;
-    
-    /**
-     * @var string|null $cloudServiceName The Azure deployed cloud service name, such as contoso.cloudapp.net.
-    */
-    private ?string $cloudServiceName = null;
-    
-    /**
-     * @var string|null $deviceDescription Any additional description, such as VTC Bldg 30/21.
-    */
-    private ?string $deviceDescription = null;
-    
-    /**
-     * @var string|null $deviceName The user media agent name, such as Cisco SX80.
-    */
-    private ?string $deviceName = null;
-    
-    /**
-     * @var string|null $mediaLegId A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-    */
-    private ?string $mediaLegId = null;
-    
-    /**
-     * @var array<TeleconferenceDeviceMediaQuality>|null $mediaQualityList The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-    */
-    private ?array $mediaQualityList = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $participantId A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-    */
-    private ?string $participantId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teleconferenceDeviceQuality and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.teleconferenceDeviceQuality');
     }
@@ -90,8 +39,16 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -99,7 +56,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallChainId(): ?string {
-        return $this->callChainId;
+        return $this->getBackingStore()->get('callChainId');
     }
 
     /**
@@ -107,7 +64,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCloudServiceDeploymentEnvironment(): ?string {
-        return $this->cloudServiceDeploymentEnvironment;
+        return $this->getBackingStore()->get('cloudServiceDeploymentEnvironment');
     }
 
     /**
@@ -115,7 +72,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCloudServiceDeploymentId(): ?string {
-        return $this->cloudServiceDeploymentId;
+        return $this->getBackingStore()->get('cloudServiceDeploymentId');
     }
 
     /**
@@ -123,7 +80,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCloudServiceInstanceName(): ?string {
-        return $this->cloudServiceInstanceName;
+        return $this->getBackingStore()->get('cloudServiceInstanceName');
     }
 
     /**
@@ -131,7 +88,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCloudServiceName(): ?string {
-        return $this->cloudServiceName;
+        return $this->getBackingStore()->get('cloudServiceName');
     }
 
     /**
@@ -139,7 +96,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeviceDescription(): ?string {
-        return $this->deviceDescription;
+        return $this->getBackingStore()->get('deviceDescription');
     }
 
     /**
@@ -147,7 +104,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->deviceName;
+        return $this->getBackingStore()->get('deviceName');
     }
 
     /**
@@ -176,7 +133,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMediaLegId(): ?string {
-        return $this->mediaLegId;
+        return $this->getBackingStore()->get('mediaLegId');
     }
 
     /**
@@ -184,7 +141,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return array<TeleconferenceDeviceMediaQuality>|null
     */
     public function getMediaQualityList(): ?array {
-        return $this->mediaQualityList;
+        return $this->getBackingStore()->get('mediaQualityList');
     }
 
     /**
@@ -192,7 +149,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -200,7 +157,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getParticipantId(): ?string {
-        return $this->participantId;
+        return $this->getBackingStore()->get('participantId');
     }
 
     /**
@@ -208,114 +165,114 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('callChainId', $this->callChainId);
-        $writer->writeStringValue('cloudServiceDeploymentEnvironment', $this->cloudServiceDeploymentEnvironment);
-        $writer->writeStringValue('cloudServiceDeploymentId', $this->cloudServiceDeploymentId);
-        $writer->writeStringValue('cloudServiceInstanceName', $this->cloudServiceInstanceName);
-        $writer->writeStringValue('cloudServiceName', $this->cloudServiceName);
-        $writer->writeStringValue('deviceDescription', $this->deviceDescription);
-        $writer->writeStringValue('deviceName', $this->deviceName);
-        $writer->writeStringValue('mediaLegId', $this->mediaLegId);
-        $writer->writeCollectionOfObjectValues('mediaQualityList', $this->mediaQualityList);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('participantId', $this->participantId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('callChainId', $this->getCallChainId());
+        $writer->writeStringValue('cloudServiceDeploymentEnvironment', $this->getCloudServiceDeploymentEnvironment());
+        $writer->writeStringValue('cloudServiceDeploymentId', $this->getCloudServiceDeploymentId());
+        $writer->writeStringValue('cloudServiceInstanceName', $this->getCloudServiceInstanceName());
+        $writer->writeStringValue('cloudServiceName', $this->getCloudServiceName());
+        $writer->writeStringValue('deviceDescription', $this->getDeviceDescription());
+        $writer->writeStringValue('deviceName', $this->getDeviceName());
+        $writer->writeStringValue('mediaLegId', $this->getMediaLegId());
+        $writer->writeCollectionOfObjectValues('mediaQualityList', $this->getMediaQualityList());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('participantId', $this->getParticipantId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      *  @param string|null $value Value to set for the callChainId property.
     */
-    public function setCallChainId(?string $value ): void {
-        $this->callChainId = $value;
+    public function setCallChainId(?string $value): void {
+        $this->getBackingStore()->set('callChainId', $value);
     }
 
     /**
      * Sets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
      *  @param string|null $value Value to set for the cloudServiceDeploymentEnvironment property.
     */
-    public function setCloudServiceDeploymentEnvironment(?string $value ): void {
-        $this->cloudServiceDeploymentEnvironment = $value;
+    public function setCloudServiceDeploymentEnvironment(?string $value): void {
+        $this->getBackingStore()->set('cloudServiceDeploymentEnvironment', $value);
     }
 
     /**
      * Sets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
      *  @param string|null $value Value to set for the cloudServiceDeploymentId property.
     */
-    public function setCloudServiceDeploymentId(?string $value ): void {
-        $this->cloudServiceDeploymentId = $value;
+    public function setCloudServiceDeploymentId(?string $value): void {
+        $this->getBackingStore()->set('cloudServiceDeploymentId', $value);
     }
 
     /**
      * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
      *  @param string|null $value Value to set for the cloudServiceInstanceName property.
     */
-    public function setCloudServiceInstanceName(?string $value ): void {
-        $this->cloudServiceInstanceName = $value;
+    public function setCloudServiceInstanceName(?string $value): void {
+        $this->getBackingStore()->set('cloudServiceInstanceName', $value);
     }
 
     /**
      * Sets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
      *  @param string|null $value Value to set for the cloudServiceName property.
     */
-    public function setCloudServiceName(?string $value ): void {
-        $this->cloudServiceName = $value;
+    public function setCloudServiceName(?string $value): void {
+        $this->getBackingStore()->set('cloudServiceName', $value);
     }
 
     /**
      * Sets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
      *  @param string|null $value Value to set for the deviceDescription property.
     */
-    public function setDeviceDescription(?string $value ): void {
-        $this->deviceDescription = $value;
+    public function setDeviceDescription(?string $value): void {
+        $this->getBackingStore()->set('deviceDescription', $value);
     }
 
     /**
      * Sets the deviceName property value. The user media agent name, such as Cisco SX80.
      *  @param string|null $value Value to set for the deviceName property.
     */
-    public function setDeviceName(?string $value ): void {
-        $this->deviceName = $value;
+    public function setDeviceName(?string $value): void {
+        $this->getBackingStore()->set('deviceName', $value);
     }
 
     /**
      * Sets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
      *  @param string|null $value Value to set for the mediaLegId property.
     */
-    public function setMediaLegId(?string $value ): void {
-        $this->mediaLegId = $value;
+    public function setMediaLegId(?string $value): void {
+        $this->getBackingStore()->set('mediaLegId', $value);
     }
 
     /**
      * Sets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
      *  @param array<TeleconferenceDeviceMediaQuality>|null $value Value to set for the mediaQualityList property.
     */
-    public function setMediaQualityList(?array $value ): void {
-        $this->mediaQualityList = $value;
+    public function setMediaQualityList(?array $value): void {
+        $this->getBackingStore()->set('mediaQualityList', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
      *  @param string|null $value Value to set for the participantId property.
     */
-    public function setParticipantId(?string $value ): void {
-        $this->participantId = $value;
+    public function setParticipantId(?string $value): void {
+        $this->getBackingStore()->set('participantId', $value);
     }
 
 }

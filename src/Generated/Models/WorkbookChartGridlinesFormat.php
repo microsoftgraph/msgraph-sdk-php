@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartGridlinesFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartLineFormat|null $line Represents chart line formatting. Read-only.
-    */
-    private ?WorkbookChartLineFormat $line = null;
-    
-    /**
      * Instantiates a new workbookChartGridlinesFormat and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class WorkbookChartGridlinesFormat extends Entity implements Parsable
      * @return WorkbookChartLineFormat|null
     */
     public function getLine(): ?WorkbookChartLineFormat {
-        return $this->line;
+        return $this->getBackingStore()->get('line');
     }
 
     /**
@@ -55,15 +50,15 @@ class WorkbookChartGridlinesFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('line', $this->line);
+        $writer->writeObjectValue('line', $this->getLine());
     }
 
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
      *  @param WorkbookChartLineFormat|null $value Value to set for the line property.
     */
-    public function setLine(?WorkbookChartLineFormat $value ): void {
-        $this->line = $value;
+    public function setLine(?WorkbookChartLineFormat $value): void {
+        $this->getBackingStore()->set('line', $value);
     }
 
 }

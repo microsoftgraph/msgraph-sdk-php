@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConditionalAccessLocations implements AdditionalDataHolder, Parsable 
+class ConditionalAccessLocations implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $excludeLocations Location IDs excluded from scope of policy.
-    */
-    private ?array $excludeLocations = null;
-    
-    /**
-     * @var array<string>|null $includeLocations Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
-    */
-    private ?array $includeLocations = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new conditionalAccessLocations and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.conditionalAccessLocations');
     }
@@ -50,8 +39,16 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExcludeLocations(): ?array {
-        return $this->excludeLocations;
+        return $this->getBackingStore()->get('excludeLocations');
     }
 
     /**
@@ -80,7 +77,7 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getIncludeLocations(): ?array {
-        return $this->includeLocations;
+        return $this->getBackingStore()->get('includeLocations');
     }
 
     /**
@@ -88,7 +85,7 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +93,42 @@ class ConditionalAccessLocations implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('excludeLocations', $this->excludeLocations);
-        $writer->writeCollectionOfPrimitiveValues('includeLocations', $this->includeLocations);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('excludeLocations', $this->getExcludeLocations());
+        $writer->writeCollectionOfPrimitiveValues('includeLocations', $this->getIncludeLocations());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the excludeLocations property value. Location IDs excluded from scope of policy.
      *  @param array<string>|null $value Value to set for the excludeLocations property.
     */
-    public function setExcludeLocations(?array $value ): void {
-        $this->excludeLocations = $value;
+    public function setExcludeLocations(?array $value): void {
+        $this->getBackingStore()->set('excludeLocations', $value);
     }
 
     /**
      * Sets the includeLocations property value. Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
      *  @param array<string>|null $value Value to set for the includeLocations property.
     */
-    public function setIncludeLocations(?array $value ): void {
-        $this->includeLocations = $value;
+    public function setIncludeLocations(?array $value): void {
+        $this->getBackingStore()->set('includeLocations', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

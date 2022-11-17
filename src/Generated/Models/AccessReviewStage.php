@@ -10,36 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewStage extends Entity implements Parsable 
 {
     /**
-     * @var array<AccessReviewInstanceDecisionItem>|null $decisions Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
-    */
-    private ?array $decisions = null;
-    
-    /**
-     * @var DateTime|null $endDateTime The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var array<AccessReviewReviewerScope>|null $fallbackReviewers This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
-    */
-    private ?array $fallbackReviewers = null;
-    
-    /**
-     * @var array<AccessReviewReviewerScope>|null $reviewers This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
-    */
-    private ?array $reviewers = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $status Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
-    */
-    private ?string $status = null;
-    
-    /**
      * Instantiates a new accessReviewStage and sets the default values.
     */
     public function __construct() {
@@ -61,7 +31,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewInstanceDecisionItem>|null
     */
     public function getDecisions(): ?array {
-        return $this->decisions;
+        return $this->getBackingStore()->get('decisions');
     }
 
     /**
@@ -69,7 +39,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -77,7 +47,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getFallbackReviewers(): ?array {
-        return $this->fallbackReviewers;
+        return $this->getBackingStore()->get('fallbackReviewers');
     }
 
     /**
@@ -101,7 +71,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
-        return $this->reviewers;
+        return $this->getBackingStore()->get('reviewers');
     }
 
     /**
@@ -109,7 +79,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -117,7 +87,7 @@ class AccessReviewStage extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -126,60 +96,60 @@ class AccessReviewStage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('decisions', $this->decisions);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->fallbackReviewers);
-        $writer->writeCollectionOfObjectValues('reviewers', $this->reviewers);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('status', $this->status);
+        $writer->writeCollectionOfObjectValues('decisions', $this->getDecisions());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->getFallbackReviewers());
+        $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('status', $this->getStatus());
     }
 
     /**
      * Sets the decisions property value. Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
      *  @param array<AccessReviewInstanceDecisionItem>|null $value Value to set for the decisions property.
     */
-    public function setDecisions(?array $value ): void {
-        $this->decisions = $value;
+    public function setDecisions(?array $value): void {
+        $this->getBackingStore()->set('decisions', $value);
     }
 
     /**
      * Sets the endDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to end. This property is the cumulative total of the durationInDays for all stages. Read-only.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the fallbackReviewers property.
     */
-    public function setFallbackReviewers(?array $value ): void {
-        $this->fallbackReviewers = $value;
+    public function setFallbackReviewers(?array $value): void {
+        $this->getBackingStore()->set('fallbackReviewers', $value);
     }
 
     /**
      * Sets the reviewers property value. This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
     */
-    public function setReviewers(?array $value ): void {
-        $this->reviewers = $value;
+    public function setReviewers(?array $value): void {
+        $this->getBackingStore()->set('reviewers', $value);
     }
 
     /**
      * Sets the startDateTime property value. The date and time in ISO 8601 format and UTC time when the review stage is scheduled to start. Read-only.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the status property value. Specifies the status of an accessReviewStage. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $orderby, and $filter (eq only). Read-only.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

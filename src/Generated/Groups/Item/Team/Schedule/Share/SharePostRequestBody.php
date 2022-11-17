@@ -7,33 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SharePostRequestBody implements AdditionalDataHolder, Parsable 
+class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DateTime|null $endDateTime The endDateTime property
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var bool|null $notifyTeam The notifyTeam property
-    */
-    private ?bool $notifyTeam = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The startDateTime property
-    */
-    private ?DateTime $startDateTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new sharePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -50,8 +39,16 @@ class SharePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class SharePostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -80,7 +77,7 @@ class SharePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getNotifyTeam(): ?bool {
-        return $this->notifyTeam;
+        return $this->getBackingStore()->get('notifyTeam');
     }
 
     /**
@@ -88,7 +85,7 @@ class SharePostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -96,42 +93,42 @@ class SharePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeBooleanValue('notifyTeam', $this->notifyTeam);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeBooleanValue('notifyTeam', $this->getNotifyTeam());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the endDateTime property value. The endDateTime property
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the notifyTeam property value. The notifyTeam property
      *  @param bool|null $value Value to set for the notifyTeam property.
     */
-    public function setNotifyTeam(?bool $value ): void {
-        $this->notifyTeam = $value;
+    public function setNotifyTeam(?bool $value): void {
+        $this->getBackingStore()->set('notifyTeam', $value);
     }
 
     /**
      * Sets the startDateTime property value. The startDateTime property
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
 }

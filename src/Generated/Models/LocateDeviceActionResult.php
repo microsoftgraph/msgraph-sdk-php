@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocateDeviceActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * @var DeviceGeoLocation|null $deviceLocation device location
-    */
-    private ?DeviceGeoLocation $deviceLocation = null;
-    
-    /**
      * Instantiates a new LocateDeviceActionResult and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class LocateDeviceActionResult extends DeviceActionResult implements Parsable
      * @return DeviceGeoLocation|null
     */
     public function getDeviceLocation(): ?DeviceGeoLocation {
-        return $this->deviceLocation;
+        return $this->getBackingStore()->get('deviceLocation');
     }
 
     /**
@@ -55,15 +50,15 @@ class LocateDeviceActionResult extends DeviceActionResult implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('deviceLocation', $this->deviceLocation);
+        $writer->writeObjectValue('deviceLocation', $this->getDeviceLocation());
     }
 
     /**
      * Sets the deviceLocation property value. device location
      *  @param DeviceGeoLocation|null $value Value to set for the deviceLocation property.
     */
-    public function setDeviceLocation(?DeviceGeoLocation $value ): void {
-        $this->deviceLocation = $value;
+    public function setDeviceLocation(?DeviceGeoLocation $value): void {
+        $this->getBackingStore()->set('deviceLocation', $value);
     }
 
 }

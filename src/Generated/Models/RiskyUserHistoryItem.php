@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskyUserHistoryItem extends RiskyUser implements Parsable 
 {
     /**
-     * @var RiskUserActivity|null $activity The activity related to user risk level change.
-    */
-    private ?RiskUserActivity $activity = null;
-    
-    /**
-     * @var string|null $initiatedBy The ID of actor that does the operation.
-    */
-    private ?string $initiatedBy = null;
-    
-    /**
-     * @var string|null $userId The ID of the user.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new riskyUserHistoryItem and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return RiskUserActivity|null
     */
     public function getActivity(): ?RiskUserActivity {
-        return $this->activity;
+        return $this->getBackingStore()->get('activity');
     }
 
     /**
@@ -66,7 +51,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return string|null
     */
     public function getInitiatedBy(): ?string {
-        return $this->initiatedBy;
+        return $this->getBackingStore()->get('initiatedBy');
     }
 
     /**
@@ -74,7 +59,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -83,33 +68,33 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('activity', $this->activity);
-        $writer->writeStringValue('initiatedBy', $this->initiatedBy);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeObjectValue('activity', $this->getActivity());
+        $writer->writeStringValue('initiatedBy', $this->getInitiatedBy());
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the activity property value. The activity related to user risk level change.
      *  @param RiskUserActivity|null $value Value to set for the activity property.
     */
-    public function setActivity(?RiskUserActivity $value ): void {
-        $this->activity = $value;
+    public function setActivity(?RiskUserActivity $value): void {
+        $this->getBackingStore()->set('activity', $value);
     }
 
     /**
      * Sets the initiatedBy property value. The ID of actor that does the operation.
      *  @param string|null $value Value to set for the initiatedBy property.
     */
-    public function setInitiatedBy(?string $value ): void {
-        $this->initiatedBy = $value;
+    public function setInitiatedBy(?string $value): void {
+        $this->getBackingStore()->set('initiatedBy', $value);
     }
 
     /**
      * Sets the userId property value. The ID of the user.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

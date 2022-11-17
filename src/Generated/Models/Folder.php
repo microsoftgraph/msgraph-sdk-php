@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Folder implements AdditionalDataHolder, Parsable 
+class Folder implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $childCount Number of children contained immediately within this container.
-    */
-    private ?int $childCount = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var FolderView|null $view A collection of properties defining the recommended view for the folder.
-    */
-    private ?FolderView $view = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new folder and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.folder');
     }
@@ -50,8 +39,16 @@ class Folder implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class Folder implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getChildCount(): ?int {
-        return $this->childCount;
+        return $this->getBackingStore()->get('childCount');
     }
 
     /**
@@ -80,7 +77,7 @@ class Folder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class Folder implements AdditionalDataHolder, Parsable
      * @return FolderView|null
     */
     public function getView(): ?FolderView {
-        return $this->view;
+        return $this->getBackingStore()->get('view');
     }
 
     /**
@@ -96,42 +93,42 @@ class Folder implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('childCount', $this->childCount);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('view', $this->view);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('childCount', $this->getChildCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('view', $this->getView());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the childCount property value. Number of children contained immediately within this container.
      *  @param int|null $value Value to set for the childCount property.
     */
-    public function setChildCount(?int $value ): void {
-        $this->childCount = $value;
+    public function setChildCount(?int $value): void {
+        $this->getBackingStore()->set('childCount', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the view property value. A collection of properties defining the recommended view for the folder.
      *  @param FolderView|null $value Value to set for the view property.
     */
-    public function setView(?FolderView $value ): void {
-        $this->view = $value;
+    public function setView(?FolderView $value): void {
+        $this->getBackingStore()->set('view', $value);
     }
 
 }

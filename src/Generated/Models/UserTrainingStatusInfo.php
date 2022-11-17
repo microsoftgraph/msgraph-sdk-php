@@ -7,43 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable 
+class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DateTime|null $assignedDateTime Date and time of assignment of the training to the user.
-    */
-    private ?DateTime $assignedDateTime = null;
-    
-    /**
-     * @var DateTime|null $completionDateTime Date and time of completion of the training by the user.
-    */
-    private ?DateTime $completionDateTime = null;
-    
-    /**
-     * @var string|null $displayName Display name of the assigned training.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var TrainingStatus|null $trainingStatus The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-    */
-    private ?TrainingStatus $trainingStatus = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new userTrainingStatusInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.userTrainingStatusInfo');
     }
@@ -61,8 +40,8 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -70,7 +49,15 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
-        return $this->assignedDateTime;
+        return $this->getBackingStore()->get('assignedDateTime');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +65,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
-        return $this->completionDateTime;
+        return $this->getBackingStore()->get('completionDateTime');
     }
 
     /**
@@ -86,7 +73,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -109,7 +96,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -117,7 +104,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @return TrainingStatus|null
     */
     public function getTrainingStatus(): ?TrainingStatus {
-        return $this->trainingStatus;
+        return $this->getBackingStore()->get('trainingStatus');
     }
 
     /**
@@ -125,60 +112,60 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeDateTimeValue('assignedDateTime', $this->assignedDateTime);
-        $writer->writeDateTimeValue('completionDateTime', $this->completionDateTime);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('trainingStatus', $this->trainingStatus);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeDateTimeValue('assignedDateTime', $this->getAssignedDateTime());
+        $writer->writeDateTimeValue('completionDateTime', $this->getCompletionDateTime());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('trainingStatus', $this->getTrainingStatus());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the assignedDateTime property value. Date and time of assignment of the training to the user.
      *  @param DateTime|null $value Value to set for the assignedDateTime property.
     */
-    public function setAssignedDateTime(?DateTime $value ): void {
-        $this->assignedDateTime = $value;
+    public function setAssignedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('assignedDateTime', $value);
     }
 
     /**
      * Sets the completionDateTime property value. Date and time of completion of the training by the user.
      *  @param DateTime|null $value Value to set for the completionDateTime property.
     */
-    public function setCompletionDateTime(?DateTime $value ): void {
-        $this->completionDateTime = $value;
+    public function setCompletionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('completionDateTime', $value);
     }
 
     /**
      * Sets the displayName property value. Display name of the assigned training.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      *  @param TrainingStatus|null $value Value to set for the trainingStatus property.
     */
-    public function setTrainingStatus(?TrainingStatus $value ): void {
-        $this->trainingStatus = $value;
+    public function setTrainingStatus(?TrainingStatus $value): void {
+        $this->getBackingStore()->set('trainingStatus', $value);
     }
 
 }

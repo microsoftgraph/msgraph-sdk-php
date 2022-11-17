@@ -7,118 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class RemoteItem implements AdditionalDataHolder, Parsable 
+class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var IdentitySet|null $createdBy Identity of the user, device, and application which created the item. Read-only.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Date and time of item creation. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var File|null $file Indicates that the remote item is a file. Read-only.
-    */
-    private ?File $file = null;
-    
-    /**
-     * @var FileSystemInfo|null $fileSystemInfo Information about the remote item from the local file system. Read-only.
-    */
-    private ?FileSystemInfo $fileSystemInfo = null;
-    
-    /**
-     * @var Folder|null $folder Indicates that the remote item is a folder. Read-only.
-    */
-    private ?Folder $folder = null;
-    
-    /**
-     * @var string|null $id Unique identifier for the remote item in its drive. Read-only.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var Image|null $image Image metadata, if the item is an image. Read-only.
-    */
-    private ?Image $image = null;
-    
-    /**
-     * @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only.
-    */
-    private ?IdentitySet $lastModifiedBy = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var string|null $name Optional. Filename of the remote item. Read-only.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var Package|null $package If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-    */
-    private ?Package $package = null;
-    
-    /**
-     * @var ItemReference|null $parentReference Properties of the parent of the remote item. Read-only.
-    */
-    private ?ItemReference $parentReference = null;
-    
-    /**
-     * @var Shared|null $shared Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
-    */
-    private ?Shared $shared = null;
-    
-    /**
-     * @var SharepointIds|null $sharepointIds Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
-    */
-    private ?SharepointIds $sharepointIds = null;
-    
-    /**
-     * @var int|null $size Size of the remote item. Read-only.
-    */
-    private ?int $size = null;
-    
-    /**
-     * @var SpecialFolder|null $specialFolder If the current item is also available as a special folder, this facet is returned. Read-only.
-    */
-    private ?SpecialFolder $specialFolder = null;
-    
-    /**
-     * @var Video|null $video Video metadata, if the item is a video. Read-only.
-    */
-    private ?Video $video = null;
-    
-    /**
-     * @var string|null $webDavUrl DAV compatible URL for the item.
-    */
-    private ?string $webDavUrl = null;
-    
-    /**
-     * @var string|null $webUrl URL that displays the resource in the browser. Read-only.
-    */
-    private ?string $webUrl = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new remoteItem and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.remoteItem');
     }
@@ -136,8 +40,16 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -145,7 +57,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -153,7 +65,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -191,7 +103,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return File|null
     */
     public function getFile(): ?File {
-        return $this->file;
+        return $this->getBackingStore()->get('file');
     }
 
     /**
@@ -199,7 +111,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return FileSystemInfo|null
     */
     public function getFileSystemInfo(): ?FileSystemInfo {
-        return $this->fileSystemInfo;
+        return $this->getBackingStore()->get('fileSystemInfo');
     }
 
     /**
@@ -207,7 +119,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return Folder|null
     */
     public function getFolder(): ?Folder {
-        return $this->folder;
+        return $this->getBackingStore()->get('folder');
     }
 
     /**
@@ -215,7 +127,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -223,7 +135,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return Image|null
     */
     public function getImage(): ?Image {
-        return $this->image;
+        return $this->getBackingStore()->get('image');
     }
 
     /**
@@ -231,7 +143,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -239,7 +151,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -247,7 +159,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -255,7 +167,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -263,7 +175,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return Package|null
     */
     public function getPackage(): ?Package {
-        return $this->package;
+        return $this->getBackingStore()->get('package');
     }
 
     /**
@@ -271,7 +183,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return ItemReference|null
     */
     public function getParentReference(): ?ItemReference {
-        return $this->parentReference;
+        return $this->getBackingStore()->get('parentReference');
     }
 
     /**
@@ -279,7 +191,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return Shared|null
     */
     public function getShared(): ?Shared {
-        return $this->shared;
+        return $this->getBackingStore()->get('shared');
     }
 
     /**
@@ -287,7 +199,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->sharepointIds;
+        return $this->getBackingStore()->get('sharepointIds');
     }
 
     /**
@@ -295,7 +207,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -303,7 +215,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return SpecialFolder|null
     */
     public function getSpecialFolder(): ?SpecialFolder {
-        return $this->specialFolder;
+        return $this->getBackingStore()->get('specialFolder');
     }
 
     /**
@@ -311,7 +223,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return Video|null
     */
     public function getVideo(): ?Video {
-        return $this->video;
+        return $this->getBackingStore()->get('video');
     }
 
     /**
@@ -319,7 +231,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWebDavUrl(): ?string {
-        return $this->webDavUrl;
+        return $this->getBackingStore()->get('webDavUrl');
     }
 
     /**
@@ -327,7 +239,7 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->webUrl;
+        return $this->getBackingStore()->get('webUrl');
     }
 
     /**
@@ -335,195 +247,195 @@ class RemoteItem implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('file', $this->file);
-        $writer->writeObjectValue('fileSystemInfo', $this->fileSystemInfo);
-        $writer->writeObjectValue('folder', $this->folder);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeObjectValue('image', $this->image);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('package', $this->package);
-        $writer->writeObjectValue('parentReference', $this->parentReference);
-        $writer->writeObjectValue('shared', $this->shared);
-        $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
-        $writer->writeIntegerValue('size', $this->size);
-        $writer->writeObjectValue('specialFolder', $this->specialFolder);
-        $writer->writeObjectValue('video', $this->video);
-        $writer->writeStringValue('webDavUrl', $this->webDavUrl);
-        $writer->writeStringValue('webUrl', $this->webUrl);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('file', $this->getFile());
+        $writer->writeObjectValue('fileSystemInfo', $this->getFileSystemInfo());
+        $writer->writeObjectValue('folder', $this->getFolder());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeObjectValue('image', $this->getImage());
+        $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('package', $this->getPackage());
+        $writer->writeObjectValue('parentReference', $this->getParentReference());
+        $writer->writeObjectValue('shared', $this->getShared());
+        $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
+        $writer->writeIntegerValue('size', $this->getSize());
+        $writer->writeObjectValue('specialFolder', $this->getSpecialFolder());
+        $writer->writeObjectValue('video', $this->getVideo());
+        $writer->writeStringValue('webDavUrl', $this->getWebDavUrl());
+        $writer->writeStringValue('webUrl', $this->getWebUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the file property value. Indicates that the remote item is a file. Read-only.
      *  @param File|null $value Value to set for the file property.
     */
-    public function setFile(?File $value ): void {
-        $this->file = $value;
+    public function setFile(?File $value): void {
+        $this->getBackingStore()->set('file', $value);
     }
 
     /**
      * Sets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
      *  @param FileSystemInfo|null $value Value to set for the fileSystemInfo property.
     */
-    public function setFileSystemInfo(?FileSystemInfo $value ): void {
-        $this->fileSystemInfo = $value;
+    public function setFileSystemInfo(?FileSystemInfo $value): void {
+        $this->getBackingStore()->set('fileSystemInfo', $value);
     }
 
     /**
      * Sets the folder property value. Indicates that the remote item is a folder. Read-only.
      *  @param Folder|null $value Value to set for the folder property.
     */
-    public function setFolder(?Folder $value ): void {
-        $this->folder = $value;
+    public function setFolder(?Folder $value): void {
+        $this->getBackingStore()->set('folder', $value);
     }
 
     /**
      * Sets the id property value. Unique identifier for the remote item in its drive. Read-only.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the image property value. Image metadata, if the item is an image. Read-only.
      *  @param Image|null $value Value to set for the image property.
     */
-    public function setImage(?Image $value ): void {
-        $this->image = $value;
+    public function setImage(?Image $value): void {
+        $this->getBackingStore()->set('image', $value);
     }
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the name property value. Optional. Filename of the remote item. Read-only.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      *  @param Package|null $value Value to set for the package property.
     */
-    public function setPackage(?Package $value ): void {
-        $this->package = $value;
+    public function setPackage(?Package $value): void {
+        $this->getBackingStore()->set('package', $value);
     }
 
     /**
      * Sets the parentReference property value. Properties of the parent of the remote item. Read-only.
      *  @param ItemReference|null $value Value to set for the parentReference property.
     */
-    public function setParentReference(?ItemReference $value ): void {
-        $this->parentReference = $value;
+    public function setParentReference(?ItemReference $value): void {
+        $this->getBackingStore()->set('parentReference', $value);
     }
 
     /**
      * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      *  @param Shared|null $value Value to set for the shared property.
     */
-    public function setShared(?Shared $value ): void {
-        $this->shared = $value;
+    public function setShared(?Shared $value): void {
+        $this->getBackingStore()->set('shared', $value);
     }
 
     /**
      * Sets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
      *  @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
-    public function setSharepointIds(?SharepointIds $value ): void {
-        $this->sharepointIds = $value;
+    public function setSharepointIds(?SharepointIds $value): void {
+        $this->getBackingStore()->set('sharepointIds', $value);
     }
 
     /**
      * Sets the size property value. Size of the remote item. Read-only.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
     /**
      * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
      *  @param SpecialFolder|null $value Value to set for the specialFolder property.
     */
-    public function setSpecialFolder(?SpecialFolder $value ): void {
-        $this->specialFolder = $value;
+    public function setSpecialFolder(?SpecialFolder $value): void {
+        $this->getBackingStore()->set('specialFolder', $value);
     }
 
     /**
      * Sets the video property value. Video metadata, if the item is a video. Read-only.
      *  @param Video|null $value Value to set for the video property.
     */
-    public function setVideo(?Video $value ): void {
-        $this->video = $value;
+    public function setVideo(?Video $value): void {
+        $this->getBackingStore()->set('video', $value);
     }
 
     /**
      * Sets the webDavUrl property value. DAV compatible URL for the item.
      *  @param string|null $value Value to set for the webDavUrl property.
     */
-    public function setWebDavUrl(?string $value ): void {
-        $this->webDavUrl = $value;
+    public function setWebDavUrl(?string $value): void {
+        $this->getBackingStore()->set('webDavUrl', $value);
     }
 
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
      *  @param string|null $value Value to set for the webUrl property.
     */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * @var string|null $description Provides the reason why the DomainDnsUnavailableRecord entity is returned.
-    */
-    private ?string $description = null;
-    
-    /**
      * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -55,15 +50,15 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
+        $writer->writeStringValue('description', $this->getDescription());
     }
 
     /**
      * Sets the description property value. Provides the reason why the DomainDnsUnavailableRecord entity is returned.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
 }

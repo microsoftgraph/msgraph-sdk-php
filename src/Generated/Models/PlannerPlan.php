@@ -10,46 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerPlan extends Entity implements Parsable 
 {
     /**
-     * @var array<PlannerBucket>|null $buckets Read-only. Nullable. Collection of buckets in the plan.
-    */
-    private ?array $buckets = null;
-    
-    /**
-     * @var PlannerPlanContainer|null $container Identifies the container of the plan. After it is set, this property can’t be updated. Required.
-    */
-    private ?PlannerPlanContainer $container = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy Read-only. The user who created the plan.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var PlannerPlanDetails|null $details Read-only. Nullable. Additional details about the plan.
-    */
-    private ?PlannerPlanDetails $details = null;
-    
-    /**
-     * @var string|null $owner The owner property
-    */
-    private ?string $owner = null;
-    
-    /**
-     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Collection of tasks in the plan.
-    */
-    private ?array $tasks = null;
-    
-    /**
-     * @var string|null $title Required. Title of the plan.
-    */
-    private ?string $title = null;
-    
-    /**
      * Instantiates a new plannerPlan and sets the default values.
     */
     public function __construct() {
@@ -71,7 +31,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return array<PlannerBucket>|null
     */
     public function getBuckets(): ?array {
-        return $this->buckets;
+        return $this->getBackingStore()->get('buckets');
     }
 
     /**
@@ -79,7 +39,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return PlannerPlanContainer|null
     */
     public function getContainer(): ?PlannerPlanContainer {
-        return $this->container;
+        return $this->getBackingStore()->get('container');
     }
 
     /**
@@ -87,7 +47,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -95,7 +55,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -103,7 +63,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return PlannerPlanDetails|null
     */
     public function getDetails(): ?PlannerPlanDetails {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -129,7 +89,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return string|null
     */
     public function getOwner(): ?string {
-        return $this->owner;
+        return $this->getBackingStore()->get('owner');
     }
 
     /**
@@ -137,7 +97,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -145,7 +105,7 @@ class PlannerPlan extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -154,78 +114,78 @@ class PlannerPlan extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('buckets', $this->buckets);
-        $writer->writeObjectValue('container', $this->container);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('details', $this->details);
-        $writer->writeStringValue('owner', $this->owner);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
-        $writer->writeStringValue('title', $this->title);
+        $writer->writeCollectionOfObjectValues('buckets', $this->getBuckets());
+        $writer->writeObjectValue('container', $this->getContainer());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('details', $this->getDetails());
+        $writer->writeStringValue('owner', $this->getOwner());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
+        $writer->writeStringValue('title', $this->getTitle());
     }
 
     /**
      * Sets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
      *  @param array<PlannerBucket>|null $value Value to set for the buckets property.
     */
-    public function setBuckets(?array $value ): void {
-        $this->buckets = $value;
+    public function setBuckets(?array $value): void {
+        $this->getBackingStore()->set('buckets', $value);
     }
 
     /**
      * Sets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
      *  @param PlannerPlanContainer|null $value Value to set for the container property.
     */
-    public function setContainer(?PlannerPlanContainer $value ): void {
-        $this->container = $value;
+    public function setContainer(?PlannerPlanContainer $value): void {
+        $this->getBackingStore()->set('container', $value);
     }
 
     /**
      * Sets the createdBy property value. Read-only. The user who created the plan.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the details property value. Read-only. Nullable. Additional details about the plan.
      *  @param PlannerPlanDetails|null $value Value to set for the details property.
     */
-    public function setDetails(?PlannerPlanDetails $value ): void {
-        $this->details = $value;
+    public function setDetails(?PlannerPlanDetails $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
     /**
      * Sets the owner property value. The owner property
      *  @param string|null $value Value to set for the owner property.
     */
-    public function setOwner(?string $value ): void {
-        $this->owner = $value;
+    public function setOwner(?string $value): void {
+        $this->getBackingStore()->set('owner', $value);
     }
 
     /**
      * Sets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
     /**
      * Sets the title property value. Required. Title of the plan.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
 }

@@ -10,51 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationRubric extends Entity implements Parsable 
 {
     /**
-     * @var IdentitySet|null $createdBy The user who created this resource.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var EducationItemBody|null $description The description of this rubric.
-    */
-    private ?EducationItemBody $description = null;
-    
-    /**
-     * @var string|null $displayName The name of this rubric.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var EducationAssignmentGradeType|null $grading The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
-    */
-    private ?EducationAssignmentGradeType $grading = null;
-    
-    /**
-     * @var IdentitySet|null $lastModifiedBy The last user to modify the resource.
-    */
-    private ?IdentitySet $lastModifiedBy = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var array<RubricLevel>|null $levels The collection of levels making up this rubric.
-    */
-    private ?array $levels = null;
-    
-    /**
-     * @var array<RubricQuality>|null $qualities The collection of qualities making up this rubric.
-    */
-    private ?array $qualities = null;
-    
-    /**
      * Instantiates a new educationRubric and sets the default values.
     */
     public function __construct() {
@@ -76,7 +31,7 @@ class EducationRubric extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -84,7 +39,7 @@ class EducationRubric extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -92,7 +47,7 @@ class EducationRubric extends Entity implements Parsable
      * @return EducationItemBody|null
     */
     public function getDescription(): ?EducationItemBody {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -100,7 +55,7 @@ class EducationRubric extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -127,7 +82,7 @@ class EducationRubric extends Entity implements Parsable
      * @return EducationAssignmentGradeType|null
     */
     public function getGrading(): ?EducationAssignmentGradeType {
-        return $this->grading;
+        return $this->getBackingStore()->get('grading');
     }
 
     /**
@@ -135,7 +90,7 @@ class EducationRubric extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -143,7 +98,7 @@ class EducationRubric extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -151,7 +106,7 @@ class EducationRubric extends Entity implements Parsable
      * @return array<RubricLevel>|null
     */
     public function getLevels(): ?array {
-        return $this->levels;
+        return $this->getBackingStore()->get('levels');
     }
 
     /**
@@ -159,7 +114,7 @@ class EducationRubric extends Entity implements Parsable
      * @return array<RubricQuality>|null
     */
     public function getQualities(): ?array {
-        return $this->qualities;
+        return $this->getBackingStore()->get('qualities');
     }
 
     /**
@@ -168,83 +123,83 @@ class EducationRubric extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('grading', $this->grading);
-        $writer->writeCollectionOfObjectValues('levels', $this->levels);
-        $writer->writeCollectionOfObjectValues('qualities', $this->qualities);
+        $writer->writeObjectValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('grading', $this->getGrading());
+        $writer->writeCollectionOfObjectValues('levels', $this->getLevels());
+        $writer->writeCollectionOfObjectValues('qualities', $this->getQualities());
     }
 
     /**
      * Sets the createdBy property value. The user who created this resource.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. The description of this rubric.
      *  @param EducationItemBody|null $value Value to set for the description property.
     */
-    public function setDescription(?EducationItemBody $value ): void {
-        $this->description = $value;
+    public function setDescription(?EducationItemBody $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The name of this rubric.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
      *  @param EducationAssignmentGradeType|null $value Value to set for the grading property.
     */
-    public function setGrading(?EducationAssignmentGradeType $value ): void {
-        $this->grading = $value;
+    public function setGrading(?EducationAssignmentGradeType $value): void {
+        $this->getBackingStore()->set('grading', $value);
     }
 
     /**
      * Sets the lastModifiedBy property value. The last user to modify the resource.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the levels property value. The collection of levels making up this rubric.
      *  @param array<RubricLevel>|null $value Value to set for the levels property.
     */
-    public function setLevels(?array $value ): void {
-        $this->levels = $value;
+    public function setLevels(?array $value): void {
+        $this->getBackingStore()->set('levels', $value);
     }
 
     /**
      * Sets the qualities property value. The collection of qualities making up this rubric.
      *  @param array<RubricQuality>|null $value Value to set for the qualities property.
     */
-    public function setQualities(?array $value ): void {
-        $this->qualities = $value;
+    public function setQualities(?array $value): void {
+        $this->getBackingStore()->set('qualities', $value);
     }
 
 }

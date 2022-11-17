@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable 
+class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var OnenotePatchActionType|null $action The action property
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?OnenotePatchActionType $action = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $content A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
-    */
-    private ?string $content = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var OnenotePatchInsertPosition|null $position The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-    */
-    private ?OnenotePatchInsertPosition $position = null;
-    
-    /**
-     * @var string|null $target The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
-    */
-    private ?string $target = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new onenotePatchContentCommand and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.onenotePatchContentCommand');
     }
@@ -61,15 +40,23 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @return OnenotePatchActionType|null
     */
     public function getAction(): ?OnenotePatchActionType {
-        return $this->action;
+        return $this->getBackingStore()->get('action');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -77,7 +64,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContent(): ?string {
-        return $this->content;
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -100,7 +87,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -108,7 +95,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @return OnenotePatchInsertPosition|null
     */
     public function getPosition(): ?OnenotePatchInsertPosition {
-        return $this->position;
+        return $this->getBackingStore()->get('position');
     }
 
     /**
@@ -116,7 +103,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTarget(): ?string {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -124,60 +111,60 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('action', $this->action);
-        $writer->writeStringValue('content', $this->content);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('position', $this->position);
-        $writer->writeStringValue('target', $this->target);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('action', $this->getAction());
+        $writer->writeStringValue('content', $this->getContent());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('position', $this->getPosition());
+        $writer->writeStringValue('target', $this->getTarget());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the action property value. The action property
      *  @param OnenotePatchActionType|null $value Value to set for the action property.
     */
-    public function setAction(?OnenotePatchActionType $value ): void {
-        $this->action = $value;
+    public function setAction(?OnenotePatchActionType $value): void {
+        $this->getBackingStore()->set('action', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
      *  @param string|null $value Value to set for the content property.
     */
-    public function setContent(?string $value ): void {
-        $this->content = $value;
+    public function setContent(?string $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      *  @param OnenotePatchInsertPosition|null $value Value to set for the position property.
     */
-    public function setPosition(?OnenotePatchInsertPosition $value ): void {
-        $this->position = $value;
+    public function setPosition(?OnenotePatchInsertPosition $value): void {
+        $this->getBackingStore()->set('position', $value);
     }
 
     /**
      * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
      *  @param string|null $value Value to set for the target property.
     */
-    public function setTarget(?string $value ): void {
-        $this->target = $value;
+    public function setTarget(?string $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

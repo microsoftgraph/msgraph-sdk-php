@@ -7,23 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsable 
+class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AttachmentInfo|null $attachmentInfo The attachmentInfo property
-    */
-    private ?AttachmentInfo $attachmentInfo = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new createUploadSessionPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -40,8 +39,8 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -49,7 +48,15 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsab
      * @return AttachmentInfo|null
     */
     public function getAttachmentInfo(): ?AttachmentInfo {
-        return $this->attachmentInfo;
+        return $this->getBackingStore()->get('attachmentInfo');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -68,24 +75,24 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('attachmentInfo', $this->attachmentInfo);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('attachmentInfo', $this->getAttachmentInfo());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attachmentInfo property value. The attachmentInfo property
      *  @param AttachmentInfo|null $value Value to set for the attachmentInfo property.
     */
-    public function setAttachmentInfo(?AttachmentInfo $value ): void {
-        $this->attachmentInfo = $value;
+    public function setAttachmentInfo(?AttachmentInfo $value): void {
+        $this->getBackingStore()->set('attachmentInfo', $value);
     }
 
 }

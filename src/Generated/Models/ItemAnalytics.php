@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemAnalytics extends Entity implements Parsable 
 {
     /**
-     * @var ItemActivityStat|null $allTime The allTime property
-    */
-    private ?ItemActivityStat $allTime = null;
-    
-    /**
-     * @var array<ItemActivityStat>|null $itemActivityStats The itemActivityStats property
-    */
-    private ?array $itemActivityStats = null;
-    
-    /**
-     * @var ItemActivityStat|null $lastSevenDays The lastSevenDays property
-    */
-    private ?ItemActivityStat $lastSevenDays = null;
-    
-    /**
      * Instantiates a new itemAnalytics and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class ItemAnalytics extends Entity implements Parsable
      * @return ItemActivityStat|null
     */
     public function getAllTime(): ?ItemActivityStat {
-        return $this->allTime;
+        return $this->getBackingStore()->get('allTime');
     }
 
     /**
@@ -66,7 +51,7 @@ class ItemAnalytics extends Entity implements Parsable
      * @return array<ItemActivityStat>|null
     */
     public function getItemActivityStats(): ?array {
-        return $this->itemActivityStats;
+        return $this->getBackingStore()->get('itemActivityStats');
     }
 
     /**
@@ -74,7 +59,7 @@ class ItemAnalytics extends Entity implements Parsable
      * @return ItemActivityStat|null
     */
     public function getLastSevenDays(): ?ItemActivityStat {
-        return $this->lastSevenDays;
+        return $this->getBackingStore()->get('lastSevenDays');
     }
 
     /**
@@ -83,33 +68,33 @@ class ItemAnalytics extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('allTime', $this->allTime);
-        $writer->writeCollectionOfObjectValues('itemActivityStats', $this->itemActivityStats);
-        $writer->writeObjectValue('lastSevenDays', $this->lastSevenDays);
+        $writer->writeObjectValue('allTime', $this->getAllTime());
+        $writer->writeCollectionOfObjectValues('itemActivityStats', $this->getItemActivityStats());
+        $writer->writeObjectValue('lastSevenDays', $this->getLastSevenDays());
     }
 
     /**
      * Sets the allTime property value. The allTime property
      *  @param ItemActivityStat|null $value Value to set for the allTime property.
     */
-    public function setAllTime(?ItemActivityStat $value ): void {
-        $this->allTime = $value;
+    public function setAllTime(?ItemActivityStat $value): void {
+        $this->getBackingStore()->set('allTime', $value);
     }
 
     /**
      * Sets the itemActivityStats property value. The itemActivityStats property
      *  @param array<ItemActivityStat>|null $value Value to set for the itemActivityStats property.
     */
-    public function setItemActivityStats(?array $value ): void {
-        $this->itemActivityStats = $value;
+    public function setItemActivityStats(?array $value): void {
+        $this->getBackingStore()->set('itemActivityStats', $value);
     }
 
     /**
      * Sets the lastSevenDays property value. The lastSevenDays property
      *  @param ItemActivityStat|null $value Value to set for the lastSevenDays property.
     */
-    public function setLastSevenDays(?ItemActivityStat $value ): void {
-        $this->lastSevenDays = $value;
+    public function setLastSevenDays(?ItemActivityStat $value): void {
+        $this->getBackingStore()->set('lastSevenDays', $value);
     }
 
 }

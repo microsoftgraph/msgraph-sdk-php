@@ -10,101 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SubjectRightsRequest extends Entity implements Parsable 
 {
     /**
-     * @var Identity|null $assignedTo Identity that the request is assigned to.
-    */
-    private ?Identity $assignedTo = null;
-    
-    /**
-     * @var DateTime|null $closedDateTime The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $closedDateTime = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy Identity information for the entity that created the request.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var DataSubject|null $dataSubject Information about the data subject.
-    */
-    private ?DataSubject $dataSubject = null;
-    
-    /**
-     * @var DataSubjectType|null $dataSubjectType The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-    */
-    private ?DataSubjectType $dataSubjectType = null;
-    
-    /**
-     * @var string|null $description Description for the request.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The name of the request.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<SubjectRightsRequestHistory>|null $history Collection of history change events.
-    */
-    private ?array $history = null;
-    
-    /**
-     * @var SubjectRightsRequestDetail|null $insight Insight about the request.
-    */
-    private ?SubjectRightsRequestDetail $insight = null;
-    
-    /**
-     * @var DateTime|null $internalDueDateTime The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $internalDueDateTime = null;
-    
-    /**
-     * @var IdentitySet|null $lastModifiedBy Identity information for the entity that last modified the request.
-    */
-    private ?IdentitySet $lastModifiedBy = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var array<AuthoredNote>|null $notes List of notes associcated with the request.
-    */
-    private ?array $notes = null;
-    
-    /**
-     * @var array<string>|null $regulations List of regulations that this request will fulfill.
-    */
-    private ?array $regulations = null;
-    
-    /**
-     * @var array<SubjectRightsRequestStageDetail>|null $stages Information about the different stages for the request.
-    */
-    private ?array $stages = null;
-    
-    /**
-     * @var SubjectRightsRequestStatus|null $status The status of the request.. Possible values are: active, closed, unknownFutureValue.
-    */
-    private ?SubjectRightsRequestStatus $status = null;
-    
-    /**
-     * @var Team|null $team Information about the Microsoft Teams team that was created for the request.
-    */
-    private ?Team $team = null;
-    
-    /**
-     * @var SubjectRightsRequestType|null $type The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
-    */
-    private ?SubjectRightsRequestType $type = null;
-    
-    /**
      * Instantiates a new SubjectRightsRequest and sets the default values.
     */
     public function __construct() {
@@ -126,7 +31,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return Identity|null
     */
     public function getAssignedTo(): ?Identity {
-        return $this->assignedTo;
+        return $this->getBackingStore()->get('assignedTo');
     }
 
     /**
@@ -134,7 +39,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getClosedDateTime(): ?DateTime {
-        return $this->closedDateTime;
+        return $this->getBackingStore()->get('closedDateTime');
     }
 
     /**
@@ -142,7 +47,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -150,7 +55,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -158,7 +63,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DataSubject|null
     */
     public function getDataSubject(): ?DataSubject {
-        return $this->dataSubject;
+        return $this->getBackingStore()->get('dataSubject');
     }
 
     /**
@@ -166,7 +71,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DataSubjectType|null
     */
     public function getDataSubjectType(): ?DataSubjectType {
-        return $this->dataSubjectType;
+        return $this->getBackingStore()->get('dataSubjectType');
     }
 
     /**
@@ -174,7 +79,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -182,7 +87,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -219,7 +124,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return array<SubjectRightsRequestHistory>|null
     */
     public function getHistory(): ?array {
-        return $this->history;
+        return $this->getBackingStore()->get('history');
     }
 
     /**
@@ -227,7 +132,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return SubjectRightsRequestDetail|null
     */
     public function getInsight(): ?SubjectRightsRequestDetail {
-        return $this->insight;
+        return $this->getBackingStore()->get('insight');
     }
 
     /**
@@ -235,7 +140,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getInternalDueDateTime(): ?DateTime {
-        return $this->internalDueDateTime;
+        return $this->getBackingStore()->get('internalDueDateTime');
     }
 
     /**
@@ -243,7 +148,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -251,7 +156,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -259,7 +164,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return array<AuthoredNote>|null
     */
     public function getNotes(): ?array {
-        return $this->notes;
+        return $this->getBackingStore()->get('notes');
     }
 
     /**
@@ -267,7 +172,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getRegulations(): ?array {
-        return $this->regulations;
+        return $this->getBackingStore()->get('regulations');
     }
 
     /**
@@ -275,7 +180,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return array<SubjectRightsRequestStageDetail>|null
     */
     public function getStages(): ?array {
-        return $this->stages;
+        return $this->getBackingStore()->get('stages');
     }
 
     /**
@@ -283,7 +188,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return SubjectRightsRequestStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -291,7 +196,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return Team|null
     */
     public function getTeam(): ?Team {
-        return $this->team;
+        return $this->getBackingStore()->get('team');
     }
 
     /**
@@ -299,7 +204,7 @@ class SubjectRightsRequest extends Entity implements Parsable
      * @return SubjectRightsRequestType|null
     */
     public function getType(): ?SubjectRightsRequestType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -308,177 +213,177 @@ class SubjectRightsRequest extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('assignedTo', $this->assignedTo);
-        $writer->writeDateTimeValue('closedDateTime', $this->closedDateTime);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('dataSubject', $this->dataSubject);
-        $writer->writeEnumValue('dataSubjectType', $this->dataSubjectType);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('history', $this->history);
-        $writer->writeObjectValue('insight', $this->insight);
-        $writer->writeDateTimeValue('internalDueDateTime', $this->internalDueDateTime);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeCollectionOfObjectValues('notes', $this->notes);
-        $writer->writeCollectionOfPrimitiveValues('regulations', $this->regulations);
-        $writer->writeCollectionOfObjectValues('stages', $this->stages);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeObjectValue('team', $this->team);
-        $writer->writeEnumValue('type', $this->type);
+        $writer->writeObjectValue('assignedTo', $this->getAssignedTo());
+        $writer->writeDateTimeValue('closedDateTime', $this->getClosedDateTime());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('dataSubject', $this->getDataSubject());
+        $writer->writeEnumValue('dataSubjectType', $this->getDataSubjectType());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('history', $this->getHistory());
+        $writer->writeObjectValue('insight', $this->getInsight());
+        $writer->writeDateTimeValue('internalDueDateTime', $this->getInternalDueDateTime());
+        $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeCollectionOfObjectValues('notes', $this->getNotes());
+        $writer->writeCollectionOfPrimitiveValues('regulations', $this->getRegulations());
+        $writer->writeCollectionOfObjectValues('stages', $this->getStages());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeObjectValue('team', $this->getTeam());
+        $writer->writeEnumValue('type', $this->getType());
     }
 
     /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
      *  @param Identity|null $value Value to set for the assignedTo property.
     */
-    public function setAssignedTo(?Identity $value ): void {
-        $this->assignedTo = $value;
+    public function setAssignedTo(?Identity $value): void {
+        $this->getBackingStore()->set('assignedTo', $value);
     }
 
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the closedDateTime property.
     */
-    public function setClosedDateTime(?DateTime $value ): void {
-        $this->closedDateTime = $value;
+    public function setClosedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('closedDateTime', $value);
     }
 
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the dataSubject property value. Information about the data subject.
      *  @param DataSubject|null $value Value to set for the dataSubject property.
     */
-    public function setDataSubject(?DataSubject $value ): void {
-        $this->dataSubject = $value;
+    public function setDataSubject(?DataSubject $value): void {
+        $this->getBackingStore()->set('dataSubject', $value);
     }
 
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      *  @param DataSubjectType|null $value Value to set for the dataSubjectType property.
     */
-    public function setDataSubjectType(?DataSubjectType $value ): void {
-        $this->dataSubjectType = $value;
+    public function setDataSubjectType(?DataSubjectType $value): void {
+        $this->getBackingStore()->set('dataSubjectType', $value);
     }
 
     /**
      * Sets the description property value. Description for the request.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the request.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the history property value. Collection of history change events.
      *  @param array<SubjectRightsRequestHistory>|null $value Value to set for the history property.
     */
-    public function setHistory(?array $value ): void {
-        $this->history = $value;
+    public function setHistory(?array $value): void {
+        $this->getBackingStore()->set('history', $value);
     }
 
     /**
      * Sets the insight property value. Insight about the request.
      *  @param SubjectRightsRequestDetail|null $value Value to set for the insight property.
     */
-    public function setInsight(?SubjectRightsRequestDetail $value ): void {
-        $this->insight = $value;
+    public function setInsight(?SubjectRightsRequestDetail $value): void {
+        $this->getBackingStore()->set('insight', $value);
     }
 
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the internalDueDateTime property.
     */
-    public function setInternalDueDateTime(?DateTime $value ): void {
-        $this->internalDueDateTime = $value;
+    public function setInternalDueDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('internalDueDateTime', $value);
     }
 
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the notes property value. List of notes associcated with the request.
      *  @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
-    public function setNotes(?array $value ): void {
-        $this->notes = $value;
+    public function setNotes(?array $value): void {
+        $this->getBackingStore()->set('notes', $value);
     }
 
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
      *  @param array<string>|null $value Value to set for the regulations property.
     */
-    public function setRegulations(?array $value ): void {
-        $this->regulations = $value;
+    public function setRegulations(?array $value): void {
+        $this->getBackingStore()->set('regulations', $value);
     }
 
     /**
      * Sets the stages property value. Information about the different stages for the request.
      *  @param array<SubjectRightsRequestStageDetail>|null $value Value to set for the stages property.
     */
-    public function setStages(?array $value ): void {
-        $this->stages = $value;
+    public function setStages(?array $value): void {
+        $this->getBackingStore()->set('stages', $value);
     }
 
     /**
      * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
      *  @param SubjectRightsRequestStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?SubjectRightsRequestStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?SubjectRightsRequestStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
      *  @param Team|null $value Value to set for the team property.
     */
-    public function setTeam(?Team $value ): void {
-        $this->team = $value;
+    public function setTeam(?Team $value): void {
+        $this->getBackingStore()->set('team', $value);
     }
 
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
      *  @param SubjectRightsRequestType|null $value Value to set for the type property.
     */
-    public function setType(?SubjectRightsRequestType $value ): void {
-        $this->type = $value;
+    public function setType(?SubjectRightsRequestType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

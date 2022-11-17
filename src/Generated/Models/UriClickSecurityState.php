@@ -7,53 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UriClickSecurityState implements AdditionalDataHolder, Parsable 
+class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $clickAction The clickAction property
-    */
-    private ?string $clickAction = null;
-    
-    /**
-     * @var DateTime|null $clickDateTime The clickDateTime property
-    */
-    private ?DateTime $clickDateTime = null;
-    
-    /**
-     * @var string|null $id The id property
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $sourceId The sourceId property
-    */
-    private ?string $sourceId = null;
-    
-    /**
-     * @var string|null $uriDomain The uriDomain property
-    */
-    private ?string $uriDomain = null;
-    
-    /**
-     * @var string|null $verdict The verdict property
-    */
-    private ?string $verdict = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new uriClickSecurityState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.uriClickSecurityState');
     }
@@ -71,8 +40,16 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -80,7 +57,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getClickAction(): ?string {
-        return $this->clickAction;
+        return $this->getBackingStore()->get('clickAction');
     }
 
     /**
@@ -88,7 +65,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getClickDateTime(): ?DateTime {
-        return $this->clickDateTime;
+        return $this->getBackingStore()->get('clickDateTime');
     }
 
     /**
@@ -113,7 +90,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -121,7 +98,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -129,7 +106,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSourceId(): ?string {
-        return $this->sourceId;
+        return $this->getBackingStore()->get('sourceId');
     }
 
     /**
@@ -137,7 +114,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUriDomain(): ?string {
-        return $this->uriDomain;
+        return $this->getBackingStore()->get('uriDomain');
     }
 
     /**
@@ -145,7 +122,7 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getVerdict(): ?string {
-        return $this->verdict;
+        return $this->getBackingStore()->get('verdict');
     }
 
     /**
@@ -153,78 +130,78 @@ class UriClickSecurityState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('clickAction', $this->clickAction);
-        $writer->writeDateTimeValue('clickDateTime', $this->clickDateTime);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('sourceId', $this->sourceId);
-        $writer->writeStringValue('uriDomain', $this->uriDomain);
-        $writer->writeStringValue('verdict', $this->verdict);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('clickAction', $this->getClickAction());
+        $writer->writeDateTimeValue('clickDateTime', $this->getClickDateTime());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('sourceId', $this->getSourceId());
+        $writer->writeStringValue('uriDomain', $this->getUriDomain());
+        $writer->writeStringValue('verdict', $this->getVerdict());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the clickAction property value. The clickAction property
      *  @param string|null $value Value to set for the clickAction property.
     */
-    public function setClickAction(?string $value ): void {
-        $this->clickAction = $value;
+    public function setClickAction(?string $value): void {
+        $this->getBackingStore()->set('clickAction', $value);
     }
 
     /**
      * Sets the clickDateTime property value. The clickDateTime property
      *  @param DateTime|null $value Value to set for the clickDateTime property.
     */
-    public function setClickDateTime(?DateTime $value ): void {
-        $this->clickDateTime = $value;
+    public function setClickDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('clickDateTime', $value);
     }
 
     /**
      * Sets the id property value. The id property
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sourceId property value. The sourceId property
      *  @param string|null $value Value to set for the sourceId property.
     */
-    public function setSourceId(?string $value ): void {
-        $this->sourceId = $value;
+    public function setSourceId(?string $value): void {
+        $this->getBackingStore()->set('sourceId', $value);
     }
 
     /**
      * Sets the uriDomain property value. The uriDomain property
      *  @param string|null $value Value to set for the uriDomain property.
     */
-    public function setUriDomain(?string $value ): void {
-        $this->uriDomain = $value;
+    public function setUriDomain(?string $value): void {
+        $this->getBackingStore()->set('uriDomain', $value);
     }
 
     /**
      * Sets the verdict property value. The verdict property
      *  @param string|null $value Value to set for the verdict property.
     */
-    public function setVerdict(?string $value ): void {
-        $this->verdict = $value;
+    public function setVerdict(?string $value): void {
+        $this->getBackingStore()->set('verdict', $value);
     }
 
 }

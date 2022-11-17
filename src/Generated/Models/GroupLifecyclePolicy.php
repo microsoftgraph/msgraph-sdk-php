@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupLifecyclePolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $alternateNotificationEmails List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
-    */
-    private ?string $alternateNotificationEmails = null;
-    
-    /**
-     * @var int|null $groupLifetimeInDays Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
-    */
-    private ?int $groupLifetimeInDays = null;
-    
-    /**
-     * @var string|null $managedGroupTypes The group type for which the expiration policy applies. Possible values are All, Selected or None.
-    */
-    private ?string $managedGroupTypes = null;
-    
-    /**
      * Instantiates a new groupLifecyclePolicy and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getAlternateNotificationEmails(): ?string {
-        return $this->alternateNotificationEmails;
+        return $this->getBackingStore()->get('alternateNotificationEmails');
     }
 
     /**
@@ -66,7 +51,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getGroupLifetimeInDays(): ?int {
-        return $this->groupLifetimeInDays;
+        return $this->getBackingStore()->get('groupLifetimeInDays');
     }
 
     /**
@@ -74,7 +59,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getManagedGroupTypes(): ?string {
-        return $this->managedGroupTypes;
+        return $this->getBackingStore()->get('managedGroupTypes');
     }
 
     /**
@@ -83,33 +68,33 @@ class GroupLifecyclePolicy extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('alternateNotificationEmails', $this->alternateNotificationEmails);
-        $writer->writeIntegerValue('groupLifetimeInDays', $this->groupLifetimeInDays);
-        $writer->writeStringValue('managedGroupTypes', $this->managedGroupTypes);
+        $writer->writeStringValue('alternateNotificationEmails', $this->getAlternateNotificationEmails());
+        $writer->writeIntegerValue('groupLifetimeInDays', $this->getGroupLifetimeInDays());
+        $writer->writeStringValue('managedGroupTypes', $this->getManagedGroupTypes());
     }
 
     /**
      * Sets the alternateNotificationEmails property value. List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
      *  @param string|null $value Value to set for the alternateNotificationEmails property.
     */
-    public function setAlternateNotificationEmails(?string $value ): void {
-        $this->alternateNotificationEmails = $value;
+    public function setAlternateNotificationEmails(?string $value): void {
+        $this->getBackingStore()->set('alternateNotificationEmails', $value);
     }
 
     /**
      * Sets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
      *  @param int|null $value Value to set for the groupLifetimeInDays property.
     */
-    public function setGroupLifetimeInDays(?int $value ): void {
-        $this->groupLifetimeInDays = $value;
+    public function setGroupLifetimeInDays(?int $value): void {
+        $this->getBackingStore()->set('groupLifetimeInDays', $value);
     }
 
     /**
      * Sets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
      *  @param string|null $value Value to set for the managedGroupTypes property.
     */
-    public function setManagedGroupTypes(?string $value ): void {
-        $this->managedGroupTypes = $value;
+    public function setManagedGroupTypes(?string $value): void {
+        $this->getBackingStore()->set('managedGroupTypes', $value);
     }
 
 }

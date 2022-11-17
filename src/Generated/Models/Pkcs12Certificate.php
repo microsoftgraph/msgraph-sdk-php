@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * @var string|null $password The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
-    */
-    private ?string $password = null;
-    
-    /**
-     * @var string|null $pkcs12Value Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
-    */
-    private ?string $pkcs12Value = null;
-    
-    /**
      * Instantiates a new Pkcs12Certificate and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->password;
+        return $this->getBackingStore()->get('password');
     }
 
     /**
@@ -60,7 +50,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
      * @return string|null
     */
     public function getPkcs12Value(): ?string {
-        return $this->pkcs12Value;
+        return $this->getBackingStore()->get('pkcs12Value');
     }
 
     /**
@@ -69,24 +59,24 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('password', $this->password);
-        $writer->writeStringValue('pkcs12Value', $this->pkcs12Value);
+        $writer->writeStringValue('password', $this->getPassword());
+        $writer->writeStringValue('pkcs12Value', $this->getPkcs12Value());
     }
 
     /**
      * Sets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      *  @param string|null $value Value to set for the password property.
     */
-    public function setPassword(?string $value ): void {
-        $this->password = $value;
+    public function setPassword(?string $value): void {
+        $this->getBackingStore()->set('password', $value);
     }
 
     /**
      * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      *  @param string|null $value Value to set for the pkcs12Value property.
     */
-    public function setPkcs12Value(?string $value ): void {
-        $this->pkcs12Value = $value;
+    public function setPkcs12Value(?string $value): void {
+        $this->getBackingStore()->set('pkcs12Value', $value);
     }
 
 }

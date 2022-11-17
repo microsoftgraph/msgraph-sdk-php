@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintTask extends Entity implements Parsable 
 {
     /**
-     * @var PrintTaskDefinition|null $definition The definition property
-    */
-    private ?PrintTaskDefinition $definition = null;
-    
-    /**
-     * @var string|null $parentUrl The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
-    */
-    private ?string $parentUrl = null;
-    
-    /**
-     * @var PrintTaskStatus|null $status The status property
-    */
-    private ?PrintTaskStatus $status = null;
-    
-    /**
-     * @var PrintTaskTrigger|null $trigger The trigger property
-    */
-    private ?PrintTaskTrigger $trigger = null;
-    
-    /**
      * Instantiates a new printTask and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskDefinition|null
     */
     public function getDefinition(): ?PrintTaskDefinition {
-        return $this->definition;
+        return $this->getBackingStore()->get('definition');
     }
 
     /**
@@ -72,7 +52,7 @@ class PrintTask extends Entity implements Parsable
      * @return string|null
     */
     public function getParentUrl(): ?string {
-        return $this->parentUrl;
+        return $this->getBackingStore()->get('parentUrl');
     }
 
     /**
@@ -80,7 +60,7 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskStatus|null
     */
     public function getStatus(): ?PrintTaskStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -88,7 +68,7 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskTrigger|null
     */
     public function getTrigger(): ?PrintTaskTrigger {
-        return $this->trigger;
+        return $this->getBackingStore()->get('trigger');
     }
 
     /**
@@ -97,42 +77,42 @@ class PrintTask extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('definition', $this->definition);
-        $writer->writeStringValue('parentUrl', $this->parentUrl);
-        $writer->writeObjectValue('status', $this->status);
-        $writer->writeObjectValue('trigger', $this->trigger);
+        $writer->writeObjectValue('definition', $this->getDefinition());
+        $writer->writeStringValue('parentUrl', $this->getParentUrl());
+        $writer->writeObjectValue('status', $this->getStatus());
+        $writer->writeObjectValue('trigger', $this->getTrigger());
     }
 
     /**
      * Sets the definition property value. The definition property
      *  @param PrintTaskDefinition|null $value Value to set for the definition property.
     */
-    public function setDefinition(?PrintTaskDefinition $value ): void {
-        $this->definition = $value;
+    public function setDefinition(?PrintTaskDefinition $value): void {
+        $this->getBackingStore()->set('definition', $value);
     }
 
     /**
      * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
      *  @param string|null $value Value to set for the parentUrl property.
     */
-    public function setParentUrl(?string $value ): void {
-        $this->parentUrl = $value;
+    public function setParentUrl(?string $value): void {
+        $this->getBackingStore()->set('parentUrl', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param PrintTaskStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?PrintTaskStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?PrintTaskStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the trigger property value. The trigger property
      *  @param PrintTaskTrigger|null $value Value to set for the trigger property.
     */
-    public function setTrigger(?PrintTaskTrigger $value ): void {
-        $this->trigger = $value;
+    public function setTrigger(?PrintTaskTrigger $value): void {
+        $this->getBackingStore()->set('trigger', $value);
     }
 
 }

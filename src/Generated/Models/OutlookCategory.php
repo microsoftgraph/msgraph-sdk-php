@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OutlookCategory extends Entity implements Parsable 
 {
     /**
-     * @var CategoryColor|null $color A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
-    */
-    private ?CategoryColor $color = null;
-    
-    /**
-     * @var string|null $displayName A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new outlookCategory and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class OutlookCategory extends Entity implements Parsable
      * @return CategoryColor|null
     */
     public function getColor(): ?CategoryColor {
-        return $this->color;
+        return $this->getBackingStore()->get('color');
     }
 
     /**
@@ -48,7 +38,7 @@ class OutlookCategory extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -69,24 +59,24 @@ class OutlookCategory extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('color', $this->color);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeEnumValue('color', $this->getColor());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
      *  @param CategoryColor|null $value Value to set for the color property.
     */
-    public function setColor(?CategoryColor $value ): void {
-        $this->color = $value;
+    public function setColor(?CategoryColor $value): void {
+        $this->getBackingStore()->set('color', $value);
     }
 
     /**
      * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

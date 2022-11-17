@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var bool|null $meetingChatEnabled Represents whether the meeting chat is enabled or not.
-    */
-    private ?bool $meetingChatEnabled = null;
-    
-    /**
-     * @var string|null $meetingChatId Unique identifier of the meeting chat.
-    */
-    private ?string $meetingChatId = null;
-    
-    /**
      * Instantiates a new MeetingPolicyUpdatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -66,7 +51,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return bool|null
     */
     public function getMeetingChatEnabled(): ?bool {
-        return $this->meetingChatEnabled;
+        return $this->getBackingStore()->get('meetingChatEnabled');
     }
 
     /**
@@ -74,7 +59,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
      * @return string|null
     */
     public function getMeetingChatId(): ?string {
-        return $this->meetingChatId;
+        return $this->getBackingStore()->get('meetingChatId');
     }
 
     /**
@@ -83,33 +68,33 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeBooleanValue('meetingChatEnabled', $this->meetingChatEnabled);
-        $writer->writeStringValue('meetingChatId', $this->meetingChatId);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeBooleanValue('meetingChatEnabled', $this->getMeetingChatEnabled());
+        $writer->writeStringValue('meetingChatId', $this->getMeetingChatId());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
      *  @param bool|null $value Value to set for the meetingChatEnabled property.
     */
-    public function setMeetingChatEnabled(?bool $value ): void {
-        $this->meetingChatEnabled = $value;
+    public function setMeetingChatEnabled(?bool $value): void {
+        $this->getBackingStore()->set('meetingChatEnabled', $value);
     }
 
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
      *  @param string|null $value Value to set for the meetingChatId property.
     */
-    public function setMeetingChatId(?string $value ): void {
-        $this->meetingChatId = $value;
+    public function setMeetingChatId(?string $value): void {
+        $this->getBackingStore()->set('meetingChatId', $value);
     }
 
 }

@@ -8,43 +8,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TermColumn implements AdditionalDataHolder, Parsable 
+class TermColumn implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowMultipleValues Specifies whether the column will allow more than one value.
-    */
-    private ?bool $allowMultipleValues = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var Term|null $parentTerm The parentTerm property
-    */
-    private ?Term $parentTerm = null;
-    
-    /**
-     * @var bool|null $showFullyQualifiedName Specifies whether to display the entire term path or only the term label.
-    */
-    private ?bool $showFullyQualifiedName = null;
-    
-    /**
-     * @var Set|null $termSet The termSet property
-    */
-    private ?Set $termSet = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new termColumn and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.termColumn');
     }
@@ -62,8 +41,8 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -71,7 +50,15 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowMultipleValues(): ?bool {
-        return $this->allowMultipleValues;
+        return $this->getBackingStore()->get('allowMultipleValues');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -94,7 +81,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +89,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return Term|null
     */
     public function getParentTerm(): ?Term {
-        return $this->parentTerm;
+        return $this->getBackingStore()->get('parentTerm');
     }
 
     /**
@@ -110,7 +97,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowFullyQualifiedName(): ?bool {
-        return $this->showFullyQualifiedName;
+        return $this->getBackingStore()->get('showFullyQualifiedName');
     }
 
     /**
@@ -118,7 +105,7 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @return Set|null
     */
     public function getTermSet(): ?Set {
-        return $this->termSet;
+        return $this->getBackingStore()->get('termSet');
     }
 
     /**
@@ -126,60 +113,60 @@ class TermColumn implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowMultipleValues', $this->allowMultipleValues);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('parentTerm', $this->parentTerm);
-        $writer->writeBooleanValue('showFullyQualifiedName', $this->showFullyQualifiedName);
-        $writer->writeObjectValue('termSet', $this->termSet);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowMultipleValues', $this->getAllowMultipleValues());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('parentTerm', $this->getParentTerm());
+        $writer->writeBooleanValue('showFullyQualifiedName', $this->getShowFullyQualifiedName());
+        $writer->writeObjectValue('termSet', $this->getTermSet());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
      *  @param bool|null $value Value to set for the allowMultipleValues property.
     */
-    public function setAllowMultipleValues(?bool $value ): void {
-        $this->allowMultipleValues = $value;
+    public function setAllowMultipleValues(?bool $value): void {
+        $this->getBackingStore()->set('allowMultipleValues', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the parentTerm property value. The parentTerm property
      *  @param Term|null $value Value to set for the parentTerm property.
     */
-    public function setParentTerm(?Term $value ): void {
-        $this->parentTerm = $value;
+    public function setParentTerm(?Term $value): void {
+        $this->getBackingStore()->set('parentTerm', $value);
     }
 
     /**
      * Sets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
      *  @param bool|null $value Value to set for the showFullyQualifiedName property.
     */
-    public function setShowFullyQualifiedName(?bool $value ): void {
-        $this->showFullyQualifiedName = $value;
+    public function setShowFullyQualifiedName(?bool $value): void {
+        $this->getBackingStore()->set('showFullyQualifiedName', $value);
     }
 
     /**
      * Sets the termSet property value. The termSet property
      *  @param Set|null $value Value to set for the termSet property.
     */
-    public function setTermSet(?Set $value ): void {
-        $this->termSet = $value;
+    public function setTermSet(?Set $value): void {
+        $this->getBackingStore()->set('termSet', $value);
     }
 
 }

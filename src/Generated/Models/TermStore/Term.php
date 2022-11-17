@@ -12,46 +12,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Term extends Entity implements Parsable 
 {
     /**
-     * @var array<Term>|null $children Children of current term.
-    */
-    private ?array $children = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Date and time of term creation. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var array<LocalizedDescription>|null $descriptions Description about term that is dependent on the languageTag.
-    */
-    private ?array $descriptions = null;
-    
-    /**
-     * @var array<LocalizedLabel>|null $labels Label metadata for a term.
-    */
-    private ?array $labels = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Last date and time of term modification. Read-only.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var array<KeyValue>|null $properties Collection of properties on the term.
-    */
-    private ?array $properties = null;
-    
-    /**
-     * @var array<Relation>|null $relations To indicate which terms are related to the current term as either pinned or reused.
-    */
-    private ?array $relations = null;
-    
-    /**
-     * @var Set|null $set The [set] in which the term is created.
-    */
-    private ?Set $set = null;
-    
-    /**
      * Instantiates a new term and sets the default values.
     */
     public function __construct() {
@@ -73,7 +33,7 @@ class Term extends Entity implements Parsable
      * @return array<Term>|null
     */
     public function getChildren(): ?array {
-        return $this->children;
+        return $this->getBackingStore()->get('children');
     }
 
     /**
@@ -81,7 +41,7 @@ class Term extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -89,7 +49,7 @@ class Term extends Entity implements Parsable
      * @return array<LocalizedDescription>|null
     */
     public function getDescriptions(): ?array {
-        return $this->descriptions;
+        return $this->getBackingStore()->get('descriptions');
     }
 
     /**
@@ -115,7 +75,7 @@ class Term extends Entity implements Parsable
      * @return array<LocalizedLabel>|null
     */
     public function getLabels(): ?array {
-        return $this->labels;
+        return $this->getBackingStore()->get('labels');
     }
 
     /**
@@ -123,7 +83,7 @@ class Term extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -131,7 +91,7 @@ class Term extends Entity implements Parsable
      * @return array<KeyValue>|null
     */
     public function getProperties(): ?array {
-        return $this->properties;
+        return $this->getBackingStore()->get('properties');
     }
 
     /**
@@ -139,7 +99,7 @@ class Term extends Entity implements Parsable
      * @return array<Relation>|null
     */
     public function getRelations(): ?array {
-        return $this->relations;
+        return $this->getBackingStore()->get('relations');
     }
 
     /**
@@ -147,7 +107,7 @@ class Term extends Entity implements Parsable
      * @return Set|null
     */
     public function getSet(): ?Set {
-        return $this->set;
+        return $this->getBackingStore()->get('set');
     }
 
     /**
@@ -156,78 +116,78 @@ class Term extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('children', $this->children);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeCollectionOfObjectValues('descriptions', $this->descriptions);
-        $writer->writeCollectionOfObjectValues('labels', $this->labels);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeCollectionOfObjectValues('properties', $this->properties);
-        $writer->writeCollectionOfObjectValues('relations', $this->relations);
-        $writer->writeObjectValue('set', $this->set);
+        $writer->writeCollectionOfObjectValues('children', $this->getChildren());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('descriptions', $this->getDescriptions());
+        $writer->writeCollectionOfObjectValues('labels', $this->getLabels());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeCollectionOfObjectValues('properties', $this->getProperties());
+        $writer->writeCollectionOfObjectValues('relations', $this->getRelations());
+        $writer->writeObjectValue('set', $this->getSet());
     }
 
     /**
      * Sets the children property value. Children of current term.
      *  @param array<Term>|null $value Value to set for the children property.
     */
-    public function setChildren(?array $value ): void {
-        $this->children = $value;
+    public function setChildren(?array $value): void {
+        $this->getBackingStore()->set('children', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Date and time of term creation. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the descriptions property value. Description about term that is dependent on the languageTag.
      *  @param array<LocalizedDescription>|null $value Value to set for the descriptions property.
     */
-    public function setDescriptions(?array $value ): void {
-        $this->descriptions = $value;
+    public function setDescriptions(?array $value): void {
+        $this->getBackingStore()->set('descriptions', $value);
     }
 
     /**
      * Sets the labels property value. Label metadata for a term.
      *  @param array<LocalizedLabel>|null $value Value to set for the labels property.
     */
-    public function setLabels(?array $value ): void {
-        $this->labels = $value;
+    public function setLabels(?array $value): void {
+        $this->getBackingStore()->set('labels', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Last date and time of term modification. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the properties property value. Collection of properties on the term.
      *  @param array<KeyValue>|null $value Value to set for the properties property.
     */
-    public function setProperties(?array $value ): void {
-        $this->properties = $value;
+    public function setProperties(?array $value): void {
+        $this->getBackingStore()->set('properties', $value);
     }
 
     /**
      * Sets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
      *  @param array<Relation>|null $value Value to set for the relations property.
     */
-    public function setRelations(?array $value ): void {
-        $this->relations = $value;
+    public function setRelations(?array $value): void {
+        $this->getBackingStore()->set('relations', $value);
     }
 
     /**
      * Sets the set property value. The [set] in which the term is created.
      *  @param Set|null $value Value to set for the set property.
     */
-    public function setSet(?Set $value ): void {
-        $this->set = $value;
+    public function setSet(?Set $value): void {
+        $this->getBackingStore()->set('set', $value);
     }
 
 }

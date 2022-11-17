@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnLink extends Entity implements Parsable 
 {
     /**
-     * @var string|null $name The name of the column  in this content type.
-    */
-    private ?string $name = null;
-    
-    /**
      * Instantiates a new columnLink and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class ColumnLink extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -55,15 +50,15 @@ class ColumnLink extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('name', $this->name);
+        $writer->writeStringValue('name', $this->getName());
     }
 
     /**
      * Sets the name property value. The name of the column  in this content type.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
 }

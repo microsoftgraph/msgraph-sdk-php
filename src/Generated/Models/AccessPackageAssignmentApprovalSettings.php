@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, Parsable 
+class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $isApprovalRequiredForAdd If false, then approval is not required for new requests in this policy.
-    */
-    private ?bool $isApprovalRequiredForAdd = null;
-    
-    /**
-     * @var bool|null $isApprovalRequiredForUpdate If false, then approval is not required for updates to requests in this policy.
-    */
-    private ?bool $isApprovalRequiredForUpdate = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<AccessPackageApprovalStage>|null $stages If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
-    */
-    private ?array $stages = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.accessPackageAssignmentApprovalSettings');
     }
@@ -55,8 +39,16 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @return bool|null
     */
     public function getIsApprovalRequiredForAdd(): ?bool {
-        return $this->isApprovalRequiredForAdd;
+        return $this->getBackingStore()->get('isApprovalRequiredForAdd');
     }
 
     /**
@@ -86,7 +78,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @return bool|null
     */
     public function getIsApprovalRequiredForUpdate(): ?bool {
-        return $this->isApprovalRequiredForUpdate;
+        return $this->getBackingStore()->get('isApprovalRequiredForUpdate');
     }
 
     /**
@@ -94,7 +86,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +94,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @return array<AccessPackageApprovalStage>|null
     */
     public function getStages(): ?array {
-        return $this->stages;
+        return $this->getBackingStore()->get('stages');
     }
 
     /**
@@ -110,51 +102,51 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('isApprovalRequiredForAdd', $this->isApprovalRequiredForAdd);
-        $writer->writeBooleanValue('isApprovalRequiredForUpdate', $this->isApprovalRequiredForUpdate);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('stages', $this->stages);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('isApprovalRequiredForAdd', $this->getIsApprovalRequiredForAdd());
+        $writer->writeBooleanValue('isApprovalRequiredForUpdate', $this->getIsApprovalRequiredForUpdate());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('stages', $this->getStages());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the isApprovalRequiredForAdd property value. If false, then approval is not required for new requests in this policy.
      *  @param bool|null $value Value to set for the isApprovalRequiredForAdd property.
     */
-    public function setIsApprovalRequiredForAdd(?bool $value ): void {
-        $this->isApprovalRequiredForAdd = $value;
+    public function setIsApprovalRequiredForAdd(?bool $value): void {
+        $this->getBackingStore()->set('isApprovalRequiredForAdd', $value);
     }
 
     /**
      * Sets the isApprovalRequiredForUpdate property value. If false, then approval is not required for updates to requests in this policy.
      *  @param bool|null $value Value to set for the isApprovalRequiredForUpdate property.
     */
-    public function setIsApprovalRequiredForUpdate(?bool $value ): void {
-        $this->isApprovalRequiredForUpdate = $value;
+    public function setIsApprovalRequiredForUpdate(?bool $value): void {
+        $this->getBackingStore()->set('isApprovalRequiredForUpdate', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the stages property value. If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      *  @param array<AccessPackageApprovalStage>|null $value Value to set for the stages property.
     */
-    public function setStages(?array $value ): void {
-        $this->stages = $value;
+    public function setStages(?array $value): void {
+        $this->getBackingStore()->set('stages', $value);
     }
 
 }

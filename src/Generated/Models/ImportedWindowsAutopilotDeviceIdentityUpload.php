@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTimeUtc DateTime when the entity is created.
-    */
-    private ?DateTime $createdDateTimeUtc = null;
-    
-    /**
-     * @var array<ImportedWindowsAutopilotDeviceIdentity>|null $deviceIdentities Collection of all Autopilot devices as a part of this upload.
-    */
-    private ?array $deviceIdentities = null;
-    
-    /**
-     * @var ImportedWindowsAutopilotDeviceIdentityUploadStatus|null $status The status property
-    */
-    private ?ImportedWindowsAutopilotDeviceIdentityUploadStatus $status = null;
-    
-    /**
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentityUpload and sets the default values.
     */
     public function __construct() {
@@ -46,7 +31,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return DateTime|null
     */
     public function getCreatedDateTimeUtc(): ?DateTime {
-        return $this->createdDateTimeUtc;
+        return $this->getBackingStore()->get('createdDateTimeUtc');
     }
 
     /**
@@ -54,7 +39,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return array<ImportedWindowsAutopilotDeviceIdentity>|null
     */
     public function getDeviceIdentities(): ?array {
-        return $this->deviceIdentities;
+        return $this->getBackingStore()->get('deviceIdentities');
     }
 
     /**
@@ -75,7 +60,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus|null
     */
     public function getStatus(): ?ImportedWindowsAutopilotDeviceIdentityUploadStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -84,33 +69,33 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTimeUtc', $this->createdDateTimeUtc);
-        $writer->writeCollectionOfObjectValues('deviceIdentities', $this->deviceIdentities);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeDateTimeValue('createdDateTimeUtc', $this->getCreatedDateTimeUtc());
+        $writer->writeCollectionOfObjectValues('deviceIdentities', $this->getDeviceIdentities());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the createdDateTimeUtc property value. DateTime when the entity is created.
      *  @param DateTime|null $value Value to set for the createdDateTimeUtc property.
     */
-    public function setCreatedDateTimeUtc(?DateTime $value ): void {
-        $this->createdDateTimeUtc = $value;
+    public function setCreatedDateTimeUtc(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTimeUtc', $value);
     }
 
     /**
      * Sets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
      *  @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the deviceIdentities property.
     */
-    public function setDeviceIdentities(?array $value ): void {
-        $this->deviceIdentities = $value;
+    public function setDeviceIdentities(?array $value): void {
+        $this->getBackingStore()->set('deviceIdentities', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param ImportedWindowsAutopilotDeviceIdentityUploadStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ImportedWindowsAutopilotDeviceIdentityUploadStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ImportedWindowsAutopilotDeviceIdentityUploadStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

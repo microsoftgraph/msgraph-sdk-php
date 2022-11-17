@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MobileAppAssignment extends Entity implements Parsable 
 {
     /**
-     * @var InstallIntent|null $intent Possible values for the install intent chosen by the admin.
-    */
-    private ?InstallIntent $intent = null;
-    
-    /**
-     * @var MobileAppAssignmentSettings|null $settings The settings for target assignment defined by the admin.
-    */
-    private ?MobileAppAssignmentSettings $settings = null;
-    
-    /**
-     * @var DeviceAndAppManagementAssignmentTarget|null $target The target group assignment defined by the admin.
-    */
-    private ?DeviceAndAppManagementAssignmentTarget $target = null;
-    
-    /**
      * Instantiates a new mobileAppAssignment and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class MobileAppAssignment extends Entity implements Parsable
      * @return InstallIntent|null
     */
     public function getIntent(): ?InstallIntent {
-        return $this->intent;
+        return $this->getBackingStore()->get('intent');
     }
 
     /**
@@ -66,7 +51,7 @@ class MobileAppAssignment extends Entity implements Parsable
      * @return MobileAppAssignmentSettings|null
     */
     public function getSettings(): ?MobileAppAssignmentSettings {
-        return $this->settings;
+        return $this->getBackingStore()->get('settings');
     }
 
     /**
@@ -74,7 +59,7 @@ class MobileAppAssignment extends Entity implements Parsable
      * @return DeviceAndAppManagementAssignmentTarget|null
     */
     public function getTarget(): ?DeviceAndAppManagementAssignmentTarget {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -83,33 +68,33 @@ class MobileAppAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('intent', $this->intent);
-        $writer->writeObjectValue('settings', $this->settings);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeEnumValue('intent', $this->getIntent());
+        $writer->writeObjectValue('settings', $this->getSettings());
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the intent property value. Possible values for the install intent chosen by the admin.
      *  @param InstallIntent|null $value Value to set for the intent property.
     */
-    public function setIntent(?InstallIntent $value ): void {
-        $this->intent = $value;
+    public function setIntent(?InstallIntent $value): void {
+        $this->getBackingStore()->set('intent', $value);
     }
 
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
      *  @param MobileAppAssignmentSettings|null $value Value to set for the settings property.
     */
-    public function setSettings(?MobileAppAssignmentSettings $value ): void {
-        $this->settings = $value;
+    public function setSettings(?MobileAppAssignmentSettings $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
-    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value ): void {
-        $this->target = $value;
+    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuditLogRoot extends Entity implements Parsable 
 {
     /**
-     * @var array<DirectoryAudit>|null $directoryAudits The directoryAudits property
-    */
-    private ?array $directoryAudits = null;
-    
-    /**
-     * @var array<ProvisioningObjectSummary>|null $provisioning The provisioning property
-    */
-    private ?array $provisioning = null;
-    
-    /**
-     * @var array<SignIn>|null $signIns The signIns property
-    */
-    private ?array $signIns = null;
-    
-    /**
      * Instantiates a new AuditLogRoot and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<DirectoryAudit>|null
     */
     public function getDirectoryAudits(): ?array {
-        return $this->directoryAudits;
+        return $this->getBackingStore()->get('directoryAudits');
     }
 
     /**
@@ -66,7 +51,7 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<ProvisioningObjectSummary>|null
     */
     public function getProvisioning(): ?array {
-        return $this->provisioning;
+        return $this->getBackingStore()->get('provisioning');
     }
 
     /**
@@ -74,7 +59,7 @@ class AuditLogRoot extends Entity implements Parsable
      * @return array<SignIn>|null
     */
     public function getSignIns(): ?array {
-        return $this->signIns;
+        return $this->getBackingStore()->get('signIns');
     }
 
     /**
@@ -83,33 +68,33 @@ class AuditLogRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('directoryAudits', $this->directoryAudits);
-        $writer->writeCollectionOfObjectValues('provisioning', $this->provisioning);
-        $writer->writeCollectionOfObjectValues('signIns', $this->signIns);
+        $writer->writeCollectionOfObjectValues('directoryAudits', $this->getDirectoryAudits());
+        $writer->writeCollectionOfObjectValues('provisioning', $this->getProvisioning());
+        $writer->writeCollectionOfObjectValues('signIns', $this->getSignIns());
     }
 
     /**
      * Sets the directoryAudits property value. The directoryAudits property
      *  @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
     */
-    public function setDirectoryAudits(?array $value ): void {
-        $this->directoryAudits = $value;
+    public function setDirectoryAudits(?array $value): void {
+        $this->getBackingStore()->set('directoryAudits', $value);
     }
 
     /**
      * Sets the provisioning property value. The provisioning property
      *  @param array<ProvisioningObjectSummary>|null $value Value to set for the provisioning property.
     */
-    public function setProvisioning(?array $value ): void {
-        $this->provisioning = $value;
+    public function setProvisioning(?array $value): void {
+        $this->getBackingStore()->set('provisioning', $value);
     }
 
     /**
      * Sets the signIns property value. The signIns property
      *  @param array<SignIn>|null $value Value to set for the signIns property.
     */
-    public function setSignIns(?array $value ): void {
-        $this->signIns = $value;
+    public function setSignIns(?array $value): void {
+        $this->getBackingStore()->set('signIns', $value);
     }
 
 }

@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkTag extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description The description of the tag as it will appear to the user in Microsoft Teams.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The name of the tag as it will appear to the user in Microsoft Teams.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var int|null $memberCount The number of users assigned to the tag.
-    */
-    private ?int $memberCount = null;
-    
-    /**
-     * @var array<TeamworkTagMember>|null $members Users assigned to the tag.
-    */
-    private ?array $members = null;
-    
-    /**
-     * @var TeamworkTagType|null $tagType The type of the tag. Default is standard.
-    */
-    private ?TeamworkTagType $tagType = null;
-    
-    /**
-     * @var string|null $teamId ID of the team in which the tag is defined.
-    */
-    private ?string $teamId = null;
-    
-    /**
      * Instantiates a new teamworkTag and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -68,7 +38,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -92,7 +62,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return int|null
     */
     public function getMemberCount(): ?int {
-        return $this->memberCount;
+        return $this->getBackingStore()->get('memberCount');
     }
 
     /**
@@ -100,7 +70,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return array<TeamworkTagMember>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -108,7 +78,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return TeamworkTagType|null
     */
     public function getTagType(): ?TeamworkTagType {
-        return $this->tagType;
+        return $this->getBackingStore()->get('tagType');
     }
 
     /**
@@ -116,7 +86,7 @@ class TeamworkTag extends Entity implements Parsable
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->teamId;
+        return $this->getBackingStore()->get('teamId');
     }
 
     /**
@@ -125,60 +95,60 @@ class TeamworkTag extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeIntegerValue('memberCount', $this->memberCount);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
-        $writer->writeEnumValue('tagType', $this->tagType);
-        $writer->writeStringValue('teamId', $this->teamId);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeIntegerValue('memberCount', $this->getMemberCount());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeEnumValue('tagType', $this->getTagType());
+        $writer->writeStringValue('teamId', $this->getTeamId());
     }
 
     /**
      * Sets the description property value. The description of the tag as it will appear to the user in Microsoft Teams.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the tag as it will appear to the user in Microsoft Teams.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the memberCount property value. The number of users assigned to the tag.
      *  @param int|null $value Value to set for the memberCount property.
     */
-    public function setMemberCount(?int $value ): void {
-        $this->memberCount = $value;
+    public function setMemberCount(?int $value): void {
+        $this->getBackingStore()->set('memberCount', $value);
     }
 
     /**
      * Sets the members property value. Users assigned to the tag.
      *  @param array<TeamworkTagMember>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
     /**
      * Sets the tagType property value. The type of the tag. Default is standard.
      *  @param TeamworkTagType|null $value Value to set for the tagType property.
     */
-    public function setTagType(?TeamworkTagType $value ): void {
-        $this->tagType = $value;
+    public function setTagType(?TeamworkTagType $value): void {
+        $this->getBackingStore()->set('tagType', $value);
     }
 
     /**
      * Sets the teamId property value. ID of the team in which the tag is defined.
      *  @param string|null $value Value to set for the teamId property.
     */
-    public function setTeamId(?string $value ): void {
-        $this->teamId = $value;
+    public function setTeamId(?string $value): void {
+        $this->getBackingStore()->set('teamId', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFunctionResult extends Entity implements Parsable 
 {
     /**
-     * @var string|null $error The error property
-    */
-    private ?string $error = null;
-    
-    /**
-     * @var Json|null $value The value property
-    */
-    private ?Json $value = null;
-    
-    /**
      * Instantiates a new WorkbookFunctionResult and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
      * @return string|null
     */
     public function getError(): ?string {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -60,7 +50,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
      * @return Json|null
     */
     public function getValue(): ?Json {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -69,24 +59,24 @@ class WorkbookFunctionResult extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('error', $this->error);
-        $writer->writeObjectValue('value', $this->value);
+        $writer->writeStringValue('error', $this->getError());
+        $writer->writeObjectValue('value', $this->getValue());
     }
 
     /**
      * Sets the error property value. The error property
      *  @param string|null $value Value to set for the error property.
     */
-    public function setError(?string $value ): void {
-        $this->error = $value;
+    public function setError(?string $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the value property value. The value property
      *  @param Json|null $value Value to set for the value property.
     */
-    public function setValue(?Json $value ): void {
-        $this->value = $value;
+    public function setValue(?Json $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

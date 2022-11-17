@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class RecentNotebookLinks implements AdditionalDataHolder, Parsable 
+class RecentNotebookLinks implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var ExternalLink|null $oneNoteClientUrl Opens the notebook in the OneNote native client if it's installed.
-    */
-    private ?ExternalLink $oneNoteClientUrl = null;
-    
-    /**
-     * @var ExternalLink|null $oneNoteWebUrl Opens the notebook in OneNote on the web.
-    */
-    private ?ExternalLink $oneNoteWebUrl = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new recentNotebookLinks and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.recentNotebookLinks');
     }
@@ -50,8 +39,16 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +69,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -80,7 +77,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
      * @return ExternalLink|null
     */
     public function getOneNoteClientUrl(): ?ExternalLink {
-        return $this->oneNoteClientUrl;
+        return $this->getBackingStore()->get('oneNoteClientUrl');
     }
 
     /**
@@ -88,7 +85,7 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
      * @return ExternalLink|null
     */
     public function getOneNoteWebUrl(): ?ExternalLink {
-        return $this->oneNoteWebUrl;
+        return $this->getBackingStore()->get('oneNoteWebUrl');
     }
 
     /**
@@ -96,42 +93,42 @@ class RecentNotebookLinks implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('oneNoteClientUrl', $this->oneNoteClientUrl);
-        $writer->writeObjectValue('oneNoteWebUrl', $this->oneNoteWebUrl);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('oneNoteClientUrl', $this->getOneNoteClientUrl());
+        $writer->writeObjectValue('oneNoteWebUrl', $this->getOneNoteWebUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the oneNoteClientUrl property value. Opens the notebook in the OneNote native client if it's installed.
      *  @param ExternalLink|null $value Value to set for the oneNoteClientUrl property.
     */
-    public function setOneNoteClientUrl(?ExternalLink $value ): void {
-        $this->oneNoteClientUrl = $value;
+    public function setOneNoteClientUrl(?ExternalLink $value): void {
+        $this->getBackingStore()->set('oneNoteClientUrl', $value);
     }
 
     /**
      * Sets the oneNoteWebUrl property value. Opens the notebook in OneNote on the web.
      *  @param ExternalLink|null $value Value to set for the oneNoteWebUrl property.
     */
-    public function setOneNoteWebUrl(?ExternalLink $value ): void {
-        $this->oneNoteWebUrl = $value;
+    public function setOneNoteWebUrl(?ExternalLink $value): void {
+        $this->getBackingStore()->set('oneNoteWebUrl', $value);
     }
 
 }

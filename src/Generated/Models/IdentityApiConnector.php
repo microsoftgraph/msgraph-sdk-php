@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityApiConnector extends Entity implements Parsable 
 {
     /**
-     * @var ApiAuthenticationConfigurationBase|null $authenticationConfiguration The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
-    */
-    private ?ApiAuthenticationConfigurationBase $authenticationConfiguration = null;
-    
-    /**
-     * @var string|null $displayName The name of the API connector.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $targetUrl The URL of the API endpoint to call.
-    */
-    private ?string $targetUrl = null;
-    
-    /**
      * Instantiates a new IdentityApiConnector and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return ApiAuthenticationConfigurationBase|null
     */
     public function getAuthenticationConfiguration(): ?ApiAuthenticationConfigurationBase {
-        return $this->authenticationConfiguration;
+        return $this->getBackingStore()->get('authenticationConfiguration');
     }
 
     /**
@@ -53,7 +38,7 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +59,7 @@ class IdentityApiConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getTargetUrl(): ?string {
-        return $this->targetUrl;
+        return $this->getBackingStore()->get('targetUrl');
     }
 
     /**
@@ -83,33 +68,33 @@ class IdentityApiConnector extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('authenticationConfiguration', $this->authenticationConfiguration);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('targetUrl', $this->targetUrl);
+        $writer->writeObjectValue('authenticationConfiguration', $this->getAuthenticationConfiguration());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('targetUrl', $this->getTargetUrl());
     }
 
     /**
      * Sets the authenticationConfiguration property value. The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
      *  @param ApiAuthenticationConfigurationBase|null $value Value to set for the authenticationConfiguration property.
     */
-    public function setAuthenticationConfiguration(?ApiAuthenticationConfigurationBase $value ): void {
-        $this->authenticationConfiguration = $value;
+    public function setAuthenticationConfiguration(?ApiAuthenticationConfigurationBase $value): void {
+        $this->getBackingStore()->set('authenticationConfiguration', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the API connector.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the targetUrl property value. The URL of the API endpoint to call.
      *  @param string|null $value Value to set for the targetUrl property.
     */
-    public function setTargetUrl(?string $value ): void {
-        $this->targetUrl = $value;
+    public function setTargetUrl(?string $value): void {
+        $this->getBackingStore()->set('targetUrl', $value);
     }
 
 }

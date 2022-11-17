@@ -7,38 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable 
+class MobileAppInstallTimeSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DateTime|null $deadlineDateTime The time at which the app should be installed.
-    */
-    private ?DateTime $deadlineDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The time at which the app should be available for installation.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var bool|null $useLocalTime Whether the local device time or UTC time should be used when determining the available and deadline times.
-    */
-    private ?bool $useLocalTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new mobileAppInstallTimeSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.mobileAppInstallTimeSettings');
     }
@@ -56,8 +40,16 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -65,7 +57,7 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getDeadlineDateTime(): ?DateTime {
-        return $this->deadlineDateTime;
+        return $this->getBackingStore()->get('deadlineDateTime');
     }
 
     /**
@@ -87,7 +79,7 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -95,7 +87,7 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -103,7 +95,7 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getUseLocalTime(): ?bool {
-        return $this->useLocalTime;
+        return $this->getBackingStore()->get('useLocalTime');
     }
 
     /**
@@ -111,51 +103,51 @@ class MobileAppInstallTimeSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeDateTimeValue('deadlineDateTime', $this->deadlineDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeBooleanValue('useLocalTime', $this->useLocalTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeDateTimeValue('deadlineDateTime', $this->getDeadlineDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeBooleanValue('useLocalTime', $this->getUseLocalTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the deadlineDateTime property value. The time at which the app should be installed.
      *  @param DateTime|null $value Value to set for the deadlineDateTime property.
     */
-    public function setDeadlineDateTime(?DateTime $value ): void {
-        $this->deadlineDateTime = $value;
+    public function setDeadlineDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('deadlineDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the startDateTime property value. The time at which the app should be available for installation.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the useLocalTime property value. Whether the local device time or UTC time should be used when determining the available and deadline times.
      *  @param bool|null $value Value to set for the useLocalTime property.
     */
-    public function setUseLocalTime(?bool $value ): void {
-        $this->useLocalTime = $value;
+    public function setUseLocalTime(?bool $value): void {
+        $this->getBackingStore()->set('useLocalTime', $value);
     }
 
 }

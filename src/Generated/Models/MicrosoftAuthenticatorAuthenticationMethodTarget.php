@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable 
 {
     /**
-     * @var MicrosoftAuthenticatorAuthenticationMode|null $authenticationMode The authenticationMode property
-    */
-    private ?MicrosoftAuthenticatorAuthenticationMode $authenticationMode = null;
-    
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
      * @return MicrosoftAuthenticatorAuthenticationMode|null
     */
     public function getAuthenticationMode(): ?MicrosoftAuthenticatorAuthenticationMode {
-        return $this->authenticationMode;
+        return $this->getBackingStore()->get('authenticationMode');
     }
 
     /**
@@ -55,15 +50,15 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('authenticationMode', $this->authenticationMode);
+        $writer->writeEnumValue('authenticationMode', $this->getAuthenticationMode());
     }
 
     /**
      * Sets the authenticationMode property value. The authenticationMode property
      *  @param MicrosoftAuthenticatorAuthenticationMode|null $value Value to set for the authenticationMode property.
     */
-    public function setAuthenticationMode(?MicrosoftAuthenticatorAuthenticationMode $value ): void {
-        $this->authenticationMode = $value;
+    public function setAuthenticationMode(?MicrosoftAuthenticatorAuthenticationMode $value): void {
+        $this->getBackingStore()->set('authenticationMode', $value);
     }
 
 }

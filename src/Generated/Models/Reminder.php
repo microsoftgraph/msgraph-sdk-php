@@ -6,63 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Reminder implements AdditionalDataHolder, Parsable 
+class Reminder implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $changeKey Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
-    */
-    private ?string $changeKey = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $eventEndTime The date, time and time zone that the event ends.
-    */
-    private ?DateTimeTimeZone $eventEndTime = null;
-    
-    /**
-     * @var string|null $eventId The unique ID of the event. Read only.
-    */
-    private ?string $eventId = null;
-    
-    /**
-     * @var Location|null $eventLocation The location of the event.
-    */
-    private ?Location $eventLocation = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $eventStartTime The date, time, and time zone that the event starts.
-    */
-    private ?DateTimeTimeZone $eventStartTime = null;
-    
-    /**
-     * @var string|null $eventSubject The text of the event's subject line.
-    */
-    private ?string $eventSubject = null;
-    
-    /**
-     * @var string|null $eventWebLink The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
-    */
-    private ?string $eventWebLink = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $reminderFireTime The date, time, and time zone that the reminder is set to occur.
-    */
-    private ?DateTimeTimeZone $reminderFireTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new reminder and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.reminder');
     }
@@ -80,8 +39,16 @@ class Reminder implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -89,7 +56,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getChangeKey(): ?string {
-        return $this->changeKey;
+        return $this->getBackingStore()->get('changeKey');
     }
 
     /**
@@ -97,7 +64,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEventEndTime(): ?DateTimeTimeZone {
-        return $this->eventEndTime;
+        return $this->getBackingStore()->get('eventEndTime');
     }
 
     /**
@@ -105,7 +72,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEventId(): ?string {
-        return $this->eventId;
+        return $this->getBackingStore()->get('eventId');
     }
 
     /**
@@ -113,7 +80,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return Location|null
     */
     public function getEventLocation(): ?Location {
-        return $this->eventLocation;
+        return $this->getBackingStore()->get('eventLocation');
     }
 
     /**
@@ -121,7 +88,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEventStartTime(): ?DateTimeTimeZone {
-        return $this->eventStartTime;
+        return $this->getBackingStore()->get('eventStartTime');
     }
 
     /**
@@ -129,7 +96,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEventSubject(): ?string {
-        return $this->eventSubject;
+        return $this->getBackingStore()->get('eventSubject');
     }
 
     /**
@@ -137,7 +104,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEventWebLink(): ?string {
-        return $this->eventWebLink;
+        return $this->getBackingStore()->get('eventWebLink');
     }
 
     /**
@@ -164,7 +131,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -172,7 +139,7 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getReminderFireTime(): ?DateTimeTimeZone {
-        return $this->reminderFireTime;
+        return $this->getBackingStore()->get('reminderFireTime');
     }
 
     /**
@@ -180,96 +147,96 @@ class Reminder implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('changeKey', $this->changeKey);
-        $writer->writeObjectValue('eventEndTime', $this->eventEndTime);
-        $writer->writeStringValue('eventId', $this->eventId);
-        $writer->writeObjectValue('eventLocation', $this->eventLocation);
-        $writer->writeObjectValue('eventStartTime', $this->eventStartTime);
-        $writer->writeStringValue('eventSubject', $this->eventSubject);
-        $writer->writeStringValue('eventWebLink', $this->eventWebLink);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('reminderFireTime', $this->reminderFireTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('changeKey', $this->getChangeKey());
+        $writer->writeObjectValue('eventEndTime', $this->getEventEndTime());
+        $writer->writeStringValue('eventId', $this->getEventId());
+        $writer->writeObjectValue('eventLocation', $this->getEventLocation());
+        $writer->writeObjectValue('eventStartTime', $this->getEventStartTime());
+        $writer->writeStringValue('eventSubject', $this->getEventSubject());
+        $writer->writeStringValue('eventWebLink', $this->getEventWebLink());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('reminderFireTime', $this->getReminderFireTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
      *  @param string|null $value Value to set for the changeKey property.
     */
-    public function setChangeKey(?string $value ): void {
-        $this->changeKey = $value;
+    public function setChangeKey(?string $value): void {
+        $this->getBackingStore()->set('changeKey', $value);
     }
 
     /**
      * Sets the eventEndTime property value. The date, time and time zone that the event ends.
      *  @param DateTimeTimeZone|null $value Value to set for the eventEndTime property.
     */
-    public function setEventEndTime(?DateTimeTimeZone $value ): void {
-        $this->eventEndTime = $value;
+    public function setEventEndTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('eventEndTime', $value);
     }
 
     /**
      * Sets the eventId property value. The unique ID of the event. Read only.
      *  @param string|null $value Value to set for the eventId property.
     */
-    public function setEventId(?string $value ): void {
-        $this->eventId = $value;
+    public function setEventId(?string $value): void {
+        $this->getBackingStore()->set('eventId', $value);
     }
 
     /**
      * Sets the eventLocation property value. The location of the event.
      *  @param Location|null $value Value to set for the eventLocation property.
     */
-    public function setEventLocation(?Location $value ): void {
-        $this->eventLocation = $value;
+    public function setEventLocation(?Location $value): void {
+        $this->getBackingStore()->set('eventLocation', $value);
     }
 
     /**
      * Sets the eventStartTime property value. The date, time, and time zone that the event starts.
      *  @param DateTimeTimeZone|null $value Value to set for the eventStartTime property.
     */
-    public function setEventStartTime(?DateTimeTimeZone $value ): void {
-        $this->eventStartTime = $value;
+    public function setEventStartTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('eventStartTime', $value);
     }
 
     /**
      * Sets the eventSubject property value. The text of the event's subject line.
      *  @param string|null $value Value to set for the eventSubject property.
     */
-    public function setEventSubject(?string $value ): void {
-        $this->eventSubject = $value;
+    public function setEventSubject(?string $value): void {
+        $this->getBackingStore()->set('eventSubject', $value);
     }
 
     /**
      * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
      *  @param string|null $value Value to set for the eventWebLink property.
     */
-    public function setEventWebLink(?string $value ): void {
-        $this->eventWebLink = $value;
+    public function setEventWebLink(?string $value): void {
+        $this->getBackingStore()->set('eventWebLink', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
      *  @param DateTimeTimeZone|null $value Value to set for the reminderFireTime property.
     */
-    public function setReminderFireTime(?DateTimeTimeZone $value ): void {
-        $this->reminderFireTime = $value;
+    public function setReminderFireTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('reminderFireTime', $value);
     }
 
 }

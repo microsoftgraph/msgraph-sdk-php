@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoverySearch extends Search implements Parsable 
 {
     /**
-     * @var array<DataSource>|null $additionalSources Adds an additional source to the eDiscovery search.
-    */
-    private ?array $additionalSources = null;
-    
-    /**
-     * @var EdiscoveryAddToReviewSetOperation|null $addToReviewSetOperation Adds the results of the eDiscovery search to the specified reviewSet.
-    */
-    private ?EdiscoveryAddToReviewSetOperation $addToReviewSetOperation = null;
-    
-    /**
-     * @var array<DataSource>|null $custodianSources Custodian sources that are included in the eDiscovery search.
-    */
-    private ?array $custodianSources = null;
-    
-    /**
-     * @var DataSourceScopes|null $dataSourceScopes When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-    */
-    private ?DataSourceScopes $dataSourceScopes = null;
-    
-    /**
-     * @var EdiscoveryEstimateOperation|null $lastEstimateStatisticsOperation The last estimate operation associated with the eDiscovery search.
-    */
-    private ?EdiscoveryEstimateOperation $lastEstimateStatisticsOperation = null;
-    
-    /**
-     * @var array<EdiscoveryNoncustodialDataSource>|null $noncustodialSources noncustodialDataSource sources that are included in the eDiscovery search
-    */
-    private ?array $noncustodialSources = null;
-    
-    /**
      * Instantiates a new EdiscoverySearch and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<DataSource>|null
     */
     public function getAdditionalSources(): ?array {
-        return $this->additionalSources;
+        return $this->getBackingStore()->get('additionalSources');
     }
 
     /**
@@ -68,7 +38,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return EdiscoveryAddToReviewSetOperation|null
     */
     public function getAddToReviewSetOperation(): ?EdiscoveryAddToReviewSetOperation {
-        return $this->addToReviewSetOperation;
+        return $this->getBackingStore()->get('addToReviewSetOperation');
     }
 
     /**
@@ -76,7 +46,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<DataSource>|null
     */
     public function getCustodianSources(): ?array {
-        return $this->custodianSources;
+        return $this->getBackingStore()->get('custodianSources');
     }
 
     /**
@@ -84,7 +54,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return DataSourceScopes|null
     */
     public function getDataSourceScopes(): ?DataSourceScopes {
-        return $this->dataSourceScopes;
+        return $this->getBackingStore()->get('dataSourceScopes');
     }
 
     /**
@@ -108,7 +78,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return EdiscoveryEstimateOperation|null
     */
     public function getLastEstimateStatisticsOperation(): ?EdiscoveryEstimateOperation {
-        return $this->lastEstimateStatisticsOperation;
+        return $this->getBackingStore()->get('lastEstimateStatisticsOperation');
     }
 
     /**
@@ -116,7 +86,7 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<EdiscoveryNoncustodialDataSource>|null
     */
     public function getNoncustodialSources(): ?array {
-        return $this->noncustodialSources;
+        return $this->getBackingStore()->get('noncustodialSources');
     }
 
     /**
@@ -125,60 +95,60 @@ class EdiscoverySearch extends Search implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('additionalSources', $this->additionalSources);
-        $writer->writeObjectValue('addToReviewSetOperation', $this->addToReviewSetOperation);
-        $writer->writeCollectionOfObjectValues('custodianSources', $this->custodianSources);
-        $writer->writeEnumValue('dataSourceScopes', $this->dataSourceScopes);
-        $writer->writeObjectValue('lastEstimateStatisticsOperation', $this->lastEstimateStatisticsOperation);
-        $writer->writeCollectionOfObjectValues('noncustodialSources', $this->noncustodialSources);
+        $writer->writeCollectionOfObjectValues('additionalSources', $this->getAdditionalSources());
+        $writer->writeObjectValue('addToReviewSetOperation', $this->getAddToReviewSetOperation());
+        $writer->writeCollectionOfObjectValues('custodianSources', $this->getCustodianSources());
+        $writer->writeEnumValue('dataSourceScopes', $this->getDataSourceScopes());
+        $writer->writeObjectValue('lastEstimateStatisticsOperation', $this->getLastEstimateStatisticsOperation());
+        $writer->writeCollectionOfObjectValues('noncustodialSources', $this->getNoncustodialSources());
     }
 
     /**
      * Sets the additionalSources property value. Adds an additional source to the eDiscovery search.
      *  @param array<DataSource>|null $value Value to set for the additionalSources property.
     */
-    public function setAdditionalSources(?array $value ): void {
-        $this->additionalSources = $value;
+    public function setAdditionalSources(?array $value): void {
+        $this->getBackingStore()->set('additionalSources', $value);
     }
 
     /**
      * Sets the addToReviewSetOperation property value. Adds the results of the eDiscovery search to the specified reviewSet.
      *  @param EdiscoveryAddToReviewSetOperation|null $value Value to set for the addToReviewSetOperation property.
     */
-    public function setAddToReviewSetOperation(?EdiscoveryAddToReviewSetOperation $value ): void {
-        $this->addToReviewSetOperation = $value;
+    public function setAddToReviewSetOperation(?EdiscoveryAddToReviewSetOperation $value): void {
+        $this->getBackingStore()->set('addToReviewSetOperation', $value);
     }
 
     /**
      * Sets the custodianSources property value. Custodian sources that are included in the eDiscovery search.
      *  @param array<DataSource>|null $value Value to set for the custodianSources property.
     */
-    public function setCustodianSources(?array $value ): void {
-        $this->custodianSources = $value;
+    public function setCustodianSources(?array $value): void {
+        $this->getBackingStore()->set('custodianSources', $value);
     }
 
     /**
      * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      *  @param DataSourceScopes|null $value Value to set for the dataSourceScopes property.
     */
-    public function setDataSourceScopes(?DataSourceScopes $value ): void {
-        $this->dataSourceScopes = $value;
+    public function setDataSourceScopes(?DataSourceScopes $value): void {
+        $this->getBackingStore()->set('dataSourceScopes', $value);
     }
 
     /**
      * Sets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the eDiscovery search.
      *  @param EdiscoveryEstimateOperation|null $value Value to set for the lastEstimateStatisticsOperation property.
     */
-    public function setLastEstimateStatisticsOperation(?EdiscoveryEstimateOperation $value ): void {
-        $this->lastEstimateStatisticsOperation = $value;
+    public function setLastEstimateStatisticsOperation(?EdiscoveryEstimateOperation $value): void {
+        $this->getBackingStore()->set('lastEstimateStatisticsOperation', $value);
     }
 
     /**
      * Sets the noncustodialSources property value. noncustodialDataSource sources that are included in the eDiscovery search
      *  @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the noncustodialSources property.
     */
-    public function setNoncustodialSources(?array $value ): void {
-        $this->noncustodialSources = $value;
+    public function setNoncustodialSources(?array $value): void {
+        $this->getBackingStore()->set('noncustodialSources', $value);
     }
 
 }

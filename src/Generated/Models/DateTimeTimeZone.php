@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DateTimeTimeZone implements AdditionalDataHolder, Parsable 
+class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $dateTime A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
-    */
-    private ?string $dateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $timeZone Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
-    */
-    private ?string $timeZone = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new dateTimeTimeZone and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.dateTimeTimeZone');
     }
@@ -50,8 +39,16 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDateTime(): ?string {
-        return $this->dateTime;
+        return $this->getBackingStore()->get('dateTime');
     }
 
     /**
@@ -80,7 +77,7 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->timeZone;
+        return $this->getBackingStore()->get('timeZone');
     }
 
     /**
@@ -96,42 +93,42 @@ class DateTimeTimeZone implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('dateTime', $this->dateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('timeZone', $this->timeZone);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('dateTime', $this->getDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('timeZone', $this->getTimeZone());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      *  @param string|null $value Value to set for the dateTime property.
     */
-    public function setDateTime(?string $value ): void {
-        $this->dateTime = $value;
+    public function setDateTime(?string $value): void {
+        $this->getBackingStore()->set('dateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
      *  @param string|null $value Value to set for the timeZone property.
     */
-    public function setTimeZone(?string $value ): void {
-        $this->timeZone = $value;
+    public function setTimeZone(?string $value): void {
+        $this->getBackingStore()->set('timeZone', $value);
     }
 
 }

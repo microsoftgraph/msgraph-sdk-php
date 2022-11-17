@@ -6,58 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable 
+class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $excludedItemCount Count of items that are excluded from the request.
-    */
-    private ?int $excludedItemCount = null;
-    
-    /**
-     * @var array<KeyValuePair>|null $insightCounts Count of items per insight.
-    */
-    private ?array $insightCounts = null;
-    
-    /**
-     * @var int|null $itemCount Count of items found.
-    */
-    private ?int $itemCount = null;
-    
-    /**
-     * @var int|null $itemNeedReview Count of item that need review.
-    */
-    private ?int $itemNeedReview = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<KeyValuePair>|null $productItemCounts Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
-    */
-    private ?array $productItemCounts = null;
-    
-    /**
-     * @var int|null $signedOffItemCount Count of items signed off by the administrator.
-    */
-    private ?int $signedOffItemCount = null;
-    
-    /**
-     * @var int|null $totalItemSize Total item size in bytes.
-    */
-    private ?int $totalItemSize = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new subjectRightsRequestDetail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.subjectRightsRequestDetail');
     }
@@ -75,8 +39,16 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +56,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getExcludedItemCount(): ?int {
-        return $this->excludedItemCount;
+        return $this->getBackingStore()->get('excludedItemCount');
     }
 
     /**
@@ -110,7 +82,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return array<KeyValuePair>|null
     */
     public function getInsightCounts(): ?array {
-        return $this->insightCounts;
+        return $this->getBackingStore()->get('insightCounts');
     }
 
     /**
@@ -118,7 +90,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getItemCount(): ?int {
-        return $this->itemCount;
+        return $this->getBackingStore()->get('itemCount');
     }
 
     /**
@@ -126,7 +98,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getItemNeedReview(): ?int {
-        return $this->itemNeedReview;
+        return $this->getBackingStore()->get('itemNeedReview');
     }
 
     /**
@@ -134,7 +106,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -142,7 +114,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return array<KeyValuePair>|null
     */
     public function getProductItemCounts(): ?array {
-        return $this->productItemCounts;
+        return $this->getBackingStore()->get('productItemCounts');
     }
 
     /**
@@ -150,7 +122,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getSignedOffItemCount(): ?int {
-        return $this->signedOffItemCount;
+        return $this->getBackingStore()->get('signedOffItemCount');
     }
 
     /**
@@ -158,7 +130,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTotalItemSize(): ?int {
-        return $this->totalItemSize;
+        return $this->getBackingStore()->get('totalItemSize');
     }
 
     /**
@@ -166,87 +138,87 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('excludedItemCount', $this->excludedItemCount);
-        $writer->writeCollectionOfObjectValues('insightCounts', $this->insightCounts);
-        $writer->writeIntegerValue('itemCount', $this->itemCount);
-        $writer->writeIntegerValue('itemNeedReview', $this->itemNeedReview);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('productItemCounts', $this->productItemCounts);
-        $writer->writeIntegerValue('signedOffItemCount', $this->signedOffItemCount);
-        $writer->writeIntegerValue('totalItemSize', $this->totalItemSize);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('excludedItemCount', $this->getExcludedItemCount());
+        $writer->writeCollectionOfObjectValues('insightCounts', $this->getInsightCounts());
+        $writer->writeIntegerValue('itemCount', $this->getItemCount());
+        $writer->writeIntegerValue('itemNeedReview', $this->getItemNeedReview());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('productItemCounts', $this->getProductItemCounts());
+        $writer->writeIntegerValue('signedOffItemCount', $this->getSignedOffItemCount());
+        $writer->writeIntegerValue('totalItemSize', $this->getTotalItemSize());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the excludedItemCount property value. Count of items that are excluded from the request.
      *  @param int|null $value Value to set for the excludedItemCount property.
     */
-    public function setExcludedItemCount(?int $value ): void {
-        $this->excludedItemCount = $value;
+    public function setExcludedItemCount(?int $value): void {
+        $this->getBackingStore()->set('excludedItemCount', $value);
     }
 
     /**
      * Sets the insightCounts property value. Count of items per insight.
      *  @param array<KeyValuePair>|null $value Value to set for the insightCounts property.
     */
-    public function setInsightCounts(?array $value ): void {
-        $this->insightCounts = $value;
+    public function setInsightCounts(?array $value): void {
+        $this->getBackingStore()->set('insightCounts', $value);
     }
 
     /**
      * Sets the itemCount property value. Count of items found.
      *  @param int|null $value Value to set for the itemCount property.
     */
-    public function setItemCount(?int $value ): void {
-        $this->itemCount = $value;
+    public function setItemCount(?int $value): void {
+        $this->getBackingStore()->set('itemCount', $value);
     }
 
     /**
      * Sets the itemNeedReview property value. Count of item that need review.
      *  @param int|null $value Value to set for the itemNeedReview property.
     */
-    public function setItemNeedReview(?int $value ): void {
-        $this->itemNeedReview = $value;
+    public function setItemNeedReview(?int $value): void {
+        $this->getBackingStore()->set('itemNeedReview', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
      *  @param array<KeyValuePair>|null $value Value to set for the productItemCounts property.
     */
-    public function setProductItemCounts(?array $value ): void {
-        $this->productItemCounts = $value;
+    public function setProductItemCounts(?array $value): void {
+        $this->getBackingStore()->set('productItemCounts', $value);
     }
 
     /**
      * Sets the signedOffItemCount property value. Count of items signed off by the administrator.
      *  @param int|null $value Value to set for the signedOffItemCount property.
     */
-    public function setSignedOffItemCount(?int $value ): void {
-        $this->signedOffItemCount = $value;
+    public function setSignedOffItemCount(?int $value): void {
+        $this->getBackingStore()->set('signedOffItemCount', $value);
     }
 
     /**
      * Sets the totalItemSize property value. Total item size in bytes.
      *  @param int|null $value Value to set for the totalItemSize property.
     */
-    public function setTotalItemSize(?int $value ): void {
-        $this->totalItemSize = $value;
+    public function setTotalItemSize(?int $value): void {
+        $this->getBackingStore()->set('totalItemSize', $value);
     }
 
 }

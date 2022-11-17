@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookApplication extends Entity implements Parsable 
 {
     /**
-     * @var string|null $calculationMode Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
-    */
-    private ?string $calculationMode = null;
-    
-    /**
      * Instantiates a new workbookApplication and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class WorkbookApplication extends Entity implements Parsable
      * @return string|null
     */
     public function getCalculationMode(): ?string {
-        return $this->calculationMode;
+        return $this->getBackingStore()->get('calculationMode');
     }
 
     /**
@@ -55,15 +50,15 @@ class WorkbookApplication extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('calculationMode', $this->calculationMode);
+        $writer->writeStringValue('calculationMode', $this->getCalculationMode());
     }
 
     /**
      * Sets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
      *  @param string|null $value Value to set for the calculationMode property.
     */
-    public function setCalculationMode(?string $value ): void {
-        $this->calculationMode = $value;
+    public function setCalculationMode(?string $value): void {
+        $this->getBackingStore()->set('calculationMode', $value);
     }
 
 }

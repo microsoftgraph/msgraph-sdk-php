@@ -9,51 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartDataLabels extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartDataLabelFormat|null $format Represents the format of chart data labels, which includes fill and font formatting. Read-only.
-    */
-    private ?WorkbookChartDataLabelFormat $format = null;
-    
-    /**
-     * @var string|null $position DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
-    */
-    private ?string $position = null;
-    
-    /**
-     * @var string|null $separator String representing the separator used for the data labels on a chart.
-    */
-    private ?string $separator = null;
-    
-    /**
-     * @var bool|null $showBubbleSize Boolean value representing if the data label bubble size is visible or not.
-    */
-    private ?bool $showBubbleSize = null;
-    
-    /**
-     * @var bool|null $showCategoryName Boolean value representing if the data label category name is visible or not.
-    */
-    private ?bool $showCategoryName = null;
-    
-    /**
-     * @var bool|null $showLegendKey Boolean value representing if the data label legend key is visible or not.
-    */
-    private ?bool $showLegendKey = null;
-    
-    /**
-     * @var bool|null $showPercentage Boolean value representing if the data label percentage is visible or not.
-    */
-    private ?bool $showPercentage = null;
-    
-    /**
-     * @var bool|null $showSeriesName Boolean value representing if the data label series name is visible or not.
-    */
-    private ?bool $showSeriesName = null;
-    
-    /**
-     * @var bool|null $showValue Boolean value representing if the data label value is visible or not.
-    */
-    private ?bool $showValue = null;
-    
-    /**
      * Instantiates a new workbookChartDataLabels and sets the default values.
     */
     public function __construct() {
@@ -94,7 +49,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return WorkbookChartDataLabelFormat|null
     */
     public function getFormat(): ?WorkbookChartDataLabelFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -102,7 +57,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return string|null
     */
     public function getPosition(): ?string {
-        return $this->position;
+        return $this->getBackingStore()->get('position');
     }
 
     /**
@@ -110,7 +65,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return string|null
     */
     public function getSeparator(): ?string {
-        return $this->separator;
+        return $this->getBackingStore()->get('separator');
     }
 
     /**
@@ -118,7 +73,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBubbleSize(): ?bool {
-        return $this->showBubbleSize;
+        return $this->getBackingStore()->get('showBubbleSize');
     }
 
     /**
@@ -126,7 +81,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowCategoryName(): ?bool {
-        return $this->showCategoryName;
+        return $this->getBackingStore()->get('showCategoryName');
     }
 
     /**
@@ -134,7 +89,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowLegendKey(): ?bool {
-        return $this->showLegendKey;
+        return $this->getBackingStore()->get('showLegendKey');
     }
 
     /**
@@ -142,7 +97,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowPercentage(): ?bool {
-        return $this->showPercentage;
+        return $this->getBackingStore()->get('showPercentage');
     }
 
     /**
@@ -150,7 +105,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowSeriesName(): ?bool {
-        return $this->showSeriesName;
+        return $this->getBackingStore()->get('showSeriesName');
     }
 
     /**
@@ -158,7 +113,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowValue(): ?bool {
-        return $this->showValue;
+        return $this->getBackingStore()->get('showValue');
     }
 
     /**
@@ -167,87 +122,87 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeStringValue('position', $this->position);
-        $writer->writeStringValue('separator', $this->separator);
-        $writer->writeBooleanValue('showBubbleSize', $this->showBubbleSize);
-        $writer->writeBooleanValue('showCategoryName', $this->showCategoryName);
-        $writer->writeBooleanValue('showLegendKey', $this->showLegendKey);
-        $writer->writeBooleanValue('showPercentage', $this->showPercentage);
-        $writer->writeBooleanValue('showSeriesName', $this->showSeriesName);
-        $writer->writeBooleanValue('showValue', $this->showValue);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeStringValue('position', $this->getPosition());
+        $writer->writeStringValue('separator', $this->getSeparator());
+        $writer->writeBooleanValue('showBubbleSize', $this->getShowBubbleSize());
+        $writer->writeBooleanValue('showCategoryName', $this->getShowCategoryName());
+        $writer->writeBooleanValue('showLegendKey', $this->getShowLegendKey());
+        $writer->writeBooleanValue('showPercentage', $this->getShowPercentage());
+        $writer->writeBooleanValue('showSeriesName', $this->getShowSeriesName());
+        $writer->writeBooleanValue('showValue', $this->getShowValue());
     }
 
     /**
      * Sets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.
      *  @param WorkbookChartDataLabelFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartDataLabelFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartDataLabelFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the position property value. DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
      *  @param string|null $value Value to set for the position property.
     */
-    public function setPosition(?string $value ): void {
-        $this->position = $value;
+    public function setPosition(?string $value): void {
+        $this->getBackingStore()->set('position', $value);
     }
 
     /**
      * Sets the separator property value. String representing the separator used for the data labels on a chart.
      *  @param string|null $value Value to set for the separator property.
     */
-    public function setSeparator(?string $value ): void {
-        $this->separator = $value;
+    public function setSeparator(?string $value): void {
+        $this->getBackingStore()->set('separator', $value);
     }
 
     /**
      * Sets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
      *  @param bool|null $value Value to set for the showBubbleSize property.
     */
-    public function setShowBubbleSize(?bool $value ): void {
-        $this->showBubbleSize = $value;
+    public function setShowBubbleSize(?bool $value): void {
+        $this->getBackingStore()->set('showBubbleSize', $value);
     }
 
     /**
      * Sets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
      *  @param bool|null $value Value to set for the showCategoryName property.
     */
-    public function setShowCategoryName(?bool $value ): void {
-        $this->showCategoryName = $value;
+    public function setShowCategoryName(?bool $value): void {
+        $this->getBackingStore()->set('showCategoryName', $value);
     }
 
     /**
      * Sets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
      *  @param bool|null $value Value to set for the showLegendKey property.
     */
-    public function setShowLegendKey(?bool $value ): void {
-        $this->showLegendKey = $value;
+    public function setShowLegendKey(?bool $value): void {
+        $this->getBackingStore()->set('showLegendKey', $value);
     }
 
     /**
      * Sets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
      *  @param bool|null $value Value to set for the showPercentage property.
     */
-    public function setShowPercentage(?bool $value ): void {
-        $this->showPercentage = $value;
+    public function setShowPercentage(?bool $value): void {
+        $this->getBackingStore()->set('showPercentage', $value);
     }
 
     /**
      * Sets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
      *  @param bool|null $value Value to set for the showSeriesName property.
     */
-    public function setShowSeriesName(?bool $value ): void {
-        $this->showSeriesName = $value;
+    public function setShowSeriesName(?bool $value): void {
+        $this->getBackingStore()->set('showSeriesName', $value);
     }
 
     /**
      * Sets the showValue property value. Boolean value representing if the data label value is visible or not.
      *  @param bool|null $value Value to set for the showValue property.
     */
-    public function setShowValue(?bool $value ): void {
-        $this->showValue = $value;
+    public function setShowValue(?bool $value): void {
+        $this->getBackingStore()->set('showValue', $value);
     }
 
 }

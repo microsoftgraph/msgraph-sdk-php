@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerBucket extends Entity implements Parsable 
 {
     /**
-     * @var string|null $name Name of the bucket.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here.
-    */
-    private ?string $orderHint = null;
-    
-    /**
-     * @var string|null $planId Plan ID to which the bucket belongs.
-    */
-    private ?string $planId = null;
-    
-    /**
-     * @var array<PlannerTask>|null $tasks Read-only. Nullable. The collection of tasks in the bucket.
-    */
-    private ?array $tasks = null;
-    
-    /**
      * Instantiates a new plannerBucket and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class PlannerBucket extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -72,7 +52,7 @@ class PlannerBucket extends Entity implements Parsable
      * @return string|null
     */
     public function getOrderHint(): ?string {
-        return $this->orderHint;
+        return $this->getBackingStore()->get('orderHint');
     }
 
     /**
@@ -80,7 +60,7 @@ class PlannerBucket extends Entity implements Parsable
      * @return string|null
     */
     public function getPlanId(): ?string {
-        return $this->planId;
+        return $this->getBackingStore()->get('planId');
     }
 
     /**
@@ -88,7 +68,7 @@ class PlannerBucket extends Entity implements Parsable
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -97,42 +77,42 @@ class PlannerBucket extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('orderHint', $this->orderHint);
-        $writer->writeStringValue('planId', $this->planId);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('orderHint', $this->getOrderHint());
+        $writer->writeStringValue('planId', $this->getPlanId());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 
     /**
      * Sets the name property value. Name of the bucket.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      *  @param string|null $value Value to set for the orderHint property.
     */
-    public function setOrderHint(?string $value ): void {
-        $this->orderHint = $value;
+    public function setOrderHint(?string $value): void {
+        $this->getBackingStore()->set('orderHint', $value);
     }
 
     /**
      * Sets the planId property value. Plan ID to which the bucket belongs.
      *  @param string|null $value Value to set for the planId property.
     */
-    public function setPlanId(?string $value ): void {
-        $this->planId = $value;
+    public function setPlanId(?string $value): void {
+        $this->getBackingStore()->set('planId', $value);
     }
 
     /**
      * Sets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
 }

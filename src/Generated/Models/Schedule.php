@@ -9,101 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Schedule extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $enabled Indicates whether the schedule is enabled for the team. Required.
-    */
-    private ?bool $enabled = null;
-    
-    /**
-     * @var array<OfferShiftRequest>|null $offerShiftRequests The offerShiftRequests property
-    */
-    private ?array $offerShiftRequests = null;
-    
-    /**
-     * @var bool|null $offerShiftRequestsEnabled Indicates whether offer shift requests are enabled for the schedule.
-    */
-    private ?bool $offerShiftRequestsEnabled = null;
-    
-    /**
-     * @var array<OpenShiftChangeRequest>|null $openShiftChangeRequests The openShiftChangeRequests property
-    */
-    private ?array $openShiftChangeRequests = null;
-    
-    /**
-     * @var array<OpenShift>|null $openShifts The openShifts property
-    */
-    private ?array $openShifts = null;
-    
-    /**
-     * @var bool|null $openShiftsEnabled Indicates whether open shifts are enabled for the schedule.
-    */
-    private ?bool $openShiftsEnabled = null;
-    
-    /**
-     * @var OperationStatus|null $provisionStatus The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
-    */
-    private ?OperationStatus $provisionStatus = null;
-    
-    /**
-     * @var string|null $provisionStatusCode Additional information about why schedule provisioning failed.
-    */
-    private ?string $provisionStatusCode = null;
-    
-    /**
-     * @var array<SchedulingGroup>|null $schedulingGroups The logical grouping of users in the schedule (usually by role).
-    */
-    private ?array $schedulingGroups = null;
-    
-    /**
-     * @var array<Shift>|null $shifts The shifts in the schedule.
-    */
-    private ?array $shifts = null;
-    
-    /**
-     * @var array<SwapShiftsChangeRequest>|null $swapShiftsChangeRequests The swapShiftsChangeRequests property
-    */
-    private ?array $swapShiftsChangeRequests = null;
-    
-    /**
-     * @var bool|null $swapShiftsRequestsEnabled Indicates whether swap shifts requests are enabled for the schedule.
-    */
-    private ?bool $swapShiftsRequestsEnabled = null;
-    
-    /**
-     * @var bool|null $timeClockEnabled Indicates whether time clock is enabled for the schedule.
-    */
-    private ?bool $timeClockEnabled = null;
-    
-    /**
-     * @var array<TimeOffReason>|null $timeOffReasons The set of reasons for a time off in the schedule.
-    */
-    private ?array $timeOffReasons = null;
-    
-    /**
-     * @var array<TimeOffRequest>|null $timeOffRequests The timeOffRequests property
-    */
-    private ?array $timeOffRequests = null;
-    
-    /**
-     * @var bool|null $timeOffRequestsEnabled Indicates whether time off requests are enabled for the schedule.
-    */
-    private ?bool $timeOffRequestsEnabled = null;
-    
-    /**
-     * @var array<TimeOff>|null $timesOff The instances of times off in the schedule.
-    */
-    private ?array $timesOff = null;
-    
-    /**
-     * @var string|null $timeZone Indicates the time zone of the schedule team using tz database format. Required.
-    */
-    private ?string $timeZone = null;
-    
-    /**
-     * @var array<string>|null $workforceIntegrationIds The workforceIntegrationIds property
-    */
-    private ?array $workforceIntegrationIds = null;
-    
-    /**
      * Instantiates a new schedule and sets the default values.
     */
     public function __construct() {
@@ -125,7 +30,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->enabled;
+        return $this->getBackingStore()->get('enabled');
     }
 
     /**
@@ -162,7 +67,7 @@ class Schedule extends Entity implements Parsable
      * @return array<OfferShiftRequest>|null
     */
     public function getOfferShiftRequests(): ?array {
-        return $this->offerShiftRequests;
+        return $this->getBackingStore()->get('offerShiftRequests');
     }
 
     /**
@@ -170,7 +75,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getOfferShiftRequestsEnabled(): ?bool {
-        return $this->offerShiftRequestsEnabled;
+        return $this->getBackingStore()->get('offerShiftRequestsEnabled');
     }
 
     /**
@@ -178,7 +83,7 @@ class Schedule extends Entity implements Parsable
      * @return array<OpenShiftChangeRequest>|null
     */
     public function getOpenShiftChangeRequests(): ?array {
-        return $this->openShiftChangeRequests;
+        return $this->getBackingStore()->get('openShiftChangeRequests');
     }
 
     /**
@@ -186,7 +91,7 @@ class Schedule extends Entity implements Parsable
      * @return array<OpenShift>|null
     */
     public function getOpenShifts(): ?array {
-        return $this->openShifts;
+        return $this->getBackingStore()->get('openShifts');
     }
 
     /**
@@ -194,7 +99,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getOpenShiftsEnabled(): ?bool {
-        return $this->openShiftsEnabled;
+        return $this->getBackingStore()->get('openShiftsEnabled');
     }
 
     /**
@@ -202,7 +107,7 @@ class Schedule extends Entity implements Parsable
      * @return OperationStatus|null
     */
     public function getProvisionStatus(): ?OperationStatus {
-        return $this->provisionStatus;
+        return $this->getBackingStore()->get('provisionStatus');
     }
 
     /**
@@ -210,7 +115,7 @@ class Schedule extends Entity implements Parsable
      * @return string|null
     */
     public function getProvisionStatusCode(): ?string {
-        return $this->provisionStatusCode;
+        return $this->getBackingStore()->get('provisionStatusCode');
     }
 
     /**
@@ -218,7 +123,7 @@ class Schedule extends Entity implements Parsable
      * @return array<SchedulingGroup>|null
     */
     public function getSchedulingGroups(): ?array {
-        return $this->schedulingGroups;
+        return $this->getBackingStore()->get('schedulingGroups');
     }
 
     /**
@@ -226,7 +131,7 @@ class Schedule extends Entity implements Parsable
      * @return array<Shift>|null
     */
     public function getShifts(): ?array {
-        return $this->shifts;
+        return $this->getBackingStore()->get('shifts');
     }
 
     /**
@@ -234,7 +139,7 @@ class Schedule extends Entity implements Parsable
      * @return array<SwapShiftsChangeRequest>|null
     */
     public function getSwapShiftsChangeRequests(): ?array {
-        return $this->swapShiftsChangeRequests;
+        return $this->getBackingStore()->get('swapShiftsChangeRequests');
     }
 
     /**
@@ -242,7 +147,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getSwapShiftsRequestsEnabled(): ?bool {
-        return $this->swapShiftsRequestsEnabled;
+        return $this->getBackingStore()->get('swapShiftsRequestsEnabled');
     }
 
     /**
@@ -250,7 +155,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getTimeClockEnabled(): ?bool {
-        return $this->timeClockEnabled;
+        return $this->getBackingStore()->get('timeClockEnabled');
     }
 
     /**
@@ -258,7 +163,7 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOffReason>|null
     */
     public function getTimeOffReasons(): ?array {
-        return $this->timeOffReasons;
+        return $this->getBackingStore()->get('timeOffReasons');
     }
 
     /**
@@ -266,7 +171,7 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOffRequest>|null
     */
     public function getTimeOffRequests(): ?array {
-        return $this->timeOffRequests;
+        return $this->getBackingStore()->get('timeOffRequests');
     }
 
     /**
@@ -274,7 +179,7 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getTimeOffRequestsEnabled(): ?bool {
-        return $this->timeOffRequestsEnabled;
+        return $this->getBackingStore()->get('timeOffRequestsEnabled');
     }
 
     /**
@@ -282,7 +187,7 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOff>|null
     */
     public function getTimesOff(): ?array {
-        return $this->timesOff;
+        return $this->getBackingStore()->get('timesOff');
     }
 
     /**
@@ -290,7 +195,7 @@ class Schedule extends Entity implements Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->timeZone;
+        return $this->getBackingStore()->get('timeZone');
     }
 
     /**
@@ -298,7 +203,7 @@ class Schedule extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getWorkforceIntegrationIds(): ?array {
-        return $this->workforceIntegrationIds;
+        return $this->getBackingStore()->get('workforceIntegrationIds');
     }
 
     /**
@@ -307,175 +212,175 @@ class Schedule extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('enabled', $this->enabled);
-        $writer->writeCollectionOfObjectValues('offerShiftRequests', $this->offerShiftRequests);
-        $writer->writeBooleanValue('offerShiftRequestsEnabled', $this->offerShiftRequestsEnabled);
-        $writer->writeCollectionOfObjectValues('openShiftChangeRequests', $this->openShiftChangeRequests);
-        $writer->writeCollectionOfObjectValues('openShifts', $this->openShifts);
-        $writer->writeBooleanValue('openShiftsEnabled', $this->openShiftsEnabled);
-        $writer->writeCollectionOfObjectValues('schedulingGroups', $this->schedulingGroups);
-        $writer->writeCollectionOfObjectValues('shifts', $this->shifts);
-        $writer->writeCollectionOfObjectValues('swapShiftsChangeRequests', $this->swapShiftsChangeRequests);
-        $writer->writeBooleanValue('swapShiftsRequestsEnabled', $this->swapShiftsRequestsEnabled);
-        $writer->writeBooleanValue('timeClockEnabled', $this->timeClockEnabled);
-        $writer->writeCollectionOfObjectValues('timeOffReasons', $this->timeOffReasons);
-        $writer->writeCollectionOfObjectValues('timeOffRequests', $this->timeOffRequests);
-        $writer->writeBooleanValue('timeOffRequestsEnabled', $this->timeOffRequestsEnabled);
-        $writer->writeCollectionOfObjectValues('timesOff', $this->timesOff);
-        $writer->writeStringValue('timeZone', $this->timeZone);
-        $writer->writeCollectionOfPrimitiveValues('workforceIntegrationIds', $this->workforceIntegrationIds);
+        $writer->writeBooleanValue('enabled', $this->getEnabled());
+        $writer->writeCollectionOfObjectValues('offerShiftRequests', $this->getOfferShiftRequests());
+        $writer->writeBooleanValue('offerShiftRequestsEnabled', $this->getOfferShiftRequestsEnabled());
+        $writer->writeCollectionOfObjectValues('openShiftChangeRequests', $this->getOpenShiftChangeRequests());
+        $writer->writeCollectionOfObjectValues('openShifts', $this->getOpenShifts());
+        $writer->writeBooleanValue('openShiftsEnabled', $this->getOpenShiftsEnabled());
+        $writer->writeCollectionOfObjectValues('schedulingGroups', $this->getSchedulingGroups());
+        $writer->writeCollectionOfObjectValues('shifts', $this->getShifts());
+        $writer->writeCollectionOfObjectValues('swapShiftsChangeRequests', $this->getSwapShiftsChangeRequests());
+        $writer->writeBooleanValue('swapShiftsRequestsEnabled', $this->getSwapShiftsRequestsEnabled());
+        $writer->writeBooleanValue('timeClockEnabled', $this->getTimeClockEnabled());
+        $writer->writeCollectionOfObjectValues('timeOffReasons', $this->getTimeOffReasons());
+        $writer->writeCollectionOfObjectValues('timeOffRequests', $this->getTimeOffRequests());
+        $writer->writeBooleanValue('timeOffRequestsEnabled', $this->getTimeOffRequestsEnabled());
+        $writer->writeCollectionOfObjectValues('timesOff', $this->getTimesOff());
+        $writer->writeStringValue('timeZone', $this->getTimeZone());
+        $writer->writeCollectionOfPrimitiveValues('workforceIntegrationIds', $this->getWorkforceIntegrationIds());
     }
 
     /**
      * Sets the enabled property value. Indicates whether the schedule is enabled for the team. Required.
      *  @param bool|null $value Value to set for the enabled property.
     */
-    public function setEnabled(?bool $value ): void {
-        $this->enabled = $value;
+    public function setEnabled(?bool $value): void {
+        $this->getBackingStore()->set('enabled', $value);
     }
 
     /**
      * Sets the offerShiftRequests property value. The offerShiftRequests property
      *  @param array<OfferShiftRequest>|null $value Value to set for the offerShiftRequests property.
     */
-    public function setOfferShiftRequests(?array $value ): void {
-        $this->offerShiftRequests = $value;
+    public function setOfferShiftRequests(?array $value): void {
+        $this->getBackingStore()->set('offerShiftRequests', $value);
     }
 
     /**
      * Sets the offerShiftRequestsEnabled property value. Indicates whether offer shift requests are enabled for the schedule.
      *  @param bool|null $value Value to set for the offerShiftRequestsEnabled property.
     */
-    public function setOfferShiftRequestsEnabled(?bool $value ): void {
-        $this->offerShiftRequestsEnabled = $value;
+    public function setOfferShiftRequestsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('offerShiftRequestsEnabled', $value);
     }
 
     /**
      * Sets the openShiftChangeRequests property value. The openShiftChangeRequests property
      *  @param array<OpenShiftChangeRequest>|null $value Value to set for the openShiftChangeRequests property.
     */
-    public function setOpenShiftChangeRequests(?array $value ): void {
-        $this->openShiftChangeRequests = $value;
+    public function setOpenShiftChangeRequests(?array $value): void {
+        $this->getBackingStore()->set('openShiftChangeRequests', $value);
     }
 
     /**
      * Sets the openShifts property value. The openShifts property
      *  @param array<OpenShift>|null $value Value to set for the openShifts property.
     */
-    public function setOpenShifts(?array $value ): void {
-        $this->openShifts = $value;
+    public function setOpenShifts(?array $value): void {
+        $this->getBackingStore()->set('openShifts', $value);
     }
 
     /**
      * Sets the openShiftsEnabled property value. Indicates whether open shifts are enabled for the schedule.
      *  @param bool|null $value Value to set for the openShiftsEnabled property.
     */
-    public function setOpenShiftsEnabled(?bool $value ): void {
-        $this->openShiftsEnabled = $value;
+    public function setOpenShiftsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('openShiftsEnabled', $value);
     }
 
     /**
      * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
      *  @param OperationStatus|null $value Value to set for the provisionStatus property.
     */
-    public function setProvisionStatus(?OperationStatus $value ): void {
-        $this->provisionStatus = $value;
+    public function setProvisionStatus(?OperationStatus $value): void {
+        $this->getBackingStore()->set('provisionStatus', $value);
     }
 
     /**
      * Sets the provisionStatusCode property value. Additional information about why schedule provisioning failed.
      *  @param string|null $value Value to set for the provisionStatusCode property.
     */
-    public function setProvisionStatusCode(?string $value ): void {
-        $this->provisionStatusCode = $value;
+    public function setProvisionStatusCode(?string $value): void {
+        $this->getBackingStore()->set('provisionStatusCode', $value);
     }
 
     /**
      * Sets the schedulingGroups property value. The logical grouping of users in the schedule (usually by role).
      *  @param array<SchedulingGroup>|null $value Value to set for the schedulingGroups property.
     */
-    public function setSchedulingGroups(?array $value ): void {
-        $this->schedulingGroups = $value;
+    public function setSchedulingGroups(?array $value): void {
+        $this->getBackingStore()->set('schedulingGroups', $value);
     }
 
     /**
      * Sets the shifts property value. The shifts in the schedule.
      *  @param array<Shift>|null $value Value to set for the shifts property.
     */
-    public function setShifts(?array $value ): void {
-        $this->shifts = $value;
+    public function setShifts(?array $value): void {
+        $this->getBackingStore()->set('shifts', $value);
     }
 
     /**
      * Sets the swapShiftsChangeRequests property value. The swapShiftsChangeRequests property
      *  @param array<SwapShiftsChangeRequest>|null $value Value to set for the swapShiftsChangeRequests property.
     */
-    public function setSwapShiftsChangeRequests(?array $value ): void {
-        $this->swapShiftsChangeRequests = $value;
+    public function setSwapShiftsChangeRequests(?array $value): void {
+        $this->getBackingStore()->set('swapShiftsChangeRequests', $value);
     }
 
     /**
      * Sets the swapShiftsRequestsEnabled property value. Indicates whether swap shifts requests are enabled for the schedule.
      *  @param bool|null $value Value to set for the swapShiftsRequestsEnabled property.
     */
-    public function setSwapShiftsRequestsEnabled(?bool $value ): void {
-        $this->swapShiftsRequestsEnabled = $value;
+    public function setSwapShiftsRequestsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('swapShiftsRequestsEnabled', $value);
     }
 
     /**
      * Sets the timeClockEnabled property value. Indicates whether time clock is enabled for the schedule.
      *  @param bool|null $value Value to set for the timeClockEnabled property.
     */
-    public function setTimeClockEnabled(?bool $value ): void {
-        $this->timeClockEnabled = $value;
+    public function setTimeClockEnabled(?bool $value): void {
+        $this->getBackingStore()->set('timeClockEnabled', $value);
     }
 
     /**
      * Sets the timeOffReasons property value. The set of reasons for a time off in the schedule.
      *  @param array<TimeOffReason>|null $value Value to set for the timeOffReasons property.
     */
-    public function setTimeOffReasons(?array $value ): void {
-        $this->timeOffReasons = $value;
+    public function setTimeOffReasons(?array $value): void {
+        $this->getBackingStore()->set('timeOffReasons', $value);
     }
 
     /**
      * Sets the timeOffRequests property value. The timeOffRequests property
      *  @param array<TimeOffRequest>|null $value Value to set for the timeOffRequests property.
     */
-    public function setTimeOffRequests(?array $value ): void {
-        $this->timeOffRequests = $value;
+    public function setTimeOffRequests(?array $value): void {
+        $this->getBackingStore()->set('timeOffRequests', $value);
     }
 
     /**
      * Sets the timeOffRequestsEnabled property value. Indicates whether time off requests are enabled for the schedule.
      *  @param bool|null $value Value to set for the timeOffRequestsEnabled property.
     */
-    public function setTimeOffRequestsEnabled(?bool $value ): void {
-        $this->timeOffRequestsEnabled = $value;
+    public function setTimeOffRequestsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('timeOffRequestsEnabled', $value);
     }
 
     /**
      * Sets the timesOff property value. The instances of times off in the schedule.
      *  @param array<TimeOff>|null $value Value to set for the timesOff property.
     */
-    public function setTimesOff(?array $value ): void {
-        $this->timesOff = $value;
+    public function setTimesOff(?array $value): void {
+        $this->getBackingStore()->set('timesOff', $value);
     }
 
     /**
      * Sets the timeZone property value. Indicates the time zone of the schedule team using tz database format. Required.
      *  @param string|null $value Value to set for the timeZone property.
     */
-    public function setTimeZone(?string $value ): void {
-        $this->timeZone = $value;
+    public function setTimeZone(?string $value): void {
+        $this->getBackingStore()->set('timeZone', $value);
     }
 
     /**
      * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
      *  @param array<string>|null $value Value to set for the workforceIntegrationIds property.
     */
-    public function setWorkforceIntegrationIds(?array $value ): void {
-        $this->workforceIntegrationIds = $value;
+    public function setWorkforceIntegrationIds(?array $value): void {
+        $this->getBackingStore()->set('workforceIntegrationIds', $value);
     }
 
 }

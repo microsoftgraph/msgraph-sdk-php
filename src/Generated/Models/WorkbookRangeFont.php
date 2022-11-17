@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookRangeFont extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $bold Represents the bold status of font.
-    */
-    private ?bool $bold = null;
-    
-    /**
-     * @var string|null $color HTML color code representation of the text color. E.g. #FF0000 represents Red.
-    */
-    private ?string $color = null;
-    
-    /**
-     * @var bool|null $italic Represents the italic status of the font.
-    */
-    private ?bool $italic = null;
-    
-    /**
-     * @var string|null $name Font name (e.g. 'Calibri')
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var float|null $size Font size.
-    */
-    private ?float $size = null;
-    
-    /**
-     * @var string|null $underline Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
-    */
-    private ?string $underline = null;
-    
-    /**
      * Instantiates a new workbookRangeFont and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return bool|null
     */
     public function getBold(): ?bool {
-        return $this->bold;
+        return $this->getBackingStore()->get('bold');
     }
 
     /**
@@ -68,7 +38,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->color;
+        return $this->getBackingStore()->get('color');
     }
 
     /**
@@ -92,7 +62,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return bool|null
     */
     public function getItalic(): ?bool {
-        return $this->italic;
+        return $this->getBackingStore()->get('italic');
     }
 
     /**
@@ -100,7 +70,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -108,7 +78,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return float|null
     */
     public function getSize(): ?float {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -116,7 +86,7 @@ class WorkbookRangeFont extends Entity implements Parsable
      * @return string|null
     */
     public function getUnderline(): ?string {
-        return $this->underline;
+        return $this->getBackingStore()->get('underline');
     }
 
     /**
@@ -125,60 +95,60 @@ class WorkbookRangeFont extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('bold', $this->bold);
-        $writer->writeStringValue('color', $this->color);
-        $writer->writeBooleanValue('italic', $this->italic);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeFloatValue('size', $this->size);
-        $writer->writeStringValue('underline', $this->underline);
+        $writer->writeBooleanValue('bold', $this->getBold());
+        $writer->writeStringValue('color', $this->getColor());
+        $writer->writeBooleanValue('italic', $this->getItalic());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeFloatValue('size', $this->getSize());
+        $writer->writeStringValue('underline', $this->getUnderline());
     }
 
     /**
      * Sets the bold property value. Represents the bold status of font.
      *  @param bool|null $value Value to set for the bold property.
     */
-    public function setBold(?bool $value ): void {
-        $this->bold = $value;
+    public function setBold(?bool $value): void {
+        $this->getBackingStore()->set('bold', $value);
     }
 
     /**
      * Sets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
      *  @param string|null $value Value to set for the color property.
     */
-    public function setColor(?string $value ): void {
-        $this->color = $value;
+    public function setColor(?string $value): void {
+        $this->getBackingStore()->set('color', $value);
     }
 
     /**
      * Sets the italic property value. Represents the italic status of the font.
      *  @param bool|null $value Value to set for the italic property.
     */
-    public function setItalic(?bool $value ): void {
-        $this->italic = $value;
+    public function setItalic(?bool $value): void {
+        $this->getBackingStore()->set('italic', $value);
     }
 
     /**
      * Sets the name property value. Font name (e.g. 'Calibri')
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the size property value. Font size.
      *  @param float|null $value Value to set for the size property.
     */
-    public function setSize(?float $value ): void {
-        $this->size = $value;
+    public function setSize(?float $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
     /**
      * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      *  @param string|null $value Value to set for the underline property.
     */
-    public function setUnderline(?string $value ): void {
-        $this->underline = $value;
+    public function setUnderline(?string $value): void {
+        $this->getBackingStore()->set('underline', $value);
     }
 
 }

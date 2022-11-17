@@ -6,68 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class IosNotificationSettings implements AdditionalDataHolder, Parsable 
+class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var IosNotificationAlertType|null $alertType Notification Settings Alert Type.
-    */
-    private ?IosNotificationAlertType $alertType = null;
-    
-    /**
-     * @var string|null $appName Application name to be associated with the bundleID.
-    */
-    private ?string $appName = null;
-    
-    /**
-     * @var bool|null $badgesEnabled Indicates whether badges are allowed for this app.
-    */
-    private ?bool $badgesEnabled = null;
-    
-    /**
-     * @var string|null $bundleID Bundle id of app to which to apply these notification settings.
-    */
-    private ?string $bundleID = null;
-    
-    /**
-     * @var bool|null $enabled Indicates whether notifications are allowed for this app.
-    */
-    private ?bool $enabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $publisher Publisher to be associated with the bundleID.
-    */
-    private ?string $publisher = null;
-    
-    /**
-     * @var bool|null $showInNotificationCenter Indicates whether notifications can be shown in notification center.
-    */
-    private ?bool $showInNotificationCenter = null;
-    
-    /**
-     * @var bool|null $showOnLockScreen Indicates whether notifications can be shown on the lock screen.
-    */
-    private ?bool $showOnLockScreen = null;
-    
-    /**
-     * @var bool|null $soundsEnabled Indicates whether sounds are allowed for this app.
-    */
-    private ?bool $soundsEnabled = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new iosNotificationSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.iosNotificationSettings');
     }
@@ -85,8 +39,8 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -94,7 +48,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return IosNotificationAlertType|null
     */
     public function getAlertType(): ?IosNotificationAlertType {
-        return $this->alertType;
+        return $this->getBackingStore()->get('alertType');
     }
 
     /**
@@ -102,7 +56,15 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAppName(): ?string {
-        return $this->appName;
+        return $this->getBackingStore()->get('appName');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -110,7 +72,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getBadgesEnabled(): ?bool {
-        return $this->badgesEnabled;
+        return $this->getBackingStore()->get('badgesEnabled');
     }
 
     /**
@@ -118,7 +80,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBundleID(): ?string {
-        return $this->bundleID;
+        return $this->getBackingStore()->get('bundleID');
     }
 
     /**
@@ -126,7 +88,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->enabled;
+        return $this->getBackingStore()->get('enabled');
     }
 
     /**
@@ -154,7 +116,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -162,7 +124,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPublisher(): ?string {
-        return $this->publisher;
+        return $this->getBackingStore()->get('publisher');
     }
 
     /**
@@ -170,7 +132,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowInNotificationCenter(): ?bool {
-        return $this->showInNotificationCenter;
+        return $this->getBackingStore()->get('showInNotificationCenter');
     }
 
     /**
@@ -178,7 +140,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowOnLockScreen(): ?bool {
-        return $this->showOnLockScreen;
+        return $this->getBackingStore()->get('showOnLockScreen');
     }
 
     /**
@@ -186,7 +148,7 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSoundsEnabled(): ?bool {
-        return $this->soundsEnabled;
+        return $this->getBackingStore()->get('soundsEnabled');
     }
 
     /**
@@ -194,105 +156,105 @@ class IosNotificationSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('alertType', $this->alertType);
-        $writer->writeStringValue('appName', $this->appName);
-        $writer->writeBooleanValue('badgesEnabled', $this->badgesEnabled);
-        $writer->writeStringValue('bundleID', $this->bundleID);
-        $writer->writeBooleanValue('enabled', $this->enabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('publisher', $this->publisher);
-        $writer->writeBooleanValue('showInNotificationCenter', $this->showInNotificationCenter);
-        $writer->writeBooleanValue('showOnLockScreen', $this->showOnLockScreen);
-        $writer->writeBooleanValue('soundsEnabled', $this->soundsEnabled);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('alertType', $this->getAlertType());
+        $writer->writeStringValue('appName', $this->getAppName());
+        $writer->writeBooleanValue('badgesEnabled', $this->getBadgesEnabled());
+        $writer->writeStringValue('bundleID', $this->getBundleID());
+        $writer->writeBooleanValue('enabled', $this->getEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('publisher', $this->getPublisher());
+        $writer->writeBooleanValue('showInNotificationCenter', $this->getShowInNotificationCenter());
+        $writer->writeBooleanValue('showOnLockScreen', $this->getShowOnLockScreen());
+        $writer->writeBooleanValue('soundsEnabled', $this->getSoundsEnabled());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the alertType property value. Notification Settings Alert Type.
      *  @param IosNotificationAlertType|null $value Value to set for the alertType property.
     */
-    public function setAlertType(?IosNotificationAlertType $value ): void {
-        $this->alertType = $value;
+    public function setAlertType(?IosNotificationAlertType $value): void {
+        $this->getBackingStore()->set('alertType', $value);
     }
 
     /**
      * Sets the appName property value. Application name to be associated with the bundleID.
      *  @param string|null $value Value to set for the appName property.
     */
-    public function setAppName(?string $value ): void {
-        $this->appName = $value;
+    public function setAppName(?string $value): void {
+        $this->getBackingStore()->set('appName', $value);
     }
 
     /**
      * Sets the badgesEnabled property value. Indicates whether badges are allowed for this app.
      *  @param bool|null $value Value to set for the badgesEnabled property.
     */
-    public function setBadgesEnabled(?bool $value ): void {
-        $this->badgesEnabled = $value;
+    public function setBadgesEnabled(?bool $value): void {
+        $this->getBackingStore()->set('badgesEnabled', $value);
     }
 
     /**
      * Sets the bundleID property value. Bundle id of app to which to apply these notification settings.
      *  @param string|null $value Value to set for the bundleID property.
     */
-    public function setBundleID(?string $value ): void {
-        $this->bundleID = $value;
+    public function setBundleID(?string $value): void {
+        $this->getBackingStore()->set('bundleID', $value);
     }
 
     /**
      * Sets the enabled property value. Indicates whether notifications are allowed for this app.
      *  @param bool|null $value Value to set for the enabled property.
     */
-    public function setEnabled(?bool $value ): void {
-        $this->enabled = $value;
+    public function setEnabled(?bool $value): void {
+        $this->getBackingStore()->set('enabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the publisher property value. Publisher to be associated with the bundleID.
      *  @param string|null $value Value to set for the publisher property.
     */
-    public function setPublisher(?string $value ): void {
-        $this->publisher = $value;
+    public function setPublisher(?string $value): void {
+        $this->getBackingStore()->set('publisher', $value);
     }
 
     /**
      * Sets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
      *  @param bool|null $value Value to set for the showInNotificationCenter property.
     */
-    public function setShowInNotificationCenter(?bool $value ): void {
-        $this->showInNotificationCenter = $value;
+    public function setShowInNotificationCenter(?bool $value): void {
+        $this->getBackingStore()->set('showInNotificationCenter', $value);
     }
 
     /**
      * Sets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
      *  @param bool|null $value Value to set for the showOnLockScreen property.
     */
-    public function setShowOnLockScreen(?bool $value ): void {
-        $this->showOnLockScreen = $value;
+    public function setShowOnLockScreen(?bool $value): void {
+        $this->getBackingStore()->set('showOnLockScreen', $value);
     }
 
     /**
      * Sets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
      *  @param bool|null $value Value to set for the soundsEnabled property.
     */
-    public function setSoundsEnabled(?bool $value ): void {
-        $this->soundsEnabled = $value;
+    public function setSoundsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('soundsEnabled', $value);
     }
 
 }

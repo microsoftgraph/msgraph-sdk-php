@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class EducationAssignmentDefaults extends Entity implements Parsable 
 {
     /**
-     * @var EducationAddedStudentAction|null $addedStudentAction Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-    */
-    private ?EducationAddedStudentAction $addedStudentAction = null;
-    
-    /**
-     * @var EducationAddToCalendarOptions|null $addToCalendarAction Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-    */
-    private ?EducationAddToCalendarOptions $addToCalendarAction = null;
-    
-    /**
-     * @var Time|null $dueTime Class-level default value for due time field. Default value is 23:59:00.
-    */
-    private ?Time $dueTime = null;
-    
-    /**
-     * @var string|null $notificationChannelUrl Default Teams channel to which notifications will be sent. Default value is null.
-    */
-    private ?string $notificationChannelUrl = null;
-    
-    /**
      * Instantiates a new EducationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return EducationAddedStudentAction|null
     */
     public function getAddedStudentAction(): ?EducationAddedStudentAction {
-        return $this->addedStudentAction;
+        return $this->getBackingStore()->get('addedStudentAction');
     }
 
     /**
@@ -59,7 +39,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return EducationAddToCalendarOptions|null
     */
     public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
-        return $this->addToCalendarAction;
+        return $this->getBackingStore()->get('addToCalendarAction');
     }
 
     /**
@@ -67,7 +47,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return Time|null
     */
     public function getDueTime(): ?Time {
-        return $this->dueTime;
+        return $this->getBackingStore()->get('dueTime');
     }
 
     /**
@@ -89,7 +69,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationChannelUrl(): ?string {
-        return $this->notificationChannelUrl;
+        return $this->getBackingStore()->get('notificationChannelUrl');
     }
 
     /**
@@ -98,42 +78,42 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('addedStudentAction', $this->addedStudentAction);
-        $writer->writeEnumValue('addToCalendarAction', $this->addToCalendarAction);
-        $writer->writeTimeValue('dueTime', $this->dueTime);
-        $writer->writeStringValue('notificationChannelUrl', $this->notificationChannelUrl);
+        $writer->writeEnumValue('addedStudentAction', $this->getAddedStudentAction());
+        $writer->writeEnumValue('addToCalendarAction', $this->getAddToCalendarAction());
+        $writer->writeTimeValue('dueTime', $this->getDueTime());
+        $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
     }
 
     /**
      * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
      *  @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
     */
-    public function setAddedStudentAction(?EducationAddedStudentAction $value ): void {
-        $this->addedStudentAction = $value;
+    public function setAddedStudentAction(?EducationAddedStudentAction $value): void {
+        $this->getBackingStore()->set('addedStudentAction', $value);
     }
 
     /**
      * Sets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      *  @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
     */
-    public function setAddToCalendarAction(?EducationAddToCalendarOptions $value ): void {
-        $this->addToCalendarAction = $value;
+    public function setAddToCalendarAction(?EducationAddToCalendarOptions $value): void {
+        $this->getBackingStore()->set('addToCalendarAction', $value);
     }
 
     /**
      * Sets the dueTime property value. Class-level default value for due time field. Default value is 23:59:00.
      *  @param Time|null $value Value to set for the dueTime property.
     */
-    public function setDueTime(?Time $value ): void {
-        $this->dueTime = $value;
+    public function setDueTime(?Time $value): void {
+        $this->getBackingStore()->set('dueTime', $value);
     }
 
     /**
      * Sets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
      *  @param string|null $value Value to set for the notificationChannelUrl property.
     */
-    public function setNotificationChannelUrl(?string $value ): void {
-        $this->notificationChannelUrl = $value;
+    public function setNotificationChannelUrl(?string $value): void {
+        $this->getBackingStore()->set('notificationChannelUrl', $value);
     }
 
 }

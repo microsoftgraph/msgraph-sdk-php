@@ -7,68 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UserSimulationDetails implements AdditionalDataHolder, Parsable 
+class UserSimulationDetails implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $assignedTrainingsCount Number of trainings assigned to a user in an attack simulation and training campaign.
-    */
-    private ?int $assignedTrainingsCount = null;
-    
-    /**
-     * @var int|null $completedTrainingsCount Number of trainings completed by a user in an attack simulation and training campaign.
-    */
-    private ?int $completedTrainingsCount = null;
-    
-    /**
-     * @var DateTime|null $compromisedDateTime Date and time of the compromising online action by a user in an attack simulation and training campaign.
-    */
-    private ?DateTime $compromisedDateTime = null;
-    
-    /**
-     * @var int|null $inProgressTrainingsCount Number of trainings in progress by a user in an attack simulation and training campaign.
-    */
-    private ?int $inProgressTrainingsCount = null;
-    
-    /**
-     * @var bool|null $isCompromised Indicates whether a user was compromised in an attack simulation and training campaign.
-    */
-    private ?bool $isCompromised = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTime|null $reportedPhishDateTime Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
-    */
-    private ?DateTime $reportedPhishDateTime = null;
-    
-    /**
-     * @var array<UserSimulationEventInfo>|null $simulationEvents List of simulation events of a user in the attack simulation and training campaign.
-    */
-    private ?array $simulationEvents = null;
-    
-    /**
-     * @var AttackSimulationUser|null $simulationUser User in an attack simulation and training campaign.
-    */
-    private ?AttackSimulationUser $simulationUser = null;
-    
-    /**
-     * @var array<UserTrainingEventInfo>|null $trainingEvents List of training events of a user in the attack simulation and training campaign.
-    */
-    private ?array $trainingEvents = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new userSimulationDetails and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.userSimulationDetails');
     }
@@ -86,8 +40,8 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -95,7 +49,15 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAssignedTrainingsCount(): ?int {
-        return $this->assignedTrainingsCount;
+        return $this->getBackingStore()->get('assignedTrainingsCount');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -103,7 +65,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getCompletedTrainingsCount(): ?int {
-        return $this->completedTrainingsCount;
+        return $this->getBackingStore()->get('completedTrainingsCount');
     }
 
     /**
@@ -111,7 +73,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCompromisedDateTime(): ?DateTime {
-        return $this->compromisedDateTime;
+        return $this->getBackingStore()->get('compromisedDateTime');
     }
 
     /**
@@ -139,7 +101,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getInProgressTrainingsCount(): ?int {
-        return $this->inProgressTrainingsCount;
+        return $this->getBackingStore()->get('inProgressTrainingsCount');
     }
 
     /**
@@ -147,7 +109,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsCompromised(): ?bool {
-        return $this->isCompromised;
+        return $this->getBackingStore()->get('isCompromised');
     }
 
     /**
@@ -155,7 +117,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -163,7 +125,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getReportedPhishDateTime(): ?DateTime {
-        return $this->reportedPhishDateTime;
+        return $this->getBackingStore()->get('reportedPhishDateTime');
     }
 
     /**
@@ -171,7 +133,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return array<UserSimulationEventInfo>|null
     */
     public function getSimulationEvents(): ?array {
-        return $this->simulationEvents;
+        return $this->getBackingStore()->get('simulationEvents');
     }
 
     /**
@@ -179,7 +141,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return AttackSimulationUser|null
     */
     public function getSimulationUser(): ?AttackSimulationUser {
-        return $this->simulationUser;
+        return $this->getBackingStore()->get('simulationUser');
     }
 
     /**
@@ -187,7 +149,7 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @return array<UserTrainingEventInfo>|null
     */
     public function getTrainingEvents(): ?array {
-        return $this->trainingEvents;
+        return $this->getBackingStore()->get('trainingEvents');
     }
 
     /**
@@ -195,105 +157,105 @@ class UserSimulationDetails implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('assignedTrainingsCount', $this->assignedTrainingsCount);
-        $writer->writeIntegerValue('completedTrainingsCount', $this->completedTrainingsCount);
-        $writer->writeDateTimeValue('compromisedDateTime', $this->compromisedDateTime);
-        $writer->writeIntegerValue('inProgressTrainingsCount', $this->inProgressTrainingsCount);
-        $writer->writeBooleanValue('isCompromised', $this->isCompromised);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeDateTimeValue('reportedPhishDateTime', $this->reportedPhishDateTime);
-        $writer->writeCollectionOfObjectValues('simulationEvents', $this->simulationEvents);
-        $writer->writeObjectValue('simulationUser', $this->simulationUser);
-        $writer->writeCollectionOfObjectValues('trainingEvents', $this->trainingEvents);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('assignedTrainingsCount', $this->getAssignedTrainingsCount());
+        $writer->writeIntegerValue('completedTrainingsCount', $this->getCompletedTrainingsCount());
+        $writer->writeDateTimeValue('compromisedDateTime', $this->getCompromisedDateTime());
+        $writer->writeIntegerValue('inProgressTrainingsCount', $this->getInProgressTrainingsCount());
+        $writer->writeBooleanValue('isCompromised', $this->getIsCompromised());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeDateTimeValue('reportedPhishDateTime', $this->getReportedPhishDateTime());
+        $writer->writeCollectionOfObjectValues('simulationEvents', $this->getSimulationEvents());
+        $writer->writeObjectValue('simulationUser', $this->getSimulationUser());
+        $writer->writeCollectionOfObjectValues('trainingEvents', $this->getTrainingEvents());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the assignedTrainingsCount property.
     */
-    public function setAssignedTrainingsCount(?int $value ): void {
-        $this->assignedTrainingsCount = $value;
+    public function setAssignedTrainingsCount(?int $value): void {
+        $this->getBackingStore()->set('assignedTrainingsCount', $value);
     }
 
     /**
      * Sets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the completedTrainingsCount property.
     */
-    public function setCompletedTrainingsCount(?int $value ): void {
-        $this->completedTrainingsCount = $value;
+    public function setCompletedTrainingsCount(?int $value): void {
+        $this->getBackingStore()->set('completedTrainingsCount', $value);
     }
 
     /**
      * Sets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the compromisedDateTime property.
     */
-    public function setCompromisedDateTime(?DateTime $value ): void {
-        $this->compromisedDateTime = $value;
+    public function setCompromisedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('compromisedDateTime', $value);
     }
 
     /**
      * Sets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the inProgressTrainingsCount property.
     */
-    public function setInProgressTrainingsCount(?int $value ): void {
-        $this->inProgressTrainingsCount = $value;
+    public function setInProgressTrainingsCount(?int $value): void {
+        $this->getBackingStore()->set('inProgressTrainingsCount', $value);
     }
 
     /**
      * Sets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      *  @param bool|null $value Value to set for the isCompromised property.
     */
-    public function setIsCompromised(?bool $value ): void {
-        $this->isCompromised = $value;
+    public function setIsCompromised(?bool $value): void {
+        $this->getBackingStore()->set('isCompromised', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the reportedPhishDateTime property.
     */
-    public function setReportedPhishDateTime(?DateTime $value ): void {
-        $this->reportedPhishDateTime = $value;
+    public function setReportedPhishDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('reportedPhishDateTime', $value);
     }
 
     /**
      * Sets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
      *  @param array<UserSimulationEventInfo>|null $value Value to set for the simulationEvents property.
     */
-    public function setSimulationEvents(?array $value ): void {
-        $this->simulationEvents = $value;
+    public function setSimulationEvents(?array $value): void {
+        $this->getBackingStore()->set('simulationEvents', $value);
     }
 
     /**
      * Sets the simulationUser property value. User in an attack simulation and training campaign.
      *  @param AttackSimulationUser|null $value Value to set for the simulationUser property.
     */
-    public function setSimulationUser(?AttackSimulationUser $value ): void {
-        $this->simulationUser = $value;
+    public function setSimulationUser(?AttackSimulationUser $value): void {
+        $this->getBackingStore()->set('simulationUser', $value);
     }
 
     /**
      * Sets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
      *  @param array<UserTrainingEventInfo>|null $value Value to set for the trainingEvents property.
     */
-    public function setTrainingEvents(?array $value ): void {
-        $this->trainingEvents = $value;
+    public function setTrainingEvents(?array $value): void {
+        $this->getBackingStore()->set('trainingEvents', $value);
     }
 
 }

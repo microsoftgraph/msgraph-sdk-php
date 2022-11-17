@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $identityProviderType The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
-    */
-    private ?string $identityProviderType = null;
-    
-    /**
      * Instantiates a new BuiltInIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getIdentityProviderType(): ?string {
-        return $this->identityProviderType;
+        return $this->getBackingStore()->get('identityProviderType');
     }
 
     /**
@@ -55,15 +50,15 @@ class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('identityProviderType', $this->identityProviderType);
+        $writer->writeStringValue('identityProviderType', $this->getIdentityProviderType());
     }
 
     /**
      * Sets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
      *  @param string|null $value Value to set for the identityProviderType property.
     */
-    public function setIdentityProviderType(?string $value ): void {
-        $this->identityProviderType = $value;
+    public function setIdentityProviderType(?string $value): void {
+        $this->getBackingStore()->set('identityProviderType', $value);
     }
 
 }

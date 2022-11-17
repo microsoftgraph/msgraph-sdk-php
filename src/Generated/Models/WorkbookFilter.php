@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookFilter extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookFilterCriteria|null $criteria The currently applied filter on the given column. Read-only.
-    */
-    private ?WorkbookFilterCriteria $criteria = null;
-    
-    /**
      * Instantiates a new workbookFilter and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class WorkbookFilter extends Entity implements Parsable
      * @return WorkbookFilterCriteria|null
     */
     public function getCriteria(): ?WorkbookFilterCriteria {
-        return $this->criteria;
+        return $this->getBackingStore()->get('criteria');
     }
 
     /**
@@ -55,15 +50,15 @@ class WorkbookFilter extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('criteria', $this->criteria);
+        $writer->writeObjectValue('criteria', $this->getCriteria());
     }
 
     /**
      * Sets the criteria property value. The currently applied filter on the given column. Read-only.
      *  @param WorkbookFilterCriteria|null $value Value to set for the criteria property.
     */
-    public function setCriteria(?WorkbookFilterCriteria $value ): void {
-        $this->criteria = $value;
+    public function setCriteria(?WorkbookFilterCriteria $value): void {
+        $this->getBackingStore()->set('criteria', $value);
     }
 
 }

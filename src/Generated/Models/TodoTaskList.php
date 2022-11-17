@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TodoTaskList extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The name of the task list.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<Extension>|null $extensions The collection of open extensions defined for the task list. Nullable.
-    */
-    private ?array $extensions = null;
-    
-    /**
-     * @var bool|null $isOwner True if the user is owner of the given task list.
-    */
-    private ?bool $isOwner = null;
-    
-    /**
-     * @var bool|null $isShared True if the task list is shared with other users
-    */
-    private ?bool $isShared = null;
-    
-    /**
-     * @var array<TodoTask>|null $tasks The tasks in this task list. Read-only. Nullable.
-    */
-    private ?array $tasks = null;
-    
-    /**
-     * @var WellknownListName|null $wellknownListName The wellknownListName property
-    */
-    private ?WellknownListName $wellknownListName = null;
-    
-    /**
      * Instantiates a new todoTaskList and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -68,7 +38,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->extensions;
+        return $this->getBackingStore()->get('extensions');
     }
 
     /**
@@ -92,7 +62,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsOwner(): ?bool {
-        return $this->isOwner;
+        return $this->getBackingStore()->get('isOwner');
     }
 
     /**
@@ -100,7 +70,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->isShared;
+        return $this->getBackingStore()->get('isShared');
     }
 
     /**
@@ -108,7 +78,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return array<TodoTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -116,7 +86,7 @@ class TodoTaskList extends Entity implements Parsable
      * @return WellknownListName|null
     */
     public function getWellknownListName(): ?WellknownListName {
-        return $this->wellknownListName;
+        return $this->getBackingStore()->get('wellknownListName');
     }
 
     /**
@@ -125,60 +95,60 @@ class TodoTaskList extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('extensions', $this->extensions);
-        $writer->writeBooleanValue('isOwner', $this->isOwner);
-        $writer->writeBooleanValue('isShared', $this->isShared);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
-        $writer->writeEnumValue('wellknownListName', $this->wellknownListName);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
+        $writer->writeBooleanValue('isOwner', $this->getIsOwner());
+        $writer->writeBooleanValue('isShared', $this->getIsShared());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
+        $writer->writeEnumValue('wellknownListName', $this->getWellknownListName());
     }
 
     /**
      * Sets the displayName property value. The name of the task list.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the task list. Nullable.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
-    public function setExtensions(?array $value ): void {
-        $this->extensions = $value;
+    public function setExtensions(?array $value): void {
+        $this->getBackingStore()->set('extensions', $value);
     }
 
     /**
      * Sets the isOwner property value. True if the user is owner of the given task list.
      *  @param bool|null $value Value to set for the isOwner property.
     */
-    public function setIsOwner(?bool $value ): void {
-        $this->isOwner = $value;
+    public function setIsOwner(?bool $value): void {
+        $this->getBackingStore()->set('isOwner', $value);
     }
 
     /**
      * Sets the isShared property value. True if the task list is shared with other users
      *  @param bool|null $value Value to set for the isShared property.
     */
-    public function setIsShared(?bool $value ): void {
-        $this->isShared = $value;
+    public function setIsShared(?bool $value): void {
+        $this->getBackingStore()->set('isShared', $value);
     }
 
     /**
      * Sets the tasks property value. The tasks in this task list. Read-only. Nullable.
      *  @param array<TodoTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
     /**
      * Sets the wellknownListName property value. The wellknownListName property
      *  @param WellknownListName|null $value Value to set for the wellknownListName property.
     */
-    public function setWellknownListName(?WellknownListName $value ): void {
-        $this->wellknownListName = $value;
+    public function setWellknownListName(?WellknownListName $value): void {
+        $this->getBackingStore()->set('wellknownListName', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookTableColumn extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookFilter|null $filter Retrieve the filter applied to the column. Read-only.
-    */
-    private ?WorkbookFilter $filter = null;
-    
-    /**
-     * @var int|null $index Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
-    */
-    private ?int $index = null;
-    
-    /**
-     * @var string|null $name Returns the name of the table column.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var Json|null $values Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-    */
-    private ?Json $values = null;
-    
-    /**
      * Instantiates a new workbookTableColumn and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return WorkbookFilter|null
     */
     public function getFilter(): ?WorkbookFilter {
-        return $this->filter;
+        return $this->getBackingStore()->get('filter');
     }
 
     /**
@@ -72,7 +52,7 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return int|null
     */
     public function getIndex(): ?int {
-        return $this->index;
+        return $this->getBackingStore()->get('index');
     }
 
     /**
@@ -80,7 +60,7 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -88,7 +68,7 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->values;
+        return $this->getBackingStore()->get('values');
     }
 
     /**
@@ -97,42 +77,42 @@ class WorkbookTableColumn extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('filter', $this->filter);
-        $writer->writeIntegerValue('index', $this->index);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeObjectValue('values', $this->values);
+        $writer->writeObjectValue('filter', $this->getFilter());
+        $writer->writeIntegerValue('index', $this->getIndex());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeObjectValue('values', $this->getValues());
     }
 
     /**
      * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
      *  @param WorkbookFilter|null $value Value to set for the filter property.
     */
-    public function setFilter(?WorkbookFilter $value ): void {
-        $this->filter = $value;
+    public function setFilter(?WorkbookFilter $value): void {
+        $this->getBackingStore()->set('filter', $value);
     }
 
     /**
      * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
      *  @param int|null $value Value to set for the index property.
     */
-    public function setIndex(?int $value ): void {
-        $this->index = $value;
+    public function setIndex(?int $value): void {
+        $this->getBackingStore()->set('index', $value);
     }
 
     /**
      * Sets the name property value. Returns the name of the table column.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      *  @param Json|null $value Value to set for the values property.
     */
-    public function setValues(?Json $value ): void {
-        $this->values = $value;
+    public function setValues(?Json $value): void {
+        $this->getBackingStore()->set('values', $value);
     }
 
 }

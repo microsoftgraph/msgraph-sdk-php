@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PinnedChatMessageInfo extends Entity implements Parsable 
 {
     /**
-     * @var ChatMessage|null $message Represents details about the chat message that is pinned.
-    */
-    private ?ChatMessage $message = null;
-    
-    /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class PinnedChatMessageInfo extends Entity implements Parsable
      * @return ChatMessage|null
     */
     public function getMessage(): ?ChatMessage {
-        return $this->message;
+        return $this->getBackingStore()->get('message');
     }
 
     /**
@@ -55,15 +50,15 @@ class PinnedChatMessageInfo extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('message', $this->message);
+        $writer->writeObjectValue('message', $this->getMessage());
     }
 
     /**
      * Sets the message property value. Represents details about the chat message that is pinned.
      *  @param ChatMessage|null $value Value to set for the message property.
     */
-    public function setMessage(?ChatMessage $value ): void {
-        $this->message = $value;
+    public function setMessage(?ChatMessage $value): void {
+        $this->getBackingStore()->set('message', $value);
     }
 
 }

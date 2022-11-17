@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IPv6CidrRange extends IpRange implements Parsable 
 {
     /**
-     * @var string|null $cidrAddress IPv6 address in CIDR notation. Not nullable.
-    */
-    private ?string $cidrAddress = null;
-    
-    /**
      * Instantiates a new IPv6CidrRange and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class IPv6CidrRange extends IpRange implements Parsable
      * @return string|null
     */
     public function getCidrAddress(): ?string {
-        return $this->cidrAddress;
+        return $this->getBackingStore()->get('cidrAddress');
     }
 
     /**
@@ -55,15 +50,15 @@ class IPv6CidrRange extends IpRange implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('cidrAddress', $this->cidrAddress);
+        $writer->writeStringValue('cidrAddress', $this->getCidrAddress());
     }
 
     /**
      * Sets the cidrAddress property value. IPv6 address in CIDR notation. Not nullable.
      *  @param string|null $value Value to set for the cidrAddress property.
     */
-    public function setCidrAddress(?string $value ): void {
-        $this->cidrAddress = $value;
+    public function setCidrAddress(?string $value): void {
+        $this->getBackingStore()->set('cidrAddress', $value);
     }
 
 }

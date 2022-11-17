@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DocumentSetVersion extends ListItemVersion implements Parsable 
 {
     /**
-     * @var string|null $comment Comment about the captured version.
-    */
-    private ?string $comment = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy User who captured the version.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Date and time when this version was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var array<DocumentSetVersionItem>|null $items Items within the document set that are captured as part of this version.
-    */
-    private ?array $items = null;
-    
-    /**
-     * @var bool|null $shouldCaptureMinorVersion If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
-    */
-    private ?bool $shouldCaptureMinorVersion = null;
-    
-    /**
      * Instantiates a new DocumentSetVersion and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->comment;
+        return $this->getBackingStore()->get('comment');
     }
 
     /**
@@ -64,7 +39,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -72,7 +47,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -95,7 +70,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return array<DocumentSetVersionItem>|null
     */
     public function getItems(): ?array {
-        return $this->items;
+        return $this->getBackingStore()->get('items');
     }
 
     /**
@@ -103,7 +78,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
      * @return bool|null
     */
     public function getShouldCaptureMinorVersion(): ?bool {
-        return $this->shouldCaptureMinorVersion;
+        return $this->getBackingStore()->get('shouldCaptureMinorVersion');
     }
 
     /**
@@ -112,51 +87,51 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('comment', $this->comment);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeCollectionOfObjectValues('items', $this->items);
-        $writer->writeBooleanValue('shouldCaptureMinorVersion', $this->shouldCaptureMinorVersion);
+        $writer->writeStringValue('comment', $this->getComment());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeBooleanValue('shouldCaptureMinorVersion', $this->getShouldCaptureMinorVersion());
     }
 
     /**
      * Sets the comment property value. Comment about the captured version.
      *  @param string|null $value Value to set for the comment property.
     */
-    public function setComment(?string $value ): void {
-        $this->comment = $value;
+    public function setComment(?string $value): void {
+        $this->getBackingStore()->set('comment', $value);
     }
 
     /**
      * Sets the createdBy property value. User who captured the version.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Date and time when this version was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the items property value. Items within the document set that are captured as part of this version.
      *  @param array<DocumentSetVersionItem>|null $value Value to set for the items property.
     */
-    public function setItems(?array $value ): void {
-        $this->items = $value;
+    public function setItems(?array $value): void {
+        $this->getBackingStore()->set('items', $value);
     }
 
     /**
      * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
      *  @param bool|null $value Value to set for the shouldCaptureMinorVersion property.
     */
-    public function setShouldCaptureMinorVersion(?bool $value ): void {
-        $this->shouldCaptureMinorVersion = $value;
+    public function setShouldCaptureMinorVersion(?bool $value): void {
+        $this->getBackingStore()->set('shouldCaptureMinorVersion', $value);
     }
 
 }

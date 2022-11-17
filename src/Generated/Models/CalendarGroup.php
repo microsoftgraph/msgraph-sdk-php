@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CalendarGroup extends Entity implements Parsable 
 {
     /**
-     * @var array<Calendar>|null $calendars The calendars in the calendar group. Navigation property. Read-only. Nullable.
-    */
-    private ?array $calendars = null;
-    
-    /**
-     * @var string|null $changeKey Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-    */
-    private ?string $changeKey = null;
-    
-    /**
-     * @var string|null $classId The class identifier. Read-only.
-    */
-    private ?string $classId = null;
-    
-    /**
-     * @var string|null $name The group name.
-    */
-    private ?string $name = null;
-    
-    /**
      * Instantiates a new calendarGroup and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class CalendarGroup extends Entity implements Parsable
      * @return array<Calendar>|null
     */
     public function getCalendars(): ?array {
-        return $this->calendars;
+        return $this->getBackingStore()->get('calendars');
     }
 
     /**
@@ -58,7 +38,7 @@ class CalendarGroup extends Entity implements Parsable
      * @return string|null
     */
     public function getChangeKey(): ?string {
-        return $this->changeKey;
+        return $this->getBackingStore()->get('changeKey');
     }
 
     /**
@@ -66,7 +46,7 @@ class CalendarGroup extends Entity implements Parsable
      * @return string|null
     */
     public function getClassId(): ?string {
-        return $this->classId;
+        return $this->getBackingStore()->get('classId');
     }
 
     /**
@@ -88,7 +68,7 @@ class CalendarGroup extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -97,42 +77,42 @@ class CalendarGroup extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('calendars', $this->calendars);
-        $writer->writeStringValue('changeKey', $this->changeKey);
-        $writer->writeStringValue('classId', $this->classId);
-        $writer->writeStringValue('name', $this->name);
+        $writer->writeCollectionOfObjectValues('calendars', $this->getCalendars());
+        $writer->writeStringValue('changeKey', $this->getChangeKey());
+        $writer->writeStringValue('classId', $this->getClassId());
+        $writer->writeStringValue('name', $this->getName());
     }
 
     /**
      * Sets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
      *  @param array<Calendar>|null $value Value to set for the calendars property.
     */
-    public function setCalendars(?array $value ): void {
-        $this->calendars = $value;
+    public function setCalendars(?array $value): void {
+        $this->getBackingStore()->set('calendars', $value);
     }
 
     /**
      * Sets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      *  @param string|null $value Value to set for the changeKey property.
     */
-    public function setChangeKey(?string $value ): void {
-        $this->changeKey = $value;
+    public function setChangeKey(?string $value): void {
+        $this->getBackingStore()->set('changeKey', $value);
     }
 
     /**
      * Sets the classId property value. The class identifier. Read-only.
      *  @param string|null $value Value to set for the classId property.
     */
-    public function setClassId(?string $value ): void {
-        $this->classId = $value;
+    public function setClassId(?string $value): void {
+        $this->getBackingStore()->set('classId', $value);
     }
 
     /**
      * Sets the name property value. The group name.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
 }

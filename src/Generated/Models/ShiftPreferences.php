@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ShiftPreferences extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var array<ShiftAvailability>|null $availability Availability of the user to be scheduled for work and its recurrence pattern.
-    */
-    private ?array $availability = null;
-    
-    /**
      * Instantiates a new ShiftPreferences and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
      * @return array<ShiftAvailability>|null
     */
     public function getAvailability(): ?array {
-        return $this->availability;
+        return $this->getBackingStore()->get('availability');
     }
 
     /**
@@ -55,15 +50,15 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('availability', $this->availability);
+        $writer->writeCollectionOfObjectValues('availability', $this->getAvailability());
     }
 
     /**
      * Sets the availability property value. Availability of the user to be scheduled for work and its recurrence pattern.
      *  @param array<ShiftAvailability>|null $value Value to set for the availability property.
     */
-    public function setAvailability(?array $value ): void {
-        $this->availability = $value;
+    public function setAvailability(?array $value): void {
+        $this->getBackingStore()->set('availability', $value);
     }
 
 }

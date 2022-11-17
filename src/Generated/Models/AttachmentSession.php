@@ -11,21 +11,6 @@ use Psr\Http\Message\StreamInterface;
 class AttachmentSession extends Entity implements Parsable 
 {
     /**
-     * @var StreamInterface|null $content The content property
-    */
-    private ?StreamInterface $content = null;
-    
-    /**
-     * @var DateTime|null $expirationDateTime The expirationDateTime property
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var array<string>|null $nextExpectedRanges The nextExpectedRanges property
-    */
-    private ?array $nextExpectedRanges = null;
-    
-    /**
      * Instantiates a new attachmentSession and sets the default values.
     */
     public function __construct() {
@@ -44,10 +29,10 @@ class AttachmentSession extends Entity implements Parsable
 
     /**
      * Gets the content property value. The content property
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContent(): StreamInterface {
-        return $this->content;
+    public function getContent(): ?StreamInterface {
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -55,7 +40,7 @@ class AttachmentSession extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -76,7 +61,7 @@ class AttachmentSession extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getNextExpectedRanges(): ?array {
-        return $this->nextExpectedRanges;
+        return $this->getBackingStore()->get('nextExpectedRanges');
     }
 
     /**
@@ -85,33 +70,33 @@ class AttachmentSession extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('content', $this->content);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeCollectionOfPrimitiveValues('nextExpectedRanges', $this->nextExpectedRanges);
+        $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeCollectionOfPrimitiveValues('nextExpectedRanges', $this->getNextExpectedRanges());
     }
 
     /**
      * Sets the content property value. The content property
      *  @param StreamInterface|null $value Value to set for the content property.
     */
-    public function setContent(?StreamInterface $value ): void {
-        $this->content = $value;
+    public function setContent(?StreamInterface $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the nextExpectedRanges property value. The nextExpectedRanges property
      *  @param array<string>|null $value Value to set for the nextExpectedRanges property.
     */
-    public function setNextExpectedRanges(?array $value ): void {
-        $this->nextExpectedRanges = $value;
+    public function setNextExpectedRanges(?array $value): void {
+        $this->getBackingStore()->set('nextExpectedRanges', $value);
     }
 
 }

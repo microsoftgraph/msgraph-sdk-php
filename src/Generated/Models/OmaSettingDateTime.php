@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OmaSettingDateTime extends OmaSetting implements Parsable 
 {
     /**
-     * @var DateTime|null $value Value.
-    */
-    private ?DateTime $value = null;
-    
-    /**
      * Instantiates a new OmaSettingDateTime and sets the default values.
     */
     public function __construct() {
@@ -47,7 +42,7 @@ class OmaSettingDateTime extends OmaSetting implements Parsable
      * @return DateTime|null
     */
     public function getValue(): ?DateTime {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -56,15 +51,15 @@ class OmaSettingDateTime extends OmaSetting implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('value', $this->value);
+        $writer->writeDateTimeValue('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. Value.
      *  @param DateTime|null $value Value to set for the value property.
     */
-    public function setValue(?DateTime $value ): void {
-        $this->value = $value;
+    public function setValue(?DateTime $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

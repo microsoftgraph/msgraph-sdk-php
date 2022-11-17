@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OutlookUser extends Entity implements Parsable 
 {
     /**
-     * @var array<OutlookCategory>|null $masterCategories A list of categories defined for the user.
-    */
-    private ?array $masterCategories = null;
-    
-    /**
      * Instantiates a new outlookUser and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class OutlookUser extends Entity implements Parsable
      * @return array<OutlookCategory>|null
     */
     public function getMasterCategories(): ?array {
-        return $this->masterCategories;
+        return $this->getBackingStore()->get('masterCategories');
     }
 
     /**
@@ -55,15 +50,15 @@ class OutlookUser extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('masterCategories', $this->masterCategories);
+        $writer->writeCollectionOfObjectValues('masterCategories', $this->getMasterCategories());
     }
 
     /**
      * Sets the masterCategories property value. A list of categories defined for the user.
      *  @param array<OutlookCategory>|null $value Value to set for the masterCategories property.
     */
-    public function setMasterCategories(?array $value ): void {
-        $this->masterCategories = $value;
+    public function setMasterCategories(?array $value): void {
+        $this->getBackingStore()->set('masterCategories', $value);
     }
 
 }

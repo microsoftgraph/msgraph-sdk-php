@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttackSimulationRoot extends Entity implements Parsable 
 {
     /**
-     * @var array<SimulationAutomation>|null $simulationAutomations Represents simulation automation created to run on a tenant.
-    */
-    private ?array $simulationAutomations = null;
-    
-    /**
-     * @var array<Simulation>|null $simulations Represents an attack simulation training campaign in a tenant.
-    */
-    private ?array $simulations = null;
-    
-    /**
      * Instantiates a new attackSimulationRoot and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class AttackSimulationRoot extends Entity implements Parsable
      * @return array<SimulationAutomation>|null
     */
     public function getSimulationAutomations(): ?array {
-        return $this->simulationAutomations;
+        return $this->getBackingStore()->get('simulationAutomations');
     }
 
     /**
@@ -60,7 +50,7 @@ class AttackSimulationRoot extends Entity implements Parsable
      * @return array<Simulation>|null
     */
     public function getSimulations(): ?array {
-        return $this->simulations;
+        return $this->getBackingStore()->get('simulations');
     }
 
     /**
@@ -69,24 +59,24 @@ class AttackSimulationRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('simulationAutomations', $this->simulationAutomations);
-        $writer->writeCollectionOfObjectValues('simulations', $this->simulations);
+        $writer->writeCollectionOfObjectValues('simulationAutomations', $this->getSimulationAutomations());
+        $writer->writeCollectionOfObjectValues('simulations', $this->getSimulations());
     }
 
     /**
      * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      *  @param array<SimulationAutomation>|null $value Value to set for the simulationAutomations property.
     */
-    public function setSimulationAutomations(?array $value ): void {
-        $this->simulationAutomations = $value;
+    public function setSimulationAutomations(?array $value): void {
+        $this->getBackingStore()->set('simulationAutomations', $value);
     }
 
     /**
      * Sets the simulations property value. Represents an attack simulation training campaign in a tenant.
      *  @param array<Simulation>|null $value Value to set for the simulations property.
     */
-    public function setSimulations(?array $value ): void {
-        $this->simulations = $value;
+    public function setSimulations(?array $value): void {
+        $this->getBackingStore()->set('simulations', $value);
     }
 
 }

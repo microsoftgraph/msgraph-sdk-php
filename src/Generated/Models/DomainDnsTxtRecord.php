@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * @var string|null $text Value used when configuring the text property at the DNS host.
-    */
-    private ?string $text = null;
-    
-    /**
      * Instantiates a new DomainDnsTxtRecord and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getText(): ?string {
-        return $this->text;
+        return $this->getBackingStore()->get('text');
     }
 
     /**
@@ -55,15 +50,15 @@ class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('text', $this->text);
+        $writer->writeStringValue('text', $this->getText());
     }
 
     /**
      * Sets the text property value. Value used when configuring the text property at the DNS host.
      *  @param string|null $value Value to set for the text property.
     */
-    public function setText(?string $value ): void {
-        $this->text = $value;
+    public function setText(?string $value): void {
+        $this->getBackingStore()->set('text', $value);
     }
 
 }

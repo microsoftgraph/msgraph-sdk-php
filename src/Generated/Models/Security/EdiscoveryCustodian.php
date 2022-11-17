@@ -10,36 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryCustodian extends DataSourceContainer implements Parsable 
 {
     /**
-     * @var DateTime|null $acknowledgedDateTime Date and time the custodian acknowledged a hold notification.
-    */
-    private ?DateTime $acknowledgedDateTime = null;
-    
-    /**
-     * @var string|null $email Email address of the custodian.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var EdiscoveryIndexOperation|null $lastIndexOperation Operation entity that represents the latest indexing for the custodian.
-    */
-    private ?EdiscoveryIndexOperation $lastIndexOperation = null;
-    
-    /**
-     * @var array<SiteSource>|null $siteSources Data source entity for SharePoint sites associated with the custodian.
-    */
-    private ?array $siteSources = null;
-    
-    /**
-     * @var array<UnifiedGroupSource>|null $unifiedGroupSources Data source entity for groups associated with the custodian.
-    */
-    private ?array $unifiedGroupSources = null;
-    
-    /**
-     * @var array<UserSource>|null $userSources Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-    */
-    private ?array $userSources = null;
-    
-    /**
      * Instantiates a new EdiscoveryCustodian and sets the default values.
     */
     public function __construct() {
@@ -61,7 +31,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return DateTime|null
     */
     public function getAcknowledgedDateTime(): ?DateTime {
-        return $this->acknowledgedDateTime;
+        return $this->getBackingStore()->get('acknowledgedDateTime');
     }
 
     /**
@@ -69,7 +39,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -93,7 +63,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return EdiscoveryIndexOperation|null
     */
     public function getLastIndexOperation(): ?EdiscoveryIndexOperation {
-        return $this->lastIndexOperation;
+        return $this->getBackingStore()->get('lastIndexOperation');
     }
 
     /**
@@ -101,7 +71,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return array<SiteSource>|null
     */
     public function getSiteSources(): ?array {
-        return $this->siteSources;
+        return $this->getBackingStore()->get('siteSources');
     }
 
     /**
@@ -109,7 +79,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return array<UnifiedGroupSource>|null
     */
     public function getUnifiedGroupSources(): ?array {
-        return $this->unifiedGroupSources;
+        return $this->getBackingStore()->get('unifiedGroupSources');
     }
 
     /**
@@ -117,7 +87,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
      * @return array<UserSource>|null
     */
     public function getUserSources(): ?array {
-        return $this->userSources;
+        return $this->getBackingStore()->get('userSources');
     }
 
     /**
@@ -126,60 +96,60 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('acknowledgedDateTime', $this->acknowledgedDateTime);
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeObjectValue('lastIndexOperation', $this->lastIndexOperation);
-        $writer->writeCollectionOfObjectValues('siteSources', $this->siteSources);
-        $writer->writeCollectionOfObjectValues('unifiedGroupSources', $this->unifiedGroupSources);
-        $writer->writeCollectionOfObjectValues('userSources', $this->userSources);
+        $writer->writeDateTimeValue('acknowledgedDateTime', $this->getAcknowledgedDateTime());
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeObjectValue('lastIndexOperation', $this->getLastIndexOperation());
+        $writer->writeCollectionOfObjectValues('siteSources', $this->getSiteSources());
+        $writer->writeCollectionOfObjectValues('unifiedGroupSources', $this->getUnifiedGroupSources());
+        $writer->writeCollectionOfObjectValues('userSources', $this->getUserSources());
     }
 
     /**
      * Sets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
      *  @param DateTime|null $value Value to set for the acknowledgedDateTime property.
     */
-    public function setAcknowledgedDateTime(?DateTime $value ): void {
-        $this->acknowledgedDateTime = $value;
+    public function setAcknowledgedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('acknowledgedDateTime', $value);
     }
 
     /**
      * Sets the email property value. Email address of the custodian.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
      *  @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
     */
-    public function setLastIndexOperation(?EdiscoveryIndexOperation $value ): void {
-        $this->lastIndexOperation = $value;
+    public function setLastIndexOperation(?EdiscoveryIndexOperation $value): void {
+        $this->getBackingStore()->set('lastIndexOperation', $value);
     }
 
     /**
      * Sets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
      *  @param array<SiteSource>|null $value Value to set for the siteSources property.
     */
-    public function setSiteSources(?array $value ): void {
-        $this->siteSources = $value;
+    public function setSiteSources(?array $value): void {
+        $this->getBackingStore()->set('siteSources', $value);
     }
 
     /**
      * Sets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
      *  @param array<UnifiedGroupSource>|null $value Value to set for the unifiedGroupSources property.
     */
-    public function setUnifiedGroupSources(?array $value ): void {
-        $this->unifiedGroupSources = $value;
+    public function setUnifiedGroupSources(?array $value): void {
+        $this->getBackingStore()->set('unifiedGroupSources', $value);
     }
 
     /**
      * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      *  @param array<UserSource>|null $value Value to set for the userSources property.
     */
-    public function setUserSources(?array $value ): void {
-        $this->userSources = $value;
+    public function setUserSources(?array $value): void {
+        $this->getBackingStore()->set('userSources', $value);
     }
 
 }

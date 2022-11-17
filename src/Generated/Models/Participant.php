@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Participant extends Entity implements Parsable 
 {
     /**
-     * @var ParticipantInfo|null $info The info property
-    */
-    private ?ParticipantInfo $info = null;
-    
-    /**
-     * @var bool|null $isInLobby true if the participant is in lobby.
-    */
-    private ?bool $isInLobby = null;
-    
-    /**
-     * @var bool|null $isMuted true if the participant is muted (client or server muted).
-    */
-    private ?bool $isMuted = null;
-    
-    /**
-     * @var array<MediaStream>|null $mediaStreams The list of media streams.
-    */
-    private ?array $mediaStreams = null;
-    
-    /**
-     * @var string|null $metadata A blob of data provided by the participant in the roster.
-    */
-    private ?string $metadata = null;
-    
-    /**
-     * @var RecordingInfo|null $recordingInfo Information about whether the participant has recording capability.
-    */
-    private ?RecordingInfo $recordingInfo = null;
-    
-    /**
      * Instantiates a new participant and sets the default values.
     */
     public function __construct() {
@@ -76,7 +46,7 @@ class Participant extends Entity implements Parsable
      * @return ParticipantInfo|null
     */
     public function getInfo(): ?ParticipantInfo {
-        return $this->info;
+        return $this->getBackingStore()->get('info');
     }
 
     /**
@@ -84,7 +54,7 @@ class Participant extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsInLobby(): ?bool {
-        return $this->isInLobby;
+        return $this->getBackingStore()->get('isInLobby');
     }
 
     /**
@@ -92,7 +62,7 @@ class Participant extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsMuted(): ?bool {
-        return $this->isMuted;
+        return $this->getBackingStore()->get('isMuted');
     }
 
     /**
@@ -100,7 +70,7 @@ class Participant extends Entity implements Parsable
      * @return array<MediaStream>|null
     */
     public function getMediaStreams(): ?array {
-        return $this->mediaStreams;
+        return $this->getBackingStore()->get('mediaStreams');
     }
 
     /**
@@ -108,7 +78,7 @@ class Participant extends Entity implements Parsable
      * @return string|null
     */
     public function getMetadata(): ?string {
-        return $this->metadata;
+        return $this->getBackingStore()->get('metadata');
     }
 
     /**
@@ -116,7 +86,7 @@ class Participant extends Entity implements Parsable
      * @return RecordingInfo|null
     */
     public function getRecordingInfo(): ?RecordingInfo {
-        return $this->recordingInfo;
+        return $this->getBackingStore()->get('recordingInfo');
     }
 
     /**
@@ -125,60 +95,60 @@ class Participant extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('info', $this->info);
-        $writer->writeBooleanValue('isInLobby', $this->isInLobby);
-        $writer->writeBooleanValue('isMuted', $this->isMuted);
-        $writer->writeCollectionOfObjectValues('mediaStreams', $this->mediaStreams);
-        $writer->writeStringValue('metadata', $this->metadata);
-        $writer->writeObjectValue('recordingInfo', $this->recordingInfo);
+        $writer->writeObjectValue('info', $this->getInfo());
+        $writer->writeBooleanValue('isInLobby', $this->getIsInLobby());
+        $writer->writeBooleanValue('isMuted', $this->getIsMuted());
+        $writer->writeCollectionOfObjectValues('mediaStreams', $this->getMediaStreams());
+        $writer->writeStringValue('metadata', $this->getMetadata());
+        $writer->writeObjectValue('recordingInfo', $this->getRecordingInfo());
     }
 
     /**
      * Sets the info property value. The info property
      *  @param ParticipantInfo|null $value Value to set for the info property.
     */
-    public function setInfo(?ParticipantInfo $value ): void {
-        $this->info = $value;
+    public function setInfo(?ParticipantInfo $value): void {
+        $this->getBackingStore()->set('info', $value);
     }
 
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
      *  @param bool|null $value Value to set for the isInLobby property.
     */
-    public function setIsInLobby(?bool $value ): void {
-        $this->isInLobby = $value;
+    public function setIsInLobby(?bool $value): void {
+        $this->getBackingStore()->set('isInLobby', $value);
     }
 
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
      *  @param bool|null $value Value to set for the isMuted property.
     */
-    public function setIsMuted(?bool $value ): void {
-        $this->isMuted = $value;
+    public function setIsMuted(?bool $value): void {
+        $this->getBackingStore()->set('isMuted', $value);
     }
 
     /**
      * Sets the mediaStreams property value. The list of media streams.
      *  @param array<MediaStream>|null $value Value to set for the mediaStreams property.
     */
-    public function setMediaStreams(?array $value ): void {
-        $this->mediaStreams = $value;
+    public function setMediaStreams(?array $value): void {
+        $this->getBackingStore()->set('mediaStreams', $value);
     }
 
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
      *  @param string|null $value Value to set for the metadata property.
     */
-    public function setMetadata(?string $value ): void {
-        $this->metadata = $value;
+    public function setMetadata(?string $value): void {
+        $this->getBackingStore()->set('metadata', $value);
     }
 
     /**
      * Sets the recordingInfo property value. Information about whether the participant has recording capability.
      *  @param RecordingInfo|null $value Value to set for the recordingInfo property.
     */
-    public function setRecordingInfo(?RecordingInfo $value ): void {
-        $this->recordingInfo = $value;
+    public function setRecordingInfo(?RecordingInfo $value): void {
+        $this->getBackingStore()->set('recordingInfo', $value);
     }
 
 }

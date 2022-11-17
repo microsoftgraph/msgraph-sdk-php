@@ -8,28 +8,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TransferPostRequestBody implements AdditionalDataHolder, Parsable 
+class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ParticipantInfo|null $transferee The transferee property
-    */
-    private ?ParticipantInfo $transferee = null;
-    
-    /**
-     * @var InvitationParticipantInfo|null $transferTarget The transferTarget property
-    */
-    private ?InvitationParticipantInfo $transferTarget = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new transferPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -46,8 +40,16 @@ class TransferPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -67,7 +69,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, Parsable
      * @return ParticipantInfo|null
     */
     public function getTransferee(): ?ParticipantInfo {
-        return $this->transferee;
+        return $this->getBackingStore()->get('transferee');
     }
 
     /**
@@ -75,7 +77,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, Parsable
      * @return InvitationParticipantInfo|null
     */
     public function getTransferTarget(): ?InvitationParticipantInfo {
-        return $this->transferTarget;
+        return $this->getBackingStore()->get('transferTarget');
     }
 
     /**
@@ -83,33 +85,33 @@ class TransferPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('transferee', $this->transferee);
-        $writer->writeObjectValue('transferTarget', $this->transferTarget);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('transferee', $this->getTransferee());
+        $writer->writeObjectValue('transferTarget', $this->getTransferTarget());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the transferee property value. The transferee property
      *  @param ParticipantInfo|null $value Value to set for the transferee property.
     */
-    public function setTransferee(?ParticipantInfo $value ): void {
-        $this->transferee = $value;
+    public function setTransferee(?ParticipantInfo $value): void {
+        $this->getBackingStore()->set('transferee', $value);
     }
 
     /**
      * Sets the transferTarget property value. The transferTarget property
      *  @param InvitationParticipantInfo|null $value Value to set for the transferTarget property.
     */
-    public function setTransferTarget(?InvitationParticipantInfo $value ): void {
-        $this->transferTarget = $value;
+    public function setTransferTarget(?InvitationParticipantInfo $value): void {
+        $this->getBackingStore()->set('transferTarget', $value);
     }
 
 }

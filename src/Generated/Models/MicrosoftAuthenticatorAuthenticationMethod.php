@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var Device|null $device The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-    */
-    private ?Device $device = null;
-    
-    /**
-     * @var string|null $deviceTag Tags containing app metadata.
-    */
-    private ?string $deviceTag = null;
-    
-    /**
-     * @var string|null $displayName The name of the device on which this app is registered.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $phoneAppVersion Numerical version of this instance of the Authenticator app.
-    */
-    private ?string $phoneAppVersion = null;
-    
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -64,7 +39,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return Device|null
     */
     public function getDevice(): ?Device {
-        return $this->device;
+        return $this->getBackingStore()->get('device');
     }
 
     /**
@@ -72,7 +47,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getDeviceTag(): ?string {
-        return $this->deviceTag;
+        return $this->getBackingStore()->get('deviceTag');
     }
 
     /**
@@ -80,7 +55,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -103,7 +78,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getPhoneAppVersion(): ?string {
-        return $this->phoneAppVersion;
+        return $this->getBackingStore()->get('phoneAppVersion');
     }
 
     /**
@@ -112,51 +87,51 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('device', $this->device);
-        $writer->writeStringValue('deviceTag', $this->deviceTag);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('phoneAppVersion', $this->phoneAppVersion);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('device', $this->getDevice());
+        $writer->writeStringValue('deviceTag', $this->getDeviceTag());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('phoneAppVersion', $this->getPhoneAppVersion());
     }
 
     /**
      * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
      *  @param Device|null $value Value to set for the device property.
     */
-    public function setDevice(?Device $value ): void {
-        $this->device = $value;
+    public function setDevice(?Device $value): void {
+        $this->getBackingStore()->set('device', $value);
     }
 
     /**
      * Sets the deviceTag property value. Tags containing app metadata.
      *  @param string|null $value Value to set for the deviceTag property.
     */
-    public function setDeviceTag(?string $value ): void {
-        $this->deviceTag = $value;
+    public function setDeviceTag(?string $value): void {
+        $this->getBackingStore()->set('deviceTag', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the device on which this app is registered.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
      *  @param string|null $value Value to set for the phoneAppVersion property.
     */
-    public function setPhoneAppVersion(?string $value ): void {
-        $this->phoneAppVersion = $value;
+    public function setPhoneAppVersion(?string $value): void {
+        $this->getBackingStore()->set('phoneAppVersion', $value);
     }
 
 }

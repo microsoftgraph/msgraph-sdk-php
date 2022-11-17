@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppStatusRawCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * @var array<ManagedAppStatusRaw>|null $value The value property
-    */
-    private ?array $value = null;
-    
-    /**
      * Instantiates a new ManagedAppStatusRawCollectionResponse and sets the default values.
     */
     public function __construct() {
@@ -45,7 +40,7 @@ class ManagedAppStatusRawCollectionResponse extends BaseCollectionPaginationCoun
      * @return array<ManagedAppStatusRaw>|null
     */
     public function getValue(): ?array {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -54,15 +49,15 @@ class ManagedAppStatusRawCollectionResponse extends BaseCollectionPaginationCoun
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('value', $this->value);
+        $writer->writeCollectionOfObjectValues('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. The value property
      *  @param array<ManagedAppStatusRaw>|null $value Value to set for the value property.
     */
-    public function setValue(?array $value ): void {
-        $this->value = $value;
+    public function setValue(?array $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

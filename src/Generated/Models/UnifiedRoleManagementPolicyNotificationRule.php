@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * @var bool|null $isDefaultRecipientsEnabled Indicates whether a default recipient will receive the notification email.
-    */
-    private ?bool $isDefaultRecipientsEnabled = null;
-    
-    /**
-     * @var string|null $notificationLevel The level of notification. The possible values are None, Critical, All.
-    */
-    private ?string $notificationLevel = null;
-    
-    /**
-     * @var array<string>|null $notificationRecipients The list of recipients of the email notifications.
-    */
-    private ?array $notificationRecipients = null;
-    
-    /**
-     * @var string|null $notificationType The type of notification. Only Email is supported.
-    */
-    private ?string $notificationType = null;
-    
-    /**
-     * @var string|null $recipientType The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
-    */
-    private ?string $recipientType = null;
-    
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.
     */
     public function __construct() {
@@ -70,7 +45,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return bool|null
     */
     public function getIsDefaultRecipientsEnabled(): ?bool {
-        return $this->isDefaultRecipientsEnabled;
+        return $this->getBackingStore()->get('isDefaultRecipientsEnabled');
     }
 
     /**
@@ -78,7 +53,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getNotificationLevel(): ?string {
-        return $this->notificationLevel;
+        return $this->getBackingStore()->get('notificationLevel');
     }
 
     /**
@@ -86,7 +61,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return array<string>|null
     */
     public function getNotificationRecipients(): ?array {
-        return $this->notificationRecipients;
+        return $this->getBackingStore()->get('notificationRecipients');
     }
 
     /**
@@ -94,7 +69,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getNotificationType(): ?string {
-        return $this->notificationType;
+        return $this->getBackingStore()->get('notificationType');
     }
 
     /**
@@ -102,7 +77,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getRecipientType(): ?string {
-        return $this->recipientType;
+        return $this->getBackingStore()->get('recipientType');
     }
 
     /**
@@ -111,51 +86,51 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isDefaultRecipientsEnabled', $this->isDefaultRecipientsEnabled);
-        $writer->writeStringValue('notificationLevel', $this->notificationLevel);
-        $writer->writeCollectionOfPrimitiveValues('notificationRecipients', $this->notificationRecipients);
-        $writer->writeStringValue('notificationType', $this->notificationType);
-        $writer->writeStringValue('recipientType', $this->recipientType);
+        $writer->writeBooleanValue('isDefaultRecipientsEnabled', $this->getIsDefaultRecipientsEnabled());
+        $writer->writeStringValue('notificationLevel', $this->getNotificationLevel());
+        $writer->writeCollectionOfPrimitiveValues('notificationRecipients', $this->getNotificationRecipients());
+        $writer->writeStringValue('notificationType', $this->getNotificationType());
+        $writer->writeStringValue('recipientType', $this->getRecipientType());
     }
 
     /**
      * Sets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.
      *  @param bool|null $value Value to set for the isDefaultRecipientsEnabled property.
     */
-    public function setIsDefaultRecipientsEnabled(?bool $value ): void {
-        $this->isDefaultRecipientsEnabled = $value;
+    public function setIsDefaultRecipientsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isDefaultRecipientsEnabled', $value);
     }
 
     /**
      * Sets the notificationLevel property value. The level of notification. The possible values are None, Critical, All.
      *  @param string|null $value Value to set for the notificationLevel property.
     */
-    public function setNotificationLevel(?string $value ): void {
-        $this->notificationLevel = $value;
+    public function setNotificationLevel(?string $value): void {
+        $this->getBackingStore()->set('notificationLevel', $value);
     }
 
     /**
      * Sets the notificationRecipients property value. The list of recipients of the email notifications.
      *  @param array<string>|null $value Value to set for the notificationRecipients property.
     */
-    public function setNotificationRecipients(?array $value ): void {
-        $this->notificationRecipients = $value;
+    public function setNotificationRecipients(?array $value): void {
+        $this->getBackingStore()->set('notificationRecipients', $value);
     }
 
     /**
      * Sets the notificationType property value. The type of notification. Only Email is supported.
      *  @param string|null $value Value to set for the notificationType property.
     */
-    public function setNotificationType(?string $value ): void {
-        $this->notificationType = $value;
+    public function setNotificationType(?string $value): void {
+        $this->getBackingStore()->set('notificationType', $value);
     }
 
     /**
      * Sets the recipientType property value. The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
      *  @param string|null $value Value to set for the recipientType property.
     */
-    public function setRecipientType(?string $value ): void {
-        $this->recipientType = $value;
+    public function setRecipientType(?string $value): void {
+        $this->getBackingStore()->set('recipientType', $value);
     }
 
 }

@@ -6,63 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Parsable 
+class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AccessReviewExpirationBehavior|null $expirationBehavior The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-    */
-    private ?AccessReviewExpirationBehavior $expirationBehavior = null;
-    
-    /**
-     * @var array<SubjectSet>|null $fallbackReviewers This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
-    */
-    private ?array $fallbackReviewers = null;
-    
-    /**
-     * @var bool|null $isEnabled If true, access reviews are required for assignments through this policy.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var bool|null $isRecommendationEnabled Specifies whether to display recommendations to the reviewer. The default value is true.
-    */
-    private ?bool $isRecommendationEnabled = null;
-    
-    /**
-     * @var bool|null $isReviewerJustificationRequired Specifies whether the reviewer must provide justification for the approval. The default value is true.
-    */
-    private ?bool $isReviewerJustificationRequired = null;
-    
-    /**
-     * @var bool|null $isSelfReview Specifies whether the principals can review their own assignments.
-    */
-    private ?bool $isSelfReview = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<SubjectSet>|null $primaryReviewers This collection specifies the users or group of users who will review the access package assignments.
-    */
-    private ?array $primaryReviewers = null;
-    
-    /**
-     * @var EntitlementManagementSchedule|null $schedule When the first review should start and how often it should recur.
-    */
-    private ?EntitlementManagementSchedule $schedule = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new accessPackageAssignmentReviewSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.accessPackageAssignmentReviewSettings');
     }
@@ -80,8 +39,16 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -89,7 +56,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return AccessReviewExpirationBehavior|null
     */
     public function getExpirationBehavior(): ?AccessReviewExpirationBehavior {
-        return $this->expirationBehavior;
+        return $this->getBackingStore()->get('expirationBehavior');
     }
 
     /**
@@ -97,7 +64,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return array<SubjectSet>|null
     */
     public function getFallbackReviewers(): ?array {
-        return $this->fallbackReviewers;
+        return $this->getBackingStore()->get('fallbackReviewers');
     }
 
     /**
@@ -124,7 +91,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -132,7 +99,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getIsRecommendationEnabled(): ?bool {
-        return $this->isRecommendationEnabled;
+        return $this->getBackingStore()->get('isRecommendationEnabled');
     }
 
     /**
@@ -140,7 +107,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getIsReviewerJustificationRequired(): ?bool {
-        return $this->isReviewerJustificationRequired;
+        return $this->getBackingStore()->get('isReviewerJustificationRequired');
     }
 
     /**
@@ -148,7 +115,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getIsSelfReview(): ?bool {
-        return $this->isSelfReview;
+        return $this->getBackingStore()->get('isSelfReview');
     }
 
     /**
@@ -156,7 +123,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -164,7 +131,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return array<SubjectSet>|null
     */
     public function getPrimaryReviewers(): ?array {
-        return $this->primaryReviewers;
+        return $this->getBackingStore()->get('primaryReviewers');
     }
 
     /**
@@ -172,7 +139,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
-        return $this->schedule;
+        return $this->getBackingStore()->get('schedule');
     }
 
     /**
@@ -180,96 +147,96 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('expirationBehavior', $this->expirationBehavior);
-        $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->fallbackReviewers);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeBooleanValue('isRecommendationEnabled', $this->isRecommendationEnabled);
-        $writer->writeBooleanValue('isReviewerJustificationRequired', $this->isReviewerJustificationRequired);
-        $writer->writeBooleanValue('isSelfReview', $this->isSelfReview);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('primaryReviewers', $this->primaryReviewers);
-        $writer->writeObjectValue('schedule', $this->schedule);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('expirationBehavior', $this->getExpirationBehavior());
+        $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->getFallbackReviewers());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeBooleanValue('isRecommendationEnabled', $this->getIsRecommendationEnabled());
+        $writer->writeBooleanValue('isReviewerJustificationRequired', $this->getIsReviewerJustificationRequired());
+        $writer->writeBooleanValue('isSelfReview', $this->getIsSelfReview());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('primaryReviewers', $this->getPrimaryReviewers());
+        $writer->writeObjectValue('schedule', $this->getSchedule());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
      *  @param AccessReviewExpirationBehavior|null $value Value to set for the expirationBehavior property.
     */
-    public function setExpirationBehavior(?AccessReviewExpirationBehavior $value ): void {
-        $this->expirationBehavior = $value;
+    public function setExpirationBehavior(?AccessReviewExpirationBehavior $value): void {
+        $this->getBackingStore()->set('expirationBehavior', $value);
     }
 
     /**
      * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
      *  @param array<SubjectSet>|null $value Value to set for the fallbackReviewers property.
     */
-    public function setFallbackReviewers(?array $value ): void {
-        $this->fallbackReviewers = $value;
+    public function setFallbackReviewers(?array $value): void {
+        $this->getBackingStore()->set('fallbackReviewers', $value);
     }
 
     /**
      * Sets the isEnabled property value. If true, access reviews are required for assignments through this policy.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
      *  @param bool|null $value Value to set for the isRecommendationEnabled property.
     */
-    public function setIsRecommendationEnabled(?bool $value ): void {
-        $this->isRecommendationEnabled = $value;
+    public function setIsRecommendationEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isRecommendationEnabled', $value);
     }
 
     /**
      * Sets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
      *  @param bool|null $value Value to set for the isReviewerJustificationRequired property.
     */
-    public function setIsReviewerJustificationRequired(?bool $value ): void {
-        $this->isReviewerJustificationRequired = $value;
+    public function setIsReviewerJustificationRequired(?bool $value): void {
+        $this->getBackingStore()->set('isReviewerJustificationRequired', $value);
     }
 
     /**
      * Sets the isSelfReview property value. Specifies whether the principals can review their own assignments.
      *  @param bool|null $value Value to set for the isSelfReview property.
     */
-    public function setIsSelfReview(?bool $value ): void {
-        $this->isSelfReview = $value;
+    public function setIsSelfReview(?bool $value): void {
+        $this->getBackingStore()->set('isSelfReview', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
      *  @param array<SubjectSet>|null $value Value to set for the primaryReviewers property.
     */
-    public function setPrimaryReviewers(?array $value ): void {
-        $this->primaryReviewers = $value;
+    public function setPrimaryReviewers(?array $value): void {
+        $this->getBackingStore()->set('primaryReviewers', $value);
     }
 
     /**
      * Sets the schedule property value. When the first review should start and how often it should recur.
      *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
-    public function setSchedule(?EntitlementManagementSchedule $value ): void {
-        $this->schedule = $value;
+    public function setSchedule(?EntitlementManagementSchedule $value): void {
+        $this->getBackingStore()->set('schedule', $value);
     }
 
 }

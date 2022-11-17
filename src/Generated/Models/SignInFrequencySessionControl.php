@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * @var SignInFrequencyAuthenticationType|null $authenticationType The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-    */
-    private ?SignInFrequencyAuthenticationType $authenticationType = null;
-    
-    /**
-     * @var SignInFrequencyInterval|null $frequencyInterval The possible values are timeBased, everyTime, unknownFutureValue.
-    */
-    private ?SignInFrequencyInterval $frequencyInterval = null;
-    
-    /**
-     * @var SigninFrequencyType|null $type Possible values are: days, hours.
-    */
-    private ?SigninFrequencyType $type = null;
-    
-    /**
-     * @var int|null $value The number of days or hours.
-    */
-    private ?int $value = null;
-    
-    /**
      * Instantiates a new SignInFrequencySessionControl and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SignInFrequencyAuthenticationType|null
     */
     public function getAuthenticationType(): ?SignInFrequencyAuthenticationType {
-        return $this->authenticationType;
+        return $this->getBackingStore()->get('authenticationType');
     }
 
     /**
@@ -72,7 +52,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SignInFrequencyInterval|null
     */
     public function getFrequencyInterval(): ?SignInFrequencyInterval {
-        return $this->frequencyInterval;
+        return $this->getBackingStore()->get('frequencyInterval');
     }
 
     /**
@@ -80,7 +60,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return SigninFrequencyType|null
     */
     public function getType(): ?SigninFrequencyType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -88,7 +68,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
      * @return int|null
     */
     public function getValue(): ?int {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -97,42 +77,42 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('authenticationType', $this->authenticationType);
-        $writer->writeEnumValue('frequencyInterval', $this->frequencyInterval);
-        $writer->writeEnumValue('type', $this->type);
-        $writer->writeIntegerValue('value', $this->value);
+        $writer->writeEnumValue('authenticationType', $this->getAuthenticationType());
+        $writer->writeEnumValue('frequencyInterval', $this->getFrequencyInterval());
+        $writer->writeEnumValue('type', $this->getType());
+        $writer->writeIntegerValue('value', $this->getValue());
     }
 
     /**
      * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
      *  @param SignInFrequencyAuthenticationType|null $value Value to set for the authenticationType property.
     */
-    public function setAuthenticationType(?SignInFrequencyAuthenticationType $value ): void {
-        $this->authenticationType = $value;
+    public function setAuthenticationType(?SignInFrequencyAuthenticationType $value): void {
+        $this->getBackingStore()->set('authenticationType', $value);
     }
 
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
      *  @param SignInFrequencyInterval|null $value Value to set for the frequencyInterval property.
     */
-    public function setFrequencyInterval(?SignInFrequencyInterval $value ): void {
-        $this->frequencyInterval = $value;
+    public function setFrequencyInterval(?SignInFrequencyInterval $value): void {
+        $this->getBackingStore()->set('frequencyInterval', $value);
     }
 
     /**
      * Sets the type property value. Possible values are: days, hours.
      *  @param SigninFrequencyType|null $value Value to set for the type property.
     */
-    public function setType(?SigninFrequencyType $value ): void {
-        $this->type = $value;
+    public function setType(?SigninFrequencyType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
     /**
      * Sets the value property value. The number of days or hours.
      *  @param int|null $value Value to set for the value property.
     */
-    public function setValue(?int $value ): void {
-        $this->value = $value;
+    public function setValue(?int $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

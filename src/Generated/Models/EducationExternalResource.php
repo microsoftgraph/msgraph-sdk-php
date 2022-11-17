@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationExternalResource extends EducationResource implements Parsable 
 {
     /**
-     * @var string|null $webUrl Location of the resource. Required
-    */
-    private ?string $webUrl = null;
-    
-    /**
      * Instantiates a new EducationExternalResource and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationExternalResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->webUrl;
+        return $this->getBackingStore()->get('webUrl');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationExternalResource extends EducationResource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('webUrl', $this->webUrl);
+        $writer->writeStringValue('webUrl', $this->getWebUrl());
     }
 
     /**
      * Sets the webUrl property value. Location of the resource. Required
      *  @param string|null $value Value to set for the webUrl property.
     */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }

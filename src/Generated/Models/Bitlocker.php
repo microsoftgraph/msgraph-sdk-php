@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Bitlocker extends Entity implements Parsable 
 {
     /**
-     * @var array<BitlockerRecoveryKey>|null $recoveryKeys The recovery keys associated with the bitlocker entity.
-    */
-    private ?array $recoveryKeys = null;
-    
-    /**
      * Instantiates a new Bitlocker and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class Bitlocker extends Entity implements Parsable
      * @return array<BitlockerRecoveryKey>|null
     */
     public function getRecoveryKeys(): ?array {
-        return $this->recoveryKeys;
+        return $this->getBackingStore()->get('recoveryKeys');
     }
 
     /**
@@ -55,15 +50,15 @@ class Bitlocker extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('recoveryKeys', $this->recoveryKeys);
+        $writer->writeCollectionOfObjectValues('recoveryKeys', $this->getRecoveryKeys());
     }
 
     /**
      * Sets the recoveryKeys property value. The recovery keys associated with the bitlocker entity.
      *  @param array<BitlockerRecoveryKey>|null $value Value to set for the recoveryKeys property.
     */
-    public function setRecoveryKeys(?array $value ): void {
-        $this->recoveryKeys = $value;
+    public function setRecoveryKeys(?array $value): void {
+        $this->getBackingStore()->set('recoveryKeys', $value);
     }
 
 }

@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TopicModelingSettings implements AdditionalDataHolder, Parsable 
+class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $dynamicallyAdjustTopicCount Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
-    */
-    private ?bool $dynamicallyAdjustTopicCount = null;
-    
-    /**
-     * @var bool|null $ignoreNumbers Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
-    */
-    private ?bool $ignoreNumbers = null;
-    
-    /**
-     * @var bool|null $isEnabled Indicates whether themes model is enabled for the case.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $topicCount The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
-    */
-    private ?int $topicCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new topicModelingSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.security.topicModelingSettings');
     }
@@ -60,8 +39,16 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -69,7 +56,7 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getDynamicallyAdjustTopicCount(): ?bool {
-        return $this->dynamicallyAdjustTopicCount;
+        return $this->getBackingStore()->get('dynamicallyAdjustTopicCount');
     }
 
     /**
@@ -92,7 +79,7 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIgnoreNumbers(): ?bool {
-        return $this->ignoreNumbers;
+        return $this->getBackingStore()->get('ignoreNumbers');
     }
 
     /**
@@ -100,7 +87,7 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -108,7 +95,7 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -116,7 +103,7 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTopicCount(): ?int {
-        return $this->topicCount;
+        return $this->getBackingStore()->get('topicCount');
     }
 
     /**
@@ -124,60 +111,60 @@ class TopicModelingSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('dynamicallyAdjustTopicCount', $this->dynamicallyAdjustTopicCount);
-        $writer->writeBooleanValue('ignoreNumbers', $this->ignoreNumbers);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('topicCount', $this->topicCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('dynamicallyAdjustTopicCount', $this->getDynamicallyAdjustTopicCount());
+        $writer->writeBooleanValue('ignoreNumbers', $this->getIgnoreNumbers());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('topicCount', $this->getTopicCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the dynamicallyAdjustTopicCount property value. Indicates whether the themes model should dynamically optimize the number of generated topics. To learn more, see Adjust maximum number of themes dynamically.
      *  @param bool|null $value Value to set for the dynamicallyAdjustTopicCount property.
     */
-    public function setDynamicallyAdjustTopicCount(?bool $value ): void {
-        $this->dynamicallyAdjustTopicCount = $value;
+    public function setDynamicallyAdjustTopicCount(?bool $value): void {
+        $this->getBackingStore()->set('dynamicallyAdjustTopicCount', $value);
     }
 
     /**
      * Sets the ignoreNumbers property value. Indicates whether the themes model should exclude numbers while parsing document texts. To learn more, see Include numbers in themes.
      *  @param bool|null $value Value to set for the ignoreNumbers property.
     */
-    public function setIgnoreNumbers(?bool $value ): void {
-        $this->ignoreNumbers = $value;
+    public function setIgnoreNumbers(?bool $value): void {
+        $this->getBackingStore()->set('ignoreNumbers', $value);
     }
 
     /**
      * Sets the isEnabled property value. Indicates whether themes model is enabled for the case.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the topicCount property value. The total number of topics that the themes model will generate for a review set. To learn more, see Maximum number of themes.
      *  @param int|null $value Value to set for the topicCount property.
     */
-    public function setTopicCount(?int $value ): void {
-        $this->topicCount = $value;
+    public function setTopicCount(?int $value): void {
+        $this->getBackingStore()->set('topicCount', $value);
     }
 
 }

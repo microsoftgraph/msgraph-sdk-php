@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamInfo extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The name of the team.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var Team|null $team The team property
-    */
-    private ?Team $team = null;
-    
-    /**
-     * @var string|null $tenantId The ID of the Azure Active Directory tenant.
-    */
-    private ?string $tenantId = null;
-    
-    /**
      * Instantiates a new teamInfo and sets the default values.
     */
     public function __construct() {
@@ -53,7 +38,7 @@ class TeamInfo extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +59,7 @@ class TeamInfo extends Entity implements Parsable
      * @return Team|null
     */
     public function getTeam(): ?Team {
-        return $this->team;
+        return $this->getBackingStore()->get('team');
     }
 
     /**
@@ -82,7 +67,7 @@ class TeamInfo extends Entity implements Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->tenantId;
+        return $this->getBackingStore()->get('tenantId');
     }
 
     /**
@@ -91,33 +76,33 @@ class TeamInfo extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('team', $this->team);
-        $writer->writeStringValue('tenantId', $this->tenantId);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('team', $this->getTeam());
+        $writer->writeStringValue('tenantId', $this->getTenantId());
     }
 
     /**
      * Sets the displayName property value. The name of the team.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the team property value. The team property
      *  @param Team|null $value Value to set for the team property.
     */
-    public function setTeam(?Team $value ): void {
-        $this->team = $value;
+    public function setTeam(?Team $value): void {
+        $this->getBackingStore()->set('team', $value);
     }
 
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
      *  @param string|null $value Value to set for the tenantId property.
     */
-    public function setTenantId(?string $value ): void {
-        $this->tenantId = $value;
+    public function setTenantId(?string $value): void {
+        $this->getBackingStore()->set('tenantId', $value);
     }
 
 }

@@ -9,41 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SubscribedSku extends Entity implements Parsable 
 {
     /**
-     * @var string|null $appliesTo For example, 'User' or 'Company'.
-    */
-    private ?string $appliesTo = null;
-    
-    /**
-     * @var string|null $capabilityStatus Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
-    */
-    private ?string $capabilityStatus = null;
-    
-    /**
-     * @var int|null $consumedUnits The number of licenses that have been assigned.
-    */
-    private ?int $consumedUnits = null;
-    
-    /**
-     * @var LicenseUnitsDetail|null $prepaidUnits Information about the number and status of prepaid licenses.
-    */
-    private ?LicenseUnitsDetail $prepaidUnits = null;
-    
-    /**
-     * @var array<ServicePlanInfo>|null $servicePlans Information about the service plans that are available with the SKU. Not nullable
-    */
-    private ?array $servicePlans = null;
-    
-    /**
-     * @var string|null $skuId The unique identifier (GUID) for the service SKU.
-    */
-    private ?string $skuId = null;
-    
-    /**
-     * @var string|null $skuPartNumber The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
-    */
-    private ?string $skuPartNumber = null;
-    
-    /**
      * Instantiates a new SubscribedSku and sets the default values.
     */
     public function __construct() {
@@ -65,7 +30,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return string|null
     */
     public function getAppliesTo(): ?string {
-        return $this->appliesTo;
+        return $this->getBackingStore()->get('appliesTo');
     }
 
     /**
@@ -73,7 +38,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return string|null
     */
     public function getCapabilityStatus(): ?string {
-        return $this->capabilityStatus;
+        return $this->getBackingStore()->get('capabilityStatus');
     }
 
     /**
@@ -81,7 +46,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return int|null
     */
     public function getConsumedUnits(): ?int {
-        return $this->consumedUnits;
+        return $this->getBackingStore()->get('consumedUnits');
     }
 
     /**
@@ -106,7 +71,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return LicenseUnitsDetail|null
     */
     public function getPrepaidUnits(): ?LicenseUnitsDetail {
-        return $this->prepaidUnits;
+        return $this->getBackingStore()->get('prepaidUnits');
     }
 
     /**
@@ -114,7 +79,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return array<ServicePlanInfo>|null
     */
     public function getServicePlans(): ?array {
-        return $this->servicePlans;
+        return $this->getBackingStore()->get('servicePlans');
     }
 
     /**
@@ -122,7 +87,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuId(): ?string {
-        return $this->skuId;
+        return $this->getBackingStore()->get('skuId');
     }
 
     /**
@@ -130,7 +95,7 @@ class SubscribedSku extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuPartNumber(): ?string {
-        return $this->skuPartNumber;
+        return $this->getBackingStore()->get('skuPartNumber');
     }
 
     /**
@@ -139,69 +104,69 @@ class SubscribedSku extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appliesTo', $this->appliesTo);
-        $writer->writeStringValue('capabilityStatus', $this->capabilityStatus);
-        $writer->writeIntegerValue('consumedUnits', $this->consumedUnits);
-        $writer->writeObjectValue('prepaidUnits', $this->prepaidUnits);
-        $writer->writeCollectionOfObjectValues('servicePlans', $this->servicePlans);
-        $writer->writeStringValue('skuId', $this->skuId);
-        $writer->writeStringValue('skuPartNumber', $this->skuPartNumber);
+        $writer->writeStringValue('appliesTo', $this->getAppliesTo());
+        $writer->writeStringValue('capabilityStatus', $this->getCapabilityStatus());
+        $writer->writeIntegerValue('consumedUnits', $this->getConsumedUnits());
+        $writer->writeObjectValue('prepaidUnits', $this->getPrepaidUnits());
+        $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
+        $writer->writeStringValue('skuId', $this->getSkuId());
+        $writer->writeStringValue('skuPartNumber', $this->getSkuPartNumber());
     }
 
     /**
      * Sets the appliesTo property value. For example, 'User' or 'Company'.
      *  @param string|null $value Value to set for the appliesTo property.
     */
-    public function setAppliesTo(?string $value ): void {
-        $this->appliesTo = $value;
+    public function setAppliesTo(?string $value): void {
+        $this->getBackingStore()->set('appliesTo', $value);
     }
 
     /**
      * Sets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
      *  @param string|null $value Value to set for the capabilityStatus property.
     */
-    public function setCapabilityStatus(?string $value ): void {
-        $this->capabilityStatus = $value;
+    public function setCapabilityStatus(?string $value): void {
+        $this->getBackingStore()->set('capabilityStatus', $value);
     }
 
     /**
      * Sets the consumedUnits property value. The number of licenses that have been assigned.
      *  @param int|null $value Value to set for the consumedUnits property.
     */
-    public function setConsumedUnits(?int $value ): void {
-        $this->consumedUnits = $value;
+    public function setConsumedUnits(?int $value): void {
+        $this->getBackingStore()->set('consumedUnits', $value);
     }
 
     /**
      * Sets the prepaidUnits property value. Information about the number and status of prepaid licenses.
      *  @param LicenseUnitsDetail|null $value Value to set for the prepaidUnits property.
     */
-    public function setPrepaidUnits(?LicenseUnitsDetail $value ): void {
-        $this->prepaidUnits = $value;
+    public function setPrepaidUnits(?LicenseUnitsDetail $value): void {
+        $this->getBackingStore()->set('prepaidUnits', $value);
     }
 
     /**
      * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
      *  @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
     */
-    public function setServicePlans(?array $value ): void {
-        $this->servicePlans = $value;
+    public function setServicePlans(?array $value): void {
+        $this->getBackingStore()->set('servicePlans', $value);
     }
 
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
      *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?string $value ): void {
-        $this->skuId = $value;
+    public function setSkuId(?string $value): void {
+        $this->getBackingStore()->set('skuId', $value);
     }
 
     /**
      * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      *  @param string|null $value Value to set for the skuPartNumber property.
     */
-    public function setSkuPartNumber(?string $value ): void {
-        $this->skuPartNumber = $value;
+    public function setSkuPartNumber(?string $value): void {
+        $this->getBackingStore()->set('skuPartNumber', $value);
     }
 
 }

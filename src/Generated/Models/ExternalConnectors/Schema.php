@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Schema extends Entity implements Parsable 
 {
     /**
-     * @var string|null $baseType Must be set to microsoft.graph.externalConnector.externalItem. Required.
-    */
-    private ?string $baseType = null;
-    
-    /**
-     * @var array<Property>|null $properties The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
-    */
-    private ?array $properties = null;
-    
-    /**
      * Instantiates a new schema and sets the default values.
     */
     public function __construct() {
@@ -41,7 +31,7 @@ class Schema extends Entity implements Parsable
      * @return string|null
     */
     public function getBaseType(): ?string {
-        return $this->baseType;
+        return $this->getBackingStore()->get('baseType');
     }
 
     /**
@@ -61,7 +51,7 @@ class Schema extends Entity implements Parsable
      * @return array<Property>|null
     */
     public function getProperties(): ?array {
-        return $this->properties;
+        return $this->getBackingStore()->get('properties');
     }
 
     /**
@@ -70,24 +60,24 @@ class Schema extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('baseType', $this->baseType);
-        $writer->writeCollectionOfObjectValues('properties', $this->properties);
+        $writer->writeStringValue('baseType', $this->getBaseType());
+        $writer->writeCollectionOfObjectValues('properties', $this->getProperties());
     }
 
     /**
      * Sets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
      *  @param string|null $value Value to set for the baseType property.
     */
-    public function setBaseType(?string $value ): void {
-        $this->baseType = $value;
+    public function setBaseType(?string $value): void {
+        $this->getBackingStore()->set('baseType', $value);
     }
 
     /**
      * Sets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
      *  @param array<Property>|null $value Value to set for the properties property.
     */
-    public function setProperties(?array $value ): void {
-        $this->properties = $value;
+    public function setProperties(?array $value): void {
+        $this->getBackingStore()->set('properties', $value);
     }
 
 }

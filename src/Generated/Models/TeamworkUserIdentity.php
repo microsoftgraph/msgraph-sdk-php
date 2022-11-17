@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkUserIdentity extends Identity implements Parsable 
 {
     /**
-     * @var TeamworkUserIdentityType|null $userIdentityType Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-    */
-    private ?TeamworkUserIdentityType $userIdentityType = null;
-    
-    /**
      * Instantiates a new TeamworkUserIdentity and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class TeamworkUserIdentity extends Identity implements Parsable
      * @return TeamworkUserIdentityType|null
     */
     public function getUserIdentityType(): ?TeamworkUserIdentityType {
-        return $this->userIdentityType;
+        return $this->getBackingStore()->get('userIdentityType');
     }
 
     /**
@@ -55,15 +50,15 @@ class TeamworkUserIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('userIdentityType', $this->userIdentityType);
+        $writer->writeEnumValue('userIdentityType', $this->getUserIdentityType());
     }
 
     /**
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
      *  @param TeamworkUserIdentityType|null $value Value to set for the userIdentityType property.
     */
-    public function setUserIdentityType(?TeamworkUserIdentityType $value ): void {
-        $this->userIdentityType = $value;
+    public function setUserIdentityType(?TeamworkUserIdentityType $value): void {
+        $this->getBackingStore()->set('userIdentityType', $value);
     }
 
 }

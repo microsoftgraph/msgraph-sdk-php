@@ -10,71 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AgreementAcceptance extends Entity implements Parsable 
 {
     /**
-     * @var string|null $agreementFileId The identifier of the agreement file accepted by the user.
-    */
-    private ?string $agreementFileId = null;
-    
-    /**
-     * @var string|null $agreementId The identifier of the agreement.
-    */
-    private ?string $agreementId = null;
-    
-    /**
-     * @var string|null $deviceDisplayName The display name of the device used for accepting the agreement.
-    */
-    private ?string $deviceDisplayName = null;
-    
-    /**
-     * @var string|null $deviceId The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $deviceOSType The operating system used to accept the agreement.
-    */
-    private ?string $deviceOSType = null;
-    
-    /**
-     * @var string|null $deviceOSVersion The operating system version of the device used to accept the agreement.
-    */
-    private ?string $deviceOSVersion = null;
-    
-    /**
-     * @var DateTime|null $expirationDateTime The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var DateTime|null $recordedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $recordedDateTime = null;
-    
-    /**
-     * @var AgreementAcceptanceState|null $state The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
-    */
-    private ?AgreementAcceptanceState $state = null;
-    
-    /**
-     * @var string|null $userDisplayName Display name of the user when the acceptance was recorded.
-    */
-    private ?string $userDisplayName = null;
-    
-    /**
-     * @var string|null $userEmail Email of the user when the acceptance was recorded.
-    */
-    private ?string $userEmail = null;
-    
-    /**
-     * @var string|null $userId The identifier of the user who accepted the agreement. Supports $filter (eq).
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $userPrincipalName UPN of the user when the acceptance was recorded.
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new agreementAcceptance and sets the default values.
     */
     public function __construct() {
@@ -96,7 +31,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getAgreementFileId(): ?string {
-        return $this->agreementFileId;
+        return $this->getBackingStore()->get('agreementFileId');
     }
 
     /**
@@ -104,7 +39,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getAgreementId(): ?string {
-        return $this->agreementId;
+        return $this->getBackingStore()->get('agreementId');
     }
 
     /**
@@ -112,7 +47,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceDisplayName(): ?string {
-        return $this->deviceDisplayName;
+        return $this->getBackingStore()->get('deviceDisplayName');
     }
 
     /**
@@ -120,7 +55,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -128,7 +63,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceOSType(): ?string {
-        return $this->deviceOSType;
+        return $this->getBackingStore()->get('deviceOSType');
     }
 
     /**
@@ -136,7 +71,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceOSVersion(): ?string {
-        return $this->deviceOSVersion;
+        return $this->getBackingStore()->get('deviceOSVersion');
     }
 
     /**
@@ -144,7 +79,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -175,7 +110,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRecordedDateTime(): ?DateTime {
-        return $this->recordedDateTime;
+        return $this->getBackingStore()->get('recordedDateTime');
     }
 
     /**
@@ -183,7 +118,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return AgreementAcceptanceState|null
     */
     public function getState(): ?AgreementAcceptanceState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -191,7 +126,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->userDisplayName;
+        return $this->getBackingStore()->get('userDisplayName');
     }
 
     /**
@@ -199,7 +134,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserEmail(): ?string {
-        return $this->userEmail;
+        return $this->getBackingStore()->get('userEmail');
     }
 
     /**
@@ -207,7 +142,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -215,7 +150,7 @@ class AgreementAcceptance extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -224,123 +159,123 @@ class AgreementAcceptance extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('agreementFileId', $this->agreementFileId);
-        $writer->writeStringValue('agreementId', $this->agreementId);
-        $writer->writeStringValue('deviceDisplayName', $this->deviceDisplayName);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('deviceOSType', $this->deviceOSType);
-        $writer->writeStringValue('deviceOSVersion', $this->deviceOSVersion);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeDateTimeValue('recordedDateTime', $this->recordedDateTime);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userEmail', $this->userEmail);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeStringValue('agreementFileId', $this->getAgreementFileId());
+        $writer->writeStringValue('agreementId', $this->getAgreementId());
+        $writer->writeStringValue('deviceDisplayName', $this->getDeviceDisplayName());
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('deviceOSType', $this->getDeviceOSType());
+        $writer->writeStringValue('deviceOSVersion', $this->getDeviceOSVersion());
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeDateTimeValue('recordedDateTime', $this->getRecordedDateTime());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
+        $writer->writeStringValue('userEmail', $this->getUserEmail());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the agreementFileId property value. The identifier of the agreement file accepted by the user.
      *  @param string|null $value Value to set for the agreementFileId property.
     */
-    public function setAgreementFileId(?string $value ): void {
-        $this->agreementFileId = $value;
+    public function setAgreementFileId(?string $value): void {
+        $this->getBackingStore()->set('agreementFileId', $value);
     }
 
     /**
      * Sets the agreementId property value. The identifier of the agreement.
      *  @param string|null $value Value to set for the agreementId property.
     */
-    public function setAgreementId(?string $value ): void {
-        $this->agreementId = $value;
+    public function setAgreementId(?string $value): void {
+        $this->getBackingStore()->set('agreementId', $value);
     }
 
     /**
      * Sets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
      *  @param string|null $value Value to set for the deviceDisplayName property.
     */
-    public function setDeviceDisplayName(?string $value ): void {
-        $this->deviceDisplayName = $value;
+    public function setDeviceDisplayName(?string $value): void {
+        $this->getBackingStore()->set('deviceDisplayName', $value);
     }
 
     /**
      * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the deviceOSType property value. The operating system used to accept the agreement.
      *  @param string|null $value Value to set for the deviceOSType property.
     */
-    public function setDeviceOSType(?string $value ): void {
-        $this->deviceOSType = $value;
+    public function setDeviceOSType(?string $value): void {
+        $this->getBackingStore()->set('deviceOSType', $value);
     }
 
     /**
      * Sets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
      *  @param string|null $value Value to set for the deviceOSVersion property.
     */
-    public function setDeviceOSVersion(?string $value ): void {
-        $this->deviceOSVersion = $value;
+    public function setDeviceOSVersion(?string $value): void {
+        $this->getBackingStore()->set('deviceOSVersion', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the recordedDateTime property.
     */
-    public function setRecordedDateTime(?DateTime $value ): void {
-        $this->recordedDateTime = $value;
+    public function setRecordedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('recordedDateTime', $value);
     }
 
     /**
      * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
      *  @param AgreementAcceptanceState|null $value Value to set for the state property.
     */
-    public function setState(?AgreementAcceptanceState $value ): void {
-        $this->state = $value;
+    public function setState(?AgreementAcceptanceState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the userDisplayName property value. Display name of the user when the acceptance was recorded.
      *  @param string|null $value Value to set for the userDisplayName property.
     */
-    public function setUserDisplayName(?string $value ): void {
-        $this->userDisplayName = $value;
+    public function setUserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('userDisplayName', $value);
     }
 
     /**
      * Sets the userEmail property value. Email of the user when the acceptance was recorded.
      *  @param string|null $value Value to set for the userEmail property.
     */
-    public function setUserEmail(?string $value ): void {
-        $this->userEmail = $value;
+    public function setUserEmail(?string $value): void {
+        $this->getBackingStore()->set('userEmail', $value);
     }
 
     /**
      * Sets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

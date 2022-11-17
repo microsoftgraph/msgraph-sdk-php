@@ -10,81 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppRegistration extends Entity implements Parsable 
 {
     /**
-     * @var MobileAppIdentifier|null $appIdentifier The app package Identifier
-    */
-    private ?MobileAppIdentifier $appIdentifier = null;
-    
-    /**
-     * @var string|null $applicationVersion App version
-    */
-    private ?string $applicationVersion = null;
-    
-    /**
-     * @var array<ManagedAppPolicy>|null $appliedPolicies Zero or more policys already applied on the registered app when it last synchronized with managment service.
-    */
-    private ?array $appliedPolicies = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Date and time of creation
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $deviceName Host device name
-    */
-    private ?string $deviceName = null;
-    
-    /**
-     * @var string|null $deviceTag App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-    */
-    private ?string $deviceTag = null;
-    
-    /**
-     * @var string|null $deviceType Host device type
-    */
-    private ?string $deviceType = null;
-    
-    /**
-     * @var array<ManagedAppFlaggedReason>|null $flaggedReasons Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-    */
-    private ?array $flaggedReasons = null;
-    
-    /**
-     * @var array<ManagedAppPolicy>|null $intendedPolicies Zero or more policies admin intended for the app as of now.
-    */
-    private ?array $intendedPolicies = null;
-    
-    /**
-     * @var DateTime|null $lastSyncDateTime Date and time of last the app synced with management service.
-    */
-    private ?DateTime $lastSyncDateTime = null;
-    
-    /**
-     * @var string|null $managementSdkVersion App management SDK version
-    */
-    private ?string $managementSdkVersion = null;
-    
-    /**
-     * @var array<ManagedAppOperation>|null $operations Zero or more long running operations triggered on the app registration.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var string|null $platformVersion Operating System version
-    */
-    private ?string $platformVersion = null;
-    
-    /**
-     * @var string|null $userId The user Id to who this app registration belongs.
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $version Version of the entity.
-    */
-    private ?string $version = null;
-    
-    /**
      * Instantiates a new managedAppRegistration and sets the default values.
     */
     public function __construct() {
@@ -114,7 +39,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return MobileAppIdentifier|null
     */
     public function getAppIdentifier(): ?MobileAppIdentifier {
-        return $this->appIdentifier;
+        return $this->getBackingStore()->get('appIdentifier');
     }
 
     /**
@@ -122,7 +47,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getApplicationVersion(): ?string {
-        return $this->applicationVersion;
+        return $this->getBackingStore()->get('applicationVersion');
     }
 
     /**
@@ -130,7 +55,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppPolicy>|null
     */
     public function getAppliedPolicies(): ?array {
-        return $this->appliedPolicies;
+        return $this->getBackingStore()->get('appliedPolicies');
     }
 
     /**
@@ -138,7 +63,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -146,7 +71,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->deviceName;
+        return $this->getBackingStore()->get('deviceName');
     }
 
     /**
@@ -154,7 +79,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceTag(): ?string {
-        return $this->deviceTag;
+        return $this->getBackingStore()->get('deviceTag');
     }
 
     /**
@@ -162,7 +87,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceType(): ?string {
-        return $this->deviceType;
+        return $this->getBackingStore()->get('deviceType');
     }
 
     /**
@@ -195,7 +120,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppFlaggedReason>|null
     */
     public function getFlaggedReasons(): ?array {
-        return $this->flaggedReasons;
+        return $this->getBackingStore()->get('flaggedReasons');
     }
 
     /**
@@ -203,7 +128,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppPolicy>|null
     */
     public function getIntendedPolicies(): ?array {
-        return $this->intendedPolicies;
+        return $this->getBackingStore()->get('intendedPolicies');
     }
 
     /**
@@ -211,7 +136,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
-        return $this->lastSyncDateTime;
+        return $this->getBackingStore()->get('lastSyncDateTime');
     }
 
     /**
@@ -219,7 +144,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getManagementSdkVersion(): ?string {
-        return $this->managementSdkVersion;
+        return $this->getBackingStore()->get('managementSdkVersion');
     }
 
     /**
@@ -227,7 +152,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -235,7 +160,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getPlatformVersion(): ?string {
-        return $this->platformVersion;
+        return $this->getBackingStore()->get('platformVersion');
     }
 
     /**
@@ -243,7 +168,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -251,7 +176,7 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -260,141 +185,141 @@ class ManagedAppRegistration extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('appIdentifier', $this->appIdentifier);
-        $writer->writeStringValue('applicationVersion', $this->applicationVersion);
-        $writer->writeCollectionOfObjectValues('appliedPolicies', $this->appliedPolicies);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('deviceName', $this->deviceName);
-        $writer->writeStringValue('deviceTag', $this->deviceTag);
-        $writer->writeStringValue('deviceType', $this->deviceType);
-        $writer->writeCollectionOfEnumValues('flaggedReasons', $this->flaggedReasons);
-        $writer->writeCollectionOfObjectValues('intendedPolicies', $this->intendedPolicies);
-        $writer->writeDateTimeValue('lastSyncDateTime', $this->lastSyncDateTime);
-        $writer->writeStringValue('managementSdkVersion', $this->managementSdkVersion);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeStringValue('platformVersion', $this->platformVersion);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('version', $this->version);
+        $writer->writeObjectValue('appIdentifier', $this->getAppIdentifier());
+        $writer->writeStringValue('applicationVersion', $this->getApplicationVersion());
+        $writer->writeCollectionOfObjectValues('appliedPolicies', $this->getAppliedPolicies());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('deviceName', $this->getDeviceName());
+        $writer->writeStringValue('deviceTag', $this->getDeviceTag());
+        $writer->writeStringValue('deviceType', $this->getDeviceType());
+        $writer->writeCollectionOfEnumValues('flaggedReasons', $this->getFlaggedReasons());
+        $writer->writeCollectionOfObjectValues('intendedPolicies', $this->getIntendedPolicies());
+        $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
+        $writer->writeStringValue('managementSdkVersion', $this->getManagementSdkVersion());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeStringValue('platformVersion', $this->getPlatformVersion());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('version', $this->getVersion());
     }
 
     /**
      * Sets the appIdentifier property value. The app package Identifier
      *  @param MobileAppIdentifier|null $value Value to set for the appIdentifier property.
     */
-    public function setAppIdentifier(?MobileAppIdentifier $value ): void {
-        $this->appIdentifier = $value;
+    public function setAppIdentifier(?MobileAppIdentifier $value): void {
+        $this->getBackingStore()->set('appIdentifier', $value);
     }
 
     /**
      * Sets the applicationVersion property value. App version
      *  @param string|null $value Value to set for the applicationVersion property.
     */
-    public function setApplicationVersion(?string $value ): void {
-        $this->applicationVersion = $value;
+    public function setApplicationVersion(?string $value): void {
+        $this->getBackingStore()->set('applicationVersion', $value);
     }
 
     /**
      * Sets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
      *  @param array<ManagedAppPolicy>|null $value Value to set for the appliedPolicies property.
     */
-    public function setAppliedPolicies(?array $value ): void {
-        $this->appliedPolicies = $value;
+    public function setAppliedPolicies(?array $value): void {
+        $this->getBackingStore()->set('appliedPolicies', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Date and time of creation
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the deviceName property value. Host device name
      *  @param string|null $value Value to set for the deviceName property.
     */
-    public function setDeviceName(?string $value ): void {
-        $this->deviceName = $value;
+    public function setDeviceName(?string $value): void {
+        $this->getBackingStore()->set('deviceName', $value);
     }
 
     /**
      * Sets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      *  @param string|null $value Value to set for the deviceTag property.
     */
-    public function setDeviceTag(?string $value ): void {
-        $this->deviceTag = $value;
+    public function setDeviceTag(?string $value): void {
+        $this->getBackingStore()->set('deviceTag', $value);
     }
 
     /**
      * Sets the deviceType property value. Host device type
      *  @param string|null $value Value to set for the deviceType property.
     */
-    public function setDeviceType(?string $value ): void {
-        $this->deviceType = $value;
+    public function setDeviceType(?string $value): void {
+        $this->getBackingStore()->set('deviceType', $value);
     }
 
     /**
      * Sets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      *  @param array<ManagedAppFlaggedReason>|null $value Value to set for the flaggedReasons property.
     */
-    public function setFlaggedReasons(?array $value ): void {
-        $this->flaggedReasons = $value;
+    public function setFlaggedReasons(?array $value): void {
+        $this->getBackingStore()->set('flaggedReasons', $value);
     }
 
     /**
      * Sets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
      *  @param array<ManagedAppPolicy>|null $value Value to set for the intendedPolicies property.
     */
-    public function setIntendedPolicies(?array $value ): void {
-        $this->intendedPolicies = $value;
+    public function setIntendedPolicies(?array $value): void {
+        $this->getBackingStore()->set('intendedPolicies', $value);
     }
 
     /**
      * Sets the lastSyncDateTime property value. Date and time of last the app synced with management service.
      *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
-    public function setLastSyncDateTime(?DateTime $value ): void {
-        $this->lastSyncDateTime = $value;
+    public function setLastSyncDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastSyncDateTime', $value);
     }
 
     /**
      * Sets the managementSdkVersion property value. App management SDK version
      *  @param string|null $value Value to set for the managementSdkVersion property.
     */
-    public function setManagementSdkVersion(?string $value ): void {
-        $this->managementSdkVersion = $value;
+    public function setManagementSdkVersion(?string $value): void {
+        $this->getBackingStore()->set('managementSdkVersion', $value);
     }
 
     /**
      * Sets the operations property value. Zero or more long running operations triggered on the app registration.
      *  @param array<ManagedAppOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the platformVersion property value. Operating System version
      *  @param string|null $value Value to set for the platformVersion property.
     */
-    public function setPlatformVersion(?string $value ): void {
-        $this->platformVersion = $value;
+    public function setPlatformVersion(?string $value): void {
+        $this->getBackingStore()->set('platformVersion', $value);
     }
 
     /**
      * Sets the userId property value. The user Id to who this app registration belongs.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the version property value. Version of the entity.
      *  @param string|null $value Value to set for the version property.
     */
-    public function setVersion(?string $value ): void {
-        $this->version = $value;
+    public function setVersion(?string $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

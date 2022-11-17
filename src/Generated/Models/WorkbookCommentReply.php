@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookCommentReply extends Entity implements Parsable 
 {
     /**
-     * @var string|null $content The content of a comment reply.
-    */
-    private ?string $content = null;
-    
-    /**
-     * @var string|null $contentType Indicates the type for the comment reply.
-    */
-    private ?string $contentType = null;
-    
-    /**
      * Instantiates a new workbookCommentReply and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class WorkbookCommentReply extends Entity implements Parsable
      * @return string|null
     */
     public function getContent(): ?string {
-        return $this->content;
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -48,7 +38,7 @@ class WorkbookCommentReply extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -69,24 +59,24 @@ class WorkbookCommentReply extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('content', $this->content);
-        $writer->writeStringValue('contentType', $this->contentType);
+        $writer->writeStringValue('content', $this->getContent());
+        $writer->writeStringValue('contentType', $this->getContentType());
     }
 
     /**
      * Sets the content property value. The content of a comment reply.
      *  @param string|null $value Value to set for the content property.
     */
-    public function setContent(?string $value ): void {
-        $this->content = $value;
+    public function setContent(?string $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the contentType property value. Indicates the type for the comment reply.
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
 }

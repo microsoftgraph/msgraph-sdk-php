@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MediaPrompt extends Prompt implements Parsable 
 {
     /**
-     * @var MediaInfo|null $mediaInfo The mediaInfo property
-    */
-    private ?MediaInfo $mediaInfo = null;
-    
-    /**
      * Instantiates a new MediaPrompt and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class MediaPrompt extends Prompt implements Parsable
      * @return MediaInfo|null
     */
     public function getMediaInfo(): ?MediaInfo {
-        return $this->mediaInfo;
+        return $this->getBackingStore()->get('mediaInfo');
     }
 
     /**
@@ -55,15 +50,15 @@ class MediaPrompt extends Prompt implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('mediaInfo', $this->mediaInfo);
+        $writer->writeObjectValue('mediaInfo', $this->getMediaInfo());
     }
 
     /**
      * Sets the mediaInfo property value. The mediaInfo property
      *  @param MediaInfo|null $value Value to set for the mediaInfo property.
     */
-    public function setMediaInfo(?MediaInfo $value ): void {
-        $this->mediaInfo = $value;
+    public function setMediaInfo(?MediaInfo $value): void {
+        $this->getBackingStore()->set('mediaInfo', $value);
     }
 
 }

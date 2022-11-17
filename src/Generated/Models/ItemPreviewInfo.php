@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ItemPreviewInfo implements AdditionalDataHolder, Parsable 
+class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $getUrl The getUrl property
-    */
-    private ?string $getUrl = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $postParameters The postParameters property
-    */
-    private ?string $postParameters = null;
-    
-    /**
-     * @var string|null $postUrl The postUrl property
-    */
-    private ?string $postUrl = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new itemPreviewInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.itemPreviewInfo');
     }
@@ -55,8 +39,16 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getGetUrl(): ?string {
-        return $this->getUrl;
+        return $this->getBackingStore()->get('getUrl');
     }
 
     /**
@@ -86,7 +78,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +86,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPostParameters(): ?string {
-        return $this->postParameters;
+        return $this->getBackingStore()->get('postParameters');
     }
 
     /**
@@ -102,7 +94,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPostUrl(): ?string {
-        return $this->postUrl;
+        return $this->getBackingStore()->get('postUrl');
     }
 
     /**
@@ -110,51 +102,51 @@ class ItemPreviewInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('getUrl', $this->getUrl);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('postParameters', $this->postParameters);
-        $writer->writeStringValue('postUrl', $this->postUrl);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('getUrl', $this->getGetUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('postParameters', $this->getPostParameters());
+        $writer->writeStringValue('postUrl', $this->getPostUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the getUrl property value. The getUrl property
      *  @param string|null $value Value to set for the getUrl property.
     */
-    public function setGetUrl(?string $value ): void {
-        $this->getUrl = $value;
+    public function setGetUrl(?string $value): void {
+        $this->getBackingStore()->set('getUrl', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the postParameters property value. The postParameters property
      *  @param string|null $value Value to set for the postParameters property.
     */
-    public function setPostParameters(?string $value ): void {
-        $this->postParameters = $value;
+    public function setPostParameters(?string $value): void {
+        $this->getBackingStore()->set('postParameters', $value);
     }
 
     /**
      * Sets the postUrl property value. The postUrl property
      *  @param string|null $value Value to set for the postUrl property.
     */
-    public function setPostUrl(?string $value ): void {
-        $this->postUrl = $value;
+    public function setPostUrl(?string $value): void {
+        $this->getBackingStore()->set('postUrl', $value);
     }
 
 }

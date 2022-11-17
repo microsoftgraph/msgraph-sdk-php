@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConvertIdResult implements AdditionalDataHolder, Parsable 
+class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var GenericError|null $errorDetails An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
-    */
-    private ?GenericError $errorDetails = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $sourceId The identifier that was converted. This value is the original, un-converted identifier.
-    */
-    private ?string $sourceId = null;
-    
-    /**
-     * @var string|null $targetId The converted identifier. This value is not present if the conversion failed.
-    */
-    private ?string $targetId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new convertIdResult and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.convertIdResult');
     }
@@ -55,8 +39,16 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +56,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @return GenericError|null
     */
     public function getErrorDetails(): ?GenericError {
-        return $this->errorDetails;
+        return $this->getBackingStore()->get('errorDetails');
     }
 
     /**
@@ -86,7 +78,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +86,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSourceId(): ?string {
-        return $this->sourceId;
+        return $this->getBackingStore()->get('sourceId');
     }
 
     /**
@@ -102,7 +94,7 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTargetId(): ?string {
-        return $this->targetId;
+        return $this->getBackingStore()->get('targetId');
     }
 
     /**
@@ -110,51 +102,51 @@ class ConvertIdResult implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('errorDetails', $this->errorDetails);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('sourceId', $this->sourceId);
-        $writer->writeStringValue('targetId', $this->targetId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('errorDetails', $this->getErrorDetails());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('sourceId', $this->getSourceId());
+        $writer->writeStringValue('targetId', $this->getTargetId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the errorDetails property value. An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
      *  @param GenericError|null $value Value to set for the errorDetails property.
     */
-    public function setErrorDetails(?GenericError $value ): void {
-        $this->errorDetails = $value;
+    public function setErrorDetails(?GenericError $value): void {
+        $this->getBackingStore()->set('errorDetails', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sourceId property value. The identifier that was converted. This value is the original, un-converted identifier.
      *  @param string|null $value Value to set for the sourceId property.
     */
-    public function setSourceId(?string $value ): void {
-        $this->sourceId = $value;
+    public function setSourceId(?string $value): void {
+        $this->getBackingStore()->set('sourceId', $value);
     }
 
     /**
      * Sets the targetId property value. The converted identifier. This value is not present if the conversion failed.
      *  @param string|null $value Value to set for the targetId property.
     */
-    public function setTargetId(?string $value ): void {
-        $this->targetId = $value;
+    public function setTargetId(?string $value): void {
+        $this->getBackingStore()->set('targetId', $value);
     }
 
 }

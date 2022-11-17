@@ -10,41 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ApprovalStage extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $assignedToMe Indicates whether the stage is assigned to the calling user to review. Read-only.
-    */
-    private ?bool $assignedToMe = null;
-    
-    /**
-     * @var string|null $displayName The label provided by the policy creator to identify an approval stage. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $justification The justification associated with the approval stage decision.
-    */
-    private ?string $justification = null;
-    
-    /**
-     * @var Identity|null $reviewedBy The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-    */
-    private ?Identity $reviewedBy = null;
-    
-    /**
-     * @var DateTime|null $reviewedDateTime The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $reviewedDateTime = null;
-    
-    /**
-     * @var string|null $reviewResult The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-    */
-    private ?string $reviewResult = null;
-    
-    /**
-     * @var string|null $status The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-    */
-    private ?string $status = null;
-    
-    /**
      * Instantiates a new approvalStage and sets the default values.
     */
     public function __construct() {
@@ -66,7 +31,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return bool|null
     */
     public function getAssignedToMe(): ?bool {
-        return $this->assignedToMe;
+        return $this->getBackingStore()->get('assignedToMe');
     }
 
     /**
@@ -74,7 +39,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -99,7 +64,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->justification;
+        return $this->getBackingStore()->get('justification');
     }
 
     /**
@@ -107,7 +72,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return Identity|null
     */
     public function getReviewedBy(): ?Identity {
-        return $this->reviewedBy;
+        return $this->getBackingStore()->get('reviewedBy');
     }
 
     /**
@@ -115,7 +80,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewedDateTime(): ?DateTime {
-        return $this->reviewedDateTime;
+        return $this->getBackingStore()->get('reviewedDateTime');
     }
 
     /**
@@ -123,7 +88,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getReviewResult(): ?string {
-        return $this->reviewResult;
+        return $this->getBackingStore()->get('reviewResult');
     }
 
     /**
@@ -131,7 +96,7 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -140,69 +105,69 @@ class ApprovalStage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('assignedToMe', $this->assignedToMe);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('justification', $this->justification);
-        $writer->writeObjectValue('reviewedBy', $this->reviewedBy);
-        $writer->writeDateTimeValue('reviewedDateTime', $this->reviewedDateTime);
-        $writer->writeStringValue('reviewResult', $this->reviewResult);
-        $writer->writeStringValue('status', $this->status);
+        $writer->writeBooleanValue('assignedToMe', $this->getAssignedToMe());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeObjectValue('reviewedBy', $this->getReviewedBy());
+        $writer->writeDateTimeValue('reviewedDateTime', $this->getReviewedDateTime());
+        $writer->writeStringValue('reviewResult', $this->getReviewResult());
+        $writer->writeStringValue('status', $this->getStatus());
     }
 
     /**
      * Sets the assignedToMe property value. Indicates whether the stage is assigned to the calling user to review. Read-only.
      *  @param bool|null $value Value to set for the assignedToMe property.
     */
-    public function setAssignedToMe(?bool $value ): void {
-        $this->assignedToMe = $value;
+    public function setAssignedToMe(?bool $value): void {
+        $this->getBackingStore()->set('assignedToMe', $value);
     }
 
     /**
      * Sets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the justification property value. The justification associated with the approval stage decision.
      *  @param string|null $value Value to set for the justification property.
     */
-    public function setJustification(?string $value ): void {
-        $this->justification = $value;
+    public function setJustification(?string $value): void {
+        $this->getBackingStore()->set('justification', $value);
     }
 
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
      *  @param Identity|null $value Value to set for the reviewedBy property.
     */
-    public function setReviewedBy(?Identity $value ): void {
-        $this->reviewedBy = $value;
+    public function setReviewedBy(?Identity $value): void {
+        $this->getBackingStore()->set('reviewedBy', $value);
     }
 
     /**
      * Sets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the reviewedDateTime property.
     */
-    public function setReviewedDateTime(?DateTime $value ): void {
-        $this->reviewedDateTime = $value;
+    public function setReviewedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('reviewedDateTime', $value);
     }
 
     /**
      * Sets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
      *  @param string|null $value Value to set for the reviewResult property.
     */
-    public function setReviewResult(?string $value ): void {
-        $this->reviewResult = $value;
+    public function setReviewResult(?string $value): void {
+        $this->getBackingStore()->set('reviewResult', $value);
     }
 
     /**
      * Sets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

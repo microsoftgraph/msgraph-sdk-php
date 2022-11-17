@@ -7,48 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable 
+class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowStaffSelection True if to allow customers to choose a specific person for the booking.
-    */
-    private ?bool $allowStaffSelection = null;
-    
-    /**
-     * @var DateInterval|null $maximumAdvance Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
-    */
-    private ?DateInterval $maximumAdvance = null;
-    
-    /**
-     * @var DateInterval|null $minimumLeadTime The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
-    */
-    private ?DateInterval $minimumLeadTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $sendConfirmationsToOwner True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
-    */
-    private ?bool $sendConfirmationsToOwner = null;
-    
-    /**
-     * @var DateInterval|null $timeSlotInterval Duration of each time slot, denoted in ISO 8601 format.
-    */
-    private ?DateInterval $timeSlotInterval = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new bookingSchedulingPolicy and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.bookingSchedulingPolicy');
     }
@@ -66,8 +40,8 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -75,7 +49,15 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowStaffSelection(): ?bool {
-        return $this->allowStaffSelection;
+        return $this->getBackingStore()->get('allowStaffSelection');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -99,7 +81,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getMaximumAdvance(): ?DateInterval {
-        return $this->maximumAdvance;
+        return $this->getBackingStore()->get('maximumAdvance');
     }
 
     /**
@@ -107,7 +89,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getMinimumLeadTime(): ?DateInterval {
-        return $this->minimumLeadTime;
+        return $this->getBackingStore()->get('minimumLeadTime');
     }
 
     /**
@@ -115,7 +97,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -123,7 +105,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSendConfirmationsToOwner(): ?bool {
-        return $this->sendConfirmationsToOwner;
+        return $this->getBackingStore()->get('sendConfirmationsToOwner');
     }
 
     /**
@@ -131,7 +113,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getTimeSlotInterval(): ?DateInterval {
-        return $this->timeSlotInterval;
+        return $this->getBackingStore()->get('timeSlotInterval');
     }
 
     /**
@@ -139,69 +121,69 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowStaffSelection', $this->allowStaffSelection);
-        $writer->writeDateIntervalValue('maximumAdvance', $this->maximumAdvance);
-        $writer->writeDateIntervalValue('minimumLeadTime', $this->minimumLeadTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('sendConfirmationsToOwner', $this->sendConfirmationsToOwner);
-        $writer->writeDateIntervalValue('timeSlotInterval', $this->timeSlotInterval);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowStaffSelection', $this->getAllowStaffSelection());
+        $writer->writeDateIntervalValue('maximumAdvance', $this->getMaximumAdvance());
+        $writer->writeDateIntervalValue('minimumLeadTime', $this->getMinimumLeadTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('sendConfirmationsToOwner', $this->getSendConfirmationsToOwner());
+        $writer->writeDateIntervalValue('timeSlotInterval', $this->getTimeSlotInterval());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
      *  @param bool|null $value Value to set for the allowStaffSelection property.
     */
-    public function setAllowStaffSelection(?bool $value ): void {
-        $this->allowStaffSelection = $value;
+    public function setAllowStaffSelection(?bool $value): void {
+        $this->getBackingStore()->set('allowStaffSelection', $value);
     }
 
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
      *  @param DateInterval|null $value Value to set for the maximumAdvance property.
     */
-    public function setMaximumAdvance(?DateInterval $value ): void {
-        $this->maximumAdvance = $value;
+    public function setMaximumAdvance(?DateInterval $value): void {
+        $this->getBackingStore()->set('maximumAdvance', $value);
     }
 
     /**
      * Sets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
      *  @param DateInterval|null $value Value to set for the minimumLeadTime property.
     */
-    public function setMinimumLeadTime(?DateInterval $value ): void {
-        $this->minimumLeadTime = $value;
+    public function setMinimumLeadTime(?DateInterval $value): void {
+        $this->getBackingStore()->set('minimumLeadTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
      *  @param bool|null $value Value to set for the sendConfirmationsToOwner property.
     */
-    public function setSendConfirmationsToOwner(?bool $value ): void {
-        $this->sendConfirmationsToOwner = $value;
+    public function setSendConfirmationsToOwner(?bool $value): void {
+        $this->getBackingStore()->set('sendConfirmationsToOwner', $value);
     }
 
     /**
      * Sets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
      *  @param DateInterval|null $value Value to set for the timeSlotInterval property.
     */
-    public function setTimeSlotInterval(?DateInterval $value ): void {
-        $this->timeSlotInterval = $value;
+    public function setTimeSlotInterval(?DateInterval $value): void {
+        $this->getBackingStore()->set('timeSlotInterval', $value);
     }
 
 }

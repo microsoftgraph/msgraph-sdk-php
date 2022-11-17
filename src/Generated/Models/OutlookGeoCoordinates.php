@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable 
+class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var float|null $accuracy The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?float $accuracy = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var float|null $altitude The altitude of the location.
-    */
-    private ?float $altitude = null;
-    
-    /**
-     * @var float|null $altitudeAccuracy The accuracy of the altitude.
-    */
-    private ?float $altitudeAccuracy = null;
-    
-    /**
-     * @var float|null $latitude The latitude of the location.
-    */
-    private ?float $latitude = null;
-    
-    /**
-     * @var float|null $longitude The longitude of the location.
-    */
-    private ?float $longitude = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new outlookGeoCoordinates and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.outlookGeoCoordinates');
     }
@@ -66,15 +40,15 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getAccuracy(): ?float {
-        return $this->accuracy;
+        return $this->getBackingStore()->get('accuracy');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -82,7 +56,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getAltitude(): ?float {
-        return $this->altitude;
+        return $this->getBackingStore()->get('altitude');
     }
 
     /**
@@ -90,7 +64,15 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getAltitudeAccuracy(): ?float {
-        return $this->altitudeAccuracy;
+        return $this->getBackingStore()->get('altitudeAccuracy');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -114,7 +96,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLatitude(): ?float {
-        return $this->latitude;
+        return $this->getBackingStore()->get('latitude');
     }
 
     /**
@@ -122,7 +104,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLongitude(): ?float {
-        return $this->longitude;
+        return $this->getBackingStore()->get('longitude');
     }
 
     /**
@@ -130,7 +112,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -138,69 +120,69 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('accuracy', $this->accuracy);
-        $writer->writeFloatValue('altitude', $this->altitude);
-        $writer->writeFloatValue('altitudeAccuracy', $this->altitudeAccuracy);
-        $writer->writeFloatValue('latitude', $this->latitude);
-        $writer->writeFloatValue('longitude', $this->longitude);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeFloatValue('accuracy', $this->getAccuracy());
+        $writer->writeFloatValue('altitude', $this->getAltitude());
+        $writer->writeFloatValue('altitudeAccuracy', $this->getAltitudeAccuracy());
+        $writer->writeFloatValue('latitude', $this->getLatitude());
+        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
      *  @param float|null $value Value to set for the accuracy property.
     */
-    public function setAccuracy(?float $value ): void {
-        $this->accuracy = $value;
+    public function setAccuracy(?float $value): void {
+        $this->getBackingStore()->set('accuracy', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the altitude property value. The altitude of the location.
      *  @param float|null $value Value to set for the altitude property.
     */
-    public function setAltitude(?float $value ): void {
-        $this->altitude = $value;
+    public function setAltitude(?float $value): void {
+        $this->getBackingStore()->set('altitude', $value);
     }
 
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
      *  @param float|null $value Value to set for the altitudeAccuracy property.
     */
-    public function setAltitudeAccuracy(?float $value ): void {
-        $this->altitudeAccuracy = $value;
+    public function setAltitudeAccuracy(?float $value): void {
+        $this->getBackingStore()->set('altitudeAccuracy', $value);
     }
 
     /**
      * Sets the latitude property value. The latitude of the location.
      *  @param float|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value ): void {
-        $this->latitude = $value;
+    public function setLatitude(?float $value): void {
+        $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. The longitude of the location.
      *  @param float|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value ): void {
-        $this->longitude = $value;
+    public function setLongitude(?float $value): void {
+        $this->getBackingStore()->set('longitude', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

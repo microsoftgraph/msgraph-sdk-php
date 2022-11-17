@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OmaSettingBase64 extends OmaSetting implements Parsable 
 {
     /**
-     * @var string|null $fileName File name associated with the Value property (.cer
-    */
-    private ?string $fileName = null;
-    
-    /**
-     * @var string|null $value Value. (Base64 encoded string)
-    */
-    private ?string $value = null;
-    
-    /**
      * Instantiates a new OmaSettingBase64 and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class OmaSettingBase64 extends OmaSetting implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->fileName;
+        return $this->getBackingStore()->get('fileName');
     }
 
     /**
@@ -60,7 +50,7 @@ class OmaSettingBase64 extends OmaSetting implements Parsable
      * @return string|null
     */
     public function getValue(): ?string {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -69,24 +59,24 @@ class OmaSettingBase64 extends OmaSetting implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('fileName', $this->fileName);
-        $writer->writeStringValue('value', $this->value);
+        $writer->writeStringValue('fileName', $this->getFileName());
+        $writer->writeStringValue('value', $this->getValue());
     }
 
     /**
      * Sets the fileName property value. File name associated with the Value property (.cer
      *  @param string|null $value Value to set for the fileName property.
     */
-    public function setFileName(?string $value ): void {
-        $this->fileName = $value;
+    public function setFileName(?string $value): void {
+        $this->getBackingStore()->set('fileName', $value);
     }
 
     /**
      * Sets the value property value. Value. (Base64 encoded string)
      *  @param string|null $value Value to set for the value property.
     */
-    public function setValue(?string $value ): void {
-        $this->value = $value;
+    public function setValue(?string $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

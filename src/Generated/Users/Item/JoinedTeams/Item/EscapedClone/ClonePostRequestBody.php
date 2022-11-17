@@ -8,48 +8,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ClonePostRequestBody implements AdditionalDataHolder, Parsable 
+class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $classification The classification property
-    */
-    private ?string $classification = null;
-    
-    /**
-     * @var string|null $description The description property
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The displayName property
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $mailNickname The mailNickname property
-    */
-    private ?string $mailNickname = null;
-    
-    /**
-     * @var ClonableTeamParts|null $partsToClone The partsToClone property
-    */
-    private ?ClonableTeamParts $partsToClone = null;
-    
-    /**
-     * @var TeamVisibilityType|null $visibility The visibility property
-    */
-    private ?TeamVisibilityType $visibility = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new clonePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -66,8 +40,16 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -75,7 +57,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getClassification(): ?string {
-        return $this->classification;
+        return $this->getBackingStore()->get('classification');
     }
 
     /**
@@ -83,7 +65,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -91,7 +73,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -115,7 +97,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMailNickname(): ?string {
-        return $this->mailNickname;
+        return $this->getBackingStore()->get('mailNickname');
     }
 
     /**
@@ -123,7 +105,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return ClonableTeamParts|null
     */
     public function getPartsToClone(): ?ClonableTeamParts {
-        return $this->partsToClone;
+        return $this->getBackingStore()->get('partsToClone');
     }
 
     /**
@@ -131,7 +113,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @return TeamVisibilityType|null
     */
     public function getVisibility(): ?TeamVisibilityType {
-        return $this->visibility;
+        return $this->getBackingStore()->get('visibility');
     }
 
     /**
@@ -139,69 +121,69 @@ class ClonePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('classification', $this->classification);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('mailNickname', $this->mailNickname);
-        $writer->writeEnumValue('partsToClone', $this->partsToClone);
-        $writer->writeEnumValue('visibility', $this->visibility);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('classification', $this->getClassification());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('mailNickname', $this->getMailNickname());
+        $writer->writeEnumValue('partsToClone', $this->getPartsToClone());
+        $writer->writeEnumValue('visibility', $this->getVisibility());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the classification property value. The classification property
      *  @param string|null $value Value to set for the classification property.
     */
-    public function setClassification(?string $value ): void {
-        $this->classification = $value;
+    public function setClassification(?string $value): void {
+        $this->getBackingStore()->set('classification', $value);
     }
 
     /**
      * Sets the description property value. The description property
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the mailNickname property value. The mailNickname property
      *  @param string|null $value Value to set for the mailNickname property.
     */
-    public function setMailNickname(?string $value ): void {
-        $this->mailNickname = $value;
+    public function setMailNickname(?string $value): void {
+        $this->getBackingStore()->set('mailNickname', $value);
     }
 
     /**
      * Sets the partsToClone property value. The partsToClone property
      *  @param ClonableTeamParts|null $value Value to set for the partsToClone property.
     */
-    public function setPartsToClone(?ClonableTeamParts $value ): void {
-        $this->partsToClone = $value;
+    public function setPartsToClone(?ClonableTeamParts $value): void {
+        $this->getBackingStore()->set('partsToClone', $value);
     }
 
     /**
      * Sets the visibility property value. The visibility property
      *  @param TeamVisibilityType|null $value Value to set for the visibility property.
     */
-    public function setVisibility(?TeamVisibilityType $value ): void {
-        $this->visibility = $value;
+    public function setVisibility(?TeamVisibilityType $value): void {
+        $this->getBackingStore()->set('visibility', $value);
     }
 
 }

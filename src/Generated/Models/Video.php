@@ -6,73 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Video implements AdditionalDataHolder, Parsable 
+class Video implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $audioBitsPerSample Number of audio bits per sample.
-    */
-    private ?int $audioBitsPerSample = null;
-    
-    /**
-     * @var int|null $audioChannels Number of audio channels.
-    */
-    private ?int $audioChannels = null;
-    
-    /**
-     * @var string|null $audioFormat Name of the audio format (AAC, MP3, etc.).
-    */
-    private ?string $audioFormat = null;
-    
-    /**
-     * @var int|null $audioSamplesPerSecond Number of audio samples per second.
-    */
-    private ?int $audioSamplesPerSecond = null;
-    
-    /**
-     * @var int|null $bitrate Bit rate of the video in bits per second.
-    */
-    private ?int $bitrate = null;
-    
-    /**
-     * @var int|null $duration Duration of the file in milliseconds.
-    */
-    private ?int $duration = null;
-    
-    /**
-     * @var string|null $fourCC 'Four character code' name of the video format.
-    */
-    private ?string $fourCC = null;
-    
-    /**
-     * @var float|null $frameRate Frame rate of the video.
-    */
-    private ?float $frameRate = null;
-    
-    /**
-     * @var int|null $height Height of the video, in pixels.
-    */
-    private ?int $height = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $width Width of the video, in pixels.
-    */
-    private ?int $width = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new video and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.video');
     }
@@ -90,8 +39,8 @@ class Video implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -99,7 +48,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAudioBitsPerSample(): ?int {
-        return $this->audioBitsPerSample;
+        return $this->getBackingStore()->get('audioBitsPerSample');
     }
 
     /**
@@ -107,7 +56,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAudioChannels(): ?int {
-        return $this->audioChannels;
+        return $this->getBackingStore()->get('audioChannels');
     }
 
     /**
@@ -115,7 +64,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAudioFormat(): ?string {
-        return $this->audioFormat;
+        return $this->getBackingStore()->get('audioFormat');
     }
 
     /**
@@ -123,7 +72,15 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAudioSamplesPerSecond(): ?int {
-        return $this->audioSamplesPerSecond;
+        return $this->getBackingStore()->get('audioSamplesPerSecond');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -131,7 +88,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getBitrate(): ?int {
-        return $this->bitrate;
+        return $this->getBackingStore()->get('bitrate');
     }
 
     /**
@@ -139,7 +96,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->duration;
+        return $this->getBackingStore()->get('duration');
     }
 
     /**
@@ -168,7 +125,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getFourCC(): ?string {
-        return $this->fourCC;
+        return $this->getBackingStore()->get('fourCC');
     }
 
     /**
@@ -176,7 +133,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getFrameRate(): ?float {
-        return $this->frameRate;
+        return $this->getBackingStore()->get('frameRate');
     }
 
     /**
@@ -184,7 +141,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getHeight(): ?int {
-        return $this->height;
+        return $this->getBackingStore()->get('height');
     }
 
     /**
@@ -192,7 +149,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -200,7 +157,7 @@ class Video implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getWidth(): ?int {
-        return $this->width;
+        return $this->getBackingStore()->get('width');
     }
 
     /**
@@ -208,114 +165,114 @@ class Video implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('audioBitsPerSample', $this->audioBitsPerSample);
-        $writer->writeIntegerValue('audioChannels', $this->audioChannels);
-        $writer->writeStringValue('audioFormat', $this->audioFormat);
-        $writer->writeIntegerValue('audioSamplesPerSecond', $this->audioSamplesPerSecond);
-        $writer->writeIntegerValue('bitrate', $this->bitrate);
-        $writer->writeIntegerValue('duration', $this->duration);
-        $writer->writeStringValue('fourCC', $this->fourCC);
-        $writer->writeFloatValue('frameRate', $this->frameRate);
-        $writer->writeIntegerValue('height', $this->height);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('width', $this->width);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('audioBitsPerSample', $this->getAudioBitsPerSample());
+        $writer->writeIntegerValue('audioChannels', $this->getAudioChannels());
+        $writer->writeStringValue('audioFormat', $this->getAudioFormat());
+        $writer->writeIntegerValue('audioSamplesPerSecond', $this->getAudioSamplesPerSecond());
+        $writer->writeIntegerValue('bitrate', $this->getBitrate());
+        $writer->writeIntegerValue('duration', $this->getDuration());
+        $writer->writeStringValue('fourCC', $this->getFourCC());
+        $writer->writeFloatValue('frameRate', $this->getFrameRate());
+        $writer->writeIntegerValue('height', $this->getHeight());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('width', $this->getWidth());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the audioBitsPerSample property value. Number of audio bits per sample.
      *  @param int|null $value Value to set for the audioBitsPerSample property.
     */
-    public function setAudioBitsPerSample(?int $value ): void {
-        $this->audioBitsPerSample = $value;
+    public function setAudioBitsPerSample(?int $value): void {
+        $this->getBackingStore()->set('audioBitsPerSample', $value);
     }
 
     /**
      * Sets the audioChannels property value. Number of audio channels.
      *  @param int|null $value Value to set for the audioChannels property.
     */
-    public function setAudioChannels(?int $value ): void {
-        $this->audioChannels = $value;
+    public function setAudioChannels(?int $value): void {
+        $this->getBackingStore()->set('audioChannels', $value);
     }
 
     /**
      * Sets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
      *  @param string|null $value Value to set for the audioFormat property.
     */
-    public function setAudioFormat(?string $value ): void {
-        $this->audioFormat = $value;
+    public function setAudioFormat(?string $value): void {
+        $this->getBackingStore()->set('audioFormat', $value);
     }
 
     /**
      * Sets the audioSamplesPerSecond property value. Number of audio samples per second.
      *  @param int|null $value Value to set for the audioSamplesPerSecond property.
     */
-    public function setAudioSamplesPerSecond(?int $value ): void {
-        $this->audioSamplesPerSecond = $value;
+    public function setAudioSamplesPerSecond(?int $value): void {
+        $this->getBackingStore()->set('audioSamplesPerSecond', $value);
     }
 
     /**
      * Sets the bitrate property value. Bit rate of the video in bits per second.
      *  @param int|null $value Value to set for the bitrate property.
     */
-    public function setBitrate(?int $value ): void {
-        $this->bitrate = $value;
+    public function setBitrate(?int $value): void {
+        $this->getBackingStore()->set('bitrate', $value);
     }
 
     /**
      * Sets the duration property value. Duration of the file in milliseconds.
      *  @param int|null $value Value to set for the duration property.
     */
-    public function setDuration(?int $value ): void {
-        $this->duration = $value;
+    public function setDuration(?int $value): void {
+        $this->getBackingStore()->set('duration', $value);
     }
 
     /**
      * Sets the fourCC property value. 'Four character code' name of the video format.
      *  @param string|null $value Value to set for the fourCC property.
     */
-    public function setFourCC(?string $value ): void {
-        $this->fourCC = $value;
+    public function setFourCC(?string $value): void {
+        $this->getBackingStore()->set('fourCC', $value);
     }
 
     /**
      * Sets the frameRate property value. Frame rate of the video.
      *  @param float|null $value Value to set for the frameRate property.
     */
-    public function setFrameRate(?float $value ): void {
-        $this->frameRate = $value;
+    public function setFrameRate(?float $value): void {
+        $this->getBackingStore()->set('frameRate', $value);
     }
 
     /**
      * Sets the height property value. Height of the video, in pixels.
      *  @param int|null $value Value to set for the height property.
     */
-    public function setHeight(?int $value ): void {
-        $this->height = $value;
+    public function setHeight(?int $value): void {
+        $this->getBackingStore()->set('height', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the width property value. Width of the video, in pixels.
      *  @param int|null $value Value to set for the width property.
     */
-    public function setWidth(?int $value ): void {
-        $this->width = $value;
+    public function setWidth(?int $value): void {
+        $this->getBackingStore()->set('width', $value);
     }
 
 }

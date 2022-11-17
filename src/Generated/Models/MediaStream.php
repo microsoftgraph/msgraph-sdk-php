@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MediaStream implements AdditionalDataHolder, Parsable 
+class MediaStream implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var MediaDirection|null $direction The direction property
-    */
-    private ?MediaDirection $direction = null;
-    
-    /**
-     * @var string|null $label The media stream label.
-    */
-    private ?string $label = null;
-    
-    /**
-     * @var Modality|null $mediaType The mediaType property
-    */
-    private ?Modality $mediaType = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $serverMuted If the media is muted by the server.
-    */
-    private ?bool $serverMuted = null;
-    
-    /**
-     * @var string|null $sourceId The source ID.
-    */
-    private ?string $sourceId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new mediaStream and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.mediaStream');
     }
@@ -65,8 +39,16 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -74,7 +56,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return MediaDirection|null
     */
     public function getDirection(): ?MediaDirection {
-        return $this->direction;
+        return $this->getBackingStore()->get('direction');
     }
 
     /**
@@ -98,7 +80,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLabel(): ?string {
-        return $this->label;
+        return $this->getBackingStore()->get('label');
     }
 
     /**
@@ -106,7 +88,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return Modality|null
     */
     public function getMediaType(): ?Modality {
-        return $this->mediaType;
+        return $this->getBackingStore()->get('mediaType');
     }
 
     /**
@@ -114,7 +96,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -122,7 +104,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getServerMuted(): ?bool {
-        return $this->serverMuted;
+        return $this->getBackingStore()->get('serverMuted');
     }
 
     /**
@@ -130,7 +112,7 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSourceId(): ?string {
-        return $this->sourceId;
+        return $this->getBackingStore()->get('sourceId');
     }
 
     /**
@@ -138,69 +120,69 @@ class MediaStream implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('direction', $this->direction);
-        $writer->writeStringValue('label', $this->label);
-        $writer->writeEnumValue('mediaType', $this->mediaType);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('serverMuted', $this->serverMuted);
-        $writer->writeStringValue('sourceId', $this->sourceId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('direction', $this->getDirection());
+        $writer->writeStringValue('label', $this->getLabel());
+        $writer->writeEnumValue('mediaType', $this->getMediaType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('serverMuted', $this->getServerMuted());
+        $writer->writeStringValue('sourceId', $this->getSourceId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the direction property value. The direction property
      *  @param MediaDirection|null $value Value to set for the direction property.
     */
-    public function setDirection(?MediaDirection $value ): void {
-        $this->direction = $value;
+    public function setDirection(?MediaDirection $value): void {
+        $this->getBackingStore()->set('direction', $value);
     }
 
     /**
      * Sets the label property value. The media stream label.
      *  @param string|null $value Value to set for the label property.
     */
-    public function setLabel(?string $value ): void {
-        $this->label = $value;
+    public function setLabel(?string $value): void {
+        $this->getBackingStore()->set('label', $value);
     }
 
     /**
      * Sets the mediaType property value. The mediaType property
      *  @param Modality|null $value Value to set for the mediaType property.
     */
-    public function setMediaType(?Modality $value ): void {
-        $this->mediaType = $value;
+    public function setMediaType(?Modality $value): void {
+        $this->getBackingStore()->set('mediaType', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the serverMuted property value. If the media is muted by the server.
      *  @param bool|null $value Value to set for the serverMuted property.
     */
-    public function setServerMuted(?bool $value ): void {
-        $this->serverMuted = $value;
+    public function setServerMuted(?bool $value): void {
+        $this->getBackingStore()->set('serverMuted', $value);
     }
 
     /**
      * Sets the sourceId property value. The source ID.
      *  @param string|null $value Value to set for the sourceId property.
     */
-    public function setSourceId(?string $value ): void {
-        $this->sourceId = $value;
+    public function setSourceId(?string $value): void {
+        $this->getBackingStore()->set('sourceId', $value);
     }
 
 }

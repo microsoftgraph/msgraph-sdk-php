@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CertificateBasedAuthConfiguration extends Entity implements Parsable 
 {
     /**
-     * @var array<CertificateAuthority>|null $certificateAuthorities Collection of certificate authorities which creates a trusted certificate chain.
-    */
-    private ?array $certificateAuthorities = null;
-    
-    /**
      * Instantiates a new certificateBasedAuthConfiguration and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class CertificateBasedAuthConfiguration extends Entity implements Parsable
      * @return array<CertificateAuthority>|null
     */
     public function getCertificateAuthorities(): ?array {
-        return $this->certificateAuthorities;
+        return $this->getBackingStore()->get('certificateAuthorities');
     }
 
     /**
@@ -55,15 +50,15 @@ class CertificateBasedAuthConfiguration extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('certificateAuthorities', $this->certificateAuthorities);
+        $writer->writeCollectionOfObjectValues('certificateAuthorities', $this->getCertificateAuthorities());
     }
 
     /**
      * Sets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
      *  @param array<CertificateAuthority>|null $value Value to set for the certificateAuthorities property.
     */
-    public function setCertificateAuthorities(?array $value ): void {
-        $this->certificateAuthorities = $value;
+    public function setCertificateAuthorities(?array $value): void {
+        $this->getBackingStore()->set('certificateAuthorities', $value);
     }
 
 }

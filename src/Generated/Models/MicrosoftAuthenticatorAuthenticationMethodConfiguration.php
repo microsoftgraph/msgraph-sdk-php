@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var MicrosoftAuthenticatorFeatureSettings|null $featureSettings A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
-    */
-    private ?MicrosoftAuthenticatorFeatureSettings $featureSettings = null;
-    
-    /**
-     * @var array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method. Expanded by default.
-    */
-    private ?array $includeTargets = null;
-    
-    /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
      * @return MicrosoftAuthenticatorFeatureSettings|null
     */
     public function getFeatureSettings(): ?MicrosoftAuthenticatorFeatureSettings {
-        return $this->featureSettings;
+        return $this->getBackingStore()->get('featureSettings');
     }
 
     /**
@@ -60,7 +50,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
      * @return array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->includeTargets;
+        return $this->getBackingStore()->get('includeTargets');
     }
 
     /**
@@ -69,24 +59,24 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('featureSettings', $this->featureSettings);
-        $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
+        $writer->writeObjectValue('featureSettings', $this->getFeatureSettings());
+        $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
     }
 
     /**
      * Sets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
      *  @param MicrosoftAuthenticatorFeatureSettings|null $value Value to set for the featureSettings property.
     */
-    public function setFeatureSettings(?MicrosoftAuthenticatorFeatureSettings $value ): void {
-        $this->featureSettings = $value;
+    public function setFeatureSettings(?MicrosoftAuthenticatorFeatureSettings $value): void {
+        $this->getBackingStore()->set('featureSettings', $value);
     }
 
     /**
      * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method. Expanded by default.
      *  @param array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
-    public function setIncludeTargets(?array $value ): void {
-        $this->includeTargets = $value;
+    public function setIncludeTargets(?array $value): void {
+        $this->getBackingStore()->set('includeTargets', $value);
     }
 
 }

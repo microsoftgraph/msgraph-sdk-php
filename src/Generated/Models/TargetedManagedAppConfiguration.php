@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements Parsable 
 {
     /**
-     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
-    */
-    private ?array $apps = null;
-    
-    /**
-     * @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-    */
-    private ?array $assignments = null;
-    
-    /**
-     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
-    */
-    private ?int $deployedAppCount = null;
-    
-    /**
-     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
-    */
-    private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
-    
-    /**
-     * @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not.
-    */
-    private ?bool $isAssigned = null;
-    
-    /**
      * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
     */
     public function __construct() {
@@ -55,7 +30,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->apps;
+        return $this->getBackingStore()->get('apps');
     }
 
     /**
@@ -63,7 +38,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return array<TargetedManagedAppPolicyAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -71,7 +46,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->deployedAppCount;
+        return $this->getBackingStore()->get('deployedAppCount');
     }
 
     /**
@@ -79,7 +54,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->deploymentSummary;
+        return $this->getBackingStore()->get('deploymentSummary');
     }
 
     /**
@@ -102,7 +77,7 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
      * @return bool|null
     */
     public function getIsAssigned(): ?bool {
-        return $this->isAssigned;
+        return $this->getBackingStore()->get('isAssigned');
     }
 
     /**
@@ -111,51 +86,51 @@ class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('apps', $this->apps);
-        $writer->writeCollectionOfObjectValues('assignments', $this->assignments);
-        $writer->writeIntegerValue('deployedAppCount', $this->deployedAppCount);
-        $writer->writeObjectValue('deploymentSummary', $this->deploymentSummary);
-        $writer->writeBooleanValue('isAssigned', $this->isAssigned);
+        $writer->writeCollectionOfObjectValues('apps', $this->getApps());
+        $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeIntegerValue('deployedAppCount', $this->getDeployedAppCount());
+        $writer->writeObjectValue('deploymentSummary', $this->getDeploymentSummary());
+        $writer->writeBooleanValue('isAssigned', $this->getIsAssigned());
     }
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
-    public function setApps(?array $value ): void {
-        $this->apps = $value;
+    public function setApps(?array $value): void {
+        $this->getBackingStore()->set('apps', $value);
     }
 
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *  @param array<TargetedManagedAppPolicyAssignment>|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?array $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?array $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      *  @param int|null $value Value to set for the deployedAppCount property.
     */
-    public function setDeployedAppCount(?int $value ): void {
-        $this->deployedAppCount = $value;
+    public function setDeployedAppCount(?int $value): void {
+        $this->getBackingStore()->set('deployedAppCount', $value);
     }
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
-    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value ): void {
-        $this->deploymentSummary = $value;
+    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
+        $this->getBackingStore()->set('deploymentSummary', $value);
     }
 
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      *  @param bool|null $value Value to set for the isAssigned property.
     */
-    public function setIsAssigned(?bool $value ): void {
-        $this->isAssigned = $value;
+    public function setIsAssigned(?bool $value): void {
+        $this->getBackingStore()->set('isAssigned', $value);
     }
 
 }

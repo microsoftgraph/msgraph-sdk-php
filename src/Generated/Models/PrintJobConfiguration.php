@@ -6,118 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PrintJobConfiguration implements AdditionalDataHolder, Parsable 
+class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $collate Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
-    */
-    private ?bool $collate = null;
-    
-    /**
-     * @var PrintColorMode|null $colorMode The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
-    */
-    private ?PrintColorMode $colorMode = null;
-    
-    /**
-     * @var int|null $copies The number of copies that should be printed. Read-only.
-    */
-    private ?int $copies = null;
-    
-    /**
-     * @var int|null $dpi The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
-    */
-    private ?int $dpi = null;
-    
-    /**
-     * @var PrintDuplexMode|null $duplexMode The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
-    */
-    private ?PrintDuplexMode $duplexMode = null;
-    
-    /**
-     * @var PrinterFeedOrientation|null $feedOrientation The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
-    */
-    private ?PrinterFeedOrientation $feedOrientation = null;
-    
-    /**
-     * @var array<PrintFinishing>|null $finishings Finishing processes to use when printing.
-    */
-    private ?array $finishings = null;
-    
-    /**
-     * @var bool|null $fitPdfToPage The fitPdfToPage property
-    */
-    private ?bool $fitPdfToPage = null;
-    
-    /**
-     * @var string|null $inputBin The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
-    */
-    private ?string $inputBin = null;
-    
-    /**
-     * @var PrintMargin|null $margin The margin settings to use when printing.
-    */
-    private ?PrintMargin $margin = null;
-    
-    /**
-     * @var string|null $mediaSize The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
-    */
-    private ?string $mediaSize = null;
-    
-    /**
-     * @var string|null $mediaType The default media (such as paper) type to print the document on.
-    */
-    private ?string $mediaType = null;
-    
-    /**
-     * @var PrintMultipageLayout|null $multipageLayout The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
-    */
-    private ?PrintMultipageLayout $multipageLayout = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var PrintOrientation|null $orientation The orientation setting the printer should use when printing the job. Valid values are described in the following table.
-    */
-    private ?PrintOrientation $orientation = null;
-    
-    /**
-     * @var string|null $outputBin The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
-    */
-    private ?string $outputBin = null;
-    
-    /**
-     * @var array<IntegerRange>|null $pageRanges The page ranges to print. Read-only.
-    */
-    private ?array $pageRanges = null;
-    
-    /**
-     * @var int|null $pagesPerSheet The number of document pages to print on each sheet.
-    */
-    private ?int $pagesPerSheet = null;
-    
-    /**
-     * @var PrintQuality|null $quality The print quality to use when printing the job. Valid values are described in the table below. Read-only.
-    */
-    private ?PrintQuality $quality = null;
-    
-    /**
-     * @var PrintScaling|null $scaling Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
-    */
-    private ?PrintScaling $scaling = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new printJobConfiguration and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.printJobConfiguration');
     }
@@ -135,8 +39,16 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -144,7 +56,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getCollate(): ?bool {
-        return $this->collate;
+        return $this->getBackingStore()->get('collate');
     }
 
     /**
@@ -152,7 +64,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintColorMode|null
     */
     public function getColorMode(): ?PrintColorMode {
-        return $this->colorMode;
+        return $this->getBackingStore()->get('colorMode');
     }
 
     /**
@@ -160,7 +72,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getCopies(): ?int {
-        return $this->copies;
+        return $this->getBackingStore()->get('copies');
     }
 
     /**
@@ -168,7 +80,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDpi(): ?int {
-        return $this->dpi;
+        return $this->getBackingStore()->get('dpi');
     }
 
     /**
@@ -176,7 +88,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintDuplexMode|null
     */
     public function getDuplexMode(): ?PrintDuplexMode {
-        return $this->duplexMode;
+        return $this->getBackingStore()->get('duplexMode');
     }
 
     /**
@@ -184,7 +96,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrinterFeedOrientation|null
     */
     public function getFeedOrientation(): ?PrinterFeedOrientation {
-        return $this->feedOrientation;
+        return $this->getBackingStore()->get('feedOrientation');
     }
 
     /**
@@ -222,7 +134,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return array<PrintFinishing>|null
     */
     public function getFinishings(): ?array {
-        return $this->finishings;
+        return $this->getBackingStore()->get('finishings');
     }
 
     /**
@@ -230,7 +142,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getFitPdfToPage(): ?bool {
-        return $this->fitPdfToPage;
+        return $this->getBackingStore()->get('fitPdfToPage');
     }
 
     /**
@@ -238,7 +150,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getInputBin(): ?string {
-        return $this->inputBin;
+        return $this->getBackingStore()->get('inputBin');
     }
 
     /**
@@ -246,7 +158,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintMargin|null
     */
     public function getMargin(): ?PrintMargin {
-        return $this->margin;
+        return $this->getBackingStore()->get('margin');
     }
 
     /**
@@ -254,7 +166,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMediaSize(): ?string {
-        return $this->mediaSize;
+        return $this->getBackingStore()->get('mediaSize');
     }
 
     /**
@@ -262,7 +174,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMediaType(): ?string {
-        return $this->mediaType;
+        return $this->getBackingStore()->get('mediaType');
     }
 
     /**
@@ -270,7 +182,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintMultipageLayout|null
     */
     public function getMultipageLayout(): ?PrintMultipageLayout {
-        return $this->multipageLayout;
+        return $this->getBackingStore()->get('multipageLayout');
     }
 
     /**
@@ -278,7 +190,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -286,7 +198,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintOrientation|null
     */
     public function getOrientation(): ?PrintOrientation {
-        return $this->orientation;
+        return $this->getBackingStore()->get('orientation');
     }
 
     /**
@@ -294,7 +206,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOutputBin(): ?string {
-        return $this->outputBin;
+        return $this->getBackingStore()->get('outputBin');
     }
 
     /**
@@ -302,7 +214,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return array<IntegerRange>|null
     */
     public function getPageRanges(): ?array {
-        return $this->pageRanges;
+        return $this->getBackingStore()->get('pageRanges');
     }
 
     /**
@@ -310,7 +222,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getPagesPerSheet(): ?int {
-        return $this->pagesPerSheet;
+        return $this->getBackingStore()->get('pagesPerSheet');
     }
 
     /**
@@ -318,7 +230,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintQuality|null
     */
     public function getQuality(): ?PrintQuality {
-        return $this->quality;
+        return $this->getBackingStore()->get('quality');
     }
 
     /**
@@ -326,7 +238,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @return PrintScaling|null
     */
     public function getScaling(): ?PrintScaling {
-        return $this->scaling;
+        return $this->getBackingStore()->get('scaling');
     }
 
     /**
@@ -334,195 +246,195 @@ class PrintJobConfiguration implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('collate', $this->collate);
-        $writer->writeEnumValue('colorMode', $this->colorMode);
-        $writer->writeIntegerValue('copies', $this->copies);
-        $writer->writeIntegerValue('dpi', $this->dpi);
-        $writer->writeEnumValue('duplexMode', $this->duplexMode);
-        $writer->writeEnumValue('feedOrientation', $this->feedOrientation);
-        $writer->writeCollectionOfEnumValues('finishings', $this->finishings);
-        $writer->writeBooleanValue('fitPdfToPage', $this->fitPdfToPage);
-        $writer->writeStringValue('inputBin', $this->inputBin);
-        $writer->writeObjectValue('margin', $this->margin);
-        $writer->writeStringValue('mediaSize', $this->mediaSize);
-        $writer->writeStringValue('mediaType', $this->mediaType);
-        $writer->writeEnumValue('multipageLayout', $this->multipageLayout);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('orientation', $this->orientation);
-        $writer->writeStringValue('outputBin', $this->outputBin);
-        $writer->writeCollectionOfObjectValues('pageRanges', $this->pageRanges);
-        $writer->writeIntegerValue('pagesPerSheet', $this->pagesPerSheet);
-        $writer->writeEnumValue('quality', $this->quality);
-        $writer->writeEnumValue('scaling', $this->scaling);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('collate', $this->getCollate());
+        $writer->writeEnumValue('colorMode', $this->getColorMode());
+        $writer->writeIntegerValue('copies', $this->getCopies());
+        $writer->writeIntegerValue('dpi', $this->getDpi());
+        $writer->writeEnumValue('duplexMode', $this->getDuplexMode());
+        $writer->writeEnumValue('feedOrientation', $this->getFeedOrientation());
+        $writer->writeCollectionOfEnumValues('finishings', $this->getFinishings());
+        $writer->writeBooleanValue('fitPdfToPage', $this->getFitPdfToPage());
+        $writer->writeStringValue('inputBin', $this->getInputBin());
+        $writer->writeObjectValue('margin', $this->getMargin());
+        $writer->writeStringValue('mediaSize', $this->getMediaSize());
+        $writer->writeStringValue('mediaType', $this->getMediaType());
+        $writer->writeEnumValue('multipageLayout', $this->getMultipageLayout());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('orientation', $this->getOrientation());
+        $writer->writeStringValue('outputBin', $this->getOutputBin());
+        $writer->writeCollectionOfObjectValues('pageRanges', $this->getPageRanges());
+        $writer->writeIntegerValue('pagesPerSheet', $this->getPagesPerSheet());
+        $writer->writeEnumValue('quality', $this->getQuality());
+        $writer->writeEnumValue('scaling', $this->getScaling());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the collate property value. Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
      *  @param bool|null $value Value to set for the collate property.
     */
-    public function setCollate(?bool $value ): void {
-        $this->collate = $value;
+    public function setCollate(?bool $value): void {
+        $this->getBackingStore()->set('collate', $value);
     }
 
     /**
      * Sets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
      *  @param PrintColorMode|null $value Value to set for the colorMode property.
     */
-    public function setColorMode(?PrintColorMode $value ): void {
-        $this->colorMode = $value;
+    public function setColorMode(?PrintColorMode $value): void {
+        $this->getBackingStore()->set('colorMode', $value);
     }
 
     /**
      * Sets the copies property value. The number of copies that should be printed. Read-only.
      *  @param int|null $value Value to set for the copies property.
     */
-    public function setCopies(?int $value ): void {
-        $this->copies = $value;
+    public function setCopies(?int $value): void {
+        $this->getBackingStore()->set('copies', $value);
     }
 
     /**
      * Sets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
      *  @param int|null $value Value to set for the dpi property.
     */
-    public function setDpi(?int $value ): void {
-        $this->dpi = $value;
+    public function setDpi(?int $value): void {
+        $this->getBackingStore()->set('dpi', $value);
     }
 
     /**
      * Sets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
      *  @param PrintDuplexMode|null $value Value to set for the duplexMode property.
     */
-    public function setDuplexMode(?PrintDuplexMode $value ): void {
-        $this->duplexMode = $value;
+    public function setDuplexMode(?PrintDuplexMode $value): void {
+        $this->getBackingStore()->set('duplexMode', $value);
     }
 
     /**
      * Sets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
      *  @param PrinterFeedOrientation|null $value Value to set for the feedOrientation property.
     */
-    public function setFeedOrientation(?PrinterFeedOrientation $value ): void {
-        $this->feedOrientation = $value;
+    public function setFeedOrientation(?PrinterFeedOrientation $value): void {
+        $this->getBackingStore()->set('feedOrientation', $value);
     }
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
      *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
     */
-    public function setFinishings(?array $value ): void {
-        $this->finishings = $value;
+    public function setFinishings(?array $value): void {
+        $this->getBackingStore()->set('finishings', $value);
     }
 
     /**
      * Sets the fitPdfToPage property value. The fitPdfToPage property
      *  @param bool|null $value Value to set for the fitPdfToPage property.
     */
-    public function setFitPdfToPage(?bool $value ): void {
-        $this->fitPdfToPage = $value;
+    public function setFitPdfToPage(?bool $value): void {
+        $this->getBackingStore()->set('fitPdfToPage', $value);
     }
 
     /**
      * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
      *  @param string|null $value Value to set for the inputBin property.
     */
-    public function setInputBin(?string $value ): void {
-        $this->inputBin = $value;
+    public function setInputBin(?string $value): void {
+        $this->getBackingStore()->set('inputBin', $value);
     }
 
     /**
      * Sets the margin property value. The margin settings to use when printing.
      *  @param PrintMargin|null $value Value to set for the margin property.
     */
-    public function setMargin(?PrintMargin $value ): void {
-        $this->margin = $value;
+    public function setMargin(?PrintMargin $value): void {
+        $this->getBackingStore()->set('margin', $value);
     }
 
     /**
      * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      *  @param string|null $value Value to set for the mediaSize property.
     */
-    public function setMediaSize(?string $value ): void {
-        $this->mediaSize = $value;
+    public function setMediaSize(?string $value): void {
+        $this->getBackingStore()->set('mediaSize', $value);
     }
 
     /**
      * Sets the mediaType property value. The default media (such as paper) type to print the document on.
      *  @param string|null $value Value to set for the mediaType property.
     */
-    public function setMediaType(?string $value ): void {
-        $this->mediaType = $value;
+    public function setMediaType(?string $value): void {
+        $this->getBackingStore()->set('mediaType', $value);
     }
 
     /**
      * Sets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      *  @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
     */
-    public function setMultipageLayout(?PrintMultipageLayout $value ): void {
-        $this->multipageLayout = $value;
+    public function setMultipageLayout(?PrintMultipageLayout $value): void {
+        $this->getBackingStore()->set('multipageLayout', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
      *  @param PrintOrientation|null $value Value to set for the orientation property.
     */
-    public function setOrientation(?PrintOrientation $value ): void {
-        $this->orientation = $value;
+    public function setOrientation(?PrintOrientation $value): void {
+        $this->getBackingStore()->set('orientation', $value);
     }
 
     /**
      * Sets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      *  @param string|null $value Value to set for the outputBin property.
     */
-    public function setOutputBin(?string $value ): void {
-        $this->outputBin = $value;
+    public function setOutputBin(?string $value): void {
+        $this->getBackingStore()->set('outputBin', $value);
     }
 
     /**
      * Sets the pageRanges property value. The page ranges to print. Read-only.
      *  @param array<IntegerRange>|null $value Value to set for the pageRanges property.
     */
-    public function setPageRanges(?array $value ): void {
-        $this->pageRanges = $value;
+    public function setPageRanges(?array $value): void {
+        $this->getBackingStore()->set('pageRanges', $value);
     }
 
     /**
      * Sets the pagesPerSheet property value. The number of document pages to print on each sheet.
      *  @param int|null $value Value to set for the pagesPerSheet property.
     */
-    public function setPagesPerSheet(?int $value ): void {
-        $this->pagesPerSheet = $value;
+    public function setPagesPerSheet(?int $value): void {
+        $this->getBackingStore()->set('pagesPerSheet', $value);
     }
 
     /**
      * Sets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
      *  @param PrintQuality|null $value Value to set for the quality property.
     */
-    public function setQuality(?PrintQuality $value ): void {
-        $this->quality = $value;
+    public function setQuality(?PrintQuality $value): void {
+        $this->getBackingStore()->set('quality', $value);
     }
 
     /**
      * Sets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
      *  @param PrintScaling|null $value Value to set for the scaling property.
     */
-    public function setScaling(?PrintScaling $value ): void {
-        $this->scaling = $value;
+    public function setScaling(?PrintScaling $value): void {
+        $this->getBackingStore()->set('scaling', $value);
     }
 
 }

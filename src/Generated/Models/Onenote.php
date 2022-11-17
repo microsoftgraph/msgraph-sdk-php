@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Onenote extends Entity implements Parsable 
 {
     /**
-     * @var array<Notebook>|null $notebooks The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
-    */
-    private ?array $notebooks = null;
-    
-    /**
-     * @var array<OnenoteOperation>|null $operations The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<OnenotePage>|null $pages The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-    */
-    private ?array $pages = null;
-    
-    /**
-     * @var array<OnenoteResource>|null $resources The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-    */
-    private ?array $resources = null;
-    
-    /**
-     * @var array<SectionGroup>|null $sectionGroups The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-    */
-    private ?array $sectionGroups = null;
-    
-    /**
-     * @var array<OnenoteSection>|null $sections The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-    */
-    private ?array $sections = null;
-    
-    /**
      * Instantiates a new onenote and sets the default values.
     */
     public function __construct() {
@@ -76,7 +46,7 @@ class Onenote extends Entity implements Parsable
      * @return array<Notebook>|null
     */
     public function getNotebooks(): ?array {
-        return $this->notebooks;
+        return $this->getBackingStore()->get('notebooks');
     }
 
     /**
@@ -84,7 +54,7 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -92,7 +62,7 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenotePage>|null
     */
     public function getPages(): ?array {
-        return $this->pages;
+        return $this->getBackingStore()->get('pages');
     }
 
     /**
@@ -100,7 +70,7 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteResource>|null
     */
     public function getResources(): ?array {
-        return $this->resources;
+        return $this->getBackingStore()->get('resources');
     }
 
     /**
@@ -108,7 +78,7 @@ class Onenote extends Entity implements Parsable
      * @return array<SectionGroup>|null
     */
     public function getSectionGroups(): ?array {
-        return $this->sectionGroups;
+        return $this->getBackingStore()->get('sectionGroups');
     }
 
     /**
@@ -116,7 +86,7 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteSection>|null
     */
     public function getSections(): ?array {
-        return $this->sections;
+        return $this->getBackingStore()->get('sections');
     }
 
     /**
@@ -125,60 +95,60 @@ class Onenote extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('notebooks', $this->notebooks);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('pages', $this->pages);
-        $writer->writeCollectionOfObjectValues('resources', $this->resources);
-        $writer->writeCollectionOfObjectValues('sectionGroups', $this->sectionGroups);
-        $writer->writeCollectionOfObjectValues('sections', $this->sections);
+        $writer->writeCollectionOfObjectValues('notebooks', $this->getNotebooks());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('pages', $this->getPages());
+        $writer->writeCollectionOfObjectValues('resources', $this->getResources());
+        $writer->writeCollectionOfObjectValues('sectionGroups', $this->getSectionGroups());
+        $writer->writeCollectionOfObjectValues('sections', $this->getSections());
     }
 
     /**
      * Sets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      *  @param array<Notebook>|null $value Value to set for the notebooks property.
     */
-    public function setNotebooks(?array $value ): void {
-        $this->notebooks = $value;
+    public function setNotebooks(?array $value): void {
+        $this->getBackingStore()->set('notebooks', $value);
     }
 
     /**
      * Sets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      *  @param array<OnenoteOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *  @param array<OnenotePage>|null $value Value to set for the pages property.
     */
-    public function setPages(?array $value ): void {
-        $this->pages = $value;
+    public function setPages(?array $value): void {
+        $this->getBackingStore()->set('pages', $value);
     }
 
     /**
      * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      *  @param array<OnenoteResource>|null $value Value to set for the resources property.
     */
-    public function setResources(?array $value ): void {
-        $this->resources = $value;
+    public function setResources(?array $value): void {
+        $this->getBackingStore()->set('resources', $value);
     }
 
     /**
      * Sets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *  @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
     */
-    public function setSectionGroups(?array $value ): void {
-        $this->sectionGroups = $value;
+    public function setSectionGroups(?array $value): void {
+        $this->getBackingStore()->set('sectionGroups', $value);
     }
 
     /**
      * Sets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      *  @param array<OnenoteSection>|null $value Value to set for the sections property.
     */
-    public function setSections(?array $value ): void {
-        $this->sections = $value;
+    public function setSections(?array $value): void {
+        $this->getBackingStore()->set('sections', $value);
     }
 
 }

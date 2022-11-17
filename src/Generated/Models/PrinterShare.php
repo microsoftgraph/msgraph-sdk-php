@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterShare extends PrinterBase implements Parsable 
 {
     /**
-     * @var bool|null $allowAllUsers If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
-    */
-    private ?bool $allowAllUsers = null;
-    
-    /**
-     * @var array<Group>|null $allowedGroups The groups whose users have access to print using the printer.
-    */
-    private ?array $allowedGroups = null;
-    
-    /**
-     * @var array<User>|null $allowedUsers The users who have access to print using the printer.
-    */
-    private ?array $allowedUsers = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The DateTimeOffset when the printer share was created. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var Printer|null $printer The printer that this printer share is related to.
-    */
-    private ?Printer $printer = null;
-    
-    /**
      * Instantiates a new printerShare and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getAllowAllUsers(): ?bool {
-        return $this->allowAllUsers;
+        return $this->getBackingStore()->get('allowAllUsers');
     }
 
     /**
@@ -64,7 +39,7 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return array<Group>|null
     */
     public function getAllowedGroups(): ?array {
-        return $this->allowedGroups;
+        return $this->getBackingStore()->get('allowedGroups');
     }
 
     /**
@@ -72,7 +47,7 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return array<User>|null
     */
     public function getAllowedUsers(): ?array {
-        return $this->allowedUsers;
+        return $this->getBackingStore()->get('allowedUsers');
     }
 
     /**
@@ -80,7 +55,7 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -103,7 +78,7 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return Printer|null
     */
     public function getPrinter(): ?Printer {
-        return $this->printer;
+        return $this->getBackingStore()->get('printer');
     }
 
     /**
@@ -112,51 +87,51 @@ class PrinterShare extends PrinterBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('allowAllUsers', $this->allowAllUsers);
-        $writer->writeCollectionOfObjectValues('allowedGroups', $this->allowedGroups);
-        $writer->writeCollectionOfObjectValues('allowedUsers', $this->allowedUsers);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('printer', $this->printer);
+        $writer->writeBooleanValue('allowAllUsers', $this->getAllowAllUsers());
+        $writer->writeCollectionOfObjectValues('allowedGroups', $this->getAllowedGroups());
+        $writer->writeCollectionOfObjectValues('allowedUsers', $this->getAllowedUsers());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('printer', $this->getPrinter());
     }
 
     /**
      * Sets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
      *  @param bool|null $value Value to set for the allowAllUsers property.
     */
-    public function setAllowAllUsers(?bool $value ): void {
-        $this->allowAllUsers = $value;
+    public function setAllowAllUsers(?bool $value): void {
+        $this->getBackingStore()->set('allowAllUsers', $value);
     }
 
     /**
      * Sets the allowedGroups property value. The groups whose users have access to print using the printer.
      *  @param array<Group>|null $value Value to set for the allowedGroups property.
     */
-    public function setAllowedGroups(?array $value ): void {
-        $this->allowedGroups = $value;
+    public function setAllowedGroups(?array $value): void {
+        $this->getBackingStore()->set('allowedGroups', $value);
     }
 
     /**
      * Sets the allowedUsers property value. The users who have access to print using the printer.
      *  @param array<User>|null $value Value to set for the allowedUsers property.
     */
-    public function setAllowedUsers(?array $value ): void {
-        $this->allowedUsers = $value;
+    public function setAllowedUsers(?array $value): void {
+        $this->getBackingStore()->set('allowedUsers', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the printer property value. The printer that this printer share is related to.
      *  @param Printer|null $value Value to set for the printer property.
     */
-    public function setPrinter(?Printer $value ): void {
-        $this->printer = $value;
+    public function setPrinter(?Printer $value): void {
+        $this->getBackingStore()->set('printer', $value);
     }
 
 }

@@ -7,23 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Parsable 
+class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ScreenSharingRole|null $role The role property
-    */
-    private ?ScreenSharingRole $role = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new changeScreenSharingRolePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -40,8 +39,16 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -60,7 +67,7 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Pa
      * @return ScreenSharingRole|null
     */
     public function getRole(): ?ScreenSharingRole {
-        return $this->role;
+        return $this->getBackingStore()->get('role');
     }
 
     /**
@@ -68,24 +75,24 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('role', $this->role);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('role', $this->getRole());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the role property value. The role property
      *  @param ScreenSharingRole|null $value Value to set for the role property.
     */
-    public function setRole(?ScreenSharingRole $value ): void {
-        $this->role = $value;
+    public function setRole(?ScreenSharingRole $value): void {
+        $this->getBackingStore()->set('role', $value);
     }
 
 }

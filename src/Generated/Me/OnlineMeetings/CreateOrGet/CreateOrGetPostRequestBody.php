@@ -9,48 +9,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable 
+class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ChatInfo|null $chatInfo The chatInfo property
-    */
-    private ?ChatInfo $chatInfo = null;
-    
-    /**
-     * @var DateTime|null $endDateTime The endDateTime property
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var string|null $externalId The externalId property
-    */
-    private ?string $externalId = null;
-    
-    /**
-     * @var MeetingParticipants|null $participants The participants property
-    */
-    private ?MeetingParticipants $participants = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The startDateTime property
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $subject The subject property
-    */
-    private ?string $subject = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new createOrGetPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -67,8 +41,16 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -76,7 +58,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
-        return $this->chatInfo;
+        return $this->getBackingStore()->get('chatInfo');
     }
 
     /**
@@ -84,7 +66,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -92,7 +74,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -116,7 +98,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
-        return $this->participants;
+        return $this->getBackingStore()->get('participants');
     }
 
     /**
@@ -124,7 +106,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -132,7 +114,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->subject;
+        return $this->getBackingStore()->get('subject');
     }
 
     /**
@@ -140,69 +122,69 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('chatInfo', $this->chatInfo);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeStringValue('externalId', $this->externalId);
-        $writer->writeObjectValue('participants', $this->participants);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('subject', $this->subject);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('chatInfo', $this->getChatInfo());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeStringValue('externalId', $this->getExternalId());
+        $writer->writeObjectValue('participants', $this->getParticipants());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('subject', $this->getSubject());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the chatInfo property value. The chatInfo property
      *  @param ChatInfo|null $value Value to set for the chatInfo property.
     */
-    public function setChatInfo(?ChatInfo $value ): void {
-        $this->chatInfo = $value;
+    public function setChatInfo(?ChatInfo $value): void {
+        $this->getBackingStore()->set('chatInfo', $value);
     }
 
     /**
      * Sets the endDateTime property value. The endDateTime property
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the externalId property value. The externalId property
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
     /**
      * Sets the participants property value. The participants property
      *  @param MeetingParticipants|null $value Value to set for the participants property.
     */
-    public function setParticipants(?MeetingParticipants $value ): void {
-        $this->participants = $value;
+    public function setParticipants(?MeetingParticipants $value): void {
+        $this->getBackingStore()->set('participants', $value);
     }
 
     /**
      * Sets the startDateTime property value. The startDateTime property
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the subject property value. The subject property
      *  @param string|null $value Value to set for the subject property.
     */
-    public function setSubject(?string $value ): void {
-        $this->subject = $value;
+    public function setSubject(?string $value): void {
+        $this->getBackingStore()->set('subject', $value);
     }
 
 }

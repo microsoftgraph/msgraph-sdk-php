@@ -7,48 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Parsable 
+class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AttackSimulationUser|null $attackSimulationUser User in an attack simulation and training campaign.
-    */
-    private ?AttackSimulationUser $attackSimulationUser = null;
-    
-    /**
-     * @var int|null $clickCount Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
-    */
-    private ?int $clickCount = null;
-    
-    /**
-     * @var int|null $compromisedCount Number of compromising actions by the user in attack simulation and training campaigns.
-    */
-    private ?int $compromisedCount = null;
-    
-    /**
-     * @var DateTime|null $latestSimulationDateTime Date and time of the latest attack simulation and training campaign that the user was included in.
-    */
-    private ?DateTime $latestSimulationDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $simulationCount Number of attack simulation and training campaigns that the user was included in.
-    */
-    private ?int $simulationCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new attackSimulationSimulationUserCoverage and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.attackSimulationSimulationUserCoverage');
     }
@@ -66,8 +40,8 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -75,7 +49,15 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return AttackSimulationUser|null
     */
     public function getAttackSimulationUser(): ?AttackSimulationUser {
-        return $this->attackSimulationUser;
+        return $this->getBackingStore()->get('attackSimulationUser');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -83,7 +65,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return int|null
     */
     public function getClickCount(): ?int {
-        return $this->clickCount;
+        return $this->getBackingStore()->get('clickCount');
     }
 
     /**
@@ -91,7 +73,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return int|null
     */
     public function getCompromisedCount(): ?int {
-        return $this->compromisedCount;
+        return $this->getBackingStore()->get('compromisedCount');
     }
 
     /**
@@ -115,7 +97,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return DateTime|null
     */
     public function getLatestSimulationDateTime(): ?DateTime {
-        return $this->latestSimulationDateTime;
+        return $this->getBackingStore()->get('latestSimulationDateTime');
     }
 
     /**
@@ -123,7 +105,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -131,7 +113,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @return int|null
     */
     public function getSimulationCount(): ?int {
-        return $this->simulationCount;
+        return $this->getBackingStore()->get('simulationCount');
     }
 
     /**
@@ -139,69 +121,69 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('attackSimulationUser', $this->attackSimulationUser);
-        $writer->writeIntegerValue('clickCount', $this->clickCount);
-        $writer->writeIntegerValue('compromisedCount', $this->compromisedCount);
-        $writer->writeDateTimeValue('latestSimulationDateTime', $this->latestSimulationDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('simulationCount', $this->simulationCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('attackSimulationUser', $this->getAttackSimulationUser());
+        $writer->writeIntegerValue('clickCount', $this->getClickCount());
+        $writer->writeIntegerValue('compromisedCount', $this->getCompromisedCount());
+        $writer->writeDateTimeValue('latestSimulationDateTime', $this->getLatestSimulationDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('simulationCount', $this->getSimulationCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
      *  @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
     */
-    public function setAttackSimulationUser(?AttackSimulationUser $value ): void {
-        $this->attackSimulationUser = $value;
+    public function setAttackSimulationUser(?AttackSimulationUser $value): void {
+        $this->getBackingStore()->set('attackSimulationUser', $value);
     }
 
     /**
      * Sets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
      *  @param int|null $value Value to set for the clickCount property.
     */
-    public function setClickCount(?int $value ): void {
-        $this->clickCount = $value;
+    public function setClickCount(?int $value): void {
+        $this->getBackingStore()->set('clickCount', $value);
     }
 
     /**
      * Sets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
      *  @param int|null $value Value to set for the compromisedCount property.
     */
-    public function setCompromisedCount(?int $value ): void {
-        $this->compromisedCount = $value;
+    public function setCompromisedCount(?int $value): void {
+        $this->getBackingStore()->set('compromisedCount', $value);
     }
 
     /**
      * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      *  @param DateTime|null $value Value to set for the latestSimulationDateTime property.
     */
-    public function setLatestSimulationDateTime(?DateTime $value ): void {
-        $this->latestSimulationDateTime = $value;
+    public function setLatestSimulationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('latestSimulationDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
      *  @param int|null $value Value to set for the simulationCount property.
     */
-    public function setSimulationCount(?int $value ): void {
-        $this->simulationCount = $value;
+    public function setSimulationCount(?int $value): void {
+        $this->getBackingStore()->set('simulationCount', $value);
     }
 
 }

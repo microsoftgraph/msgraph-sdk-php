@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AgreementFileLocalization extends AgreementFileProperties implements Parsable 
 {
     /**
-     * @var array<AgreementFileVersion>|null $versions Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-    */
-    private ?array $versions = null;
-    
-    /**
      * Instantiates a new agreementFileLocalization and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class AgreementFileLocalization extends AgreementFileProperties implements Parsa
      * @return array<AgreementFileVersion>|null
     */
     public function getVersions(): ?array {
-        return $this->versions;
+        return $this->getBackingStore()->get('versions');
     }
 
     /**
@@ -55,15 +50,15 @@ class AgreementFileLocalization extends AgreementFileProperties implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('versions', $this->versions);
+        $writer->writeCollectionOfObjectValues('versions', $this->getVersions());
     }
 
     /**
      * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
      *  @param array<AgreementFileVersion>|null $value Value to set for the versions property.
     */
-    public function setVersions(?array $value ): void {
-        $this->versions = $value;
+    public function setVersions(?array $value): void {
+        $this->getBackingStore()->set('versions', $value);
     }
 
 }

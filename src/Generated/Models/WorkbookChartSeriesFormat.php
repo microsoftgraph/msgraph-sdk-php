@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartSeriesFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartFill|null $fill Represents the fill format of a chart series, which includes background formating information. Read-only.
-    */
-    private ?WorkbookChartFill $fill = null;
-    
-    /**
-     * @var WorkbookChartLineFormat|null $line Represents line formatting. Read-only.
-    */
-    private ?WorkbookChartLineFormat $line = null;
-    
-    /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class WorkbookChartSeriesFormat extends Entity implements Parsable
      * @return WorkbookChartFill|null
     */
     public function getFill(): ?WorkbookChartFill {
-        return $this->fill;
+        return $this->getBackingStore()->get('fill');
     }
 
     /**
@@ -60,7 +50,7 @@ class WorkbookChartSeriesFormat extends Entity implements Parsable
      * @return WorkbookChartLineFormat|null
     */
     public function getLine(): ?WorkbookChartLineFormat {
-        return $this->line;
+        return $this->getBackingStore()->get('line');
     }
 
     /**
@@ -69,24 +59,24 @@ class WorkbookChartSeriesFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('fill', $this->fill);
-        $writer->writeObjectValue('line', $this->line);
+        $writer->writeObjectValue('fill', $this->getFill());
+        $writer->writeObjectValue('line', $this->getLine());
     }
 
     /**
      * Sets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
      *  @param WorkbookChartFill|null $value Value to set for the fill property.
     */
-    public function setFill(?WorkbookChartFill $value ): void {
-        $this->fill = $value;
+    public function setFill(?WorkbookChartFill $value): void {
+        $this->getBackingStore()->set('fill', $value);
     }
 
     /**
      * Sets the line property value. Represents line formatting. Read-only.
      *  @param WorkbookChartLineFormat|null $value Value to set for the line property.
     */
-    public function setLine(?WorkbookChartLineFormat $value ): void {
-        $this->line = $value;
+    public function setLine(?WorkbookChartLineFormat $value): void {
+        $this->getBackingStore()->set('line', $value);
     }
 
 }

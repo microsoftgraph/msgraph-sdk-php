@@ -7,44 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
-class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, Parsable 
+class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var StreamInterface|null $certificate Data recovery Certificate
-    */
-    private ?StreamInterface $certificate = null;
-    
-    /**
-     * @var string|null $description Data recovery Certificate description
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var DateTime|null $expirationDateTime Data recovery Certificate expiration datetime
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $subjectName Data recovery Certificate subject name
-    */
-    private ?string $subjectName = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new windowsInformationProtectionDataRecoveryCertificate and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.windowsInformationProtectionDataRecoveryCertificate');
     }
@@ -62,16 +41,24 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
      * Gets the certificate property value. Data recovery Certificate
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getCertificate(): StreamInterface {
-        return $this->certificate;
+    public function getCertificate(): ?StreamInterface {
+        return $this->getBackingStore()->get('certificate');
     }
 
     /**
@@ -79,7 +66,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -87,7 +74,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -110,7 +97,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -118,7 +105,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getSubjectName(): ?string {
-        return $this->subjectName;
+        return $this->getBackingStore()->get('subjectName');
     }
 
     /**
@@ -126,60 +113,60 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBinaryContent('certificate', $this->certificate);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('subjectName', $this->subjectName);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBinaryContent('certificate', $this->getCertificate());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('subjectName', $this->getSubjectName());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the certificate property value. Data recovery Certificate
      *  @param StreamInterface|null $value Value to set for the certificate property.
     */
-    public function setCertificate(?StreamInterface $value ): void {
-        $this->certificate = $value;
+    public function setCertificate(?StreamInterface $value): void {
+        $this->getBackingStore()->set('certificate', $value);
     }
 
     /**
      * Sets the description property value. Data recovery Certificate description
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. Data recovery Certificate expiration datetime
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name
      *  @param string|null $value Value to set for the subjectName property.
     */
-    public function setSubjectName(?string $value ): void {
-        $this->subjectName = $value;
+    public function setSubjectName(?string $value): void {
+        $this->getBackingStore()->set('subjectName', $value);
     }
 
 }

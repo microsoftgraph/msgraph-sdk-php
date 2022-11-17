@@ -10,46 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConnectedOrganization extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $description The description of the connected organization.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The display name of the connected organization. Supports $filter (eq).
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<DirectoryObject>|null $externalSponsors The externalSponsors property
-    */
-    private ?array $externalSponsors = null;
-    
-    /**
-     * @var array<IdentitySource>|null $identitySources The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
-    */
-    private ?array $identitySources = null;
-    
-    /**
-     * @var array<DirectoryObject>|null $internalSponsors The internalSponsors property
-    */
-    private ?array $internalSponsors = null;
-    
-    /**
-     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $modifiedDateTime = null;
-    
-    /**
-     * @var ConnectedOrganizationState|null $state The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
-    */
-    private ?ConnectedOrganizationState $state = null;
-    
-    /**
      * Instantiates a new connectedOrganization and sets the default values.
     */
     public function __construct() {
@@ -71,7 +31,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -79,7 +39,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -87,7 +47,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -95,7 +55,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getExternalSponsors(): ?array {
-        return $this->externalSponsors;
+        return $this->getBackingStore()->get('externalSponsors');
     }
 
     /**
@@ -121,7 +81,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<IdentitySource>|null
     */
     public function getIdentitySources(): ?array {
-        return $this->identitySources;
+        return $this->getBackingStore()->get('identitySources');
     }
 
     /**
@@ -129,7 +89,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getInternalSponsors(): ?array {
-        return $this->internalSponsors;
+        return $this->getBackingStore()->get('internalSponsors');
     }
 
     /**
@@ -137,7 +97,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
-        return $this->modifiedDateTime;
+        return $this->getBackingStore()->get('modifiedDateTime');
     }
 
     /**
@@ -145,7 +105,7 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return ConnectedOrganizationState|null
     */
     public function getState(): ?ConnectedOrganizationState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -154,78 +114,78 @@ class ConnectedOrganization extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('externalSponsors', $this->externalSponsors);
-        $writer->writeCollectionOfObjectValues('identitySources', $this->identitySources);
-        $writer->writeCollectionOfObjectValues('internalSponsors', $this->internalSponsors);
-        $writer->writeDateTimeValue('modifiedDateTime', $this->modifiedDateTime);
-        $writer->writeEnumValue('state', $this->state);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('externalSponsors', $this->getExternalSponsors());
+        $writer->writeCollectionOfObjectValues('identitySources', $this->getIdentitySources());
+        $writer->writeCollectionOfObjectValues('internalSponsors', $this->getInternalSponsors());
+        $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeEnumValue('state', $this->getState());
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. The description of the connected organization.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The display name of the connected organization. Supports $filter (eq).
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the externalSponsors property value. The externalSponsors property
      *  @param array<DirectoryObject>|null $value Value to set for the externalSponsors property.
     */
-    public function setExternalSponsors(?array $value ): void {
-        $this->externalSponsors = $value;
+    public function setExternalSponsors(?array $value): void {
+        $this->getBackingStore()->set('externalSponsors', $value);
     }
 
     /**
      * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
      *  @param array<IdentitySource>|null $value Value to set for the identitySources property.
     */
-    public function setIdentitySources(?array $value ): void {
-        $this->identitySources = $value;
+    public function setIdentitySources(?array $value): void {
+        $this->getBackingStore()->set('identitySources', $value);
     }
 
     /**
      * Sets the internalSponsors property value. The internalSponsors property
      *  @param array<DirectoryObject>|null $value Value to set for the internalSponsors property.
     */
-    public function setInternalSponsors(?array $value ): void {
-        $this->internalSponsors = $value;
+    public function setInternalSponsors(?array $value): void {
+        $this->getBackingStore()->set('internalSponsors', $value);
     }
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
-    public function setModifiedDateTime(?DateTime $value ): void {
-        $this->modifiedDateTime = $value;
+    public function setModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('modifiedDateTime', $value);
     }
 
     /**
      * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      *  @param ConnectedOrganizationState|null $value Value to set for the state property.
     */
-    public function setState(?ConnectedOrganizationState $value ): void {
-        $this->state = $value;
+    public function setState(?ConnectedOrganizationState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

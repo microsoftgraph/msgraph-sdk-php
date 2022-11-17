@@ -6,53 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AudioConferencing implements AdditionalDataHolder, Parsable 
+class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $conferenceId The conference id of the online meeting.
-    */
-    private ?string $conferenceId = null;
-    
-    /**
-     * @var string|null $dialinUrl A URL to the externally-accessible web page that contains dial-in information.
-    */
-    private ?string $dialinUrl = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $tollFreeNumber The tollFreeNumber property
-    */
-    private ?string $tollFreeNumber = null;
-    
-    /**
-     * @var array<string>|null $tollFreeNumbers List of toll-free numbers that are displayed in the meeting invite.
-    */
-    private ?array $tollFreeNumbers = null;
-    
-    /**
-     * @var string|null $tollNumber The tollNumber property
-    */
-    private ?string $tollNumber = null;
-    
-    /**
-     * @var array<string>|null $tollNumbers List of toll numbers that are displayed in the meeting invite.
-    */
-    private ?array $tollNumbers = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new audioConferencing and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.audioConferencing');
     }
@@ -70,8 +39,16 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +56,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getConferenceId(): ?string {
-        return $this->conferenceId;
+        return $this->getBackingStore()->get('conferenceId');
     }
 
     /**
@@ -87,7 +64,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDialinUrl(): ?string {
-        return $this->dialinUrl;
+        return $this->getBackingStore()->get('dialinUrl');
     }
 
     /**
@@ -112,7 +89,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -120,7 +97,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTollFreeNumber(): ?string {
-        return $this->tollFreeNumber;
+        return $this->getBackingStore()->get('tollFreeNumber');
     }
 
     /**
@@ -128,7 +105,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getTollFreeNumbers(): ?array {
-        return $this->tollFreeNumbers;
+        return $this->getBackingStore()->get('tollFreeNumbers');
     }
 
     /**
@@ -136,7 +113,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTollNumber(): ?string {
-        return $this->tollNumber;
+        return $this->getBackingStore()->get('tollNumber');
     }
 
     /**
@@ -144,7 +121,7 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getTollNumbers(): ?array {
-        return $this->tollNumbers;
+        return $this->getBackingStore()->get('tollNumbers');
     }
 
     /**
@@ -152,78 +129,78 @@ class AudioConferencing implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('conferenceId', $this->conferenceId);
-        $writer->writeStringValue('dialinUrl', $this->dialinUrl);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('tollFreeNumber', $this->tollFreeNumber);
-        $writer->writeCollectionOfPrimitiveValues('tollFreeNumbers', $this->tollFreeNumbers);
-        $writer->writeStringValue('tollNumber', $this->tollNumber);
-        $writer->writeCollectionOfPrimitiveValues('tollNumbers', $this->tollNumbers);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('conferenceId', $this->getConferenceId());
+        $writer->writeStringValue('dialinUrl', $this->getDialinUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('tollFreeNumber', $this->getTollFreeNumber());
+        $writer->writeCollectionOfPrimitiveValues('tollFreeNumbers', $this->getTollFreeNumbers());
+        $writer->writeStringValue('tollNumber', $this->getTollNumber());
+        $writer->writeCollectionOfPrimitiveValues('tollNumbers', $this->getTollNumbers());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the conferenceId property value. The conference id of the online meeting.
      *  @param string|null $value Value to set for the conferenceId property.
     */
-    public function setConferenceId(?string $value ): void {
-        $this->conferenceId = $value;
+    public function setConferenceId(?string $value): void {
+        $this->getBackingStore()->set('conferenceId', $value);
     }
 
     /**
      * Sets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
      *  @param string|null $value Value to set for the dialinUrl property.
     */
-    public function setDialinUrl(?string $value ): void {
-        $this->dialinUrl = $value;
+    public function setDialinUrl(?string $value): void {
+        $this->getBackingStore()->set('dialinUrl', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the tollFreeNumber property value. The tollFreeNumber property
      *  @param string|null $value Value to set for the tollFreeNumber property.
     */
-    public function setTollFreeNumber(?string $value ): void {
-        $this->tollFreeNumber = $value;
+    public function setTollFreeNumber(?string $value): void {
+        $this->getBackingStore()->set('tollFreeNumber', $value);
     }
 
     /**
      * Sets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
      *  @param array<string>|null $value Value to set for the tollFreeNumbers property.
     */
-    public function setTollFreeNumbers(?array $value ): void {
-        $this->tollFreeNumbers = $value;
+    public function setTollFreeNumbers(?array $value): void {
+        $this->getBackingStore()->set('tollFreeNumbers', $value);
     }
 
     /**
      * Sets the tollNumber property value. The tollNumber property
      *  @param string|null $value Value to set for the tollNumber property.
     */
-    public function setTollNumber(?string $value ): void {
-        $this->tollNumber = $value;
+    public function setTollNumber(?string $value): void {
+        $this->getBackingStore()->set('tollNumber', $value);
     }
 
     /**
      * Sets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
      *  @param array<string>|null $value Value to set for the tollNumbers property.
     */
-    public function setTollNumbers(?array $value ): void {
-        $this->tollNumbers = $value;
+    public function setTollNumbers(?array $value): void {
+        $this->getBackingStore()->set('tollNumbers', $value);
     }
 
 }

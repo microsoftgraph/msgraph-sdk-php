@@ -9,76 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookTable extends Entity implements Parsable 
 {
     /**
-     * @var array<WorkbookTableColumn>|null $columns Represents a collection of all the columns in the table. Read-only.
-    */
-    private ?array $columns = null;
-    
-    /**
-     * @var bool|null $highlightFirstColumn Indicates whether the first column contains special formatting.
-    */
-    private ?bool $highlightFirstColumn = null;
-    
-    /**
-     * @var bool|null $highlightLastColumn Indicates whether the last column contains special formatting.
-    */
-    private ?bool $highlightLastColumn = null;
-    
-    /**
-     * @var string|null $legacyId Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
-    */
-    private ?string $legacyId = null;
-    
-    /**
-     * @var string|null $name Name of the table.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<WorkbookTableRow>|null $rows Represents a collection of all the rows in the table. Read-only.
-    */
-    private ?array $rows = null;
-    
-    /**
-     * @var bool|null $showBandedColumns Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
-    */
-    private ?bool $showBandedColumns = null;
-    
-    /**
-     * @var bool|null $showBandedRows Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
-    */
-    private ?bool $showBandedRows = null;
-    
-    /**
-     * @var bool|null $showFilterButton Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
-    */
-    private ?bool $showFilterButton = null;
-    
-    /**
-     * @var bool|null $showHeaders Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
-    */
-    private ?bool $showHeaders = null;
-    
-    /**
-     * @var bool|null $showTotals Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
-    */
-    private ?bool $showTotals = null;
-    
-    /**
-     * @var WorkbookTableSort|null $sort Represents the sorting for the table. Read-only.
-    */
-    private ?WorkbookTableSort $sort = null;
-    
-    /**
-     * @var string|null $style Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
-    */
-    private ?string $style = null;
-    
-    /**
-     * @var WorkbookWorksheet|null $worksheet The worksheet containing the current table. Read-only.
-    */
-    private ?WorkbookWorksheet $worksheet = null;
-    
-    /**
      * Instantiates a new workbookTable and sets the default values.
     */
     public function __construct() {
@@ -100,7 +30,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return array<WorkbookTableColumn>|null
     */
     public function getColumns(): ?array {
-        return $this->columns;
+        return $this->getBackingStore()->get('columns');
     }
 
     /**
@@ -132,7 +62,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getHighlightFirstColumn(): ?bool {
-        return $this->highlightFirstColumn;
+        return $this->getBackingStore()->get('highlightFirstColumn');
     }
 
     /**
@@ -140,7 +70,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getHighlightLastColumn(): ?bool {
-        return $this->highlightLastColumn;
+        return $this->getBackingStore()->get('highlightLastColumn');
     }
 
     /**
@@ -148,7 +78,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getLegacyId(): ?string {
-        return $this->legacyId;
+        return $this->getBackingStore()->get('legacyId');
     }
 
     /**
@@ -156,7 +86,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -164,7 +94,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return array<WorkbookTableRow>|null
     */
     public function getRows(): ?array {
-        return $this->rows;
+        return $this->getBackingStore()->get('rows');
     }
 
     /**
@@ -172,7 +102,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBandedColumns(): ?bool {
-        return $this->showBandedColumns;
+        return $this->getBackingStore()->get('showBandedColumns');
     }
 
     /**
@@ -180,7 +110,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowBandedRows(): ?bool {
-        return $this->showBandedRows;
+        return $this->getBackingStore()->get('showBandedRows');
     }
 
     /**
@@ -188,7 +118,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowFilterButton(): ?bool {
-        return $this->showFilterButton;
+        return $this->getBackingStore()->get('showFilterButton');
     }
 
     /**
@@ -196,7 +126,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowHeaders(): ?bool {
-        return $this->showHeaders;
+        return $this->getBackingStore()->get('showHeaders');
     }
 
     /**
@@ -204,7 +134,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowTotals(): ?bool {
-        return $this->showTotals;
+        return $this->getBackingStore()->get('showTotals');
     }
 
     /**
@@ -212,7 +142,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return WorkbookTableSort|null
     */
     public function getSort(): ?WorkbookTableSort {
-        return $this->sort;
+        return $this->getBackingStore()->get('sort');
     }
 
     /**
@@ -220,7 +150,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return string|null
     */
     public function getStyle(): ?string {
-        return $this->style;
+        return $this->getBackingStore()->get('style');
     }
 
     /**
@@ -228,7 +158,7 @@ class WorkbookTable extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->worksheet;
+        return $this->getBackingStore()->get('worksheet');
     }
 
     /**
@@ -237,132 +167,132 @@ class WorkbookTable extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('columns', $this->columns);
-        $writer->writeBooleanValue('highlightFirstColumn', $this->highlightFirstColumn);
-        $writer->writeBooleanValue('highlightLastColumn', $this->highlightLastColumn);
-        $writer->writeStringValue('legacyId', $this->legacyId);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfObjectValues('rows', $this->rows);
-        $writer->writeBooleanValue('showBandedColumns', $this->showBandedColumns);
-        $writer->writeBooleanValue('showBandedRows', $this->showBandedRows);
-        $writer->writeBooleanValue('showFilterButton', $this->showFilterButton);
-        $writer->writeBooleanValue('showHeaders', $this->showHeaders);
-        $writer->writeBooleanValue('showTotals', $this->showTotals);
-        $writer->writeObjectValue('sort', $this->sort);
-        $writer->writeStringValue('style', $this->style);
-        $writer->writeObjectValue('worksheet', $this->worksheet);
+        $writer->writeCollectionOfObjectValues('columns', $this->getColumns());
+        $writer->writeBooleanValue('highlightFirstColumn', $this->getHighlightFirstColumn());
+        $writer->writeBooleanValue('highlightLastColumn', $this->getHighlightLastColumn());
+        $writer->writeStringValue('legacyId', $this->getLegacyId());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfObjectValues('rows', $this->getRows());
+        $writer->writeBooleanValue('showBandedColumns', $this->getShowBandedColumns());
+        $writer->writeBooleanValue('showBandedRows', $this->getShowBandedRows());
+        $writer->writeBooleanValue('showFilterButton', $this->getShowFilterButton());
+        $writer->writeBooleanValue('showHeaders', $this->getShowHeaders());
+        $writer->writeBooleanValue('showTotals', $this->getShowTotals());
+        $writer->writeObjectValue('sort', $this->getSort());
+        $writer->writeStringValue('style', $this->getStyle());
+        $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
 
     /**
      * Sets the columns property value. Represents a collection of all the columns in the table. Read-only.
      *  @param array<WorkbookTableColumn>|null $value Value to set for the columns property.
     */
-    public function setColumns(?array $value ): void {
-        $this->columns = $value;
+    public function setColumns(?array $value): void {
+        $this->getBackingStore()->set('columns', $value);
     }
 
     /**
      * Sets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
      *  @param bool|null $value Value to set for the highlightFirstColumn property.
     */
-    public function setHighlightFirstColumn(?bool $value ): void {
-        $this->highlightFirstColumn = $value;
+    public function setHighlightFirstColumn(?bool $value): void {
+        $this->getBackingStore()->set('highlightFirstColumn', $value);
     }
 
     /**
      * Sets the highlightLastColumn property value. Indicates whether the last column contains special formatting.
      *  @param bool|null $value Value to set for the highlightLastColumn property.
     */
-    public function setHighlightLastColumn(?bool $value ): void {
-        $this->highlightLastColumn = $value;
+    public function setHighlightLastColumn(?bool $value): void {
+        $this->getBackingStore()->set('highlightLastColumn', $value);
     }
 
     /**
      * Sets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
      *  @param string|null $value Value to set for the legacyId property.
     */
-    public function setLegacyId(?string $value ): void {
-        $this->legacyId = $value;
+    public function setLegacyId(?string $value): void {
+        $this->getBackingStore()->set('legacyId', $value);
     }
 
     /**
      * Sets the name property value. Name of the table.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the rows property value. Represents a collection of all the rows in the table. Read-only.
      *  @param array<WorkbookTableRow>|null $value Value to set for the rows property.
     */
-    public function setRows(?array $value ): void {
-        $this->rows = $value;
+    public function setRows(?array $value): void {
+        $this->getBackingStore()->set('rows', $value);
     }
 
     /**
      * Sets the showBandedColumns property value. Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
      *  @param bool|null $value Value to set for the showBandedColumns property.
     */
-    public function setShowBandedColumns(?bool $value ): void {
-        $this->showBandedColumns = $value;
+    public function setShowBandedColumns(?bool $value): void {
+        $this->getBackingStore()->set('showBandedColumns', $value);
     }
 
     /**
      * Sets the showBandedRows property value. Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
      *  @param bool|null $value Value to set for the showBandedRows property.
     */
-    public function setShowBandedRows(?bool $value ): void {
-        $this->showBandedRows = $value;
+    public function setShowBandedRows(?bool $value): void {
+        $this->getBackingStore()->set('showBandedRows', $value);
     }
 
     /**
      * Sets the showFilterButton property value. Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
      *  @param bool|null $value Value to set for the showFilterButton property.
     */
-    public function setShowFilterButton(?bool $value ): void {
-        $this->showFilterButton = $value;
+    public function setShowFilterButton(?bool $value): void {
+        $this->getBackingStore()->set('showFilterButton', $value);
     }
 
     /**
      * Sets the showHeaders property value. Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
      *  @param bool|null $value Value to set for the showHeaders property.
     */
-    public function setShowHeaders(?bool $value ): void {
-        $this->showHeaders = $value;
+    public function setShowHeaders(?bool $value): void {
+        $this->getBackingStore()->set('showHeaders', $value);
     }
 
     /**
      * Sets the showTotals property value. Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
      *  @param bool|null $value Value to set for the showTotals property.
     */
-    public function setShowTotals(?bool $value ): void {
-        $this->showTotals = $value;
+    public function setShowTotals(?bool $value): void {
+        $this->getBackingStore()->set('showTotals', $value);
     }
 
     /**
      * Sets the sort property value. Represents the sorting for the table. Read-only.
      *  @param WorkbookTableSort|null $value Value to set for the sort property.
     */
-    public function setSort(?WorkbookTableSort $value ): void {
-        $this->sort = $value;
+    public function setSort(?WorkbookTableSort $value): void {
+        $this->getBackingStore()->set('sort', $value);
     }
 
     /**
      * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      *  @param string|null $value Value to set for the style property.
     */
-    public function setStyle(?string $value ): void {
-        $this->style = $value;
+    public function setStyle(?string $value): void {
+        $this->getBackingStore()->set('style', $value);
     }
 
     /**
      * Sets the worksheet property value. The worksheet containing the current table. Read-only.
      *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
-    public function setWorksheet(?WorkbookWorksheet $value ): void {
-        $this->worksheet = $value;
+    public function setWorksheet(?WorkbookWorksheet $value): void {
+        $this->getBackingStore()->set('worksheet', $value);
     }
 
 }

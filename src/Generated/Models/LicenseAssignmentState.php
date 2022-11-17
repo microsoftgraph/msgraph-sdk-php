@@ -7,53 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class LicenseAssignmentState implements AdditionalDataHolder, Parsable 
+class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $assignedByGroup The assignedByGroup property
-    */
-    private ?string $assignedByGroup = null;
-    
-    /**
-     * @var array<string>|null $disabledPlans The disabledPlans property
-    */
-    private ?array $disabledPlans = null;
-    
-    /**
-     * @var string|null $error The error property
-    */
-    private ?string $error = null;
-    
-    /**
-     * @var DateTime|null $lastUpdatedDateTime The lastUpdatedDateTime property
-    */
-    private ?DateTime $lastUpdatedDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $skuId The skuId property
-    */
-    private ?string $skuId = null;
-    
-    /**
-     * @var string|null $state The state property
-    */
-    private ?string $state = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new licenseAssignmentState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.licenseAssignmentState');
     }
@@ -71,8 +40,8 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -80,7 +49,15 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAssignedByGroup(): ?string {
-        return $this->assignedByGroup;
+        return $this->getBackingStore()->get('assignedByGroup');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -88,7 +65,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getDisabledPlans(): ?array {
-        return $this->disabledPlans;
+        return $this->getBackingStore()->get('disabledPlans');
     }
 
     /**
@@ -96,7 +73,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getError(): ?string {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -121,7 +98,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
-        return $this->lastUpdatedDateTime;
+        return $this->getBackingStore()->get('lastUpdatedDateTime');
     }
 
     /**
@@ -129,7 +106,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -137,7 +114,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSkuId(): ?string {
-        return $this->skuId;
+        return $this->getBackingStore()->get('skuId');
     }
 
     /**
@@ -145,7 +122,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -153,78 +130,78 @@ class LicenseAssignmentState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('assignedByGroup', $this->assignedByGroup);
-        $writer->writeCollectionOfPrimitiveValues('disabledPlans', $this->disabledPlans);
-        $writer->writeStringValue('error', $this->error);
-        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->lastUpdatedDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('skuId', $this->skuId);
-        $writer->writeStringValue('state', $this->state);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('assignedByGroup', $this->getAssignedByGroup());
+        $writer->writeCollectionOfPrimitiveValues('disabledPlans', $this->getDisabledPlans());
+        $writer->writeStringValue('error', $this->getError());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('skuId', $this->getSkuId());
+        $writer->writeStringValue('state', $this->getState());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the assignedByGroup property value. The assignedByGroup property
      *  @param string|null $value Value to set for the assignedByGroup property.
     */
-    public function setAssignedByGroup(?string $value ): void {
-        $this->assignedByGroup = $value;
+    public function setAssignedByGroup(?string $value): void {
+        $this->getBackingStore()->set('assignedByGroup', $value);
     }
 
     /**
      * Sets the disabledPlans property value. The disabledPlans property
      *  @param array<string>|null $value Value to set for the disabledPlans property.
     */
-    public function setDisabledPlans(?array $value ): void {
-        $this->disabledPlans = $value;
+    public function setDisabledPlans(?array $value): void {
+        $this->getBackingStore()->set('disabledPlans', $value);
     }
 
     /**
      * Sets the error property value. The error property
      *  @param string|null $value Value to set for the error property.
     */
-    public function setError(?string $value ): void {
-        $this->error = $value;
+    public function setError(?string $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
-    public function setLastUpdatedDateTime(?DateTime $value ): void {
-        $this->lastUpdatedDateTime = $value;
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the skuId property value. The skuId property
      *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?string $value ): void {
-        $this->skuId = $value;
+    public function setSkuId(?string $value): void {
+        $this->getBackingStore()->set('skuId', $value);
     }
 
     /**
      * Sets the state property value. The state property
      *  @param string|null $value Value to set for the state property.
     */
-    public function setState(?string $value ): void {
-        $this->state = $value;
+    public function setState(?string $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

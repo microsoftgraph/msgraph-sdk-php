@@ -7,128 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DirectRoutingLogRow implements AdditionalDataHolder, Parsable 
+class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $calleeNumber Number of the user or bot who received the call. E.164 format, but may include additional data.
-    */
-    private ?string $calleeNumber = null;
-    
-    /**
-     * @var int|null $callEndSubReason In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
-    */
-    private ?int $callEndSubReason = null;
-    
-    /**
-     * @var string|null $callerNumber Number of the user or bot who made the call. E.164 format, but may include additional data.
-    */
-    private ?string $callerNumber = null;
-    
-    /**
-     * @var string|null $callType Call type and direction.
-    */
-    private ?string $callType = null;
-    
-    /**
-     * @var string|null $correlationId Identifier for the call that you can use when calling Microsoft Support. GUID.
-    */
-    private ?string $correlationId = null;
-    
-    /**
-     * @var int|null $duration Duration of the call in seconds.
-    */
-    private ?int $duration = null;
-    
-    /**
-     * @var DateTime|null $endDateTime Only exists for successful (fully established) calls. Time when call ended.
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var DateTime|null $failureDateTime Only exists for failed (not fully established) calls.
-    */
-    private ?DateTime $failureDateTime = null;
-    
-    /**
-     * @var int|null $finalSipCode The code with which the call ended, RFC 3261.
-    */
-    private ?int $finalSipCode = null;
-    
-    /**
-     * @var string|null $finalSipCodePhrase Description of the SIP code and Microsoft subcode.
-    */
-    private ?string $finalSipCodePhrase = null;
-    
-    /**
-     * @var string|null $id Unique call identifier. GUID.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var DateTime|null $inviteDateTime When the initial invite was sent.
-    */
-    private ?DateTime $inviteDateTime = null;
-    
-    /**
-     * @var bool|null $mediaBypassEnabled Indicates if the trunk was enabled for media bypass or not.
-    */
-    private ?bool $mediaBypassEnabled = null;
-    
-    /**
-     * @var string|null $mediaPathLocation The datacenter used for media path in non-bypass call.
-    */
-    private ?string $mediaPathLocation = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $signalingLocation The datacenter used for signaling for both bypass and non-bypass calls.
-    */
-    private ?string $signalingLocation = null;
-    
-    /**
-     * @var DateTime|null $startDateTime Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var bool|null $successfulCall Success or attempt.
-    */
-    private ?bool $successfulCall = null;
-    
-    /**
-     * @var string|null $trunkFullyQualifiedDomainName Fully qualified domain name of the session border controller.
-    */
-    private ?string $trunkFullyQualifiedDomainName = null;
-    
-    /**
-     * @var string|null $userDisplayName Display name of the user.
-    */
-    private ?string $userDisplayName = null;
-    
-    /**
-     * @var string|null $userId Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $userPrincipalName UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
-    */
-    private ?string $userPrincipalName = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new directRoutingLogRow and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.callRecords.directRoutingLogRow');
     }
@@ -146,8 +40,16 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -155,7 +57,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCalleeNumber(): ?string {
-        return $this->calleeNumber;
+        return $this->getBackingStore()->get('calleeNumber');
     }
 
     /**
@@ -163,7 +65,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getCallEndSubReason(): ?int {
-        return $this->callEndSubReason;
+        return $this->getBackingStore()->get('callEndSubReason');
     }
 
     /**
@@ -171,7 +73,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallerNumber(): ?string {
-        return $this->callerNumber;
+        return $this->getBackingStore()->get('callerNumber');
     }
 
     /**
@@ -179,7 +81,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCallType(): ?string {
-        return $this->callType;
+        return $this->getBackingStore()->get('callType');
     }
 
     /**
@@ -187,7 +89,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCorrelationId(): ?string {
-        return $this->correlationId;
+        return $this->getBackingStore()->get('correlationId');
     }
 
     /**
@@ -195,7 +97,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->duration;
+        return $this->getBackingStore()->get('duration');
     }
 
     /**
@@ -203,7 +105,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -211,7 +113,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getFailureDateTime(): ?DateTime {
-        return $this->failureDateTime;
+        return $this->getBackingStore()->get('failureDateTime');
     }
 
     /**
@@ -251,7 +153,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getFinalSipCode(): ?int {
-        return $this->finalSipCode;
+        return $this->getBackingStore()->get('finalSipCode');
     }
 
     /**
@@ -259,7 +161,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getFinalSipCodePhrase(): ?string {
-        return $this->finalSipCodePhrase;
+        return $this->getBackingStore()->get('finalSipCodePhrase');
     }
 
     /**
@@ -267,7 +169,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -275,7 +177,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getInviteDateTime(): ?DateTime {
-        return $this->inviteDateTime;
+        return $this->getBackingStore()->get('inviteDateTime');
     }
 
     /**
@@ -283,7 +185,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getMediaBypassEnabled(): ?bool {
-        return $this->mediaBypassEnabled;
+        return $this->getBackingStore()->get('mediaBypassEnabled');
     }
 
     /**
@@ -291,7 +193,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMediaPathLocation(): ?string {
-        return $this->mediaPathLocation;
+        return $this->getBackingStore()->get('mediaPathLocation');
     }
 
     /**
@@ -299,7 +201,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -307,7 +209,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSignalingLocation(): ?string {
-        return $this->signalingLocation;
+        return $this->getBackingStore()->get('signalingLocation');
     }
 
     /**
@@ -315,7 +217,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -323,7 +225,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSuccessfulCall(): ?bool {
-        return $this->successfulCall;
+        return $this->getBackingStore()->get('successfulCall');
     }
 
     /**
@@ -331,7 +233,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTrunkFullyQualifiedDomainName(): ?string {
-        return $this->trunkFullyQualifiedDomainName;
+        return $this->getBackingStore()->get('trunkFullyQualifiedDomainName');
     }
 
     /**
@@ -339,7 +241,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->userDisplayName;
+        return $this->getBackingStore()->get('userDisplayName');
     }
 
     /**
@@ -347,7 +249,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -355,7 +257,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -363,213 +265,213 @@ class DirectRoutingLogRow implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('calleeNumber', $this->calleeNumber);
-        $writer->writeIntegerValue('callEndSubReason', $this->callEndSubReason);
-        $writer->writeStringValue('callerNumber', $this->callerNumber);
-        $writer->writeStringValue('callType', $this->callType);
-        $writer->writeStringValue('correlationId', $this->correlationId);
-        $writer->writeIntegerValue('duration', $this->duration);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeDateTimeValue('failureDateTime', $this->failureDateTime);
-        $writer->writeIntegerValue('finalSipCode', $this->finalSipCode);
-        $writer->writeStringValue('finalSipCodePhrase', $this->finalSipCodePhrase);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeDateTimeValue('inviteDateTime', $this->inviteDateTime);
-        $writer->writeBooleanValue('mediaBypassEnabled', $this->mediaBypassEnabled);
-        $writer->writeStringValue('mediaPathLocation', $this->mediaPathLocation);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('signalingLocation', $this->signalingLocation);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeBooleanValue('successfulCall', $this->successfulCall);
-        $writer->writeStringValue('trunkFullyQualifiedDomainName', $this->trunkFullyQualifiedDomainName);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('calleeNumber', $this->getCalleeNumber());
+        $writer->writeIntegerValue('callEndSubReason', $this->getCallEndSubReason());
+        $writer->writeStringValue('callerNumber', $this->getCallerNumber());
+        $writer->writeStringValue('callType', $this->getCallType());
+        $writer->writeStringValue('correlationId', $this->getCorrelationId());
+        $writer->writeIntegerValue('duration', $this->getDuration());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeDateTimeValue('failureDateTime', $this->getFailureDateTime());
+        $writer->writeIntegerValue('finalSipCode', $this->getFinalSipCode());
+        $writer->writeStringValue('finalSipCodePhrase', $this->getFinalSipCodePhrase());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeDateTimeValue('inviteDateTime', $this->getInviteDateTime());
+        $writer->writeBooleanValue('mediaBypassEnabled', $this->getMediaBypassEnabled());
+        $writer->writeStringValue('mediaPathLocation', $this->getMediaPathLocation());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('signalingLocation', $this->getSignalingLocation());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeBooleanValue('successfulCall', $this->getSuccessfulCall());
+        $writer->writeStringValue('trunkFullyQualifiedDomainName', $this->getTrunkFullyQualifiedDomainName());
+        $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the calleeNumber property value. Number of the user or bot who received the call. E.164 format, but may include additional data.
      *  @param string|null $value Value to set for the calleeNumber property.
     */
-    public function setCalleeNumber(?string $value ): void {
-        $this->calleeNumber = $value;
+    public function setCalleeNumber(?string $value): void {
+        $this->getBackingStore()->set('calleeNumber', $value);
     }
 
     /**
      * Sets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
      *  @param int|null $value Value to set for the callEndSubReason property.
     */
-    public function setCallEndSubReason(?int $value ): void {
-        $this->callEndSubReason = $value;
+    public function setCallEndSubReason(?int $value): void {
+        $this->getBackingStore()->set('callEndSubReason', $value);
     }
 
     /**
      * Sets the callerNumber property value. Number of the user or bot who made the call. E.164 format, but may include additional data.
      *  @param string|null $value Value to set for the callerNumber property.
     */
-    public function setCallerNumber(?string $value ): void {
-        $this->callerNumber = $value;
+    public function setCallerNumber(?string $value): void {
+        $this->getBackingStore()->set('callerNumber', $value);
     }
 
     /**
      * Sets the callType property value. Call type and direction.
      *  @param string|null $value Value to set for the callType property.
     */
-    public function setCallType(?string $value ): void {
-        $this->callType = $value;
+    public function setCallType(?string $value): void {
+        $this->getBackingStore()->set('callType', $value);
     }
 
     /**
      * Sets the correlationId property value. Identifier for the call that you can use when calling Microsoft Support. GUID.
      *  @param string|null $value Value to set for the correlationId property.
     */
-    public function setCorrelationId(?string $value ): void {
-        $this->correlationId = $value;
+    public function setCorrelationId(?string $value): void {
+        $this->getBackingStore()->set('correlationId', $value);
     }
 
     /**
      * Sets the duration property value. Duration of the call in seconds.
      *  @param int|null $value Value to set for the duration property.
     */
-    public function setDuration(?int $value ): void {
-        $this->duration = $value;
+    public function setDuration(?int $value): void {
+        $this->getBackingStore()->set('duration', $value);
     }
 
     /**
      * Sets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the failureDateTime property value. Only exists for failed (not fully established) calls.
      *  @param DateTime|null $value Value to set for the failureDateTime property.
     */
-    public function setFailureDateTime(?DateTime $value ): void {
-        $this->failureDateTime = $value;
+    public function setFailureDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('failureDateTime', $value);
     }
 
     /**
      * Sets the finalSipCode property value. The code with which the call ended, RFC 3261.
      *  @param int|null $value Value to set for the finalSipCode property.
     */
-    public function setFinalSipCode(?int $value ): void {
-        $this->finalSipCode = $value;
+    public function setFinalSipCode(?int $value): void {
+        $this->getBackingStore()->set('finalSipCode', $value);
     }
 
     /**
      * Sets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
      *  @param string|null $value Value to set for the finalSipCodePhrase property.
     */
-    public function setFinalSipCodePhrase(?string $value ): void {
-        $this->finalSipCodePhrase = $value;
+    public function setFinalSipCodePhrase(?string $value): void {
+        $this->getBackingStore()->set('finalSipCodePhrase', $value);
     }
 
     /**
      * Sets the id property value. Unique call identifier. GUID.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the inviteDateTime property value. When the initial invite was sent.
      *  @param DateTime|null $value Value to set for the inviteDateTime property.
     */
-    public function setInviteDateTime(?DateTime $value ): void {
-        $this->inviteDateTime = $value;
+    public function setInviteDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('inviteDateTime', $value);
     }
 
     /**
      * Sets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
      *  @param bool|null $value Value to set for the mediaBypassEnabled property.
     */
-    public function setMediaBypassEnabled(?bool $value ): void {
-        $this->mediaBypassEnabled = $value;
+    public function setMediaBypassEnabled(?bool $value): void {
+        $this->getBackingStore()->set('mediaBypassEnabled', $value);
     }
 
     /**
      * Sets the mediaPathLocation property value. The datacenter used for media path in non-bypass call.
      *  @param string|null $value Value to set for the mediaPathLocation property.
     */
-    public function setMediaPathLocation(?string $value ): void {
-        $this->mediaPathLocation = $value;
+    public function setMediaPathLocation(?string $value): void {
+        $this->getBackingStore()->set('mediaPathLocation', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the signalingLocation property value. The datacenter used for signaling for both bypass and non-bypass calls.
      *  @param string|null $value Value to set for the signalingLocation property.
     */
-    public function setSignalingLocation(?string $value ): void {
-        $this->signalingLocation = $value;
+    public function setSignalingLocation(?string $value): void {
+        $this->getBackingStore()->set('signalingLocation', $value);
     }
 
     /**
      * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the successfulCall property value. Success or attempt.
      *  @param bool|null $value Value to set for the successfulCall property.
     */
-    public function setSuccessfulCall(?bool $value ): void {
-        $this->successfulCall = $value;
+    public function setSuccessfulCall(?bool $value): void {
+        $this->getBackingStore()->set('successfulCall', $value);
     }
 
     /**
      * Sets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      *  @param string|null $value Value to set for the trunkFullyQualifiedDomainName property.
     */
-    public function setTrunkFullyQualifiedDomainName(?string $value ): void {
-        $this->trunkFullyQualifiedDomainName = $value;
+    public function setTrunkFullyQualifiedDomainName(?string $value): void {
+        $this->getBackingStore()->set('trunkFullyQualifiedDomainName', $value);
     }
 
     /**
      * Sets the userDisplayName property value. Display name of the user.
      *  @param string|null $value Value to set for the userDisplayName property.
     */
-    public function setUserDisplayName(?string $value ): void {
-        $this->userDisplayName = $value;
+    public function setUserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('userDisplayName', $value);
     }
 
     /**
      * Sets the userId property value. Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

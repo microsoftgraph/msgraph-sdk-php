@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable 
 {
     /**
-     * @var Notebook|null $parentNotebook The notebook that contains the section group. Read-only.
-    */
-    private ?Notebook $parentNotebook = null;
-    
-    /**
-     * @var SectionGroup|null $parentSectionGroup The section group that contains the section group. Read-only.
-    */
-    private ?SectionGroup $parentSectionGroup = null;
-    
-    /**
-     * @var array<SectionGroup>|null $sectionGroups The section groups in the section. Read-only. Nullable.
-    */
-    private ?array $sectionGroups = null;
-    
-    /**
-     * @var string|null $sectionGroupsUrl The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
-    */
-    private ?string $sectionGroupsUrl = null;
-    
-    /**
-     * @var array<OnenoteSection>|null $sections The sections in the section group. Read-only. Nullable.
-    */
-    private ?array $sections = null;
-    
-    /**
-     * @var string|null $sectionsUrl The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-    */
-    private ?string $sectionsUrl = null;
-    
-    /**
      * Instantiates a new sectionGroup and sets the default values.
     */
     public function __construct() {
@@ -76,7 +46,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return Notebook|null
     */
     public function getParentNotebook(): ?Notebook {
-        return $this->parentNotebook;
+        return $this->getBackingStore()->get('parentNotebook');
     }
 
     /**
@@ -84,7 +54,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return SectionGroup|null
     */
     public function getParentSectionGroup(): ?SectionGroup {
-        return $this->parentSectionGroup;
+        return $this->getBackingStore()->get('parentSectionGroup');
     }
 
     /**
@@ -92,7 +62,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<SectionGroup>|null
     */
     public function getSectionGroups(): ?array {
-        return $this->sectionGroups;
+        return $this->getBackingStore()->get('sectionGroups');
     }
 
     /**
@@ -100,7 +70,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
-        return $this->sectionGroupsUrl;
+        return $this->getBackingStore()->get('sectionGroupsUrl');
     }
 
     /**
@@ -108,7 +78,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<OnenoteSection>|null
     */
     public function getSections(): ?array {
-        return $this->sections;
+        return $this->getBackingStore()->get('sections');
     }
 
     /**
@@ -116,7 +86,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
-        return $this->sectionsUrl;
+        return $this->getBackingStore()->get('sectionsUrl');
     }
 
     /**
@@ -125,60 +95,60 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('parentNotebook', $this->parentNotebook);
-        $writer->writeObjectValue('parentSectionGroup', $this->parentSectionGroup);
-        $writer->writeCollectionOfObjectValues('sectionGroups', $this->sectionGroups);
-        $writer->writeStringValue('sectionGroupsUrl', $this->sectionGroupsUrl);
-        $writer->writeCollectionOfObjectValues('sections', $this->sections);
-        $writer->writeStringValue('sectionsUrl', $this->sectionsUrl);
+        $writer->writeObjectValue('parentNotebook', $this->getParentNotebook());
+        $writer->writeObjectValue('parentSectionGroup', $this->getParentSectionGroup());
+        $writer->writeCollectionOfObjectValues('sectionGroups', $this->getSectionGroups());
+        $writer->writeStringValue('sectionGroupsUrl', $this->getSectionGroupsUrl());
+        $writer->writeCollectionOfObjectValues('sections', $this->getSections());
+        $writer->writeStringValue('sectionsUrl', $this->getSectionsUrl());
     }
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the section group. Read-only.
      *  @param Notebook|null $value Value to set for the parentNotebook property.
     */
-    public function setParentNotebook(?Notebook $value ): void {
-        $this->parentNotebook = $value;
+    public function setParentNotebook(?Notebook $value): void {
+        $this->getBackingStore()->set('parentNotebook', $value);
     }
 
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section group. Read-only.
      *  @param SectionGroup|null $value Value to set for the parentSectionGroup property.
     */
-    public function setParentSectionGroup(?SectionGroup $value ): void {
-        $this->parentSectionGroup = $value;
+    public function setParentSectionGroup(?SectionGroup $value): void {
+        $this->getBackingStore()->set('parentSectionGroup', $value);
     }
 
     /**
      * Sets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
      *  @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
     */
-    public function setSectionGroups(?array $value ): void {
-        $this->sectionGroups = $value;
+    public function setSectionGroups(?array $value): void {
+        $this->getBackingStore()->set('sectionGroups', $value);
     }
 
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      *  @param string|null $value Value to set for the sectionGroupsUrl property.
     */
-    public function setSectionGroupsUrl(?string $value ): void {
-        $this->sectionGroupsUrl = $value;
+    public function setSectionGroupsUrl(?string $value): void {
+        $this->getBackingStore()->set('sectionGroupsUrl', $value);
     }
 
     /**
      * Sets the sections property value. The sections in the section group. Read-only. Nullable.
      *  @param array<OnenoteSection>|null $value Value to set for the sections property.
     */
-    public function setSections(?array $value ): void {
-        $this->sections = $value;
+    public function setSections(?array $value): void {
+        $this->getBackingStore()->set('sections', $value);
     }
 
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
      *  @param string|null $value Value to set for the sectionsUrl property.
     */
-    public function setSectionsUrl(?string $value ): void {
-        $this->sectionsUrl = $value;
+    public function setSectionsUrl(?string $value): void {
+        $this->getBackingStore()->set('sectionsUrl', $value);
     }
 
 }

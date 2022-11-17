@@ -6,58 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BookingQuestionAnswer implements AdditionalDataHolder, Parsable 
+class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $answer The answer given by the user in case the answerInputType is text.
-    */
-    private ?string $answer = null;
-    
-    /**
-     * @var AnswerInputType|null $answerInputType The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-    */
-    private ?AnswerInputType $answerInputType = null;
-    
-    /**
-     * @var array<string>|null $answerOptions In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-    */
-    private ?array $answerOptions = null;
-    
-    /**
-     * @var bool|null $isRequired Indicates whether it is mandatory to answer the custom question.
-    */
-    private ?bool $isRequired = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $question The question.
-    */
-    private ?string $question = null;
-    
-    /**
-     * @var string|null $questionId The ID of the custom question.
-    */
-    private ?string $questionId = null;
-    
-    /**
-     * @var array<string>|null $selectedOptions The answers selected by the user.
-    */
-    private ?array $selectedOptions = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new bookingQuestionAnswer and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.bookingQuestionAnswer');
     }
@@ -75,8 +39,8 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -84,7 +48,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAnswer(): ?string {
-        return $this->answer;
+        return $this->getBackingStore()->get('answer');
     }
 
     /**
@@ -92,7 +56,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return AnswerInputType|null
     */
     public function getAnswerInputType(): ?AnswerInputType {
-        return $this->answerInputType;
+        return $this->getBackingStore()->get('answerInputType');
     }
 
     /**
@@ -100,7 +64,15 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAnswerOptions(): ?array {
-        return $this->answerOptions;
+        return $this->getBackingStore()->get('answerOptions');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -126,7 +98,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
-        return $this->isRequired;
+        return $this->getBackingStore()->get('isRequired');
     }
 
     /**
@@ -134,7 +106,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -142,7 +114,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getQuestion(): ?string {
-        return $this->question;
+        return $this->getBackingStore()->get('question');
     }
 
     /**
@@ -150,7 +122,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getQuestionId(): ?string {
-        return $this->questionId;
+        return $this->getBackingStore()->get('questionId');
     }
 
     /**
@@ -158,7 +130,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getSelectedOptions(): ?array {
-        return $this->selectedOptions;
+        return $this->getBackingStore()->get('selectedOptions');
     }
 
     /**
@@ -166,87 +138,87 @@ class BookingQuestionAnswer implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('answer', $this->answer);
-        $writer->writeEnumValue('answerInputType', $this->answerInputType);
-        $writer->writeCollectionOfPrimitiveValues('answerOptions', $this->answerOptions);
-        $writer->writeBooleanValue('isRequired', $this->isRequired);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('question', $this->question);
-        $writer->writeStringValue('questionId', $this->questionId);
-        $writer->writeCollectionOfPrimitiveValues('selectedOptions', $this->selectedOptions);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('answer', $this->getAnswer());
+        $writer->writeEnumValue('answerInputType', $this->getAnswerInputType());
+        $writer->writeCollectionOfPrimitiveValues('answerOptions', $this->getAnswerOptions());
+        $writer->writeBooleanValue('isRequired', $this->getIsRequired());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('question', $this->getQuestion());
+        $writer->writeStringValue('questionId', $this->getQuestionId());
+        $writer->writeCollectionOfPrimitiveValues('selectedOptions', $this->getSelectedOptions());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the answer property value. The answer given by the user in case the answerInputType is text.
      *  @param string|null $value Value to set for the answer property.
     */
-    public function setAnswer(?string $value ): void {
-        $this->answer = $value;
+    public function setAnswer(?string $value): void {
+        $this->getBackingStore()->set('answer', $value);
     }
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      *  @param AnswerInputType|null $value Value to set for the answerInputType property.
     */
-    public function setAnswerInputType(?AnswerInputType $value ): void {
-        $this->answerInputType = $value;
+    public function setAnswerInputType(?AnswerInputType $value): void {
+        $this->getBackingStore()->set('answerInputType', $value);
     }
 
     /**
      * Sets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
      *  @param array<string>|null $value Value to set for the answerOptions property.
     */
-    public function setAnswerOptions(?array $value ): void {
-        $this->answerOptions = $value;
+    public function setAnswerOptions(?array $value): void {
+        $this->getBackingStore()->set('answerOptions', $value);
     }
 
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
      *  @param bool|null $value Value to set for the isRequired property.
     */
-    public function setIsRequired(?bool $value ): void {
-        $this->isRequired = $value;
+    public function setIsRequired(?bool $value): void {
+        $this->getBackingStore()->set('isRequired', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the question property value. The question.
      *  @param string|null $value Value to set for the question property.
     */
-    public function setQuestion(?string $value ): void {
-        $this->question = $value;
+    public function setQuestion(?string $value): void {
+        $this->getBackingStore()->set('question', $value);
     }
 
     /**
      * Sets the questionId property value. The ID of the custom question.
      *  @param string|null $value Value to set for the questionId property.
     */
-    public function setQuestionId(?string $value ): void {
-        $this->questionId = $value;
+    public function setQuestionId(?string $value): void {
+        $this->getBackingStore()->set('questionId', $value);
     }
 
     /**
      * Sets the selectedOptions property value. The answers selected by the user.
      *  @param array<string>|null $value Value to set for the selectedOptions property.
     */
-    public function setSelectedOptions(?array $value ): void {
-        $this->selectedOptions = $value;
+    public function setSelectedOptions(?array $value): void {
+        $this->getBackingStore()->set('selectedOptions', $value);
     }
 
 }

@@ -10,61 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuditEvent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $activity Friendly name of the activity.
-    */
-    private ?string $activity = null;
-    
-    /**
-     * @var DateTime|null $activityDateTime The date time in UTC when the activity was performed.
-    */
-    private ?DateTime $activityDateTime = null;
-    
-    /**
-     * @var string|null $activityOperationType The HTTP operation type of the activity.
-    */
-    private ?string $activityOperationType = null;
-    
-    /**
-     * @var string|null $activityResult The result of the activity.
-    */
-    private ?string $activityResult = null;
-    
-    /**
-     * @var string|null $activityType The type of activity that was being performed.
-    */
-    private ?string $activityType = null;
-    
-    /**
-     * @var AuditActor|null $actor AAD user and application that are associated with the audit event.
-    */
-    private ?AuditActor $actor = null;
-    
-    /**
-     * @var string|null $category Audit category.
-    */
-    private ?string $category = null;
-    
-    /**
-     * @var string|null $componentName Component name.
-    */
-    private ?string $componentName = null;
-    
-    /**
-     * @var string|null $correlationId The client request Id that is used to correlate activity within the system.
-    */
-    private ?string $correlationId = null;
-    
-    /**
-     * @var string|null $displayName Event display name.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<AuditResource>|null $resources Resources being modified.
-    */
-    private ?array $resources = null;
-    
-    /**
      * Instantiates a new AuditEvent and sets the default values.
     */
     public function __construct() {
@@ -86,7 +31,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getActivity(): ?string {
-        return $this->activity;
+        return $this->getBackingStore()->get('activity');
     }
 
     /**
@@ -94,7 +39,7 @@ class AuditEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
-        return $this->activityDateTime;
+        return $this->getBackingStore()->get('activityDateTime');
     }
 
     /**
@@ -102,7 +47,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getActivityOperationType(): ?string {
-        return $this->activityOperationType;
+        return $this->getBackingStore()->get('activityOperationType');
     }
 
     /**
@@ -110,7 +55,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getActivityResult(): ?string {
-        return $this->activityResult;
+        return $this->getBackingStore()->get('activityResult');
     }
 
     /**
@@ -118,7 +63,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getActivityType(): ?string {
-        return $this->activityType;
+        return $this->getBackingStore()->get('activityType');
     }
 
     /**
@@ -126,7 +71,7 @@ class AuditEvent extends Entity implements Parsable
      * @return AuditActor|null
     */
     public function getActor(): ?AuditActor {
-        return $this->actor;
+        return $this->getBackingStore()->get('actor');
     }
 
     /**
@@ -134,7 +79,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getCategory(): ?string {
-        return $this->category;
+        return $this->getBackingStore()->get('category');
     }
 
     /**
@@ -142,7 +87,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getComponentName(): ?string {
-        return $this->componentName;
+        return $this->getBackingStore()->get('componentName');
     }
 
     /**
@@ -150,7 +95,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getCorrelationId(): ?string {
-        return $this->correlationId;
+        return $this->getBackingStore()->get('correlationId');
     }
 
     /**
@@ -158,7 +103,7 @@ class AuditEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -187,7 +132,7 @@ class AuditEvent extends Entity implements Parsable
      * @return array<AuditResource>|null
     */
     public function getResources(): ?array {
-        return $this->resources;
+        return $this->getBackingStore()->get('resources');
     }
 
     /**
@@ -196,105 +141,105 @@ class AuditEvent extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('activity', $this->activity);
-        $writer->writeDateTimeValue('activityDateTime', $this->activityDateTime);
-        $writer->writeStringValue('activityOperationType', $this->activityOperationType);
-        $writer->writeStringValue('activityResult', $this->activityResult);
-        $writer->writeStringValue('activityType', $this->activityType);
-        $writer->writeObjectValue('actor', $this->actor);
-        $writer->writeStringValue('category', $this->category);
-        $writer->writeStringValue('componentName', $this->componentName);
-        $writer->writeStringValue('correlationId', $this->correlationId);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('resources', $this->resources);
+        $writer->writeStringValue('activity', $this->getActivity());
+        $writer->writeDateTimeValue('activityDateTime', $this->getActivityDateTime());
+        $writer->writeStringValue('activityOperationType', $this->getActivityOperationType());
+        $writer->writeStringValue('activityResult', $this->getActivityResult());
+        $writer->writeStringValue('activityType', $this->getActivityType());
+        $writer->writeObjectValue('actor', $this->getActor());
+        $writer->writeStringValue('category', $this->getCategory());
+        $writer->writeStringValue('componentName', $this->getComponentName());
+        $writer->writeStringValue('correlationId', $this->getCorrelationId());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('resources', $this->getResources());
     }
 
     /**
      * Sets the activity property value. Friendly name of the activity.
      *  @param string|null $value Value to set for the activity property.
     */
-    public function setActivity(?string $value ): void {
-        $this->activity = $value;
+    public function setActivity(?string $value): void {
+        $this->getBackingStore()->set('activity', $value);
     }
 
     /**
      * Sets the activityDateTime property value. The date time in UTC when the activity was performed.
      *  @param DateTime|null $value Value to set for the activityDateTime property.
     */
-    public function setActivityDateTime(?DateTime $value ): void {
-        $this->activityDateTime = $value;
+    public function setActivityDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('activityDateTime', $value);
     }
 
     /**
      * Sets the activityOperationType property value. The HTTP operation type of the activity.
      *  @param string|null $value Value to set for the activityOperationType property.
     */
-    public function setActivityOperationType(?string $value ): void {
-        $this->activityOperationType = $value;
+    public function setActivityOperationType(?string $value): void {
+        $this->getBackingStore()->set('activityOperationType', $value);
     }
 
     /**
      * Sets the activityResult property value. The result of the activity.
      *  @param string|null $value Value to set for the activityResult property.
     */
-    public function setActivityResult(?string $value ): void {
-        $this->activityResult = $value;
+    public function setActivityResult(?string $value): void {
+        $this->getBackingStore()->set('activityResult', $value);
     }
 
     /**
      * Sets the activityType property value. The type of activity that was being performed.
      *  @param string|null $value Value to set for the activityType property.
     */
-    public function setActivityType(?string $value ): void {
-        $this->activityType = $value;
+    public function setActivityType(?string $value): void {
+        $this->getBackingStore()->set('activityType', $value);
     }
 
     /**
      * Sets the actor property value. AAD user and application that are associated with the audit event.
      *  @param AuditActor|null $value Value to set for the actor property.
     */
-    public function setActor(?AuditActor $value ): void {
-        $this->actor = $value;
+    public function setActor(?AuditActor $value): void {
+        $this->getBackingStore()->set('actor', $value);
     }
 
     /**
      * Sets the category property value. Audit category.
      *  @param string|null $value Value to set for the category property.
     */
-    public function setCategory(?string $value ): void {
-        $this->category = $value;
+    public function setCategory(?string $value): void {
+        $this->getBackingStore()->set('category', $value);
     }
 
     /**
      * Sets the componentName property value. Component name.
      *  @param string|null $value Value to set for the componentName property.
     */
-    public function setComponentName(?string $value ): void {
-        $this->componentName = $value;
+    public function setComponentName(?string $value): void {
+        $this->getBackingStore()->set('componentName', $value);
     }
 
     /**
      * Sets the correlationId property value. The client request Id that is used to correlate activity within the system.
      *  @param string|null $value Value to set for the correlationId property.
     */
-    public function setCorrelationId(?string $value ): void {
-        $this->correlationId = $value;
+    public function setCorrelationId(?string $value): void {
+        $this->getBackingStore()->set('correlationId', $value);
     }
 
     /**
      * Sets the displayName property value. Event display name.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the resources property value. Resources being modified.
      *  @param array<AuditResource>|null $value Value to set for the resources property.
     */
-    public function setResources(?array $value ): void {
-        $this->resources = $value;
+    public function setResources(?array $value): void {
+        $this->getBackingStore()->set('resources', $value);
     }
 
 }

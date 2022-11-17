@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class FolderView implements AdditionalDataHolder, Parsable 
+class FolderView implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $sortBy The method by which the folder should be sorted.
-    */
-    private ?string $sortBy = null;
-    
-    /**
-     * @var string|null $sortOrder If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
-    */
-    private ?string $sortOrder = null;
-    
-    /**
-     * @var string|null $viewType The type of view that should be used to represent the folder.
-    */
-    private ?string $viewType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new folderView and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.folderView');
     }
@@ -55,8 +39,16 @@ class FolderView implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -86,7 +78,7 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSortBy(): ?string {
-        return $this->sortBy;
+        return $this->getBackingStore()->get('sortBy');
     }
 
     /**
@@ -94,7 +86,7 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSortOrder(): ?string {
-        return $this->sortOrder;
+        return $this->getBackingStore()->get('sortOrder');
     }
 
     /**
@@ -102,7 +94,7 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getViewType(): ?string {
-        return $this->viewType;
+        return $this->getBackingStore()->get('viewType');
     }
 
     /**
@@ -110,51 +102,51 @@ class FolderView implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('sortBy', $this->sortBy);
-        $writer->writeStringValue('sortOrder', $this->sortOrder);
-        $writer->writeStringValue('viewType', $this->viewType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('sortBy', $this->getSortBy());
+        $writer->writeStringValue('sortOrder', $this->getSortOrder());
+        $writer->writeStringValue('viewType', $this->getViewType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sortBy property value. The method by which the folder should be sorted.
      *  @param string|null $value Value to set for the sortBy property.
     */
-    public function setSortBy(?string $value ): void {
-        $this->sortBy = $value;
+    public function setSortBy(?string $value): void {
+        $this->getBackingStore()->set('sortBy', $value);
     }
 
     /**
      * Sets the sortOrder property value. If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
      *  @param string|null $value Value to set for the sortOrder property.
     */
-    public function setSortOrder(?string $value ): void {
-        $this->sortOrder = $value;
+    public function setSortOrder(?string $value): void {
+        $this->getBackingStore()->set('sortOrder', $value);
     }
 
     /**
      * Sets the viewType property value. The type of view that should be used to represent the folder.
      *  @param string|null $value Value to set for the viewType property.
     */
-    public function setViewType(?string $value ): void {
-        $this->viewType = $value;
+    public function setViewType(?string $value): void {
+        $this->getBackingStore()->set('viewType', $value);
     }
 
 }

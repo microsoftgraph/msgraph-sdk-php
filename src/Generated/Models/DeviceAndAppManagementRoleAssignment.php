@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable 
 {
     /**
-     * @var array<string>|null $members The list of ids of role member security groups. These are IDs from Azure Active Directory.
-    */
-    private ?array $members = null;
-    
-    /**
      * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
      * @return array<string>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -55,15 +50,15 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('members', $this->members);
+        $writer->writeCollectionOfPrimitiveValues('members', $this->getMembers());
     }
 
     /**
      * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
      *  @param array<string>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
 }

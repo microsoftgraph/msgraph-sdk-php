@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SearchAlteration implements AdditionalDataHolder, Parsable 
+class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $alteredHighlightedQueryString Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
-    */
-    private ?string $alteredHighlightedQueryString = null;
-    
-    /**
-     * @var string|null $alteredQueryString Defines the altered query string with spelling correction.
-    */
-    private ?string $alteredQueryString = null;
-    
-    /**
-     * @var array<AlteredQueryToken>|null $alteredQueryTokens Represents changed segments related to an original user query.
-    */
-    private ?array $alteredQueryTokens = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new searchAlteration and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.searchAlteration');
     }
@@ -55,8 +39,8 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +48,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAlteredHighlightedQueryString(): ?string {
-        return $this->alteredHighlightedQueryString;
+        return $this->getBackingStore()->get('alteredHighlightedQueryString');
     }
 
     /**
@@ -72,7 +56,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAlteredQueryString(): ?string {
-        return $this->alteredQueryString;
+        return $this->getBackingStore()->get('alteredQueryString');
     }
 
     /**
@@ -80,7 +64,15 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * @return array<AlteredQueryToken>|null
     */
     public function getAlteredQueryTokens(): ?array {
-        return $this->alteredQueryTokens;
+        return $this->getBackingStore()->get('alteredQueryTokens');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -102,7 +94,7 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +102,51 @@ class SearchAlteration implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('alteredHighlightedQueryString', $this->alteredHighlightedQueryString);
-        $writer->writeStringValue('alteredQueryString', $this->alteredQueryString);
-        $writer->writeCollectionOfObjectValues('alteredQueryTokens', $this->alteredQueryTokens);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('alteredHighlightedQueryString', $this->getAlteredHighlightedQueryString());
+        $writer->writeStringValue('alteredQueryString', $this->getAlteredQueryString());
+        $writer->writeCollectionOfObjectValues('alteredQueryTokens', $this->getAlteredQueryTokens());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
      *  @param string|null $value Value to set for the alteredHighlightedQueryString property.
     */
-    public function setAlteredHighlightedQueryString(?string $value ): void {
-        $this->alteredHighlightedQueryString = $value;
+    public function setAlteredHighlightedQueryString(?string $value): void {
+        $this->getBackingStore()->set('alteredHighlightedQueryString', $value);
     }
 
     /**
      * Sets the alteredQueryString property value. Defines the altered query string with spelling correction.
      *  @param string|null $value Value to set for the alteredQueryString property.
     */
-    public function setAlteredQueryString(?string $value ): void {
-        $this->alteredQueryString = $value;
+    public function setAlteredQueryString(?string $value): void {
+        $this->getBackingStore()->set('alteredQueryString', $value);
     }
 
     /**
      * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
      *  @param array<AlteredQueryToken>|null $value Value to set for the alteredQueryTokens property.
     */
-    public function setAlteredQueryTokens(?array $value ): void {
-        $this->alteredQueryTokens = $value;
+    public function setAlteredQueryTokens(?array $value): void {
+        $this->getBackingStore()->set('alteredQueryTokens', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -10,41 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable 
 {
     /**
-     * @var string|null $assignedUserPrincipalName UPN of the user the device will be assigned
-    */
-    private ?string $assignedUserPrincipalName = null;
-    
-    /**
-     * @var string|null $groupTag Group Tag of the Windows autopilot device.
-    */
-    private ?string $groupTag = null;
-    
-    /**
-     * @var StreamInterface|null $hardwareIdentifier Hardware Blob of the Windows autopilot device.
-    */
-    private ?StreamInterface $hardwareIdentifier = null;
-    
-    /**
-     * @var string|null $importId The Import Id of the Windows autopilot device.
-    */
-    private ?string $importId = null;
-    
-    /**
-     * @var string|null $productKey Product Key of the Windows autopilot device.
-    */
-    private ?string $productKey = null;
-    
-    /**
-     * @var string|null $serialNumber Serial number of the Windows autopilot device.
-    */
-    private ?string $serialNumber = null;
-    
-    /**
-     * @var ImportedWindowsAutopilotDeviceIdentityState|null $state Current state of the imported device.
-    */
-    private ?ImportedWindowsAutopilotDeviceIdentityState $state = null;
-    
-    /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentity and sets the default values.
     */
     public function __construct() {
@@ -66,7 +31,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return string|null
     */
     public function getAssignedUserPrincipalName(): ?string {
-        return $this->assignedUserPrincipalName;
+        return $this->getBackingStore()->get('assignedUserPrincipalName');
     }
 
     /**
@@ -91,15 +56,15 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return string|null
     */
     public function getGroupTag(): ?string {
-        return $this->groupTag;
+        return $this->getBackingStore()->get('groupTag');
     }
 
     /**
      * Gets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getHardwareIdentifier(): StreamInterface {
-        return $this->hardwareIdentifier;
+    public function getHardwareIdentifier(): ?StreamInterface {
+        return $this->getBackingStore()->get('hardwareIdentifier');
     }
 
     /**
@@ -107,7 +72,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return string|null
     */
     public function getImportId(): ?string {
-        return $this->importId;
+        return $this->getBackingStore()->get('importId');
     }
 
     /**
@@ -115,7 +80,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return string|null
     */
     public function getProductKey(): ?string {
-        return $this->productKey;
+        return $this->getBackingStore()->get('productKey');
     }
 
     /**
@@ -123,7 +88,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return string|null
     */
     public function getSerialNumber(): ?string {
-        return $this->serialNumber;
+        return $this->getBackingStore()->get('serialNumber');
     }
 
     /**
@@ -131,7 +96,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
      * @return ImportedWindowsAutopilotDeviceIdentityState|null
     */
     public function getState(): ?ImportedWindowsAutopilotDeviceIdentityState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -140,69 +105,69 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('assignedUserPrincipalName', $this->assignedUserPrincipalName);
-        $writer->writeStringValue('groupTag', $this->groupTag);
-        $writer->writeBinaryContent('hardwareIdentifier', $this->hardwareIdentifier);
-        $writer->writeStringValue('importId', $this->importId);
-        $writer->writeStringValue('productKey', $this->productKey);
-        $writer->writeStringValue('serialNumber', $this->serialNumber);
-        $writer->writeObjectValue('state', $this->state);
+        $writer->writeStringValue('assignedUserPrincipalName', $this->getAssignedUserPrincipalName());
+        $writer->writeStringValue('groupTag', $this->getGroupTag());
+        $writer->writeBinaryContent('hardwareIdentifier', $this->getHardwareIdentifier());
+        $writer->writeStringValue('importId', $this->getImportId());
+        $writer->writeStringValue('productKey', $this->getProductKey());
+        $writer->writeStringValue('serialNumber', $this->getSerialNumber());
+        $writer->writeObjectValue('state', $this->getState());
     }
 
     /**
      * Sets the assignedUserPrincipalName property value. UPN of the user the device will be assigned
      *  @param string|null $value Value to set for the assignedUserPrincipalName property.
     */
-    public function setAssignedUserPrincipalName(?string $value ): void {
-        $this->assignedUserPrincipalName = $value;
+    public function setAssignedUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('assignedUserPrincipalName', $value);
     }
 
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
      *  @param string|null $value Value to set for the groupTag property.
     */
-    public function setGroupTag(?string $value ): void {
-        $this->groupTag = $value;
+    public function setGroupTag(?string $value): void {
+        $this->getBackingStore()->set('groupTag', $value);
     }
 
     /**
      * Sets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
      *  @param StreamInterface|null $value Value to set for the hardwareIdentifier property.
     */
-    public function setHardwareIdentifier(?StreamInterface $value ): void {
-        $this->hardwareIdentifier = $value;
+    public function setHardwareIdentifier(?StreamInterface $value): void {
+        $this->getBackingStore()->set('hardwareIdentifier', $value);
     }
 
     /**
      * Sets the importId property value. The Import Id of the Windows autopilot device.
      *  @param string|null $value Value to set for the importId property.
     */
-    public function setImportId(?string $value ): void {
-        $this->importId = $value;
+    public function setImportId(?string $value): void {
+        $this->getBackingStore()->set('importId', $value);
     }
 
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
      *  @param string|null $value Value to set for the productKey property.
     */
-    public function setProductKey(?string $value ): void {
-        $this->productKey = $value;
+    public function setProductKey(?string $value): void {
+        $this->getBackingStore()->set('productKey', $value);
     }
 
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
      *  @param string|null $value Value to set for the serialNumber property.
     */
-    public function setSerialNumber(?string $value ): void {
-        $this->serialNumber = $value;
+    public function setSerialNumber(?string $value): void {
+        $this->getBackingStore()->set('serialNumber', $value);
     }
 
     /**
      * Sets the state property value. Current state of the imported device.
      *  @param ImportedWindowsAutopilotDeviceIdentityState|null $value Value to set for the state property.
     */
-    public function setState(?ImportedWindowsAutopilotDeviceIdentityState $value ): void {
-        $this->state = $value;
+    public function setState(?ImportedWindowsAutopilotDeviceIdentityState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

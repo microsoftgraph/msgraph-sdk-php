@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class IdentityGovernance implements AdditionalDataHolder, Parsable 
+class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var AccessReviewSet|null $accessReviews The accessReviews property
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?AccessReviewSet $accessReviews = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var AppConsentApprovalRoute|null $appConsent The appConsent property
-    */
-    private ?AppConsentApprovalRoute $appConsent = null;
-    
-    /**
-     * @var EntitlementManagement|null $entitlementManagement The entitlementManagement property
-    */
-    private ?EntitlementManagement $entitlementManagement = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var TermsOfUseContainer|null $termsOfUse The termsOfUse property
-    */
-    private ?TermsOfUseContainer $termsOfUse = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new IdentityGovernance and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.identityGovernance');
     }
@@ -61,15 +40,15 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return AccessReviewSet|null
     */
     public function getAccessReviews(): ?AccessReviewSet {
-        return $this->accessReviews;
+        return $this->getBackingStore()->get('accessReviews');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -77,7 +56,15 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return AppConsentApprovalRoute|null
     */
     public function getAppConsent(): ?AppConsentApprovalRoute {
-        return $this->appConsent;
+        return $this->getBackingStore()->get('appConsent');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -85,7 +72,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return EntitlementManagement|null
     */
     public function getEntitlementManagement(): ?EntitlementManagement {
-        return $this->entitlementManagement;
+        return $this->getBackingStore()->get('entitlementManagement');
     }
 
     /**
@@ -108,7 +95,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -116,7 +103,7 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @return TermsOfUseContainer|null
     */
     public function getTermsOfUse(): ?TermsOfUseContainer {
-        return $this->termsOfUse;
+        return $this->getBackingStore()->get('termsOfUse');
     }
 
     /**
@@ -124,60 +111,60 @@ class IdentityGovernance implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('accessReviews', $this->accessReviews);
-        $writer->writeObjectValue('appConsent', $this->appConsent);
-        $writer->writeObjectValue('entitlementManagement', $this->entitlementManagement);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('termsOfUse', $this->termsOfUse);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('accessReviews', $this->getAccessReviews());
+        $writer->writeObjectValue('appConsent', $this->getAppConsent());
+        $writer->writeObjectValue('entitlementManagement', $this->getEntitlementManagement());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('termsOfUse', $this->getTermsOfUse());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the accessReviews property value. The accessReviews property
      *  @param AccessReviewSet|null $value Value to set for the accessReviews property.
     */
-    public function setAccessReviews(?AccessReviewSet $value ): void {
-        $this->accessReviews = $value;
+    public function setAccessReviews(?AccessReviewSet $value): void {
+        $this->getBackingStore()->set('accessReviews', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the appConsent property value. The appConsent property
      *  @param AppConsentApprovalRoute|null $value Value to set for the appConsent property.
     */
-    public function setAppConsent(?AppConsentApprovalRoute $value ): void {
-        $this->appConsent = $value;
+    public function setAppConsent(?AppConsentApprovalRoute $value): void {
+        $this->getBackingStore()->set('appConsent', $value);
     }
 
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property
      *  @param EntitlementManagement|null $value Value to set for the entitlementManagement property.
     */
-    public function setEntitlementManagement(?EntitlementManagement $value ): void {
-        $this->entitlementManagement = $value;
+    public function setEntitlementManagement(?EntitlementManagement $value): void {
+        $this->getBackingStore()->set('entitlementManagement', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the termsOfUse property value. The termsOfUse property
      *  @param TermsOfUseContainer|null $value Value to set for the termsOfUse property.
     */
-    public function setTermsOfUse(?TermsOfUseContainer $value ): void {
-        $this->termsOfUse = $value;
+    public function setTermsOfUse(?TermsOfUseContainer $value): void {
+        $this->getBackingStore()->set('termsOfUse', $value);
     }
 
 }

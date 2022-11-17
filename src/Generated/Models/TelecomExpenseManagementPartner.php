@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TelecomExpenseManagementPartner extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $appAuthorized Whether the partner's AAD app has been authorized to access Intune.
-    */
-    private ?bool $appAuthorized = null;
-    
-    /**
-     * @var string|null $displayName Display name of the TEM partner.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $enabled Whether Intune's connection to the TEM service is currently enabled or disabled.
-    */
-    private ?bool $enabled = null;
-    
-    /**
-     * @var DateTime|null $lastConnectionDateTime Timestamp of the last request sent to Intune by the TEM partner.
-    */
-    private ?DateTime $lastConnectionDateTime = null;
-    
-    /**
-     * @var string|null $url URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-    */
-    private ?string $url = null;
-    
-    /**
      * Instantiates a new telecomExpenseManagementPartner and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getAppAuthorized(): ?bool {
-        return $this->appAuthorized;
+        return $this->getBackingStore()->get('appAuthorized');
     }
 
     /**
@@ -64,7 +39,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -72,7 +47,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->enabled;
+        return $this->getBackingStore()->get('enabled');
     }
 
     /**
@@ -95,7 +70,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastConnectionDateTime(): ?DateTime {
-        return $this->lastConnectionDateTime;
+        return $this->getBackingStore()->get('lastConnectionDateTime');
     }
 
     /**
@@ -103,7 +78,7 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->url;
+        return $this->getBackingStore()->get('url');
     }
 
     /**
@@ -112,51 +87,51 @@ class TelecomExpenseManagementPartner extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('appAuthorized', $this->appAuthorized);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('enabled', $this->enabled);
-        $writer->writeDateTimeValue('lastConnectionDateTime', $this->lastConnectionDateTime);
-        $writer->writeStringValue('url', $this->url);
+        $writer->writeBooleanValue('appAuthorized', $this->getAppAuthorized());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('enabled', $this->getEnabled());
+        $writer->writeDateTimeValue('lastConnectionDateTime', $this->getLastConnectionDateTime());
+        $writer->writeStringValue('url', $this->getUrl());
     }
 
     /**
      * Sets the appAuthorized property value. Whether the partner's AAD app has been authorized to access Intune.
      *  @param bool|null $value Value to set for the appAuthorized property.
     */
-    public function setAppAuthorized(?bool $value ): void {
-        $this->appAuthorized = $value;
+    public function setAppAuthorized(?bool $value): void {
+        $this->getBackingStore()->set('appAuthorized', $value);
     }
 
     /**
      * Sets the displayName property value. Display name of the TEM partner.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the enabled property value. Whether Intune's connection to the TEM service is currently enabled or disabled.
      *  @param bool|null $value Value to set for the enabled property.
     */
-    public function setEnabled(?bool $value ): void {
-        $this->enabled = $value;
+    public function setEnabled(?bool $value): void {
+        $this->getBackingStore()->set('enabled', $value);
     }
 
     /**
      * Sets the lastConnectionDateTime property value. Timestamp of the last request sent to Intune by the TEM partner.
      *  @param DateTime|null $value Value to set for the lastConnectionDateTime property.
     */
-    public function setLastConnectionDateTime(?DateTime $value ): void {
-        $this->lastConnectionDateTime = $value;
+    public function setLastConnectionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastConnectionDateTime', $value);
     }
 
     /**
      * Sets the url property value. URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
      *  @param string|null $value Value to set for the url property.
     */
-    public function setUrl(?string $value ): void {
-        $this->url = $value;
+    public function setUrl(?string $value): void {
+        $this->getBackingStore()->set('url', $value);
     }
 
 }

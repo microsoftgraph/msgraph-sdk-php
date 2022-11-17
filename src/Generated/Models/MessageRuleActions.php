@@ -6,78 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MessageRuleActions implements AdditionalDataHolder, Parsable 
+class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $assignCategories A list of categories to be assigned to a message.
-    */
-    private ?array $assignCategories = null;
-    
-    /**
-     * @var string|null $copyToFolder The ID of a folder that a message is to be copied to.
-    */
-    private ?string $copyToFolder = null;
-    
-    /**
-     * @var bool|null $delete Indicates whether a message should be moved to the Deleted Items folder.
-    */
-    private ?bool $delete = null;
-    
-    /**
-     * @var array<Recipient>|null $forwardAsAttachmentTo The email addresses of the recipients to which a message should be forwarded as an attachment.
-    */
-    private ?array $forwardAsAttachmentTo = null;
-    
-    /**
-     * @var array<Recipient>|null $forwardTo The email addresses of the recipients to which a message should be forwarded.
-    */
-    private ?array $forwardTo = null;
-    
-    /**
-     * @var bool|null $markAsRead Indicates whether a message should be marked as read.
-    */
-    private ?bool $markAsRead = null;
-    
-    /**
-     * @var Importance|null $markImportance Sets the importance of the message, which can be: low, normal, high.
-    */
-    private ?Importance $markImportance = null;
-    
-    /**
-     * @var string|null $moveToFolder The ID of the folder that a message will be moved to.
-    */
-    private ?string $moveToFolder = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $permanentDelete Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
-    */
-    private ?bool $permanentDelete = null;
-    
-    /**
-     * @var array<Recipient>|null $redirectTo The email addresses to which a message should be redirected.
-    */
-    private ?array $redirectTo = null;
-    
-    /**
-     * @var bool|null $stopProcessingRules Indicates whether subsequent rules should be evaluated.
-    */
-    private ?bool $stopProcessingRules = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new messageRuleActions and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.messageRuleActions');
     }
@@ -95,8 +39,8 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -104,7 +48,15 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAssignCategories(): ?array {
-        return $this->assignCategories;
+        return $this->getBackingStore()->get('assignCategories');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -112,7 +64,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCopyToFolder(): ?string {
-        return $this->copyToFolder;
+        return $this->getBackingStore()->get('copyToFolder');
     }
 
     /**
@@ -120,7 +72,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getDelete(): ?bool {
-        return $this->delete;
+        return $this->getBackingStore()->get('delete');
     }
 
     /**
@@ -150,7 +102,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return array<Recipient>|null
     */
     public function getForwardAsAttachmentTo(): ?array {
-        return $this->forwardAsAttachmentTo;
+        return $this->getBackingStore()->get('forwardAsAttachmentTo');
     }
 
     /**
@@ -158,7 +110,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return array<Recipient>|null
     */
     public function getForwardTo(): ?array {
-        return $this->forwardTo;
+        return $this->getBackingStore()->get('forwardTo');
     }
 
     /**
@@ -166,7 +118,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getMarkAsRead(): ?bool {
-        return $this->markAsRead;
+        return $this->getBackingStore()->get('markAsRead');
     }
 
     /**
@@ -174,7 +126,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return Importance|null
     */
     public function getMarkImportance(): ?Importance {
-        return $this->markImportance;
+        return $this->getBackingStore()->get('markImportance');
     }
 
     /**
@@ -182,7 +134,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMoveToFolder(): ?string {
-        return $this->moveToFolder;
+        return $this->getBackingStore()->get('moveToFolder');
     }
 
     /**
@@ -190,7 +142,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -198,7 +150,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getPermanentDelete(): ?bool {
-        return $this->permanentDelete;
+        return $this->getBackingStore()->get('permanentDelete');
     }
 
     /**
@@ -206,7 +158,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return array<Recipient>|null
     */
     public function getRedirectTo(): ?array {
-        return $this->redirectTo;
+        return $this->getBackingStore()->get('redirectTo');
     }
 
     /**
@@ -214,7 +166,7 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getStopProcessingRules(): ?bool {
-        return $this->stopProcessingRules;
+        return $this->getBackingStore()->get('stopProcessingRules');
     }
 
     /**
@@ -222,123 +174,123 @@ class MessageRuleActions implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('assignCategories', $this->assignCategories);
-        $writer->writeStringValue('copyToFolder', $this->copyToFolder);
-        $writer->writeBooleanValue('delete', $this->delete);
-        $writer->writeCollectionOfObjectValues('forwardAsAttachmentTo', $this->forwardAsAttachmentTo);
-        $writer->writeCollectionOfObjectValues('forwardTo', $this->forwardTo);
-        $writer->writeBooleanValue('markAsRead', $this->markAsRead);
-        $writer->writeEnumValue('markImportance', $this->markImportance);
-        $writer->writeStringValue('moveToFolder', $this->moveToFolder);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('permanentDelete', $this->permanentDelete);
-        $writer->writeCollectionOfObjectValues('redirectTo', $this->redirectTo);
-        $writer->writeBooleanValue('stopProcessingRules', $this->stopProcessingRules);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('assignCategories', $this->getAssignCategories());
+        $writer->writeStringValue('copyToFolder', $this->getCopyToFolder());
+        $writer->writeBooleanValue('delete', $this->getDelete());
+        $writer->writeCollectionOfObjectValues('forwardAsAttachmentTo', $this->getForwardAsAttachmentTo());
+        $writer->writeCollectionOfObjectValues('forwardTo', $this->getForwardTo());
+        $writer->writeBooleanValue('markAsRead', $this->getMarkAsRead());
+        $writer->writeEnumValue('markImportance', $this->getMarkImportance());
+        $writer->writeStringValue('moveToFolder', $this->getMoveToFolder());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('permanentDelete', $this->getPermanentDelete());
+        $writer->writeCollectionOfObjectValues('redirectTo', $this->getRedirectTo());
+        $writer->writeBooleanValue('stopProcessingRules', $this->getStopProcessingRules());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the assignCategories property value. A list of categories to be assigned to a message.
      *  @param array<string>|null $value Value to set for the assignCategories property.
     */
-    public function setAssignCategories(?array $value ): void {
-        $this->assignCategories = $value;
+    public function setAssignCategories(?array $value): void {
+        $this->getBackingStore()->set('assignCategories', $value);
     }
 
     /**
      * Sets the copyToFolder property value. The ID of a folder that a message is to be copied to.
      *  @param string|null $value Value to set for the copyToFolder property.
     */
-    public function setCopyToFolder(?string $value ): void {
-        $this->copyToFolder = $value;
+    public function setCopyToFolder(?string $value): void {
+        $this->getBackingStore()->set('copyToFolder', $value);
     }
 
     /**
      * Sets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
      *  @param bool|null $value Value to set for the delete property.
     */
-    public function setDelete(?bool $value ): void {
-        $this->delete = $value;
+    public function setDelete(?bool $value): void {
+        $this->getBackingStore()->set('delete', $value);
     }
 
     /**
      * Sets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
      *  @param array<Recipient>|null $value Value to set for the forwardAsAttachmentTo property.
     */
-    public function setForwardAsAttachmentTo(?array $value ): void {
-        $this->forwardAsAttachmentTo = $value;
+    public function setForwardAsAttachmentTo(?array $value): void {
+        $this->getBackingStore()->set('forwardAsAttachmentTo', $value);
     }
 
     /**
      * Sets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
      *  @param array<Recipient>|null $value Value to set for the forwardTo property.
     */
-    public function setForwardTo(?array $value ): void {
-        $this->forwardTo = $value;
+    public function setForwardTo(?array $value): void {
+        $this->getBackingStore()->set('forwardTo', $value);
     }
 
     /**
      * Sets the markAsRead property value. Indicates whether a message should be marked as read.
      *  @param bool|null $value Value to set for the markAsRead property.
     */
-    public function setMarkAsRead(?bool $value ): void {
-        $this->markAsRead = $value;
+    public function setMarkAsRead(?bool $value): void {
+        $this->getBackingStore()->set('markAsRead', $value);
     }
 
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      *  @param Importance|null $value Value to set for the markImportance property.
     */
-    public function setMarkImportance(?Importance $value ): void {
-        $this->markImportance = $value;
+    public function setMarkImportance(?Importance $value): void {
+        $this->getBackingStore()->set('markImportance', $value);
     }
 
     /**
      * Sets the moveToFolder property value. The ID of the folder that a message will be moved to.
      *  @param string|null $value Value to set for the moveToFolder property.
     */
-    public function setMoveToFolder(?string $value ): void {
-        $this->moveToFolder = $value;
+    public function setMoveToFolder(?string $value): void {
+        $this->getBackingStore()->set('moveToFolder', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      *  @param bool|null $value Value to set for the permanentDelete property.
     */
-    public function setPermanentDelete(?bool $value ): void {
-        $this->permanentDelete = $value;
+    public function setPermanentDelete(?bool $value): void {
+        $this->getBackingStore()->set('permanentDelete', $value);
     }
 
     /**
      * Sets the redirectTo property value. The email addresses to which a message should be redirected.
      *  @param array<Recipient>|null $value Value to set for the redirectTo property.
     */
-    public function setRedirectTo(?array $value ): void {
-        $this->redirectTo = $value;
+    public function setRedirectTo(?array $value): void {
+        $this->getBackingStore()->set('redirectTo', $value);
     }
 
     /**
      * Sets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
      *  @param bool|null $value Value to set for the stopProcessingRules property.
     */
-    public function setStopProcessingRules(?bool $value ): void {
-        $this->stopProcessingRules = $value;
+    public function setStopProcessingRules(?bool $value): void {
+        $this->getBackingStore()->set('stopProcessingRules', $value);
     }
 
 }

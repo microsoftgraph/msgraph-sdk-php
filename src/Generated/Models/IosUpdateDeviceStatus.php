@@ -10,61 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosUpdateDeviceStatus extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires
-    */
-    private ?DateTime $complianceGracePeriodExpirationDateTime = null;
-    
-    /**
-     * @var string|null $deviceDisplayName Device name of the DevicePolicyStatus.
-    */
-    private ?string $deviceDisplayName = null;
-    
-    /**
-     * @var string|null $deviceId The device id that is being reported.
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $deviceModel The device model that is being reported
-    */
-    private ?string $deviceModel = null;
-    
-    /**
-     * @var IosUpdatesInstallStatus|null $installStatus The installStatus property
-    */
-    private ?IosUpdatesInstallStatus $installStatus = null;
-    
-    /**
-     * @var DateTime|null $lastReportedDateTime Last modified date time of the policy report.
-    */
-    private ?DateTime $lastReportedDateTime = null;
-    
-    /**
-     * @var string|null $osVersion The device version that is being reported.
-    */
-    private ?string $osVersion = null;
-    
-    /**
-     * @var ComplianceStatus|null $status The status property
-    */
-    private ?ComplianceStatus $status = null;
-    
-    /**
-     * @var string|null $userId The User id that is being reported.
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $userName The User Name that is being reported
-    */
-    private ?string $userName = null;
-    
-    /**
-     * @var string|null $userPrincipalName UserPrincipalName.
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new iosUpdateDeviceStatus and sets the default values.
     */
     public function __construct() {
@@ -86,7 +31,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getComplianceGracePeriodExpirationDateTime(): ?DateTime {
-        return $this->complianceGracePeriodExpirationDateTime;
+        return $this->getBackingStore()->get('complianceGracePeriodExpirationDateTime');
     }
 
     /**
@@ -94,7 +39,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceDisplayName(): ?string {
-        return $this->deviceDisplayName;
+        return $this->getBackingStore()->get('deviceDisplayName');
     }
 
     /**
@@ -102,7 +47,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -110,7 +55,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceModel(): ?string {
-        return $this->deviceModel;
+        return $this->getBackingStore()->get('deviceModel');
     }
 
     /**
@@ -139,7 +84,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return IosUpdatesInstallStatus|null
     */
     public function getInstallStatus(): ?IosUpdatesInstallStatus {
-        return $this->installStatus;
+        return $this->getBackingStore()->get('installStatus');
     }
 
     /**
@@ -147,7 +92,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastReportedDateTime(): ?DateTime {
-        return $this->lastReportedDateTime;
+        return $this->getBackingStore()->get('lastReportedDateTime');
     }
 
     /**
@@ -155,7 +100,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getOsVersion(): ?string {
-        return $this->osVersion;
+        return $this->getBackingStore()->get('osVersion');
     }
 
     /**
@@ -163,7 +108,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return ComplianceStatus|null
     */
     public function getStatus(): ?ComplianceStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -171,7 +116,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -179,7 +124,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->userName;
+        return $this->getBackingStore()->get('userName');
     }
 
     /**
@@ -187,7 +132,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -196,105 +141,105 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->complianceGracePeriodExpirationDateTime);
-        $writer->writeStringValue('deviceDisplayName', $this->deviceDisplayName);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('deviceModel', $this->deviceModel);
-        $writer->writeEnumValue('installStatus', $this->installStatus);
-        $writer->writeDateTimeValue('lastReportedDateTime', $this->lastReportedDateTime);
-        $writer->writeStringValue('osVersion', $this->osVersion);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userName', $this->userName);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->getComplianceGracePeriodExpirationDateTime());
+        $writer->writeStringValue('deviceDisplayName', $this->getDeviceDisplayName());
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('deviceModel', $this->getDeviceModel());
+        $writer->writeEnumValue('installStatus', $this->getInstallStatus());
+        $writer->writeDateTimeValue('lastReportedDateTime', $this->getLastReportedDateTime());
+        $writer->writeStringValue('osVersion', $this->getOsVersion());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('userName', $this->getUserName());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      *  @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
     */
-    public function setComplianceGracePeriodExpirationDateTime(?DateTime $value ): void {
-        $this->complianceGracePeriodExpirationDateTime = $value;
+    public function setComplianceGracePeriodExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('complianceGracePeriodExpirationDateTime', $value);
     }
 
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
      *  @param string|null $value Value to set for the deviceDisplayName property.
     */
-    public function setDeviceDisplayName(?string $value ): void {
-        $this->deviceDisplayName = $value;
+    public function setDeviceDisplayName(?string $value): void {
+        $this->getBackingStore()->set('deviceDisplayName', $value);
     }
 
     /**
      * Sets the deviceId property value. The device id that is being reported.
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the deviceModel property value. The device model that is being reported
      *  @param string|null $value Value to set for the deviceModel property.
     */
-    public function setDeviceModel(?string $value ): void {
-        $this->deviceModel = $value;
+    public function setDeviceModel(?string $value): void {
+        $this->getBackingStore()->set('deviceModel', $value);
     }
 
     /**
      * Sets the installStatus property value. The installStatus property
      *  @param IosUpdatesInstallStatus|null $value Value to set for the installStatus property.
     */
-    public function setInstallStatus(?IosUpdatesInstallStatus $value ): void {
-        $this->installStatus = $value;
+    public function setInstallStatus(?IosUpdatesInstallStatus $value): void {
+        $this->getBackingStore()->set('installStatus', $value);
     }
 
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      *  @param DateTime|null $value Value to set for the lastReportedDateTime property.
     */
-    public function setLastReportedDateTime(?DateTime $value ): void {
-        $this->lastReportedDateTime = $value;
+    public function setLastReportedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastReportedDateTime', $value);
     }
 
     /**
      * Sets the osVersion property value. The device version that is being reported.
      *  @param string|null $value Value to set for the osVersion property.
     */
-    public function setOsVersion(?string $value ): void {
-        $this->osVersion = $value;
+    public function setOsVersion(?string $value): void {
+        $this->getBackingStore()->set('osVersion', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param ComplianceStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ComplianceStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ComplianceStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the userId property value. The User id that is being reported.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userName property value. The User Name that is being reported
      *  @param string|null $value Value to set for the userName property.
     */
-    public function setUserName(?string $value ): void {
-        $this->userName = $value;
+    public function setUserName(?string $value): void {
+        $this->getBackingStore()->set('userName', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

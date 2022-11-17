@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ChoiceColumn implements AdditionalDataHolder, Parsable 
+class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowTextEntry If true, allows custom values that aren't in the configured choices.
-    */
-    private ?bool $allowTextEntry = null;
-    
-    /**
-     * @var array<string>|null $choices The list of values available for this column.
-    */
-    private ?array $choices = null;
-    
-    /**
-     * @var string|null $displayAs How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
-    */
-    private ?string $displayAs = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new choiceColumn and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.choiceColumn');
     }
@@ -55,8 +39,8 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +48,15 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowTextEntry(): ?bool {
-        return $this->allowTextEntry;
+        return $this->getBackingStore()->get('allowTextEntry');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +64,7 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getChoices(): ?array {
-        return $this->choices;
+        return $this->getBackingStore()->get('choices');
     }
 
     /**
@@ -80,7 +72,7 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayAs(): ?string {
-        return $this->displayAs;
+        return $this->getBackingStore()->get('displayAs');
     }
 
     /**
@@ -102,7 +94,7 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +102,51 @@ class ChoiceColumn implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowTextEntry', $this->allowTextEntry);
-        $writer->writeCollectionOfPrimitiveValues('choices', $this->choices);
-        $writer->writeStringValue('displayAs', $this->displayAs);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowTextEntry', $this->getAllowTextEntry());
+        $writer->writeCollectionOfPrimitiveValues('choices', $this->getChoices());
+        $writer->writeStringValue('displayAs', $this->getDisplayAs());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
      *  @param bool|null $value Value to set for the allowTextEntry property.
     */
-    public function setAllowTextEntry(?bool $value ): void {
-        $this->allowTextEntry = $value;
+    public function setAllowTextEntry(?bool $value): void {
+        $this->getBackingStore()->set('allowTextEntry', $value);
     }
 
     /**
      * Sets the choices property value. The list of values available for this column.
      *  @param array<string>|null $value Value to set for the choices property.
     */
-    public function setChoices(?array $value ): void {
-        $this->choices = $value;
+    public function setChoices(?array $value): void {
+        $this->getBackingStore()->set('choices', $value);
     }
 
     /**
      * Sets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
      *  @param string|null $value Value to set for the displayAs property.
     */
-    public function setDisplayAs(?string $value ): void {
-        $this->displayAs = $value;
+    public function setDisplayAs(?string $value): void {
+        $this->getBackingStore()->set('displayAs', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

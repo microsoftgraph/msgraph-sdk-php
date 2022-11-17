@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Endpoint extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $capability The capability property
-    */
-    private ?string $capability = null;
-    
-    /**
-     * @var string|null $providerId The providerId property
-    */
-    private ?string $providerId = null;
-    
-    /**
-     * @var string|null $providerName The providerName property
-    */
-    private ?string $providerName = null;
-    
-    /**
-     * @var string|null $providerResourceId The providerResourceId property
-    */
-    private ?string $providerResourceId = null;
-    
-    /**
-     * @var string|null $uri The uri property
-    */
-    private ?string $uri = null;
-    
-    /**
      * Instantiates a new endpoint and sets the default values.
     */
     public function __construct() {
@@ -55,7 +30,7 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getCapability(): ?string {
-        return $this->capability;
+        return $this->getBackingStore()->get('capability');
     }
 
     /**
@@ -78,7 +53,7 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderId(): ?string {
-        return $this->providerId;
+        return $this->getBackingStore()->get('providerId');
     }
 
     /**
@@ -86,7 +61,7 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderName(): ?string {
-        return $this->providerName;
+        return $this->getBackingStore()->get('providerName');
     }
 
     /**
@@ -94,7 +69,7 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProviderResourceId(): ?string {
-        return $this->providerResourceId;
+        return $this->getBackingStore()->get('providerResourceId');
     }
 
     /**
@@ -102,7 +77,7 @@ class Endpoint extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getUri(): ?string {
-        return $this->uri;
+        return $this->getBackingStore()->get('uri');
     }
 
     /**
@@ -111,51 +86,51 @@ class Endpoint extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('capability', $this->capability);
-        $writer->writeStringValue('providerId', $this->providerId);
-        $writer->writeStringValue('providerName', $this->providerName);
-        $writer->writeStringValue('providerResourceId', $this->providerResourceId);
-        $writer->writeStringValue('uri', $this->uri);
+        $writer->writeStringValue('capability', $this->getCapability());
+        $writer->writeStringValue('providerId', $this->getProviderId());
+        $writer->writeStringValue('providerName', $this->getProviderName());
+        $writer->writeStringValue('providerResourceId', $this->getProviderResourceId());
+        $writer->writeStringValue('uri', $this->getUri());
     }
 
     /**
      * Sets the capability property value. The capability property
      *  @param string|null $value Value to set for the capability property.
     */
-    public function setCapability(?string $value ): void {
-        $this->capability = $value;
+    public function setCapability(?string $value): void {
+        $this->getBackingStore()->set('capability', $value);
     }
 
     /**
      * Sets the providerId property value. The providerId property
      *  @param string|null $value Value to set for the providerId property.
     */
-    public function setProviderId(?string $value ): void {
-        $this->providerId = $value;
+    public function setProviderId(?string $value): void {
+        $this->getBackingStore()->set('providerId', $value);
     }
 
     /**
      * Sets the providerName property value. The providerName property
      *  @param string|null $value Value to set for the providerName property.
     */
-    public function setProviderName(?string $value ): void {
-        $this->providerName = $value;
+    public function setProviderName(?string $value): void {
+        $this->getBackingStore()->set('providerName', $value);
     }
 
     /**
      * Sets the providerResourceId property value. The providerResourceId property
      *  @param string|null $value Value to set for the providerResourceId property.
     */
-    public function setProviderResourceId(?string $value ): void {
-        $this->providerResourceId = $value;
+    public function setProviderResourceId(?string $value): void {
+        $this->getBackingStore()->set('providerResourceId', $value);
     }
 
     /**
      * Sets the uri property value. The uri property
      *  @param string|null $value Value to set for the uri property.
     */
-    public function setUri(?string $value ): void {
-        $this->uri = $value;
+    public function setUri(?string $value): void {
+        $this->getBackingStore()->set('uri', $value);
     }
 
 }

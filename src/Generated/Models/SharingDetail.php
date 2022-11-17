@@ -7,48 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SharingDetail implements AdditionalDataHolder, Parsable 
+class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var InsightIdentity|null $sharedBy The user who shared the document.
-    */
-    private ?InsightIdentity $sharedBy = null;
-    
-    /**
-     * @var DateTime|null $sharedDateTime The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $sharedDateTime = null;
-    
-    /**
-     * @var ResourceReference|null $sharingReference The sharingReference property
-    */
-    private ?ResourceReference $sharingReference = null;
-    
-    /**
-     * @var string|null $sharingSubject The subject with which the document was shared.
-    */
-    private ?string $sharingSubject = null;
-    
-    /**
-     * @var string|null $sharingType Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
-    */
-    private ?string $sharingType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new sharingDetail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.sharingDetail');
     }
@@ -66,8 +40,16 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -91,7 +73,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -99,7 +81,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return InsightIdentity|null
     */
     public function getSharedBy(): ?InsightIdentity {
-        return $this->sharedBy;
+        return $this->getBackingStore()->get('sharedBy');
     }
 
     /**
@@ -107,7 +89,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getSharedDateTime(): ?DateTime {
-        return $this->sharedDateTime;
+        return $this->getBackingStore()->get('sharedDateTime');
     }
 
     /**
@@ -115,7 +97,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return ResourceReference|null
     */
     public function getSharingReference(): ?ResourceReference {
-        return $this->sharingReference;
+        return $this->getBackingStore()->get('sharingReference');
     }
 
     /**
@@ -123,7 +105,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSharingSubject(): ?string {
-        return $this->sharingSubject;
+        return $this->getBackingStore()->get('sharingSubject');
     }
 
     /**
@@ -131,7 +113,7 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSharingType(): ?string {
-        return $this->sharingType;
+        return $this->getBackingStore()->get('sharingType');
     }
 
     /**
@@ -139,68 +121,68 @@ class SharingDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('sharedBy', $this->sharedBy);
-        $writer->writeDateTimeValue('sharedDateTime', $this->sharedDateTime);
-        $writer->writeStringValue('sharingSubject', $this->sharingSubject);
-        $writer->writeStringValue('sharingType', $this->sharingType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('sharedBy', $this->getSharedBy());
+        $writer->writeDateTimeValue('sharedDateTime', $this->getSharedDateTime());
+        $writer->writeStringValue('sharingSubject', $this->getSharingSubject());
+        $writer->writeStringValue('sharingType', $this->getSharingType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sharedBy property value. The user who shared the document.
      *  @param InsightIdentity|null $value Value to set for the sharedBy property.
     */
-    public function setSharedBy(?InsightIdentity $value ): void {
-        $this->sharedBy = $value;
+    public function setSharedBy(?InsightIdentity $value): void {
+        $this->getBackingStore()->set('sharedBy', $value);
     }
 
     /**
      * Sets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the sharedDateTime property.
     */
-    public function setSharedDateTime(?DateTime $value ): void {
-        $this->sharedDateTime = $value;
+    public function setSharedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('sharedDateTime', $value);
     }
 
     /**
      * Sets the sharingReference property value. The sharingReference property
      *  @param ResourceReference|null $value Value to set for the sharingReference property.
     */
-    public function setSharingReference(?ResourceReference $value ): void {
-        $this->sharingReference = $value;
+    public function setSharingReference(?ResourceReference $value): void {
+        $this->getBackingStore()->set('sharingReference', $value);
     }
 
     /**
      * Sets the sharingSubject property value. The subject with which the document was shared.
      *  @param string|null $value Value to set for the sharingSubject property.
     */
-    public function setSharingSubject(?string $value ): void {
-        $this->sharingSubject = $value;
+    public function setSharingSubject(?string $value): void {
+        $this->getBackingStore()->set('sharingSubject', $value);
     }
 
     /**
      * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      *  @param string|null $value Value to set for the sharingType property.
     */
-    public function setSharingType(?string $value ): void {
-        $this->sharingType = $value;
+    public function setSharingType(?string $value): void {
+        $this->getBackingStore()->set('sharingType', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookComment extends Entity implements Parsable 
 {
     /**
-     * @var string|null $content The content of comment.
-    */
-    private ?string $content = null;
-    
-    /**
-     * @var string|null $contentType Indicates the type for the comment.
-    */
-    private ?string $contentType = null;
-    
-    /**
-     * @var array<WorkbookCommentReply>|null $replies The replies property
-    */
-    private ?array $replies = null;
-    
-    /**
      * Instantiates a new workbookComment and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class WorkbookComment extends Entity implements Parsable
      * @return string|null
     */
     public function getContent(): ?string {
-        return $this->content;
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -53,7 +38,7 @@ class WorkbookComment extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -74,7 +59,7 @@ class WorkbookComment extends Entity implements Parsable
      * @return array<WorkbookCommentReply>|null
     */
     public function getReplies(): ?array {
-        return $this->replies;
+        return $this->getBackingStore()->get('replies');
     }
 
     /**
@@ -83,33 +68,33 @@ class WorkbookComment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('content', $this->content);
-        $writer->writeStringValue('contentType', $this->contentType);
-        $writer->writeCollectionOfObjectValues('replies', $this->replies);
+        $writer->writeStringValue('content', $this->getContent());
+        $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeCollectionOfObjectValues('replies', $this->getReplies());
     }
 
     /**
      * Sets the content property value. The content of comment.
      *  @param string|null $value Value to set for the content property.
     */
-    public function setContent(?string $value ): void {
-        $this->content = $value;
+    public function setContent(?string $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the contentType property value. Indicates the type for the comment.
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the replies property value. The replies property
      *  @param array<WorkbookCommentReply>|null $value Value to set for the replies property.
     */
-    public function setReplies(?array $value ): void {
-        $this->replies = $value;
+    public function setReplies(?array $value): void {
+        $this->getBackingStore()->set('replies', $value);
     }
 
 }

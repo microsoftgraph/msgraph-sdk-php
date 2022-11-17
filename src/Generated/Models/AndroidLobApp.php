@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidLobApp extends MobileLobApp implements Parsable 
 {
     /**
-     * @var AndroidMinimumOperatingSystem|null $minimumSupportedOperatingSystem The value for the minimum applicable operating system.
-    */
-    private ?AndroidMinimumOperatingSystem $minimumSupportedOperatingSystem = null;
-    
-    /**
-     * @var string|null $packageId The package identifier.
-    */
-    private ?string $packageId = null;
-    
-    /**
-     * @var string|null $versionCode The version code of Android Line of Business (LoB) app.
-    */
-    private ?string $versionCode = null;
-    
-    /**
-     * @var string|null $versionName The version name of Android Line of Business (LoB) app.
-    */
-    private ?string $versionName = null;
-    
-    /**
      * Instantiates a new AndroidLobApp and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class AndroidLobApp extends MobileLobApp implements Parsable
      * @return AndroidMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?AndroidMinimumOperatingSystem {
-        return $this->minimumSupportedOperatingSystem;
+        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
     }
 
     /**
@@ -72,7 +52,7 @@ class AndroidLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getPackageId(): ?string {
-        return $this->packageId;
+        return $this->getBackingStore()->get('packageId');
     }
 
     /**
@@ -80,7 +60,7 @@ class AndroidLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionCode(): ?string {
-        return $this->versionCode;
+        return $this->getBackingStore()->get('versionCode');
     }
 
     /**
@@ -88,7 +68,7 @@ class AndroidLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionName(): ?string {
-        return $this->versionName;
+        return $this->getBackingStore()->get('versionName');
     }
 
     /**
@@ -97,42 +77,42 @@ class AndroidLobApp extends MobileLobApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->minimumSupportedOperatingSystem);
-        $writer->writeStringValue('packageId', $this->packageId);
-        $writer->writeStringValue('versionCode', $this->versionCode);
-        $writer->writeStringValue('versionName', $this->versionName);
+        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('packageId', $this->getPackageId());
+        $writer->writeStringValue('versionCode', $this->getVersionCode());
+        $writer->writeStringValue('versionName', $this->getVersionName());
     }
 
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      *  @param AndroidMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
     */
-    public function setMinimumSupportedOperatingSystem(?AndroidMinimumOperatingSystem $value ): void {
-        $this->minimumSupportedOperatingSystem = $value;
+    public function setMinimumSupportedOperatingSystem(?AndroidMinimumOperatingSystem $value): void {
+        $this->getBackingStore()->set('minimumSupportedOperatingSystem', $value);
     }
 
     /**
      * Sets the packageId property value. The package identifier.
      *  @param string|null $value Value to set for the packageId property.
     */
-    public function setPackageId(?string $value ): void {
-        $this->packageId = $value;
+    public function setPackageId(?string $value): void {
+        $this->getBackingStore()->set('packageId', $value);
     }
 
     /**
      * Sets the versionCode property value. The version code of Android Line of Business (LoB) app.
      *  @param string|null $value Value to set for the versionCode property.
     */
-    public function setVersionCode(?string $value ): void {
-        $this->versionCode = $value;
+    public function setVersionCode(?string $value): void {
+        $this->getBackingStore()->set('versionCode', $value);
     }
 
     /**
      * Sets the versionName property value. The version name of Android Line of Business (LoB) app.
      *  @param string|null $value Value to set for the versionName property.
     */
-    public function setVersionName(?string $value ): void {
-        $this->versionName = $value;
+    public function setVersionName(?string $value): void {
+        $this->getBackingStore()->set('versionName', $value);
     }
 
 }

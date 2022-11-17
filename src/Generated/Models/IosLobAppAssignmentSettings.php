@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * @var bool|null $isRemovable When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
-    */
-    private ?bool $isRemovable = null;
-    
-    /**
-     * @var bool|null $uninstallOnDeviceRemoval When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
-    */
-    private ?bool $uninstallOnDeviceRemoval = null;
-    
-    /**
-     * @var string|null $vpnConfigurationId This is the unique identifier (Id) of the VPN Configuration to apply to the app.
-    */
-    private ?string $vpnConfigurationId = null;
-    
-    /**
      * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return bool|null
     */
     public function getIsRemovable(): ?bool {
-        return $this->isRemovable;
+        return $this->getBackingStore()->get('isRemovable');
     }
 
     /**
@@ -66,7 +51,7 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return bool|null
     */
     public function getUninstallOnDeviceRemoval(): ?bool {
-        return $this->uninstallOnDeviceRemoval;
+        return $this->getBackingStore()->get('uninstallOnDeviceRemoval');
     }
 
     /**
@@ -74,7 +59,7 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return string|null
     */
     public function getVpnConfigurationId(): ?string {
-        return $this->vpnConfigurationId;
+        return $this->getBackingStore()->get('vpnConfigurationId');
     }
 
     /**
@@ -83,33 +68,33 @@ class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isRemovable', $this->isRemovable);
-        $writer->writeBooleanValue('uninstallOnDeviceRemoval', $this->uninstallOnDeviceRemoval);
-        $writer->writeStringValue('vpnConfigurationId', $this->vpnConfigurationId);
+        $writer->writeBooleanValue('isRemovable', $this->getIsRemovable());
+        $writer->writeBooleanValue('uninstallOnDeviceRemoval', $this->getUninstallOnDeviceRemoval());
+        $writer->writeStringValue('vpnConfigurationId', $this->getVpnConfigurationId());
     }
 
     /**
      * Sets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
      *  @param bool|null $value Value to set for the isRemovable property.
     */
-    public function setIsRemovable(?bool $value ): void {
-        $this->isRemovable = $value;
+    public function setIsRemovable(?bool $value): void {
+        $this->getBackingStore()->set('isRemovable', $value);
     }
 
     /**
      * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      *  @param bool|null $value Value to set for the uninstallOnDeviceRemoval property.
     */
-    public function setUninstallOnDeviceRemoval(?bool $value ): void {
-        $this->uninstallOnDeviceRemoval = $value;
+    public function setUninstallOnDeviceRemoval(?bool $value): void {
+        $this->getBackingStore()->set('uninstallOnDeviceRemoval', $value);
     }
 
     /**
      * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      *  @param string|null $value Value to set for the vpnConfigurationId property.
     */
-    public function setVpnConfigurationId(?string $value ): void {
-        $this->vpnConfigurationId = $value;
+    public function setVpnConfigurationId(?string $value): void {
+        $this->getBackingStore()->set('vpnConfigurationId', $value);
     }
 
 }

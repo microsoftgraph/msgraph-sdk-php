@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationLinkResource extends EducationResource implements Parsable 
 {
     /**
-     * @var string|null $link URL to the resource.
-    */
-    private ?string $link = null;
-    
-    /**
      * Instantiates a new EducationLinkResource and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationLinkResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getLink(): ?string {
-        return $this->link;
+        return $this->getBackingStore()->get('link');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationLinkResource extends EducationResource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('link', $this->link);
+        $writer->writeStringValue('link', $this->getLink());
     }
 
     /**
      * Sets the link property value. URL to the resource.
      *  @param string|null $value Value to set for the link property.
     */
-    public function setLink(?string $value ): void {
-        $this->link = $value;
+    public function setLink(?string $value): void {
+        $this->getBackingStore()->set('link', $value);
     }
 
 }

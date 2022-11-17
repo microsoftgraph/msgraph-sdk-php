@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SharingInvitation implements AdditionalDataHolder, Parsable 
+class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $email The email address provided for the recipient of the sharing invitation. Read-only.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var IdentitySet|null $invitedBy Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
-    */
-    private ?IdentitySet $invitedBy = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $redeemedBy The redeemedBy property
-    */
-    private ?string $redeemedBy = null;
-    
-    /**
-     * @var bool|null $signInRequired If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
-    */
-    private ?bool $signInRequired = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new sharingInvitation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.sharingInvitation');
     }
@@ -60,8 +39,16 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -69,7 +56,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -92,7 +79,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getInvitedBy(): ?IdentitySet {
-        return $this->invitedBy;
+        return $this->getBackingStore()->get('invitedBy');
     }
 
     /**
@@ -100,7 +87,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -108,7 +95,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRedeemedBy(): ?string {
-        return $this->redeemedBy;
+        return $this->getBackingStore()->get('redeemedBy');
     }
 
     /**
@@ -116,7 +103,7 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getSignInRequired(): ?bool {
-        return $this->signInRequired;
+        return $this->getBackingStore()->get('signInRequired');
     }
 
     /**
@@ -124,60 +111,60 @@ class SharingInvitation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeObjectValue('invitedBy', $this->invitedBy);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('redeemedBy', $this->redeemedBy);
-        $writer->writeBooleanValue('signInRequired', $this->signInRequired);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeObjectValue('invitedBy', $this->getInvitedBy());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('redeemedBy', $this->getRedeemedBy());
+        $writer->writeBooleanValue('signInRequired', $this->getSignInRequired());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      *  @param IdentitySet|null $value Value to set for the invitedBy property.
     */
-    public function setInvitedBy(?IdentitySet $value ): void {
-        $this->invitedBy = $value;
+    public function setInvitedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('invitedBy', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the redeemedBy property value. The redeemedBy property
      *  @param string|null $value Value to set for the redeemedBy property.
     */
-    public function setRedeemedBy(?string $value ): void {
-        $this->redeemedBy = $value;
+    public function setRedeemedBy(?string $value): void {
+        $this->getBackingStore()->set('redeemedBy', $value);
     }
 
     /**
      * Sets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      *  @param bool|null $value Value to set for the signInRequired property.
     */
-    public function setSignInRequired(?bool $value ): void {
-        $this->signInRequired = $value;
+    public function setSignInRequired(?bool $value): void {
+        $this->getBackingStore()->set('signInRequired', $value);
     }
 
 }

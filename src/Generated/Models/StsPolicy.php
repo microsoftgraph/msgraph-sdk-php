@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class StsPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * @var array<DirectoryObject>|null $appliesTo The appliesTo property
-    */
-    private ?array $appliesTo = null;
-    
-    /**
-     * @var array<string>|null $definition A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
-    */
-    private ?array $definition = null;
-    
-    /**
-     * @var bool|null $isOrganizationDefault If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
-    */
-    private ?bool $isOrganizationDefault = null;
-    
-    /**
      * Instantiates a new StsPolicy and sets the default values.
     */
     public function __construct() {
@@ -56,7 +41,7 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
-        return $this->appliesTo;
+        return $this->getBackingStore()->get('appliesTo');
     }
 
     /**
@@ -64,7 +49,7 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return array<string>|null
     */
     public function getDefinition(): ?array {
-        return $this->definition;
+        return $this->getBackingStore()->get('definition');
     }
 
     /**
@@ -85,7 +70,7 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return bool|null
     */
     public function getIsOrganizationDefault(): ?bool {
-        return $this->isOrganizationDefault;
+        return $this->getBackingStore()->get('isOrganizationDefault');
     }
 
     /**
@@ -94,33 +79,33 @@ class StsPolicy extends PolicyBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('appliesTo', $this->appliesTo);
-        $writer->writeCollectionOfPrimitiveValues('definition', $this->definition);
-        $writer->writeBooleanValue('isOrganizationDefault', $this->isOrganizationDefault);
+        $writer->writeCollectionOfObjectValues('appliesTo', $this->getAppliesTo());
+        $writer->writeCollectionOfPrimitiveValues('definition', $this->getDefinition());
+        $writer->writeBooleanValue('isOrganizationDefault', $this->getIsOrganizationDefault());
     }
 
     /**
      * Sets the appliesTo property value. The appliesTo property
      *  @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
-    public function setAppliesTo(?array $value ): void {
-        $this->appliesTo = $value;
+    public function setAppliesTo(?array $value): void {
+        $this->getBackingStore()->set('appliesTo', $value);
     }
 
     /**
      * Sets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
      *  @param array<string>|null $value Value to set for the definition property.
     */
-    public function setDefinition(?array $value ): void {
-        $this->definition = $value;
+    public function setDefinition(?array $value): void {
+        $this->getBackingStore()->set('definition', $value);
     }
 
     /**
      * Sets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
      *  @param bool|null $value Value to set for the isOrganizationDefault property.
     */
-    public function setIsOrganizationDefault(?bool $value ): void {
-        $this->isOrganizationDefault = $value;
+    public function setIsOrganizationDefault(?bool $value): void {
+        $this->getBackingStore()->set('isOrganizationDefault', $value);
     }
 
 }

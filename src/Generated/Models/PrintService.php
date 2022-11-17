@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintService extends Entity implements Parsable 
 {
     /**
-     * @var array<PrintServiceEndpoint>|null $endpoints Endpoints that can be used to access the service. Read-only. Nullable.
-    */
-    private ?array $endpoints = null;
-    
-    /**
      * Instantiates a new PrintService and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class PrintService extends Entity implements Parsable
      * @return array<PrintServiceEndpoint>|null
     */
     public function getEndpoints(): ?array {
-        return $this->endpoints;
+        return $this->getBackingStore()->get('endpoints');
     }
 
     /**
@@ -55,15 +50,15 @@ class PrintService extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('endpoints', $this->endpoints);
+        $writer->writeCollectionOfObjectValues('endpoints', $this->getEndpoints());
     }
 
     /**
      * Sets the endpoints property value. Endpoints that can be used to access the service. Read-only. Nullable.
      *  @param array<PrintServiceEndpoint>|null $value Value to set for the endpoints property.
     */
-    public function setEndpoints(?array $value ): void {
-        $this->endpoints = $value;
+    public function setEndpoints(?array $value): void {
+        $this->getBackingStore()->set('endpoints', $value);
     }
 
 }

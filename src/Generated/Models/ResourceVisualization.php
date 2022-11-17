@@ -6,63 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ResourceVisualization implements AdditionalDataHolder, Parsable 
+class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $containerDisplayName A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
-    */
-    private ?string $containerDisplayName = null;
-    
-    /**
-     * @var string|null $containerType Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-    */
-    private ?string $containerType = null;
-    
-    /**
-     * @var string|null $containerWebUrl A path leading to the folder in which the item is stored.
-    */
-    private ?string $containerWebUrl = null;
-    
-    /**
-     * @var string|null $mediaType The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
-    */
-    private ?string $mediaType = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $previewImageUrl A URL leading to the preview image for the item.
-    */
-    private ?string $previewImageUrl = null;
-    
-    /**
-     * @var string|null $previewText A preview text for the item.
-    */
-    private ?string $previewText = null;
-    
-    /**
-     * @var string|null $title The item's title text.
-    */
-    private ?string $title = null;
-    
-    /**
-     * @var string|null $type The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
-    */
-    private ?string $type = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new resourceVisualization and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.resourceVisualization');
     }
@@ -80,8 +39,16 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -89,7 +56,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContainerDisplayName(): ?string {
-        return $this->containerDisplayName;
+        return $this->getBackingStore()->get('containerDisplayName');
     }
 
     /**
@@ -97,7 +64,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContainerType(): ?string {
-        return $this->containerType;
+        return $this->getBackingStore()->get('containerType');
     }
 
     /**
@@ -105,7 +72,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContainerWebUrl(): ?string {
-        return $this->containerWebUrl;
+        return $this->getBackingStore()->get('containerWebUrl');
     }
 
     /**
@@ -132,7 +99,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMediaType(): ?string {
-        return $this->mediaType;
+        return $this->getBackingStore()->get('mediaType');
     }
 
     /**
@@ -140,7 +107,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -148,7 +115,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPreviewImageUrl(): ?string {
-        return $this->previewImageUrl;
+        return $this->getBackingStore()->get('previewImageUrl');
     }
 
     /**
@@ -156,7 +123,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPreviewText(): ?string {
-        return $this->previewText;
+        return $this->getBackingStore()->get('previewText');
     }
 
     /**
@@ -164,7 +131,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -172,7 +139,7 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -180,96 +147,96 @@ class ResourceVisualization implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('containerDisplayName', $this->containerDisplayName);
-        $writer->writeStringValue('containerType', $this->containerType);
-        $writer->writeStringValue('containerWebUrl', $this->containerWebUrl);
-        $writer->writeStringValue('mediaType', $this->mediaType);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('previewImageUrl', $this->previewImageUrl);
-        $writer->writeStringValue('previewText', $this->previewText);
-        $writer->writeStringValue('title', $this->title);
-        $writer->writeStringValue('type', $this->type);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('containerDisplayName', $this->getContainerDisplayName());
+        $writer->writeStringValue('containerType', $this->getContainerType());
+        $writer->writeStringValue('containerWebUrl', $this->getContainerWebUrl());
+        $writer->writeStringValue('mediaType', $this->getMediaType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('previewImageUrl', $this->getPreviewImageUrl());
+        $writer->writeStringValue('previewText', $this->getPreviewText());
+        $writer->writeStringValue('title', $this->getTitle());
+        $writer->writeStringValue('type', $this->getType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      *  @param string|null $value Value to set for the containerDisplayName property.
     */
-    public function setContainerDisplayName(?string $value ): void {
-        $this->containerDisplayName = $value;
+    public function setContainerDisplayName(?string $value): void {
+        $this->getBackingStore()->set('containerDisplayName', $value);
     }
 
     /**
      * Sets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      *  @param string|null $value Value to set for the containerType property.
     */
-    public function setContainerType(?string $value ): void {
-        $this->containerType = $value;
+    public function setContainerType(?string $value): void {
+        $this->getBackingStore()->set('containerType', $value);
     }
 
     /**
      * Sets the containerWebUrl property value. A path leading to the folder in which the item is stored.
      *  @param string|null $value Value to set for the containerWebUrl property.
     */
-    public function setContainerWebUrl(?string $value ): void {
-        $this->containerWebUrl = $value;
+    public function setContainerWebUrl(?string $value): void {
+        $this->getBackingStore()->set('containerWebUrl', $value);
     }
 
     /**
      * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      *  @param string|null $value Value to set for the mediaType property.
     */
-    public function setMediaType(?string $value ): void {
-        $this->mediaType = $value;
+    public function setMediaType(?string $value): void {
+        $this->getBackingStore()->set('mediaType', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.
      *  @param string|null $value Value to set for the previewImageUrl property.
     */
-    public function setPreviewImageUrl(?string $value ): void {
-        $this->previewImageUrl = $value;
+    public function setPreviewImageUrl(?string $value): void {
+        $this->getBackingStore()->set('previewImageUrl', $value);
     }
 
     /**
      * Sets the previewText property value. A preview text for the item.
      *  @param string|null $value Value to set for the previewText property.
     */
-    public function setPreviewText(?string $value ): void {
-        $this->previewText = $value;
+    public function setPreviewText(?string $value): void {
+        $this->getBackingStore()->set('previewText', $value);
     }
 
     /**
      * Sets the title property value. The item's title text.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
     /**
      * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      *  @param string|null $value Value to set for the type property.
     */
-    public function setType(?string $value ): void {
-        $this->type = $value;
+    public function setType(?string $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

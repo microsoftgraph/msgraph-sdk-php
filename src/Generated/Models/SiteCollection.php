@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SiteCollection implements AdditionalDataHolder, Parsable 
+class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $dataLocationCode The geographic region code for where this site collection resides. Read-only.
-    */
-    private ?string $dataLocationCode = null;
-    
-    /**
-     * @var string|null $hostname The hostname for the site collection. Read-only.
-    */
-    private ?string $hostname = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var Root|null $root If present, indicates that this is a root site collection in SharePoint. Read-only.
-    */
-    private ?Root $root = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new siteCollection and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.siteCollection');
     }
@@ -55,8 +39,16 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +56,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDataLocationCode(): ?string {
-        return $this->dataLocationCode;
+        return $this->getBackingStore()->get('dataLocationCode');
     }
 
     /**
@@ -86,7 +78,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getHostname(): ?string {
-        return $this->hostname;
+        return $this->getBackingStore()->get('hostname');
     }
 
     /**
@@ -94,7 +86,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +94,7 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @return Root|null
     */
     public function getRoot(): ?Root {
-        return $this->root;
+        return $this->getBackingStore()->get('root');
     }
 
     /**
@@ -110,51 +102,51 @@ class SiteCollection implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('dataLocationCode', $this->dataLocationCode);
-        $writer->writeStringValue('hostname', $this->hostname);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('root', $this->root);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('dataLocationCode', $this->getDataLocationCode());
+        $writer->writeStringValue('hostname', $this->getHostname());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('root', $this->getRoot());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
      *  @param string|null $value Value to set for the dataLocationCode property.
     */
-    public function setDataLocationCode(?string $value ): void {
-        $this->dataLocationCode = $value;
+    public function setDataLocationCode(?string $value): void {
+        $this->getBackingStore()->set('dataLocationCode', $value);
     }
 
     /**
      * Sets the hostname property value. The hostname for the site collection. Read-only.
      *  @param string|null $value Value to set for the hostname property.
     */
-    public function setHostname(?string $value ): void {
-        $this->hostname = $value;
+    public function setHostname(?string $value): void {
+        $this->getBackingStore()->set('hostname', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
      *  @param Root|null $value Value to set for the root property.
     */
-    public function setRoot(?Root $value ): void {
-        $this->root = $value;
+    public function setRoot(?Root $value): void {
+        $this->getBackingStore()->set('root', $value);
     }
 
 }

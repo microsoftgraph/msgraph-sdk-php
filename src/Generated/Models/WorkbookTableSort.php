@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookTableSort extends Entity implements Parsable 
 {
     /**
-     * @var array<WorkbookSortField>|null $fields Represents the current conditions used to last sort the table. Read-only.
-    */
-    private ?array $fields = null;
-    
-    /**
-     * @var bool|null $matchCase Represents whether the casing impacted the last sort of the table. Read-only.
-    */
-    private ?bool $matchCase = null;
-    
-    /**
-     * @var string|null $method Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
-    */
-    private ?string $method = null;
-    
-    /**
      * Instantiates a new workbookTableSort and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class WorkbookTableSort extends Entity implements Parsable
      * @return array<WorkbookSortField>|null
     */
     public function getFields(): ?array {
-        return $this->fields;
+        return $this->getBackingStore()->get('fields');
     }
 
     /**
@@ -66,7 +51,7 @@ class WorkbookTableSort extends Entity implements Parsable
      * @return bool|null
     */
     public function getMatchCase(): ?bool {
-        return $this->matchCase;
+        return $this->getBackingStore()->get('matchCase');
     }
 
     /**
@@ -74,7 +59,7 @@ class WorkbookTableSort extends Entity implements Parsable
      * @return string|null
     */
     public function getMethod(): ?string {
-        return $this->method;
+        return $this->getBackingStore()->get('method');
     }
 
     /**
@@ -83,33 +68,33 @@ class WorkbookTableSort extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('fields', $this->fields);
-        $writer->writeBooleanValue('matchCase', $this->matchCase);
-        $writer->writeStringValue('method', $this->method);
+        $writer->writeCollectionOfObjectValues('fields', $this->getFields());
+        $writer->writeBooleanValue('matchCase', $this->getMatchCase());
+        $writer->writeStringValue('method', $this->getMethod());
     }
 
     /**
      * Sets the fields property value. Represents the current conditions used to last sort the table. Read-only.
      *  @param array<WorkbookSortField>|null $value Value to set for the fields property.
     */
-    public function setFields(?array $value ): void {
-        $this->fields = $value;
+    public function setFields(?array $value): void {
+        $this->getBackingStore()->set('fields', $value);
     }
 
     /**
      * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
      *  @param bool|null $value Value to set for the matchCase property.
     */
-    public function setMatchCase(?bool $value ): void {
-        $this->matchCase = $value;
+    public function setMatchCase(?bool $value): void {
+        $this->getBackingStore()->set('matchCase', $value);
     }
 
     /**
      * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      *  @param string|null $value Value to set for the method property.
     */
-    public function setMethod(?string $value ): void {
-        $this->method = $value;
+    public function setMethod(?string $value): void {
+        $this->getBackingStore()->set('method', $value);
     }
 
 }

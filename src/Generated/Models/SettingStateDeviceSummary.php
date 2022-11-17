@@ -9,51 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SettingStateDeviceSummary extends Entity implements Parsable 
 {
     /**
-     * @var int|null $compliantDeviceCount Device Compliant count for the setting
-    */
-    private ?int $compliantDeviceCount = null;
-    
-    /**
-     * @var int|null $conflictDeviceCount Device conflict error count for the setting
-    */
-    private ?int $conflictDeviceCount = null;
-    
-    /**
-     * @var int|null $errorDeviceCount Device error count for the setting
-    */
-    private ?int $errorDeviceCount = null;
-    
-    /**
-     * @var string|null $instancePath Name of the InstancePath for the setting
-    */
-    private ?string $instancePath = null;
-    
-    /**
-     * @var int|null $nonCompliantDeviceCount Device NonCompliant count for the setting
-    */
-    private ?int $nonCompliantDeviceCount = null;
-    
-    /**
-     * @var int|null $notApplicableDeviceCount Device Not Applicable count for the setting
-    */
-    private ?int $notApplicableDeviceCount = null;
-    
-    /**
-     * @var int|null $remediatedDeviceCount Device Compliant count for the setting
-    */
-    private ?int $remediatedDeviceCount = null;
-    
-    /**
-     * @var string|null $settingName Name of the setting
-    */
-    private ?string $settingName = null;
-    
-    /**
-     * @var int|null $unknownDeviceCount Device Unkown count for the setting
-    */
-    private ?int $unknownDeviceCount = null;
-    
-    /**
      * Instantiates a new settingStateDeviceSummary and sets the default values.
     */
     public function __construct() {
@@ -75,7 +30,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getCompliantDeviceCount(): ?int {
-        return $this->compliantDeviceCount;
+        return $this->getBackingStore()->get('compliantDeviceCount');
     }
 
     /**
@@ -83,7 +38,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConflictDeviceCount(): ?int {
-        return $this->conflictDeviceCount;
+        return $this->getBackingStore()->get('conflictDeviceCount');
     }
 
     /**
@@ -91,7 +46,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getErrorDeviceCount(): ?int {
-        return $this->errorDeviceCount;
+        return $this->getBackingStore()->get('errorDeviceCount');
     }
 
     /**
@@ -118,7 +73,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getInstancePath(): ?string {
-        return $this->instancePath;
+        return $this->getBackingStore()->get('instancePath');
     }
 
     /**
@@ -126,7 +81,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNonCompliantDeviceCount(): ?int {
-        return $this->nonCompliantDeviceCount;
+        return $this->getBackingStore()->get('nonCompliantDeviceCount');
     }
 
     /**
@@ -134,7 +89,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNotApplicableDeviceCount(): ?int {
-        return $this->notApplicableDeviceCount;
+        return $this->getBackingStore()->get('notApplicableDeviceCount');
     }
 
     /**
@@ -142,7 +97,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getRemediatedDeviceCount(): ?int {
-        return $this->remediatedDeviceCount;
+        return $this->getBackingStore()->get('remediatedDeviceCount');
     }
 
     /**
@@ -150,7 +105,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getSettingName(): ?string {
-        return $this->settingName;
+        return $this->getBackingStore()->get('settingName');
     }
 
     /**
@@ -158,7 +113,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->unknownDeviceCount;
+        return $this->getBackingStore()->get('unknownDeviceCount');
     }
 
     /**
@@ -167,87 +122,87 @@ class SettingStateDeviceSummary extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('compliantDeviceCount', $this->compliantDeviceCount);
-        $writer->writeIntegerValue('conflictDeviceCount', $this->conflictDeviceCount);
-        $writer->writeIntegerValue('errorDeviceCount', $this->errorDeviceCount);
-        $writer->writeStringValue('instancePath', $this->instancePath);
-        $writer->writeIntegerValue('nonCompliantDeviceCount', $this->nonCompliantDeviceCount);
-        $writer->writeIntegerValue('notApplicableDeviceCount', $this->notApplicableDeviceCount);
-        $writer->writeIntegerValue('remediatedDeviceCount', $this->remediatedDeviceCount);
-        $writer->writeStringValue('settingName', $this->settingName);
-        $writer->writeIntegerValue('unknownDeviceCount', $this->unknownDeviceCount);
+        $writer->writeIntegerValue('compliantDeviceCount', $this->getCompliantDeviceCount());
+        $writer->writeIntegerValue('conflictDeviceCount', $this->getConflictDeviceCount());
+        $writer->writeIntegerValue('errorDeviceCount', $this->getErrorDeviceCount());
+        $writer->writeStringValue('instancePath', $this->getInstancePath());
+        $writer->writeIntegerValue('nonCompliantDeviceCount', $this->getNonCompliantDeviceCount());
+        $writer->writeIntegerValue('notApplicableDeviceCount', $this->getNotApplicableDeviceCount());
+        $writer->writeIntegerValue('remediatedDeviceCount', $this->getRemediatedDeviceCount());
+        $writer->writeStringValue('settingName', $this->getSettingName());
+        $writer->writeIntegerValue('unknownDeviceCount', $this->getUnknownDeviceCount());
     }
 
     /**
      * Sets the compliantDeviceCount property value. Device Compliant count for the setting
      *  @param int|null $value Value to set for the compliantDeviceCount property.
     */
-    public function setCompliantDeviceCount(?int $value ): void {
-        $this->compliantDeviceCount = $value;
+    public function setCompliantDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('compliantDeviceCount', $value);
     }
 
     /**
      * Sets the conflictDeviceCount property value. Device conflict error count for the setting
      *  @param int|null $value Value to set for the conflictDeviceCount property.
     */
-    public function setConflictDeviceCount(?int $value ): void {
-        $this->conflictDeviceCount = $value;
+    public function setConflictDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('conflictDeviceCount', $value);
     }
 
     /**
      * Sets the errorDeviceCount property value. Device error count for the setting
      *  @param int|null $value Value to set for the errorDeviceCount property.
     */
-    public function setErrorDeviceCount(?int $value ): void {
-        $this->errorDeviceCount = $value;
+    public function setErrorDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('errorDeviceCount', $value);
     }
 
     /**
      * Sets the instancePath property value. Name of the InstancePath for the setting
      *  @param string|null $value Value to set for the instancePath property.
     */
-    public function setInstancePath(?string $value ): void {
-        $this->instancePath = $value;
+    public function setInstancePath(?string $value): void {
+        $this->getBackingStore()->set('instancePath', $value);
     }
 
     /**
      * Sets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
      *  @param int|null $value Value to set for the nonCompliantDeviceCount property.
     */
-    public function setNonCompliantDeviceCount(?int $value ): void {
-        $this->nonCompliantDeviceCount = $value;
+    public function setNonCompliantDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('nonCompliantDeviceCount', $value);
     }
 
     /**
      * Sets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
      *  @param int|null $value Value to set for the notApplicableDeviceCount property.
     */
-    public function setNotApplicableDeviceCount(?int $value ): void {
-        $this->notApplicableDeviceCount = $value;
+    public function setNotApplicableDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('notApplicableDeviceCount', $value);
     }
 
     /**
      * Sets the remediatedDeviceCount property value. Device Compliant count for the setting
      *  @param int|null $value Value to set for the remediatedDeviceCount property.
     */
-    public function setRemediatedDeviceCount(?int $value ): void {
-        $this->remediatedDeviceCount = $value;
+    public function setRemediatedDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('remediatedDeviceCount', $value);
     }
 
     /**
      * Sets the settingName property value. Name of the setting
      *  @param string|null $value Value to set for the settingName property.
     */
-    public function setSettingName(?string $value ): void {
-        $this->settingName = $value;
+    public function setSettingName(?string $value): void {
+        $this->getBackingStore()->set('settingName', $value);
     }
 
     /**
      * Sets the unknownDeviceCount property value. Device Unkown count for the setting
      *  @param int|null $value Value to set for the unknownDeviceCount property.
     */
-    public function setUnknownDeviceCount(?int $value ): void {
-        $this->unknownDeviceCount = $value;
+    public function setUnknownDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('unknownDeviceCount', $value);
     }
 
 }

@@ -7,63 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceGeoLocation implements AdditionalDataHolder, Parsable 
+class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var float|null $altitude Altitude, given in meters above sea level
-    */
-    private ?float $altitude = null;
-    
-    /**
-     * @var float|null $heading Heading in degrees from true north
-    */
-    private ?float $heading = null;
-    
-    /**
-     * @var float|null $horizontalAccuracy Accuracy of longitude and latitude in meters
-    */
-    private ?float $horizontalAccuracy = null;
-    
-    /**
-     * @var DateTime|null $lastCollectedDateTime Time at which location was recorded, relative to UTC
-    */
-    private ?DateTime $lastCollectedDateTime = null;
-    
-    /**
-     * @var float|null $latitude Latitude coordinate of the device's location
-    */
-    private ?float $latitude = null;
-    
-    /**
-     * @var float|null $longitude Longitude coordinate of the device's location
-    */
-    private ?float $longitude = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var float|null $speed Speed the device is traveling in meters per second
-    */
-    private ?float $speed = null;
-    
-    /**
-     * @var float|null $verticalAccuracy Accuracy of altitude in meters
-    */
-    private ?float $verticalAccuracy = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceGeoLocation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.deviceGeoLocation');
     }
@@ -81,8 +40,8 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -90,7 +49,15 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getAltitude(): ?float {
-        return $this->altitude;
+        return $this->getBackingStore()->get('altitude');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -117,7 +84,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getHeading(): ?float {
-        return $this->heading;
+        return $this->getBackingStore()->get('heading');
     }
 
     /**
@@ -125,7 +92,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getHorizontalAccuracy(): ?float {
-        return $this->horizontalAccuracy;
+        return $this->getBackingStore()->get('horizontalAccuracy');
     }
 
     /**
@@ -133,7 +100,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLastCollectedDateTime(): ?DateTime {
-        return $this->lastCollectedDateTime;
+        return $this->getBackingStore()->get('lastCollectedDateTime');
     }
 
     /**
@@ -141,7 +108,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLatitude(): ?float {
-        return $this->latitude;
+        return $this->getBackingStore()->get('latitude');
     }
 
     /**
@@ -149,7 +116,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getLongitude(): ?float {
-        return $this->longitude;
+        return $this->getBackingStore()->get('longitude');
     }
 
     /**
@@ -157,7 +124,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -165,7 +132,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getSpeed(): ?float {
-        return $this->speed;
+        return $this->getBackingStore()->get('speed');
     }
 
     /**
@@ -173,7 +140,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getVerticalAccuracy(): ?float {
-        return $this->verticalAccuracy;
+        return $this->getBackingStore()->get('verticalAccuracy');
     }
 
     /**
@@ -181,96 +148,96 @@ class DeviceGeoLocation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('altitude', $this->altitude);
-        $writer->writeFloatValue('heading', $this->heading);
-        $writer->writeFloatValue('horizontalAccuracy', $this->horizontalAccuracy);
-        $writer->writeDateTimeValue('lastCollectedDateTime', $this->lastCollectedDateTime);
-        $writer->writeFloatValue('latitude', $this->latitude);
-        $writer->writeFloatValue('longitude', $this->longitude);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeFloatValue('speed', $this->speed);
-        $writer->writeFloatValue('verticalAccuracy', $this->verticalAccuracy);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeFloatValue('altitude', $this->getAltitude());
+        $writer->writeFloatValue('heading', $this->getHeading());
+        $writer->writeFloatValue('horizontalAccuracy', $this->getHorizontalAccuracy());
+        $writer->writeDateTimeValue('lastCollectedDateTime', $this->getLastCollectedDateTime());
+        $writer->writeFloatValue('latitude', $this->getLatitude());
+        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeFloatValue('speed', $this->getSpeed());
+        $writer->writeFloatValue('verticalAccuracy', $this->getVerticalAccuracy());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the altitude property value. Altitude, given in meters above sea level
      *  @param float|null $value Value to set for the altitude property.
     */
-    public function setAltitude(?float $value ): void {
-        $this->altitude = $value;
+    public function setAltitude(?float $value): void {
+        $this->getBackingStore()->set('altitude', $value);
     }
 
     /**
      * Sets the heading property value. Heading in degrees from true north
      *  @param float|null $value Value to set for the heading property.
     */
-    public function setHeading(?float $value ): void {
-        $this->heading = $value;
+    public function setHeading(?float $value): void {
+        $this->getBackingStore()->set('heading', $value);
     }
 
     /**
      * Sets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
      *  @param float|null $value Value to set for the horizontalAccuracy property.
     */
-    public function setHorizontalAccuracy(?float $value ): void {
-        $this->horizontalAccuracy = $value;
+    public function setHorizontalAccuracy(?float $value): void {
+        $this->getBackingStore()->set('horizontalAccuracy', $value);
     }
 
     /**
      * Sets the lastCollectedDateTime property value. Time at which location was recorded, relative to UTC
      *  @param DateTime|null $value Value to set for the lastCollectedDateTime property.
     */
-    public function setLastCollectedDateTime(?DateTime $value ): void {
-        $this->lastCollectedDateTime = $value;
+    public function setLastCollectedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastCollectedDateTime', $value);
     }
 
     /**
      * Sets the latitude property value. Latitude coordinate of the device's location
      *  @param float|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value ): void {
-        $this->latitude = $value;
+    public function setLatitude(?float $value): void {
+        $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. Longitude coordinate of the device's location
      *  @param float|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value ): void {
-        $this->longitude = $value;
+    public function setLongitude(?float $value): void {
+        $this->getBackingStore()->set('longitude', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the speed property value. Speed the device is traveling in meters per second
      *  @param float|null $value Value to set for the speed property.
     */
-    public function setSpeed(?float $value ): void {
-        $this->speed = $value;
+    public function setSpeed(?float $value): void {
+        $this->getBackingStore()->set('speed', $value);
     }
 
     /**
      * Sets the verticalAccuracy property value. Accuracy of altitude in meters
      *  @param float|null $value Value to set for the verticalAccuracy property.
     */
-    public function setVerticalAccuracy(?float $value ): void {
-        $this->verticalAccuracy = $value;
+    public function setVerticalAccuracy(?float $value): void {
+        $this->getBackingStore()->set('verticalAccuracy', $value);
     }
 
 }

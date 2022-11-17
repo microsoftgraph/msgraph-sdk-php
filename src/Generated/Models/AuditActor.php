@@ -6,63 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AuditActor implements AdditionalDataHolder, Parsable 
+class AuditActor implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $applicationDisplayName Name of the Application.
-    */
-    private ?string $applicationDisplayName = null;
-    
-    /**
-     * @var string|null $applicationId AAD Application Id.
-    */
-    private ?string $applicationId = null;
-    
-    /**
-     * @var string|null $auditActorType Actor Type.
-    */
-    private ?string $auditActorType = null;
-    
-    /**
-     * @var string|null $ipAddress IPAddress.
-    */
-    private ?string $ipAddress = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $servicePrincipalName Service Principal Name (SPN).
-    */
-    private ?string $servicePrincipalName = null;
-    
-    /**
-     * @var string|null $userId User Id.
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var array<string>|null $userPermissions List of user permissions when the audit was performed.
-    */
-    private ?array $userPermissions = null;
-    
-    /**
-     * @var string|null $userPrincipalName User Principal Name (UPN).
-    */
-    private ?string $userPrincipalName = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new auditActor and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.auditActor');
     }
@@ -80,8 +39,8 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -89,7 +48,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getApplicationDisplayName(): ?string {
-        return $this->applicationDisplayName;
+        return $this->getBackingStore()->get('applicationDisplayName');
     }
 
     /**
@@ -97,7 +56,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getApplicationId(): ?string {
-        return $this->applicationId;
+        return $this->getBackingStore()->get('applicationId');
     }
 
     /**
@@ -105,7 +64,15 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAuditActorType(): ?string {
-        return $this->auditActorType;
+        return $this->getBackingStore()->get('auditActorType');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -132,7 +99,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->ipAddress;
+        return $this->getBackingStore()->get('ipAddress');
     }
 
     /**
@@ -140,7 +107,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -148,7 +115,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getServicePrincipalName(): ?string {
-        return $this->servicePrincipalName;
+        return $this->getBackingStore()->get('servicePrincipalName');
     }
 
     /**
@@ -156,7 +123,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -164,7 +131,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getUserPermissions(): ?array {
-        return $this->userPermissions;
+        return $this->getBackingStore()->get('userPermissions');
     }
 
     /**
@@ -172,7 +139,7 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -180,96 +147,96 @@ class AuditActor implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('applicationDisplayName', $this->applicationDisplayName);
-        $writer->writeStringValue('applicationId', $this->applicationId);
-        $writer->writeStringValue('auditActorType', $this->auditActorType);
-        $writer->writeStringValue('ipAddress', $this->ipAddress);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('servicePrincipalName', $this->servicePrincipalName);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeCollectionOfPrimitiveValues('userPermissions', $this->userPermissions);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('applicationDisplayName', $this->getApplicationDisplayName());
+        $writer->writeStringValue('applicationId', $this->getApplicationId());
+        $writer->writeStringValue('auditActorType', $this->getAuditActorType());
+        $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('servicePrincipalName', $this->getServicePrincipalName());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeCollectionOfPrimitiveValues('userPermissions', $this->getUserPermissions());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the applicationDisplayName property value. Name of the Application.
      *  @param string|null $value Value to set for the applicationDisplayName property.
     */
-    public function setApplicationDisplayName(?string $value ): void {
-        $this->applicationDisplayName = $value;
+    public function setApplicationDisplayName(?string $value): void {
+        $this->getBackingStore()->set('applicationDisplayName', $value);
     }
 
     /**
      * Sets the applicationId property value. AAD Application Id.
      *  @param string|null $value Value to set for the applicationId property.
     */
-    public function setApplicationId(?string $value ): void {
-        $this->applicationId = $value;
+    public function setApplicationId(?string $value): void {
+        $this->getBackingStore()->set('applicationId', $value);
     }
 
     /**
      * Sets the auditActorType property value. Actor Type.
      *  @param string|null $value Value to set for the auditActorType property.
     */
-    public function setAuditActorType(?string $value ): void {
-        $this->auditActorType = $value;
+    public function setAuditActorType(?string $value): void {
+        $this->getBackingStore()->set('auditActorType', $value);
     }
 
     /**
      * Sets the ipAddress property value. IPAddress.
      *  @param string|null $value Value to set for the ipAddress property.
     */
-    public function setIpAddress(?string $value ): void {
-        $this->ipAddress = $value;
+    public function setIpAddress(?string $value): void {
+        $this->getBackingStore()->set('ipAddress', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the servicePrincipalName property value. Service Principal Name (SPN).
      *  @param string|null $value Value to set for the servicePrincipalName property.
     */
-    public function setServicePrincipalName(?string $value ): void {
-        $this->servicePrincipalName = $value;
+    public function setServicePrincipalName(?string $value): void {
+        $this->getBackingStore()->set('servicePrincipalName', $value);
     }
 
     /**
      * Sets the userId property value. User Id.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userPermissions property value. List of user permissions when the audit was performed.
      *  @param array<string>|null $value Value to set for the userPermissions property.
     */
-    public function setUserPermissions(?array $value ): void {
-        $this->userPermissions = $value;
+    public function setUserPermissions(?array $value): void {
+        $this->getBackingStore()->set('userPermissions', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. User Principal Name (UPN).
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

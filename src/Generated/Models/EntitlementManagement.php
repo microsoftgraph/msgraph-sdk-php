@@ -9,46 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EntitlementManagement extends Entity implements Parsable 
 {
     /**
-     * @var array<Approval>|null $accessPackageAssignmentApprovals Approval stages for decisions associated with access package assignment requests.
-    */
-    private ?array $accessPackageAssignmentApprovals = null;
-    
-    /**
-     * @var array<AccessPackage>|null $accessPackages Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
-    */
-    private ?array $accessPackages = null;
-    
-    /**
-     * @var array<AccessPackageAssignmentPolicy>|null $assignmentPolicies Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
-    */
-    private ?array $assignmentPolicies = null;
-    
-    /**
-     * @var array<AccessPackageAssignmentRequest>|null $assignmentRequests Access package assignment requests created by or on behalf of a subject.
-    */
-    private ?array $assignmentRequests = null;
-    
-    /**
-     * @var array<AccessPackageAssignment>|null $assignments The assignment of an access package to a subject for a period of time.
-    */
-    private ?array $assignments = null;
-    
-    /**
-     * @var array<AccessPackageCatalog>|null $catalogs A container for access packages.
-    */
-    private ?array $catalogs = null;
-    
-    /**
-     * @var array<ConnectedOrganization>|null $connectedOrganizations References to a directory or domain of another organization whose users can request access.
-    */
-    private ?array $connectedOrganizations = null;
-    
-    /**
-     * @var EntitlementManagementSettings|null $settings The settings that control the behavior of Azure AD entitlement management.
-    */
-    private ?EntitlementManagementSettings $settings = null;
-    
-    /**
      * Instantiates a new EntitlementManagement and sets the default values.
     */
     public function __construct() {
@@ -70,7 +30,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<Approval>|null
     */
     public function getAccessPackageAssignmentApprovals(): ?array {
-        return $this->accessPackageAssignmentApprovals;
+        return $this->getBackingStore()->get('accessPackageAssignmentApprovals');
     }
 
     /**
@@ -78,7 +38,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackage>|null
     */
     public function getAccessPackages(): ?array {
-        return $this->accessPackages;
+        return $this->getBackingStore()->get('accessPackages');
     }
 
     /**
@@ -86,7 +46,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignmentPolicy>|null
     */
     public function getAssignmentPolicies(): ?array {
-        return $this->assignmentPolicies;
+        return $this->getBackingStore()->get('assignmentPolicies');
     }
 
     /**
@@ -94,7 +54,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignmentRequest>|null
     */
     public function getAssignmentRequests(): ?array {
-        return $this->assignmentRequests;
+        return $this->getBackingStore()->get('assignmentRequests');
     }
 
     /**
@@ -102,7 +62,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -110,7 +70,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageCatalog>|null
     */
     public function getCatalogs(): ?array {
-        return $this->catalogs;
+        return $this->getBackingStore()->get('catalogs');
     }
 
     /**
@@ -118,7 +78,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<ConnectedOrganization>|null
     */
     public function getConnectedOrganizations(): ?array {
-        return $this->connectedOrganizations;
+        return $this->getBackingStore()->get('connectedOrganizations');
     }
 
     /**
@@ -144,7 +104,7 @@ class EntitlementManagement extends Entity implements Parsable
      * @return EntitlementManagementSettings|null
     */
     public function getSettings(): ?EntitlementManagementSettings {
-        return $this->settings;
+        return $this->getBackingStore()->get('settings');
     }
 
     /**
@@ -153,78 +113,78 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('accessPackageAssignmentApprovals', $this->accessPackageAssignmentApprovals);
-        $writer->writeCollectionOfObjectValues('accessPackages', $this->accessPackages);
-        $writer->writeCollectionOfObjectValues('assignmentPolicies', $this->assignmentPolicies);
-        $writer->writeCollectionOfObjectValues('assignmentRequests', $this->assignmentRequests);
-        $writer->writeCollectionOfObjectValues('assignments', $this->assignments);
-        $writer->writeCollectionOfObjectValues('catalogs', $this->catalogs);
-        $writer->writeCollectionOfObjectValues('connectedOrganizations', $this->connectedOrganizations);
-        $writer->writeObjectValue('settings', $this->settings);
+        $writer->writeCollectionOfObjectValues('accessPackageAssignmentApprovals', $this->getAccessPackageAssignmentApprovals());
+        $writer->writeCollectionOfObjectValues('accessPackages', $this->getAccessPackages());
+        $writer->writeCollectionOfObjectValues('assignmentPolicies', $this->getAssignmentPolicies());
+        $writer->writeCollectionOfObjectValues('assignmentRequests', $this->getAssignmentRequests());
+        $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeCollectionOfObjectValues('catalogs', $this->getCatalogs());
+        $writer->writeCollectionOfObjectValues('connectedOrganizations', $this->getConnectedOrganizations());
+        $writer->writeObjectValue('settings', $this->getSettings());
     }
 
     /**
      * Sets the accessPackageAssignmentApprovals property value. Approval stages for decisions associated with access package assignment requests.
      *  @param array<Approval>|null $value Value to set for the accessPackageAssignmentApprovals property.
     */
-    public function setAccessPackageAssignmentApprovals(?array $value ): void {
-        $this->accessPackageAssignmentApprovals = $value;
+    public function setAccessPackageAssignmentApprovals(?array $value): void {
+        $this->getBackingStore()->set('accessPackageAssignmentApprovals', $value);
     }
 
     /**
      * Sets the accessPackages property value. Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
      *  @param array<AccessPackage>|null $value Value to set for the accessPackages property.
     */
-    public function setAccessPackages(?array $value ): void {
-        $this->accessPackages = $value;
+    public function setAccessPackages(?array $value): void {
+        $this->getBackingStore()->set('accessPackages', $value);
     }
 
     /**
      * Sets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      *  @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
     */
-    public function setAssignmentPolicies(?array $value ): void {
-        $this->assignmentPolicies = $value;
+    public function setAssignmentPolicies(?array $value): void {
+        $this->getBackingStore()->set('assignmentPolicies', $value);
     }
 
     /**
      * Sets the assignmentRequests property value. Access package assignment requests created by or on behalf of a subject.
      *  @param array<AccessPackageAssignmentRequest>|null $value Value to set for the assignmentRequests property.
     */
-    public function setAssignmentRequests(?array $value ): void {
-        $this->assignmentRequests = $value;
+    public function setAssignmentRequests(?array $value): void {
+        $this->getBackingStore()->set('assignmentRequests', $value);
     }
 
     /**
      * Sets the assignments property value. The assignment of an access package to a subject for a period of time.
      *  @param array<AccessPackageAssignment>|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?array $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?array $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the catalogs property value. A container for access packages.
      *  @param array<AccessPackageCatalog>|null $value Value to set for the catalogs property.
     */
-    public function setCatalogs(?array $value ): void {
-        $this->catalogs = $value;
+    public function setCatalogs(?array $value): void {
+        $this->getBackingStore()->set('catalogs', $value);
     }
 
     /**
      * Sets the connectedOrganizations property value. References to a directory or domain of another organization whose users can request access.
      *  @param array<ConnectedOrganization>|null $value Value to set for the connectedOrganizations property.
     */
-    public function setConnectedOrganizations(?array $value ): void {
-        $this->connectedOrganizations = $value;
+    public function setConnectedOrganizations(?array $value): void {
+        $this->getBackingStore()->set('connectedOrganizations', $value);
     }
 
     /**
      * Sets the settings property value. The settings that control the behavior of Azure AD entitlement management.
      *  @param EntitlementManagementSettings|null $value Value to set for the settings property.
     */
-    public function setSettings(?EntitlementManagementSettings $value ): void {
-        $this->settings = $value;
+    public function setSettings(?EntitlementManagementSettings $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
 }

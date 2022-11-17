@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable 
 {
     /**
-     * @var UnifiedRoleManagementPolicy|null $policy The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
-    */
-    private ?UnifiedRoleManagementPolicy $policy = null;
-    
-    /**
-     * @var string|null $policyId The id of the policy. Inherited from entity.
-    */
-    private ?string $policyId = null;
-    
-    /**
-     * @var string|null $roleDefinitionId The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
-    */
-    private ?string $roleDefinitionId = null;
-    
-    /**
-     * @var string|null $scopeId The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
-    */
-    private ?string $scopeId = null;
-    
-    /**
-     * @var string|null $scopeType The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
-    */
-    private ?string $scopeType = null;
-    
-    /**
      * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
     */
     public function __construct() {
@@ -70,7 +45,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return UnifiedRoleManagementPolicy|null
     */
     public function getPolicy(): ?UnifiedRoleManagementPolicy {
-        return $this->policy;
+        return $this->getBackingStore()->get('policy');
     }
 
     /**
@@ -78,7 +53,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getPolicyId(): ?string {
-        return $this->policyId;
+        return $this->getBackingStore()->get('policyId');
     }
 
     /**
@@ -86,7 +61,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
-        return $this->roleDefinitionId;
+        return $this->getBackingStore()->get('roleDefinitionId');
     }
 
     /**
@@ -94,7 +69,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeId(): ?string {
-        return $this->scopeId;
+        return $this->getBackingStore()->get('scopeId');
     }
 
     /**
@@ -102,7 +77,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeType(): ?string {
-        return $this->scopeType;
+        return $this->getBackingStore()->get('scopeType');
     }
 
     /**
@@ -111,51 +86,51 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('policy', $this->policy);
-        $writer->writeStringValue('policyId', $this->policyId);
-        $writer->writeStringValue('roleDefinitionId', $this->roleDefinitionId);
-        $writer->writeStringValue('scopeId', $this->scopeId);
-        $writer->writeStringValue('scopeType', $this->scopeType);
+        $writer->writeObjectValue('policy', $this->getPolicy());
+        $writer->writeStringValue('policyId', $this->getPolicyId());
+        $writer->writeStringValue('roleDefinitionId', $this->getRoleDefinitionId());
+        $writer->writeStringValue('scopeId', $this->getScopeId());
+        $writer->writeStringValue('scopeType', $this->getScopeType());
     }
 
     /**
      * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      *  @param UnifiedRoleManagementPolicy|null $value Value to set for the policy property.
     */
-    public function setPolicy(?UnifiedRoleManagementPolicy $value ): void {
-        $this->policy = $value;
+    public function setPolicy(?UnifiedRoleManagementPolicy $value): void {
+        $this->getBackingStore()->set('policy', $value);
     }
 
     /**
      * Sets the policyId property value. The id of the policy. Inherited from entity.
      *  @param string|null $value Value to set for the policyId property.
     */
-    public function setPolicyId(?string $value ): void {
-        $this->policyId = $value;
+    public function setPolicyId(?string $value): void {
+        $this->getBackingStore()->set('policyId', $value);
     }
 
     /**
      * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      *  @param string|null $value Value to set for the roleDefinitionId property.
     */
-    public function setRoleDefinitionId(?string $value ): void {
-        $this->roleDefinitionId = $value;
+    public function setRoleDefinitionId(?string $value): void {
+        $this->getBackingStore()->set('roleDefinitionId', $value);
     }
 
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      *  @param string|null $value Value to set for the scopeId property.
     */
-    public function setScopeId(?string $value ): void {
-        $this->scopeId = $value;
+    public function setScopeId(?string $value): void {
+        $this->getBackingStore()->set('scopeId', $value);
     }
 
     /**
      * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      *  @param string|null $value Value to set for the scopeType property.
     */
-    public function setScopeType(?string $value ): void {
-        $this->scopeType = $value;
+    public function setScopeType(?string $value): void {
+        $this->getBackingStore()->set('scopeType', $value);
     }
 
 }

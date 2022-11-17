@@ -10,41 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallRecordingEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $callId Unique identifier of the call.
-    */
-    private ?string $callId = null;
-    
-    /**
-     * @var string|null $callRecordingDisplayName Display name for the call recording.
-    */
-    private ?string $callRecordingDisplayName = null;
-    
-    /**
-     * @var DateInterval|null $callRecordingDuration Duration of the call recording.
-    */
-    private ?DateInterval $callRecordingDuration = null;
-    
-    /**
-     * @var CallRecordingStatus|null $callRecordingStatus Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-    */
-    private ?CallRecordingStatus $callRecordingStatus = null;
-    
-    /**
-     * @var string|null $callRecordingUrl Call recording URL.
-    */
-    private ?string $callRecordingUrl = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var IdentitySet|null $meetingOrganizer Organizer of the meeting.
-    */
-    private ?IdentitySet $meetingOrganizer = null;
-    
-    /**
      * Instantiates a new CallRecordingEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -66,7 +31,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->callId;
+        return $this->getBackingStore()->get('callId');
     }
 
     /**
@@ -74,7 +39,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallRecordingDisplayName(): ?string {
-        return $this->callRecordingDisplayName;
+        return $this->getBackingStore()->get('callRecordingDisplayName');
     }
 
     /**
@@ -82,7 +47,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return DateInterval|null
     */
     public function getCallRecordingDuration(): ?DateInterval {
-        return $this->callRecordingDuration;
+        return $this->getBackingStore()->get('callRecordingDuration');
     }
 
     /**
@@ -90,7 +55,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return CallRecordingStatus|null
     */
     public function getCallRecordingStatus(): ?CallRecordingStatus {
-        return $this->callRecordingStatus;
+        return $this->getBackingStore()->get('callRecordingStatus');
     }
 
     /**
@@ -98,7 +63,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return string|null
     */
     public function getCallRecordingUrl(): ?string {
-        return $this->callRecordingUrl;
+        return $this->getBackingStore()->get('callRecordingUrl');
     }
 
     /**
@@ -123,7 +88,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -131,7 +96,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
      * @return IdentitySet|null
     */
     public function getMeetingOrganizer(): ?IdentitySet {
-        return $this->meetingOrganizer;
+        return $this->getBackingStore()->get('meetingOrganizer');
     }
 
     /**
@@ -140,69 +105,69 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('callId', $this->callId);
-        $writer->writeStringValue('callRecordingDisplayName', $this->callRecordingDisplayName);
-        $writer->writeDateIntervalValue('callRecordingDuration', $this->callRecordingDuration);
-        $writer->writeEnumValue('callRecordingStatus', $this->callRecordingStatus);
-        $writer->writeStringValue('callRecordingUrl', $this->callRecordingUrl);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeObjectValue('meetingOrganizer', $this->meetingOrganizer);
+        $writer->writeStringValue('callId', $this->getCallId());
+        $writer->writeStringValue('callRecordingDisplayName', $this->getCallRecordingDisplayName());
+        $writer->writeDateIntervalValue('callRecordingDuration', $this->getCallRecordingDuration());
+        $writer->writeEnumValue('callRecordingStatus', $this->getCallRecordingStatus());
+        $writer->writeStringValue('callRecordingUrl', $this->getCallRecordingUrl());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeObjectValue('meetingOrganizer', $this->getMeetingOrganizer());
     }
 
     /**
      * Sets the callId property value. Unique identifier of the call.
      *  @param string|null $value Value to set for the callId property.
     */
-    public function setCallId(?string $value ): void {
-        $this->callId = $value;
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
      * Sets the callRecordingDisplayName property value. Display name for the call recording.
      *  @param string|null $value Value to set for the callRecordingDisplayName property.
     */
-    public function setCallRecordingDisplayName(?string $value ): void {
-        $this->callRecordingDisplayName = $value;
+    public function setCallRecordingDisplayName(?string $value): void {
+        $this->getBackingStore()->set('callRecordingDisplayName', $value);
     }
 
     /**
      * Sets the callRecordingDuration property value. Duration of the call recording.
      *  @param DateInterval|null $value Value to set for the callRecordingDuration property.
     */
-    public function setCallRecordingDuration(?DateInterval $value ): void {
-        $this->callRecordingDuration = $value;
+    public function setCallRecordingDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('callRecordingDuration', $value);
     }
 
     /**
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      *  @param CallRecordingStatus|null $value Value to set for the callRecordingStatus property.
     */
-    public function setCallRecordingStatus(?CallRecordingStatus $value ): void {
-        $this->callRecordingStatus = $value;
+    public function setCallRecordingStatus(?CallRecordingStatus $value): void {
+        $this->getBackingStore()->set('callRecordingStatus', $value);
     }
 
     /**
      * Sets the callRecordingUrl property value. Call recording URL.
      *  @param string|null $value Value to set for the callRecordingUrl property.
     */
-    public function setCallRecordingUrl(?string $value ): void {
-        $this->callRecordingUrl = $value;
+    public function setCallRecordingUrl(?string $value): void {
+        $this->getBackingStore()->set('callRecordingUrl', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the meetingOrganizer property value. Organizer of the meeting.
      *  @param IdentitySet|null $value Value to set for the meetingOrganizer property.
     */
-    public function setMeetingOrganizer(?IdentitySet $value ): void {
-        $this->meetingOrganizer = $value;
+    public function setMeetingOrganizer(?IdentitySet $value): void {
+        $this->getBackingStore()->set('meetingOrganizer', $value);
     }
 
 }

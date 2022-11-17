@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleValueLegacyExtendedProperty extends Entity implements Parsable 
 {
     /**
-     * @var string|null $value A property value.
-    */
-    private ?string $value = null;
-    
-    /**
      * Instantiates a new singleValueLegacyExtendedProperty and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class SingleValueLegacyExtendedProperty extends Entity implements Parsable
      * @return string|null
     */
     public function getValue(): ?string {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -55,15 +50,15 @@ class SingleValueLegacyExtendedProperty extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('value', $this->value);
+        $writer->writeStringValue('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. A property value.
      *  @param string|null $value Value to set for the value property.
     */
-    public function setValue(?string $value ): void {
-        $this->value = $value;
+    public function setValue(?string $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

@@ -10,56 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SecureScore extends Entity implements Parsable 
 {
     /**
-     * @var int|null $activeUserCount Active user count of the given tenant.
-    */
-    private ?int $activeUserCount = null;
-    
-    /**
-     * @var array<AverageComparativeScore>|null $averageComparativeScores Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
-    */
-    private ?array $averageComparativeScores = null;
-    
-    /**
-     * @var string|null $azureTenantId GUID string for tenant ID.
-    */
-    private ?string $azureTenantId = null;
-    
-    /**
-     * @var array<ControlScore>|null $controlScores Contains tenant scores for a set of controls.
-    */
-    private ?array $controlScores = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The date when the entity is created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var float|null $currentScore Tenant current attained score on specified date.
-    */
-    private ?float $currentScore = null;
-    
-    /**
-     * @var array<string>|null $enabledServices Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
-    */
-    private ?array $enabledServices = null;
-    
-    /**
-     * @var int|null $licensedUserCount Licensed user count of the given tenant.
-    */
-    private ?int $licensedUserCount = null;
-    
-    /**
-     * @var float|null $maxScore Tenant maximum possible score on specified date.
-    */
-    private ?float $maxScore = null;
-    
-    /**
-     * @var SecurityVendorInformation|null $vendorInformation Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
-    */
-    private ?SecurityVendorInformation $vendorInformation = null;
-    
-    /**
      * Instantiates a new secureScore and sets the default values.
     */
     public function __construct() {
@@ -81,7 +31,7 @@ class SecureScore extends Entity implements Parsable
      * @return int|null
     */
     public function getActiveUserCount(): ?int {
-        return $this->activeUserCount;
+        return $this->getBackingStore()->get('activeUserCount');
     }
 
     /**
@@ -89,7 +39,7 @@ class SecureScore extends Entity implements Parsable
      * @return array<AverageComparativeScore>|null
     */
     public function getAverageComparativeScores(): ?array {
-        return $this->averageComparativeScores;
+        return $this->getBackingStore()->get('averageComparativeScores');
     }
 
     /**
@@ -97,7 +47,7 @@ class SecureScore extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureTenantId(): ?string {
-        return $this->azureTenantId;
+        return $this->getBackingStore()->get('azureTenantId');
     }
 
     /**
@@ -105,7 +55,7 @@ class SecureScore extends Entity implements Parsable
      * @return array<ControlScore>|null
     */
     public function getControlScores(): ?array {
-        return $this->controlScores;
+        return $this->getBackingStore()->get('controlScores');
     }
 
     /**
@@ -113,7 +63,7 @@ class SecureScore extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -121,7 +71,7 @@ class SecureScore extends Entity implements Parsable
      * @return float|null
     */
     public function getCurrentScore(): ?float {
-        return $this->currentScore;
+        return $this->getBackingStore()->get('currentScore');
     }
 
     /**
@@ -129,7 +79,7 @@ class SecureScore extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getEnabledServices(): ?array {
-        return $this->enabledServices;
+        return $this->getBackingStore()->get('enabledServices');
     }
 
     /**
@@ -157,7 +107,7 @@ class SecureScore extends Entity implements Parsable
      * @return int|null
     */
     public function getLicensedUserCount(): ?int {
-        return $this->licensedUserCount;
+        return $this->getBackingStore()->get('licensedUserCount');
     }
 
     /**
@@ -165,7 +115,7 @@ class SecureScore extends Entity implements Parsable
      * @return float|null
     */
     public function getMaxScore(): ?float {
-        return $this->maxScore;
+        return $this->getBackingStore()->get('maxScore');
     }
 
     /**
@@ -173,7 +123,7 @@ class SecureScore extends Entity implements Parsable
      * @return SecurityVendorInformation|null
     */
     public function getVendorInformation(): ?SecurityVendorInformation {
-        return $this->vendorInformation;
+        return $this->getBackingStore()->get('vendorInformation');
     }
 
     /**
@@ -182,96 +132,96 @@ class SecureScore extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('activeUserCount', $this->activeUserCount);
-        $writer->writeCollectionOfObjectValues('averageComparativeScores', $this->averageComparativeScores);
-        $writer->writeStringValue('azureTenantId', $this->azureTenantId);
-        $writer->writeCollectionOfObjectValues('controlScores', $this->controlScores);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeFloatValue('currentScore', $this->currentScore);
-        $writer->writeCollectionOfPrimitiveValues('enabledServices', $this->enabledServices);
-        $writer->writeIntegerValue('licensedUserCount', $this->licensedUserCount);
-        $writer->writeFloatValue('maxScore', $this->maxScore);
-        $writer->writeObjectValue('vendorInformation', $this->vendorInformation);
+        $writer->writeIntegerValue('activeUserCount', $this->getActiveUserCount());
+        $writer->writeCollectionOfObjectValues('averageComparativeScores', $this->getAverageComparativeScores());
+        $writer->writeStringValue('azureTenantId', $this->getAzureTenantId());
+        $writer->writeCollectionOfObjectValues('controlScores', $this->getControlScores());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeFloatValue('currentScore', $this->getCurrentScore());
+        $writer->writeCollectionOfPrimitiveValues('enabledServices', $this->getEnabledServices());
+        $writer->writeIntegerValue('licensedUserCount', $this->getLicensedUserCount());
+        $writer->writeFloatValue('maxScore', $this->getMaxScore());
+        $writer->writeObjectValue('vendorInformation', $this->getVendorInformation());
     }
 
     /**
      * Sets the activeUserCount property value. Active user count of the given tenant.
      *  @param int|null $value Value to set for the activeUserCount property.
     */
-    public function setActiveUserCount(?int $value ): void {
-        $this->activeUserCount = $value;
+    public function setActiveUserCount(?int $value): void {
+        $this->getBackingStore()->set('activeUserCount', $value);
     }
 
     /**
      * Sets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      *  @param array<AverageComparativeScore>|null $value Value to set for the averageComparativeScores property.
     */
-    public function setAverageComparativeScores(?array $value ): void {
-        $this->averageComparativeScores = $value;
+    public function setAverageComparativeScores(?array $value): void {
+        $this->getBackingStore()->set('averageComparativeScores', $value);
     }
 
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
      *  @param string|null $value Value to set for the azureTenantId property.
     */
-    public function setAzureTenantId(?string $value ): void {
-        $this->azureTenantId = $value;
+    public function setAzureTenantId(?string $value): void {
+        $this->getBackingStore()->set('azureTenantId', $value);
     }
 
     /**
      * Sets the controlScores property value. Contains tenant scores for a set of controls.
      *  @param array<ControlScore>|null $value Value to set for the controlScores property.
     */
-    public function setControlScores(?array $value ): void {
-        $this->controlScores = $value;
+    public function setControlScores(?array $value): void {
+        $this->getBackingStore()->set('controlScores', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The date when the entity is created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
      *  @param float|null $value Value to set for the currentScore property.
     */
-    public function setCurrentScore(?float $value ): void {
-        $this->currentScore = $value;
+    public function setCurrentScore(?float $value): void {
+        $this->getBackingStore()->set('currentScore', $value);
     }
 
     /**
      * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
      *  @param array<string>|null $value Value to set for the enabledServices property.
     */
-    public function setEnabledServices(?array $value ): void {
-        $this->enabledServices = $value;
+    public function setEnabledServices(?array $value): void {
+        $this->getBackingStore()->set('enabledServices', $value);
     }
 
     /**
      * Sets the licensedUserCount property value. Licensed user count of the given tenant.
      *  @param int|null $value Value to set for the licensedUserCount property.
     */
-    public function setLicensedUserCount(?int $value ): void {
-        $this->licensedUserCount = $value;
+    public function setLicensedUserCount(?int $value): void {
+        $this->getBackingStore()->set('licensedUserCount', $value);
     }
 
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
      *  @param float|null $value Value to set for the maxScore property.
     */
-    public function setMaxScore(?float $value ): void {
-        $this->maxScore = $value;
+    public function setMaxScore(?float $value): void {
+        $this->getBackingStore()->set('maxScore', $value);
     }
 
     /**
      * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      *  @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
     */
-    public function setVendorInformation(?SecurityVendorInformation $value ): void {
-        $this->vendorInformation = $value;
+    public function setVendorInformation(?SecurityVendorInformation $value): void {
+        $this->getBackingStore()->set('vendorInformation', $value);
     }
 
 }

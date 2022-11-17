@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsable 
+class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $isCompliantDeviceAccepted Specifies whether compliant devices from external Azure AD organizations are trusted.
-    */
-    private ?bool $isCompliantDeviceAccepted = null;
-    
-    /**
-     * @var bool|null $isHybridAzureADJoinedDeviceAccepted Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
-    */
-    private ?bool $isHybridAzureADJoinedDeviceAccepted = null;
-    
-    /**
-     * @var bool|null $isMfaAccepted Specifies whether MFA from external Azure AD organizations is trusted.
-    */
-    private ?bool $isMfaAccepted = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.crossTenantAccessPolicyInboundTrust');
     }
@@ -55,8 +39,16 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * @return bool|null
     */
     public function getIsCompliantDeviceAccepted(): ?bool {
-        return $this->isCompliantDeviceAccepted;
+        return $this->getBackingStore()->get('isCompliantDeviceAccepted');
     }
 
     /**
@@ -86,7 +78,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * @return bool|null
     */
     public function getIsHybridAzureADJoinedDeviceAccepted(): ?bool {
-        return $this->isHybridAzureADJoinedDeviceAccepted;
+        return $this->getBackingStore()->get('isHybridAzureADJoinedDeviceAccepted');
     }
 
     /**
@@ -94,7 +86,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * @return bool|null
     */
     public function getIsMfaAccepted(): ?bool {
-        return $this->isMfaAccepted;
+        return $this->getBackingStore()->get('isMfaAccepted');
     }
 
     /**
@@ -102,7 +94,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +102,51 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('isCompliantDeviceAccepted', $this->isCompliantDeviceAccepted);
-        $writer->writeBooleanValue('isHybridAzureADJoinedDeviceAccepted', $this->isHybridAzureADJoinedDeviceAccepted);
-        $writer->writeBooleanValue('isMfaAccepted', $this->isMfaAccepted);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('isCompliantDeviceAccepted', $this->getIsCompliantDeviceAccepted());
+        $writer->writeBooleanValue('isHybridAzureADJoinedDeviceAccepted', $this->getIsHybridAzureADJoinedDeviceAccepted());
+        $writer->writeBooleanValue('isMfaAccepted', $this->getIsMfaAccepted());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.
      *  @param bool|null $value Value to set for the isCompliantDeviceAccepted property.
     */
-    public function setIsCompliantDeviceAccepted(?bool $value ): void {
-        $this->isCompliantDeviceAccepted = $value;
+    public function setIsCompliantDeviceAccepted(?bool $value): void {
+        $this->getBackingStore()->set('isCompliantDeviceAccepted', $value);
     }
 
     /**
      * Sets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
      *  @param bool|null $value Value to set for the isHybridAzureADJoinedDeviceAccepted property.
     */
-    public function setIsHybridAzureADJoinedDeviceAccepted(?bool $value ): void {
-        $this->isHybridAzureADJoinedDeviceAccepted = $value;
+    public function setIsHybridAzureADJoinedDeviceAccepted(?bool $value): void {
+        $this->getBackingStore()->set('isHybridAzureADJoinedDeviceAccepted', $value);
     }
 
     /**
      * Sets the isMfaAccepted property value. Specifies whether MFA from external Azure AD organizations is trusted.
      *  @param bool|null $value Value to set for the isMfaAccepted property.
     */
-    public function setIsMfaAccepted(?bool $value ): void {
-        $this->isMfaAccepted = $value;
+    public function setIsMfaAccepted(?bool $value): void {
+        $this->getBackingStore()->set('isMfaAccepted', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -10,17 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintOperation extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The DateTimeOffset when the operation was created. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var PrintOperationStatus|null $status The status property
-    */
-    private ?PrintOperationStatus $status = null;
-    
-    /**
-     * Instantiates a new printOperation and sets the default values.
+     * Instantiates a new PrintOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -48,7 +38,7 @@ class PrintOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -68,7 +58,7 @@ class PrintOperation extends Entity implements Parsable
      * @return PrintOperationStatus|null
     */
     public function getStatus(): ?PrintOperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -77,24 +67,24 @@ class PrintOperation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('status', $this->status);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('status', $this->getStatus());
     }
 
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the operation was created. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param PrintOperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?PrintOperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?PrintOperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CalendarSharingMessage extends Message implements Parsable 
 {
     /**
-     * @var bool|null $canAccept The canAccept property
-    */
-    private ?bool $canAccept = null;
-    
-    /**
-     * @var CalendarSharingMessageAction|null $sharingMessageAction The sharingMessageAction property
-    */
-    private ?CalendarSharingMessageAction $sharingMessageAction = null;
-    
-    /**
-     * @var array<CalendarSharingMessageAction>|null $sharingMessageActions The sharingMessageActions property
-    */
-    private ?array $sharingMessageActions = null;
-    
-    /**
-     * @var string|null $suggestedCalendarName The suggestedCalendarName property
-    */
-    private ?string $suggestedCalendarName = null;
-    
-    /**
      * Instantiates a new CalendarSharingMessage and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getCanAccept(): ?bool {
-        return $this->canAccept;
+        return $this->getBackingStore()->get('canAccept');
     }
 
     /**
@@ -72,7 +52,7 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return CalendarSharingMessageAction|null
     */
     public function getSharingMessageAction(): ?CalendarSharingMessageAction {
-        return $this->sharingMessageAction;
+        return $this->getBackingStore()->get('sharingMessageAction');
     }
 
     /**
@@ -80,7 +60,7 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return array<CalendarSharingMessageAction>|null
     */
     public function getSharingMessageActions(): ?array {
-        return $this->sharingMessageActions;
+        return $this->getBackingStore()->get('sharingMessageActions');
     }
 
     /**
@@ -88,7 +68,7 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return string|null
     */
     public function getSuggestedCalendarName(): ?string {
-        return $this->suggestedCalendarName;
+        return $this->getBackingStore()->get('suggestedCalendarName');
     }
 
     /**
@@ -97,42 +77,42 @@ class CalendarSharingMessage extends Message implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('canAccept', $this->canAccept);
-        $writer->writeObjectValue('sharingMessageAction', $this->sharingMessageAction);
-        $writer->writeCollectionOfObjectValues('sharingMessageActions', $this->sharingMessageActions);
-        $writer->writeStringValue('suggestedCalendarName', $this->suggestedCalendarName);
+        $writer->writeBooleanValue('canAccept', $this->getCanAccept());
+        $writer->writeObjectValue('sharingMessageAction', $this->getSharingMessageAction());
+        $writer->writeCollectionOfObjectValues('sharingMessageActions', $this->getSharingMessageActions());
+        $writer->writeStringValue('suggestedCalendarName', $this->getSuggestedCalendarName());
     }
 
     /**
      * Sets the canAccept property value. The canAccept property
      *  @param bool|null $value Value to set for the canAccept property.
     */
-    public function setCanAccept(?bool $value ): void {
-        $this->canAccept = $value;
+    public function setCanAccept(?bool $value): void {
+        $this->getBackingStore()->set('canAccept', $value);
     }
 
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
      *  @param CalendarSharingMessageAction|null $value Value to set for the sharingMessageAction property.
     */
-    public function setSharingMessageAction(?CalendarSharingMessageAction $value ): void {
-        $this->sharingMessageAction = $value;
+    public function setSharingMessageAction(?CalendarSharingMessageAction $value): void {
+        $this->getBackingStore()->set('sharingMessageAction', $value);
     }
 
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
      *  @param array<CalendarSharingMessageAction>|null $value Value to set for the sharingMessageActions property.
     */
-    public function setSharingMessageActions(?array $value ): void {
-        $this->sharingMessageActions = $value;
+    public function setSharingMessageActions(?array $value): void {
+        $this->getBackingStore()->set('sharingMessageActions', $value);
     }
 
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
      *  @param string|null $value Value to set for the suggestedCalendarName property.
     */
-    public function setSuggestedCalendarName(?string $value ): void {
-        $this->suggestedCalendarName = $value;
+    public function setSuggestedCalendarName(?string $value): void {
+        $this->getBackingStore()->set('suggestedCalendarName', $value);
     }
 
 }

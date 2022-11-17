@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InviteParticipantsOperation extends CommsOperation implements Parsable 
 {
     /**
-     * @var array<InvitationParticipantInfo>|null $participants The participants to invite.
-    */
-    private ?array $participants = null;
-    
-    /**
      * Instantiates a new InviteParticipantsOperation and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class InviteParticipantsOperation extends CommsOperation implements Parsable
      * @return array<InvitationParticipantInfo>|null
     */
     public function getParticipants(): ?array {
-        return $this->participants;
+        return $this->getBackingStore()->get('participants');
     }
 
     /**
@@ -55,15 +50,15 @@ class InviteParticipantsOperation extends CommsOperation implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('participants', $this->participants);
+        $writer->writeCollectionOfObjectValues('participants', $this->getParticipants());
     }
 
     /**
      * Sets the participants property value. The participants to invite.
      *  @param array<InvitationParticipantInfo>|null $value Value to set for the participants property.
     */
-    public function setParticipants(?array $value ): void {
-        $this->participants = $value;
+    public function setParticipants(?array $value): void {
+        $this->getBackingStore()->set('participants', $value);
     }
 
 }

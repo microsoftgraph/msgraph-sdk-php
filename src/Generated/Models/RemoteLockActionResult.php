@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RemoteLockActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * @var string|null $unlockPin Pin to unlock the client
-    */
-    private ?string $unlockPin = null;
-    
-    /**
      * Instantiates a new RemoteLockActionResult and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class RemoteLockActionResult extends DeviceActionResult implements Parsable
      * @return string|null
     */
     public function getUnlockPin(): ?string {
-        return $this->unlockPin;
+        return $this->getBackingStore()->get('unlockPin');
     }
 
     /**
@@ -55,15 +50,15 @@ class RemoteLockActionResult extends DeviceActionResult implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('unlockPin', $this->unlockPin);
+        $writer->writeStringValue('unlockPin', $this->getUnlockPin());
     }
 
     /**
      * Sets the unlockPin property value. Pin to unlock the client
      *  @param string|null $value Value to set for the unlockPin property.
     */
-    public function setUnlockPin(?string $value ): void {
-        $this->unlockPin = $value;
+    public function setUnlockPin(?string $value): void {
+        $this->getBackingStore()->set('unlockPin', $value);
     }
 
 }

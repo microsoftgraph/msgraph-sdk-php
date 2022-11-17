@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceScheduledActionForRule extends Entity implements Parsable 
 {
     /**
-     * @var string|null $ruleName Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
-    */
-    private ?string $ruleName = null;
-    
-    /**
-     * @var array<DeviceComplianceActionItem>|null $scheduledActionConfigurations The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-    */
-    private ?array $scheduledActionConfigurations = null;
-    
-    /**
      * Instantiates a new deviceComplianceScheduledActionForRule and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class DeviceComplianceScheduledActionForRule extends Entity implements Parsable
      * @return string|null
     */
     public function getRuleName(): ?string {
-        return $this->ruleName;
+        return $this->getBackingStore()->get('ruleName');
     }
 
     /**
@@ -60,7 +50,7 @@ class DeviceComplianceScheduledActionForRule extends Entity implements Parsable
      * @return array<DeviceComplianceActionItem>|null
     */
     public function getScheduledActionConfigurations(): ?array {
-        return $this->scheduledActionConfigurations;
+        return $this->getBackingStore()->get('scheduledActionConfigurations');
     }
 
     /**
@@ -69,24 +59,24 @@ class DeviceComplianceScheduledActionForRule extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('ruleName', $this->ruleName);
-        $writer->writeCollectionOfObjectValues('scheduledActionConfigurations', $this->scheduledActionConfigurations);
+        $writer->writeStringValue('ruleName', $this->getRuleName());
+        $writer->writeCollectionOfObjectValues('scheduledActionConfigurations', $this->getScheduledActionConfigurations());
     }
 
     /**
      * Sets the ruleName property value. Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
      *  @param string|null $value Value to set for the ruleName property.
     */
-    public function setRuleName(?string $value ): void {
-        $this->ruleName = $value;
+    public function setRuleName(?string $value): void {
+        $this->getBackingStore()->set('ruleName', $value);
     }
 
     /**
      * Sets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      *  @param array<DeviceComplianceActionItem>|null $value Value to set for the scheduledActionConfigurations property.
     */
-    public function setScheduledActionConfigurations(?array $value ): void {
-        $this->scheduledActionConfigurations = $value;
+    public function setScheduledActionConfigurations(?array $value): void {
+        $this->getBackingStore()->set('scheduledActionConfigurations', $value);
     }
 
 }

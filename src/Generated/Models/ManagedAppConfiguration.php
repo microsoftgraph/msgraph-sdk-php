@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-    */
-    private ?array $customSettings = null;
-    
-    /**
      * Instantiates a new ManagedAppConfiguration and sets the default values.
     */
     public function __construct() {
@@ -42,7 +37,7 @@ class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable
      * @return array<KeyValuePair>|null
     */
     public function getCustomSettings(): ?array {
-        return $this->customSettings;
+        return $this->getBackingStore()->get('customSettings');
     }
 
     /**
@@ -62,15 +57,15 @@ class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('customSettings', $this->customSettings);
+        $writer->writeCollectionOfObjectValues('customSettings', $this->getCustomSettings());
     }
 
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      *  @param array<KeyValuePair>|null $value Value to set for the customSettings property.
     */
-    public function setCustomSettings(?array $value ): void {
-        $this->customSettings = $value;
+    public function setCustomSettings(?array $value): void {
+        $this->getBackingStore()->set('customSettings', $value);
     }
 
 }

@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ParentalControlSettings implements AdditionalDataHolder, Parsable 
+class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $countriesBlockedForMinors Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
-    */
-    private ?array $countriesBlockedForMinors = null;
-    
-    /**
-     * @var string|null $legalAgeGroupRule Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.
-    */
-    private ?string $legalAgeGroupRule = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new parentalControlSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.parentalControlSettings');
     }
@@ -50,8 +39,16 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +56,7 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getCountriesBlockedForMinors(): ?array {
-        return $this->countriesBlockedForMinors;
+        return $this->getBackingStore()->get('countriesBlockedForMinors');
     }
 
     /**
@@ -80,7 +77,7 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLegalAgeGroupRule(): ?string {
-        return $this->legalAgeGroupRule;
+        return $this->getBackingStore()->get('legalAgeGroupRule');
     }
 
     /**
@@ -88,7 +85,7 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +93,42 @@ class ParentalControlSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('countriesBlockedForMinors', $this->countriesBlockedForMinors);
-        $writer->writeStringValue('legalAgeGroupRule', $this->legalAgeGroupRule);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('countriesBlockedForMinors', $this->getCountriesBlockedForMinors());
+        $writer->writeStringValue('legalAgeGroupRule', $this->getLegalAgeGroupRule());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the countriesBlockedForMinors property value. Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
      *  @param array<string>|null $value Value to set for the countriesBlockedForMinors property.
     */
-    public function setCountriesBlockedForMinors(?array $value ): void {
-        $this->countriesBlockedForMinors = $value;
+    public function setCountriesBlockedForMinors(?array $value): void {
+        $this->getBackingStore()->set('countriesBlockedForMinors', $value);
     }
 
     /**
      * Sets the legalAgeGroupRule property value. Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.
      *  @param string|null $value Value to set for the legalAgeGroupRule property.
     */
-    public function setLegalAgeGroupRule(?string $value ): void {
-        $this->legalAgeGroupRule = $value;
+    public function setLegalAgeGroupRule(?string $value): void {
+        $this->getBackingStore()->set('legalAgeGroupRule', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

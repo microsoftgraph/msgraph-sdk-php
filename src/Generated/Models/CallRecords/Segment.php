@@ -11,36 +11,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Segment extends Entity implements Parsable 
 {
     /**
-     * @var Endpoint|null $callee Endpoint that answered this segment.
-    */
-    private ?Endpoint $callee = null;
-    
-    /**
-     * @var Endpoint|null $caller Endpoint that initiated this segment.
-    */
-    private ?Endpoint $caller = null;
-    
-    /**
-     * @var DateTime|null $endDateTime UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var FailureInfo|null $failureInfo Failure information associated with the segment if it failed.
-    */
-    private ?FailureInfo $failureInfo = null;
-    
-    /**
-     * @var array<Media>|null $media Media associated with this segment.
-    */
-    private ?array $media = null;
-    
-    /**
-     * @var DateTime|null $startDateTime UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
      * Instantiates a new segment and sets the default values.
     */
     public function __construct() {
@@ -62,7 +32,7 @@ class Segment extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCallee(): ?Endpoint {
-        return $this->callee;
+        return $this->getBackingStore()->get('callee');
     }
 
     /**
@@ -70,7 +40,7 @@ class Segment extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCaller(): ?Endpoint {
-        return $this->caller;
+        return $this->getBackingStore()->get('caller');
     }
 
     /**
@@ -78,7 +48,7 @@ class Segment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -86,7 +56,7 @@ class Segment extends Entity implements Parsable
      * @return FailureInfo|null
     */
     public function getFailureInfo(): ?FailureInfo {
-        return $this->failureInfo;
+        return $this->getBackingStore()->get('failureInfo');
     }
 
     /**
@@ -110,7 +80,7 @@ class Segment extends Entity implements Parsable
      * @return array<Media>|null
     */
     public function getMedia(): ?array {
-        return $this->media;
+        return $this->getBackingStore()->get('media');
     }
 
     /**
@@ -118,7 +88,7 @@ class Segment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -127,60 +97,60 @@ class Segment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('callee', $this->callee);
-        $writer->writeObjectValue('caller', $this->caller);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeObjectValue('failureInfo', $this->failureInfo);
-        $writer->writeCollectionOfObjectValues('media', $this->media);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
+        $writer->writeObjectValue('callee', $this->getCallee());
+        $writer->writeObjectValue('caller', $this->getCaller());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeObjectValue('failureInfo', $this->getFailureInfo());
+        $writer->writeCollectionOfObjectValues('media', $this->getMedia());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }
 
     /**
      * Sets the callee property value. Endpoint that answered this segment.
      *  @param Endpoint|null $value Value to set for the callee property.
     */
-    public function setCallee(?Endpoint $value ): void {
-        $this->callee = $value;
+    public function setCallee(?Endpoint $value): void {
+        $this->getBackingStore()->set('callee', $value);
     }
 
     /**
      * Sets the caller property value. Endpoint that initiated this segment.
      *  @param Endpoint|null $value Value to set for the caller property.
     */
-    public function setCaller(?Endpoint $value ): void {
-        $this->caller = $value;
+    public function setCaller(?Endpoint $value): void {
+        $this->getBackingStore()->set('caller', $value);
     }
 
     /**
      * Sets the endDateTime property value. UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the failureInfo property value. Failure information associated with the segment if it failed.
      *  @param FailureInfo|null $value Value to set for the failureInfo property.
     */
-    public function setFailureInfo(?FailureInfo $value ): void {
-        $this->failureInfo = $value;
+    public function setFailureInfo(?FailureInfo $value): void {
+        $this->getBackingStore()->set('failureInfo', $value);
     }
 
     /**
      * Sets the media property value. Media associated with this segment.
      *  @param array<Media>|null $value Value to set for the media property.
     */
-    public function setMedia(?array $value ): void {
-        $this->media = $value;
+    public function setMedia(?array $value): void {
+        $this->getBackingStore()->set('media', $value);
     }
 
     /**
      * Sets the startDateTime property value. UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
 }

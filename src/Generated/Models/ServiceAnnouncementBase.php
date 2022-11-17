@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceAnnouncementBase extends Entity implements Parsable 
 {
     /**
-     * @var array<KeyValuePair>|null $details Additional details about service event. This property doesn't support filters.
-    */
-    private ?array $details = null;
-    
-    /**
-     * @var DateTime|null $endDateTime The end time of the service event.
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime The last modified time of the service event.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The start time of the service event.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $title The title of the service event.
-    */
-    private ?string $title = null;
-    
-    /**
      * Instantiates a new serviceAnnouncementBase and sets the default values.
     */
     public function __construct() {
@@ -64,7 +39,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return array<KeyValuePair>|null
     */
     public function getDetails(): ?array {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -72,7 +47,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -95,7 +70,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -103,7 +78,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -111,7 +86,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -120,51 +95,51 @@ class ServiceAnnouncementBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('details', $this->details);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('title', $this->title);
+        $writer->writeCollectionOfObjectValues('details', $this->getDetails());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('title', $this->getTitle());
     }
 
     /**
      * Sets the details property value. Additional details about service event. This property doesn't support filters.
      *  @param array<KeyValuePair>|null $value Value to set for the details property.
     */
-    public function setDetails(?array $value ): void {
-        $this->details = $value;
+    public function setDetails(?array $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
     /**
      * Sets the endDateTime property value. The end time of the service event.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The last modified time of the service event.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the startDateTime property value. The start time of the service event.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the title property value. The title of the service event.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
 }

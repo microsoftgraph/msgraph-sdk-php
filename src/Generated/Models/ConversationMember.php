@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConversationMember extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The display name of the user.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<string>|null $roles The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
-    */
-    private ?array $roles = null;
-    
-    /**
-     * @var DateTime|null $visibleHistoryStartDateTime The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
-    */
-    private ?DateTime $visibleHistoryStartDateTime = null;
-    
-    /**
      * Instantiates a new conversationMember and sets the default values.
     */
     public function __construct() {
@@ -53,7 +38,7 @@ class ConversationMember extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +59,7 @@ class ConversationMember extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getRoles(): ?array {
-        return $this->roles;
+        return $this->getBackingStore()->get('roles');
     }
 
     /**
@@ -82,7 +67,7 @@ class ConversationMember extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getVisibleHistoryStartDateTime(): ?DateTime {
-        return $this->visibleHistoryStartDateTime;
+        return $this->getBackingStore()->get('visibleHistoryStartDateTime');
     }
 
     /**
@@ -91,33 +76,33 @@ class ConversationMember extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfPrimitiveValues('roles', $this->roles);
-        $writer->writeDateTimeValue('visibleHistoryStartDateTime', $this->visibleHistoryStartDateTime);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfPrimitiveValues('roles', $this->getRoles());
+        $writer->writeDateTimeValue('visibleHistoryStartDateTime', $this->getVisibleHistoryStartDateTime());
     }
 
     /**
      * Sets the displayName property value. The display name of the user.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      *  @param array<string>|null $value Value to set for the roles property.
     */
-    public function setRoles(?array $value ): void {
-        $this->roles = $value;
+    public function setRoles(?array $value): void {
+        $this->getBackingStore()->set('roles', $value);
     }
 
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
      *  @param DateTime|null $value Value to set for the visibleHistoryStartDateTime property.
     */
-    public function setVisibleHistoryStartDateTime(?DateTime $value ): void {
-        $this->visibleHistoryStartDateTime = $value;
+    public function setVisibleHistoryStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('visibleHistoryStartDateTime', $value);
     }
 
 }

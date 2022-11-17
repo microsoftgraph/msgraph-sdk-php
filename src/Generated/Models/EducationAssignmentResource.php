@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentResource extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $distributeForStudentWork Indicates whether this resource should be copied to each student submission for modification and submission. Required
-    */
-    private ?bool $distributeForStudentWork = null;
-    
-    /**
-     * @var EducationResource|null $resource Resource object that has been associated with this assignment.
-    */
-    private ?EducationResource $resource = null;
-    
-    /**
      * Instantiates a new educationAssignmentResource and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class EducationAssignmentResource extends Entity implements Parsable
      * @return bool|null
     */
     public function getDistributeForStudentWork(): ?bool {
-        return $this->distributeForStudentWork;
+        return $this->getBackingStore()->get('distributeForStudentWork');
     }
 
     /**
@@ -60,7 +50,7 @@ class EducationAssignmentResource extends Entity implements Parsable
      * @return EducationResource|null
     */
     public function getResource(): ?EducationResource {
-        return $this->resource;
+        return $this->getBackingStore()->get('resource');
     }
 
     /**
@@ -69,24 +59,24 @@ class EducationAssignmentResource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('distributeForStudentWork', $this->distributeForStudentWork);
-        $writer->writeObjectValue('resource', $this->resource);
+        $writer->writeBooleanValue('distributeForStudentWork', $this->getDistributeForStudentWork());
+        $writer->writeObjectValue('resource', $this->getResource());
     }
 
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
      *  @param bool|null $value Value to set for the distributeForStudentWork property.
     */
-    public function setDistributeForStudentWork(?bool $value ): void {
-        $this->distributeForStudentWork = $value;
+    public function setDistributeForStudentWork(?bool $value): void {
+        $this->getBackingStore()->set('distributeForStudentWork', $value);
     }
 
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
      *  @param EducationResource|null $value Value to set for the resource property.
     */
-    public function setResource(?EducationResource $value ): void {
-        $this->resource = $value;
+    public function setResource(?EducationResource $value): void {
+        $this->getBackingStore()->set('resource', $value);
     }
 
 }

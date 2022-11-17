@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InferenceClassificationOverride extends Entity implements Parsable 
 {
     /**
-     * @var InferenceClassificationType|null $classifyAs Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-    */
-    private ?InferenceClassificationType $classifyAs = null;
-    
-    /**
-     * @var EmailAddress|null $senderEmailAddress The email address information of the sender for whom the override is created.
-    */
-    private ?EmailAddress $senderEmailAddress = null;
-    
-    /**
      * Instantiates a new inferenceClassificationOverride and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class InferenceClassificationOverride extends Entity implements Parsable
      * @return InferenceClassificationType|null
     */
     public function getClassifyAs(): ?InferenceClassificationType {
-        return $this->classifyAs;
+        return $this->getBackingStore()->get('classifyAs');
     }
 
     /**
@@ -60,7 +50,7 @@ class InferenceClassificationOverride extends Entity implements Parsable
      * @return EmailAddress|null
     */
     public function getSenderEmailAddress(): ?EmailAddress {
-        return $this->senderEmailAddress;
+        return $this->getBackingStore()->get('senderEmailAddress');
     }
 
     /**
@@ -69,24 +59,24 @@ class InferenceClassificationOverride extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('classifyAs', $this->classifyAs);
-        $writer->writeObjectValue('senderEmailAddress', $this->senderEmailAddress);
+        $writer->writeEnumValue('classifyAs', $this->getClassifyAs());
+        $writer->writeObjectValue('senderEmailAddress', $this->getSenderEmailAddress());
     }
 
     /**
      * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      *  @param InferenceClassificationType|null $value Value to set for the classifyAs property.
     */
-    public function setClassifyAs(?InferenceClassificationType $value ): void {
-        $this->classifyAs = $value;
+    public function setClassifyAs(?InferenceClassificationType $value): void {
+        $this->getBackingStore()->set('classifyAs', $value);
     }
 
     /**
      * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
      *  @param EmailAddress|null $value Value to set for the senderEmailAddress property.
     */
-    public function setSenderEmailAddress(?EmailAddress $value ): void {
-        $this->senderEmailAddress = $value;
+    public function setSenderEmailAddress(?EmailAddress $value): void {
+        $this->getBackingStore()->set('senderEmailAddress', $value);
     }
 
 }

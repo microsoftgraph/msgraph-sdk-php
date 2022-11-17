@@ -6,23 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsable 
+class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $quickScan The quickScan property
-    */
-    private ?bool $quickScan = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new windowsDefenderScanPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -39,8 +38,16 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +66,7 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getQuickScan(): ?bool {
-        return $this->quickScan;
+        return $this->getBackingStore()->get('quickScan');
     }
 
     /**
@@ -67,24 +74,24 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('quickScan', $this->quickScan);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('quickScan', $this->getQuickScan());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the quickScan property value. The quickScan property
      *  @param bool|null $value Value to set for the quickScan property.
     */
-    public function setQuickScan(?bool $value ): void {
-        $this->quickScan = $value;
+    public function setQuickScan(?bool $value): void {
+        $this->getBackingStore()->set('quickScan', $value);
     }
 
 }

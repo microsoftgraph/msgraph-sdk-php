@@ -7,28 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ForwardPostRequestBody implements AdditionalDataHolder, Parsable 
+class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $comment The Comment property
-    */
-    private ?string $comment = null;
-    
-    /**
-     * @var array<Recipient>|null $toRecipients The ToRecipients property
-    */
-    private ?array $toRecipients = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new forwardPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -45,8 +39,16 @@ class ForwardPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -54,7 +56,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->comment;
+        return $this->getBackingStore()->get('comment');
     }
 
     /**
@@ -74,7 +76,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
-        return $this->toRecipients;
+        return $this->getBackingStore()->get('toRecipients');
     }
 
     /**
@@ -82,33 +84,33 @@ class ForwardPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('comment', $this->comment);
-        $writer->writeCollectionOfObjectValues('toRecipients', $this->toRecipients);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('comment', $this->getComment());
+        $writer->writeCollectionOfObjectValues('toRecipients', $this->getToRecipients());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the comment property value. The Comment property
      *  @param string|null $value Value to set for the Comment property.
     */
-    public function setComment(?string $value ): void {
-        $this->comment = $value;
+    public function setComment(?string $value): void {
+        $this->getBackingStore()->set('comment', $value);
     }
 
     /**
      * Sets the toRecipients property value. The ToRecipients property
      *  @param array<Recipient>|null $value Value to set for the ToRecipients property.
     */
-    public function setToRecipients(?array $value ): void {
-        $this->toRecipients = $value;
+    public function setToRecipients(?array $value): void {
+        $this->getBackingStore()->set('toRecipients', $value);
     }
 
 }

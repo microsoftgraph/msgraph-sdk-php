@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificationRecipientScope implements Parsable 
 {
     /**
-     * @var string|null $query Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
-    */
-    private ?string $query = null;
-    
-    /**
-     * @var string|null $queryRoot In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
-    */
-    private ?string $queryRoot = null;
-    
-    /**
-     * @var string|null $queryType Indicates the type of query. Allowed value is MicrosoftGraph.
-    */
-    private ?string $queryType = null;
-    
-    /**
      * Instantiates a new AccessReviewNotificationRecipientQueryScope and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
      * @return string|null
     */
     public function getQuery(): ?string {
-        return $this->query;
+        return $this->getBackingStore()->get('query');
     }
 
     /**
@@ -66,7 +51,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
      * @return string|null
     */
     public function getQueryRoot(): ?string {
-        return $this->queryRoot;
+        return $this->getBackingStore()->get('queryRoot');
     }
 
     /**
@@ -74,7 +59,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
      * @return string|null
     */
     public function getQueryType(): ?string {
-        return $this->queryType;
+        return $this->getBackingStore()->get('queryType');
     }
 
     /**
@@ -83,33 +68,33 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('query', $this->query);
-        $writer->writeStringValue('queryRoot', $this->queryRoot);
-        $writer->writeStringValue('queryType', $this->queryType);
+        $writer->writeStringValue('query', $this->getQuery());
+        $writer->writeStringValue('queryRoot', $this->getQueryRoot());
+        $writer->writeStringValue('queryType', $this->getQueryType());
     }
 
     /**
      * Sets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
      *  @param string|null $value Value to set for the query property.
     */
-    public function setQuery(?string $value ): void {
-        $this->query = $value;
+    public function setQuery(?string $value): void {
+        $this->getBackingStore()->set('query', $value);
     }
 
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
      *  @param string|null $value Value to set for the queryRoot property.
     */
-    public function setQueryRoot(?string $value ): void {
-        $this->queryRoot = $value;
+    public function setQueryRoot(?string $value): void {
+        $this->getBackingStore()->set('queryRoot', $value);
     }
 
     /**
      * Sets the queryType property value. Indicates the type of query. Allowed value is MicrosoftGraph.
      *  @param string|null $value Value to set for the queryType property.
     */
-    public function setQueryType(?string $value ): void {
-        $this->queryType = $value;
+    public function setQueryType(?string $value): void {
+        $this->getBackingStore()->set('queryType', $value);
     }
 
 }

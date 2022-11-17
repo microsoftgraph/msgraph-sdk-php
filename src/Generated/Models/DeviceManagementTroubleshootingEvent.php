@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementTroubleshootingEvent extends Entity implements Parsable 
 {
     /**
-     * @var string|null $correlationId Id used for tracing the failure in the service.
-    */
-    private ?string $correlationId = null;
-    
-    /**
-     * @var DateTime|null $eventDateTime Time when the event occurred .
-    */
-    private ?DateTime $eventDateTime = null;
-    
-    /**
      * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
@@ -48,7 +38,7 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
      * @return string|null
     */
     public function getCorrelationId(): ?string {
-        return $this->correlationId;
+        return $this->getBackingStore()->get('correlationId');
     }
 
     /**
@@ -56,7 +46,7 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->eventDateTime;
+        return $this->getBackingStore()->get('eventDateTime');
     }
 
     /**
@@ -77,24 +67,24 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('correlationId', $this->correlationId);
-        $writer->writeDateTimeValue('eventDateTime', $this->eventDateTime);
+        $writer->writeStringValue('correlationId', $this->getCorrelationId());
+        $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
     }
 
     /**
      * Sets the correlationId property value. Id used for tracing the failure in the service.
      *  @param string|null $value Value to set for the correlationId property.
     */
-    public function setCorrelationId(?string $value ): void {
-        $this->correlationId = $value;
+    public function setCorrelationId(?string $value): void {
+        $this->getBackingStore()->set('correlationId', $value);
     }
 
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      *  @param DateTime|null $value Value to set for the eventDateTime property.
     */
-    public function setEventDateTime(?DateTime $value ): void {
-        $this->eventDateTime = $value;
+    public function setEventDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('eventDateTime', $value);
     }
 
 }

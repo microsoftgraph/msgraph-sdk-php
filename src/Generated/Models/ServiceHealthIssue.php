@@ -9,51 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable 
 {
     /**
-     * @var ServiceHealthClassificationType|null $classification The classification property
-    */
-    private ?ServiceHealthClassificationType $classification = null;
-    
-    /**
-     * @var string|null $feature The feature name of the service issue.
-    */
-    private ?string $feature = null;
-    
-    /**
-     * @var string|null $featureGroup The feature group name of the service issue.
-    */
-    private ?string $featureGroup = null;
-    
-    /**
-     * @var string|null $impactDescription The description of the service issue impact.
-    */
-    private ?string $impactDescription = null;
-    
-    /**
-     * @var bool|null $isResolved Indicates whether the issue is resolved.
-    */
-    private ?bool $isResolved = null;
-    
-    /**
-     * @var ServiceHealthOrigin|null $origin The origin property
-    */
-    private ?ServiceHealthOrigin $origin = null;
-    
-    /**
-     * @var array<ServiceHealthIssuePost>|null $posts Collection of historical posts for the service issue.
-    */
-    private ?array $posts = null;
-    
-    /**
-     * @var string|null $service Indicates the service affected by the issue.
-    */
-    private ?string $service = null;
-    
-    /**
-     * @var ServiceHealthStatus|null $status The status property
-    */
-    private ?ServiceHealthStatus $status = null;
-    
-    /**
      * Instantiates a new ServiceHealthIssue and sets the default values.
     */
     public function __construct() {
@@ -75,7 +30,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthClassificationType|null
     */
     public function getClassification(): ?ServiceHealthClassificationType {
-        return $this->classification;
+        return $this->getBackingStore()->get('classification');
     }
 
     /**
@@ -83,7 +38,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getFeature(): ?string {
-        return $this->feature;
+        return $this->getBackingStore()->get('feature');
     }
 
     /**
@@ -91,7 +46,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getFeatureGroup(): ?string {
-        return $this->featureGroup;
+        return $this->getBackingStore()->get('featureGroup');
     }
 
     /**
@@ -118,7 +73,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getImpactDescription(): ?string {
-        return $this->impactDescription;
+        return $this->getBackingStore()->get('impactDescription');
     }
 
     /**
@@ -126,7 +81,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getIsResolved(): ?bool {
-        return $this->isResolved;
+        return $this->getBackingStore()->get('isResolved');
     }
 
     /**
@@ -134,7 +89,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthOrigin|null
     */
     public function getOrigin(): ?ServiceHealthOrigin {
-        return $this->origin;
+        return $this->getBackingStore()->get('origin');
     }
 
     /**
@@ -142,7 +97,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return array<ServiceHealthIssuePost>|null
     */
     public function getPosts(): ?array {
-        return $this->posts;
+        return $this->getBackingStore()->get('posts');
     }
 
     /**
@@ -150,7 +105,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->service;
+        return $this->getBackingStore()->get('service');
     }
 
     /**
@@ -158,7 +113,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -167,87 +122,87 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('classification', $this->classification);
-        $writer->writeStringValue('feature', $this->feature);
-        $writer->writeStringValue('featureGroup', $this->featureGroup);
-        $writer->writeStringValue('impactDescription', $this->impactDescription);
-        $writer->writeBooleanValue('isResolved', $this->isResolved);
-        $writer->writeEnumValue('origin', $this->origin);
-        $writer->writeCollectionOfObjectValues('posts', $this->posts);
-        $writer->writeStringValue('service', $this->service);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeEnumValue('classification', $this->getClassification());
+        $writer->writeStringValue('feature', $this->getFeature());
+        $writer->writeStringValue('featureGroup', $this->getFeatureGroup());
+        $writer->writeStringValue('impactDescription', $this->getImpactDescription());
+        $writer->writeBooleanValue('isResolved', $this->getIsResolved());
+        $writer->writeEnumValue('origin', $this->getOrigin());
+        $writer->writeCollectionOfObjectValues('posts', $this->getPosts());
+        $writer->writeStringValue('service', $this->getService());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the classification property value. The classification property
      *  @param ServiceHealthClassificationType|null $value Value to set for the classification property.
     */
-    public function setClassification(?ServiceHealthClassificationType $value ): void {
-        $this->classification = $value;
+    public function setClassification(?ServiceHealthClassificationType $value): void {
+        $this->getBackingStore()->set('classification', $value);
     }
 
     /**
      * Sets the feature property value. The feature name of the service issue.
      *  @param string|null $value Value to set for the feature property.
     */
-    public function setFeature(?string $value ): void {
-        $this->feature = $value;
+    public function setFeature(?string $value): void {
+        $this->getBackingStore()->set('feature', $value);
     }
 
     /**
      * Sets the featureGroup property value. The feature group name of the service issue.
      *  @param string|null $value Value to set for the featureGroup property.
     */
-    public function setFeatureGroup(?string $value ): void {
-        $this->featureGroup = $value;
+    public function setFeatureGroup(?string $value): void {
+        $this->getBackingStore()->set('featureGroup', $value);
     }
 
     /**
      * Sets the impactDescription property value. The description of the service issue impact.
      *  @param string|null $value Value to set for the impactDescription property.
     */
-    public function setImpactDescription(?string $value ): void {
-        $this->impactDescription = $value;
+    public function setImpactDescription(?string $value): void {
+        $this->getBackingStore()->set('impactDescription', $value);
     }
 
     /**
      * Sets the isResolved property value. Indicates whether the issue is resolved.
      *  @param bool|null $value Value to set for the isResolved property.
     */
-    public function setIsResolved(?bool $value ): void {
-        $this->isResolved = $value;
+    public function setIsResolved(?bool $value): void {
+        $this->getBackingStore()->set('isResolved', $value);
     }
 
     /**
      * Sets the origin property value. The origin property
      *  @param ServiceHealthOrigin|null $value Value to set for the origin property.
     */
-    public function setOrigin(?ServiceHealthOrigin $value ): void {
-        $this->origin = $value;
+    public function setOrigin(?ServiceHealthOrigin $value): void {
+        $this->getBackingStore()->set('origin', $value);
     }
 
     /**
      * Sets the posts property value. Collection of historical posts for the service issue.
      *  @param array<ServiceHealthIssuePost>|null $value Value to set for the posts property.
     */
-    public function setPosts(?array $value ): void {
-        $this->posts = $value;
+    public function setPosts(?array $value): void {
+        $this->getBackingStore()->set('posts', $value);
     }
 
     /**
      * Sets the service property value. Indicates the service affected by the issue.
      *  @param string|null $value Value to set for the service property.
     */
-    public function setService(?string $value ): void {
-        $this->service = $value;
+    public function setService(?string $value): void {
+        $this->getBackingStore()->set('service', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param ServiceHealthStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ServiceHealthStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ServiceHealthStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

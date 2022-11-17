@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsMxRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * @var string|null $mailExchange Value used when configuring the answer/destination/value of the MX record at the DNS host.
-    */
-    private ?string $mailExchange = null;
-    
-    /**
-     * @var int|null $preference Value used when configuring the Preference/Priority property of the MX record at the DNS host.
-    */
-    private ?int $preference = null;
-    
-    /**
      * Instantiates a new DomainDnsMxRecord and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getMailExchange(): ?string {
-        return $this->mailExchange;
+        return $this->getBackingStore()->get('mailExchange');
     }
 
     /**
@@ -60,7 +50,7 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPreference(): ?int {
-        return $this->preference;
+        return $this->getBackingStore()->get('preference');
     }
 
     /**
@@ -69,24 +59,24 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('mailExchange', $this->mailExchange);
-        $writer->writeIntegerValue('preference', $this->preference);
+        $writer->writeStringValue('mailExchange', $this->getMailExchange());
+        $writer->writeIntegerValue('preference', $this->getPreference());
     }
 
     /**
      * Sets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.
      *  @param string|null $value Value to set for the mailExchange property.
     */
-    public function setMailExchange(?string $value ): void {
-        $this->mailExchange = $value;
+    public function setMailExchange(?string $value): void {
+        $this->getBackingStore()->set('mailExchange', $value);
     }
 
     /**
      * Sets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
      *  @param int|null $value Value to set for the preference property.
     */
-    public function setPreference(?int $value ): void {
-        $this->preference = $value;
+    public function setPreference(?int $value): void {
+        $this->getBackingStore()->set('preference', $value);
     }
 
 }

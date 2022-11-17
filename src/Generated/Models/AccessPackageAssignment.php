@@ -10,41 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignment extends Entity implements Parsable 
 {
     /**
-     * @var AccessPackage|null $accessPackage Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-    */
-    private ?AccessPackage $accessPackage = null;
-    
-    /**
-     * @var AccessPackageAssignmentPolicy|null $assignmentPolicy Read-only. Supports $filter (eq) on the id property and $expand query parameters.
-    */
-    private ?AccessPackageAssignmentPolicy $assignmentPolicy = null;
-    
-    /**
-     * @var DateTime|null $expiredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $expiredDateTime = null;
-    
-    /**
-     * @var EntitlementManagementSchedule|null $schedule When the access assignment is to be in place. Read-only.
-    */
-    private ?EntitlementManagementSchedule $schedule = null;
-    
-    /**
-     * @var AccessPackageAssignmentState|null $state The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-    */
-    private ?AccessPackageAssignmentState $state = null;
-    
-    /**
-     * @var string|null $status More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-    */
-    private ?string $status = null;
-    
-    /**
-     * @var AccessPackageSubject|null $target The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-    */
-    private ?AccessPackageSubject $target = null;
-    
-    /**
      * Instantiates a new accessPackageAssignment and sets the default values.
     */
     public function __construct() {
@@ -66,7 +31,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
-        return $this->accessPackage;
+        return $this->getBackingStore()->get('accessPackage');
     }
 
     /**
@@ -74,7 +39,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return AccessPackageAssignmentPolicy|null
     */
     public function getAssignmentPolicy(): ?AccessPackageAssignmentPolicy {
-        return $this->assignmentPolicy;
+        return $this->getBackingStore()->get('assignmentPolicy');
     }
 
     /**
@@ -82,7 +47,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpiredDateTime(): ?DateTime {
-        return $this->expiredDateTime;
+        return $this->getBackingStore()->get('expiredDateTime');
     }
 
     /**
@@ -107,7 +72,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
-        return $this->schedule;
+        return $this->getBackingStore()->get('schedule');
     }
 
     /**
@@ -115,7 +80,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return AccessPackageAssignmentState|null
     */
     public function getState(): ?AccessPackageAssignmentState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -123,7 +88,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -131,7 +96,7 @@ class AccessPackageAssignment extends Entity implements Parsable
      * @return AccessPackageSubject|null
     */
     public function getTarget(): ?AccessPackageSubject {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -140,69 +105,69 @@ class AccessPackageAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('accessPackage', $this->accessPackage);
-        $writer->writeObjectValue('assignmentPolicy', $this->assignmentPolicy);
-        $writer->writeDateTimeValue('expiredDateTime', $this->expiredDateTime);
-        $writer->writeObjectValue('schedule', $this->schedule);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeStringValue('status', $this->status);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeObjectValue('accessPackage', $this->getAccessPackage());
+        $writer->writeObjectValue('assignmentPolicy', $this->getAssignmentPolicy());
+        $writer->writeDateTimeValue('expiredDateTime', $this->getExpiredDateTime());
+        $writer->writeObjectValue('schedule', $this->getSchedule());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('status', $this->getStatus());
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
-    public function setAccessPackage(?AccessPackage $value ): void {
-        $this->accessPackage = $value;
+    public function setAccessPackage(?AccessPackage $value): void {
+        $this->getBackingStore()->set('accessPackage', $value);
     }
 
     /**
      * Sets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
      *  @param AccessPackageAssignmentPolicy|null $value Value to set for the assignmentPolicy property.
     */
-    public function setAssignmentPolicy(?AccessPackageAssignmentPolicy $value ): void {
-        $this->assignmentPolicy = $value;
+    public function setAssignmentPolicy(?AccessPackageAssignmentPolicy $value): void {
+        $this->getBackingStore()->set('assignmentPolicy', $value);
     }
 
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the expiredDateTime property.
     */
-    public function setExpiredDateTime(?DateTime $value ): void {
-        $this->expiredDateTime = $value;
+    public function setExpiredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expiredDateTime', $value);
     }
 
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
      *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
-    public function setSchedule(?EntitlementManagementSchedule $value ): void {
-        $this->schedule = $value;
+    public function setSchedule(?EntitlementManagementSchedule $value): void {
+        $this->getBackingStore()->set('schedule', $value);
     }
 
     /**
      * Sets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
      *  @param AccessPackageAssignmentState|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageAssignmentState $value ): void {
-        $this->state = $value;
+    public function setState(?AccessPackageAssignmentState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      *  @param AccessPackageSubject|null $value Value to set for the target property.
     */
-    public function setTarget(?AccessPackageSubject $value ): void {
-        $this->target = $value;
+    public function setTarget(?AccessPackageSubject $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

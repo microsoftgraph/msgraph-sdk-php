@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryCaseSettings extends Entity implements Parsable 
 {
     /**
-     * @var OcrSettings|null $ocr The OCR (Optical Character Recognition) settings for the case.
-    */
-    private ?OcrSettings $ocr = null;
-    
-    /**
-     * @var RedundancyDetectionSettings|null $redundancyDetection The redundancy (near duplicate and email threading) detection settings for the case.
-    */
-    private ?RedundancyDetectionSettings $redundancyDetection = null;
-    
-    /**
-     * @var TopicModelingSettings|null $topicModeling The Topic Modeling (Themes) settings for the case.
-    */
-    private ?TopicModelingSettings $topicModeling = null;
-    
-    /**
      * Instantiates a new ediscoveryCaseSettings and sets the default values.
     */
     public function __construct() {
@@ -59,7 +44,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return OcrSettings|null
     */
     public function getOcr(): ?OcrSettings {
-        return $this->ocr;
+        return $this->getBackingStore()->get('ocr');
     }
 
     /**
@@ -67,7 +52,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return RedundancyDetectionSettings|null
     */
     public function getRedundancyDetection(): ?RedundancyDetectionSettings {
-        return $this->redundancyDetection;
+        return $this->getBackingStore()->get('redundancyDetection');
     }
 
     /**
@@ -75,7 +60,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return TopicModelingSettings|null
     */
     public function getTopicModeling(): ?TopicModelingSettings {
-        return $this->topicModeling;
+        return $this->getBackingStore()->get('topicModeling');
     }
 
     /**
@@ -84,33 +69,33 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('ocr', $this->ocr);
-        $writer->writeObjectValue('redundancyDetection', $this->redundancyDetection);
-        $writer->writeObjectValue('topicModeling', $this->topicModeling);
+        $writer->writeObjectValue('ocr', $this->getOcr());
+        $writer->writeObjectValue('redundancyDetection', $this->getRedundancyDetection());
+        $writer->writeObjectValue('topicModeling', $this->getTopicModeling());
     }
 
     /**
      * Sets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
      *  @param OcrSettings|null $value Value to set for the ocr property.
     */
-    public function setOcr(?OcrSettings $value ): void {
-        $this->ocr = $value;
+    public function setOcr(?OcrSettings $value): void {
+        $this->getBackingStore()->set('ocr', $value);
     }
 
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
      *  @param RedundancyDetectionSettings|null $value Value to set for the redundancyDetection property.
     */
-    public function setRedundancyDetection(?RedundancyDetectionSettings $value ): void {
-        $this->redundancyDetection = $value;
+    public function setRedundancyDetection(?RedundancyDetectionSettings $value): void {
+        $this->getBackingStore()->set('redundancyDetection', $value);
     }
 
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      *  @param TopicModelingSettings|null $value Value to set for the topicModeling property.
     */
-    public function setTopicModeling(?TopicModelingSettings $value ): void {
-        $this->topicModeling = $value;
+    public function setTopicModeling(?TopicModelingSettings $value): void {
+        $this->getBackingStore()->set('topicModeling', $value);
     }
 
 }

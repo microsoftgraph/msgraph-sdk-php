@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LicenseDetails extends Entity implements Parsable 
 {
     /**
-     * @var array<ServicePlanInfo>|null $servicePlans Information about the service plans assigned with the license. Read-only, Not nullable
-    */
-    private ?array $servicePlans = null;
-    
-    /**
-     * @var string|null $skuId Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-    */
-    private ?string $skuId = null;
-    
-    /**
-     * @var string|null $skuPartNumber Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
-    */
-    private ?string $skuPartNumber = null;
-    
-    /**
      * Instantiates a new licenseDetails and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class LicenseDetails extends Entity implements Parsable
      * @return array<ServicePlanInfo>|null
     */
     public function getServicePlans(): ?array {
-        return $this->servicePlans;
+        return $this->getBackingStore()->get('servicePlans');
     }
 
     /**
@@ -66,7 +51,7 @@ class LicenseDetails extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuId(): ?string {
-        return $this->skuId;
+        return $this->getBackingStore()->get('skuId');
     }
 
     /**
@@ -74,7 +59,7 @@ class LicenseDetails extends Entity implements Parsable
      * @return string|null
     */
     public function getSkuPartNumber(): ?string {
-        return $this->skuPartNumber;
+        return $this->getBackingStore()->get('skuPartNumber');
     }
 
     /**
@@ -83,33 +68,33 @@ class LicenseDetails extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('servicePlans', $this->servicePlans);
-        $writer->writeStringValue('skuId', $this->skuId);
-        $writer->writeStringValue('skuPartNumber', $this->skuPartNumber);
+        $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
+        $writer->writeStringValue('skuId', $this->getSkuId());
+        $writer->writeStringValue('skuPartNumber', $this->getSkuPartNumber());
     }
 
     /**
      * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
      *  @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
     */
-    public function setServicePlans(?array $value ): void {
-        $this->servicePlans = $value;
+    public function setServicePlans(?array $value): void {
+        $this->getBackingStore()->set('servicePlans', $value);
     }
 
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
      *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?string $value ): void {
-        $this->skuId = $value;
+    public function setSkuId(?string $value): void {
+        $this->getBackingStore()->set('skuId', $value);
     }
 
     /**
      * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
      *  @param string|null $value Value to set for the skuPartNumber property.
     */
-    public function setSkuPartNumber(?string $value ): void {
-        $this->skuPartNumber = $value;
+    public function setSkuPartNumber(?string $value): void {
+        $this->getBackingStore()->set('skuPartNumber', $value);
     }
 
 }

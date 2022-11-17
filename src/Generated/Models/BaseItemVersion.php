@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BaseItemVersion extends Entity implements Parsable 
 {
     /**
-     * @var IdentitySet|null $lastModifiedBy Identity of the user which last modified the version. Read-only.
-    */
-    private ?IdentitySet $lastModifiedBy = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Date and time the version was last modified. Read-only.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var PublicationFacet|null $publication Indicates the publication status of this particular version. Read-only.
-    */
-    private ?PublicationFacet $publication = null;
-    
-    /**
      * Instantiates a new baseItemVersion and sets the default values.
     */
     public function __construct() {
@@ -68,7 +53,7 @@ class BaseItemVersion extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -76,7 +61,7 @@ class BaseItemVersion extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -84,7 +69,7 @@ class BaseItemVersion extends Entity implements Parsable
      * @return PublicationFacet|null
     */
     public function getPublication(): ?PublicationFacet {
-        return $this->publication;
+        return $this->getBackingStore()->get('publication');
     }
 
     /**
@@ -93,33 +78,33 @@ class BaseItemVersion extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeObjectValue('publication', $this->publication);
+        $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeObjectValue('publication', $this->getPublication());
     }
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the publication property value. Indicates the publication status of this particular version. Read-only.
      *  @param PublicationFacet|null $value Value to set for the publication property.
     */
-    public function setPublication(?PublicationFacet $value ): void {
-        $this->publication = $value;
+    public function setPublication(?PublicationFacet $value): void {
+        $this->getBackingStore()->set('publication', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OrganizationalBranding extends OrganizationalBrandingProperties implements Parsable 
 {
     /**
-     * @var array<OrganizationalBrandingLocalization>|null $localizations Add different branding based on a locale.
-    */
-    private ?array $localizations = null;
-    
-    /**
      * Instantiates a new OrganizationalBranding and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
      * @return array<OrganizationalBrandingLocalization>|null
     */
     public function getLocalizations(): ?array {
-        return $this->localizations;
+        return $this->getBackingStore()->get('localizations');
     }
 
     /**
@@ -55,15 +50,15 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('localizations', $this->localizations);
+        $writer->writeCollectionOfObjectValues('localizations', $this->getLocalizations());
     }
 
     /**
      * Sets the localizations property value. Add different branding based on a locale.
      *  @param array<OrganizationalBrandingLocalization>|null $value Value to set for the localizations property.
     */
-    public function setLocalizations(?array $value ): void {
-        $this->localizations = $value;
+    public function setLocalizations(?array $value): void {
+        $this->getBackingStore()->set('localizations', $value);
     }
 
 }

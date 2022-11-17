@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintTaskTrigger extends Entity implements Parsable 
 {
     /**
-     * @var PrintTaskDefinition|null $definition The definition property
-    */
-    private ?PrintTaskDefinition $definition = null;
-    
-    /**
-     * @var PrintEvent|null $event The event property
-    */
-    private ?PrintEvent $event = null;
-    
-    /**
      * Instantiates a new printTaskTrigger and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class PrintTaskTrigger extends Entity implements Parsable
      * @return PrintTaskDefinition|null
     */
     public function getDefinition(): ?PrintTaskDefinition {
-        return $this->definition;
+        return $this->getBackingStore()->get('definition');
     }
 
     /**
@@ -48,7 +38,7 @@ class PrintTaskTrigger extends Entity implements Parsable
      * @return PrintEvent|null
     */
     public function getEvent(): ?PrintEvent {
-        return $this->event;
+        return $this->getBackingStore()->get('event');
     }
 
     /**
@@ -69,24 +59,24 @@ class PrintTaskTrigger extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('definition', $this->definition);
-        $writer->writeEnumValue('event', $this->event);
+        $writer->writeObjectValue('definition', $this->getDefinition());
+        $writer->writeEnumValue('event', $this->getEvent());
     }
 
     /**
      * Sets the definition property value. The definition property
      *  @param PrintTaskDefinition|null $value Value to set for the definition property.
     */
-    public function setDefinition(?PrintTaskDefinition $value ): void {
-        $this->definition = $value;
+    public function setDefinition(?PrintTaskDefinition $value): void {
+        $this->getBackingStore()->set('definition', $value);
     }
 
     /**
      * Sets the event property value. The event property
      *  @param PrintEvent|null $value Value to set for the event property.
     */
-    public function setEvent(?PrintEvent $value ): void {
-        $this->event = $value;
+    public function setEvent(?PrintEvent $value): void {
+        $this->getBackingStore()->set('event', $value);
     }
 
 }

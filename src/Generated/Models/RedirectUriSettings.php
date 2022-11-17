@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class RedirectUriSettings implements AdditionalDataHolder, Parsable 
+class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $index The index property
-    */
-    private ?int $index = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $uri The uri property
-    */
-    private ?string $uri = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new redirectUriSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.redirectUriSettings');
     }
@@ -50,8 +39,16 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +69,7 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getIndex(): ?int {
-        return $this->index;
+        return $this->getBackingStore()->get('index');
     }
 
     /**
@@ -80,7 +77,7 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUri(): ?string {
-        return $this->uri;
+        return $this->getBackingStore()->get('uri');
     }
 
     /**
@@ -96,42 +93,42 @@ class RedirectUriSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('index', $this->index);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('uri', $this->uri);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('index', $this->getIndex());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('uri', $this->getUri());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the index property value. The index property
      *  @param int|null $value Value to set for the index property.
     */
-    public function setIndex(?int $value ): void {
-        $this->index = $value;
+    public function setIndex(?int $value): void {
+        $this->getBackingStore()->set('index', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the uri property value. The uri property
      *  @param string|null $value Value to set for the uri property.
     */
-    public function setUri(?string $value ): void {
-        $this->uri = $value;
+    public function setUri(?string $value): void {
+        $this->getBackingStore()->set('uri', $value);
     }
 
 }

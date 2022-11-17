@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Store extends Entity implements Parsable 
 {
     /**
-     * @var string|null $defaultLanguageTag Default language of the term store.
-    */
-    private ?string $defaultLanguageTag = null;
-    
-    /**
-     * @var array<Group>|null $groups Collection of all groups available in the term store.
-    */
-    private ?array $groups = null;
-    
-    /**
-     * @var array<string>|null $languageTags List of languages for the term store.
-    */
-    private ?array $languageTags = null;
-    
-    /**
-     * @var array<Set>|null $sets Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
-    */
-    private ?array $sets = null;
-    
-    /**
      * Instantiates a new store and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class Store extends Entity implements Parsable
      * @return string|null
     */
     public function getDefaultLanguageTag(): ?string {
-        return $this->defaultLanguageTag;
+        return $this->getBackingStore()->get('defaultLanguageTag');
     }
 
     /**
@@ -73,7 +53,7 @@ class Store extends Entity implements Parsable
      * @return array<Group>|null
     */
     public function getGroups(): ?array {
-        return $this->groups;
+        return $this->getBackingStore()->get('groups');
     }
 
     /**
@@ -81,7 +61,7 @@ class Store extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getLanguageTags(): ?array {
-        return $this->languageTags;
+        return $this->getBackingStore()->get('languageTags');
     }
 
     /**
@@ -89,7 +69,7 @@ class Store extends Entity implements Parsable
      * @return array<Set>|null
     */
     public function getSets(): ?array {
-        return $this->sets;
+        return $this->getBackingStore()->get('sets');
     }
 
     /**
@@ -98,42 +78,42 @@ class Store extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('defaultLanguageTag', $this->defaultLanguageTag);
-        $writer->writeCollectionOfObjectValues('groups', $this->groups);
-        $writer->writeCollectionOfPrimitiveValues('languageTags', $this->languageTags);
-        $writer->writeCollectionOfObjectValues('sets', $this->sets);
+        $writer->writeStringValue('defaultLanguageTag', $this->getDefaultLanguageTag());
+        $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
+        $writer->writeCollectionOfPrimitiveValues('languageTags', $this->getLanguageTags());
+        $writer->writeCollectionOfObjectValues('sets', $this->getSets());
     }
 
     /**
      * Sets the defaultLanguageTag property value. Default language of the term store.
      *  @param string|null $value Value to set for the defaultLanguageTag property.
     */
-    public function setDefaultLanguageTag(?string $value ): void {
-        $this->defaultLanguageTag = $value;
+    public function setDefaultLanguageTag(?string $value): void {
+        $this->getBackingStore()->set('defaultLanguageTag', $value);
     }
 
     /**
      * Sets the groups property value. Collection of all groups available in the term store.
      *  @param array<Group>|null $value Value to set for the groups property.
     */
-    public function setGroups(?array $value ): void {
-        $this->groups = $value;
+    public function setGroups(?array $value): void {
+        $this->getBackingStore()->set('groups', $value);
     }
 
     /**
      * Sets the languageTags property value. List of languages for the term store.
      *  @param array<string>|null $value Value to set for the languageTags property.
     */
-    public function setLanguageTags(?array $value ): void {
-        $this->languageTags = $value;
+    public function setLanguageTags(?array $value): void {
+        $this->getBackingStore()->set('languageTags', $value);
     }
 
     /**
      * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      *  @param array<Set>|null $value Value to set for the sets property.
     */
-    public function setSets(?array $value ): void {
-        $this->sets = $value;
+    public function setSets(?array $value): void {
+        $this->getBackingStore()->set('sets', $value);
     }
 
 }

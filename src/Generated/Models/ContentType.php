@@ -9,101 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ContentType extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $associatedHubsUrls List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
-    */
-    private ?array $associatedHubsUrls = null;
-    
-    /**
-     * @var ContentType|null $base Parent contentType from which this content type is derived.
-    */
-    private ?ContentType $base = null;
-    
-    /**
-     * @var array<ContentType>|null $baseTypes The collection of content types that are ancestors of this content type.
-    */
-    private ?array $baseTypes = null;
-    
-    /**
-     * @var array<ColumnLink>|null $columnLinks The collection of columns that are required by this content type.
-    */
-    private ?array $columnLinks = null;
-    
-    /**
-     * @var array<ColumnDefinition>|null $columnPositions Column order information in a content type.
-    */
-    private ?array $columnPositions = null;
-    
-    /**
-     * @var array<ColumnDefinition>|null $columns The collection of column definitions for this contentType.
-    */
-    private ?array $columns = null;
-    
-    /**
-     * @var string|null $description The descriptive text for the item.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var DocumentSet|null $documentSet Document Set metadata.
-    */
-    private ?DocumentSet $documentSet = null;
-    
-    /**
-     * @var DocumentSetContent|null $documentTemplate Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
-    */
-    private ?DocumentSetContent $documentTemplate = null;
-    
-    /**
-     * @var string|null $group The name of the group this content type belongs to. Helps organize related content types.
-    */
-    private ?string $group = null;
-    
-    /**
-     * @var bool|null $hidden Indicates whether the content type is hidden in the list's 'New' menu.
-    */
-    private ?bool $hidden = null;
-    
-    /**
-     * @var ItemReference|null $inheritedFrom If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
-    */
-    private ?ItemReference $inheritedFrom = null;
-    
-    /**
-     * @var bool|null $isBuiltIn Specifies if a content type is a built-in content type.
-    */
-    private ?bool $isBuiltIn = null;
-    
-    /**
-     * @var string|null $name The name of the content type.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var ContentTypeOrder|null $order Specifies the order in which the content type appears in the selection UI.
-    */
-    private ?ContentTypeOrder $order = null;
-    
-    /**
-     * @var string|null $parentId The unique identifier of the content type.
-    */
-    private ?string $parentId = null;
-    
-    /**
-     * @var bool|null $propagateChanges If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
-    */
-    private ?bool $propagateChanges = null;
-    
-    /**
-     * @var bool|null $readOnly If true, the content type can't be modified unless this value is first set to false.
-    */
-    private ?bool $readOnly = null;
-    
-    /**
-     * @var bool|null $sealed If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
-    */
-    private ?bool $sealed = null;
-    
-    /**
      * Instantiates a new contentType and sets the default values.
     */
     public function __construct() {
@@ -125,7 +30,7 @@ class ContentType extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAssociatedHubsUrls(): ?array {
-        return $this->associatedHubsUrls;
+        return $this->getBackingStore()->get('associatedHubsUrls');
     }
 
     /**
@@ -133,7 +38,7 @@ class ContentType extends Entity implements Parsable
      * @return ContentType|null
     */
     public function getBase(): ?ContentType {
-        return $this->base;
+        return $this->getBackingStore()->get('base');
     }
 
     /**
@@ -141,7 +46,7 @@ class ContentType extends Entity implements Parsable
      * @return array<ContentType>|null
     */
     public function getBaseTypes(): ?array {
-        return $this->baseTypes;
+        return $this->getBackingStore()->get('baseTypes');
     }
 
     /**
@@ -149,7 +54,7 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnLink>|null
     */
     public function getColumnLinks(): ?array {
-        return $this->columnLinks;
+        return $this->getBackingStore()->get('columnLinks');
     }
 
     /**
@@ -157,7 +62,7 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumnPositions(): ?array {
-        return $this->columnPositions;
+        return $this->getBackingStore()->get('columnPositions');
     }
 
     /**
@@ -165,7 +70,7 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumns(): ?array {
-        return $this->columns;
+        return $this->getBackingStore()->get('columns');
     }
 
     /**
@@ -173,7 +78,7 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -181,7 +86,7 @@ class ContentType extends Entity implements Parsable
      * @return DocumentSet|null
     */
     public function getDocumentSet(): ?DocumentSet {
-        return $this->documentSet;
+        return $this->getBackingStore()->get('documentSet');
     }
 
     /**
@@ -189,7 +94,7 @@ class ContentType extends Entity implements Parsable
      * @return DocumentSetContent|null
     */
     public function getDocumentTemplate(): ?DocumentSetContent {
-        return $this->documentTemplate;
+        return $this->getBackingStore()->get('documentTemplate');
     }
 
     /**
@@ -226,7 +131,7 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getGroup(): ?string {
-        return $this->group;
+        return $this->getBackingStore()->get('group');
     }
 
     /**
@@ -234,7 +139,7 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getHidden(): ?bool {
-        return $this->hidden;
+        return $this->getBackingStore()->get('hidden');
     }
 
     /**
@@ -242,7 +147,7 @@ class ContentType extends Entity implements Parsable
      * @return ItemReference|null
     */
     public function getInheritedFrom(): ?ItemReference {
-        return $this->inheritedFrom;
+        return $this->getBackingStore()->get('inheritedFrom');
     }
 
     /**
@@ -250,7 +155,7 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsBuiltIn(): ?bool {
-        return $this->isBuiltIn;
+        return $this->getBackingStore()->get('isBuiltIn');
     }
 
     /**
@@ -258,7 +163,7 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -266,7 +171,7 @@ class ContentType extends Entity implements Parsable
      * @return ContentTypeOrder|null
     */
     public function getOrder(): ?ContentTypeOrder {
-        return $this->order;
+        return $this->getBackingStore()->get('order');
     }
 
     /**
@@ -274,7 +179,7 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getParentId(): ?string {
-        return $this->parentId;
+        return $this->getBackingStore()->get('parentId');
     }
 
     /**
@@ -282,7 +187,7 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
-        return $this->propagateChanges;
+        return $this->getBackingStore()->get('propagateChanges');
     }
 
     /**
@@ -290,7 +195,7 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
-        return $this->readOnly;
+        return $this->getBackingStore()->get('readOnly');
     }
 
     /**
@@ -298,7 +203,7 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getSealed(): ?bool {
-        return $this->sealed;
+        return $this->getBackingStore()->get('sealed');
     }
 
     /**
@@ -307,177 +212,177 @@ class ContentType extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('associatedHubsUrls', $this->associatedHubsUrls);
-        $writer->writeObjectValue('base', $this->base);
-        $writer->writeCollectionOfObjectValues('baseTypes', $this->baseTypes);
-        $writer->writeCollectionOfObjectValues('columnLinks', $this->columnLinks);
-        $writer->writeCollectionOfObjectValues('columnPositions', $this->columnPositions);
-        $writer->writeCollectionOfObjectValues('columns', $this->columns);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeObjectValue('documentSet', $this->documentSet);
-        $writer->writeObjectValue('documentTemplate', $this->documentTemplate);
-        $writer->writeStringValue('group', $this->group);
-        $writer->writeBooleanValue('hidden', $this->hidden);
-        $writer->writeObjectValue('inheritedFrom', $this->inheritedFrom);
-        $writer->writeBooleanValue('isBuiltIn', $this->isBuiltIn);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeObjectValue('order', $this->order);
-        $writer->writeStringValue('parentId', $this->parentId);
-        $writer->writeBooleanValue('propagateChanges', $this->propagateChanges);
-        $writer->writeBooleanValue('readOnly', $this->readOnly);
-        $writer->writeBooleanValue('sealed', $this->sealed);
+        $writer->writeCollectionOfPrimitiveValues('associatedHubsUrls', $this->getAssociatedHubsUrls());
+        $writer->writeObjectValue('base', $this->getBase());
+        $writer->writeCollectionOfObjectValues('baseTypes', $this->getBaseTypes());
+        $writer->writeCollectionOfObjectValues('columnLinks', $this->getColumnLinks());
+        $writer->writeCollectionOfObjectValues('columnPositions', $this->getColumnPositions());
+        $writer->writeCollectionOfObjectValues('columns', $this->getColumns());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeObjectValue('documentSet', $this->getDocumentSet());
+        $writer->writeObjectValue('documentTemplate', $this->getDocumentTemplate());
+        $writer->writeStringValue('group', $this->getGroup());
+        $writer->writeBooleanValue('hidden', $this->getHidden());
+        $writer->writeObjectValue('inheritedFrom', $this->getInheritedFrom());
+        $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeObjectValue('order', $this->getOrder());
+        $writer->writeStringValue('parentId', $this->getParentId());
+        $writer->writeBooleanValue('propagateChanges', $this->getPropagateChanges());
+        $writer->writeBooleanValue('readOnly', $this->getReadOnly());
+        $writer->writeBooleanValue('sealed', $this->getSealed());
     }
 
     /**
      * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      *  @param array<string>|null $value Value to set for the associatedHubsUrls property.
     */
-    public function setAssociatedHubsUrls(?array $value ): void {
-        $this->associatedHubsUrls = $value;
+    public function setAssociatedHubsUrls(?array $value): void {
+        $this->getBackingStore()->set('associatedHubsUrls', $value);
     }
 
     /**
      * Sets the base property value. Parent contentType from which this content type is derived.
      *  @param ContentType|null $value Value to set for the base property.
     */
-    public function setBase(?ContentType $value ): void {
-        $this->base = $value;
+    public function setBase(?ContentType $value): void {
+        $this->getBackingStore()->set('base', $value);
     }
 
     /**
      * Sets the baseTypes property value. The collection of content types that are ancestors of this content type.
      *  @param array<ContentType>|null $value Value to set for the baseTypes property.
     */
-    public function setBaseTypes(?array $value ): void {
-        $this->baseTypes = $value;
+    public function setBaseTypes(?array $value): void {
+        $this->getBackingStore()->set('baseTypes', $value);
     }
 
     /**
      * Sets the columnLinks property value. The collection of columns that are required by this content type.
      *  @param array<ColumnLink>|null $value Value to set for the columnLinks property.
     */
-    public function setColumnLinks(?array $value ): void {
-        $this->columnLinks = $value;
+    public function setColumnLinks(?array $value): void {
+        $this->getBackingStore()->set('columnLinks', $value);
     }
 
     /**
      * Sets the columnPositions property value. Column order information in a content type.
      *  @param array<ColumnDefinition>|null $value Value to set for the columnPositions property.
     */
-    public function setColumnPositions(?array $value ): void {
-        $this->columnPositions = $value;
+    public function setColumnPositions(?array $value): void {
+        $this->getBackingStore()->set('columnPositions', $value);
     }
 
     /**
      * Sets the columns property value. The collection of column definitions for this contentType.
      *  @param array<ColumnDefinition>|null $value Value to set for the columns property.
     */
-    public function setColumns(?array $value ): void {
-        $this->columns = $value;
+    public function setColumns(?array $value): void {
+        $this->getBackingStore()->set('columns', $value);
     }
 
     /**
      * Sets the description property value. The descriptive text for the item.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the documentSet property value. Document Set metadata.
      *  @param DocumentSet|null $value Value to set for the documentSet property.
     */
-    public function setDocumentSet(?DocumentSet $value ): void {
-        $this->documentSet = $value;
+    public function setDocumentSet(?DocumentSet $value): void {
+        $this->getBackingStore()->set('documentSet', $value);
     }
 
     /**
      * Sets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
      *  @param DocumentSetContent|null $value Value to set for the documentTemplate property.
     */
-    public function setDocumentTemplate(?DocumentSetContent $value ): void {
-        $this->documentTemplate = $value;
+    public function setDocumentTemplate(?DocumentSetContent $value): void {
+        $this->getBackingStore()->set('documentTemplate', $value);
     }
 
     /**
      * Sets the group property value. The name of the group this content type belongs to. Helps organize related content types.
      *  @param string|null $value Value to set for the group property.
     */
-    public function setGroup(?string $value ): void {
-        $this->group = $value;
+    public function setGroup(?string $value): void {
+        $this->getBackingStore()->set('group', $value);
     }
 
     /**
      * Sets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
      *  @param bool|null $value Value to set for the hidden property.
     */
-    public function setHidden(?bool $value ): void {
-        $this->hidden = $value;
+    public function setHidden(?bool $value): void {
+        $this->getBackingStore()->set('hidden', $value);
     }
 
     /**
      * Sets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
      *  @param ItemReference|null $value Value to set for the inheritedFrom property.
     */
-    public function setInheritedFrom(?ItemReference $value ): void {
-        $this->inheritedFrom = $value;
+    public function setInheritedFrom(?ItemReference $value): void {
+        $this->getBackingStore()->set('inheritedFrom', $value);
     }
 
     /**
      * Sets the isBuiltIn property value. Specifies if a content type is a built-in content type.
      *  @param bool|null $value Value to set for the isBuiltIn property.
     */
-    public function setIsBuiltIn(?bool $value ): void {
-        $this->isBuiltIn = $value;
+    public function setIsBuiltIn(?bool $value): void {
+        $this->getBackingStore()->set('isBuiltIn', $value);
     }
 
     /**
      * Sets the name property value. The name of the content type.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the order property value. Specifies the order in which the content type appears in the selection UI.
      *  @param ContentTypeOrder|null $value Value to set for the order property.
     */
-    public function setOrder(?ContentTypeOrder $value ): void {
-        $this->order = $value;
+    public function setOrder(?ContentTypeOrder $value): void {
+        $this->getBackingStore()->set('order', $value);
     }
 
     /**
      * Sets the parentId property value. The unique identifier of the content type.
      *  @param string|null $value Value to set for the parentId property.
     */
-    public function setParentId(?string $value ): void {
-        $this->parentId = $value;
+    public function setParentId(?string $value): void {
+        $this->getBackingStore()->set('parentId', $value);
     }
 
     /**
      * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
      *  @param bool|null $value Value to set for the propagateChanges property.
     */
-    public function setPropagateChanges(?bool $value ): void {
-        $this->propagateChanges = $value;
+    public function setPropagateChanges(?bool $value): void {
+        $this->getBackingStore()->set('propagateChanges', $value);
     }
 
     /**
      * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
      *  @param bool|null $value Value to set for the readOnly property.
     */
-    public function setReadOnly(?bool $value ): void {
-        $this->readOnly = $value;
+    public function setReadOnly(?bool $value): void {
+        $this->getBackingStore()->set('readOnly', $value);
     }
 
     /**
      * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      *  @param bool|null $value Value to set for the sealed property.
     */
-    public function setSealed(?bool $value ): void {
-        $this->sealed = $value;
+    public function setSealed(?bool $value): void {
+        $this->getBackingStore()->set('sealed', $value);
     }
 
 }

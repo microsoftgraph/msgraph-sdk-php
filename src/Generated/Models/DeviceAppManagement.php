@@ -10,96 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceAppManagement extends Entity implements Parsable 
 {
     /**
-     * @var array<AndroidManagedAppProtection>|null $androidManagedAppProtections Android managed app policies.
-    */
-    private ?array $androidManagedAppProtections = null;
-    
-    /**
-     * @var array<DefaultManagedAppProtection>|null $defaultManagedAppProtections Default managed app policies.
-    */
-    private ?array $defaultManagedAppProtections = null;
-    
-    /**
-     * @var array<IosManagedAppProtection>|null $iosManagedAppProtections iOS managed app policies.
-    */
-    private ?array $iosManagedAppProtections = null;
-    
-    /**
-     * @var bool|null $isEnabledForMicrosoftStoreForBusiness Whether the account is enabled for syncing applications from the Microsoft Store for Business.
-    */
-    private ?bool $isEnabledForMicrosoftStoreForBusiness = null;
-    
-    /**
-     * @var array<ManagedAppPolicy>|null $managedAppPolicies Managed app policies.
-    */
-    private ?array $managedAppPolicies = null;
-    
-    /**
-     * @var array<ManagedAppRegistration>|null $managedAppRegistrations The managed app registrations.
-    */
-    private ?array $managedAppRegistrations = null;
-    
-    /**
-     * @var array<ManagedAppStatus>|null $managedAppStatuses The managed app statuses.
-    */
-    private ?array $managedAppStatuses = null;
-    
-    /**
-     * @var array<ManagedEBook>|null $managedEBooks The Managed eBook.
-    */
-    private ?array $managedEBooks = null;
-    
-    /**
-     * @var array<MdmWindowsInformationProtectionPolicy>|null $mdmWindowsInformationProtectionPolicies Windows information protection for apps running on devices which are MDM enrolled.
-    */
-    private ?array $mdmWindowsInformationProtectionPolicies = null;
-    
-    /**
-     * @var string|null $microsoftStoreForBusinessLanguage The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
-    */
-    private ?string $microsoftStoreForBusinessLanguage = null;
-    
-    /**
-     * @var DateTime|null $microsoftStoreForBusinessLastCompletedApplicationSyncTime The last time an application sync from the Microsoft Store for Business was completed.
-    */
-    private ?DateTime $microsoftStoreForBusinessLastCompletedApplicationSyncTime = null;
-    
-    /**
-     * @var DateTime|null $microsoftStoreForBusinessLastSuccessfulSyncDateTime The last time the apps from the Microsoft Store for Business were synced successfully for the account.
-    */
-    private ?DateTime $microsoftStoreForBusinessLastSuccessfulSyncDateTime = null;
-    
-    /**
-     * @var array<MobileAppCategory>|null $mobileAppCategories The mobile app categories.
-    */
-    private ?array $mobileAppCategories = null;
-    
-    /**
-     * @var array<ManagedDeviceMobileAppConfiguration>|null $mobileAppConfigurations The Managed Device Mobile Application Configurations.
-    */
-    private ?array $mobileAppConfigurations = null;
-    
-    /**
-     * @var array<MobileApp>|null $mobileApps The mobile apps.
-    */
-    private ?array $mobileApps = null;
-    
-    /**
-     * @var array<TargetedManagedAppConfiguration>|null $targetedManagedAppConfigurations Targeted managed app configurations.
-    */
-    private ?array $targetedManagedAppConfigurations = null;
-    
-    /**
-     * @var array<VppToken>|null $vppTokens List of Vpp tokens for this organization.
-    */
-    private ?array $vppTokens = null;
-    
-    /**
-     * @var array<WindowsInformationProtectionPolicy>|null $windowsInformationProtectionPolicies Windows information protection for apps running on devices which are not MDM enrolled.
-    */
-    private ?array $windowsInformationProtectionPolicies = null;
-    
-    /**
      * Instantiates a new DeviceAppManagement and sets the default values.
     */
     public function __construct() {
@@ -121,7 +31,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<AndroidManagedAppProtection>|null
     */
     public function getAndroidManagedAppProtections(): ?array {
-        return $this->androidManagedAppProtections;
+        return $this->getBackingStore()->get('androidManagedAppProtections');
     }
 
     /**
@@ -129,7 +39,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<DefaultManagedAppProtection>|null
     */
     public function getDefaultManagedAppProtections(): ?array {
-        return $this->defaultManagedAppProtections;
+        return $this->getBackingStore()->get('defaultManagedAppProtections');
     }
 
     /**
@@ -165,7 +75,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<IosManagedAppProtection>|null
     */
     public function getIosManagedAppProtections(): ?array {
-        return $this->iosManagedAppProtections;
+        return $this->getBackingStore()->get('iosManagedAppProtections');
     }
 
     /**
@@ -173,7 +83,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabledForMicrosoftStoreForBusiness(): ?bool {
-        return $this->isEnabledForMicrosoftStoreForBusiness;
+        return $this->getBackingStore()->get('isEnabledForMicrosoftStoreForBusiness');
     }
 
     /**
@@ -181,7 +91,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<ManagedAppPolicy>|null
     */
     public function getManagedAppPolicies(): ?array {
-        return $this->managedAppPolicies;
+        return $this->getBackingStore()->get('managedAppPolicies');
     }
 
     /**
@@ -189,7 +99,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<ManagedAppRegistration>|null
     */
     public function getManagedAppRegistrations(): ?array {
-        return $this->managedAppRegistrations;
+        return $this->getBackingStore()->get('managedAppRegistrations');
     }
 
     /**
@@ -197,7 +107,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<ManagedAppStatus>|null
     */
     public function getManagedAppStatuses(): ?array {
-        return $this->managedAppStatuses;
+        return $this->getBackingStore()->get('managedAppStatuses');
     }
 
     /**
@@ -205,7 +115,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<ManagedEBook>|null
     */
     public function getManagedEBooks(): ?array {
-        return $this->managedEBooks;
+        return $this->getBackingStore()->get('managedEBooks');
     }
 
     /**
@@ -213,7 +123,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<MdmWindowsInformationProtectionPolicy>|null
     */
     public function getMdmWindowsInformationProtectionPolicies(): ?array {
-        return $this->mdmWindowsInformationProtectionPolicies;
+        return $this->getBackingStore()->get('mdmWindowsInformationProtectionPolicies');
     }
 
     /**
@@ -221,7 +131,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return string|null
     */
     public function getMicrosoftStoreForBusinessLanguage(): ?string {
-        return $this->microsoftStoreForBusinessLanguage;
+        return $this->getBackingStore()->get('microsoftStoreForBusinessLanguage');
     }
 
     /**
@@ -229,7 +139,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(): ?DateTime {
-        return $this->microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+        return $this->getBackingStore()->get('microsoftStoreForBusinessLastCompletedApplicationSyncTime');
     }
 
     /**
@@ -237,7 +147,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(): ?DateTime {
-        return $this->microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+        return $this->getBackingStore()->get('microsoftStoreForBusinessLastSuccessfulSyncDateTime');
     }
 
     /**
@@ -245,7 +155,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<MobileAppCategory>|null
     */
     public function getMobileAppCategories(): ?array {
-        return $this->mobileAppCategories;
+        return $this->getBackingStore()->get('mobileAppCategories');
     }
 
     /**
@@ -253,7 +163,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<ManagedDeviceMobileAppConfiguration>|null
     */
     public function getMobileAppConfigurations(): ?array {
-        return $this->mobileAppConfigurations;
+        return $this->getBackingStore()->get('mobileAppConfigurations');
     }
 
     /**
@@ -261,7 +171,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<MobileApp>|null
     */
     public function getMobileApps(): ?array {
-        return $this->mobileApps;
+        return $this->getBackingStore()->get('mobileApps');
     }
 
     /**
@@ -269,7 +179,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<TargetedManagedAppConfiguration>|null
     */
     public function getTargetedManagedAppConfigurations(): ?array {
-        return $this->targetedManagedAppConfigurations;
+        return $this->getBackingStore()->get('targetedManagedAppConfigurations');
     }
 
     /**
@@ -277,7 +187,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<VppToken>|null
     */
     public function getVppTokens(): ?array {
-        return $this->vppTokens;
+        return $this->getBackingStore()->get('vppTokens');
     }
 
     /**
@@ -285,7 +195,7 @@ class DeviceAppManagement extends Entity implements Parsable
      * @return array<WindowsInformationProtectionPolicy>|null
     */
     public function getWindowsInformationProtectionPolicies(): ?array {
-        return $this->windowsInformationProtectionPolicies;
+        return $this->getBackingStore()->get('windowsInformationProtectionPolicies');
     }
 
     /**
@@ -294,168 +204,168 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('androidManagedAppProtections', $this->androidManagedAppProtections);
-        $writer->writeCollectionOfObjectValues('defaultManagedAppProtections', $this->defaultManagedAppProtections);
-        $writer->writeCollectionOfObjectValues('iosManagedAppProtections', $this->iosManagedAppProtections);
-        $writer->writeBooleanValue('isEnabledForMicrosoftStoreForBusiness', $this->isEnabledForMicrosoftStoreForBusiness);
-        $writer->writeCollectionOfObjectValues('managedAppPolicies', $this->managedAppPolicies);
-        $writer->writeCollectionOfObjectValues('managedAppRegistrations', $this->managedAppRegistrations);
-        $writer->writeCollectionOfObjectValues('managedAppStatuses', $this->managedAppStatuses);
-        $writer->writeCollectionOfObjectValues('managedEBooks', $this->managedEBooks);
-        $writer->writeCollectionOfObjectValues('mdmWindowsInformationProtectionPolicies', $this->mdmWindowsInformationProtectionPolicies);
-        $writer->writeStringValue('microsoftStoreForBusinessLanguage', $this->microsoftStoreForBusinessLanguage);
-        $writer->writeDateTimeValue('microsoftStoreForBusinessLastCompletedApplicationSyncTime', $this->microsoftStoreForBusinessLastCompletedApplicationSyncTime);
-        $writer->writeDateTimeValue('microsoftStoreForBusinessLastSuccessfulSyncDateTime', $this->microsoftStoreForBusinessLastSuccessfulSyncDateTime);
-        $writer->writeCollectionOfObjectValues('mobileAppCategories', $this->mobileAppCategories);
-        $writer->writeCollectionOfObjectValues('mobileAppConfigurations', $this->mobileAppConfigurations);
-        $writer->writeCollectionOfObjectValues('mobileApps', $this->mobileApps);
-        $writer->writeCollectionOfObjectValues('targetedManagedAppConfigurations', $this->targetedManagedAppConfigurations);
-        $writer->writeCollectionOfObjectValues('vppTokens', $this->vppTokens);
-        $writer->writeCollectionOfObjectValues('windowsInformationProtectionPolicies', $this->windowsInformationProtectionPolicies);
+        $writer->writeCollectionOfObjectValues('androidManagedAppProtections', $this->getAndroidManagedAppProtections());
+        $writer->writeCollectionOfObjectValues('defaultManagedAppProtections', $this->getDefaultManagedAppProtections());
+        $writer->writeCollectionOfObjectValues('iosManagedAppProtections', $this->getIosManagedAppProtections());
+        $writer->writeBooleanValue('isEnabledForMicrosoftStoreForBusiness', $this->getIsEnabledForMicrosoftStoreForBusiness());
+        $writer->writeCollectionOfObjectValues('managedAppPolicies', $this->getManagedAppPolicies());
+        $writer->writeCollectionOfObjectValues('managedAppRegistrations', $this->getManagedAppRegistrations());
+        $writer->writeCollectionOfObjectValues('managedAppStatuses', $this->getManagedAppStatuses());
+        $writer->writeCollectionOfObjectValues('managedEBooks', $this->getManagedEBooks());
+        $writer->writeCollectionOfObjectValues('mdmWindowsInformationProtectionPolicies', $this->getMdmWindowsInformationProtectionPolicies());
+        $writer->writeStringValue('microsoftStoreForBusinessLanguage', $this->getMicrosoftStoreForBusinessLanguage());
+        $writer->writeDateTimeValue('microsoftStoreForBusinessLastCompletedApplicationSyncTime', $this->getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime());
+        $writer->writeDateTimeValue('microsoftStoreForBusinessLastSuccessfulSyncDateTime', $this->getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime());
+        $writer->writeCollectionOfObjectValues('mobileAppCategories', $this->getMobileAppCategories());
+        $writer->writeCollectionOfObjectValues('mobileAppConfigurations', $this->getMobileAppConfigurations());
+        $writer->writeCollectionOfObjectValues('mobileApps', $this->getMobileApps());
+        $writer->writeCollectionOfObjectValues('targetedManagedAppConfigurations', $this->getTargetedManagedAppConfigurations());
+        $writer->writeCollectionOfObjectValues('vppTokens', $this->getVppTokens());
+        $writer->writeCollectionOfObjectValues('windowsInformationProtectionPolicies', $this->getWindowsInformationProtectionPolicies());
     }
 
     /**
      * Sets the androidManagedAppProtections property value. Android managed app policies.
      *  @param array<AndroidManagedAppProtection>|null $value Value to set for the androidManagedAppProtections property.
     */
-    public function setAndroidManagedAppProtections(?array $value ): void {
-        $this->androidManagedAppProtections = $value;
+    public function setAndroidManagedAppProtections(?array $value): void {
+        $this->getBackingStore()->set('androidManagedAppProtections', $value);
     }
 
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
      *  @param array<DefaultManagedAppProtection>|null $value Value to set for the defaultManagedAppProtections property.
     */
-    public function setDefaultManagedAppProtections(?array $value ): void {
-        $this->defaultManagedAppProtections = $value;
+    public function setDefaultManagedAppProtections(?array $value): void {
+        $this->getBackingStore()->set('defaultManagedAppProtections', $value);
     }
 
     /**
      * Sets the iosManagedAppProtections property value. iOS managed app policies.
      *  @param array<IosManagedAppProtection>|null $value Value to set for the iosManagedAppProtections property.
     */
-    public function setIosManagedAppProtections(?array $value ): void {
-        $this->iosManagedAppProtections = $value;
+    public function setIosManagedAppProtections(?array $value): void {
+        $this->getBackingStore()->set('iosManagedAppProtections', $value);
     }
 
     /**
      * Sets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
      *  @param bool|null $value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
     */
-    public function setIsEnabledForMicrosoftStoreForBusiness(?bool $value ): void {
-        $this->isEnabledForMicrosoftStoreForBusiness = $value;
+    public function setIsEnabledForMicrosoftStoreForBusiness(?bool $value): void {
+        $this->getBackingStore()->set('isEnabledForMicrosoftStoreForBusiness', $value);
     }
 
     /**
      * Sets the managedAppPolicies property value. Managed app policies.
      *  @param array<ManagedAppPolicy>|null $value Value to set for the managedAppPolicies property.
     */
-    public function setManagedAppPolicies(?array $value ): void {
-        $this->managedAppPolicies = $value;
+    public function setManagedAppPolicies(?array $value): void {
+        $this->getBackingStore()->set('managedAppPolicies', $value);
     }
 
     /**
      * Sets the managedAppRegistrations property value. The managed app registrations.
      *  @param array<ManagedAppRegistration>|null $value Value to set for the managedAppRegistrations property.
     */
-    public function setManagedAppRegistrations(?array $value ): void {
-        $this->managedAppRegistrations = $value;
+    public function setManagedAppRegistrations(?array $value): void {
+        $this->getBackingStore()->set('managedAppRegistrations', $value);
     }
 
     /**
      * Sets the managedAppStatuses property value. The managed app statuses.
      *  @param array<ManagedAppStatus>|null $value Value to set for the managedAppStatuses property.
     */
-    public function setManagedAppStatuses(?array $value ): void {
-        $this->managedAppStatuses = $value;
+    public function setManagedAppStatuses(?array $value): void {
+        $this->getBackingStore()->set('managedAppStatuses', $value);
     }
 
     /**
      * Sets the managedEBooks property value. The Managed eBook.
      *  @param array<ManagedEBook>|null $value Value to set for the managedEBooks property.
     */
-    public function setManagedEBooks(?array $value ): void {
-        $this->managedEBooks = $value;
+    public function setManagedEBooks(?array $value): void {
+        $this->getBackingStore()->set('managedEBooks', $value);
     }
 
     /**
      * Sets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
      *  @param array<MdmWindowsInformationProtectionPolicy>|null $value Value to set for the mdmWindowsInformationProtectionPolicies property.
     */
-    public function setMdmWindowsInformationProtectionPolicies(?array $value ): void {
-        $this->mdmWindowsInformationProtectionPolicies = $value;
+    public function setMdmWindowsInformationProtectionPolicies(?array $value): void {
+        $this->getBackingStore()->set('mdmWindowsInformationProtectionPolicies', $value);
     }
 
     /**
      * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      *  @param string|null $value Value to set for the microsoftStoreForBusinessLanguage property.
     */
-    public function setMicrosoftStoreForBusinessLanguage(?string $value ): void {
-        $this->microsoftStoreForBusinessLanguage = $value;
+    public function setMicrosoftStoreForBusinessLanguage(?string $value): void {
+        $this->getBackingStore()->set('microsoftStoreForBusinessLanguage', $value);
     }
 
     /**
      * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
      *  @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
     */
-    public function setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(?DateTime $value ): void {
-        $this->microsoftStoreForBusinessLastCompletedApplicationSyncTime = $value;
+    public function setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(?DateTime $value): void {
+        $this->getBackingStore()->set('microsoftStoreForBusinessLastCompletedApplicationSyncTime', $value);
     }
 
     /**
      * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
      *  @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
     */
-    public function setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(?DateTime $value ): void {
-        $this->microsoftStoreForBusinessLastSuccessfulSyncDateTime = $value;
+    public function setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('microsoftStoreForBusinessLastSuccessfulSyncDateTime', $value);
     }
 
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
      *  @param array<MobileAppCategory>|null $value Value to set for the mobileAppCategories property.
     */
-    public function setMobileAppCategories(?array $value ): void {
-        $this->mobileAppCategories = $value;
+    public function setMobileAppCategories(?array $value): void {
+        $this->getBackingStore()->set('mobileAppCategories', $value);
     }
 
     /**
      * Sets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
      *  @param array<ManagedDeviceMobileAppConfiguration>|null $value Value to set for the mobileAppConfigurations property.
     */
-    public function setMobileAppConfigurations(?array $value ): void {
-        $this->mobileAppConfigurations = $value;
+    public function setMobileAppConfigurations(?array $value): void {
+        $this->getBackingStore()->set('mobileAppConfigurations', $value);
     }
 
     /**
      * Sets the mobileApps property value. The mobile apps.
      *  @param array<MobileApp>|null $value Value to set for the mobileApps property.
     */
-    public function setMobileApps(?array $value ): void {
-        $this->mobileApps = $value;
+    public function setMobileApps(?array $value): void {
+        $this->getBackingStore()->set('mobileApps', $value);
     }
 
     /**
      * Sets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
      *  @param array<TargetedManagedAppConfiguration>|null $value Value to set for the targetedManagedAppConfigurations property.
     */
-    public function setTargetedManagedAppConfigurations(?array $value ): void {
-        $this->targetedManagedAppConfigurations = $value;
+    public function setTargetedManagedAppConfigurations(?array $value): void {
+        $this->getBackingStore()->set('targetedManagedAppConfigurations', $value);
     }
 
     /**
      * Sets the vppTokens property value. List of Vpp tokens for this organization.
      *  @param array<VppToken>|null $value Value to set for the vppTokens property.
     */
-    public function setVppTokens(?array $value ): void {
-        $this->vppTokens = $value;
+    public function setVppTokens(?array $value): void {
+        $this->getBackingStore()->set('vppTokens', $value);
     }
 
     /**
      * Sets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
      *  @param array<WindowsInformationProtectionPolicy>|null $value Value to set for the windowsInformationProtectionPolicies property.
     */
-    public function setWindowsInformationProtectionPolicies(?array $value ): void {
-        $this->windowsInformationProtectionPolicies = $value;
+    public function setWindowsInformationProtectionPolicies(?array $value): void {
+        $this->getBackingStore()->set('windowsInformationProtectionPolicies', $value);
     }
 
 }

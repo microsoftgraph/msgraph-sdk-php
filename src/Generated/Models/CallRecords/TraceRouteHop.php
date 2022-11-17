@@ -7,38 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TraceRouteHop implements AdditionalDataHolder, Parsable 
+class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $hopCount The network path count of this hop that was used to compute the RTT.
-    */
-    private ?int $hopCount = null;
-    
-    /**
-     * @var string|null $ipAddress IP address used for this hop in the network trace.
-    */
-    private ?string $ipAddress = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateInterval|null $roundTripTime The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
-    */
-    private ?DateInterval $roundTripTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new traceRouteHop and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.callRecords.traceRouteHop');
     }
@@ -56,8 +40,16 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +71,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getHopCount(): ?int {
-        return $this->hopCount;
+        return $this->getBackingStore()->get('hopCount');
     }
 
     /**
@@ -87,7 +79,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->ipAddress;
+        return $this->getBackingStore()->get('ipAddress');
     }
 
     /**
@@ -95,7 +87,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -103,7 +95,7 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getRoundTripTime(): ?DateInterval {
-        return $this->roundTripTime;
+        return $this->getBackingStore()->get('roundTripTime');
     }
 
     /**
@@ -111,51 +103,51 @@ class TraceRouteHop implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('hopCount', $this->hopCount);
-        $writer->writeStringValue('ipAddress', $this->ipAddress);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeDateIntervalValue('roundTripTime', $this->roundTripTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('hopCount', $this->getHopCount());
+        $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeDateIntervalValue('roundTripTime', $this->getRoundTripTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
      *  @param int|null $value Value to set for the hopCount property.
     */
-    public function setHopCount(?int $value ): void {
-        $this->hopCount = $value;
+    public function setHopCount(?int $value): void {
+        $this->getBackingStore()->set('hopCount', $value);
     }
 
     /**
      * Sets the ipAddress property value. IP address used for this hop in the network trace.
      *  @param string|null $value Value to set for the ipAddress property.
     */
-    public function setIpAddress(?string $value ): void {
-        $this->ipAddress = $value;
+    public function setIpAddress(?string $value): void {
+        $this->getBackingStore()->set('ipAddress', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      *  @param DateInterval|null $value Value to set for the roundTripTime property.
     */
-    public function setRoundTripTime(?DateInterval $value ): void {
-        $this->roundTripTime = $value;
+    public function setRoundTripTime(?DateInterval $value): void {
+        $this->getBackingStore()->set('roundTripTime', $value);
     }
 
 }

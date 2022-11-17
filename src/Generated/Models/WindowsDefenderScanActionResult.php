@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDefenderScanActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * @var string|null $scanType Scan type either full scan or quick scan
-    */
-    private ?string $scanType = null;
-    
-    /**
      * Instantiates a new WindowsDefenderScanActionResult and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
      * @return string|null
     */
     public function getScanType(): ?string {
-        return $this->scanType;
+        return $this->getBackingStore()->get('scanType');
     }
 
     /**
@@ -55,15 +50,15 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('scanType', $this->scanType);
+        $writer->writeStringValue('scanType', $this->getScanType());
     }
 
     /**
      * Sets the scanType property value. Scan type either full scan or quick scan
      *  @param string|null $value Value to set for the scanType property.
     */
-    public function setScanType(?string $value ): void {
-        $this->scanType = $value;
+    public function setScanType(?string $value): void {
+        $this->getBackingStore()->set('scanType', $value);
     }
 
 }

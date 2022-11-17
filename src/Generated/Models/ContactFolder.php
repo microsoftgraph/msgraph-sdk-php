@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ContactFolder extends Entity implements Parsable 
 {
     /**
-     * @var array<ContactFolder>|null $childFolders The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-    */
-    private ?array $childFolders = null;
-    
-    /**
-     * @var array<Contact>|null $contacts The contacts in the folder. Navigation property. Read-only. Nullable.
-    */
-    private ?array $contacts = null;
-    
-    /**
-     * @var string|null $displayName The folder's display name.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
-    */
-    private ?array $multiValueExtendedProperties = null;
-    
-    /**
-     * @var string|null $parentFolderId The ID of the folder's parent folder.
-    */
-    private ?string $parentFolderId = null;
-    
-    /**
-     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
-    */
-    private ?array $singleValueExtendedProperties = null;
-    
-    /**
      * Instantiates a new contactFolder and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class ContactFolder extends Entity implements Parsable
      * @return array<ContactFolder>|null
     */
     public function getChildFolders(): ?array {
-        return $this->childFolders;
+        return $this->getBackingStore()->get('childFolders');
     }
 
     /**
@@ -68,7 +38,7 @@ class ContactFolder extends Entity implements Parsable
      * @return array<Contact>|null
     */
     public function getContacts(): ?array {
-        return $this->contacts;
+        return $this->getBackingStore()->get('contacts');
     }
 
     /**
@@ -76,7 +46,7 @@ class ContactFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -100,7 +70,7 @@ class ContactFolder extends Entity implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->multiValueExtendedProperties;
+        return $this->getBackingStore()->get('multiValueExtendedProperties');
     }
 
     /**
@@ -108,7 +78,7 @@ class ContactFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getParentFolderId(): ?string {
-        return $this->parentFolderId;
+        return $this->getBackingStore()->get('parentFolderId');
     }
 
     /**
@@ -116,7 +86,7 @@ class ContactFolder extends Entity implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->singleValueExtendedProperties;
+        return $this->getBackingStore()->get('singleValueExtendedProperties');
     }
 
     /**
@@ -125,60 +95,60 @@ class ContactFolder extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('childFolders', $this->childFolders);
-        $writer->writeCollectionOfObjectValues('contacts', $this->contacts);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->multiValueExtendedProperties);
-        $writer->writeStringValue('parentFolderId', $this->parentFolderId);
-        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->singleValueExtendedProperties);
+        $writer->writeCollectionOfObjectValues('childFolders', $this->getChildFolders());
+        $writer->writeCollectionOfObjectValues('contacts', $this->getContacts());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
+        $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
+        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
     }
 
     /**
      * Sets the childFolders property value. The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      *  @param array<ContactFolder>|null $value Value to set for the childFolders property.
     */
-    public function setChildFolders(?array $value ): void {
-        $this->childFolders = $value;
+    public function setChildFolders(?array $value): void {
+        $this->getBackingStore()->set('childFolders', $value);
     }
 
     /**
      * Sets the contacts property value. The contacts in the folder. Navigation property. Read-only. Nullable.
      *  @param array<Contact>|null $value Value to set for the contacts property.
     */
-    public function setContacts(?array $value ): void {
-        $this->contacts = $value;
+    public function setContacts(?array $value): void {
+        $this->getBackingStore()->set('contacts', $value);
     }
 
     /**
      * Sets the displayName property value. The folder's display name.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
-    public function setMultiValueExtendedProperties(?array $value ): void {
-        $this->multiValueExtendedProperties = $value;
+    public function setMultiValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('multiValueExtendedProperties', $value);
     }
 
     /**
      * Sets the parentFolderId property value. The ID of the folder's parent folder.
      *  @param string|null $value Value to set for the parentFolderId property.
     */
-    public function setParentFolderId(?string $value ): void {
-        $this->parentFolderId = $value;
+    public function setParentFolderId(?string $value): void {
+        $this->getBackingStore()->set('parentFolderId', $value);
     }
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
-    public function setSingleValueExtendedProperties(?array $value ): void {
-        $this->singleValueExtendedProperties = $value;
+    public function setSingleValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('singleValueExtendedProperties', $value);
     }
 
 }

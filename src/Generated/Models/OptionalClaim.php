@@ -6,43 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class OptionalClaim implements AdditionalDataHolder, Parsable 
+class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $additionalProperties Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-    */
-    private ?array $additionalProperties = null;
-    
-    /**
-     * @var bool|null $essential If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-    */
-    private ?bool $essential = null;
-    
-    /**
-     * @var string|null $name The name of the optional claim.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $source The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
-    */
-    private ?string $source = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new optionalClaim and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.optionalClaim');
     }
@@ -60,8 +39,8 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -69,7 +48,15 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAdditionalProperties(): ?array {
-        return $this->additionalProperties;
+        return $this->getBackingStore()->get('additionalProperties');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -77,7 +64,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getEssential(): ?bool {
-        return $this->essential;
+        return $this->getBackingStore()->get('essential');
     }
 
     /**
@@ -100,7 +87,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -108,7 +95,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -116,7 +103,7 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSource(): ?string {
-        return $this->source;
+        return $this->getBackingStore()->get('source');
     }
 
     /**
@@ -124,60 +111,60 @@ class OptionalClaim implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('additionalProperties', $this->additionalProperties);
-        $writer->writeBooleanValue('essential', $this->essential);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('source', $this->source);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('additionalProperties', $this->getAdditionalProperties());
+        $writer->writeBooleanValue('essential', $this->getEssential());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('source', $this->getSource());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
      *  @param array<string>|null $value Value to set for the additionalProperties property.
     */
-    public function setAdditionalProperties(?array $value ): void {
-        $this->additionalProperties = $value;
+    public function setAdditionalProperties(?array $value): void {
+        $this->getBackingStore()->set('additionalProperties', $value);
     }
 
     /**
      * Sets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
      *  @param bool|null $value Value to set for the essential property.
     */
-    public function setEssential(?bool $value ): void {
-        $this->essential = $value;
+    public function setEssential(?bool $value): void {
+        $this->getBackingStore()->set('essential', $value);
     }
 
     /**
      * Sets the name property value. The name of the optional claim.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
      *  @param string|null $value Value to set for the source property.
     */
-    public function setSource(?string $value ): void {
-        $this->source = $value;
+    public function setSource(?string $value): void {
+        $this->getBackingStore()->set('source', $value);
     }
 
 }

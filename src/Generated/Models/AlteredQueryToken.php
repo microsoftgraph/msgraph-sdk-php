@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AlteredQueryToken implements AdditionalDataHolder, Parsable 
+class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $length Defines the length of a changed segment.
-    */
-    private ?int $length = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $offset Defines the offset of a changed segment.
-    */
-    private ?int $offset = null;
-    
-    /**
-     * @var string|null $suggestion Represents the corrected segment string.
-    */
-    private ?string $suggestion = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new alteredQueryToken and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.alteredQueryToken');
     }
@@ -55,8 +39,16 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +70,7 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getLength(): ?int {
-        return $this->length;
+        return $this->getBackingStore()->get('length');
     }
 
     /**
@@ -86,7 +78,7 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +86,7 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getOffset(): ?int {
-        return $this->offset;
+        return $this->getBackingStore()->get('offset');
     }
 
     /**
@@ -102,7 +94,7 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSuggestion(): ?string {
-        return $this->suggestion;
+        return $this->getBackingStore()->get('suggestion');
     }
 
     /**
@@ -110,51 +102,51 @@ class AlteredQueryToken implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('length', $this->length);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('offset', $this->offset);
-        $writer->writeStringValue('suggestion', $this->suggestion);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('length', $this->getLength());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('offset', $this->getOffset());
+        $writer->writeStringValue('suggestion', $this->getSuggestion());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the length property value. Defines the length of a changed segment.
      *  @param int|null $value Value to set for the length property.
     */
-    public function setLength(?int $value ): void {
-        $this->length = $value;
+    public function setLength(?int $value): void {
+        $this->getBackingStore()->set('length', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the offset property value. Defines the offset of a changed segment.
      *  @param int|null $value Value to set for the offset property.
     */
-    public function setOffset(?int $value ): void {
-        $this->offset = $value;
+    public function setOffset(?int $value): void {
+        $this->getBackingStore()->set('offset', $value);
     }
 
     /**
      * Sets the suggestion property value. Represents the corrected segment string.
      *  @param string|null $value Value to set for the suggestion property.
     */
-    public function setSuggestion(?string $value ): void {
-        $this->suggestion = $value;
+    public function setSuggestion(?string $value): void {
+        $this->getBackingStore()->set('suggestion', $value);
     }
 
 }

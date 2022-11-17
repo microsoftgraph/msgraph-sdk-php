@@ -6,58 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable 
+class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var Win32LobAppMsiPackageType|null $packageType Indicates the package type of an MSI Win32LobApp.
-    */
-    private ?Win32LobAppMsiPackageType $packageType = null;
-    
-    /**
-     * @var string|null $productCode The MSI product code.
-    */
-    private ?string $productCode = null;
-    
-    /**
-     * @var string|null $productName The MSI product name.
-    */
-    private ?string $productName = null;
-    
-    /**
-     * @var string|null $productVersion The MSI product version.
-    */
-    private ?string $productVersion = null;
-    
-    /**
-     * @var string|null $publisher The MSI publisher.
-    */
-    private ?string $publisher = null;
-    
-    /**
-     * @var bool|null $requiresReboot Whether the MSI app requires the machine to reboot to complete installation.
-    */
-    private ?bool $requiresReboot = null;
-    
-    /**
-     * @var string|null $upgradeCode The MSI upgrade code.
-    */
-    private ?string $upgradeCode = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new win32LobAppMsiInformation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.win32LobAppMsiInformation');
     }
@@ -75,8 +39,16 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -102,7 +74,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,7 +82,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return Win32LobAppMsiPackageType|null
     */
     public function getPackageType(): ?Win32LobAppMsiPackageType {
-        return $this->packageType;
+        return $this->getBackingStore()->get('packageType');
     }
 
     /**
@@ -118,7 +90,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProductCode(): ?string {
-        return $this->productCode;
+        return $this->getBackingStore()->get('productCode');
     }
 
     /**
@@ -126,7 +98,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProductName(): ?string {
-        return $this->productName;
+        return $this->getBackingStore()->get('productName');
     }
 
     /**
@@ -134,7 +106,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProductVersion(): ?string {
-        return $this->productVersion;
+        return $this->getBackingStore()->get('productVersion');
     }
 
     /**
@@ -142,7 +114,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPublisher(): ?string {
-        return $this->publisher;
+        return $this->getBackingStore()->get('publisher');
     }
 
     /**
@@ -150,7 +122,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getRequiresReboot(): ?bool {
-        return $this->requiresReboot;
+        return $this->getBackingStore()->get('requiresReboot');
     }
 
     /**
@@ -158,7 +130,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUpgradeCode(): ?string {
-        return $this->upgradeCode;
+        return $this->getBackingStore()->get('upgradeCode');
     }
 
     /**
@@ -166,87 +138,87 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('packageType', $this->packageType);
-        $writer->writeStringValue('productCode', $this->productCode);
-        $writer->writeStringValue('productName', $this->productName);
-        $writer->writeStringValue('productVersion', $this->productVersion);
-        $writer->writeStringValue('publisher', $this->publisher);
-        $writer->writeBooleanValue('requiresReboot', $this->requiresReboot);
-        $writer->writeStringValue('upgradeCode', $this->upgradeCode);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('packageType', $this->getPackageType());
+        $writer->writeStringValue('productCode', $this->getProductCode());
+        $writer->writeStringValue('productName', $this->getProductName());
+        $writer->writeStringValue('productVersion', $this->getProductVersion());
+        $writer->writeStringValue('publisher', $this->getPublisher());
+        $writer->writeBooleanValue('requiresReboot', $this->getRequiresReboot());
+        $writer->writeStringValue('upgradeCode', $this->getUpgradeCode());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      *  @param Win32LobAppMsiPackageType|null $value Value to set for the packageType property.
     */
-    public function setPackageType(?Win32LobAppMsiPackageType $value ): void {
-        $this->packageType = $value;
+    public function setPackageType(?Win32LobAppMsiPackageType $value): void {
+        $this->getBackingStore()->set('packageType', $value);
     }
 
     /**
      * Sets the productCode property value. The MSI product code.
      *  @param string|null $value Value to set for the productCode property.
     */
-    public function setProductCode(?string $value ): void {
-        $this->productCode = $value;
+    public function setProductCode(?string $value): void {
+        $this->getBackingStore()->set('productCode', $value);
     }
 
     /**
      * Sets the productName property value. The MSI product name.
      *  @param string|null $value Value to set for the productName property.
     */
-    public function setProductName(?string $value ): void {
-        $this->productName = $value;
+    public function setProductName(?string $value): void {
+        $this->getBackingStore()->set('productName', $value);
     }
 
     /**
      * Sets the productVersion property value. The MSI product version.
      *  @param string|null $value Value to set for the productVersion property.
     */
-    public function setProductVersion(?string $value ): void {
-        $this->productVersion = $value;
+    public function setProductVersion(?string $value): void {
+        $this->getBackingStore()->set('productVersion', $value);
     }
 
     /**
      * Sets the publisher property value. The MSI publisher.
      *  @param string|null $value Value to set for the publisher property.
     */
-    public function setPublisher(?string $value ): void {
-        $this->publisher = $value;
+    public function setPublisher(?string $value): void {
+        $this->getBackingStore()->set('publisher', $value);
     }
 
     /**
      * Sets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
      *  @param bool|null $value Value to set for the requiresReboot property.
     */
-    public function setRequiresReboot(?bool $value ): void {
-        $this->requiresReboot = $value;
+    public function setRequiresReboot(?bool $value): void {
+        $this->getBackingStore()->set('requiresReboot', $value);
     }
 
     /**
      * Sets the upgradeCode property value. The MSI upgrade code.
      *  @param string|null $value Value to set for the upgradeCode property.
     */
-    public function setUpgradeCode(?string $value ): void {
-        $this->upgradeCode = $value;
+    public function setUpgradeCode(?string $value): void {
+        $this->getBackingStore()->set('upgradeCode', $value);
     }
 
 }

@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MediaContentRatingGermany implements AdditionalDataHolder, Parsable 
+class MediaContentRatingGermany implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var RatingGermanyMoviesType|null $movieRating Movies rating labels in Germany
-    */
-    private ?RatingGermanyMoviesType $movieRating = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var RatingGermanyTelevisionType|null $tvRating TV content rating labels in Germany
-    */
-    private ?RatingGermanyTelevisionType $tvRating = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new mediaContentRatingGermany and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.mediaContentRatingGermany');
     }
@@ -50,8 +39,16 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +69,7 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * @return RatingGermanyMoviesType|null
     */
     public function getMovieRating(): ?RatingGermanyMoviesType {
-        return $this->movieRating;
+        return $this->getBackingStore()->get('movieRating');
     }
 
     /**
@@ -80,7 +77,7 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +85,7 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * @return RatingGermanyTelevisionType|null
     */
     public function getTvRating(): ?RatingGermanyTelevisionType {
-        return $this->tvRating;
+        return $this->getBackingStore()->get('tvRating');
     }
 
     /**
@@ -96,42 +93,42 @@ class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('movieRating', $this->movieRating);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('tvRating', $this->tvRating);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('movieRating', $this->getMovieRating());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('tvRating', $this->getTvRating());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the movieRating property value. Movies rating labels in Germany
      *  @param RatingGermanyMoviesType|null $value Value to set for the movieRating property.
     */
-    public function setMovieRating(?RatingGermanyMoviesType $value ): void {
-        $this->movieRating = $value;
+    public function setMovieRating(?RatingGermanyMoviesType $value): void {
+        $this->getBackingStore()->set('movieRating', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the tvRating property value. TV content rating labels in Germany
      *  @param RatingGermanyTelevisionType|null $value Value to set for the tvRating property.
     */
-    public function setTvRating(?RatingGermanyTelevisionType $value ): void {
-        $this->tvRating = $value;
+    public function setTvRating(?RatingGermanyTelevisionType $value): void {
+        $this->getBackingStore()->set('tvRating', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharePointIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * @var Identity|null $group The group associated with this action. Optional.
-    */
-    private ?Identity $group = null;
-    
-    /**
-     * @var SharePointIdentity|null $siteGroup The SharePoint group associated with this action. Optional.
-    */
-    private ?SharePointIdentity $siteGroup = null;
-    
-    /**
-     * @var SharePointIdentity|null $siteUser The SharePoint user associated with this action. Optional.
-    */
-    private ?SharePointIdentity $siteUser = null;
-    
-    /**
      * Instantiates a new SharePointIdentitySet and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return Identity|null
     */
     public function getGroup(): ?Identity {
-        return $this->group;
+        return $this->getBackingStore()->get('group');
     }
 
     /**
@@ -66,7 +51,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return SharePointIdentity|null
     */
     public function getSiteGroup(): ?SharePointIdentity {
-        return $this->siteGroup;
+        return $this->getBackingStore()->get('siteGroup');
     }
 
     /**
@@ -74,7 +59,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return SharePointIdentity|null
     */
     public function getSiteUser(): ?SharePointIdentity {
-        return $this->siteUser;
+        return $this->getBackingStore()->get('siteUser');
     }
 
     /**
@@ -83,33 +68,33 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('group', $this->group);
-        $writer->writeObjectValue('siteGroup', $this->siteGroup);
-        $writer->writeObjectValue('siteUser', $this->siteUser);
+        $writer->writeObjectValue('group', $this->getGroup());
+        $writer->writeObjectValue('siteGroup', $this->getSiteGroup());
+        $writer->writeObjectValue('siteUser', $this->getSiteUser());
     }
 
     /**
      * Sets the group property value. The group associated with this action. Optional.
      *  @param Identity|null $value Value to set for the group property.
     */
-    public function setGroup(?Identity $value ): void {
-        $this->group = $value;
+    public function setGroup(?Identity $value): void {
+        $this->getBackingStore()->set('group', $value);
     }
 
     /**
      * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
      *  @param SharePointIdentity|null $value Value to set for the siteGroup property.
     */
-    public function setSiteGroup(?SharePointIdentity $value ): void {
-        $this->siteGroup = $value;
+    public function setSiteGroup(?SharePointIdentity $value): void {
+        $this->getBackingStore()->set('siteGroup', $value);
     }
 
     /**
      * Sets the siteUser property value. The SharePoint user associated with this action. Optional.
      *  @param SharePointIdentity|null $value Value to set for the siteUser property.
     */
-    public function setSiteUser(?SharePointIdentity $value ): void {
-        $this->siteUser = $value;
+    public function setSiteUser(?SharePointIdentity $value): void {
+        $this->getBackingStore()->set('siteUser', $value);
     }
 
 }

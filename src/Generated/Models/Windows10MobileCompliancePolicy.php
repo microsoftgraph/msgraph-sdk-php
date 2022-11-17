@@ -9,86 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements Parsable 
 {
     /**
-     * @var bool|null $bitLockerEnabled Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-    */
-    private ?bool $bitLockerEnabled = null;
-    
-    /**
-     * @var bool|null $codeIntegrityEnabled Require devices to be reported as healthy by Windows Device Health Attestation.
-    */
-    private ?bool $codeIntegrityEnabled = null;
-    
-    /**
-     * @var bool|null $earlyLaunchAntiMalwareDriverEnabled Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-    */
-    private ?bool $earlyLaunchAntiMalwareDriverEnabled = null;
-    
-    /**
-     * @var string|null $osMaximumVersion Maximum Windows Phone version.
-    */
-    private ?string $osMaximumVersion = null;
-    
-    /**
-     * @var string|null $osMinimumVersion Minimum Windows Phone version.
-    */
-    private ?string $osMinimumVersion = null;
-    
-    /**
-     * @var bool|null $passwordBlockSimple Whether or not to block syncing the calendar.
-    */
-    private ?bool $passwordBlockSimple = null;
-    
-    /**
-     * @var int|null $passwordExpirationDays Number of days before password expiration. Valid values 1 to 255
-    */
-    private ?int $passwordExpirationDays = null;
-    
-    /**
-     * @var int|null $passwordMinimumCharacterSetCount The number of character sets required in the password.
-    */
-    private ?int $passwordMinimumCharacterSetCount = null;
-    
-    /**
-     * @var int|null $passwordMinimumLength Minimum password length. Valid values 4 to 16
-    */
-    private ?int $passwordMinimumLength = null;
-    
-    /**
-     * @var int|null $passwordMinutesOfInactivityBeforeLock Minutes of inactivity before a password is required.
-    */
-    private ?int $passwordMinutesOfInactivityBeforeLock = null;
-    
-    /**
-     * @var int|null $passwordPreviousPasswordBlockCount The number of previous passwords to prevent re-use of.
-    */
-    private ?int $passwordPreviousPasswordBlockCount = null;
-    
-    /**
-     * @var bool|null $passwordRequired Require a password to unlock Windows Phone device.
-    */
-    private ?bool $passwordRequired = null;
-    
-    /**
-     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
-    */
-    private ?RequiredPasswordType $passwordRequiredType = null;
-    
-    /**
-     * @var bool|null $passwordRequireToUnlockFromIdle Require a password to unlock an idle device.
-    */
-    private ?bool $passwordRequireToUnlockFromIdle = null;
-    
-    /**
-     * @var bool|null $secureBootEnabled Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-    */
-    private ?bool $secureBootEnabled = null;
-    
-    /**
-     * @var bool|null $storageRequireEncryption Require encryption on windows devices.
-    */
-    private ?bool $storageRequireEncryption = null;
-    
-    /**
      * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.
     */
     public function __construct() {
@@ -110,7 +30,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getBitLockerEnabled(): ?bool {
-        return $this->bitLockerEnabled;
+        return $this->getBackingStore()->get('bitLockerEnabled');
     }
 
     /**
@@ -118,7 +38,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getCodeIntegrityEnabled(): ?bool {
-        return $this->codeIntegrityEnabled;
+        return $this->getBackingStore()->get('codeIntegrityEnabled');
     }
 
     /**
@@ -126,7 +46,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getEarlyLaunchAntiMalwareDriverEnabled(): ?bool {
-        return $this->earlyLaunchAntiMalwareDriverEnabled;
+        return $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverEnabled');
     }
 
     /**
@@ -160,7 +80,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return string|null
     */
     public function getOsMaximumVersion(): ?string {
-        return $this->osMaximumVersion;
+        return $this->getBackingStore()->get('osMaximumVersion');
     }
 
     /**
@@ -168,7 +88,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return string|null
     */
     public function getOsMinimumVersion(): ?string {
-        return $this->osMinimumVersion;
+        return $this->getBackingStore()->get('osMinimumVersion');
     }
 
     /**
@@ -176,7 +96,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getPasswordBlockSimple(): ?bool {
-        return $this->passwordBlockSimple;
+        return $this->getBackingStore()->get('passwordBlockSimple');
     }
 
     /**
@@ -184,7 +104,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->passwordExpirationDays;
+        return $this->getBackingStore()->get('passwordExpirationDays');
     }
 
     /**
@@ -192,7 +112,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->passwordMinimumCharacterSetCount;
+        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
     }
 
     /**
@@ -200,7 +120,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->passwordMinimumLength;
+        return $this->getBackingStore()->get('passwordMinimumLength');
     }
 
     /**
@@ -208,7 +128,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeLock(): ?int {
-        return $this->passwordMinutesOfInactivityBeforeLock;
+        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
     }
 
     /**
@@ -216,7 +136,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->passwordPreviousPasswordBlockCount;
+        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
     }
 
     /**
@@ -224,7 +144,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getPasswordRequired(): ?bool {
-        return $this->passwordRequired;
+        return $this->getBackingStore()->get('passwordRequired');
     }
 
     /**
@@ -232,7 +152,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->passwordRequiredType;
+        return $this->getBackingStore()->get('passwordRequiredType');
     }
 
     /**
@@ -240,7 +160,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getPasswordRequireToUnlockFromIdle(): ?bool {
-        return $this->passwordRequireToUnlockFromIdle;
+        return $this->getBackingStore()->get('passwordRequireToUnlockFromIdle');
     }
 
     /**
@@ -248,7 +168,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getSecureBootEnabled(): ?bool {
-        return $this->secureBootEnabled;
+        return $this->getBackingStore()->get('secureBootEnabled');
     }
 
     /**
@@ -256,7 +176,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
      * @return bool|null
     */
     public function getStorageRequireEncryption(): ?bool {
-        return $this->storageRequireEncryption;
+        return $this->getBackingStore()->get('storageRequireEncryption');
     }
 
     /**
@@ -265,150 +185,150 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('bitLockerEnabled', $this->bitLockerEnabled);
-        $writer->writeBooleanValue('codeIntegrityEnabled', $this->codeIntegrityEnabled);
-        $writer->writeBooleanValue('earlyLaunchAntiMalwareDriverEnabled', $this->earlyLaunchAntiMalwareDriverEnabled);
-        $writer->writeStringValue('osMaximumVersion', $this->osMaximumVersion);
-        $writer->writeStringValue('osMinimumVersion', $this->osMinimumVersion);
-        $writer->writeBooleanValue('passwordBlockSimple', $this->passwordBlockSimple);
-        $writer->writeIntegerValue('passwordExpirationDays', $this->passwordExpirationDays);
-        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->passwordMinimumCharacterSetCount);
-        $writer->writeIntegerValue('passwordMinimumLength', $this->passwordMinimumLength);
-        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeLock', $this->passwordMinutesOfInactivityBeforeLock);
-        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->passwordPreviousPasswordBlockCount);
-        $writer->writeBooleanValue('passwordRequired', $this->passwordRequired);
-        $writer->writeEnumValue('passwordRequiredType', $this->passwordRequiredType);
-        $writer->writeBooleanValue('passwordRequireToUnlockFromIdle', $this->passwordRequireToUnlockFromIdle);
-        $writer->writeBooleanValue('secureBootEnabled', $this->secureBootEnabled);
-        $writer->writeBooleanValue('storageRequireEncryption', $this->storageRequireEncryption);
+        $writer->writeBooleanValue('bitLockerEnabled', $this->getBitLockerEnabled());
+        $writer->writeBooleanValue('codeIntegrityEnabled', $this->getCodeIntegrityEnabled());
+        $writer->writeBooleanValue('earlyLaunchAntiMalwareDriverEnabled', $this->getEarlyLaunchAntiMalwareDriverEnabled());
+        $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
+        $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
+        $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());
+        $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
+        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());
+        $writer->writeIntegerValue('passwordMinimumLength', $this->getPasswordMinimumLength());
+        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeLock', $this->getPasswordMinutesOfInactivityBeforeLock());
+        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->getPasswordPreviousPasswordBlockCount());
+        $writer->writeBooleanValue('passwordRequired', $this->getPasswordRequired());
+        $writer->writeEnumValue('passwordRequiredType', $this->getPasswordRequiredType());
+        $writer->writeBooleanValue('passwordRequireToUnlockFromIdle', $this->getPasswordRequireToUnlockFromIdle());
+        $writer->writeBooleanValue('secureBootEnabled', $this->getSecureBootEnabled());
+        $writer->writeBooleanValue('storageRequireEncryption', $this->getStorageRequireEncryption());
     }
 
     /**
      * Sets the bitLockerEnabled property value. Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
      *  @param bool|null $value Value to set for the bitLockerEnabled property.
     */
-    public function setBitLockerEnabled(?bool $value ): void {
-        $this->bitLockerEnabled = $value;
+    public function setBitLockerEnabled(?bool $value): void {
+        $this->getBackingStore()->set('bitLockerEnabled', $value);
     }
 
     /**
      * Sets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
      *  @param bool|null $value Value to set for the codeIntegrityEnabled property.
     */
-    public function setCodeIntegrityEnabled(?bool $value ): void {
-        $this->codeIntegrityEnabled = $value;
+    public function setCodeIntegrityEnabled(?bool $value): void {
+        $this->getBackingStore()->set('codeIntegrityEnabled', $value);
     }
 
     /**
      * Sets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      *  @param bool|null $value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
     */
-    public function setEarlyLaunchAntiMalwareDriverEnabled(?bool $value ): void {
-        $this->earlyLaunchAntiMalwareDriverEnabled = $value;
+    public function setEarlyLaunchAntiMalwareDriverEnabled(?bool $value): void {
+        $this->getBackingStore()->set('earlyLaunchAntiMalwareDriverEnabled', $value);
     }
 
     /**
      * Sets the osMaximumVersion property value. Maximum Windows Phone version.
      *  @param string|null $value Value to set for the osMaximumVersion property.
     */
-    public function setOsMaximumVersion(?string $value ): void {
-        $this->osMaximumVersion = $value;
+    public function setOsMaximumVersion(?string $value): void {
+        $this->getBackingStore()->set('osMaximumVersion', $value);
     }
 
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
      *  @param string|null $value Value to set for the osMinimumVersion property.
     */
-    public function setOsMinimumVersion(?string $value ): void {
-        $this->osMinimumVersion = $value;
+    public function setOsMinimumVersion(?string $value): void {
+        $this->getBackingStore()->set('osMinimumVersion', $value);
     }
 
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
      *  @param bool|null $value Value to set for the passwordBlockSimple property.
     */
-    public function setPasswordBlockSimple(?bool $value ): void {
-        $this->passwordBlockSimple = $value;
+    public function setPasswordBlockSimple(?bool $value): void {
+        $this->getBackingStore()->set('passwordBlockSimple', $value);
     }
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
      *  @param int|null $value Value to set for the passwordExpirationDays property.
     */
-    public function setPasswordExpirationDays(?int $value ): void {
-        $this->passwordExpirationDays = $value;
+    public function setPasswordExpirationDays(?int $value): void {
+        $this->getBackingStore()->set('passwordExpirationDays', $value);
     }
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
-    public function setPasswordMinimumCharacterSetCount(?int $value ): void {
-        $this->passwordMinimumCharacterSetCount = $value;
+    public function setPasswordMinimumCharacterSetCount(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
     }
 
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      *  @param int|null $value Value to set for the passwordMinimumLength property.
     */
-    public function setPasswordMinimumLength(?int $value ): void {
-        $this->passwordMinimumLength = $value;
+    public function setPasswordMinimumLength(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumLength', $value);
     }
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
-    public function setPasswordMinutesOfInactivityBeforeLock(?int $value ): void {
-        $this->passwordMinutesOfInactivityBeforeLock = $value;
+    public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
+        $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
     }
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
      *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
-    public function setPasswordPreviousPasswordBlockCount(?int $value ): void {
-        $this->passwordPreviousPasswordBlockCount = $value;
+    public function setPasswordPreviousPasswordBlockCount(?int $value): void {
+        $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
     }
 
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows Phone device.
      *  @param bool|null $value Value to set for the passwordRequired property.
     */
-    public function setPasswordRequired(?bool $value ): void {
-        $this->passwordRequired = $value;
+    public function setPasswordRequired(?bool $value): void {
+        $this->getBackingStore()->set('passwordRequired', $value);
     }
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
-    public function setPasswordRequiredType(?RequiredPasswordType $value ): void {
-        $this->passwordRequiredType = $value;
+    public function setPasswordRequiredType(?RequiredPasswordType $value): void {
+        $this->getBackingStore()->set('passwordRequiredType', $value);
     }
 
     /**
      * Sets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
      *  @param bool|null $value Value to set for the passwordRequireToUnlockFromIdle property.
     */
-    public function setPasswordRequireToUnlockFromIdle(?bool $value ): void {
-        $this->passwordRequireToUnlockFromIdle = $value;
+    public function setPasswordRequireToUnlockFromIdle(?bool $value): void {
+        $this->getBackingStore()->set('passwordRequireToUnlockFromIdle', $value);
     }
 
     /**
      * Sets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      *  @param bool|null $value Value to set for the secureBootEnabled property.
     */
-    public function setSecureBootEnabled(?bool $value ): void {
-        $this->secureBootEnabled = $value;
+    public function setSecureBootEnabled(?bool $value): void {
+        $this->getBackingStore()->set('secureBootEnabled', $value);
     }
 
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows devices.
      *  @param bool|null $value Value to set for the storageRequireEncryption property.
     */
-    public function setStorageRequireEncryption(?bool $value ): void {
-        $this->storageRequireEncryption = $value;
+    public function setStorageRequireEncryption(?bool $value): void {
+        $this->getBackingStore()->set('storageRequireEncryption', $value);
     }
 
 }

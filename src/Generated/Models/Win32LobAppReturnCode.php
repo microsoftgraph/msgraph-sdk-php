@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable 
+class Win32LobAppReturnCode implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $returnCode Return code.
-    */
-    private ?int $returnCode = null;
-    
-    /**
-     * @var Win32LobAppReturnCodeType|null $type Indicates the type of return code.
-    */
-    private ?Win32LobAppReturnCodeType $type = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new win32LobAppReturnCode and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.win32LobAppReturnCode');
     }
@@ -50,8 +39,16 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +69,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -80,7 +77,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getReturnCode(): ?int {
-        return $this->returnCode;
+        return $this->getBackingStore()->get('returnCode');
     }
 
     /**
@@ -88,7 +85,7 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * @return Win32LobAppReturnCodeType|null
     */
     public function getType(): ?Win32LobAppReturnCodeType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -96,42 +93,42 @@ class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('returnCode', $this->returnCode);
-        $writer->writeEnumValue('type', $this->type);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('returnCode', $this->getReturnCode());
+        $writer->writeEnumValue('type', $this->getType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the returnCode property value. Return code.
      *  @param int|null $value Value to set for the returnCode property.
     */
-    public function setReturnCode(?int $value ): void {
-        $this->returnCode = $value;
+    public function setReturnCode(?int $value): void {
+        $this->getBackingStore()->set('returnCode', $value);
     }
 
     /**
      * Sets the type property value. Indicates the type of return code.
      *  @param Win32LobAppReturnCodeType|null $value Value to set for the type property.
     */
-    public function setType(?Win32LobAppReturnCodeType $value ): void {
-        $this->type = $value;
+    public function setType(?Win32LobAppReturnCodeType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

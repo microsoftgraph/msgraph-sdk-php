@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerGroup extends Entity implements Parsable 
 {
     /**
-     * @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns the plannerPlans owned by the group.
-    */
-    private ?array $plans = null;
-    
-    /**
      * Instantiates a new plannerGroup and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class PlannerGroup extends Entity implements Parsable
      * @return array<PlannerPlan>|null
     */
     public function getPlans(): ?array {
-        return $this->plans;
+        return $this->getBackingStore()->get('plans');
     }
 
     /**
@@ -55,15 +50,15 @@ class PlannerGroup extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('plans', $this->plans);
+        $writer->writeCollectionOfObjectValues('plans', $this->getPlans());
     }
 
     /**
      * Sets the plans property value. Read-only. Nullable. Returns the plannerPlans owned by the group.
      *  @param array<PlannerPlan>|null $value Value to set for the plans property.
     */
-    public function setPlans(?array $value ): void {
-        $this->plans = $value;
+    public function setPlans(?array $value): void {
+        $this->getBackingStore()->set('plans', $value);
     }
 
 }

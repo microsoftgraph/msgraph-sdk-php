@@ -10,51 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConversationThread extends Entity implements Parsable 
 {
     /**
-     * @var array<Recipient>|null $ccRecipients The Cc: recipients for the thread. Returned only on $select.
-    */
-    private ?array $ccRecipients = null;
-    
-    /**
-     * @var bool|null $hasAttachments Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
-    */
-    private ?bool $hasAttachments = null;
-    
-    /**
-     * @var bool|null $isLocked Indicates if the thread is locked. Returned by default.
-    */
-    private ?bool $isLocked = null;
-    
-    /**
-     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
-    */
-    private ?DateTime $lastDeliveredDateTime = null;
-    
-    /**
-     * @var array<Post>|null $posts The posts property
-    */
-    private ?array $posts = null;
-    
-    /**
-     * @var string|null $preview A short summary from the body of the latest post in this conversation. Returned by default.
-    */
-    private ?string $preview = null;
-    
-    /**
-     * @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
-    */
-    private ?string $topic = null;
-    
-    /**
-     * @var array<Recipient>|null $toRecipients The To: recipients for the thread. Returned only on $select.
-    */
-    private ?array $toRecipients = null;
-    
-    /**
-     * @var array<string>|null $uniqueSenders All the users that sent a message to this thread. Returned by default.
-    */
-    private ?array $uniqueSenders = null;
-    
-    /**
      * Instantiates a new conversationThread and sets the default values.
     */
     public function __construct() {
@@ -76,7 +31,7 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Recipient>|null
     */
     public function getCcRecipients(): ?array {
-        return $this->ccRecipients;
+        return $this->getBackingStore()->get('ccRecipients');
     }
 
     /**
@@ -103,7 +58,7 @@ class ConversationThread extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->hasAttachments;
+        return $this->getBackingStore()->get('hasAttachments');
     }
 
     /**
@@ -111,7 +66,7 @@ class ConversationThread extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsLocked(): ?bool {
-        return $this->isLocked;
+        return $this->getBackingStore()->get('isLocked');
     }
 
     /**
@@ -119,7 +74,7 @@ class ConversationThread extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
-        return $this->lastDeliveredDateTime;
+        return $this->getBackingStore()->get('lastDeliveredDateTime');
     }
 
     /**
@@ -127,7 +82,7 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Post>|null
     */
     public function getPosts(): ?array {
-        return $this->posts;
+        return $this->getBackingStore()->get('posts');
     }
 
     /**
@@ -135,7 +90,7 @@ class ConversationThread extends Entity implements Parsable
      * @return string|null
     */
     public function getPreview(): ?string {
-        return $this->preview;
+        return $this->getBackingStore()->get('preview');
     }
 
     /**
@@ -143,7 +98,7 @@ class ConversationThread extends Entity implements Parsable
      * @return string|null
     */
     public function getTopic(): ?string {
-        return $this->topic;
+        return $this->getBackingStore()->get('topic');
     }
 
     /**
@@ -151,7 +106,7 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
-        return $this->toRecipients;
+        return $this->getBackingStore()->get('toRecipients');
     }
 
     /**
@@ -159,7 +114,7 @@ class ConversationThread extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getUniqueSenders(): ?array {
-        return $this->uniqueSenders;
+        return $this->getBackingStore()->get('uniqueSenders');
     }
 
     /**
@@ -168,87 +123,87 @@ class ConversationThread extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('ccRecipients', $this->ccRecipients);
-        $writer->writeBooleanValue('hasAttachments', $this->hasAttachments);
-        $writer->writeBooleanValue('isLocked', $this->isLocked);
-        $writer->writeDateTimeValue('lastDeliveredDateTime', $this->lastDeliveredDateTime);
-        $writer->writeCollectionOfObjectValues('posts', $this->posts);
-        $writer->writeStringValue('preview', $this->preview);
-        $writer->writeStringValue('topic', $this->topic);
-        $writer->writeCollectionOfObjectValues('toRecipients', $this->toRecipients);
-        $writer->writeCollectionOfPrimitiveValues('uniqueSenders', $this->uniqueSenders);
+        $writer->writeCollectionOfObjectValues('ccRecipients', $this->getCcRecipients());
+        $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
+        $writer->writeBooleanValue('isLocked', $this->getIsLocked());
+        $writer->writeDateTimeValue('lastDeliveredDateTime', $this->getLastDeliveredDateTime());
+        $writer->writeCollectionOfObjectValues('posts', $this->getPosts());
+        $writer->writeStringValue('preview', $this->getPreview());
+        $writer->writeStringValue('topic', $this->getTopic());
+        $writer->writeCollectionOfObjectValues('toRecipients', $this->getToRecipients());
+        $writer->writeCollectionOfPrimitiveValues('uniqueSenders', $this->getUniqueSenders());
     }
 
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
      *  @param array<Recipient>|null $value Value to set for the ccRecipients property.
     */
-    public function setCcRecipients(?array $value ): void {
-        $this->ccRecipients = $value;
+    public function setCcRecipients(?array $value): void {
+        $this->getBackingStore()->set('ccRecipients', $value);
     }
 
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
      *  @param bool|null $value Value to set for the hasAttachments property.
     */
-    public function setHasAttachments(?bool $value ): void {
-        $this->hasAttachments = $value;
+    public function setHasAttachments(?bool $value): void {
+        $this->getBackingStore()->set('hasAttachments', $value);
     }
 
     /**
      * Sets the isLocked property value. Indicates if the thread is locked. Returned by default.
      *  @param bool|null $value Value to set for the isLocked property.
     */
-    public function setIsLocked(?bool $value ): void {
-        $this->isLocked = $value;
+    public function setIsLocked(?bool $value): void {
+        $this->getBackingStore()->set('isLocked', $value);
     }
 
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
-    public function setLastDeliveredDateTime(?DateTime $value ): void {
-        $this->lastDeliveredDateTime = $value;
+    public function setLastDeliveredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastDeliveredDateTime', $value);
     }
 
     /**
      * Sets the posts property value. The posts property
      *  @param array<Post>|null $value Value to set for the posts property.
     */
-    public function setPosts(?array $value ): void {
-        $this->posts = $value;
+    public function setPosts(?array $value): void {
+        $this->getBackingStore()->set('posts', $value);
     }
 
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
      *  @param string|null $value Value to set for the preview property.
     */
-    public function setPreview(?string $value ): void {
-        $this->preview = $value;
+    public function setPreview(?string $value): void {
+        $this->getBackingStore()->set('preview', $value);
     }
 
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
      *  @param string|null $value Value to set for the topic property.
     */
-    public function setTopic(?string $value ): void {
-        $this->topic = $value;
+    public function setTopic(?string $value): void {
+        $this->getBackingStore()->set('topic', $value);
     }
 
     /**
      * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
      *  @param array<Recipient>|null $value Value to set for the toRecipients property.
     */
-    public function setToRecipients(?array $value ): void {
-        $this->toRecipients = $value;
+    public function setToRecipients(?array $value): void {
+        $this->getBackingStore()->set('toRecipients', $value);
     }
 
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
      *  @param array<string>|null $value Value to set for the uniqueSenders property.
     */
-    public function setUniqueSenders(?array $value ): void {
-        $this->uniqueSenders = $value;
+    public function setUniqueSenders(?array $value): void {
+        $this->getBackingStore()->set('uniqueSenders', $value);
     }
 
 }

@@ -11,41 +11,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Session extends Entity implements Parsable 
 {
     /**
-     * @var Endpoint|null $callee Endpoint that answered the session.
-    */
-    private ?Endpoint $callee = null;
-    
-    /**
-     * @var Endpoint|null $caller Endpoint that initiated the session.
-    */
-    private ?Endpoint $caller = null;
-    
-    /**
-     * @var DateTime|null $endDateTime UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var FailureInfo|null $failureInfo Failure information associated with the session if the session failed.
-    */
-    private ?FailureInfo $failureInfo = null;
-    
-    /**
-     * @var array<Modality>|null $modalities List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-    */
-    private ?array $modalities = null;
-    
-    /**
-     * @var array<Segment>|null $segments The list of segments involved in the session. Read-only. Nullable.
-    */
-    private ?array $segments = null;
-    
-    /**
-     * @var DateTime|null $startDateTime UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
      * Instantiates a new session and sets the default values.
     */
     public function __construct() {
@@ -67,7 +32,7 @@ class Session extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCallee(): ?Endpoint {
-        return $this->callee;
+        return $this->getBackingStore()->get('callee');
     }
 
     /**
@@ -75,7 +40,7 @@ class Session extends Entity implements Parsable
      * @return Endpoint|null
     */
     public function getCaller(): ?Endpoint {
-        return $this->caller;
+        return $this->getBackingStore()->get('caller');
     }
 
     /**
@@ -83,7 +48,7 @@ class Session extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -91,7 +56,7 @@ class Session extends Entity implements Parsable
      * @return FailureInfo|null
     */
     public function getFailureInfo(): ?FailureInfo {
-        return $this->failureInfo;
+        return $this->getBackingStore()->get('failureInfo');
     }
 
     /**
@@ -116,7 +81,7 @@ class Session extends Entity implements Parsable
      * @return array<Modality>|null
     */
     public function getModalities(): ?array {
-        return $this->modalities;
+        return $this->getBackingStore()->get('modalities');
     }
 
     /**
@@ -124,7 +89,7 @@ class Session extends Entity implements Parsable
      * @return array<Segment>|null
     */
     public function getSegments(): ?array {
-        return $this->segments;
+        return $this->getBackingStore()->get('segments');
     }
 
     /**
@@ -132,7 +97,7 @@ class Session extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -141,69 +106,69 @@ class Session extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('callee', $this->callee);
-        $writer->writeObjectValue('caller', $this->caller);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeObjectValue('failureInfo', $this->failureInfo);
-        $writer->writeCollectionOfEnumValues('modalities', $this->modalities);
-        $writer->writeCollectionOfObjectValues('segments', $this->segments);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
+        $writer->writeObjectValue('callee', $this->getCallee());
+        $writer->writeObjectValue('caller', $this->getCaller());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeObjectValue('failureInfo', $this->getFailureInfo());
+        $writer->writeCollectionOfEnumValues('modalities', $this->getModalities());
+        $writer->writeCollectionOfObjectValues('segments', $this->getSegments());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }
 
     /**
      * Sets the callee property value. Endpoint that answered the session.
      *  @param Endpoint|null $value Value to set for the callee property.
     */
-    public function setCallee(?Endpoint $value ): void {
-        $this->callee = $value;
+    public function setCallee(?Endpoint $value): void {
+        $this->getBackingStore()->set('callee', $value);
     }
 
     /**
      * Sets the caller property value. Endpoint that initiated the session.
      *  @param Endpoint|null $value Value to set for the caller property.
     */
-    public function setCaller(?Endpoint $value ): void {
-        $this->caller = $value;
+    public function setCaller(?Endpoint $value): void {
+        $this->getBackingStore()->set('caller', $value);
     }
 
     /**
      * Sets the endDateTime property value. UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the failureInfo property value. Failure information associated with the session if the session failed.
      *  @param FailureInfo|null $value Value to set for the failureInfo property.
     */
-    public function setFailureInfo(?FailureInfo $value ): void {
-        $this->failureInfo = $value;
+    public function setFailureInfo(?FailureInfo $value): void {
+        $this->getBackingStore()->set('failureInfo', $value);
     }
 
     /**
      * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      *  @param array<Modality>|null $value Value to set for the modalities property.
     */
-    public function setModalities(?array $value ): void {
-        $this->modalities = $value;
+    public function setModalities(?array $value): void {
+        $this->getBackingStore()->set('modalities', $value);
     }
 
     /**
      * Sets the segments property value. The list of segments involved in the session. Read-only. Nullable.
      *  @param array<Segment>|null $value Value to set for the segments property.
     */
-    public function setSegments(?array $value ): void {
-        $this->segments = $value;
+    public function setSegments(?array $value): void {
+        $this->getBackingStore()->set('segments', $value);
     }
 
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
 }

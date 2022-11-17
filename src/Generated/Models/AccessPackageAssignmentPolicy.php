@@ -10,71 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentPolicy extends Entity implements Parsable 
 {
     /**
-     * @var AccessPackage|null $accessPackage Access package containing this policy. Read-only.
-    */
-    private ?AccessPackage $accessPackage = null;
-    
-    /**
-     * @var AllowedTargetScope|null $allowedTargetScope Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-    */
-    private ?AllowedTargetScope $allowedTargetScope = null;
-    
-    /**
-     * @var AccessPackageAutomaticRequestSettings|null $automaticRequestSettings This property is only present for an auto assignment policy; if absent, this is a request-based policy.
-    */
-    private ?AccessPackageAutomaticRequestSettings $automaticRequestSettings = null;
-    
-    /**
-     * @var AccessPackageCatalog|null $catalog Catalog of the access package containing this policy. Read-only.
-    */
-    private ?AccessPackageCatalog $catalog = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $description The description of the policy.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The display name of the policy.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var ExpirationPattern|null $expiration The expiration date for assignments created in this policy.
-    */
-    private ?ExpirationPattern $expiration = null;
-    
-    /**
-     * @var DateTime|null $modifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $modifiedDateTime = null;
-    
-    /**
-     * @var AccessPackageAssignmentApprovalSettings|null $requestApprovalSettings Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
-    */
-    private ?AccessPackageAssignmentApprovalSettings $requestApprovalSettings = null;
-    
-    /**
-     * @var AccessPackageAssignmentRequestorSettings|null $requestorSettings Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
-    */
-    private ?AccessPackageAssignmentRequestorSettings $requestorSettings = null;
-    
-    /**
-     * @var AccessPackageAssignmentReviewSettings|null $reviewSettings Settings for access reviews of assignments through this policy.
-    */
-    private ?AccessPackageAssignmentReviewSettings $reviewSettings = null;
-    
-    /**
-     * @var array<SubjectSet>|null $specificAllowedTargets The principals that can be assigned access from an access package through this policy.
-    */
-    private ?array $specificAllowedTargets = null;
-    
-    /**
      * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
     */
     public function __construct() {
@@ -96,7 +31,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
-        return $this->accessPackage;
+        return $this->getBackingStore()->get('accessPackage');
     }
 
     /**
@@ -104,7 +39,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AllowedTargetScope|null
     */
     public function getAllowedTargetScope(): ?AllowedTargetScope {
-        return $this->allowedTargetScope;
+        return $this->getBackingStore()->get('allowedTargetScope');
     }
 
     /**
@@ -112,7 +47,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackageAutomaticRequestSettings|null
     */
     public function getAutomaticRequestSettings(): ?AccessPackageAutomaticRequestSettings {
-        return $this->automaticRequestSettings;
+        return $this->getBackingStore()->get('automaticRequestSettings');
     }
 
     /**
@@ -120,7 +55,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackageCatalog|null
     */
     public function getCatalog(): ?AccessPackageCatalog {
-        return $this->catalog;
+        return $this->getBackingStore()->get('catalog');
     }
 
     /**
@@ -128,7 +63,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -136,7 +71,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -144,7 +79,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -152,7 +87,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return ExpirationPattern|null
     */
     public function getExpiration(): ?ExpirationPattern {
-        return $this->expiration;
+        return $this->getBackingStore()->get('expiration');
     }
 
     /**
@@ -183,7 +118,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
-        return $this->modifiedDateTime;
+        return $this->getBackingStore()->get('modifiedDateTime');
     }
 
     /**
@@ -191,7 +126,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackageAssignmentApprovalSettings|null
     */
     public function getRequestApprovalSettings(): ?AccessPackageAssignmentApprovalSettings {
-        return $this->requestApprovalSettings;
+        return $this->getBackingStore()->get('requestApprovalSettings');
     }
 
     /**
@@ -199,7 +134,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackageAssignmentRequestorSettings|null
     */
     public function getRequestorSettings(): ?AccessPackageAssignmentRequestorSettings {
-        return $this->requestorSettings;
+        return $this->getBackingStore()->get('requestorSettings');
     }
 
     /**
@@ -207,7 +142,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return AccessPackageAssignmentReviewSettings|null
     */
     public function getReviewSettings(): ?AccessPackageAssignmentReviewSettings {
-        return $this->reviewSettings;
+        return $this->getBackingStore()->get('reviewSettings');
     }
 
     /**
@@ -215,7 +150,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
      * @return array<SubjectSet>|null
     */
     public function getSpecificAllowedTargets(): ?array {
-        return $this->specificAllowedTargets;
+        return $this->getBackingStore()->get('specificAllowedTargets');
     }
 
     /**
@@ -224,123 +159,123 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('accessPackage', $this->accessPackage);
-        $writer->writeEnumValue('allowedTargetScope', $this->allowedTargetScope);
-        $writer->writeObjectValue('automaticRequestSettings', $this->automaticRequestSettings);
-        $writer->writeObjectValue('catalog', $this->catalog);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('expiration', $this->expiration);
-        $writer->writeDateTimeValue('modifiedDateTime', $this->modifiedDateTime);
-        $writer->writeObjectValue('requestApprovalSettings', $this->requestApprovalSettings);
-        $writer->writeObjectValue('requestorSettings', $this->requestorSettings);
-        $writer->writeObjectValue('reviewSettings', $this->reviewSettings);
-        $writer->writeCollectionOfObjectValues('specificAllowedTargets', $this->specificAllowedTargets);
+        $writer->writeObjectValue('accessPackage', $this->getAccessPackage());
+        $writer->writeEnumValue('allowedTargetScope', $this->getAllowedTargetScope());
+        $writer->writeObjectValue('automaticRequestSettings', $this->getAutomaticRequestSettings());
+        $writer->writeObjectValue('catalog', $this->getCatalog());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('expiration', $this->getExpiration());
+        $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeObjectValue('requestApprovalSettings', $this->getRequestApprovalSettings());
+        $writer->writeObjectValue('requestorSettings', $this->getRequestorSettings());
+        $writer->writeObjectValue('reviewSettings', $this->getReviewSettings());
+        $writer->writeCollectionOfObjectValues('specificAllowedTargets', $this->getSpecificAllowedTargets());
     }
 
     /**
      * Sets the accessPackage property value. Access package containing this policy. Read-only.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
-    public function setAccessPackage(?AccessPackage $value ): void {
-        $this->accessPackage = $value;
+    public function setAccessPackage(?AccessPackage $value): void {
+        $this->getBackingStore()->set('accessPackage', $value);
     }
 
     /**
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
      *  @param AllowedTargetScope|null $value Value to set for the allowedTargetScope property.
     */
-    public function setAllowedTargetScope(?AllowedTargetScope $value ): void {
-        $this->allowedTargetScope = $value;
+    public function setAllowedTargetScope(?AllowedTargetScope $value): void {
+        $this->getBackingStore()->set('allowedTargetScope', $value);
     }
 
     /**
      * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
      *  @param AccessPackageAutomaticRequestSettings|null $value Value to set for the automaticRequestSettings property.
     */
-    public function setAutomaticRequestSettings(?AccessPackageAutomaticRequestSettings $value ): void {
-        $this->automaticRequestSettings = $value;
+    public function setAutomaticRequestSettings(?AccessPackageAutomaticRequestSettings $value): void {
+        $this->getBackingStore()->set('automaticRequestSettings', $value);
     }
 
     /**
      * Sets the catalog property value. Catalog of the access package containing this policy. Read-only.
      *  @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
-    public function setCatalog(?AccessPackageCatalog $value ): void {
-        $this->catalog = $value;
+    public function setCatalog(?AccessPackageCatalog $value): void {
+        $this->getBackingStore()->set('catalog', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. The description of the policy.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The display name of the policy.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the expiration property value. The expiration date for assignments created in this policy.
      *  @param ExpirationPattern|null $value Value to set for the expiration property.
     */
-    public function setExpiration(?ExpirationPattern $value ): void {
-        $this->expiration = $value;
+    public function setExpiration(?ExpirationPattern $value): void {
+        $this->getBackingStore()->set('expiration', $value);
     }
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
-    public function setModifiedDateTime(?DateTime $value ): void {
-        $this->modifiedDateTime = $value;
+    public function setModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('modifiedDateTime', $value);
     }
 
     /**
      * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
      *  @param AccessPackageAssignmentApprovalSettings|null $value Value to set for the requestApprovalSettings property.
     */
-    public function setRequestApprovalSettings(?AccessPackageAssignmentApprovalSettings $value ): void {
-        $this->requestApprovalSettings = $value;
+    public function setRequestApprovalSettings(?AccessPackageAssignmentApprovalSettings $value): void {
+        $this->getBackingStore()->set('requestApprovalSettings', $value);
     }
 
     /**
      * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
      *  @param AccessPackageAssignmentRequestorSettings|null $value Value to set for the requestorSettings property.
     */
-    public function setRequestorSettings(?AccessPackageAssignmentRequestorSettings $value ): void {
-        $this->requestorSettings = $value;
+    public function setRequestorSettings(?AccessPackageAssignmentRequestorSettings $value): void {
+        $this->getBackingStore()->set('requestorSettings', $value);
     }
 
     /**
      * Sets the reviewSettings property value. Settings for access reviews of assignments through this policy.
      *  @param AccessPackageAssignmentReviewSettings|null $value Value to set for the reviewSettings property.
     */
-    public function setReviewSettings(?AccessPackageAssignmentReviewSettings $value ): void {
-        $this->reviewSettings = $value;
+    public function setReviewSettings(?AccessPackageAssignmentReviewSettings $value): void {
+        $this->getBackingStore()->set('reviewSettings', $value);
     }
 
     /**
      * Sets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
      *  @param array<SubjectSet>|null $value Value to set for the specificAllowedTargets property.
     */
-    public function setSpecificAllowedTargets(?array $value ): void {
-        $this->specificAllowedTargets = $value;
+    public function setSpecificAllowedTargets(?array $value): void {
+        $this->getBackingStore()->set('specificAllowedTargets', $value);
     }
 
 }

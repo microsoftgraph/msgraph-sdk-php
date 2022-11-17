@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationFeedbackOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * @var EducationFeedback|null $feedback Teacher's written feedback to the student.
-    */
-    private ?EducationFeedback $feedback = null;
-    
-    /**
-     * @var EducationFeedback|null $publishedFeedback A copy of the feedback property that is made when the grade is released to the student.
-    */
-    private ?EducationFeedback $publishedFeedback = null;
-    
-    /**
      * Instantiates a new EducationFeedbackOutcome and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
      * @return EducationFeedback|null
     */
     public function getFeedback(): ?EducationFeedback {
-        return $this->feedback;
+        return $this->getBackingStore()->get('feedback');
     }
 
     /**
@@ -60,7 +50,7 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
      * @return EducationFeedback|null
     */
     public function getPublishedFeedback(): ?EducationFeedback {
-        return $this->publishedFeedback;
+        return $this->getBackingStore()->get('publishedFeedback');
     }
 
     /**
@@ -69,24 +59,24 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('feedback', $this->feedback);
-        $writer->writeObjectValue('publishedFeedback', $this->publishedFeedback);
+        $writer->writeObjectValue('feedback', $this->getFeedback());
+        $writer->writeObjectValue('publishedFeedback', $this->getPublishedFeedback());
     }
 
     /**
      * Sets the feedback property value. Teacher's written feedback to the student.
      *  @param EducationFeedback|null $value Value to set for the feedback property.
     */
-    public function setFeedback(?EducationFeedback $value ): void {
-        $this->feedback = $value;
+    public function setFeedback(?EducationFeedback $value): void {
+        $this->getBackingStore()->set('feedback', $value);
     }
 
     /**
      * Sets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
      *  @param EducationFeedback|null $value Value to set for the publishedFeedback property.
     */
-    public function setPublishedFeedback(?EducationFeedback $value ): void {
-        $this->publishedFeedback = $value;
+    public function setPublishedFeedback(?EducationFeedback $value): void {
+        $this->getBackingStore()->set('publishedFeedback', $value);
     }
 
 }

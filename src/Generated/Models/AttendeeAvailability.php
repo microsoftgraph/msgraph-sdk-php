@@ -6,33 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AttendeeAvailability implements AdditionalDataHolder, Parsable 
+class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AttendeeBase|null $attendee The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
-    */
-    private ?AttendeeBase $attendee = null;
-    
-    /**
-     * @var FreeBusyStatus|null $availability The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-    */
-    private ?FreeBusyStatus $availability = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new attendeeAvailability and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.attendeeAvailability');
     }
@@ -50,8 +39,8 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -59,7 +48,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @return AttendeeBase|null
     */
     public function getAttendee(): ?AttendeeBase {
-        return $this->attendee;
+        return $this->getBackingStore()->get('attendee');
     }
 
     /**
@@ -67,7 +56,15 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @return FreeBusyStatus|null
     */
     public function getAvailability(): ?FreeBusyStatus {
-        return $this->availability;
+        return $this->getBackingStore()->get('availability');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -88,7 +85,7 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +93,42 @@ class AttendeeAvailability implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('attendee', $this->attendee);
-        $writer->writeEnumValue('availability', $this->availability);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('attendee', $this->getAttendee());
+        $writer->writeEnumValue('availability', $this->getAvailability());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      *  @param AttendeeBase|null $value Value to set for the attendee property.
     */
-    public function setAttendee(?AttendeeBase $value ): void {
-        $this->attendee = $value;
+    public function setAttendee(?AttendeeBase $value): void {
+        $this->getBackingStore()->set('attendee', $value);
     }
 
     /**
      * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      *  @param FreeBusyStatus|null $value Value to set for the availability property.
     */
-    public function setAvailability(?FreeBusyStatus $value ): void {
-        $this->availability = $value;
+    public function setAvailability(?FreeBusyStatus $value): void {
+        $this->getBackingStore()->set('availability', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

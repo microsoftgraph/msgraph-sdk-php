@@ -6,48 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable 
+class ChatMessagePolicyViolation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ChatMessagePolicyViolationDlpActionTypes|null $dlpAction The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
-    */
-    private ?ChatMessagePolicyViolationDlpActionTypes $dlpAction = null;
-    
-    /**
-     * @var string|null $justificationText Justification text provided by the sender of the message when overriding a policy violation.
-    */
-    private ?string $justificationText = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var ChatMessagePolicyViolationPolicyTip|null $policyTip Information to display to the message sender about why the message was flagged as a violation.
-    */
-    private ?ChatMessagePolicyViolationPolicyTip $policyTip = null;
-    
-    /**
-     * @var ChatMessagePolicyViolationUserActionTypes|null $userAction Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
-    */
-    private ?ChatMessagePolicyViolationUserActionTypes $userAction = null;
-    
-    /**
-     * @var ChatMessagePolicyViolationVerdictDetailsTypes|null $verdictDetails Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
-    */
-    private ?ChatMessagePolicyViolationVerdictDetailsTypes $verdictDetails = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new chatMessagePolicyViolation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
         $this->setOdataType('#microsoft.graph.chatMessagePolicyViolation');
     }
@@ -65,8 +39,16 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -74,7 +56,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return ChatMessagePolicyViolationDlpActionTypes|null
     */
     public function getDlpAction(): ?ChatMessagePolicyViolationDlpActionTypes {
-        return $this->dlpAction;
+        return $this->getBackingStore()->get('dlpAction');
     }
 
     /**
@@ -98,7 +80,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getJustificationText(): ?string {
-        return $this->justificationText;
+        return $this->getBackingStore()->get('justificationText');
     }
 
     /**
@@ -106,7 +88,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -114,7 +96,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return ChatMessagePolicyViolationPolicyTip|null
     */
     public function getPolicyTip(): ?ChatMessagePolicyViolationPolicyTip {
-        return $this->policyTip;
+        return $this->getBackingStore()->get('policyTip');
     }
 
     /**
@@ -122,7 +104,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return ChatMessagePolicyViolationUserActionTypes|null
     */
     public function getUserAction(): ?ChatMessagePolicyViolationUserActionTypes {
-        return $this->userAction;
+        return $this->getBackingStore()->get('userAction');
     }
 
     /**
@@ -130,7 +112,7 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @return ChatMessagePolicyViolationVerdictDetailsTypes|null
     */
     public function getVerdictDetails(): ?ChatMessagePolicyViolationVerdictDetailsTypes {
-        return $this->verdictDetails;
+        return $this->getBackingStore()->get('verdictDetails');
     }
 
     /**
@@ -138,69 +120,69 @@ class ChatMessagePolicyViolation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('dlpAction', $this->dlpAction);
-        $writer->writeStringValue('justificationText', $this->justificationText);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('policyTip', $this->policyTip);
-        $writer->writeEnumValue('userAction', $this->userAction);
-        $writer->writeEnumValue('verdictDetails', $this->verdictDetails);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('dlpAction', $this->getDlpAction());
+        $writer->writeStringValue('justificationText', $this->getJustificationText());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('policyTip', $this->getPolicyTip());
+        $writer->writeEnumValue('userAction', $this->getUserAction());
+        $writer->writeEnumValue('verdictDetails', $this->getVerdictDetails());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the dlpAction property value. The action taken by the DLP provider on the message with sensitive content. Supported values are: NoneNotifySender -- Inform the sender of the violation but allow readers to read the message.BlockAccess -- Block readers from reading the message.BlockAccessExternal -- Block users outside the organization from reading the message, while allowing users within the organization to read the message.
      *  @param ChatMessagePolicyViolationDlpActionTypes|null $value Value to set for the dlpAction property.
     */
-    public function setDlpAction(?ChatMessagePolicyViolationDlpActionTypes $value ): void {
-        $this->dlpAction = $value;
+    public function setDlpAction(?ChatMessagePolicyViolationDlpActionTypes $value): void {
+        $this->getBackingStore()->set('dlpAction', $value);
     }
 
     /**
      * Sets the justificationText property value. Justification text provided by the sender of the message when overriding a policy violation.
      *  @param string|null $value Value to set for the justificationText property.
     */
-    public function setJustificationText(?string $value ): void {
-        $this->justificationText = $value;
+    public function setJustificationText(?string $value): void {
+        $this->getBackingStore()->set('justificationText', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the policyTip property value. Information to display to the message sender about why the message was flagged as a violation.
      *  @param ChatMessagePolicyViolationPolicyTip|null $value Value to set for the policyTip property.
     */
-    public function setPolicyTip(?ChatMessagePolicyViolationPolicyTip $value ): void {
-        $this->policyTip = $value;
+    public function setPolicyTip(?ChatMessagePolicyViolationPolicyTip $value): void {
+        $this->getBackingStore()->set('policyTip', $value);
     }
 
     /**
      * Sets the userAction property value. Indicates the action taken by the user on a message blocked by the DLP provider. Supported values are: NoneOverrideReportFalsePositiveWhen the DLP provider is updating the message for blocking sensitive content, userAction is not required.
      *  @param ChatMessagePolicyViolationUserActionTypes|null $value Value to set for the userAction property.
     */
-    public function setUserAction(?ChatMessagePolicyViolationUserActionTypes $value ): void {
-        $this->userAction = $value;
+    public function setUserAction(?ChatMessagePolicyViolationUserActionTypes $value): void {
+        $this->getBackingStore()->set('userAction', $value);
     }
 
     /**
      * Sets the verdictDetails property value. Indicates what actions the sender may take in response to the policy violation. Supported values are: NoneAllowFalsePositiveOverride -- Allows the sender to declare the policyViolation to be an error in the DLP app and its rules, and allow readers to see the message again if the dlpAction had hidden it.AllowOverrideWithoutJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, without needing to provide an explanation for doing so. AllowOverrideWithJustification -- Allows the sender to overriide the DLP violation and allow readers to see the message again if the dlpAction had hidden it, after providing an explanation for doing so.AllowOverrideWithoutJustification and AllowOverrideWithJustification are mutually exclusive.
      *  @param ChatMessagePolicyViolationVerdictDetailsTypes|null $value Value to set for the verdictDetails property.
     */
-    public function setVerdictDetails(?ChatMessagePolicyViolationVerdictDetailsTypes $value ): void {
-        $this->verdictDetails = $value;
+    public function setVerdictDetails(?ChatMessagePolicyViolationVerdictDetailsTypes $value): void {
+        $this->getBackingStore()->set('verdictDetails', $value);
     }
 
 }

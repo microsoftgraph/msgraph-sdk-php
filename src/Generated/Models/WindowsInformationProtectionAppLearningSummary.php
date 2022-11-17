@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable 
 {
     /**
-     * @var string|null $applicationName Application Name
-    */
-    private ?string $applicationName = null;
-    
-    /**
-     * @var ApplicationType|null $applicationType Possible types of Application
-    */
-    private ?ApplicationType $applicationType = null;
-    
-    /**
-     * @var int|null $deviceCount Device Count
-    */
-    private ?int $deviceCount = null;
-    
-    /**
      * Instantiates a new windowsInformationProtectionAppLearningSummary and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return string|null
     */
     public function getApplicationName(): ?string {
-        return $this->applicationName;
+        return $this->getBackingStore()->get('applicationName');
     }
 
     /**
@@ -53,7 +38,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return ApplicationType|null
     */
     public function getApplicationType(): ?ApplicationType {
-        return $this->applicationType;
+        return $this->getBackingStore()->get('applicationType');
     }
 
     /**
@@ -61,7 +46,7 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
      * @return int|null
     */
     public function getDeviceCount(): ?int {
-        return $this->deviceCount;
+        return $this->getBackingStore()->get('deviceCount');
     }
 
     /**
@@ -83,33 +68,33 @@ class WindowsInformationProtectionAppLearningSummary extends Entity implements P
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('applicationName', $this->applicationName);
-        $writer->writeEnumValue('applicationType', $this->applicationType);
-        $writer->writeIntegerValue('deviceCount', $this->deviceCount);
+        $writer->writeStringValue('applicationName', $this->getApplicationName());
+        $writer->writeEnumValue('applicationType', $this->getApplicationType());
+        $writer->writeIntegerValue('deviceCount', $this->getDeviceCount());
     }
 
     /**
      * Sets the applicationName property value. Application Name
      *  @param string|null $value Value to set for the applicationName property.
     */
-    public function setApplicationName(?string $value ): void {
-        $this->applicationName = $value;
+    public function setApplicationName(?string $value): void {
+        $this->getBackingStore()->set('applicationName', $value);
     }
 
     /**
      * Sets the applicationType property value. Possible types of Application
      *  @param ApplicationType|null $value Value to set for the applicationType property.
     */
-    public function setApplicationType(?ApplicationType $value ): void {
-        $this->applicationType = $value;
+    public function setApplicationType(?ApplicationType $value): void {
+        $this->getBackingStore()->set('applicationType', $value);
     }
 
     /**
      * Sets the deviceCount property value. Device Count
      *  @param int|null $value Value to set for the deviceCount property.
     */
-    public function setDeviceCount(?int $value ): void {
-        $this->deviceCount = $value;
+    public function setDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('deviceCount', $value);
     }
 
 }

@@ -7,23 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Parsable 
+class SnoozeReminderPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DateTimeTimeZone|null $newReminderTime The NewReminderTime property
-    */
-    private ?DateTimeTimeZone $newReminderTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new snoozeReminderPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -40,8 +39,16 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -60,7 +67,7 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getNewReminderTime(): ?DateTimeTimeZone {
-        return $this->newReminderTime;
+        return $this->getBackingStore()->get('newReminderTime');
     }
 
     /**
@@ -68,24 +75,24 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('newReminderTime', $this->newReminderTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('newReminderTime', $this->getNewReminderTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the newReminderTime property value. The NewReminderTime property
      *  @param DateTimeTimeZone|null $value Value to set for the NewReminderTime property.
     */
-    public function setNewReminderTime(?DateTimeTimeZone $value ): void {
-        $this->newReminderTime = $value;
+    public function setNewReminderTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('newReminderTime', $value);
     }
 
 }

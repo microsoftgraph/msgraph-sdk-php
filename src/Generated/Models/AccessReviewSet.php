@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewSet extends Entity implements Parsable 
 {
     /**
-     * @var array<AccessReviewScheduleDefinition>|null $definitions Represents the template and scheduling for an access review.
-    */
-    private ?array $definitions = null;
-    
-    /**
-     * @var array<AccessReviewHistoryDefinition>|null $historyDefinitions Represents a collection of access review history data and the scopes used to collect that data.
-    */
-    private ?array $historyDefinitions = null;
-    
-    /**
      * Instantiates a new AccessReviewSet and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class AccessReviewSet extends Entity implements Parsable
      * @return array<AccessReviewScheduleDefinition>|null
     */
     public function getDefinitions(): ?array {
-        return $this->definitions;
+        return $this->getBackingStore()->get('definitions');
     }
 
     /**
@@ -60,7 +50,7 @@ class AccessReviewSet extends Entity implements Parsable
      * @return array<AccessReviewHistoryDefinition>|null
     */
     public function getHistoryDefinitions(): ?array {
-        return $this->historyDefinitions;
+        return $this->getBackingStore()->get('historyDefinitions');
     }
 
     /**
@@ -69,24 +59,24 @@ class AccessReviewSet extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('definitions', $this->definitions);
-        $writer->writeCollectionOfObjectValues('historyDefinitions', $this->historyDefinitions);
+        $writer->writeCollectionOfObjectValues('definitions', $this->getDefinitions());
+        $writer->writeCollectionOfObjectValues('historyDefinitions', $this->getHistoryDefinitions());
     }
 
     /**
      * Sets the definitions property value. Represents the template and scheduling for an access review.
      *  @param array<AccessReviewScheduleDefinition>|null $value Value to set for the definitions property.
     */
-    public function setDefinitions(?array $value ): void {
-        $this->definitions = $value;
+    public function setDefinitions(?array $value): void {
+        $this->getBackingStore()->set('definitions', $value);
     }
 
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
      *  @param array<AccessReviewHistoryDefinition>|null $value Value to set for the historyDefinitions property.
     */
-    public function setHistoryDefinitions(?array $value ): void {
-        $this->historyDefinitions = $value;
+    public function setHistoryDefinitions(?array $value): void {
+        $this->getBackingStore()->set('historyDefinitions', $value);
     }
 
 }

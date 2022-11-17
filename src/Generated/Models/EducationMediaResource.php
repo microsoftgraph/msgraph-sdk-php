@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationMediaResource extends EducationResource implements Parsable 
 {
     /**
-     * @var string|null $fileUrl Location of the file on shared point folder. Required
-    */
-    private ?string $fileUrl = null;
-    
-    /**
      * Instantiates a new EducationMediaResource and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationMediaResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getFileUrl(): ?string {
-        return $this->fileUrl;
+        return $this->getBackingStore()->get('fileUrl');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationMediaResource extends EducationResource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('fileUrl', $this->fileUrl);
+        $writer->writeStringValue('fileUrl', $this->getFileUrl());
     }
 
     /**
      * Sets the fileUrl property value. Location of the file on shared point folder. Required
      *  @param string|null $value Value to set for the fileUrl property.
     */
-    public function setFileUrl(?string $value ): void {
-        $this->fileUrl = $value;
+    public function setFileUrl(?string $value): void {
+        $this->getBackingStore()->set('fileUrl', $value);
     }
 
 }

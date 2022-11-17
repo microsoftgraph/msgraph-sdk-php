@@ -9,56 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Invitation extends Entity implements Parsable 
 {
     /**
-     * @var User|null $invitedUser The user created as part of the invitation creation. Read-Only
-    */
-    private ?User $invitedUser = null;
-    
-    /**
-     * @var string|null $invitedUserDisplayName The display name of the user being invited.
-    */
-    private ?string $invitedUserDisplayName = null;
-    
-    /**
-     * @var string|null $invitedUserEmailAddress The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
-    */
-    private ?string $invitedUserEmailAddress = null;
-    
-    /**
-     * @var InvitedUserMessageInfo|null $invitedUserMessageInfo Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
-    */
-    private ?InvitedUserMessageInfo $invitedUserMessageInfo = null;
-    
-    /**
-     * @var string|null $invitedUserType The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
-    */
-    private ?string $invitedUserType = null;
-    
-    /**
-     * @var string|null $inviteRedeemUrl The URL the user can use to redeem their invitation. Read-only.
-    */
-    private ?string $inviteRedeemUrl = null;
-    
-    /**
-     * @var string|null $inviteRedirectUrl The URL the user should be redirected to once the invitation is redeemed. Required.
-    */
-    private ?string $inviteRedirectUrl = null;
-    
-    /**
-     * @var bool|null $resetRedemption The resetRedemption property
-    */
-    private ?bool $resetRedemption = null;
-    
-    /**
-     * @var bool|null $sendInvitationMessage Indicates whether an email should be sent to the user being invited. The default is false.
-    */
-    private ?bool $sendInvitationMessage = null;
-    
-    /**
-     * @var string|null $status The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
-    */
-    private ?string $status = null;
-    
-    /**
      * Instantiates a new Invitation and sets the default values.
     */
     public function __construct() {
@@ -100,7 +50,7 @@ class Invitation extends Entity implements Parsable
      * @return User|null
     */
     public function getInvitedUser(): ?User {
-        return $this->invitedUser;
+        return $this->getBackingStore()->get('invitedUser');
     }
 
     /**
@@ -108,7 +58,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserDisplayName(): ?string {
-        return $this->invitedUserDisplayName;
+        return $this->getBackingStore()->get('invitedUserDisplayName');
     }
 
     /**
@@ -116,7 +66,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserEmailAddress(): ?string {
-        return $this->invitedUserEmailAddress;
+        return $this->getBackingStore()->get('invitedUserEmailAddress');
     }
 
     /**
@@ -124,7 +74,7 @@ class Invitation extends Entity implements Parsable
      * @return InvitedUserMessageInfo|null
     */
     public function getInvitedUserMessageInfo(): ?InvitedUserMessageInfo {
-        return $this->invitedUserMessageInfo;
+        return $this->getBackingStore()->get('invitedUserMessageInfo');
     }
 
     /**
@@ -132,7 +82,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserType(): ?string {
-        return $this->invitedUserType;
+        return $this->getBackingStore()->get('invitedUserType');
     }
 
     /**
@@ -140,7 +90,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInviteRedeemUrl(): ?string {
-        return $this->inviteRedeemUrl;
+        return $this->getBackingStore()->get('inviteRedeemUrl');
     }
 
     /**
@@ -148,7 +98,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInviteRedirectUrl(): ?string {
-        return $this->inviteRedirectUrl;
+        return $this->getBackingStore()->get('inviteRedirectUrl');
     }
 
     /**
@@ -156,7 +106,7 @@ class Invitation extends Entity implements Parsable
      * @return bool|null
     */
     public function getResetRedemption(): ?bool {
-        return $this->resetRedemption;
+        return $this->getBackingStore()->get('resetRedemption');
     }
 
     /**
@@ -164,7 +114,7 @@ class Invitation extends Entity implements Parsable
      * @return bool|null
     */
     public function getSendInvitationMessage(): ?bool {
-        return $this->sendInvitationMessage;
+        return $this->getBackingStore()->get('sendInvitationMessage');
     }
 
     /**
@@ -172,7 +122,7 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -181,96 +131,96 @@ class Invitation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('invitedUser', $this->invitedUser);
-        $writer->writeStringValue('invitedUserDisplayName', $this->invitedUserDisplayName);
-        $writer->writeStringValue('invitedUserEmailAddress', $this->invitedUserEmailAddress);
-        $writer->writeObjectValue('invitedUserMessageInfo', $this->invitedUserMessageInfo);
-        $writer->writeStringValue('invitedUserType', $this->invitedUserType);
-        $writer->writeStringValue('inviteRedeemUrl', $this->inviteRedeemUrl);
-        $writer->writeStringValue('inviteRedirectUrl', $this->inviteRedirectUrl);
-        $writer->writeBooleanValue('resetRedemption', $this->resetRedemption);
-        $writer->writeBooleanValue('sendInvitationMessage', $this->sendInvitationMessage);
-        $writer->writeStringValue('status', $this->status);
+        $writer->writeObjectValue('invitedUser', $this->getInvitedUser());
+        $writer->writeStringValue('invitedUserDisplayName', $this->getInvitedUserDisplayName());
+        $writer->writeStringValue('invitedUserEmailAddress', $this->getInvitedUserEmailAddress());
+        $writer->writeObjectValue('invitedUserMessageInfo', $this->getInvitedUserMessageInfo());
+        $writer->writeStringValue('invitedUserType', $this->getInvitedUserType());
+        $writer->writeStringValue('inviteRedeemUrl', $this->getInviteRedeemUrl());
+        $writer->writeStringValue('inviteRedirectUrl', $this->getInviteRedirectUrl());
+        $writer->writeBooleanValue('resetRedemption', $this->getResetRedemption());
+        $writer->writeBooleanValue('sendInvitationMessage', $this->getSendInvitationMessage());
+        $writer->writeStringValue('status', $this->getStatus());
     }
 
     /**
      * Sets the invitedUser property value. The user created as part of the invitation creation. Read-Only
      *  @param User|null $value Value to set for the invitedUser property.
     */
-    public function setInvitedUser(?User $value ): void {
-        $this->invitedUser = $value;
+    public function setInvitedUser(?User $value): void {
+        $this->getBackingStore()->set('invitedUser', $value);
     }
 
     /**
      * Sets the invitedUserDisplayName property value. The display name of the user being invited.
      *  @param string|null $value Value to set for the invitedUserDisplayName property.
     */
-    public function setInvitedUserDisplayName(?string $value ): void {
-        $this->invitedUserDisplayName = $value;
+    public function setInvitedUserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('invitedUserDisplayName', $value);
     }
 
     /**
      * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
      *  @param string|null $value Value to set for the invitedUserEmailAddress property.
     */
-    public function setInvitedUserEmailAddress(?string $value ): void {
-        $this->invitedUserEmailAddress = $value;
+    public function setInvitedUserEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('invitedUserEmailAddress', $value);
     }
 
     /**
      * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
      *  @param InvitedUserMessageInfo|null $value Value to set for the invitedUserMessageInfo property.
     */
-    public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value ): void {
-        $this->invitedUserMessageInfo = $value;
+    public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value): void {
+        $this->getBackingStore()->set('invitedUserMessageInfo', $value);
     }
 
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      *  @param string|null $value Value to set for the invitedUserType property.
     */
-    public function setInvitedUserType(?string $value ): void {
-        $this->invitedUserType = $value;
+    public function setInvitedUserType(?string $value): void {
+        $this->getBackingStore()->set('invitedUserType', $value);
     }
 
     /**
      * Sets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
      *  @param string|null $value Value to set for the inviteRedeemUrl property.
     */
-    public function setInviteRedeemUrl(?string $value ): void {
-        $this->inviteRedeemUrl = $value;
+    public function setInviteRedeemUrl(?string $value): void {
+        $this->getBackingStore()->set('inviteRedeemUrl', $value);
     }
 
     /**
      * Sets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
      *  @param string|null $value Value to set for the inviteRedirectUrl property.
     */
-    public function setInviteRedirectUrl(?string $value ): void {
-        $this->inviteRedirectUrl = $value;
+    public function setInviteRedirectUrl(?string $value): void {
+        $this->getBackingStore()->set('inviteRedirectUrl', $value);
     }
 
     /**
      * Sets the resetRedemption property value. The resetRedemption property
      *  @param bool|null $value Value to set for the resetRedemption property.
     */
-    public function setResetRedemption(?bool $value ): void {
-        $this->resetRedemption = $value;
+    public function setResetRedemption(?bool $value): void {
+        $this->getBackingStore()->set('resetRedemption', $value);
     }
 
     /**
      * Sets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
      *  @param bool|null $value Value to set for the sendInvitationMessage property.
     */
-    public function setSendInvitationMessage(?bool $value ): void {
-        $this->sendInvitationMessage = $value;
+    public function setSendInvitationMessage(?bool $value): void {
+        $this->getBackingStore()->set('sendInvitationMessage', $value);
     }
 
     /**
      * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

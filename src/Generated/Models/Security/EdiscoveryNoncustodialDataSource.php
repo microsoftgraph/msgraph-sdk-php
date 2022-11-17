@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable 
 {
     /**
-     * @var DataSource|null $dataSource User source or SharePoint site data source as non-custodial data source.
-    */
-    private ?DataSource $dataSource = null;
-    
-    /**
-     * @var EdiscoveryIndexOperation|null $lastIndexOperation Operation entity that represents the latest indexing for the non-custodial data source.
-    */
-    private ?EdiscoveryIndexOperation $lastIndexOperation = null;
-    
-    /**
      * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
      * @return DataSource|null
     */
     public function getDataSource(): ?DataSource {
-        return $this->dataSource;
+        return $this->getBackingStore()->get('dataSource');
     }
 
     /**
@@ -60,7 +50,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
      * @return EdiscoveryIndexOperation|null
     */
     public function getLastIndexOperation(): ?EdiscoveryIndexOperation {
-        return $this->lastIndexOperation;
+        return $this->getBackingStore()->get('lastIndexOperation');
     }
 
     /**
@@ -69,24 +59,24 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('dataSource', $this->dataSource);
-        $writer->writeObjectValue('lastIndexOperation', $this->lastIndexOperation);
+        $writer->writeObjectValue('dataSource', $this->getDataSource());
+        $writer->writeObjectValue('lastIndexOperation', $this->getLastIndexOperation());
     }
 
     /**
      * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
      *  @param DataSource|null $value Value to set for the dataSource property.
     */
-    public function setDataSource(?DataSource $value ): void {
-        $this->dataSource = $value;
+    public function setDataSource(?DataSource $value): void {
+        $this->getBackingStore()->set('dataSource', $value);
     }
 
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
      *  @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
     */
-    public function setLastIndexOperation(?EdiscoveryIndexOperation $value ): void {
-        $this->lastIndexOperation = $value;
+    public function setLastIndexOperation(?EdiscoveryIndexOperation $value): void {
+        $this->getBackingStore()->set('lastIndexOperation', $value);
     }
 
 }
