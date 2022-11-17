@@ -14,7 +14,7 @@ class PlannerPlanDetails extends Entity implements Parsable
     private ?PlannerCategoryDescriptions $categoryDescriptions = null;
     
     /**
-     * @var PlannerUserIds|null $sharedWith Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * @var PlannerUserIds|null $sharedWith Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
     */
     private ?PlannerUserIds $sharedWith = null;
     
@@ -56,7 +56,7 @@ class PlannerPlanDetails extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Gets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
      * @return PlannerUserIds|null
     */
     public function getSharedWith(): ?PlannerUserIds {
@@ -82,7 +82,7 @@ class PlannerPlanDetails extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharedWith property value. Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
      *  @param PlannerUserIds|null $value Value to set for the sharedWith property.
     */
     public function setSharedWith(?PlannerUserIds $value ): void {

@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SharedWithChannelTeamInfoItemRequestBuilder 
 {
     /**
-     * The allowedMembers property
+     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
     */
     public function allowedMembers(): AllowedMembersRequestBuilder {
         return new AllowedMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.joinedTeams.item.primaryChannel.sharedWithTeams.item.allowedMembers.item collection
+     * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */

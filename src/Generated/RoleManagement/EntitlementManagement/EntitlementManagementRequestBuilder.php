@@ -44,56 +44,56 @@ class EntitlementManagementRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The roleAssignments property
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
     */
     public function roleAssignments(): RoleAssignmentsRequestBuilder {
         return new RoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleAssignmentScheduleInstances property
+     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
     */
     public function roleAssignmentScheduleInstances(): RoleAssignmentScheduleInstancesRequestBuilder {
         return new RoleAssignmentScheduleInstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleAssignmentScheduleRequests property
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
     */
     public function roleAssignmentScheduleRequests(): RoleAssignmentScheduleRequestsRequestBuilder {
         return new RoleAssignmentScheduleRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleAssignmentSchedules property
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
     */
     public function roleAssignmentSchedules(): RoleAssignmentSchedulesRequestBuilder {
         return new RoleAssignmentSchedulesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleDefinitions property
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
     */
     public function roleDefinitions(): RoleDefinitionsRequestBuilder {
         return new RoleDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleEligibilityScheduleInstances property
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
     */
     public function roleEligibilityScheduleInstances(): RoleEligibilityScheduleInstancesRequestBuilder {
         return new RoleEligibilityScheduleInstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleEligibilityScheduleRequests property
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
     */
     public function roleEligibilityScheduleRequests(): RoleEligibilityScheduleRequestsRequestBuilder {
         return new RoleEligibilityScheduleRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The roleEligibilitySchedules property
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
     */
     public function roleEligibilitySchedules(): RoleEligibilitySchedulesRequestBuilder {
         return new RoleEligibilitySchedulesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -244,7 +244,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignments.item collection
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentItemRequestBuilder
     */
@@ -255,7 +255,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentScheduleInstances.item collection
+     * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
     */
@@ -266,7 +266,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentScheduleRequests.item collection
+     * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     */
@@ -277,7 +277,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleAssignmentSchedules.item collection
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleAssignmentScheduleItemRequestBuilder
     */
@@ -288,7 +288,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleDefinitions.item collection
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleDefinitionItemRequestBuilder
     */
@@ -299,7 +299,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilityScheduleInstances.item collection
+     * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
     */
@@ -310,7 +310,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilityScheduleRequests.item collection
+     * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     */
@@ -321,7 +321,7 @@ class EntitlementManagementRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleEligibilitySchedules.item collection
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleEligibilityScheduleItemRequestBuilder
     */

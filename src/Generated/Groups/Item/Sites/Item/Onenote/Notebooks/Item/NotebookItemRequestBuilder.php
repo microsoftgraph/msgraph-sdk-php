@@ -23,7 +23,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class NotebookItemRequestBuilder 
 {
     /**
-     * The copyNotebook property
+     * Provides operations to call the copyNotebook method.
     */
     public function copyNotebook(): CopyNotebookRequestBuilder {
         return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -40,14 +40,14 @@ class NotebookItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sectionGroups property
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
     */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sections property
+     * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
     */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -198,7 +198,7 @@ class NotebookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.onenote.notebooks.item.sectionGroups.item collection
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
      * @param string $id Unique identifier of the item
      * @return SectionGroupItemRequestBuilder
     */
@@ -209,7 +209,7 @@ class NotebookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.sites.item.onenote.notebooks.item.sections.item collection
+     * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
      * @param string $id Unique identifier of the item
      * @return OnenoteSectionItemRequestBuilder
     */

@@ -34,63 +34,63 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EventItemRequestBuilder 
 {
     /**
-     * The accept property
+     * Provides operations to call the accept method.
     */
     public function accept(): AcceptRequestBuilder {
         return new AcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The attachments property
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
     */
     public function attachments(): AttachmentsRequestBuilder {
         return new AttachmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The calendar property
+     * Provides operations to manage the calendar property of the microsoft.graph.event entity.
     */
     public function calendar(): CalendarRequestBuilder {
         return new CalendarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The cancel property
+     * Provides operations to call the cancel method.
     */
     public function cancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The decline property
+     * Provides operations to call the decline method.
     */
     public function decline(): DeclineRequestBuilder {
         return new DeclineRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The dismissReminder property
+     * Provides operations to call the dismissReminder method.
     */
     public function dismissReminder(): DismissReminderRequestBuilder {
         return new DismissReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The forward property
+     * Provides operations to call the forward method.
     */
     public function forward(): ForwardRequestBuilder {
         return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The multiValueExtendedProperties property
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
     */
     public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
         return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -107,21 +107,21 @@ class EventItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The singleValueExtendedProperties property
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
     */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The snoozeReminder property
+     * Provides operations to call the snoozeReminder method.
     */
     public function snoozeReminder(): SnoozeReminderRequestBuilder {
         return new SnoozeReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tentativelyAccept property
+     * Provides operations to call the tentativelyAccept method.
     */
     public function tentativelyAccept(): TentativelyAcceptRequestBuilder {
         return new TentativelyAcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -133,7 +133,7 @@ class EventItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.calendar.events.item.instances.item.attachments.item collection
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
      * @return AttachmentItemRequestBuilder
     */
@@ -180,7 +180,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.calendar.events.item.instances.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */
@@ -210,7 +210,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.calendar.events.item.instances.item.multiValueExtendedProperties.item collection
+     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
     */
@@ -221,7 +221,7 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.calendar.events.item.instances.item.singleValueExtendedProperties.item collection
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
      * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
     */

@@ -58,133 +58,133 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServicePrincipalItemRequestBuilder 
 {
     /**
-     * The addKey property
+     * Provides operations to call the addKey method.
     */
     public function addKey(): AddKeyRequestBuilder {
         return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The addPassword property
+     * Provides operations to call the addPassword method.
     */
     public function addPassword(): AddPasswordRequestBuilder {
         return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The addTokenSigningCertificate property
+     * Provides operations to call the addTokenSigningCertificate method.
     */
     public function addTokenSigningCertificate(): AddTokenSigningCertificateRequestBuilder {
         return new AddTokenSigningCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The appRoleAssignedTo property
+     * Provides operations to manage the appRoleAssignedTo property of the microsoft.graph.servicePrincipal entity.
     */
     public function appRoleAssignedTo(): AppRoleAssignedToRequestBuilder {
         return new AppRoleAssignedToRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The appRoleAssignments property
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
     */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The claimsMappingPolicies property
+     * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.servicePrincipal entity.
     */
     public function claimsMappingPolicies(): ClaimsMappingPoliciesRequestBuilder {
         return new ClaimsMappingPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The createdObjects property
+     * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.
     */
     public function createdObjects(): CreatedObjectsRequestBuilder {
         return new CreatedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The delegatedPermissionClassifications property
+     * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
     */
     public function delegatedPermissionClassifications(): DelegatedPermissionClassificationsRequestBuilder {
         return new DelegatedPermissionClassificationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The endpoints property
+     * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
     */
     public function endpoints(): EndpointsRequestBuilder {
         return new EndpointsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The federatedIdentityCredentials property
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
     */
     public function federatedIdentityCredentials(): FederatedIdentityCredentialsRequestBuilder {
         return new FederatedIdentityCredentialsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The homeRealmDiscoveryPolicies property
+     * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.servicePrincipal entity.
     */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
         return new HomeRealmDiscoveryPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The memberOf property
+     * Provides operations to manage the memberOf property of the microsoft.graph.servicePrincipal entity.
     */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The oauth2PermissionGrants property
+     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity.
     */
     public function oauth2PermissionGrants(): Oauth2PermissionGrantsRequestBuilder {
         return new Oauth2PermissionGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The ownedObjects property
+     * Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity.
     */
     public function ownedObjects(): OwnedObjectsRequestBuilder {
         return new OwnedObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The owners property
+     * Provides operations to manage the owners property of the microsoft.graph.servicePrincipal entity.
     */
     public function owners(): OwnersRequestBuilder {
         return new OwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -196,14 +196,14 @@ class ServicePrincipalItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The removeKey property
+     * Provides operations to call the removeKey method.
     */
     public function removeKey(): RemoveKeyRequestBuilder {
         return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The removePassword property
+     * Provides operations to call the removePassword method.
     */
     public function removePassword(): RemovePasswordRequestBuilder {
         return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -215,28 +215,28 @@ class ServicePrincipalItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tokenIssuancePolicies property
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
     */
     public function tokenIssuancePolicies(): TokenIssuancePoliciesRequestBuilder {
         return new TokenIssuancePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tokenLifetimePolicies property
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
     */
     public function tokenLifetimePolicies(): TokenLifetimePoliciesRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The transitiveMemberOf property
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity.
     */
     public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
         return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -248,7 +248,7 @@ class ServicePrincipalItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.appRoleAssignedTo.item collection
+     * Provides operations to manage the appRoleAssignedTo property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignedToItemAppRoleAssignmentItemRequestBuilder
     */
@@ -259,7 +259,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.appRoleAssignments.item collection
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemAppRoleAssignmentsItemAppRoleAssignmentItemRequestBuilder
     */
@@ -313,7 +313,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.createdObjects.item collection
+     * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemCreatedObjectsItemDirectoryObjectItemRequestBuilder
     */
@@ -373,7 +373,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.delegatedPermissionClassifications.item collection
+     * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return DelegatedPermissionClassificationItemRequestBuilder
     */
@@ -403,7 +403,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.endpoints.item collection
+     * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return EndpointItemRequestBuilder
     */
@@ -414,7 +414,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.federatedIdentityCredentials.item collection
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return FederatedIdentityCredentialItemRequestBuilder
     */
@@ -455,7 +455,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.memberOf.item collection
+     * Provides operations to manage the memberOf property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
@@ -466,7 +466,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.oauth2PermissionGrants.item collection
+     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return OAuth2PermissionGrantItemRequestBuilder
     */
@@ -477,7 +477,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.ownedObjects.item collection
+     * Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemOwnedObjectsItemDirectoryObjectItemRequestBuilder
     */
@@ -519,7 +519,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.tokenIssuancePolicies.item collection
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return TokenIssuancePolicyItemRequestBuilder
     */
@@ -530,7 +530,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.tokenLifetimePolicies.item collection
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return TokenLifetimePolicyItemRequestBuilder
     */
@@ -541,7 +541,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.servicePrincipals.item.transitiveMemberOf.item collection
+     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedServicePrincipalsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */

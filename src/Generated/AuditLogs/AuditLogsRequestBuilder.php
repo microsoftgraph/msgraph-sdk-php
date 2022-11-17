@@ -24,7 +24,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AuditLogsRequestBuilder 
 {
     /**
-     * The directoryAudits property
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
     */
     public function directoryAudits(): DirectoryAuditsRequestBuilder {
         return new DirectoryAuditsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -36,7 +36,7 @@ class AuditLogsRequestBuilder
     private array $pathParameters;
     
     /**
-     * The provisioning property
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
     */
     public function provisioning(): ProvisioningRequestBuilder {
         return new ProvisioningRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -48,7 +48,7 @@ class AuditLogsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The signIns property
+     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
     */
     public function signIns(): SignInsRequestBuilder {
         return new SignInsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -120,7 +120,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.auditLogs.directoryAudits.item collection
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
      * @param string $id Unique identifier of the item
      * @return DirectoryAuditItemRequestBuilder
     */
@@ -170,7 +170,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.auditLogs.provisioning.item collection
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
      * @param string $id Unique identifier of the item
      * @return ProvisioningObjectSummaryItemRequestBuilder
     */
@@ -181,7 +181,7 @@ class AuditLogsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.auditLogs.signIns.item collection
+     * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
      * @param string $id Unique identifier of the item
      * @return SignInItemRequestBuilder
     */

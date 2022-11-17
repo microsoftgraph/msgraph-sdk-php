@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UnifiedGroupSourceItemRequestBuilder 
 {
     /**
-     * The group property
+     * Provides operations to manage the group property of the microsoft.graph.security.unifiedGroupSource entity.
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);

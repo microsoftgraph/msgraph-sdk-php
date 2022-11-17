@@ -21,7 +21,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ParticipantItemRequestBuilder 
 {
     /**
-     * The mute property
+     * Provides operations to call the mute method.
     */
     public function mute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -38,14 +38,14 @@ class ParticipantItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The startHoldMusic property
+     * Provides operations to call the startHoldMusic method.
     */
     public function startHoldMusic(): StartHoldMusicRequestBuilder {
         return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The stopHoldMusic property
+     * Provides operations to call the stopHoldMusic method.
     */
     public function stopHoldMusic(): StopHoldMusicRequestBuilder {
         return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);

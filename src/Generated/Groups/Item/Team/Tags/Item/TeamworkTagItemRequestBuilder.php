@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamworkTagItemRequestBuilder 
 {
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -161,7 +161,7 @@ class TeamworkTagItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.team.tags.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
      * @param string $id Unique identifier of the item
      * @return TeamworkTagMemberItemRequestBuilder
     */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates;
+namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Item;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
-class TemplatesRequestBuilderPostRequestConfiguration 
+class AuditEventItemRequestBuilderPatchRequestConfiguration 
 {
     /**
      * @var array<string, string>|null $headers Request headers

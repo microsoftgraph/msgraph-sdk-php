@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CrossTenantAccessPolicyRequestBuilder 
 {
     /**
-     * The default property
+     * Provides operations to manage the default property of the microsoft.graph.crossTenantAccessPolicy entity.
     */
     public function escapedDefault(): DefaultRequestBuilder {
         return new DefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The partners property
+     * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
     */
     public function partners(): PartnersRequestBuilder {
         return new PartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -169,7 +169,7 @@ class CrossTenantAccessPolicyRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.policies.crossTenantAccessPolicy.partners.item collection
+     * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
      * @param string $id Unique identifier of the item
      * @return CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     */

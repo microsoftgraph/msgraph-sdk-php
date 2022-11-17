@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AppConsentRequestBuilder 
 {
     /**
-     * The appConsentRequests property
+     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
     */
     public function appConsentRequests(): AppConsentRequestsRequestBuilder {
         return new AppConsentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class AppConsentRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.appConsent.appConsentRequests.item collection
+     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
      * @param string $id Unique identifier of the item
      * @return AppConsentRequestItemRequestBuilder
     */

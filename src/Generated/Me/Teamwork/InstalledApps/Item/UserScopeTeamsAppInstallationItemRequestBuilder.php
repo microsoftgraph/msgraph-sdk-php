@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UserScopeTeamsAppInstallationItemRequestBuilder 
 {
     /**
-     * The chat property
+     * Provides operations to manage the chat property of the microsoft.graph.userScopeTeamsAppInstallation entity.
     */
     public function chat(): ChatRequestBuilder {
         return new ChatRequestBuilder($this->pathParameters, $this->requestAdapter);

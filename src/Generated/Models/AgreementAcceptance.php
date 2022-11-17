@@ -25,7 +25,7 @@ class AgreementAcceptance extends Entity implements Parsable
     private ?string $deviceDisplayName = null;
     
     /**
-     * @var string|null $deviceId The unique identifier of the device used for accepting the agreement.
+     * @var string|null $deviceId The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
     */
     private ?string $deviceId = null;
     
@@ -40,7 +40,7 @@ class AgreementAcceptance extends Entity implements Parsable
     private ?string $deviceOSVersion = null;
     
     /**
-     * @var DateTime|null $expirationDateTime The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @var DateTime|null $expirationDateTime The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
     */
     private ?DateTime $expirationDateTime = null;
     
@@ -65,7 +65,7 @@ class AgreementAcceptance extends Entity implements Parsable
     private ?string $userEmail = null;
     
     /**
-     * @var string|null $userId The identifier of the user who accepted the agreement.
+     * @var string|null $userId The identifier of the user who accepted the agreement. Supports $filter (eq).
     */
     private ?string $userId = null;
     
@@ -116,7 +116,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @return string|null
     */
     public function getDeviceId(): ?string {
@@ -140,7 +140,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -203,7 +203,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Gets the userId property value. The identifier of the user who accepted the agreement.
+     * Gets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -264,7 +264,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      *  @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value ): void {
@@ -288,7 +288,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value ): void {
@@ -328,7 +328,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Sets the userId property value. The identifier of the user who accepted the agreement.
+     * Sets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
      *  @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value ): void {

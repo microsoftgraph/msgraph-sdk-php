@@ -21,21 +21,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryObjectItemRequestBuilder 
 {
     /**
-     * The appRoleAssignment property
+     * Casts the previous resource to appRoleAssignment.
     */
     public function appRoleAssignment(): AppRoleAssignmentRequestBuilder {
         return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The device property
+     * Casts the previous resource to device.
     */
     public function device(): DeviceRequestBuilder {
         return new DeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The endpoint property
+     * Casts the previous resource to endpoint.
     */
     public function endpoint(): EndpointRequestBuilder {
         return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);

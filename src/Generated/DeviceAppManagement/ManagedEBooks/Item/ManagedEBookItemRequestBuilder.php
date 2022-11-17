@@ -26,28 +26,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ManagedEBookItemRequestBuilder 
 {
     /**
-     * The assign property
+     * Provides operations to call the assign method.
     */
     public function assign(): AssignRequestBuilder {
         return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The assignments property
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The deviceStates property
+     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
     */
     public function deviceStates(): DeviceStatesRequestBuilder {
         return new DeviceStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The installSummary property
+     * Provides operations to manage the installSummary property of the microsoft.graph.managedEBook entity.
     */
     public function installSummary(): InstallSummaryRequestBuilder {
         return new InstallSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -69,14 +69,14 @@ class ManagedEBookItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userStateSummary property
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
     */
     public function userStateSummary(): UserStateSummaryRequestBuilder {
         return new UserStateSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.assignments.item collection
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
      * @return ManagedEBookAssignmentItemRequestBuilder
     */
@@ -187,7 +187,7 @@ class ManagedEBookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.deviceStates.item collection
+     * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
      * @return DeviceInstallStateItemRequestBuilder
     */
@@ -237,7 +237,7 @@ class ManagedEBookItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceAppManagement.managedEBooks.item.userStateSummary.item collection
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
      * @return UserInstallStateSummaryItemRequestBuilder
     */

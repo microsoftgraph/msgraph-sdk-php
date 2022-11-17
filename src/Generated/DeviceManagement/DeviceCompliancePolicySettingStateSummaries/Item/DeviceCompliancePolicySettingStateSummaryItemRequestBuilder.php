@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder 
 {
     /**
-     * The deviceComplianceSettingStates property
+     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
     */
     public function deviceComplianceSettingStates(): DeviceComplianceSettingStatesRequestBuilder {
         return new DeviceComplianceSettingStatesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,7 +142,7 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.deviceManagement.deviceCompliancePolicySettingStateSummaries.item.deviceComplianceSettingStates.item collection
+     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
      * @param string $id Unique identifier of the item
      * @return DeviceComplianceSettingStateItemRequestBuilder
     */

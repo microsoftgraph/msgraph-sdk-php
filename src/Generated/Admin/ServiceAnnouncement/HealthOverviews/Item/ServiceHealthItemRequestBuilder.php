@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServiceHealthItemRequestBuilder 
 {
     /**
-     * The issues property
+     * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
     */
     public function issues(): IssuesRequestBuilder {
         return new IssuesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -161,7 +161,7 @@ class ServiceHealthItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.admin.serviceAnnouncement.healthOverviews.item.issues.item collection
+     * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
      * @param string $id Unique identifier of the item
      * @return ServiceHealthIssueItemRequestBuilder
     */

@@ -30,7 +30,7 @@ class ConversationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The threads property
+     * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
     */
     public function threads(): ThreadsRequestBuilder {
         return new ThreadsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -137,7 +137,7 @@ class ConversationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.groups.item.conversations.item.threads.item collection
+     * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
      * @param string $id Unique identifier of the item
      * @return ConversationThreadItemRequestBuilder
     */

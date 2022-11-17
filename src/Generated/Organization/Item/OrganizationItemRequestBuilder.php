@@ -29,49 +29,49 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OrganizationItemRequestBuilder 
 {
     /**
-     * The branding property
+     * Provides operations to manage the branding property of the microsoft.graph.organization entity.
     */
     public function branding(): BrandingRequestBuilder {
         return new BrandingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The certificateBasedAuthConfiguration property
+     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
     */
     public function certificateBasedAuthConfiguration(): CertificateBasedAuthConfigurationRequestBuilder {
         return new CertificateBasedAuthConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The extensions property
+     * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
         return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -88,14 +88,14 @@ class OrganizationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The setMobileDeviceManagementAuthority property
+     * Provides operations to call the setMobileDeviceManagementAuthority method.
     */
     public function setMobileDeviceManagementAuthority(): SetMobileDeviceManagementAuthorityRequestBuilder {
         return new SetMobileDeviceManagementAuthorityRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -107,7 +107,7 @@ class OrganizationItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.organization.item.certificateBasedAuthConfiguration.item collection
+     * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
      * @param string $id Unique identifier of the item
      * @return CertificateBasedAuthConfigurationItemRequestBuilder
     */
@@ -218,7 +218,7 @@ class OrganizationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.organization.item.extensions.item collection
+     * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
      * @param string $id Unique identifier of the item
      * @return ExtensionItemRequestBuilder
     */

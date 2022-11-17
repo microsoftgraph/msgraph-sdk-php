@@ -135,12 +135,12 @@ class ManagedDevice extends Entity implements Parsable
     private ?DateTime $exchangeLastSuccessfulSyncDateTime = null;
     
     /**
-     * @var int|null $freeStorageSpaceInBytes Free Storage in Bytes. This property is read-only.
+     * @var int|null $freeStorageSpaceInBytes Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
     */
     private ?int $freeStorageSpaceInBytes = null;
     
     /**
-     * @var string|null $iccid Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * @var string|null $iccid Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     */
     private ?string $iccid = null;
     
@@ -205,7 +205,7 @@ class ManagedDevice extends Entity implements Parsable
     private ?string $model = null;
     
     /**
-     * @var string|null $notes Notes on the device created by IT Admin
+     * @var string|null $notes Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
     */
     private ?string $notes = null;
     
@@ -230,7 +230,7 @@ class ManagedDevice extends Entity implements Parsable
     private ?string $phoneNumber = null;
     
     /**
-     * @var int|null $physicalMemoryInBytes Total Memory in Bytes. This property is read-only.
+     * @var int|null $physicalMemoryInBytes Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
     */
     private ?int $physicalMemoryInBytes = null;
     
@@ -265,7 +265,7 @@ class ManagedDevice extends Entity implements Parsable
     private ?int $totalStorageSpaceInBytes = null;
     
     /**
-     * @var string|null $udid Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * @var string|null $udid Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     */
     private ?string $udid = null;
     
@@ -579,7 +579,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. This property is read-only.
+     * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @return int|null
     */
     public function getFreeStorageSpaceInBytes(): ?int {
@@ -587,7 +587,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
     public function getIccid(): ?string {
@@ -691,7 +691,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the notes property value. Notes on the device created by IT Admin
+     * Gets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
      * @return string|null
     */
     public function getNotes(): ?string {
@@ -731,7 +731,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. This property is read-only.
+     * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
      * @return int|null
     */
     public function getPhysicalMemoryInBytes(): ?int {
@@ -787,7 +787,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
     public function getUdid(): ?string {
@@ -1057,7 +1057,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. This property is read-only.
+     * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      *  @param int|null $value Value to set for the freeStorageSpaceInBytes property.
     */
     public function setFreeStorageSpaceInBytes(?int $value ): void {
@@ -1065,7 +1065,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      *  @param string|null $value Value to set for the iccid property.
     */
     public function setIccid(?string $value ): void {
@@ -1169,7 +1169,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the notes property value. Notes on the device created by IT Admin
+     * Sets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
      *  @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value ): void {
@@ -1209,7 +1209,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. This property is read-only.
+     * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
      *  @param int|null $value Value to set for the physicalMemoryInBytes property.
     */
     public function setPhysicalMemoryInBytes(?int $value ): void {
@@ -1265,7 +1265,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      *  @param string|null $value Value to set for the udid property.
     */
     public function setUdid(?string $value ): void {

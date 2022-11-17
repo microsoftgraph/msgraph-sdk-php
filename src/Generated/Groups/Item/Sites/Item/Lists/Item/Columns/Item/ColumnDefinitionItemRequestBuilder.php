@@ -29,7 +29,7 @@ class ColumnDefinitionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sourceColumn property
+     * Provides operations to manage the sourceColumn property of the microsoft.graph.columnDefinition entity.
     */
     public function sourceColumn(): SourceColumnRequestBuilder {
         return new SourceColumnRequestBuilder($this->pathParameters, $this->requestAdapter);

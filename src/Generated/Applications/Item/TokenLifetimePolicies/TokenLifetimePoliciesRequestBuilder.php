@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TokenLifetimePoliciesRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -32,7 +32,7 @@ class TokenLifetimePoliciesRequestBuilder
     private array $pathParameters;
     
     /**
-     * The Ref property
+     * Provides operations to manage the collection of application entities.
     */
     public function ref(): RefRequestBuilder {
         return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);

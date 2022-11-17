@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class GroupLifecyclePolicyItemRequestBuilder 
 {
     /**
-     * The addGroup property
+     * Provides operations to call the addGroup method.
     */
     public function addGroup(): AddGroupRequestBuilder {
         return new AddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -32,7 +32,7 @@ class GroupLifecyclePolicyItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The removeGroup property
+     * Provides operations to call the removeGroup method.
     */
     public function removeGroup(): RemoveGroupRequestBuilder {
         return new RemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);

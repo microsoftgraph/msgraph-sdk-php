@@ -27,28 +27,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class IdentityRequestBuilder 
 {
     /**
-     * The apiConnectors property
+     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
     */
     public function apiConnectors(): ApiConnectorsRequestBuilder {
         return new ApiConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The b2xUserFlows property
+     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
     */
     public function b2xUserFlows(): B2xUserFlowsRequestBuilder {
         return new B2xUserFlowsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The conditionalAccess property
+     * Provides operations to manage the conditionalAccess property of the microsoft.graph.identityContainer entity.
     */
     public function conditionalAccess(): ConditionalAccessRequestBuilder {
         return new ConditionalAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The identityProviders property
+     * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
     */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -70,14 +70,14 @@ class IdentityRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userFlowAttributes property
+     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
     */
     public function userFlowAttributes(): UserFlowAttributesRequestBuilder {
         return new UserFlowAttributesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.apiConnectors.item collection
+     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
      * @return IdentityApiConnectorItemRequestBuilder
     */
@@ -88,7 +88,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item collection
+     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
      * @return B2xIdentityUserFlowItemRequestBuilder
     */
@@ -178,7 +178,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.identityProviders.item collection
+     * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
      * @return IdentityProviderBaseItemRequestBuilder
     */
@@ -209,7 +209,7 @@ class IdentityRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identity.userFlowAttributes.item collection
+     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
      * @return IdentityUserFlowAttributeItemRequestBuilder
     */

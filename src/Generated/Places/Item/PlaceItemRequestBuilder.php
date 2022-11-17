@@ -29,7 +29,7 @@ class PlaceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The room property
+     * Casts the previous resource to room.
     */
     public function room(): RoomRequestBuilder {
         return new RoomRequestBuilder($this->pathParameters, $this->requestAdapter);

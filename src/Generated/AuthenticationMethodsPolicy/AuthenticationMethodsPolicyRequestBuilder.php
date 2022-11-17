@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AuthenticationMethodsPolicyRequestBuilder 
 {
     /**
-     * The authenticationMethodConfigurations property
+     * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
     */
     public function authenticationMethodConfigurations(): AuthenticationMethodConfigurationsRequestBuilder {
         return new AuthenticationMethodConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class AuthenticationMethodsPolicyRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.authenticationMethodsPolicy.authenticationMethodConfigurations.item collection
+     * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodConfigurationItemRequestBuilder
     */

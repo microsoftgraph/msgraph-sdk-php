@@ -23,7 +23,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SubjectRightsRequestItemRequestBuilder 
 {
     /**
-     * The notes property
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
     */
     public function notes(): NotesRequestBuilder {
         return new NotesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -40,7 +40,7 @@ class SubjectRightsRequestItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The team property
+     * Provides operations to manage the team property of the microsoft.graph.subjectRightsRequest entity.
     */
     public function team(): TeamRequestBuilder {
         return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -187,7 +187,7 @@ class SubjectRightsRequestItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.privacy.subjectRightsRequests.item.notes.item collection
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
      * @param string $id Unique identifier of the item
      * @return AuthoredNoteItemRequestBuilder
     */

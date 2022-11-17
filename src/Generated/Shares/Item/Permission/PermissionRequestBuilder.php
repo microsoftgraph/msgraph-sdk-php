@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PermissionRequestBuilder 
 {
     /**
-     * The grant property
+     * Provides operations to call the grant method.
     */
     public function grant(): GrantRequestBuilder {
         return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OnenoteResourceItemRequestBuilder 
 {
     /**
-     * The content property
+     * Provides operations to manage the media for the user entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);

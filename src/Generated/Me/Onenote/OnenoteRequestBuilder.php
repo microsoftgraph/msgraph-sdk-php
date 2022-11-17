@@ -30,21 +30,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OnenoteRequestBuilder 
 {
     /**
-     * The notebooks property
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
     */
     public function notebooks(): NotebooksRequestBuilder {
         return new NotebooksRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The pages property
+     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
     */
     public function pages(): PagesRequestBuilder {
         return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -61,21 +61,21 @@ class OnenoteRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The resources property
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
     */
     public function resources(): ResourcesRequestBuilder {
         return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sectionGroups property
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
     */
     public function sectionGroups(): SectionGroupsRequestBuilder {
         return new SectionGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sections property
+     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
     */
     public function sections(): SectionsRequestBuilder {
         return new SectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -206,7 +206,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.notebooks.item collection
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return NotebookItemRequestBuilder
     */
@@ -217,7 +217,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return OnenoteOperationItemRequestBuilder
     */
@@ -228,7 +228,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.pages.item collection
+     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return OnenotePageItemRequestBuilder
     */
@@ -259,7 +259,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.resources.item collection
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return OnenoteResourceItemRequestBuilder
     */
@@ -270,7 +270,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.sectionGroups.item collection
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return SectionGroupItemRequestBuilder
     */
@@ -281,7 +281,7 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onenote.sections.item collection
+     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
      * @param string $id Unique identifier of the item
      * @return OnenoteSectionItemRequestBuilder
     */

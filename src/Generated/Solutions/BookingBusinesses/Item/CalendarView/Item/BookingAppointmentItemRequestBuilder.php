@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class BookingAppointmentItemRequestBuilder 
 {
     /**
-     * The cancel property
+     * Provides operations to call the cancel method.
     */
     public function cancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -22,21 +22,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OwnedObjectsRequestBuilder 
 {
     /**
-     * The application property
+     * Casts the previous resource to application.
     */
     public function application(): ApplicationRequestBuilder {
         return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The group property
+     * Casts the previous resource to group.
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -53,7 +53,7 @@ class OwnedObjectsRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The servicePrincipal property
+     * Casts the previous resource to servicePrincipal.
     */
     public function servicePrincipal(): ServicePrincipalRequestBuilder {
         return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The import property
+     * Provides operations to call the import method.
     */
     public function import(): ImportRequestBuilder {
         return new ImportRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -38,42 +38,42 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AuthenticationRequestBuilder 
 {
     /**
-     * The emailMethods property
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
     */
     public function emailMethods(): EmailMethodsRequestBuilder {
         return new EmailMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The fido2Methods property
+     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
     */
     public function fido2Methods(): Fido2MethodsRequestBuilder {
         return new Fido2MethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The methods property
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
     */
     public function methods(): MethodsRequestBuilder {
         return new MethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The microsoftAuthenticatorMethods property
+     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
     */
     public function microsoftAuthenticatorMethods(): MicrosoftAuthenticatorMethodsRequestBuilder {
         return new MicrosoftAuthenticatorMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The passwordMethods property
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
     */
     public function passwordMethods(): PasswordMethodsRequestBuilder {
         return new PasswordMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -85,7 +85,7 @@ class AuthenticationRequestBuilder
     private array $pathParameters;
     
     /**
-     * The phoneMethods property
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
     */
     public function phoneMethods(): PhoneMethodsRequestBuilder {
         return new PhoneMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -97,14 +97,14 @@ class AuthenticationRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The softwareOathMethods property
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
     */
     public function softwareOathMethods(): SoftwareOathMethodsRequestBuilder {
         return new SoftwareOathMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The temporaryAccessPassMethods property
+     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
     */
     public function temporaryAccessPassMethods(): TemporaryAccessPassMethodsRequestBuilder {
         return new TemporaryAccessPassMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -116,7 +116,7 @@ class AuthenticationRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The windowsHelloForBusinessMethods property
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
     */
     public function windowsHelloForBusinessMethods(): WindowsHelloForBusinessMethodsRequestBuilder {
         return new WindowsHelloForBusinessMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -223,7 +223,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.emailMethods.item collection
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return EmailAuthenticationMethodItemRequestBuilder
     */
@@ -234,7 +234,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.fido2Methods.item collection
+     * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return Fido2AuthenticationMethodItemRequestBuilder
     */
@@ -264,7 +264,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.methods.item collection
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return AuthenticationMethodItemRequestBuilder
     */
@@ -275,7 +275,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.microsoftAuthenticatorMethods.item collection
+     * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
     */
@@ -286,7 +286,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return LongRunningOperationItemRequestBuilder
     */
@@ -297,7 +297,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.passwordMethods.item collection
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return PasswordAuthenticationMethodItemRequestBuilder
     */
@@ -328,7 +328,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.phoneMethods.item collection
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return PhoneAuthenticationMethodItemRequestBuilder
     */
@@ -339,7 +339,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.softwareOathMethods.item collection
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return SoftwareOathAuthenticationMethodItemRequestBuilder
     */
@@ -350,7 +350,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.temporaryAccessPassMethods.item collection
+     * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilder
     */
@@ -361,7 +361,7 @@ class AuthenticationRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.authentication.windowsHelloForBusinessMethods.item collection
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
      * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
     */

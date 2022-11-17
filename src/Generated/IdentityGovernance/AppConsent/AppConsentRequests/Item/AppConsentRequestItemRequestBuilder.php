@@ -35,7 +35,7 @@ class AppConsentRequestItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The userConsentRequests property
+     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
     */
     public function userConsentRequests(): UserConsentRequestsRequestBuilder {
         return new UserConsentRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class AppConsentRequestItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.identityGovernance.appConsent.appConsentRequests.item.userConsentRequests.item collection
+     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
      * @param string $id Unique identifier of the item
      * @return UserConsentRequestItemRequestBuilder
     */

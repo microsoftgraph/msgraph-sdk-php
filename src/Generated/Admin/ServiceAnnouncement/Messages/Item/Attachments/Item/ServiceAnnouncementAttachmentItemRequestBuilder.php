@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServiceAnnouncementAttachmentItemRequestBuilder 
 {
     /**
-     * The content property
+     * Provides operations to manage the media for the admin entity.
     */
     public function content(): ContentRequestBuilder {
         return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);

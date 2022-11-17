@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class BucketsRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -78,7 +78,7 @@ class BucketsRequestBuilder
     }
 
     /**
-     * Use this API to create a new **plannerBucket**.
+     * Create a new plannerBucket object.
      * @param PlannerBucket $body 
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -121,7 +121,7 @@ class BucketsRequestBuilder
     }
 
     /**
-     * Use this API to create a new **plannerBucket**.
+     * Create a new plannerBucket object.
      * @param PlannerBucket $body 
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service

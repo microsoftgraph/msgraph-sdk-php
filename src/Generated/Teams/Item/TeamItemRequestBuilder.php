@@ -42,70 +42,70 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TeamItemRequestBuilder 
 {
     /**
-     * The allChannels property
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
     */
     public function allChannels(): AllChannelsRequestBuilder {
         return new AllChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The archive property
+     * Provides operations to call the archive method.
     */
     public function archive(): ArchiveRequestBuilder {
         return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The channels property
+     * Provides operations to manage the channels property of the microsoft.graph.team entity.
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The completeMigration property
+     * Provides operations to call the completeMigration method.
     */
     public function completeMigration(): CompleteMigrationRequestBuilder {
         return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The clone property
+     * Provides operations to call the clone method.
     */
     public function escapedClone(): CloneRequestBuilder {
         return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The group property
+     * Provides operations to manage the group property of the microsoft.graph.team entity.
     */
     public function group(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The incomingChannels property
+     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
     */
     public function incomingChannels(): IncomingChannelsRequestBuilder {
         return new IncomingChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The installedApps property
+     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
     */
     public function installedApps(): InstalledAppsRequestBuilder {
         return new InstalledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.team entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The operations property
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -117,14 +117,14 @@ class TeamItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The photo property
+     * Provides operations to manage the photo property of the microsoft.graph.team entity.
     */
     public function photo(): PhotoRequestBuilder {
         return new PhotoRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The primaryChannel property
+     * Provides operations to manage the primaryChannel property of the microsoft.graph.team entity.
     */
     public function primaryChannel(): PrimaryChannelRequestBuilder {
         return new PrimaryChannelRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -136,35 +136,35 @@ class TeamItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The schedule property
+     * Provides operations to manage the schedule property of the microsoft.graph.team entity.
     */
     public function schedule(): ScheduleRequestBuilder {
         return new ScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The sendActivityNotification property
+     * Provides operations to call the sendActivityNotification method.
     */
     public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
         return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The tags property
+     * Provides operations to manage the tags property of the microsoft.graph.team entity.
     */
     public function tags(): TagsRequestBuilder {
         return new TagsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The template property
+     * Provides operations to manage the template property of the microsoft.graph.team entity.
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The unarchive property
+     * Provides operations to call the unarchive method.
     */
     public function unarchive(): UnarchiveRequestBuilder {
         return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -176,7 +176,7 @@ class TeamItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.allChannels.item collection
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedTeamsItemAllChannelsItemChannelItemRequestBuilder
     */
@@ -187,7 +187,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.channels.item collection
+     * Provides operations to manage the channels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedTeamsItemChannelsItemChannelItemRequestBuilder
     */
@@ -317,7 +317,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.incomingChannels.item collection
+     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return MicrosoftGraphGeneratedTeamsItemIncomingChannelsItemChannelItemRequestBuilder
     */
@@ -328,7 +328,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.installedApps.item collection
+     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return TeamsAppInstallationItemRequestBuilder
     */
@@ -339,7 +339,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return ConversationMemberItemRequestBuilder
     */
@@ -350,7 +350,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.operations.item collection
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return TeamsAsyncOperationItemRequestBuilder
     */
@@ -381,7 +381,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.teams.item.tags.item collection
+     * Provides operations to manage the tags property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
      * @return TeamworkTagItemRequestBuilder
     */

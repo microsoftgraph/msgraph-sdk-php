@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SolutionsRequestBuilder 
 {
     /**
-     * The bookingBusinesses property
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
     */
     public function bookingBusinesses(): BookingBusinessesRequestBuilder {
         return new BookingBusinessesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The bookingCurrencies property
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
     */
     public function bookingCurrencies(): BookingCurrenciesRequestBuilder {
         return new BookingCurrenciesRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -51,7 +51,7 @@ class SolutionsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingBusinesses.item collection
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
      * @param string $id Unique identifier of the item
      * @return BookingBusinessItemRequestBuilder
     */
@@ -62,7 +62,7 @@ class SolutionsRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.solutions.bookingCurrencies.item collection
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
      * @param string $id Unique identifier of the item
      * @return BookingCurrencyItemRequestBuilder
     */

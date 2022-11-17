@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MeetingAttendanceReportItemRequestBuilder 
 {
     /**
-     * The attendanceRecords property
+     * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
     */
     public function attendanceRecords(): AttendanceRecordsRequestBuilder {
         return new AttendanceRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -42,7 +42,7 @@ class MeetingAttendanceReportItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.me.onlineMeetings.item.attendanceReports.item.attendanceRecords.item collection
+     * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
      * @param string $id Unique identifier of the item
      * @return AttendanceRecordItemRequestBuilder
     */

@@ -22,21 +22,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MobileAppsRequestBuilder 
 {
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The managedMobileLobApp property
+     * Casts the previous resource to managedMobileLobApp.
     */
     public function managedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
         return new ManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The mobileLobApp property
+     * Casts the previous resource to mobileLobApp.
     */
     public function mobileLobApp(): MobileLobAppRequestBuilder {
         return new MobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);

@@ -22,21 +22,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class IdentityGovernanceRequestBuilder 
 {
     /**
-     * The accessReviews property
+     * Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity.
     */
     public function accessReviews(): AccessReviewsRequestBuilder {
         return new AccessReviewsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The appConsent property
+     * Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity.
     */
     public function appConsent(): AppConsentRequestBuilder {
         return new AppConsentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The entitlementManagement property
+     * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
     */
     public function entitlementManagement(): EntitlementManagementRequestBuilder {
         return new EntitlementManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -53,7 +53,7 @@ class IdentityGovernanceRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The termsOfUse property
+     * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
     */
     public function termsOfUse(): TermsOfUseRequestBuilder {
         return new TermsOfUseRequestBuilder($this->pathParameters, $this->requestAdapter);

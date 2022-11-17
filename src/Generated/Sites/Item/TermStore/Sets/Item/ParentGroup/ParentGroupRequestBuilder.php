@@ -30,7 +30,7 @@ class ParentGroupRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The sets property
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
     */
     public function sets(): SetsRequestBuilder {
         return new SetsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class ParentGroupRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.sites.item.termStore.sets.item.parentGroup.sets.item collection
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
      * @param string $id Unique identifier of the item
      * @return SetItemRequestBuilder
     */

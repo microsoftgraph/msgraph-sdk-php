@@ -14,6 +14,11 @@ class DeviceManagement extends Entity implements Parsable
     private ?ApplePushNotificationCertificate $applePushNotificationCertificate = null;
     
     /**
+     * @var array<AuditEvent>|null $auditEvents The Audit Events
+    */
+    private ?array $auditEvents = null;
+    
+    /**
      * @var array<ComplianceManagementPartner>|null $complianceManagementPartners The list of Compliance Management Partners configured by the tenant.
     */
     private ?array $complianceManagementPartners = null;
@@ -209,6 +214,14 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the auditEvents property value. The Audit Events
+     * @return array<AuditEvent>|null
+    */
+    public function getAuditEvents(): ?array {
+        return $this->auditEvents;
+    }
+
+    /**
      * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
      * @return array<ComplianceManagementPartner>|null
     */
@@ -312,6 +325,7 @@ class DeviceManagement extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'applePushNotificationCertificate' => fn(ParseNode $n) => $o->setApplePushNotificationCertificate($n->getObjectValue([ApplePushNotificationCertificate::class, 'createFromDiscriminatorValue'])),
+            'auditEvents' => fn(ParseNode $n) => $o->setAuditEvents($n->getCollectionOfObjectValues([AuditEvent::class, 'createFromDiscriminatorValue'])),
             'complianceManagementPartners' => fn(ParseNode $n) => $o->setComplianceManagementPartners($n->getCollectionOfObjectValues([ComplianceManagementPartner::class, 'createFromDiscriminatorValue'])),
             'conditionalAccessSettings' => fn(ParseNode $n) => $o->setConditionalAccessSettings($n->getObjectValue([OnPremisesConditionalAccessSettings::class, 'createFromDiscriminatorValue'])),
             'detectedApps' => fn(ParseNode $n) => $o->setDetectedApps($n->getCollectionOfObjectValues([DetectedApp::class, 'createFromDiscriminatorValue'])),
@@ -532,6 +546,7 @@ class DeviceManagement extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('applePushNotificationCertificate', $this->applePushNotificationCertificate);
+        $writer->writeCollectionOfObjectValues('auditEvents', $this->auditEvents);
         $writer->writeCollectionOfObjectValues('complianceManagementPartners', $this->complianceManagementPartners);
         $writer->writeObjectValue('conditionalAccessSettings', $this->conditionalAccessSettings);
         $writer->writeCollectionOfObjectValues('detectedApps', $this->detectedApps);
@@ -574,6 +589,14 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setApplePushNotificationCertificate(?ApplePushNotificationCertificate $value ): void {
         $this->applePushNotificationCertificate = $value;
+    }
+
+    /**
+     * Sets the auditEvents property value. The Audit Events
+     *  @param array<AuditEvent>|null $value Value to set for the auditEvents property.
+    */
+    public function setAuditEvents(?array $value ): void {
+        $this->auditEvents = $value;
     }
 
     /**

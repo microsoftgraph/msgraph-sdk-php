@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ActivityHistoryItemItemRequestBuilder 
 {
     /**
-     * The activity property
+     * Provides operations to manage the activity property of the microsoft.graph.activityHistoryItem entity.
     */
     public function activity(): ActivityRequestBuilder {
         return new ActivityRequestBuilder($this->pathParameters, $this->requestAdapter);

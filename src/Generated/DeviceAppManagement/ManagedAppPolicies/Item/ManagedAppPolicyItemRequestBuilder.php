@@ -29,7 +29,7 @@ class ManagedAppPolicyItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The targetApps property
+     * Provides operations to call the targetApps method.
     */
     public function targetApps(): TargetAppsRequestBuilder {
         return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);

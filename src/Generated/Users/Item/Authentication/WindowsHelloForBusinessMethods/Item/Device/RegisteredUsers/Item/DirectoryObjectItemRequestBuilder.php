@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryObjectItemRequestBuilder 
 {
     /**
-     * The appRoleAssignment property
+     * Casts the previous resource to appRoleAssignment.
     */
     public function appRoleAssignment(): AppRoleAssignmentRequestBuilder {
         return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The endpoint property
+     * Casts the previous resource to endpoint.
     */
     public function endpoint(): EndpointRequestBuilder {
         return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -46,7 +46,7 @@ class DirectoryObjectItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The servicePrincipal property
+     * Casts the previous resource to servicePrincipal.
     */
     public function servicePrincipal(): ServicePrincipalRequestBuilder {
         return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -58,7 +58,7 @@ class DirectoryObjectItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * The user property
+     * Casts the previous resource to user.
     */
     public function user(): UserRequestBuilder {
         return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);

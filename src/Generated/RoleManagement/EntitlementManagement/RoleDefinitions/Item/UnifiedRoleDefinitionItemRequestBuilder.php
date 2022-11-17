@@ -19,7 +19,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class UnifiedRoleDefinitionItemRequestBuilder 
 {
     /**
-     * The inheritsPermissionsFrom property
+     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
     */
     public function inheritsPermissionsFrom(): InheritsPermissionsFromRequestBuilder {
         return new InheritsPermissionsFromRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -160,7 +160,7 @@ class UnifiedRoleDefinitionItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.roleManagement.entitlementManagement.roleDefinitions.item.inheritsPermissionsFrom.item collection
+     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
      * @param string $id Unique identifier of the item
      * @return UnifiedRoleDefinitionItemRequestBuilder
     */

@@ -22,14 +22,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ConnectedOrganizationItemRequestBuilder 
 {
     /**
-     * The externalSponsors property
+     * Provides operations to manage the externalSponsors property of the microsoft.graph.connectedOrganization entity.
     */
     public function externalSponsors(): ExternalSponsorsRequestBuilder {
         return new ExternalSponsorsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The internalSponsors property
+     * Provides operations to manage the internalSponsors property of the microsoft.graph.connectedOrganization entity.
     */
     public function internalSponsors(): InternalSponsorsRequestBuilder {
         return new InternalSponsorsRequestBuilder($this->pathParameters, $this->requestAdapter);

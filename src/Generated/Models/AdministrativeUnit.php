@@ -39,7 +39,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     private ?string $visibility = null;
     
     /**
-     * Instantiates a new AdministrativeUnit and sets the default values.
+     * Instantiates a new administrativeUnit and sets the default values.
     */
     public function __construct() {
         parent::__construct();

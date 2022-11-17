@@ -23,21 +23,21 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContentTypesRequestBuilder 
 {
     /**
-     * The addCopy property
+     * Provides operations to call the addCopy method.
     */
     public function addCopy(): AddCopyRequestBuilder {
         return new AddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The addCopyFromContentTypeHub property
+     * Provides operations to call the addCopyFromContentTypeHub method.
     */
     public function addCopyFromContentTypeHub(): AddCopyFromContentTypeHubRequestBuilder {
         return new AddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The Count property
+     * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);

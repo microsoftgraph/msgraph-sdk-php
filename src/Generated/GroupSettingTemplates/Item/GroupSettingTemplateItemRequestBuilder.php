@@ -23,28 +23,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class GroupSettingTemplateItemRequestBuilder 
 {
     /**
-     * The checkMemberGroups property
+     * Provides operations to call the checkMemberGroups method.
     */
     public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The checkMemberObjects property
+     * Provides operations to call the checkMemberObjects method.
     */
     public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberGroups property
+     * Provides operations to call the getMemberGroups method.
     */
     public function getMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The getMemberObjects property
+     * Provides operations to call the getMemberObjects method.
     */
     public function getMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -61,7 +61,7 @@ class GroupSettingTemplateItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The restore property
+     * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);

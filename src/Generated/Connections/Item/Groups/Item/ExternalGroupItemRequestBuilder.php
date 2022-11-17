@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ExternalGroupItemRequestBuilder 
 {
     /**
-     * The members property
+     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -161,7 +161,7 @@ class ExternalGroupItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.connections.item.groups.item.members.item collection
+     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
      * @param string $id Unique identifier of the item
      * @return IdentityItemRequestBuilder
     */

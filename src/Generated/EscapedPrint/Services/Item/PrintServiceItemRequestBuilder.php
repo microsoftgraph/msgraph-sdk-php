@@ -20,7 +20,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PrintServiceItemRequestBuilder 
 {
     /**
-     * The endpoints property
+     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
     */
     public function endpoints(): EndpointsRequestBuilder {
         return new EndpointsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -142,7 +142,7 @@ class PrintServiceItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.print.services.item.endpoints.item collection
+     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
      * @param string $id Unique identifier of the item
      * @return PrintServiceEndpointItemRequestBuilder
     */

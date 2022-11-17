@@ -30,7 +30,7 @@ class SimulationAutomationItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The runs property
+     * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
     */
     public function runs(): RunsRequestBuilder {
         return new RunsRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -181,7 +181,7 @@ class SimulationAutomationItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.security.attackSimulation.simulationAutomations.item.runs.item collection
+     * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
      * @param string $id Unique identifier of the item
      * @return SimulationAutomationRunItemRequestBuilder
     */

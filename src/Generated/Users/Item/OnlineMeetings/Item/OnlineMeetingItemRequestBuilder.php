@@ -21,14 +21,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OnlineMeetingItemRequestBuilder 
 {
     /**
-     * The attendanceReports property
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
     */
     public function attendanceReports(): AttendanceReportsRequestBuilder {
         return new AttendanceReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The attendeeReport property
+     * Provides operations to manage the media for the user entity.
     */
     public function attendeeReport(): AttendeeReportRequestBuilder {
         return new AttendeeReportRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -50,7 +50,7 @@ class OnlineMeetingItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft\Graph\Generated.users.item.onlineMeetings.item.attendanceReports.item collection
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
      * @param string $id Unique identifier of the item
      * @return MeetingAttendanceReportItemRequestBuilder
     */

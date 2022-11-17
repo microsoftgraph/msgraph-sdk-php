@@ -26,28 +26,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SharedDriveItemItemRequestBuilder 
 {
     /**
-     * The driveItem property
+     * Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity.
     */
     public function driveItem(): DriveItemRequestBuilder {
         return new DriveItemRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The list property
+     * Provides operations to manage the list property of the microsoft.graph.sharedDriveItem entity.
     */
     public function escapedList(): ListRequestBuilder {
         return new ListRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The items property
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The listItem property
+     * Provides operations to manage the listItem property of the microsoft.graph.sharedDriveItem entity.
     */
     public function listItem(): ListItemRequestBuilder {
         return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -59,7 +59,7 @@ class SharedDriveItemItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * The permission property
+     * Provides operations to manage the permission property of the microsoft.graph.sharedDriveItem entity.
     */
     public function permission(): PermissionRequestBuilder {
         return new PermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -71,14 +71,14 @@ class SharedDriveItemItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * The root property
+     * Provides operations to manage the root property of the microsoft.graph.sharedDriveItem entity.
     */
     public function root(): RootRequestBuilder {
         return new RootRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * The site property
+     * Provides operations to manage the site property of the microsoft.graph.sharedDriveItem entity.
     */
     public function site(): SiteRequestBuilder {
         return new SiteRequestBuilder($this->pathParameters, $this->requestAdapter);
@@ -209,7 +209,7 @@ class SharedDriveItemItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.shares.item.items.item collection
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
      * @param string $id Unique identifier of the item
      * @return DriveItemItemRequestBuilder
     */
