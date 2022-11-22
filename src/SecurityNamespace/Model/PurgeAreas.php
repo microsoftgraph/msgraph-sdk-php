@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseAction File
+* PurgeAreas File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\SecurityNamespace\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CaseAction class
+* PurgeAreas class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseAction extends Enum
+class PurgeAreas extends Enum
 {
     /**
-    * The Enum CaseAction
+    * The Enum PurgeAreas
     */
-    const CONTENT_EXPORT = "contentExport";
-    const APPLY_TAGS = "applyTags";
-    const CONVERT_TO_PDF = "convertToPdf";
-    const INDEX = "index";
-    const ESTIMATE_STATISTICS = "estimateStatistics";
-    const ADD_TO_REVIEW_SET = "addToReviewSet";
-    const HOLD_UPDATE = "holdUpdate";
+    const MAILBOXES = "mailboxes";
+    const TEAMS_MESSAGES = "teamsMessages";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const PURGE_DATA = "purgeData";
 }

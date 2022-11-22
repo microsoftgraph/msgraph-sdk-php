@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CaseAction File
+* EdiscoveryPurgeDataOperation File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Microsoft\Graph\SecurityNamespace\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CaseAction class
+* EdiscoveryPurgeDataOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,18 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CaseAction extends Enum
+class EdiscoveryPurgeDataOperation extends CaseOperation
 {
-    /**
-    * The Enum CaseAction
-    */
-    const CONTENT_EXPORT = "contentExport";
-    const APPLY_TAGS = "applyTags";
-    const CONVERT_TO_PDF = "convertToPdf";
-    const INDEX = "index";
-    const ESTIMATE_STATISTICS = "estimateStatistics";
-    const ADD_TO_REVIEW_SET = "addToReviewSet";
-    const HOLD_UPDATE = "holdUpdate";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const PURGE_DATA = "purgeData";
 }
