@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PolicyBase extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $description Description for this policy. Required.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Display name for this policy. Required.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new policyBase and sets the default values.
     */
     public function __construct() {
@@ -56,7 +46,7 @@ class PolicyBase extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -64,7 +54,7 @@ class PolicyBase extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -85,24 +75,24 @@ class PolicyBase extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the description property value. Description for this policy. Required.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Display name for this policy. Required.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

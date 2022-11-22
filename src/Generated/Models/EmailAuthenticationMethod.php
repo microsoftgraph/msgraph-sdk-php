@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * @var string|null $emailAddress The email address registered to this user.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
      * Instantiates a new EmailAuthenticationMethod and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -55,15 +50,15 @@ class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
     }
 
     /**
      * Sets the emailAddress property value. The email address registered to this user.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
 }

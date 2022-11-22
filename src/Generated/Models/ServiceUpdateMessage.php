@@ -11,61 +11,6 @@ use Psr\Http\Message\StreamInterface;
 class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable 
 {
     /**
-     * @var DateTime|null $actionRequiredByDateTime The expected deadline of the action for the message.
-    */
-    private ?DateTime $actionRequiredByDateTime = null;
-    
-    /**
-     * @var array<ServiceAnnouncementAttachment>|null $attachments A collection of serviceAnnouncementAttachments.
-    */
-    private ?array $attachments = null;
-    
-    /**
-     * @var StreamInterface|null $attachmentsArchive The zip file that contains all attachments for a message.
-    */
-    private ?StreamInterface $attachmentsArchive = null;
-    
-    /**
-     * @var ItemBody|null $body The body property
-    */
-    private ?ItemBody $body = null;
-    
-    /**
-     * @var ServiceUpdateCategory|null $category The category property
-    */
-    private ?ServiceUpdateCategory $category = null;
-    
-    /**
-     * @var bool|null $hasAttachments Indicates whether the message has any attachment.
-    */
-    private ?bool $hasAttachments = null;
-    
-    /**
-     * @var bool|null $isMajorChange Indicates whether the message describes a major update for the service.
-    */
-    private ?bool $isMajorChange = null;
-    
-    /**
-     * @var array<string>|null $services The affected services by the service message.
-    */
-    private ?array $services = null;
-    
-    /**
-     * @var ServiceUpdateSeverity|null $severity The severity property
-    */
-    private ?ServiceUpdateSeverity $severity = null;
-    
-    /**
-     * @var array<string>|null $tags A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
-    */
-    private ?array $tags = null;
-    
-    /**
-     * @var ServiceUpdateMessageViewpoint|null $viewPoint Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
-    */
-    private ?ServiceUpdateMessageViewpoint $viewPoint = null;
-    
-    /**
      * Instantiates a new ServiceUpdateMessage and sets the default values.
     */
     public function __construct() {
@@ -87,7 +32,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return DateTime|null
     */
     public function getActionRequiredByDateTime(): ?DateTime {
-        return $this->actionRequiredByDateTime;
+        return $this->getBackingStore()->get('actionRequiredByDateTime');
     }
 
     /**
@@ -95,15 +40,15 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<ServiceAnnouncementAttachment>|null
     */
     public function getAttachments(): ?array {
-        return $this->attachments;
+        return $this->getBackingStore()->get('attachments');
     }
 
     /**
      * Gets the attachmentsArchive property value. The zip file that contains all attachments for a message.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getAttachmentsArchive(): StreamInterface {
-        return $this->attachmentsArchive;
+    public function getAttachmentsArchive(): ?StreamInterface {
+        return $this->getBackingStore()->get('attachmentsArchive');
     }
 
     /**
@@ -111,7 +56,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
-        return $this->body;
+        return $this->getBackingStore()->get('body');
     }
 
     /**
@@ -119,7 +64,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateCategory|null
     */
     public function getCategory(): ?ServiceUpdateCategory {
-        return $this->category;
+        return $this->getBackingStore()->get('category');
     }
 
     /**
@@ -148,7 +93,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->hasAttachments;
+        return $this->getBackingStore()->get('hasAttachments');
     }
 
     /**
@@ -156,7 +101,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getIsMajorChange(): ?bool {
-        return $this->isMajorChange;
+        return $this->getBackingStore()->get('isMajorChange');
     }
 
     /**
@@ -164,7 +109,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<string>|null
     */
     public function getServices(): ?array {
-        return $this->services;
+        return $this->getBackingStore()->get('services');
     }
 
     /**
@@ -172,7 +117,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateSeverity|null
     */
     public function getSeverity(): ?ServiceUpdateSeverity {
-        return $this->severity;
+        return $this->getBackingStore()->get('severity');
     }
 
     /**
@@ -180,7 +125,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->tags;
+        return $this->getBackingStore()->get('tags');
     }
 
     /**
@@ -188,7 +133,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateMessageViewpoint|null
     */
     public function getViewPoint(): ?ServiceUpdateMessageViewpoint {
-        return $this->viewPoint;
+        return $this->getBackingStore()->get('viewPoint');
     }
 
     /**
@@ -197,105 +142,105 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('actionRequiredByDateTime', $this->actionRequiredByDateTime);
-        $writer->writeCollectionOfObjectValues('attachments', $this->attachments);
-        $writer->writeBinaryContent('attachmentsArchive', $this->attachmentsArchive);
-        $writer->writeObjectValue('body', $this->body);
-        $writer->writeEnumValue('category', $this->category);
-        $writer->writeBooleanValue('hasAttachments', $this->hasAttachments);
-        $writer->writeBooleanValue('isMajorChange', $this->isMajorChange);
-        $writer->writeCollectionOfPrimitiveValues('services', $this->services);
-        $writer->writeEnumValue('severity', $this->severity);
-        $writer->writeCollectionOfPrimitiveValues('tags', $this->tags);
-        $writer->writeObjectValue('viewPoint', $this->viewPoint);
+        $writer->writeDateTimeValue('actionRequiredByDateTime', $this->getActionRequiredByDateTime());
+        $writer->writeCollectionOfObjectValues('attachments', $this->getAttachments());
+        $writer->writeBinaryContent('attachmentsArchive', $this->getAttachmentsArchive());
+        $writer->writeObjectValue('body', $this->getBody());
+        $writer->writeEnumValue('category', $this->getCategory());
+        $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
+        $writer->writeBooleanValue('isMajorChange', $this->getIsMajorChange());
+        $writer->writeCollectionOfPrimitiveValues('services', $this->getServices());
+        $writer->writeEnumValue('severity', $this->getSeverity());
+        $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
+        $writer->writeObjectValue('viewPoint', $this->getViewPoint());
     }
 
     /**
      * Sets the actionRequiredByDateTime property value. The expected deadline of the action for the message.
      *  @param DateTime|null $value Value to set for the actionRequiredByDateTime property.
     */
-    public function setActionRequiredByDateTime(?DateTime $value ): void {
-        $this->actionRequiredByDateTime = $value;
+    public function setActionRequiredByDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('actionRequiredByDateTime', $value);
     }
 
     /**
      * Sets the attachments property value. A collection of serviceAnnouncementAttachments.
      *  @param array<ServiceAnnouncementAttachment>|null $value Value to set for the attachments property.
     */
-    public function setAttachments(?array $value ): void {
-        $this->attachments = $value;
+    public function setAttachments(?array $value): void {
+        $this->getBackingStore()->set('attachments', $value);
     }
 
     /**
      * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
      *  @param StreamInterface|null $value Value to set for the attachmentsArchive property.
     */
-    public function setAttachmentsArchive(?StreamInterface $value ): void {
-        $this->attachmentsArchive = $value;
+    public function setAttachmentsArchive(?StreamInterface $value): void {
+        $this->getBackingStore()->set('attachmentsArchive', $value);
     }
 
     /**
      * Sets the body property value. The body property
      *  @param ItemBody|null $value Value to set for the body property.
     */
-    public function setBody(?ItemBody $value ): void {
-        $this->body = $value;
+    public function setBody(?ItemBody $value): void {
+        $this->getBackingStore()->set('body', $value);
     }
 
     /**
      * Sets the category property value. The category property
      *  @param ServiceUpdateCategory|null $value Value to set for the category property.
     */
-    public function setCategory(?ServiceUpdateCategory $value ): void {
-        $this->category = $value;
+    public function setCategory(?ServiceUpdateCategory $value): void {
+        $this->getBackingStore()->set('category', $value);
     }
 
     /**
      * Sets the hasAttachments property value. Indicates whether the message has any attachment.
      *  @param bool|null $value Value to set for the hasAttachments property.
     */
-    public function setHasAttachments(?bool $value ): void {
-        $this->hasAttachments = $value;
+    public function setHasAttachments(?bool $value): void {
+        $this->getBackingStore()->set('hasAttachments', $value);
     }
 
     /**
      * Sets the isMajorChange property value. Indicates whether the message describes a major update for the service.
      *  @param bool|null $value Value to set for the isMajorChange property.
     */
-    public function setIsMajorChange(?bool $value ): void {
-        $this->isMajorChange = $value;
+    public function setIsMajorChange(?bool $value): void {
+        $this->getBackingStore()->set('isMajorChange', $value);
     }
 
     /**
      * Sets the services property value. The affected services by the service message.
      *  @param array<string>|null $value Value to set for the services property.
     */
-    public function setServices(?array $value ): void {
-        $this->services = $value;
+    public function setServices(?array $value): void {
+        $this->getBackingStore()->set('services', $value);
     }
 
     /**
      * Sets the severity property value. The severity property
      *  @param ServiceUpdateSeverity|null $value Value to set for the severity property.
     */
-    public function setSeverity(?ServiceUpdateSeverity $value ): void {
-        $this->severity = $value;
+    public function setSeverity(?ServiceUpdateSeverity $value): void {
+        $this->getBackingStore()->set('severity', $value);
     }
 
     /**
      * Sets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
      *  @param array<string>|null $value Value to set for the tags property.
     */
-    public function setTags(?array $value ): void {
-        $this->tags = $value;
+    public function setTags(?array $value): void {
+        $this->getBackingStore()->set('tags', $value);
     }
 
     /**
      * Sets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
      *  @param ServiceUpdateMessageViewpoint|null $value Value to set for the viewPoint property.
     */
-    public function setViewPoint(?ServiceUpdateMessageViewpoint $value ): void {
-        $this->viewPoint = $value;
+    public function setViewPoint(?ServiceUpdateMessageViewpoint $value): void {
+        $this->getBackingStore()->set('viewPoint', $value);
     }
 
 }

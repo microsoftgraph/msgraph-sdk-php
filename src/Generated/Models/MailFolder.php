@@ -9,66 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MailFolder extends Entity implements Parsable 
 {
     /**
-     * @var int|null $childFolderCount The number of immediate child mailFolders in the current mailFolder.
-    */
-    private ?int $childFolderCount = null;
-    
-    /**
-     * @var array<MailFolder>|null $childFolders The collection of child folders in the mailFolder.
-    */
-    private ?array $childFolders = null;
-    
-    /**
-     * @var string|null $displayName The mailFolder's display name.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isHidden Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
-    */
-    private ?bool $isHidden = null;
-    
-    /**
-     * @var array<MessageRule>|null $messageRules The collection of rules that apply to the user's Inbox folder.
-    */
-    private ?array $messageRules = null;
-    
-    /**
-     * @var array<Message>|null $messages The collection of messages in the mailFolder.
-    */
-    private ?array $messages = null;
-    
-    /**
-     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
-    */
-    private ?array $multiValueExtendedProperties = null;
-    
-    /**
-     * @var string|null $parentFolderId The unique identifier for the mailFolder's parent mailFolder.
-    */
-    private ?string $parentFolderId = null;
-    
-    /**
-     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
-    */
-    private ?array $singleValueExtendedProperties = null;
-    
-    /**
-     * @var int|null $totalItemCount The number of items in the mailFolder.
-    */
-    private ?int $totalItemCount = null;
-    
-    /**
-     * @var int|null $unreadItemCount The number of items in the mailFolder marked as unread.
-    */
-    private ?int $unreadItemCount = null;
-    
-    /**
      * Instantiates a new mailFolder and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.mailFolder');
     }
 
     /**
@@ -92,7 +36,7 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getChildFolderCount(): ?int {
-        return $this->childFolderCount;
+        return $this->getBackingStore()->get('childFolderCount');
     }
 
     /**
@@ -100,7 +44,7 @@ class MailFolder extends Entity implements Parsable
      * @return array<MailFolder>|null
     */
     public function getChildFolders(): ?array {
-        return $this->childFolders;
+        return $this->getBackingStore()->get('childFolders');
     }
 
     /**
@@ -108,7 +52,7 @@ class MailFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -137,7 +81,7 @@ class MailFolder extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsHidden(): ?bool {
-        return $this->isHidden;
+        return $this->getBackingStore()->get('isHidden');
     }
 
     /**
@@ -145,7 +89,7 @@ class MailFolder extends Entity implements Parsable
      * @return array<MessageRule>|null
     */
     public function getMessageRules(): ?array {
-        return $this->messageRules;
+        return $this->getBackingStore()->get('messageRules');
     }
 
     /**
@@ -153,7 +97,7 @@ class MailFolder extends Entity implements Parsable
      * @return array<Message>|null
     */
     public function getMessages(): ?array {
-        return $this->messages;
+        return $this->getBackingStore()->get('messages');
     }
 
     /**
@@ -161,7 +105,7 @@ class MailFolder extends Entity implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->multiValueExtendedProperties;
+        return $this->getBackingStore()->get('multiValueExtendedProperties');
     }
 
     /**
@@ -169,7 +113,7 @@ class MailFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getParentFolderId(): ?string {
-        return $this->parentFolderId;
+        return $this->getBackingStore()->get('parentFolderId');
     }
 
     /**
@@ -177,7 +121,7 @@ class MailFolder extends Entity implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->singleValueExtendedProperties;
+        return $this->getBackingStore()->get('singleValueExtendedProperties');
     }
 
     /**
@@ -185,7 +129,7 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalItemCount(): ?int {
-        return $this->totalItemCount;
+        return $this->getBackingStore()->get('totalItemCount');
     }
 
     /**
@@ -193,7 +137,7 @@ class MailFolder extends Entity implements Parsable
      * @return int|null
     */
     public function getUnreadItemCount(): ?int {
-        return $this->unreadItemCount;
+        return $this->getBackingStore()->get('unreadItemCount');
     }
 
     /**
@@ -202,105 +146,105 @@ class MailFolder extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('childFolderCount', $this->childFolderCount);
-        $writer->writeCollectionOfObjectValues('childFolders', $this->childFolders);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isHidden', $this->isHidden);
-        $writer->writeCollectionOfObjectValues('messageRules', $this->messageRules);
-        $writer->writeCollectionOfObjectValues('messages', $this->messages);
-        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->multiValueExtendedProperties);
-        $writer->writeStringValue('parentFolderId', $this->parentFolderId);
-        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->singleValueExtendedProperties);
-        $writer->writeIntegerValue('totalItemCount', $this->totalItemCount);
-        $writer->writeIntegerValue('unreadItemCount', $this->unreadItemCount);
+        $writer->writeIntegerValue('childFolderCount', $this->getChildFolderCount());
+        $writer->writeCollectionOfObjectValues('childFolders', $this->getChildFolders());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isHidden', $this->getIsHidden());
+        $writer->writeCollectionOfObjectValues('messageRules', $this->getMessageRules());
+        $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
+        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
+        $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
+        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
+        $writer->writeIntegerValue('totalItemCount', $this->getTotalItemCount());
+        $writer->writeIntegerValue('unreadItemCount', $this->getUnreadItemCount());
     }
 
     /**
      * Sets the childFolderCount property value. The number of immediate child mailFolders in the current mailFolder.
      *  @param int|null $value Value to set for the childFolderCount property.
     */
-    public function setChildFolderCount(?int $value ): void {
-        $this->childFolderCount = $value;
+    public function setChildFolderCount(?int $value): void {
+        $this->getBackingStore()->set('childFolderCount', $value);
     }
 
     /**
      * Sets the childFolders property value. The collection of child folders in the mailFolder.
      *  @param array<MailFolder>|null $value Value to set for the childFolders property.
     */
-    public function setChildFolders(?array $value ): void {
-        $this->childFolders = $value;
+    public function setChildFolders(?array $value): void {
+        $this->getBackingStore()->set('childFolders', $value);
     }
 
     /**
      * Sets the displayName property value. The mailFolder's display name.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
      *  @param bool|null $value Value to set for the isHidden property.
     */
-    public function setIsHidden(?bool $value ): void {
-        $this->isHidden = $value;
+    public function setIsHidden(?bool $value): void {
+        $this->getBackingStore()->set('isHidden', $value);
     }
 
     /**
      * Sets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
      *  @param array<MessageRule>|null $value Value to set for the messageRules property.
     */
-    public function setMessageRules(?array $value ): void {
-        $this->messageRules = $value;
+    public function setMessageRules(?array $value): void {
+        $this->getBackingStore()->set('messageRules', $value);
     }
 
     /**
      * Sets the messages property value. The collection of messages in the mailFolder.
      *  @param array<Message>|null $value Value to set for the messages property.
     */
-    public function setMessages(?array $value ): void {
-        $this->messages = $value;
+    public function setMessages(?array $value): void {
+        $this->getBackingStore()->set('messages', $value);
     }
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
-    public function setMultiValueExtendedProperties(?array $value ): void {
-        $this->multiValueExtendedProperties = $value;
+    public function setMultiValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('multiValueExtendedProperties', $value);
     }
 
     /**
      * Sets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
      *  @param string|null $value Value to set for the parentFolderId property.
     */
-    public function setParentFolderId(?string $value ): void {
-        $this->parentFolderId = $value;
+    public function setParentFolderId(?string $value): void {
+        $this->getBackingStore()->set('parentFolderId', $value);
     }
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
-    public function setSingleValueExtendedProperties(?array $value ): void {
-        $this->singleValueExtendedProperties = $value;
+    public function setSingleValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('singleValueExtendedProperties', $value);
     }
 
     /**
      * Sets the totalItemCount property value. The number of items in the mailFolder.
      *  @param int|null $value Value to set for the totalItemCount property.
     */
-    public function setTotalItemCount(?int $value ): void {
-        $this->totalItemCount = $value;
+    public function setTotalItemCount(?int $value): void {
+        $this->getBackingStore()->set('totalItemCount', $value);
     }
 
     /**
      * Sets the unreadItemCount property value. The number of items in the mailFolder marked as unread.
      *  @param int|null $value Value to set for the unreadItemCount property.
     */
-    public function setUnreadItemCount(?int $value ): void {
-        $this->unreadItemCount = $value;
+    public function setUnreadItemCount(?int $value): void {
+        $this->getBackingStore()->set('unreadItemCount', $value);
     }
 
 }

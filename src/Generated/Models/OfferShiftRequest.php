@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OfferShiftRequest extends ScheduleChangeRequest implements Parsable 
 {
     /**
-     * @var DateTime|null $recipientActionDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $recipientActionDateTime = null;
-    
-    /**
-     * @var string|null $recipientActionMessage Custom message sent by recipient of the offer shift request.
-    */
-    private ?string $recipientActionMessage = null;
-    
-    /**
-     * @var string|null $recipientUserId User ID of the recipient of the offer shift request.
-    */
-    private ?string $recipientUserId = null;
-    
-    /**
-     * @var string|null $senderShiftId User ID of the sender of the offer shift request.
-    */
-    private ?string $senderShiftId = null;
-    
-    /**
      * Instantiates a new OfferShiftRequest and sets the default values.
     */
     public function __construct() {
@@ -72,7 +52,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return DateTime|null
     */
     public function getRecipientActionDateTime(): ?DateTime {
-        return $this->recipientActionDateTime;
+        return $this->getBackingStore()->get('recipientActionDateTime');
     }
 
     /**
@@ -80,7 +60,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getRecipientActionMessage(): ?string {
-        return $this->recipientActionMessage;
+        return $this->getBackingStore()->get('recipientActionMessage');
     }
 
     /**
@@ -88,7 +68,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getRecipientUserId(): ?string {
-        return $this->recipientUserId;
+        return $this->getBackingStore()->get('recipientUserId');
     }
 
     /**
@@ -96,7 +76,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getSenderShiftId(): ?string {
-        return $this->senderShiftId;
+        return $this->getBackingStore()->get('senderShiftId');
     }
 
     /**
@@ -105,41 +85,41 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('recipientActionMessage', $this->recipientActionMessage);
-        $writer->writeStringValue('recipientUserId', $this->recipientUserId);
-        $writer->writeStringValue('senderShiftId', $this->senderShiftId);
+        $writer->writeStringValue('recipientActionMessage', $this->getRecipientActionMessage());
+        $writer->writeStringValue('recipientUserId', $this->getRecipientUserId());
+        $writer->writeStringValue('senderShiftId', $this->getSenderShiftId());
     }
 
     /**
      * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the recipientActionDateTime property.
     */
-    public function setRecipientActionDateTime(?DateTime $value ): void {
-        $this->recipientActionDateTime = $value;
+    public function setRecipientActionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('recipientActionDateTime', $value);
     }
 
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
      *  @param string|null $value Value to set for the recipientActionMessage property.
     */
-    public function setRecipientActionMessage(?string $value ): void {
-        $this->recipientActionMessage = $value;
+    public function setRecipientActionMessage(?string $value): void {
+        $this->getBackingStore()->set('recipientActionMessage', $value);
     }
 
     /**
      * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
      *  @param string|null $value Value to set for the recipientUserId property.
     */
-    public function setRecipientUserId(?string $value ): void {
-        $this->recipientUserId = $value;
+    public function setRecipientUserId(?string $value): void {
+        $this->getBackingStore()->set('recipientUserId', $value);
     }
 
     /**
      * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
      *  @param string|null $value Value to set for the senderShiftId property.
     */
-    public function setSenderShiftId(?string $value ): void {
-        $this->senderShiftId = $value;
+    public function setSenderShiftId(?string $value): void {
+        $this->getBackingStore()->set('senderShiftId', $value);
     }
 
 }

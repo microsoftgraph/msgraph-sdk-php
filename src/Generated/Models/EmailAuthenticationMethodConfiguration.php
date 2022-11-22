@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var ExternalEmailOtpState|null $allowExternalIdToUseEmailOtp Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in October 2021.
-    */
-    private ?ExternalEmailOtpState $allowExternalIdToUseEmailOtp = null;
-    
-    /**
-     * @var array<AuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method.
-    */
-    private ?array $includeTargets = null;
-    
-    /**
      * Instantiates a new EmailAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return ExternalEmailOtpState|null
     */
     public function getAllowExternalIdToUseEmailOtp(): ?ExternalEmailOtpState {
-        return $this->allowExternalIdToUseEmailOtp;
+        return $this->getBackingStore()->get('allowExternalIdToUseEmailOtp');
     }
 
     /**
@@ -60,7 +50,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->includeTargets;
+        return $this->getBackingStore()->get('includeTargets');
     }
 
     /**
@@ -69,24 +59,24 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('allowExternalIdToUseEmailOtp', $this->allowExternalIdToUseEmailOtp);
-        $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
+        $writer->writeEnumValue('allowExternalIdToUseEmailOtp', $this->getAllowExternalIdToUseEmailOtp());
+        $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
     }
 
     /**
      * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in October 2021.
      *  @param ExternalEmailOtpState|null $value Value to set for the allowExternalIdToUseEmailOtp property.
     */
-    public function setAllowExternalIdToUseEmailOtp(?ExternalEmailOtpState $value ): void {
-        $this->allowExternalIdToUseEmailOtp = $value;
+    public function setAllowExternalIdToUseEmailOtp(?ExternalEmailOtpState $value): void {
+        $this->getBackingStore()->set('allowExternalIdToUseEmailOtp', $value);
     }
 
     /**
      * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
      *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
-    public function setIncludeTargets(?array $value ): void {
-        $this->includeTargets = $value;
+    public function setIncludeTargets(?array $value): void {
+        $this->getBackingStore()->set('includeTargets', $value);
     }
 
 }

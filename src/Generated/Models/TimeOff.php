@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOff extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var TimeOffItem|null $draftTimeOff The draft version of this timeOff that is viewable by managers. Required.
-    */
-    private ?TimeOffItem $draftTimeOff = null;
-    
-    /**
-     * @var TimeOffItem|null $sharedTimeOff The shared version of this timeOff that is viewable by both employees and managers. Required.
-    */
-    private ?TimeOffItem $sharedTimeOff = null;
-    
-    /**
-     * @var string|null $userId ID of the user assigned to the timeOff. Required.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new TimeOff and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return TimeOffItem|null
     */
     public function getDraftTimeOff(): ?TimeOffItem {
-        return $this->draftTimeOff;
+        return $this->getBackingStore()->get('draftTimeOff');
     }
 
     /**
@@ -66,7 +51,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return TimeOffItem|null
     */
     public function getSharedTimeOff(): ?TimeOffItem {
-        return $this->sharedTimeOff;
+        return $this->getBackingStore()->get('sharedTimeOff');
     }
 
     /**
@@ -74,7 +59,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -83,33 +68,33 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('draftTimeOff', $this->draftTimeOff);
-        $writer->writeObjectValue('sharedTimeOff', $this->sharedTimeOff);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeObjectValue('draftTimeOff', $this->getDraftTimeOff());
+        $writer->writeObjectValue('sharedTimeOff', $this->getSharedTimeOff());
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
      *  @param TimeOffItem|null $value Value to set for the draftTimeOff property.
     */
-    public function setDraftTimeOff(?TimeOffItem $value ): void {
-        $this->draftTimeOff = $value;
+    public function setDraftTimeOff(?TimeOffItem $value): void {
+        $this->getBackingStore()->set('draftTimeOff', $value);
     }
 
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
      *  @param TimeOffItem|null $value Value to set for the sharedTimeOff property.
     */
-    public function setSharedTimeOff(?TimeOffItem $value ): void {
-        $this->sharedTimeOff = $value;
+    public function setSharedTimeOff(?TimeOffItem $value): void {
+        $this->getBackingStore()->set('sharedTimeOff', $value);
     }
 
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

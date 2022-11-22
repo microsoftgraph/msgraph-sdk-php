@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * @var string|null $secretKey The secret key of the method. Always returns null.
-    */
-    private ?string $secretKey = null;
-    
-    /**
      * Instantiates a new SoftwareOathAuthenticationMethod and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements P
      * @return string|null
     */
     public function getSecretKey(): ?string {
-        return $this->secretKey;
+        return $this->getBackingStore()->get('secretKey');
     }
 
     /**
@@ -55,15 +50,15 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements P
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('secretKey', $this->secretKey);
+        $writer->writeStringValue('secretKey', $this->getSecretKey());
     }
 
     /**
      * Sets the secretKey property value. The secret key of the method. Always returns null.
      *  @param string|null $value Value to set for the secretKey property.
     */
-    public function setSecretKey(?string $value ): void {
-        $this->secretKey = $value;
+    public function setSecretKey(?string $value): void {
+        $this->getBackingStore()->set('secretKey', $value);
     }
 
 }

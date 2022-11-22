@@ -7,40 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class EducationFeedback implements AdditionalDataHolder, Parsable 
+class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var IdentitySet|null $feedbackBy User who created the feedback.
-    */
-    private ?IdentitySet $feedbackBy = null;
-    
-    /**
-     * @var DateTime|null $feedbackDateTime Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $feedbackDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var EducationItemBody|null $text Feedback.
-    */
-    private ?EducationItemBody $text = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new educationFeedback and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.educationFeedback');
     }
 
     /**
@@ -56,8 +39,16 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -65,7 +56,7 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getFeedbackBy(): ?IdentitySet {
-        return $this->feedbackBy;
+        return $this->getBackingStore()->get('feedbackBy');
     }
 
     /**
@@ -73,7 +64,7 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getFeedbackDateTime(): ?DateTime {
-        return $this->feedbackDateTime;
+        return $this->getBackingStore()->get('feedbackDateTime');
     }
 
     /**
@@ -95,7 +86,7 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -103,7 +94,7 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * @return EducationItemBody|null
     */
     public function getText(): ?EducationItemBody {
-        return $this->text;
+        return $this->getBackingStore()->get('text');
     }
 
     /**
@@ -111,51 +102,59 @@ class EducationFeedback implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('feedbackBy', $this->feedbackBy);
-        $writer->writeDateTimeValue('feedbackDateTime', $this->feedbackDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('text', $this->text);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('feedbackBy', $this->getFeedbackBy());
+        $writer->writeDateTimeValue('feedbackDateTime', $this->getFeedbackDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('text', $this->getText());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the feedbackBy property value. User who created the feedback.
      *  @param IdentitySet|null $value Value to set for the feedbackBy property.
     */
-    public function setFeedbackBy(?IdentitySet $value ): void {
-        $this->feedbackBy = $value;
+    public function setFeedbackBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('feedbackBy', $value);
     }
 
     /**
      * Sets the feedbackDateTime property value. Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the feedbackDateTime property.
     */
-    public function setFeedbackDateTime(?DateTime $value ): void {
-        $this->feedbackDateTime = $value;
+    public function setFeedbackDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('feedbackDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the text property value. Feedback.
      *  @param EducationItemBody|null $value Value to set for the text property.
     */
-    public function setText(?EducationItemBody $value ): void {
-        $this->text = $value;
+    public function setText(?EducationItemBody $value): void {
+        $this->getBackingStore()->set('text', $value);
     }
 
 }

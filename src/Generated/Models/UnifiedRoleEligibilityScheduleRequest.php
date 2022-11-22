@@ -9,86 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable 
 {
     /**
-     * @var UnifiedRoleScheduleRequestActions|null $action Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
-    */
-    private ?UnifiedRoleScheduleRequestActions $action = null;
-    
-    /**
-     * @var AppScope|null $appScope Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
-    */
-    private ?AppScope $appScope = null;
-    
-    /**
-     * @var string|null $appScopeId Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
-    */
-    private ?string $appScopeId = null;
-    
-    /**
-     * @var DirectoryObject|null $directoryScope The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
-    */
-    private ?DirectoryObject $directoryScope = null;
-    
-    /**
-     * @var string|null $directoryScopeId Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
-    */
-    private ?string $directoryScopeId = null;
-    
-    /**
-     * @var bool|null $isValidationOnly Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
-    */
-    private ?bool $isValidationOnly = null;
-    
-    /**
-     * @var string|null $justification A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
-    */
-    private ?string $justification = null;
-    
-    /**
-     * @var DirectoryObject|null $principal The principal that's getting a role eligibility through the request. Supports $expand.
-    */
-    private ?DirectoryObject $principal = null;
-    
-    /**
-     * @var string|null $principalId Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
-    */
-    private ?string $principalId = null;
-    
-    /**
-     * @var UnifiedRoleDefinition|null $roleDefinition Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
-    */
-    private ?UnifiedRoleDefinition $roleDefinition = null;
-    
-    /**
-     * @var string|null $roleDefinitionId Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
-    */
-    private ?string $roleDefinitionId = null;
-    
-    /**
-     * @var RequestSchedule|null $scheduleInfo The period of the role eligibility. Recurring schedules are currently unsupported.
-    */
-    private ?RequestSchedule $scheduleInfo = null;
-    
-    /**
-     * @var UnifiedRoleEligibilitySchedule|null $targetSchedule The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
-    */
-    private ?UnifiedRoleEligibilitySchedule $targetSchedule = null;
-    
-    /**
-     * @var string|null $targetScheduleId Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
-    */
-    private ?string $targetScheduleId = null;
-    
-    /**
-     * @var TicketInfo|null $ticketInfo Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
-    */
-    private ?TicketInfo $ticketInfo = null;
-    
-    /**
      * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.unifiedRoleEligibilityScheduleRequest');
     }
 
     /**
@@ -105,7 +29,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleScheduleRequestActions|null
     */
     public function getAction(): ?UnifiedRoleScheduleRequestActions {
-        return $this->action;
+        return $this->getBackingStore()->get('action');
     }
 
     /**
@@ -113,7 +37,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return AppScope|null
     */
     public function getAppScope(): ?AppScope {
-        return $this->appScope;
+        return $this->getBackingStore()->get('appScope');
     }
 
     /**
@@ -121,7 +45,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getAppScopeId(): ?string {
-        return $this->appScopeId;
+        return $this->getBackingStore()->get('appScopeId');
     }
 
     /**
@@ -129,7 +53,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return DirectoryObject|null
     */
     public function getDirectoryScope(): ?DirectoryObject {
-        return $this->directoryScope;
+        return $this->getBackingStore()->get('directoryScope');
     }
 
     /**
@@ -137,7 +61,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getDirectoryScopeId(): ?string {
-        return $this->directoryScopeId;
+        return $this->getBackingStore()->get('directoryScopeId');
     }
 
     /**
@@ -170,7 +94,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return bool|null
     */
     public function getIsValidationOnly(): ?bool {
-        return $this->isValidationOnly;
+        return $this->getBackingStore()->get('isValidationOnly');
     }
 
     /**
@@ -178,7 +102,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->justification;
+        return $this->getBackingStore()->get('justification');
     }
 
     /**
@@ -186,7 +110,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
-        return $this->principal;
+        return $this->getBackingStore()->get('principal');
     }
 
     /**
@@ -194,7 +118,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->principalId;
+        return $this->getBackingStore()->get('principalId');
     }
 
     /**
@@ -202,7 +126,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleDefinition|null
     */
     public function getRoleDefinition(): ?UnifiedRoleDefinition {
-        return $this->roleDefinition;
+        return $this->getBackingStore()->get('roleDefinition');
     }
 
     /**
@@ -210,7 +134,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
-        return $this->roleDefinitionId;
+        return $this->getBackingStore()->get('roleDefinitionId');
     }
 
     /**
@@ -218,7 +142,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return RequestSchedule|null
     */
     public function getScheduleInfo(): ?RequestSchedule {
-        return $this->scheduleInfo;
+        return $this->getBackingStore()->get('scheduleInfo');
     }
 
     /**
@@ -226,7 +150,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return UnifiedRoleEligibilitySchedule|null
     */
     public function getTargetSchedule(): ?UnifiedRoleEligibilitySchedule {
-        return $this->targetSchedule;
+        return $this->getBackingStore()->get('targetSchedule');
     }
 
     /**
@@ -234,7 +158,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return string|null
     */
     public function getTargetScheduleId(): ?string {
-        return $this->targetScheduleId;
+        return $this->getBackingStore()->get('targetScheduleId');
     }
 
     /**
@@ -242,7 +166,7 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
      * @return TicketInfo|null
     */
     public function getTicketInfo(): ?TicketInfo {
-        return $this->ticketInfo;
+        return $this->getBackingStore()->get('ticketInfo');
     }
 
     /**
@@ -251,141 +175,141 @@ class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('action', $this->action);
-        $writer->writeObjectValue('appScope', $this->appScope);
-        $writer->writeStringValue('appScopeId', $this->appScopeId);
-        $writer->writeObjectValue('directoryScope', $this->directoryScope);
-        $writer->writeStringValue('directoryScopeId', $this->directoryScopeId);
-        $writer->writeBooleanValue('isValidationOnly', $this->isValidationOnly);
-        $writer->writeStringValue('justification', $this->justification);
-        $writer->writeObjectValue('principal', $this->principal);
-        $writer->writeStringValue('principalId', $this->principalId);
-        $writer->writeObjectValue('roleDefinition', $this->roleDefinition);
-        $writer->writeStringValue('roleDefinitionId', $this->roleDefinitionId);
-        $writer->writeObjectValue('scheduleInfo', $this->scheduleInfo);
-        $writer->writeObjectValue('targetSchedule', $this->targetSchedule);
-        $writer->writeStringValue('targetScheduleId', $this->targetScheduleId);
-        $writer->writeObjectValue('ticketInfo', $this->ticketInfo);
+        $writer->writeEnumValue('action', $this->getAction());
+        $writer->writeObjectValue('appScope', $this->getAppScope());
+        $writer->writeStringValue('appScopeId', $this->getAppScopeId());
+        $writer->writeObjectValue('directoryScope', $this->getDirectoryScope());
+        $writer->writeStringValue('directoryScopeId', $this->getDirectoryScopeId());
+        $writer->writeBooleanValue('isValidationOnly', $this->getIsValidationOnly());
+        $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeObjectValue('principal', $this->getPrincipal());
+        $writer->writeStringValue('principalId', $this->getPrincipalId());
+        $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());
+        $writer->writeStringValue('roleDefinitionId', $this->getRoleDefinitionId());
+        $writer->writeObjectValue('scheduleInfo', $this->getScheduleInfo());
+        $writer->writeObjectValue('targetSchedule', $this->getTargetSchedule());
+        $writer->writeStringValue('targetScheduleId', $this->getTargetScheduleId());
+        $writer->writeObjectValue('ticketInfo', $this->getTicketInfo());
     }
 
     /**
      * Sets the action property value. Represents the type of operation on the role eligibility request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign eligible roles to principals.adminRemove: For administrators to remove eligible roles from principals. adminUpdate: For administrators to change existing role eligibilities.adminExtend: For administrators to extend expiring role eligibilities.adminRenew: For administrators to renew expired eligibilities.selfActivate: For users to activate their assignments.selfDeactivate: For users to deactivate their active assignments.selfExtend: For users to request to extend their expiring assignments.selfRenew: For users to request to renew their expired assignments.
      *  @param UnifiedRoleScheduleRequestActions|null $value Value to set for the action property.
     */
-    public function setAction(?UnifiedRoleScheduleRequestActions $value ): void {
-        $this->action = $value;
+    public function setAction(?UnifiedRoleScheduleRequestActions $value): void {
+        $this->getBackingStore()->set('action', $value);
     }
 
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      *  @param AppScope|null $value Value to set for the appScope property.
     */
-    public function setAppScope(?AppScope $value ): void {
-        $this->appScope = $value;
+    public function setAppScope(?AppScope $value): void {
+        $this->getBackingStore()->set('appScope', $value);
     }
 
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
      *  @param string|null $value Value to set for the appScopeId property.
     */
-    public function setAppScopeId(?string $value ): void {
-        $this->appScopeId = $value;
+    public function setAppScopeId(?string $value): void {
+        $this->getBackingStore()->set('appScopeId', $value);
     }
 
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      *  @param DirectoryObject|null $value Value to set for the directoryScope property.
     */
-    public function setDirectoryScope(?DirectoryObject $value ): void {
-        $this->directoryScope = $value;
+    public function setDirectoryScope(?DirectoryObject $value): void {
+        $this->getBackingStore()->set('directoryScope', $value);
     }
 
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
      *  @param string|null $value Value to set for the directoryScopeId property.
     */
-    public function setDirectoryScopeId(?string $value ): void {
-        $this->directoryScopeId = $value;
+    public function setDirectoryScopeId(?string $value): void {
+        $this->getBackingStore()->set('directoryScopeId', $value);
     }
 
     /**
      * Sets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      *  @param bool|null $value Value to set for the isValidationOnly property.
     */
-    public function setIsValidationOnly(?bool $value ): void {
-        $this->isValidationOnly = $value;
+    public function setIsValidationOnly(?bool $value): void {
+        $this->getBackingStore()->set('isValidationOnly', $value);
     }
 
     /**
      * Sets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
      *  @param string|null $value Value to set for the justification property.
     */
-    public function setJustification(?string $value ): void {
-        $this->justification = $value;
+    public function setJustification(?string $value): void {
+        $this->getBackingStore()->set('justification', $value);
     }
 
     /**
      * Sets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
      *  @param DirectoryObject|null $value Value to set for the principal property.
     */
-    public function setPrincipal(?DirectoryObject $value ): void {
-        $this->principal = $value;
+    public function setPrincipal(?DirectoryObject $value): void {
+        $this->getBackingStore()->set('principal', $value);
     }
 
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals.Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the principalId property.
     */
-    public function setPrincipalId(?string $value ): void {
-        $this->principalId = $value;
+    public function setPrincipalId(?string $value): void {
+        $this->getBackingStore()->set('principalId', $value);
     }
 
     /**
      * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      *  @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
     */
-    public function setRoleDefinition(?UnifiedRoleDefinition $value ): void {
-        $this->roleDefinition = $value;
+    public function setRoleDefinition(?UnifiedRoleDefinition $value): void {
+        $this->getBackingStore()->set('roleDefinition', $value);
     }
 
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the roleDefinitionId property.
     */
-    public function setRoleDefinitionId(?string $value ): void {
-        $this->roleDefinitionId = $value;
+    public function setRoleDefinitionId(?string $value): void {
+        $this->getBackingStore()->set('roleDefinitionId', $value);
     }
 
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
      *  @param RequestSchedule|null $value Value to set for the scheduleInfo property.
     */
-    public function setScheduleInfo(?RequestSchedule $value ): void {
-        $this->scheduleInfo = $value;
+    public function setScheduleInfo(?RequestSchedule $value): void {
+        $this->getBackingStore()->set('scheduleInfo', $value);
     }
 
     /**
      * Sets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
      *  @param UnifiedRoleEligibilitySchedule|null $value Value to set for the targetSchedule property.
     */
-    public function setTargetSchedule(?UnifiedRoleEligibilitySchedule $value ): void {
-        $this->targetSchedule = $value;
+    public function setTargetSchedule(?UnifiedRoleEligibilitySchedule $value): void {
+        $this->getBackingStore()->set('targetSchedule', $value);
     }
 
     /**
      * Sets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
      *  @param string|null $value Value to set for the targetScheduleId property.
     */
-    public function setTargetScheduleId(?string $value ): void {
-        $this->targetScheduleId = $value;
+    public function setTargetScheduleId(?string $value): void {
+        $this->getBackingStore()->set('targetScheduleId', $value);
     }
 
     /**
      * Sets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
      *  @param TicketInfo|null $value Value to set for the ticketInfo property.
     */
-    public function setTicketInfo(?TicketInfo $value ): void {
-        $this->ticketInfo = $value;
+    public function setTicketInfo(?TicketInfo $value): void {
+        $this->getBackingStore()->set('ticketInfo', $value);
     }
 
 }

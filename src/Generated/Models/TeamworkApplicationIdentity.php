@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkApplicationIdentity extends Identity implements Parsable 
 {
     /**
-     * @var TeamworkApplicationIdentityType|null $applicationIdentityType Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-    */
-    private ?TeamworkApplicationIdentityType $applicationIdentityType = null;
-    
-    /**
      * Instantiates a new TeamworkApplicationIdentity and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
      * @return TeamworkApplicationIdentityType|null
     */
     public function getApplicationIdentityType(): ?TeamworkApplicationIdentityType {
-        return $this->applicationIdentityType;
+        return $this->getBackingStore()->get('applicationIdentityType');
     }
 
     /**
@@ -55,15 +50,15 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('applicationIdentityType', $this->applicationIdentityType);
+        $writer->writeEnumValue('applicationIdentityType', $this->getApplicationIdentityType());
     }
 
     /**
      * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      *  @param TeamworkApplicationIdentityType|null $value Value to set for the applicationIdentityType property.
     */
-    public function setApplicationIdentityType(?TeamworkApplicationIdentityType $value ): void {
-        $this->applicationIdentityType = $value;
+    public function setApplicationIdentityType(?TeamworkApplicationIdentityType $value): void {
+        $this->getBackingStore()->set('applicationIdentityType', $value);
     }
 
 }

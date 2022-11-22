@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var bool|null $allowSampleSharing Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
-    */
-    private ?bool $allowSampleSharing = null;
-    
-    /**
-     * @var bool|null $enableExpeditedTelemetryReporting Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
-    */
-    private ?bool $enableExpeditedTelemetryReporting = null;
-    
-    /**
      * Instantiates a new WindowsDefenderAdvancedThreatProtectionConfiguration and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
      * @return bool|null
     */
     public function getAllowSampleSharing(): ?bool {
-        return $this->allowSampleSharing;
+        return $this->getBackingStore()->get('allowSampleSharing');
     }
 
     /**
@@ -48,7 +38,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
      * @return bool|null
     */
     public function getEnableExpeditedTelemetryReporting(): ?bool {
-        return $this->enableExpeditedTelemetryReporting;
+        return $this->getBackingStore()->get('enableExpeditedTelemetryReporting');
     }
 
     /**
@@ -69,24 +59,24 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('allowSampleSharing', $this->allowSampleSharing);
-        $writer->writeBooleanValue('enableExpeditedTelemetryReporting', $this->enableExpeditedTelemetryReporting);
+        $writer->writeBooleanValue('allowSampleSharing', $this->getAllowSampleSharing());
+        $writer->writeBooleanValue('enableExpeditedTelemetryReporting', $this->getEnableExpeditedTelemetryReporting());
     }
 
     /**
      * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      *  @param bool|null $value Value to set for the allowSampleSharing property.
     */
-    public function setAllowSampleSharing(?bool $value ): void {
-        $this->allowSampleSharing = $value;
+    public function setAllowSampleSharing(?bool $value): void {
+        $this->getBackingStore()->set('allowSampleSharing', $value);
     }
 
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      *  @param bool|null $value Value to set for the enableExpeditedTelemetryReporting property.
     */
-    public function setEnableExpeditedTelemetryReporting(?bool $value ): void {
-        $this->enableExpeditedTelemetryReporting = $value;
+    public function setEnableExpeditedTelemetryReporting(?bool $value): void {
+        $this->getBackingStore()->set('enableExpeditedTelemetryReporting', $value);
     }
 
 }

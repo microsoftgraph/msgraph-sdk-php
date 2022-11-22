@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * @var Win32LobAppDeliveryOptimizationPriority|null $deliveryOptimizationPriority Contains value for delivery optimization priority.
-    */
-    private ?Win32LobAppDeliveryOptimizationPriority $deliveryOptimizationPriority = null;
-    
-    /**
-     * @var MobileAppInstallTimeSettings|null $installTimeSettings The install time settings to apply for this app assignment.
-    */
-    private ?MobileAppInstallTimeSettings $installTimeSettings = null;
-    
-    /**
-     * @var Win32LobAppNotification|null $notifications Contains value for notification status.
-    */
-    private ?Win32LobAppNotification $notifications = null;
-    
-    /**
-     * @var Win32LobAppRestartSettings|null $restartSettings The reboot settings to apply for this app assignment.
-    */
-    private ?Win32LobAppRestartSettings $restartSettings = null;
-    
-    /**
      * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppDeliveryOptimizationPriority|null
     */
     public function getDeliveryOptimizationPriority(): ?Win32LobAppDeliveryOptimizationPriority {
-        return $this->deliveryOptimizationPriority;
+        return $this->getBackingStore()->get('deliveryOptimizationPriority');
     }
 
     /**
@@ -72,7 +52,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return MobileAppInstallTimeSettings|null
     */
     public function getInstallTimeSettings(): ?MobileAppInstallTimeSettings {
-        return $this->installTimeSettings;
+        return $this->getBackingStore()->get('installTimeSettings');
     }
 
     /**
@@ -80,7 +60,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppNotification|null
     */
     public function getNotifications(): ?Win32LobAppNotification {
-        return $this->notifications;
+        return $this->getBackingStore()->get('notifications');
     }
 
     /**
@@ -88,7 +68,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppRestartSettings|null
     */
     public function getRestartSettings(): ?Win32LobAppRestartSettings {
-        return $this->restartSettings;
+        return $this->getBackingStore()->get('restartSettings');
     }
 
     /**
@@ -97,42 +77,42 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('deliveryOptimizationPriority', $this->deliveryOptimizationPriority);
-        $writer->writeObjectValue('installTimeSettings', $this->installTimeSettings);
-        $writer->writeEnumValue('notifications', $this->notifications);
-        $writer->writeObjectValue('restartSettings', $this->restartSettings);
+        $writer->writeEnumValue('deliveryOptimizationPriority', $this->getDeliveryOptimizationPriority());
+        $writer->writeObjectValue('installTimeSettings', $this->getInstallTimeSettings());
+        $writer->writeEnumValue('notifications', $this->getNotifications());
+        $writer->writeObjectValue('restartSettings', $this->getRestartSettings());
     }
 
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      *  @param Win32LobAppDeliveryOptimizationPriority|null $value Value to set for the deliveryOptimizationPriority property.
     */
-    public function setDeliveryOptimizationPriority(?Win32LobAppDeliveryOptimizationPriority $value ): void {
-        $this->deliveryOptimizationPriority = $value;
+    public function setDeliveryOptimizationPriority(?Win32LobAppDeliveryOptimizationPriority $value): void {
+        $this->getBackingStore()->set('deliveryOptimizationPriority', $value);
     }
 
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
      *  @param MobileAppInstallTimeSettings|null $value Value to set for the installTimeSettings property.
     */
-    public function setInstallTimeSettings(?MobileAppInstallTimeSettings $value ): void {
-        $this->installTimeSettings = $value;
+    public function setInstallTimeSettings(?MobileAppInstallTimeSettings $value): void {
+        $this->getBackingStore()->set('installTimeSettings', $value);
     }
 
     /**
      * Sets the notifications property value. Contains value for notification status.
      *  @param Win32LobAppNotification|null $value Value to set for the notifications property.
     */
-    public function setNotifications(?Win32LobAppNotification $value ): void {
-        $this->notifications = $value;
+    public function setNotifications(?Win32LobAppNotification $value): void {
+        $this->getBackingStore()->set('notifications', $value);
     }
 
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
      *  @param Win32LobAppRestartSettings|null $value Value to set for the restartSettings property.
     */
-    public function setRestartSettings(?Win32LobAppRestartSettings $value ): void {
-        $this->restartSettings = $value;
+    public function setRestartSettings(?Win32LobAppRestartSettings $value): void {
+        $this->getBackingStore()->set('restartSettings', $value);
     }
 
 }

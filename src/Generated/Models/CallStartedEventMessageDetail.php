@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallStartedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var TeamworkCallEventType|null $callEventType Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-    */
-    private ?TeamworkCallEventType $callEventType = null;
-    
-    /**
-     * @var string|null $callId Unique identifier of the call.
-    */
-    private ?string $callId = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new CallStartedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return TeamworkCallEventType|null
     */
     public function getCallEventType(): ?TeamworkCallEventType {
-        return $this->callEventType;
+        return $this->getBackingStore()->get('callEventType');
     }
 
     /**
@@ -53,7 +38,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->callId;
+        return $this->getBackingStore()->get('callId');
     }
 
     /**
@@ -74,7 +59,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -83,33 +68,33 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('callEventType', $this->callEventType);
-        $writer->writeStringValue('callId', $this->callId);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeEnumValue('callEventType', $this->getCallEventType());
+        $writer->writeStringValue('callId', $this->getCallId());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      *  @param TeamworkCallEventType|null $value Value to set for the callEventType property.
     */
-    public function setCallEventType(?TeamworkCallEventType $value ): void {
-        $this->callEventType = $value;
+    public function setCallEventType(?TeamworkCallEventType $value): void {
+        $this->getBackingStore()->set('callEventType', $value);
     }
 
     /**
      * Sets the callId property value. Unique identifier of the call.
      *  @param string|null $value Value to set for the callId property.
     */
-    public function setCallId(?string $value ): void {
-        $this->callId = $value;
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

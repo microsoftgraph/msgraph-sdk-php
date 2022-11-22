@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OutlookItem extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $categories The categories associated with the item
-    */
-    private ?array $categories = null;
-    
-    /**
-     * @var string|null $changeKey Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-    */
-    private ?string $changeKey = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
      * Instantiates a new outlookItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.outlookItem');
     }
 
     /**
@@ -65,7 +44,7 @@ class OutlookItem extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getCategories(): ?array {
-        return $this->categories;
+        return $this->getBackingStore()->get('categories');
     }
 
     /**
@@ -73,7 +52,7 @@ class OutlookItem extends Entity implements Parsable
      * @return string|null
     */
     public function getChangeKey(): ?string {
-        return $this->changeKey;
+        return $this->getBackingStore()->get('changeKey');
     }
 
     /**
@@ -81,7 +60,7 @@ class OutlookItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -103,7 +82,7 @@ class OutlookItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -112,42 +91,42 @@ class OutlookItem extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('categories', $this->categories);
-        $writer->writeStringValue('changeKey', $this->changeKey);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
+        $writer->writeCollectionOfPrimitiveValues('categories', $this->getCategories());
+        $writer->writeStringValue('changeKey', $this->getChangeKey());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
     }
 
     /**
      * Sets the categories property value. The categories associated with the item
      *  @param array<string>|null $value Value to set for the categories property.
     */
-    public function setCategories(?array $value ): void {
-        $this->categories = $value;
+    public function setCategories(?array $value): void {
+        $this->getBackingStore()->set('categories', $value);
     }
 
     /**
      * Sets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      *  @param string|null $value Value to set for the changeKey property.
     */
-    public function setChangeKey(?string $value ): void {
-        $this->changeKey = $value;
+    public function setChangeKey(?string $value): void {
+        $this->getBackingStore()->set('changeKey', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
 }

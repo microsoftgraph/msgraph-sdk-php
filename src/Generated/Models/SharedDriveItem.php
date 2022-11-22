@@ -9,44 +9,9 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharedDriveItem extends BaseItem implements Parsable 
 {
     /**
-     * @var DriveItem|null $driveItem Used to access the underlying driveItem
-    */
-    private ?DriveItem $driveItem = null;
-    
-    /**
      * @var EscapedList|null $escapedList Used to access the underlying list
     */
-    private ?EscapedList $escapedList = null;
-    
-    /**
-     * @var array<DriveItem>|null $items All driveItems contained in the sharing root. This collection cannot be enumerated.
-    */
-    private ?array $items = null;
-    
-    /**
-     * @var ListItem|null $listItem Used to access the underlying listItem
-    */
-    private ?ListItem $listItem = null;
-    
-    /**
-     * @var IdentitySet|null $owner Information about the owner of the shared item being referenced.
-    */
-    private ?IdentitySet $owner = null;
-    
-    /**
-     * @var Permission|null $permission Used to access the permission representing the underlying sharing link
-    */
-    private ?Permission $permission = null;
-    
-    /**
-     * @var DriveItem|null $root Used to access the underlying driveItem. Deprecated -- use driveItem instead.
-    */
-    private ?DriveItem $root = null;
-    
-    /**
-     * @var Site|null $site Used to access the underlying site
-    */
-    private ?Site $site = null;
+    public ?EscapedList $escapedList = null;
     
     /**
      * Instantiates a new SharedDriveItem and sets the default values.
@@ -70,7 +35,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->driveItem;
+        return $this->getBackingStore()->get('driveItem');
     }
 
     /**
@@ -96,7 +61,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getItems(): ?array {
-        return $this->items;
+        return $this->getBackingStore()->get('items');
     }
 
     /**
@@ -104,7 +69,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return EscapedList|null
     */
     public function getList(): ?EscapedList {
-        return $this->escapedList;
+        return $this->getBackingStore()->get('escapedList');
     }
 
     /**
@@ -112,7 +77,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return ListItem|null
     */
     public function getListItem(): ?ListItem {
-        return $this->listItem;
+        return $this->getBackingStore()->get('listItem');
     }
 
     /**
@@ -120,7 +85,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return IdentitySet|null
     */
     public function getOwner(): ?IdentitySet {
-        return $this->owner;
+        return $this->getBackingStore()->get('owner');
     }
 
     /**
@@ -128,7 +93,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return Permission|null
     */
     public function getPermission(): ?Permission {
-        return $this->permission;
+        return $this->getBackingStore()->get('permission');
     }
 
     /**
@@ -136,7 +101,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getRoot(): ?DriveItem {
-        return $this->root;
+        return $this->getBackingStore()->get('root');
     }
 
     /**
@@ -144,7 +109,7 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return Site|null
     */
     public function getSite(): ?Site {
-        return $this->site;
+        return $this->getBackingStore()->get('site');
     }
 
     /**
@@ -153,78 +118,78 @@ class SharedDriveItem extends BaseItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('driveItem', $this->driveItem);
-        $writer->writeObjectValue('list', $this->escapedList);
-        $writer->writeCollectionOfObjectValues('items', $this->items);
-        $writer->writeObjectValue('listItem', $this->listItem);
-        $writer->writeObjectValue('owner', $this->owner);
-        $writer->writeObjectValue('permission', $this->permission);
-        $writer->writeObjectValue('root', $this->root);
-        $writer->writeObjectValue('site', $this->site);
+        $writer->writeObjectValue('driveItem', $this->getDriveItem());
+        $writer->writeObjectValue('list', $this->getList());
+        $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeObjectValue('listItem', $this->getListItem());
+        $writer->writeObjectValue('owner', $this->getOwner());
+        $writer->writeObjectValue('permission', $this->getPermission());
+        $writer->writeObjectValue('root', $this->getRoot());
+        $writer->writeObjectValue('site', $this->getSite());
     }
 
     /**
      * Sets the driveItem property value. Used to access the underlying driveItem
      *  @param DriveItem|null $value Value to set for the driveItem property.
     */
-    public function setDriveItem(?DriveItem $value ): void {
-        $this->driveItem = $value;
+    public function setDriveItem(?DriveItem $value): void {
+        $this->getBackingStore()->set('driveItem', $value);
     }
 
     /**
      * Sets the items property value. All driveItems contained in the sharing root. This collection cannot be enumerated.
      *  @param array<DriveItem>|null $value Value to set for the items property.
     */
-    public function setItems(?array $value ): void {
-        $this->items = $value;
+    public function setItems(?array $value): void {
+        $this->getBackingStore()->set('items', $value);
     }
 
     /**
      * Sets the list property value. Used to access the underlying list
      *  @param EscapedList|null $value Value to set for the EscapedList property.
     */
-    public function setList(?EscapedList $value ): void {
-        $this->escapedList = $value;
+    public function setList(?EscapedList $value): void {
+        $this->getBackingStore()->set('escapedList', $value);
     }
 
     /**
      * Sets the listItem property value. Used to access the underlying listItem
      *  @param ListItem|null $value Value to set for the listItem property.
     */
-    public function setListItem(?ListItem $value ): void {
-        $this->listItem = $value;
+    public function setListItem(?ListItem $value): void {
+        $this->getBackingStore()->set('listItem', $value);
     }
 
     /**
      * Sets the owner property value. Information about the owner of the shared item being referenced.
      *  @param IdentitySet|null $value Value to set for the owner property.
     */
-    public function setOwner(?IdentitySet $value ): void {
-        $this->owner = $value;
+    public function setOwner(?IdentitySet $value): void {
+        $this->getBackingStore()->set('owner', $value);
     }
 
     /**
      * Sets the permission property value. Used to access the permission representing the underlying sharing link
      *  @param Permission|null $value Value to set for the permission property.
     */
-    public function setPermission(?Permission $value ): void {
-        $this->permission = $value;
+    public function setPermission(?Permission $value): void {
+        $this->getBackingStore()->set('permission', $value);
     }
 
     /**
      * Sets the root property value. Used to access the underlying driveItem. Deprecated -- use driveItem instead.
      *  @param DriveItem|null $value Value to set for the root property.
     */
-    public function setRoot(?DriveItem $value ): void {
-        $this->root = $value;
+    public function setRoot(?DriveItem $value): void {
+        $this->getBackingStore()->set('root', $value);
     }
 
     /**
      * Sets the site property value. Used to access the underlying site
      *  @param Site|null $value Value to set for the site property.
     */
-    public function setSite(?Site $value ): void {
-        $this->site = $value;
+    public function setSite(?Site $value): void {
+        $this->getBackingStore()->set('site', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable 
 {
     /**
-     * @var array<IosHomeScreenFolderPage>|null $pages Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-    */
-    private ?array $pages = null;
-    
-    /**
      * Instantiates a new IosHomeScreenFolder and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
      * @return array<IosHomeScreenFolderPage>|null
     */
     public function getPages(): ?array {
-        return $this->pages;
+        return $this->getBackingStore()->get('pages');
     }
 
     /**
@@ -55,15 +50,15 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('pages', $this->pages);
+        $writer->writeCollectionOfObjectValues('pages', $this->getPages());
     }
 
     /**
      * Sets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
      *  @param array<IosHomeScreenFolderPage>|null $value Value to set for the pages property.
     */
-    public function setPages(?array $value ): void {
-        $this->pages = $value;
+    public function setPages(?array $value): void {
+        $this->getBackingStore()->set('pages', $value);
     }
 
 }

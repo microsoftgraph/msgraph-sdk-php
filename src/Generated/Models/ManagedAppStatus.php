@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppStatus extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName Friendly name of the status report.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $version Version of the entity.
-    */
-    private ?string $version = null;
-    
-    /**
      * Instantiates a new managedAppStatus and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.managedAppStatus');
     }
 
     /**
@@ -47,7 +36,7 @@ class ManagedAppStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -67,7 +56,7 @@ class ManagedAppStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -76,24 +65,24 @@ class ManagedAppStatus extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('version', $this->version);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('version', $this->getVersion());
     }
 
     /**
      * Sets the displayName property value. Friendly name of the status report.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the version property value. Version of the entity.
      *  @param string|null $value Value to set for the version property.
     */
-    public function setVersion(?string $value ): void {
-        $this->version = $value;
+    public function setVersion(?string $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

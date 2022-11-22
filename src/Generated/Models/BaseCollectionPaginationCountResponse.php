@@ -6,28 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Parsable 
+class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $odataCount The OdataCount property
-    */
-    private ?int $odataCount = null;
-    
-    /**
-     * @var string|null $odataNextLink The OdataNextLink property
-    */
-    private ?string $odataNextLink = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new BaseCollectionPaginationCountResponse and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -44,8 +38,16 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -65,7 +67,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Par
      * @return int|null
     */
     public function getOdataCount(): ?int {
-        return $this->odataCount;
+        return $this->getBackingStore()->get('odataCount');
     }
 
     /**
@@ -73,7 +75,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getOdataNextLink(): ?string {
-        return $this->odataNextLink;
+        return $this->getBackingStore()->get('odataNextLink');
     }
 
     /**
@@ -81,33 +83,41 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('@odata.count', $this->odataCount);
-        $writer->writeStringValue('@odata.nextLink', $this->odataNextLink);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('@odata.count', $this->getOdataCount());
+        $writer->writeStringValue('@odata.nextLink', $this->getOdataNextLink());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.count property value. The OdataCount property
      *  @param int|null $value Value to set for the OdataCount property.
     */
-    public function setOdataCount(?int $value ): void {
-        $this->odataCount = $value;
+    public function setOdataCount(?int $value): void {
+        $this->getBackingStore()->set('odataCount', $value);
     }
 
     /**
      * Sets the @odata.nextLink property value. The OdataNextLink property
      *  @param string|null $value Value to set for the OdataNextLink property.
     */
-    public function setOdataNextLink(?string $value ): void {
-        $this->odataNextLink = $value;
+    public function setOdataNextLink(?string $value): void {
+        $this->getBackingStore()->set('odataNextLink', $value);
     }
 
 }

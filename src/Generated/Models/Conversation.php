@@ -10,41 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Conversation extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $hasAttachments Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
-    */
-    private ?bool $hasAttachments = null;
-    
-    /**
-     * @var DateTime|null $lastDeliveredDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $lastDeliveredDateTime = null;
-    
-    /**
-     * @var string|null $preview A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
-    */
-    private ?string $preview = null;
-    
-    /**
-     * @var array<ConversationThread>|null $threads A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
-    */
-    private ?array $threads = null;
-    
-    /**
-     * @var string|null $topic The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-    */
-    private ?string $topic = null;
-    
-    /**
-     * @var array<string>|null $uniqueSenders All the users that sent a message to this Conversation.
-    */
-    private ?array $uniqueSenders = null;
-    
-    /**
      * Instantiates a new conversation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.conversation');
     }
 
     /**
@@ -77,7 +46,7 @@ class Conversation extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->hasAttachments;
+        return $this->getBackingStore()->get('hasAttachments');
     }
 
     /**
@@ -85,7 +54,7 @@ class Conversation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
-        return $this->lastDeliveredDateTime;
+        return $this->getBackingStore()->get('lastDeliveredDateTime');
     }
 
     /**
@@ -93,7 +62,7 @@ class Conversation extends Entity implements Parsable
      * @return string|null
     */
     public function getPreview(): ?string {
-        return $this->preview;
+        return $this->getBackingStore()->get('preview');
     }
 
     /**
@@ -101,7 +70,7 @@ class Conversation extends Entity implements Parsable
      * @return array<ConversationThread>|null
     */
     public function getThreads(): ?array {
-        return $this->threads;
+        return $this->getBackingStore()->get('threads');
     }
 
     /**
@@ -109,7 +78,7 @@ class Conversation extends Entity implements Parsable
      * @return string|null
     */
     public function getTopic(): ?string {
-        return $this->topic;
+        return $this->getBackingStore()->get('topic');
     }
 
     /**
@@ -117,7 +86,7 @@ class Conversation extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getUniqueSenders(): ?array {
-        return $this->uniqueSenders;
+        return $this->getBackingStore()->get('uniqueSenders');
     }
 
     /**
@@ -126,60 +95,60 @@ class Conversation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('hasAttachments', $this->hasAttachments);
-        $writer->writeDateTimeValue('lastDeliveredDateTime', $this->lastDeliveredDateTime);
-        $writer->writeStringValue('preview', $this->preview);
-        $writer->writeCollectionOfObjectValues('threads', $this->threads);
-        $writer->writeStringValue('topic', $this->topic);
-        $writer->writeCollectionOfPrimitiveValues('uniqueSenders', $this->uniqueSenders);
+        $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
+        $writer->writeDateTimeValue('lastDeliveredDateTime', $this->getLastDeliveredDateTime());
+        $writer->writeStringValue('preview', $this->getPreview());
+        $writer->writeCollectionOfObjectValues('threads', $this->getThreads());
+        $writer->writeStringValue('topic', $this->getTopic());
+        $writer->writeCollectionOfPrimitiveValues('uniqueSenders', $this->getUniqueSenders());
     }
 
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
      *  @param bool|null $value Value to set for the hasAttachments property.
     */
-    public function setHasAttachments(?bool $value ): void {
-        $this->hasAttachments = $value;
+    public function setHasAttachments(?bool $value): void {
+        $this->getBackingStore()->set('hasAttachments', $value);
     }
 
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
-    public function setLastDeliveredDateTime(?DateTime $value ): void {
-        $this->lastDeliveredDateTime = $value;
+    public function setLastDeliveredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastDeliveredDateTime', $value);
     }
 
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      *  @param string|null $value Value to set for the preview property.
     */
-    public function setPreview(?string $value ): void {
-        $this->preview = $value;
+    public function setPreview(?string $value): void {
+        $this->getBackingStore()->set('preview', $value);
     }
 
     /**
      * Sets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      *  @param array<ConversationThread>|null $value Value to set for the threads property.
     */
-    public function setThreads(?array $value ): void {
-        $this->threads = $value;
+    public function setThreads(?array $value): void {
+        $this->getBackingStore()->set('threads', $value);
     }
 
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      *  @param string|null $value Value to set for the topic property.
     */
-    public function setTopic(?string $value ): void {
-        $this->topic = $value;
+    public function setTopic(?string $value): void {
+        $this->getBackingStore()->set('topic', $value);
     }
 
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this Conversation.
      *  @param array<string>|null $value Value to set for the uniqueSenders property.
     */
-    public function setUniqueSenders(?array $value ): void {
-        $this->uniqueSenders = $value;
+    public function setUniqueSenders(?array $value): void {
+        $this->getBackingStore()->set('uniqueSenders', $value);
     }
 
 }

@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxisTitleFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartFont|null $font Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-    */
-    private ?WorkbookChartFont $font = null;
-    
-    /**
      * Instantiates a new workbookChartAxisTitleFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartAxisTitleFormat');
     }
 
     /**
@@ -46,7 +40,7 @@ class WorkbookChartAxisTitleFormat extends Entity implements Parsable
      * @return WorkbookChartFont|null
     */
     public function getFont(): ?WorkbookChartFont {
-        return $this->font;
+        return $this->getBackingStore()->get('font');
     }
 
     /**
@@ -55,15 +49,15 @@ class WorkbookChartAxisTitleFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('font', $this->font);
+        $writer->writeObjectValue('font', $this->getFont());
     }
 
     /**
      * Sets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
      *  @param WorkbookChartFont|null $value Value to set for the font property.
     */
-    public function setFont(?WorkbookChartFont $value ): void {
-        $this->font = $value;
+    public function setFont(?WorkbookChartFont $value): void {
+        $this->getBackingStore()->set('font', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipient implements Parsable 
 {
     /**
-     * @var string|null $userId User ID of the user to whom the submission is assigned.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new EducationSubmissionIndividualRecipient and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the userId property value. User ID of the user to whom the submission is assigned.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

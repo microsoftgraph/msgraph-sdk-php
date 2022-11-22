@@ -9,71 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChart extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartAxes|null $axes Represents chart axes. Read-only.
-    */
-    private ?WorkbookChartAxes $axes = null;
-    
-    /**
-     * @var WorkbookChartDataLabels|null $dataLabels Represents the datalabels on the chart. Read-only.
-    */
-    private ?WorkbookChartDataLabels $dataLabels = null;
-    
-    /**
-     * @var WorkbookChartAreaFormat|null $format Encapsulates the format properties for the chart area. Read-only.
-    */
-    private ?WorkbookChartAreaFormat $format = null;
-    
-    /**
-     * @var float|null $height Represents the height, in points, of the chart object.
-    */
-    private ?float $height = null;
-    
-    /**
-     * @var float|null $left The distance, in points, from the left side of the chart to the worksheet origin.
-    */
-    private ?float $left = null;
-    
-    /**
-     * @var WorkbookChartLegend|null $legend Represents the legend for the chart. Read-only.
-    */
-    private ?WorkbookChartLegend $legend = null;
-    
-    /**
-     * @var string|null $name Represents the name of a chart object.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<WorkbookChartSeries>|null $series Represents either a single series or collection of series in the chart. Read-only.
-    */
-    private ?array $series = null;
-    
-    /**
-     * @var WorkbookChartTitle|null $title Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
-    */
-    private ?WorkbookChartTitle $title = null;
-    
-    /**
-     * @var float|null $top Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
-    */
-    private ?float $top = null;
-    
-    /**
-     * @var float|null $width Represents the width, in points, of the chart object.
-    */
-    private ?float $width = null;
-    
-    /**
-     * @var WorkbookWorksheet|null $worksheet The worksheet containing the current chart. Read-only.
-    */
-    private ?WorkbookWorksheet $worksheet = null;
-    
-    /**
      * Instantiates a new workbookChart and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChart');
     }
 
     /**
@@ -90,7 +29,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartAxes|null
     */
     public function getAxes(): ?WorkbookChartAxes {
-        return $this->axes;
+        return $this->getBackingStore()->get('axes');
     }
 
     /**
@@ -98,7 +37,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartDataLabels|null
     */
     public function getDataLabels(): ?WorkbookChartDataLabels {
-        return $this->dataLabels;
+        return $this->getBackingStore()->get('dataLabels');
     }
 
     /**
@@ -128,7 +67,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartAreaFormat|null
     */
     public function getFormat(): ?WorkbookChartAreaFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -136,7 +75,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getHeight(): ?float {
-        return $this->height;
+        return $this->getBackingStore()->get('height');
     }
 
     /**
@@ -144,7 +83,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getLeft(): ?float {
-        return $this->left;
+        return $this->getBackingStore()->get('left');
     }
 
     /**
@@ -152,7 +91,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartLegend|null
     */
     public function getLegend(): ?WorkbookChartLegend {
-        return $this->legend;
+        return $this->getBackingStore()->get('legend');
     }
 
     /**
@@ -160,7 +99,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -168,7 +107,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return array<WorkbookChartSeries>|null
     */
     public function getSeries(): ?array {
-        return $this->series;
+        return $this->getBackingStore()->get('series');
     }
 
     /**
@@ -176,7 +115,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookChartTitle|null
     */
     public function getTitle(): ?WorkbookChartTitle {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -184,7 +123,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getTop(): ?float {
-        return $this->top;
+        return $this->getBackingStore()->get('top');
     }
 
     /**
@@ -192,7 +131,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return float|null
     */
     public function getWidth(): ?float {
-        return $this->width;
+        return $this->getBackingStore()->get('width');
     }
 
     /**
@@ -200,7 +139,7 @@ class WorkbookChart extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->worksheet;
+        return $this->getBackingStore()->get('worksheet');
     }
 
     /**
@@ -209,114 +148,114 @@ class WorkbookChart extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('axes', $this->axes);
-        $writer->writeObjectValue('dataLabels', $this->dataLabels);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeFloatValue('height', $this->height);
-        $writer->writeFloatValue('left', $this->left);
-        $writer->writeObjectValue('legend', $this->legend);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfObjectValues('series', $this->series);
-        $writer->writeObjectValue('title', $this->title);
-        $writer->writeFloatValue('top', $this->top);
-        $writer->writeFloatValue('width', $this->width);
-        $writer->writeObjectValue('worksheet', $this->worksheet);
+        $writer->writeObjectValue('axes', $this->getAxes());
+        $writer->writeObjectValue('dataLabels', $this->getDataLabels());
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeFloatValue('height', $this->getHeight());
+        $writer->writeFloatValue('left', $this->getLeft());
+        $writer->writeObjectValue('legend', $this->getLegend());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfObjectValues('series', $this->getSeries());
+        $writer->writeObjectValue('title', $this->getTitle());
+        $writer->writeFloatValue('top', $this->getTop());
+        $writer->writeFloatValue('width', $this->getWidth());
+        $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
 
     /**
      * Sets the axes property value. Represents chart axes. Read-only.
      *  @param WorkbookChartAxes|null $value Value to set for the axes property.
     */
-    public function setAxes(?WorkbookChartAxes $value ): void {
-        $this->axes = $value;
+    public function setAxes(?WorkbookChartAxes $value): void {
+        $this->getBackingStore()->set('axes', $value);
     }
 
     /**
      * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
      *  @param WorkbookChartDataLabels|null $value Value to set for the dataLabels property.
     */
-    public function setDataLabels(?WorkbookChartDataLabels $value ): void {
-        $this->dataLabels = $value;
+    public function setDataLabels(?WorkbookChartDataLabels $value): void {
+        $this->getBackingStore()->set('dataLabels', $value);
     }
 
     /**
      * Sets the format property value. Encapsulates the format properties for the chart area. Read-only.
      *  @param WorkbookChartAreaFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartAreaFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartAreaFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the height property value. Represents the height, in points, of the chart object.
      *  @param float|null $value Value to set for the height property.
     */
-    public function setHeight(?float $value ): void {
-        $this->height = $value;
+    public function setHeight(?float $value): void {
+        $this->getBackingStore()->set('height', $value);
     }
 
     /**
      * Sets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
      *  @param float|null $value Value to set for the left property.
     */
-    public function setLeft(?float $value ): void {
-        $this->left = $value;
+    public function setLeft(?float $value): void {
+        $this->getBackingStore()->set('left', $value);
     }
 
     /**
      * Sets the legend property value. Represents the legend for the chart. Read-only.
      *  @param WorkbookChartLegend|null $value Value to set for the legend property.
     */
-    public function setLegend(?WorkbookChartLegend $value ): void {
-        $this->legend = $value;
+    public function setLegend(?WorkbookChartLegend $value): void {
+        $this->getBackingStore()->set('legend', $value);
     }
 
     /**
      * Sets the name property value. Represents the name of a chart object.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the series property value. Represents either a single series or collection of series in the chart. Read-only.
      *  @param array<WorkbookChartSeries>|null $value Value to set for the series property.
     */
-    public function setSeries(?array $value ): void {
-        $this->series = $value;
+    public function setSeries(?array $value): void {
+        $this->getBackingStore()->set('series', $value);
     }
 
     /**
      * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      *  @param WorkbookChartTitle|null $value Value to set for the title property.
     */
-    public function setTitle(?WorkbookChartTitle $value ): void {
-        $this->title = $value;
+    public function setTitle(?WorkbookChartTitle $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
     /**
      * Sets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
      *  @param float|null $value Value to set for the top property.
     */
-    public function setTop(?float $value ): void {
-        $this->top = $value;
+    public function setTop(?float $value): void {
+        $this->getBackingStore()->set('top', $value);
     }
 
     /**
      * Sets the width property value. Represents the width, in points, of the chart object.
      *  @param float|null $value Value to set for the width property.
     */
-    public function setWidth(?float $value ): void {
-        $this->width = $value;
+    public function setWidth(?float $value): void {
+        $this->getBackingStore()->set('width', $value);
     }
 
     /**
      * Sets the worksheet property value. The worksheet containing the current chart. Read-only.
      *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
-    public function setWorksheet(?WorkbookWorksheet $value ): void {
-        $this->worksheet = $value;
+    public function setWorksheet(?WorkbookWorksheet $value): void {
+        $this->getBackingStore()->set('worksheet', $value);
     }
 
 }

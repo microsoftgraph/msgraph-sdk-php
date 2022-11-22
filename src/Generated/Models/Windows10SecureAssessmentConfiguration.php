@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var bool|null $allowPrinting Indicates whether or not to allow the app from printing during the test.
-    */
-    private ?bool $allowPrinting = null;
-    
-    /**
-     * @var bool|null $allowScreenCapture Indicates whether or not to allow screen capture capability during a test.
-    */
-    private ?bool $allowScreenCapture = null;
-    
-    /**
-     * @var bool|null $allowTextSuggestion Indicates whether or not to allow text suggestions during the test.
-    */
-    private ?bool $allowTextSuggestion = null;
-    
-    /**
-     * @var string|null $configurationAccount The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-    */
-    private ?string $configurationAccount = null;
-    
-    /**
-     * @var string|null $launchUri Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-    */
-    private ?string $launchUri = null;
-    
-    /**
      * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
     */
     public function __construct() {
@@ -55,7 +30,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowPrinting(): ?bool {
-        return $this->allowPrinting;
+        return $this->getBackingStore()->get('allowPrinting');
     }
 
     /**
@@ -63,7 +38,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowScreenCapture(): ?bool {
-        return $this->allowScreenCapture;
+        return $this->getBackingStore()->get('allowScreenCapture');
     }
 
     /**
@@ -71,7 +46,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowTextSuggestion(): ?bool {
-        return $this->allowTextSuggestion;
+        return $this->getBackingStore()->get('allowTextSuggestion');
     }
 
     /**
@@ -79,7 +54,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return string|null
     */
     public function getConfigurationAccount(): ?string {
-        return $this->configurationAccount;
+        return $this->getBackingStore()->get('configurationAccount');
     }
 
     /**
@@ -102,7 +77,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return string|null
     */
     public function getLaunchUri(): ?string {
-        return $this->launchUri;
+        return $this->getBackingStore()->get('launchUri');
     }
 
     /**
@@ -111,51 +86,51 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('allowPrinting', $this->allowPrinting);
-        $writer->writeBooleanValue('allowScreenCapture', $this->allowScreenCapture);
-        $writer->writeBooleanValue('allowTextSuggestion', $this->allowTextSuggestion);
-        $writer->writeStringValue('configurationAccount', $this->configurationAccount);
-        $writer->writeStringValue('launchUri', $this->launchUri);
+        $writer->writeBooleanValue('allowPrinting', $this->getAllowPrinting());
+        $writer->writeBooleanValue('allowScreenCapture', $this->getAllowScreenCapture());
+        $writer->writeBooleanValue('allowTextSuggestion', $this->getAllowTextSuggestion());
+        $writer->writeStringValue('configurationAccount', $this->getConfigurationAccount());
+        $writer->writeStringValue('launchUri', $this->getLaunchUri());
     }
 
     /**
      * Sets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
      *  @param bool|null $value Value to set for the allowPrinting property.
     */
-    public function setAllowPrinting(?bool $value ): void {
-        $this->allowPrinting = $value;
+    public function setAllowPrinting(?bool $value): void {
+        $this->getBackingStore()->set('allowPrinting', $value);
     }
 
     /**
      * Sets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
      *  @param bool|null $value Value to set for the allowScreenCapture property.
     */
-    public function setAllowScreenCapture(?bool $value ): void {
-        $this->allowScreenCapture = $value;
+    public function setAllowScreenCapture(?bool $value): void {
+        $this->getBackingStore()->set('allowScreenCapture', $value);
     }
 
     /**
      * Sets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
      *  @param bool|null $value Value to set for the allowTextSuggestion property.
     */
-    public function setAllowTextSuggestion(?bool $value ): void {
-        $this->allowTextSuggestion = $value;
+    public function setAllowTextSuggestion(?bool $value): void {
+        $this->getBackingStore()->set('allowTextSuggestion', $value);
     }
 
     /**
      * Sets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      *  @param string|null $value Value to set for the configurationAccount property.
     */
-    public function setConfigurationAccount(?string $value ): void {
-        $this->configurationAccount = $value;
+    public function setConfigurationAccount(?string $value): void {
+        $this->getBackingStore()->set('configurationAccount', $value);
     }
 
     /**
      * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      *  @param string|null $value Value to set for the launchUri property.
     */
-    public function setLaunchUri(?string $value ): void {
-        $this->launchUri = $value;
+    public function setLaunchUri(?string $value): void {
+        $this->getBackingStore()->set('launchUri', $value);
     }
 
 }

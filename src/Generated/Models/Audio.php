@@ -6,105 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Audio implements AdditionalDataHolder, Parsable 
+class Audio implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $album The title of the album for this audio file.
-    */
-    private ?string $album = null;
-    
-    /**
-     * @var string|null $albumArtist The artist named on the album for the audio file.
-    */
-    private ?string $albumArtist = null;
-    
-    /**
-     * @var string|null $artist The performing artist for the audio file.
-    */
-    private ?string $artist = null;
-    
-    /**
-     * @var int|null $bitrate Bitrate expressed in kbps.
-    */
-    private ?int $bitrate = null;
-    
-    /**
-     * @var string|null $composers The name of the composer of the audio file.
-    */
-    private ?string $composers = null;
-    
-    /**
-     * @var string|null $copyright Copyright information for the audio file.
-    */
-    private ?string $copyright = null;
-    
-    /**
-     * @var int|null $disc The number of the disc this audio file came from.
-    */
-    private ?int $disc = null;
-    
-    /**
-     * @var int|null $discCount The total number of discs in this album.
-    */
-    private ?int $discCount = null;
-    
-    /**
-     * @var int|null $duration Duration of the audio file, expressed in milliseconds
-    */
-    private ?int $duration = null;
-    
-    /**
-     * @var string|null $genre The genre of this audio file.
-    */
-    private ?string $genre = null;
-    
-    /**
-     * @var bool|null $hasDrm Indicates if the file is protected with digital rights management.
-    */
-    private ?bool $hasDrm = null;
-    
-    /**
-     * @var bool|null $isVariableBitrate Indicates if the file is encoded with a variable bitrate.
-    */
-    private ?bool $isVariableBitrate = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $title The title of the audio file.
-    */
-    private ?string $title = null;
-    
-    /**
-     * @var int|null $track The number of the track on the original disc for this audio file.
-    */
-    private ?int $track = null;
-    
-    /**
-     * @var int|null $trackCount The total number of tracks on the original disc for this audio file.
-    */
-    private ?int $trackCount = null;
-    
-    /**
-     * @var int|null $year The year the audio file was recorded.
-    */
-    private ?int $year = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new audio and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.audio');
     }
 
     /**
@@ -120,8 +38,8 @@ class Audio implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -129,7 +47,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAlbum(): ?string {
-        return $this->album;
+        return $this->getBackingStore()->get('album');
     }
 
     /**
@@ -137,7 +55,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAlbumArtist(): ?string {
-        return $this->albumArtist;
+        return $this->getBackingStore()->get('albumArtist');
     }
 
     /**
@@ -145,7 +63,15 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getArtist(): ?string {
-        return $this->artist;
+        return $this->getBackingStore()->get('artist');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -153,7 +79,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getBitrate(): ?int {
-        return $this->bitrate;
+        return $this->getBackingStore()->get('bitrate');
     }
 
     /**
@@ -161,7 +87,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getComposers(): ?string {
-        return $this->composers;
+        return $this->getBackingStore()->get('composers');
     }
 
     /**
@@ -169,7 +95,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCopyright(): ?string {
-        return $this->copyright;
+        return $this->getBackingStore()->get('copyright');
     }
 
     /**
@@ -177,7 +103,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDisc(): ?int {
-        return $this->disc;
+        return $this->getBackingStore()->get('disc');
     }
 
     /**
@@ -185,7 +111,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDiscCount(): ?int {
-        return $this->discCount;
+        return $this->getBackingStore()->get('discCount');
     }
 
     /**
@@ -193,7 +119,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->duration;
+        return $this->getBackingStore()->get('duration');
     }
 
     /**
@@ -228,7 +154,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getGenre(): ?string {
-        return $this->genre;
+        return $this->getBackingStore()->get('genre');
     }
 
     /**
@@ -236,7 +162,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getHasDrm(): ?bool {
-        return $this->hasDrm;
+        return $this->getBackingStore()->get('hasDrm');
     }
 
     /**
@@ -244,7 +170,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsVariableBitrate(): ?bool {
-        return $this->isVariableBitrate;
+        return $this->getBackingStore()->get('isVariableBitrate');
     }
 
     /**
@@ -252,7 +178,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -260,7 +186,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -268,7 +194,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTrack(): ?int {
-        return $this->track;
+        return $this->getBackingStore()->get('track');
     }
 
     /**
@@ -276,7 +202,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTrackCount(): ?int {
-        return $this->trackCount;
+        return $this->getBackingStore()->get('trackCount');
     }
 
     /**
@@ -284,7 +210,7 @@ class Audio implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getYear(): ?int {
-        return $this->year;
+        return $this->getBackingStore()->get('year');
     }
 
     /**
@@ -292,168 +218,176 @@ class Audio implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('album', $this->album);
-        $writer->writeStringValue('albumArtist', $this->albumArtist);
-        $writer->writeStringValue('artist', $this->artist);
-        $writer->writeIntegerValue('bitrate', $this->bitrate);
-        $writer->writeStringValue('composers', $this->composers);
-        $writer->writeStringValue('copyright', $this->copyright);
-        $writer->writeIntegerValue('disc', $this->disc);
-        $writer->writeIntegerValue('discCount', $this->discCount);
-        $writer->writeIntegerValue('duration', $this->duration);
-        $writer->writeStringValue('genre', $this->genre);
-        $writer->writeBooleanValue('hasDrm', $this->hasDrm);
-        $writer->writeBooleanValue('isVariableBitrate', $this->isVariableBitrate);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('title', $this->title);
-        $writer->writeIntegerValue('track', $this->track);
-        $writer->writeIntegerValue('trackCount', $this->trackCount);
-        $writer->writeIntegerValue('year', $this->year);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('album', $this->getAlbum());
+        $writer->writeStringValue('albumArtist', $this->getAlbumArtist());
+        $writer->writeStringValue('artist', $this->getArtist());
+        $writer->writeIntegerValue('bitrate', $this->getBitrate());
+        $writer->writeStringValue('composers', $this->getComposers());
+        $writer->writeStringValue('copyright', $this->getCopyright());
+        $writer->writeIntegerValue('disc', $this->getDisc());
+        $writer->writeIntegerValue('discCount', $this->getDiscCount());
+        $writer->writeIntegerValue('duration', $this->getDuration());
+        $writer->writeStringValue('genre', $this->getGenre());
+        $writer->writeBooleanValue('hasDrm', $this->getHasDrm());
+        $writer->writeBooleanValue('isVariableBitrate', $this->getIsVariableBitrate());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('title', $this->getTitle());
+        $writer->writeIntegerValue('track', $this->getTrack());
+        $writer->writeIntegerValue('trackCount', $this->getTrackCount());
+        $writer->writeIntegerValue('year', $this->getYear());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the album property value. The title of the album for this audio file.
      *  @param string|null $value Value to set for the album property.
     */
-    public function setAlbum(?string $value ): void {
-        $this->album = $value;
+    public function setAlbum(?string $value): void {
+        $this->getBackingStore()->set('album', $value);
     }
 
     /**
      * Sets the albumArtist property value. The artist named on the album for the audio file.
      *  @param string|null $value Value to set for the albumArtist property.
     */
-    public function setAlbumArtist(?string $value ): void {
-        $this->albumArtist = $value;
+    public function setAlbumArtist(?string $value): void {
+        $this->getBackingStore()->set('albumArtist', $value);
     }
 
     /**
      * Sets the artist property value. The performing artist for the audio file.
      *  @param string|null $value Value to set for the artist property.
     */
-    public function setArtist(?string $value ): void {
-        $this->artist = $value;
+    public function setArtist(?string $value): void {
+        $this->getBackingStore()->set('artist', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the bitrate property value. Bitrate expressed in kbps.
      *  @param int|null $value Value to set for the bitrate property.
     */
-    public function setBitrate(?int $value ): void {
-        $this->bitrate = $value;
+    public function setBitrate(?int $value): void {
+        $this->getBackingStore()->set('bitrate', $value);
     }
 
     /**
      * Sets the composers property value. The name of the composer of the audio file.
      *  @param string|null $value Value to set for the composers property.
     */
-    public function setComposers(?string $value ): void {
-        $this->composers = $value;
+    public function setComposers(?string $value): void {
+        $this->getBackingStore()->set('composers', $value);
     }
 
     /**
      * Sets the copyright property value. Copyright information for the audio file.
      *  @param string|null $value Value to set for the copyright property.
     */
-    public function setCopyright(?string $value ): void {
-        $this->copyright = $value;
+    public function setCopyright(?string $value): void {
+        $this->getBackingStore()->set('copyright', $value);
     }
 
     /**
      * Sets the disc property value. The number of the disc this audio file came from.
      *  @param int|null $value Value to set for the disc property.
     */
-    public function setDisc(?int $value ): void {
-        $this->disc = $value;
+    public function setDisc(?int $value): void {
+        $this->getBackingStore()->set('disc', $value);
     }
 
     /**
      * Sets the discCount property value. The total number of discs in this album.
      *  @param int|null $value Value to set for the discCount property.
     */
-    public function setDiscCount(?int $value ): void {
-        $this->discCount = $value;
+    public function setDiscCount(?int $value): void {
+        $this->getBackingStore()->set('discCount', $value);
     }
 
     /**
      * Sets the duration property value. Duration of the audio file, expressed in milliseconds
      *  @param int|null $value Value to set for the duration property.
     */
-    public function setDuration(?int $value ): void {
-        $this->duration = $value;
+    public function setDuration(?int $value): void {
+        $this->getBackingStore()->set('duration', $value);
     }
 
     /**
      * Sets the genre property value. The genre of this audio file.
      *  @param string|null $value Value to set for the genre property.
     */
-    public function setGenre(?string $value ): void {
-        $this->genre = $value;
+    public function setGenre(?string $value): void {
+        $this->getBackingStore()->set('genre', $value);
     }
 
     /**
      * Sets the hasDrm property value. Indicates if the file is protected with digital rights management.
      *  @param bool|null $value Value to set for the hasDrm property.
     */
-    public function setHasDrm(?bool $value ): void {
-        $this->hasDrm = $value;
+    public function setHasDrm(?bool $value): void {
+        $this->getBackingStore()->set('hasDrm', $value);
     }
 
     /**
      * Sets the isVariableBitrate property value. Indicates if the file is encoded with a variable bitrate.
      *  @param bool|null $value Value to set for the isVariableBitrate property.
     */
-    public function setIsVariableBitrate(?bool $value ): void {
-        $this->isVariableBitrate = $value;
+    public function setIsVariableBitrate(?bool $value): void {
+        $this->getBackingStore()->set('isVariableBitrate', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the title property value. The title of the audio file.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
     /**
      * Sets the track property value. The number of the track on the original disc for this audio file.
      *  @param int|null $value Value to set for the track property.
     */
-    public function setTrack(?int $value ): void {
-        $this->track = $value;
+    public function setTrack(?int $value): void {
+        $this->getBackingStore()->set('track', $value);
     }
 
     /**
      * Sets the trackCount property value. The total number of tracks on the original disc for this audio file.
      *  @param int|null $value Value to set for the trackCount property.
     */
-    public function setTrackCount(?int $value ): void {
-        $this->trackCount = $value;
+    public function setTrackCount(?int $value): void {
+        $this->getBackingStore()->set('trackCount', $value);
     }
 
     /**
      * Sets the year property value. The year the audio file was recorded.
      *  @param int|null $value Value to set for the year property.
     */
-    public function setYear(?int $value ): void {
-        $this->year = $value;
+    public function setYear(?int $value): void {
+        $this->getBackingStore()->set('year', $value);
     }
 
 }

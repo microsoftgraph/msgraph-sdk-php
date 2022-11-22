@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable 
 {
     /**
-     * @var string|null $openShiftId ID for the open shift.
-    */
-    private ?string $openShiftId = null;
-    
-    /**
      * Instantiates a new OpenShiftChangeRequest and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getOpenShiftId(): ?string {
-        return $this->openShiftId;
+        return $this->getBackingStore()->get('openShiftId');
     }
 
     /**
@@ -55,15 +50,15 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('openShiftId', $this->openShiftId);
+        $writer->writeStringValue('openShiftId', $this->getOpenShiftId());
     }
 
     /**
      * Sets the openShiftId property value. ID for the open shift.
      *  @param string|null $value Value to set for the openShiftId property.
     */
-    public function setOpenShiftId(?string $value ): void {
-        $this->openShiftId = $value;
+    public function setOpenShiftId(?string $value): void {
+        $this->getBackingStore()->set('openShiftId', $value);
     }
 
 }

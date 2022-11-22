@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable 
 {
     /**
-     * @var string|null $accessPackageDisplayName Display name of the access package to which access has been granted.
-    */
-    private ?string $accessPackageDisplayName = null;
-    
-    /**
-     * @var string|null $accessPackageId Identifier of the access package to which access has been granted.
-    */
-    private ?string $accessPackageId = null;
-    
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
      * @return string|null
     */
     public function getAccessPackageDisplayName(): ?string {
-        return $this->accessPackageDisplayName;
+        return $this->getBackingStore()->get('accessPackageDisplayName');
     }
 
     /**
@@ -48,7 +38,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
      * @return string|null
     */
     public function getAccessPackageId(): ?string {
-        return $this->accessPackageId;
+        return $this->getBackingStore()->get('accessPackageId');
     }
 
     /**
@@ -69,24 +59,24 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('accessPackageDisplayName', $this->accessPackageDisplayName);
-        $writer->writeStringValue('accessPackageId', $this->accessPackageId);
+        $writer->writeStringValue('accessPackageDisplayName', $this->getAccessPackageDisplayName());
+        $writer->writeStringValue('accessPackageId', $this->getAccessPackageId());
     }
 
     /**
      * Sets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
      *  @param string|null $value Value to set for the accessPackageDisplayName property.
     */
-    public function setAccessPackageDisplayName(?string $value ): void {
-        $this->accessPackageDisplayName = $value;
+    public function setAccessPackageDisplayName(?string $value): void {
+        $this->getBackingStore()->set('accessPackageDisplayName', $value);
     }
 
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
      *  @param string|null $value Value to set for the accessPackageId property.
     */
-    public function setAccessPackageId(?string $value ): void {
-        $this->accessPackageId = $value;
+    public function setAccessPackageId(?string $value): void {
+        $this->getBackingStore()->set('accessPackageId', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttributeRuleMembers extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $description A description of the membership rule.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $membershipRule Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
-    */
-    private ?string $membershipRule = null;
-    
-    /**
      * Instantiates a new AttributeRuleMembers and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -60,7 +50,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getMembershipRule(): ?string {
-        return $this->membershipRule;
+        return $this->getBackingStore()->get('membershipRule');
     }
 
     /**
@@ -69,24 +59,24 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('membershipRule', $this->membershipRule);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('membershipRule', $this->getMembershipRule());
     }
 
     /**
      * Sets the description property value. A description of the membership rule.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
      *  @param string|null $value Value to set for the membershipRule property.
     */
-    public function setMembershipRule(?string $value ): void {
-        $this->membershipRule = $value;
+    public function setMembershipRule(?string $value): void {
+        $this->getBackingStore()->set('membershipRule', $value);
     }
 
 }

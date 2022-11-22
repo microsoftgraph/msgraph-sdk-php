@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsTab extends Entity implements Parsable 
 {
     /**
-     * @var TeamsTabConfiguration|null $configuration Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-    */
-    private ?TeamsTabConfiguration $configuration = null;
-    
-    /**
-     * @var string|null $displayName Name of the tab.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var TeamsApp|null $teamsApp The application that is linked to the tab. This cannot be changed after tab creation.
-    */
-    private ?TeamsApp $teamsApp = null;
-    
-    /**
-     * @var string|null $webUrl Deep link URL of the tab instance. Read only.
-    */
-    private ?string $webUrl = null;
-    
-    /**
      * Instantiates a new teamsTab and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.teamsTab');
     }
 
     /**
@@ -50,7 +29,7 @@ class TeamsTab extends Entity implements Parsable
      * @return TeamsTabConfiguration|null
     */
     public function getConfiguration(): ?TeamsTabConfiguration {
-        return $this->configuration;
+        return $this->getBackingStore()->get('configuration');
     }
 
     /**
@@ -58,7 +37,7 @@ class TeamsTab extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -80,7 +59,7 @@ class TeamsTab extends Entity implements Parsable
      * @return TeamsApp|null
     */
     public function getTeamsApp(): ?TeamsApp {
-        return $this->teamsApp;
+        return $this->getBackingStore()->get('teamsApp');
     }
 
     /**
@@ -88,7 +67,7 @@ class TeamsTab extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->webUrl;
+        return $this->getBackingStore()->get('webUrl');
     }
 
     /**
@@ -97,42 +76,42 @@ class TeamsTab extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('configuration', $this->configuration);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('teamsApp', $this->teamsApp);
-        $writer->writeStringValue('webUrl', $this->webUrl);
+        $writer->writeObjectValue('configuration', $this->getConfiguration());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('teamsApp', $this->getTeamsApp());
+        $writer->writeStringValue('webUrl', $this->getWebUrl());
     }
 
     /**
      * Sets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
      *  @param TeamsTabConfiguration|null $value Value to set for the configuration property.
     */
-    public function setConfiguration(?TeamsTabConfiguration $value ): void {
-        $this->configuration = $value;
+    public function setConfiguration(?TeamsTabConfiguration $value): void {
+        $this->getBackingStore()->set('configuration', $value);
     }
 
     /**
      * Sets the displayName property value. Name of the tab.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the teamsApp property value. The application that is linked to the tab. This cannot be changed after tab creation.
      *  @param TeamsApp|null $value Value to set for the teamsApp property.
     */
-    public function setTeamsApp(?TeamsApp $value ): void {
-        $this->teamsApp = $value;
+    public function setTeamsApp(?TeamsApp $value): void {
+        $this->getBackingStore()->set('teamsApp', $value);
     }
 
     /**
      * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
      *  @param string|null $value Value to set for the webUrl property.
     */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }

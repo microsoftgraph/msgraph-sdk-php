@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable 
 {
     /**
-     * @var CloudAppSecuritySessionControlType|null $cloudAppSecurityType Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-    */
-    private ?CloudAppSecuritySessionControlType $cloudAppSecurityType = null;
-    
-    /**
      * Instantiates a new CloudAppSecuritySessionControl and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
      * @return CloudAppSecuritySessionControlType|null
     */
     public function getCloudAppSecurityType(): ?CloudAppSecuritySessionControlType {
-        return $this->cloudAppSecurityType;
+        return $this->getBackingStore()->get('cloudAppSecurityType');
     }
 
     /**
@@ -55,15 +50,15 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('cloudAppSecurityType', $this->cloudAppSecurityType);
+        $writer->writeEnumValue('cloudAppSecurityType', $this->getCloudAppSecurityType());
     }
 
     /**
      * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      *  @param CloudAppSecuritySessionControlType|null $value Value to set for the cloudAppSecurityType property.
     */
-    public function setCloudAppSecurityType(?CloudAppSecuritySessionControlType $value ): void {
-        $this->cloudAppSecurityType = $value;
+    public function setCloudAppSecurityType(?CloudAppSecuritySessionControlType $value): void {
+        $this->getBackingStore()->set('cloudAppSecurityType', $value);
     }
 
 }

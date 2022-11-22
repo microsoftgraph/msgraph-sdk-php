@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BitlockerRecoveryKey extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $deviceId Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $key The BitLocker recovery key. Returned only on $select. Not nullable.
-    */
-    private ?string $key = null;
-    
-    /**
-     * @var VolumeType|null $volumeType Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-    */
-    private ?VolumeType $volumeType = null;
-    
-    /**
      * Instantiates a new bitlockerRecoveryKey and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.bitlockerRecoveryKey');
     }
 
     /**
@@ -51,7 +30,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -59,7 +38,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -81,7 +60,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
      * @return string|null
     */
     public function getKey(): ?string {
-        return $this->key;
+        return $this->getBackingStore()->get('key');
     }
 
     /**
@@ -89,7 +68,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
      * @return VolumeType|null
     */
     public function getVolumeType(): ?VolumeType {
-        return $this->volumeType;
+        return $this->getBackingStore()->get('volumeType');
     }
 
     /**
@@ -98,42 +77,42 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('key', $this->key);
-        $writer->writeEnumValue('volumeType', $this->volumeType);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('key', $this->getKey());
+        $writer->writeEnumValue('volumeType', $this->getVolumeType());
     }
 
     /**
      * Sets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
      *  @param string|null $value Value to set for the key property.
     */
-    public function setKey(?string $value ): void {
-        $this->key = $value;
+    public function setKey(?string $value): void {
+        $this->getBackingStore()->set('key', $value);
     }
 
     /**
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
      *  @param VolumeType|null $value Value to set for the volumeType property.
     */
-    public function setVolumeType(?VolumeType $value ): void {
-        $this->volumeType = $value;
+    public function setVolumeType(?VolumeType $value): void {
+        $this->getBackingStore()->set('volumeType', $value);
     }
 
 }

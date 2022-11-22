@@ -7,50 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UserSimulationEventInfo implements AdditionalDataHolder, Parsable 
+class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $browser Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
-    */
-    private ?string $browser = null;
-    
-    /**
-     * @var DateTime|null $eventDateTime Date and time of the simulation event by a user in an attack simulation and training campaign.
-    */
-    private ?DateTime $eventDateTime = null;
-    
-    /**
-     * @var string|null $eventName Name of the simulation event by a user in an attack simulation and training campaign.
-    */
-    private ?string $eventName = null;
-    
-    /**
-     * @var string|null $ipAddress IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
-    */
-    private ?string $ipAddress = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $osPlatformDeviceDetails The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
-    */
-    private ?string $osPlatformDeviceDetails = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new userSimulationEventInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.userSimulationEventInfo');
     }
 
     /**
@@ -66,8 +39,16 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -75,7 +56,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBrowser(): ?string {
-        return $this->browser;
+        return $this->getBackingStore()->get('browser');
     }
 
     /**
@@ -83,7 +64,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->eventDateTime;
+        return $this->getBackingStore()->get('eventDateTime');
     }
 
     /**
@@ -91,7 +72,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEventName(): ?string {
-        return $this->eventName;
+        return $this->getBackingStore()->get('eventName');
     }
 
     /**
@@ -115,7 +96,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->ipAddress;
+        return $this->getBackingStore()->get('ipAddress');
     }
 
     /**
@@ -123,7 +104,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -131,7 +112,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOsPlatformDeviceDetails(): ?string {
-        return $this->osPlatformDeviceDetails;
+        return $this->getBackingStore()->get('osPlatformDeviceDetails');
     }
 
     /**
@@ -139,69 +120,77 @@ class UserSimulationEventInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('browser', $this->browser);
-        $writer->writeDateTimeValue('eventDateTime', $this->eventDateTime);
-        $writer->writeStringValue('eventName', $this->eventName);
-        $writer->writeStringValue('ipAddress', $this->ipAddress);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('osPlatformDeviceDetails', $this->osPlatformDeviceDetails);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('browser', $this->getBrowser());
+        $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
+        $writer->writeStringValue('eventName', $this->getEventName());
+        $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('osPlatformDeviceDetails', $this->getOsPlatformDeviceDetails());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the browser property.
     */
-    public function setBrowser(?string $value ): void {
-        $this->browser = $value;
+    public function setBrowser(?string $value): void {
+        $this->getBackingStore()->set('browser', $value);
     }
 
     /**
      * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      *  @param DateTime|null $value Value to set for the eventDateTime property.
     */
-    public function setEventDateTime(?DateTime $value ): void {
-        $this->eventDateTime = $value;
+    public function setEventDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('eventDateTime', $value);
     }
 
     /**
      * Sets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the eventName property.
     */
-    public function setEventName(?string $value ): void {
-        $this->eventName = $value;
+    public function setEventName(?string $value): void {
+        $this->getBackingStore()->set('eventName', $value);
     }
 
     /**
      * Sets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the ipAddress property.
     */
-    public function setIpAddress(?string $value ): void {
-        $this->ipAddress = $value;
+    public function setIpAddress(?string $value): void {
+        $this->getBackingStore()->set('ipAddress', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
      *  @param string|null $value Value to set for the osPlatformDeviceDetails property.
     */
-    public function setOsPlatformDeviceDetails(?string $value ): void {
-        $this->osPlatformDeviceDetails = $value;
+    public function setOsPlatformDeviceDetails(?string $value): void {
+        $this->getBackingStore()->set('osPlatformDeviceDetails', $value);
     }
 
 }

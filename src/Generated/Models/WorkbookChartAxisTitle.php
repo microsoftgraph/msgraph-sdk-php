@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxisTitle extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartAxisTitleFormat|null $format Represents the formatting of chart axis title. Read-only.
-    */
-    private ?WorkbookChartAxisTitleFormat $format = null;
-    
-    /**
-     * @var string|null $text Represents the axis title.
-    */
-    private ?string $text = null;
-    
-    /**
-     * @var bool|null $visible A boolean that specifies the visibility of an axis title.
-    */
-    private ?bool $visible = null;
-    
-    /**
      * Instantiates a new workbookChartAxisTitle and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartAxisTitle');
     }
 
     /**
@@ -58,7 +42,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return WorkbookChartAxisTitleFormat|null
     */
     public function getFormat(): ?WorkbookChartAxisTitleFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -66,7 +50,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return string|null
     */
     public function getText(): ?string {
-        return $this->text;
+        return $this->getBackingStore()->get('text');
     }
 
     /**
@@ -74,7 +58,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->visible;
+        return $this->getBackingStore()->get('visible');
     }
 
     /**
@@ -83,33 +67,33 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeStringValue('text', $this->text);
-        $writer->writeBooleanValue('visible', $this->visible);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeStringValue('text', $this->getText());
+        $writer->writeBooleanValue('visible', $this->getVisible());
     }
 
     /**
      * Sets the format property value. Represents the formatting of chart axis title. Read-only.
      *  @param WorkbookChartAxisTitleFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartAxisTitleFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartAxisTitleFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the text property value. Represents the axis title.
      *  @param string|null $value Value to set for the text property.
     */
-    public function setText(?string $value ): void {
-        $this->text = $value;
+    public function setText(?string $value): void {
+        $this->getBackingStore()->set('text', $value);
     }
 
     /**
      * Sets the visible property value. A boolean that specifies the visibility of an axis title.
      *  @param bool|null $value Value to set for the visible property.
     */
-    public function setVisible(?bool $value ): void {
-        $this->visible = $value;
+    public function setVisible(?bool $value): void {
+        $this->getBackingStore()->set('visible', $value);
     }
 
 }

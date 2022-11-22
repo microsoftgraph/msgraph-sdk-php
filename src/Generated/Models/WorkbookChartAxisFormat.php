@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxisFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartFont|null $font Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-    */
-    private ?WorkbookChartFont $font = null;
-    
-    /**
-     * @var WorkbookChartLineFormat|null $line Represents chart line formatting. Read-only.
-    */
-    private ?WorkbookChartLineFormat $line = null;
-    
-    /**
      * Instantiates a new workbookChartAxisFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartAxisFormat');
     }
 
     /**
@@ -52,7 +41,7 @@ class WorkbookChartAxisFormat extends Entity implements Parsable
      * @return WorkbookChartFont|null
     */
     public function getFont(): ?WorkbookChartFont {
-        return $this->font;
+        return $this->getBackingStore()->get('font');
     }
 
     /**
@@ -60,7 +49,7 @@ class WorkbookChartAxisFormat extends Entity implements Parsable
      * @return WorkbookChartLineFormat|null
     */
     public function getLine(): ?WorkbookChartLineFormat {
-        return $this->line;
+        return $this->getBackingStore()->get('line');
     }
 
     /**
@@ -69,24 +58,24 @@ class WorkbookChartAxisFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('font', $this->font);
-        $writer->writeObjectValue('line', $this->line);
+        $writer->writeObjectValue('font', $this->getFont());
+        $writer->writeObjectValue('line', $this->getLine());
     }
 
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      *  @param WorkbookChartFont|null $value Value to set for the font property.
     */
-    public function setFont(?WorkbookChartFont $value ): void {
-        $this->font = $value;
+    public function setFont(?WorkbookChartFont $value): void {
+        $this->getBackingStore()->set('font', $value);
     }
 
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
      *  @param WorkbookChartLineFormat|null $value Value to set for the line property.
     */
-    public function setLine(?WorkbookChartLineFormat $value ): void {
-        $this->line = $value;
+    public function setLine(?WorkbookChartLineFormat $value): void {
+        $this->getBackingStore()->set('line', $value);
     }
 
 }

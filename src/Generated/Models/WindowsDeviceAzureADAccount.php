@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsable 
 {
     /**
-     * @var string|null $userPrincipalName Not yet documented
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new WindowsDeviceAzureADAccount and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsab
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -55,15 +50,15 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the userPrincipalName property value. Not yet documented
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

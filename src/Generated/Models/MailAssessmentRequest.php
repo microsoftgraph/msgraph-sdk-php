@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable 
 {
     /**
-     * @var MailDestinationRoutingReason|null $destinationRoutingReason The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-    */
-    private ?MailDestinationRoutingReason $destinationRoutingReason = null;
-    
-    /**
-     * @var string|null $messageUri The resource URI of the mail message for assessment.
-    */
-    private ?string $messageUri = null;
-    
-    /**
-     * @var string|null $recipientEmail The mail recipient whose policies are used to assess the mail.
-    */
-    private ?string $recipientEmail = null;
-    
-    /**
      * Instantiates a new MailAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return MailDestinationRoutingReason|null
     */
     public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
-        return $this->destinationRoutingReason;
+        return $this->getBackingStore()->get('destinationRoutingReason');
     }
 
     /**
@@ -66,7 +51,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getMessageUri(): ?string {
-        return $this->messageUri;
+        return $this->getBackingStore()->get('messageUri');
     }
 
     /**
@@ -74,7 +59,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getRecipientEmail(): ?string {
-        return $this->recipientEmail;
+        return $this->getBackingStore()->get('recipientEmail');
     }
 
     /**
@@ -83,33 +68,33 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('destinationRoutingReason', $this->destinationRoutingReason);
-        $writer->writeStringValue('messageUri', $this->messageUri);
-        $writer->writeStringValue('recipientEmail', $this->recipientEmail);
+        $writer->writeEnumValue('destinationRoutingReason', $this->getDestinationRoutingReason());
+        $writer->writeStringValue('messageUri', $this->getMessageUri());
+        $writer->writeStringValue('recipientEmail', $this->getRecipientEmail());
     }
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      *  @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
-    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value ): void {
-        $this->destinationRoutingReason = $value;
+    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
+        $this->getBackingStore()->set('destinationRoutingReason', $value);
     }
 
     /**
      * Sets the messageUri property value. The resource URI of the mail message for assessment.
      *  @param string|null $value Value to set for the messageUri property.
     */
-    public function setMessageUri(?string $value ): void {
-        $this->messageUri = $value;
+    public function setMessageUri(?string $value): void {
+        $this->getBackingStore()->set('messageUri', $value);
     }
 
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      *  @param string|null $value Value to set for the recipientEmail property.
     */
-    public function setRecipientEmail(?string $value ): void {
-        $this->recipientEmail = $value;
+    public function setRecipientEmail(?string $value): void {
+        $this->getBackingStore()->set('recipientEmail', $value);
     }
 
 }

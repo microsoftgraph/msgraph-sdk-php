@@ -6,50 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TextColumn implements AdditionalDataHolder, Parsable 
+class TextColumn implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowMultipleLines Whether to allow multiple lines of text.
-    */
-    private ?bool $allowMultipleLines = null;
-    
-    /**
-     * @var bool|null $appendChangesToExistingText Whether updates to this column should replace existing text, or append to it.
-    */
-    private ?bool $appendChangesToExistingText = null;
-    
-    /**
-     * @var int|null $linesForEditing The size of the text box.
-    */
-    private ?int $linesForEditing = null;
-    
-    /**
-     * @var int|null $maxLength The maximum number of characters for the value.
-    */
-    private ?int $maxLength = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $textType The type of text being stored. Must be one of plain or richText
-    */
-    private ?string $textType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new textColumn and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.textColumn');
     }
 
     /**
@@ -65,8 +38,8 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -74,7 +47,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowMultipleLines(): ?bool {
-        return $this->allowMultipleLines;
+        return $this->getBackingStore()->get('allowMultipleLines');
     }
 
     /**
@@ -82,7 +55,15 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAppendChangesToExistingText(): ?bool {
-        return $this->appendChangesToExistingText;
+        return $this->getBackingStore()->get('appendChangesToExistingText');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -106,7 +87,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getLinesForEditing(): ?int {
-        return $this->linesForEditing;
+        return $this->getBackingStore()->get('linesForEditing');
     }
 
     /**
@@ -114,7 +95,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMaxLength(): ?int {
-        return $this->maxLength;
+        return $this->getBackingStore()->get('maxLength');
     }
 
     /**
@@ -122,7 +103,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -130,7 +111,7 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTextType(): ?string {
-        return $this->textType;
+        return $this->getBackingStore()->get('textType');
     }
 
     /**
@@ -138,69 +119,77 @@ class TextColumn implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowMultipleLines', $this->allowMultipleLines);
-        $writer->writeBooleanValue('appendChangesToExistingText', $this->appendChangesToExistingText);
-        $writer->writeIntegerValue('linesForEditing', $this->linesForEditing);
-        $writer->writeIntegerValue('maxLength', $this->maxLength);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('textType', $this->textType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowMultipleLines', $this->getAllowMultipleLines());
+        $writer->writeBooleanValue('appendChangesToExistingText', $this->getAppendChangesToExistingText());
+        $writer->writeIntegerValue('linesForEditing', $this->getLinesForEditing());
+        $writer->writeIntegerValue('maxLength', $this->getMaxLength());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('textType', $this->getTextType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
      *  @param bool|null $value Value to set for the allowMultipleLines property.
     */
-    public function setAllowMultipleLines(?bool $value ): void {
-        $this->allowMultipleLines = $value;
+    public function setAllowMultipleLines(?bool $value): void {
+        $this->getBackingStore()->set('allowMultipleLines', $value);
     }
 
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
      *  @param bool|null $value Value to set for the appendChangesToExistingText property.
     */
-    public function setAppendChangesToExistingText(?bool $value ): void {
-        $this->appendChangesToExistingText = $value;
+    public function setAppendChangesToExistingText(?bool $value): void {
+        $this->getBackingStore()->set('appendChangesToExistingText', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the linesForEditing property value. The size of the text box.
      *  @param int|null $value Value to set for the linesForEditing property.
     */
-    public function setLinesForEditing(?int $value ): void {
-        $this->linesForEditing = $value;
+    public function setLinesForEditing(?int $value): void {
+        $this->getBackingStore()->set('linesForEditing', $value);
     }
 
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
      *  @param int|null $value Value to set for the maxLength property.
     */
-    public function setMaxLength(?int $value ): void {
-        $this->maxLength = $value;
+    public function setMaxLength(?int $value): void {
+        $this->getBackingStore()->set('maxLength', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
      *  @param string|null $value Value to set for the textType property.
     */
-    public function setTextType(?string $value ): void {
-        $this->textType = $value;
+    public function setTextType(?string $value): void {
+        $this->getBackingStore()->set('textType', $value);
     }
 
 }

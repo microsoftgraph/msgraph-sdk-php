@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAndroidStoreApp extends ManagedApp implements Parsable 
 {
     /**
-     * @var string|null $appStoreUrl The Android AppStoreUrl.
-    */
-    private ?string $appStoreUrl = null;
-    
-    /**
-     * @var AndroidMinimumOperatingSystem|null $minimumSupportedOperatingSystem Contains properties for the minimum operating system required for an Android mobile app.
-    */
-    private ?AndroidMinimumOperatingSystem $minimumSupportedOperatingSystem = null;
-    
-    /**
-     * @var string|null $packageId The app's package ID.
-    */
-    private ?string $packageId = null;
-    
-    /**
      * Instantiates a new ManagedAndroidStoreApp and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class ManagedAndroidStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getAppStoreUrl(): ?string {
-        return $this->appStoreUrl;
+        return $this->getBackingStore()->get('appStoreUrl');
     }
 
     /**
@@ -66,7 +51,7 @@ class ManagedAndroidStoreApp extends ManagedApp implements Parsable
      * @return AndroidMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?AndroidMinimumOperatingSystem {
-        return $this->minimumSupportedOperatingSystem;
+        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
     }
 
     /**
@@ -74,7 +59,7 @@ class ManagedAndroidStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getPackageId(): ?string {
-        return $this->packageId;
+        return $this->getBackingStore()->get('packageId');
     }
 
     /**
@@ -83,33 +68,33 @@ class ManagedAndroidStoreApp extends ManagedApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appStoreUrl', $this->appStoreUrl);
-        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->minimumSupportedOperatingSystem);
-        $writer->writeStringValue('packageId', $this->packageId);
+        $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
+        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
+        $writer->writeStringValue('packageId', $this->getPackageId());
     }
 
     /**
      * Sets the appStoreUrl property value. The Android AppStoreUrl.
      *  @param string|null $value Value to set for the appStoreUrl property.
     */
-    public function setAppStoreUrl(?string $value ): void {
-        $this->appStoreUrl = $value;
+    public function setAppStoreUrl(?string $value): void {
+        $this->getBackingStore()->set('appStoreUrl', $value);
     }
 
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties for the minimum operating system required for an Android mobile app.
      *  @param AndroidMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
     */
-    public function setMinimumSupportedOperatingSystem(?AndroidMinimumOperatingSystem $value ): void {
-        $this->minimumSupportedOperatingSystem = $value;
+    public function setMinimumSupportedOperatingSystem(?AndroidMinimumOperatingSystem $value): void {
+        $this->getBackingStore()->set('minimumSupportedOperatingSystem', $value);
     }
 
     /**
      * Sets the packageId property value. The app's package ID.
      *  @param string|null $value Value to set for the packageId property.
     */
-    public function setPackageId(?string $value ): void {
-        $this->packageId = $value;
+    public function setPackageId(?string $value): void {
+        $this->getBackingStore()->set('packageId', $value);
     }
 
 }

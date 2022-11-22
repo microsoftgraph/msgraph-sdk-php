@@ -6,46 +6,24 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Microsoft\Kiota\Abstractions\Types\Date;
 
-class EducationTerm implements AdditionalDataHolder, Parsable 
+class EducationTerm implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $displayName Display name of the term.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var Date|null $endDate End of the term.
-    */
-    private ?Date $endDate = null;
-    
-    /**
-     * @var string|null $externalId ID of term in the syncing system.
-    */
-    private ?string $externalId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var Date|null $startDate Start of the term.
-    */
-    private ?Date $startDate = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new educationTerm and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.educationTerm');
     }
 
     /**
@@ -61,8 +39,16 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -70,7 +56,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -78,7 +64,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return Date|null
     */
     public function getEndDate(): ?Date {
-        return $this->endDate;
+        return $this->getBackingStore()->get('endDate');
     }
 
     /**
@@ -86,7 +72,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -109,7 +95,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -117,7 +103,7 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @return Date|null
     */
     public function getStartDate(): ?Date {
-        return $this->startDate;
+        return $this->getBackingStore()->get('startDate');
     }
 
     /**
@@ -125,60 +111,68 @@ class EducationTerm implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeDateValue('endDate', $this->endDate);
-        $writer->writeStringValue('externalId', $this->externalId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeDateValue('startDate', $this->startDate);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeDateValue('endDate', $this->getEndDate());
+        $writer->writeStringValue('externalId', $this->getExternalId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeDateValue('startDate', $this->getStartDate());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the displayName property value. Display name of the term.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the endDate property value. End of the term.
      *  @param Date|null $value Value to set for the endDate property.
     */
-    public function setEndDate(?Date $value ): void {
-        $this->endDate = $value;
+    public function setEndDate(?Date $value): void {
+        $this->getBackingStore()->set('endDate', $value);
     }
 
     /**
      * Sets the externalId property value. ID of term in the syncing system.
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the startDate property value. Start of the term.
      *  @param Date|null $value Value to set for the startDate property.
     */
-    public function setStartDate(?Date $value ): void {
-        $this->startDate = $value;
+    public function setStartDate(?Date $value): void {
+        $this->getBackingStore()->set('startDate', $value);
     }
 
 }

@@ -9,41 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ListItem extends BaseItem implements Parsable 
 {
     /**
-     * @var ItemAnalytics|null $analytics Analytics about the view activities that took place on this item.
-    */
-    private ?ItemAnalytics $analytics = null;
-    
-    /**
-     * @var ContentTypeInfo|null $contentType The content type of this list item
-    */
-    private ?ContentTypeInfo $contentType = null;
-    
-    /**
-     * @var array<DocumentSetVersion>|null $documentSetVersions Version information for a document set version created by a user.
-    */
-    private ?array $documentSetVersions = null;
-    
-    /**
-     * @var DriveItem|null $driveItem For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-    */
-    private ?DriveItem $driveItem = null;
-    
-    /**
-     * @var FieldValueSet|null $fields The values of the columns set on this list item.
-    */
-    private ?FieldValueSet $fields = null;
-    
-    /**
-     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
-    */
-    private ?SharepointIds $sharepointIds = null;
-    
-    /**
-     * @var array<ListItemVersion>|null $versions The list of previous versions of the list item.
-    */
-    private ?array $versions = null;
-    
-    /**
      * Instantiates a new listItem and sets the default values.
     */
     public function __construct() {
@@ -65,7 +30,7 @@ class ListItem extends BaseItem implements Parsable
      * @return ItemAnalytics|null
     */
     public function getAnalytics(): ?ItemAnalytics {
-        return $this->analytics;
+        return $this->getBackingStore()->get('analytics');
     }
 
     /**
@@ -73,7 +38,7 @@ class ListItem extends BaseItem implements Parsable
      * @return ContentTypeInfo|null
     */
     public function getContentType(): ?ContentTypeInfo {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -81,7 +46,7 @@ class ListItem extends BaseItem implements Parsable
      * @return array<DocumentSetVersion>|null
     */
     public function getDocumentSetVersions(): ?array {
-        return $this->documentSetVersions;
+        return $this->getBackingStore()->get('documentSetVersions');
     }
 
     /**
@@ -89,7 +54,7 @@ class ListItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->driveItem;
+        return $this->getBackingStore()->get('driveItem');
     }
 
     /**
@@ -114,7 +79,7 @@ class ListItem extends BaseItem implements Parsable
      * @return FieldValueSet|null
     */
     public function getFields(): ?FieldValueSet {
-        return $this->fields;
+        return $this->getBackingStore()->get('fields');
     }
 
     /**
@@ -122,7 +87,7 @@ class ListItem extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->sharepointIds;
+        return $this->getBackingStore()->get('sharepointIds');
     }
 
     /**
@@ -130,7 +95,7 @@ class ListItem extends BaseItem implements Parsable
      * @return array<ListItemVersion>|null
     */
     public function getVersions(): ?array {
-        return $this->versions;
+        return $this->getBackingStore()->get('versions');
     }
 
     /**
@@ -139,69 +104,69 @@ class ListItem extends BaseItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('analytics', $this->analytics);
-        $writer->writeObjectValue('contentType', $this->contentType);
-        $writer->writeCollectionOfObjectValues('documentSetVersions', $this->documentSetVersions);
-        $writer->writeObjectValue('driveItem', $this->driveItem);
-        $writer->writeObjectValue('fields', $this->fields);
-        $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
-        $writer->writeCollectionOfObjectValues('versions', $this->versions);
+        $writer->writeObjectValue('analytics', $this->getAnalytics());
+        $writer->writeObjectValue('contentType', $this->getContentType());
+        $writer->writeCollectionOfObjectValues('documentSetVersions', $this->getDocumentSetVersions());
+        $writer->writeObjectValue('driveItem', $this->getDriveItem());
+        $writer->writeObjectValue('fields', $this->getFields());
+        $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
+        $writer->writeCollectionOfObjectValues('versions', $this->getVersions());
     }
 
     /**
      * Sets the analytics property value. Analytics about the view activities that took place on this item.
      *  @param ItemAnalytics|null $value Value to set for the analytics property.
     */
-    public function setAnalytics(?ItemAnalytics $value ): void {
-        $this->analytics = $value;
+    public function setAnalytics(?ItemAnalytics $value): void {
+        $this->getBackingStore()->set('analytics', $value);
     }
 
     /**
      * Sets the contentType property value. The content type of this list item
      *  @param ContentTypeInfo|null $value Value to set for the contentType property.
     */
-    public function setContentType(?ContentTypeInfo $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?ContentTypeInfo $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.
      *  @param array<DocumentSetVersion>|null $value Value to set for the documentSetVersions property.
     */
-    public function setDocumentSetVersions(?array $value ): void {
-        $this->documentSetVersions = $value;
+    public function setDocumentSetVersions(?array $value): void {
+        $this->getBackingStore()->set('documentSetVersions', $value);
     }
 
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      *  @param DriveItem|null $value Value to set for the driveItem property.
     */
-    public function setDriveItem(?DriveItem $value ): void {
-        $this->driveItem = $value;
+    public function setDriveItem(?DriveItem $value): void {
+        $this->getBackingStore()->set('driveItem', $value);
     }
 
     /**
      * Sets the fields property value. The values of the columns set on this list item.
      *  @param FieldValueSet|null $value Value to set for the fields property.
     */
-    public function setFields(?FieldValueSet $value ): void {
-        $this->fields = $value;
+    public function setFields(?FieldValueSet $value): void {
+        $this->getBackingStore()->set('fields', $value);
     }
 
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      *  @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
-    public function setSharepointIds(?SharepointIds $value ): void {
-        $this->sharepointIds = $value;
+    public function setSharepointIds(?SharepointIds $value): void {
+        $this->getBackingStore()->set('sharepointIds', $value);
     }
 
     /**
      * Sets the versions property value. The list of previous versions of the list item.
      *  @param array<ListItemVersion>|null $value Value to set for the versions property.
     */
-    public function setVersions(?array $value ): void {
-        $this->versions = $value;
+    public function setVersions(?array $value): void {
+        $this->getBackingStore()->set('versions', $value);
     }
 
 }

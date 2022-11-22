@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EnrollmentConfigurationAssignment extends Entity implements Parsable 
 {
     /**
-     * @var DeviceAndAppManagementAssignmentTarget|null $target Represents an assignment to managed devices in the tenant
-    */
-    private ?DeviceAndAppManagementAssignmentTarget $target = null;
-    
-    /**
      * Instantiates a new enrollmentConfigurationAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.enrollmentConfigurationAssignment');
     }
 
     /**
@@ -46,7 +40,7 @@ class EnrollmentConfigurationAssignment extends Entity implements Parsable
      * @return DeviceAndAppManagementAssignmentTarget|null
     */
     public function getTarget(): ?DeviceAndAppManagementAssignmentTarget {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -55,15 +49,15 @@ class EnrollmentConfigurationAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the target property value. Represents an assignment to managed devices in the tenant
      *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
-    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value ): void {
-        $this->target = $value;
+    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

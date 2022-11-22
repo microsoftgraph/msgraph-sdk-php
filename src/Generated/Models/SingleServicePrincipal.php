@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SingleServicePrincipal extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $description Description of this service principal.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $servicePrincipalId ID of the servicePrincipal.
-    */
-    private ?string $servicePrincipalId = null;
-    
-    /**
      * Instantiates a new SingleServicePrincipal and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class SingleServicePrincipal extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -60,7 +50,7 @@ class SingleServicePrincipal extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getServicePrincipalId(): ?string {
-        return $this->servicePrincipalId;
+        return $this->getBackingStore()->get('servicePrincipalId');
     }
 
     /**
@@ -69,24 +59,24 @@ class SingleServicePrincipal extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('servicePrincipalId', $this->servicePrincipalId);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('servicePrincipalId', $this->getServicePrincipalId());
     }
 
     /**
      * Sets the description property value. Description of this service principal.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the servicePrincipalId property value. ID of the servicePrincipal.
      *  @param string|null $value Value to set for the servicePrincipalId property.
     */
-    public function setServicePrincipalId(?string $value ): void {
-        $this->servicePrincipalId = $value;
+    public function setServicePrincipalId(?string $value): void {
+        $this->getBackingStore()->set('servicePrincipalId', $value);
     }
 
 }

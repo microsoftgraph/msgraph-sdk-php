@@ -9,51 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxis extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartAxisFormat|null $format Represents the formatting of a chart object, which includes line and font formatting. Read-only.
-    */
-    private ?WorkbookChartAxisFormat $format = null;
-    
-    /**
-     * @var WorkbookChartGridlines|null $majorGridlines Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
-    */
-    private ?WorkbookChartGridlines $majorGridlines = null;
-    
-    /**
-     * @var Json|null $majorUnit Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
-    */
-    private ?Json $majorUnit = null;
-    
-    /**
-     * @var Json|null $maximum Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-    */
-    private ?Json $maximum = null;
-    
-    /**
-     * @var Json|null $minimum Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-    */
-    private ?Json $minimum = null;
-    
-    /**
-     * @var WorkbookChartGridlines|null $minorGridlines Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
-    */
-    private ?WorkbookChartGridlines $minorGridlines = null;
-    
-    /**
-     * @var Json|null $minorUnit Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
-    */
-    private ?Json $minorUnit = null;
-    
-    /**
-     * @var WorkbookChartAxisTitle|null $title Represents the axis title. Read-only.
-    */
-    private ?WorkbookChartAxisTitle $title = null;
-    
-    /**
      * Instantiates a new workbookChartAxis and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartAxis');
     }
 
     /**
@@ -88,7 +47,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartAxisFormat|null
     */
     public function getFormat(): ?WorkbookChartAxisFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -96,7 +55,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartGridlines|null
     */
     public function getMajorGridlines(): ?WorkbookChartGridlines {
-        return $this->majorGridlines;
+        return $this->getBackingStore()->get('majorGridlines');
     }
 
     /**
@@ -104,7 +63,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMajorUnit(): ?Json {
-        return $this->majorUnit;
+        return $this->getBackingStore()->get('majorUnit');
     }
 
     /**
@@ -112,7 +71,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMaximum(): ?Json {
-        return $this->maximum;
+        return $this->getBackingStore()->get('maximum');
     }
 
     /**
@@ -120,7 +79,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMinimum(): ?Json {
-        return $this->minimum;
+        return $this->getBackingStore()->get('minimum');
     }
 
     /**
@@ -128,7 +87,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartGridlines|null
     */
     public function getMinorGridlines(): ?WorkbookChartGridlines {
-        return $this->minorGridlines;
+        return $this->getBackingStore()->get('minorGridlines');
     }
 
     /**
@@ -136,7 +95,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return Json|null
     */
     public function getMinorUnit(): ?Json {
-        return $this->minorUnit;
+        return $this->getBackingStore()->get('minorUnit');
     }
 
     /**
@@ -144,7 +103,7 @@ class WorkbookChartAxis extends Entity implements Parsable
      * @return WorkbookChartAxisTitle|null
     */
     public function getTitle(): ?WorkbookChartAxisTitle {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -153,78 +112,78 @@ class WorkbookChartAxis extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeObjectValue('majorGridlines', $this->majorGridlines);
-        $writer->writeObjectValue('majorUnit', $this->majorUnit);
-        $writer->writeObjectValue('maximum', $this->maximum);
-        $writer->writeObjectValue('minimum', $this->minimum);
-        $writer->writeObjectValue('minorGridlines', $this->minorGridlines);
-        $writer->writeObjectValue('minorUnit', $this->minorUnit);
-        $writer->writeObjectValue('title', $this->title);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeObjectValue('majorGridlines', $this->getMajorGridlines());
+        $writer->writeObjectValue('majorUnit', $this->getMajorUnit());
+        $writer->writeObjectValue('maximum', $this->getMaximum());
+        $writer->writeObjectValue('minimum', $this->getMinimum());
+        $writer->writeObjectValue('minorGridlines', $this->getMinorGridlines());
+        $writer->writeObjectValue('minorUnit', $this->getMinorUnit());
+        $writer->writeObjectValue('title', $this->getTitle());
     }
 
     /**
      * Sets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
      *  @param WorkbookChartAxisFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartAxisFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartAxisFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
      *  @param WorkbookChartGridlines|null $value Value to set for the majorGridlines property.
     */
-    public function setMajorGridlines(?WorkbookChartGridlines $value ): void {
-        $this->majorGridlines = $value;
+    public function setMajorGridlines(?WorkbookChartGridlines $value): void {
+        $this->getBackingStore()->set('majorGridlines', $value);
     }
 
     /**
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
      *  @param Json|null $value Value to set for the majorUnit property.
     */
-    public function setMajorUnit(?Json $value ): void {
-        $this->majorUnit = $value;
+    public function setMajorUnit(?Json $value): void {
+        $this->getBackingStore()->set('majorUnit', $value);
     }
 
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      *  @param Json|null $value Value to set for the maximum property.
     */
-    public function setMaximum(?Json $value ): void {
-        $this->maximum = $value;
+    public function setMaximum(?Json $value): void {
+        $this->getBackingStore()->set('maximum', $value);
     }
 
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      *  @param Json|null $value Value to set for the minimum property.
     */
-    public function setMinimum(?Json $value ): void {
-        $this->minimum = $value;
+    public function setMinimum(?Json $value): void {
+        $this->getBackingStore()->set('minimum', $value);
     }
 
     /**
      * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      *  @param WorkbookChartGridlines|null $value Value to set for the minorGridlines property.
     */
-    public function setMinorGridlines(?WorkbookChartGridlines $value ): void {
-        $this->minorGridlines = $value;
+    public function setMinorGridlines(?WorkbookChartGridlines $value): void {
+        $this->getBackingStore()->set('minorGridlines', $value);
     }
 
     /**
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      *  @param Json|null $value Value to set for the minorUnit property.
     */
-    public function setMinorUnit(?Json $value ): void {
-        $this->minorUnit = $value;
+    public function setMinorUnit(?Json $value): void {
+        $this->getBackingStore()->set('minorUnit', $value);
     }
 
     /**
      * Sets the title property value. Represents the axis title. Read-only.
      *  @param WorkbookChartAxisTitle|null $value Value to set for the title property.
     */
-    public function setTitle(?WorkbookChartAxisTitle $value ): void {
-        $this->title = $value;
+    public function setTitle(?WorkbookChartAxisTitle $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
 }

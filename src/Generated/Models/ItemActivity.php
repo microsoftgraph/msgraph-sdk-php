@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemActivity extends Entity implements Parsable 
 {
     /**
-     * @var AccessAction|null $access An item was accessed.
-    */
-    private ?AccessAction $access = null;
-    
-    /**
-     * @var DateTime|null $activityDateTime Details about when the activity took place. Read-only.
-    */
-    private ?DateTime $activityDateTime = null;
-    
-    /**
-     * @var IdentitySet|null $actor Identity of who performed the action. Read-only.
-    */
-    private ?IdentitySet $actor = null;
-    
-    /**
-     * @var DriveItem|null $driveItem Exposes the driveItem that was the target of this activity.
-    */
-    private ?DriveItem $driveItem = null;
-    
-    /**
      * Instantiates a new itemActivity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.itemActivity');
     }
 
     /**
@@ -51,7 +30,7 @@ class ItemActivity extends Entity implements Parsable
      * @return AccessAction|null
     */
     public function getAccess(): ?AccessAction {
-        return $this->access;
+        return $this->getBackingStore()->get('access');
     }
 
     /**
@@ -59,7 +38,7 @@ class ItemActivity extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
-        return $this->activityDateTime;
+        return $this->getBackingStore()->get('activityDateTime');
     }
 
     /**
@@ -67,7 +46,7 @@ class ItemActivity extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getActor(): ?IdentitySet {
-        return $this->actor;
+        return $this->getBackingStore()->get('actor');
     }
 
     /**
@@ -75,7 +54,7 @@ class ItemActivity extends Entity implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->driveItem;
+        return $this->getBackingStore()->get('driveItem');
     }
 
     /**
@@ -98,42 +77,42 @@ class ItemActivity extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('access', $this->access);
-        $writer->writeDateTimeValue('activityDateTime', $this->activityDateTime);
-        $writer->writeObjectValue('actor', $this->actor);
-        $writer->writeObjectValue('driveItem', $this->driveItem);
+        $writer->writeObjectValue('access', $this->getAccess());
+        $writer->writeDateTimeValue('activityDateTime', $this->getActivityDateTime());
+        $writer->writeObjectValue('actor', $this->getActor());
+        $writer->writeObjectValue('driveItem', $this->getDriveItem());
     }
 
     /**
      * Sets the access property value. An item was accessed.
      *  @param AccessAction|null $value Value to set for the access property.
     */
-    public function setAccess(?AccessAction $value ): void {
-        $this->access = $value;
+    public function setAccess(?AccessAction $value): void {
+        $this->getBackingStore()->set('access', $value);
     }
 
     /**
      * Sets the activityDateTime property value. Details about when the activity took place. Read-only.
      *  @param DateTime|null $value Value to set for the activityDateTime property.
     */
-    public function setActivityDateTime(?DateTime $value ): void {
-        $this->activityDateTime = $value;
+    public function setActivityDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('activityDateTime', $value);
     }
 
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
      *  @param IdentitySet|null $value Value to set for the actor property.
     */
-    public function setActor(?IdentitySet $value ): void {
-        $this->actor = $value;
+    public function setActor(?IdentitySet $value): void {
+        $this->getBackingStore()->set('actor', $value);
     }
 
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
      *  @param DriveItem|null $value Value to set for the driveItem property.
     */
-    public function setDriveItem(?DriveItem $value ): void {
-        $this->driveItem = $value;
+    public function setDriveItem(?DriveItem $value): void {
+        $this->getBackingStore()->set('driveItem', $value);
     }
 
 }

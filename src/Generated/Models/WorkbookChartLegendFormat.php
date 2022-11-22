@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartLegendFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartFill|null $fill Represents the fill format of an object, which includes background formating information. Read-only.
-    */
-    private ?WorkbookChartFill $fill = null;
-    
-    /**
-     * @var WorkbookChartFont|null $font Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
-    */
-    private ?WorkbookChartFont $font = null;
-    
-    /**
      * Instantiates a new workbookChartLegendFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartLegendFormat');
     }
 
     /**
@@ -52,7 +41,7 @@ class WorkbookChartLegendFormat extends Entity implements Parsable
      * @return WorkbookChartFill|null
     */
     public function getFill(): ?WorkbookChartFill {
-        return $this->fill;
+        return $this->getBackingStore()->get('fill');
     }
 
     /**
@@ -60,7 +49,7 @@ class WorkbookChartLegendFormat extends Entity implements Parsable
      * @return WorkbookChartFont|null
     */
     public function getFont(): ?WorkbookChartFont {
-        return $this->font;
+        return $this->getBackingStore()->get('font');
     }
 
     /**
@@ -69,24 +58,24 @@ class WorkbookChartLegendFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('fill', $this->fill);
-        $writer->writeObjectValue('font', $this->font);
+        $writer->writeObjectValue('fill', $this->getFill());
+        $writer->writeObjectValue('font', $this->getFont());
     }
 
     /**
      * Sets the fill property value. Represents the fill format of an object, which includes background formating information. Read-only.
      *  @param WorkbookChartFill|null $value Value to set for the fill property.
     */
-    public function setFill(?WorkbookChartFill $value ): void {
-        $this->fill = $value;
+    public function setFill(?WorkbookChartFill $value): void {
+        $this->getBackingStore()->set('fill', $value);
     }
 
     /**
      * Sets the font property value. Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
      *  @param WorkbookChartFont|null $value Value to set for the font property.
     */
-    public function setFont(?WorkbookChartFont $value ): void {
-        $this->font = $value;
+    public function setFont(?WorkbookChartFont $value): void {
+        $this->getBackingStore()->set('font', $value);
     }
 
 }

@@ -10,51 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalConnection extends Entity implements Parsable 
 {
     /**
-     * @var Configuration|null $configuration Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
-    */
-    private ?Configuration $configuration = null;
-    
-    /**
-     * @var string|null $description Description of the connection displayed in the Microsoft 365 admin center. Optional.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var array<ExternalGroup>|null $groups The groups property
-    */
-    private ?array $groups = null;
-    
-    /**
-     * @var array<ExternalItem>|null $items The items property
-    */
-    private ?array $items = null;
-    
-    /**
-     * @var string|null $name The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<ConnectionOperation>|null $operations The operations property
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var Schema|null $schema The schema property
-    */
-    private ?Schema $schema = null;
-    
-    /**
-     * @var ConnectionState|null $state Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-    */
-    private ?ConnectionState $state = null;
-    
-    /**
      * Instantiates a new externalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.externalConnectors.externalConnection');
     }
 
     /**
@@ -71,7 +30,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return Configuration|null
     */
     public function getConfiguration(): ?Configuration {
-        return $this->configuration;
+        return $this->getBackingStore()->get('configuration');
     }
 
     /**
@@ -79,7 +38,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -105,7 +64,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ExternalGroup>|null
     */
     public function getGroups(): ?array {
-        return $this->groups;
+        return $this->getBackingStore()->get('groups');
     }
 
     /**
@@ -113,7 +72,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ExternalItem>|null
     */
     public function getItems(): ?array {
-        return $this->items;
+        return $this->getBackingStore()->get('items');
     }
 
     /**
@@ -121,7 +80,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -129,7 +88,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ConnectionOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -137,7 +96,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return Schema|null
     */
     public function getSchema(): ?Schema {
-        return $this->schema;
+        return $this->getBackingStore()->get('schema');
     }
 
     /**
@@ -145,7 +104,7 @@ class ExternalConnection extends Entity implements Parsable
      * @return ConnectionState|null
     */
     public function getState(): ?ConnectionState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -154,77 +113,77 @@ class ExternalConnection extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('configuration', $this->configuration);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeCollectionOfObjectValues('groups', $this->groups);
-        $writer->writeCollectionOfObjectValues('items', $this->items);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeObjectValue('schema', $this->schema);
+        $writer->writeObjectValue('configuration', $this->getConfiguration());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
+        $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeObjectValue('schema', $this->getSchema());
     }
 
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      *  @param Configuration|null $value Value to set for the configuration property.
     */
-    public function setConfiguration(?Configuration $value ): void {
-        $this->configuration = $value;
+    public function setConfiguration(?Configuration $value): void {
+        $this->getBackingStore()->set('configuration', $value);
     }
 
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the groups property value. The groups property
      *  @param array<ExternalGroup>|null $value Value to set for the groups property.
     */
-    public function setGroups(?array $value ): void {
-        $this->groups = $value;
+    public function setGroups(?array $value): void {
+        $this->getBackingStore()->set('groups', $value);
     }
 
     /**
      * Sets the items property value. The items property
      *  @param array<ExternalItem>|null $value Value to set for the items property.
     */
-    public function setItems(?array $value ): void {
-        $this->items = $value;
+    public function setItems(?array $value): void {
+        $this->getBackingStore()->set('items', $value);
     }
 
     /**
      * Sets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the operations property value. The operations property
      *  @param array<ConnectionOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the schema property value. The schema property
      *  @param Schema|null $value Value to set for the schema property.
     */
-    public function setSchema(?Schema $value ): void {
-        $this->schema = $value;
+    public function setSchema(?Schema $value): void {
+        $this->getBackingStore()->set('schema', $value);
     }
 
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      *  @param ConnectionState|null $value Value to set for the state property.
     */
-    public function setState(?ConnectionState $value ): void {
-        $this->state = $value;
+    public function setState(?ConnectionState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

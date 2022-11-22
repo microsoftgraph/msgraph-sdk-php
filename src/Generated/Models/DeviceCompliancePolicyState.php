@@ -9,41 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicyState extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The name of the policy for this policyBase
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var PolicyPlatformType|null $platformType Supported platform types for policies.
-    */
-    private ?PolicyPlatformType $platformType = null;
-    
-    /**
-     * @var int|null $settingCount Count of how many setting a policy holds
-    */
-    private ?int $settingCount = null;
-    
-    /**
-     * @var array<DeviceCompliancePolicySettingState>|null $settingStates The settingStates property
-    */
-    private ?array $settingStates = null;
-    
-    /**
-     * @var ComplianceStatus|null $state The state property
-    */
-    private ?ComplianceStatus $state = null;
-    
-    /**
-     * @var int|null $version The version of the policy
-    */
-    private ?int $version = null;
-    
-    /**
      * Instantiates a new deviceCompliancePolicyState and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceCompliancePolicyState');
     }
 
     /**
@@ -60,7 +29,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -84,7 +53,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return PolicyPlatformType|null
     */
     public function getPlatformType(): ?PolicyPlatformType {
-        return $this->platformType;
+        return $this->getBackingStore()->get('platformType');
     }
 
     /**
@@ -92,7 +61,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return int|null
     */
     public function getSettingCount(): ?int {
-        return $this->settingCount;
+        return $this->getBackingStore()->get('settingCount');
     }
 
     /**
@@ -100,7 +69,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return array<DeviceCompliancePolicySettingState>|null
     */
     public function getSettingStates(): ?array {
-        return $this->settingStates;
+        return $this->getBackingStore()->get('settingStates');
     }
 
     /**
@@ -108,7 +77,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -116,7 +85,7 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -125,60 +94,60 @@ class DeviceCompliancePolicyState extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('platformType', $this->platformType);
-        $writer->writeIntegerValue('settingCount', $this->settingCount);
-        $writer->writeCollectionOfObjectValues('settingStates', $this->settingStates);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeIntegerValue('version', $this->version);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('platformType', $this->getPlatformType());
+        $writer->writeIntegerValue('settingCount', $this->getSettingCount());
+        $writer->writeCollectionOfObjectValues('settingStates', $this->getSettingStates());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeIntegerValue('version', $this->getVersion());
     }
 
     /**
      * Sets the displayName property value. The name of the policy for this policyBase
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the platformType property value. Supported platform types for policies.
      *  @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
-    public function setPlatformType(?PolicyPlatformType $value ): void {
-        $this->platformType = $value;
+    public function setPlatformType(?PolicyPlatformType $value): void {
+        $this->getBackingStore()->set('platformType', $value);
     }
 
     /**
      * Sets the settingCount property value. Count of how many setting a policy holds
      *  @param int|null $value Value to set for the settingCount property.
     */
-    public function setSettingCount(?int $value ): void {
-        $this->settingCount = $value;
+    public function setSettingCount(?int $value): void {
+        $this->getBackingStore()->set('settingCount', $value);
     }
 
     /**
      * Sets the settingStates property value. The settingStates property
      *  @param array<DeviceCompliancePolicySettingState>|null $value Value to set for the settingStates property.
     */
-    public function setSettingStates(?array $value ): void {
-        $this->settingStates = $value;
+    public function setSettingStates(?array $value): void {
+        $this->getBackingStore()->set('settingStates', $value);
     }
 
     /**
      * Sets the state property value. The state property
      *  @param ComplianceStatus|null $value Value to set for the state property.
     */
-    public function setState(?ComplianceStatus $value ): void {
-        $this->state = $value;
+    public function setState(?ComplianceStatus $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the version property value. The version of the policy
      *  @param int|null $value Value to set for the version property.
     */
-    public function setVersion(?int $value ): void {
-        $this->version = $value;
+    public function setVersion(?int $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

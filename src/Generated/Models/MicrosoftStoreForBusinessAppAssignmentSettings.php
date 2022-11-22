@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * @var bool|null $useDeviceContext Whether or not to use device execution context for Microsoft Store for Business mobile app.
-    */
-    private ?bool $useDeviceContext = null;
-    
-    /**
      * Instantiates a new MicrosoftStoreForBusinessAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
      * @return bool|null
     */
     public function getUseDeviceContext(): ?bool {
-        return $this->useDeviceContext;
+        return $this->getBackingStore()->get('useDeviceContext');
     }
 
     /**
@@ -55,15 +50,15 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('useDeviceContext', $this->useDeviceContext);
+        $writer->writeBooleanValue('useDeviceContext', $this->getUseDeviceContext());
     }
 
     /**
      * Sets the useDeviceContext property value. Whether or not to use device execution context for Microsoft Store for Business mobile app.
      *  @param bool|null $value Value to set for the useDeviceContext property.
     */
-    public function setUseDeviceContext(?bool $value ): void {
-        $this->useDeviceContext = $value;
+    public function setUseDeviceContext(?bool $value): void {
+        $this->getBackingStore()->set('useDeviceContext', $value);
     }
 
 }

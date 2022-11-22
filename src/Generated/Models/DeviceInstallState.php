@@ -10,51 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceInstallState extends Entity implements Parsable 
 {
     /**
-     * @var string|null $deviceId Device Id.
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $deviceName Device name.
-    */
-    private ?string $deviceName = null;
-    
-    /**
-     * @var string|null $errorCode The error code for install failures.
-    */
-    private ?string $errorCode = null;
-    
-    /**
-     * @var InstallState|null $installState Possible values for install state.
-    */
-    private ?InstallState $installState = null;
-    
-    /**
-     * @var DateTime|null $lastSyncDateTime Last sync date and time.
-    */
-    private ?DateTime $lastSyncDateTime = null;
-    
-    /**
-     * @var string|null $osDescription OS Description.
-    */
-    private ?string $osDescription = null;
-    
-    /**
-     * @var string|null $osVersion OS Version.
-    */
-    private ?string $osVersion = null;
-    
-    /**
-     * @var string|null $userName Device User Name.
-    */
-    private ?string $userName = null;
-    
-    /**
      * Instantiates a new deviceInstallState and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceInstallState');
     }
 
     /**
@@ -71,7 +30,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -79,7 +38,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->deviceName;
+        return $this->getBackingStore()->get('deviceName');
     }
 
     /**
@@ -87,7 +46,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getErrorCode(): ?string {
-        return $this->errorCode;
+        return $this->getBackingStore()->get('errorCode');
     }
 
     /**
@@ -113,7 +72,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return InstallState|null
     */
     public function getInstallState(): ?InstallState {
-        return $this->installState;
+        return $this->getBackingStore()->get('installState');
     }
 
     /**
@@ -121,7 +80,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
-        return $this->lastSyncDateTime;
+        return $this->getBackingStore()->get('lastSyncDateTime');
     }
 
     /**
@@ -129,7 +88,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getOsDescription(): ?string {
-        return $this->osDescription;
+        return $this->getBackingStore()->get('osDescription');
     }
 
     /**
@@ -137,7 +96,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getOsVersion(): ?string {
-        return $this->osVersion;
+        return $this->getBackingStore()->get('osVersion');
     }
 
     /**
@@ -145,7 +104,7 @@ class DeviceInstallState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->userName;
+        return $this->getBackingStore()->get('userName');
     }
 
     /**
@@ -154,78 +113,78 @@ class DeviceInstallState extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('deviceName', $this->deviceName);
-        $writer->writeStringValue('errorCode', $this->errorCode);
-        $writer->writeEnumValue('installState', $this->installState);
-        $writer->writeDateTimeValue('lastSyncDateTime', $this->lastSyncDateTime);
-        $writer->writeStringValue('osDescription', $this->osDescription);
-        $writer->writeStringValue('osVersion', $this->osVersion);
-        $writer->writeStringValue('userName', $this->userName);
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('deviceName', $this->getDeviceName());
+        $writer->writeStringValue('errorCode', $this->getErrorCode());
+        $writer->writeEnumValue('installState', $this->getInstallState());
+        $writer->writeDateTimeValue('lastSyncDateTime', $this->getLastSyncDateTime());
+        $writer->writeStringValue('osDescription', $this->getOsDescription());
+        $writer->writeStringValue('osVersion', $this->getOsVersion());
+        $writer->writeStringValue('userName', $this->getUserName());
     }
 
     /**
      * Sets the deviceId property value. Device Id.
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the deviceName property value. Device name.
      *  @param string|null $value Value to set for the deviceName property.
     */
-    public function setDeviceName(?string $value ): void {
-        $this->deviceName = $value;
+    public function setDeviceName(?string $value): void {
+        $this->getBackingStore()->set('deviceName', $value);
     }
 
     /**
      * Sets the errorCode property value. The error code for install failures.
      *  @param string|null $value Value to set for the errorCode property.
     */
-    public function setErrorCode(?string $value ): void {
-        $this->errorCode = $value;
+    public function setErrorCode(?string $value): void {
+        $this->getBackingStore()->set('errorCode', $value);
     }
 
     /**
      * Sets the installState property value. Possible values for install state.
      *  @param InstallState|null $value Value to set for the installState property.
     */
-    public function setInstallState(?InstallState $value ): void {
-        $this->installState = $value;
+    public function setInstallState(?InstallState $value): void {
+        $this->getBackingStore()->set('installState', $value);
     }
 
     /**
      * Sets the lastSyncDateTime property value. Last sync date and time.
      *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
-    public function setLastSyncDateTime(?DateTime $value ): void {
-        $this->lastSyncDateTime = $value;
+    public function setLastSyncDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastSyncDateTime', $value);
     }
 
     /**
      * Sets the osDescription property value. OS Description.
      *  @param string|null $value Value to set for the osDescription property.
     */
-    public function setOsDescription(?string $value ): void {
-        $this->osDescription = $value;
+    public function setOsDescription(?string $value): void {
+        $this->getBackingStore()->set('osDescription', $value);
     }
 
     /**
      * Sets the osVersion property value. OS Version.
      *  @param string|null $value Value to set for the osVersion property.
     */
-    public function setOsVersion(?string $value ): void {
-        $this->osVersion = $value;
+    public function setOsVersion(?string $value): void {
+        $this->getBackingStore()->set('osVersion', $value);
     }
 
     /**
      * Sets the userName property value. Device User Name.
      *  @param string|null $value Value to set for the userName property.
     */
-    public function setUserName(?string $value ): void {
-        $this->userName = $value;
+    public function setUserName(?string $value): void {
+        $this->getBackingStore()->set('userName', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * @var EducationResource|null $feedbackResource The actual feedback resource.
-    */
-    private ?EducationResource $feedbackResource = null;
-    
-    /**
-     * @var EducationFeedbackResourceOutcomeStatus|null $resourceStatus The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-    */
-    private ?EducationFeedbackResourceOutcomeStatus $resourceStatus = null;
-    
-    /**
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
      * @return EducationResource|null
     */
     public function getFeedbackResource(): ?EducationResource {
-        return $this->feedbackResource;
+        return $this->getBackingStore()->get('feedbackResource');
     }
 
     /**
@@ -60,7 +50,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
      * @return EducationFeedbackResourceOutcomeStatus|null
     */
     public function getResourceStatus(): ?EducationFeedbackResourceOutcomeStatus {
-        return $this->resourceStatus;
+        return $this->getBackingStore()->get('resourceStatus');
     }
 
     /**
@@ -69,24 +59,24 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('feedbackResource', $this->feedbackResource);
-        $writer->writeEnumValue('resourceStatus', $this->resourceStatus);
+        $writer->writeObjectValue('feedbackResource', $this->getFeedbackResource());
+        $writer->writeEnumValue('resourceStatus', $this->getResourceStatus());
     }
 
     /**
      * Sets the feedbackResource property value. The actual feedback resource.
      *  @param EducationResource|null $value Value to set for the feedbackResource property.
     */
-    public function setFeedbackResource(?EducationResource $value ): void {
-        $this->feedbackResource = $value;
+    public function setFeedbackResource(?EducationResource $value): void {
+        $this->getBackingStore()->set('feedbackResource', $value);
     }
 
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      *  @param EducationFeedbackResourceOutcomeStatus|null $value Value to set for the resourceStatus property.
     */
-    public function setResourceStatus(?EducationFeedbackResourceOutcomeStatus $value ): void {
-        $this->resourceStatus = $value;
+    public function setResourceStatus(?EducationFeedbackResourceOutcomeStatus $value): void {
+        $this->getBackingStore()->set('resourceStatus', $value);
     }
 
 }

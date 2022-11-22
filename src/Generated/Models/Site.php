@@ -10,102 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Site extends BaseItem implements Parsable 
 {
     /**
-     * @var ItemAnalytics|null $analytics Analytics about the view activities that took place in this site.
-    */
-    private ?ItemAnalytics $analytics = null;
-    
-    /**
-     * @var array<ColumnDefinition>|null $columns The collection of column definitions reusable across lists under this site.
-    */
-    private ?array $columns = null;
-    
-    /**
-     * @var array<ContentType>|null $contentTypes The collection of content types defined for this site.
-    */
-    private ?array $contentTypes = null;
-    
-    /**
-     * @var string|null $displayName The full title for the site. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var Drive|null $drive The default drive (document library) for this site.
-    */
-    private ?Drive $drive = null;
-    
-    /**
-     * @var array<Drive>|null $drives The collection of drives (document libraries) under this site.
-    */
-    private ?array $drives = null;
-    
-    /**
-     * @var PublicError|null $error The error property
-    */
-    private ?PublicError $error = null;
-    
-    /**
-     * @var array<ColumnDefinition>|null $externalColumns The externalColumns property
-    */
-    private ?array $externalColumns = null;
-    
-    /**
-     * @var array<BaseItem>|null $items Used to address any item contained in this site. This collection can't be enumerated.
-    */
-    private ?array $items = null;
-    
-    /**
-     * @var array<EscapedList>|null $lists The collection of lists under this site.
-    */
-    private ?array $lists = null;
-    
-    /**
-     * @var Onenote|null $onenote Calls the OneNote service for notebook related operations.
-    */
-    private ?Onenote $onenote = null;
-    
-    /**
-     * @var array<RichLongRunningOperation>|null $operations The collection of long-running operations on the site.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<Permission>|null $permissions The permissions associated with the site. Nullable.
-    */
-    private ?array $permissions = null;
-    
-    /**
-     * @var Root|null $root If present, indicates that this is the root site in the site collection. Read-only.
-    */
-    private ?Root $root = null;
-    
-    /**
-     * @var SharepointIds|null $sharepointIds Returns identifiers useful for SharePoint REST compatibility. Read-only.
-    */
-    private ?SharepointIds $sharepointIds = null;
-    
-    /**
-     * @var SiteCollection|null $siteCollection Provides details about the site's site collection. Available only on the root site. Read-only.
-    */
-    private ?SiteCollection $siteCollection = null;
-    
-    /**
-     * @var array<Site>|null $sites The collection of the sub-sites under this site.
-    */
-    private ?array $sites = null;
-    
-    /**
-     * @var Store|null $termStore The default termStore under this site.
-    */
-    private ?Store $termStore = null;
-    
-    /**
-     * @var array<Store>|null $termStores The collection of termStores under this site.
-    */
-    private ?array $termStores = null;
-    
-    /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -126,7 +31,7 @@ class Site extends BaseItem implements Parsable
      * @return ItemAnalytics|null
     */
     public function getAnalytics(): ?ItemAnalytics {
-        return $this->analytics;
+        return $this->getBackingStore()->get('analytics');
     }
 
     /**
@@ -134,7 +39,7 @@ class Site extends BaseItem implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumns(): ?array {
-        return $this->columns;
+        return $this->getBackingStore()->get('columns');
     }
 
     /**
@@ -142,7 +47,7 @@ class Site extends BaseItem implements Parsable
      * @return array<ContentType>|null
     */
     public function getContentTypes(): ?array {
-        return $this->contentTypes;
+        return $this->getBackingStore()->get('contentTypes');
     }
 
     /**
@@ -150,7 +55,7 @@ class Site extends BaseItem implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -158,7 +63,7 @@ class Site extends BaseItem implements Parsable
      * @return Drive|null
     */
     public function getDrive(): ?Drive {
-        return $this->drive;
+        return $this->getBackingStore()->get('drive');
     }
 
     /**
@@ -166,7 +71,7 @@ class Site extends BaseItem implements Parsable
      * @return array<Drive>|null
     */
     public function getDrives(): ?array {
-        return $this->drives;
+        return $this->getBackingStore()->get('drives');
     }
 
     /**
@@ -174,7 +79,7 @@ class Site extends BaseItem implements Parsable
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -182,7 +87,7 @@ class Site extends BaseItem implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getExternalColumns(): ?array {
-        return $this->externalColumns;
+        return $this->getBackingStore()->get('externalColumns');
     }
 
     /**
@@ -219,7 +124,7 @@ class Site extends BaseItem implements Parsable
      * @return array<BaseItem>|null
     */
     public function getItems(): ?array {
-        return $this->items;
+        return $this->getBackingStore()->get('items');
     }
 
     /**
@@ -227,7 +132,7 @@ class Site extends BaseItem implements Parsable
      * @return array<EscapedList>|null
     */
     public function getLists(): ?array {
-        return $this->lists;
+        return $this->getBackingStore()->get('lists');
     }
 
     /**
@@ -235,7 +140,7 @@ class Site extends BaseItem implements Parsable
      * @return Onenote|null
     */
     public function getOnenote(): ?Onenote {
-        return $this->onenote;
+        return $this->getBackingStore()->get('onenote');
     }
 
     /**
@@ -243,7 +148,7 @@ class Site extends BaseItem implements Parsable
      * @return array<RichLongRunningOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -251,7 +156,7 @@ class Site extends BaseItem implements Parsable
      * @return array<Permission>|null
     */
     public function getPermissions(): ?array {
-        return $this->permissions;
+        return $this->getBackingStore()->get('permissions');
     }
 
     /**
@@ -259,7 +164,7 @@ class Site extends BaseItem implements Parsable
      * @return Root|null
     */
     public function getRoot(): ?Root {
-        return $this->root;
+        return $this->getBackingStore()->get('root');
     }
 
     /**
@@ -267,7 +172,7 @@ class Site extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->sharepointIds;
+        return $this->getBackingStore()->get('sharepointIds');
     }
 
     /**
@@ -275,7 +180,7 @@ class Site extends BaseItem implements Parsable
      * @return SiteCollection|null
     */
     public function getSiteCollection(): ?SiteCollection {
-        return $this->siteCollection;
+        return $this->getBackingStore()->get('siteCollection');
     }
 
     /**
@@ -283,7 +188,7 @@ class Site extends BaseItem implements Parsable
      * @return array<Site>|null
     */
     public function getSites(): ?array {
-        return $this->sites;
+        return $this->getBackingStore()->get('sites');
     }
 
     /**
@@ -291,7 +196,7 @@ class Site extends BaseItem implements Parsable
      * @return Store|null
     */
     public function getTermStore(): ?Store {
-        return $this->termStore;
+        return $this->getBackingStore()->get('termStore');
     }
 
     /**
@@ -299,7 +204,7 @@ class Site extends BaseItem implements Parsable
      * @return array<Store>|null
     */
     public function getTermStores(): ?array {
-        return $this->termStores;
+        return $this->getBackingStore()->get('termStores');
     }
 
     /**
@@ -308,177 +213,177 @@ class Site extends BaseItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('analytics', $this->analytics);
-        $writer->writeCollectionOfObjectValues('columns', $this->columns);
-        $writer->writeCollectionOfObjectValues('contentTypes', $this->contentTypes);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('drive', $this->drive);
-        $writer->writeCollectionOfObjectValues('drives', $this->drives);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeCollectionOfObjectValues('externalColumns', $this->externalColumns);
-        $writer->writeCollectionOfObjectValues('items', $this->items);
-        $writer->writeCollectionOfObjectValues('lists', $this->lists);
-        $writer->writeObjectValue('onenote', $this->onenote);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('permissions', $this->permissions);
-        $writer->writeObjectValue('root', $this->root);
-        $writer->writeObjectValue('sharepointIds', $this->sharepointIds);
-        $writer->writeObjectValue('siteCollection', $this->siteCollection);
-        $writer->writeCollectionOfObjectValues('sites', $this->sites);
-        $writer->writeObjectValue('termStore', $this->termStore);
-        $writer->writeCollectionOfObjectValues('termStores', $this->termStores);
+        $writer->writeObjectValue('analytics', $this->getAnalytics());
+        $writer->writeCollectionOfObjectValues('columns', $this->getColumns());
+        $writer->writeCollectionOfObjectValues('contentTypes', $this->getContentTypes());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('drive', $this->getDrive());
+        $writer->writeCollectionOfObjectValues('drives', $this->getDrives());
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeCollectionOfObjectValues('externalColumns', $this->getExternalColumns());
+        $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeCollectionOfObjectValues('lists', $this->getLists());
+        $writer->writeObjectValue('onenote', $this->getOnenote());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());
+        $writer->writeObjectValue('root', $this->getRoot());
+        $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
+        $writer->writeObjectValue('siteCollection', $this->getSiteCollection());
+        $writer->writeCollectionOfObjectValues('sites', $this->getSites());
+        $writer->writeObjectValue('termStore', $this->getTermStore());
+        $writer->writeCollectionOfObjectValues('termStores', $this->getTermStores());
     }
 
     /**
      * Sets the analytics property value. Analytics about the view activities that took place in this site.
      *  @param ItemAnalytics|null $value Value to set for the analytics property.
     */
-    public function setAnalytics(?ItemAnalytics $value ): void {
-        $this->analytics = $value;
+    public function setAnalytics(?ItemAnalytics $value): void {
+        $this->getBackingStore()->set('analytics', $value);
     }
 
     /**
      * Sets the columns property value. The collection of column definitions reusable across lists under this site.
      *  @param array<ColumnDefinition>|null $value Value to set for the columns property.
     */
-    public function setColumns(?array $value ): void {
-        $this->columns = $value;
+    public function setColumns(?array $value): void {
+        $this->getBackingStore()->set('columns', $value);
     }
 
     /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
      *  @param array<ContentType>|null $value Value to set for the contentTypes property.
     */
-    public function setContentTypes(?array $value ): void {
-        $this->contentTypes = $value;
+    public function setContentTypes(?array $value): void {
+        $this->getBackingStore()->set('contentTypes', $value);
     }
 
     /**
      * Sets the displayName property value. The full title for the site. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the drive property value. The default drive (document library) for this site.
      *  @param Drive|null $value Value to set for the drive property.
     */
-    public function setDrive(?Drive $value ): void {
-        $this->drive = $value;
+    public function setDrive(?Drive $value): void {
+        $this->getBackingStore()->set('drive', $value);
     }
 
     /**
      * Sets the drives property value. The collection of drives (document libraries) under this site.
      *  @param array<Drive>|null $value Value to set for the drives property.
     */
-    public function setDrives(?array $value ): void {
-        $this->drives = $value;
+    public function setDrives(?array $value): void {
+        $this->getBackingStore()->set('drives', $value);
     }
 
     /**
      * Sets the error property value. The error property
      *  @param PublicError|null $value Value to set for the error property.
     */
-    public function setError(?PublicError $value ): void {
-        $this->error = $value;
+    public function setError(?PublicError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the externalColumns property value. The externalColumns property
      *  @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
     */
-    public function setExternalColumns(?array $value ): void {
-        $this->externalColumns = $value;
+    public function setExternalColumns(?array $value): void {
+        $this->getBackingStore()->set('externalColumns', $value);
     }
 
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      *  @param array<BaseItem>|null $value Value to set for the items property.
     */
-    public function setItems(?array $value ): void {
-        $this->items = $value;
+    public function setItems(?array $value): void {
+        $this->getBackingStore()->set('items', $value);
     }
 
     /**
      * Sets the lists property value. The collection of lists under this site.
      *  @param array<EscapedList>|null $value Value to set for the lists property.
     */
-    public function setLists(?array $value ): void {
-        $this->lists = $value;
+    public function setLists(?array $value): void {
+        $this->getBackingStore()->set('lists', $value);
     }
 
     /**
      * Sets the onenote property value. Calls the OneNote service for notebook related operations.
      *  @param Onenote|null $value Value to set for the onenote property.
     */
-    public function setOnenote(?Onenote $value ): void {
-        $this->onenote = $value;
+    public function setOnenote(?Onenote $value): void {
+        $this->getBackingStore()->set('onenote', $value);
     }
 
     /**
      * Sets the operations property value. The collection of long-running operations on the site.
      *  @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
      *  @param array<Permission>|null $value Value to set for the permissions property.
     */
-    public function setPermissions(?array $value ): void {
-        $this->permissions = $value;
+    public function setPermissions(?array $value): void {
+        $this->getBackingStore()->set('permissions', $value);
     }
 
     /**
      * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
      *  @param Root|null $value Value to set for the root property.
     */
-    public function setRoot(?Root $value ): void {
-        $this->root = $value;
+    public function setRoot(?Root $value): void {
+        $this->getBackingStore()->set('root', $value);
     }
 
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      *  @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
-    public function setSharepointIds(?SharepointIds $value ): void {
-        $this->sharepointIds = $value;
+    public function setSharepointIds(?SharepointIds $value): void {
+        $this->getBackingStore()->set('sharepointIds', $value);
     }
 
     /**
      * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
      *  @param SiteCollection|null $value Value to set for the siteCollection property.
     */
-    public function setSiteCollection(?SiteCollection $value ): void {
-        $this->siteCollection = $value;
+    public function setSiteCollection(?SiteCollection $value): void {
+        $this->getBackingStore()->set('siteCollection', $value);
     }
 
     /**
      * Sets the sites property value. The collection of the sub-sites under this site.
      *  @param array<Site>|null $value Value to set for the sites property.
     */
-    public function setSites(?array $value ): void {
-        $this->sites = $value;
+    public function setSites(?array $value): void {
+        $this->getBackingStore()->set('sites', $value);
     }
 
     /**
      * Sets the termStore property value. The default termStore under this site.
      *  @param Store|null $value Value to set for the termStore property.
     */
-    public function setTermStore(?Store $value ): void {
-        $this->termStore = $value;
+    public function setTermStore(?Store $value): void {
+        $this->getBackingStore()->set('termStore', $value);
     }
 
     /**
      * Sets the termStores property value. The collection of termStores under this site.
      *  @param array<Store>|null $value Value to set for the termStores property.
     */
-    public function setTermStores(?array $value ): void {
-        $this->termStores = $value;
+    public function setTermStores(?array $value): void {
+        $this->getBackingStore()->set('termStores', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConnectedOrganizationMembers extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $connectedOrganizationId The ID of the connected organization in entitlement management.
-    */
-    private ?string $connectedOrganizationId = null;
-    
-    /**
-     * @var string|null $description The name of the connected organization.
-    */
-    private ?string $description = null;
-    
-    /**
      * Instantiates a new ConnectedOrganizationMembers and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getConnectedOrganizationId(): ?string {
-        return $this->connectedOrganizationId;
+        return $this->getBackingStore()->get('connectedOrganizationId');
     }
 
     /**
@@ -48,7 +38,7 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -69,24 +59,24 @@ class ConnectedOrganizationMembers extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('connectedOrganizationId', $this->connectedOrganizationId);
-        $writer->writeStringValue('description', $this->description);
+        $writer->writeStringValue('connectedOrganizationId', $this->getConnectedOrganizationId());
+        $writer->writeStringValue('description', $this->getDescription());
     }
 
     /**
      * Sets the connectedOrganizationId property value. The ID of the connected organization in entitlement management.
      *  @param string|null $value Value to set for the connectedOrganizationId property.
     */
-    public function setConnectedOrganizationId(?string $value ): void {
-        $this->connectedOrganizationId = $value;
+    public function setConnectedOrganizationId(?string $value): void {
+        $this->getBackingStore()->set('connectedOrganizationId', $value);
     }
 
     /**
      * Sets the description property value. The name of the connected organization.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
 }

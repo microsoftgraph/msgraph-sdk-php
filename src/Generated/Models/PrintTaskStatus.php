@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PrintTaskStatus implements AdditionalDataHolder, Parsable 
+class PrintTaskStatus implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $description A human-readable description of the current processing state of the printTask.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var PrintTaskProcessingState|null $state The state property
-    */
-    private ?PrintTaskProcessingState $state = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new printTaskStatus and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.printTaskStatus');
     }
 
     /**
@@ -50,8 +38,16 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +55,7 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -80,7 +76,7 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +84,7 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @return PrintTaskProcessingState|null
     */
     public function getState(): ?PrintTaskProcessingState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -96,42 +92,50 @@ class PrintTaskStatus implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the description property value. A human-readable description of the current processing state of the printTask.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the state property value. The state property
      *  @param PrintTaskProcessingState|null $value Value to set for the state property.
     */
-    public function setState(?PrintTaskProcessingState $value ): void {
-        $this->state = $value;
+    public function setState(?PrintTaskProcessingState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

@@ -9,171 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ColumnDefinition extends Entity implements Parsable 
 {
     /**
-     * @var BooleanColumn|null $boolean This column stores boolean values.
-    */
-    private ?BooleanColumn $boolean = null;
-    
-    /**
-     * @var CalculatedColumn|null $calculated This column's data is calculated based on other columns.
-    */
-    private ?CalculatedColumn $calculated = null;
-    
-    /**
-     * @var ChoiceColumn|null $choice This column stores data from a list of choices.
-    */
-    private ?ChoiceColumn $choice = null;
-    
-    /**
-     * @var string|null $columnGroup For site columns, the name of the group this column belongs to. Helps organize related columns.
-    */
-    private ?string $columnGroup = null;
-    
-    /**
-     * @var ContentApprovalStatusColumn|null $contentApprovalStatus This column stores content approval status.
-    */
-    private ?ContentApprovalStatusColumn $contentApprovalStatus = null;
-    
-    /**
-     * @var CurrencyColumn|null $currency This column stores currency values.
-    */
-    private ?CurrencyColumn $currency = null;
-    
-    /**
-     * @var DateTimeColumn|null $dateTime This column stores DateTime values.
-    */
-    private ?DateTimeColumn $dateTime = null;
-    
-    /**
-     * @var DefaultColumnValue|null $defaultValue The default value for this column.
-    */
-    private ?DefaultColumnValue $defaultValue = null;
-    
-    /**
-     * @var string|null $description The user-facing description of the column.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The user-facing name of the column.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $enforceUniqueValues If true, no two list items may have the same value for this column.
-    */
-    private ?bool $enforceUniqueValues = null;
-    
-    /**
-     * @var GeolocationColumn|null $geolocation This column stores a geolocation.
-    */
-    private ?GeolocationColumn $geolocation = null;
-    
-    /**
-     * @var bool|null $hidden Specifies whether the column is displayed in the user interface.
-    */
-    private ?bool $hidden = null;
-    
-    /**
-     * @var HyperlinkOrPictureColumn|null $hyperlinkOrPicture This column stores hyperlink or picture values.
-    */
-    private ?HyperlinkOrPictureColumn $hyperlinkOrPicture = null;
-    
-    /**
-     * @var bool|null $indexed Specifies whether the column values can be used for sorting and searching.
-    */
-    private ?bool $indexed = null;
-    
-    /**
-     * @var bool|null $isDeletable Indicates whether this column can be deleted.
-    */
-    private ?bool $isDeletable = null;
-    
-    /**
-     * @var bool|null $isReorderable Indicates whether values in the column can be reordered. Read-only.
-    */
-    private ?bool $isReorderable = null;
-    
-    /**
-     * @var bool|null $isSealed Specifies whether the column can be changed.
-    */
-    private ?bool $isSealed = null;
-    
-    /**
-     * @var LookupColumn|null $lookup This column's data is looked up from another source in the site.
-    */
-    private ?LookupColumn $lookup = null;
-    
-    /**
-     * @var string|null $name The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var NumberColumn|null $number This column stores number values.
-    */
-    private ?NumberColumn $number = null;
-    
-    /**
-     * @var PersonOrGroupColumn|null $personOrGroup This column stores Person or Group values.
-    */
-    private ?PersonOrGroupColumn $personOrGroup = null;
-    
-    /**
-     * @var bool|null $propagateChanges If 'true', changes to this column will be propagated to lists that implement the column.
-    */
-    private ?bool $propagateChanges = null;
-    
-    /**
-     * @var bool|null $readOnly Specifies whether the column values can be modified.
-    */
-    private ?bool $readOnly = null;
-    
-    /**
-     * @var bool|null $required Specifies whether the column value isn't optional.
-    */
-    private ?bool $required = null;
-    
-    /**
-     * @var ColumnDefinition|null $sourceColumn The source column for the content type column.
-    */
-    private ?ColumnDefinition $sourceColumn = null;
-    
-    /**
-     * @var ContentTypeInfo|null $sourceContentType ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
-    */
-    private ?ContentTypeInfo $sourceContentType = null;
-    
-    /**
-     * @var TermColumn|null $term This column stores taxonomy terms.
-    */
-    private ?TermColumn $term = null;
-    
-    /**
-     * @var TextColumn|null $text This column stores text values.
-    */
-    private ?TextColumn $text = null;
-    
-    /**
-     * @var ThumbnailColumn|null $thumbnail This column stores thumbnail values.
-    */
-    private ?ThumbnailColumn $thumbnail = null;
-    
-    /**
-     * @var ColumnTypes|null $type For site columns, the type of column. Read-only.
-    */
-    private ?ColumnTypes $type = null;
-    
-    /**
-     * @var ColumnValidation|null $validation This column stores validation formula and message for the column.
-    */
-    private ?ColumnValidation $validation = null;
-    
-    /**
      * Instantiates a new columnDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.columnDefinition');
     }
 
     /**
@@ -190,7 +29,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return BooleanColumn|null
     */
     public function getBoolean(): ?BooleanColumn {
-        return $this->boolean;
+        return $this->getBackingStore()->get('boolean');
     }
 
     /**
@@ -198,7 +37,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return CalculatedColumn|null
     */
     public function getCalculated(): ?CalculatedColumn {
-        return $this->calculated;
+        return $this->getBackingStore()->get('calculated');
     }
 
     /**
@@ -206,7 +45,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ChoiceColumn|null
     */
     public function getChoice(): ?ChoiceColumn {
-        return $this->choice;
+        return $this->getBackingStore()->get('choice');
     }
 
     /**
@@ -214,7 +53,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getColumnGroup(): ?string {
-        return $this->columnGroup;
+        return $this->getBackingStore()->get('columnGroup');
     }
 
     /**
@@ -222,7 +61,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ContentApprovalStatusColumn|null
     */
     public function getContentApprovalStatus(): ?ContentApprovalStatusColumn {
-        return $this->contentApprovalStatus;
+        return $this->getBackingStore()->get('contentApprovalStatus');
     }
 
     /**
@@ -230,7 +69,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return CurrencyColumn|null
     */
     public function getCurrency(): ?CurrencyColumn {
-        return $this->currency;
+        return $this->getBackingStore()->get('currency');
     }
 
     /**
@@ -238,7 +77,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return DateTimeColumn|null
     */
     public function getDateTime(): ?DateTimeColumn {
-        return $this->dateTime;
+        return $this->getBackingStore()->get('dateTime');
     }
 
     /**
@@ -246,7 +85,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return DefaultColumnValue|null
     */
     public function getDefaultValue(): ?DefaultColumnValue {
-        return $this->defaultValue;
+        return $this->getBackingStore()->get('defaultValue');
     }
 
     /**
@@ -254,7 +93,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -262,7 +101,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -270,7 +109,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getEnforceUniqueValues(): ?bool {
-        return $this->enforceUniqueValues;
+        return $this->getBackingStore()->get('enforceUniqueValues');
     }
 
     /**
@@ -320,7 +159,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return GeolocationColumn|null
     */
     public function getGeolocation(): ?GeolocationColumn {
-        return $this->geolocation;
+        return $this->getBackingStore()->get('geolocation');
     }
 
     /**
@@ -328,7 +167,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getHidden(): ?bool {
-        return $this->hidden;
+        return $this->getBackingStore()->get('hidden');
     }
 
     /**
@@ -336,7 +175,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return HyperlinkOrPictureColumn|null
     */
     public function getHyperlinkOrPicture(): ?HyperlinkOrPictureColumn {
-        return $this->hyperlinkOrPicture;
+        return $this->getBackingStore()->get('hyperlinkOrPicture');
     }
 
     /**
@@ -344,7 +183,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIndexed(): ?bool {
-        return $this->indexed;
+        return $this->getBackingStore()->get('indexed');
     }
 
     /**
@@ -352,7 +191,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDeletable(): ?bool {
-        return $this->isDeletable;
+        return $this->getBackingStore()->get('isDeletable');
     }
 
     /**
@@ -360,7 +199,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsReorderable(): ?bool {
-        return $this->isReorderable;
+        return $this->getBackingStore()->get('isReorderable');
     }
 
     /**
@@ -368,7 +207,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSealed(): ?bool {
-        return $this->isSealed;
+        return $this->getBackingStore()->get('isSealed');
     }
 
     /**
@@ -376,7 +215,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return LookupColumn|null
     */
     public function getLookup(): ?LookupColumn {
-        return $this->lookup;
+        return $this->getBackingStore()->get('lookup');
     }
 
     /**
@@ -384,7 +223,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -392,7 +231,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return NumberColumn|null
     */
     public function getNumber(): ?NumberColumn {
-        return $this->number;
+        return $this->getBackingStore()->get('number');
     }
 
     /**
@@ -400,7 +239,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return PersonOrGroupColumn|null
     */
     public function getPersonOrGroup(): ?PersonOrGroupColumn {
-        return $this->personOrGroup;
+        return $this->getBackingStore()->get('personOrGroup');
     }
 
     /**
@@ -408,7 +247,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
-        return $this->propagateChanges;
+        return $this->getBackingStore()->get('propagateChanges');
     }
 
     /**
@@ -416,7 +255,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
-        return $this->readOnly;
+        return $this->getBackingStore()->get('readOnly');
     }
 
     /**
@@ -424,7 +263,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getRequired(): ?bool {
-        return $this->required;
+        return $this->getBackingStore()->get('required');
     }
 
     /**
@@ -432,7 +271,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ColumnDefinition|null
     */
     public function getSourceColumn(): ?ColumnDefinition {
-        return $this->sourceColumn;
+        return $this->getBackingStore()->get('sourceColumn');
     }
 
     /**
@@ -440,7 +279,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ContentTypeInfo|null
     */
     public function getSourceContentType(): ?ContentTypeInfo {
-        return $this->sourceContentType;
+        return $this->getBackingStore()->get('sourceContentType');
     }
 
     /**
@@ -448,7 +287,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return TermColumn|null
     */
     public function getTerm(): ?TermColumn {
-        return $this->term;
+        return $this->getBackingStore()->get('term');
     }
 
     /**
@@ -456,7 +295,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return TextColumn|null
     */
     public function getText(): ?TextColumn {
-        return $this->text;
+        return $this->getBackingStore()->get('text');
     }
 
     /**
@@ -464,7 +303,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ThumbnailColumn|null
     */
     public function getThumbnail(): ?ThumbnailColumn {
-        return $this->thumbnail;
+        return $this->getBackingStore()->get('thumbnail');
     }
 
     /**
@@ -472,7 +311,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ColumnTypes|null
     */
     public function getType(): ?ColumnTypes {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -480,7 +319,7 @@ class ColumnDefinition extends Entity implements Parsable
      * @return ColumnValidation|null
     */
     public function getValidation(): ?ColumnValidation {
-        return $this->validation;
+        return $this->getBackingStore()->get('validation');
     }
 
     /**
@@ -489,294 +328,294 @@ class ColumnDefinition extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('boolean', $this->boolean);
-        $writer->writeObjectValue('calculated', $this->calculated);
-        $writer->writeObjectValue('choice', $this->choice);
-        $writer->writeStringValue('columnGroup', $this->columnGroup);
-        $writer->writeObjectValue('contentApprovalStatus', $this->contentApprovalStatus);
-        $writer->writeObjectValue('currency', $this->currency);
-        $writer->writeObjectValue('dateTime', $this->dateTime);
-        $writer->writeObjectValue('defaultValue', $this->defaultValue);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('enforceUniqueValues', $this->enforceUniqueValues);
-        $writer->writeObjectValue('geolocation', $this->geolocation);
-        $writer->writeBooleanValue('hidden', $this->hidden);
-        $writer->writeObjectValue('hyperlinkOrPicture', $this->hyperlinkOrPicture);
-        $writer->writeBooleanValue('indexed', $this->indexed);
-        $writer->writeBooleanValue('isDeletable', $this->isDeletable);
-        $writer->writeBooleanValue('isReorderable', $this->isReorderable);
-        $writer->writeBooleanValue('isSealed', $this->isSealed);
-        $writer->writeObjectValue('lookup', $this->lookup);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeObjectValue('number', $this->number);
-        $writer->writeObjectValue('personOrGroup', $this->personOrGroup);
-        $writer->writeBooleanValue('propagateChanges', $this->propagateChanges);
-        $writer->writeBooleanValue('readOnly', $this->readOnly);
-        $writer->writeBooleanValue('required', $this->required);
-        $writer->writeObjectValue('sourceColumn', $this->sourceColumn);
-        $writer->writeObjectValue('sourceContentType', $this->sourceContentType);
-        $writer->writeObjectValue('term', $this->term);
-        $writer->writeObjectValue('text', $this->text);
-        $writer->writeObjectValue('thumbnail', $this->thumbnail);
-        $writer->writeEnumValue('type', $this->type);
-        $writer->writeObjectValue('validation', $this->validation);
+        $writer->writeObjectValue('boolean', $this->getBoolean());
+        $writer->writeObjectValue('calculated', $this->getCalculated());
+        $writer->writeObjectValue('choice', $this->getChoice());
+        $writer->writeStringValue('columnGroup', $this->getColumnGroup());
+        $writer->writeObjectValue('contentApprovalStatus', $this->getContentApprovalStatus());
+        $writer->writeObjectValue('currency', $this->getCurrency());
+        $writer->writeObjectValue('dateTime', $this->getDateTime());
+        $writer->writeObjectValue('defaultValue', $this->getDefaultValue());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('enforceUniqueValues', $this->getEnforceUniqueValues());
+        $writer->writeObjectValue('geolocation', $this->getGeolocation());
+        $writer->writeBooleanValue('hidden', $this->getHidden());
+        $writer->writeObjectValue('hyperlinkOrPicture', $this->getHyperlinkOrPicture());
+        $writer->writeBooleanValue('indexed', $this->getIndexed());
+        $writer->writeBooleanValue('isDeletable', $this->getIsDeletable());
+        $writer->writeBooleanValue('isReorderable', $this->getIsReorderable());
+        $writer->writeBooleanValue('isSealed', $this->getIsSealed());
+        $writer->writeObjectValue('lookup', $this->getLookup());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeObjectValue('number', $this->getNumber());
+        $writer->writeObjectValue('personOrGroup', $this->getPersonOrGroup());
+        $writer->writeBooleanValue('propagateChanges', $this->getPropagateChanges());
+        $writer->writeBooleanValue('readOnly', $this->getReadOnly());
+        $writer->writeBooleanValue('required', $this->getRequired());
+        $writer->writeObjectValue('sourceColumn', $this->getSourceColumn());
+        $writer->writeObjectValue('sourceContentType', $this->getSourceContentType());
+        $writer->writeObjectValue('term', $this->getTerm());
+        $writer->writeObjectValue('text', $this->getText());
+        $writer->writeObjectValue('thumbnail', $this->getThumbnail());
+        $writer->writeEnumValue('type', $this->getType());
+        $writer->writeObjectValue('validation', $this->getValidation());
     }
 
     /**
      * Sets the boolean property value. This column stores boolean values.
      *  @param BooleanColumn|null $value Value to set for the boolean property.
     */
-    public function setBoolean(?BooleanColumn $value ): void {
-        $this->boolean = $value;
+    public function setBoolean(?BooleanColumn $value): void {
+        $this->getBackingStore()->set('boolean', $value);
     }
 
     /**
      * Sets the calculated property value. This column's data is calculated based on other columns.
      *  @param CalculatedColumn|null $value Value to set for the calculated property.
     */
-    public function setCalculated(?CalculatedColumn $value ): void {
-        $this->calculated = $value;
+    public function setCalculated(?CalculatedColumn $value): void {
+        $this->getBackingStore()->set('calculated', $value);
     }
 
     /**
      * Sets the choice property value. This column stores data from a list of choices.
      *  @param ChoiceColumn|null $value Value to set for the choice property.
     */
-    public function setChoice(?ChoiceColumn $value ): void {
-        $this->choice = $value;
+    public function setChoice(?ChoiceColumn $value): void {
+        $this->getBackingStore()->set('choice', $value);
     }
 
     /**
      * Sets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
      *  @param string|null $value Value to set for the columnGroup property.
     */
-    public function setColumnGroup(?string $value ): void {
-        $this->columnGroup = $value;
+    public function setColumnGroup(?string $value): void {
+        $this->getBackingStore()->set('columnGroup', $value);
     }
 
     /**
      * Sets the contentApprovalStatus property value. This column stores content approval status.
      *  @param ContentApprovalStatusColumn|null $value Value to set for the contentApprovalStatus property.
     */
-    public function setContentApprovalStatus(?ContentApprovalStatusColumn $value ): void {
-        $this->contentApprovalStatus = $value;
+    public function setContentApprovalStatus(?ContentApprovalStatusColumn $value): void {
+        $this->getBackingStore()->set('contentApprovalStatus', $value);
     }
 
     /**
      * Sets the currency property value. This column stores currency values.
      *  @param CurrencyColumn|null $value Value to set for the currency property.
     */
-    public function setCurrency(?CurrencyColumn $value ): void {
-        $this->currency = $value;
+    public function setCurrency(?CurrencyColumn $value): void {
+        $this->getBackingStore()->set('currency', $value);
     }
 
     /**
      * Sets the dateTime property value. This column stores DateTime values.
      *  @param DateTimeColumn|null $value Value to set for the dateTime property.
     */
-    public function setDateTime(?DateTimeColumn $value ): void {
-        $this->dateTime = $value;
+    public function setDateTime(?DateTimeColumn $value): void {
+        $this->getBackingStore()->set('dateTime', $value);
     }
 
     /**
      * Sets the defaultValue property value. The default value for this column.
      *  @param DefaultColumnValue|null $value Value to set for the defaultValue property.
     */
-    public function setDefaultValue(?DefaultColumnValue $value ): void {
-        $this->defaultValue = $value;
+    public function setDefaultValue(?DefaultColumnValue $value): void {
+        $this->getBackingStore()->set('defaultValue', $value);
     }
 
     /**
      * Sets the description property value. The user-facing description of the column.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The user-facing name of the column.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
      *  @param bool|null $value Value to set for the enforceUniqueValues property.
     */
-    public function setEnforceUniqueValues(?bool $value ): void {
-        $this->enforceUniqueValues = $value;
+    public function setEnforceUniqueValues(?bool $value): void {
+        $this->getBackingStore()->set('enforceUniqueValues', $value);
     }
 
     /**
      * Sets the geolocation property value. This column stores a geolocation.
      *  @param GeolocationColumn|null $value Value to set for the geolocation property.
     */
-    public function setGeolocation(?GeolocationColumn $value ): void {
-        $this->geolocation = $value;
+    public function setGeolocation(?GeolocationColumn $value): void {
+        $this->getBackingStore()->set('geolocation', $value);
     }
 
     /**
      * Sets the hidden property value. Specifies whether the column is displayed in the user interface.
      *  @param bool|null $value Value to set for the hidden property.
     */
-    public function setHidden(?bool $value ): void {
-        $this->hidden = $value;
+    public function setHidden(?bool $value): void {
+        $this->getBackingStore()->set('hidden', $value);
     }
 
     /**
      * Sets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
      *  @param HyperlinkOrPictureColumn|null $value Value to set for the hyperlinkOrPicture property.
     */
-    public function setHyperlinkOrPicture(?HyperlinkOrPictureColumn $value ): void {
-        $this->hyperlinkOrPicture = $value;
+    public function setHyperlinkOrPicture(?HyperlinkOrPictureColumn $value): void {
+        $this->getBackingStore()->set('hyperlinkOrPicture', $value);
     }
 
     /**
      * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      *  @param bool|null $value Value to set for the indexed property.
     */
-    public function setIndexed(?bool $value ): void {
-        $this->indexed = $value;
+    public function setIndexed(?bool $value): void {
+        $this->getBackingStore()->set('indexed', $value);
     }
 
     /**
      * Sets the isDeletable property value. Indicates whether this column can be deleted.
      *  @param bool|null $value Value to set for the isDeletable property.
     */
-    public function setIsDeletable(?bool $value ): void {
-        $this->isDeletable = $value;
+    public function setIsDeletable(?bool $value): void {
+        $this->getBackingStore()->set('isDeletable', $value);
     }
 
     /**
      * Sets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
      *  @param bool|null $value Value to set for the isReorderable property.
     */
-    public function setIsReorderable(?bool $value ): void {
-        $this->isReorderable = $value;
+    public function setIsReorderable(?bool $value): void {
+        $this->getBackingStore()->set('isReorderable', $value);
     }
 
     /**
      * Sets the isSealed property value. Specifies whether the column can be changed.
      *  @param bool|null $value Value to set for the isSealed property.
     */
-    public function setIsSealed(?bool $value ): void {
-        $this->isSealed = $value;
+    public function setIsSealed(?bool $value): void {
+        $this->getBackingStore()->set('isSealed', $value);
     }
 
     /**
      * Sets the lookup property value. This column's data is looked up from another source in the site.
      *  @param LookupColumn|null $value Value to set for the lookup property.
     */
-    public function setLookup(?LookupColumn $value ): void {
-        $this->lookup = $value;
+    public function setLookup(?LookupColumn $value): void {
+        $this->getBackingStore()->set('lookup', $value);
     }
 
     /**
      * Sets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the number property value. This column stores number values.
      *  @param NumberColumn|null $value Value to set for the number property.
     */
-    public function setNumber(?NumberColumn $value ): void {
-        $this->number = $value;
+    public function setNumber(?NumberColumn $value): void {
+        $this->getBackingStore()->set('number', $value);
     }
 
     /**
      * Sets the personOrGroup property value. This column stores Person or Group values.
      *  @param PersonOrGroupColumn|null $value Value to set for the personOrGroup property.
     */
-    public function setPersonOrGroup(?PersonOrGroupColumn $value ): void {
-        $this->personOrGroup = $value;
+    public function setPersonOrGroup(?PersonOrGroupColumn $value): void {
+        $this->getBackingStore()->set('personOrGroup', $value);
     }
 
     /**
      * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
      *  @param bool|null $value Value to set for the propagateChanges property.
     */
-    public function setPropagateChanges(?bool $value ): void {
-        $this->propagateChanges = $value;
+    public function setPropagateChanges(?bool $value): void {
+        $this->getBackingStore()->set('propagateChanges', $value);
     }
 
     /**
      * Sets the readOnly property value. Specifies whether the column values can be modified.
      *  @param bool|null $value Value to set for the readOnly property.
     */
-    public function setReadOnly(?bool $value ): void {
-        $this->readOnly = $value;
+    public function setReadOnly(?bool $value): void {
+        $this->getBackingStore()->set('readOnly', $value);
     }
 
     /**
      * Sets the required property value. Specifies whether the column value isn't optional.
      *  @param bool|null $value Value to set for the required property.
     */
-    public function setRequired(?bool $value ): void {
-        $this->required = $value;
+    public function setRequired(?bool $value): void {
+        $this->getBackingStore()->set('required', $value);
     }
 
     /**
      * Sets the sourceColumn property value. The source column for the content type column.
      *  @param ColumnDefinition|null $value Value to set for the sourceColumn property.
     */
-    public function setSourceColumn(?ColumnDefinition $value ): void {
-        $this->sourceColumn = $value;
+    public function setSourceColumn(?ColumnDefinition $value): void {
+        $this->getBackingStore()->set('sourceColumn', $value);
     }
 
     /**
      * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
      *  @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
     */
-    public function setSourceContentType(?ContentTypeInfo $value ): void {
-        $this->sourceContentType = $value;
+    public function setSourceContentType(?ContentTypeInfo $value): void {
+        $this->getBackingStore()->set('sourceContentType', $value);
     }
 
     /**
      * Sets the term property value. This column stores taxonomy terms.
      *  @param TermColumn|null $value Value to set for the term property.
     */
-    public function setTerm(?TermColumn $value ): void {
-        $this->term = $value;
+    public function setTerm(?TermColumn $value): void {
+        $this->getBackingStore()->set('term', $value);
     }
 
     /**
      * Sets the text property value. This column stores text values.
      *  @param TextColumn|null $value Value to set for the text property.
     */
-    public function setText(?TextColumn $value ): void {
-        $this->text = $value;
+    public function setText(?TextColumn $value): void {
+        $this->getBackingStore()->set('text', $value);
     }
 
     /**
      * Sets the thumbnail property value. This column stores thumbnail values.
      *  @param ThumbnailColumn|null $value Value to set for the thumbnail property.
     */
-    public function setThumbnail(?ThumbnailColumn $value ): void {
-        $this->thumbnail = $value;
+    public function setThumbnail(?ThumbnailColumn $value): void {
+        $this->getBackingStore()->set('thumbnail', $value);
     }
 
     /**
      * Sets the type property value. For site columns, the type of column. Read-only.
      *  @param ColumnTypes|null $value Value to set for the type property.
     */
-    public function setType(?ColumnTypes $value ): void {
-        $this->type = $value;
+    public function setType(?ColumnTypes $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
     /**
      * Sets the validation property value. This column stores validation formula and message for the column.
      *  @param ColumnValidation|null $value Value to set for the validation property.
     */
-    public function setValidation(?ColumnValidation $value ): void {
-        $this->validation = $value;
+    public function setValidation(?ColumnValidation $value): void {
+        $this->getBackingStore()->set('validation', $value);
     }
 
 }

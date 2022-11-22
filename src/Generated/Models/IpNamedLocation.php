@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IpNamedLocation extends NamedLocation implements Parsable 
 {
     /**
-     * @var array<IpRange>|null $ipRanges List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
-    */
-    private ?array $ipRanges = null;
-    
-    /**
-     * @var bool|null $isTrusted true if this location is explicitly trusted. Optional. Default value is false.
-    */
-    private ?bool $isTrusted = null;
-    
-    /**
      * Instantiates a new IpNamedLocation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.ipNamedLocation');
     }
 
     /**
@@ -52,7 +41,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
      * @return array<IpRange>|null
     */
     public function getIpRanges(): ?array {
-        return $this->ipRanges;
+        return $this->getBackingStore()->get('ipRanges');
     }
 
     /**
@@ -60,7 +49,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
      * @return bool|null
     */
     public function getIsTrusted(): ?bool {
-        return $this->isTrusted;
+        return $this->getBackingStore()->get('isTrusted');
     }
 
     /**
@@ -69,24 +58,24 @@ class IpNamedLocation extends NamedLocation implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('ipRanges', $this->ipRanges);
-        $writer->writeBooleanValue('isTrusted', $this->isTrusted);
+        $writer->writeCollectionOfObjectValues('ipRanges', $this->getIpRanges());
+        $writer->writeBooleanValue('isTrusted', $this->getIsTrusted());
     }
 
     /**
      * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
      *  @param array<IpRange>|null $value Value to set for the ipRanges property.
     */
-    public function setIpRanges(?array $value ): void {
-        $this->ipRanges = $value;
+    public function setIpRanges(?array $value): void {
+        $this->getBackingStore()->set('ipRanges', $value);
     }
 
     /**
      * Sets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
      *  @param bool|null $value Value to set for the isTrusted property.
     */
-    public function setIsTrusted(?bool $value ): void {
-        $this->isTrusted = $value;
+    public function setIsTrusted(?bool $value): void {
+        $this->getBackingStore()->set('isTrusted', $value);
     }
 
 }

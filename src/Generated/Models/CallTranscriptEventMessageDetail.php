@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $callId Unique identifier of the call.
-    */
-    private ?string $callId = null;
-    
-    /**
-     * @var string|null $callTranscriptICalUid Unique identifier for a call transcript.
-    */
-    private ?string $callTranscriptICalUid = null;
-    
-    /**
-     * @var IdentitySet|null $meetingOrganizer The organizer of the meeting.
-    */
-    private ?IdentitySet $meetingOrganizer = null;
-    
-    /**
      * Instantiates a new CallTranscriptEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->callId;
+        return $this->getBackingStore()->get('callId');
     }
 
     /**
@@ -53,7 +38,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getCallTranscriptICalUid(): ?string {
-        return $this->callTranscriptICalUid;
+        return $this->getBackingStore()->get('callTranscriptICalUid');
     }
 
     /**
@@ -74,7 +59,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return IdentitySet|null
     */
     public function getMeetingOrganizer(): ?IdentitySet {
-        return $this->meetingOrganizer;
+        return $this->getBackingStore()->get('meetingOrganizer');
     }
 
     /**
@@ -83,33 +68,33 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('callId', $this->callId);
-        $writer->writeStringValue('callTranscriptICalUid', $this->callTranscriptICalUid);
-        $writer->writeObjectValue('meetingOrganizer', $this->meetingOrganizer);
+        $writer->writeStringValue('callId', $this->getCallId());
+        $writer->writeStringValue('callTranscriptICalUid', $this->getCallTranscriptICalUid());
+        $writer->writeObjectValue('meetingOrganizer', $this->getMeetingOrganizer());
     }
 
     /**
      * Sets the callId property value. Unique identifier of the call.
      *  @param string|null $value Value to set for the callId property.
     */
-    public function setCallId(?string $value ): void {
-        $this->callId = $value;
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
      * Sets the callTranscriptICalUid property value. Unique identifier for a call transcript.
      *  @param string|null $value Value to set for the callTranscriptICalUid property.
     */
-    public function setCallTranscriptICalUid(?string $value ): void {
-        $this->callTranscriptICalUid = $value;
+    public function setCallTranscriptICalUid(?string $value): void {
+        $this->getBackingStore()->set('callTranscriptICalUid', $value);
     }
 
     /**
      * Sets the meetingOrganizer property value. The organizer of the meeting.
      *  @param IdentitySet|null $value Value to set for the meetingOrganizer property.
     */
-    public function setMeetingOrganizer(?IdentitySet $value ): void {
-        $this->meetingOrganizer = $value;
+    public function setMeetingOrganizer(?IdentitySet $value): void {
+        $this->getBackingStore()->set('meetingOrganizer', $value);
     }
 
 }

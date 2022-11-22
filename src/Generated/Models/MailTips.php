@@ -6,85 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MailTips implements AdditionalDataHolder, Parsable 
+class MailTips implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AutomaticRepliesMailTips|null $automaticReplies Mail tips for automatic reply if it has been set up by the recipient.
-    */
-    private ?AutomaticRepliesMailTips $automaticReplies = null;
-    
-    /**
-     * @var string|null $customMailTip A custom mail tip that can be set on the recipient's mailbox.
-    */
-    private ?string $customMailTip = null;
-    
-    /**
-     * @var bool|null $deliveryRestricted Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
-    */
-    private ?bool $deliveryRestricted = null;
-    
-    /**
-     * @var EmailAddress|null $emailAddress The email address of the recipient to get mailtips for.
-    */
-    private ?EmailAddress $emailAddress = null;
-    
-    /**
-     * @var MailTipsError|null $error Errors that occur during the getMailTips action.
-    */
-    private ?MailTipsError $error = null;
-    
-    /**
-     * @var int|null $externalMemberCount The number of external members if the recipient is a distribution list.
-    */
-    private ?int $externalMemberCount = null;
-    
-    /**
-     * @var bool|null $isModerated Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
-    */
-    private ?bool $isModerated = null;
-    
-    /**
-     * @var bool|null $mailboxFull The mailbox full status of the recipient.
-    */
-    private ?bool $mailboxFull = null;
-    
-    /**
-     * @var int|null $maxMessageSize The maximum message size that has been configured for the recipient's organization or mailbox.
-    */
-    private ?int $maxMessageSize = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var RecipientScopeType|null $recipientScope The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
-    */
-    private ?RecipientScopeType $recipientScope = null;
-    
-    /**
-     * @var array<Recipient>|null $recipientSuggestions Recipients suggested based on previous contexts where they appear in the same message.
-    */
-    private ?array $recipientSuggestions = null;
-    
-    /**
-     * @var int|null $totalMemberCount The number of members if the recipient is a distribution list.
-    */
-    private ?int $totalMemberCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new mailTips and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.mailTips');
     }
 
     /**
@@ -100,8 +38,8 @@ class MailTips implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -109,7 +47,15 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return AutomaticRepliesMailTips|null
     */
     public function getAutomaticReplies(): ?AutomaticRepliesMailTips {
-        return $this->automaticReplies;
+        return $this->getBackingStore()->get('automaticReplies');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -117,7 +63,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCustomMailTip(): ?string {
-        return $this->customMailTip;
+        return $this->getBackingStore()->get('customMailTip');
     }
 
     /**
@@ -125,7 +71,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getDeliveryRestricted(): ?bool {
-        return $this->deliveryRestricted;
+        return $this->getBackingStore()->get('deliveryRestricted');
     }
 
     /**
@@ -133,7 +79,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return EmailAddress|null
     */
     public function getEmailAddress(): ?EmailAddress {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -141,7 +87,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return MailTipsError|null
     */
     public function getError(): ?MailTipsError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -149,7 +95,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getExternalMemberCount(): ?int {
-        return $this->externalMemberCount;
+        return $this->getBackingStore()->get('externalMemberCount');
     }
 
     /**
@@ -180,7 +126,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsModerated(): ?bool {
-        return $this->isModerated;
+        return $this->getBackingStore()->get('isModerated');
     }
 
     /**
@@ -188,7 +134,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getMailboxFull(): ?bool {
-        return $this->mailboxFull;
+        return $this->getBackingStore()->get('mailboxFull');
     }
 
     /**
@@ -196,7 +142,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMaxMessageSize(): ?int {
-        return $this->maxMessageSize;
+        return $this->getBackingStore()->get('maxMessageSize');
     }
 
     /**
@@ -204,7 +150,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -212,7 +158,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return RecipientScopeType|null
     */
     public function getRecipientScope(): ?RecipientScopeType {
-        return $this->recipientScope;
+        return $this->getBackingStore()->get('recipientScope');
     }
 
     /**
@@ -220,7 +166,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return array<Recipient>|null
     */
     public function getRecipientSuggestions(): ?array {
-        return $this->recipientSuggestions;
+        return $this->getBackingStore()->get('recipientSuggestions');
     }
 
     /**
@@ -228,7 +174,7 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTotalMemberCount(): ?int {
-        return $this->totalMemberCount;
+        return $this->getBackingStore()->get('totalMemberCount');
     }
 
     /**
@@ -236,132 +182,140 @@ class MailTips implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('automaticReplies', $this->automaticReplies);
-        $writer->writeStringValue('customMailTip', $this->customMailTip);
-        $writer->writeBooleanValue('deliveryRestricted', $this->deliveryRestricted);
-        $writer->writeObjectValue('emailAddress', $this->emailAddress);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeIntegerValue('externalMemberCount', $this->externalMemberCount);
-        $writer->writeBooleanValue('isModerated', $this->isModerated);
-        $writer->writeBooleanValue('mailboxFull', $this->mailboxFull);
-        $writer->writeIntegerValue('maxMessageSize', $this->maxMessageSize);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('recipientScope', $this->recipientScope);
-        $writer->writeCollectionOfObjectValues('recipientSuggestions', $this->recipientSuggestions);
-        $writer->writeIntegerValue('totalMemberCount', $this->totalMemberCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('automaticReplies', $this->getAutomaticReplies());
+        $writer->writeStringValue('customMailTip', $this->getCustomMailTip());
+        $writer->writeBooleanValue('deliveryRestricted', $this->getDeliveryRestricted());
+        $writer->writeObjectValue('emailAddress', $this->getEmailAddress());
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeIntegerValue('externalMemberCount', $this->getExternalMemberCount());
+        $writer->writeBooleanValue('isModerated', $this->getIsModerated());
+        $writer->writeBooleanValue('mailboxFull', $this->getMailboxFull());
+        $writer->writeIntegerValue('maxMessageSize', $this->getMaxMessageSize());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('recipientScope', $this->getRecipientScope());
+        $writer->writeCollectionOfObjectValues('recipientSuggestions', $this->getRecipientSuggestions());
+        $writer->writeIntegerValue('totalMemberCount', $this->getTotalMemberCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the automaticReplies property value. Mail tips for automatic reply if it has been set up by the recipient.
      *  @param AutomaticRepliesMailTips|null $value Value to set for the automaticReplies property.
     */
-    public function setAutomaticReplies(?AutomaticRepliesMailTips $value ): void {
-        $this->automaticReplies = $value;
+    public function setAutomaticReplies(?AutomaticRepliesMailTips $value): void {
+        $this->getBackingStore()->set('automaticReplies', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the customMailTip property value. A custom mail tip that can be set on the recipient's mailbox.
      *  @param string|null $value Value to set for the customMailTip property.
     */
-    public function setCustomMailTip(?string $value ): void {
-        $this->customMailTip = $value;
+    public function setCustomMailTip(?string $value): void {
+        $this->getBackingStore()->set('customMailTip', $value);
     }
 
     /**
      * Sets the deliveryRestricted property value. Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      *  @param bool|null $value Value to set for the deliveryRestricted property.
     */
-    public function setDeliveryRestricted(?bool $value ): void {
-        $this->deliveryRestricted = $value;
+    public function setDeliveryRestricted(?bool $value): void {
+        $this->getBackingStore()->set('deliveryRestricted', $value);
     }
 
     /**
      * Sets the emailAddress property value. The email address of the recipient to get mailtips for.
      *  @param EmailAddress|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?EmailAddress $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?EmailAddress $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the error property value. Errors that occur during the getMailTips action.
      *  @param MailTipsError|null $value Value to set for the error property.
     */
-    public function setError(?MailTipsError $value ): void {
-        $this->error = $value;
+    public function setError(?MailTipsError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the externalMemberCount property value. The number of external members if the recipient is a distribution list.
      *  @param int|null $value Value to set for the externalMemberCount property.
     */
-    public function setExternalMemberCount(?int $value ): void {
-        $this->externalMemberCount = $value;
+    public function setExternalMemberCount(?int $value): void {
+        $this->getBackingStore()->set('externalMemberCount', $value);
     }
 
     /**
      * Sets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      *  @param bool|null $value Value to set for the isModerated property.
     */
-    public function setIsModerated(?bool $value ): void {
-        $this->isModerated = $value;
+    public function setIsModerated(?bool $value): void {
+        $this->getBackingStore()->set('isModerated', $value);
     }
 
     /**
      * Sets the mailboxFull property value. The mailbox full status of the recipient.
      *  @param bool|null $value Value to set for the mailboxFull property.
     */
-    public function setMailboxFull(?bool $value ): void {
-        $this->mailboxFull = $value;
+    public function setMailboxFull(?bool $value): void {
+        $this->getBackingStore()->set('mailboxFull', $value);
     }
 
     /**
      * Sets the maxMessageSize property value. The maximum message size that has been configured for the recipient's organization or mailbox.
      *  @param int|null $value Value to set for the maxMessageSize property.
     */
-    public function setMaxMessageSize(?int $value ): void {
-        $this->maxMessageSize = $value;
+    public function setMaxMessageSize(?int $value): void {
+        $this->getBackingStore()->set('maxMessageSize', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      *  @param RecipientScopeType|null $value Value to set for the recipientScope property.
     */
-    public function setRecipientScope(?RecipientScopeType $value ): void {
-        $this->recipientScope = $value;
+    public function setRecipientScope(?RecipientScopeType $value): void {
+        $this->getBackingStore()->set('recipientScope', $value);
     }
 
     /**
      * Sets the recipientSuggestions property value. Recipients suggested based on previous contexts where they appear in the same message.
      *  @param array<Recipient>|null $value Value to set for the recipientSuggestions property.
     */
-    public function setRecipientSuggestions(?array $value ): void {
-        $this->recipientSuggestions = $value;
+    public function setRecipientSuggestions(?array $value): void {
+        $this->getBackingStore()->set('recipientSuggestions', $value);
     }
 
     /**
      * Sets the totalMemberCount property value. The number of members if the recipient is a distribution list.
      *  @param int|null $value Value to set for the totalMemberCount property.
     */
-    public function setTotalMemberCount(?int $value ): void {
-        $this->totalMemberCount = $value;
+    public function setTotalMemberCount(?int $value): void {
+        $this->getBackingStore()->set('totalMemberCount', $value);
     }
 
 }

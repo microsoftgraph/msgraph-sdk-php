@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisioningSystem extends Identity implements Parsable 
 {
     /**
-     * @var DetailsInfo|null $details Details of the system.
-    */
-    private ?DetailsInfo $details = null;
-    
-    /**
      * Instantiates a new ProvisioningSystem and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ProvisioningSystem extends Identity implements Parsable
      * @return DetailsInfo|null
     */
     public function getDetails(): ?DetailsInfo {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -55,15 +50,15 @@ class ProvisioningSystem extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('details', $this->details);
+        $writer->writeObjectValue('details', $this->getDetails());
     }
 
     /**
      * Sets the details property value. Details of the system.
      *  @param DetailsInfo|null $value Value to set for the details property.
     */
-    public function setDetails(?DetailsInfo $value ): void {
-        $this->details = $value;
+    public function setDetails(?DetailsInfo $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
 }

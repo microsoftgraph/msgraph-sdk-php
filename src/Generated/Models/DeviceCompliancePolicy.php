@@ -10,71 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicy extends Entity implements Parsable 
 {
     /**
-     * @var array<DeviceCompliancePolicyAssignment>|null $assignments The collection of assignments for this compliance policy.
-    */
-    private ?array $assignments = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime DateTime the object was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $description Admin provided description of the Device Configuration.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var array<SettingStateDeviceSummary>|null $deviceSettingStateSummaries Compliance Setting State Device Summary
-    */
-    private ?array $deviceSettingStateSummaries = null;
-    
-    /**
-     * @var array<DeviceComplianceDeviceStatus>|null $deviceStatuses List of DeviceComplianceDeviceStatus.
-    */
-    private ?array $deviceStatuses = null;
-    
-    /**
-     * @var DeviceComplianceDeviceOverview|null $deviceStatusOverview Device compliance devices status overview
-    */
-    private ?DeviceComplianceDeviceOverview $deviceStatusOverview = null;
-    
-    /**
-     * @var string|null $displayName Admin provided name of the device configuration.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var array<DeviceComplianceScheduledActionForRule>|null $scheduledActionsForRule The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
-    */
-    private ?array $scheduledActionsForRule = null;
-    
-    /**
-     * @var array<DeviceComplianceUserStatus>|null $userStatuses List of DeviceComplianceUserStatus.
-    */
-    private ?array $userStatuses = null;
-    
-    /**
-     * @var DeviceComplianceUserOverview|null $userStatusOverview Device compliance users status overview
-    */
-    private ?DeviceComplianceUserOverview $userStatusOverview = null;
-    
-    /**
-     * @var int|null $version Version of the device configuration.
-    */
-    private ?int $version = null;
-    
-    /**
      * Instantiates a new deviceCompliancePolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceCompliancePolicy');
     }
 
     /**
@@ -105,7 +44,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return array<DeviceCompliancePolicyAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -113,7 +52,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -121,7 +60,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -129,7 +68,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return array<SettingStateDeviceSummary>|null
     */
     public function getDeviceSettingStateSummaries(): ?array {
-        return $this->deviceSettingStateSummaries;
+        return $this->getBackingStore()->get('deviceSettingStateSummaries');
     }
 
     /**
@@ -137,7 +76,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return array<DeviceComplianceDeviceStatus>|null
     */
     public function getDeviceStatuses(): ?array {
-        return $this->deviceStatuses;
+        return $this->getBackingStore()->get('deviceStatuses');
     }
 
     /**
@@ -145,7 +84,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return DeviceComplianceDeviceOverview|null
     */
     public function getDeviceStatusOverview(): ?DeviceComplianceDeviceOverview {
-        return $this->deviceStatusOverview;
+        return $this->getBackingStore()->get('deviceStatusOverview');
     }
 
     /**
@@ -153,7 +92,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -183,7 +122,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -191,7 +130,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return array<DeviceComplianceScheduledActionForRule>|null
     */
     public function getScheduledActionsForRule(): ?array {
-        return $this->scheduledActionsForRule;
+        return $this->getBackingStore()->get('scheduledActionsForRule');
     }
 
     /**
@@ -199,7 +138,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return array<DeviceComplianceUserStatus>|null
     */
     public function getUserStatuses(): ?array {
-        return $this->userStatuses;
+        return $this->getBackingStore()->get('userStatuses');
     }
 
     /**
@@ -207,7 +146,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return DeviceComplianceUserOverview|null
     */
     public function getUserStatusOverview(): ?DeviceComplianceUserOverview {
-        return $this->userStatusOverview;
+        return $this->getBackingStore()->get('userStatusOverview');
     }
 
     /**
@@ -215,7 +154,7 @@ class DeviceCompliancePolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -224,114 +163,114 @@ class DeviceCompliancePolicy extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('assignments', $this->assignments);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeCollectionOfObjectValues('deviceSettingStateSummaries', $this->deviceSettingStateSummaries);
-        $writer->writeCollectionOfObjectValues('deviceStatuses', $this->deviceStatuses);
-        $writer->writeObjectValue('deviceStatusOverview', $this->deviceStatusOverview);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeCollectionOfObjectValues('scheduledActionsForRule', $this->scheduledActionsForRule);
-        $writer->writeCollectionOfObjectValues('userStatuses', $this->userStatuses);
-        $writer->writeObjectValue('userStatusOverview', $this->userStatusOverview);
-        $writer->writeIntegerValue('version', $this->version);
+        $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeCollectionOfObjectValues('deviceSettingStateSummaries', $this->getDeviceSettingStateSummaries());
+        $writer->writeCollectionOfObjectValues('deviceStatuses', $this->getDeviceStatuses());
+        $writer->writeObjectValue('deviceStatusOverview', $this->getDeviceStatusOverview());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeCollectionOfObjectValues('scheduledActionsForRule', $this->getScheduledActionsForRule());
+        $writer->writeCollectionOfObjectValues('userStatuses', $this->getUserStatuses());
+        $writer->writeObjectValue('userStatusOverview', $this->getUserStatusOverview());
+        $writer->writeIntegerValue('version', $this->getVersion());
     }
 
     /**
      * Sets the assignments property value. The collection of assignments for this compliance policy.
      *  @param array<DeviceCompliancePolicyAssignment>|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?array $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?array $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the deviceSettingStateSummaries property value. Compliance Setting State Device Summary
      *  @param array<SettingStateDeviceSummary>|null $value Value to set for the deviceSettingStateSummaries property.
     */
-    public function setDeviceSettingStateSummaries(?array $value ): void {
-        $this->deviceSettingStateSummaries = $value;
+    public function setDeviceSettingStateSummaries(?array $value): void {
+        $this->getBackingStore()->set('deviceSettingStateSummaries', $value);
     }
 
     /**
      * Sets the deviceStatuses property value. List of DeviceComplianceDeviceStatus.
      *  @param array<DeviceComplianceDeviceStatus>|null $value Value to set for the deviceStatuses property.
     */
-    public function setDeviceStatuses(?array $value ): void {
-        $this->deviceStatuses = $value;
+    public function setDeviceStatuses(?array $value): void {
+        $this->getBackingStore()->set('deviceStatuses', $value);
     }
 
     /**
      * Sets the deviceStatusOverview property value. Device compliance devices status overview
      *  @param DeviceComplianceDeviceOverview|null $value Value to set for the deviceStatusOverview property.
     */
-    public function setDeviceStatusOverview(?DeviceComplianceDeviceOverview $value ): void {
-        $this->deviceStatusOverview = $value;
+    public function setDeviceStatusOverview(?DeviceComplianceDeviceOverview $value): void {
+        $this->getBackingStore()->set('deviceStatusOverview', $value);
     }
 
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      *  @param array<DeviceComplianceScheduledActionForRule>|null $value Value to set for the scheduledActionsForRule property.
     */
-    public function setScheduledActionsForRule(?array $value ): void {
-        $this->scheduledActionsForRule = $value;
+    public function setScheduledActionsForRule(?array $value): void {
+        $this->getBackingStore()->set('scheduledActionsForRule', $value);
     }
 
     /**
      * Sets the userStatuses property value. List of DeviceComplianceUserStatus.
      *  @param array<DeviceComplianceUserStatus>|null $value Value to set for the userStatuses property.
     */
-    public function setUserStatuses(?array $value ): void {
-        $this->userStatuses = $value;
+    public function setUserStatuses(?array $value): void {
+        $this->getBackingStore()->set('userStatuses', $value);
     }
 
     /**
      * Sets the userStatusOverview property value. Device compliance users status overview
      *  @param DeviceComplianceUserOverview|null $value Value to set for the userStatusOverview property.
     */
-    public function setUserStatusOverview(?DeviceComplianceUserOverview $value ): void {
-        $this->userStatusOverview = $value;
+    public function setUserStatusOverview(?DeviceComplianceUserOverview $value): void {
+        $this->getBackingStore()->set('userStatusOverview', $value);
     }
 
     /**
      * Sets the version property value. Version of the device configuration.
      *  @param int|null $value Value to set for the version property.
     */
-    public function setVersion(?int $value ): void {
-        $this->version = $value;
+    public function setVersion(?int $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

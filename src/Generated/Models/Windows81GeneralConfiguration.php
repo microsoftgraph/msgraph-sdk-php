@@ -9,171 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var bool|null $accountsBlockAddingNonMicrosoftAccountEmail Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-    */
-    private ?bool $accountsBlockAddingNonMicrosoftAccountEmail = null;
-    
-    /**
-     * @var bool|null $applyOnlyToWindows81 Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-    */
-    private ?bool $applyOnlyToWindows81 = null;
-    
-    /**
-     * @var bool|null $browserBlockAutofill Indicates whether or not to block auto fill.
-    */
-    private ?bool $browserBlockAutofill = null;
-    
-    /**
-     * @var bool|null $browserBlockAutomaticDetectionOfIntranetSites Indicates whether or not to block automatic detection of Intranet sites.
-    */
-    private ?bool $browserBlockAutomaticDetectionOfIntranetSites = null;
-    
-    /**
-     * @var bool|null $browserBlockEnterpriseModeAccess Indicates whether or not to block enterprise mode access.
-    */
-    private ?bool $browserBlockEnterpriseModeAccess = null;
-    
-    /**
-     * @var bool|null $browserBlockJavaScript Indicates whether or not to Block the user from using JavaScript.
-    */
-    private ?bool $browserBlockJavaScript = null;
-    
-    /**
-     * @var bool|null $browserBlockPlugins Indicates whether or not to block plug-ins.
-    */
-    private ?bool $browserBlockPlugins = null;
-    
-    /**
-     * @var bool|null $browserBlockPopups Indicates whether or not to block popups.
-    */
-    private ?bool $browserBlockPopups = null;
-    
-    /**
-     * @var bool|null $browserBlockSendingDoNotTrackHeader Indicates whether or not to Block the user from sending the do not track header.
-    */
-    private ?bool $browserBlockSendingDoNotTrackHeader = null;
-    
-    /**
-     * @var bool|null $browserBlockSingleWordEntryOnIntranetSites Indicates whether or not to block a single word entry on Intranet sites.
-    */
-    private ?bool $browserBlockSingleWordEntryOnIntranetSites = null;
-    
-    /**
-     * @var string|null $browserEnterpriseModeSiteListLocation The enterprise mode site list location. Could be a local file, local network or http location.
-    */
-    private ?string $browserEnterpriseModeSiteListLocation = null;
-    
-    /**
-     * @var InternetSiteSecurityLevel|null $browserInternetSecurityLevel Possible values for internet site security level.
-    */
-    private ?InternetSiteSecurityLevel $browserInternetSecurityLevel = null;
-    
-    /**
-     * @var SiteSecurityLevel|null $browserIntranetSecurityLevel Possible values for site security level.
-    */
-    private ?SiteSecurityLevel $browserIntranetSecurityLevel = null;
-    
-    /**
-     * @var string|null $browserLoggingReportLocation The logging report location.
-    */
-    private ?string $browserLoggingReportLocation = null;
-    
-    /**
-     * @var bool|null $browserRequireFirewall Indicates whether or not to require a firewall.
-    */
-    private ?bool $browserRequireFirewall = null;
-    
-    /**
-     * @var bool|null $browserRequireFraudWarning Indicates whether or not to require fraud warning.
-    */
-    private ?bool $browserRequireFraudWarning = null;
-    
-    /**
-     * @var bool|null $browserRequireHighSecurityForRestrictedSites Indicates whether or not to require high security for restricted sites.
-    */
-    private ?bool $browserRequireHighSecurityForRestrictedSites = null;
-    
-    /**
-     * @var bool|null $browserRequireSmartScreen Indicates whether or not to require the user to use the smart screen filter.
-    */
-    private ?bool $browserRequireSmartScreen = null;
-    
-    /**
-     * @var SiteSecurityLevel|null $browserTrustedSitesSecurityLevel Possible values for site security level.
-    */
-    private ?SiteSecurityLevel $browserTrustedSitesSecurityLevel = null;
-    
-    /**
-     * @var bool|null $cellularBlockDataRoaming Indicates whether or not to block data roaming.
-    */
-    private ?bool $cellularBlockDataRoaming = null;
-    
-    /**
-     * @var bool|null $diagnosticsBlockDataSubmission Indicates whether or not to block diagnostic data submission.
-    */
-    private ?bool $diagnosticsBlockDataSubmission = null;
-    
-    /**
-     * @var bool|null $passwordBlockPicturePasswordAndPin Indicates whether or not to Block the user from using a pictures password and pin.
-    */
-    private ?bool $passwordBlockPicturePasswordAndPin = null;
-    
-    /**
-     * @var int|null $passwordExpirationDays Password expiration in days.
-    */
-    private ?int $passwordExpirationDays = null;
-    
-    /**
-     * @var int|null $passwordMinimumCharacterSetCount The number of character sets required in the password.
-    */
-    private ?int $passwordMinimumCharacterSetCount = null;
-    
-    /**
-     * @var int|null $passwordMinimumLength The minimum password length.
-    */
-    private ?int $passwordMinimumLength = null;
-    
-    /**
-     * @var int|null $passwordMinutesOfInactivityBeforeScreenTimeout The minutes of inactivity before the screen times out.
-    */
-    private ?int $passwordMinutesOfInactivityBeforeScreenTimeout = null;
-    
-    /**
-     * @var int|null $passwordPreviousPasswordBlockCount The number of previous passwords to prevent re-use of. Valid values 0 to 24
-    */
-    private ?int $passwordPreviousPasswordBlockCount = null;
-    
-    /**
-     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
-    */
-    private ?RequiredPasswordType $passwordRequiredType = null;
-    
-    /**
-     * @var int|null $passwordSignInFailureCountBeforeFactoryReset The number of sign in failures before factory reset.
-    */
-    private ?int $passwordSignInFailureCountBeforeFactoryReset = null;
-    
-    /**
-     * @var bool|null $storageRequireDeviceEncryption Indicates whether or not to require encryption on a mobile device.
-    */
-    private ?bool $storageRequireDeviceEncryption = null;
-    
-    /**
-     * @var bool|null $updatesRequireAutomaticUpdates Indicates whether or not to require automatic updates.
-    */
-    private ?bool $updatesRequireAutomaticUpdates = null;
-    
-    /**
-     * @var WindowsUserAccountControlSettings|null $userAccountControlSettings Possible values for Windows user account control settings.
-    */
-    private ?WindowsUserAccountControlSettings $userAccountControlSettings = null;
-    
-    /**
-     * @var string|null $workFoldersUrl The work folders url.
-    */
-    private ?string $workFoldersUrl = null;
-    
-    /**
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.
     */
     public function __construct() {
@@ -195,7 +30,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getAccountsBlockAddingNonMicrosoftAccountEmail(): ?bool {
-        return $this->accountsBlockAddingNonMicrosoftAccountEmail;
+        return $this->getBackingStore()->get('accountsBlockAddingNonMicrosoftAccountEmail');
     }
 
     /**
@@ -203,7 +38,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getApplyOnlyToWindows81(): ?bool {
-        return $this->applyOnlyToWindows81;
+        return $this->getBackingStore()->get('applyOnlyToWindows81');
     }
 
     /**
@@ -211,7 +46,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockAutofill(): ?bool {
-        return $this->browserBlockAutofill;
+        return $this->getBackingStore()->get('browserBlockAutofill');
     }
 
     /**
@@ -219,7 +54,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockAutomaticDetectionOfIntranetSites(): ?bool {
-        return $this->browserBlockAutomaticDetectionOfIntranetSites;
+        return $this->getBackingStore()->get('browserBlockAutomaticDetectionOfIntranetSites');
     }
 
     /**
@@ -227,7 +62,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockEnterpriseModeAccess(): ?bool {
-        return $this->browserBlockEnterpriseModeAccess;
+        return $this->getBackingStore()->get('browserBlockEnterpriseModeAccess');
     }
 
     /**
@@ -235,7 +70,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockJavaScript(): ?bool {
-        return $this->browserBlockJavaScript;
+        return $this->getBackingStore()->get('browserBlockJavaScript');
     }
 
     /**
@@ -243,7 +78,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockPlugins(): ?bool {
-        return $this->browserBlockPlugins;
+        return $this->getBackingStore()->get('browserBlockPlugins');
     }
 
     /**
@@ -251,7 +86,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockPopups(): ?bool {
-        return $this->browserBlockPopups;
+        return $this->getBackingStore()->get('browserBlockPopups');
     }
 
     /**
@@ -259,7 +94,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockSendingDoNotTrackHeader(): ?bool {
-        return $this->browserBlockSendingDoNotTrackHeader;
+        return $this->getBackingStore()->get('browserBlockSendingDoNotTrackHeader');
     }
 
     /**
@@ -267,7 +102,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserBlockSingleWordEntryOnIntranetSites(): ?bool {
-        return $this->browserBlockSingleWordEntryOnIntranetSites;
+        return $this->getBackingStore()->get('browserBlockSingleWordEntryOnIntranetSites');
     }
 
     /**
@@ -275,7 +110,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getBrowserEnterpriseModeSiteListLocation(): ?string {
-        return $this->browserEnterpriseModeSiteListLocation;
+        return $this->getBackingStore()->get('browserEnterpriseModeSiteListLocation');
     }
 
     /**
@@ -283,7 +118,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return InternetSiteSecurityLevel|null
     */
     public function getBrowserInternetSecurityLevel(): ?InternetSiteSecurityLevel {
-        return $this->browserInternetSecurityLevel;
+        return $this->getBackingStore()->get('browserInternetSecurityLevel');
     }
 
     /**
@@ -291,7 +126,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return SiteSecurityLevel|null
     */
     public function getBrowserIntranetSecurityLevel(): ?SiteSecurityLevel {
-        return $this->browserIntranetSecurityLevel;
+        return $this->getBackingStore()->get('browserIntranetSecurityLevel');
     }
 
     /**
@@ -299,7 +134,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getBrowserLoggingReportLocation(): ?string {
-        return $this->browserLoggingReportLocation;
+        return $this->getBackingStore()->get('browserLoggingReportLocation');
     }
 
     /**
@@ -307,7 +142,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireFirewall(): ?bool {
-        return $this->browserRequireFirewall;
+        return $this->getBackingStore()->get('browserRequireFirewall');
     }
 
     /**
@@ -315,7 +150,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireFraudWarning(): ?bool {
-        return $this->browserRequireFraudWarning;
+        return $this->getBackingStore()->get('browserRequireFraudWarning');
     }
 
     /**
@@ -323,7 +158,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireHighSecurityForRestrictedSites(): ?bool {
-        return $this->browserRequireHighSecurityForRestrictedSites;
+        return $this->getBackingStore()->get('browserRequireHighSecurityForRestrictedSites');
     }
 
     /**
@@ -331,7 +166,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getBrowserRequireSmartScreen(): ?bool {
-        return $this->browserRequireSmartScreen;
+        return $this->getBackingStore()->get('browserRequireSmartScreen');
     }
 
     /**
@@ -339,7 +174,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return SiteSecurityLevel|null
     */
     public function getBrowserTrustedSitesSecurityLevel(): ?SiteSecurityLevel {
-        return $this->browserTrustedSitesSecurityLevel;
+        return $this->getBackingStore()->get('browserTrustedSitesSecurityLevel');
     }
 
     /**
@@ -347,7 +182,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getCellularBlockDataRoaming(): ?bool {
-        return $this->cellularBlockDataRoaming;
+        return $this->getBackingStore()->get('cellularBlockDataRoaming');
     }
 
     /**
@@ -355,7 +190,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getDiagnosticsBlockDataSubmission(): ?bool {
-        return $this->diagnosticsBlockDataSubmission;
+        return $this->getBackingStore()->get('diagnosticsBlockDataSubmission');
     }
 
     /**
@@ -406,7 +241,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getPasswordBlockPicturePasswordAndPin(): ?bool {
-        return $this->passwordBlockPicturePasswordAndPin;
+        return $this->getBackingStore()->get('passwordBlockPicturePasswordAndPin');
     }
 
     /**
@@ -414,7 +249,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->passwordExpirationDays;
+        return $this->getBackingStore()->get('passwordExpirationDays');
     }
 
     /**
@@ -422,7 +257,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->passwordMinimumCharacterSetCount;
+        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
     }
 
     /**
@@ -430,7 +265,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->passwordMinimumLength;
+        return $this->getBackingStore()->get('passwordMinimumLength');
     }
 
     /**
@@ -438,7 +273,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->passwordMinutesOfInactivityBeforeScreenTimeout;
+        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
     }
 
     /**
@@ -446,7 +281,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->passwordPreviousPasswordBlockCount;
+        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
     }
 
     /**
@@ -454,7 +289,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->passwordRequiredType;
+        return $this->getBackingStore()->get('passwordRequiredType');
     }
 
     /**
@@ -462,7 +297,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return int|null
     */
     public function getPasswordSignInFailureCountBeforeFactoryReset(): ?int {
-        return $this->passwordSignInFailureCountBeforeFactoryReset;
+        return $this->getBackingStore()->get('passwordSignInFailureCountBeforeFactoryReset');
     }
 
     /**
@@ -470,7 +305,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getStorageRequireDeviceEncryption(): ?bool {
-        return $this->storageRequireDeviceEncryption;
+        return $this->getBackingStore()->get('storageRequireDeviceEncryption');
     }
 
     /**
@@ -478,7 +313,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return bool|null
     */
     public function getUpdatesRequireAutomaticUpdates(): ?bool {
-        return $this->updatesRequireAutomaticUpdates;
+        return $this->getBackingStore()->get('updatesRequireAutomaticUpdates');
     }
 
     /**
@@ -486,7 +321,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return WindowsUserAccountControlSettings|null
     */
     public function getUserAccountControlSettings(): ?WindowsUserAccountControlSettings {
-        return $this->userAccountControlSettings;
+        return $this->getBackingStore()->get('userAccountControlSettings');
     }
 
     /**
@@ -494,7 +329,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
      * @return string|null
     */
     public function getWorkFoldersUrl(): ?string {
-        return $this->workFoldersUrl;
+        return $this->getBackingStore()->get('workFoldersUrl');
     }
 
     /**
@@ -503,302 +338,302 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('accountsBlockAddingNonMicrosoftAccountEmail', $this->accountsBlockAddingNonMicrosoftAccountEmail);
-        $writer->writeBooleanValue('browserBlockAutofill', $this->browserBlockAutofill);
-        $writer->writeBooleanValue('browserBlockAutomaticDetectionOfIntranetSites', $this->browserBlockAutomaticDetectionOfIntranetSites);
-        $writer->writeBooleanValue('browserBlockEnterpriseModeAccess', $this->browserBlockEnterpriseModeAccess);
-        $writer->writeBooleanValue('browserBlockJavaScript', $this->browserBlockJavaScript);
-        $writer->writeBooleanValue('browserBlockPlugins', $this->browserBlockPlugins);
-        $writer->writeBooleanValue('browserBlockPopups', $this->browserBlockPopups);
-        $writer->writeBooleanValue('browserBlockSendingDoNotTrackHeader', $this->browserBlockSendingDoNotTrackHeader);
-        $writer->writeBooleanValue('browserBlockSingleWordEntryOnIntranetSites', $this->browserBlockSingleWordEntryOnIntranetSites);
-        $writer->writeStringValue('browserEnterpriseModeSiteListLocation', $this->browserEnterpriseModeSiteListLocation);
-        $writer->writeEnumValue('browserInternetSecurityLevel', $this->browserInternetSecurityLevel);
-        $writer->writeEnumValue('browserIntranetSecurityLevel', $this->browserIntranetSecurityLevel);
-        $writer->writeStringValue('browserLoggingReportLocation', $this->browserLoggingReportLocation);
-        $writer->writeBooleanValue('browserRequireFirewall', $this->browserRequireFirewall);
-        $writer->writeBooleanValue('browserRequireFraudWarning', $this->browserRequireFraudWarning);
-        $writer->writeBooleanValue('browserRequireHighSecurityForRestrictedSites', $this->browserRequireHighSecurityForRestrictedSites);
-        $writer->writeBooleanValue('browserRequireSmartScreen', $this->browserRequireSmartScreen);
-        $writer->writeEnumValue('browserTrustedSitesSecurityLevel', $this->browserTrustedSitesSecurityLevel);
-        $writer->writeBooleanValue('cellularBlockDataRoaming', $this->cellularBlockDataRoaming);
-        $writer->writeBooleanValue('diagnosticsBlockDataSubmission', $this->diagnosticsBlockDataSubmission);
-        $writer->writeBooleanValue('passwordBlockPicturePasswordAndPin', $this->passwordBlockPicturePasswordAndPin);
-        $writer->writeIntegerValue('passwordExpirationDays', $this->passwordExpirationDays);
-        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->passwordMinimumCharacterSetCount);
-        $writer->writeIntegerValue('passwordMinimumLength', $this->passwordMinimumLength);
-        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeScreenTimeout', $this->passwordMinutesOfInactivityBeforeScreenTimeout);
-        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->passwordPreviousPasswordBlockCount);
-        $writer->writeEnumValue('passwordRequiredType', $this->passwordRequiredType);
-        $writer->writeIntegerValue('passwordSignInFailureCountBeforeFactoryReset', $this->passwordSignInFailureCountBeforeFactoryReset);
-        $writer->writeBooleanValue('storageRequireDeviceEncryption', $this->storageRequireDeviceEncryption);
-        $writer->writeBooleanValue('updatesRequireAutomaticUpdates', $this->updatesRequireAutomaticUpdates);
-        $writer->writeEnumValue('userAccountControlSettings', $this->userAccountControlSettings);
-        $writer->writeStringValue('workFoldersUrl', $this->workFoldersUrl);
+        $writer->writeBooleanValue('accountsBlockAddingNonMicrosoftAccountEmail', $this->getAccountsBlockAddingNonMicrosoftAccountEmail());
+        $writer->writeBooleanValue('browserBlockAutofill', $this->getBrowserBlockAutofill());
+        $writer->writeBooleanValue('browserBlockAutomaticDetectionOfIntranetSites', $this->getBrowserBlockAutomaticDetectionOfIntranetSites());
+        $writer->writeBooleanValue('browserBlockEnterpriseModeAccess', $this->getBrowserBlockEnterpriseModeAccess());
+        $writer->writeBooleanValue('browserBlockJavaScript', $this->getBrowserBlockJavaScript());
+        $writer->writeBooleanValue('browserBlockPlugins', $this->getBrowserBlockPlugins());
+        $writer->writeBooleanValue('browserBlockPopups', $this->getBrowserBlockPopups());
+        $writer->writeBooleanValue('browserBlockSendingDoNotTrackHeader', $this->getBrowserBlockSendingDoNotTrackHeader());
+        $writer->writeBooleanValue('browserBlockSingleWordEntryOnIntranetSites', $this->getBrowserBlockSingleWordEntryOnIntranetSites());
+        $writer->writeStringValue('browserEnterpriseModeSiteListLocation', $this->getBrowserEnterpriseModeSiteListLocation());
+        $writer->writeEnumValue('browserInternetSecurityLevel', $this->getBrowserInternetSecurityLevel());
+        $writer->writeEnumValue('browserIntranetSecurityLevel', $this->getBrowserIntranetSecurityLevel());
+        $writer->writeStringValue('browserLoggingReportLocation', $this->getBrowserLoggingReportLocation());
+        $writer->writeBooleanValue('browserRequireFirewall', $this->getBrowserRequireFirewall());
+        $writer->writeBooleanValue('browserRequireFraudWarning', $this->getBrowserRequireFraudWarning());
+        $writer->writeBooleanValue('browserRequireHighSecurityForRestrictedSites', $this->getBrowserRequireHighSecurityForRestrictedSites());
+        $writer->writeBooleanValue('browserRequireSmartScreen', $this->getBrowserRequireSmartScreen());
+        $writer->writeEnumValue('browserTrustedSitesSecurityLevel', $this->getBrowserTrustedSitesSecurityLevel());
+        $writer->writeBooleanValue('cellularBlockDataRoaming', $this->getCellularBlockDataRoaming());
+        $writer->writeBooleanValue('diagnosticsBlockDataSubmission', $this->getDiagnosticsBlockDataSubmission());
+        $writer->writeBooleanValue('passwordBlockPicturePasswordAndPin', $this->getPasswordBlockPicturePasswordAndPin());
+        $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
+        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());
+        $writer->writeIntegerValue('passwordMinimumLength', $this->getPasswordMinimumLength());
+        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeScreenTimeout', $this->getPasswordMinutesOfInactivityBeforeScreenTimeout());
+        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->getPasswordPreviousPasswordBlockCount());
+        $writer->writeEnumValue('passwordRequiredType', $this->getPasswordRequiredType());
+        $writer->writeIntegerValue('passwordSignInFailureCountBeforeFactoryReset', $this->getPasswordSignInFailureCountBeforeFactoryReset());
+        $writer->writeBooleanValue('storageRequireDeviceEncryption', $this->getStorageRequireDeviceEncryption());
+        $writer->writeBooleanValue('updatesRequireAutomaticUpdates', $this->getUpdatesRequireAutomaticUpdates());
+        $writer->writeEnumValue('userAccountControlSettings', $this->getUserAccountControlSettings());
+        $writer->writeStringValue('workFoldersUrl', $this->getWorkFoldersUrl());
     }
 
     /**
      * Sets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      *  @param bool|null $value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
     */
-    public function setAccountsBlockAddingNonMicrosoftAccountEmail(?bool $value ): void {
-        $this->accountsBlockAddingNonMicrosoftAccountEmail = $value;
+    public function setAccountsBlockAddingNonMicrosoftAccountEmail(?bool $value): void {
+        $this->getBackingStore()->set('accountsBlockAddingNonMicrosoftAccountEmail', $value);
     }
 
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      *  @param bool|null $value Value to set for the applyOnlyToWindows81 property.
     */
-    public function setApplyOnlyToWindows81(?bool $value ): void {
-        $this->applyOnlyToWindows81 = $value;
+    public function setApplyOnlyToWindows81(?bool $value): void {
+        $this->getBackingStore()->set('applyOnlyToWindows81', $value);
     }
 
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
      *  @param bool|null $value Value to set for the browserBlockAutofill property.
     */
-    public function setBrowserBlockAutofill(?bool $value ): void {
-        $this->browserBlockAutofill = $value;
+    public function setBrowserBlockAutofill(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockAutofill', $value);
     }
 
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
      *  @param bool|null $value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
     */
-    public function setBrowserBlockAutomaticDetectionOfIntranetSites(?bool $value ): void {
-        $this->browserBlockAutomaticDetectionOfIntranetSites = $value;
+    public function setBrowserBlockAutomaticDetectionOfIntranetSites(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockAutomaticDetectionOfIntranetSites', $value);
     }
 
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
      *  @param bool|null $value Value to set for the browserBlockEnterpriseModeAccess property.
     */
-    public function setBrowserBlockEnterpriseModeAccess(?bool $value ): void {
-        $this->browserBlockEnterpriseModeAccess = $value;
+    public function setBrowserBlockEnterpriseModeAccess(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockEnterpriseModeAccess', $value);
     }
 
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      *  @param bool|null $value Value to set for the browserBlockJavaScript property.
     */
-    public function setBrowserBlockJavaScript(?bool $value ): void {
-        $this->browserBlockJavaScript = $value;
+    public function setBrowserBlockJavaScript(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockJavaScript', $value);
     }
 
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
      *  @param bool|null $value Value to set for the browserBlockPlugins property.
     */
-    public function setBrowserBlockPlugins(?bool $value ): void {
-        $this->browserBlockPlugins = $value;
+    public function setBrowserBlockPlugins(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockPlugins', $value);
     }
 
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
      *  @param bool|null $value Value to set for the browserBlockPopups property.
     */
-    public function setBrowserBlockPopups(?bool $value ): void {
-        $this->browserBlockPopups = $value;
+    public function setBrowserBlockPopups(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockPopups', $value);
     }
 
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      *  @param bool|null $value Value to set for the browserBlockSendingDoNotTrackHeader property.
     */
-    public function setBrowserBlockSendingDoNotTrackHeader(?bool $value ): void {
-        $this->browserBlockSendingDoNotTrackHeader = $value;
+    public function setBrowserBlockSendingDoNotTrackHeader(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockSendingDoNotTrackHeader', $value);
     }
 
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
      *  @param bool|null $value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
     */
-    public function setBrowserBlockSingleWordEntryOnIntranetSites(?bool $value ): void {
-        $this->browserBlockSingleWordEntryOnIntranetSites = $value;
+    public function setBrowserBlockSingleWordEntryOnIntranetSites(?bool $value): void {
+        $this->getBackingStore()->set('browserBlockSingleWordEntryOnIntranetSites', $value);
     }
 
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
      *  @param string|null $value Value to set for the browserEnterpriseModeSiteListLocation property.
     */
-    public function setBrowserEnterpriseModeSiteListLocation(?string $value ): void {
-        $this->browserEnterpriseModeSiteListLocation = $value;
+    public function setBrowserEnterpriseModeSiteListLocation(?string $value): void {
+        $this->getBackingStore()->set('browserEnterpriseModeSiteListLocation', $value);
     }
 
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      *  @param InternetSiteSecurityLevel|null $value Value to set for the browserInternetSecurityLevel property.
     */
-    public function setBrowserInternetSecurityLevel(?InternetSiteSecurityLevel $value ): void {
-        $this->browserInternetSecurityLevel = $value;
+    public function setBrowserInternetSecurityLevel(?InternetSiteSecurityLevel $value): void {
+        $this->getBackingStore()->set('browserInternetSecurityLevel', $value);
     }
 
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      *  @param SiteSecurityLevel|null $value Value to set for the browserIntranetSecurityLevel property.
     */
-    public function setBrowserIntranetSecurityLevel(?SiteSecurityLevel $value ): void {
-        $this->browserIntranetSecurityLevel = $value;
+    public function setBrowserIntranetSecurityLevel(?SiteSecurityLevel $value): void {
+        $this->getBackingStore()->set('browserIntranetSecurityLevel', $value);
     }
 
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
      *  @param string|null $value Value to set for the browserLoggingReportLocation property.
     */
-    public function setBrowserLoggingReportLocation(?string $value ): void {
-        $this->browserLoggingReportLocation = $value;
+    public function setBrowserLoggingReportLocation(?string $value): void {
+        $this->getBackingStore()->set('browserLoggingReportLocation', $value);
     }
 
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
      *  @param bool|null $value Value to set for the browserRequireFirewall property.
     */
-    public function setBrowserRequireFirewall(?bool $value ): void {
-        $this->browserRequireFirewall = $value;
+    public function setBrowserRequireFirewall(?bool $value): void {
+        $this->getBackingStore()->set('browserRequireFirewall', $value);
     }
 
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
      *  @param bool|null $value Value to set for the browserRequireFraudWarning property.
     */
-    public function setBrowserRequireFraudWarning(?bool $value ): void {
-        $this->browserRequireFraudWarning = $value;
+    public function setBrowserRequireFraudWarning(?bool $value): void {
+        $this->getBackingStore()->set('browserRequireFraudWarning', $value);
     }
 
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
      *  @param bool|null $value Value to set for the browserRequireHighSecurityForRestrictedSites property.
     */
-    public function setBrowserRequireHighSecurityForRestrictedSites(?bool $value ): void {
-        $this->browserRequireHighSecurityForRestrictedSites = $value;
+    public function setBrowserRequireHighSecurityForRestrictedSites(?bool $value): void {
+        $this->getBackingStore()->set('browserRequireHighSecurityForRestrictedSites', $value);
     }
 
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
      *  @param bool|null $value Value to set for the browserRequireSmartScreen property.
     */
-    public function setBrowserRequireSmartScreen(?bool $value ): void {
-        $this->browserRequireSmartScreen = $value;
+    public function setBrowserRequireSmartScreen(?bool $value): void {
+        $this->getBackingStore()->set('browserRequireSmartScreen', $value);
     }
 
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      *  @param SiteSecurityLevel|null $value Value to set for the browserTrustedSitesSecurityLevel property.
     */
-    public function setBrowserTrustedSitesSecurityLevel(?SiteSecurityLevel $value ): void {
-        $this->browserTrustedSitesSecurityLevel = $value;
+    public function setBrowserTrustedSitesSecurityLevel(?SiteSecurityLevel $value): void {
+        $this->getBackingStore()->set('browserTrustedSitesSecurityLevel', $value);
     }
 
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      *  @param bool|null $value Value to set for the cellularBlockDataRoaming property.
     */
-    public function setCellularBlockDataRoaming(?bool $value ): void {
-        $this->cellularBlockDataRoaming = $value;
+    public function setCellularBlockDataRoaming(?bool $value): void {
+        $this->getBackingStore()->set('cellularBlockDataRoaming', $value);
     }
 
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
      *  @param bool|null $value Value to set for the diagnosticsBlockDataSubmission property.
     */
-    public function setDiagnosticsBlockDataSubmission(?bool $value ): void {
-        $this->diagnosticsBlockDataSubmission = $value;
+    public function setDiagnosticsBlockDataSubmission(?bool $value): void {
+        $this->getBackingStore()->set('diagnosticsBlockDataSubmission', $value);
     }
 
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
      *  @param bool|null $value Value to set for the passwordBlockPicturePasswordAndPin property.
     */
-    public function setPasswordBlockPicturePasswordAndPin(?bool $value ): void {
-        $this->passwordBlockPicturePasswordAndPin = $value;
+    public function setPasswordBlockPicturePasswordAndPin(?bool $value): void {
+        $this->getBackingStore()->set('passwordBlockPicturePasswordAndPin', $value);
     }
 
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
      *  @param int|null $value Value to set for the passwordExpirationDays property.
     */
-    public function setPasswordExpirationDays(?int $value ): void {
-        $this->passwordExpirationDays = $value;
+    public function setPasswordExpirationDays(?int $value): void {
+        $this->getBackingStore()->set('passwordExpirationDays', $value);
     }
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
-    public function setPasswordMinimumCharacterSetCount(?int $value ): void {
-        $this->passwordMinimumCharacterSetCount = $value;
+    public function setPasswordMinimumCharacterSetCount(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
     }
 
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      *  @param int|null $value Value to set for the passwordMinimumLength property.
     */
-    public function setPasswordMinimumLength(?int $value ): void {
-        $this->passwordMinimumLength = $value;
+    public function setPasswordMinimumLength(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumLength', $value);
     }
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
-    public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value ): void {
-        $this->passwordMinutesOfInactivityBeforeScreenTimeout = $value;
+    public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
+        $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
     }
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
-    public function setPasswordPreviousPasswordBlockCount(?int $value ): void {
-        $this->passwordPreviousPasswordBlockCount = $value;
+    public function setPasswordPreviousPasswordBlockCount(?int $value): void {
+        $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
     }
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
-    public function setPasswordRequiredType(?RequiredPasswordType $value ): void {
-        $this->passwordRequiredType = $value;
+    public function setPasswordRequiredType(?RequiredPasswordType $value): void {
+        $this->getBackingStore()->set('passwordRequiredType', $value);
     }
 
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
      *  @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
     */
-    public function setPasswordSignInFailureCountBeforeFactoryReset(?int $value ): void {
-        $this->passwordSignInFailureCountBeforeFactoryReset = $value;
+    public function setPasswordSignInFailureCountBeforeFactoryReset(?int $value): void {
+        $this->getBackingStore()->set('passwordSignInFailureCountBeforeFactoryReset', $value);
     }
 
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
      *  @param bool|null $value Value to set for the storageRequireDeviceEncryption property.
     */
-    public function setStorageRequireDeviceEncryption(?bool $value ): void {
-        $this->storageRequireDeviceEncryption = $value;
+    public function setStorageRequireDeviceEncryption(?bool $value): void {
+        $this->getBackingStore()->set('storageRequireDeviceEncryption', $value);
     }
 
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
      *  @param bool|null $value Value to set for the updatesRequireAutomaticUpdates property.
     */
-    public function setUpdatesRequireAutomaticUpdates(?bool $value ): void {
-        $this->updatesRequireAutomaticUpdates = $value;
+    public function setUpdatesRequireAutomaticUpdates(?bool $value): void {
+        $this->getBackingStore()->set('updatesRequireAutomaticUpdates', $value);
     }
 
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      *  @param WindowsUserAccountControlSettings|null $value Value to set for the userAccountControlSettings property.
     */
-    public function setUserAccountControlSettings(?WindowsUserAccountControlSettings $value ): void {
-        $this->userAccountControlSettings = $value;
+    public function setUserAccountControlSettings(?WindowsUserAccountControlSettings $value): void {
+        $this->getBackingStore()->set('userAccountControlSettings', $value);
     }
 
     /**
      * Sets the workFoldersUrl property value. The work folders url.
      *  @param string|null $value Value to set for the workFoldersUrl property.
     */
-    public function setWorkFoldersUrl(?string $value ): void {
-        $this->workFoldersUrl = $value;
+    public function setWorkFoldersUrl(?string $value): void {
+        $this->getBackingStore()->set('workFoldersUrl', $value);
     }
 
 }

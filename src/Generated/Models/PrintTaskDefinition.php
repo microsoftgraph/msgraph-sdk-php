@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintTaskDefinition extends Entity implements Parsable 
 {
     /**
-     * @var AppIdentity|null $createdBy The createdBy property
-    */
-    private ?AppIdentity $createdBy = null;
-    
-    /**
-     * @var string|null $displayName The name of the printTaskDefinition.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<PrintTask>|null $tasks A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
-    */
-    private ?array $tasks = null;
-    
-    /**
      * Instantiates a new printTaskDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.printTaskDefinition');
     }
 
     /**
@@ -45,7 +29,7 @@ class PrintTaskDefinition extends Entity implements Parsable
      * @return AppIdentity|null
     */
     public function getCreatedBy(): ?AppIdentity {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -53,7 +37,7 @@ class PrintTaskDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +58,7 @@ class PrintTaskDefinition extends Entity implements Parsable
      * @return array<PrintTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -83,33 +67,33 @@ class PrintTaskDefinition extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 
     /**
      * Sets the createdBy property value. The createdBy property
      *  @param AppIdentity|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?AppIdentity $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?AppIdentity $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      *  @param array<PrintTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
 }

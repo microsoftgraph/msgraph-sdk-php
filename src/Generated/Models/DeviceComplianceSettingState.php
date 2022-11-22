@@ -10,66 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceSettingState extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $complianceGracePeriodExpirationDateTime The DateTime when device compliance grace period expires
-    */
-    private ?DateTime $complianceGracePeriodExpirationDateTime = null;
-    
-    /**
-     * @var string|null $deviceId The Device Id that is being reported
-    */
-    private ?string $deviceId = null;
-    
-    /**
-     * @var string|null $deviceModel The device model that is being reported
-    */
-    private ?string $deviceModel = null;
-    
-    /**
-     * @var string|null $deviceName The Device Name that is being reported
-    */
-    private ?string $deviceName = null;
-    
-    /**
-     * @var string|null $setting The setting class name and property name.
-    */
-    private ?string $setting = null;
-    
-    /**
-     * @var string|null $settingName The Setting Name that is being reported
-    */
-    private ?string $settingName = null;
-    
-    /**
-     * @var ComplianceStatus|null $state The state property
-    */
-    private ?ComplianceStatus $state = null;
-    
-    /**
-     * @var string|null $userEmail The User email address that is being reported
-    */
-    private ?string $userEmail = null;
-    
-    /**
-     * @var string|null $userId The user Id that is being reported
-    */
-    private ?string $userId = null;
-    
-    /**
-     * @var string|null $userName The User Name that is being reported
-    */
-    private ?string $userName = null;
-    
-    /**
-     * @var string|null $userPrincipalName The User PrincipalName that is being reported
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new deviceComplianceSettingState and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceComplianceSettingState');
     }
 
     /**
@@ -86,7 +30,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getComplianceGracePeriodExpirationDateTime(): ?DateTime {
-        return $this->complianceGracePeriodExpirationDateTime;
+        return $this->getBackingStore()->get('complianceGracePeriodExpirationDateTime');
     }
 
     /**
@@ -94,7 +38,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->deviceId;
+        return $this->getBackingStore()->get('deviceId');
     }
 
     /**
@@ -102,7 +46,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceModel(): ?string {
-        return $this->deviceModel;
+        return $this->getBackingStore()->get('deviceModel');
     }
 
     /**
@@ -110,7 +54,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->deviceName;
+        return $this->getBackingStore()->get('deviceName');
     }
 
     /**
@@ -139,7 +83,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getSetting(): ?string {
-        return $this->setting;
+        return $this->getBackingStore()->get('setting');
     }
 
     /**
@@ -147,7 +91,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getSettingName(): ?string {
-        return $this->settingName;
+        return $this->getBackingStore()->get('settingName');
     }
 
     /**
@@ -155,7 +99,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -163,7 +107,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserEmail(): ?string {
-        return $this->userEmail;
+        return $this->getBackingStore()->get('userEmail');
     }
 
     /**
@@ -171,7 +115,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -179,7 +123,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserName(): ?string {
-        return $this->userName;
+        return $this->getBackingStore()->get('userName');
     }
 
     /**
@@ -187,7 +131,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -196,105 +140,105 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->complianceGracePeriodExpirationDateTime);
-        $writer->writeStringValue('deviceId', $this->deviceId);
-        $writer->writeStringValue('deviceModel', $this->deviceModel);
-        $writer->writeStringValue('deviceName', $this->deviceName);
-        $writer->writeStringValue('setting', $this->setting);
-        $writer->writeStringValue('settingName', $this->settingName);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeStringValue('userEmail', $this->userEmail);
-        $writer->writeStringValue('userId', $this->userId);
-        $writer->writeStringValue('userName', $this->userName);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeDateTimeValue('complianceGracePeriodExpirationDateTime', $this->getComplianceGracePeriodExpirationDateTime());
+        $writer->writeStringValue('deviceId', $this->getDeviceId());
+        $writer->writeStringValue('deviceModel', $this->getDeviceModel());
+        $writer->writeStringValue('deviceName', $this->getDeviceName());
+        $writer->writeStringValue('setting', $this->getSetting());
+        $writer->writeStringValue('settingName', $this->getSettingName());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('userEmail', $this->getUserEmail());
+        $writer->writeStringValue('userId', $this->getUserId());
+        $writer->writeStringValue('userName', $this->getUserName());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      *  @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
     */
-    public function setComplianceGracePeriodExpirationDateTime(?DateTime $value ): void {
-        $this->complianceGracePeriodExpirationDateTime = $value;
+    public function setComplianceGracePeriodExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('complianceGracePeriodExpirationDateTime', $value);
     }
 
     /**
      * Sets the deviceId property value. The Device Id that is being reported
      *  @param string|null $value Value to set for the deviceId property.
     */
-    public function setDeviceId(?string $value ): void {
-        $this->deviceId = $value;
+    public function setDeviceId(?string $value): void {
+        $this->getBackingStore()->set('deviceId', $value);
     }
 
     /**
      * Sets the deviceModel property value. The device model that is being reported
      *  @param string|null $value Value to set for the deviceModel property.
     */
-    public function setDeviceModel(?string $value ): void {
-        $this->deviceModel = $value;
+    public function setDeviceModel(?string $value): void {
+        $this->getBackingStore()->set('deviceModel', $value);
     }
 
     /**
      * Sets the deviceName property value. The Device Name that is being reported
      *  @param string|null $value Value to set for the deviceName property.
     */
-    public function setDeviceName(?string $value ): void {
-        $this->deviceName = $value;
+    public function setDeviceName(?string $value): void {
+        $this->getBackingStore()->set('deviceName', $value);
     }
 
     /**
      * Sets the setting property value. The setting class name and property name.
      *  @param string|null $value Value to set for the setting property.
     */
-    public function setSetting(?string $value ): void {
-        $this->setting = $value;
+    public function setSetting(?string $value): void {
+        $this->getBackingStore()->set('setting', $value);
     }
 
     /**
      * Sets the settingName property value. The Setting Name that is being reported
      *  @param string|null $value Value to set for the settingName property.
     */
-    public function setSettingName(?string $value ): void {
-        $this->settingName = $value;
+    public function setSettingName(?string $value): void {
+        $this->getBackingStore()->set('settingName', $value);
     }
 
     /**
      * Sets the state property value. The state property
      *  @param ComplianceStatus|null $value Value to set for the state property.
     */
-    public function setState(?ComplianceStatus $value ): void {
-        $this->state = $value;
+    public function setState(?ComplianceStatus $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the userEmail property value. The User email address that is being reported
      *  @param string|null $value Value to set for the userEmail property.
     */
-    public function setUserEmail(?string $value ): void {
-        $this->userEmail = $value;
+    public function setUserEmail(?string $value): void {
+        $this->getBackingStore()->set('userEmail', $value);
     }
 
     /**
      * Sets the userId property value. The user Id that is being reported
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
     /**
      * Sets the userName property value. The User Name that is being reported
      *  @param string|null $value Value to set for the userName property.
     */
-    public function setUserName(?string $value ): void {
-        $this->userName = $value;
+    public function setUserName(?string $value): void {
+        $this->getBackingStore()->set('userName', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. The User PrincipalName that is being reported
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

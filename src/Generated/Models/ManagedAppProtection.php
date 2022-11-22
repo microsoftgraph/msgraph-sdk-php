@@ -10,141 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppProtection extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * @var array<ManagedAppDataStorageLocation>|null $allowedDataStorageLocations Data storage locations where a user may store managed data.
-    */
-    private ?array $allowedDataStorageLocations = null;
-    
-    /**
-     * @var ManagedAppDataTransferLevel|null $allowedInboundDataTransferSources Data can be transferred from/to these classes of apps
-    */
-    private ?ManagedAppDataTransferLevel $allowedInboundDataTransferSources = null;
-    
-    /**
-     * @var ManagedAppClipboardSharingLevel|null $allowedOutboundClipboardSharingLevel Represents the level to which the device's clipboard may be shared between apps
-    */
-    private ?ManagedAppClipboardSharingLevel $allowedOutboundClipboardSharingLevel = null;
-    
-    /**
-     * @var ManagedAppDataTransferLevel|null $allowedOutboundDataTransferDestinations Data can be transferred from/to these classes of apps
-    */
-    private ?ManagedAppDataTransferLevel $allowedOutboundDataTransferDestinations = null;
-    
-    /**
-     * @var bool|null $contactSyncBlocked Indicates whether contacts can be synced to the user's device.
-    */
-    private ?bool $contactSyncBlocked = null;
-    
-    /**
-     * @var bool|null $dataBackupBlocked Indicates whether the backup of a managed app's data is blocked.
-    */
-    private ?bool $dataBackupBlocked = null;
-    
-    /**
-     * @var bool|null $deviceComplianceRequired Indicates whether device compliance is required.
-    */
-    private ?bool $deviceComplianceRequired = null;
-    
-    /**
-     * @var bool|null $disableAppPinIfDevicePinIsSet Indicates whether use of the app pin is required if the device pin is set.
-    */
-    private ?bool $disableAppPinIfDevicePinIsSet = null;
-    
-    /**
-     * @var bool|null $fingerprintBlocked Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
-    */
-    private ?bool $fingerprintBlocked = null;
-    
-    /**
-     * @var ManagedBrowserType|null $managedBrowser Type of managed browser
-    */
-    private ?ManagedBrowserType $managedBrowser = null;
-    
-    /**
-     * @var bool|null $managedBrowserToOpenLinksRequired Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
-    */
-    private ?bool $managedBrowserToOpenLinksRequired = null;
-    
-    /**
-     * @var int|null $maximumPinRetries Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
-    */
-    private ?int $maximumPinRetries = null;
-    
-    /**
-     * @var int|null $minimumPinLength Minimum pin length required for an app-level pin if PinRequired is set to True
-    */
-    private ?int $minimumPinLength = null;
-    
-    /**
-     * @var string|null $minimumRequiredAppVersion Versions less than the specified version will block the managed app from accessing company data.
-    */
-    private ?string $minimumRequiredAppVersion = null;
-    
-    /**
-     * @var string|null $minimumRequiredOsVersion Versions less than the specified version will block the managed app from accessing company data.
-    */
-    private ?string $minimumRequiredOsVersion = null;
-    
-    /**
-     * @var string|null $minimumWarningAppVersion Versions less than the specified version will result in warning message on the managed app.
-    */
-    private ?string $minimumWarningAppVersion = null;
-    
-    /**
-     * @var string|null $minimumWarningOsVersion Versions less than the specified version will result in warning message on the managed app from accessing company data.
-    */
-    private ?string $minimumWarningOsVersion = null;
-    
-    /**
-     * @var bool|null $organizationalCredentialsRequired Indicates whether organizational credentials are required for app use.
-    */
-    private ?bool $organizationalCredentialsRequired = null;
-    
-    /**
-     * @var DateInterval|null $periodBeforePinReset TimePeriod before the all-level pin must be reset if PinRequired is set to True.
-    */
-    private ?DateInterval $periodBeforePinReset = null;
-    
-    /**
-     * @var DateInterval|null $periodOfflineBeforeAccessCheck The period after which access is checked when the device is not connected to the internet.
-    */
-    private ?DateInterval $periodOfflineBeforeAccessCheck = null;
-    
-    /**
-     * @var DateInterval|null $periodOfflineBeforeWipeIsEnforced The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
-    */
-    private ?DateInterval $periodOfflineBeforeWipeIsEnforced = null;
-    
-    /**
-     * @var DateInterval|null $periodOnlineBeforeAccessCheck The period after which access is checked when the device is connected to the internet.
-    */
-    private ?DateInterval $periodOnlineBeforeAccessCheck = null;
-    
-    /**
-     * @var ManagedAppPinCharacterSet|null $pinCharacterSet Character set which is to be used for a user's app PIN
-    */
-    private ?ManagedAppPinCharacterSet $pinCharacterSet = null;
-    
-    /**
-     * @var bool|null $pinRequired Indicates whether an app-level pin is required.
-    */
-    private ?bool $pinRequired = null;
-    
-    /**
-     * @var bool|null $printBlocked Indicates whether printing is allowed from managed apps.
-    */
-    private ?bool $printBlocked = null;
-    
-    /**
-     * @var bool|null $saveAsBlocked Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
-    */
-    private ?bool $saveAsBlocked = null;
-    
-    /**
-     * @var bool|null $simplePinBlocked Indicates whether simplePin is blocked.
-    */
-    private ?bool $simplePinBlocked = null;
-    
-    /**
      * Instantiates a new ManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -176,7 +41,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return array<ManagedAppDataStorageLocation>|null
     */
     public function getAllowedDataStorageLocations(): ?array {
-        return $this->allowedDataStorageLocations;
+        return $this->getBackingStore()->get('allowedDataStorageLocations');
     }
 
     /**
@@ -184,7 +49,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppDataTransferLevel|null
     */
     public function getAllowedInboundDataTransferSources(): ?ManagedAppDataTransferLevel {
-        return $this->allowedInboundDataTransferSources;
+        return $this->getBackingStore()->get('allowedInboundDataTransferSources');
     }
 
     /**
@@ -192,7 +57,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppClipboardSharingLevel|null
     */
     public function getAllowedOutboundClipboardSharingLevel(): ?ManagedAppClipboardSharingLevel {
-        return $this->allowedOutboundClipboardSharingLevel;
+        return $this->getBackingStore()->get('allowedOutboundClipboardSharingLevel');
     }
 
     /**
@@ -200,7 +65,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppDataTransferLevel|null
     */
     public function getAllowedOutboundDataTransferDestinations(): ?ManagedAppDataTransferLevel {
-        return $this->allowedOutboundDataTransferDestinations;
+        return $this->getBackingStore()->get('allowedOutboundDataTransferDestinations');
     }
 
     /**
@@ -208,7 +73,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getContactSyncBlocked(): ?bool {
-        return $this->contactSyncBlocked;
+        return $this->getBackingStore()->get('contactSyncBlocked');
     }
 
     /**
@@ -216,7 +81,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDataBackupBlocked(): ?bool {
-        return $this->dataBackupBlocked;
+        return $this->getBackingStore()->get('dataBackupBlocked');
     }
 
     /**
@@ -224,7 +89,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDeviceComplianceRequired(): ?bool {
-        return $this->deviceComplianceRequired;
+        return $this->getBackingStore()->get('deviceComplianceRequired');
     }
 
     /**
@@ -232,7 +97,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDisableAppPinIfDevicePinIsSet(): ?bool {
-        return $this->disableAppPinIfDevicePinIsSet;
+        return $this->getBackingStore()->get('disableAppPinIfDevicePinIsSet');
     }
 
     /**
@@ -277,7 +142,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getFingerprintBlocked(): ?bool {
-        return $this->fingerprintBlocked;
+        return $this->getBackingStore()->get('fingerprintBlocked');
     }
 
     /**
@@ -285,7 +150,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedBrowserType|null
     */
     public function getManagedBrowser(): ?ManagedBrowserType {
-        return $this->managedBrowser;
+        return $this->getBackingStore()->get('managedBrowser');
     }
 
     /**
@@ -293,7 +158,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getManagedBrowserToOpenLinksRequired(): ?bool {
-        return $this->managedBrowserToOpenLinksRequired;
+        return $this->getBackingStore()->get('managedBrowserToOpenLinksRequired');
     }
 
     /**
@@ -301,7 +166,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return int|null
     */
     public function getMaximumPinRetries(): ?int {
-        return $this->maximumPinRetries;
+        return $this->getBackingStore()->get('maximumPinRetries');
     }
 
     /**
@@ -309,7 +174,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return int|null
     */
     public function getMinimumPinLength(): ?int {
-        return $this->minimumPinLength;
+        return $this->getBackingStore()->get('minimumPinLength');
     }
 
     /**
@@ -317,7 +182,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumRequiredAppVersion(): ?string {
-        return $this->minimumRequiredAppVersion;
+        return $this->getBackingStore()->get('minimumRequiredAppVersion');
     }
 
     /**
@@ -325,7 +190,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumRequiredOsVersion(): ?string {
-        return $this->minimumRequiredOsVersion;
+        return $this->getBackingStore()->get('minimumRequiredOsVersion');
     }
 
     /**
@@ -333,7 +198,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumWarningAppVersion(): ?string {
-        return $this->minimumWarningAppVersion;
+        return $this->getBackingStore()->get('minimumWarningAppVersion');
     }
 
     /**
@@ -341,7 +206,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumWarningOsVersion(): ?string {
-        return $this->minimumWarningOsVersion;
+        return $this->getBackingStore()->get('minimumWarningOsVersion');
     }
 
     /**
@@ -349,7 +214,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getOrganizationalCredentialsRequired(): ?bool {
-        return $this->organizationalCredentialsRequired;
+        return $this->getBackingStore()->get('organizationalCredentialsRequired');
     }
 
     /**
@@ -357,7 +222,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodBeforePinReset(): ?DateInterval {
-        return $this->periodBeforePinReset;
+        return $this->getBackingStore()->get('periodBeforePinReset');
     }
 
     /**
@@ -365,7 +230,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOfflineBeforeAccessCheck(): ?DateInterval {
-        return $this->periodOfflineBeforeAccessCheck;
+        return $this->getBackingStore()->get('periodOfflineBeforeAccessCheck');
     }
 
     /**
@@ -373,7 +238,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOfflineBeforeWipeIsEnforced(): ?DateInterval {
-        return $this->periodOfflineBeforeWipeIsEnforced;
+        return $this->getBackingStore()->get('periodOfflineBeforeWipeIsEnforced');
     }
 
     /**
@@ -381,7 +246,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOnlineBeforeAccessCheck(): ?DateInterval {
-        return $this->periodOnlineBeforeAccessCheck;
+        return $this->getBackingStore()->get('periodOnlineBeforeAccessCheck');
     }
 
     /**
@@ -389,7 +254,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppPinCharacterSet|null
     */
     public function getPinCharacterSet(): ?ManagedAppPinCharacterSet {
-        return $this->pinCharacterSet;
+        return $this->getBackingStore()->get('pinCharacterSet');
     }
 
     /**
@@ -397,7 +262,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getPinRequired(): ?bool {
-        return $this->pinRequired;
+        return $this->getBackingStore()->get('pinRequired');
     }
 
     /**
@@ -405,7 +270,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getPrintBlocked(): ?bool {
-        return $this->printBlocked;
+        return $this->getBackingStore()->get('printBlocked');
     }
 
     /**
@@ -413,7 +278,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getSaveAsBlocked(): ?bool {
-        return $this->saveAsBlocked;
+        return $this->getBackingStore()->get('saveAsBlocked');
     }
 
     /**
@@ -421,7 +286,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getSimplePinBlocked(): ?bool {
-        return $this->simplePinBlocked;
+        return $this->getBackingStore()->get('simplePinBlocked');
     }
 
     /**
@@ -430,249 +295,249 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfEnumValues('allowedDataStorageLocations', $this->allowedDataStorageLocations);
-        $writer->writeEnumValue('allowedInboundDataTransferSources', $this->allowedInboundDataTransferSources);
-        $writer->writeEnumValue('allowedOutboundClipboardSharingLevel', $this->allowedOutboundClipboardSharingLevel);
-        $writer->writeEnumValue('allowedOutboundDataTransferDestinations', $this->allowedOutboundDataTransferDestinations);
-        $writer->writeBooleanValue('contactSyncBlocked', $this->contactSyncBlocked);
-        $writer->writeBooleanValue('dataBackupBlocked', $this->dataBackupBlocked);
-        $writer->writeBooleanValue('deviceComplianceRequired', $this->deviceComplianceRequired);
-        $writer->writeBooleanValue('disableAppPinIfDevicePinIsSet', $this->disableAppPinIfDevicePinIsSet);
-        $writer->writeBooleanValue('fingerprintBlocked', $this->fingerprintBlocked);
-        $writer->writeEnumValue('managedBrowser', $this->managedBrowser);
-        $writer->writeBooleanValue('managedBrowserToOpenLinksRequired', $this->managedBrowserToOpenLinksRequired);
-        $writer->writeIntegerValue('maximumPinRetries', $this->maximumPinRetries);
-        $writer->writeIntegerValue('minimumPinLength', $this->minimumPinLength);
-        $writer->writeStringValue('minimumRequiredAppVersion', $this->minimumRequiredAppVersion);
-        $writer->writeStringValue('minimumRequiredOsVersion', $this->minimumRequiredOsVersion);
-        $writer->writeStringValue('minimumWarningAppVersion', $this->minimumWarningAppVersion);
-        $writer->writeStringValue('minimumWarningOsVersion', $this->minimumWarningOsVersion);
-        $writer->writeBooleanValue('organizationalCredentialsRequired', $this->organizationalCredentialsRequired);
-        $writer->writeDateIntervalValue('periodBeforePinReset', $this->periodBeforePinReset);
-        $writer->writeDateIntervalValue('periodOfflineBeforeAccessCheck', $this->periodOfflineBeforeAccessCheck);
-        $writer->writeDateIntervalValue('periodOfflineBeforeWipeIsEnforced', $this->periodOfflineBeforeWipeIsEnforced);
-        $writer->writeDateIntervalValue('periodOnlineBeforeAccessCheck', $this->periodOnlineBeforeAccessCheck);
-        $writer->writeEnumValue('pinCharacterSet', $this->pinCharacterSet);
-        $writer->writeBooleanValue('pinRequired', $this->pinRequired);
-        $writer->writeBooleanValue('printBlocked', $this->printBlocked);
-        $writer->writeBooleanValue('saveAsBlocked', $this->saveAsBlocked);
-        $writer->writeBooleanValue('simplePinBlocked', $this->simplePinBlocked);
+        $writer->writeCollectionOfEnumValues('allowedDataStorageLocations', $this->getAllowedDataStorageLocations());
+        $writer->writeEnumValue('allowedInboundDataTransferSources', $this->getAllowedInboundDataTransferSources());
+        $writer->writeEnumValue('allowedOutboundClipboardSharingLevel', $this->getAllowedOutboundClipboardSharingLevel());
+        $writer->writeEnumValue('allowedOutboundDataTransferDestinations', $this->getAllowedOutboundDataTransferDestinations());
+        $writer->writeBooleanValue('contactSyncBlocked', $this->getContactSyncBlocked());
+        $writer->writeBooleanValue('dataBackupBlocked', $this->getDataBackupBlocked());
+        $writer->writeBooleanValue('deviceComplianceRequired', $this->getDeviceComplianceRequired());
+        $writer->writeBooleanValue('disableAppPinIfDevicePinIsSet', $this->getDisableAppPinIfDevicePinIsSet());
+        $writer->writeBooleanValue('fingerprintBlocked', $this->getFingerprintBlocked());
+        $writer->writeEnumValue('managedBrowser', $this->getManagedBrowser());
+        $writer->writeBooleanValue('managedBrowserToOpenLinksRequired', $this->getManagedBrowserToOpenLinksRequired());
+        $writer->writeIntegerValue('maximumPinRetries', $this->getMaximumPinRetries());
+        $writer->writeIntegerValue('minimumPinLength', $this->getMinimumPinLength());
+        $writer->writeStringValue('minimumRequiredAppVersion', $this->getMinimumRequiredAppVersion());
+        $writer->writeStringValue('minimumRequiredOsVersion', $this->getMinimumRequiredOsVersion());
+        $writer->writeStringValue('minimumWarningAppVersion', $this->getMinimumWarningAppVersion());
+        $writer->writeStringValue('minimumWarningOsVersion', $this->getMinimumWarningOsVersion());
+        $writer->writeBooleanValue('organizationalCredentialsRequired', $this->getOrganizationalCredentialsRequired());
+        $writer->writeDateIntervalValue('periodBeforePinReset', $this->getPeriodBeforePinReset());
+        $writer->writeDateIntervalValue('periodOfflineBeforeAccessCheck', $this->getPeriodOfflineBeforeAccessCheck());
+        $writer->writeDateIntervalValue('periodOfflineBeforeWipeIsEnforced', $this->getPeriodOfflineBeforeWipeIsEnforced());
+        $writer->writeDateIntervalValue('periodOnlineBeforeAccessCheck', $this->getPeriodOnlineBeforeAccessCheck());
+        $writer->writeEnumValue('pinCharacterSet', $this->getPinCharacterSet());
+        $writer->writeBooleanValue('pinRequired', $this->getPinRequired());
+        $writer->writeBooleanValue('printBlocked', $this->getPrintBlocked());
+        $writer->writeBooleanValue('saveAsBlocked', $this->getSaveAsBlocked());
+        $writer->writeBooleanValue('simplePinBlocked', $this->getSimplePinBlocked());
     }
 
     /**
      * Sets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
      *  @param array<ManagedAppDataStorageLocation>|null $value Value to set for the allowedDataStorageLocations property.
     */
-    public function setAllowedDataStorageLocations(?array $value ): void {
-        $this->allowedDataStorageLocations = $value;
+    public function setAllowedDataStorageLocations(?array $value): void {
+        $this->getBackingStore()->set('allowedDataStorageLocations', $value);
     }
 
     /**
      * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      *  @param ManagedAppDataTransferLevel|null $value Value to set for the allowedInboundDataTransferSources property.
     */
-    public function setAllowedInboundDataTransferSources(?ManagedAppDataTransferLevel $value ): void {
-        $this->allowedInboundDataTransferSources = $value;
+    public function setAllowedInboundDataTransferSources(?ManagedAppDataTransferLevel $value): void {
+        $this->getBackingStore()->set('allowedInboundDataTransferSources', $value);
     }
 
     /**
      * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      *  @param ManagedAppClipboardSharingLevel|null $value Value to set for the allowedOutboundClipboardSharingLevel property.
     */
-    public function setAllowedOutboundClipboardSharingLevel(?ManagedAppClipboardSharingLevel $value ): void {
-        $this->allowedOutboundClipboardSharingLevel = $value;
+    public function setAllowedOutboundClipboardSharingLevel(?ManagedAppClipboardSharingLevel $value): void {
+        $this->getBackingStore()->set('allowedOutboundClipboardSharingLevel', $value);
     }
 
     /**
      * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      *  @param ManagedAppDataTransferLevel|null $value Value to set for the allowedOutboundDataTransferDestinations property.
     */
-    public function setAllowedOutboundDataTransferDestinations(?ManagedAppDataTransferLevel $value ): void {
-        $this->allowedOutboundDataTransferDestinations = $value;
+    public function setAllowedOutboundDataTransferDestinations(?ManagedAppDataTransferLevel $value): void {
+        $this->getBackingStore()->set('allowedOutboundDataTransferDestinations', $value);
     }
 
     /**
      * Sets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
      *  @param bool|null $value Value to set for the contactSyncBlocked property.
     */
-    public function setContactSyncBlocked(?bool $value ): void {
-        $this->contactSyncBlocked = $value;
+    public function setContactSyncBlocked(?bool $value): void {
+        $this->getBackingStore()->set('contactSyncBlocked', $value);
     }
 
     /**
      * Sets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
      *  @param bool|null $value Value to set for the dataBackupBlocked property.
     */
-    public function setDataBackupBlocked(?bool $value ): void {
-        $this->dataBackupBlocked = $value;
+    public function setDataBackupBlocked(?bool $value): void {
+        $this->getBackingStore()->set('dataBackupBlocked', $value);
     }
 
     /**
      * Sets the deviceComplianceRequired property value. Indicates whether device compliance is required.
      *  @param bool|null $value Value to set for the deviceComplianceRequired property.
     */
-    public function setDeviceComplianceRequired(?bool $value ): void {
-        $this->deviceComplianceRequired = $value;
+    public function setDeviceComplianceRequired(?bool $value): void {
+        $this->getBackingStore()->set('deviceComplianceRequired', $value);
     }
 
     /**
      * Sets the disableAppPinIfDevicePinIsSet property value. Indicates whether use of the app pin is required if the device pin is set.
      *  @param bool|null $value Value to set for the disableAppPinIfDevicePinIsSet property.
     */
-    public function setDisableAppPinIfDevicePinIsSet(?bool $value ): void {
-        $this->disableAppPinIfDevicePinIsSet = $value;
+    public function setDisableAppPinIfDevicePinIsSet(?bool $value): void {
+        $this->getBackingStore()->set('disableAppPinIfDevicePinIsSet', $value);
     }
 
     /**
      * Sets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
      *  @param bool|null $value Value to set for the fingerprintBlocked property.
     */
-    public function setFingerprintBlocked(?bool $value ): void {
-        $this->fingerprintBlocked = $value;
+    public function setFingerprintBlocked(?bool $value): void {
+        $this->getBackingStore()->set('fingerprintBlocked', $value);
     }
 
     /**
      * Sets the managedBrowser property value. Type of managed browser
      *  @param ManagedBrowserType|null $value Value to set for the managedBrowser property.
     */
-    public function setManagedBrowser(?ManagedBrowserType $value ): void {
-        $this->managedBrowser = $value;
+    public function setManagedBrowser(?ManagedBrowserType $value): void {
+        $this->getBackingStore()->set('managedBrowser', $value);
     }
 
     /**
      * Sets the managedBrowserToOpenLinksRequired property value. Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
      *  @param bool|null $value Value to set for the managedBrowserToOpenLinksRequired property.
     */
-    public function setManagedBrowserToOpenLinksRequired(?bool $value ): void {
-        $this->managedBrowserToOpenLinksRequired = $value;
+    public function setManagedBrowserToOpenLinksRequired(?bool $value): void {
+        $this->getBackingStore()->set('managedBrowserToOpenLinksRequired', $value);
     }
 
     /**
      * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
      *  @param int|null $value Value to set for the maximumPinRetries property.
     */
-    public function setMaximumPinRetries(?int $value ): void {
-        $this->maximumPinRetries = $value;
+    public function setMaximumPinRetries(?int $value): void {
+        $this->getBackingStore()->set('maximumPinRetries', $value);
     }
 
     /**
      * Sets the minimumPinLength property value. Minimum pin length required for an app-level pin if PinRequired is set to True
      *  @param int|null $value Value to set for the minimumPinLength property.
     */
-    public function setMinimumPinLength(?int $value ): void {
-        $this->minimumPinLength = $value;
+    public function setMinimumPinLength(?int $value): void {
+        $this->getBackingStore()->set('minimumPinLength', $value);
     }
 
     /**
      * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      *  @param string|null $value Value to set for the minimumRequiredAppVersion property.
     */
-    public function setMinimumRequiredAppVersion(?string $value ): void {
-        $this->minimumRequiredAppVersion = $value;
+    public function setMinimumRequiredAppVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredAppVersion', $value);
     }
 
     /**
      * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      *  @param string|null $value Value to set for the minimumRequiredOsVersion property.
     */
-    public function setMinimumRequiredOsVersion(?string $value ): void {
-        $this->minimumRequiredOsVersion = $value;
+    public function setMinimumRequiredOsVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredOsVersion', $value);
     }
 
     /**
      * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app.
      *  @param string|null $value Value to set for the minimumWarningAppVersion property.
     */
-    public function setMinimumWarningAppVersion(?string $value ): void {
-        $this->minimumWarningAppVersion = $value;
+    public function setMinimumWarningAppVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumWarningAppVersion', $value);
     }
 
     /**
      * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
      *  @param string|null $value Value to set for the minimumWarningOsVersion property.
     */
-    public function setMinimumWarningOsVersion(?string $value ): void {
-        $this->minimumWarningOsVersion = $value;
+    public function setMinimumWarningOsVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumWarningOsVersion', $value);
     }
 
     /**
      * Sets the organizationalCredentialsRequired property value. Indicates whether organizational credentials are required for app use.
      *  @param bool|null $value Value to set for the organizationalCredentialsRequired property.
     */
-    public function setOrganizationalCredentialsRequired(?bool $value ): void {
-        $this->organizationalCredentialsRequired = $value;
+    public function setOrganizationalCredentialsRequired(?bool $value): void {
+        $this->getBackingStore()->set('organizationalCredentialsRequired', $value);
     }
 
     /**
      * Sets the periodBeforePinReset property value. TimePeriod before the all-level pin must be reset if PinRequired is set to True.
      *  @param DateInterval|null $value Value to set for the periodBeforePinReset property.
     */
-    public function setPeriodBeforePinReset(?DateInterval $value ): void {
-        $this->periodBeforePinReset = $value;
+    public function setPeriodBeforePinReset(?DateInterval $value): void {
+        $this->getBackingStore()->set('periodBeforePinReset', $value);
     }
 
     /**
      * Sets the periodOfflineBeforeAccessCheck property value. The period after which access is checked when the device is not connected to the internet.
      *  @param DateInterval|null $value Value to set for the periodOfflineBeforeAccessCheck property.
     */
-    public function setPeriodOfflineBeforeAccessCheck(?DateInterval $value ): void {
-        $this->periodOfflineBeforeAccessCheck = $value;
+    public function setPeriodOfflineBeforeAccessCheck(?DateInterval $value): void {
+        $this->getBackingStore()->set('periodOfflineBeforeAccessCheck', $value);
     }
 
     /**
      * Sets the periodOfflineBeforeWipeIsEnforced property value. The amount of time an app is allowed to remain disconnected from the internet before all managed data it is wiped.
      *  @param DateInterval|null $value Value to set for the periodOfflineBeforeWipeIsEnforced property.
     */
-    public function setPeriodOfflineBeforeWipeIsEnforced(?DateInterval $value ): void {
-        $this->periodOfflineBeforeWipeIsEnforced = $value;
+    public function setPeriodOfflineBeforeWipeIsEnforced(?DateInterval $value): void {
+        $this->getBackingStore()->set('periodOfflineBeforeWipeIsEnforced', $value);
     }
 
     /**
      * Sets the periodOnlineBeforeAccessCheck property value. The period after which access is checked when the device is connected to the internet.
      *  @param DateInterval|null $value Value to set for the periodOnlineBeforeAccessCheck property.
     */
-    public function setPeriodOnlineBeforeAccessCheck(?DateInterval $value ): void {
-        $this->periodOnlineBeforeAccessCheck = $value;
+    public function setPeriodOnlineBeforeAccessCheck(?DateInterval $value): void {
+        $this->getBackingStore()->set('periodOnlineBeforeAccessCheck', $value);
     }
 
     /**
      * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      *  @param ManagedAppPinCharacterSet|null $value Value to set for the pinCharacterSet property.
     */
-    public function setPinCharacterSet(?ManagedAppPinCharacterSet $value ): void {
-        $this->pinCharacterSet = $value;
+    public function setPinCharacterSet(?ManagedAppPinCharacterSet $value): void {
+        $this->getBackingStore()->set('pinCharacterSet', $value);
     }
 
     /**
      * Sets the pinRequired property value. Indicates whether an app-level pin is required.
      *  @param bool|null $value Value to set for the pinRequired property.
     */
-    public function setPinRequired(?bool $value ): void {
-        $this->pinRequired = $value;
+    public function setPinRequired(?bool $value): void {
+        $this->getBackingStore()->set('pinRequired', $value);
     }
 
     /**
      * Sets the printBlocked property value. Indicates whether printing is allowed from managed apps.
      *  @param bool|null $value Value to set for the printBlocked property.
     */
-    public function setPrintBlocked(?bool $value ): void {
-        $this->printBlocked = $value;
+    public function setPrintBlocked(?bool $value): void {
+        $this->getBackingStore()->set('printBlocked', $value);
     }
 
     /**
      * Sets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
      *  @param bool|null $value Value to set for the saveAsBlocked property.
     */
-    public function setSaveAsBlocked(?bool $value ): void {
-        $this->saveAsBlocked = $value;
+    public function setSaveAsBlocked(?bool $value): void {
+        $this->getBackingStore()->set('saveAsBlocked', $value);
     }
 
     /**
      * Sets the simplePinBlocked property value. Indicates whether simplePin is blocked.
      *  @param bool|null $value Value to set for the simplePinBlocked property.
     */
-    public function setSimplePinBlocked(?bool $value ): void {
-        $this->simplePinBlocked = $value;
+    public function setSimplePinBlocked(?bool $value): void {
+        $this->getBackingStore()->set('simplePinBlocked', $value);
     }
 
 }

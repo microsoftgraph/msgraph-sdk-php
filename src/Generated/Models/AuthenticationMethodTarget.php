@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodTarget extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $isRegistrationRequired Determines if the user is enforced to register the authentication method.
-    */
-    private ?bool $isRegistrationRequired = null;
-    
-    /**
-     * @var AuthenticationMethodTargetType|null $targetType The targetType property
-    */
-    private ?AuthenticationMethodTargetType $targetType = null;
-    
-    /**
      * Instantiates a new authenticationMethodTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.authenticationMethodTarget');
     }
 
     /**
@@ -59,7 +48,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRegistrationRequired(): ?bool {
-        return $this->isRegistrationRequired;
+        return $this->getBackingStore()->get('isRegistrationRequired');
     }
 
     /**
@@ -67,7 +56,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
-        return $this->targetType;
+        return $this->getBackingStore()->get('targetType');
     }
 
     /**
@@ -76,24 +65,24 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isRegistrationRequired', $this->isRegistrationRequired);
-        $writer->writeEnumValue('targetType', $this->targetType);
+        $writer->writeBooleanValue('isRegistrationRequired', $this->getIsRegistrationRequired());
+        $writer->writeEnumValue('targetType', $this->getTargetType());
     }
 
     /**
      * Sets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
      *  @param bool|null $value Value to set for the isRegistrationRequired property.
     */
-    public function setIsRegistrationRequired(?bool $value ): void {
-        $this->isRegistrationRequired = $value;
+    public function setIsRegistrationRequired(?bool $value): void {
+        $this->getBackingStore()->set('isRegistrationRequired', $value);
     }
 
     /**
      * Sets the targetType property value. The targetType property
      *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
-    public function setTargetType(?AuthenticationMethodTargetType $value ): void {
-        $this->targetType = $value;
+    public function setTargetType(?AuthenticationMethodTargetType $value): void {
+        $this->getBackingStore()->set('targetType', $value);
     }
 
 }

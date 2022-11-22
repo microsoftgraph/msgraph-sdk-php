@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $certificateData The certificate data, which is a long string of text from the certificate. Can be null.
-    */
-    private ?string $certificateData = null;
-    
-    /**
-     * @var string|null $developerId The Apple developer identifier. Required.
-    */
-    private ?string $developerId = null;
-    
-    /**
-     * @var string|null $keyId The Apple key identifier. Required.
-    */
-    private ?string $keyId = null;
-    
-    /**
-     * @var string|null $serviceId The Apple service identifier. Required.
-    */
-    private ?string $serviceId = null;
-    
-    /**
      * Instantiates a new AppleManagedIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getCertificateData(): ?string {
-        return $this->certificateData;
+        return $this->getBackingStore()->get('certificateData');
     }
 
     /**
@@ -58,7 +38,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getDeveloperId(): ?string {
-        return $this->developerId;
+        return $this->getBackingStore()->get('developerId');
     }
 
     /**
@@ -80,7 +60,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getKeyId(): ?string {
-        return $this->keyId;
+        return $this->getBackingStore()->get('keyId');
     }
 
     /**
@@ -88,7 +68,7 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getServiceId(): ?string {
-        return $this->serviceId;
+        return $this->getBackingStore()->get('serviceId');
     }
 
     /**
@@ -97,42 +77,42 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('certificateData', $this->certificateData);
-        $writer->writeStringValue('developerId', $this->developerId);
-        $writer->writeStringValue('keyId', $this->keyId);
-        $writer->writeStringValue('serviceId', $this->serviceId);
+        $writer->writeStringValue('certificateData', $this->getCertificateData());
+        $writer->writeStringValue('developerId', $this->getDeveloperId());
+        $writer->writeStringValue('keyId', $this->getKeyId());
+        $writer->writeStringValue('serviceId', $this->getServiceId());
     }
 
     /**
      * Sets the certificateData property value. The certificate data, which is a long string of text from the certificate. Can be null.
      *  @param string|null $value Value to set for the certificateData property.
     */
-    public function setCertificateData(?string $value ): void {
-        $this->certificateData = $value;
+    public function setCertificateData(?string $value): void {
+        $this->getBackingStore()->set('certificateData', $value);
     }
 
     /**
      * Sets the developerId property value. The Apple developer identifier. Required.
      *  @param string|null $value Value to set for the developerId property.
     */
-    public function setDeveloperId(?string $value ): void {
-        $this->developerId = $value;
+    public function setDeveloperId(?string $value): void {
+        $this->getBackingStore()->set('developerId', $value);
     }
 
     /**
      * Sets the keyId property value. The Apple key identifier. Required.
      *  @param string|null $value Value to set for the keyId property.
     */
-    public function setKeyId(?string $value ): void {
-        $this->keyId = $value;
+    public function setKeyId(?string $value): void {
+        $this->getBackingStore()->set('keyId', $value);
     }
 
     /**
      * Sets the serviceId property value. The Apple service identifier. Required.
      *  @param string|null $value Value to set for the serviceId property.
     */
-    public function setServiceId(?string $value ): void {
-        $this->serviceId = $value;
+    public function setServiceId(?string $value): void {
+        $this->getBackingStore()->set('serviceId', $value);
     }
 
 }

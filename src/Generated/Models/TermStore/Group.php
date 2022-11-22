@@ -11,41 +11,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Group extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime Date and time of the group creation. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $description Description that gives details on the term usage.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Name of the group.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $parentSiteId ID of the parent site of this group.
-    */
-    private ?string $parentSiteId = null;
-    
-    /**
-     * @var TermGroupScope|null $scope Returns the type of the group. Possible values are: global, system, and siteCollection.
-    */
-    private ?TermGroupScope $scope = null;
-    
-    /**
-     * @var array<Set>|null $sets All sets under the group in a term [store].
-    */
-    private ?array $sets = null;
-    
-    /**
      * Instantiates a new group and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.termStore.group');
     }
 
     /**
@@ -62,7 +31,7 @@ class Group extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -70,7 +39,7 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -78,7 +47,7 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -102,7 +71,7 @@ class Group extends Entity implements Parsable
      * @return string|null
     */
     public function getParentSiteId(): ?string {
-        return $this->parentSiteId;
+        return $this->getBackingStore()->get('parentSiteId');
     }
 
     /**
@@ -110,7 +79,7 @@ class Group extends Entity implements Parsable
      * @return TermGroupScope|null
     */
     public function getScope(): ?TermGroupScope {
-        return $this->scope;
+        return $this->getBackingStore()->get('scope');
     }
 
     /**
@@ -118,7 +87,7 @@ class Group extends Entity implements Parsable
      * @return array<Set>|null
     */
     public function getSets(): ?array {
-        return $this->sets;
+        return $this->getBackingStore()->get('sets');
     }
 
     /**
@@ -127,60 +96,60 @@ class Group extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('parentSiteId', $this->parentSiteId);
-        $writer->writeEnumValue('scope', $this->scope);
-        $writer->writeCollectionOfObjectValues('sets', $this->sets);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('parentSiteId', $this->getParentSiteId());
+        $writer->writeEnumValue('scope', $this->getScope());
+        $writer->writeCollectionOfObjectValues('sets', $this->getSets());
     }
 
     /**
      * Sets the createdDateTime property value. Date and time of the group creation. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. Description that gives details on the term usage.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Name of the group.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the parentSiteId property value. ID of the parent site of this group.
      *  @param string|null $value Value to set for the parentSiteId property.
     */
-    public function setParentSiteId(?string $value ): void {
-        $this->parentSiteId = $value;
+    public function setParentSiteId(?string $value): void {
+        $this->getBackingStore()->set('parentSiteId', $value);
     }
 
     /**
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
      *  @param TermGroupScope|null $value Value to set for the scope property.
     */
-    public function setScope(?TermGroupScope $value ): void {
-        $this->scope = $value;
+    public function setScope(?TermGroupScope $value): void {
+        $this->getBackingStore()->set('scope', $value);
     }
 
     /**
      * Sets the sets property value. All sets under the group in a term [store].
      *  @param array<Set>|null $value Value to set for the sets property.
     */
-    public function setSets(?array $value ): void {
-        $this->sets = $value;
+    public function setSets(?array $value): void {
+        $this->getBackingStore()->set('sets', $value);
     }
 
 }

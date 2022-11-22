@@ -10,71 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleScheduleBase extends Entity implements Parsable 
 {
     /**
-     * @var AppScope|null $appScope Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
-    */
-    private ?AppScope $appScope = null;
-    
-    /**
-     * @var string|null $appScopeId Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
-    */
-    private ?string $appScopeId = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime When the schedule was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $createdUsing Identifier of the object through which this schedule was created.
-    */
-    private ?string $createdUsing = null;
-    
-    /**
-     * @var DirectoryObject|null $directoryScope The directory object that is the scope of the role eligibility or assignment. Read-only.
-    */
-    private ?DirectoryObject $directoryScope = null;
-    
-    /**
-     * @var string|null $directoryScopeId Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
-    */
-    private ?string $directoryScopeId = null;
-    
-    /**
-     * @var DateTime|null $modifiedDateTime When the schedule was last modified.
-    */
-    private ?DateTime $modifiedDateTime = null;
-    
-    /**
-     * @var DirectoryObject|null $principal The principal that's getting a role assignment or that's eligible for a role through the request.
-    */
-    private ?DirectoryObject $principal = null;
-    
-    /**
-     * @var string|null $principalId Identifier of the principal that has been granted the role assignment or eligibility.
-    */
-    private ?string $principalId = null;
-    
-    /**
-     * @var UnifiedRoleDefinition|null $roleDefinition Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
-    */
-    private ?UnifiedRoleDefinition $roleDefinition = null;
-    
-    /**
-     * @var string|null $roleDefinitionId Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
-    */
-    private ?string $roleDefinitionId = null;
-    
-    /**
-     * @var string|null $status The status of the role assignment or eligibility request.
-    */
-    private ?string $status = null;
-    
-    /**
      * Instantiates a new unifiedRoleScheduleBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.unifiedRoleScheduleBase');
     }
 
     /**
@@ -99,7 +38,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return AppScope|null
     */
     public function getAppScope(): ?AppScope {
-        return $this->appScope;
+        return $this->getBackingStore()->get('appScope');
     }
 
     /**
@@ -107,7 +46,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getAppScopeId(): ?string {
-        return $this->appScopeId;
+        return $this->getBackingStore()->get('appScopeId');
     }
 
     /**
@@ -115,7 +54,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -123,7 +62,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getCreatedUsing(): ?string {
-        return $this->createdUsing;
+        return $this->getBackingStore()->get('createdUsing');
     }
 
     /**
@@ -131,7 +70,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return DirectoryObject|null
     */
     public function getDirectoryScope(): ?DirectoryObject {
-        return $this->directoryScope;
+        return $this->getBackingStore()->get('directoryScope');
     }
 
     /**
@@ -139,7 +78,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getDirectoryScopeId(): ?string {
-        return $this->directoryScopeId;
+        return $this->getBackingStore()->get('directoryScopeId');
     }
 
     /**
@@ -169,7 +108,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
-        return $this->modifiedDateTime;
+        return $this->getBackingStore()->get('modifiedDateTime');
     }
 
     /**
@@ -177,7 +116,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
-        return $this->principal;
+        return $this->getBackingStore()->get('principal');
     }
 
     /**
@@ -185,7 +124,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->principalId;
+        return $this->getBackingStore()->get('principalId');
     }
 
     /**
@@ -193,7 +132,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return UnifiedRoleDefinition|null
     */
     public function getRoleDefinition(): ?UnifiedRoleDefinition {
-        return $this->roleDefinition;
+        return $this->getBackingStore()->get('roleDefinition');
     }
 
     /**
@@ -201,7 +140,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
-        return $this->roleDefinitionId;
+        return $this->getBackingStore()->get('roleDefinitionId');
     }
 
     /**
@@ -209,7 +148,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -218,114 +157,114 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('appScope', $this->appScope);
-        $writer->writeStringValue('appScopeId', $this->appScopeId);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('createdUsing', $this->createdUsing);
-        $writer->writeObjectValue('directoryScope', $this->directoryScope);
-        $writer->writeStringValue('directoryScopeId', $this->directoryScopeId);
-        $writer->writeDateTimeValue('modifiedDateTime', $this->modifiedDateTime);
-        $writer->writeObjectValue('principal', $this->principal);
-        $writer->writeStringValue('principalId', $this->principalId);
-        $writer->writeObjectValue('roleDefinition', $this->roleDefinition);
-        $writer->writeStringValue('roleDefinitionId', $this->roleDefinitionId);
-        $writer->writeStringValue('status', $this->status);
+        $writer->writeObjectValue('appScope', $this->getAppScope());
+        $writer->writeStringValue('appScopeId', $this->getAppScopeId());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('createdUsing', $this->getCreatedUsing());
+        $writer->writeObjectValue('directoryScope', $this->getDirectoryScope());
+        $writer->writeStringValue('directoryScopeId', $this->getDirectoryScopeId());
+        $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeObjectValue('principal', $this->getPrincipal());
+        $writer->writeStringValue('principalId', $this->getPrincipalId());
+        $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());
+        $writer->writeStringValue('roleDefinitionId', $this->getRoleDefinitionId());
+        $writer->writeStringValue('status', $this->getStatus());
     }
 
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
      *  @param AppScope|null $value Value to set for the appScope property.
     */
-    public function setAppScope(?AppScope $value ): void {
-        $this->appScope = $value;
+    public function setAppScope(?AppScope $value): void {
+        $this->getBackingStore()->set('appScope', $value);
     }
 
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
      *  @param string|null $value Value to set for the appScopeId property.
     */
-    public function setAppScopeId(?string $value ): void {
-        $this->appScopeId = $value;
+    public function setAppScopeId(?string $value): void {
+        $this->getBackingStore()->set('appScopeId', $value);
     }
 
     /**
      * Sets the createdDateTime property value. When the schedule was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the createdUsing property value. Identifier of the object through which this schedule was created.
      *  @param string|null $value Value to set for the createdUsing property.
     */
-    public function setCreatedUsing(?string $value ): void {
-        $this->createdUsing = $value;
+    public function setCreatedUsing(?string $value): void {
+        $this->getBackingStore()->set('createdUsing', $value);
     }
 
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility or assignment. Read-only.
      *  @param DirectoryObject|null $value Value to set for the directoryScope property.
     */
-    public function setDirectoryScope(?DirectoryObject $value ): void {
-        $this->directoryScope = $value;
+    public function setDirectoryScope(?DirectoryObject $value): void {
+        $this->getBackingStore()->set('directoryScope', $value);
     }
 
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      *  @param string|null $value Value to set for the directoryScopeId property.
     */
-    public function setDirectoryScopeId(?string $value ): void {
-        $this->directoryScopeId = $value;
+    public function setDirectoryScopeId(?string $value): void {
+        $this->getBackingStore()->set('directoryScopeId', $value);
     }
 
     /**
      * Sets the modifiedDateTime property value. When the schedule was last modified.
      *  @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
-    public function setModifiedDateTime(?DateTime $value ): void {
-        $this->modifiedDateTime = $value;
+    public function setModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('modifiedDateTime', $value);
     }
 
     /**
      * Sets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
      *  @param DirectoryObject|null $value Value to set for the principal property.
     */
-    public function setPrincipal(?DirectoryObject $value ): void {
-        $this->principal = $value;
+    public function setPrincipal(?DirectoryObject $value): void {
+        $this->getBackingStore()->set('principal', $value);
     }
 
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or eligibility.
      *  @param string|null $value Value to set for the principalId property.
     */
-    public function setPrincipalId(?string $value ): void {
-        $this->principalId = $value;
+    public function setPrincipalId(?string $value): void {
+        $this->getBackingStore()->set('principalId', $value);
     }
 
     /**
      * Sets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
      *  @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
     */
-    public function setRoleDefinition(?UnifiedRoleDefinition $value ): void {
-        $this->roleDefinition = $value;
+    public function setRoleDefinition(?UnifiedRoleDefinition $value): void {
+        $this->getBackingStore()->set('roleDefinition', $value);
     }
 
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
      *  @param string|null $value Value to set for the roleDefinitionId property.
     */
-    public function setRoleDefinitionId(?string $value ): void {
-        $this->roleDefinitionId = $value;
+    public function setRoleDefinitionId(?string $value): void {
+        $this->getBackingStore()->set('roleDefinitionId', $value);
     }
 
     /**
      * Sets the status property value. The status of the role assignment or eligibility request.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

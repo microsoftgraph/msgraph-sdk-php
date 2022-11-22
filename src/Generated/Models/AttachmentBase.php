@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttachmentBase extends Entity implements Parsable 
 {
     /**
-     * @var string|null $contentType The contentType property
-    */
-    private ?string $contentType = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var string|null $name The name property
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var int|null $size The size property
-    */
-    private ?int $size = null;
-    
-    /**
      * Instantiates a new attachmentBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.attachmentBase');
     }
 
     /**
@@ -58,7 +37,7 @@ class AttachmentBase extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -80,7 +59,7 @@ class AttachmentBase extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -88,7 +67,7 @@ class AttachmentBase extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -96,7 +75,7 @@ class AttachmentBase extends Entity implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -105,42 +84,42 @@ class AttachmentBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('contentType', $this->contentType);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeIntegerValue('size', $this->size);
+        $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeIntegerValue('size', $this->getSize());
     }
 
     /**
      * Sets the contentType property value. The contentType property
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the name property value. The name property
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the size property value. The size property
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
 }

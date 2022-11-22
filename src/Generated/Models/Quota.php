@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Quota implements AdditionalDataHolder, Parsable 
+class Quota implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $deleted Total space consumed by files in the recycle bin, in bytes. Read-only.
-    */
-    private ?int $deleted = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $remaining Total space remaining before reaching the quota limit, in bytes. Read-only.
-    */
-    private ?int $remaining = null;
-    
-    /**
-     * @var string|null $state Enumeration value that indicates the state of the storage space. Read-only.
-    */
-    private ?string $state = null;
-    
-    /**
-     * @var StoragePlanInformation|null $storagePlanInformation Information about the drive's storage quota plans. Only in Personal OneDrive.
-    */
-    private ?StoragePlanInformation $storagePlanInformation = null;
-    
-    /**
-     * @var int|null $total Total allowed storage space, in bytes. Read-only.
-    */
-    private ?int $total = null;
-    
-    /**
-     * @var int|null $used Total space used, in bytes. Read-only.
-    */
-    private ?int $used = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new quota and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.quota');
     }
 
     /**
@@ -70,8 +38,16 @@ class Quota implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +55,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDeleted(): ?int {
-        return $this->deleted;
+        return $this->getBackingStore()->get('deleted');
     }
 
     /**
@@ -104,7 +80,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -112,7 +88,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getRemaining(): ?int {
-        return $this->remaining;
+        return $this->getBackingStore()->get('remaining');
     }
 
     /**
@@ -120,7 +96,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -128,7 +104,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return StoragePlanInformation|null
     */
     public function getStoragePlanInformation(): ?StoragePlanInformation {
-        return $this->storagePlanInformation;
+        return $this->getBackingStore()->get('storagePlanInformation');
     }
 
     /**
@@ -136,7 +112,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTotal(): ?int {
-        return $this->total;
+        return $this->getBackingStore()->get('total');
     }
 
     /**
@@ -144,7 +120,7 @@ class Quota implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getUsed(): ?int {
-        return $this->used;
+        return $this->getBackingStore()->get('used');
     }
 
     /**
@@ -152,78 +128,86 @@ class Quota implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('deleted', $this->deleted);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('remaining', $this->remaining);
-        $writer->writeStringValue('state', $this->state);
-        $writer->writeObjectValue('storagePlanInformation', $this->storagePlanInformation);
-        $writer->writeIntegerValue('total', $this->total);
-        $writer->writeIntegerValue('used', $this->used);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('deleted', $this->getDeleted());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('remaining', $this->getRemaining());
+        $writer->writeStringValue('state', $this->getState());
+        $writer->writeObjectValue('storagePlanInformation', $this->getStoragePlanInformation());
+        $writer->writeIntegerValue('total', $this->getTotal());
+        $writer->writeIntegerValue('used', $this->getUsed());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
      *  @param int|null $value Value to set for the deleted property.
     */
-    public function setDeleted(?int $value ): void {
-        $this->deleted = $value;
+    public function setDeleted(?int $value): void {
+        $this->getBackingStore()->set('deleted', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
      *  @param int|null $value Value to set for the remaining property.
     */
-    public function setRemaining(?int $value ): void {
-        $this->remaining = $value;
+    public function setRemaining(?int $value): void {
+        $this->getBackingStore()->set('remaining', $value);
     }
 
     /**
      * Sets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
      *  @param string|null $value Value to set for the state property.
     */
-    public function setState(?string $value ): void {
-        $this->state = $value;
+    public function setState(?string $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
      *  @param StoragePlanInformation|null $value Value to set for the storagePlanInformation property.
     */
-    public function setStoragePlanInformation(?StoragePlanInformation $value ): void {
-        $this->storagePlanInformation = $value;
+    public function setStoragePlanInformation(?StoragePlanInformation $value): void {
+        $this->getBackingStore()->set('storagePlanInformation', $value);
     }
 
     /**
      * Sets the total property value. Total allowed storage space, in bytes. Read-only.
      *  @param int|null $value Value to set for the total property.
     */
-    public function setTotal(?int $value ): void {
-        $this->total = $value;
+    public function setTotal(?int $value): void {
+        $this->getBackingStore()->set('total', $value);
     }
 
     /**
      * Sets the used property value. Total space used, in bytes. Read-only.
      *  @param int|null $value Value to set for the used property.
     */
-    public function setUsed(?int $value ): void {
-        $this->used = $value;
+    public function setUsed(?int $value): void {
+        $this->getBackingStore()->set('used', $value);
     }
 
 }

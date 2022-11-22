@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable 
 {
     /**
-     * @var string|null $contentData Base64 encoded file content. The file content cannot fetch back because it isn't stored.
-    */
-    private ?string $contentData = null;
-    
-    /**
-     * @var string|null $fileName The file name.
-    */
-    private ?string $fileName = null;
-    
-    /**
      * Instantiates a new FileAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getContentData(): ?string {
-        return $this->contentData;
+        return $this->getBackingStore()->get('contentData');
     }
 
     /**
@@ -60,7 +50,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->fileName;
+        return $this->getBackingStore()->get('fileName');
     }
 
     /**
@@ -69,24 +59,24 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('contentData', $this->contentData);
-        $writer->writeStringValue('fileName', $this->fileName);
+        $writer->writeStringValue('contentData', $this->getContentData());
+        $writer->writeStringValue('fileName', $this->getFileName());
     }
 
     /**
      * Sets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      *  @param string|null $value Value to set for the contentData property.
     */
-    public function setContentData(?string $value ): void {
-        $this->contentData = $value;
+    public function setContentData(?string $value): void {
+        $this->getBackingStore()->set('contentData', $value);
     }
 
     /**
      * Sets the fileName property value. The file name.
      *  @param string|null $value Value to set for the fileName property.
     */
-    public function setFileName(?string $value ): void {
-        $this->fileName = $value;
+    public function setFileName(?string $value): void {
+        $this->getBackingStore()->set('fileName', $value);
     }
 
 }

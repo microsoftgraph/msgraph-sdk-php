@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenTypeExtension extends Extension implements Parsable 
 {
     /**
-     * @var string|null $extensionName A unique text identifier for an open type data extension. Required.
-    */
-    private ?string $extensionName = null;
-    
-    /**
      * Instantiates a new OpenTypeExtension and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class OpenTypeExtension extends Extension implements Parsable
      * @return string|null
     */
     public function getExtensionName(): ?string {
-        return $this->extensionName;
+        return $this->getBackingStore()->get('extensionName');
     }
 
     /**
@@ -55,15 +50,15 @@ class OpenTypeExtension extends Extension implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('extensionName', $this->extensionName);
+        $writer->writeStringValue('extensionName', $this->getExtensionName());
     }
 
     /**
      * Sets the extensionName property value. A unique text identifier for an open type data extension. Required.
      *  @param string|null $value Value to set for the extensionName property.
     */
-    public function setExtensionName(?string $value ): void {
-        $this->extensionName = $value;
+    public function setExtensionName(?string $value): void {
+        $this->getBackingStore()->set('extensionName', $value);
     }
 
 }

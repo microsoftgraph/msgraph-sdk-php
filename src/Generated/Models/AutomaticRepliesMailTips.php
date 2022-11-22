@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable 
+class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $message The automatic reply message.
-    */
-    private ?string $message = null;
-    
-    /**
-     * @var LocaleInfo|null $messageLanguage The language that the automatic reply message is in.
-    */
-    private ?LocaleInfo $messageLanguage = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $scheduledEndTime The date and time that automatic replies are set to end.
-    */
-    private ?DateTimeTimeZone $scheduledEndTime = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $scheduledStartTime The date and time that automatic replies are set to begin.
-    */
-    private ?DateTimeTimeZone $scheduledStartTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new automaticRepliesMailTips and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.automaticRepliesMailTips');
     }
 
     /**
@@ -60,8 +38,16 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +70,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMessage(): ?string {
-        return $this->message;
+        return $this->getBackingStore()->get('message');
     }
 
     /**
@@ -92,7 +78,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @return LocaleInfo|null
     */
     public function getMessageLanguage(): ?LocaleInfo {
-        return $this->messageLanguage;
+        return $this->getBackingStore()->get('messageLanguage');
     }
 
     /**
@@ -100,7 +86,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -108,7 +94,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getScheduledEndTime(): ?DateTimeTimeZone {
-        return $this->scheduledEndTime;
+        return $this->getBackingStore()->get('scheduledEndTime');
     }
 
     /**
@@ -116,7 +102,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getScheduledStartTime(): ?DateTimeTimeZone {
-        return $this->scheduledStartTime;
+        return $this->getBackingStore()->get('scheduledStartTime');
     }
 
     /**
@@ -124,60 +110,68 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('message', $this->message);
-        $writer->writeObjectValue('messageLanguage', $this->messageLanguage);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('scheduledEndTime', $this->scheduledEndTime);
-        $writer->writeObjectValue('scheduledStartTime', $this->scheduledStartTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('message', $this->getMessage());
+        $writer->writeObjectValue('messageLanguage', $this->getMessageLanguage());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('scheduledEndTime', $this->getScheduledEndTime());
+        $writer->writeObjectValue('scheduledStartTime', $this->getScheduledStartTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the message property value. The automatic reply message.
      *  @param string|null $value Value to set for the message property.
     */
-    public function setMessage(?string $value ): void {
-        $this->message = $value;
+    public function setMessage(?string $value): void {
+        $this->getBackingStore()->set('message', $value);
     }
 
     /**
      * Sets the messageLanguage property value. The language that the automatic reply message is in.
      *  @param LocaleInfo|null $value Value to set for the messageLanguage property.
     */
-    public function setMessageLanguage(?LocaleInfo $value ): void {
-        $this->messageLanguage = $value;
+    public function setMessageLanguage(?LocaleInfo $value): void {
+        $this->getBackingStore()->set('messageLanguage', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the scheduledEndTime property value. The date and time that automatic replies are set to end.
      *  @param DateTimeTimeZone|null $value Value to set for the scheduledEndTime property.
     */
-    public function setScheduledEndTime(?DateTimeTimeZone $value ): void {
-        $this->scheduledEndTime = $value;
+    public function setScheduledEndTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('scheduledEndTime', $value);
     }
 
     /**
      * Sets the scheduledStartTime property value. The date and time that automatic replies are set to begin.
      *  @param DateTimeTimeZone|null $value Value to set for the scheduledStartTime property.
     */
-    public function setScheduledStartTime(?DateTimeTimeZone $value ): void {
-        $this->scheduledStartTime = $value;
+    public function setScheduledStartTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('scheduledStartTime', $value);
     }
 
 }

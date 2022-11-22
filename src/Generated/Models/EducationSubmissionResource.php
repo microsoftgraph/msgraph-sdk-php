@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSubmissionResource extends Entity implements Parsable 
 {
     /**
-     * @var string|null $assignmentResourceUrl Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
-    */
-    private ?string $assignmentResourceUrl = null;
-    
-    /**
-     * @var EducationResource|null $resource Resource object.
-    */
-    private ?EducationResource $resource = null;
-    
-    /**
      * Instantiates a new educationSubmissionResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.educationSubmissionResource');
     }
 
     /**
@@ -40,7 +29,7 @@ class EducationSubmissionResource extends Entity implements Parsable
      * @return string|null
     */
     public function getAssignmentResourceUrl(): ?string {
-        return $this->assignmentResourceUrl;
+        return $this->getBackingStore()->get('assignmentResourceUrl');
     }
 
     /**
@@ -60,7 +49,7 @@ class EducationSubmissionResource extends Entity implements Parsable
      * @return EducationResource|null
     */
     public function getResource(): ?EducationResource {
-        return $this->resource;
+        return $this->getBackingStore()->get('resource');
     }
 
     /**
@@ -69,24 +58,24 @@ class EducationSubmissionResource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('assignmentResourceUrl', $this->assignmentResourceUrl);
-        $writer->writeObjectValue('resource', $this->resource);
+        $writer->writeStringValue('assignmentResourceUrl', $this->getAssignmentResourceUrl());
+        $writer->writeObjectValue('resource', $this->getResource());
     }
 
     /**
      * Sets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
      *  @param string|null $value Value to set for the assignmentResourceUrl property.
     */
-    public function setAssignmentResourceUrl(?string $value ): void {
-        $this->assignmentResourceUrl = $value;
+    public function setAssignmentResourceUrl(?string $value): void {
+        $this->getBackingStore()->set('assignmentResourceUrl', $value);
     }
 
     /**
      * Sets the resource property value. Resource object.
      *  @param EducationResource|null $value Value to set for the resource property.
     */
-    public function setResource(?EducationResource $value ): void {
-        $this->resource = $value;
+    public function setResource(?EducationResource $value): void {
+        $this->getBackingStore()->set('resource', $value);
     }
 
 }

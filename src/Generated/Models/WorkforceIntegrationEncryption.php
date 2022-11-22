@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable 
+class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var WorkforceIntegrationEncryptionProtocol|null $protocol Possible values are: sharedSecret, unknownFutureValue.
-    */
-    private ?WorkforceIntegrationEncryptionProtocol $protocol = null;
-    
-    /**
-     * @var string|null $secret Encryption shared secret.
-    */
-    private ?string $secret = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new workforceIntegrationEncryption and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.workforceIntegrationEncryption');
     }
 
     /**
@@ -50,8 +38,16 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +68,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -80,7 +76,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @return WorkforceIntegrationEncryptionProtocol|null
     */
     public function getProtocol(): ?WorkforceIntegrationEncryptionProtocol {
-        return $this->protocol;
+        return $this->getBackingStore()->get('protocol');
     }
 
     /**
@@ -88,7 +84,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSecret(): ?string {
-        return $this->secret;
+        return $this->getBackingStore()->get('secret');
     }
 
     /**
@@ -96,42 +92,50 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('protocol', $this->protocol);
-        $writer->writeStringValue('secret', $this->secret);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('protocol', $this->getProtocol());
+        $writer->writeStringValue('secret', $this->getSecret());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
      *  @param WorkforceIntegrationEncryptionProtocol|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?WorkforceIntegrationEncryptionProtocol $value ): void {
-        $this->protocol = $value;
+    public function setProtocol(?WorkforceIntegrationEncryptionProtocol $value): void {
+        $this->getBackingStore()->set('protocol', $value);
     }
 
     /**
      * Sets the secret property value. Encryption shared secret.
      *  @param string|null $value Value to set for the secret property.
     */
-    public function setSecret(?string $value ): void {
-        $this->secret = $value;
+    public function setSecret(?string $value): void {
+        $this->getBackingStore()->set('secret', $value);
     }
 
 }

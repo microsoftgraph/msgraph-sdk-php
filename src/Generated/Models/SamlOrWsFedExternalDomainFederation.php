@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements Parsable 
 {
     /**
-     * @var array<ExternalDomainName>|null $domains Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
-    */
-    private ?array $domains = null;
-    
-    /**
      * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements
      * @return array<ExternalDomainName>|null
     */
     public function getDomains(): ?array {
-        return $this->domains;
+        return $this->getBackingStore()->get('domains');
     }
 
     /**
@@ -55,15 +50,15 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('domains', $this->domains);
+        $writer->writeCollectionOfObjectValues('domains', $this->getDomains());
     }
 
     /**
      * Sets the domains property value. Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
      *  @param array<ExternalDomainName>|null $value Value to set for the domains property.
     */
-    public function setDomains(?array $value ): void {
-        $this->domains = $value;
+    public function setDomains(?array $value): void {
+        $this->getBackingStore()->set('domains', $value);
     }
 
 }

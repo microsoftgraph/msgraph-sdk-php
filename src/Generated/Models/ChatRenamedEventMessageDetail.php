@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $chatDisplayName The updated name of the chat.
-    */
-    private ?string $chatDisplayName = null;
-    
-    /**
-     * @var string|null $chatId Unique identifier of the chat.
-    */
-    private ?string $chatId = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new ChatRenamedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getChatDisplayName(): ?string {
-        return $this->chatDisplayName;
+        return $this->getBackingStore()->get('chatDisplayName');
     }
 
     /**
@@ -53,7 +38,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getChatId(): ?string {
-        return $this->chatId;
+        return $this->getBackingStore()->get('chatId');
     }
 
     /**
@@ -74,7 +59,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -83,33 +68,33 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('chatDisplayName', $this->chatDisplayName);
-        $writer->writeStringValue('chatId', $this->chatId);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeStringValue('chatDisplayName', $this->getChatDisplayName());
+        $writer->writeStringValue('chatId', $this->getChatId());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the chatDisplayName property value. The updated name of the chat.
      *  @param string|null $value Value to set for the chatDisplayName property.
     */
-    public function setChatDisplayName(?string $value ): void {
-        $this->chatDisplayName = $value;
+    public function setChatDisplayName(?string $value): void {
+        $this->getBackingStore()->set('chatDisplayName', $value);
     }
 
     /**
      * Sets the chatId property value. Unique identifier of the chat.
      *  @param string|null $value Value to set for the chatId property.
     */
-    public function setChatId(?string $value ): void {
-        $this->chatId = $value;
+    public function setChatId(?string $value): void {
+        $this->getBackingStore()->set('chatId', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

@@ -6,60 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AppRole implements AdditionalDataHolder, Parsable 
+class AppRole implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $allowedMemberTypes Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
-    */
-    private ?array $allowedMemberTypes = null;
-    
-    /**
-     * @var string|null $description The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Display name for the permission that appears in the app role assignment and consent experiences.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $id Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var bool|null $isEnabled When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $origin Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
-    */
-    private ?string $origin = null;
-    
-    /**
-     * @var string|null $value Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
-    */
-    private ?string $value = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new appRole and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.appRole');
     }
 
     /**
@@ -75,8 +38,8 @@ class AppRole implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -84,7 +47,15 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAllowedMemberTypes(): ?array {
-        return $this->allowedMemberTypes;
+        return $this->getBackingStore()->get('allowedMemberTypes');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -92,7 +63,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -100,7 +71,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -126,7 +97,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -134,7 +105,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -142,7 +113,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -150,7 +121,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOrigin(): ?string {
-        return $this->origin;
+        return $this->getBackingStore()->get('origin');
     }
 
     /**
@@ -158,7 +129,7 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getValue(): ?string {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -166,87 +137,95 @@ class AppRole implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('allowedMemberTypes', $this->allowedMemberTypes);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('origin', $this->origin);
-        $writer->writeStringValue('value', $this->value);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('allowedMemberTypes', $this->getAllowedMemberTypes());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('origin', $this->getOrigin());
+        $writer->writeStringValue('value', $this->getValue());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowedMemberTypes property value. Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
      *  @param array<string>|null $value Value to set for the allowedMemberTypes property.
     */
-    public function setAllowedMemberTypes(?array $value ): void {
-        $this->allowedMemberTypes = $value;
+    public function setAllowedMemberTypes(?array $value): void {
+        $this->getBackingStore()->set('allowedMemberTypes', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the description property value. The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Display name for the permission that appears in the app role assignment and consent experiences.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the id property value. Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the isEnabled property value. When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the origin property value. Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
      *  @param string|null $value Value to set for the origin property.
     */
-    public function setOrigin(?string $value ): void {
-        $this->origin = $value;
+    public function setOrigin(?string $value): void {
+        $this->getBackingStore()->set('origin', $value);
     }
 
     /**
      * Sets the value property value. Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
      *  @param string|null $value Value to set for the value property.
     */
-    public function setValue(?string $value ): void {
-        $this->value = $value;
+    public function setValue(?string $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var array<OmaSetting>|null $omaSettings OMA settings. This collection can contain a maximum of 500 elements.
-    */
-    private ?array $omaSettings = null;
-    
-    /**
      * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implemen
      * @return array<OmaSetting>|null
     */
     public function getOmaSettings(): ?array {
-        return $this->omaSettings;
+        return $this->getBackingStore()->get('omaSettings');
     }
 
     /**
@@ -55,15 +50,15 @@ class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('omaSettings', $this->omaSettings);
+        $writer->writeCollectionOfObjectValues('omaSettings', $this->getOmaSettings());
     }
 
     /**
      * Sets the omaSettings property value. OMA settings. This collection can contain a maximum of 500 elements.
      *  @param array<OmaSetting>|null $value Value to set for the omaSettings property.
     */
-    public function setOmaSettings(?array $value ): void {
-        $this->omaSettings = $value;
+    public function setOmaSettings(?array $value): void {
+        $this->getBackingStore()->set('omaSettings', $value);
     }
 
 }

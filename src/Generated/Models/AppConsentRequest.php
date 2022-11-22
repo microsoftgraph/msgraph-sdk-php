@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppConsentRequest extends Entity implements Parsable 
 {
     /**
-     * @var string|null $appDisplayName The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
-    */
-    private ?string $appDisplayName = null;
-    
-    /**
-     * @var string|null $appId The identifier of the application. Required. Supports $filter (eq only) and $orderby.
-    */
-    private ?string $appId = null;
-    
-    /**
-     * @var array<AppConsentRequestScope>|null $pendingScopes A list of pending scopes waiting for approval. Required.
-    */
-    private ?array $pendingScopes = null;
-    
-    /**
-     * @var array<UserConsentRequest>|null $userConsentRequests A list of pending user consent requests. Supports $filter (eq).
-    */
-    private ?array $userConsentRequests = null;
-    
-    /**
      * Instantiates a new appConsentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.appConsentRequest');
     }
 
     /**
@@ -50,7 +29,7 @@ class AppConsentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getAppDisplayName(): ?string {
-        return $this->appDisplayName;
+        return $this->getBackingStore()->get('appDisplayName');
     }
 
     /**
@@ -58,7 +37,7 @@ class AppConsentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->appId;
+        return $this->getBackingStore()->get('appId');
     }
 
     /**
@@ -80,7 +59,7 @@ class AppConsentRequest extends Entity implements Parsable
      * @return array<AppConsentRequestScope>|null
     */
     public function getPendingScopes(): ?array {
-        return $this->pendingScopes;
+        return $this->getBackingStore()->get('pendingScopes');
     }
 
     /**
@@ -88,7 +67,7 @@ class AppConsentRequest extends Entity implements Parsable
      * @return array<UserConsentRequest>|null
     */
     public function getUserConsentRequests(): ?array {
-        return $this->userConsentRequests;
+        return $this->getBackingStore()->get('userConsentRequests');
     }
 
     /**
@@ -97,42 +76,42 @@ class AppConsentRequest extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appDisplayName', $this->appDisplayName);
-        $writer->writeStringValue('appId', $this->appId);
-        $writer->writeCollectionOfObjectValues('pendingScopes', $this->pendingScopes);
-        $writer->writeCollectionOfObjectValues('userConsentRequests', $this->userConsentRequests);
+        $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
+        $writer->writeStringValue('appId', $this->getAppId());
+        $writer->writeCollectionOfObjectValues('pendingScopes', $this->getPendingScopes());
+        $writer->writeCollectionOfObjectValues('userConsentRequests', $this->getUserConsentRequests());
     }
 
     /**
      * Sets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
      *  @param string|null $value Value to set for the appDisplayName property.
     */
-    public function setAppDisplayName(?string $value ): void {
-        $this->appDisplayName = $value;
+    public function setAppDisplayName(?string $value): void {
+        $this->getBackingStore()->set('appDisplayName', $value);
     }
 
     /**
      * Sets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
      *  @param string|null $value Value to set for the appId property.
     */
-    public function setAppId(?string $value ): void {
-        $this->appId = $value;
+    public function setAppId(?string $value): void {
+        $this->getBackingStore()->set('appId', $value);
     }
 
     /**
      * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
      *  @param array<AppConsentRequestScope>|null $value Value to set for the pendingScopes property.
     */
-    public function setPendingScopes(?array $value ): void {
-        $this->pendingScopes = $value;
+    public function setPendingScopes(?array $value): void {
+        $this->getBackingStore()->set('pendingScopes', $value);
     }
 
     /**
      * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      *  @param array<UserConsentRequest>|null $value Value to set for the userConsentRequests property.
     */
-    public function setUserConsentRequests(?array $value ): void {
-        $this->userConsentRequests = $value;
+    public function setUserConsentRequests(?array $value): void {
+        $this->getBackingStore()->set('userConsentRequests', $value);
     }
 
 }

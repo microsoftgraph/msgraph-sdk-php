@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ColumnValidation implements AdditionalDataHolder, Parsable 
+class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $defaultLanguage Default BCP 47 language tag for the description.
-    */
-    private ?string $defaultLanguage = null;
-    
-    /**
-     * @var array<DisplayNameLocalization>|null $descriptions Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
-    */
-    private ?array $descriptions = null;
-    
-    /**
-     * @var string|null $formula The formula to validate column value. For examples, see Examples of common formulas in lists.
-    */
-    private ?string $formula = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new columnValidation and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.columnValidation');
     }
 
     /**
@@ -55,8 +38,16 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDefaultLanguage(): ?string {
-        return $this->defaultLanguage;
+        return $this->getBackingStore()->get('defaultLanguage');
     }
 
     /**
@@ -72,7 +63,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @return array<DisplayNameLocalization>|null
     */
     public function getDescriptions(): ?array {
-        return $this->descriptions;
+        return $this->getBackingStore()->get('descriptions');
     }
 
     /**
@@ -94,7 +85,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getFormula(): ?string {
-        return $this->formula;
+        return $this->getBackingStore()->get('formula');
     }
 
     /**
@@ -102,7 +93,7 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +101,59 @@ class ColumnValidation implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('defaultLanguage', $this->defaultLanguage);
-        $writer->writeCollectionOfObjectValues('descriptions', $this->descriptions);
-        $writer->writeStringValue('formula', $this->formula);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('defaultLanguage', $this->getDefaultLanguage());
+        $writer->writeCollectionOfObjectValues('descriptions', $this->getDescriptions());
+        $writer->writeStringValue('formula', $this->getFormula());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the defaultLanguage property value. Default BCP 47 language tag for the description.
      *  @param string|null $value Value to set for the defaultLanguage property.
     */
-    public function setDefaultLanguage(?string $value ): void {
-        $this->defaultLanguage = $value;
+    public function setDefaultLanguage(?string $value): void {
+        $this->getBackingStore()->set('defaultLanguage', $value);
     }
 
     /**
      * Sets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
      *  @param array<DisplayNameLocalization>|null $value Value to set for the descriptions property.
     */
-    public function setDescriptions(?array $value ): void {
-        $this->descriptions = $value;
+    public function setDescriptions(?array $value): void {
+        $this->getBackingStore()->set('descriptions', $value);
     }
 
     /**
      * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
      *  @param string|null $value Value to set for the formula property.
     */
-    public function setFormula(?string $value ): void {
-        $this->formula = $value;
+    public function setFormula(?string $value): void {
+        $this->getBackingStore()->set('formula', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

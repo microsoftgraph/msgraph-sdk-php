@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OrganizerMeetingInfo extends MeetingInfo implements Parsable 
 {
     /**
-     * @var IdentitySet|null $organizer The organizer property
-    */
-    private ?IdentitySet $organizer = null;
-    
-    /**
      * Instantiates a new OrganizerMeetingInfo and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
      * @return IdentitySet|null
     */
     public function getOrganizer(): ?IdentitySet {
-        return $this->organizer;
+        return $this->getBackingStore()->get('organizer');
     }
 
     /**
@@ -55,15 +50,15 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('organizer', $this->organizer);
+        $writer->writeObjectValue('organizer', $this->getOrganizer());
     }
 
     /**
      * Sets the organizer property value. The organizer property
      *  @param IdentitySet|null $value Value to set for the organizer property.
     */
-    public function setOrganizer(?IdentitySet $value ): void {
-        $this->organizer = $value;
+    public function setOrganizer(?IdentitySet $value): void {
+        $this->getBackingStore()->set('organizer', $value);
     }
 
 }

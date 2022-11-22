@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CountryNamedLocation extends NamedLocation implements Parsable 
 {
     /**
-     * @var array<string>|null $countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
-    */
-    private ?array $countriesAndRegions = null;
-    
-    /**
-     * @var CountryLookupMethodType|null $countryLookupMethod Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
-    */
-    private ?CountryLookupMethodType $countryLookupMethod = null;
-    
-    /**
-     * @var bool|null $includeUnknownCountriesAndRegions true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
-    */
-    private ?bool $includeUnknownCountriesAndRegions = null;
-    
-    /**
      * Instantiates a new CountryNamedLocation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.countryNamedLocation');
     }
 
     /**
@@ -45,7 +29,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return array<string>|null
     */
     public function getCountriesAndRegions(): ?array {
-        return $this->countriesAndRegions;
+        return $this->getBackingStore()->get('countriesAndRegions');
     }
 
     /**
@@ -53,7 +37,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return CountryLookupMethodType|null
     */
     public function getCountryLookupMethod(): ?CountryLookupMethodType {
-        return $this->countryLookupMethod;
+        return $this->getBackingStore()->get('countryLookupMethod');
     }
 
     /**
@@ -74,7 +58,7 @@ class CountryNamedLocation extends NamedLocation implements Parsable
      * @return bool|null
     */
     public function getIncludeUnknownCountriesAndRegions(): ?bool {
-        return $this->includeUnknownCountriesAndRegions;
+        return $this->getBackingStore()->get('includeUnknownCountriesAndRegions');
     }
 
     /**
@@ -83,33 +67,33 @@ class CountryNamedLocation extends NamedLocation implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('countriesAndRegions', $this->countriesAndRegions);
-        $writer->writeEnumValue('countryLookupMethod', $this->countryLookupMethod);
-        $writer->writeBooleanValue('includeUnknownCountriesAndRegions', $this->includeUnknownCountriesAndRegions);
+        $writer->writeCollectionOfPrimitiveValues('countriesAndRegions', $this->getCountriesAndRegions());
+        $writer->writeEnumValue('countryLookupMethod', $this->getCountryLookupMethod());
+        $writer->writeBooleanValue('includeUnknownCountriesAndRegions', $this->getIncludeUnknownCountriesAndRegions());
     }
 
     /**
      * Sets the countriesAndRegions property value. List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
      *  @param array<string>|null $value Value to set for the countriesAndRegions property.
     */
-    public function setCountriesAndRegions(?array $value ): void {
-        $this->countriesAndRegions = $value;
+    public function setCountriesAndRegions(?array $value): void {
+        $this->getBackingStore()->set('countriesAndRegions', $value);
     }
 
     /**
      * Sets the countryLookupMethod property value. Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      *  @param CountryLookupMethodType|null $value Value to set for the countryLookupMethod property.
     */
-    public function setCountryLookupMethod(?CountryLookupMethodType $value ): void {
-        $this->countryLookupMethod = $value;
+    public function setCountryLookupMethod(?CountryLookupMethodType $value): void {
+        $this->getBackingStore()->set('countryLookupMethod', $value);
     }
 
     /**
      * Sets the includeUnknownCountriesAndRegions property value. true if IP addresses that don't map to a country or region should be included in the named location. Optional. Default value is false.
      *  @param bool|null $value Value to set for the includeUnknownCountriesAndRegions property.
     */
-    public function setIncludeUnknownCountriesAndRegions(?bool $value ): void {
-        $this->includeUnknownCountriesAndRegions = $value;
+    public function setIncludeUnknownCountriesAndRegions(?bool $value): void {
+        $this->getBackingStore()->set('includeUnknownCountriesAndRegions', $value);
     }
 
 }

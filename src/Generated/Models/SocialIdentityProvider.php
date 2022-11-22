@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SocialIdentityProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $clientId The identifier for the client application obtained when registering the application with the identity provider. Required.
-    */
-    private ?string $clientId = null;
-    
-    /**
-     * @var string|null $clientSecret The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
-    */
-    private ?string $clientSecret = null;
-    
-    /**
-     * @var string|null $identityProviderType For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
-    */
-    private ?string $identityProviderType = null;
-    
-    /**
      * Instantiates a new SocialIdentityProvider and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getClientId(): ?string {
-        return $this->clientId;
+        return $this->getBackingStore()->get('clientId');
     }
 
     /**
@@ -53,7 +38,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getClientSecret(): ?string {
-        return $this->clientSecret;
+        return $this->getBackingStore()->get('clientSecret');
     }
 
     /**
@@ -74,7 +59,7 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getIdentityProviderType(): ?string {
-        return $this->identityProviderType;
+        return $this->getBackingStore()->get('identityProviderType');
     }
 
     /**
@@ -83,33 +68,33 @@ class SocialIdentityProvider extends IdentityProviderBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('clientId', $this->clientId);
-        $writer->writeStringValue('clientSecret', $this->clientSecret);
-        $writer->writeStringValue('identityProviderType', $this->identityProviderType);
+        $writer->writeStringValue('clientId', $this->getClientId());
+        $writer->writeStringValue('clientSecret', $this->getClientSecret());
+        $writer->writeStringValue('identityProviderType', $this->getIdentityProviderType());
     }
 
     /**
      * Sets the clientId property value. The identifier for the client application obtained when registering the application with the identity provider. Required.
      *  @param string|null $value Value to set for the clientId property.
     */
-    public function setClientId(?string $value ): void {
-        $this->clientId = $value;
+    public function setClientId(?string $value): void {
+        $this->getBackingStore()->set('clientId', $value);
     }
 
     /**
      * Sets the clientSecret property value. The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
      *  @param string|null $value Value to set for the clientSecret property.
     */
-    public function setClientSecret(?string $value ): void {
-        $this->clientSecret = $value;
+    public function setClientSecret(?string $value): void {
+        $this->getBackingStore()->set('clientSecret', $value);
     }
 
     /**
      * Sets the identityProviderType property value. For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
      *  @param string|null $value Value to set for the identityProviderType property.
     */
-    public function setIdentityProviderType(?string $value ): void {
-        $this->identityProviderType = $value;
+    public function setIdentityProviderType(?string $value): void {
+        $this->getBackingStore()->set('identityProviderType', $value);
     }
 
 }

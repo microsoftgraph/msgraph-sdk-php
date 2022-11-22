@@ -9,46 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Workbook extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookApplication|null $application The application property
-    */
-    private ?WorkbookApplication $application = null;
-    
-    /**
-     * @var array<WorkbookComment>|null $comments The comments property
-    */
-    private ?array $comments = null;
-    
-    /**
-     * @var WorkbookFunctions|null $functions The functions property
-    */
-    private ?WorkbookFunctions $functions = null;
-    
-    /**
-     * @var array<WorkbookNamedItem>|null $names Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
-    */
-    private ?array $names = null;
-    
-    /**
-     * @var array<WorkbookOperation>|null $operations The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<WorkbookTable>|null $tables Represents a collection of tables associated with the workbook. Read-only.
-    */
-    private ?array $tables = null;
-    
-    /**
-     * @var array<WorkbookWorksheet>|null $worksheets Represents a collection of worksheets associated with the workbook. Read-only.
-    */
-    private ?array $worksheets = null;
-    
-    /**
      * Instantiates a new workbook and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbook');
     }
 
     /**
@@ -65,7 +29,7 @@ class Workbook extends Entity implements Parsable
      * @return WorkbookApplication|null
     */
     public function getApplication(): ?WorkbookApplication {
-        return $this->application;
+        return $this->getBackingStore()->get('application');
     }
 
     /**
@@ -73,7 +37,7 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookComment>|null
     */
     public function getComments(): ?array {
-        return $this->comments;
+        return $this->getBackingStore()->get('comments');
     }
 
     /**
@@ -98,7 +62,7 @@ class Workbook extends Entity implements Parsable
      * @return WorkbookFunctions|null
     */
     public function getFunctions(): ?WorkbookFunctions {
-        return $this->functions;
+        return $this->getBackingStore()->get('functions');
     }
 
     /**
@@ -106,7 +70,7 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookNamedItem>|null
     */
     public function getNames(): ?array {
-        return $this->names;
+        return $this->getBackingStore()->get('names');
     }
 
     /**
@@ -114,7 +78,7 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -122,7 +86,7 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookTable>|null
     */
     public function getTables(): ?array {
-        return $this->tables;
+        return $this->getBackingStore()->get('tables');
     }
 
     /**
@@ -130,7 +94,7 @@ class Workbook extends Entity implements Parsable
      * @return array<WorkbookWorksheet>|null
     */
     public function getWorksheets(): ?array {
-        return $this->worksheets;
+        return $this->getBackingStore()->get('worksheets');
     }
 
     /**
@@ -139,69 +103,69 @@ class Workbook extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('application', $this->application);
-        $writer->writeCollectionOfObjectValues('comments', $this->comments);
-        $writer->writeObjectValue('functions', $this->functions);
-        $writer->writeCollectionOfObjectValues('names', $this->names);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('tables', $this->tables);
-        $writer->writeCollectionOfObjectValues('worksheets', $this->worksheets);
+        $writer->writeObjectValue('application', $this->getApplication());
+        $writer->writeCollectionOfObjectValues('comments', $this->getComments());
+        $writer->writeObjectValue('functions', $this->getFunctions());
+        $writer->writeCollectionOfObjectValues('names', $this->getNames());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('tables', $this->getTables());
+        $writer->writeCollectionOfObjectValues('worksheets', $this->getWorksheets());
     }
 
     /**
      * Sets the application property value. The application property
      *  @param WorkbookApplication|null $value Value to set for the application property.
     */
-    public function setApplication(?WorkbookApplication $value ): void {
-        $this->application = $value;
+    public function setApplication(?WorkbookApplication $value): void {
+        $this->getBackingStore()->set('application', $value);
     }
 
     /**
      * Sets the comments property value. The comments property
      *  @param array<WorkbookComment>|null $value Value to set for the comments property.
     */
-    public function setComments(?array $value ): void {
-        $this->comments = $value;
+    public function setComments(?array $value): void {
+        $this->getBackingStore()->set('comments', $value);
     }
 
     /**
      * Sets the functions property value. The functions property
      *  @param WorkbookFunctions|null $value Value to set for the functions property.
     */
-    public function setFunctions(?WorkbookFunctions $value ): void {
-        $this->functions = $value;
+    public function setFunctions(?WorkbookFunctions $value): void {
+        $this->getBackingStore()->set('functions', $value);
     }
 
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      *  @param array<WorkbookNamedItem>|null $value Value to set for the names property.
     */
-    public function setNames(?array $value ): void {
-        $this->names = $value;
+    public function setNames(?array $value): void {
+        $this->getBackingStore()->set('names', $value);
     }
 
     /**
      * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      *  @param array<WorkbookOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      *  @param array<WorkbookTable>|null $value Value to set for the tables property.
     */
-    public function setTables(?array $value ): void {
-        $this->tables = $value;
+    public function setTables(?array $value): void {
+        $this->getBackingStore()->set('tables', $value);
     }
 
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      *  @param array<WorkbookWorksheet>|null $value Value to set for the worksheets property.
     */
-    public function setWorksheets(?array $value ): void {
-        $this->worksheets = $value;
+    public function setWorksheets(?array $value): void {
+        $this->getBackingStore()->set('worksheets', $value);
     }
 
 }

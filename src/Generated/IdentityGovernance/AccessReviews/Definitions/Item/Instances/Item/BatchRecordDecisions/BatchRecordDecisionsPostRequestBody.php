@@ -6,38 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsable 
+class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $decision The decision property
-    */
-    private ?string $decision = null;
-    
-    /**
-     * @var string|null $justification The justification property
-    */
-    private ?string $justification = null;
-    
-    /**
-     * @var string|null $principalId The principalId property
-    */
-    private ?string $principalId = null;
-    
-    /**
-     * @var string|null $resourceId The resourceId property
-    */
-    private ?string $resourceId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new batchRecordDecisionsPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -54,8 +38,16 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -63,7 +55,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getDecision(): ?string {
-        return $this->decision;
+        return $this->getBackingStore()->get('decision');
     }
 
     /**
@@ -85,7 +77,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->justification;
+        return $this->getBackingStore()->get('justification');
     }
 
     /**
@@ -93,7 +85,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->principalId;
+        return $this->getBackingStore()->get('principalId');
     }
 
     /**
@@ -101,7 +93,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->resourceId;
+        return $this->getBackingStore()->get('resourceId');
     }
 
     /**
@@ -109,51 +101,59 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('decision', $this->decision);
-        $writer->writeStringValue('justification', $this->justification);
-        $writer->writeStringValue('principalId', $this->principalId);
-        $writer->writeStringValue('resourceId', $this->resourceId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('decision', $this->getDecision());
+        $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeStringValue('principalId', $this->getPrincipalId());
+        $writer->writeStringValue('resourceId', $this->getResourceId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the decision property value. The decision property
      *  @param string|null $value Value to set for the decision property.
     */
-    public function setDecision(?string $value ): void {
-        $this->decision = $value;
+    public function setDecision(?string $value): void {
+        $this->getBackingStore()->set('decision', $value);
     }
 
     /**
      * Sets the justification property value. The justification property
      *  @param string|null $value Value to set for the justification property.
     */
-    public function setJustification(?string $value ): void {
-        $this->justification = $value;
+    public function setJustification(?string $value): void {
+        $this->getBackingStore()->set('justification', $value);
     }
 
     /**
      * Sets the principalId property value. The principalId property
      *  @param string|null $value Value to set for the principalId property.
     */
-    public function setPrincipalId(?string $value ): void {
-        $this->principalId = $value;
+    public function setPrincipalId(?string $value): void {
+        $this->getBackingStore()->set('principalId', $value);
     }
 
     /**
      * Sets the resourceId property value. The resourceId property
      *  @param string|null $value Value to set for the resourceId property.
     */
-    public function setResourceId(?string $value ): void {
-        $this->resourceId = $value;
+    public function setResourceId(?string $value): void {
+        $this->getBackingStore()->set('resourceId', $value);
     }
 
 }

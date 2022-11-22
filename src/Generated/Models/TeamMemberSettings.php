@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeamMemberSettings implements AdditionalDataHolder, Parsable 
+class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowAddRemoveApps If set to true, members can add and remove apps.
-    */
-    private ?bool $allowAddRemoveApps = null;
-    
-    /**
-     * @var bool|null $allowCreatePrivateChannels If set to true, members can add and update private channels.
-    */
-    private ?bool $allowCreatePrivateChannels = null;
-    
-    /**
-     * @var bool|null $allowCreateUpdateChannels If set to true, members can add and update channels.
-    */
-    private ?bool $allowCreateUpdateChannels = null;
-    
-    /**
-     * @var bool|null $allowCreateUpdateRemoveConnectors If set to true, members can add, update, and remove connectors.
-    */
-    private ?bool $allowCreateUpdateRemoveConnectors = null;
-    
-    /**
-     * @var bool|null $allowCreateUpdateRemoveTabs If set to true, members can add, update, and remove tabs.
-    */
-    private ?bool $allowCreateUpdateRemoveTabs = null;
-    
-    /**
-     * @var bool|null $allowDeleteChannels If set to true, members can delete channels.
-    */
-    private ?bool $allowDeleteChannels = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teamMemberSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.teamMemberSettings');
     }
 
     /**
@@ -70,8 +38,8 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -79,7 +47,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowAddRemoveApps(): ?bool {
-        return $this->allowAddRemoveApps;
+        return $this->getBackingStore()->get('allowAddRemoveApps');
     }
 
     /**
@@ -87,7 +55,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowCreatePrivateChannels(): ?bool {
-        return $this->allowCreatePrivateChannels;
+        return $this->getBackingStore()->get('allowCreatePrivateChannels');
     }
 
     /**
@@ -95,7 +63,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateChannels(): ?bool {
-        return $this->allowCreateUpdateChannels;
+        return $this->getBackingStore()->get('allowCreateUpdateChannels');
     }
 
     /**
@@ -103,7 +71,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateRemoveConnectors(): ?bool {
-        return $this->allowCreateUpdateRemoveConnectors;
+        return $this->getBackingStore()->get('allowCreateUpdateRemoveConnectors');
     }
 
     /**
@@ -111,7 +79,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateRemoveTabs(): ?bool {
-        return $this->allowCreateUpdateRemoveTabs;
+        return $this->getBackingStore()->get('allowCreateUpdateRemoveTabs');
     }
 
     /**
@@ -119,7 +87,15 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowDeleteChannels(): ?bool {
-        return $this->allowDeleteChannels;
+        return $this->getBackingStore()->get('allowDeleteChannels');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -144,7 +120,7 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -152,78 +128,86 @@ class TeamMemberSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowAddRemoveApps', $this->allowAddRemoveApps);
-        $writer->writeBooleanValue('allowCreatePrivateChannels', $this->allowCreatePrivateChannels);
-        $writer->writeBooleanValue('allowCreateUpdateChannels', $this->allowCreateUpdateChannels);
-        $writer->writeBooleanValue('allowCreateUpdateRemoveConnectors', $this->allowCreateUpdateRemoveConnectors);
-        $writer->writeBooleanValue('allowCreateUpdateRemoveTabs', $this->allowCreateUpdateRemoveTabs);
-        $writer->writeBooleanValue('allowDeleteChannels', $this->allowDeleteChannels);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowAddRemoveApps', $this->getAllowAddRemoveApps());
+        $writer->writeBooleanValue('allowCreatePrivateChannels', $this->getAllowCreatePrivateChannels());
+        $writer->writeBooleanValue('allowCreateUpdateChannels', $this->getAllowCreateUpdateChannels());
+        $writer->writeBooleanValue('allowCreateUpdateRemoveConnectors', $this->getAllowCreateUpdateRemoveConnectors());
+        $writer->writeBooleanValue('allowCreateUpdateRemoveTabs', $this->getAllowCreateUpdateRemoveTabs());
+        $writer->writeBooleanValue('allowDeleteChannels', $this->getAllowDeleteChannels());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
      *  @param bool|null $value Value to set for the allowAddRemoveApps property.
     */
-    public function setAllowAddRemoveApps(?bool $value ): void {
-        $this->allowAddRemoveApps = $value;
+    public function setAllowAddRemoveApps(?bool $value): void {
+        $this->getBackingStore()->set('allowAddRemoveApps', $value);
     }
 
     /**
      * Sets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
      *  @param bool|null $value Value to set for the allowCreatePrivateChannels property.
     */
-    public function setAllowCreatePrivateChannels(?bool $value ): void {
-        $this->allowCreatePrivateChannels = $value;
+    public function setAllowCreatePrivateChannels(?bool $value): void {
+        $this->getBackingStore()->set('allowCreatePrivateChannels', $value);
     }
 
     /**
      * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
      *  @param bool|null $value Value to set for the allowCreateUpdateChannels property.
     */
-    public function setAllowCreateUpdateChannels(?bool $value ): void {
-        $this->allowCreateUpdateChannels = $value;
+    public function setAllowCreateUpdateChannels(?bool $value): void {
+        $this->getBackingStore()->set('allowCreateUpdateChannels', $value);
     }
 
     /**
      * Sets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
      *  @param bool|null $value Value to set for the allowCreateUpdateRemoveConnectors property.
     */
-    public function setAllowCreateUpdateRemoveConnectors(?bool $value ): void {
-        $this->allowCreateUpdateRemoveConnectors = $value;
+    public function setAllowCreateUpdateRemoveConnectors(?bool $value): void {
+        $this->getBackingStore()->set('allowCreateUpdateRemoveConnectors', $value);
     }
 
     /**
      * Sets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
      *  @param bool|null $value Value to set for the allowCreateUpdateRemoveTabs property.
     */
-    public function setAllowCreateUpdateRemoveTabs(?bool $value ): void {
-        $this->allowCreateUpdateRemoveTabs = $value;
+    public function setAllowCreateUpdateRemoveTabs(?bool $value): void {
+        $this->getBackingStore()->set('allowCreateUpdateRemoveTabs', $value);
     }
 
     /**
      * Sets the allowDeleteChannels property value. If set to true, members can delete channels.
      *  @param bool|null $value Value to set for the allowDeleteChannels property.
     */
-    public function setAllowDeleteChannels(?bool $value ): void {
-        $this->allowDeleteChannels = $value;
+    public function setAllowDeleteChannels(?bool $value): void {
+        $this->getBackingStore()->set('allowDeleteChannels', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

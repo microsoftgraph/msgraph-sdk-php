@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserTeamwork extends Entity implements Parsable 
 {
     /**
-     * @var array<AssociatedTeamInfo>|null $associatedTeams The list of associatedTeamInfo objects that a user is associated with.
-    */
-    private ?array $associatedTeams = null;
-    
-    /**
-     * @var array<UserScopeTeamsAppInstallation>|null $installedApps The apps installed in the personal scope of this user.
-    */
-    private ?array $installedApps = null;
-    
-    /**
-     * Instantiates a new userTeamwork and sets the default values.
+     * Instantiates a new UserTeamwork and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.userTeamwork');
     }
 
     /**
@@ -40,7 +29,7 @@ class UserTeamwork extends Entity implements Parsable
      * @return array<AssociatedTeamInfo>|null
     */
     public function getAssociatedTeams(): ?array {
-        return $this->associatedTeams;
+        return $this->getBackingStore()->get('associatedTeams');
     }
 
     /**
@@ -60,7 +49,7 @@ class UserTeamwork extends Entity implements Parsable
      * @return array<UserScopeTeamsAppInstallation>|null
     */
     public function getInstalledApps(): ?array {
-        return $this->installedApps;
+        return $this->getBackingStore()->get('installedApps');
     }
 
     /**
@@ -69,24 +58,24 @@ class UserTeamwork extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('associatedTeams', $this->associatedTeams);
-        $writer->writeCollectionOfObjectValues('installedApps', $this->installedApps);
+        $writer->writeCollectionOfObjectValues('associatedTeams', $this->getAssociatedTeams());
+        $writer->writeCollectionOfObjectValues('installedApps', $this->getInstalledApps());
     }
 
     /**
      * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
      *  @param array<AssociatedTeamInfo>|null $value Value to set for the associatedTeams property.
     */
-    public function setAssociatedTeams(?array $value ): void {
-        $this->associatedTeams = $value;
+    public function setAssociatedTeams(?array $value): void {
+        $this->getBackingStore()->set('associatedTeams', $value);
     }
 
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.
      *  @param array<UserScopeTeamsAppInstallation>|null $value Value to set for the installedApps property.
     */
-    public function setInstalledApps(?array $value ): void {
-        $this->installedApps = $value;
+    public function setInstalledApps(?array $value): void {
+        $this->getBackingStore()->set('installedApps', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var array<AuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method.
-    */
-    private ?array $includeTargets = null;
-    
-    /**
-     * @var bool|null $isAttestationEnforced Determines whether attestation must be enforced for FIDO2 security key registration.
-    */
-    private ?bool $isAttestationEnforced = null;
-    
-    /**
-     * @var bool|null $isSelfServiceRegistrationAllowed Determines if users can register new FIDO2 security keys.
-    */
-    private ?bool $isSelfServiceRegistrationAllowed = null;
-    
-    /**
-     * @var Fido2KeyRestrictions|null $keyRestrictions Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
-    */
-    private ?Fido2KeyRestrictions $keyRestrictions = null;
-    
-    /**
      * Instantiates a new Fido2AuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->includeTargets;
+        return $this->getBackingStore()->get('includeTargets');
     }
 
     /**
@@ -72,7 +52,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return bool|null
     */
     public function getIsAttestationEnforced(): ?bool {
-        return $this->isAttestationEnforced;
+        return $this->getBackingStore()->get('isAttestationEnforced');
     }
 
     /**
@@ -80,7 +60,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return bool|null
     */
     public function getIsSelfServiceRegistrationAllowed(): ?bool {
-        return $this->isSelfServiceRegistrationAllowed;
+        return $this->getBackingStore()->get('isSelfServiceRegistrationAllowed');
     }
 
     /**
@@ -88,7 +68,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return Fido2KeyRestrictions|null
     */
     public function getKeyRestrictions(): ?Fido2KeyRestrictions {
-        return $this->keyRestrictions;
+        return $this->getBackingStore()->get('keyRestrictions');
     }
 
     /**
@@ -97,42 +77,42 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
-        $writer->writeBooleanValue('isAttestationEnforced', $this->isAttestationEnforced);
-        $writer->writeBooleanValue('isSelfServiceRegistrationAllowed', $this->isSelfServiceRegistrationAllowed);
-        $writer->writeObjectValue('keyRestrictions', $this->keyRestrictions);
+        $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
+        $writer->writeBooleanValue('isAttestationEnforced', $this->getIsAttestationEnforced());
+        $writer->writeBooleanValue('isSelfServiceRegistrationAllowed', $this->getIsSelfServiceRegistrationAllowed());
+        $writer->writeObjectValue('keyRestrictions', $this->getKeyRestrictions());
     }
 
     /**
      * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
      *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
-    public function setIncludeTargets(?array $value ): void {
-        $this->includeTargets = $value;
+    public function setIncludeTargets(?array $value): void {
+        $this->getBackingStore()->set('includeTargets', $value);
     }
 
     /**
      * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
      *  @param bool|null $value Value to set for the isAttestationEnforced property.
     */
-    public function setIsAttestationEnforced(?bool $value ): void {
-        $this->isAttestationEnforced = $value;
+    public function setIsAttestationEnforced(?bool $value): void {
+        $this->getBackingStore()->set('isAttestationEnforced', $value);
     }
 
     /**
      * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
      *  @param bool|null $value Value to set for the isSelfServiceRegistrationAllowed property.
     */
-    public function setIsSelfServiceRegistrationAllowed(?bool $value ): void {
-        $this->isSelfServiceRegistrationAllowed = $value;
+    public function setIsSelfServiceRegistrationAllowed(?bool $value): void {
+        $this->getBackingStore()->set('isSelfServiceRegistrationAllowed', $value);
     }
 
     /**
      * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
      *  @param Fido2KeyRestrictions|null $value Value to set for the keyRestrictions property.
     */
-    public function setKeyRestrictions(?Fido2KeyRestrictions $value ): void {
-        $this->keyRestrictions = $value;
+    public function setKeyRestrictions(?Fido2KeyRestrictions $value): void {
+        $this->getBackingStore()->set('keyRestrictions', $value);
     }
 
 }

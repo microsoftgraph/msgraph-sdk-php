@@ -10,46 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewHistoryInstance extends Entity implements Parsable 
 {
     /**
-     * @var string|null $downloadUri Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
-    */
-    private ?string $downloadUri = null;
-    
-    /**
-     * @var DateTime|null $expirationDateTime Timestamp when this instance and associated data expires and the history is deleted. Required.
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var DateTime|null $fulfilledDateTime Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
-    */
-    private ?DateTime $fulfilledDateTime = null;
-    
-    /**
-     * @var DateTime|null $reviewHistoryPeriodEndDateTime Timestamp, reviews ending on or before this date will be included in the fetched history data.
-    */
-    private ?DateTime $reviewHistoryPeriodEndDateTime = null;
-    
-    /**
-     * @var DateTime|null $reviewHistoryPeriodStartDateTime Timestamp, reviews starting on or after this date will be included in the fetched history data.
-    */
-    private ?DateTime $reviewHistoryPeriodStartDateTime = null;
-    
-    /**
-     * @var DateTime|null $runDateTime Timestamp when the instance's history data is scheduled to be generated.
-    */
-    private ?DateTime $runDateTime = null;
-    
-    /**
-     * @var AccessReviewHistoryStatus|null $status Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-    */
-    private ?AccessReviewHistoryStatus $status = null;
-    
-    /**
      * Instantiates a new accessReviewHistoryInstance and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.accessReviewHistoryInstance');
     }
 
     /**
@@ -66,7 +30,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return string|null
     */
     public function getDownloadUri(): ?string {
-        return $this->downloadUri;
+        return $this->getBackingStore()->get('downloadUri');
     }
 
     /**
@@ -74,7 +38,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -99,7 +63,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getFulfilledDateTime(): ?DateTime {
-        return $this->fulfilledDateTime;
+        return $this->getBackingStore()->get('fulfilledDateTime');
     }
 
     /**
@@ -107,7 +71,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewHistoryPeriodEndDateTime(): ?DateTime {
-        return $this->reviewHistoryPeriodEndDateTime;
+        return $this->getBackingStore()->get('reviewHistoryPeriodEndDateTime');
     }
 
     /**
@@ -115,7 +79,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewHistoryPeriodStartDateTime(): ?DateTime {
-        return $this->reviewHistoryPeriodStartDateTime;
+        return $this->getBackingStore()->get('reviewHistoryPeriodStartDateTime');
     }
 
     /**
@@ -123,7 +87,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRunDateTime(): ?DateTime {
-        return $this->runDateTime;
+        return $this->getBackingStore()->get('runDateTime');
     }
 
     /**
@@ -131,7 +95,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
      * @return AccessReviewHistoryStatus|null
     */
     public function getStatus(): ?AccessReviewHistoryStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -140,69 +104,69 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('downloadUri', $this->downloadUri);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeDateTimeValue('fulfilledDateTime', $this->fulfilledDateTime);
-        $writer->writeDateTimeValue('reviewHistoryPeriodEndDateTime', $this->reviewHistoryPeriodEndDateTime);
-        $writer->writeDateTimeValue('reviewHistoryPeriodStartDateTime', $this->reviewHistoryPeriodStartDateTime);
-        $writer->writeDateTimeValue('runDateTime', $this->runDateTime);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeStringValue('downloadUri', $this->getDownloadUri());
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeDateTimeValue('fulfilledDateTime', $this->getFulfilledDateTime());
+        $writer->writeDateTimeValue('reviewHistoryPeriodEndDateTime', $this->getReviewHistoryPeriodEndDateTime());
+        $writer->writeDateTimeValue('reviewHistoryPeriodStartDateTime', $this->getReviewHistoryPeriodStartDateTime());
+        $writer->writeDateTimeValue('runDateTime', $this->getRunDateTime());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      *  @param string|null $value Value to set for the downloadUri property.
     */
-    public function setDownloadUri(?string $value ): void {
-        $this->downloadUri = $value;
+    public function setDownloadUri(?string $value): void {
+        $this->getBackingStore()->set('downloadUri', $value);
     }
 
     /**
      * Sets the expirationDateTime property value. Timestamp when this instance and associated data expires and the history is deleted. Required.
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
      *  @param DateTime|null $value Value to set for the fulfilledDateTime property.
     */
-    public function setFulfilledDateTime(?DateTime $value ): void {
-        $this->fulfilledDateTime = $value;
+    public function setFulfilledDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('fulfilledDateTime', $value);
     }
 
     /**
      * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
      *  @param DateTime|null $value Value to set for the reviewHistoryPeriodEndDateTime property.
     */
-    public function setReviewHistoryPeriodEndDateTime(?DateTime $value ): void {
-        $this->reviewHistoryPeriodEndDateTime = $value;
+    public function setReviewHistoryPeriodEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('reviewHistoryPeriodEndDateTime', $value);
     }
 
     /**
      * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
      *  @param DateTime|null $value Value to set for the reviewHistoryPeriodStartDateTime property.
     */
-    public function setReviewHistoryPeriodStartDateTime(?DateTime $value ): void {
-        $this->reviewHistoryPeriodStartDateTime = $value;
+    public function setReviewHistoryPeriodStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('reviewHistoryPeriodStartDateTime', $value);
     }
 
     /**
      * Sets the runDateTime property value. Timestamp when the instance's history data is scheduled to be generated.
      *  @param DateTime|null $value Value to set for the runDateTime property.
     */
-    public function setRunDateTime(?DateTime $value ): void {
-        $this->runDateTime = $value;
+    public function setRunDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('runDateTime', $value);
     }
 
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
      *  @param AccessReviewHistoryStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?AccessReviewHistoryStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?AccessReviewHistoryStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

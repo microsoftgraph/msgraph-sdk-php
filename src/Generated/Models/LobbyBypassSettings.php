@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class LobbyBypassSettings implements AdditionalDataHolder, Parsable 
+class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $isDialInBypassEnabled Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
-    */
-    private ?bool $isDialInBypassEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var LobbyBypassScope|null $scope Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-    */
-    private ?LobbyBypassScope $scope = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new lobbyBypassSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.lobbyBypassSettings');
     }
 
     /**
@@ -50,8 +38,16 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +68,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsDialInBypassEnabled(): ?bool {
-        return $this->isDialInBypassEnabled;
+        return $this->getBackingStore()->get('isDialInBypassEnabled');
     }
 
     /**
@@ -80,7 +76,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +84,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * @return LobbyBypassScope|null
     */
     public function getScope(): ?LobbyBypassScope {
-        return $this->scope;
+        return $this->getBackingStore()->get('scope');
     }
 
     /**
@@ -96,42 +92,50 @@ class LobbyBypassSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('isDialInBypassEnabled', $this->isDialInBypassEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('scope', $this->scope);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('isDialInBypassEnabled', $this->getIsDialInBypassEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('scope', $this->getScope());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
      *  @param bool|null $value Value to set for the isDialInBypassEnabled property.
     */
-    public function setIsDialInBypassEnabled(?bool $value ): void {
-        $this->isDialInBypassEnabled = $value;
+    public function setIsDialInBypassEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isDialInBypassEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      *  @param LobbyBypassScope|null $value Value to set for the scope property.
     */
-    public function setScope(?LobbyBypassScope $value ): void {
-        $this->scope = $value;
+    public function setScope(?LobbyBypassScope $value): void {
+        $this->getBackingStore()->set('scope', $value);
     }
 
 }

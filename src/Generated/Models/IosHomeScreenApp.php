@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosHomeScreenApp extends IosHomeScreenItem implements Parsable 
 {
     /**
-     * @var string|null $bundleID BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-    */
-    private ?string $bundleID = null;
-    
-    /**
      * Instantiates a new IosHomeScreenApp and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class IosHomeScreenApp extends IosHomeScreenItem implements Parsable
      * @return string|null
     */
     public function getBundleID(): ?string {
-        return $this->bundleID;
+        return $this->getBackingStore()->get('bundleID');
     }
 
     /**
@@ -55,15 +50,15 @@ class IosHomeScreenApp extends IosHomeScreenItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('bundleID', $this->bundleID);
+        $writer->writeStringValue('bundleID', $this->getBundleID());
     }
 
     /**
      * Sets the bundleID property value. BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
      *  @param string|null $value Value to set for the bundleID property.
     */
-    public function setBundleID(?string $value ): void {
-        $this->bundleID = $value;
+    public function setBundleID(?string $value): void {
+        $this->getBackingStore()->set('bundleID', $value);
     }
 
 }

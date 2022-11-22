@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable 
+class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $caller The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
-    */
-    private ?string $caller = null;
-    
-    /**
-     * @var array<string>|null $enforcedSettings The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
-    */
-    private ?array $enforcedSettings = null;
-    
-    /**
-     * @var array<string>|null $inheritableSettings The list of role settings that can be inherited by child scopes. Use All for all settings.
-    */
-    private ?array $inheritableSettings = null;
-    
-    /**
-     * @var string|null $level The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
-    */
-    private ?string $level = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $operations The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<DirectoryObject>|null $targetObjects The targetObjects property
-    */
-    private ?array $targetObjects = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.unifiedRoleManagementPolicyRuleTarget');
     }
 
     /**
@@ -70,8 +38,16 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +55,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getCaller(): ?string {
-        return $this->caller;
+        return $this->getBackingStore()->get('caller');
     }
 
     /**
@@ -87,7 +63,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return array<string>|null
     */
     public function getEnforcedSettings(): ?array {
-        return $this->enforcedSettings;
+        return $this->getBackingStore()->get('enforcedSettings');
     }
 
     /**
@@ -112,7 +88,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return array<string>|null
     */
     public function getInheritableSettings(): ?array {
-        return $this->inheritableSettings;
+        return $this->getBackingStore()->get('inheritableSettings');
     }
 
     /**
@@ -120,7 +96,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getLevel(): ?string {
-        return $this->level;
+        return $this->getBackingStore()->get('level');
     }
 
     /**
@@ -128,7 +104,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -136,7 +112,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return array<UnifiedRoleManagementPolicyRuleTargetOperations>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -144,7 +120,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @return array<DirectoryObject>|null
     */
     public function getTargetObjects(): ?array {
-        return $this->targetObjects;
+        return $this->getBackingStore()->get('targetObjects');
     }
 
     /**
@@ -152,78 +128,86 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('caller', $this->caller);
-        $writer->writeCollectionOfPrimitiveValues('enforcedSettings', $this->enforcedSettings);
-        $writer->writeCollectionOfPrimitiveValues('inheritableSettings', $this->inheritableSettings);
-        $writer->writeStringValue('level', $this->level);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfEnumValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('targetObjects', $this->targetObjects);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('caller', $this->getCaller());
+        $writer->writeCollectionOfPrimitiveValues('enforcedSettings', $this->getEnforcedSettings());
+        $writer->writeCollectionOfPrimitiveValues('inheritableSettings', $this->getInheritableSettings());
+        $writer->writeStringValue('level', $this->getLevel());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfEnumValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('targetObjects', $this->getTargetObjects());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      *  @param string|null $value Value to set for the caller property.
     */
-    public function setCaller(?string $value ): void {
-        $this->caller = $value;
+    public function setCaller(?string $value): void {
+        $this->getBackingStore()->set('caller', $value);
     }
 
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      *  @param array<string>|null $value Value to set for the enforcedSettings property.
     */
-    public function setEnforcedSettings(?array $value ): void {
-        $this->enforcedSettings = $value;
+    public function setEnforcedSettings(?array $value): void {
+        $this->getBackingStore()->set('enforcedSettings', $value);
     }
 
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      *  @param array<string>|null $value Value to set for the inheritableSettings property.
     */
-    public function setInheritableSettings(?array $value ): void {
-        $this->inheritableSettings = $value;
+    public function setInheritableSettings(?array $value): void {
+        $this->getBackingStore()->set('inheritableSettings', $value);
     }
 
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      *  @param string|null $value Value to set for the level property.
     */
-    public function setLevel(?string $value ): void {
-        $this->level = $value;
+    public function setLevel(?string $value): void {
+        $this->getBackingStore()->set('level', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      *  @param array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the targetObjects property value. The targetObjects property
      *  @param array<DirectoryObject>|null $value Value to set for the targetObjects property.
     */
-    public function setTargetObjects(?array $value ): void {
-        $this->targetObjects = $value;
+    public function setTargetObjects(?array $value): void {
+        $this->getBackingStore()->set('targetObjects', $value);
     }
 
 }

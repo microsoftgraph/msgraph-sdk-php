@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Planner extends Entity implements Parsable 
 {
     /**
-     * @var array<PlannerBucket>|null $buckets Read-only. Nullable. Returns a collection of the specified buckets
-    */
-    private ?array $buckets = null;
-    
-    /**
-     * @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns a collection of the specified plans
-    */
-    private ?array $plans = null;
-    
-    /**
-     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns a collection of the specified tasks
-    */
-    private ?array $tasks = null;
-    
-    /**
      * Instantiates a new Planner and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.planner');
     }
 
     /**
@@ -45,7 +29,7 @@ class Planner extends Entity implements Parsable
      * @return array<PlannerBucket>|null
     */
     public function getBuckets(): ?array {
-        return $this->buckets;
+        return $this->getBackingStore()->get('buckets');
     }
 
     /**
@@ -66,7 +50,7 @@ class Planner extends Entity implements Parsable
      * @return array<PlannerPlan>|null
     */
     public function getPlans(): ?array {
-        return $this->plans;
+        return $this->getBackingStore()->get('plans');
     }
 
     /**
@@ -74,7 +58,7 @@ class Planner extends Entity implements Parsable
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -83,33 +67,33 @@ class Planner extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('buckets', $this->buckets);
-        $writer->writeCollectionOfObjectValues('plans', $this->plans);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
+        $writer->writeCollectionOfObjectValues('buckets', $this->getBuckets());
+        $writer->writeCollectionOfObjectValues('plans', $this->getPlans());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 
     /**
      * Sets the buckets property value. Read-only. Nullable. Returns a collection of the specified buckets
      *  @param array<PlannerBucket>|null $value Value to set for the buckets property.
     */
-    public function setBuckets(?array $value ): void {
-        $this->buckets = $value;
+    public function setBuckets(?array $value): void {
+        $this->getBackingStore()->set('buckets', $value);
     }
 
     /**
      * Sets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
      *  @param array<PlannerPlan>|null $value Value to set for the plans property.
     */
-    public function setPlans(?array $value ): void {
-        $this->plans = $value;
+    public function setPlans(?array $value): void {
+        $this->getBackingStore()->set('plans', $value);
     }
 
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
 }

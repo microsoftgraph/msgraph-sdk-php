@@ -7,185 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable 
+class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $attestationIdentityKey TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-    */
-    private ?string $attestationIdentityKey = null;
-    
-    /**
-     * @var string|null $bitLockerStatus On or Off of BitLocker Drive Encryption
-    */
-    private ?string $bitLockerStatus = null;
-    
-    /**
-     * @var string|null $bootAppSecurityVersion The security version number of the Boot Application
-    */
-    private ?string $bootAppSecurityVersion = null;
-    
-    /**
-     * @var string|null $bootDebugging When bootDebugging is enabled, the device is used in development and testing
-    */
-    private ?string $bootDebugging = null;
-    
-    /**
-     * @var string|null $bootManagerSecurityVersion The security version number of the Boot Application
-    */
-    private ?string $bootManagerSecurityVersion = null;
-    
-    /**
-     * @var string|null $bootManagerVersion The version of the Boot Manager
-    */
-    private ?string $bootManagerVersion = null;
-    
-    /**
-     * @var string|null $bootRevisionListInfo The Boot Revision List that was loaded during initial boot on the attested device
-    */
-    private ?string $bootRevisionListInfo = null;
-    
-    /**
-     * @var string|null $codeIntegrity When code integrity is enabled, code execution is restricted to integrity verified code
-    */
-    private ?string $codeIntegrity = null;
-    
-    /**
-     * @var string|null $codeIntegrityCheckVersion The version of the Boot Manager
-    */
-    private ?string $codeIntegrityCheckVersion = null;
-    
-    /**
-     * @var string|null $codeIntegrityPolicy The Code Integrity policy that is controlling the security of the boot environment
-    */
-    private ?string $codeIntegrityPolicy = null;
-    
-    /**
-     * @var string|null $contentNamespaceUrl The DHA report version. (Namespace version)
-    */
-    private ?string $contentNamespaceUrl = null;
-    
-    /**
-     * @var string|null $contentVersion The HealthAttestation state schema version
-    */
-    private ?string $contentVersion = null;
-    
-    /**
-     * @var string|null $dataExcutionPolicy DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-    */
-    private ?string $dataExcutionPolicy = null;
-    
-    /**
-     * @var string|null $deviceHealthAttestationStatus The DHA report version. (Namespace version)
-    */
-    private ?string $deviceHealthAttestationStatus = null;
-    
-    /**
-     * @var string|null $earlyLaunchAntiMalwareDriverProtection ELAM provides protection for the computers in your network when they start up
-    */
-    private ?string $earlyLaunchAntiMalwareDriverProtection = null;
-    
-    /**
-     * @var string|null $healthAttestationSupportedStatus This attribute indicates if DHA is supported for the device
-    */
-    private ?string $healthAttestationSupportedStatus = null;
-    
-    /**
-     * @var string|null $healthStatusMismatchInfo This attribute appears if DHA-Service detects an integrity issue
-    */
-    private ?string $healthStatusMismatchInfo = null;
-    
-    /**
-     * @var DateTime|null $issuedDateTime The DateTime when device was evaluated or issued to MDM
-    */
-    private ?DateTime $issuedDateTime = null;
-    
-    /**
-     * @var string|null $lastUpdateDateTime The Timestamp of the last update.
-    */
-    private ?string $lastUpdateDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $operatingSystemKernelDebugging When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-    */
-    private ?string $operatingSystemKernelDebugging = null;
-    
-    /**
-     * @var string|null $operatingSystemRevListInfo The Operating System Revision List that was loaded during initial boot on the attested device
-    */
-    private ?string $operatingSystemRevListInfo = null;
-    
-    /**
-     * @var string|null $pcr0 The measurement that is captured in PCR[0]
-    */
-    private ?string $pcr0 = null;
-    
-    /**
-     * @var string|null $pcrHashAlgorithm Informational attribute that identifies the HASH algorithm that was used by TPM
-    */
-    private ?string $pcrHashAlgorithm = null;
-    
-    /**
-     * @var int|null $resetCount The number of times a PC device has hibernated or resumed
-    */
-    private ?int $resetCount = null;
-    
-    /**
-     * @var int|null $restartCount The number of times a PC device has rebooted
-    */
-    private ?int $restartCount = null;
-    
-    /**
-     * @var string|null $safeMode Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-    */
-    private ?string $safeMode = null;
-    
-    /**
-     * @var string|null $secureBoot When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-    */
-    private ?string $secureBoot = null;
-    
-    /**
-     * @var string|null $secureBootConfigurationPolicyFingerPrint Fingerprint of the Custom Secure Boot Configuration Policy
-    */
-    private ?string $secureBootConfigurationPolicyFingerPrint = null;
-    
-    /**
-     * @var string|null $testSigning When test signing is allowed, the device does not enforce signature validation during boot
-    */
-    private ?string $testSigning = null;
-    
-    /**
-     * @var string|null $tpmVersion The security version number of the Boot Application
-    */
-    private ?string $tpmVersion = null;
-    
-    /**
-     * @var string|null $virtualSecureMode VSM is a container that protects high value assets from a compromised kernel
-    */
-    private ?string $virtualSecureMode = null;
-    
-    /**
-     * @var string|null $windowsPE Operating system running with limited services that is used to prepare a computer for Windows
-    */
-    private ?string $windowsPE = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceHealthAttestationState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.deviceHealthAttestationState');
     }
 
     /**
@@ -201,8 +39,8 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -210,7 +48,15 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAttestationIdentityKey(): ?string {
-        return $this->attestationIdentityKey;
+        return $this->getBackingStore()->get('attestationIdentityKey');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -218,7 +64,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBitLockerStatus(): ?string {
-        return $this->bitLockerStatus;
+        return $this->getBackingStore()->get('bitLockerStatus');
     }
 
     /**
@@ -226,7 +72,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBootAppSecurityVersion(): ?string {
-        return $this->bootAppSecurityVersion;
+        return $this->getBackingStore()->get('bootAppSecurityVersion');
     }
 
     /**
@@ -234,7 +80,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBootDebugging(): ?string {
-        return $this->bootDebugging;
+        return $this->getBackingStore()->get('bootDebugging');
     }
 
     /**
@@ -242,7 +88,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBootManagerSecurityVersion(): ?string {
-        return $this->bootManagerSecurityVersion;
+        return $this->getBackingStore()->get('bootManagerSecurityVersion');
     }
 
     /**
@@ -250,7 +96,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBootManagerVersion(): ?string {
-        return $this->bootManagerVersion;
+        return $this->getBackingStore()->get('bootManagerVersion');
     }
 
     /**
@@ -258,7 +104,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBootRevisionListInfo(): ?string {
-        return $this->bootRevisionListInfo;
+        return $this->getBackingStore()->get('bootRevisionListInfo');
     }
 
     /**
@@ -266,7 +112,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCodeIntegrity(): ?string {
-        return $this->codeIntegrity;
+        return $this->getBackingStore()->get('codeIntegrity');
     }
 
     /**
@@ -274,7 +120,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCodeIntegrityCheckVersion(): ?string {
-        return $this->codeIntegrityCheckVersion;
+        return $this->getBackingStore()->get('codeIntegrityCheckVersion');
     }
 
     /**
@@ -282,7 +128,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCodeIntegrityPolicy(): ?string {
-        return $this->codeIntegrityPolicy;
+        return $this->getBackingStore()->get('codeIntegrityPolicy');
     }
 
     /**
@@ -290,7 +136,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContentNamespaceUrl(): ?string {
-        return $this->contentNamespaceUrl;
+        return $this->getBackingStore()->get('contentNamespaceUrl');
     }
 
     /**
@@ -298,7 +144,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContentVersion(): ?string {
-        return $this->contentVersion;
+        return $this->getBackingStore()->get('contentVersion');
     }
 
     /**
@@ -306,7 +152,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDataExcutionPolicy(): ?string {
-        return $this->dataExcutionPolicy;
+        return $this->getBackingStore()->get('dataExcutionPolicy');
     }
 
     /**
@@ -314,7 +160,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDeviceHealthAttestationStatus(): ?string {
-        return $this->deviceHealthAttestationStatus;
+        return $this->getBackingStore()->get('deviceHealthAttestationStatus');
     }
 
     /**
@@ -322,7 +168,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEarlyLaunchAntiMalwareDriverProtection(): ?string {
-        return $this->earlyLaunchAntiMalwareDriverProtection;
+        return $this->getBackingStore()->get('earlyLaunchAntiMalwareDriverProtection');
     }
 
     /**
@@ -373,7 +219,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getHealthAttestationSupportedStatus(): ?string {
-        return $this->healthAttestationSupportedStatus;
+        return $this->getBackingStore()->get('healthAttestationSupportedStatus');
     }
 
     /**
@@ -381,7 +227,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getHealthStatusMismatchInfo(): ?string {
-        return $this->healthStatusMismatchInfo;
+        return $this->getBackingStore()->get('healthStatusMismatchInfo');
     }
 
     /**
@@ -389,7 +235,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getIssuedDateTime(): ?DateTime {
-        return $this->issuedDateTime;
+        return $this->getBackingStore()->get('issuedDateTime');
     }
 
     /**
@@ -397,7 +243,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLastUpdateDateTime(): ?string {
-        return $this->lastUpdateDateTime;
+        return $this->getBackingStore()->get('lastUpdateDateTime');
     }
 
     /**
@@ -405,7 +251,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -413,7 +259,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOperatingSystemKernelDebugging(): ?string {
-        return $this->operatingSystemKernelDebugging;
+        return $this->getBackingStore()->get('operatingSystemKernelDebugging');
     }
 
     /**
@@ -421,7 +267,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOperatingSystemRevListInfo(): ?string {
-        return $this->operatingSystemRevListInfo;
+        return $this->getBackingStore()->get('operatingSystemRevListInfo');
     }
 
     /**
@@ -429,7 +275,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPcr0(): ?string {
-        return $this->pcr0;
+        return $this->getBackingStore()->get('pcr0');
     }
 
     /**
@@ -437,7 +283,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPcrHashAlgorithm(): ?string {
-        return $this->pcrHashAlgorithm;
+        return $this->getBackingStore()->get('pcrHashAlgorithm');
     }
 
     /**
@@ -445,7 +291,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getResetCount(): ?int {
-        return $this->resetCount;
+        return $this->getBackingStore()->get('resetCount');
     }
 
     /**
@@ -453,7 +299,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getRestartCount(): ?int {
-        return $this->restartCount;
+        return $this->getBackingStore()->get('restartCount');
     }
 
     /**
@@ -461,7 +307,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSafeMode(): ?string {
-        return $this->safeMode;
+        return $this->getBackingStore()->get('safeMode');
     }
 
     /**
@@ -469,7 +315,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSecureBoot(): ?string {
-        return $this->secureBoot;
+        return $this->getBackingStore()->get('secureBoot');
     }
 
     /**
@@ -477,7 +323,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSecureBootConfigurationPolicyFingerPrint(): ?string {
-        return $this->secureBootConfigurationPolicyFingerPrint;
+        return $this->getBackingStore()->get('secureBootConfigurationPolicyFingerPrint');
     }
 
     /**
@@ -485,7 +331,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTestSigning(): ?string {
-        return $this->testSigning;
+        return $this->getBackingStore()->get('testSigning');
     }
 
     /**
@@ -493,7 +339,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTpmVersion(): ?string {
-        return $this->tpmVersion;
+        return $this->getBackingStore()->get('tpmVersion');
     }
 
     /**
@@ -501,7 +347,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getVirtualSecureMode(): ?string {
-        return $this->virtualSecureMode;
+        return $this->getBackingStore()->get('virtualSecureMode');
     }
 
     /**
@@ -509,7 +355,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWindowsPE(): ?string {
-        return $this->windowsPE;
+        return $this->getBackingStore()->get('windowsPE');
     }
 
     /**
@@ -517,312 +363,320 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('attestationIdentityKey', $this->attestationIdentityKey);
-        $writer->writeStringValue('bitLockerStatus', $this->bitLockerStatus);
-        $writer->writeStringValue('bootAppSecurityVersion', $this->bootAppSecurityVersion);
-        $writer->writeStringValue('bootDebugging', $this->bootDebugging);
-        $writer->writeStringValue('bootManagerSecurityVersion', $this->bootManagerSecurityVersion);
-        $writer->writeStringValue('bootManagerVersion', $this->bootManagerVersion);
-        $writer->writeStringValue('bootRevisionListInfo', $this->bootRevisionListInfo);
-        $writer->writeStringValue('codeIntegrity', $this->codeIntegrity);
-        $writer->writeStringValue('codeIntegrityCheckVersion', $this->codeIntegrityCheckVersion);
-        $writer->writeStringValue('codeIntegrityPolicy', $this->codeIntegrityPolicy);
-        $writer->writeStringValue('contentNamespaceUrl', $this->contentNamespaceUrl);
-        $writer->writeStringValue('contentVersion', $this->contentVersion);
-        $writer->writeStringValue('dataExcutionPolicy', $this->dataExcutionPolicy);
-        $writer->writeStringValue('deviceHealthAttestationStatus', $this->deviceHealthAttestationStatus);
-        $writer->writeStringValue('earlyLaunchAntiMalwareDriverProtection', $this->earlyLaunchAntiMalwareDriverProtection);
-        $writer->writeStringValue('healthAttestationSupportedStatus', $this->healthAttestationSupportedStatus);
-        $writer->writeStringValue('healthStatusMismatchInfo', $this->healthStatusMismatchInfo);
-        $writer->writeDateTimeValue('issuedDateTime', $this->issuedDateTime);
-        $writer->writeStringValue('lastUpdateDateTime', $this->lastUpdateDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('operatingSystemKernelDebugging', $this->operatingSystemKernelDebugging);
-        $writer->writeStringValue('operatingSystemRevListInfo', $this->operatingSystemRevListInfo);
-        $writer->writeStringValue('pcr0', $this->pcr0);
-        $writer->writeStringValue('pcrHashAlgorithm', $this->pcrHashAlgorithm);
-        $writer->writeIntegerValue('resetCount', $this->resetCount);
-        $writer->writeIntegerValue('restartCount', $this->restartCount);
-        $writer->writeStringValue('safeMode', $this->safeMode);
-        $writer->writeStringValue('secureBoot', $this->secureBoot);
-        $writer->writeStringValue('secureBootConfigurationPolicyFingerPrint', $this->secureBootConfigurationPolicyFingerPrint);
-        $writer->writeStringValue('testSigning', $this->testSigning);
-        $writer->writeStringValue('tpmVersion', $this->tpmVersion);
-        $writer->writeStringValue('virtualSecureMode', $this->virtualSecureMode);
-        $writer->writeStringValue('windowsPE', $this->windowsPE);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('attestationIdentityKey', $this->getAttestationIdentityKey());
+        $writer->writeStringValue('bitLockerStatus', $this->getBitLockerStatus());
+        $writer->writeStringValue('bootAppSecurityVersion', $this->getBootAppSecurityVersion());
+        $writer->writeStringValue('bootDebugging', $this->getBootDebugging());
+        $writer->writeStringValue('bootManagerSecurityVersion', $this->getBootManagerSecurityVersion());
+        $writer->writeStringValue('bootManagerVersion', $this->getBootManagerVersion());
+        $writer->writeStringValue('bootRevisionListInfo', $this->getBootRevisionListInfo());
+        $writer->writeStringValue('codeIntegrity', $this->getCodeIntegrity());
+        $writer->writeStringValue('codeIntegrityCheckVersion', $this->getCodeIntegrityCheckVersion());
+        $writer->writeStringValue('codeIntegrityPolicy', $this->getCodeIntegrityPolicy());
+        $writer->writeStringValue('contentNamespaceUrl', $this->getContentNamespaceUrl());
+        $writer->writeStringValue('contentVersion', $this->getContentVersion());
+        $writer->writeStringValue('dataExcutionPolicy', $this->getDataExcutionPolicy());
+        $writer->writeStringValue('deviceHealthAttestationStatus', $this->getDeviceHealthAttestationStatus());
+        $writer->writeStringValue('earlyLaunchAntiMalwareDriverProtection', $this->getEarlyLaunchAntiMalwareDriverProtection());
+        $writer->writeStringValue('healthAttestationSupportedStatus', $this->getHealthAttestationSupportedStatus());
+        $writer->writeStringValue('healthStatusMismatchInfo', $this->getHealthStatusMismatchInfo());
+        $writer->writeDateTimeValue('issuedDateTime', $this->getIssuedDateTime());
+        $writer->writeStringValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('operatingSystemKernelDebugging', $this->getOperatingSystemKernelDebugging());
+        $writer->writeStringValue('operatingSystemRevListInfo', $this->getOperatingSystemRevListInfo());
+        $writer->writeStringValue('pcr0', $this->getPcr0());
+        $writer->writeStringValue('pcrHashAlgorithm', $this->getPcrHashAlgorithm());
+        $writer->writeIntegerValue('resetCount', $this->getResetCount());
+        $writer->writeIntegerValue('restartCount', $this->getRestartCount());
+        $writer->writeStringValue('safeMode', $this->getSafeMode());
+        $writer->writeStringValue('secureBoot', $this->getSecureBoot());
+        $writer->writeStringValue('secureBootConfigurationPolicyFingerPrint', $this->getSecureBootConfigurationPolicyFingerPrint());
+        $writer->writeStringValue('testSigning', $this->getTestSigning());
+        $writer->writeStringValue('tpmVersion', $this->getTpmVersion());
+        $writer->writeStringValue('virtualSecureMode', $this->getVirtualSecureMode());
+        $writer->writeStringValue('windowsPE', $this->getWindowsPE());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
      *  @param string|null $value Value to set for the attestationIdentityKey property.
     */
-    public function setAttestationIdentityKey(?string $value ): void {
-        $this->attestationIdentityKey = $value;
+    public function setAttestationIdentityKey(?string $value): void {
+        $this->getBackingStore()->set('attestationIdentityKey', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
      *  @param string|null $value Value to set for the bitLockerStatus property.
     */
-    public function setBitLockerStatus(?string $value ): void {
-        $this->bitLockerStatus = $value;
+    public function setBitLockerStatus(?string $value): void {
+        $this->getBackingStore()->set('bitLockerStatus', $value);
     }
 
     /**
      * Sets the bootAppSecurityVersion property value. The security version number of the Boot Application
      *  @param string|null $value Value to set for the bootAppSecurityVersion property.
     */
-    public function setBootAppSecurityVersion(?string $value ): void {
-        $this->bootAppSecurityVersion = $value;
+    public function setBootAppSecurityVersion(?string $value): void {
+        $this->getBackingStore()->set('bootAppSecurityVersion', $value);
     }
 
     /**
      * Sets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
      *  @param string|null $value Value to set for the bootDebugging property.
     */
-    public function setBootDebugging(?string $value ): void {
-        $this->bootDebugging = $value;
+    public function setBootDebugging(?string $value): void {
+        $this->getBackingStore()->set('bootDebugging', $value);
     }
 
     /**
      * Sets the bootManagerSecurityVersion property value. The security version number of the Boot Application
      *  @param string|null $value Value to set for the bootManagerSecurityVersion property.
     */
-    public function setBootManagerSecurityVersion(?string $value ): void {
-        $this->bootManagerSecurityVersion = $value;
+    public function setBootManagerSecurityVersion(?string $value): void {
+        $this->getBackingStore()->set('bootManagerSecurityVersion', $value);
     }
 
     /**
      * Sets the bootManagerVersion property value. The version of the Boot Manager
      *  @param string|null $value Value to set for the bootManagerVersion property.
     */
-    public function setBootManagerVersion(?string $value ): void {
-        $this->bootManagerVersion = $value;
+    public function setBootManagerVersion(?string $value): void {
+        $this->getBackingStore()->set('bootManagerVersion', $value);
     }
 
     /**
      * Sets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
      *  @param string|null $value Value to set for the bootRevisionListInfo property.
     */
-    public function setBootRevisionListInfo(?string $value ): void {
-        $this->bootRevisionListInfo = $value;
+    public function setBootRevisionListInfo(?string $value): void {
+        $this->getBackingStore()->set('bootRevisionListInfo', $value);
     }
 
     /**
      * Sets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
      *  @param string|null $value Value to set for the codeIntegrity property.
     */
-    public function setCodeIntegrity(?string $value ): void {
-        $this->codeIntegrity = $value;
+    public function setCodeIntegrity(?string $value): void {
+        $this->getBackingStore()->set('codeIntegrity', $value);
     }
 
     /**
      * Sets the codeIntegrityCheckVersion property value. The version of the Boot Manager
      *  @param string|null $value Value to set for the codeIntegrityCheckVersion property.
     */
-    public function setCodeIntegrityCheckVersion(?string $value ): void {
-        $this->codeIntegrityCheckVersion = $value;
+    public function setCodeIntegrityCheckVersion(?string $value): void {
+        $this->getBackingStore()->set('codeIntegrityCheckVersion', $value);
     }
 
     /**
      * Sets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
      *  @param string|null $value Value to set for the codeIntegrityPolicy property.
     */
-    public function setCodeIntegrityPolicy(?string $value ): void {
-        $this->codeIntegrityPolicy = $value;
+    public function setCodeIntegrityPolicy(?string $value): void {
+        $this->getBackingStore()->set('codeIntegrityPolicy', $value);
     }
 
     /**
      * Sets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
      *  @param string|null $value Value to set for the contentNamespaceUrl property.
     */
-    public function setContentNamespaceUrl(?string $value ): void {
-        $this->contentNamespaceUrl = $value;
+    public function setContentNamespaceUrl(?string $value): void {
+        $this->getBackingStore()->set('contentNamespaceUrl', $value);
     }
 
     /**
      * Sets the contentVersion property value. The HealthAttestation state schema version
      *  @param string|null $value Value to set for the contentVersion property.
     */
-    public function setContentVersion(?string $value ): void {
-        $this->contentVersion = $value;
+    public function setContentVersion(?string $value): void {
+        $this->getBackingStore()->set('contentVersion', $value);
     }
 
     /**
      * Sets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
      *  @param string|null $value Value to set for the dataExcutionPolicy property.
     */
-    public function setDataExcutionPolicy(?string $value ): void {
-        $this->dataExcutionPolicy = $value;
+    public function setDataExcutionPolicy(?string $value): void {
+        $this->getBackingStore()->set('dataExcutionPolicy', $value);
     }
 
     /**
      * Sets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
      *  @param string|null $value Value to set for the deviceHealthAttestationStatus property.
     */
-    public function setDeviceHealthAttestationStatus(?string $value ): void {
-        $this->deviceHealthAttestationStatus = $value;
+    public function setDeviceHealthAttestationStatus(?string $value): void {
+        $this->getBackingStore()->set('deviceHealthAttestationStatus', $value);
     }
 
     /**
      * Sets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
      *  @param string|null $value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
     */
-    public function setEarlyLaunchAntiMalwareDriverProtection(?string $value ): void {
-        $this->earlyLaunchAntiMalwareDriverProtection = $value;
+    public function setEarlyLaunchAntiMalwareDriverProtection(?string $value): void {
+        $this->getBackingStore()->set('earlyLaunchAntiMalwareDriverProtection', $value);
     }
 
     /**
      * Sets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
      *  @param string|null $value Value to set for the healthAttestationSupportedStatus property.
     */
-    public function setHealthAttestationSupportedStatus(?string $value ): void {
-        $this->healthAttestationSupportedStatus = $value;
+    public function setHealthAttestationSupportedStatus(?string $value): void {
+        $this->getBackingStore()->set('healthAttestationSupportedStatus', $value);
     }
 
     /**
      * Sets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
      *  @param string|null $value Value to set for the healthStatusMismatchInfo property.
     */
-    public function setHealthStatusMismatchInfo(?string $value ): void {
-        $this->healthStatusMismatchInfo = $value;
+    public function setHealthStatusMismatchInfo(?string $value): void {
+        $this->getBackingStore()->set('healthStatusMismatchInfo', $value);
     }
 
     /**
      * Sets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
      *  @param DateTime|null $value Value to set for the issuedDateTime property.
     */
-    public function setIssuedDateTime(?DateTime $value ): void {
-        $this->issuedDateTime = $value;
+    public function setIssuedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('issuedDateTime', $value);
     }
 
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update.
      *  @param string|null $value Value to set for the lastUpdateDateTime property.
     */
-    public function setLastUpdateDateTime(?string $value ): void {
-        $this->lastUpdateDateTime = $value;
+    public function setLastUpdateDateTime(?string $value): void {
+        $this->getBackingStore()->set('lastUpdateDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
      *  @param string|null $value Value to set for the operatingSystemKernelDebugging property.
     */
-    public function setOperatingSystemKernelDebugging(?string $value ): void {
-        $this->operatingSystemKernelDebugging = $value;
+    public function setOperatingSystemKernelDebugging(?string $value): void {
+        $this->getBackingStore()->set('operatingSystemKernelDebugging', $value);
     }
 
     /**
      * Sets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
      *  @param string|null $value Value to set for the operatingSystemRevListInfo property.
     */
-    public function setOperatingSystemRevListInfo(?string $value ): void {
-        $this->operatingSystemRevListInfo = $value;
+    public function setOperatingSystemRevListInfo(?string $value): void {
+        $this->getBackingStore()->set('operatingSystemRevListInfo', $value);
     }
 
     /**
      * Sets the pcr0 property value. The measurement that is captured in PCR[0]
      *  @param string|null $value Value to set for the pcr0 property.
     */
-    public function setPcr0(?string $value ): void {
-        $this->pcr0 = $value;
+    public function setPcr0(?string $value): void {
+        $this->getBackingStore()->set('pcr0', $value);
     }
 
     /**
      * Sets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
      *  @param string|null $value Value to set for the pcrHashAlgorithm property.
     */
-    public function setPcrHashAlgorithm(?string $value ): void {
-        $this->pcrHashAlgorithm = $value;
+    public function setPcrHashAlgorithm(?string $value): void {
+        $this->getBackingStore()->set('pcrHashAlgorithm', $value);
     }
 
     /**
      * Sets the resetCount property value. The number of times a PC device has hibernated or resumed
      *  @param int|null $value Value to set for the resetCount property.
     */
-    public function setResetCount(?int $value ): void {
-        $this->resetCount = $value;
+    public function setResetCount(?int $value): void {
+        $this->getBackingStore()->set('resetCount', $value);
     }
 
     /**
      * Sets the restartCount property value. The number of times a PC device has rebooted
      *  @param int|null $value Value to set for the restartCount property.
     */
-    public function setRestartCount(?int $value ): void {
-        $this->restartCount = $value;
+    public function setRestartCount(?int $value): void {
+        $this->getBackingStore()->set('restartCount', $value);
     }
 
     /**
      * Sets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
      *  @param string|null $value Value to set for the safeMode property.
     */
-    public function setSafeMode(?string $value ): void {
-        $this->safeMode = $value;
+    public function setSafeMode(?string $value): void {
+        $this->getBackingStore()->set('safeMode', $value);
     }
 
     /**
      * Sets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
      *  @param string|null $value Value to set for the secureBoot property.
     */
-    public function setSecureBoot(?string $value ): void {
-        $this->secureBoot = $value;
+    public function setSecureBoot(?string $value): void {
+        $this->getBackingStore()->set('secureBoot', $value);
     }
 
     /**
      * Sets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
      *  @param string|null $value Value to set for the secureBootConfigurationPolicyFingerPrint property.
     */
-    public function setSecureBootConfigurationPolicyFingerPrint(?string $value ): void {
-        $this->secureBootConfigurationPolicyFingerPrint = $value;
+    public function setSecureBootConfigurationPolicyFingerPrint(?string $value): void {
+        $this->getBackingStore()->set('secureBootConfigurationPolicyFingerPrint', $value);
     }
 
     /**
      * Sets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
      *  @param string|null $value Value to set for the testSigning property.
     */
-    public function setTestSigning(?string $value ): void {
-        $this->testSigning = $value;
+    public function setTestSigning(?string $value): void {
+        $this->getBackingStore()->set('testSigning', $value);
     }
 
     /**
      * Sets the tpmVersion property value. The security version number of the Boot Application
      *  @param string|null $value Value to set for the tpmVersion property.
     */
-    public function setTpmVersion(?string $value ): void {
-        $this->tpmVersion = $value;
+    public function setTpmVersion(?string $value): void {
+        $this->getBackingStore()->set('tpmVersion', $value);
     }
 
     /**
      * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
      *  @param string|null $value Value to set for the virtualSecureMode property.
     */
-    public function setVirtualSecureMode(?string $value ): void {
-        $this->virtualSecureMode = $value;
+    public function setVirtualSecureMode(?string $value): void {
+        $this->getBackingStore()->set('virtualSecureMode', $value);
     }
 
     /**
      * Sets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
      *  @param string|null $value Value to set for the windowsPE property.
     */
-    public function setWindowsPE(?string $value ): void {
-        $this->windowsPE = $value;
+    public function setWindowsPE(?string $value): void {
+        $this->getBackingStore()->set('windowsPE', $value);
     }
 
 }

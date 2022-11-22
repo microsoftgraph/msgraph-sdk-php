@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
     /**
-     * @var string|null $groupId The group Id that is the target of the assignment.
-    */
-    private ?string $groupId = null;
-    
-    /**
      * Instantiates a new GroupAssignmentTarget and sets the default values.
     */
     public function __construct() {
@@ -53,7 +48,7 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
      * @return string|null
     */
     public function getGroupId(): ?string {
-        return $this->groupId;
+        return $this->getBackingStore()->get('groupId');
     }
 
     /**
@@ -62,15 +57,15 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('groupId', $this->groupId);
+        $writer->writeStringValue('groupId', $this->getGroupId());
     }
 
     /**
      * Sets the groupId property value. The group Id that is the target of the assignment.
      *  @param string|null $value Value to set for the groupId property.
     */
-    public function setGroupId(?string $value ): void {
-        $this->groupId = $value;
+    public function setGroupId(?string $value): void {
+        $this->getBackingStore()->set('groupId', $value);
     }
 
 }

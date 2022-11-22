@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipient implements Parsable 
 {
     /**
-     * @var array<string>|null $recipients A collection of IDs of the recipients.
-    */
-    private ?array $recipients = null;
-    
-    /**
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
      * @return array<string>|null
     */
     public function getRecipients(): ?array {
-        return $this->recipients;
+        return $this->getBackingStore()->get('recipients');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('recipients', $this->recipients);
+        $writer->writeCollectionOfPrimitiveValues('recipients', $this->getRecipients());
     }
 
     /**
      * Sets the recipients property value. A collection of IDs of the recipients.
      *  @param array<string>|null $value Value to set for the recipients property.
     */
-    public function setRecipients(?array $value ): void {
-        $this->recipients = $value;
+    public function setRecipients(?array $value): void {
+        $this->getBackingStore()->set('recipients', $value);
     }
 
 }

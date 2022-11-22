@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkConversationIdentity extends Identity implements Parsable 
 {
     /**
-     * @var TeamworkConversationIdentityType|null $conversationIdentityType Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-    */
-    private ?TeamworkConversationIdentityType $conversationIdentityType = null;
-    
-    /**
      * Instantiates a new TeamworkConversationIdentity and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
      * @return TeamworkConversationIdentityType|null
     */
     public function getConversationIdentityType(): ?TeamworkConversationIdentityType {
-        return $this->conversationIdentityType;
+        return $this->getBackingStore()->get('conversationIdentityType');
     }
 
     /**
@@ -55,15 +50,15 @@ class TeamworkConversationIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('conversationIdentityType', $this->conversationIdentityType);
+        $writer->writeEnumValue('conversationIdentityType', $this->getConversationIdentityType());
     }
 
     /**
      * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      *  @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
     */
-    public function setConversationIdentityType(?TeamworkConversationIdentityType $value ): void {
-        $this->conversationIdentityType = $value;
+    public function setConversationIdentityType(?TeamworkConversationIdentityType $value): void {
+        $this->getBackingStore()->set('conversationIdentityType', $value);
     }
 
 }

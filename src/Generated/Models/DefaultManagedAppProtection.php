@@ -9,66 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DefaultManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
     /**
-     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Represents the level to which app data is encrypted for managed apps
-    */
-    private ?ManagedAppDataEncryptionType $appDataEncryptionType = null;
-    
-    /**
-     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
-    */
-    private ?array $apps = null;
-    
-    /**
-     * @var array<KeyValuePair>|null $customSettings A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-    */
-    private ?array $customSettings = null;
-    
-    /**
-     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
-    */
-    private ?int $deployedAppCount = null;
-    
-    /**
-     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
-    */
-    private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
-    
-    /**
-     * @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-    */
-    private ?bool $disableAppEncryptionIfDeviceEncryptionIsEnabled = null;
-    
-    /**
-     * @var bool|null $encryptAppData Indicates whether managed-app data should be encrypted. (Android only)
-    */
-    private ?bool $encryptAppData = null;
-    
-    /**
-     * @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-    */
-    private ?bool $faceIdBlocked = null;
-    
-    /**
-     * @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
-    */
-    private ?string $minimumRequiredPatchVersion = null;
-    
-    /**
-     * @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-    */
-    private ?string $minimumRequiredSdkVersion = null;
-    
-    /**
-     * @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-    */
-    private ?string $minimumWarningPatchVersion = null;
-    
-    /**
-     * @var bool|null $screenCaptureBlocked Indicates whether screen capture is blocked. (Android only)
-    */
-    private ?bool $screenCaptureBlocked = null;
-    
-    /**
      * Instantiates a new DefaultManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -90,7 +30,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return ManagedAppDataEncryptionType|null
     */
     public function getAppDataEncryptionType(): ?ManagedAppDataEncryptionType {
-        return $this->appDataEncryptionType;
+        return $this->getBackingStore()->get('appDataEncryptionType');
     }
 
     /**
@@ -98,7 +38,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->apps;
+        return $this->getBackingStore()->get('apps');
     }
 
     /**
@@ -106,7 +46,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return array<KeyValuePair>|null
     */
     public function getCustomSettings(): ?array {
-        return $this->customSettings;
+        return $this->getBackingStore()->get('customSettings');
     }
 
     /**
@@ -114,7 +54,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->deployedAppCount;
+        return $this->getBackingStore()->get('deployedAppCount');
     }
 
     /**
@@ -122,7 +62,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->deploymentSummary;
+        return $this->getBackingStore()->get('deploymentSummary');
     }
 
     /**
@@ -130,7 +70,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return bool|null
     */
     public function getDisableAppEncryptionIfDeviceEncryptionIsEnabled(): ?bool {
-        return $this->disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return $this->getBackingStore()->get('disableAppEncryptionIfDeviceEncryptionIsEnabled');
     }
 
     /**
@@ -138,7 +78,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return bool|null
     */
     public function getEncryptAppData(): ?bool {
-        return $this->encryptAppData;
+        return $this->getBackingStore()->get('encryptAppData');
     }
 
     /**
@@ -146,7 +86,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return bool|null
     */
     public function getFaceIdBlocked(): ?bool {
-        return $this->faceIdBlocked;
+        return $this->getBackingStore()->get('faceIdBlocked');
     }
 
     /**
@@ -176,7 +116,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return string|null
     */
     public function getMinimumRequiredPatchVersion(): ?string {
-        return $this->minimumRequiredPatchVersion;
+        return $this->getBackingStore()->get('minimumRequiredPatchVersion');
     }
 
     /**
@@ -184,7 +124,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return string|null
     */
     public function getMinimumRequiredSdkVersion(): ?string {
-        return $this->minimumRequiredSdkVersion;
+        return $this->getBackingStore()->get('minimumRequiredSdkVersion');
     }
 
     /**
@@ -192,7 +132,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return string|null
     */
     public function getMinimumWarningPatchVersion(): ?string {
-        return $this->minimumWarningPatchVersion;
+        return $this->getBackingStore()->get('minimumWarningPatchVersion');
     }
 
     /**
@@ -200,7 +140,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
      * @return bool|null
     */
     public function getScreenCaptureBlocked(): ?bool {
-        return $this->screenCaptureBlocked;
+        return $this->getBackingStore()->get('screenCaptureBlocked');
     }
 
     /**
@@ -209,114 +149,114 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('appDataEncryptionType', $this->appDataEncryptionType);
-        $writer->writeCollectionOfObjectValues('apps', $this->apps);
-        $writer->writeCollectionOfObjectValues('customSettings', $this->customSettings);
-        $writer->writeIntegerValue('deployedAppCount', $this->deployedAppCount);
-        $writer->writeObjectValue('deploymentSummary', $this->deploymentSummary);
-        $writer->writeBooleanValue('disableAppEncryptionIfDeviceEncryptionIsEnabled', $this->disableAppEncryptionIfDeviceEncryptionIsEnabled);
-        $writer->writeBooleanValue('encryptAppData', $this->encryptAppData);
-        $writer->writeBooleanValue('faceIdBlocked', $this->faceIdBlocked);
-        $writer->writeStringValue('minimumRequiredPatchVersion', $this->minimumRequiredPatchVersion);
-        $writer->writeStringValue('minimumRequiredSdkVersion', $this->minimumRequiredSdkVersion);
-        $writer->writeStringValue('minimumWarningPatchVersion', $this->minimumWarningPatchVersion);
-        $writer->writeBooleanValue('screenCaptureBlocked', $this->screenCaptureBlocked);
+        $writer->writeEnumValue('appDataEncryptionType', $this->getAppDataEncryptionType());
+        $writer->writeCollectionOfObjectValues('apps', $this->getApps());
+        $writer->writeCollectionOfObjectValues('customSettings', $this->getCustomSettings());
+        $writer->writeIntegerValue('deployedAppCount', $this->getDeployedAppCount());
+        $writer->writeObjectValue('deploymentSummary', $this->getDeploymentSummary());
+        $writer->writeBooleanValue('disableAppEncryptionIfDeviceEncryptionIsEnabled', $this->getDisableAppEncryptionIfDeviceEncryptionIsEnabled());
+        $writer->writeBooleanValue('encryptAppData', $this->getEncryptAppData());
+        $writer->writeBooleanValue('faceIdBlocked', $this->getFaceIdBlocked());
+        $writer->writeStringValue('minimumRequiredPatchVersion', $this->getMinimumRequiredPatchVersion());
+        $writer->writeStringValue('minimumRequiredSdkVersion', $this->getMinimumRequiredSdkVersion());
+        $writer->writeStringValue('minimumWarningPatchVersion', $this->getMinimumWarningPatchVersion());
+        $writer->writeBooleanValue('screenCaptureBlocked', $this->getScreenCaptureBlocked());
     }
 
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      *  @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
     */
-    public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value ): void {
-        $this->appDataEncryptionType = $value;
+    public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value): void {
+        $this->getBackingStore()->set('appDataEncryptionType', $value);
     }
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
-    public function setApps(?array $value ): void {
-        $this->apps = $value;
+    public function setApps(?array $value): void {
+        $this->getBackingStore()->set('apps', $value);
     }
 
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      *  @param array<KeyValuePair>|null $value Value to set for the customSettings property.
     */
-    public function setCustomSettings(?array $value ): void {
-        $this->customSettings = $value;
+    public function setCustomSettings(?array $value): void {
+        $this->getBackingStore()->set('customSettings', $value);
     }
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      *  @param int|null $value Value to set for the deployedAppCount property.
     */
-    public function setDeployedAppCount(?int $value ): void {
-        $this->deployedAppCount = $value;
+    public function setDeployedAppCount(?int $value): void {
+        $this->getBackingStore()->set('deployedAppCount', $value);
     }
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
-    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value ): void {
-        $this->deploymentSummary = $value;
+    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
+        $this->getBackingStore()->set('deploymentSummary', $value);
     }
 
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      *  @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
     */
-    public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value ): void {
-        $this->disableAppEncryptionIfDeviceEncryptionIsEnabled = $value;
+    public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('disableAppEncryptionIfDeviceEncryptionIsEnabled', $value);
     }
 
     /**
      * Sets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
      *  @param bool|null $value Value to set for the encryptAppData property.
     */
-    public function setEncryptAppData(?bool $value ): void {
-        $this->encryptAppData = $value;
+    public function setEncryptAppData(?bool $value): void {
+        $this->getBackingStore()->set('encryptAppData', $value);
     }
 
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      *  @param bool|null $value Value to set for the faceIdBlocked property.
     */
-    public function setFaceIdBlocked(?bool $value ): void {
-        $this->faceIdBlocked = $value;
+    public function setFaceIdBlocked(?bool $value): void {
+        $this->getBackingStore()->set('faceIdBlocked', $value);
     }
 
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      *  @param string|null $value Value to set for the minimumRequiredPatchVersion property.
     */
-    public function setMinimumRequiredPatchVersion(?string $value ): void {
-        $this->minimumRequiredPatchVersion = $value;
+    public function setMinimumRequiredPatchVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredPatchVersion', $value);
     }
 
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      *  @param string|null $value Value to set for the minimumRequiredSdkVersion property.
     */
-    public function setMinimumRequiredSdkVersion(?string $value ): void {
-        $this->minimumRequiredSdkVersion = $value;
+    public function setMinimumRequiredSdkVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredSdkVersion', $value);
     }
 
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      *  @param string|null $value Value to set for the minimumWarningPatchVersion property.
     */
-    public function setMinimumWarningPatchVersion(?string $value ): void {
-        $this->minimumWarningPatchVersion = $value;
+    public function setMinimumWarningPatchVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumWarningPatchVersion', $value);
     }
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
      *  @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
-    public function setScreenCaptureBlocked(?bool $value ): void {
-        $this->screenCaptureBlocked = $value;
+    public function setScreenCaptureBlocked(?bool $value): void {
+        $this->getBackingStore()->set('screenCaptureBlocked', $value);
     }
 
 }

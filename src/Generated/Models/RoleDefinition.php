@@ -9,36 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RoleDefinition extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description Description of the Role definition.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Display Name of the Role definition.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isBuiltIn Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-    */
-    private ?bool $isBuiltIn = null;
-    
-    /**
-     * @var array<RoleAssignment>|null $roleAssignments List of Role assignments for this role definition.
-    */
-    private ?array $roleAssignments = null;
-    
-    /**
-     * @var array<RolePermission>|null $rolePermissions List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-    */
-    private ?array $rolePermissions = null;
-    
-    /**
      * Instantiates a new roleDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.roleDefinition');
     }
 
     /**
@@ -62,7 +36,7 @@ class RoleDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -70,7 +44,7 @@ class RoleDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -93,7 +67,7 @@ class RoleDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsBuiltIn(): ?bool {
-        return $this->isBuiltIn;
+        return $this->getBackingStore()->get('isBuiltIn');
     }
 
     /**
@@ -101,7 +75,7 @@ class RoleDefinition extends Entity implements Parsable
      * @return array<RoleAssignment>|null
     */
     public function getRoleAssignments(): ?array {
-        return $this->roleAssignments;
+        return $this->getBackingStore()->get('roleAssignments');
     }
 
     /**
@@ -109,7 +83,7 @@ class RoleDefinition extends Entity implements Parsable
      * @return array<RolePermission>|null
     */
     public function getRolePermissions(): ?array {
-        return $this->rolePermissions;
+        return $this->getBackingStore()->get('rolePermissions');
     }
 
     /**
@@ -118,51 +92,51 @@ class RoleDefinition extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isBuiltIn', $this->isBuiltIn);
-        $writer->writeCollectionOfObjectValues('roleAssignments', $this->roleAssignments);
-        $writer->writeCollectionOfObjectValues('rolePermissions', $this->rolePermissions);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
+        $writer->writeCollectionOfObjectValues('roleAssignments', $this->getRoleAssignments());
+        $writer->writeCollectionOfObjectValues('rolePermissions', $this->getRolePermissions());
     }
 
     /**
      * Sets the description property value. Description of the Role definition.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Display Name of the Role definition.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      *  @param bool|null $value Value to set for the isBuiltIn property.
     */
-    public function setIsBuiltIn(?bool $value ): void {
-        $this->isBuiltIn = $value;
+    public function setIsBuiltIn(?bool $value): void {
+        $this->getBackingStore()->set('isBuiltIn', $value);
     }
 
     /**
      * Sets the roleAssignments property value. List of Role assignments for this role definition.
      *  @param array<RoleAssignment>|null $value Value to set for the roleAssignments property.
     */
-    public function setRoleAssignments(?array $value ): void {
-        $this->roleAssignments = $value;
+    public function setRoleAssignments(?array $value): void {
+        $this->getBackingStore()->set('roleAssignments', $value);
     }
 
     /**
      * Sets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      *  @param array<RolePermission>|null $value Value to set for the rolePermissions property.
     */
-    public function setRolePermissions(?array $value ): void {
-        $this->rolePermissions = $value;
+    public function setRolePermissions(?array $value): void {
+        $this->getBackingStore()->set('rolePermissions', $value);
     }
 
 }

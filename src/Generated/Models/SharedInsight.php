@@ -9,41 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharedInsight extends Entity implements Parsable 
 {
     /**
-     * @var SharingDetail|null $lastShared Details about the shared item. Read only.
-    */
-    private ?SharingDetail $lastShared = null;
-    
-    /**
-     * @var Entity|null $lastSharedMethod The lastSharedMethod property
-    */
-    private ?Entity $lastSharedMethod = null;
-    
-    /**
-     * @var Entity|null $resource Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-    */
-    private ?Entity $resource = null;
-    
-    /**
-     * @var ResourceReference|null $resourceReference Reference properties of the shared document, such as the url and type of the document. Read-only
-    */
-    private ?ResourceReference $resourceReference = null;
-    
-    /**
-     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience. Read-only
-    */
-    private ?ResourceVisualization $resourceVisualization = null;
-    
-    /**
-     * @var array<SharingDetail>|null $sharingHistory The sharingHistory property
-    */
-    private ?array $sharingHistory = null;
-    
-    /**
      * Instantiates a new sharedInsight and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.sharedInsight');
     }
 
     /**
@@ -76,7 +45,7 @@ class SharedInsight extends Entity implements Parsable
      * @return SharingDetail|null
     */
     public function getLastShared(): ?SharingDetail {
-        return $this->lastShared;
+        return $this->getBackingStore()->get('lastShared');
     }
 
     /**
@@ -84,7 +53,7 @@ class SharedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getLastSharedMethod(): ?Entity {
-        return $this->lastSharedMethod;
+        return $this->getBackingStore()->get('lastSharedMethod');
     }
 
     /**
@@ -92,7 +61,7 @@ class SharedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->resource;
+        return $this->getBackingStore()->get('resource');
     }
 
     /**
@@ -100,7 +69,7 @@ class SharedInsight extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->resourceReference;
+        return $this->getBackingStore()->get('resourceReference');
     }
 
     /**
@@ -108,7 +77,7 @@ class SharedInsight extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->resourceVisualization;
+        return $this->getBackingStore()->get('resourceVisualization');
     }
 
     /**
@@ -116,7 +85,7 @@ class SharedInsight extends Entity implements Parsable
      * @return array<SharingDetail>|null
     */
     public function getSharingHistory(): ?array {
-        return $this->sharingHistory;
+        return $this->getBackingStore()->get('sharingHistory');
     }
 
     /**
@@ -125,58 +94,58 @@ class SharedInsight extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('lastShared', $this->lastShared);
-        $writer->writeObjectValue('lastSharedMethod', $this->lastSharedMethod);
-        $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeCollectionOfObjectValues('sharingHistory', $this->sharingHistory);
+        $writer->writeObjectValue('lastShared', $this->getLastShared());
+        $writer->writeObjectValue('lastSharedMethod', $this->getLastSharedMethod());
+        $writer->writeObjectValue('resource', $this->getResource());
+        $writer->writeCollectionOfObjectValues('sharingHistory', $this->getSharingHistory());
     }
 
     /**
      * Sets the lastShared property value. Details about the shared item. Read only.
      *  @param SharingDetail|null $value Value to set for the lastShared property.
     */
-    public function setLastShared(?SharingDetail $value ): void {
-        $this->lastShared = $value;
+    public function setLastShared(?SharingDetail $value): void {
+        $this->getBackingStore()->set('lastShared', $value);
     }
 
     /**
      * Sets the lastSharedMethod property value. The lastSharedMethod property
      *  @param Entity|null $value Value to set for the lastSharedMethod property.
     */
-    public function setLastSharedMethod(?Entity $value ): void {
-        $this->lastSharedMethod = $value;
+    public function setLastSharedMethod(?Entity $value): void {
+        $this->getBackingStore()->set('lastSharedMethod', $value);
     }
 
     /**
      * Sets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      *  @param Entity|null $value Value to set for the resource property.
     */
-    public function setResource(?Entity $value ): void {
-        $this->resource = $value;
+    public function setResource(?Entity $value): void {
+        $this->getBackingStore()->set('resource', $value);
     }
 
     /**
      * Sets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
      *  @param ResourceReference|null $value Value to set for the resourceReference property.
     */
-    public function setResourceReference(?ResourceReference $value ): void {
-        $this->resourceReference = $value;
+    public function setResourceReference(?ResourceReference $value): void {
+        $this->getBackingStore()->set('resourceReference', $value);
     }
 
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
     */
-    public function setResourceVisualization(?ResourceVisualization $value ): void {
-        $this->resourceVisualization = $value;
+    public function setResourceVisualization(?ResourceVisualization $value): void {
+        $this->getBackingStore()->set('resourceVisualization', $value);
     }
 
     /**
      * Sets the sharingHistory property value. The sharingHistory property
      *  @param array<SharingDetail>|null $value Value to set for the sharingHistory property.
     */
-    public function setSharingHistory(?array $value ): void {
-        $this->sharingHistory = $value;
+    public function setSharingHistory(?array $value): void {
+        $this->getBackingStore()->set('sharingHistory', $value);
     }
 
 }

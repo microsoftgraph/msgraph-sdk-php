@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResetPasscodeActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * @var string|null $passcode Newly generated passcode for the device
-    */
-    private ?string $passcode = null;
-    
-    /**
      * Instantiates a new ResetPasscodeActionResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.resetPasscodeActionResult');
     }
 
     /**
@@ -46,7 +40,7 @@ class ResetPasscodeActionResult extends DeviceActionResult implements Parsable
      * @return string|null
     */
     public function getPasscode(): ?string {
-        return $this->passcode;
+        return $this->getBackingStore()->get('passcode');
     }
 
     /**
@@ -55,15 +49,15 @@ class ResetPasscodeActionResult extends DeviceActionResult implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('passcode', $this->passcode);
+        $writer->writeStringValue('passcode', $this->getPasscode());
     }
 
     /**
      * Sets the passcode property value. Newly generated passcode for the device
      *  @param string|null $value Value to set for the passcode property.
     */
-    public function setPasscode(?string $value ): void {
-        $this->passcode = $value;
+    public function setPasscode(?string $value): void {
+        $this->getBackingStore()->set('passcode', $value);
     }
 
 }

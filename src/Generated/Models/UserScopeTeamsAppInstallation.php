@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable 
 {
     /**
-     * @var Chat|null $chat The chat between the user and Teams app.
-    */
-    private ?Chat $chat = null;
-    
-    /**
      * Instantiates a new UserScopeTeamsAppInstallation and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Pars
      * @return Chat|null
     */
     public function getChat(): ?Chat {
-        return $this->chat;
+        return $this->getBackingStore()->get('chat');
     }
 
     /**
@@ -55,15 +50,15 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('chat', $this->chat);
+        $writer->writeObjectValue('chat', $this->getChat());
     }
 
     /**
      * Sets the chat property value. The chat between the user and Teams app.
      *  @param Chat|null $value Value to set for the chat property.
     */
-    public function setChat(?Chat $value ): void {
-        $this->chat = $value;
+    public function setChat(?Chat $value): void {
+        $this->getBackingStore()->set('chat', $value);
     }
 
 }

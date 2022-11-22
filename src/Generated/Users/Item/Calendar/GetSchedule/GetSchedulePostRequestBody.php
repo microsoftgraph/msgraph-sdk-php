@@ -7,38 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable 
+class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $availabilityViewInterval The AvailabilityViewInterval property
-    */
-    private ?int $availabilityViewInterval = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $endTime The EndTime property
-    */
-    private ?DateTimeTimeZone $endTime = null;
-    
-    /**
-     * @var array<string>|null $schedules The Schedules property
-    */
-    private ?array $schedules = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $startTime The StartTime property
-    */
-    private ?DateTimeTimeZone $startTime = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new getSchedulePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -55,8 +39,8 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +48,15 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getAvailabilityViewInterval(): ?int {
-        return $this->availabilityViewInterval;
+        return $this->getBackingStore()->get('availabilityViewInterval');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +64,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEndTime(): ?DateTimeTimeZone {
-        return $this->endTime;
+        return $this->getBackingStore()->get('endTime');
     }
 
     /**
@@ -94,7 +86,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getSchedules(): ?array {
-        return $this->schedules;
+        return $this->getBackingStore()->get('schedules');
     }
 
     /**
@@ -102,7 +94,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getStartTime(): ?DateTimeTimeZone {
-        return $this->startTime;
+        return $this->getBackingStore()->get('startTime');
     }
 
     /**
@@ -110,51 +102,59 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('availabilityViewInterval', $this->availabilityViewInterval);
-        $writer->writeObjectValue('endTime', $this->endTime);
-        $writer->writeCollectionOfPrimitiveValues('schedules', $this->schedules);
-        $writer->writeObjectValue('startTime', $this->startTime);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('availabilityViewInterval', $this->getAvailabilityViewInterval());
+        $writer->writeObjectValue('endTime', $this->getEndTime());
+        $writer->writeCollectionOfPrimitiveValues('schedules', $this->getSchedules());
+        $writer->writeObjectValue('startTime', $this->getStartTime());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
      *  @param int|null $value Value to set for the AvailabilityViewInterval property.
     */
-    public function setAvailabilityViewInterval(?int $value ): void {
-        $this->availabilityViewInterval = $value;
+    public function setAvailabilityViewInterval(?int $value): void {
+        $this->getBackingStore()->set('availabilityViewInterval', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the endTime property value. The EndTime property
      *  @param DateTimeTimeZone|null $value Value to set for the EndTime property.
     */
-    public function setEndTime(?DateTimeTimeZone $value ): void {
-        $this->endTime = $value;
+    public function setEndTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('endTime', $value);
     }
 
     /**
      * Sets the schedules property value. The Schedules property
      *  @param array<string>|null $value Value to set for the Schedules property.
     */
-    public function setSchedules(?array $value ): void {
-        $this->schedules = $value;
+    public function setSchedules(?array $value): void {
+        $this->getBackingStore()->set('schedules', $value);
     }
 
     /**
      * Sets the startTime property value. The StartTime property
      *  @param DateTimeTimeZone|null $value Value to set for the StartTime property.
     */
-    public function setStartTime(?DateTimeTimeZone $value ): void {
-        $this->startTime = $value;
+    public function setStartTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('startTime', $value);
     }
 
 }

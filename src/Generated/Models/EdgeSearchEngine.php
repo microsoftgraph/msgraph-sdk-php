@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable 
 {
     /**
-     * @var EdgeSearchEngineType|null $edgeSearchEngineType Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-    */
-    private ?EdgeSearchEngineType $edgeSearchEngineType = null;
-    
-    /**
      * Instantiates a new EdgeSearchEngine and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable
      * @return EdgeSearchEngineType|null
     */
     public function getEdgeSearchEngineType(): ?EdgeSearchEngineType {
-        return $this->edgeSearchEngineType;
+        return $this->getBackingStore()->get('edgeSearchEngineType');
     }
 
     /**
@@ -55,15 +50,15 @@ class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('edgeSearchEngineType', $this->edgeSearchEngineType);
+        $writer->writeEnumValue('edgeSearchEngineType', $this->getEdgeSearchEngineType());
     }
 
     /**
      * Sets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      *  @param EdgeSearchEngineType|null $value Value to set for the edgeSearchEngineType property.
     */
-    public function setEdgeSearchEngineType(?EdgeSearchEngineType $value ): void {
-        $this->edgeSearchEngineType = $value;
+    public function setEdgeSearchEngineType(?EdgeSearchEngineType $value): void {
+        $this->getBackingStore()->set('edgeSearchEngineType', $value);
     }
 
 }

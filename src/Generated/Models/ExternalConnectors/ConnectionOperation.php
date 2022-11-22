@@ -11,21 +11,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConnectionOperation extends Entity implements Parsable 
 {
     /**
-     * @var PublicError|null $error If status is failed, provides more information about the error that caused the failure.
-    */
-    private ?PublicError $error = null;
-    
-    /**
-     * @var ConnectionOperationStatus|null $status Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
-    */
-    private ?ConnectionOperationStatus $status = null;
-    
-    /**
      * Instantiates a new connectionOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.externalConnectors.connectionOperation');
     }
 
     /**
@@ -42,7 +31,7 @@ class ConnectionOperation extends Entity implements Parsable
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -62,7 +51,7 @@ class ConnectionOperation extends Entity implements Parsable
      * @return ConnectionOperationStatus|null
     */
     public function getStatus(): ?ConnectionOperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -71,24 +60,24 @@ class ConnectionOperation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the error property value. If status is failed, provides more information about the error that caused the failure.
      *  @param PublicError|null $value Value to set for the error property.
     */
-    public function setError(?PublicError $value ): void {
-        $this->error = $value;
+    public function setError(?PublicError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
      *  @param ConnectionOperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ConnectionOperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ConnectionOperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

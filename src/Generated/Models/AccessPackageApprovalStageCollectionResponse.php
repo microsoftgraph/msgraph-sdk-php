@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageApprovalStageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * @var array<AccessPackageApprovalStage>|null $value The value property
-    */
-    private ?array $value = null;
-    
-    /**
      * Instantiates a new AccessPackageApprovalStageCollectionResponse and sets the default values.
     */
     public function __construct() {
@@ -45,7 +40,7 @@ class AccessPackageApprovalStageCollectionResponse extends BaseCollectionPaginat
      * @return array<AccessPackageApprovalStage>|null
     */
     public function getValue(): ?array {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -54,15 +49,15 @@ class AccessPackageApprovalStageCollectionResponse extends BaseCollectionPaginat
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('value', $this->value);
+        $writer->writeCollectionOfObjectValues('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. The value property
      *  @param array<AccessPackageApprovalStage>|null $value Value to set for the value property.
     */
-    public function setValue(?array $value ): void {
-        $this->value = $value;
+    public function setValue(?array $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

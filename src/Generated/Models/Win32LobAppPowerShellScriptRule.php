@@ -9,46 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsable 
 {
     /**
-     * @var string|null $comparisonValue The script output comparison value. Do not specify a value if the rule is used for detection.
-    */
-    private ?string $comparisonValue = null;
-    
-    /**
-     * @var string|null $displayName The display name for the rule. Do not specify this value if the rule is used for detection.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $enforceSignatureCheck A value indicating whether a signature check is enforced.
-    */
-    private ?bool $enforceSignatureCheck = null;
-    
-    /**
-     * @var Win32LobAppPowerShellScriptRuleOperationType|null $operationType Contains all supported Powershell Script output detection type.
-    */
-    private ?Win32LobAppPowerShellScriptRuleOperationType $operationType = null;
-    
-    /**
-     * @var Win32LobAppRuleOperator|null $operator Contains properties for detection operator.
-    */
-    private ?Win32LobAppRuleOperator $operator = null;
-    
-    /**
-     * @var bool|null $runAs32Bit A value indicating whether the script should run as 32-bit.
-    */
-    private ?bool $runAs32Bit = null;
-    
-    /**
-     * @var RunAsAccountType|null $runAsAccount The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-    */
-    private ?RunAsAccountType $runAsAccount = null;
-    
-    /**
-     * @var string|null $scriptContent The base64-encoded script content.
-    */
-    private ?string $scriptContent = null;
-    
-    /**
      * Instantiates a new Win32LobAppPowerShellScriptRule and sets the default values.
     */
     public function __construct() {
@@ -70,7 +30,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getComparisonValue(): ?string {
-        return $this->comparisonValue;
+        return $this->getBackingStore()->get('comparisonValue');
     }
 
     /**
@@ -78,7 +38,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -86,7 +46,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return bool|null
     */
     public function getEnforceSignatureCheck(): ?bool {
-        return $this->enforceSignatureCheck;
+        return $this->getBackingStore()->get('enforceSignatureCheck');
     }
 
     /**
@@ -112,7 +72,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return Win32LobAppPowerShellScriptRuleOperationType|null
     */
     public function getOperationType(): ?Win32LobAppPowerShellScriptRuleOperationType {
-        return $this->operationType;
+        return $this->getBackingStore()->get('operationType');
     }
 
     /**
@@ -120,7 +80,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return Win32LobAppRuleOperator|null
     */
     public function getOperator(): ?Win32LobAppRuleOperator {
-        return $this->operator;
+        return $this->getBackingStore()->get('operator');
     }
 
     /**
@@ -128,7 +88,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return bool|null
     */
     public function getRunAs32Bit(): ?bool {
-        return $this->runAs32Bit;
+        return $this->getBackingStore()->get('runAs32Bit');
     }
 
     /**
@@ -136,7 +96,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return RunAsAccountType|null
     */
     public function getRunAsAccount(): ?RunAsAccountType {
-        return $this->runAsAccount;
+        return $this->getBackingStore()->get('runAsAccount');
     }
 
     /**
@@ -144,7 +104,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getScriptContent(): ?string {
-        return $this->scriptContent;
+        return $this->getBackingStore()->get('scriptContent');
     }
 
     /**
@@ -153,78 +113,78 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('comparisonValue', $this->comparisonValue);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('enforceSignatureCheck', $this->enforceSignatureCheck);
-        $writer->writeEnumValue('operationType', $this->operationType);
-        $writer->writeEnumValue('operator', $this->operator);
-        $writer->writeBooleanValue('runAs32Bit', $this->runAs32Bit);
-        $writer->writeEnumValue('runAsAccount', $this->runAsAccount);
-        $writer->writeStringValue('scriptContent', $this->scriptContent);
+        $writer->writeStringValue('comparisonValue', $this->getComparisonValue());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('enforceSignatureCheck', $this->getEnforceSignatureCheck());
+        $writer->writeEnumValue('operationType', $this->getOperationType());
+        $writer->writeEnumValue('operator', $this->getOperator());
+        $writer->writeBooleanValue('runAs32Bit', $this->getRunAs32Bit());
+        $writer->writeEnumValue('runAsAccount', $this->getRunAsAccount());
+        $writer->writeStringValue('scriptContent', $this->getScriptContent());
     }
 
     /**
      * Sets the comparisonValue property value. The script output comparison value. Do not specify a value if the rule is used for detection.
      *  @param string|null $value Value to set for the comparisonValue property.
     */
-    public function setComparisonValue(?string $value ): void {
-        $this->comparisonValue = $value;
+    public function setComparisonValue(?string $value): void {
+        $this->getBackingStore()->set('comparisonValue', $value);
     }
 
     /**
      * Sets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
      *  @param bool|null $value Value to set for the enforceSignatureCheck property.
     */
-    public function setEnforceSignatureCheck(?bool $value ): void {
-        $this->enforceSignatureCheck = $value;
+    public function setEnforceSignatureCheck(?bool $value): void {
+        $this->getBackingStore()->set('enforceSignatureCheck', $value);
     }
 
     /**
      * Sets the operationType property value. Contains all supported Powershell Script output detection type.
      *  @param Win32LobAppPowerShellScriptRuleOperationType|null $value Value to set for the operationType property.
     */
-    public function setOperationType(?Win32LobAppPowerShellScriptRuleOperationType $value ): void {
-        $this->operationType = $value;
+    public function setOperationType(?Win32LobAppPowerShellScriptRuleOperationType $value): void {
+        $this->getBackingStore()->set('operationType', $value);
     }
 
     /**
      * Sets the operator property value. Contains properties for detection operator.
      *  @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
     */
-    public function setOperator(?Win32LobAppRuleOperator $value ): void {
-        $this->operator = $value;
+    public function setOperator(?Win32LobAppRuleOperator $value): void {
+        $this->getBackingStore()->set('operator', $value);
     }
 
     /**
      * Sets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
      *  @param bool|null $value Value to set for the runAs32Bit property.
     */
-    public function setRunAs32Bit(?bool $value ): void {
-        $this->runAs32Bit = $value;
+    public function setRunAs32Bit(?bool $value): void {
+        $this->getBackingStore()->set('runAs32Bit', $value);
     }
 
     /**
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
      *  @param RunAsAccountType|null $value Value to set for the runAsAccount property.
     */
-    public function setRunAsAccount(?RunAsAccountType $value ): void {
-        $this->runAsAccount = $value;
+    public function setRunAsAccount(?RunAsAccountType $value): void {
+        $this->getBackingStore()->set('runAsAccount', $value);
     }
 
     /**
      * Sets the scriptContent property value. The base64-encoded script content.
      *  @param string|null $value Value to set for the scriptContent property.
     */
-    public function setScriptContent(?string $value ): void {
-        $this->scriptContent = $value;
+    public function setScriptContent(?string $value): void {
+        $this->getBackingStore()->set('scriptContent', $value);
     }
 
 }

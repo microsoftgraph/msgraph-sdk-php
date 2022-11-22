@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartPointFormat extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartFill|null $fill Represents the fill format of a chart, which includes background formating information. Read-only.
-    */
-    private ?WorkbookChartFill $fill = null;
-    
-    /**
      * Instantiates a new workbookChartPointFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartPointFormat');
     }
 
     /**
@@ -46,7 +40,7 @@ class WorkbookChartPointFormat extends Entity implements Parsable
      * @return WorkbookChartFill|null
     */
     public function getFill(): ?WorkbookChartFill {
-        return $this->fill;
+        return $this->getBackingStore()->get('fill');
     }
 
     /**
@@ -55,15 +49,15 @@ class WorkbookChartPointFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('fill', $this->fill);
+        $writer->writeObjectValue('fill', $this->getFill());
     }
 
     /**
      * Sets the fill property value. Represents the fill format of a chart, which includes background formating information. Read-only.
      *  @param WorkbookChartFill|null $value Value to set for the fill property.
     */
-    public function setFill(?WorkbookChartFill $value ): void {
-        $this->fill = $value;
+    public function setFill(?WorkbookChartFill $value): void {
+        $this->getBackingStore()->set('fill', $value);
     }
 
 }

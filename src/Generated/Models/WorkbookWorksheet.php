@@ -9,51 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookWorksheet extends Entity implements Parsable 
 {
     /**
-     * @var array<WorkbookChart>|null $charts Returns collection of charts that are part of the worksheet. Read-only.
-    */
-    private ?array $charts = null;
-    
-    /**
-     * @var string|null $name The display name of the worksheet.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<WorkbookNamedItem>|null $names Returns collection of names that are associated with the worksheet. Read-only.
-    */
-    private ?array $names = null;
-    
-    /**
-     * @var array<WorkbookPivotTable>|null $pivotTables Collection of PivotTables that are part of the worksheet.
-    */
-    private ?array $pivotTables = null;
-    
-    /**
-     * @var int|null $position The zero-based position of the worksheet within the workbook.
-    */
-    private ?int $position = null;
-    
-    /**
-     * @var WorkbookWorksheetProtection|null $protection Returns sheet protection object for a worksheet. Read-only.
-    */
-    private ?WorkbookWorksheetProtection $protection = null;
-    
-    /**
-     * @var array<WorkbookTable>|null $tables Collection of tables that are part of the worksheet. Read-only.
-    */
-    private ?array $tables = null;
-    
-    /**
-     * @var string|null $visibility The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
-    */
-    private ?string $visibility = null;
-    
-    /**
      * Instantiates a new workbookWorksheet and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookWorksheet');
     }
 
     /**
@@ -70,7 +29,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return array<WorkbookChart>|null
     */
     public function getCharts(): ?array {
-        return $this->charts;
+        return $this->getBackingStore()->get('charts');
     }
 
     /**
@@ -96,7 +55,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -104,7 +63,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return array<WorkbookNamedItem>|null
     */
     public function getNames(): ?array {
-        return $this->names;
+        return $this->getBackingStore()->get('names');
     }
 
     /**
@@ -112,7 +71,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return array<WorkbookPivotTable>|null
     */
     public function getPivotTables(): ?array {
-        return $this->pivotTables;
+        return $this->getBackingStore()->get('pivotTables');
     }
 
     /**
@@ -120,7 +79,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return int|null
     */
     public function getPosition(): ?int {
-        return $this->position;
+        return $this->getBackingStore()->get('position');
     }
 
     /**
@@ -128,7 +87,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return WorkbookWorksheetProtection|null
     */
     public function getProtection(): ?WorkbookWorksheetProtection {
-        return $this->protection;
+        return $this->getBackingStore()->get('protection');
     }
 
     /**
@@ -136,7 +95,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return array<WorkbookTable>|null
     */
     public function getTables(): ?array {
-        return $this->tables;
+        return $this->getBackingStore()->get('tables');
     }
 
     /**
@@ -144,7 +103,7 @@ class WorkbookWorksheet extends Entity implements Parsable
      * @return string|null
     */
     public function getVisibility(): ?string {
-        return $this->visibility;
+        return $this->getBackingStore()->get('visibility');
     }
 
     /**
@@ -153,78 +112,78 @@ class WorkbookWorksheet extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('charts', $this->charts);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfObjectValues('names', $this->names);
-        $writer->writeCollectionOfObjectValues('pivotTables', $this->pivotTables);
-        $writer->writeIntegerValue('position', $this->position);
-        $writer->writeObjectValue('protection', $this->protection);
-        $writer->writeCollectionOfObjectValues('tables', $this->tables);
-        $writer->writeStringValue('visibility', $this->visibility);
+        $writer->writeCollectionOfObjectValues('charts', $this->getCharts());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfObjectValues('names', $this->getNames());
+        $writer->writeCollectionOfObjectValues('pivotTables', $this->getPivotTables());
+        $writer->writeIntegerValue('position', $this->getPosition());
+        $writer->writeObjectValue('protection', $this->getProtection());
+        $writer->writeCollectionOfObjectValues('tables', $this->getTables());
+        $writer->writeStringValue('visibility', $this->getVisibility());
     }
 
     /**
      * Sets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
      *  @param array<WorkbookChart>|null $value Value to set for the charts property.
     */
-    public function setCharts(?array $value ): void {
-        $this->charts = $value;
+    public function setCharts(?array $value): void {
+        $this->getBackingStore()->set('charts', $value);
     }
 
     /**
      * Sets the name property value. The display name of the worksheet.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
      *  @param array<WorkbookNamedItem>|null $value Value to set for the names property.
     */
-    public function setNames(?array $value ): void {
-        $this->names = $value;
+    public function setNames(?array $value): void {
+        $this->getBackingStore()->set('names', $value);
     }
 
     /**
      * Sets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
      *  @param array<WorkbookPivotTable>|null $value Value to set for the pivotTables property.
     */
-    public function setPivotTables(?array $value ): void {
-        $this->pivotTables = $value;
+    public function setPivotTables(?array $value): void {
+        $this->getBackingStore()->set('pivotTables', $value);
     }
 
     /**
      * Sets the position property value. The zero-based position of the worksheet within the workbook.
      *  @param int|null $value Value to set for the position property.
     */
-    public function setPosition(?int $value ): void {
-        $this->position = $value;
+    public function setPosition(?int $value): void {
+        $this->getBackingStore()->set('position', $value);
     }
 
     /**
      * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
      *  @param WorkbookWorksheetProtection|null $value Value to set for the protection property.
     */
-    public function setProtection(?WorkbookWorksheetProtection $value ): void {
-        $this->protection = $value;
+    public function setProtection(?WorkbookWorksheetProtection $value): void {
+        $this->getBackingStore()->set('protection', $value);
     }
 
     /**
      * Sets the tables property value. Collection of tables that are part of the worksheet. Read-only.
      *  @param array<WorkbookTable>|null $value Value to set for the tables property.
     */
-    public function setTables(?array $value ): void {
-        $this->tables = $value;
+    public function setTables(?array $value): void {
+        $this->getBackingStore()->set('tables', $value);
     }
 
     /**
      * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      *  @param string|null $value Value to set for the visibility property.
     */
-    public function setVisibility(?string $value ): void {
-        $this->visibility = $value;
+    public function setVisibility(?string $value): void {
+        $this->getBackingStore()->set('visibility', $value);
     }
 
 }

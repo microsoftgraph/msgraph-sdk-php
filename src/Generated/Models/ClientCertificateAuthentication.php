@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable 
 {
     /**
-     * @var array<Pkcs12CertificateInformation>|null $certificateList The list of certificates uploaded for this API connector.
-    */
-    private ?array $certificateList = null;
-    
-    /**
      * Instantiates a new ClientCertificateAuthentication and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
      * @return array<Pkcs12CertificateInformation>|null
     */
     public function getCertificateList(): ?array {
-        return $this->certificateList;
+        return $this->getBackingStore()->get('certificateList');
     }
 
     /**
@@ -55,15 +50,15 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('certificateList', $this->certificateList);
+        $writer->writeCollectionOfObjectValues('certificateList', $this->getCertificateList());
     }
 
     /**
      * Sets the certificateList property value. The list of certificates uploaded for this API connector.
      *  @param array<Pkcs12CertificateInformation>|null $value Value to set for the certificateList property.
     */
-    public function setCertificateList(?array $value ): void {
-        $this->certificateList = $value;
+    public function setCertificateList(?array $value): void {
+        $this->getBackingStore()->set('certificateList', $value);
     }
 
 }

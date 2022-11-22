@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TokenMeetingInfo extends MeetingInfo implements Parsable 
 {
     /**
-     * @var string|null $token The token used to join the call.
-    */
-    private ?string $token = null;
-    
-    /**
      * Instantiates a new TokenMeetingInfo and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class TokenMeetingInfo extends MeetingInfo implements Parsable
      * @return string|null
     */
     public function getToken(): ?string {
-        return $this->token;
+        return $this->getBackingStore()->get('token');
     }
 
     /**
@@ -55,15 +50,15 @@ class TokenMeetingInfo extends MeetingInfo implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('token', $this->token);
+        $writer->writeStringValue('token', $this->getToken());
     }
 
     /**
      * Sets the token property value. The token used to join the call.
      *  @param string|null $value Value to set for the token property.
     */
-    public function setToken(?string $value ): void {
-        $this->token = $value;
+    public function setToken(?string $value): void {
+        $this->getBackingStore()->set('token', $value);
     }
 
 }

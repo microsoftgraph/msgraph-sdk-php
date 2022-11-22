@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ParticipantEndpoint extends Endpoint implements Parsable 
 {
     /**
-     * @var UserFeedback|null $feedback The feedback provided by the user of this endpoint about the quality of the session.
-    */
-    private ?UserFeedback $feedback = null;
-    
-    /**
-     * @var IdentitySet|null $identity Identity associated with the endpoint.
-    */
-    private ?IdentitySet $identity = null;
-    
-    /**
      * Instantiates a new ParticipantEndpoint and sets the default values.
     */
     public function __construct() {
@@ -41,7 +31,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return UserFeedback|null
     */
     public function getFeedback(): ?UserFeedback {
-        return $this->feedback;
+        return $this->getBackingStore()->get('feedback');
     }
 
     /**
@@ -61,7 +51,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return IdentitySet|null
     */
     public function getIdentity(): ?IdentitySet {
-        return $this->identity;
+        return $this->getBackingStore()->get('identity');
     }
 
     /**
@@ -70,24 +60,24 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('feedback', $this->feedback);
-        $writer->writeObjectValue('identity', $this->identity);
+        $writer->writeObjectValue('feedback', $this->getFeedback());
+        $writer->writeObjectValue('identity', $this->getIdentity());
     }
 
     /**
      * Sets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
      *  @param UserFeedback|null $value Value to set for the feedback property.
     */
-    public function setFeedback(?UserFeedback $value ): void {
-        $this->feedback = $value;
+    public function setFeedback(?UserFeedback $value): void {
+        $this->getBackingStore()->set('feedback', $value);
     }
 
     /**
      * Sets the identity property value. Identity associated with the endpoint.
      *  @param IdentitySet|null $value Value to set for the identity property.
     */
-    public function setIdentity(?IdentitySet $value ): void {
-        $this->identity = $value;
+    public function setIdentity(?IdentitySet $value): void {
+        $this->getBackingStore()->set('identity', $value);
     }
 
 }

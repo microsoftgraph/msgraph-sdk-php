@@ -10,26 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThreatAssessmentResult extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $message The result message for each threat assessment.
-    */
-    private ?string $message = null;
-    
-    /**
-     * @var ThreatAssessmentResultType|null $resultType The threat assessment result type. Possible values are: checkPolicy, rescan.
-    */
-    private ?ThreatAssessmentResultType $resultType = null;
-    
-    /**
      * Instantiates a new threatAssessmentResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.threatAssessmentResult');
     }
 
     /**
@@ -46,7 +30,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -67,7 +51,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
      * @return string|null
     */
     public function getMessage(): ?string {
-        return $this->message;
+        return $this->getBackingStore()->get('message');
     }
 
     /**
@@ -75,7 +59,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
      * @return ThreatAssessmentResultType|null
     */
     public function getResultType(): ?ThreatAssessmentResultType {
-        return $this->resultType;
+        return $this->getBackingStore()->get('resultType');
     }
 
     /**
@@ -84,33 +68,33 @@ class ThreatAssessmentResult extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('message', $this->message);
-        $writer->writeEnumValue('resultType', $this->resultType);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('message', $this->getMessage());
+        $writer->writeEnumValue('resultType', $this->getResultType());
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the message property value. The result message for each threat assessment.
      *  @param string|null $value Value to set for the message property.
     */
-    public function setMessage(?string $value ): void {
-        $this->message = $value;
+    public function setMessage(?string $value): void {
+        $this->getBackingStore()->set('message', $value);
     }
 
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
      *  @param ThreatAssessmentResultType|null $value Value to set for the resultType property.
     */
-    public function setResultType(?ThreatAssessmentResultType $value ): void {
-        $this->resultType = $value;
+    public function setResultType(?ThreatAssessmentResultType $value): void {
+        $this->getBackingStore()->set('resultType', $value);
     }
 
 }

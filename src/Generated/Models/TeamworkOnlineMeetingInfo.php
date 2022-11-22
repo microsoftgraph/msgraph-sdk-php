@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable 
+class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $calendarEventId The identifier of the calendar event associated with the meeting.
-    */
-    private ?string $calendarEventId = null;
-    
-    /**
-     * @var string|null $joinWebUrl The URL that users click to join or uniquely identify the meeting.
-    */
-    private ?string $joinWebUrl = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var TeamworkUserIdentity|null $organizer The organizer of the meeting.
-    */
-    private ?TeamworkUserIdentity $organizer = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teamworkOnlineMeetingInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.teamworkOnlineMeetingInfo');
     }
 
     /**
@@ -55,8 +38,16 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCalendarEventId(): ?string {
-        return $this->calendarEventId;
+        return $this->getBackingStore()->get('calendarEventId');
     }
 
     /**
@@ -86,7 +77,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getJoinWebUrl(): ?string {
-        return $this->joinWebUrl;
+        return $this->getBackingStore()->get('joinWebUrl');
     }
 
     /**
@@ -94,7 +85,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +93,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @return TeamworkUserIdentity|null
     */
     public function getOrganizer(): ?TeamworkUserIdentity {
-        return $this->organizer;
+        return $this->getBackingStore()->get('organizer');
     }
 
     /**
@@ -110,51 +101,59 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('calendarEventId', $this->calendarEventId);
-        $writer->writeStringValue('joinWebUrl', $this->joinWebUrl);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('organizer', $this->organizer);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('calendarEventId', $this->getCalendarEventId());
+        $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('organizer', $this->getOrganizer());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the calendarEventId property value. The identifier of the calendar event associated with the meeting.
      *  @param string|null $value Value to set for the calendarEventId property.
     */
-    public function setCalendarEventId(?string $value ): void {
-        $this->calendarEventId = $value;
+    public function setCalendarEventId(?string $value): void {
+        $this->getBackingStore()->set('calendarEventId', $value);
     }
 
     /**
      * Sets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
      *  @param string|null $value Value to set for the joinWebUrl property.
     */
-    public function setJoinWebUrl(?string $value ): void {
-        $this->joinWebUrl = $value;
+    public function setJoinWebUrl(?string $value): void {
+        $this->getBackingStore()->set('joinWebUrl', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the organizer property value. The organizer of the meeting.
      *  @param TeamworkUserIdentity|null $value Value to set for the organizer property.
     */
-    public function setOrganizer(?TeamworkUserIdentity $value ): void {
-        $this->organizer = $value;
+    public function setOrganizer(?TeamworkUserIdentity $value): void {
+        $this->getBackingStore()->set('organizer', $value);
     }
 
 }

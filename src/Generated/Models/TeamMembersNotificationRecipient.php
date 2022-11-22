@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable 
 {
     /**
-     * @var string|null $teamId The unique identifier for the team whose members should receive the notification.
-    */
-    private ?string $teamId = null;
-    
-    /**
      * Instantiates a new TeamMembersNotificationRecipient and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient imp
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->teamId;
+        return $this->getBackingStore()->get('teamId');
     }
 
     /**
@@ -55,15 +50,15 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('teamId', $this->teamId);
+        $writer->writeStringValue('teamId', $this->getTeamId());
     }
 
     /**
      * Sets the teamId property value. The unique identifier for the team whose members should receive the notification.
      *  @param string|null $value Value to set for the teamId property.
     */
-    public function setTeamId(?string $value ): void {
-        $this->teamId = $value;
+    public function setTeamId(?string $value): void {
+        $this->getBackingStore()->set('teamId', $value);
     }
 
 }

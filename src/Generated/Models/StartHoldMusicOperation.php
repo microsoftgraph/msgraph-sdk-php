@@ -13,7 +13,6 @@ class StartHoldMusicOperation extends CommsOperation implements Parsable
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.startHoldMusicOperation');
     }
 
     /**

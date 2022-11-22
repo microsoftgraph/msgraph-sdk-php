@@ -9,46 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageSubject extends Entity implements Parsable 
 {
     /**
-     * @var ConnectedOrganization|null $connectedOrganization The connected organization of the subject. Read-only. Nullable.
-    */
-    private ?ConnectedOrganization $connectedOrganization = null;
-    
-    /**
-     * @var string|null $displayName The display name of the subject.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $email The email address of the subject.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var string|null $objectId The object identifier of the subject. null if the subject is not yet a user in the tenant.
-    */
-    private ?string $objectId = null;
-    
-    /**
-     * @var string|null $onPremisesSecurityIdentifier A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
-    */
-    private ?string $onPremisesSecurityIdentifier = null;
-    
-    /**
-     * @var string|null $principalName The principal name, if known, of the subject.
-    */
-    private ?string $principalName = null;
-    
-    /**
-     * @var AccessPackageSubjectType|null $subjectType The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-    */
-    private ?AccessPackageSubjectType $subjectType = null;
-    
-    /**
      * Instantiates a new accessPackageSubject and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.accessPackageSubject');
     }
 
     /**
@@ -65,7 +29,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return ConnectedOrganization|null
     */
     public function getConnectedOrganization(): ?ConnectedOrganization {
-        return $this->connectedOrganization;
+        return $this->getBackingStore()->get('connectedOrganization');
     }
 
     /**
@@ -73,7 +37,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -81,7 +45,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -106,7 +70,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return string|null
     */
     public function getObjectId(): ?string {
-        return $this->objectId;
+        return $this->getBackingStore()->get('objectId');
     }
 
     /**
@@ -114,7 +78,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
-        return $this->onPremisesSecurityIdentifier;
+        return $this->getBackingStore()->get('onPremisesSecurityIdentifier');
     }
 
     /**
@@ -122,7 +86,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return string|null
     */
     public function getPrincipalName(): ?string {
-        return $this->principalName;
+        return $this->getBackingStore()->get('principalName');
     }
 
     /**
@@ -130,7 +94,7 @@ class AccessPackageSubject extends Entity implements Parsable
      * @return AccessPackageSubjectType|null
     */
     public function getSubjectType(): ?AccessPackageSubjectType {
-        return $this->subjectType;
+        return $this->getBackingStore()->get('subjectType');
     }
 
     /**
@@ -139,69 +103,69 @@ class AccessPackageSubject extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('connectedOrganization', $this->connectedOrganization);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeStringValue('objectId', $this->objectId);
-        $writer->writeStringValue('onPremisesSecurityIdentifier', $this->onPremisesSecurityIdentifier);
-        $writer->writeStringValue('principalName', $this->principalName);
-        $writer->writeEnumValue('subjectType', $this->subjectType);
+        $writer->writeObjectValue('connectedOrganization', $this->getConnectedOrganization());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeStringValue('objectId', $this->getObjectId());
+        $writer->writeStringValue('onPremisesSecurityIdentifier', $this->getOnPremisesSecurityIdentifier());
+        $writer->writeStringValue('principalName', $this->getPrincipalName());
+        $writer->writeEnumValue('subjectType', $this->getSubjectType());
     }
 
     /**
      * Sets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
      *  @param ConnectedOrganization|null $value Value to set for the connectedOrganization property.
     */
-    public function setConnectedOrganization(?ConnectedOrganization $value ): void {
-        $this->connectedOrganization = $value;
+    public function setConnectedOrganization(?ConnectedOrganization $value): void {
+        $this->getBackingStore()->set('connectedOrganization', $value);
     }
 
     /**
      * Sets the displayName property value. The display name of the subject.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the email property value. The email address of the subject.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
      *  @param string|null $value Value to set for the objectId property.
     */
-    public function setObjectId(?string $value ): void {
-        $this->objectId = $value;
+    public function setObjectId(?string $value): void {
+        $this->getBackingStore()->set('objectId', $value);
     }
 
     /**
      * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
      *  @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
-    public function setOnPremisesSecurityIdentifier(?string $value ): void {
-        $this->onPremisesSecurityIdentifier = $value;
+    public function setOnPremisesSecurityIdentifier(?string $value): void {
+        $this->getBackingStore()->set('onPremisesSecurityIdentifier', $value);
     }
 
     /**
      * Sets the principalName property value. The principal name, if known, of the subject.
      *  @param string|null $value Value to set for the principalName property.
     */
-    public function setPrincipalName(?string $value ): void {
-        $this->principalName = $value;
+    public function setPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('principalName', $value);
     }
 
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      *  @param AccessPackageSubjectType|null $value Value to set for the subjectType property.
     */
-    public function setSubjectType(?AccessPackageSubjectType $value ): void {
-        $this->subjectType = $value;
+    public function setSubjectType(?AccessPackageSubjectType $value): void {
+        $this->getBackingStore()->set('subjectType', $value);
     }
 
 }

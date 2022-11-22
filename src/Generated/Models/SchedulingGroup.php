@@ -9,22 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SchedulingGroup extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $displayName The display name for the schedulingGroup. Required.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isActive Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-    */
-    private ?bool $isActive = null;
-    
-    /**
-     * @var array<string>|null $userIds The list of user IDs that are a member of the schedulingGroup. Required.
-    */
-    private ?array $userIds = null;
-    
-    /**
-     * Instantiates a new SchedulingGroup and sets the default values.
+     * Instantiates a new schedulingGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -45,7 +30,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +51,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->isActive;
+        return $this->getBackingStore()->get('isActive');
     }
 
     /**
@@ -74,7 +59,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
      * @return array<string>|null
     */
     public function getUserIds(): ?array {
-        return $this->userIds;
+        return $this->getBackingStore()->get('userIds');
     }
 
     /**
@@ -83,32 +68,32 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfPrimitiveValues('userIds', $this->userIds);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfPrimitiveValues('userIds', $this->getUserIds());
     }
 
     /**
      * Sets the displayName property value. The display name for the schedulingGroup. Required.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
      *  @param bool|null $value Value to set for the isActive property.
     */
-    public function setIsActive(?bool $value ): void {
-        $this->isActive = $value;
+    public function setIsActive(?bool $value): void {
+        $this->getBackingStore()->set('isActive', $value);
     }
 
     /**
      * Sets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
      *  @param array<string>|null $value Value to set for the userIds property.
     */
-    public function setUserIds(?array $value ): void {
-        $this->userIds = $value;
+    public function setUserIds(?array $value): void {
+        $this->getBackingStore()->set('userIds', $value);
     }
 
 }

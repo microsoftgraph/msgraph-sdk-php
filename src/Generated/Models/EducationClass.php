@@ -9,111 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * @var array<EducationCategory>|null $assignmentCategories All categories associated with this class. Nullable.
-    */
-    private ?array $assignmentCategories = null;
-    
-    /**
-     * @var EducationAssignmentDefaults|null $assignmentDefaults Specifies class-level defaults respected by new assignments created in the class.
-    */
-    private ?EducationAssignmentDefaults $assignmentDefaults = null;
-    
-    /**
-     * @var array<EducationAssignment>|null $assignments All assignments associated with this class. Nullable.
-    */
-    private ?array $assignments = null;
-    
-    /**
-     * @var EducationAssignmentSettings|null $assignmentSettings Specifies class-level assignments settings.
-    */
-    private ?EducationAssignmentSettings $assignmentSettings = null;
-    
-    /**
-     * @var string|null $classCode Class code used by the school to identify the class.
-    */
-    private ?string $classCode = null;
-    
-    /**
-     * @var EducationCourse|null $course The course property
-    */
-    private ?EducationCourse $course = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy Entity who created the class
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var string|null $description Description of the class.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Name of the class.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $externalId ID of the class from the syncing system.
-    */
-    private ?string $externalId = null;
-    
-    /**
-     * @var string|null $externalName Name of the class in the syncing system.
-    */
-    private ?string $externalName = null;
-    
-    /**
-     * @var EducationExternalSource|null $externalSource How this class was created. Possible values are: sis, manual.
-    */
-    private ?EducationExternalSource $externalSource = null;
-    
-    /**
-     * @var string|null $externalSourceDetail The name of the external source this resources was generated from.
-    */
-    private ?string $externalSourceDetail = null;
-    
-    /**
-     * @var string|null $grade Grade level of the class.
-    */
-    private ?string $grade = null;
-    
-    /**
-     * @var Group|null $group The underlying Microsoft 365 group object.
-    */
-    private ?Group $group = null;
-    
-    /**
-     * @var string|null $mailNickname Mail name for sending email to all members, if this is enabled.
-    */
-    private ?string $mailNickname = null;
-    
-    /**
-     * @var array<EducationUser>|null $members All users in the class. Nullable.
-    */
-    private ?array $members = null;
-    
-    /**
-     * @var array<EducationSchool>|null $schools All schools that this class is associated with. Nullable.
-    */
-    private ?array $schools = null;
-    
-    /**
-     * @var array<EducationUser>|null $teachers All teachers in the class. Nullable.
-    */
-    private ?array $teachers = null;
-    
-    /**
-     * @var EducationTerm|null $term Term for this class.
-    */
-    private ?EducationTerm $term = null;
-    
-    /**
      * Instantiates a new EducationClass and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.educationClass');
     }
 
     /**
@@ -130,7 +29,7 @@ class EducationClass extends Entity implements Parsable
      * @return array<EducationCategory>|null
     */
     public function getAssignmentCategories(): ?array {
-        return $this->assignmentCategories;
+        return $this->getBackingStore()->get('assignmentCategories');
     }
 
     /**
@@ -138,7 +37,7 @@ class EducationClass extends Entity implements Parsable
      * @return EducationAssignmentDefaults|null
     */
     public function getAssignmentDefaults(): ?EducationAssignmentDefaults {
-        return $this->assignmentDefaults;
+        return $this->getBackingStore()->get('assignmentDefaults');
     }
 
     /**
@@ -146,7 +45,7 @@ class EducationClass extends Entity implements Parsable
      * @return array<EducationAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -154,7 +53,7 @@ class EducationClass extends Entity implements Parsable
      * @return EducationAssignmentSettings|null
     */
     public function getAssignmentSettings(): ?EducationAssignmentSettings {
-        return $this->assignmentSettings;
+        return $this->getBackingStore()->get('assignmentSettings');
     }
 
     /**
@@ -162,7 +61,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getClassCode(): ?string {
-        return $this->classCode;
+        return $this->getBackingStore()->get('classCode');
     }
 
     /**
@@ -170,7 +69,7 @@ class EducationClass extends Entity implements Parsable
      * @return EducationCourse|null
     */
     public function getCourse(): ?EducationCourse {
-        return $this->course;
+        return $this->getBackingStore()->get('course');
     }
 
     /**
@@ -178,7 +77,7 @@ class EducationClass extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -186,7 +85,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -194,7 +93,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -202,7 +101,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -210,7 +109,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalName(): ?string {
-        return $this->externalName;
+        return $this->getBackingStore()->get('externalName');
     }
 
     /**
@@ -218,7 +117,7 @@ class EducationClass extends Entity implements Parsable
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
-        return $this->externalSource;
+        return $this->getBackingStore()->get('externalSource');
     }
 
     /**
@@ -226,7 +125,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalSourceDetail(): ?string {
-        return $this->externalSourceDetail;
+        return $this->getBackingStore()->get('externalSourceDetail');
     }
 
     /**
@@ -264,7 +163,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getGrade(): ?string {
-        return $this->grade;
+        return $this->getBackingStore()->get('grade');
     }
 
     /**
@@ -272,7 +171,7 @@ class EducationClass extends Entity implements Parsable
      * @return Group|null
     */
     public function getGroup(): ?Group {
-        return $this->group;
+        return $this->getBackingStore()->get('group');
     }
 
     /**
@@ -280,7 +179,7 @@ class EducationClass extends Entity implements Parsable
      * @return string|null
     */
     public function getMailNickname(): ?string {
-        return $this->mailNickname;
+        return $this->getBackingStore()->get('mailNickname');
     }
 
     /**
@@ -288,7 +187,7 @@ class EducationClass extends Entity implements Parsable
      * @return array<EducationUser>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -296,7 +195,7 @@ class EducationClass extends Entity implements Parsable
      * @return array<EducationSchool>|null
     */
     public function getSchools(): ?array {
-        return $this->schools;
+        return $this->getBackingStore()->get('schools');
     }
 
     /**
@@ -304,7 +203,7 @@ class EducationClass extends Entity implements Parsable
      * @return array<EducationUser>|null
     */
     public function getTeachers(): ?array {
-        return $this->teachers;
+        return $this->getBackingStore()->get('teachers');
     }
 
     /**
@@ -312,7 +211,7 @@ class EducationClass extends Entity implements Parsable
      * @return EducationTerm|null
     */
     public function getTerm(): ?EducationTerm {
-        return $this->term;
+        return $this->getBackingStore()->get('term');
     }
 
     /**
@@ -321,186 +220,186 @@ class EducationClass extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('assignmentCategories', $this->assignmentCategories);
-        $writer->writeObjectValue('assignmentDefaults', $this->assignmentDefaults);
-        $writer->writeCollectionOfObjectValues('assignments', $this->assignments);
-        $writer->writeObjectValue('assignmentSettings', $this->assignmentSettings);
-        $writer->writeStringValue('classCode', $this->classCode);
-        $writer->writeObjectValue('course', $this->course);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('externalId', $this->externalId);
-        $writer->writeStringValue('externalName', $this->externalName);
-        $writer->writeEnumValue('externalSource', $this->externalSource);
-        $writer->writeStringValue('externalSourceDetail', $this->externalSourceDetail);
-        $writer->writeStringValue('grade', $this->grade);
-        $writer->writeObjectValue('group', $this->group);
-        $writer->writeStringValue('mailNickname', $this->mailNickname);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
-        $writer->writeCollectionOfObjectValues('schools', $this->schools);
-        $writer->writeCollectionOfObjectValues('teachers', $this->teachers);
-        $writer->writeObjectValue('term', $this->term);
+        $writer->writeCollectionOfObjectValues('assignmentCategories', $this->getAssignmentCategories());
+        $writer->writeObjectValue('assignmentDefaults', $this->getAssignmentDefaults());
+        $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeObjectValue('assignmentSettings', $this->getAssignmentSettings());
+        $writer->writeStringValue('classCode', $this->getClassCode());
+        $writer->writeObjectValue('course', $this->getCourse());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('externalId', $this->getExternalId());
+        $writer->writeStringValue('externalName', $this->getExternalName());
+        $writer->writeEnumValue('externalSource', $this->getExternalSource());
+        $writer->writeStringValue('externalSourceDetail', $this->getExternalSourceDetail());
+        $writer->writeStringValue('grade', $this->getGrade());
+        $writer->writeObjectValue('group', $this->getGroup());
+        $writer->writeStringValue('mailNickname', $this->getMailNickname());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeCollectionOfObjectValues('schools', $this->getSchools());
+        $writer->writeCollectionOfObjectValues('teachers', $this->getTeachers());
+        $writer->writeObjectValue('term', $this->getTerm());
     }
 
     /**
      * Sets the assignmentCategories property value. All categories associated with this class. Nullable.
      *  @param array<EducationCategory>|null $value Value to set for the assignmentCategories property.
     */
-    public function setAssignmentCategories(?array $value ): void {
-        $this->assignmentCategories = $value;
+    public function setAssignmentCategories(?array $value): void {
+        $this->getBackingStore()->set('assignmentCategories', $value);
     }
 
     /**
      * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      *  @param EducationAssignmentDefaults|null $value Value to set for the assignmentDefaults property.
     */
-    public function setAssignmentDefaults(?EducationAssignmentDefaults $value ): void {
-        $this->assignmentDefaults = $value;
+    public function setAssignmentDefaults(?EducationAssignmentDefaults $value): void {
+        $this->getBackingStore()->set('assignmentDefaults', $value);
     }
 
     /**
      * Sets the assignments property value. All assignments associated with this class. Nullable.
      *  @param array<EducationAssignment>|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?array $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?array $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the assignmentSettings property value. Specifies class-level assignments settings.
      *  @param EducationAssignmentSettings|null $value Value to set for the assignmentSettings property.
     */
-    public function setAssignmentSettings(?EducationAssignmentSettings $value ): void {
-        $this->assignmentSettings = $value;
+    public function setAssignmentSettings(?EducationAssignmentSettings $value): void {
+        $this->getBackingStore()->set('assignmentSettings', $value);
     }
 
     /**
      * Sets the classCode property value. Class code used by the school to identify the class.
      *  @param string|null $value Value to set for the classCode property.
     */
-    public function setClassCode(?string $value ): void {
-        $this->classCode = $value;
+    public function setClassCode(?string $value): void {
+        $this->getBackingStore()->set('classCode', $value);
     }
 
     /**
      * Sets the course property value. The course property
      *  @param EducationCourse|null $value Value to set for the course property.
     */
-    public function setCourse(?EducationCourse $value ): void {
-        $this->course = $value;
+    public function setCourse(?EducationCourse $value): void {
+        $this->getBackingStore()->set('course', $value);
     }
 
     /**
      * Sets the createdBy property value. Entity who created the class
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the description property value. Description of the class.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Name of the class.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the externalId property value. ID of the class from the syncing system.
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
     /**
      * Sets the externalName property value. Name of the class in the syncing system.
      *  @param string|null $value Value to set for the externalName property.
     */
-    public function setExternalName(?string $value ): void {
-        $this->externalName = $value;
+    public function setExternalName(?string $value): void {
+        $this->getBackingStore()->set('externalName', $value);
     }
 
     /**
      * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
-    public function setExternalSource(?EducationExternalSource $value ): void {
-        $this->externalSource = $value;
+    public function setExternalSource(?EducationExternalSource $value): void {
+        $this->getBackingStore()->set('externalSource', $value);
     }
 
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      *  @param string|null $value Value to set for the externalSourceDetail property.
     */
-    public function setExternalSourceDetail(?string $value ): void {
-        $this->externalSourceDetail = $value;
+    public function setExternalSourceDetail(?string $value): void {
+        $this->getBackingStore()->set('externalSourceDetail', $value);
     }
 
     /**
      * Sets the grade property value. Grade level of the class.
      *  @param string|null $value Value to set for the grade property.
     */
-    public function setGrade(?string $value ): void {
-        $this->grade = $value;
+    public function setGrade(?string $value): void {
+        $this->getBackingStore()->set('grade', $value);
     }
 
     /**
      * Sets the group property value. The underlying Microsoft 365 group object.
      *  @param Group|null $value Value to set for the group property.
     */
-    public function setGroup(?Group $value ): void {
-        $this->group = $value;
+    public function setGroup(?Group $value): void {
+        $this->getBackingStore()->set('group', $value);
     }
 
     /**
      * Sets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
      *  @param string|null $value Value to set for the mailNickname property.
     */
-    public function setMailNickname(?string $value ): void {
-        $this->mailNickname = $value;
+    public function setMailNickname(?string $value): void {
+        $this->getBackingStore()->set('mailNickname', $value);
     }
 
     /**
      * Sets the members property value. All users in the class. Nullable.
      *  @param array<EducationUser>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.
      *  @param array<EducationSchool>|null $value Value to set for the schools property.
     */
-    public function setSchools(?array $value ): void {
-        $this->schools = $value;
+    public function setSchools(?array $value): void {
+        $this->getBackingStore()->set('schools', $value);
     }
 
     /**
      * Sets the teachers property value. All teachers in the class. Nullable.
      *  @param array<EducationUser>|null $value Value to set for the teachers property.
     */
-    public function setTeachers(?array $value ): void {
-        $this->teachers = $value;
+    public function setTeachers(?array $value): void {
+        $this->getBackingStore()->set('teachers', $value);
     }
 
     /**
      * Sets the term property value. Term for this class.
      *  @param EducationTerm|null $value Value to set for the term property.
     */
-    public function setTerm(?EducationTerm $value ): void {
-        $this->term = $value;
+    public function setTerm(?EducationTerm $value): void {
+        $this->getBackingStore()->set('term', $value);
     }
 
 }

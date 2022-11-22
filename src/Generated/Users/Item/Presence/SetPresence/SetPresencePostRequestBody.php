@@ -7,38 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable 
+class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var string|null $activity The activity property
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?string $activity = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $availability The availability property
-    */
-    private ?string $availability = null;
-    
-    /**
-     * @var DateInterval|null $expirationDuration The expirationDuration property
-    */
-    private ?DateInterval $expirationDuration = null;
-    
-    /**
-     * @var string|null $sessionId The sessionId property
-    */
-    private ?string $sessionId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new setPresencePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -56,15 +40,15 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getActivity(): ?string {
-        return $this->activity;
+        return $this->getBackingStore()->get('activity');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -72,7 +56,15 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAvailability(): ?string {
-        return $this->availability;
+        return $this->getBackingStore()->get('availability');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -80,7 +72,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getExpirationDuration(): ?DateInterval {
-        return $this->expirationDuration;
+        return $this->getBackingStore()->get('expirationDuration');
     }
 
     /**
@@ -102,7 +94,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSessionId(): ?string {
-        return $this->sessionId;
+        return $this->getBackingStore()->get('sessionId');
     }
 
     /**
@@ -110,51 +102,59 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('activity', $this->activity);
-        $writer->writeStringValue('availability', $this->availability);
-        $writer->writeDateIntervalValue('expirationDuration', $this->expirationDuration);
-        $writer->writeStringValue('sessionId', $this->sessionId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('activity', $this->getActivity());
+        $writer->writeStringValue('availability', $this->getAvailability());
+        $writer->writeDateIntervalValue('expirationDuration', $this->getExpirationDuration());
+        $writer->writeStringValue('sessionId', $this->getSessionId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the activity property value. The activity property
      *  @param string|null $value Value to set for the activity property.
     */
-    public function setActivity(?string $value ): void {
-        $this->activity = $value;
+    public function setActivity(?string $value): void {
+        $this->getBackingStore()->set('activity', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the availability property value. The availability property
      *  @param string|null $value Value to set for the availability property.
     */
-    public function setAvailability(?string $value ): void {
-        $this->availability = $value;
+    public function setAvailability(?string $value): void {
+        $this->getBackingStore()->set('availability', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the expirationDuration property value. The expirationDuration property
      *  @param DateInterval|null $value Value to set for the expirationDuration property.
     */
-    public function setExpirationDuration(?DateInterval $value ): void {
-        $this->expirationDuration = $value;
+    public function setExpirationDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('expirationDuration', $value);
     }
 
     /**
      * Sets the sessionId property value. The sessionId property
      *  @param string|null $value Value to set for the sessionId property.
     */
-    public function setSessionId(?string $value ): void {
-        $this->sessionId = $value;
+    public function setSessionId(?string $value): void {
+        $this->getBackingStore()->set('sessionId', $value);
     }
 
 }

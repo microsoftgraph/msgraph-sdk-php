@@ -13,4 +13,5 @@ class CaseAction extends Enum {
     public const ADD_TO_REVIEW_SET = 'addToReviewSet';
     public const HOLD_UPDATE = 'holdUpdate';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
+    public const PURGE_DATA = 'purgeData';
 }

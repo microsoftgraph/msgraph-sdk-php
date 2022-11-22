@@ -9,71 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Room extends Place implements Parsable 
 {
     /**
-     * @var string|null $audioDeviceName Specifies the name of the audio device in the room.
-    */
-    private ?string $audioDeviceName = null;
-    
-    /**
-     * @var BookingType|null $bookingType Type of room. Possible values are standard, and reserved.
-    */
-    private ?BookingType $bookingType = null;
-    
-    /**
-     * @var string|null $building Specifies the building name or building number that the room is in.
-    */
-    private ?string $building = null;
-    
-    /**
-     * @var int|null $capacity Specifies the capacity of the room.
-    */
-    private ?int $capacity = null;
-    
-    /**
-     * @var string|null $displayDeviceName Specifies the name of the display device in the room.
-    */
-    private ?string $displayDeviceName = null;
-    
-    /**
-     * @var string|null $emailAddress Email address of the room.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var string|null $floorLabel Specifies a descriptive label for the floor, for example, P.
-    */
-    private ?string $floorLabel = null;
-    
-    /**
-     * @var int|null $floorNumber Specifies the floor number that the room is on.
-    */
-    private ?int $floorNumber = null;
-    
-    /**
-     * @var bool|null $isWheelChairAccessible Specifies whether the room is wheelchair accessible.
-    */
-    private ?bool $isWheelChairAccessible = null;
-    
-    /**
-     * @var string|null $label Specifies a descriptive label for the room, for example, a number or name.
-    */
-    private ?string $label = null;
-    
-    /**
-     * @var string|null $nickname Specifies a nickname for the room, for example, 'conf room'.
-    */
-    private ?string $nickname = null;
-    
-    /**
-     * @var array<string>|null $tags Specifies additional features of the room, for example, details like the type of view or furniture type.
-    */
-    private ?array $tags = null;
-    
-    /**
-     * @var string|null $videoDeviceName Specifies the name of the video device in the room.
-    */
-    private ?string $videoDeviceName = null;
-    
-    /**
      * Instantiates a new Room and sets the default values.
     */
     public function __construct() {
@@ -95,7 +30,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getAudioDeviceName(): ?string {
-        return $this->audioDeviceName;
+        return $this->getBackingStore()->get('audioDeviceName');
     }
 
     /**
@@ -103,7 +38,7 @@ class Room extends Place implements Parsable
      * @return BookingType|null
     */
     public function getBookingType(): ?BookingType {
-        return $this->bookingType;
+        return $this->getBackingStore()->get('bookingType');
     }
 
     /**
@@ -111,7 +46,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getBuilding(): ?string {
-        return $this->building;
+        return $this->getBackingStore()->get('building');
     }
 
     /**
@@ -119,7 +54,7 @@ class Room extends Place implements Parsable
      * @return int|null
     */
     public function getCapacity(): ?int {
-        return $this->capacity;
+        return $this->getBackingStore()->get('capacity');
     }
 
     /**
@@ -127,7 +62,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getDisplayDeviceName(): ?string {
-        return $this->displayDeviceName;
+        return $this->getBackingStore()->get('displayDeviceName');
     }
 
     /**
@@ -135,7 +70,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -166,7 +101,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getFloorLabel(): ?string {
-        return $this->floorLabel;
+        return $this->getBackingStore()->get('floorLabel');
     }
 
     /**
@@ -174,7 +109,7 @@ class Room extends Place implements Parsable
      * @return int|null
     */
     public function getFloorNumber(): ?int {
-        return $this->floorNumber;
+        return $this->getBackingStore()->get('floorNumber');
     }
 
     /**
@@ -182,7 +117,7 @@ class Room extends Place implements Parsable
      * @return bool|null
     */
     public function getIsWheelChairAccessible(): ?bool {
-        return $this->isWheelChairAccessible;
+        return $this->getBackingStore()->get('isWheelChairAccessible');
     }
 
     /**
@@ -190,7 +125,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getLabel(): ?string {
-        return $this->label;
+        return $this->getBackingStore()->get('label');
     }
 
     /**
@@ -198,7 +133,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getNickname(): ?string {
-        return $this->nickname;
+        return $this->getBackingStore()->get('nickname');
     }
 
     /**
@@ -206,7 +141,7 @@ class Room extends Place implements Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->tags;
+        return $this->getBackingStore()->get('tags');
     }
 
     /**
@@ -214,7 +149,7 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getVideoDeviceName(): ?string {
-        return $this->videoDeviceName;
+        return $this->getBackingStore()->get('videoDeviceName');
     }
 
     /**
@@ -223,123 +158,123 @@ class Room extends Place implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('audioDeviceName', $this->audioDeviceName);
-        $writer->writeEnumValue('bookingType', $this->bookingType);
-        $writer->writeStringValue('building', $this->building);
-        $writer->writeIntegerValue('capacity', $this->capacity);
-        $writer->writeStringValue('displayDeviceName', $this->displayDeviceName);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeStringValue('floorLabel', $this->floorLabel);
-        $writer->writeIntegerValue('floorNumber', $this->floorNumber);
-        $writer->writeBooleanValue('isWheelChairAccessible', $this->isWheelChairAccessible);
-        $writer->writeStringValue('label', $this->label);
-        $writer->writeStringValue('nickname', $this->nickname);
-        $writer->writeCollectionOfPrimitiveValues('tags', $this->tags);
-        $writer->writeStringValue('videoDeviceName', $this->videoDeviceName);
+        $writer->writeStringValue('audioDeviceName', $this->getAudioDeviceName());
+        $writer->writeEnumValue('bookingType', $this->getBookingType());
+        $writer->writeStringValue('building', $this->getBuilding());
+        $writer->writeIntegerValue('capacity', $this->getCapacity());
+        $writer->writeStringValue('displayDeviceName', $this->getDisplayDeviceName());
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeStringValue('floorLabel', $this->getFloorLabel());
+        $writer->writeIntegerValue('floorNumber', $this->getFloorNumber());
+        $writer->writeBooleanValue('isWheelChairAccessible', $this->getIsWheelChairAccessible());
+        $writer->writeStringValue('label', $this->getLabel());
+        $writer->writeStringValue('nickname', $this->getNickname());
+        $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
+        $writer->writeStringValue('videoDeviceName', $this->getVideoDeviceName());
     }
 
     /**
      * Sets the audioDeviceName property value. Specifies the name of the audio device in the room.
      *  @param string|null $value Value to set for the audioDeviceName property.
     */
-    public function setAudioDeviceName(?string $value ): void {
-        $this->audioDeviceName = $value;
+    public function setAudioDeviceName(?string $value): void {
+        $this->getBackingStore()->set('audioDeviceName', $value);
     }
 
     /**
      * Sets the bookingType property value. Type of room. Possible values are standard, and reserved.
      *  @param BookingType|null $value Value to set for the bookingType property.
     */
-    public function setBookingType(?BookingType $value ): void {
-        $this->bookingType = $value;
+    public function setBookingType(?BookingType $value): void {
+        $this->getBackingStore()->set('bookingType', $value);
     }
 
     /**
      * Sets the building property value. Specifies the building name or building number that the room is in.
      *  @param string|null $value Value to set for the building property.
     */
-    public function setBuilding(?string $value ): void {
-        $this->building = $value;
+    public function setBuilding(?string $value): void {
+        $this->getBackingStore()->set('building', $value);
     }
 
     /**
      * Sets the capacity property value. Specifies the capacity of the room.
      *  @param int|null $value Value to set for the capacity property.
     */
-    public function setCapacity(?int $value ): void {
-        $this->capacity = $value;
+    public function setCapacity(?int $value): void {
+        $this->getBackingStore()->set('capacity', $value);
     }
 
     /**
      * Sets the displayDeviceName property value. Specifies the name of the display device in the room.
      *  @param string|null $value Value to set for the displayDeviceName property.
     */
-    public function setDisplayDeviceName(?string $value ): void {
-        $this->displayDeviceName = $value;
+    public function setDisplayDeviceName(?string $value): void {
+        $this->getBackingStore()->set('displayDeviceName', $value);
     }
 
     /**
      * Sets the emailAddress property value. Email address of the room.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      *  @param string|null $value Value to set for the floorLabel property.
     */
-    public function setFloorLabel(?string $value ): void {
-        $this->floorLabel = $value;
+    public function setFloorLabel(?string $value): void {
+        $this->getBackingStore()->set('floorLabel', $value);
     }
 
     /**
      * Sets the floorNumber property value. Specifies the floor number that the room is on.
      *  @param int|null $value Value to set for the floorNumber property.
     */
-    public function setFloorNumber(?int $value ): void {
-        $this->floorNumber = $value;
+    public function setFloorNumber(?int $value): void {
+        $this->getBackingStore()->set('floorNumber', $value);
     }
 
     /**
      * Sets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
      *  @param bool|null $value Value to set for the isWheelChairAccessible property.
     */
-    public function setIsWheelChairAccessible(?bool $value ): void {
-        $this->isWheelChairAccessible = $value;
+    public function setIsWheelChairAccessible(?bool $value): void {
+        $this->getBackingStore()->set('isWheelChairAccessible', $value);
     }
 
     /**
      * Sets the label property value. Specifies a descriptive label for the room, for example, a number or name.
      *  @param string|null $value Value to set for the label property.
     */
-    public function setLabel(?string $value ): void {
-        $this->label = $value;
+    public function setLabel(?string $value): void {
+        $this->getBackingStore()->set('label', $value);
     }
 
     /**
      * Sets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
      *  @param string|null $value Value to set for the nickname property.
     */
-    public function setNickname(?string $value ): void {
-        $this->nickname = $value;
+    public function setNickname(?string $value): void {
+        $this->getBackingStore()->set('nickname', $value);
     }
 
     /**
      * Sets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
      *  @param array<string>|null $value Value to set for the tags property.
     */
-    public function setTags(?array $value ): void {
-        $this->tags = $value;
+    public function setTags(?array $value): void {
+        $this->getBackingStore()->set('tags', $value);
     }
 
     /**
      * Sets the videoDeviceName property value. Specifies the name of the video device in the room.
      *  @param string|null $value Value to set for the videoDeviceName property.
     */
-    public function setVideoDeviceName(?string $value ): void {
-        $this->videoDeviceName = $value;
+    public function setVideoDeviceName(?string $value): void {
+        $this->getBackingStore()->set('videoDeviceName', $value);
     }
 
 }

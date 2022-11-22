@@ -7,58 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable 
+class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $bargeInAllowed The bargeInAllowed property
-    */
-    private ?bool $bargeInAllowed = null;
-    
-    /**
-     * @var string|null $clientContext The clientContext property
-    */
-    private ?string $clientContext = null;
-    
-    /**
-     * @var int|null $initialSilenceTimeoutInSeconds The initialSilenceTimeoutInSeconds property
-    */
-    private ?int $initialSilenceTimeoutInSeconds = null;
-    
-    /**
-     * @var int|null $maxRecordDurationInSeconds The maxRecordDurationInSeconds property
-    */
-    private ?int $maxRecordDurationInSeconds = null;
-    
-    /**
-     * @var int|null $maxSilenceTimeoutInSeconds The maxSilenceTimeoutInSeconds property
-    */
-    private ?int $maxSilenceTimeoutInSeconds = null;
-    
-    /**
-     * @var bool|null $playBeep The playBeep property
-    */
-    private ?bool $playBeep = null;
-    
-    /**
-     * @var array<Prompt>|null $prompts The prompts property
-    */
-    private ?array $prompts = null;
-    
-    /**
-     * @var array<string>|null $stopTones The stopTones property
-    */
-    private ?array $stopTones = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new recordResponsePostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -75,8 +39,16 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +56,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getBargeInAllowed(): ?bool {
-        return $this->bargeInAllowed;
+        return $this->getBackingStore()->get('bargeInAllowed');
     }
 
     /**
@@ -92,7 +64,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getClientContext(): ?string {
-        return $this->clientContext;
+        return $this->getBackingStore()->get('clientContext');
     }
 
     /**
@@ -118,7 +90,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getInitialSilenceTimeoutInSeconds(): ?int {
-        return $this->initialSilenceTimeoutInSeconds;
+        return $this->getBackingStore()->get('initialSilenceTimeoutInSeconds');
     }
 
     /**
@@ -126,7 +98,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMaxRecordDurationInSeconds(): ?int {
-        return $this->maxRecordDurationInSeconds;
+        return $this->getBackingStore()->get('maxRecordDurationInSeconds');
     }
 
     /**
@@ -134,7 +106,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMaxSilenceTimeoutInSeconds(): ?int {
-        return $this->maxSilenceTimeoutInSeconds;
+        return $this->getBackingStore()->get('maxSilenceTimeoutInSeconds');
     }
 
     /**
@@ -142,7 +114,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getPlayBeep(): ?bool {
-        return $this->playBeep;
+        return $this->getBackingStore()->get('playBeep');
     }
 
     /**
@@ -150,7 +122,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<Prompt>|null
     */
     public function getPrompts(): ?array {
-        return $this->prompts;
+        return $this->getBackingStore()->get('prompts');
     }
 
     /**
@@ -158,7 +130,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getStopTones(): ?array {
-        return $this->stopTones;
+        return $this->getBackingStore()->get('stopTones');
     }
 
     /**
@@ -166,87 +138,95 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('bargeInAllowed', $this->bargeInAllowed);
-        $writer->writeStringValue('clientContext', $this->clientContext);
-        $writer->writeIntegerValue('initialSilenceTimeoutInSeconds', $this->initialSilenceTimeoutInSeconds);
-        $writer->writeIntegerValue('maxRecordDurationInSeconds', $this->maxRecordDurationInSeconds);
-        $writer->writeIntegerValue('maxSilenceTimeoutInSeconds', $this->maxSilenceTimeoutInSeconds);
-        $writer->writeBooleanValue('playBeep', $this->playBeep);
-        $writer->writeCollectionOfObjectValues('prompts', $this->prompts);
-        $writer->writeCollectionOfPrimitiveValues('stopTones', $this->stopTones);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('bargeInAllowed', $this->getBargeInAllowed());
+        $writer->writeStringValue('clientContext', $this->getClientContext());
+        $writer->writeIntegerValue('initialSilenceTimeoutInSeconds', $this->getInitialSilenceTimeoutInSeconds());
+        $writer->writeIntegerValue('maxRecordDurationInSeconds', $this->getMaxRecordDurationInSeconds());
+        $writer->writeIntegerValue('maxSilenceTimeoutInSeconds', $this->getMaxSilenceTimeoutInSeconds());
+        $writer->writeBooleanValue('playBeep', $this->getPlayBeep());
+        $writer->writeCollectionOfObjectValues('prompts', $this->getPrompts());
+        $writer->writeCollectionOfPrimitiveValues('stopTones', $this->getStopTones());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the bargeInAllowed property value. The bargeInAllowed property
      *  @param bool|null $value Value to set for the bargeInAllowed property.
     */
-    public function setBargeInAllowed(?bool $value ): void {
-        $this->bargeInAllowed = $value;
+    public function setBargeInAllowed(?bool $value): void {
+        $this->getBackingStore()->set('bargeInAllowed', $value);
     }
 
     /**
      * Sets the clientContext property value. The clientContext property
      *  @param string|null $value Value to set for the clientContext property.
     */
-    public function setClientContext(?string $value ): void {
-        $this->clientContext = $value;
+    public function setClientContext(?string $value): void {
+        $this->getBackingStore()->set('clientContext', $value);
     }
 
     /**
      * Sets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
      *  @param int|null $value Value to set for the initialSilenceTimeoutInSeconds property.
     */
-    public function setInitialSilenceTimeoutInSeconds(?int $value ): void {
-        $this->initialSilenceTimeoutInSeconds = $value;
+    public function setInitialSilenceTimeoutInSeconds(?int $value): void {
+        $this->getBackingStore()->set('initialSilenceTimeoutInSeconds', $value);
     }
 
     /**
      * Sets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
      *  @param int|null $value Value to set for the maxRecordDurationInSeconds property.
     */
-    public function setMaxRecordDurationInSeconds(?int $value ): void {
-        $this->maxRecordDurationInSeconds = $value;
+    public function setMaxRecordDurationInSeconds(?int $value): void {
+        $this->getBackingStore()->set('maxRecordDurationInSeconds', $value);
     }
 
     /**
      * Sets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
      *  @param int|null $value Value to set for the maxSilenceTimeoutInSeconds property.
     */
-    public function setMaxSilenceTimeoutInSeconds(?int $value ): void {
-        $this->maxSilenceTimeoutInSeconds = $value;
+    public function setMaxSilenceTimeoutInSeconds(?int $value): void {
+        $this->getBackingStore()->set('maxSilenceTimeoutInSeconds', $value);
     }
 
     /**
      * Sets the playBeep property value. The playBeep property
      *  @param bool|null $value Value to set for the playBeep property.
     */
-    public function setPlayBeep(?bool $value ): void {
-        $this->playBeep = $value;
+    public function setPlayBeep(?bool $value): void {
+        $this->getBackingStore()->set('playBeep', $value);
     }
 
     /**
      * Sets the prompts property value. The prompts property
      *  @param array<Prompt>|null $value Value to set for the prompts property.
     */
-    public function setPrompts(?array $value ): void {
-        $this->prompts = $value;
+    public function setPrompts(?array $value): void {
+        $this->getBackingStore()->set('prompts', $value);
     }
 
     /**
      * Sets the stopTones property value. The stopTones property
      *  @param array<string>|null $value Value to set for the stopTones property.
     */
-    public function setStopTones(?array $value ): void {
-        $this->stopTones = $value;
+    public function setStopTones(?array $value): void {
+        $this->getBackingStore()->set('stopTones', $value);
     }
 
 }

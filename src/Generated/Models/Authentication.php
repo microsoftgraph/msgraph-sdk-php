@@ -9,61 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Authentication extends Entity implements Parsable 
 {
     /**
-     * @var array<EmailAuthenticationMethod>|null $emailMethods The email address registered to a user for authentication.
-    */
-    private ?array $emailMethods = null;
-    
-    /**
-     * @var array<Fido2AuthenticationMethod>|null $fido2Methods Represents the FIDO2 security keys registered to a user for authentication.
-    */
-    private ?array $fido2Methods = null;
-    
-    /**
-     * @var array<AuthenticationMethod>|null $methods Represents all authentication methods registered to a user.
-    */
-    private ?array $methods = null;
-    
-    /**
-     * @var array<MicrosoftAuthenticatorAuthenticationMethod>|null $microsoftAuthenticatorMethods The details of the Microsoft Authenticator app registered to a user for authentication.
-    */
-    private ?array $microsoftAuthenticatorMethods = null;
-    
-    /**
-     * @var array<LongRunningOperation>|null $operations Represents the status of a long-running operation.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<PasswordAuthenticationMethod>|null $passwordMethods Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
-    */
-    private ?array $passwordMethods = null;
-    
-    /**
-     * @var array<PhoneAuthenticationMethod>|null $phoneMethods The phone numbers registered to a user for authentication.
-    */
-    private ?array $phoneMethods = null;
-    
-    /**
-     * @var array<SoftwareOathAuthenticationMethod>|null $softwareOathMethods The software OATH TOTP applications registered to a user for authentication.
-    */
-    private ?array $softwareOathMethods = null;
-    
-    /**
-     * @var array<TemporaryAccessPassAuthenticationMethod>|null $temporaryAccessPassMethods Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
-    */
-    private ?array $temporaryAccessPassMethods = null;
-    
-    /**
-     * @var array<WindowsHelloForBusinessAuthenticationMethod>|null $windowsHelloForBusinessMethods Represents the Windows Hello for Business authentication method registered to a user for authentication.
-    */
-    private ?array $windowsHelloForBusinessMethods = null;
-    
-    /**
      * Instantiates a new authentication and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.authentication');
     }
 
     /**
@@ -80,7 +29,7 @@ class Authentication extends Entity implements Parsable
      * @return array<EmailAuthenticationMethod>|null
     */
     public function getEmailMethods(): ?array {
-        return $this->emailMethods;
+        return $this->getBackingStore()->get('emailMethods');
     }
 
     /**
@@ -88,7 +37,7 @@ class Authentication extends Entity implements Parsable
      * @return array<Fido2AuthenticationMethod>|null
     */
     public function getFido2Methods(): ?array {
-        return $this->fido2Methods;
+        return $this->getBackingStore()->get('fido2Methods');
     }
 
     /**
@@ -116,7 +65,7 @@ class Authentication extends Entity implements Parsable
      * @return array<AuthenticationMethod>|null
     */
     public function getMethods(): ?array {
-        return $this->methods;
+        return $this->getBackingStore()->get('methods');
     }
 
     /**
@@ -124,7 +73,7 @@ class Authentication extends Entity implements Parsable
      * @return array<MicrosoftAuthenticatorAuthenticationMethod>|null
     */
     public function getMicrosoftAuthenticatorMethods(): ?array {
-        return $this->microsoftAuthenticatorMethods;
+        return $this->getBackingStore()->get('microsoftAuthenticatorMethods');
     }
 
     /**
@@ -132,7 +81,7 @@ class Authentication extends Entity implements Parsable
      * @return array<LongRunningOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -140,7 +89,7 @@ class Authentication extends Entity implements Parsable
      * @return array<PasswordAuthenticationMethod>|null
     */
     public function getPasswordMethods(): ?array {
-        return $this->passwordMethods;
+        return $this->getBackingStore()->get('passwordMethods');
     }
 
     /**
@@ -148,7 +97,7 @@ class Authentication extends Entity implements Parsable
      * @return array<PhoneAuthenticationMethod>|null
     */
     public function getPhoneMethods(): ?array {
-        return $this->phoneMethods;
+        return $this->getBackingStore()->get('phoneMethods');
     }
 
     /**
@@ -156,7 +105,7 @@ class Authentication extends Entity implements Parsable
      * @return array<SoftwareOathAuthenticationMethod>|null
     */
     public function getSoftwareOathMethods(): ?array {
-        return $this->softwareOathMethods;
+        return $this->getBackingStore()->get('softwareOathMethods');
     }
 
     /**
@@ -164,7 +113,7 @@ class Authentication extends Entity implements Parsable
      * @return array<TemporaryAccessPassAuthenticationMethod>|null
     */
     public function getTemporaryAccessPassMethods(): ?array {
-        return $this->temporaryAccessPassMethods;
+        return $this->getBackingStore()->get('temporaryAccessPassMethods');
     }
 
     /**
@@ -172,7 +121,7 @@ class Authentication extends Entity implements Parsable
      * @return array<WindowsHelloForBusinessAuthenticationMethod>|null
     */
     public function getWindowsHelloForBusinessMethods(): ?array {
-        return $this->windowsHelloForBusinessMethods;
+        return $this->getBackingStore()->get('windowsHelloForBusinessMethods');
     }
 
     /**
@@ -181,96 +130,96 @@ class Authentication extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('emailMethods', $this->emailMethods);
-        $writer->writeCollectionOfObjectValues('fido2Methods', $this->fido2Methods);
-        $writer->writeCollectionOfObjectValues('methods', $this->methods);
-        $writer->writeCollectionOfObjectValues('microsoftAuthenticatorMethods', $this->microsoftAuthenticatorMethods);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('passwordMethods', $this->passwordMethods);
-        $writer->writeCollectionOfObjectValues('phoneMethods', $this->phoneMethods);
-        $writer->writeCollectionOfObjectValues('softwareOathMethods', $this->softwareOathMethods);
-        $writer->writeCollectionOfObjectValues('temporaryAccessPassMethods', $this->temporaryAccessPassMethods);
-        $writer->writeCollectionOfObjectValues('windowsHelloForBusinessMethods', $this->windowsHelloForBusinessMethods);
+        $writer->writeCollectionOfObjectValues('emailMethods', $this->getEmailMethods());
+        $writer->writeCollectionOfObjectValues('fido2Methods', $this->getFido2Methods());
+        $writer->writeCollectionOfObjectValues('methods', $this->getMethods());
+        $writer->writeCollectionOfObjectValues('microsoftAuthenticatorMethods', $this->getMicrosoftAuthenticatorMethods());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('passwordMethods', $this->getPasswordMethods());
+        $writer->writeCollectionOfObjectValues('phoneMethods', $this->getPhoneMethods());
+        $writer->writeCollectionOfObjectValues('softwareOathMethods', $this->getSoftwareOathMethods());
+        $writer->writeCollectionOfObjectValues('temporaryAccessPassMethods', $this->getTemporaryAccessPassMethods());
+        $writer->writeCollectionOfObjectValues('windowsHelloForBusinessMethods', $this->getWindowsHelloForBusinessMethods());
     }
 
     /**
      * Sets the emailMethods property value. The email address registered to a user for authentication.
      *  @param array<EmailAuthenticationMethod>|null $value Value to set for the emailMethods property.
     */
-    public function setEmailMethods(?array $value ): void {
-        $this->emailMethods = $value;
+    public function setEmailMethods(?array $value): void {
+        $this->getBackingStore()->set('emailMethods', $value);
     }
 
     /**
      * Sets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
      *  @param array<Fido2AuthenticationMethod>|null $value Value to set for the fido2Methods property.
     */
-    public function setFido2Methods(?array $value ): void {
-        $this->fido2Methods = $value;
+    public function setFido2Methods(?array $value): void {
+        $this->getBackingStore()->set('fido2Methods', $value);
     }
 
     /**
      * Sets the methods property value. Represents all authentication methods registered to a user.
      *  @param array<AuthenticationMethod>|null $value Value to set for the methods property.
     */
-    public function setMethods(?array $value ): void {
-        $this->methods = $value;
+    public function setMethods(?array $value): void {
+        $this->getBackingStore()->set('methods', $value);
     }
 
     /**
      * Sets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
      *  @param array<MicrosoftAuthenticatorAuthenticationMethod>|null $value Value to set for the microsoftAuthenticatorMethods property.
     */
-    public function setMicrosoftAuthenticatorMethods(?array $value ): void {
-        $this->microsoftAuthenticatorMethods = $value;
+    public function setMicrosoftAuthenticatorMethods(?array $value): void {
+        $this->getBackingStore()->set('microsoftAuthenticatorMethods', $value);
     }
 
     /**
      * Sets the operations property value. Represents the status of a long-running operation.
      *  @param array<LongRunningOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
      *  @param array<PasswordAuthenticationMethod>|null $value Value to set for the passwordMethods property.
     */
-    public function setPasswordMethods(?array $value ): void {
-        $this->passwordMethods = $value;
+    public function setPasswordMethods(?array $value): void {
+        $this->getBackingStore()->set('passwordMethods', $value);
     }
 
     /**
      * Sets the phoneMethods property value. The phone numbers registered to a user for authentication.
      *  @param array<PhoneAuthenticationMethod>|null $value Value to set for the phoneMethods property.
     */
-    public function setPhoneMethods(?array $value ): void {
-        $this->phoneMethods = $value;
+    public function setPhoneMethods(?array $value): void {
+        $this->getBackingStore()->set('phoneMethods', $value);
     }
 
     /**
      * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
      *  @param array<SoftwareOathAuthenticationMethod>|null $value Value to set for the softwareOathMethods property.
     */
-    public function setSoftwareOathMethods(?array $value ): void {
-        $this->softwareOathMethods = $value;
+    public function setSoftwareOathMethods(?array $value): void {
+        $this->getBackingStore()->set('softwareOathMethods', $value);
     }
 
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      *  @param array<TemporaryAccessPassAuthenticationMethod>|null $value Value to set for the temporaryAccessPassMethods property.
     */
-    public function setTemporaryAccessPassMethods(?array $value ): void {
-        $this->temporaryAccessPassMethods = $value;
+    public function setTemporaryAccessPassMethods(?array $value): void {
+        $this->getBackingStore()->set('temporaryAccessPassMethods', $value);
     }
 
     /**
      * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      *  @param array<WindowsHelloForBusinessAuthenticationMethod>|null $value Value to set for the windowsHelloForBusinessMethods property.
     */
-    public function setWindowsHelloForBusinessMethods(?array $value ): void {
-        $this->windowsHelloForBusinessMethods = $value;
+    public function setWindowsHelloForBusinessMethods(?array $value): void {
+        $this->getBackingStore()->set('windowsHelloForBusinessMethods', $value);
     }
 
 }

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocationConstraintItem extends Location implements Parsable 
 {
     /**
-     * @var bool|null $resolveAvailability If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
-    */
-    private ?bool $resolveAvailability = null;
-    
-    /**
      * Instantiates a new LocationConstraintItem and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class LocationConstraintItem extends Location implements Parsable
      * @return bool|null
     */
     public function getResolveAvailability(): ?bool {
-        return $this->resolveAvailability;
+        return $this->getBackingStore()->get('resolveAvailability');
     }
 
     /**
@@ -55,15 +50,15 @@ class LocationConstraintItem extends Location implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('resolveAvailability', $this->resolveAvailability);
+        $writer->writeBooleanValue('resolveAvailability', $this->getResolveAvailability());
     }
 
     /**
      * Sets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
      *  @param bool|null $value Value to set for the resolveAvailability property.
     */
-    public function setResolveAvailability(?bool $value ): void {
-        $this->resolveAvailability = $value;
+    public function setResolveAvailability(?bool $value): void {
+        $this->getBackingStore()->set('resolveAvailability', $value);
     }
 
 }
