@@ -25,6 +25,37 @@ class PlannerTaskCreation extends Entity
 {
 
     /**
+    * Gets the creationSourceKind
+    *
+    * @return PlannerCreationSourceKind|null The creationSourceKind
+    */
+    public function getCreationSourceKind()
+    {
+        if (array_key_exists("creationSourceKind", $this->_propDict)) {
+            if (is_a($this->_propDict["creationSourceKind"], "\Beta\Microsoft\Graph\Model\PlannerCreationSourceKind") || is_null($this->_propDict["creationSourceKind"])) {
+                return $this->_propDict["creationSourceKind"];
+            } else {
+                $this->_propDict["creationSourceKind"] = new PlannerCreationSourceKind($this->_propDict["creationSourceKind"]);
+                return $this->_propDict["creationSourceKind"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the creationSourceKind
+    *
+    * @param PlannerCreationSourceKind $val The value to assign to the creationSourceKind
+    *
+    * @return PlannerTaskCreation The PlannerTaskCreation
+    */
+    public function setCreationSourceKind($val)
+    {
+        $this->_propDict["creationSourceKind"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the teamsPublicationInfo
     * Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
     *

@@ -427,6 +427,34 @@ class CloudPC extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the partnerAgentInstallResults
+     *
+     * @return array|null The partnerAgentInstallResults
+     */
+    public function getPartnerAgentInstallResults()
+    {
+        if (array_key_exists("partnerAgentInstallResults", $this->_propDict)) {
+           return $this->_propDict["partnerAgentInstallResults"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the partnerAgentInstallResults
+    *
+    * @param CloudPcPartnerAgentInstallResult[] $val The partnerAgentInstallResults
+    *
+    * @return CloudPC
+    */
+    public function setPartnerAgentInstallResults($val)
+    {
+        $this->_propDict["partnerAgentInstallResults"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the provisioningPolicyId
     * The provisioning policy ID of the Cloud PC.
@@ -482,6 +510,37 @@ class CloudPC extends Entity
     public function setProvisioningPolicyName($val)
     {
         $this->_propDict["provisioningPolicyName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the provisioningType
+    *
+    * @return CloudPcProvisioningType|null The provisioningType
+    */
+    public function getProvisioningType()
+    {
+        if (array_key_exists("provisioningType", $this->_propDict)) {
+            if (is_a($this->_propDict["provisioningType"], "\Beta\Microsoft\Graph\Model\CloudPcProvisioningType") || is_null($this->_propDict["provisioningType"])) {
+                return $this->_propDict["provisioningType"];
+            } else {
+                $this->_propDict["provisioningType"] = new CloudPcProvisioningType($this->_propDict["provisioningType"]);
+                return $this->_propDict["provisioningType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the provisioningType
+    *
+    * @param CloudPcProvisioningType $val The provisioningType
+    *
+    * @return CloudPC
+    */
+    public function setProvisioningType($val)
+    {
+        $this->_propDict["provisioningType"] = $val;
         return $this;
     }
 

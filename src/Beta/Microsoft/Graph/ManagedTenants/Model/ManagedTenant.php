@@ -640,6 +640,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the managementTemplateCollectionTenantSummaries
+     *
+     * @return array|null The managementTemplateCollectionTenantSummaries
+     */
+    public function getManagementTemplateCollectionTenantSummaries()
+    {
+        if (array_key_exists("managementTemplateCollectionTenantSummaries", $this->_propDict)) {
+           return $this->_propDict["managementTemplateCollectionTenantSummaries"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the managementTemplateCollectionTenantSummaries
+    *
+    * @param ManagementTemplateCollectionTenantSummary[] $val The managementTemplateCollectionTenantSummaries
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplateCollectionTenantSummaries($val)
+    {
+        $this->_propDict["managementTemplateCollectionTenantSummaries"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the managementTemplates
     * The collection of baseline management templates across managed tenants.
      *
@@ -693,6 +721,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     public function setManagementTemplateSteps($val)
     {
         $this->_propDict["managementTemplateSteps"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the managementTemplateStepTenantSummaries
+     *
+     * @return array|null The managementTemplateStepTenantSummaries
+     */
+    public function getManagementTemplateStepTenantSummaries()
+    {
+        if (array_key_exists("managementTemplateStepTenantSummaries", $this->_propDict)) {
+           return $this->_propDict["managementTemplateStepTenantSummaries"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the managementTemplateStepTenantSummaries
+    *
+    * @param ManagementTemplateStepTenantSummary[] $val The managementTemplateStepTenantSummaries
+    *
+    * @return ManagedTenant
+    */
+    public function setManagementTemplateStepTenantSummaries($val)
+    {
+        $this->_propDict["managementTemplateStepTenantSummaries"] = $val;
         return $this;
     }
 

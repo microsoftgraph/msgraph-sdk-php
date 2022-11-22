@@ -455,6 +455,37 @@ class OnPremisesPublishing extends Entity
     }
 
     /**
+    * Gets the segmentsConfiguration
+    *
+    * @return SegmentConfiguration|null The segmentsConfiguration
+    */
+    public function getSegmentsConfiguration()
+    {
+        if (array_key_exists("segmentsConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["segmentsConfiguration"], "\Beta\Microsoft\Graph\Model\SegmentConfiguration") || is_null($this->_propDict["segmentsConfiguration"])) {
+                return $this->_propDict["segmentsConfiguration"];
+            } else {
+                $this->_propDict["segmentsConfiguration"] = new SegmentConfiguration($this->_propDict["segmentsConfiguration"]);
+                return $this->_propDict["segmentsConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the segmentsConfiguration
+    *
+    * @param SegmentConfiguration $val The value to assign to the segmentsConfiguration
+    *
+    * @return OnPremisesPublishing The OnPremisesPublishing
+    */
+    public function setSegmentsConfiguration($val)
+    {
+        $this->_propDict["segmentsConfiguration"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the singleSignOnSettings
     * Represents the single sign-on configuration for the on-premises application.
     *

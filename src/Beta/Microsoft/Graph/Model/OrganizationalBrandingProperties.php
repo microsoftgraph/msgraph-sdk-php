@@ -294,6 +294,64 @@ class OrganizationalBrandingProperties extends Entity
     }
 
     /**
+    * Gets the customCSS
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The customCSS
+    */
+    public function getCustomCSS()
+    {
+        if (array_key_exists("customCSS", $this->_propDict)) {
+            if (is_a($this->_propDict["customCSS"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customCSS"])) {
+                return $this->_propDict["customCSS"];
+            } else {
+                $this->_propDict["customCSS"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customCSS"]);
+                return $this->_propDict["customCSS"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the customCSS
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The customCSS
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCSS($val)
+    {
+        $this->_propDict["customCSS"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customCSSRelativeUrl
+    *
+    * @return string|null The customCSSRelativeUrl
+    */
+    public function getCustomCSSRelativeUrl()
+    {
+        if (array_key_exists("customCSSRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["customCSSRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCSSRelativeUrl
+    *
+    * @param string $val The customCSSRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCSSRelativeUrl($val)
+    {
+        $this->_propDict["customCSSRelativeUrl"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the customForgotMyPasswordText
     * A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
     *
@@ -555,6 +613,95 @@ class OrganizationalBrandingProperties extends Entity
     public function setHeaderBackgroundColor($val)
     {
         $this->_propDict["headerBackgroundColor"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the headerLogo
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The headerLogo
+    */
+    public function getHeaderLogo()
+    {
+        if (array_key_exists("headerLogo", $this->_propDict)) {
+            if (is_a($this->_propDict["headerLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["headerLogo"])) {
+                return $this->_propDict["headerLogo"];
+            } else {
+                $this->_propDict["headerLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["headerLogo"]);
+                return $this->_propDict["headerLogo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the headerLogo
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The headerLogo
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setHeaderLogo($val)
+    {
+        $this->_propDict["headerLogo"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the headerLogoRelativeUrl
+    *
+    * @return string|null The headerLogoRelativeUrl
+    */
+    public function getHeaderLogoRelativeUrl()
+    {
+        if (array_key_exists("headerLogoRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["headerLogoRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the headerLogoRelativeUrl
+    *
+    * @param string $val The headerLogoRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setHeaderLogoRelativeUrl($val)
+    {
+        $this->_propDict["headerLogoRelativeUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the loginPageLayoutConfiguration
+    *
+    * @return LoginPageLayoutConfiguration|null The loginPageLayoutConfiguration
+    */
+    public function getLoginPageLayoutConfiguration()
+    {
+        if (array_key_exists("loginPageLayoutConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["loginPageLayoutConfiguration"], "\Beta\Microsoft\Graph\Model\LoginPageLayoutConfiguration") || is_null($this->_propDict["loginPageLayoutConfiguration"])) {
+                return $this->_propDict["loginPageLayoutConfiguration"];
+            } else {
+                $this->_propDict["loginPageLayoutConfiguration"] = new LoginPageLayoutConfiguration($this->_propDict["loginPageLayoutConfiguration"]);
+                return $this->_propDict["loginPageLayoutConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the loginPageLayoutConfiguration
+    *
+    * @param LoginPageLayoutConfiguration $val The loginPageLayoutConfiguration
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setLoginPageLayoutConfiguration($val)
+    {
+        $this->_propDict["loginPageLayoutConfiguration"] = $val;
         return $this;
     }
 
