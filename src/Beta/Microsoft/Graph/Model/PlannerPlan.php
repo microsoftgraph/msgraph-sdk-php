@@ -157,6 +157,37 @@ class PlannerPlan extends PlannerDelta
     }
 
     /**
+    * Gets the creationSource
+    *
+    * @return PlannerPlanCreation|null The creationSource
+    */
+    public function getCreationSource()
+    {
+        if (array_key_exists("creationSource", $this->_propDict)) {
+            if (is_a($this->_propDict["creationSource"], "\Beta\Microsoft\Graph\Model\PlannerPlanCreation") || is_null($this->_propDict["creationSource"])) {
+                return $this->_propDict["creationSource"];
+            } else {
+                $this->_propDict["creationSource"] = new PlannerPlanCreation($this->_propDict["creationSource"]);
+                return $this->_propDict["creationSource"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the creationSource
+    *
+    * @param PlannerPlanCreation $val The creationSource
+    *
+    * @return PlannerPlan
+    */
+    public function setCreationSource($val)
+    {
+        $this->_propDict["creationSource"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the owner
     *
     * @return string|null The owner

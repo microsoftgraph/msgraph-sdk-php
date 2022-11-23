@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Task File
+* PlannerRuleKind File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* Task class
+* PlannerRuleKind class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Task extends BaseTask
+class PlannerRuleKind extends Enum
 {
+    /**
+    * The Enum PlannerRuleKind
+    */
+    const TASK_RULE = "taskRule";
+    const BUCKET_RULE = "bucketRule";
+    const PLAN_RULE = "planRule";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
