@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsable 
+class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $osMaximumVersion Max OS version supported
-    */
-    private ?string $osMaximumVersion = null;
-    
-    /**
-     * @var string|null $osMinimumVersion Min OS version supported
-    */
-    private ?string $osMinimumVersion = null;
-    
-    /**
-     * @var bool|null $personalDeviceEnrollmentBlocked Block personally owned devices from enrolling
-    */
-    private ?bool $personalDeviceEnrollmentBlocked = null;
-    
-    /**
-     * @var bool|null $platformBlocked Block the platform from enrolling
-    */
-    private ?bool $platformBlocked = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.deviceEnrollmentPlatformRestriction');
     }
 
     /**
@@ -60,8 +38,16 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +70,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -92,7 +78,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOsMaximumVersion(): ?string {
-        return $this->osMaximumVersion;
+        return $this->getBackingStore()->get('osMaximumVersion');
     }
 
     /**
@@ -100,7 +86,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOsMinimumVersion(): ?string {
-        return $this->osMinimumVersion;
+        return $this->getBackingStore()->get('osMinimumVersion');
     }
 
     /**
@@ -108,7 +94,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @return bool|null
     */
     public function getPersonalDeviceEnrollmentBlocked(): ?bool {
-        return $this->personalDeviceEnrollmentBlocked;
+        return $this->getBackingStore()->get('personalDeviceEnrollmentBlocked');
     }
 
     /**
@@ -116,7 +102,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @return bool|null
     */
     public function getPlatformBlocked(): ?bool {
-        return $this->platformBlocked;
+        return $this->getBackingStore()->get('platformBlocked');
     }
 
     /**
@@ -124,60 +110,68 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('osMaximumVersion', $this->osMaximumVersion);
-        $writer->writeStringValue('osMinimumVersion', $this->osMinimumVersion);
-        $writer->writeBooleanValue('personalDeviceEnrollmentBlocked', $this->personalDeviceEnrollmentBlocked);
-        $writer->writeBooleanValue('platformBlocked', $this->platformBlocked);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('osMaximumVersion', $this->getOsMaximumVersion());
+        $writer->writeStringValue('osMinimumVersion', $this->getOsMinimumVersion());
+        $writer->writeBooleanValue('personalDeviceEnrollmentBlocked', $this->getPersonalDeviceEnrollmentBlocked());
+        $writer->writeBooleanValue('platformBlocked', $this->getPlatformBlocked());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the osMaximumVersion property value. Max OS version supported
      *  @param string|null $value Value to set for the osMaximumVersion property.
     */
-    public function setOsMaximumVersion(?string $value ): void {
-        $this->osMaximumVersion = $value;
+    public function setOsMaximumVersion(?string $value): void {
+        $this->getBackingStore()->set('osMaximumVersion', $value);
     }
 
     /**
      * Sets the osMinimumVersion property value. Min OS version supported
      *  @param string|null $value Value to set for the osMinimumVersion property.
     */
-    public function setOsMinimumVersion(?string $value ): void {
-        $this->osMinimumVersion = $value;
+    public function setOsMinimumVersion(?string $value): void {
+        $this->getBackingStore()->set('osMinimumVersion', $value);
     }
 
     /**
      * Sets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
      *  @param bool|null $value Value to set for the personalDeviceEnrollmentBlocked property.
     */
-    public function setPersonalDeviceEnrollmentBlocked(?bool $value ): void {
-        $this->personalDeviceEnrollmentBlocked = $value;
+    public function setPersonalDeviceEnrollmentBlocked(?bool $value): void {
+        $this->getBackingStore()->set('personalDeviceEnrollmentBlocked', $value);
     }
 
     /**
      * Sets the platformBlocked property value. Block the platform from enrolling
      *  @param bool|null $value Value to set for the platformBlocked property.
     */
-    public function setPlatformBlocked(?bool $value ): void {
-        $this->platformBlocked = $value;
+    public function setPlatformBlocked(?bool $value): void {
+        $this->getBackingStore()->set('platformBlocked', $value);
     }
 
 }

@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable 
+class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $isCaptionEnabled Indicates whether captions are enabled for this Teams live event.
-    */
-    private ?bool $isCaptionEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $spokenLanguage The spoken language.
-    */
-    private ?string $spokenLanguage = null;
-    
-    /**
-     * @var array<string>|null $translationLanguages The translation languages (choose up to 6).
-    */
-    private ?array $translationLanguages = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new broadcastMeetingCaptionSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.broadcastMeetingCaptionSettings');
     }
 
     /**
@@ -55,8 +38,16 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +69,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsCaptionEnabled(): ?bool {
-        return $this->isCaptionEnabled;
+        return $this->getBackingStore()->get('isCaptionEnabled');
     }
 
     /**
@@ -86,7 +77,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +85,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSpokenLanguage(): ?string {
-        return $this->spokenLanguage;
+        return $this->getBackingStore()->get('spokenLanguage');
     }
 
     /**
@@ -102,7 +93,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getTranslationLanguages(): ?array {
-        return $this->translationLanguages;
+        return $this->getBackingStore()->get('translationLanguages');
     }
 
     /**
@@ -110,51 +101,59 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('isCaptionEnabled', $this->isCaptionEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('spokenLanguage', $this->spokenLanguage);
-        $writer->writeCollectionOfPrimitiveValues('translationLanguages', $this->translationLanguages);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('isCaptionEnabled', $this->getIsCaptionEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('spokenLanguage', $this->getSpokenLanguage());
+        $writer->writeCollectionOfPrimitiveValues('translationLanguages', $this->getTranslationLanguages());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      *  @param bool|null $value Value to set for the isCaptionEnabled property.
     */
-    public function setIsCaptionEnabled(?bool $value ): void {
-        $this->isCaptionEnabled = $value;
+    public function setIsCaptionEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isCaptionEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the spokenLanguage property value. The spoken language.
      *  @param string|null $value Value to set for the spokenLanguage property.
     */
-    public function setSpokenLanguage(?string $value ): void {
-        $this->spokenLanguage = $value;
+    public function setSpokenLanguage(?string $value): void {
+        $this->getBackingStore()->set('spokenLanguage', $value);
     }
 
     /**
      * Sets the translationLanguages property value. The translation languages (choose up to 6).
      *  @param array<string>|null $value Value to set for the translationLanguages property.
     */
-    public function setTranslationLanguages(?array $value ): void {
-        $this->translationLanguages = $value;
+    public function setTranslationLanguages(?array $value): void {
+        $this->getBackingStore()->set('translationLanguages', $value);
     }
 
 }

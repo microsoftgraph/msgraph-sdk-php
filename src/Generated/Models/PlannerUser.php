@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerUser extends Entity implements Parsable 
 {
     /**
-     * @var array<PlannerPlan>|null $plans Read-only. Nullable. Returns the plannerTasks assigned to the user.
-    */
-    private ?array $plans = null;
-    
-    /**
-     * @var array<PlannerTask>|null $tasks Read-only. Nullable. Returns the plannerPlans shared with the user.
-    */
-    private ?array $tasks = null;
-    
-    /**
      * Instantiates a new plannerUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.plannerUser');
     }
 
     /**
@@ -52,7 +41,7 @@ class PlannerUser extends Entity implements Parsable
      * @return array<PlannerPlan>|null
     */
     public function getPlans(): ?array {
-        return $this->plans;
+        return $this->getBackingStore()->get('plans');
     }
 
     /**
@@ -60,7 +49,7 @@ class PlannerUser extends Entity implements Parsable
      * @return array<PlannerTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -69,24 +58,24 @@ class PlannerUser extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('plans', $this->plans);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
+        $writer->writeCollectionOfObjectValues('plans', $this->getPlans());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 
     /**
      * Sets the plans property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
      *  @param array<PlannerPlan>|null $value Value to set for the plans property.
     */
-    public function setPlans(?array $value ): void {
-        $this->plans = $value;
+    public function setPlans(?array $value): void {
+        $this->getBackingStore()->set('plans', $value);
     }
 
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns the plannerPlans shared with the user.
      *  @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
 }

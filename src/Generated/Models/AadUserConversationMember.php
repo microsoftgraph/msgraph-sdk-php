@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AadUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * @var string|null $email The email address of the user.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var string|null $tenantId TenantId which the Azure AD user belongs to.
-    */
-    private ?string $tenantId = null;
-    
-    /**
-     * @var User|null $user The user property
-    */
-    private ?User $user = null;
-    
-    /**
-     * @var string|null $userId The guid of the user.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new AadUserConversationMember and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -72,7 +52,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->tenantId;
+        return $this->getBackingStore()->get('tenantId');
     }
 
     /**
@@ -80,7 +60,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
      * @return User|null
     */
     public function getUser(): ?User {
-        return $this->user;
+        return $this->getBackingStore()->get('user');
     }
 
     /**
@@ -88,7 +68,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -97,42 +77,42 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeStringValue('tenantId', $this->tenantId);
-        $writer->writeObjectValue('user', $this->user);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeStringValue('tenantId', $this->getTenantId());
+        $writer->writeObjectValue('user', $this->getUser());
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the email property value. The email address of the user.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
      *  @param string|null $value Value to set for the tenantId property.
     */
-    public function setTenantId(?string $value ): void {
-        $this->tenantId = $value;
+    public function setTenantId(?string $value): void {
+        $this->getBackingStore()->set('tenantId', $value);
     }
 
     /**
      * Sets the user property value. The user property
      *  @param User|null $value Value to set for the user property.
     */
-    public function setUser(?User $value ): void {
-        $this->user = $value;
+    public function setUser(?User $value): void {
+        $this->getBackingStore()->set('user', $value);
     }
 
     /**
      * Sets the userId property value. The guid of the user.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisionedIdentity extends Identity implements Parsable 
 {
     /**
-     * @var DetailsInfo|null $details Details of the identity.
-    */
-    private ?DetailsInfo $details = null;
-    
-    /**
-     * @var string|null $identityType Type of identity that has been provisioned, such as 'user' or 'group'.
-    */
-    private ?string $identityType = null;
-    
-    /**
      * Instantiates a new ProvisionedIdentity and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class ProvisionedIdentity extends Identity implements Parsable
      * @return DetailsInfo|null
     */
     public function getDetails(): ?DetailsInfo {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -60,7 +50,7 @@ class ProvisionedIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getIdentityType(): ?string {
-        return $this->identityType;
+        return $this->getBackingStore()->get('identityType');
     }
 
     /**
@@ -69,24 +59,24 @@ class ProvisionedIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('details', $this->details);
-        $writer->writeStringValue('identityType', $this->identityType);
+        $writer->writeObjectValue('details', $this->getDetails());
+        $writer->writeStringValue('identityType', $this->getIdentityType());
     }
 
     /**
      * Sets the details property value. Details of the identity.
      *  @param DetailsInfo|null $value Value to set for the details property.
     */
-    public function setDetails(?DetailsInfo $value ): void {
-        $this->details = $value;
+    public function setDetails(?DetailsInfo $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
     /**
      * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
      *  @param string|null $value Value to set for the identityType property.
     */
-    public function setIdentityType(?string $value ): void {
-        $this->identityType = $value;
+    public function setIdentityType(?string $value): void {
+        $this->getBackingStore()->set('identityType', $value);
     }
 
 }

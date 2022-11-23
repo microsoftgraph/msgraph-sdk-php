@@ -9,71 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookRangeView extends Entity implements Parsable 
 {
     /**
-     * @var Json|null $cellAddresses Represents the cell addresses
-    */
-    private ?Json $cellAddresses = null;
-    
-    /**
-     * @var int|null $columnCount Returns the number of visible columns. Read-only.
-    */
-    private ?int $columnCount = null;
-    
-    /**
-     * @var Json|null $formulas Represents the formula in A1-style notation.
-    */
-    private ?Json $formulas = null;
-    
-    /**
-     * @var Json|null $formulasLocal Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-    */
-    private ?Json $formulasLocal = null;
-    
-    /**
-     * @var Json|null $formulasR1C1 Represents the formula in R1C1-style notation.
-    */
-    private ?Json $formulasR1C1 = null;
-    
-    /**
-     * @var int|null $index Index of the range.
-    */
-    private ?int $index = null;
-    
-    /**
-     * @var Json|null $numberFormat Represents Excel's number format code for the given cell. Read-only.
-    */
-    private ?Json $numberFormat = null;
-    
-    /**
-     * @var int|null $rowCount Returns the number of visible rows. Read-only.
-    */
-    private ?int $rowCount = null;
-    
-    /**
-     * @var array<WorkbookRangeView>|null $rows Represents a collection of range views associated with the range. Read-only. Read-only.
-    */
-    private ?array $rows = null;
-    
-    /**
-     * @var Json|null $text Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
-    */
-    private ?Json $text = null;
-    
-    /**
-     * @var Json|null $values Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-    */
-    private ?Json $values = null;
-    
-    /**
-     * @var Json|null $valueTypes Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
-    */
-    private ?Json $valueTypes = null;
-    
-    /**
      * Instantiates a new WorkbookRangeView and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookRangeView');
     }
 
     /**
@@ -90,7 +29,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getCellAddresses(): ?Json {
-        return $this->cellAddresses;
+        return $this->getBackingStore()->get('cellAddresses');
     }
 
     /**
@@ -98,7 +37,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return int|null
     */
     public function getColumnCount(): ?int {
-        return $this->columnCount;
+        return $this->getBackingStore()->get('columnCount');
     }
 
     /**
@@ -128,7 +67,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulas(): ?Json {
-        return $this->formulas;
+        return $this->getBackingStore()->get('formulas');
     }
 
     /**
@@ -136,7 +75,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulasLocal(): ?Json {
-        return $this->formulasLocal;
+        return $this->getBackingStore()->get('formulasLocal');
     }
 
     /**
@@ -144,7 +83,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getFormulasR1C1(): ?Json {
-        return $this->formulasR1C1;
+        return $this->getBackingStore()->get('formulasR1C1');
     }
 
     /**
@@ -152,7 +91,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return int|null
     */
     public function getIndex(): ?int {
-        return $this->index;
+        return $this->getBackingStore()->get('index');
     }
 
     /**
@@ -160,7 +99,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getNumberFormat(): ?Json {
-        return $this->numberFormat;
+        return $this->getBackingStore()->get('numberFormat');
     }
 
     /**
@@ -168,7 +107,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return int|null
     */
     public function getRowCount(): ?int {
-        return $this->rowCount;
+        return $this->getBackingStore()->get('rowCount');
     }
 
     /**
@@ -176,7 +115,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return array<WorkbookRangeView>|null
     */
     public function getRows(): ?array {
-        return $this->rows;
+        return $this->getBackingStore()->get('rows');
     }
 
     /**
@@ -184,7 +123,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getText(): ?Json {
-        return $this->text;
+        return $this->getBackingStore()->get('text');
     }
 
     /**
@@ -192,7 +131,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->values;
+        return $this->getBackingStore()->get('values');
     }
 
     /**
@@ -200,7 +139,7 @@ class WorkbookRangeView extends Entity implements Parsable
      * @return Json|null
     */
     public function getValueTypes(): ?Json {
-        return $this->valueTypes;
+        return $this->getBackingStore()->get('valueTypes');
     }
 
     /**
@@ -209,114 +148,114 @@ class WorkbookRangeView extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('cellAddresses', $this->cellAddresses);
-        $writer->writeIntegerValue('columnCount', $this->columnCount);
-        $writer->writeObjectValue('formulas', $this->formulas);
-        $writer->writeObjectValue('formulasLocal', $this->formulasLocal);
-        $writer->writeObjectValue('formulasR1C1', $this->formulasR1C1);
-        $writer->writeIntegerValue('index', $this->index);
-        $writer->writeObjectValue('numberFormat', $this->numberFormat);
-        $writer->writeIntegerValue('rowCount', $this->rowCount);
-        $writer->writeCollectionOfObjectValues('rows', $this->rows);
-        $writer->writeObjectValue('text', $this->text);
-        $writer->writeObjectValue('values', $this->values);
-        $writer->writeObjectValue('valueTypes', $this->valueTypes);
+        $writer->writeObjectValue('cellAddresses', $this->getCellAddresses());
+        $writer->writeIntegerValue('columnCount', $this->getColumnCount());
+        $writer->writeObjectValue('formulas', $this->getFormulas());
+        $writer->writeObjectValue('formulasLocal', $this->getFormulasLocal());
+        $writer->writeObjectValue('formulasR1C1', $this->getFormulasR1C1());
+        $writer->writeIntegerValue('index', $this->getIndex());
+        $writer->writeObjectValue('numberFormat', $this->getNumberFormat());
+        $writer->writeIntegerValue('rowCount', $this->getRowCount());
+        $writer->writeCollectionOfObjectValues('rows', $this->getRows());
+        $writer->writeObjectValue('text', $this->getText());
+        $writer->writeObjectValue('values', $this->getValues());
+        $writer->writeObjectValue('valueTypes', $this->getValueTypes());
     }
 
     /**
      * Sets the cellAddresses property value. Represents the cell addresses
      *  @param Json|null $value Value to set for the cellAddresses property.
     */
-    public function setCellAddresses(?Json $value ): void {
-        $this->cellAddresses = $value;
+    public function setCellAddresses(?Json $value): void {
+        $this->getBackingStore()->set('cellAddresses', $value);
     }
 
     /**
      * Sets the columnCount property value. Returns the number of visible columns. Read-only.
      *  @param int|null $value Value to set for the columnCount property.
     */
-    public function setColumnCount(?int $value ): void {
-        $this->columnCount = $value;
+    public function setColumnCount(?int $value): void {
+        $this->getBackingStore()->set('columnCount', $value);
     }
 
     /**
      * Sets the formulas property value. Represents the formula in A1-style notation.
      *  @param Json|null $value Value to set for the formulas property.
     */
-    public function setFormulas(?Json $value ): void {
-        $this->formulas = $value;
+    public function setFormulas(?Json $value): void {
+        $this->getBackingStore()->set('formulas', $value);
     }
 
     /**
      * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      *  @param Json|null $value Value to set for the formulasLocal property.
     */
-    public function setFormulasLocal(?Json $value ): void {
-        $this->formulasLocal = $value;
+    public function setFormulasLocal(?Json $value): void {
+        $this->getBackingStore()->set('formulasLocal', $value);
     }
 
     /**
      * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
      *  @param Json|null $value Value to set for the formulasR1C1 property.
     */
-    public function setFormulasR1C1(?Json $value ): void {
-        $this->formulasR1C1 = $value;
+    public function setFormulasR1C1(?Json $value): void {
+        $this->getBackingStore()->set('formulasR1C1', $value);
     }
 
     /**
      * Sets the index property value. Index of the range.
      *  @param int|null $value Value to set for the index property.
     */
-    public function setIndex(?int $value ): void {
-        $this->index = $value;
+    public function setIndex(?int $value): void {
+        $this->getBackingStore()->set('index', $value);
     }
 
     /**
      * Sets the numberFormat property value. Represents Excel's number format code for the given cell. Read-only.
      *  @param Json|null $value Value to set for the numberFormat property.
     */
-    public function setNumberFormat(?Json $value ): void {
-        $this->numberFormat = $value;
+    public function setNumberFormat(?Json $value): void {
+        $this->getBackingStore()->set('numberFormat', $value);
     }
 
     /**
      * Sets the rowCount property value. Returns the number of visible rows. Read-only.
      *  @param int|null $value Value to set for the rowCount property.
     */
-    public function setRowCount(?int $value ): void {
-        $this->rowCount = $value;
+    public function setRowCount(?int $value): void {
+        $this->getBackingStore()->set('rowCount', $value);
     }
 
     /**
      * Sets the rows property value. Represents a collection of range views associated with the range. Read-only. Read-only.
      *  @param array<WorkbookRangeView>|null $value Value to set for the rows property.
     */
-    public function setRows(?array $value ): void {
-        $this->rows = $value;
+    public function setRows(?array $value): void {
+        $this->getBackingStore()->set('rows', $value);
     }
 
     /**
      * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
      *  @param Json|null $value Value to set for the text property.
     */
-    public function setText(?Json $value ): void {
-        $this->text = $value;
+    public function setText(?Json $value): void {
+        $this->getBackingStore()->set('text', $value);
     }
 
     /**
      * Sets the values property value. Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      *  @param Json|null $value Value to set for the values property.
     */
-    public function setValues(?Json $value ): void {
-        $this->values = $value;
+    public function setValues(?Json $value): void {
+        $this->getBackingStore()->set('values', $value);
     }
 
     /**
      * Sets the valueTypes property value. Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      *  @param Json|null $value Value to set for the valueTypes property.
     */
-    public function setValueTypes(?Json $value ): void {
-        $this->valueTypes = $value;
+    public function setValueTypes(?Json $value): void {
+        $this->getBackingStore()->set('valueTypes', $value);
     }
 
 }

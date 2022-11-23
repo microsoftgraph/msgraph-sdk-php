@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * @var ApprovalSettings|null $setting The settings for approval of the role assignment.
-    */
-    private ?ApprovalSettings $setting = null;
-    
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyApprovalRule and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
      * @return ApprovalSettings|null
     */
     public function getSetting(): ?ApprovalSettings {
-        return $this->setting;
+        return $this->getBackingStore()->get('setting');
     }
 
     /**
@@ -55,15 +50,15 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('setting', $this->setting);
+        $writer->writeObjectValue('setting', $this->getSetting());
     }
 
     /**
      * Sets the setting property value. The settings for approval of the role assignment.
      *  @param ApprovalSettings|null $value Value to set for the setting property.
     */
-    public function setSetting(?ApprovalSettings $value ): void {
-        $this->setting = $value;
+    public function setSetting(?ApprovalSettings $value): void {
+        $this->getBackingStore()->set('setting', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EventMessageResponse extends EventMessage implements Parsable 
 {
     /**
-     * @var TimeSlot|null $proposedNewTime The proposedNewTime property
-    */
-    private ?TimeSlot $proposedNewTime = null;
-    
-    /**
-     * @var ResponseType|null $responseType The responseType property
-    */
-    private ?ResponseType $responseType = null;
-    
-    /**
      * Instantiates a new EventMessageResponse and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class EventMessageResponse extends EventMessage implements Parsable
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
-        return $this->proposedNewTime;
+        return $this->getBackingStore()->get('proposedNewTime');
     }
 
     /**
@@ -60,7 +50,7 @@ class EventMessageResponse extends EventMessage implements Parsable
      * @return ResponseType|null
     */
     public function getResponseType(): ?ResponseType {
-        return $this->responseType;
+        return $this->getBackingStore()->get('responseType');
     }
 
     /**
@@ -69,24 +59,24 @@ class EventMessageResponse extends EventMessage implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('proposedNewTime', $this->proposedNewTime);
-        $writer->writeEnumValue('responseType', $this->responseType);
+        $writer->writeObjectValue('proposedNewTime', $this->getProposedNewTime());
+        $writer->writeEnumValue('responseType', $this->getResponseType());
     }
 
     /**
      * Sets the proposedNewTime property value. The proposedNewTime property
      *  @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
-    public function setProposedNewTime(?TimeSlot $value ): void {
-        $this->proposedNewTime = $value;
+    public function setProposedNewTime(?TimeSlot $value): void {
+        $this->getBackingStore()->set('proposedNewTime', $value);
     }
 
     /**
      * Sets the responseType property value. The responseType property
      *  @param ResponseType|null $value Value to set for the responseType property.
     */
-    public function setResponseType(?ResponseType $value ): void {
-        $this->responseType = $value;
+    public function setResponseType(?ResponseType $value): void {
+        $this->getBackingStore()->set('responseType', $value);
     }
 
 }

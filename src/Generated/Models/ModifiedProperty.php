@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ModifiedProperty implements AdditionalDataHolder, Parsable 
+class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $displayName Indicates the property name of the target attribute that was changed.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $newValue Indicates the updated value for the propery.
-    */
-    private ?string $newValue = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $oldValue Indicates the previous value (before the update) for the property.
-    */
-    private ?string $oldValue = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new modifiedProperty and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.modifiedProperty');
     }
 
     /**
@@ -55,8 +38,16 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -86,7 +77,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getNewValue(): ?string {
-        return $this->newValue;
+        return $this->getBackingStore()->get('newValue');
     }
 
     /**
@@ -94,7 +85,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +93,7 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOldValue(): ?string {
-        return $this->oldValue;
+        return $this->getBackingStore()->get('oldValue');
     }
 
     /**
@@ -110,51 +101,59 @@ class ModifiedProperty implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('newValue', $this->newValue);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('oldValue', $this->oldValue);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('newValue', $this->getNewValue());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('oldValue', $this->getOldValue());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the displayName property value. Indicates the property name of the target attribute that was changed.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the newValue property value. Indicates the updated value for the propery.
      *  @param string|null $value Value to set for the newValue property.
     */
-    public function setNewValue(?string $value ): void {
-        $this->newValue = $value;
+    public function setNewValue(?string $value): void {
+        $this->getBackingStore()->set('newValue', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the oldValue property value. Indicates the previous value (before the update) for the property.
      *  @param string|null $value Value to set for the oldValue property.
     */
-    public function setOldValue(?string $value ): void {
-        $this->oldValue = $value;
+    public function setOldValue(?string $value): void {
+        $this->getBackingStore()->set('oldValue', $value);
     }
 
 }

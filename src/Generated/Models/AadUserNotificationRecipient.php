@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AadUserNotificationRecipient extends TeamworkNotificationRecipient implements Parsable 
 {
     /**
-     * @var string|null $userId Azure AD user identifier. Use the List users method to get this ID.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new AadUserNotificationRecipient and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient impleme
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -55,15 +50,15 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient impleme
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

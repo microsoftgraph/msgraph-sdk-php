@@ -9,56 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
-     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
-    */
-    private ?array $apps = null;
-    
-    /**
-     * @var string|null $customBrowserDisplayName Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    */
-    private ?string $customBrowserDisplayName = null;
-    
-    /**
-     * @var string|null $customBrowserPackageId Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    */
-    private ?string $customBrowserPackageId = null;
-    
-    /**
-     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
-    */
-    private ?int $deployedAppCount = null;
-    
-    /**
-     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
-    */
-    private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
-    
-    /**
-     * @var bool|null $disableAppEncryptionIfDeviceEncryptionIsEnabled When this setting is enabled, app level encryption is disabled if device level encryption is enabled
-    */
-    private ?bool $disableAppEncryptionIfDeviceEncryptionIsEnabled = null;
-    
-    /**
-     * @var bool|null $encryptAppData Indicates whether application data for managed apps should be encrypted
-    */
-    private ?bool $encryptAppData = null;
-    
-    /**
-     * @var string|null $minimumRequiredPatchVersion Define the oldest required Android security patch level a user can have to gain secure access to the app.
-    */
-    private ?string $minimumRequiredPatchVersion = null;
-    
-    /**
-     * @var string|null $minimumWarningPatchVersion Define the oldest recommended Android security patch level a user can have for secure access to the app.
-    */
-    private ?string $minimumWarningPatchVersion = null;
-    
-    /**
-     * @var bool|null $screenCaptureBlocked Indicates whether a managed user can take screen captures of managed apps
-    */
-    private ?bool $screenCaptureBlocked = null;
-    
-    /**
      * Instantiates a new AndroidManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -80,7 +30,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->apps;
+        return $this->getBackingStore()->get('apps');
     }
 
     /**
@@ -88,7 +38,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getCustomBrowserDisplayName(): ?string {
-        return $this->customBrowserDisplayName;
+        return $this->getBackingStore()->get('customBrowserDisplayName');
     }
 
     /**
@@ -96,7 +46,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getCustomBrowserPackageId(): ?string {
-        return $this->customBrowserPackageId;
+        return $this->getBackingStore()->get('customBrowserPackageId');
     }
 
     /**
@@ -104,7 +54,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->deployedAppCount;
+        return $this->getBackingStore()->get('deployedAppCount');
     }
 
     /**
@@ -112,7 +62,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->deploymentSummary;
+        return $this->getBackingStore()->get('deploymentSummary');
     }
 
     /**
@@ -120,7 +70,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getDisableAppEncryptionIfDeviceEncryptionIsEnabled(): ?bool {
-        return $this->disableAppEncryptionIfDeviceEncryptionIsEnabled;
+        return $this->getBackingStore()->get('disableAppEncryptionIfDeviceEncryptionIsEnabled');
     }
 
     /**
@@ -128,7 +78,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getEncryptAppData(): ?bool {
-        return $this->encryptAppData;
+        return $this->getBackingStore()->get('encryptAppData');
     }
 
     /**
@@ -156,7 +106,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getMinimumRequiredPatchVersion(): ?string {
-        return $this->minimumRequiredPatchVersion;
+        return $this->getBackingStore()->get('minimumRequiredPatchVersion');
     }
 
     /**
@@ -164,7 +114,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getMinimumWarningPatchVersion(): ?string {
-        return $this->minimumWarningPatchVersion;
+        return $this->getBackingStore()->get('minimumWarningPatchVersion');
     }
 
     /**
@@ -172,7 +122,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getScreenCaptureBlocked(): ?bool {
-        return $this->screenCaptureBlocked;
+        return $this->getBackingStore()->get('screenCaptureBlocked');
     }
 
     /**
@@ -181,96 +131,96 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('apps', $this->apps);
-        $writer->writeStringValue('customBrowserDisplayName', $this->customBrowserDisplayName);
-        $writer->writeStringValue('customBrowserPackageId', $this->customBrowserPackageId);
-        $writer->writeIntegerValue('deployedAppCount', $this->deployedAppCount);
-        $writer->writeObjectValue('deploymentSummary', $this->deploymentSummary);
-        $writer->writeBooleanValue('disableAppEncryptionIfDeviceEncryptionIsEnabled', $this->disableAppEncryptionIfDeviceEncryptionIsEnabled);
-        $writer->writeBooleanValue('encryptAppData', $this->encryptAppData);
-        $writer->writeStringValue('minimumRequiredPatchVersion', $this->minimumRequiredPatchVersion);
-        $writer->writeStringValue('minimumWarningPatchVersion', $this->minimumWarningPatchVersion);
-        $writer->writeBooleanValue('screenCaptureBlocked', $this->screenCaptureBlocked);
+        $writer->writeCollectionOfObjectValues('apps', $this->getApps());
+        $writer->writeStringValue('customBrowserDisplayName', $this->getCustomBrowserDisplayName());
+        $writer->writeStringValue('customBrowserPackageId', $this->getCustomBrowserPackageId());
+        $writer->writeIntegerValue('deployedAppCount', $this->getDeployedAppCount());
+        $writer->writeObjectValue('deploymentSummary', $this->getDeploymentSummary());
+        $writer->writeBooleanValue('disableAppEncryptionIfDeviceEncryptionIsEnabled', $this->getDisableAppEncryptionIfDeviceEncryptionIsEnabled());
+        $writer->writeBooleanValue('encryptAppData', $this->getEncryptAppData());
+        $writer->writeStringValue('minimumRequiredPatchVersion', $this->getMinimumRequiredPatchVersion());
+        $writer->writeStringValue('minimumWarningPatchVersion', $this->getMinimumWarningPatchVersion());
+        $writer->writeBooleanValue('screenCaptureBlocked', $this->getScreenCaptureBlocked());
     }
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
-    public function setApps(?array $value ): void {
-        $this->apps = $value;
+    public function setApps(?array $value): void {
+        $this->getBackingStore()->set('apps', $value);
     }
 
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      *  @param string|null $value Value to set for the customBrowserDisplayName property.
     */
-    public function setCustomBrowserDisplayName(?string $value ): void {
-        $this->customBrowserDisplayName = $value;
+    public function setCustomBrowserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('customBrowserDisplayName', $value);
     }
 
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      *  @param string|null $value Value to set for the customBrowserPackageId property.
     */
-    public function setCustomBrowserPackageId(?string $value ): void {
-        $this->customBrowserPackageId = $value;
+    public function setCustomBrowserPackageId(?string $value): void {
+        $this->getBackingStore()->set('customBrowserPackageId', $value);
     }
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      *  @param int|null $value Value to set for the deployedAppCount property.
     */
-    public function setDeployedAppCount(?int $value ): void {
-        $this->deployedAppCount = $value;
+    public function setDeployedAppCount(?int $value): void {
+        $this->getBackingStore()->set('deployedAppCount', $value);
     }
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
-    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value ): void {
-        $this->deploymentSummary = $value;
+    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
+        $this->getBackingStore()->set('deploymentSummary', $value);
     }
 
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      *  @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
     */
-    public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value ): void {
-        $this->disableAppEncryptionIfDeviceEncryptionIsEnabled = $value;
+    public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('disableAppEncryptionIfDeviceEncryptionIsEnabled', $value);
     }
 
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
      *  @param bool|null $value Value to set for the encryptAppData property.
     */
-    public function setEncryptAppData(?bool $value ): void {
-        $this->encryptAppData = $value;
+    public function setEncryptAppData(?bool $value): void {
+        $this->getBackingStore()->set('encryptAppData', $value);
     }
 
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
      *  @param string|null $value Value to set for the minimumRequiredPatchVersion property.
     */
-    public function setMinimumRequiredPatchVersion(?string $value ): void {
-        $this->minimumRequiredPatchVersion = $value;
+    public function setMinimumRequiredPatchVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredPatchVersion', $value);
     }
 
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
      *  @param string|null $value Value to set for the minimumWarningPatchVersion property.
     */
-    public function setMinimumWarningPatchVersion(?string $value ): void {
-        $this->minimumWarningPatchVersion = $value;
+    public function setMinimumWarningPatchVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumWarningPatchVersion', $value);
     }
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
      *  @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
-    public function setScreenCaptureBlocked(?bool $value ): void {
-        $this->screenCaptureBlocked = $value;
+    public function setScreenCaptureBlocked(?bool $value): void {
+        $this->getBackingStore()->set('screenCaptureBlocked', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectionApp implements Parsable 
 {
     /**
-     * @var string|null $binaryName The binary name.
-    */
-    private ?string $binaryName = null;
-    
-    /**
-     * @var string|null $binaryVersionHigh The high binary version.
-    */
-    private ?string $binaryVersionHigh = null;
-    
-    /**
-     * @var string|null $binaryVersionLow The lower binary version.
-    */
-    private ?string $binaryVersionLow = null;
-    
-    /**
      * Instantiates a new WindowsInformationProtectionDesktopApp and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryName(): ?string {
-        return $this->binaryName;
+        return $this->getBackingStore()->get('binaryName');
     }
 
     /**
@@ -53,7 +38,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryVersionHigh(): ?string {
-        return $this->binaryVersionHigh;
+        return $this->getBackingStore()->get('binaryVersionHigh');
     }
 
     /**
@@ -61,7 +46,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryVersionLow(): ?string {
-        return $this->binaryVersionLow;
+        return $this->getBackingStore()->get('binaryVersionLow');
     }
 
     /**
@@ -83,33 +68,33 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('binaryName', $this->binaryName);
-        $writer->writeStringValue('binaryVersionHigh', $this->binaryVersionHigh);
-        $writer->writeStringValue('binaryVersionLow', $this->binaryVersionLow);
+        $writer->writeStringValue('binaryName', $this->getBinaryName());
+        $writer->writeStringValue('binaryVersionHigh', $this->getBinaryVersionHigh());
+        $writer->writeStringValue('binaryVersionLow', $this->getBinaryVersionLow());
     }
 
     /**
      * Sets the binaryName property value. The binary name.
      *  @param string|null $value Value to set for the binaryName property.
     */
-    public function setBinaryName(?string $value ): void {
-        $this->binaryName = $value;
+    public function setBinaryName(?string $value): void {
+        $this->getBackingStore()->set('binaryName', $value);
     }
 
     /**
      * Sets the binaryVersionHigh property value. The high binary version.
      *  @param string|null $value Value to set for the binaryVersionHigh property.
     */
-    public function setBinaryVersionHigh(?string $value ): void {
-        $this->binaryVersionHigh = $value;
+    public function setBinaryVersionHigh(?string $value): void {
+        $this->getBackingStore()->set('binaryVersionHigh', $value);
     }
 
     /**
      * Sets the binaryVersionLow property value. The lower binary version.
      *  @param string|null $value Value to set for the binaryVersionLow property.
     */
-    public function setBinaryVersionLow(?string $value ): void {
-        $this->binaryVersionLow = $value;
+    public function setBinaryVersionLow(?string $value): void {
+        $this->getBackingStore()->set('binaryVersionLow', $value);
     }
 
 }

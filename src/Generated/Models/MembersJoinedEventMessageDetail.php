@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MembersJoinedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var array<TeamworkUserIdentity>|null $members List of members who joined the chat.
-    */
-    private ?array $members = null;
-    
-    /**
      * Instantiates a new MembersJoinedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class MembersJoinedEventMessageDetail extends EventMessageDetail implements Pars
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -60,7 +50,7 @@ class MembersJoinedEventMessageDetail extends EventMessageDetail implements Pars
      * @return array<TeamworkUserIdentity>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -69,24 +59,24 @@ class MembersJoinedEventMessageDetail extends EventMessageDetail implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the members property value. List of members who joined the chat.
      *  @param array<TeamworkUserIdentity>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
 }

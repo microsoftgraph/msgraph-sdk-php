@@ -10,56 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppApp extends MobileApp implements Parsable 
 {
     /**
-     * @var IosDeviceType|null $applicableDeviceType The applicable iOS Device Type.
-    */
-    private ?IosDeviceType $applicableDeviceType = null;
-    
-    /**
-     * @var string|null $appStoreUrl The store URL.
-    */
-    private ?string $appStoreUrl = null;
-    
-    /**
-     * @var string|null $bundleId The Identity Name.
-    */
-    private ?string $bundleId = null;
-    
-    /**
-     * @var VppLicensingType|null $licensingType The supported License Type.
-    */
-    private ?VppLicensingType $licensingType = null;
-    
-    /**
-     * @var DateTime|null $releaseDateTime The VPP application release date and time.
-    */
-    private ?DateTime $releaseDateTime = null;
-    
-    /**
-     * @var int|null $totalLicenseCount The total number of VPP licenses.
-    */
-    private ?int $totalLicenseCount = null;
-    
-    /**
-     * @var int|null $usedLicenseCount The number of VPP licenses in use.
-    */
-    private ?int $usedLicenseCount = null;
-    
-    /**
-     * @var VppTokenAccountType|null $vppTokenAccountType Possible types of an Apple Volume Purchase Program token.
-    */
-    private ?VppTokenAccountType $vppTokenAccountType = null;
-    
-    /**
-     * @var string|null $vppTokenAppleId The Apple Id associated with the given Apple Volume Purchase Program Token.
-    */
-    private ?string $vppTokenAppleId = null;
-    
-    /**
-     * @var string|null $vppTokenOrganizationName The organization associated with the Apple Volume Purchase Program Token
-    */
-    private ?string $vppTokenOrganizationName = null;
-    
-    /**
      * Instantiates a new IosVppApp and sets the default values.
     */
     public function __construct() {
@@ -81,7 +31,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return IosDeviceType|null
     */
     public function getApplicableDeviceType(): ?IosDeviceType {
-        return $this->applicableDeviceType;
+        return $this->getBackingStore()->get('applicableDeviceType');
     }
 
     /**
@@ -89,7 +39,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getAppStoreUrl(): ?string {
-        return $this->appStoreUrl;
+        return $this->getBackingStore()->get('appStoreUrl');
     }
 
     /**
@@ -97,7 +47,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getBundleId(): ?string {
-        return $this->bundleId;
+        return $this->getBackingStore()->get('bundleId');
     }
 
     /**
@@ -125,7 +75,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return VppLicensingType|null
     */
     public function getLicensingType(): ?VppLicensingType {
-        return $this->licensingType;
+        return $this->getBackingStore()->get('licensingType');
     }
 
     /**
@@ -133,7 +83,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return DateTime|null
     */
     public function getReleaseDateTime(): ?DateTime {
-        return $this->releaseDateTime;
+        return $this->getBackingStore()->get('releaseDateTime');
     }
 
     /**
@@ -141,7 +91,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return int|null
     */
     public function getTotalLicenseCount(): ?int {
-        return $this->totalLicenseCount;
+        return $this->getBackingStore()->get('totalLicenseCount');
     }
 
     /**
@@ -149,7 +99,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return int|null
     */
     public function getUsedLicenseCount(): ?int {
-        return $this->usedLicenseCount;
+        return $this->getBackingStore()->get('usedLicenseCount');
     }
 
     /**
@@ -157,7 +107,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return VppTokenAccountType|null
     */
     public function getVppTokenAccountType(): ?VppTokenAccountType {
-        return $this->vppTokenAccountType;
+        return $this->getBackingStore()->get('vppTokenAccountType');
     }
 
     /**
@@ -165,7 +115,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getVppTokenAppleId(): ?string {
-        return $this->vppTokenAppleId;
+        return $this->getBackingStore()->get('vppTokenAppleId');
     }
 
     /**
@@ -173,7 +123,7 @@ class IosVppApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getVppTokenOrganizationName(): ?string {
-        return $this->vppTokenOrganizationName;
+        return $this->getBackingStore()->get('vppTokenOrganizationName');
     }
 
     /**
@@ -182,96 +132,96 @@ class IosVppApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('applicableDeviceType', $this->applicableDeviceType);
-        $writer->writeStringValue('appStoreUrl', $this->appStoreUrl);
-        $writer->writeStringValue('bundleId', $this->bundleId);
-        $writer->writeObjectValue('licensingType', $this->licensingType);
-        $writer->writeDateTimeValue('releaseDateTime', $this->releaseDateTime);
-        $writer->writeIntegerValue('totalLicenseCount', $this->totalLicenseCount);
-        $writer->writeIntegerValue('usedLicenseCount', $this->usedLicenseCount);
-        $writer->writeEnumValue('vppTokenAccountType', $this->vppTokenAccountType);
-        $writer->writeStringValue('vppTokenAppleId', $this->vppTokenAppleId);
-        $writer->writeStringValue('vppTokenOrganizationName', $this->vppTokenOrganizationName);
+        $writer->writeObjectValue('applicableDeviceType', $this->getApplicableDeviceType());
+        $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
+        $writer->writeStringValue('bundleId', $this->getBundleId());
+        $writer->writeObjectValue('licensingType', $this->getLicensingType());
+        $writer->writeDateTimeValue('releaseDateTime', $this->getReleaseDateTime());
+        $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());
+        $writer->writeIntegerValue('usedLicenseCount', $this->getUsedLicenseCount());
+        $writer->writeEnumValue('vppTokenAccountType', $this->getVppTokenAccountType());
+        $writer->writeStringValue('vppTokenAppleId', $this->getVppTokenAppleId());
+        $writer->writeStringValue('vppTokenOrganizationName', $this->getVppTokenOrganizationName());
     }
 
     /**
      * Sets the applicableDeviceType property value. The applicable iOS Device Type.
      *  @param IosDeviceType|null $value Value to set for the applicableDeviceType property.
     */
-    public function setApplicableDeviceType(?IosDeviceType $value ): void {
-        $this->applicableDeviceType = $value;
+    public function setApplicableDeviceType(?IosDeviceType $value): void {
+        $this->getBackingStore()->set('applicableDeviceType', $value);
     }
 
     /**
      * Sets the appStoreUrl property value. The store URL.
      *  @param string|null $value Value to set for the appStoreUrl property.
     */
-    public function setAppStoreUrl(?string $value ): void {
-        $this->appStoreUrl = $value;
+    public function setAppStoreUrl(?string $value): void {
+        $this->getBackingStore()->set('appStoreUrl', $value);
     }
 
     /**
      * Sets the bundleId property value. The Identity Name.
      *  @param string|null $value Value to set for the bundleId property.
     */
-    public function setBundleId(?string $value ): void {
-        $this->bundleId = $value;
+    public function setBundleId(?string $value): void {
+        $this->getBackingStore()->set('bundleId', $value);
     }
 
     /**
      * Sets the licensingType property value. The supported License Type.
      *  @param VppLicensingType|null $value Value to set for the licensingType property.
     */
-    public function setLicensingType(?VppLicensingType $value ): void {
-        $this->licensingType = $value;
+    public function setLicensingType(?VppLicensingType $value): void {
+        $this->getBackingStore()->set('licensingType', $value);
     }
 
     /**
      * Sets the releaseDateTime property value. The VPP application release date and time.
      *  @param DateTime|null $value Value to set for the releaseDateTime property.
     */
-    public function setReleaseDateTime(?DateTime $value ): void {
-        $this->releaseDateTime = $value;
+    public function setReleaseDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('releaseDateTime', $value);
     }
 
     /**
      * Sets the totalLicenseCount property value. The total number of VPP licenses.
      *  @param int|null $value Value to set for the totalLicenseCount property.
     */
-    public function setTotalLicenseCount(?int $value ): void {
-        $this->totalLicenseCount = $value;
+    public function setTotalLicenseCount(?int $value): void {
+        $this->getBackingStore()->set('totalLicenseCount', $value);
     }
 
     /**
      * Sets the usedLicenseCount property value. The number of VPP licenses in use.
      *  @param int|null $value Value to set for the usedLicenseCount property.
     */
-    public function setUsedLicenseCount(?int $value ): void {
-        $this->usedLicenseCount = $value;
+    public function setUsedLicenseCount(?int $value): void {
+        $this->getBackingStore()->set('usedLicenseCount', $value);
     }
 
     /**
      * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      *  @param VppTokenAccountType|null $value Value to set for the vppTokenAccountType property.
     */
-    public function setVppTokenAccountType(?VppTokenAccountType $value ): void {
-        $this->vppTokenAccountType = $value;
+    public function setVppTokenAccountType(?VppTokenAccountType $value): void {
+        $this->getBackingStore()->set('vppTokenAccountType', $value);
     }
 
     /**
      * Sets the vppTokenAppleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
      *  @param string|null $value Value to set for the vppTokenAppleId property.
     */
-    public function setVppTokenAppleId(?string $value ): void {
-        $this->vppTokenAppleId = $value;
+    public function setVppTokenAppleId(?string $value): void {
+        $this->getBackingStore()->set('vppTokenAppleId', $value);
     }
 
     /**
      * Sets the vppTokenOrganizationName property value. The organization associated with the Apple Volume Purchase Program Token
      *  @param string|null $value Value to set for the vppTokenOrganizationName property.
     */
-    public function setVppTokenOrganizationName(?string $value ): void {
-        $this->vppTokenOrganizationName = $value;
+    public function setVppTokenOrganizationName(?string $value): void {
+        $this->getBackingStore()->set('vppTokenOrganizationName', $value);
     }
 
 }

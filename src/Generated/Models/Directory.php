@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Directory extends Entity implements Parsable 
 {
     /**
-     * @var array<AdministrativeUnit>|null $administrativeUnits Conceptual container for user and group directory objects.
-    */
-    private ?array $administrativeUnits = null;
-    
-    /**
-     * @var array<DirectoryObject>|null $deletedItems Recently deleted items. Read-only. Nullable.
-    */
-    private ?array $deletedItems = null;
-    
-    /**
-     * @var array<IdentityProviderBase>|null $federationConfigurations Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-    */
-    private ?array $federationConfigurations = null;
-    
-    /**
      * Instantiates a new Directory and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.directory');
     }
 
     /**
@@ -45,7 +29,7 @@ class Directory extends Entity implements Parsable
      * @return array<AdministrativeUnit>|null
     */
     public function getAdministrativeUnits(): ?array {
-        return $this->administrativeUnits;
+        return $this->getBackingStore()->get('administrativeUnits');
     }
 
     /**
@@ -53,7 +37,7 @@ class Directory extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getDeletedItems(): ?array {
-        return $this->deletedItems;
+        return $this->getBackingStore()->get('deletedItems');
     }
 
     /**
@@ -61,7 +45,7 @@ class Directory extends Entity implements Parsable
      * @return array<IdentityProviderBase>|null
     */
     public function getFederationConfigurations(): ?array {
-        return $this->federationConfigurations;
+        return $this->getBackingStore()->get('federationConfigurations');
     }
 
     /**
@@ -83,33 +67,33 @@ class Directory extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('administrativeUnits', $this->administrativeUnits);
-        $writer->writeCollectionOfObjectValues('deletedItems', $this->deletedItems);
-        $writer->writeCollectionOfObjectValues('federationConfigurations', $this->federationConfigurations);
+        $writer->writeCollectionOfObjectValues('administrativeUnits', $this->getAdministrativeUnits());
+        $writer->writeCollectionOfObjectValues('deletedItems', $this->getDeletedItems());
+        $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
     }
 
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
      *  @param array<AdministrativeUnit>|null $value Value to set for the administrativeUnits property.
     */
-    public function setAdministrativeUnits(?array $value ): void {
-        $this->administrativeUnits = $value;
+    public function setAdministrativeUnits(?array $value): void {
+        $this->getBackingStore()->set('administrativeUnits', $value);
     }
 
     /**
      * Sets the deletedItems property value. Recently deleted items. Read-only. Nullable.
      *  @param array<DirectoryObject>|null $value Value to set for the deletedItems property.
     */
-    public function setDeletedItems(?array $value ): void {
-        $this->deletedItems = $value;
+    public function setDeletedItems(?array $value): void {
+        $this->getBackingStore()->set('deletedItems', $value);
     }
 
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      *  @param array<IdentityProviderBase>|null $value Value to set for the federationConfigurations property.
     */
-    public function setFederationConfigurations(?array $value ): void {
-        $this->federationConfigurations = $value;
+    public function setFederationConfigurations(?array $value): void {
+        $this->getBackingStore()->set('federationConfigurations', $value);
     }
 
 }

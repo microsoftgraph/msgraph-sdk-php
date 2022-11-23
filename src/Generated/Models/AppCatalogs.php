@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppCatalogs extends Entity implements Parsable 
 {
     /**
-     * @var array<TeamsApp>|null $teamsApps The teamsApps property
-    */
-    private ?array $teamsApps = null;
-    
-    /**
      * Instantiates a new AppCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.appCatalogs');
     }
 
     /**
@@ -46,7 +40,7 @@ class AppCatalogs extends Entity implements Parsable
      * @return array<TeamsApp>|null
     */
     public function getTeamsApps(): ?array {
-        return $this->teamsApps;
+        return $this->getBackingStore()->get('teamsApps');
     }
 
     /**
@@ -55,15 +49,15 @@ class AppCatalogs extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('teamsApps', $this->teamsApps);
+        $writer->writeCollectionOfObjectValues('teamsApps', $this->getTeamsApps());
     }
 
     /**
      * Sets the teamsApps property value. The teamsApps property
      *  @param array<TeamsApp>|null $value Value to set for the teamsApps property.
     */
-    public function setTeamsApps(?array $value ): void {
-        $this->teamsApps = $value;
+    public function setTeamsApps(?array $value): void {
+        $this->getBackingStore()->set('teamsApps', $value);
     }
 
 }

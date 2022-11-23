@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * @var string|null $claimValue The value of the authentication context claim.
-    */
-    private ?string $claimValue = null;
-    
-    /**
-     * @var bool|null $isEnabled Whether this rule is enabled.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyAuthenticationContextRule and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
      * @return string|null
     */
     public function getClaimValue(): ?string {
-        return $this->claimValue;
+        return $this->getBackingStore()->get('claimValue');
     }
 
     /**
@@ -60,7 +50,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -69,24 +59,24 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('claimValue', $this->claimValue);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
+        $writer->writeStringValue('claimValue', $this->getClaimValue());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
     }
 
     /**
      * Sets the claimValue property value. The value of the authentication context claim.
      *  @param string|null $value Value to set for the claimValue property.
     */
-    public function setClaimValue(?string $value ): void {
-        $this->claimValue = $value;
+    public function setClaimValue(?string $value): void {
+        $this->getBackingStore()->set('claimValue', $value);
     }
 
     /**
      * Sets the isEnabled property value. Whether this rule is enabled.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
 }

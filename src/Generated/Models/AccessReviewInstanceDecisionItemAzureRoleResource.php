@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInstanceDecisionItemResource implements Parsable 
 {
     /**
-     * @var AccessReviewInstanceDecisionItemResource|null $scope Details of the scope this role is associated with.
-    */
-    private ?AccessReviewInstanceDecisionItemResource $scope = null;
-    
-    /**
      * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
      * @return AccessReviewInstanceDecisionItemResource|null
     */
     public function getScope(): ?AccessReviewInstanceDecisionItemResource {
-        return $this->scope;
+        return $this->getBackingStore()->get('scope');
     }
 
     /**
@@ -55,15 +50,15 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('scope', $this->scope);
+        $writer->writeObjectValue('scope', $this->getScope());
     }
 
     /**
      * Sets the scope property value. Details of the scope this role is associated with.
      *  @param AccessReviewInstanceDecisionItemResource|null $value Value to set for the scope property.
     */
-    public function setScope(?AccessReviewInstanceDecisionItemResource $value ): void {
-        $this->scope = $value;
+    public function setScope(?AccessReviewInstanceDecisionItemResource $value): void {
+        $this->getBackingStore()->set('scope', $value);
     }
 
 }

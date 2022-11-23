@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConditionalAccessUsers implements AdditionalDataHolder, Parsable 
+class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $excludeGroups Group IDs excluded from scope of policy.
-    */
-    private ?array $excludeGroups = null;
-    
-    /**
-     * @var array<string>|null $excludeRoles Role IDs excluded from scope of policy.
-    */
-    private ?array $excludeRoles = null;
-    
-    /**
-     * @var array<string>|null $excludeUsers User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
-    */
-    private ?array $excludeUsers = null;
-    
-    /**
-     * @var array<string>|null $includeGroups Group IDs in scope of policy unless explicitly excluded, or All.
-    */
-    private ?array $includeGroups = null;
-    
-    /**
-     * @var array<string>|null $includeRoles Role IDs in scope of policy unless explicitly excluded, or All.
-    */
-    private ?array $includeRoles = null;
-    
-    /**
-     * @var array<string>|null $includeUsers User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
-    */
-    private ?array $includeUsers = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new conditionalAccessUsers and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.conditionalAccessUsers');
     }
 
     /**
@@ -70,8 +38,16 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +55,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExcludeGroups(): ?array {
-        return $this->excludeGroups;
+        return $this->getBackingStore()->get('excludeGroups');
     }
 
     /**
@@ -87,7 +63,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExcludeRoles(): ?array {
-        return $this->excludeRoles;
+        return $this->getBackingStore()->get('excludeRoles');
     }
 
     /**
@@ -95,7 +71,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExcludeUsers(): ?array {
-        return $this->excludeUsers;
+        return $this->getBackingStore()->get('excludeUsers');
     }
 
     /**
@@ -120,7 +96,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getIncludeGroups(): ?array {
-        return $this->includeGroups;
+        return $this->getBackingStore()->get('includeGroups');
     }
 
     /**
@@ -128,7 +104,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getIncludeRoles(): ?array {
-        return $this->includeRoles;
+        return $this->getBackingStore()->get('includeRoles');
     }
 
     /**
@@ -136,7 +112,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getIncludeUsers(): ?array {
-        return $this->includeUsers;
+        return $this->getBackingStore()->get('includeUsers');
     }
 
     /**
@@ -144,7 +120,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -152,78 +128,86 @@ class ConditionalAccessUsers implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('excludeGroups', $this->excludeGroups);
-        $writer->writeCollectionOfPrimitiveValues('excludeRoles', $this->excludeRoles);
-        $writer->writeCollectionOfPrimitiveValues('excludeUsers', $this->excludeUsers);
-        $writer->writeCollectionOfPrimitiveValues('includeGroups', $this->includeGroups);
-        $writer->writeCollectionOfPrimitiveValues('includeRoles', $this->includeRoles);
-        $writer->writeCollectionOfPrimitiveValues('includeUsers', $this->includeUsers);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('excludeGroups', $this->getExcludeGroups());
+        $writer->writeCollectionOfPrimitiveValues('excludeRoles', $this->getExcludeRoles());
+        $writer->writeCollectionOfPrimitiveValues('excludeUsers', $this->getExcludeUsers());
+        $writer->writeCollectionOfPrimitiveValues('includeGroups', $this->getIncludeGroups());
+        $writer->writeCollectionOfPrimitiveValues('includeRoles', $this->getIncludeRoles());
+        $writer->writeCollectionOfPrimitiveValues('includeUsers', $this->getIncludeUsers());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the excludeGroups property value. Group IDs excluded from scope of policy.
      *  @param array<string>|null $value Value to set for the excludeGroups property.
     */
-    public function setExcludeGroups(?array $value ): void {
-        $this->excludeGroups = $value;
+    public function setExcludeGroups(?array $value): void {
+        $this->getBackingStore()->set('excludeGroups', $value);
     }
 
     /**
      * Sets the excludeRoles property value. Role IDs excluded from scope of policy.
      *  @param array<string>|null $value Value to set for the excludeRoles property.
     */
-    public function setExcludeRoles(?array $value ): void {
-        $this->excludeRoles = $value;
+    public function setExcludeRoles(?array $value): void {
+        $this->getBackingStore()->set('excludeRoles', $value);
     }
 
     /**
      * Sets the excludeUsers property value. User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
      *  @param array<string>|null $value Value to set for the excludeUsers property.
     */
-    public function setExcludeUsers(?array $value ): void {
-        $this->excludeUsers = $value;
+    public function setExcludeUsers(?array $value): void {
+        $this->getBackingStore()->set('excludeUsers', $value);
     }
 
     /**
      * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded, or All.
      *  @param array<string>|null $value Value to set for the includeGroups property.
     */
-    public function setIncludeGroups(?array $value ): void {
-        $this->includeGroups = $value;
+    public function setIncludeGroups(?array $value): void {
+        $this->getBackingStore()->set('includeGroups', $value);
     }
 
     /**
      * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded, or All.
      *  @param array<string>|null $value Value to set for the includeRoles property.
     */
-    public function setIncludeRoles(?array $value ): void {
-        $this->includeRoles = $value;
+    public function setIncludeRoles(?array $value): void {
+        $this->getBackingStore()->set('includeRoles', $value);
     }
 
     /**
      * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
      *  @param array<string>|null $value Value to set for the includeUsers property.
     */
-    public function setIncludeUsers(?array $value ): void {
-        $this->includeUsers = $value;
+    public function setIncludeUsers(?array $value): void {
+        $this->getBackingStore()->set('includeUsers', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

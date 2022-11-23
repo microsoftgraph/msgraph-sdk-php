@@ -9,12 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharePointIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $loginName The sign in name of the SharePoint identity.
-    */
-    private ?string $loginName = null;
-    
-    /**
-     * Instantiates a new SharePointIdentity and sets the default values.
+     * Instantiates a new sharePointIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -46,7 +41,7 @@ class SharePointIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getLoginName(): ?string {
-        return $this->loginName;
+        return $this->getBackingStore()->get('loginName');
     }
 
     /**
@@ -55,15 +50,15 @@ class SharePointIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('loginName', $this->loginName);
+        $writer->writeStringValue('loginName', $this->getLoginName());
     }
 
     /**
      * Sets the loginName property value. The sign in name of the SharePoint identity.
      *  @param string|null $value Value to set for the loginName property.
     */
-    public function setLoginName(?string $value ): void {
-        $this->loginName = $value;
+    public function setLoginName(?string $value): void {
+        $this->getBackingStore()->set('loginName', $value);
     }
 
 }

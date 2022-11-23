@@ -6,70 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PermissionScope implements AdditionalDataHolder, Parsable 
+class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $adminConsentDescription A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
-    */
-    private ?string $adminConsentDescription = null;
-    
-    /**
-     * @var string|null $adminConsentDisplayName The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
-    */
-    private ?string $adminConsentDisplayName = null;
-    
-    /**
-     * @var string|null $id Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var bool|null $isEnabled When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $origin The origin property
-    */
-    private ?string $origin = null;
-    
-    /**
-     * @var string|null $type The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
-    */
-    private ?string $type = null;
-    
-    /**
-     * @var string|null $userConsentDescription A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
-    */
-    private ?string $userConsentDescription = null;
-    
-    /**
-     * @var string|null $userConsentDisplayName A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
-    */
-    private ?string $userConsentDisplayName = null;
-    
-    /**
-     * @var string|null $value Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
-    */
-    private ?string $value = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new permissionScope and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.permissionScope');
     }
 
     /**
@@ -85,8 +38,8 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -94,7 +47,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAdminConsentDescription(): ?string {
-        return $this->adminConsentDescription;
+        return $this->getBackingStore()->get('adminConsentDescription');
     }
 
     /**
@@ -102,7 +55,15 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAdminConsentDisplayName(): ?string {
-        return $this->adminConsentDisplayName;
+        return $this->getBackingStore()->get('adminConsentDisplayName');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -130,7 +91,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -138,7 +99,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -146,7 +107,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -154,7 +115,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOrigin(): ?string {
-        return $this->origin;
+        return $this->getBackingStore()->get('origin');
     }
 
     /**
@@ -162,7 +123,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -170,7 +131,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserConsentDescription(): ?string {
-        return $this->userConsentDescription;
+        return $this->getBackingStore()->get('userConsentDescription');
     }
 
     /**
@@ -178,7 +139,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserConsentDisplayName(): ?string {
-        return $this->userConsentDisplayName;
+        return $this->getBackingStore()->get('userConsentDisplayName');
     }
 
     /**
@@ -186,7 +147,7 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getValue(): ?string {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -194,105 +155,113 @@ class PermissionScope implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('adminConsentDescription', $this->adminConsentDescription);
-        $writer->writeStringValue('adminConsentDisplayName', $this->adminConsentDisplayName);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('origin', $this->origin);
-        $writer->writeStringValue('type', $this->type);
-        $writer->writeStringValue('userConsentDescription', $this->userConsentDescription);
-        $writer->writeStringValue('userConsentDisplayName', $this->userConsentDisplayName);
-        $writer->writeStringValue('value', $this->value);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('adminConsentDescription', $this->getAdminConsentDescription());
+        $writer->writeStringValue('adminConsentDisplayName', $this->getAdminConsentDisplayName());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('origin', $this->getOrigin());
+        $writer->writeStringValue('type', $this->getType());
+        $writer->writeStringValue('userConsentDescription', $this->getUserConsentDescription());
+        $writer->writeStringValue('userConsentDisplayName', $this->getUserConsentDisplayName());
+        $writer->writeStringValue('value', $this->getValue());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the adminConsentDescription property value. A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
      *  @param string|null $value Value to set for the adminConsentDescription property.
     */
-    public function setAdminConsentDescription(?string $value ): void {
-        $this->adminConsentDescription = $value;
+    public function setAdminConsentDescription(?string $value): void {
+        $this->getBackingStore()->set('adminConsentDescription', $value);
     }
 
     /**
      * Sets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
      *  @param string|null $value Value to set for the adminConsentDisplayName property.
     */
-    public function setAdminConsentDisplayName(?string $value ): void {
-        $this->adminConsentDisplayName = $value;
+    public function setAdminConsentDisplayName(?string $value): void {
+        $this->getBackingStore()->set('adminConsentDisplayName', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the isEnabled property value. When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the origin property value. The origin property
      *  @param string|null $value Value to set for the origin property.
     */
-    public function setOrigin(?string $value ): void {
-        $this->origin = $value;
+    public function setOrigin(?string $value): void {
+        $this->getBackingStore()->set('origin', $value);
     }
 
     /**
      * Sets the type property value. The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
      *  @param string|null $value Value to set for the type property.
     */
-    public function setType(?string $value ): void {
-        $this->type = $value;
+    public function setType(?string $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
     /**
      * Sets the userConsentDescription property value. A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      *  @param string|null $value Value to set for the userConsentDescription property.
     */
-    public function setUserConsentDescription(?string $value ): void {
-        $this->userConsentDescription = $value;
+    public function setUserConsentDescription(?string $value): void {
+        $this->getBackingStore()->set('userConsentDescription', $value);
     }
 
     /**
      * Sets the userConsentDisplayName property value. A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      *  @param string|null $value Value to set for the userConsentDisplayName property.
     */
-    public function setUserConsentDisplayName(?string $value ): void {
-        $this->userConsentDisplayName = $value;
+    public function setUserConsentDisplayName(?string $value): void {
+        $this->getBackingStore()->set('userConsentDisplayName', $value);
     }
 
     /**
      * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
      *  @param string|null $value Value to set for the value property.
     */
-    public function setValue(?string $value ): void {
-        $this->value = $value;
+    public function setValue(?string $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

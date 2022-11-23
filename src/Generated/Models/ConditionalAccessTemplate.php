@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessTemplate extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description The user-friendly name of the template.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var ConditionalAccessPolicyDetail|null $details The details property
-    */
-    private ?ConditionalAccessPolicyDetail $details = null;
-    
-    /**
-     * @var string|null $name The user-friendly name of the template.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var TemplateScenarios|null $scenarios The scenarios property
-    */
-    private ?TemplateScenarios $scenarios = null;
-    
-    /**
      * Instantiates a new conditionalAccessTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.conditionalAccessTemplate');
     }
 
     /**
@@ -50,7 +29,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -58,7 +37,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return ConditionalAccessPolicyDetail|null
     */
     public function getDetails(): ?ConditionalAccessPolicyDetail {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -80,7 +59,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -88,7 +67,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return TemplateScenarios|null
     */
     public function getScenarios(): ?TemplateScenarios {
-        return $this->scenarios;
+        return $this->getBackingStore()->get('scenarios');
     }
 
     /**
@@ -97,42 +76,42 @@ class ConditionalAccessTemplate extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeObjectValue('details', $this->details);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeEnumValue('scenarios', $this->scenarios);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeObjectValue('details', $this->getDetails());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeEnumValue('scenarios', $this->getScenarios());
     }
 
     /**
      * Sets the description property value. The user-friendly name of the template.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the details property value. The details property
      *  @param ConditionalAccessPolicyDetail|null $value Value to set for the details property.
     */
-    public function setDetails(?ConditionalAccessPolicyDetail $value ): void {
-        $this->details = $value;
+    public function setDetails(?ConditionalAccessPolicyDetail $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
     /**
      * Sets the name property value. The user-friendly name of the template.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the scenarios property value. The scenarios property
      *  @param TemplateScenarios|null $value Value to set for the scenarios property.
     */
-    public function setScenarios(?TemplateScenarios $value ): void {
-        $this->scenarios = $value;
+    public function setScenarios(?TemplateScenarios $value): void {
+        $this->getBackingStore()->set('scenarios', $value);
     }
 
 }

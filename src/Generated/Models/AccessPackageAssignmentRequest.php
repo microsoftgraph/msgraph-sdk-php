@@ -10,56 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessPackageAssignmentRequest extends Entity implements Parsable 
 {
     /**
-     * @var AccessPackage|null $accessPackage The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
-    */
-    private ?AccessPackage $accessPackage = null;
-    
-    /**
-     * @var AccessPackageAssignment|null $assignment For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
-    */
-    private ?AccessPackageAssignment $assignment = null;
-    
-    /**
-     * @var DateTime|null $completedDateTime The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $completedDateTime = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var AccessPackageSubject|null $requestor The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
-    */
-    private ?AccessPackageSubject $requestor = null;
-    
-    /**
-     * @var AccessPackageRequestType|null $requestType The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
-    */
-    private ?AccessPackageRequestType $requestType = null;
-    
-    /**
-     * @var EntitlementManagementSchedule|null $schedule The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
-    */
-    private ?EntitlementManagementSchedule $schedule = null;
-    
-    /**
-     * @var AccessPackageRequestState|null $state The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
-    */
-    private ?AccessPackageRequestState $state = null;
-    
-    /**
-     * @var string|null $status More information on the request processing status. Read-only.
-    */
-    private ?string $status = null;
-    
-    /**
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.accessPackageAssignmentRequest');
     }
 
     /**
@@ -76,7 +30,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
-        return $this->accessPackage;
+        return $this->getBackingStore()->get('accessPackage');
     }
 
     /**
@@ -84,7 +38,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageAssignment|null
     */
     public function getAssignment(): ?AccessPackageAssignment {
-        return $this->assignment;
+        return $this->getBackingStore()->get('assignment');
     }
 
     /**
@@ -92,7 +46,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->completedDateTime;
+        return $this->getBackingStore()->get('completedDateTime');
     }
 
     /**
@@ -100,7 +54,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -127,7 +81,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageSubject|null
     */
     public function getRequestor(): ?AccessPackageSubject {
-        return $this->requestor;
+        return $this->getBackingStore()->get('requestor');
     }
 
     /**
@@ -135,7 +89,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
-        return $this->requestType;
+        return $this->getBackingStore()->get('requestType');
     }
 
     /**
@@ -143,7 +97,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
-        return $this->schedule;
+        return $this->getBackingStore()->get('schedule');
     }
 
     /**
@@ -151,7 +105,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return AccessPackageRequestState|null
     */
     public function getState(): ?AccessPackageRequestState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -159,7 +113,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -168,87 +122,87 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('accessPackage', $this->accessPackage);
-        $writer->writeObjectValue('assignment', $this->assignment);
-        $writer->writeDateTimeValue('completedDateTime', $this->completedDateTime);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('requestor', $this->requestor);
-        $writer->writeEnumValue('requestType', $this->requestType);
-        $writer->writeObjectValue('schedule', $this->schedule);
-        $writer->writeEnumValue('state', $this->state);
-        $writer->writeStringValue('status', $this->status);
+        $writer->writeObjectValue('accessPackage', $this->getAccessPackage());
+        $writer->writeObjectValue('assignment', $this->getAssignment());
+        $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('requestor', $this->getRequestor());
+        $writer->writeEnumValue('requestType', $this->getRequestType());
+        $writer->writeObjectValue('schedule', $this->getSchedule());
+        $writer->writeEnumValue('state', $this->getState());
+        $writer->writeStringValue('status', $this->getStatus());
     }
 
     /**
      * Sets the accessPackage property value. The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      *  @param AccessPackage|null $value Value to set for the accessPackage property.
     */
-    public function setAccessPackage(?AccessPackage $value ): void {
-        $this->accessPackage = $value;
+    public function setAccessPackage(?AccessPackage $value): void {
+        $this->getBackingStore()->set('accessPackage', $value);
     }
 
     /**
      * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      *  @param AccessPackageAssignment|null $value Value to set for the assignment property.
     */
-    public function setAssignment(?AccessPackageAssignment $value ): void {
-        $this->assignment = $value;
+    public function setAssignment(?AccessPackageAssignment $value): void {
+        $this->getBackingStore()->set('assignment', $value);
     }
 
     /**
      * Sets the completedDateTime property value. The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the completedDateTime property.
     */
-    public function setCompletedDateTime(?DateTime $value ): void {
-        $this->completedDateTime = $value;
+    public function setCompletedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('completedDateTime', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      *  @param AccessPackageSubject|null $value Value to set for the requestor property.
     */
-    public function setRequestor(?AccessPackageSubject $value ): void {
-        $this->requestor = $value;
+    public function setRequestor(?AccessPackageSubject $value): void {
+        $this->getBackingStore()->set('requestor', $value);
     }
 
     /**
      * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of userAdd, userUpdate or userRemove. This property cannot be changed once set.
      *  @param AccessPackageRequestType|null $value Value to set for the requestType property.
     */
-    public function setRequestType(?AccessPackageRequestType $value ): void {
-        $this->requestType = $value;
+    public function setRequestType(?AccessPackageRequestType $value): void {
+        $this->getBackingStore()->set('requestType', $value);
     }
 
     /**
      * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
      *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
-    public function setSchedule(?EntitlementManagementSchedule $value ): void {
-        $this->schedule = $value;
+    public function setSchedule(?EntitlementManagementSchedule $value): void {
+        $this->getBackingStore()->set('schedule', $value);
     }
 
     /**
      * Sets the state property value. The state of the request. The possible values are: submitted, pendingApproval, delivering, delivered, deliveryFailed, denied, scheduled, canceled, partiallyDelivered, unknownFutureValue. Read-only. Supports $filter (eq).
      *  @param AccessPackageRequestState|null $value Value to set for the state property.
     */
-    public function setState(?AccessPackageRequestState $value ): void {
-        $this->state = $value;
+    public function setState(?AccessPackageRequestState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
     /**
      * Sets the status property value. More information on the request processing status. Read-only.
      *  @param string|null $value Value to set for the status property.
     */
-    public function setStatus(?string $value ): void {
-        $this->status = $value;
+    public function setStatus(?string $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

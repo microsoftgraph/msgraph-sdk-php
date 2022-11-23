@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ShiftItem extends ScheduleEntity implements Parsable 
 {
     /**
-     * @var array<ShiftActivity>|null $activities An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
-    */
-    private ?array $activities = null;
-    
-    /**
-     * @var string|null $displayName The shift label of the shiftItem.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $notes The shift notes for the shiftItem.
-    */
-    private ?string $notes = null;
-    
-    /**
      * Instantiates a new ShiftItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.shiftItem');
     }
 
     /**
@@ -52,7 +36,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
      * @return array<ShiftActivity>|null
     */
     public function getActivities(): ?array {
-        return $this->activities;
+        return $this->getBackingStore()->get('activities');
     }
 
     /**
@@ -60,7 +44,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -81,7 +65,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
      * @return string|null
     */
     public function getNotes(): ?string {
-        return $this->notes;
+        return $this->getBackingStore()->get('notes');
     }
 
     /**
@@ -90,33 +74,33 @@ class ShiftItem extends ScheduleEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('activities', $this->activities);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('notes', $this->notes);
+        $writer->writeCollectionOfObjectValues('activities', $this->getActivities());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('notes', $this->getNotes());
     }
 
     /**
      * Sets the activities property value. An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
      *  @param array<ShiftActivity>|null $value Value to set for the activities property.
     */
-    public function setActivities(?array $value ): void {
-        $this->activities = $value;
+    public function setActivities(?array $value): void {
+        $this->getBackingStore()->set('activities', $value);
     }
 
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
      *  @param string|null $value Value to set for the notes property.
     */
-    public function setNotes(?string $value ): void {
-        $this->notes = $value;
+    public function setNotes(?string $value): void {
+        $this->getBackingStore()->set('notes', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality implements Parsable 
 {
     /**
-     * @var float|null $averageInboundBitRate The average inbound stream video bit rate per second.
-    */
-    private ?float $averageInboundBitRate = null;
-    
-    /**
-     * @var float|null $averageInboundFrameRate The average inbound stream video frame rate per second.
-    */
-    private ?float $averageInboundFrameRate = null;
-    
-    /**
-     * @var float|null $averageOutboundBitRate The average outbound stream video bit rate per second.
-    */
-    private ?float $averageOutboundBitRate = null;
-    
-    /**
-     * @var float|null $averageOutboundFrameRate The average outbound stream video frame rate per second.
-    */
-    private ?float $averageOutboundFrameRate = null;
-    
-    /**
      * Instantiates a new TeleconferenceDeviceVideoQuality and sets the default values.
     */
     public function __construct() {
@@ -57,7 +37,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageInboundBitRate(): ?float {
-        return $this->averageInboundBitRate;
+        return $this->getBackingStore()->get('averageInboundBitRate');
     }
 
     /**
@@ -65,7 +45,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageInboundFrameRate(): ?float {
-        return $this->averageInboundFrameRate;
+        return $this->getBackingStore()->get('averageInboundFrameRate');
     }
 
     /**
@@ -73,7 +53,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageOutboundBitRate(): ?float {
-        return $this->averageOutboundBitRate;
+        return $this->getBackingStore()->get('averageOutboundBitRate');
     }
 
     /**
@@ -81,7 +61,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageOutboundFrameRate(): ?float {
-        return $this->averageOutboundFrameRate;
+        return $this->getBackingStore()->get('averageOutboundFrameRate');
     }
 
     /**
@@ -104,42 +84,42 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('averageInboundBitRate', $this->averageInboundBitRate);
-        $writer->writeFloatValue('averageInboundFrameRate', $this->averageInboundFrameRate);
-        $writer->writeFloatValue('averageOutboundBitRate', $this->averageOutboundBitRate);
-        $writer->writeFloatValue('averageOutboundFrameRate', $this->averageOutboundFrameRate);
+        $writer->writeFloatValue('averageInboundBitRate', $this->getAverageInboundBitRate());
+        $writer->writeFloatValue('averageInboundFrameRate', $this->getAverageInboundFrameRate());
+        $writer->writeFloatValue('averageOutboundBitRate', $this->getAverageOutboundBitRate());
+        $writer->writeFloatValue('averageOutboundFrameRate', $this->getAverageOutboundFrameRate());
     }
 
     /**
      * Sets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
      *  @param float|null $value Value to set for the averageInboundBitRate property.
     */
-    public function setAverageInboundBitRate(?float $value ): void {
-        $this->averageInboundBitRate = $value;
+    public function setAverageInboundBitRate(?float $value): void {
+        $this->getBackingStore()->set('averageInboundBitRate', $value);
     }
 
     /**
      * Sets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
      *  @param float|null $value Value to set for the averageInboundFrameRate property.
     */
-    public function setAverageInboundFrameRate(?float $value ): void {
-        $this->averageInboundFrameRate = $value;
+    public function setAverageInboundFrameRate(?float $value): void {
+        $this->getBackingStore()->set('averageInboundFrameRate', $value);
     }
 
     /**
      * Sets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
      *  @param float|null $value Value to set for the averageOutboundBitRate property.
     */
-    public function setAverageOutboundBitRate(?float $value ): void {
-        $this->averageOutboundBitRate = $value;
+    public function setAverageOutboundBitRate(?float $value): void {
+        $this->getBackingStore()->set('averageOutboundBitRate', $value);
     }
 
     /**
      * Sets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
      *  @param float|null $value Value to set for the averageOutboundFrameRate property.
     */
-    public function setAverageOutboundFrameRate(?float $value ): void {
-        $this->averageOutboundFrameRate = $value;
+    public function setAverageOutboundFrameRate(?float $value): void {
+        $this->getBackingStore()->set('averageOutboundFrameRate', $value);
     }
 
 }

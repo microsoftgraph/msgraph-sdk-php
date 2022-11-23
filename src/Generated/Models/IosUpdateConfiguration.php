@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class IosUpdateConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var Time|null $activeHoursEnd Active Hours End (active hours mean the time window when updates install should not happen)
-    */
-    private ?Time $activeHoursEnd = null;
-    
-    /**
-     * @var Time|null $activeHoursStart Active Hours Start (active hours mean the time window when updates install should not happen)
-    */
-    private ?Time $activeHoursStart = null;
-    
-    /**
-     * @var array<DayOfWeek>|null $scheduledInstallDays Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-    */
-    private ?array $scheduledInstallDays = null;
-    
-    /**
-     * @var int|null $utcTimeOffsetInMinutes UTC Time Offset indicated in minutes
-    */
-    private ?int $utcTimeOffsetInMinutes = null;
-    
-    /**
      * Instantiates a new IosUpdateConfiguration and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return Time|null
     */
     public function getActiveHoursEnd(): ?Time {
-        return $this->activeHoursEnd;
+        return $this->getBackingStore()->get('activeHoursEnd');
     }
 
     /**
@@ -59,7 +39,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return Time|null
     */
     public function getActiveHoursStart(): ?Time {
-        return $this->activeHoursStart;
+        return $this->getBackingStore()->get('activeHoursStart');
     }
 
     /**
@@ -81,7 +61,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return array<DayOfWeek>|null
     */
     public function getScheduledInstallDays(): ?array {
-        return $this->scheduledInstallDays;
+        return $this->getBackingStore()->get('scheduledInstallDays');
     }
 
     /**
@@ -89,7 +69,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return int|null
     */
     public function getUtcTimeOffsetInMinutes(): ?int {
-        return $this->utcTimeOffsetInMinutes;
+        return $this->getBackingStore()->get('utcTimeOffsetInMinutes');
     }
 
     /**
@@ -98,42 +78,42 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeTimeValue('activeHoursEnd', $this->activeHoursEnd);
-        $writer->writeTimeValue('activeHoursStart', $this->activeHoursStart);
-        $writer->writeCollectionOfEnumValues('scheduledInstallDays', $this->scheduledInstallDays);
-        $writer->writeIntegerValue('utcTimeOffsetInMinutes', $this->utcTimeOffsetInMinutes);
+        $writer->writeTimeValue('activeHoursEnd', $this->getActiveHoursEnd());
+        $writer->writeTimeValue('activeHoursStart', $this->getActiveHoursStart());
+        $writer->writeCollectionOfEnumValues('scheduledInstallDays', $this->getScheduledInstallDays());
+        $writer->writeIntegerValue('utcTimeOffsetInMinutes', $this->getUtcTimeOffsetInMinutes());
     }
 
     /**
      * Sets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
      *  @param Time|null $value Value to set for the activeHoursEnd property.
     */
-    public function setActiveHoursEnd(?Time $value ): void {
-        $this->activeHoursEnd = $value;
+    public function setActiveHoursEnd(?Time $value): void {
+        $this->getBackingStore()->set('activeHoursEnd', $value);
     }
 
     /**
      * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
      *  @param Time|null $value Value to set for the activeHoursStart property.
     */
-    public function setActiveHoursStart(?Time $value ): void {
-        $this->activeHoursStart = $value;
+    public function setActiveHoursStart(?Time $value): void {
+        $this->getBackingStore()->set('activeHoursStart', $value);
     }
 
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      *  @param array<DayOfWeek>|null $value Value to set for the scheduledInstallDays property.
     */
-    public function setScheduledInstallDays(?array $value ): void {
-        $this->scheduledInstallDays = $value;
+    public function setScheduledInstallDays(?array $value): void {
+        $this->getBackingStore()->set('scheduledInstallDays', $value);
     }
 
     /**
      * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
      *  @param int|null $value Value to set for the utcTimeOffsetInMinutes property.
     */
-    public function setUtcTimeOffsetInMinutes(?int $value ): void {
-        $this->utcTimeOffsetInMinutes = $value;
+    public function setUtcTimeOffsetInMinutes(?int $value): void {
+        $this->getBackingStore()->set('utcTimeOffsetInMinutes', $value);
     }
 
 }

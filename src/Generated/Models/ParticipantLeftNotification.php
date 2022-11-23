@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ParticipantLeftNotification extends Entity implements Parsable 
 {
     /**
-     * @var Call|null $call The call property
-    */
-    private ?Call $call = null;
-    
-    /**
-     * @var string|null $participantId ID of the participant under the policy who has left the meeting.
-    */
-    private ?string $participantId = null;
-    
-    /**
      * Instantiates a new ParticipantLeftNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.participantLeftNotification');
     }
 
     /**
@@ -40,7 +29,7 @@ class ParticipantLeftNotification extends Entity implements Parsable
      * @return Call|null
     */
     public function getCall(): ?Call {
-        return $this->call;
+        return $this->getBackingStore()->get('call');
     }
 
     /**
@@ -60,7 +49,7 @@ class ParticipantLeftNotification extends Entity implements Parsable
      * @return string|null
     */
     public function getParticipantId(): ?string {
-        return $this->participantId;
+        return $this->getBackingStore()->get('participantId');
     }
 
     /**
@@ -69,24 +58,24 @@ class ParticipantLeftNotification extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('call', $this->call);
-        $writer->writeStringValue('participantId', $this->participantId);
+        $writer->writeObjectValue('call', $this->getCall());
+        $writer->writeStringValue('participantId', $this->getParticipantId());
     }
 
     /**
      * Sets the call property value. The call property
      *  @param Call|null $value Value to set for the call property.
     */
-    public function setCall(?Call $value ): void {
-        $this->call = $value;
+    public function setCall(?Call $value): void {
+        $this->getBackingStore()->set('call', $value);
     }
 
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
      *  @param string|null $value Value to set for the participantId property.
     */
-    public function setParticipantId(?string $value ): void {
-        $this->participantId = $value;
+    public function setParticipantId(?string $value): void {
+        $this->getBackingStore()->set('participantId', $value);
     }
 
 }

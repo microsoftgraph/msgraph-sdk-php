@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LinkedResource extends Entity implements Parsable 
 {
     /**
-     * @var string|null $applicationName Field indicating the app name of the source that is sending the linkedResource.
-    */
-    private ?string $applicationName = null;
-    
-    /**
-     * @var string|null $displayName Field indicating the title of the linkedResource.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $externalId Id of the object that is associated with this task on the third-party/partner system.
-    */
-    private ?string $externalId = null;
-    
-    /**
-     * @var string|null $webUrl Deep link to the linkedResource.
-    */
-    private ?string $webUrl = null;
-    
-    /**
      * Instantiates a new linkedResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.linkedResource');
     }
 
     /**
@@ -50,7 +29,7 @@ class LinkedResource extends Entity implements Parsable
      * @return string|null
     */
     public function getApplicationName(): ?string {
-        return $this->applicationName;
+        return $this->getBackingStore()->get('applicationName');
     }
 
     /**
@@ -58,7 +37,7 @@ class LinkedResource extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +45,7 @@ class LinkedResource extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -88,7 +67,7 @@ class LinkedResource extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->webUrl;
+        return $this->getBackingStore()->get('webUrl');
     }
 
     /**
@@ -97,42 +76,42 @@ class LinkedResource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('applicationName', $this->applicationName);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('externalId', $this->externalId);
-        $writer->writeStringValue('webUrl', $this->webUrl);
+        $writer->writeStringValue('applicationName', $this->getApplicationName());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('externalId', $this->getExternalId());
+        $writer->writeStringValue('webUrl', $this->getWebUrl());
     }
 
     /**
      * Sets the applicationName property value. Field indicating the app name of the source that is sending the linkedResource.
      *  @param string|null $value Value to set for the applicationName property.
     */
-    public function setApplicationName(?string $value ): void {
-        $this->applicationName = $value;
+    public function setApplicationName(?string $value): void {
+        $this->getBackingStore()->set('applicationName', $value);
     }
 
     /**
      * Sets the displayName property value. Field indicating the title of the linkedResource.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the externalId property value. Id of the object that is associated with this task on the third-party/partner system.
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
     /**
      * Sets the webUrl property value. Deep link to the linkedResource.
      *  @param string|null $value Value to set for the webUrl property.
     */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }

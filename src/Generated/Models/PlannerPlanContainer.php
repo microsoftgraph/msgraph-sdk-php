@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class PlannerPlanContainer implements AdditionalDataHolder, Parsable 
+class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $containerId The identifier of the resource that contains the plan.
-    */
-    private ?string $containerId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var PlannerContainerType|null $type The type property
-    */
-    private ?PlannerContainerType $type = null;
-    
-    /**
-     * @var string|null $url The full canonical URL of the container.
-    */
-    private ?string $url = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new plannerPlanContainer and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.plannerPlanContainer');
     }
 
     /**
@@ -55,8 +38,16 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContainerId(): ?string {
-        return $this->containerId;
+        return $this->getBackingStore()->get('containerId');
     }
 
     /**
@@ -86,15 +77,15 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
      * @return PlannerContainerType|null
     */
     public function getType(): ?PlannerContainerType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -102,7 +93,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->url;
+        return $this->getBackingStore()->get('url');
     }
 
     /**
@@ -110,51 +101,59 @@ class PlannerPlanContainer implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('containerId', $this->containerId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('type', $this->type);
-        $writer->writeStringValue('url', $this->url);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('containerId', $this->getContainerId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('type', $this->getType());
+        $writer->writeStringValue('url', $this->getUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the containerId property value. The identifier of the resource that contains the plan.
      *  @param string|null $value Value to set for the containerId property.
     */
-    public function setContainerId(?string $value ): void {
-        $this->containerId = $value;
+    public function setContainerId(?string $value): void {
+        $this->getBackingStore()->set('containerId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
      *  @param PlannerContainerType|null $value Value to set for the type property.
     */
-    public function setType(?PlannerContainerType $value ): void {
-        $this->type = $value;
+    public function setType(?PlannerContainerType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
     /**
      * Sets the url property value. The full canonical URL of the container.
      *  @param string|null $value Value to set for the url property.
     */
-    public function setUrl(?string $value ): void {
-        $this->url = $value;
+    public function setUrl(?string $value): void {
+        $this->getBackingStore()->set('url', $value);
     }
 
 }

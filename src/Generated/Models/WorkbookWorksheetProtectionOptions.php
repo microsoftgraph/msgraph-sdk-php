@@ -6,80 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsable 
+class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowAutoFilter Represents the worksheet protection option of allowing using auto filter feature.
-    */
-    private ?bool $allowAutoFilter = null;
-    
-    /**
-     * @var bool|null $allowDeleteColumns Represents the worksheet protection option of allowing deleting columns.
-    */
-    private ?bool $allowDeleteColumns = null;
-    
-    /**
-     * @var bool|null $allowDeleteRows Represents the worksheet protection option of allowing deleting rows.
-    */
-    private ?bool $allowDeleteRows = null;
-    
-    /**
-     * @var bool|null $allowFormatCells Represents the worksheet protection option of allowing formatting cells.
-    */
-    private ?bool $allowFormatCells = null;
-    
-    /**
-     * @var bool|null $allowFormatColumns Represents the worksheet protection option of allowing formatting columns.
-    */
-    private ?bool $allowFormatColumns = null;
-    
-    /**
-     * @var bool|null $allowFormatRows Represents the worksheet protection option of allowing formatting rows.
-    */
-    private ?bool $allowFormatRows = null;
-    
-    /**
-     * @var bool|null $allowInsertColumns Represents the worksheet protection option of allowing inserting columns.
-    */
-    private ?bool $allowInsertColumns = null;
-    
-    /**
-     * @var bool|null $allowInsertHyperlinks Represents the worksheet protection option of allowing inserting hyperlinks.
-    */
-    private ?bool $allowInsertHyperlinks = null;
-    
-    /**
-     * @var bool|null $allowInsertRows Represents the worksheet protection option of allowing inserting rows.
-    */
-    private ?bool $allowInsertRows = null;
-    
-    /**
-     * @var bool|null $allowPivotTables Represents the worksheet protection option of allowing using pivot table feature.
-    */
-    private ?bool $allowPivotTables = null;
-    
-    /**
-     * @var bool|null $allowSort Represents the worksheet protection option of allowing using sort feature.
-    */
-    private ?bool $allowSort = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.workbookWorksheetProtectionOptions');
     }
 
     /**
@@ -95,8 +38,8 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -104,7 +47,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowAutoFilter(): ?bool {
-        return $this->allowAutoFilter;
+        return $this->getBackingStore()->get('allowAutoFilter');
     }
 
     /**
@@ -112,7 +55,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowDeleteColumns(): ?bool {
-        return $this->allowDeleteColumns;
+        return $this->getBackingStore()->get('allowDeleteColumns');
     }
 
     /**
@@ -120,7 +63,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowDeleteRows(): ?bool {
-        return $this->allowDeleteRows;
+        return $this->getBackingStore()->get('allowDeleteRows');
     }
 
     /**
@@ -128,7 +71,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowFormatCells(): ?bool {
-        return $this->allowFormatCells;
+        return $this->getBackingStore()->get('allowFormatCells');
     }
 
     /**
@@ -136,7 +79,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowFormatColumns(): ?bool {
-        return $this->allowFormatColumns;
+        return $this->getBackingStore()->get('allowFormatColumns');
     }
 
     /**
@@ -144,7 +87,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowFormatRows(): ?bool {
-        return $this->allowFormatRows;
+        return $this->getBackingStore()->get('allowFormatRows');
     }
 
     /**
@@ -152,7 +95,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowInsertColumns(): ?bool {
-        return $this->allowInsertColumns;
+        return $this->getBackingStore()->get('allowInsertColumns');
     }
 
     /**
@@ -160,7 +103,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowInsertHyperlinks(): ?bool {
-        return $this->allowInsertHyperlinks;
+        return $this->getBackingStore()->get('allowInsertHyperlinks');
     }
 
     /**
@@ -168,7 +111,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowInsertRows(): ?bool {
-        return $this->allowInsertRows;
+        return $this->getBackingStore()->get('allowInsertRows');
     }
 
     /**
@@ -176,7 +119,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowPivotTables(): ?bool {
-        return $this->allowPivotTables;
+        return $this->getBackingStore()->get('allowPivotTables');
     }
 
     /**
@@ -184,7 +127,15 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return bool|null
     */
     public function getAllowSort(): ?bool {
-        return $this->allowSort;
+        return $this->getBackingStore()->get('allowSort');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -214,7 +165,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -222,123 +173,131 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowAutoFilter', $this->allowAutoFilter);
-        $writer->writeBooleanValue('allowDeleteColumns', $this->allowDeleteColumns);
-        $writer->writeBooleanValue('allowDeleteRows', $this->allowDeleteRows);
-        $writer->writeBooleanValue('allowFormatCells', $this->allowFormatCells);
-        $writer->writeBooleanValue('allowFormatColumns', $this->allowFormatColumns);
-        $writer->writeBooleanValue('allowFormatRows', $this->allowFormatRows);
-        $writer->writeBooleanValue('allowInsertColumns', $this->allowInsertColumns);
-        $writer->writeBooleanValue('allowInsertHyperlinks', $this->allowInsertHyperlinks);
-        $writer->writeBooleanValue('allowInsertRows', $this->allowInsertRows);
-        $writer->writeBooleanValue('allowPivotTables', $this->allowPivotTables);
-        $writer->writeBooleanValue('allowSort', $this->allowSort);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowAutoFilter', $this->getAllowAutoFilter());
+        $writer->writeBooleanValue('allowDeleteColumns', $this->getAllowDeleteColumns());
+        $writer->writeBooleanValue('allowDeleteRows', $this->getAllowDeleteRows());
+        $writer->writeBooleanValue('allowFormatCells', $this->getAllowFormatCells());
+        $writer->writeBooleanValue('allowFormatColumns', $this->getAllowFormatColumns());
+        $writer->writeBooleanValue('allowFormatRows', $this->getAllowFormatRows());
+        $writer->writeBooleanValue('allowInsertColumns', $this->getAllowInsertColumns());
+        $writer->writeBooleanValue('allowInsertHyperlinks', $this->getAllowInsertHyperlinks());
+        $writer->writeBooleanValue('allowInsertRows', $this->getAllowInsertRows());
+        $writer->writeBooleanValue('allowPivotTables', $this->getAllowPivotTables());
+        $writer->writeBooleanValue('allowSort', $this->getAllowSort());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
      *  @param bool|null $value Value to set for the allowAutoFilter property.
     */
-    public function setAllowAutoFilter(?bool $value ): void {
-        $this->allowAutoFilter = $value;
+    public function setAllowAutoFilter(?bool $value): void {
+        $this->getBackingStore()->set('allowAutoFilter', $value);
     }
 
     /**
      * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
      *  @param bool|null $value Value to set for the allowDeleteColumns property.
     */
-    public function setAllowDeleteColumns(?bool $value ): void {
-        $this->allowDeleteColumns = $value;
+    public function setAllowDeleteColumns(?bool $value): void {
+        $this->getBackingStore()->set('allowDeleteColumns', $value);
     }
 
     /**
      * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
      *  @param bool|null $value Value to set for the allowDeleteRows property.
     */
-    public function setAllowDeleteRows(?bool $value ): void {
-        $this->allowDeleteRows = $value;
+    public function setAllowDeleteRows(?bool $value): void {
+        $this->getBackingStore()->set('allowDeleteRows', $value);
     }
 
     /**
      * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
      *  @param bool|null $value Value to set for the allowFormatCells property.
     */
-    public function setAllowFormatCells(?bool $value ): void {
-        $this->allowFormatCells = $value;
+    public function setAllowFormatCells(?bool $value): void {
+        $this->getBackingStore()->set('allowFormatCells', $value);
     }
 
     /**
      * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
      *  @param bool|null $value Value to set for the allowFormatColumns property.
     */
-    public function setAllowFormatColumns(?bool $value ): void {
-        $this->allowFormatColumns = $value;
+    public function setAllowFormatColumns(?bool $value): void {
+        $this->getBackingStore()->set('allowFormatColumns', $value);
     }
 
     /**
      * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
      *  @param bool|null $value Value to set for the allowFormatRows property.
     */
-    public function setAllowFormatRows(?bool $value ): void {
-        $this->allowFormatRows = $value;
+    public function setAllowFormatRows(?bool $value): void {
+        $this->getBackingStore()->set('allowFormatRows', $value);
     }
 
     /**
      * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
      *  @param bool|null $value Value to set for the allowInsertColumns property.
     */
-    public function setAllowInsertColumns(?bool $value ): void {
-        $this->allowInsertColumns = $value;
+    public function setAllowInsertColumns(?bool $value): void {
+        $this->getBackingStore()->set('allowInsertColumns', $value);
     }
 
     /**
      * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
      *  @param bool|null $value Value to set for the allowInsertHyperlinks property.
     */
-    public function setAllowInsertHyperlinks(?bool $value ): void {
-        $this->allowInsertHyperlinks = $value;
+    public function setAllowInsertHyperlinks(?bool $value): void {
+        $this->getBackingStore()->set('allowInsertHyperlinks', $value);
     }
 
     /**
      * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
      *  @param bool|null $value Value to set for the allowInsertRows property.
     */
-    public function setAllowInsertRows(?bool $value ): void {
-        $this->allowInsertRows = $value;
+    public function setAllowInsertRows(?bool $value): void {
+        $this->getBackingStore()->set('allowInsertRows', $value);
     }
 
     /**
      * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
      *  @param bool|null $value Value to set for the allowPivotTables property.
     */
-    public function setAllowPivotTables(?bool $value ): void {
-        $this->allowPivotTables = $value;
+    public function setAllowPivotTables(?bool $value): void {
+        $this->getBackingStore()->set('allowPivotTables', $value);
     }
 
     /**
      * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
      *  @param bool|null $value Value to set for the allowSort property.
     */
-    public function setAllowSort(?bool $value ): void {
-        $this->allowSort = $value;
+    public function setAllowSort(?bool $value): void {
+        $this->getBackingStore()->set('allowSort', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

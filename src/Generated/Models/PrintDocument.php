@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintDocument extends Entity implements Parsable 
 {
     /**
-     * @var string|null $contentType The document's content (MIME) type. Read-only.
-    */
-    private ?string $contentType = null;
-    
-    /**
-     * @var string|null $displayName The document's name. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var int|null $size The document's size in bytes. Read-only.
-    */
-    private ?int $size = null;
-    
-    /**
      * Instantiates a new printDocument and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.printDocument');
     }
 
     /**
@@ -45,7 +29,7 @@ class PrintDocument extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -53,7 +37,7 @@ class PrintDocument extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +58,7 @@ class PrintDocument extends Entity implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -83,33 +67,33 @@ class PrintDocument extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('contentType', $this->contentType);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeIntegerValue('size', $this->size);
+        $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeIntegerValue('size', $this->getSize());
     }
 
     /**
      * Sets the contentType property value. The document's content (MIME) type. Read-only.
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the displayName property value. The document's name. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the size property value. The document's size in bytes. Read-only.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
 }

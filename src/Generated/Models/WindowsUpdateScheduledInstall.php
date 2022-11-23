@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable 
 {
     /**
-     * @var WeeklySchedule|null $scheduledInstallDay Possible values for a weekly schedule.
-    */
-    private ?WeeklySchedule $scheduledInstallDay = null;
-    
-    /**
-     * @var Time|null $scheduledInstallTime Scheduled Install Time during day
-    */
-    private ?Time $scheduledInstallTime = null;
-    
-    /**
      * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
     */
     public function __construct() {
@@ -53,7 +43,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
      * @return WeeklySchedule|null
     */
     public function getScheduledInstallDay(): ?WeeklySchedule {
-        return $this->scheduledInstallDay;
+        return $this->getBackingStore()->get('scheduledInstallDay');
     }
 
     /**
@@ -61,7 +51,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
      * @return Time|null
     */
     public function getScheduledInstallTime(): ?Time {
-        return $this->scheduledInstallTime;
+        return $this->getBackingStore()->get('scheduledInstallTime');
     }
 
     /**
@@ -70,24 +60,24 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('scheduledInstallDay', $this->scheduledInstallDay);
-        $writer->writeTimeValue('scheduledInstallTime', $this->scheduledInstallTime);
+        $writer->writeEnumValue('scheduledInstallDay', $this->getScheduledInstallDay());
+        $writer->writeTimeValue('scheduledInstallTime', $this->getScheduledInstallTime());
     }
 
     /**
      * Sets the scheduledInstallDay property value. Possible values for a weekly schedule.
      *  @param WeeklySchedule|null $value Value to set for the scheduledInstallDay property.
     */
-    public function setScheduledInstallDay(?WeeklySchedule $value ): void {
-        $this->scheduledInstallDay = $value;
+    public function setScheduledInstallDay(?WeeklySchedule $value): void {
+        $this->getBackingStore()->set('scheduledInstallDay', $value);
     }
 
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
      *  @param Time|null $value Value to set for the scheduledInstallTime property.
     */
-    public function setScheduledInstallTime(?Time $value ): void {
-        $this->scheduledInstallTime = $value;
+    public function setScheduledInstallTime(?Time $value): void {
+        $this->getBackingStore()->set('scheduledInstallTime', $value);
     }
 
 }

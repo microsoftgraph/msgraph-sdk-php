@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookOperation extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookOperationError|null $error The error returned by the operation.
-    */
-    private ?WorkbookOperationError $error = null;
-    
-    /**
-     * @var string|null $resourceLocation The resource URI for the result.
-    */
-    private ?string $resourceLocation = null;
-    
-    /**
-     * @var WorkbookOperationStatus|null $status The status property
-    */
-    private ?WorkbookOperationStatus $status = null;
-    
-    /**
      * Instantiates a new workbookOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookOperation');
     }
 
     /**
@@ -45,7 +29,7 @@ class WorkbookOperation extends Entity implements Parsable
      * @return WorkbookOperationError|null
     */
     public function getError(): ?WorkbookOperationError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -66,7 +50,7 @@ class WorkbookOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceLocation(): ?string {
-        return $this->resourceLocation;
+        return $this->getBackingStore()->get('resourceLocation');
     }
 
     /**
@@ -74,7 +58,7 @@ class WorkbookOperation extends Entity implements Parsable
      * @return WorkbookOperationStatus|null
     */
     public function getStatus(): ?WorkbookOperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -83,33 +67,33 @@ class WorkbookOperation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeStringValue('resourceLocation', $this->resourceLocation);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeStringValue('resourceLocation', $this->getResourceLocation());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the error property value. The error returned by the operation.
      *  @param WorkbookOperationError|null $value Value to set for the error property.
     */
-    public function setError(?WorkbookOperationError $value ): void {
-        $this->error = $value;
+    public function setError(?WorkbookOperationError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the resourceLocation property value. The resource URI for the result.
      *  @param string|null $value Value to set for the resourceLocation property.
     */
-    public function setResourceLocation(?string $value ): void {
-        $this->resourceLocation = $value;
+    public function setResourceLocation(?string $value): void {
+        $this->getBackingStore()->set('resourceLocation', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param WorkbookOperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?WorkbookOperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?WorkbookOperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

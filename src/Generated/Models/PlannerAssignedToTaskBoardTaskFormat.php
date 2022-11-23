@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable 
 {
     /**
-     * @var PlannerOrderHintsByAssignee|null $orderHintsByAssignee Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
-    */
-    private ?PlannerOrderHintsByAssignee $orderHintsByAssignee = null;
-    
-    /**
-     * @var string|null $unassignedOrderHint Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
-    */
-    private ?string $unassignedOrderHint = null;
-    
-    /**
      * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.plannerAssignedToTaskBoardTaskFormat');
     }
 
     /**
@@ -52,7 +41,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
      * @return PlannerOrderHintsByAssignee|null
     */
     public function getOrderHintsByAssignee(): ?PlannerOrderHintsByAssignee {
-        return $this->orderHintsByAssignee;
+        return $this->getBackingStore()->get('orderHintsByAssignee');
     }
 
     /**
@@ -60,7 +49,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
      * @return string|null
     */
     public function getUnassignedOrderHint(): ?string {
-        return $this->unassignedOrderHint;
+        return $this->getBackingStore()->get('unassignedOrderHint');
     }
 
     /**
@@ -69,24 +58,24 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('orderHintsByAssignee', $this->orderHintsByAssignee);
-        $writer->writeStringValue('unassignedOrderHint', $this->unassignedOrderHint);
+        $writer->writeObjectValue('orderHintsByAssignee', $this->getOrderHintsByAssignee());
+        $writer->writeStringValue('unassignedOrderHint', $this->getUnassignedOrderHint());
     }
 
     /**
      * Sets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
      *  @param PlannerOrderHintsByAssignee|null $value Value to set for the orderHintsByAssignee property.
     */
-    public function setOrderHintsByAssignee(?PlannerOrderHintsByAssignee $value ): void {
-        $this->orderHintsByAssignee = $value;
+    public function setOrderHintsByAssignee(?PlannerOrderHintsByAssignee $value): void {
+        $this->getBackingStore()->set('orderHintsByAssignee', $value);
     }
 
     /**
      * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
      *  @param string|null $value Value to set for the unassignedOrderHint property.
     */
-    public function setUnassignedOrderHint(?string $value ): void {
-        $this->unassignedOrderHint = $value;
+    public function setUnassignedOrderHint(?string $value): void {
+        $this->getBackingStore()->set('unassignedOrderHint', $value);
     }
 
 }

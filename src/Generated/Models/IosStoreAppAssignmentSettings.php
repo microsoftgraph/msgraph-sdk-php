@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * @var string|null $vpnConfigurationId The VPN Configuration Id to apply for this app.
-    */
-    private ?string $vpnConfigurationId = null;
-    
-    /**
      * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return string|null
     */
     public function getVpnConfigurationId(): ?string {
-        return $this->vpnConfigurationId;
+        return $this->getBackingStore()->get('vpnConfigurationId');
     }
 
     /**
@@ -55,15 +50,15 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('vpnConfigurationId', $this->vpnConfigurationId);
+        $writer->writeStringValue('vpnConfigurationId', $this->getVpnConfigurationId());
     }
 
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
      *  @param string|null $value Value to set for the vpnConfigurationId property.
     */
-    public function setVpnConfigurationId(?string $value ): void {
-        $this->vpnConfigurationId = $value;
+    public function setVpnConfigurationId(?string $value): void {
+        $this->getBackingStore()->set('vpnConfigurationId', $value);
     }
 
 }

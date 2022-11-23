@@ -10,26 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The date and time that this Windows Hello for Business key was registered.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var Device|null $device The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-    */
-    private ?Device $device = null;
-    
-    /**
-     * @var string|null $displayName The name of the device on which Windows Hello for Business is registered
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var AuthenticationMethodKeyStrength|null $keyStrength Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-    */
-    private ?AuthenticationMethodKeyStrength $keyStrength = null;
-    
-    /**
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
     */
     public function __construct() {
@@ -51,7 +31,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -59,7 +39,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
      * @return Device|null
     */
     public function getDevice(): ?Device {
-        return $this->device;
+        return $this->getBackingStore()->get('device');
     }
 
     /**
@@ -67,7 +47,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -89,7 +69,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
      * @return AuthenticationMethodKeyStrength|null
     */
     public function getKeyStrength(): ?AuthenticationMethodKeyStrength {
-        return $this->keyStrength;
+        return $this->getBackingStore()->get('keyStrength');
     }
 
     /**
@@ -98,42 +78,42 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('device', $this->device);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('keyStrength', $this->keyStrength);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('device', $this->getDevice());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('keyStrength', $this->getKeyStrength());
     }
 
     /**
      * Sets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      *  @param Device|null $value Value to set for the device property.
     */
-    public function setDevice(?Device $value ): void {
-        $this->device = $value;
+    public function setDevice(?Device $value): void {
+        $this->getBackingStore()->set('device', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the device on which Windows Hello for Business is registered
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
      *  @param AuthenticationMethodKeyStrength|null $value Value to set for the keyStrength property.
     */
-    public function setKeyStrength(?AuthenticationMethodKeyStrength $value ): void {
-        $this->keyStrength = $value;
+    public function setKeyStrength(?AuthenticationMethodKeyStrength $value): void {
+        $this->getBackingStore()->set('keyStrength', $value);
     }
 
 }

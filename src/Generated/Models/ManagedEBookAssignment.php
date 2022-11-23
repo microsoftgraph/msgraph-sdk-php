@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedEBookAssignment extends Entity implements Parsable 
 {
     /**
-     * @var InstallIntent|null $installIntent Possible values for the install intent chosen by the admin.
-    */
-    private ?InstallIntent $installIntent = null;
-    
-    /**
-     * @var DeviceAndAppManagementAssignmentTarget|null $target The assignment target for eBook.
-    */
-    private ?DeviceAndAppManagementAssignmentTarget $target = null;
-    
-    /**
      * Instantiates a new managedEBookAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.managedEBookAssignment');
     }
 
     /**
@@ -59,7 +48,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
      * @return InstallIntent|null
     */
     public function getInstallIntent(): ?InstallIntent {
-        return $this->installIntent;
+        return $this->getBackingStore()->get('installIntent');
     }
 
     /**
@@ -67,7 +56,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
      * @return DeviceAndAppManagementAssignmentTarget|null
     */
     public function getTarget(): ?DeviceAndAppManagementAssignmentTarget {
-        return $this->target;
+        return $this->getBackingStore()->get('target');
     }
 
     /**
@@ -76,24 +65,24 @@ class ManagedEBookAssignment extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('installIntent', $this->installIntent);
-        $writer->writeObjectValue('target', $this->target);
+        $writer->writeEnumValue('installIntent', $this->getInstallIntent());
+        $writer->writeObjectValue('target', $this->getTarget());
     }
 
     /**
      * Sets the installIntent property value. Possible values for the install intent chosen by the admin.
      *  @param InstallIntent|null $value Value to set for the installIntent property.
     */
-    public function setInstallIntent(?InstallIntent $value ): void {
-        $this->installIntent = $value;
+    public function setInstallIntent(?InstallIntent $value): void {
+        $this->getBackingStore()->set('installIntent', $value);
     }
 
     /**
      * Sets the target property value. The assignment target for eBook.
      *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
-    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value ): void {
-        $this->target = $value;
+    public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
+        $this->getBackingStore()->set('target', $value);
     }
 
 }

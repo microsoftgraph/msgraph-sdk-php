@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryTagOperationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * @var array<EdiscoveryTagOperation>|null $value The value property
-    */
-    private ?array $value = null;
-    
-    /**
      * Instantiates a new EdiscoveryTagOperationCollectionResponse and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EdiscoveryTagOperationCollectionResponse extends BaseCollectionPaginationC
      * @return array<EdiscoveryTagOperation>|null
     */
     public function getValue(): ?array {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -55,15 +50,15 @@ class EdiscoveryTagOperationCollectionResponse extends BaseCollectionPaginationC
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('value', $this->value);
+        $writer->writeCollectionOfObjectValues('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. The value property
      *  @param array<EdiscoveryTagOperation>|null $value Value to set for the value property.
     */
-    public function setValue(?array $value ): void {
-        $this->value = $value;
+    public function setValue(?array $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

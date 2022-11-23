@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType implements Parsable 
 {
     /**
-     * @var Time|null $activeHoursEnd Active Hours End
-    */
-    private ?Time $activeHoursEnd = null;
-    
-    /**
-     * @var Time|null $activeHoursStart Active Hours Start
-    */
-    private ?Time $activeHoursStart = null;
-    
-    /**
      * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
     */
     public function __construct() {
@@ -41,7 +31,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
      * @return Time|null
     */
     public function getActiveHoursEnd(): ?Time {
-        return $this->activeHoursEnd;
+        return $this->getBackingStore()->get('activeHoursEnd');
     }
 
     /**
@@ -49,7 +39,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
      * @return Time|null
     */
     public function getActiveHoursStart(): ?Time {
-        return $this->activeHoursStart;
+        return $this->getBackingStore()->get('activeHoursStart');
     }
 
     /**
@@ -70,24 +60,24 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeTimeValue('activeHoursEnd', $this->activeHoursEnd);
-        $writer->writeTimeValue('activeHoursStart', $this->activeHoursStart);
+        $writer->writeTimeValue('activeHoursEnd', $this->getActiveHoursEnd());
+        $writer->writeTimeValue('activeHoursStart', $this->getActiveHoursStart());
     }
 
     /**
      * Sets the activeHoursEnd property value. Active Hours End
      *  @param Time|null $value Value to set for the activeHoursEnd property.
     */
-    public function setActiveHoursEnd(?Time $value ): void {
-        $this->activeHoursEnd = $value;
+    public function setActiveHoursEnd(?Time $value): void {
+        $this->getBackingStore()->set('activeHoursEnd', $value);
     }
 
     /**
      * Sets the activeHoursStart property value. Active Hours Start
      *  @param Time|null $value Value to set for the activeHoursStart property.
     */
-    public function setActiveHoursStart(?Time $value ): void {
-        $this->activeHoursStart = $value;
+    public function setActiveHoursStart(?Time $value): void {
+        $this->getBackingStore()->set('activeHoursStart', $value);
     }
 
 }

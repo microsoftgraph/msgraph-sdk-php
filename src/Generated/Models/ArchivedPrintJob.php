@@ -7,70 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ArchivedPrintJob implements AdditionalDataHolder, Parsable 
+class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var bool|null $acquiredByPrinter True if the job was acquired by a printer; false otherwise. Read-only.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?bool $acquiredByPrinter = null;
-    
-    /**
-     * @var DateTime|null $acquiredDateTime The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
-    */
-    private ?DateTime $acquiredDateTime = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var DateTime|null $completionDateTime The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
-    */
-    private ?DateTime $completionDateTime = null;
-    
-    /**
-     * @var int|null $copiesPrinted The number of copies that were printed. Read-only.
-    */
-    private ?int $copiesPrinted = null;
-    
-    /**
-     * @var UserIdentity|null $createdBy The user who created the print job. Read-only.
-    */
-    private ?UserIdentity $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The dateTimeOffset when the job was created. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $id The archived print job's GUID. Read-only.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $printerId The printer ID that the job was queued for. Read-only.
-    */
-    private ?string $printerId = null;
-    
-    /**
-     * @var PrintJobProcessingState|null $processingState The processingState property
-    */
-    private ?PrintJobProcessingState $processingState = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new archivedPrintJob and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.archivedPrintJob');
     }
 
     /**
@@ -87,7 +40,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAcquiredByPrinter(): ?bool {
-        return $this->acquiredByPrinter;
+        return $this->getBackingStore()->get('acquiredByPrinter');
     }
 
     /**
@@ -95,15 +48,23 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getAcquiredDateTime(): ?DateTime {
-        return $this->acquiredDateTime;
+        return $this->getBackingStore()->get('acquiredDateTime');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -111,7 +72,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
-        return $this->completionDateTime;
+        return $this->getBackingStore()->get('completionDateTime');
     }
 
     /**
@@ -119,7 +80,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getCopiesPrinted(): ?int {
-        return $this->copiesPrinted;
+        return $this->getBackingStore()->get('copiesPrinted');
     }
 
     /**
@@ -127,7 +88,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -135,7 +96,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -163,7 +124,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -171,7 +132,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -179,7 +140,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPrinterId(): ?string {
-        return $this->printerId;
+        return $this->getBackingStore()->get('printerId');
     }
 
     /**
@@ -187,7 +148,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @return PrintJobProcessingState|null
     */
     public function getProcessingState(): ?PrintJobProcessingState {
-        return $this->processingState;
+        return $this->getBackingStore()->get('processingState');
     }
 
     /**
@@ -195,105 +156,113 @@ class ArchivedPrintJob implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('acquiredByPrinter', $this->acquiredByPrinter);
-        $writer->writeDateTimeValue('acquiredDateTime', $this->acquiredDateTime);
-        $writer->writeDateTimeValue('completionDateTime', $this->completionDateTime);
-        $writer->writeIntegerValue('copiesPrinted', $this->copiesPrinted);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('printerId', $this->printerId);
-        $writer->writeEnumValue('processingState', $this->processingState);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('acquiredByPrinter', $this->getAcquiredByPrinter());
+        $writer->writeDateTimeValue('acquiredDateTime', $this->getAcquiredDateTime());
+        $writer->writeDateTimeValue('completionDateTime', $this->getCompletionDateTime());
+        $writer->writeIntegerValue('copiesPrinted', $this->getCopiesPrinted());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('printerId', $this->getPrinterId());
+        $writer->writeEnumValue('processingState', $this->getProcessingState());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the acquiredByPrinter property value. True if the job was acquired by a printer; false otherwise. Read-only.
      *  @param bool|null $value Value to set for the acquiredByPrinter property.
     */
-    public function setAcquiredByPrinter(?bool $value ): void {
-        $this->acquiredByPrinter = $value;
+    public function setAcquiredByPrinter(?bool $value): void {
+        $this->getBackingStore()->set('acquiredByPrinter', $value);
     }
 
     /**
      * Sets the acquiredDateTime property value. The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
      *  @param DateTime|null $value Value to set for the acquiredDateTime property.
     */
-    public function setAcquiredDateTime(?DateTime $value ): void {
-        $this->acquiredDateTime = $value;
+    public function setAcquiredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('acquiredDateTime', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
      *  @param DateTime|null $value Value to set for the completionDateTime property.
     */
-    public function setCompletionDateTime(?DateTime $value ): void {
-        $this->completionDateTime = $value;
+    public function setCompletionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('completionDateTime', $value);
     }
 
     /**
      * Sets the copiesPrinted property value. The number of copies that were printed. Read-only.
      *  @param int|null $value Value to set for the copiesPrinted property.
     */
-    public function setCopiesPrinted(?int $value ): void {
-        $this->copiesPrinted = $value;
+    public function setCopiesPrinted(?int $value): void {
+        $this->getBackingStore()->set('copiesPrinted', $value);
     }
 
     /**
      * Sets the createdBy property value. The user who created the print job. Read-only.
      *  @param UserIdentity|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?UserIdentity $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?UserIdentity $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The dateTimeOffset when the job was created. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the id property value. The archived print job's GUID. Read-only.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the printerId property value. The printer ID that the job was queued for. Read-only.
      *  @param string|null $value Value to set for the printerId property.
     */
-    public function setPrinterId(?string $value ): void {
-        $this->printerId = $value;
+    public function setPrinterId(?string $value): void {
+        $this->getBackingStore()->set('printerId', $value);
     }
 
     /**
      * Sets the processingState property value. The processingState property
      *  @param PrintJobProcessingState|null $value Value to set for the processingState property.
     */
-    public function setProcessingState(?PrintJobProcessingState $value ): void {
-        $this->processingState = $value;
+    public function setProcessingState(?PrintJobProcessingState $value): void {
+        $this->getBackingStore()->set('processingState', $value);
     }
 
 }

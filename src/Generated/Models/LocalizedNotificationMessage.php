@@ -10,36 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LocalizedNotificationMessage extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $isDefault Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-    */
-    private ?bool $isDefault = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime DateTime the object was last modified.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var string|null $locale The Locale for which this message is destined.
-    */
-    private ?string $locale = null;
-    
-    /**
-     * @var string|null $messageTemplate The Message Template content.
-    */
-    private ?string $messageTemplate = null;
-    
-    /**
-     * @var string|null $subject The Message Template Subject.
-    */
-    private ?string $subject = null;
-    
-    /**
      * Instantiates a new localizedNotificationMessage and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.localizedNotificationMessage');
     }
 
     /**
@@ -71,7 +45,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->isDefault;
+        return $this->getBackingStore()->get('isDefault');
     }
 
     /**
@@ -79,7 +53,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -87,7 +61,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
      * @return string|null
     */
     public function getLocale(): ?string {
-        return $this->locale;
+        return $this->getBackingStore()->get('locale');
     }
 
     /**
@@ -95,7 +69,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
      * @return string|null
     */
     public function getMessageTemplate(): ?string {
-        return $this->messageTemplate;
+        return $this->getBackingStore()->get('messageTemplate');
     }
 
     /**
@@ -103,7 +77,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->subject;
+        return $this->getBackingStore()->get('subject');
     }
 
     /**
@@ -112,51 +86,51 @@ class LocalizedNotificationMessage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isDefault', $this->isDefault);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeStringValue('locale', $this->locale);
-        $writer->writeStringValue('messageTemplate', $this->messageTemplate);
-        $writer->writeStringValue('subject', $this->subject);
+        $writer->writeBooleanValue('isDefault', $this->getIsDefault());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('locale', $this->getLocale());
+        $writer->writeStringValue('messageTemplate', $this->getMessageTemplate());
+        $writer->writeStringValue('subject', $this->getSubject());
     }
 
     /**
      * Sets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
      *  @param bool|null $value Value to set for the isDefault property.
     */
-    public function setIsDefault(?bool $value ): void {
-        $this->isDefault = $value;
+    public function setIsDefault(?bool $value): void {
+        $this->getBackingStore()->set('isDefault', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the locale property value. The Locale for which this message is destined.
      *  @param string|null $value Value to set for the locale property.
     */
-    public function setLocale(?string $value ): void {
-        $this->locale = $value;
+    public function setLocale(?string $value): void {
+        $this->getBackingStore()->set('locale', $value);
     }
 
     /**
      * Sets the messageTemplate property value. The Message Template content.
      *  @param string|null $value Value to set for the messageTemplate property.
     */
-    public function setMessageTemplate(?string $value ): void {
-        $this->messageTemplate = $value;
+    public function setMessageTemplate(?string $value): void {
+        $this->getBackingStore()->set('messageTemplate', $value);
     }
 
     /**
      * Sets the subject property value. The Message Template Subject.
      *  @param string|null $value Value to set for the subject property.
     */
-    public function setSubject(?string $value ): void {
-        $this->subject = $value;
+    public function setSubject(?string $value): void {
+        $this->getBackingStore()->set('subject', $value);
     }
 
 }

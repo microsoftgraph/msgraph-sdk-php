@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationOrganization extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description Organization description.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Organization display name.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var EducationExternalSource|null $externalSource Source where this organization was created from. Possible values are: sis, manual.
-    */
-    private ?EducationExternalSource $externalSource = null;
-    
-    /**
-     * @var string|null $externalSourceDetail The name of the external source this resources was generated from.
-    */
-    private ?string $externalSourceDetail = null;
-    
-    /**
      * Instantiates a new educationOrganization and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.educationOrganization');
     }
 
     /**
@@ -57,7 +36,7 @@ class EducationOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -65,7 +44,7 @@ class EducationOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -73,7 +52,7 @@ class EducationOrganization extends Entity implements Parsable
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
-        return $this->externalSource;
+        return $this->getBackingStore()->get('externalSource');
     }
 
     /**
@@ -81,7 +60,7 @@ class EducationOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalSourceDetail(): ?string {
-        return $this->externalSourceDetail;
+        return $this->getBackingStore()->get('externalSourceDetail');
     }
 
     /**
@@ -104,42 +83,42 @@ class EducationOrganization extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('externalSource', $this->externalSource);
-        $writer->writeStringValue('externalSourceDetail', $this->externalSourceDetail);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('externalSource', $this->getExternalSource());
+        $writer->writeStringValue('externalSourceDetail', $this->getExternalSourceDetail());
     }
 
     /**
      * Sets the description property value. Organization description.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Organization display name.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
      *  @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
-    public function setExternalSource(?EducationExternalSource $value ): void {
-        $this->externalSource = $value;
+    public function setExternalSource(?EducationExternalSource $value): void {
+        $this->getBackingStore()->set('externalSource', $value);
     }
 
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      *  @param string|null $value Value to set for the externalSourceDetail property.
     */
-    public function setExternalSourceDetail(?string $value ): void {
-        $this->externalSourceDetail = $value;
+    public function setExternalSourceDetail(?string $value): void {
+        $this->getBackingStore()->set('externalSourceDetail', $value);
     }
 
 }

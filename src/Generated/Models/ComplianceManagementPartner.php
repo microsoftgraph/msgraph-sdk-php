@@ -10,56 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ComplianceManagementPartner extends Entity implements Parsable 
 {
     /**
-     * @var array<ComplianceManagementPartnerAssignment>|null $androidEnrollmentAssignments User groups which enroll Android devices through partner.
-    */
-    private ?array $androidEnrollmentAssignments = null;
-    
-    /**
-     * @var bool|null $androidOnboarded Partner onboarded for Android devices.
-    */
-    private ?bool $androidOnboarded = null;
-    
-    /**
-     * @var string|null $displayName Partner display name
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<ComplianceManagementPartnerAssignment>|null $iosEnrollmentAssignments User groups which enroll ios devices through partner.
-    */
-    private ?array $iosEnrollmentAssignments = null;
-    
-    /**
-     * @var bool|null $iosOnboarded Partner onboarded for ios devices.
-    */
-    private ?bool $iosOnboarded = null;
-    
-    /**
-     * @var DateTime|null $lastHeartbeatDateTime Timestamp of last heartbeat after admin onboarded to the compliance management partner
-    */
-    private ?DateTime $lastHeartbeatDateTime = null;
-    
-    /**
-     * @var array<ComplianceManagementPartnerAssignment>|null $macOsEnrollmentAssignments User groups which enroll Mac devices through partner.
-    */
-    private ?array $macOsEnrollmentAssignments = null;
-    
-    /**
-     * @var bool|null $macOsOnboarded Partner onboarded for Mac devices.
-    */
-    private ?bool $macOsOnboarded = null;
-    
-    /**
-     * @var DeviceManagementPartnerTenantState|null $partnerState Partner state of this tenant.
-    */
-    private ?DeviceManagementPartnerTenantState $partnerState = null;
-    
-    /**
      * Instantiates a new complianceManagementPartner and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.complianceManagementPartner');
     }
 
     /**
@@ -76,7 +30,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getAndroidEnrollmentAssignments(): ?array {
-        return $this->androidEnrollmentAssignments;
+        return $this->getBackingStore()->get('androidEnrollmentAssignments');
     }
 
     /**
@@ -84,7 +38,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getAndroidOnboarded(): ?bool {
-        return $this->androidOnboarded;
+        return $this->getBackingStore()->get('androidOnboarded');
     }
 
     /**
@@ -92,7 +46,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -119,7 +73,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getIosEnrollmentAssignments(): ?array {
-        return $this->iosEnrollmentAssignments;
+        return $this->getBackingStore()->get('iosEnrollmentAssignments');
     }
 
     /**
@@ -127,7 +81,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getIosOnboarded(): ?bool {
-        return $this->iosOnboarded;
+        return $this->getBackingStore()->get('iosOnboarded');
     }
 
     /**
@@ -135,7 +89,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastHeartbeatDateTime(): ?DateTime {
-        return $this->lastHeartbeatDateTime;
+        return $this->getBackingStore()->get('lastHeartbeatDateTime');
     }
 
     /**
@@ -143,7 +97,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getMacOsEnrollmentAssignments(): ?array {
-        return $this->macOsEnrollmentAssignments;
+        return $this->getBackingStore()->get('macOsEnrollmentAssignments');
     }
 
     /**
@@ -151,7 +105,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getMacOsOnboarded(): ?bool {
-        return $this->macOsOnboarded;
+        return $this->getBackingStore()->get('macOsOnboarded');
     }
 
     /**
@@ -159,7 +113,7 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return DeviceManagementPartnerTenantState|null
     */
     public function getPartnerState(): ?DeviceManagementPartnerTenantState {
-        return $this->partnerState;
+        return $this->getBackingStore()->get('partnerState');
     }
 
     /**
@@ -168,87 +122,87 @@ class ComplianceManagementPartner extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('androidEnrollmentAssignments', $this->androidEnrollmentAssignments);
-        $writer->writeBooleanValue('androidOnboarded', $this->androidOnboarded);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('iosEnrollmentAssignments', $this->iosEnrollmentAssignments);
-        $writer->writeBooleanValue('iosOnboarded', $this->iosOnboarded);
-        $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->lastHeartbeatDateTime);
-        $writer->writeCollectionOfObjectValues('macOsEnrollmentAssignments', $this->macOsEnrollmentAssignments);
-        $writer->writeBooleanValue('macOsOnboarded', $this->macOsOnboarded);
-        $writer->writeEnumValue('partnerState', $this->partnerState);
+        $writer->writeCollectionOfObjectValues('androidEnrollmentAssignments', $this->getAndroidEnrollmentAssignments());
+        $writer->writeBooleanValue('androidOnboarded', $this->getAndroidOnboarded());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('iosEnrollmentAssignments', $this->getIosEnrollmentAssignments());
+        $writer->writeBooleanValue('iosOnboarded', $this->getIosOnboarded());
+        $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->getLastHeartbeatDateTime());
+        $writer->writeCollectionOfObjectValues('macOsEnrollmentAssignments', $this->getMacOsEnrollmentAssignments());
+        $writer->writeBooleanValue('macOsOnboarded', $this->getMacOsOnboarded());
+        $writer->writeEnumValue('partnerState', $this->getPartnerState());
     }
 
     /**
      * Sets the androidEnrollmentAssignments property value. User groups which enroll Android devices through partner.
      *  @param array<ComplianceManagementPartnerAssignment>|null $value Value to set for the androidEnrollmentAssignments property.
     */
-    public function setAndroidEnrollmentAssignments(?array $value ): void {
-        $this->androidEnrollmentAssignments = $value;
+    public function setAndroidEnrollmentAssignments(?array $value): void {
+        $this->getBackingStore()->set('androidEnrollmentAssignments', $value);
     }
 
     /**
      * Sets the androidOnboarded property value. Partner onboarded for Android devices.
      *  @param bool|null $value Value to set for the androidOnboarded property.
     */
-    public function setAndroidOnboarded(?bool $value ): void {
-        $this->androidOnboarded = $value;
+    public function setAndroidOnboarded(?bool $value): void {
+        $this->getBackingStore()->set('androidOnboarded', $value);
     }
 
     /**
      * Sets the displayName property value. Partner display name
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the iosEnrollmentAssignments property value. User groups which enroll ios devices through partner.
      *  @param array<ComplianceManagementPartnerAssignment>|null $value Value to set for the iosEnrollmentAssignments property.
     */
-    public function setIosEnrollmentAssignments(?array $value ): void {
-        $this->iosEnrollmentAssignments = $value;
+    public function setIosEnrollmentAssignments(?array $value): void {
+        $this->getBackingStore()->set('iosEnrollmentAssignments', $value);
     }
 
     /**
      * Sets the iosOnboarded property value. Partner onboarded for ios devices.
      *  @param bool|null $value Value to set for the iosOnboarded property.
     */
-    public function setIosOnboarded(?bool $value ): void {
-        $this->iosOnboarded = $value;
+    public function setIosOnboarded(?bool $value): void {
+        $this->getBackingStore()->set('iosOnboarded', $value);
     }
 
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin onboarded to the compliance management partner
      *  @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
     */
-    public function setLastHeartbeatDateTime(?DateTime $value ): void {
-        $this->lastHeartbeatDateTime = $value;
+    public function setLastHeartbeatDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastHeartbeatDateTime', $value);
     }
 
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
      *  @param array<ComplianceManagementPartnerAssignment>|null $value Value to set for the macOsEnrollmentAssignments property.
     */
-    public function setMacOsEnrollmentAssignments(?array $value ): void {
-        $this->macOsEnrollmentAssignments = $value;
+    public function setMacOsEnrollmentAssignments(?array $value): void {
+        $this->getBackingStore()->set('macOsEnrollmentAssignments', $value);
     }
 
     /**
      * Sets the macOsOnboarded property value. Partner onboarded for Mac devices.
      *  @param bool|null $value Value to set for the macOsOnboarded property.
     */
-    public function setMacOsOnboarded(?bool $value ): void {
-        $this->macOsOnboarded = $value;
+    public function setMacOsOnboarded(?bool $value): void {
+        $this->getBackingStore()->set('macOsOnboarded', $value);
     }
 
     /**
      * Sets the partnerState property value. Partner state of this tenant.
      *  @param DeviceManagementPartnerTenantState|null $value Value to set for the partnerState property.
     */
-    public function setPartnerState(?DeviceManagementPartnerTenantState $value ): void {
-        $this->partnerState = $value;
+    public function setPartnerState(?DeviceManagementPartnerTenantState $value): void {
+        $this->getBackingStore()->set('partnerState', $value);
     }
 
 }

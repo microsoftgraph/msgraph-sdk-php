@@ -9,66 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable 
 {
     /**
-     * @var int|null $compliantDeviceCount Number of compliant devices
-    */
-    private ?int $compliantDeviceCount = null;
-    
-    /**
-     * @var int|null $conflictDeviceCount Number of conflict devices
-    */
-    private ?int $conflictDeviceCount = null;
-    
-    /**
-     * @var array<DeviceComplianceSettingState>|null $deviceComplianceSettingStates Not yet documented
-    */
-    private ?array $deviceComplianceSettingStates = null;
-    
-    /**
-     * @var int|null $errorDeviceCount Number of error devices
-    */
-    private ?int $errorDeviceCount = null;
-    
-    /**
-     * @var int|null $nonCompliantDeviceCount Number of NonCompliant devices
-    */
-    private ?int $nonCompliantDeviceCount = null;
-    
-    /**
-     * @var int|null $notApplicableDeviceCount Number of not applicable devices
-    */
-    private ?int $notApplicableDeviceCount = null;
-    
-    /**
-     * @var PolicyPlatformType|null $platformType Supported platform types for policies.
-    */
-    private ?PolicyPlatformType $platformType = null;
-    
-    /**
-     * @var int|null $remediatedDeviceCount Number of remediated devices
-    */
-    private ?int $remediatedDeviceCount = null;
-    
-    /**
-     * @var string|null $setting The setting class name and property name.
-    */
-    private ?string $setting = null;
-    
-    /**
-     * @var string|null $settingName Name of the setting.
-    */
-    private ?string $settingName = null;
-    
-    /**
-     * @var int|null $unknownDeviceCount Number of unknown devices
-    */
-    private ?int $unknownDeviceCount = null;
-    
-    /**
      * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceCompliancePolicySettingStateSummary');
     }
 
     /**
@@ -85,7 +29,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getCompliantDeviceCount(): ?int {
-        return $this->compliantDeviceCount;
+        return $this->getBackingStore()->get('compliantDeviceCount');
     }
 
     /**
@@ -93,7 +37,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getConflictDeviceCount(): ?int {
-        return $this->conflictDeviceCount;
+        return $this->getBackingStore()->get('conflictDeviceCount');
     }
 
     /**
@@ -101,7 +45,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return array<DeviceComplianceSettingState>|null
     */
     public function getDeviceComplianceSettingStates(): ?array {
-        return $this->deviceComplianceSettingStates;
+        return $this->getBackingStore()->get('deviceComplianceSettingStates');
     }
 
     /**
@@ -109,7 +53,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getErrorDeviceCount(): ?int {
-        return $this->errorDeviceCount;
+        return $this->getBackingStore()->get('errorDeviceCount');
     }
 
     /**
@@ -138,7 +82,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getNonCompliantDeviceCount(): ?int {
-        return $this->nonCompliantDeviceCount;
+        return $this->getBackingStore()->get('nonCompliantDeviceCount');
     }
 
     /**
@@ -146,7 +90,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getNotApplicableDeviceCount(): ?int {
-        return $this->notApplicableDeviceCount;
+        return $this->getBackingStore()->get('notApplicableDeviceCount');
     }
 
     /**
@@ -154,7 +98,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return PolicyPlatformType|null
     */
     public function getPlatformType(): ?PolicyPlatformType {
-        return $this->platformType;
+        return $this->getBackingStore()->get('platformType');
     }
 
     /**
@@ -162,7 +106,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getRemediatedDeviceCount(): ?int {
-        return $this->remediatedDeviceCount;
+        return $this->getBackingStore()->get('remediatedDeviceCount');
     }
 
     /**
@@ -170,7 +114,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return string|null
     */
     public function getSetting(): ?string {
-        return $this->setting;
+        return $this->getBackingStore()->get('setting');
     }
 
     /**
@@ -178,7 +122,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return string|null
     */
     public function getSettingName(): ?string {
-        return $this->settingName;
+        return $this->getBackingStore()->get('settingName');
     }
 
     /**
@@ -186,7 +130,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->unknownDeviceCount;
+        return $this->getBackingStore()->get('unknownDeviceCount');
     }
 
     /**
@@ -195,105 +139,105 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('compliantDeviceCount', $this->compliantDeviceCount);
-        $writer->writeIntegerValue('conflictDeviceCount', $this->conflictDeviceCount);
-        $writer->writeCollectionOfObjectValues('deviceComplianceSettingStates', $this->deviceComplianceSettingStates);
-        $writer->writeIntegerValue('errorDeviceCount', $this->errorDeviceCount);
-        $writer->writeIntegerValue('nonCompliantDeviceCount', $this->nonCompliantDeviceCount);
-        $writer->writeIntegerValue('notApplicableDeviceCount', $this->notApplicableDeviceCount);
-        $writer->writeEnumValue('platformType', $this->platformType);
-        $writer->writeIntegerValue('remediatedDeviceCount', $this->remediatedDeviceCount);
-        $writer->writeStringValue('setting', $this->setting);
-        $writer->writeStringValue('settingName', $this->settingName);
-        $writer->writeIntegerValue('unknownDeviceCount', $this->unknownDeviceCount);
+        $writer->writeIntegerValue('compliantDeviceCount', $this->getCompliantDeviceCount());
+        $writer->writeIntegerValue('conflictDeviceCount', $this->getConflictDeviceCount());
+        $writer->writeCollectionOfObjectValues('deviceComplianceSettingStates', $this->getDeviceComplianceSettingStates());
+        $writer->writeIntegerValue('errorDeviceCount', $this->getErrorDeviceCount());
+        $writer->writeIntegerValue('nonCompliantDeviceCount', $this->getNonCompliantDeviceCount());
+        $writer->writeIntegerValue('notApplicableDeviceCount', $this->getNotApplicableDeviceCount());
+        $writer->writeEnumValue('platformType', $this->getPlatformType());
+        $writer->writeIntegerValue('remediatedDeviceCount', $this->getRemediatedDeviceCount());
+        $writer->writeStringValue('setting', $this->getSetting());
+        $writer->writeStringValue('settingName', $this->getSettingName());
+        $writer->writeIntegerValue('unknownDeviceCount', $this->getUnknownDeviceCount());
     }
 
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices
      *  @param int|null $value Value to set for the compliantDeviceCount property.
     */
-    public function setCompliantDeviceCount(?int $value ): void {
-        $this->compliantDeviceCount = $value;
+    public function setCompliantDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('compliantDeviceCount', $value);
     }
 
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      *  @param int|null $value Value to set for the conflictDeviceCount property.
     */
-    public function setConflictDeviceCount(?int $value ): void {
-        $this->conflictDeviceCount = $value;
+    public function setConflictDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('conflictDeviceCount', $value);
     }
 
     /**
      * Sets the deviceComplianceSettingStates property value. Not yet documented
      *  @param array<DeviceComplianceSettingState>|null $value Value to set for the deviceComplianceSettingStates property.
     */
-    public function setDeviceComplianceSettingStates(?array $value ): void {
-        $this->deviceComplianceSettingStates = $value;
+    public function setDeviceComplianceSettingStates(?array $value): void {
+        $this->getBackingStore()->set('deviceComplianceSettingStates', $value);
     }
 
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      *  @param int|null $value Value to set for the errorDeviceCount property.
     */
-    public function setErrorDeviceCount(?int $value ): void {
-        $this->errorDeviceCount = $value;
+    public function setErrorDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('errorDeviceCount', $value);
     }
 
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      *  @param int|null $value Value to set for the nonCompliantDeviceCount property.
     */
-    public function setNonCompliantDeviceCount(?int $value ): void {
-        $this->nonCompliantDeviceCount = $value;
+    public function setNonCompliantDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('nonCompliantDeviceCount', $value);
     }
 
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      *  @param int|null $value Value to set for the notApplicableDeviceCount property.
     */
-    public function setNotApplicableDeviceCount(?int $value ): void {
-        $this->notApplicableDeviceCount = $value;
+    public function setNotApplicableDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('notApplicableDeviceCount', $value);
     }
 
     /**
      * Sets the platformType property value. Supported platform types for policies.
      *  @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
-    public function setPlatformType(?PolicyPlatformType $value ): void {
-        $this->platformType = $value;
+    public function setPlatformType(?PolicyPlatformType $value): void {
+        $this->getBackingStore()->set('platformType', $value);
     }
 
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      *  @param int|null $value Value to set for the remediatedDeviceCount property.
     */
-    public function setRemediatedDeviceCount(?int $value ): void {
-        $this->remediatedDeviceCount = $value;
+    public function setRemediatedDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('remediatedDeviceCount', $value);
     }
 
     /**
      * Sets the setting property value. The setting class name and property name.
      *  @param string|null $value Value to set for the setting property.
     */
-    public function setSetting(?string $value ): void {
-        $this->setting = $value;
+    public function setSetting(?string $value): void {
+        $this->getBackingStore()->set('setting', $value);
     }
 
     /**
      * Sets the settingName property value. Name of the setting.
      *  @param string|null $value Value to set for the settingName property.
     */
-    public function setSettingName(?string $value ): void {
-        $this->settingName = $value;
+    public function setSettingName(?string $value): void {
+        $this->getBackingStore()->set('settingName', $value);
     }
 
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      *  @param int|null $value Value to set for the unknownDeviceCount property.
     */
-    public function setUnknownDeviceCount(?int $value ): void {
-        $this->unknownDeviceCount = $value;
+    public function setUnknownDeviceCount(?int $value): void {
+        $this->getBackingStore()->set('unknownDeviceCount', $value);
     }
 
 }

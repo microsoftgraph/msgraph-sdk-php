@@ -10,31 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var DateInterval|null $callDuration Duration of the call.
-    */
-    private ?DateInterval $callDuration = null;
-    
-    /**
-     * @var TeamworkCallEventType|null $callEventType Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-    */
-    private ?TeamworkCallEventType $callEventType = null;
-    
-    /**
-     * @var string|null $callId Unique identifier of the call.
-    */
-    private ?string $callId = null;
-    
-    /**
-     * @var array<CallParticipantInfo>|null $callParticipants List of call participants.
-    */
-    private ?array $callParticipants = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new CallEndedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -56,7 +31,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return DateInterval|null
     */
     public function getCallDuration(): ?DateInterval {
-        return $this->callDuration;
+        return $this->getBackingStore()->get('callDuration');
     }
 
     /**
@@ -64,7 +39,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return TeamworkCallEventType|null
     */
     public function getCallEventType(): ?TeamworkCallEventType {
-        return $this->callEventType;
+        return $this->getBackingStore()->get('callEventType');
     }
 
     /**
@@ -72,7 +47,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->callId;
+        return $this->getBackingStore()->get('callId');
     }
 
     /**
@@ -80,7 +55,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return array<CallParticipantInfo>|null
     */
     public function getCallParticipants(): ?array {
-        return $this->callParticipants;
+        return $this->getBackingStore()->get('callParticipants');
     }
 
     /**
@@ -103,7 +78,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -112,51 +87,51 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateIntervalValue('callDuration', $this->callDuration);
-        $writer->writeEnumValue('callEventType', $this->callEventType);
-        $writer->writeStringValue('callId', $this->callId);
-        $writer->writeCollectionOfObjectValues('callParticipants', $this->callParticipants);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeDateIntervalValue('callDuration', $this->getCallDuration());
+        $writer->writeEnumValue('callEventType', $this->getCallEventType());
+        $writer->writeStringValue('callId', $this->getCallId());
+        $writer->writeCollectionOfObjectValues('callParticipants', $this->getCallParticipants());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the callDuration property value. Duration of the call.
      *  @param DateInterval|null $value Value to set for the callDuration property.
     */
-    public function setCallDuration(?DateInterval $value ): void {
-        $this->callDuration = $value;
+    public function setCallDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('callDuration', $value);
     }
 
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      *  @param TeamworkCallEventType|null $value Value to set for the callEventType property.
     */
-    public function setCallEventType(?TeamworkCallEventType $value ): void {
-        $this->callEventType = $value;
+    public function setCallEventType(?TeamworkCallEventType $value): void {
+        $this->getBackingStore()->set('callEventType', $value);
     }
 
     /**
      * Sets the callId property value. Unique identifier of the call.
      *  @param string|null $value Value to set for the callId property.
     */
-    public function setCallId(?string $value ): void {
-        $this->callId = $value;
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
      * Sets the callParticipants property value. List of call participants.
      *  @param array<CallParticipantInfo>|null $value Value to set for the callParticipants property.
     */
-    public function setCallParticipants(?array $value ): void {
-        $this->callParticipants = $value;
+    public function setCallParticipants(?array $value): void {
+        $this->getBackingStore()->set('callParticipants', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

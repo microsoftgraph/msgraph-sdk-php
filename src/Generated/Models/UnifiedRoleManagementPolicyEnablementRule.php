@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * @var array<string>|null $enabledRules The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
-    */
-    private ?array $enabledRules = null;
-    
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyEnablementRule and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
      * @return array<string>|null
     */
     public function getEnabledRules(): ?array {
-        return $this->enabledRules;
+        return $this->getBackingStore()->get('enabledRules');
     }
 
     /**
@@ -55,15 +50,15 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('enabledRules', $this->enabledRules);
+        $writer->writeCollectionOfPrimitiveValues('enabledRules', $this->getEnabledRules());
     }
 
     /**
      * Sets the enabledRules property value. The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
      *  @param array<string>|null $value Value to set for the enabledRules property.
     */
-    public function setEnabledRules(?array $value ): void {
-        $this->enabledRules = $value;
+    public function setEnabledRules(?array $value): void {
+        $this->getBackingStore()->set('enabledRules', $value);
     }
 
 }

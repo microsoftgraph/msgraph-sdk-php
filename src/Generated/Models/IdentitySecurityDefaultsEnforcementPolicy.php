@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * @var bool|null $isEnabled If set to true, Azure Active Directory security defaults is enabled for the tenant.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
      * Instantiates a new IdentitySecurityDefaultsEnforcementPolicy and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Pa
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -55,15 +50,15 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
     }
 
     /**
      * Sets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
 }

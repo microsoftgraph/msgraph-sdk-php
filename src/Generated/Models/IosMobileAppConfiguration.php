@@ -10,16 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable 
 {
     /**
-     * @var StreamInterface|null $encodedSettingXml mdm app configuration Base64 binary.
-    */
-    private ?StreamInterface $encodedSettingXml = null;
-    
-    /**
-     * @var array<AppConfigurationSettingItem>|null $settings app configuration setting items.
-    */
-    private ?array $settings = null;
-    
-    /**
      * Instantiates a new IosMobileAppConfiguration and sets the default values.
     */
     public function __construct() {
@@ -38,10 +28,10 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
 
     /**
      * Gets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getEncodedSettingXml(): StreamInterface {
-        return $this->encodedSettingXml;
+    public function getEncodedSettingXml(): ?StreamInterface {
+        return $this->getBackingStore()->get('encodedSettingXml');
     }
 
     /**
@@ -61,7 +51,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
      * @return array<AppConfigurationSettingItem>|null
     */
     public function getSettings(): ?array {
-        return $this->settings;
+        return $this->getBackingStore()->get('settings');
     }
 
     /**
@@ -70,24 +60,24 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('encodedSettingXml', $this->encodedSettingXml);
-        $writer->writeCollectionOfObjectValues('settings', $this->settings);
+        $writer->writeBinaryContent('encodedSettingXml', $this->getEncodedSettingXml());
+        $writer->writeCollectionOfObjectValues('settings', $this->getSettings());
     }
 
     /**
      * Sets the encodedSettingXml property value. mdm app configuration Base64 binary.
      *  @param StreamInterface|null $value Value to set for the encodedSettingXml property.
     */
-    public function setEncodedSettingXml(?StreamInterface $value ): void {
-        $this->encodedSettingXml = $value;
+    public function setEncodedSettingXml(?StreamInterface $value): void {
+        $this->getBackingStore()->set('encodedSettingXml', $value);
     }
 
     /**
      * Sets the settings property value. app configuration setting items.
      *  @param array<AppConfigurationSettingItem>|null $value Value to set for the settings property.
     */
-    public function setSettings(?array $value ): void {
-        $this->settings = $value;
+    public function setSettings(?array $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
 }

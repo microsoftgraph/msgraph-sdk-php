@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffRequest extends ScheduleChangeRequest implements Parsable 
 {
     /**
-     * @var DateTime|null $endDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var DateTime|null $startDateTime The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $timeOffReasonId The reason for the time off.
-    */
-    private ?string $timeOffReasonId = null;
-    
-    /**
      * Instantiates a new TimeOffRequest and sets the default values.
     */
     public function __construct() {
@@ -46,7 +31,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -67,7 +52,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -75,7 +60,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getTimeOffReasonId(): ?string {
-        return $this->timeOffReasonId;
+        return $this->getBackingStore()->get('timeOffReasonId');
     }
 
     /**
@@ -84,33 +69,33 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('timeOffReasonId', $this->timeOffReasonId);
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('timeOffReasonId', $this->getTimeOffReasonId());
     }
 
     /**
      * Sets the endDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the timeOffReasonId property value. The reason for the time off.
      *  @param string|null $value Value to set for the timeOffReasonId property.
     */
-    public function setTimeOffReasonId(?string $value ): void {
-        $this->timeOffReasonId = $value;
+    public function setTimeOffReasonId(?string $value): void {
+        $this->getBackingStore()->set('timeOffReasonId', $value);
     }
 
 }

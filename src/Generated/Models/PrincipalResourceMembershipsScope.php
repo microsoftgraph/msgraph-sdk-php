@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrincipalResourceMembershipsScope extends AccessReviewScope implements Parsable 
 {
     /**
-     * @var array<AccessReviewScope>|null $principalScopes Defines the scopes of the principals whose access to resources are reviewed in the access review.
-    */
-    private ?array $principalScopes = null;
-    
-    /**
-     * @var array<AccessReviewScope>|null $resourceScopes Defines the scopes of the resources for which access is reviewed.
-    */
-    private ?array $resourceScopes = null;
-    
-    /**
      * Instantiates a new PrincipalResourceMembershipsScope and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
      * @return array<AccessReviewScope>|null
     */
     public function getPrincipalScopes(): ?array {
-        return $this->principalScopes;
+        return $this->getBackingStore()->get('principalScopes');
     }
 
     /**
@@ -60,7 +50,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
      * @return array<AccessReviewScope>|null
     */
     public function getResourceScopes(): ?array {
-        return $this->resourceScopes;
+        return $this->getBackingStore()->get('resourceScopes');
     }
 
     /**
@@ -69,24 +59,24 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('principalScopes', $this->principalScopes);
-        $writer->writeCollectionOfObjectValues('resourceScopes', $this->resourceScopes);
+        $writer->writeCollectionOfObjectValues('principalScopes', $this->getPrincipalScopes());
+        $writer->writeCollectionOfObjectValues('resourceScopes', $this->getResourceScopes());
     }
 
     /**
      * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
      *  @param array<AccessReviewScope>|null $value Value to set for the principalScopes property.
     */
-    public function setPrincipalScopes(?array $value ): void {
-        $this->principalScopes = $value;
+    public function setPrincipalScopes(?array $value): void {
+        $this->getBackingStore()->set('principalScopes', $value);
     }
 
     /**
      * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
      *  @param array<AccessReviewScope>|null $value Value to set for the resourceScopes property.
     */
-    public function setResourceScopes(?array $value ): void {
-        $this->resourceScopes = $value;
+    public function setResourceScopes(?array $value): void {
+        $this->getBackingStore()->set('resourceScopes', $value);
     }
 
 }

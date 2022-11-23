@@ -6,95 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class IntuneBrand implements AdditionalDataHolder, Parsable 
+class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $contactITEmailAddress Email address of the person/organization responsible for IT support.
-    */
-    private ?string $contactITEmailAddress = null;
-    
-    /**
-     * @var string|null $contactITName Name of the person/organization responsible for IT support.
-    */
-    private ?string $contactITName = null;
-    
-    /**
-     * @var string|null $contactITNotes Text comments regarding the person/organization responsible for IT support.
-    */
-    private ?string $contactITNotes = null;
-    
-    /**
-     * @var string|null $contactITPhoneNumber Phone number of the person/organization responsible for IT support.
-    */
-    private ?string $contactITPhoneNumber = null;
-    
-    /**
-     * @var MimeContent|null $darkBackgroundLogo Logo image displayed in Company Portal apps which have a dark background behind the logo.
-    */
-    private ?MimeContent $darkBackgroundLogo = null;
-    
-    /**
-     * @var string|null $displayName Company/organization name that is displayed to end users.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var MimeContent|null $lightBackgroundLogo Logo image displayed in Company Portal apps which have a light background behind the logo.
-    */
-    private ?MimeContent $lightBackgroundLogo = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $onlineSupportSiteName Display name of the company/organization’s IT helpdesk site.
-    */
-    private ?string $onlineSupportSiteName = null;
-    
-    /**
-     * @var string|null $onlineSupportSiteUrl URL to the company/organization’s IT helpdesk site.
-    */
-    private ?string $onlineSupportSiteUrl = null;
-    
-    /**
-     * @var string|null $privacyUrl URL to the company/organization’s privacy policy.
-    */
-    private ?string $privacyUrl = null;
-    
-    /**
-     * @var bool|null $showDisplayNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-    */
-    private ?bool $showDisplayNameNextToLogo = null;
-    
-    /**
-     * @var bool|null $showLogo Boolean that represents whether the administrator-supplied logo images are shown or not shown.
-    */
-    private ?bool $showLogo = null;
-    
-    /**
-     * @var bool|null $showNameNextToLogo Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
-    */
-    private ?bool $showNameNextToLogo = null;
-    
-    /**
-     * @var RgbColor|null $themeColor Primary theme color used in the Company Portal applications and web portal.
-    */
-    private ?RgbColor $themeColor = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new intuneBrand and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.intuneBrand');
     }
 
     /**
@@ -110,8 +38,16 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -119,7 +55,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContactITEmailAddress(): ?string {
-        return $this->contactITEmailAddress;
+        return $this->getBackingStore()->get('contactITEmailAddress');
     }
 
     /**
@@ -127,7 +63,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContactITName(): ?string {
-        return $this->contactITName;
+        return $this->getBackingStore()->get('contactITName');
     }
 
     /**
@@ -135,7 +71,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContactITNotes(): ?string {
-        return $this->contactITNotes;
+        return $this->getBackingStore()->get('contactITNotes');
     }
 
     /**
@@ -143,7 +79,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContactITPhoneNumber(): ?string {
-        return $this->contactITPhoneNumber;
+        return $this->getBackingStore()->get('contactITPhoneNumber');
     }
 
     /**
@@ -151,7 +87,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return MimeContent|null
     */
     public function getDarkBackgroundLogo(): ?MimeContent {
-        return $this->darkBackgroundLogo;
+        return $this->getBackingStore()->get('darkBackgroundLogo');
     }
 
     /**
@@ -159,7 +95,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -192,7 +128,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return MimeContent|null
     */
     public function getLightBackgroundLogo(): ?MimeContent {
-        return $this->lightBackgroundLogo;
+        return $this->getBackingStore()->get('lightBackgroundLogo');
     }
 
     /**
@@ -200,7 +136,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -208,7 +144,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOnlineSupportSiteName(): ?string {
-        return $this->onlineSupportSiteName;
+        return $this->getBackingStore()->get('onlineSupportSiteName');
     }
 
     /**
@@ -216,7 +152,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOnlineSupportSiteUrl(): ?string {
-        return $this->onlineSupportSiteUrl;
+        return $this->getBackingStore()->get('onlineSupportSiteUrl');
     }
 
     /**
@@ -224,7 +160,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPrivacyUrl(): ?string {
-        return $this->privacyUrl;
+        return $this->getBackingStore()->get('privacyUrl');
     }
 
     /**
@@ -232,7 +168,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowDisplayNameNextToLogo(): ?bool {
-        return $this->showDisplayNameNextToLogo;
+        return $this->getBackingStore()->get('showDisplayNameNextToLogo');
     }
 
     /**
@@ -240,7 +176,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowLogo(): ?bool {
-        return $this->showLogo;
+        return $this->getBackingStore()->get('showLogo');
     }
 
     /**
@@ -248,7 +184,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getShowNameNextToLogo(): ?bool {
-        return $this->showNameNextToLogo;
+        return $this->getBackingStore()->get('showNameNextToLogo');
     }
 
     /**
@@ -256,7 +192,7 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @return RgbColor|null
     */
     public function getThemeColor(): ?RgbColor {
-        return $this->themeColor;
+        return $this->getBackingStore()->get('themeColor');
     }
 
     /**
@@ -264,150 +200,158 @@ class IntuneBrand implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('contactITEmailAddress', $this->contactITEmailAddress);
-        $writer->writeStringValue('contactITName', $this->contactITName);
-        $writer->writeStringValue('contactITNotes', $this->contactITNotes);
-        $writer->writeStringValue('contactITPhoneNumber', $this->contactITPhoneNumber);
-        $writer->writeObjectValue('darkBackgroundLogo', $this->darkBackgroundLogo);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('lightBackgroundLogo', $this->lightBackgroundLogo);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('onlineSupportSiteName', $this->onlineSupportSiteName);
-        $writer->writeStringValue('onlineSupportSiteUrl', $this->onlineSupportSiteUrl);
-        $writer->writeStringValue('privacyUrl', $this->privacyUrl);
-        $writer->writeBooleanValue('showDisplayNameNextToLogo', $this->showDisplayNameNextToLogo);
-        $writer->writeBooleanValue('showLogo', $this->showLogo);
-        $writer->writeBooleanValue('showNameNextToLogo', $this->showNameNextToLogo);
-        $writer->writeObjectValue('themeColor', $this->themeColor);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('contactITEmailAddress', $this->getContactITEmailAddress());
+        $writer->writeStringValue('contactITName', $this->getContactITName());
+        $writer->writeStringValue('contactITNotes', $this->getContactITNotes());
+        $writer->writeStringValue('contactITPhoneNumber', $this->getContactITPhoneNumber());
+        $writer->writeObjectValue('darkBackgroundLogo', $this->getDarkBackgroundLogo());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('lightBackgroundLogo', $this->getLightBackgroundLogo());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('onlineSupportSiteName', $this->getOnlineSupportSiteName());
+        $writer->writeStringValue('onlineSupportSiteUrl', $this->getOnlineSupportSiteUrl());
+        $writer->writeStringValue('privacyUrl', $this->getPrivacyUrl());
+        $writer->writeBooleanValue('showDisplayNameNextToLogo', $this->getShowDisplayNameNextToLogo());
+        $writer->writeBooleanValue('showLogo', $this->getShowLogo());
+        $writer->writeBooleanValue('showNameNextToLogo', $this->getShowNameNextToLogo());
+        $writer->writeObjectValue('themeColor', $this->getThemeColor());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      *  @param string|null $value Value to set for the contactITEmailAddress property.
     */
-    public function setContactITEmailAddress(?string $value ): void {
-        $this->contactITEmailAddress = $value;
+    public function setContactITEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('contactITEmailAddress', $value);
     }
 
     /**
      * Sets the contactITName property value. Name of the person/organization responsible for IT support.
      *  @param string|null $value Value to set for the contactITName property.
     */
-    public function setContactITName(?string $value ): void {
-        $this->contactITName = $value;
+    public function setContactITName(?string $value): void {
+        $this->getBackingStore()->set('contactITName', $value);
     }
 
     /**
      * Sets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      *  @param string|null $value Value to set for the contactITNotes property.
     */
-    public function setContactITNotes(?string $value ): void {
-        $this->contactITNotes = $value;
+    public function setContactITNotes(?string $value): void {
+        $this->getBackingStore()->set('contactITNotes', $value);
     }
 
     /**
      * Sets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      *  @param string|null $value Value to set for the contactITPhoneNumber property.
     */
-    public function setContactITPhoneNumber(?string $value ): void {
-        $this->contactITPhoneNumber = $value;
+    public function setContactITPhoneNumber(?string $value): void {
+        $this->getBackingStore()->set('contactITPhoneNumber', $value);
     }
 
     /**
      * Sets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      *  @param MimeContent|null $value Value to set for the darkBackgroundLogo property.
     */
-    public function setDarkBackgroundLogo(?MimeContent $value ): void {
-        $this->darkBackgroundLogo = $value;
+    public function setDarkBackgroundLogo(?MimeContent $value): void {
+        $this->getBackingStore()->set('darkBackgroundLogo', $value);
     }
 
     /**
      * Sets the displayName property value. Company/organization name that is displayed to end users.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      *  @param MimeContent|null $value Value to set for the lightBackgroundLogo property.
     */
-    public function setLightBackgroundLogo(?MimeContent $value ): void {
-        $this->lightBackgroundLogo = $value;
+    public function setLightBackgroundLogo(?MimeContent $value): void {
+        $this->getBackingStore()->set('lightBackgroundLogo', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
      *  @param string|null $value Value to set for the onlineSupportSiteName property.
     */
-    public function setOnlineSupportSiteName(?string $value ): void {
-        $this->onlineSupportSiteName = $value;
+    public function setOnlineSupportSiteName(?string $value): void {
+        $this->getBackingStore()->set('onlineSupportSiteName', $value);
     }
 
     /**
      * Sets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
      *  @param string|null $value Value to set for the onlineSupportSiteUrl property.
     */
-    public function setOnlineSupportSiteUrl(?string $value ): void {
-        $this->onlineSupportSiteUrl = $value;
+    public function setOnlineSupportSiteUrl(?string $value): void {
+        $this->getBackingStore()->set('onlineSupportSiteUrl', $value);
     }
 
     /**
      * Sets the privacyUrl property value. URL to the company/organization’s privacy policy.
      *  @param string|null $value Value to set for the privacyUrl property.
     */
-    public function setPrivacyUrl(?string $value ): void {
-        $this->privacyUrl = $value;
+    public function setPrivacyUrl(?string $value): void {
+        $this->getBackingStore()->set('privacyUrl', $value);
     }
 
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      *  @param bool|null $value Value to set for the showDisplayNameNextToLogo property.
     */
-    public function setShowDisplayNameNextToLogo(?bool $value ): void {
-        $this->showDisplayNameNextToLogo = $value;
+    public function setShowDisplayNameNextToLogo(?bool $value): void {
+        $this->getBackingStore()->set('showDisplayNameNextToLogo', $value);
     }
 
     /**
      * Sets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      *  @param bool|null $value Value to set for the showLogo property.
     */
-    public function setShowLogo(?bool $value ): void {
-        $this->showLogo = $value;
+    public function setShowLogo(?bool $value): void {
+        $this->getBackingStore()->set('showLogo', $value);
     }
 
     /**
      * Sets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      *  @param bool|null $value Value to set for the showNameNextToLogo property.
     */
-    public function setShowNameNextToLogo(?bool $value ): void {
-        $this->showNameNextToLogo = $value;
+    public function setShowNameNextToLogo(?bool $value): void {
+        $this->getBackingStore()->set('showNameNextToLogo', $value);
     }
 
     /**
      * Sets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      *  @param RgbColor|null $value Value to set for the themeColor property.
     */
-    public function setThemeColor(?RgbColor $value ): void {
-        $this->themeColor = $value;
+    public function setThemeColor(?RgbColor $value): void {
+        $this->getBackingStore()->set('themeColor', $value);
     }
 
 }

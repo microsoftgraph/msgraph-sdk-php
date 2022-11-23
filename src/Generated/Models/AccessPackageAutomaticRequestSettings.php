@@ -7,40 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Parsable 
+class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var DateInterval|null $gracePeriodBeforeAccessRemoval The gracePeriodBeforeAccessRemoval property
-    */
-    private ?DateInterval $gracePeriodBeforeAccessRemoval = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $removeAccessWhenTargetLeavesAllowedTargets The removeAccessWhenTargetLeavesAllowedTargets property
-    */
-    private ?bool $removeAccessWhenTargetLeavesAllowedTargets = null;
-    
-    /**
-     * @var bool|null $requestAccessForAllowedTargets If set to true, automatic assignments will be created for targets in the allowed target scope.
-    */
-    private ?bool $requestAccessForAllowedTargets = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new accessPackageAutomaticRequestSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.accessPackageAutomaticRequestSettings');
     }
 
     /**
@@ -56,8 +39,16 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +70,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * @return DateInterval|null
     */
     public function getGracePeriodBeforeAccessRemoval(): ?DateInterval {
-        return $this->gracePeriodBeforeAccessRemoval;
+        return $this->getBackingStore()->get('gracePeriodBeforeAccessRemoval');
     }
 
     /**
@@ -87,7 +78,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -95,7 +86,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getRemoveAccessWhenTargetLeavesAllowedTargets(): ?bool {
-        return $this->removeAccessWhenTargetLeavesAllowedTargets;
+        return $this->getBackingStore()->get('removeAccessWhenTargetLeavesAllowedTargets');
     }
 
     /**
@@ -103,7 +94,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * @return bool|null
     */
     public function getRequestAccessForAllowedTargets(): ?bool {
-        return $this->requestAccessForAllowedTargets;
+        return $this->getBackingStore()->get('requestAccessForAllowedTargets');
     }
 
     /**
@@ -111,51 +102,59 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeDateIntervalValue('gracePeriodBeforeAccessRemoval', $this->gracePeriodBeforeAccessRemoval);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('removeAccessWhenTargetLeavesAllowedTargets', $this->removeAccessWhenTargetLeavesAllowedTargets);
-        $writer->writeBooleanValue('requestAccessForAllowedTargets', $this->requestAccessForAllowedTargets);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeDateIntervalValue('gracePeriodBeforeAccessRemoval', $this->getGracePeriodBeforeAccessRemoval());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('removeAccessWhenTargetLeavesAllowedTargets', $this->getRemoveAccessWhenTargetLeavesAllowedTargets());
+        $writer->writeBooleanValue('requestAccessForAllowedTargets', $this->getRequestAccessForAllowedTargets());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
      *  @param DateInterval|null $value Value to set for the gracePeriodBeforeAccessRemoval property.
     */
-    public function setGracePeriodBeforeAccessRemoval(?DateInterval $value ): void {
-        $this->gracePeriodBeforeAccessRemoval = $value;
+    public function setGracePeriodBeforeAccessRemoval(?DateInterval $value): void {
+        $this->getBackingStore()->set('gracePeriodBeforeAccessRemoval', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
      *  @param bool|null $value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
     */
-    public function setRemoveAccessWhenTargetLeavesAllowedTargets(?bool $value ): void {
-        $this->removeAccessWhenTargetLeavesAllowedTargets = $value;
+    public function setRemoveAccessWhenTargetLeavesAllowedTargets(?bool $value): void {
+        $this->getBackingStore()->set('removeAccessWhenTargetLeavesAllowedTargets', $value);
     }
 
     /**
      * Sets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
      *  @param bool|null $value Value to set for the requestAccessForAllowedTargets property.
     */
-    public function setRequestAccessForAllowedTargets(?bool $value ): void {
-        $this->requestAccessForAllowedTargets = $value;
+    public function setRequestAccessForAllowedTargets(?bool $value): void {
+        $this->getBackingStore()->set('requestAccessForAllowedTargets', $value);
     }
 
 }

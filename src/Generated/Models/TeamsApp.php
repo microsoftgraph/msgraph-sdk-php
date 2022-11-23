@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsApp extends Entity implements Parsable 
 {
     /**
-     * @var array<TeamsAppDefinition>|null $appDefinitions The details for each version of the app.
-    */
-    private ?array $appDefinitions = null;
-    
-    /**
-     * @var string|null $displayName The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var TeamsAppDistributionMethod|null $distributionMethod The method of distribution for the app. Read-only.
-    */
-    private ?TeamsAppDistributionMethod $distributionMethod = null;
-    
-    /**
-     * @var string|null $externalId The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
-    */
-    private ?string $externalId = null;
-    
-    /**
      * Instantiates a new teamsApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.teamsApp');
     }
 
     /**
@@ -50,7 +29,7 @@ class TeamsApp extends Entity implements Parsable
      * @return array<TeamsAppDefinition>|null
     */
     public function getAppDefinitions(): ?array {
-        return $this->appDefinitions;
+        return $this->getBackingStore()->get('appDefinitions');
     }
 
     /**
@@ -58,7 +37,7 @@ class TeamsApp extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +45,7 @@ class TeamsApp extends Entity implements Parsable
      * @return TeamsAppDistributionMethod|null
     */
     public function getDistributionMethod(): ?TeamsAppDistributionMethod {
-        return $this->distributionMethod;
+        return $this->getBackingStore()->get('distributionMethod');
     }
 
     /**
@@ -74,7 +53,7 @@ class TeamsApp extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -97,42 +76,42 @@ class TeamsApp extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('appDefinitions', $this->appDefinitions);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('distributionMethod', $this->distributionMethod);
-        $writer->writeStringValue('externalId', $this->externalId);
+        $writer->writeCollectionOfObjectValues('appDefinitions', $this->getAppDefinitions());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('distributionMethod', $this->getDistributionMethod());
+        $writer->writeStringValue('externalId', $this->getExternalId());
     }
 
     /**
      * Sets the appDefinitions property value. The details for each version of the app.
      *  @param array<TeamsAppDefinition>|null $value Value to set for the appDefinitions property.
     */
-    public function setAppDefinitions(?array $value ): void {
-        $this->appDefinitions = $value;
+    public function setAppDefinitions(?array $value): void {
+        $this->getBackingStore()->set('appDefinitions', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
      *  @param TeamsAppDistributionMethod|null $value Value to set for the distributionMethod property.
     */
-    public function setDistributionMethod(?TeamsAppDistributionMethod $value ): void {
-        $this->distributionMethod = $value;
+    public function setDistributionMethod(?TeamsAppDistributionMethod $value): void {
+        $this->getBackingStore()->set('distributionMethod', $value);
     }
 
     /**
      * Sets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
 }

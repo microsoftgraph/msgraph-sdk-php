@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ParticipantJoiningNotification extends Entity implements Parsable 
 {
     /**
-     * @var Call|null $call The call property
-    */
-    private ?Call $call = null;
-    
-    /**
      * Instantiates a new ParticipantJoiningNotification and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.participantJoiningNotification');
     }
 
     /**
@@ -35,7 +29,7 @@ class ParticipantJoiningNotification extends Entity implements Parsable
      * @return Call|null
     */
     public function getCall(): ?Call {
-        return $this->call;
+        return $this->getBackingStore()->get('call');
     }
 
     /**
@@ -55,15 +49,15 @@ class ParticipantJoiningNotification extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('call', $this->call);
+        $writer->writeObjectValue('call', $this->getCall());
     }
 
     /**
      * Sets the call property value. The call property
      *  @param Call|null $value Value to set for the call property.
     */
-    public function setCall(?Call $value ): void {
-        $this->call = $value;
+    public function setCall(?Call $value): void {
+        $this->getBackingStore()->set('call', $value);
     }
 
 }

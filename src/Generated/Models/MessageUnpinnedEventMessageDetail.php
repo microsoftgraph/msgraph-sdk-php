@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var DateTime|null $eventDateTime Date and time when the event occurred.
-    */
-    private ?DateTime $eventDateTime = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new MessageUnpinnedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -41,7 +31,7 @@ class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Pa
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->eventDateTime;
+        return $this->getBackingStore()->get('eventDateTime');
     }
 
     /**
@@ -61,7 +51,7 @@ class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Pa
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -70,24 +60,24 @@ class MessageUnpinnedEventMessageDetail extends EventMessageDetail implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('eventDateTime', $this->eventDateTime);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the eventDateTime property value. Date and time when the event occurred.
      *  @param DateTime|null $value Value to set for the eventDateTime property.
     */
-    public function setEventDateTime(?DateTime $value ): void {
-        $this->eventDateTime = $value;
+    public function setEventDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('eventDateTime', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

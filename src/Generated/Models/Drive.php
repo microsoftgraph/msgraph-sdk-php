@@ -9,59 +9,9 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Drive extends BaseItem implements Parsable 
 {
     /**
-     * @var array<DriveItem>|null $bundles Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
-    */
-    private ?array $bundles = null;
-    
-    /**
-     * @var string|null $driveType Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
-    */
-    private ?string $driveType = null;
-    
-    /**
      * @var EscapedList|null $escapedList For drives in SharePoint, the underlying document library list. Read-only. Nullable.
     */
-    private ?EscapedList $escapedList = null;
-    
-    /**
-     * @var array<DriveItem>|null $following The list of items the user is following. Only in OneDrive for Business.
-    */
-    private ?array $following = null;
-    
-    /**
-     * @var array<DriveItem>|null $items All items contained in the drive. Read-only. Nullable.
-    */
-    private ?array $items = null;
-    
-    /**
-     * @var IdentitySet|null $owner Optional. The user account that owns the drive. Read-only.
-    */
-    private ?IdentitySet $owner = null;
-    
-    /**
-     * @var Quota|null $quota Optional. Information about the drive's storage space quota. Read-only.
-    */
-    private ?Quota $quota = null;
-    
-    /**
-     * @var DriveItem|null $root The root folder of the drive. Read-only.
-    */
-    private ?DriveItem $root = null;
-    
-    /**
-     * @var SharepointIds|null $sharePointIds The sharePointIds property
-    */
-    private ?SharepointIds $sharePointIds = null;
-    
-    /**
-     * @var array<DriveItem>|null $special Collection of common folders available in OneDrive. Read-only. Nullable.
-    */
-    private ?array $special = null;
-    
-    /**
-     * @var SystemFacet|null $system If present, indicates that this is a system-managed drive. Read-only.
-    */
-    private ?SystemFacet $system = null;
+    public ?EscapedList $escapedList = null;
     
     /**
      * Instantiates a new Drive and sets the default values.
@@ -85,7 +35,7 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getBundles(): ?array {
-        return $this->bundles;
+        return $this->getBackingStore()->get('bundles');
     }
 
     /**
@@ -93,7 +43,7 @@ class Drive extends BaseItem implements Parsable
      * @return string|null
     */
     public function getDriveType(): ?string {
-        return $this->driveType;
+        return $this->getBackingStore()->get('driveType');
     }
 
     /**
@@ -122,7 +72,7 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getFollowing(): ?array {
-        return $this->following;
+        return $this->getBackingStore()->get('following');
     }
 
     /**
@@ -130,7 +80,7 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getItems(): ?array {
-        return $this->items;
+        return $this->getBackingStore()->get('items');
     }
 
     /**
@@ -138,7 +88,7 @@ class Drive extends BaseItem implements Parsable
      * @return EscapedList|null
     */
     public function getList(): ?EscapedList {
-        return $this->escapedList;
+        return $this->getBackingStore()->get('escapedList');
     }
 
     /**
@@ -146,7 +96,7 @@ class Drive extends BaseItem implements Parsable
      * @return IdentitySet|null
     */
     public function getOwner(): ?IdentitySet {
-        return $this->owner;
+        return $this->getBackingStore()->get('owner');
     }
 
     /**
@@ -154,7 +104,7 @@ class Drive extends BaseItem implements Parsable
      * @return Quota|null
     */
     public function getQuota(): ?Quota {
-        return $this->quota;
+        return $this->getBackingStore()->get('quota');
     }
 
     /**
@@ -162,7 +112,7 @@ class Drive extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getRoot(): ?DriveItem {
-        return $this->root;
+        return $this->getBackingStore()->get('root');
     }
 
     /**
@@ -170,7 +120,7 @@ class Drive extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharePointIds(): ?SharepointIds {
-        return $this->sharePointIds;
+        return $this->getBackingStore()->get('sharePointIds');
     }
 
     /**
@@ -178,7 +128,7 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getSpecial(): ?array {
-        return $this->special;
+        return $this->getBackingStore()->get('special');
     }
 
     /**
@@ -186,7 +136,7 @@ class Drive extends BaseItem implements Parsable
      * @return SystemFacet|null
     */
     public function getSystem(): ?SystemFacet {
-        return $this->system;
+        return $this->getBackingStore()->get('system');
     }
 
     /**
@@ -195,105 +145,105 @@ class Drive extends BaseItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('bundles', $this->bundles);
-        $writer->writeStringValue('driveType', $this->driveType);
-        $writer->writeObjectValue('list', $this->escapedList);
-        $writer->writeCollectionOfObjectValues('following', $this->following);
-        $writer->writeCollectionOfObjectValues('items', $this->items);
-        $writer->writeObjectValue('owner', $this->owner);
-        $writer->writeObjectValue('quota', $this->quota);
-        $writer->writeObjectValue('root', $this->root);
-        $writer->writeObjectValue('sharePointIds', $this->sharePointIds);
-        $writer->writeCollectionOfObjectValues('special', $this->special);
-        $writer->writeObjectValue('system', $this->system);
+        $writer->writeCollectionOfObjectValues('bundles', $this->getBundles());
+        $writer->writeStringValue('driveType', $this->getDriveType());
+        $writer->writeObjectValue('list', $this->getList());
+        $writer->writeCollectionOfObjectValues('following', $this->getFollowing());
+        $writer->writeCollectionOfObjectValues('items', $this->getItems());
+        $writer->writeObjectValue('owner', $this->getOwner());
+        $writer->writeObjectValue('quota', $this->getQuota());
+        $writer->writeObjectValue('root', $this->getRoot());
+        $writer->writeObjectValue('sharePointIds', $this->getSharePointIds());
+        $writer->writeCollectionOfObjectValues('special', $this->getSpecial());
+        $writer->writeObjectValue('system', $this->getSystem());
     }
 
     /**
      * Sets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      *  @param array<DriveItem>|null $value Value to set for the bundles property.
     */
-    public function setBundles(?array $value ): void {
-        $this->bundles = $value;
+    public function setBundles(?array $value): void {
+        $this->getBackingStore()->set('bundles', $value);
     }
 
     /**
      * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
      *  @param string|null $value Value to set for the driveType property.
     */
-    public function setDriveType(?string $value ): void {
-        $this->driveType = $value;
+    public function setDriveType(?string $value): void {
+        $this->getBackingStore()->set('driveType', $value);
     }
 
     /**
      * Sets the following property value. The list of items the user is following. Only in OneDrive for Business.
      *  @param array<DriveItem>|null $value Value to set for the following property.
     */
-    public function setFollowing(?array $value ): void {
-        $this->following = $value;
+    public function setFollowing(?array $value): void {
+        $this->getBackingStore()->set('following', $value);
     }
 
     /**
      * Sets the items property value. All items contained in the drive. Read-only. Nullable.
      *  @param array<DriveItem>|null $value Value to set for the items property.
     */
-    public function setItems(?array $value ): void {
-        $this->items = $value;
+    public function setItems(?array $value): void {
+        $this->getBackingStore()->set('items', $value);
     }
 
     /**
      * Sets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      *  @param EscapedList|null $value Value to set for the EscapedList property.
     */
-    public function setList(?EscapedList $value ): void {
-        $this->escapedList = $value;
+    public function setList(?EscapedList $value): void {
+        $this->getBackingStore()->set('escapedList', $value);
     }
 
     /**
      * Sets the owner property value. Optional. The user account that owns the drive. Read-only.
      *  @param IdentitySet|null $value Value to set for the owner property.
     */
-    public function setOwner(?IdentitySet $value ): void {
-        $this->owner = $value;
+    public function setOwner(?IdentitySet $value): void {
+        $this->getBackingStore()->set('owner', $value);
     }
 
     /**
      * Sets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
      *  @param Quota|null $value Value to set for the quota property.
     */
-    public function setQuota(?Quota $value ): void {
-        $this->quota = $value;
+    public function setQuota(?Quota $value): void {
+        $this->getBackingStore()->set('quota', $value);
     }
 
     /**
      * Sets the root property value. The root folder of the drive. Read-only.
      *  @param DriveItem|null $value Value to set for the root property.
     */
-    public function setRoot(?DriveItem $value ): void {
-        $this->root = $value;
+    public function setRoot(?DriveItem $value): void {
+        $this->getBackingStore()->set('root', $value);
     }
 
     /**
      * Sets the sharePointIds property value. The sharePointIds property
      *  @param SharepointIds|null $value Value to set for the sharePointIds property.
     */
-    public function setSharePointIds(?SharepointIds $value ): void {
-        $this->sharePointIds = $value;
+    public function setSharePointIds(?SharepointIds $value): void {
+        $this->getBackingStore()->set('sharePointIds', $value);
     }
 
     /**
      * Sets the special property value. Collection of common folders available in OneDrive. Read-only. Nullable.
      *  @param array<DriveItem>|null $value Value to set for the special property.
     */
-    public function setSpecial(?array $value ): void {
-        $this->special = $value;
+    public function setSpecial(?array $value): void {
+        $this->getBackingStore()->set('special', $value);
     }
 
     /**
      * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
      *  @param SystemFacet|null $value Value to set for the system property.
     */
-    public function setSystem(?SystemFacet $value ): void {
-        $this->system = $value;
+    public function setSystem(?SystemFacet $value): void {
+        $this->getBackingStore()->set('system', $value);
     }
 
 }

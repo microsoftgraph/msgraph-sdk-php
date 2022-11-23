@@ -6,28 +6,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Parsable 
+class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $hubSiteUrls The hubSiteUrls property
-    */
-    private ?array $hubSiteUrls = null;
-    
-    /**
-     * @var bool|null $propagateToExistingLists The propagateToExistingLists property
-    */
-    private ?bool $propagateToExistingLists = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new associateWithHubSitesPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -44,8 +38,16 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -65,7 +67,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Pars
      * @return array<string>|null
     */
     public function getHubSiteUrls(): ?array {
-        return $this->hubSiteUrls;
+        return $this->getBackingStore()->get('hubSiteUrls');
     }
 
     /**
@@ -73,7 +75,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Pars
      * @return bool|null
     */
     public function getPropagateToExistingLists(): ?bool {
-        return $this->propagateToExistingLists;
+        return $this->getBackingStore()->get('propagateToExistingLists');
     }
 
     /**
@@ -81,33 +83,41 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('hubSiteUrls', $this->hubSiteUrls);
-        $writer->writeBooleanValue('propagateToExistingLists', $this->propagateToExistingLists);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('hubSiteUrls', $this->getHubSiteUrls());
+        $writer->writeBooleanValue('propagateToExistingLists', $this->getPropagateToExistingLists());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the hubSiteUrls property value. The hubSiteUrls property
      *  @param array<string>|null $value Value to set for the hubSiteUrls property.
     */
-    public function setHubSiteUrls(?array $value ): void {
-        $this->hubSiteUrls = $value;
+    public function setHubSiteUrls(?array $value): void {
+        $this->getBackingStore()->set('hubSiteUrls', $value);
     }
 
     /**
      * Sets the propagateToExistingLists property value. The propagateToExistingLists property
      *  @param bool|null $value Value to set for the propagateToExistingLists property.
     */
-    public function setPropagateToExistingLists(?bool $value ): void {
-        $this->propagateToExistingLists = $value;
+    public function setPropagateToExistingLists(?bool $value): void {
+        $this->getBackingStore()->set('propagateToExistingLists', $value);
     }
 
 }

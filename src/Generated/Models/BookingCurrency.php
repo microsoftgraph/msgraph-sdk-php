@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCurrency extends Entity implements Parsable 
 {
     /**
-     * @var string|null $symbol The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
-    */
-    private ?string $symbol = null;
-    
-    /**
      * Instantiates a new BookingCurrency and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.bookingCurrency');
     }
 
     /**
@@ -46,7 +40,7 @@ class BookingCurrency extends Entity implements Parsable
      * @return string|null
     */
     public function getSymbol(): ?string {
-        return $this->symbol;
+        return $this->getBackingStore()->get('symbol');
     }
 
     /**
@@ -55,15 +49,15 @@ class BookingCurrency extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('symbol', $this->symbol);
+        $writer->writeStringValue('symbol', $this->getSymbol());
     }
 
     /**
      * Sets the symbol property value. The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
      *  @param string|null $value Value to set for the symbol property.
     */
-    public function setSymbol(?string $value ): void {
-        $this->symbol = $value;
+    public function setSymbol(?string $value): void {
+        $this->getBackingStore()->set('symbol', $value);
     }
 
 }

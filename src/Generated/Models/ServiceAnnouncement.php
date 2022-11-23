@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceAnnouncement extends Entity implements Parsable 
 {
     /**
-     * @var array<ServiceHealth>|null $healthOverviews A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
-    */
-    private ?array $healthOverviews = null;
-    
-    /**
-     * @var array<ServiceHealthIssue>|null $issues A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
-    */
-    private ?array $issues = null;
-    
-    /**
-     * @var array<ServiceUpdateMessage>|null $messages A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
-    */
-    private ?array $messages = null;
-    
-    /**
      * Instantiates a new serviceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.serviceAnnouncement');
     }
 
     /**
@@ -58,7 +42,7 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceHealth>|null
     */
     public function getHealthOverviews(): ?array {
-        return $this->healthOverviews;
+        return $this->getBackingStore()->get('healthOverviews');
     }
 
     /**
@@ -66,7 +50,7 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceHealthIssue>|null
     */
     public function getIssues(): ?array {
-        return $this->issues;
+        return $this->getBackingStore()->get('issues');
     }
 
     /**
@@ -74,7 +58,7 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceUpdateMessage>|null
     */
     public function getMessages(): ?array {
-        return $this->messages;
+        return $this->getBackingStore()->get('messages');
     }
 
     /**
@@ -83,33 +67,33 @@ class ServiceAnnouncement extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('healthOverviews', $this->healthOverviews);
-        $writer->writeCollectionOfObjectValues('issues', $this->issues);
-        $writer->writeCollectionOfObjectValues('messages', $this->messages);
+        $writer->writeCollectionOfObjectValues('healthOverviews', $this->getHealthOverviews());
+        $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
+        $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
     }
 
     /**
      * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      *  @param array<ServiceHealth>|null $value Value to set for the healthOverviews property.
     */
-    public function setHealthOverviews(?array $value ): void {
-        $this->healthOverviews = $value;
+    public function setHealthOverviews(?array $value): void {
+        $this->getBackingStore()->set('healthOverviews', $value);
     }
 
     /**
      * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
      *  @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
     */
-    public function setIssues(?array $value ): void {
-        $this->issues = $value;
+    public function setIssues(?array $value): void {
+        $this->getBackingStore()->set('issues', $value);
     }
 
     /**
      * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
      *  @param array<ServiceUpdateMessage>|null $value Value to set for the messages property.
     */
-    public function setMessages(?array $value ): void {
-        $this->messages = $value;
+    public function setMessages(?array $value): void {
+        $this->getBackingStore()->set('messages', $value);
     }
 
 }

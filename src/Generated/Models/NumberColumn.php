@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class NumberColumn implements AdditionalDataHolder, Parsable 
+class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $decimalPlaces How many decimal places to display. See below for information about the possible values.
-    */
-    private ?string $decimalPlaces = null;
-    
-    /**
-     * @var string|null $displayAs How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
-    */
-    private ?string $displayAs = null;
-    
-    /**
-     * @var float|null $maximum The maximum permitted value.
-    */
-    private ?float $maximum = null;
-    
-    /**
-     * @var float|null $minimum The minimum permitted value.
-    */
-    private ?float $minimum = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new numberColumn and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.numberColumn');
     }
 
     /**
@@ -60,8 +38,16 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -69,7 +55,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDecimalPlaces(): ?string {
-        return $this->decimalPlaces;
+        return $this->getBackingStore()->get('decimalPlaces');
     }
 
     /**
@@ -77,7 +63,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayAs(): ?string {
-        return $this->displayAs;
+        return $this->getBackingStore()->get('displayAs');
     }
 
     /**
@@ -100,7 +86,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getMaximum(): ?float {
-        return $this->maximum;
+        return $this->getBackingStore()->get('maximum');
     }
 
     /**
@@ -108,7 +94,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getMinimum(): ?float {
-        return $this->minimum;
+        return $this->getBackingStore()->get('minimum');
     }
 
     /**
@@ -116,7 +102,7 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -124,60 +110,68 @@ class NumberColumn implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('decimalPlaces', $this->decimalPlaces);
-        $writer->writeStringValue('displayAs', $this->displayAs);
-        $writer->writeFloatValue('maximum', $this->maximum);
-        $writer->writeFloatValue('minimum', $this->minimum);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('decimalPlaces', $this->getDecimalPlaces());
+        $writer->writeStringValue('displayAs', $this->getDisplayAs());
+        $writer->writeFloatValue('maximum', $this->getMaximum());
+        $writer->writeFloatValue('minimum', $this->getMinimum());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the decimalPlaces property value. How many decimal places to display. See below for information about the possible values.
      *  @param string|null $value Value to set for the decimalPlaces property.
     */
-    public function setDecimalPlaces(?string $value ): void {
-        $this->decimalPlaces = $value;
+    public function setDecimalPlaces(?string $value): void {
+        $this->getBackingStore()->set('decimalPlaces', $value);
     }
 
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      *  @param string|null $value Value to set for the displayAs property.
     */
-    public function setDisplayAs(?string $value ): void {
-        $this->displayAs = $value;
+    public function setDisplayAs(?string $value): void {
+        $this->getBackingStore()->set('displayAs', $value);
     }
 
     /**
      * Sets the maximum property value. The maximum permitted value.
      *  @param float|null $value Value to set for the maximum property.
     */
-    public function setMaximum(?float $value ): void {
-        $this->maximum = $value;
+    public function setMaximum(?float $value): void {
+        $this->getBackingStore()->set('maximum', $value);
     }
 
     /**
      * Sets the minimum property value. The minimum permitted value.
      *  @param float|null $value Value to set for the minimum property.
     */
-    public function setMinimum(?float $value ): void {
-        $this->minimum = $value;
+    public function setMinimum(?float $value): void {
+        $this->getBackingStore()->set('minimum', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

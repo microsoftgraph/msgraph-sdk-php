@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable 
 {
     /**
-     * @var TeamworkConversationIdentity|null $conversation If present, represents a conversation (for example, team or channel) @mentioned in a message.
-    */
-    private ?TeamworkConversationIdentity $conversation = null;
-    
-    /**
      * Instantiates a new ChatMessageMentionedIdentitySet and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
      * @return TeamworkConversationIdentity|null
     */
     public function getConversation(): ?TeamworkConversationIdentity {
-        return $this->conversation;
+        return $this->getBackingStore()->get('conversation');
     }
 
     /**
@@ -55,15 +50,15 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('conversation', $this->conversation);
+        $writer->writeObjectValue('conversation', $this->getConversation());
     }
 
     /**
      * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
      *  @param TeamworkConversationIdentity|null $value Value to set for the conversation property.
     */
-    public function setConversation(?TeamworkConversationIdentity $value ): void {
-        $this->conversation = $value;
+    public function setConversation(?TeamworkConversationIdentity $value): void {
+        $this->getBackingStore()->set('conversation', $value);
     }
 
 }

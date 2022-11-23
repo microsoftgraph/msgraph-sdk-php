@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var bool|null $uninstallBuiltInApps Indicates whether or not to uninstall a fixed list of built-in Windows apps.
-    */
-    private ?bool $uninstallBuiltInApps = null;
-    
-    /**
      * Instantiates a new Windows10EnterpriseModernAppManagementConfiguration and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
      * @return bool|null
     */
     public function getUninstallBuiltInApps(): ?bool {
-        return $this->uninstallBuiltInApps;
+        return $this->getBackingStore()->get('uninstallBuiltInApps');
     }
 
     /**
@@ -55,15 +50,15 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('uninstallBuiltInApps', $this->uninstallBuiltInApps);
+        $writer->writeBooleanValue('uninstallBuiltInApps', $this->getUninstallBuiltInApps());
     }
 
     /**
      * Sets the uninstallBuiltInApps property value. Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      *  @param bool|null $value Value to set for the uninstallBuiltInApps property.
     */
-    public function setUninstallBuiltInApps(?bool $value ): void {
-        $this->uninstallBuiltInApps = $value;
+    public function setUninstallBuiltInApps(?bool $value): void {
+        $this->getBackingStore()->set('uninstallBuiltInApps', $value);
     }
 
 }

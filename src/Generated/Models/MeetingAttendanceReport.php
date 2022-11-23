@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MeetingAttendanceReport extends Entity implements Parsable 
 {
     /**
-     * @var array<AttendanceRecord>|null $attendanceRecords List of attendance records of an attendance report. Read-only.
-    */
-    private ?array $attendanceRecords = null;
-    
-    /**
-     * @var DateTime|null $meetingEndDateTime UTC time when the meeting ended. Read-only.
-    */
-    private ?DateTime $meetingEndDateTime = null;
-    
-    /**
-     * @var DateTime|null $meetingStartDateTime UTC time when the meeting started. Read-only.
-    */
-    private ?DateTime $meetingStartDateTime = null;
-    
-    /**
-     * @var int|null $totalParticipantCount Total number of participants. Read-only.
-    */
-    private ?int $totalParticipantCount = null;
-    
-    /**
      * Instantiates a new meetingAttendanceReport and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.meetingAttendanceReport');
     }
 
     /**
@@ -51,7 +30,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return array<AttendanceRecord>|null
     */
     public function getAttendanceRecords(): ?array {
-        return $this->attendanceRecords;
+        return $this->getBackingStore()->get('attendanceRecords');
     }
 
     /**
@@ -73,7 +52,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMeetingEndDateTime(): ?DateTime {
-        return $this->meetingEndDateTime;
+        return $this->getBackingStore()->get('meetingEndDateTime');
     }
 
     /**
@@ -81,7 +60,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getMeetingStartDateTime(): ?DateTime {
-        return $this->meetingStartDateTime;
+        return $this->getBackingStore()->get('meetingStartDateTime');
     }
 
     /**
@@ -89,7 +68,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalParticipantCount(): ?int {
-        return $this->totalParticipantCount;
+        return $this->getBackingStore()->get('totalParticipantCount');
     }
 
     /**
@@ -98,42 +77,42 @@ class MeetingAttendanceReport extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('attendanceRecords', $this->attendanceRecords);
-        $writer->writeDateTimeValue('meetingEndDateTime', $this->meetingEndDateTime);
-        $writer->writeDateTimeValue('meetingStartDateTime', $this->meetingStartDateTime);
-        $writer->writeIntegerValue('totalParticipantCount', $this->totalParticipantCount);
+        $writer->writeCollectionOfObjectValues('attendanceRecords', $this->getAttendanceRecords());
+        $writer->writeDateTimeValue('meetingEndDateTime', $this->getMeetingEndDateTime());
+        $writer->writeDateTimeValue('meetingStartDateTime', $this->getMeetingStartDateTime());
+        $writer->writeIntegerValue('totalParticipantCount', $this->getTotalParticipantCount());
     }
 
     /**
      * Sets the attendanceRecords property value. List of attendance records of an attendance report. Read-only.
      *  @param array<AttendanceRecord>|null $value Value to set for the attendanceRecords property.
     */
-    public function setAttendanceRecords(?array $value ): void {
-        $this->attendanceRecords = $value;
+    public function setAttendanceRecords(?array $value): void {
+        $this->getBackingStore()->set('attendanceRecords', $value);
     }
 
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
      *  @param DateTime|null $value Value to set for the meetingEndDateTime property.
     */
-    public function setMeetingEndDateTime(?DateTime $value ): void {
-        $this->meetingEndDateTime = $value;
+    public function setMeetingEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('meetingEndDateTime', $value);
     }
 
     /**
      * Sets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
      *  @param DateTime|null $value Value to set for the meetingStartDateTime property.
     */
-    public function setMeetingStartDateTime(?DateTime $value ): void {
-        $this->meetingStartDateTime = $value;
+    public function setMeetingStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('meetingStartDateTime', $value);
     }
 
     /**
      * Sets the totalParticipantCount property value. Total number of participants. Read-only.
      *  @param int|null $value Value to set for the totalParticipantCount property.
     */
-    public function setTotalParticipantCount(?int $value ): void {
-        $this->totalParticipantCount = $value;
+    public function setTotalParticipantCount(?int $value): void {
+        $this->getBackingStore()->set('totalParticipantCount', $value);
     }
 
 }

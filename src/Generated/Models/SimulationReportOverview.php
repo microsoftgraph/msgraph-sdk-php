@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SimulationReportOverview implements AdditionalDataHolder, Parsable 
+class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<RecommendedAction>|null $recommendedActions List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
-    */
-    private ?array $recommendedActions = null;
-    
-    /**
-     * @var int|null $resolvedTargetsCount Number of valid users in the attack simulation and training campaign.
-    */
-    private ?int $resolvedTargetsCount = null;
-    
-    /**
-     * @var SimulationEventsContent|null $simulationEventsContent Summary of simulation events in the attack simulation and training campaign.
-    */
-    private ?SimulationEventsContent $simulationEventsContent = null;
-    
-    /**
-     * @var TrainingEventsContent|null $trainingEventsContent Summary of assigned trainings in the attack simulation and training campaign.
-    */
-    private ?TrainingEventsContent $trainingEventsContent = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new simulationReportOverview and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.simulationReportOverview');
     }
 
     /**
@@ -60,8 +38,16 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +70,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -92,7 +78,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @return array<RecommendedAction>|null
     */
     public function getRecommendedActions(): ?array {
-        return $this->recommendedActions;
+        return $this->getBackingStore()->get('recommendedActions');
     }
 
     /**
@@ -100,7 +86,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getResolvedTargetsCount(): ?int {
-        return $this->resolvedTargetsCount;
+        return $this->getBackingStore()->get('resolvedTargetsCount');
     }
 
     /**
@@ -108,7 +94,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @return SimulationEventsContent|null
     */
     public function getSimulationEventsContent(): ?SimulationEventsContent {
-        return $this->simulationEventsContent;
+        return $this->getBackingStore()->get('simulationEventsContent');
     }
 
     /**
@@ -116,7 +102,7 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @return TrainingEventsContent|null
     */
     public function getTrainingEventsContent(): ?TrainingEventsContent {
-        return $this->trainingEventsContent;
+        return $this->getBackingStore()->get('trainingEventsContent');
     }
 
     /**
@@ -124,60 +110,68 @@ class SimulationReportOverview implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('recommendedActions', $this->recommendedActions);
-        $writer->writeIntegerValue('resolvedTargetsCount', $this->resolvedTargetsCount);
-        $writer->writeObjectValue('simulationEventsContent', $this->simulationEventsContent);
-        $writer->writeObjectValue('trainingEventsContent', $this->trainingEventsContent);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('recommendedActions', $this->getRecommendedActions());
+        $writer->writeIntegerValue('resolvedTargetsCount', $this->getResolvedTargetsCount());
+        $writer->writeObjectValue('simulationEventsContent', $this->getSimulationEventsContent());
+        $writer->writeObjectValue('trainingEventsContent', $this->getTrainingEventsContent());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
      *  @param array<RecommendedAction>|null $value Value to set for the recommendedActions property.
     */
-    public function setRecommendedActions(?array $value ): void {
-        $this->recommendedActions = $value;
+    public function setRecommendedActions(?array $value): void {
+        $this->getBackingStore()->set('recommendedActions', $value);
     }
 
     /**
      * Sets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
      *  @param int|null $value Value to set for the resolvedTargetsCount property.
     */
-    public function setResolvedTargetsCount(?int $value ): void {
-        $this->resolvedTargetsCount = $value;
+    public function setResolvedTargetsCount(?int $value): void {
+        $this->getBackingStore()->set('resolvedTargetsCount', $value);
     }
 
     /**
      * Sets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
      *  @param SimulationEventsContent|null $value Value to set for the simulationEventsContent property.
     */
-    public function setSimulationEventsContent(?SimulationEventsContent $value ): void {
-        $this->simulationEventsContent = $value;
+    public function setSimulationEventsContent(?SimulationEventsContent $value): void {
+        $this->getBackingStore()->set('simulationEventsContent', $value);
     }
 
     /**
      * Sets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
      *  @param TrainingEventsContent|null $value Value to set for the trainingEventsContent property.
     */
-    public function setTrainingEventsContent(?TrainingEventsContent $value ): void {
-        $this->trainingEventsContent = $value;
+    public function setTrainingEventsContent(?TrainingEventsContent $value): void {
+        $this->getBackingStore()->set('trainingEventsContent', $value);
     }
 
 }

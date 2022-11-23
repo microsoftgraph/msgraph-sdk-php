@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsOfUseContainer extends Entity implements Parsable 
 {
     /**
-     * @var array<AgreementAcceptance>|null $agreementAcceptances Represents the current status of a user's response to a company's customizable terms of use agreement.
-    */
-    private ?array $agreementAcceptances = null;
-    
-    /**
-     * @var array<Agreement>|null $agreements Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
-    */
-    private ?array $agreements = null;
-    
-    /**
      * Instantiates a new TermsOfUseContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.termsOfUseContainer');
     }
 
     /**
@@ -40,7 +29,7 @@ class TermsOfUseContainer extends Entity implements Parsable
      * @return array<AgreementAcceptance>|null
     */
     public function getAgreementAcceptances(): ?array {
-        return $this->agreementAcceptances;
+        return $this->getBackingStore()->get('agreementAcceptances');
     }
 
     /**
@@ -48,7 +37,7 @@ class TermsOfUseContainer extends Entity implements Parsable
      * @return array<Agreement>|null
     */
     public function getAgreements(): ?array {
-        return $this->agreements;
+        return $this->getBackingStore()->get('agreements');
     }
 
     /**
@@ -69,24 +58,24 @@ class TermsOfUseContainer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('agreementAcceptances', $this->agreementAcceptances);
-        $writer->writeCollectionOfObjectValues('agreements', $this->agreements);
+        $writer->writeCollectionOfObjectValues('agreementAcceptances', $this->getAgreementAcceptances());
+        $writer->writeCollectionOfObjectValues('agreements', $this->getAgreements());
     }
 
     /**
      * Sets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
      *  @param array<AgreementAcceptance>|null $value Value to set for the agreementAcceptances property.
     */
-    public function setAgreementAcceptances(?array $value ): void {
-        $this->agreementAcceptances = $value;
+    public function setAgreementAcceptances(?array $value): void {
+        $this->getBackingStore()->set('agreementAcceptances', $value);
     }
 
     /**
      * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
      *  @param array<Agreement>|null $value Value to set for the agreements property.
     */
-    public function setAgreements(?array $value ): void {
-        $this->agreements = $value;
+    public function setAgreements(?array $value): void {
+        $this->getBackingStore()->set('agreements', $value);
     }
 
 }

@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffReason extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var string|null $displayName The name of the timeOffReason. Required.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var TimeOffReasonIconType|null $iconType Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
-    */
-    private ?TimeOffReasonIconType $iconType = null;
-    
-    /**
-     * @var bool|null $isActive Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
-    */
-    private ?bool $isActive = null;
-    
-    /**
      * Instantiates a new TimeOffReason and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +51,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return TimeOffReasonIconType|null
     */
     public function getIconType(): ?TimeOffReasonIconType {
-        return $this->iconType;
+        return $this->getBackingStore()->get('iconType');
     }
 
     /**
@@ -74,7 +59,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->isActive;
+        return $this->getBackingStore()->get('isActive');
     }
 
     /**
@@ -83,33 +68,33 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('iconType', $this->iconType);
-        $writer->writeBooleanValue('isActive', $this->isActive);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('iconType', $this->getIconType());
+        $writer->writeBooleanValue('isActive', $this->getIsActive());
     }
 
     /**
      * Sets the displayName property value. The name of the timeOffReason. Required.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      *  @param TimeOffReasonIconType|null $value Value to set for the iconType property.
     */
-    public function setIconType(?TimeOffReasonIconType $value ): void {
-        $this->iconType = $value;
+    public function setIconType(?TimeOffReasonIconType $value): void {
+        $this->getBackingStore()->set('iconType', $value);
     }
 
     /**
      * Sets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
      *  @param bool|null $value Value to set for the isActive property.
     */
-    public function setIsActive(?bool $value ): void {
-        $this->isActive = $value;
+    public function setIsActive(?bool $value): void {
+        $this->getBackingStore()->set('isActive', $value);
     }
 
 }

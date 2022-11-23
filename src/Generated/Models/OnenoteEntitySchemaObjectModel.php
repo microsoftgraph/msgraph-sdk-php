@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
      * Instantiates a new OnenoteEntitySchemaObjectModel and sets the default values.
     */
     public function __construct() {
@@ -47,7 +42,7 @@ class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements P
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -67,15 +62,15 @@ class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements P
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
     }
 
     /**
      * Sets the createdDateTime property value. The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
 }

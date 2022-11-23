@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope implements Parsable 
 {
     /**
-     * @var DateInterval|null $inactiveDuration Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
-    */
-    private ?DateInterval $inactiveDuration = null;
-    
-    /**
      * Instantiates a new AccessReviewInactiveUsersQueryScope and sets the default values.
     */
     public function __construct() {
@@ -47,7 +42,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
      * @return DateInterval|null
     */
     public function getInactiveDuration(): ?DateInterval {
-        return $this->inactiveDuration;
+        return $this->getBackingStore()->get('inactiveDuration');
     }
 
     /**
@@ -56,15 +51,15 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateIntervalValue('inactiveDuration', $this->inactiveDuration);
+        $writer->writeDateIntervalValue('inactiveDuration', $this->getInactiveDuration());
     }
 
     /**
      * Sets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
      *  @param DateInterval|null $value Value to set for the inactiveDuration property.
     */
-    public function setInactiveDuration(?DateInterval $value ): void {
-        $this->inactiveDuration = $value;
+    public function setInactiveDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('inactiveDuration', $value);
     }
 
 }

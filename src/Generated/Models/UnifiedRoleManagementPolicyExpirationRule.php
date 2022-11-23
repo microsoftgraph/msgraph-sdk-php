@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
     /**
-     * @var bool|null $isExpirationRequired Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
-    */
-    private ?bool $isExpirationRequired = null;
-    
-    /**
-     * @var DateInterval|null $maximumDuration The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
-    */
-    private ?DateInterval $maximumDuration = null;
-    
-    /**
      * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
     */
     public function __construct() {
@@ -53,7 +43,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
      * @return bool|null
     */
     public function getIsExpirationRequired(): ?bool {
-        return $this->isExpirationRequired;
+        return $this->getBackingStore()->get('isExpirationRequired');
     }
 
     /**
@@ -61,7 +51,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
      * @return DateInterval|null
     */
     public function getMaximumDuration(): ?DateInterval {
-        return $this->maximumDuration;
+        return $this->getBackingStore()->get('maximumDuration');
     }
 
     /**
@@ -70,24 +60,24 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isExpirationRequired', $this->isExpirationRequired);
-        $writer->writeDateIntervalValue('maximumDuration', $this->maximumDuration);
+        $writer->writeBooleanValue('isExpirationRequired', $this->getIsExpirationRequired());
+        $writer->writeDateIntervalValue('maximumDuration', $this->getMaximumDuration());
     }
 
     /**
      * Sets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
      *  @param bool|null $value Value to set for the isExpirationRequired property.
     */
-    public function setIsExpirationRequired(?bool $value ): void {
-        $this->isExpirationRequired = $value;
+    public function setIsExpirationRequired(?bool $value): void {
+        $this->getBackingStore()->set('isExpirationRequired', $value);
     }
 
     /**
      * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
      *  @param DateInterval|null $value Value to set for the maximumDuration property.
     */
-    public function setMaximumDuration(?DateInterval $value ): void {
-        $this->maximumDuration = $value;
+    public function setMaximumDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('maximumDuration', $value);
     }
 
 }

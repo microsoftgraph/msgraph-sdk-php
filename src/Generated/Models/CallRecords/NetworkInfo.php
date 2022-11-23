@@ -6,155 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class NetworkInfo implements AdditionalDataHolder, Parsable 
+class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var float|null $bandwidthLowEventRatio Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-    */
-    private ?float $bandwidthLowEventRatio = null;
-    
-    /**
-     * @var string|null $basicServiceSetIdentifier The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
-    */
-    private ?string $basicServiceSetIdentifier = null;
-    
-    /**
-     * @var NetworkConnectionType|null $connectionType The connectionType property
-    */
-    private ?NetworkConnectionType $connectionType = null;
-    
-    /**
-     * @var float|null $delayEventRatio Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-    */
-    private ?float $delayEventRatio = null;
-    
-    /**
-     * @var string|null $dnsSuffix DNS suffix associated with the network adapter of the media endpoint.
-    */
-    private ?string $dnsSuffix = null;
-    
-    /**
-     * @var string|null $ipAddress IP address of the media endpoint.
-    */
-    private ?string $ipAddress = null;
-    
-    /**
-     * @var int|null $linkSpeed Link speed in bits per second reported by the network adapter used by the media endpoint.
-    */
-    private ?int $linkSpeed = null;
-    
-    /**
-     * @var string|null $macAddress The media access control (MAC) address of the media endpoint's network device.
-    */
-    private ?string $macAddress = null;
-    
-    /**
-     * @var NetworkTransportProtocol|null $networkTransportProtocol The networkTransportProtocol property
-    */
-    private ?NetworkTransportProtocol $networkTransportProtocol = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $port Network port number used by media endpoint.
-    */
-    private ?int $port = null;
-    
-    /**
-     * @var float|null $receivedQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-    */
-    private ?float $receivedQualityEventRatio = null;
-    
-    /**
-     * @var string|null $reflexiveIPAddress IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
-    */
-    private ?string $reflexiveIPAddress = null;
-    
-    /**
-     * @var string|null $relayIPAddress IP address of the media relay server allocated by the media endpoint.
-    */
-    private ?string $relayIPAddress = null;
-    
-    /**
-     * @var int|null $relayPort Network port number allocated on the media relay server by the media endpoint.
-    */
-    private ?int $relayPort = null;
-    
-    /**
-     * @var float|null $sentQualityEventRatio Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-    */
-    private ?float $sentQualityEventRatio = null;
-    
-    /**
-     * @var string|null $subnet Subnet used for media stream by the media endpoint.
-    */
-    private ?string $subnet = null;
-    
-    /**
-     * @var array<TraceRouteHop>|null $traceRouteHops List of network trace route hops collected for this media stream.*
-    */
-    private ?array $traceRouteHops = null;
-    
-    /**
-     * @var WifiBand|null $wifiBand The wifiBand property
-    */
-    private ?WifiBand $wifiBand = null;
-    
-    /**
-     * @var int|null $wifiBatteryCharge Estimated remaining battery charge in percentage reported by the media endpoint.
-    */
-    private ?int $wifiBatteryCharge = null;
-    
-    /**
-     * @var int|null $wifiChannel WiFi channel used by the media endpoint.
-    */
-    private ?int $wifiChannel = null;
-    
-    /**
-     * @var string|null $wifiMicrosoftDriver Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-    */
-    private ?string $wifiMicrosoftDriver = null;
-    
-    /**
-     * @var string|null $wifiMicrosoftDriverVersion Version of the Microsoft WiFi driver used by the media endpoint.
-    */
-    private ?string $wifiMicrosoftDriverVersion = null;
-    
-    /**
-     * @var WifiRadioType|null $wifiRadioType The wifiRadioType property
-    */
-    private ?WifiRadioType $wifiRadioType = null;
-    
-    /**
-     * @var int|null $wifiSignalStrength WiFi signal strength in percentage reported by the media endpoint.
-    */
-    private ?int $wifiSignalStrength = null;
-    
-    /**
-     * @var string|null $wifiVendorDriver Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
-    */
-    private ?string $wifiVendorDriver = null;
-    
-    /**
-     * @var string|null $wifiVendorDriverVersion Version of the WiFi driver used by the media endpoint.
-    */
-    private ?string $wifiVendorDriverVersion = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new networkInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.callRecords.networkInfo');
     }
 
     /**
@@ -170,8 +38,16 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -179,7 +55,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getBandwidthLowEventRatio(): ?float {
-        return $this->bandwidthLowEventRatio;
+        return $this->getBackingStore()->get('bandwidthLowEventRatio');
     }
 
     /**
@@ -187,7 +63,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBasicServiceSetIdentifier(): ?string {
-        return $this->basicServiceSetIdentifier;
+        return $this->getBackingStore()->get('basicServiceSetIdentifier');
     }
 
     /**
@@ -195,7 +71,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return NetworkConnectionType|null
     */
     public function getConnectionType(): ?NetworkConnectionType {
-        return $this->connectionType;
+        return $this->getBackingStore()->get('connectionType');
     }
 
     /**
@@ -203,7 +79,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getDelayEventRatio(): ?float {
-        return $this->delayEventRatio;
+        return $this->getBackingStore()->get('delayEventRatio');
     }
 
     /**
@@ -211,7 +87,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDnsSuffix(): ?string {
-        return $this->dnsSuffix;
+        return $this->getBackingStore()->get('dnsSuffix');
     }
 
     /**
@@ -256,7 +132,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->ipAddress;
+        return $this->getBackingStore()->get('ipAddress');
     }
 
     /**
@@ -264,7 +140,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getLinkSpeed(): ?int {
-        return $this->linkSpeed;
+        return $this->getBackingStore()->get('linkSpeed');
     }
 
     /**
@@ -272,7 +148,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getMacAddress(): ?string {
-        return $this->macAddress;
+        return $this->getBackingStore()->get('macAddress');
     }
 
     /**
@@ -280,7 +156,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return NetworkTransportProtocol|null
     */
     public function getNetworkTransportProtocol(): ?NetworkTransportProtocol {
-        return $this->networkTransportProtocol;
+        return $this->getBackingStore()->get('networkTransportProtocol');
     }
 
     /**
@@ -288,7 +164,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -296,7 +172,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getPort(): ?int {
-        return $this->port;
+        return $this->getBackingStore()->get('port');
     }
 
     /**
@@ -304,7 +180,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getReceivedQualityEventRatio(): ?float {
-        return $this->receivedQualityEventRatio;
+        return $this->getBackingStore()->get('receivedQualityEventRatio');
     }
 
     /**
@@ -312,7 +188,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getReflexiveIPAddress(): ?string {
-        return $this->reflexiveIPAddress;
+        return $this->getBackingStore()->get('reflexiveIPAddress');
     }
 
     /**
@@ -320,7 +196,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRelayIPAddress(): ?string {
-        return $this->relayIPAddress;
+        return $this->getBackingStore()->get('relayIPAddress');
     }
 
     /**
@@ -328,7 +204,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getRelayPort(): ?int {
-        return $this->relayPort;
+        return $this->getBackingStore()->get('relayPort');
     }
 
     /**
@@ -336,7 +212,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getSentQualityEventRatio(): ?float {
-        return $this->sentQualityEventRatio;
+        return $this->getBackingStore()->get('sentQualityEventRatio');
     }
 
     /**
@@ -344,7 +220,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSubnet(): ?string {
-        return $this->subnet;
+        return $this->getBackingStore()->get('subnet');
     }
 
     /**
@@ -352,7 +228,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return array<TraceRouteHop>|null
     */
     public function getTraceRouteHops(): ?array {
-        return $this->traceRouteHops;
+        return $this->getBackingStore()->get('traceRouteHops');
     }
 
     /**
@@ -360,7 +236,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return WifiBand|null
     */
     public function getWifiBand(): ?WifiBand {
-        return $this->wifiBand;
+        return $this->getBackingStore()->get('wifiBand');
     }
 
     /**
@@ -368,7 +244,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getWifiBatteryCharge(): ?int {
-        return $this->wifiBatteryCharge;
+        return $this->getBackingStore()->get('wifiBatteryCharge');
     }
 
     /**
@@ -376,7 +252,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getWifiChannel(): ?int {
-        return $this->wifiChannel;
+        return $this->getBackingStore()->get('wifiChannel');
     }
 
     /**
@@ -384,7 +260,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWifiMicrosoftDriver(): ?string {
-        return $this->wifiMicrosoftDriver;
+        return $this->getBackingStore()->get('wifiMicrosoftDriver');
     }
 
     /**
@@ -392,7 +268,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWifiMicrosoftDriverVersion(): ?string {
-        return $this->wifiMicrosoftDriverVersion;
+        return $this->getBackingStore()->get('wifiMicrosoftDriverVersion');
     }
 
     /**
@@ -400,7 +276,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return WifiRadioType|null
     */
     public function getWifiRadioType(): ?WifiRadioType {
-        return $this->wifiRadioType;
+        return $this->getBackingStore()->get('wifiRadioType');
     }
 
     /**
@@ -408,7 +284,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getWifiSignalStrength(): ?int {
-        return $this->wifiSignalStrength;
+        return $this->getBackingStore()->get('wifiSignalStrength');
     }
 
     /**
@@ -416,7 +292,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWifiVendorDriver(): ?string {
-        return $this->wifiVendorDriver;
+        return $this->getBackingStore()->get('wifiVendorDriver');
     }
 
     /**
@@ -424,7 +300,7 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWifiVendorDriverVersion(): ?string {
-        return $this->wifiVendorDriverVersion;
+        return $this->getBackingStore()->get('wifiVendorDriverVersion');
     }
 
     /**
@@ -432,258 +308,266 @@ class NetworkInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('bandwidthLowEventRatio', $this->bandwidthLowEventRatio);
-        $writer->writeStringValue('basicServiceSetIdentifier', $this->basicServiceSetIdentifier);
-        $writer->writeEnumValue('connectionType', $this->connectionType);
-        $writer->writeFloatValue('delayEventRatio', $this->delayEventRatio);
-        $writer->writeStringValue('dnsSuffix', $this->dnsSuffix);
-        $writer->writeStringValue('ipAddress', $this->ipAddress);
-        $writer->writeIntegerValue('linkSpeed', $this->linkSpeed);
-        $writer->writeStringValue('macAddress', $this->macAddress);
-        $writer->writeEnumValue('networkTransportProtocol', $this->networkTransportProtocol);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('port', $this->port);
-        $writer->writeFloatValue('receivedQualityEventRatio', $this->receivedQualityEventRatio);
-        $writer->writeStringValue('reflexiveIPAddress', $this->reflexiveIPAddress);
-        $writer->writeStringValue('relayIPAddress', $this->relayIPAddress);
-        $writer->writeIntegerValue('relayPort', $this->relayPort);
-        $writer->writeFloatValue('sentQualityEventRatio', $this->sentQualityEventRatio);
-        $writer->writeStringValue('subnet', $this->subnet);
-        $writer->writeCollectionOfObjectValues('traceRouteHops', $this->traceRouteHops);
-        $writer->writeEnumValue('wifiBand', $this->wifiBand);
-        $writer->writeIntegerValue('wifiBatteryCharge', $this->wifiBatteryCharge);
-        $writer->writeIntegerValue('wifiChannel', $this->wifiChannel);
-        $writer->writeStringValue('wifiMicrosoftDriver', $this->wifiMicrosoftDriver);
-        $writer->writeStringValue('wifiMicrosoftDriverVersion', $this->wifiMicrosoftDriverVersion);
-        $writer->writeEnumValue('wifiRadioType', $this->wifiRadioType);
-        $writer->writeIntegerValue('wifiSignalStrength', $this->wifiSignalStrength);
-        $writer->writeStringValue('wifiVendorDriver', $this->wifiVendorDriver);
-        $writer->writeStringValue('wifiVendorDriverVersion', $this->wifiVendorDriverVersion);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeFloatValue('bandwidthLowEventRatio', $this->getBandwidthLowEventRatio());
+        $writer->writeStringValue('basicServiceSetIdentifier', $this->getBasicServiceSetIdentifier());
+        $writer->writeEnumValue('connectionType', $this->getConnectionType());
+        $writer->writeFloatValue('delayEventRatio', $this->getDelayEventRatio());
+        $writer->writeStringValue('dnsSuffix', $this->getDnsSuffix());
+        $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeIntegerValue('linkSpeed', $this->getLinkSpeed());
+        $writer->writeStringValue('macAddress', $this->getMacAddress());
+        $writer->writeEnumValue('networkTransportProtocol', $this->getNetworkTransportProtocol());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('port', $this->getPort());
+        $writer->writeFloatValue('receivedQualityEventRatio', $this->getReceivedQualityEventRatio());
+        $writer->writeStringValue('reflexiveIPAddress', $this->getReflexiveIPAddress());
+        $writer->writeStringValue('relayIPAddress', $this->getRelayIPAddress());
+        $writer->writeIntegerValue('relayPort', $this->getRelayPort());
+        $writer->writeFloatValue('sentQualityEventRatio', $this->getSentQualityEventRatio());
+        $writer->writeStringValue('subnet', $this->getSubnet());
+        $writer->writeCollectionOfObjectValues('traceRouteHops', $this->getTraceRouteHops());
+        $writer->writeEnumValue('wifiBand', $this->getWifiBand());
+        $writer->writeIntegerValue('wifiBatteryCharge', $this->getWifiBatteryCharge());
+        $writer->writeIntegerValue('wifiChannel', $this->getWifiChannel());
+        $writer->writeStringValue('wifiMicrosoftDriver', $this->getWifiMicrosoftDriver());
+        $writer->writeStringValue('wifiMicrosoftDriverVersion', $this->getWifiMicrosoftDriverVersion());
+        $writer->writeEnumValue('wifiRadioType', $this->getWifiRadioType());
+        $writer->writeIntegerValue('wifiSignalStrength', $this->getWifiSignalStrength());
+        $writer->writeStringValue('wifiVendorDriver', $this->getWifiVendorDriver());
+        $writer->writeStringValue('wifiVendorDriverVersion', $this->getWifiVendorDriverVersion());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
      *  @param float|null $value Value to set for the bandwidthLowEventRatio property.
     */
-    public function setBandwidthLowEventRatio(?float $value ): void {
-        $this->bandwidthLowEventRatio = $value;
+    public function setBandwidthLowEventRatio(?float $value): void {
+        $this->getBackingStore()->set('bandwidthLowEventRatio', $value);
     }
 
     /**
      * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
      *  @param string|null $value Value to set for the basicServiceSetIdentifier property.
     */
-    public function setBasicServiceSetIdentifier(?string $value ): void {
-        $this->basicServiceSetIdentifier = $value;
+    public function setBasicServiceSetIdentifier(?string $value): void {
+        $this->getBackingStore()->set('basicServiceSetIdentifier', $value);
     }
 
     /**
      * Sets the connectionType property value. The connectionType property
      *  @param NetworkConnectionType|null $value Value to set for the connectionType property.
     */
-    public function setConnectionType(?NetworkConnectionType $value ): void {
-        $this->connectionType = $value;
+    public function setConnectionType(?NetworkConnectionType $value): void {
+        $this->getBackingStore()->set('connectionType', $value);
     }
 
     /**
      * Sets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
      *  @param float|null $value Value to set for the delayEventRatio property.
     */
-    public function setDelayEventRatio(?float $value ): void {
-        $this->delayEventRatio = $value;
+    public function setDelayEventRatio(?float $value): void {
+        $this->getBackingStore()->set('delayEventRatio', $value);
     }
 
     /**
      * Sets the dnsSuffix property value. DNS suffix associated with the network adapter of the media endpoint.
      *  @param string|null $value Value to set for the dnsSuffix property.
     */
-    public function setDnsSuffix(?string $value ): void {
-        $this->dnsSuffix = $value;
+    public function setDnsSuffix(?string $value): void {
+        $this->getBackingStore()->set('dnsSuffix', $value);
     }
 
     /**
      * Sets the ipAddress property value. IP address of the media endpoint.
      *  @param string|null $value Value to set for the ipAddress property.
     */
-    public function setIpAddress(?string $value ): void {
-        $this->ipAddress = $value;
+    public function setIpAddress(?string $value): void {
+        $this->getBackingStore()->set('ipAddress', $value);
     }
 
     /**
      * Sets the linkSpeed property value. Link speed in bits per second reported by the network adapter used by the media endpoint.
      *  @param int|null $value Value to set for the linkSpeed property.
     */
-    public function setLinkSpeed(?int $value ): void {
-        $this->linkSpeed = $value;
+    public function setLinkSpeed(?int $value): void {
+        $this->getBackingStore()->set('linkSpeed', $value);
     }
 
     /**
      * Sets the macAddress property value. The media access control (MAC) address of the media endpoint's network device.
      *  @param string|null $value Value to set for the macAddress property.
     */
-    public function setMacAddress(?string $value ): void {
-        $this->macAddress = $value;
+    public function setMacAddress(?string $value): void {
+        $this->getBackingStore()->set('macAddress', $value);
     }
 
     /**
      * Sets the networkTransportProtocol property value. The networkTransportProtocol property
      *  @param NetworkTransportProtocol|null $value Value to set for the networkTransportProtocol property.
     */
-    public function setNetworkTransportProtocol(?NetworkTransportProtocol $value ): void {
-        $this->networkTransportProtocol = $value;
+    public function setNetworkTransportProtocol(?NetworkTransportProtocol $value): void {
+        $this->getBackingStore()->set('networkTransportProtocol', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the port property value. Network port number used by media endpoint.
      *  @param int|null $value Value to set for the port property.
     */
-    public function setPort(?int $value ): void {
-        $this->port = $value;
+    public function setPort(?int $value): void {
+        $this->getBackingStore()->set('port', $value);
     }
 
     /**
      * Sets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
      *  @param float|null $value Value to set for the receivedQualityEventRatio property.
     */
-    public function setReceivedQualityEventRatio(?float $value ): void {
-        $this->receivedQualityEventRatio = $value;
+    public function setReceivedQualityEventRatio(?float $value): void {
+        $this->getBackingStore()->set('receivedQualityEventRatio', $value);
     }
 
     /**
      * Sets the reflexiveIPAddress property value. IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
      *  @param string|null $value Value to set for the reflexiveIPAddress property.
     */
-    public function setReflexiveIPAddress(?string $value ): void {
-        $this->reflexiveIPAddress = $value;
+    public function setReflexiveIPAddress(?string $value): void {
+        $this->getBackingStore()->set('reflexiveIPAddress', $value);
     }
 
     /**
      * Sets the relayIPAddress property value. IP address of the media relay server allocated by the media endpoint.
      *  @param string|null $value Value to set for the relayIPAddress property.
     */
-    public function setRelayIPAddress(?string $value ): void {
-        $this->relayIPAddress = $value;
+    public function setRelayIPAddress(?string $value): void {
+        $this->getBackingStore()->set('relayIPAddress', $value);
     }
 
     /**
      * Sets the relayPort property value. Network port number allocated on the media relay server by the media endpoint.
      *  @param int|null $value Value to set for the relayPort property.
     */
-    public function setRelayPort(?int $value ): void {
-        $this->relayPort = $value;
+    public function setRelayPort(?int $value): void {
+        $this->getBackingStore()->set('relayPort', $value);
     }
 
     /**
      * Sets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
      *  @param float|null $value Value to set for the sentQualityEventRatio property.
     */
-    public function setSentQualityEventRatio(?float $value ): void {
-        $this->sentQualityEventRatio = $value;
+    public function setSentQualityEventRatio(?float $value): void {
+        $this->getBackingStore()->set('sentQualityEventRatio', $value);
     }
 
     /**
      * Sets the subnet property value. Subnet used for media stream by the media endpoint.
      *  @param string|null $value Value to set for the subnet property.
     */
-    public function setSubnet(?string $value ): void {
-        $this->subnet = $value;
+    public function setSubnet(?string $value): void {
+        $this->getBackingStore()->set('subnet', $value);
     }
 
     /**
      * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
      *  @param array<TraceRouteHop>|null $value Value to set for the traceRouteHops property.
     */
-    public function setTraceRouteHops(?array $value ): void {
-        $this->traceRouteHops = $value;
+    public function setTraceRouteHops(?array $value): void {
+        $this->getBackingStore()->set('traceRouteHops', $value);
     }
 
     /**
      * Sets the wifiBand property value. The wifiBand property
      *  @param WifiBand|null $value Value to set for the wifiBand property.
     */
-    public function setWifiBand(?WifiBand $value ): void {
-        $this->wifiBand = $value;
+    public function setWifiBand(?WifiBand $value): void {
+        $this->getBackingStore()->set('wifiBand', $value);
     }
 
     /**
      * Sets the wifiBatteryCharge property value. Estimated remaining battery charge in percentage reported by the media endpoint.
      *  @param int|null $value Value to set for the wifiBatteryCharge property.
     */
-    public function setWifiBatteryCharge(?int $value ): void {
-        $this->wifiBatteryCharge = $value;
+    public function setWifiBatteryCharge(?int $value): void {
+        $this->getBackingStore()->set('wifiBatteryCharge', $value);
     }
 
     /**
      * Sets the wifiChannel property value. WiFi channel used by the media endpoint.
      *  @param int|null $value Value to set for the wifiChannel property.
     */
-    public function setWifiChannel(?int $value ): void {
-        $this->wifiChannel = $value;
+    public function setWifiChannel(?int $value): void {
+        $this->getBackingStore()->set('wifiChannel', $value);
     }
 
     /**
      * Sets the wifiMicrosoftDriver property value. Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      *  @param string|null $value Value to set for the wifiMicrosoftDriver property.
     */
-    public function setWifiMicrosoftDriver(?string $value ): void {
-        $this->wifiMicrosoftDriver = $value;
+    public function setWifiMicrosoftDriver(?string $value): void {
+        $this->getBackingStore()->set('wifiMicrosoftDriver', $value);
     }
 
     /**
      * Sets the wifiMicrosoftDriverVersion property value. Version of the Microsoft WiFi driver used by the media endpoint.
      *  @param string|null $value Value to set for the wifiMicrosoftDriverVersion property.
     */
-    public function setWifiMicrosoftDriverVersion(?string $value ): void {
-        $this->wifiMicrosoftDriverVersion = $value;
+    public function setWifiMicrosoftDriverVersion(?string $value): void {
+        $this->getBackingStore()->set('wifiMicrosoftDriverVersion', $value);
     }
 
     /**
      * Sets the wifiRadioType property value. The wifiRadioType property
      *  @param WifiRadioType|null $value Value to set for the wifiRadioType property.
     */
-    public function setWifiRadioType(?WifiRadioType $value ): void {
-        $this->wifiRadioType = $value;
+    public function setWifiRadioType(?WifiRadioType $value): void {
+        $this->getBackingStore()->set('wifiRadioType', $value);
     }
 
     /**
      * Sets the wifiSignalStrength property value. WiFi signal strength in percentage reported by the media endpoint.
      *  @param int|null $value Value to set for the wifiSignalStrength property.
     */
-    public function setWifiSignalStrength(?int $value ): void {
-        $this->wifiSignalStrength = $value;
+    public function setWifiSignalStrength(?int $value): void {
+        $this->getBackingStore()->set('wifiSignalStrength', $value);
     }
 
     /**
      * Sets the wifiVendorDriver property value. Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      *  @param string|null $value Value to set for the wifiVendorDriver property.
     */
-    public function setWifiVendorDriver(?string $value ): void {
-        $this->wifiVendorDriver = $value;
+    public function setWifiVendorDriver(?string $value): void {
+        $this->getBackingStore()->set('wifiVendorDriver', $value);
     }
 
     /**
      * Sets the wifiVendorDriverVersion property value. Version of the WiFi driver used by the media endpoint.
      *  @param string|null $value Value to set for the wifiVendorDriverVersion property.
     */
-    public function setWifiVendorDriverVersion(?string $value ): void {
-        $this->wifiVendorDriverVersion = $value;
+    public function setWifiVendorDriverVersion(?string $value): void {
+        $this->getBackingStore()->set('wifiVendorDriverVersion', $value);
     }
 
 }

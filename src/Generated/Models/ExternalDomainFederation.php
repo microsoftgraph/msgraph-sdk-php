@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalDomainFederation extends IdentitySource implements Parsable 
 {
     /**
-     * @var string|null $displayName The name of the identity source, typically also the domain name. Read only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $domainName The domain name. Read only.
-    */
-    private ?string $domainName = null;
-    
-    /**
-     * @var string|null $issuerUri The issuerURI of the incoming federation. Read only.
-    */
-    private ?string $issuerUri = null;
-    
-    /**
      * Instantiates a new ExternalDomainFederation and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -53,7 +38,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getDomainName(): ?string {
-        return $this->domainName;
+        return $this->getBackingStore()->get('domainName');
     }
 
     /**
@@ -74,7 +59,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
      * @return string|null
     */
     public function getIssuerUri(): ?string {
-        return $this->issuerUri;
+        return $this->getBackingStore()->get('issuerUri');
     }
 
     /**
@@ -83,33 +68,33 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('domainName', $this->domainName);
-        $writer->writeStringValue('issuerUri', $this->issuerUri);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('domainName', $this->getDomainName());
+        $writer->writeStringValue('issuerUri', $this->getIssuerUri());
     }
 
     /**
      * Sets the displayName property value. The name of the identity source, typically also the domain name. Read only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the domainName property value. The domain name. Read only.
      *  @param string|null $value Value to set for the domainName property.
     */
-    public function setDomainName(?string $value ): void {
-        $this->domainName = $value;
+    public function setDomainName(?string $value): void {
+        $this->getBackingStore()->set('domainName', $value);
     }
 
     /**
      * Sets the issuerUri property value. The issuerURI of the incoming federation. Read only.
      *  @param string|null $value Value to set for the issuerUri property.
     */
-    public function setIssuerUri(?string $value ): void {
-        $this->issuerUri = $value;
+    public function setIssuerUri(?string $value): void {
+        $this->getBackingStore()->set('issuerUri', $value);
     }
 
 }

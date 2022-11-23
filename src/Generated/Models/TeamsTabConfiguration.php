@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeamsTabConfiguration implements AdditionalDataHolder, Parsable 
+class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $contentUrl Url used for rendering tab contents in Teams. Required.
-    */
-    private ?string $contentUrl = null;
-    
-    /**
-     * @var string|null $entityId Identifier for the entity hosted by the tab provider.
-    */
-    private ?string $entityId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $removeUrl Url called by Teams client when a Tab is removed using the Teams Client.
-    */
-    private ?string $removeUrl = null;
-    
-    /**
-     * @var string|null $websiteUrl Url for showing tab contents outside of Teams.
-    */
-    private ?string $websiteUrl = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teamsTabConfiguration and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.teamsTabConfiguration');
     }
 
     /**
@@ -60,8 +38,16 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -69,7 +55,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->contentUrl;
+        return $this->getBackingStore()->get('contentUrl');
     }
 
     /**
@@ -77,7 +63,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEntityId(): ?string {
-        return $this->entityId;
+        return $this->getBackingStore()->get('entityId');
     }
 
     /**
@@ -100,7 +86,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -108,7 +94,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRemoveUrl(): ?string {
-        return $this->removeUrl;
+        return $this->getBackingStore()->get('removeUrl');
     }
 
     /**
@@ -116,7 +102,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getWebsiteUrl(): ?string {
-        return $this->websiteUrl;
+        return $this->getBackingStore()->get('websiteUrl');
     }
 
     /**
@@ -124,60 +110,68 @@ class TeamsTabConfiguration implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('contentUrl', $this->contentUrl);
-        $writer->writeStringValue('entityId', $this->entityId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('removeUrl', $this->removeUrl);
-        $writer->writeStringValue('websiteUrl', $this->websiteUrl);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('contentUrl', $this->getContentUrl());
+        $writer->writeStringValue('entityId', $this->getEntityId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('removeUrl', $this->getRemoveUrl());
+        $writer->writeStringValue('websiteUrl', $this->getWebsiteUrl());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
      *  @param string|null $value Value to set for the contentUrl property.
     */
-    public function setContentUrl(?string $value ): void {
-        $this->contentUrl = $value;
+    public function setContentUrl(?string $value): void {
+        $this->getBackingStore()->set('contentUrl', $value);
     }
 
     /**
      * Sets the entityId property value. Identifier for the entity hosted by the tab provider.
      *  @param string|null $value Value to set for the entityId property.
     */
-    public function setEntityId(?string $value ): void {
-        $this->entityId = $value;
+    public function setEntityId(?string $value): void {
+        $this->getBackingStore()->set('entityId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
      *  @param string|null $value Value to set for the removeUrl property.
     */
-    public function setRemoveUrl(?string $value ): void {
-        $this->removeUrl = $value;
+    public function setRemoveUrl(?string $value): void {
+        $this->getBackingStore()->set('removeUrl', $value);
     }
 
     /**
      * Sets the websiteUrl property value. Url for showing tab contents outside of Teams.
      *  @param string|null $value Value to set for the websiteUrl property.
     */
-    public function setWebsiteUrl(?string $value ): void {
-        $this->websiteUrl = $value;
+    public function setWebsiteUrl(?string $value): void {
+        $this->getBackingStore()->set('websiteUrl', $value);
     }
 
 }

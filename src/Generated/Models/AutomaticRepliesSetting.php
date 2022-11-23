@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable 
+class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ExternalAudienceScope|null $externalAudience The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-    */
-    private ?ExternalAudienceScope $externalAudience = null;
-    
-    /**
-     * @var string|null $externalReplyMessage The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
-    */
-    private ?string $externalReplyMessage = null;
-    
-    /**
-     * @var string|null $internalReplyMessage The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
-    */
-    private ?string $internalReplyMessage = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $scheduledEndDateTime The date and time that automatic replies are set to end, if Status is set to Scheduled.
-    */
-    private ?DateTimeTimeZone $scheduledEndDateTime = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $scheduledStartDateTime The date and time that automatic replies are set to begin, if Status is set to Scheduled.
-    */
-    private ?DateTimeTimeZone $scheduledStartDateTime = null;
-    
-    /**
-     * @var AutomaticRepliesStatus|null $status Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-    */
-    private ?AutomaticRepliesStatus $status = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new automaticRepliesSetting and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.automaticRepliesSetting');
     }
 
     /**
@@ -70,8 +38,16 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +55,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return ExternalAudienceScope|null
     */
     public function getExternalAudience(): ?ExternalAudienceScope {
-        return $this->externalAudience;
+        return $this->getBackingStore()->get('externalAudience');
     }
 
     /**
@@ -87,7 +63,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExternalReplyMessage(): ?string {
-        return $this->externalReplyMessage;
+        return $this->getBackingStore()->get('externalReplyMessage');
     }
 
     /**
@@ -112,7 +88,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getInternalReplyMessage(): ?string {
-        return $this->internalReplyMessage;
+        return $this->getBackingStore()->get('internalReplyMessage');
     }
 
     /**
@@ -120,7 +96,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -128,7 +104,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getScheduledEndDateTime(): ?DateTimeTimeZone {
-        return $this->scheduledEndDateTime;
+        return $this->getBackingStore()->get('scheduledEndDateTime');
     }
 
     /**
@@ -136,7 +112,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getScheduledStartDateTime(): ?DateTimeTimeZone {
-        return $this->scheduledStartDateTime;
+        return $this->getBackingStore()->get('scheduledStartDateTime');
     }
 
     /**
@@ -144,7 +120,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @return AutomaticRepliesStatus|null
     */
     public function getStatus(): ?AutomaticRepliesStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -152,78 +128,86 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('externalAudience', $this->externalAudience);
-        $writer->writeStringValue('externalReplyMessage', $this->externalReplyMessage);
-        $writer->writeStringValue('internalReplyMessage', $this->internalReplyMessage);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('scheduledEndDateTime', $this->scheduledEndDateTime);
-        $writer->writeObjectValue('scheduledStartDateTime', $this->scheduledStartDateTime);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('externalAudience', $this->getExternalAudience());
+        $writer->writeStringValue('externalReplyMessage', $this->getExternalReplyMessage());
+        $writer->writeStringValue('internalReplyMessage', $this->getInternalReplyMessage());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('scheduledEndDateTime', $this->getScheduledEndDateTime());
+        $writer->writeObjectValue('scheduledStartDateTime', $this->getScheduledStartDateTime());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      *  @param ExternalAudienceScope|null $value Value to set for the externalAudience property.
     */
-    public function setExternalAudience(?ExternalAudienceScope $value ): void {
-        $this->externalAudience = $value;
+    public function setExternalAudience(?ExternalAudienceScope $value): void {
+        $this->getBackingStore()->set('externalAudience', $value);
     }
 
     /**
      * Sets the externalReplyMessage property value. The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      *  @param string|null $value Value to set for the externalReplyMessage property.
     */
-    public function setExternalReplyMessage(?string $value ): void {
-        $this->externalReplyMessage = $value;
+    public function setExternalReplyMessage(?string $value): void {
+        $this->getBackingStore()->set('externalReplyMessage', $value);
     }
 
     /**
      * Sets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
      *  @param string|null $value Value to set for the internalReplyMessage property.
     */
-    public function setInternalReplyMessage(?string $value ): void {
-        $this->internalReplyMessage = $value;
+    public function setInternalReplyMessage(?string $value): void {
+        $this->getBackingStore()->set('internalReplyMessage', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
      *  @param DateTimeTimeZone|null $value Value to set for the scheduledEndDateTime property.
     */
-    public function setScheduledEndDateTime(?DateTimeTimeZone $value ): void {
-        $this->scheduledEndDateTime = $value;
+    public function setScheduledEndDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('scheduledEndDateTime', $value);
     }
 
     /**
      * Sets the scheduledStartDateTime property value. The date and time that automatic replies are set to begin, if Status is set to Scheduled.
      *  @param DateTimeTimeZone|null $value Value to set for the scheduledStartDateTime property.
     */
-    public function setScheduledStartDateTime(?DateTimeTimeZone $value ): void {
-        $this->scheduledStartDateTime = $value;
+    public function setScheduledStartDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('scheduledStartDateTime', $value);
     }
 
     /**
      * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      *  @param AutomaticRepliesStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?AutomaticRepliesStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?AutomaticRepliesStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

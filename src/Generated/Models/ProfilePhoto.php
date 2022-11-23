@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProfilePhoto extends Entity implements Parsable 
 {
     /**
-     * @var int|null $height The height of the photo. Read-only.
-    */
-    private ?int $height = null;
-    
-    /**
-     * @var int|null $width The width of the photo. Read-only.
-    */
-    private ?int $width = null;
-    
-    /**
      * Instantiates a new profilePhoto and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.profilePhoto');
     }
 
     /**
@@ -52,7 +41,7 @@ class ProfilePhoto extends Entity implements Parsable
      * @return int|null
     */
     public function getHeight(): ?int {
-        return $this->height;
+        return $this->getBackingStore()->get('height');
     }
 
     /**
@@ -60,7 +49,7 @@ class ProfilePhoto extends Entity implements Parsable
      * @return int|null
     */
     public function getWidth(): ?int {
-        return $this->width;
+        return $this->getBackingStore()->get('width');
     }
 
     /**
@@ -69,24 +58,24 @@ class ProfilePhoto extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('height', $this->height);
-        $writer->writeIntegerValue('width', $this->width);
+        $writer->writeIntegerValue('height', $this->getHeight());
+        $writer->writeIntegerValue('width', $this->getWidth());
     }
 
     /**
      * Sets the height property value. The height of the photo. Read-only.
      *  @param int|null $value Value to set for the height property.
     */
-    public function setHeight(?int $value ): void {
-        $this->height = $value;
+    public function setHeight(?int $value): void {
+        $this->getBackingStore()->set('height', $value);
     }
 
     /**
      * Sets the width property value. The width of the photo. Read-only.
      *  @param int|null $value Value to set for the width property.
     */
-    public function setWidth(?int $value ): void {
-        $this->width = $value;
+    public function setWidth(?int $value): void {
+        $this->getBackingStore()->set('width', $value);
     }
 
 }

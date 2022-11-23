@@ -10,36 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Security extends Entity implements Parsable 
 {
     /**
-     * @var array<Alert>|null $alerts The alerts property
-    */
-    private ?array $alerts = null;
-    
-    /**
-     * @var AttackSimulationRoot|null $attackSimulation The attackSimulation property
-    */
-    private ?AttackSimulationRoot $attackSimulation = null;
-    
-    /**
-     * @var CasesRoot|null $cases The cases property
-    */
-    private ?CasesRoot $cases = null;
-    
-    /**
-     * @var array<SecureScoreControlProfile>|null $secureScoreControlProfiles The secureScoreControlProfiles property
-    */
-    private ?array $secureScoreControlProfiles = null;
-    
-    /**
-     * @var array<SecureScore>|null $secureScores The secureScores property
-    */
-    private ?array $secureScores = null;
-    
-    /**
      * Instantiates a new Security and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.security');
     }
 
     /**
@@ -56,7 +30,7 @@ class Security extends Entity implements Parsable
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
-        return $this->alerts;
+        return $this->getBackingStore()->get('alerts');
     }
 
     /**
@@ -64,7 +38,7 @@ class Security extends Entity implements Parsable
      * @return AttackSimulationRoot|null
     */
     public function getAttackSimulation(): ?AttackSimulationRoot {
-        return $this->attackSimulation;
+        return $this->getBackingStore()->get('attackSimulation');
     }
 
     /**
@@ -72,7 +46,7 @@ class Security extends Entity implements Parsable
      * @return CasesRoot|null
     */
     public function getCases(): ?CasesRoot {
-        return $this->cases;
+        return $this->getBackingStore()->get('cases');
     }
 
     /**
@@ -95,7 +69,7 @@ class Security extends Entity implements Parsable
      * @return array<SecureScoreControlProfile>|null
     */
     public function getSecureScoreControlProfiles(): ?array {
-        return $this->secureScoreControlProfiles;
+        return $this->getBackingStore()->get('secureScoreControlProfiles');
     }
 
     /**
@@ -103,7 +77,7 @@ class Security extends Entity implements Parsable
      * @return array<SecureScore>|null
     */
     public function getSecureScores(): ?array {
-        return $this->secureScores;
+        return $this->getBackingStore()->get('secureScores');
     }
 
     /**
@@ -112,51 +86,51 @@ class Security extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('alerts', $this->alerts);
-        $writer->writeObjectValue('attackSimulation', $this->attackSimulation);
-        $writer->writeObjectValue('cases', $this->cases);
-        $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->secureScoreControlProfiles);
-        $writer->writeCollectionOfObjectValues('secureScores', $this->secureScores);
+        $writer->writeCollectionOfObjectValues('alerts', $this->getAlerts());
+        $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
+        $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
+        $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
     }
 
     /**
      * Sets the alerts property value. The alerts property
      *  @param array<Alert>|null $value Value to set for the alerts property.
     */
-    public function setAlerts(?array $value ): void {
-        $this->alerts = $value;
+    public function setAlerts(?array $value): void {
+        $this->getBackingStore()->set('alerts', $value);
     }
 
     /**
      * Sets the attackSimulation property value. The attackSimulation property
      *  @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
     */
-    public function setAttackSimulation(?AttackSimulationRoot $value ): void {
-        $this->attackSimulation = $value;
+    public function setAttackSimulation(?AttackSimulationRoot $value): void {
+        $this->getBackingStore()->set('attackSimulation', $value);
     }
 
     /**
      * Sets the cases property value. The cases property
      *  @param CasesRoot|null $value Value to set for the cases property.
     */
-    public function setCases(?CasesRoot $value ): void {
-        $this->cases = $value;
+    public function setCases(?CasesRoot $value): void {
+        $this->getBackingStore()->set('cases', $value);
     }
 
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      *  @param array<SecureScoreControlProfile>|null $value Value to set for the secureScoreControlProfiles property.
     */
-    public function setSecureScoreControlProfiles(?array $value ): void {
-        $this->secureScoreControlProfiles = $value;
+    public function setSecureScoreControlProfiles(?array $value): void {
+        $this->getBackingStore()->set('secureScoreControlProfiles', $value);
     }
 
     /**
      * Sets the secureScores property value. The secureScores property
      *  @param array<SecureScore>|null $value Value to set for the secureScores property.
     */
-    public function setSecureScores(?array $value ): void {
-        $this->secureScores = $value;
+    public function setSecureScores(?array $value): void {
+        $this->getBackingStore()->set('secureScores', $value);
     }
 
 }

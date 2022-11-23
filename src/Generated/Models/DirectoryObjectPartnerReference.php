@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $description Description of the object returned. Read-only.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Name of directory object being returned, like group or application. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $externalPartnerTenantId The tenant identifier for the partner tenant. Read-only.
-    */
-    private ?string $externalPartnerTenantId = null;
-    
-    /**
-     * @var string|null $objectType The type of the referenced object in the partner tenant. Read-only.
-    */
-    private ?string $objectType = null;
-    
-    /**
      * Instantiates a new DirectoryObjectPartnerReference and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -58,7 +38,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +46,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getExternalPartnerTenantId(): ?string {
-        return $this->externalPartnerTenantId;
+        return $this->getBackingStore()->get('externalPartnerTenantId');
     }
 
     /**
@@ -88,7 +68,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getObjectType(): ?string {
-        return $this->objectType;
+        return $this->getBackingStore()->get('objectType');
     }
 
     /**
@@ -97,42 +77,42 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('externalPartnerTenantId', $this->externalPartnerTenantId);
-        $writer->writeStringValue('objectType', $this->objectType);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('externalPartnerTenantId', $this->getExternalPartnerTenantId());
+        $writer->writeStringValue('objectType', $this->getObjectType());
     }
 
     /**
      * Sets the description property value. Description of the object returned. Read-only.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Name of directory object being returned, like group or application. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
      *  @param string|null $value Value to set for the externalPartnerTenantId property.
     */
-    public function setExternalPartnerTenantId(?string $value ): void {
-        $this->externalPartnerTenantId = $value;
+    public function setExternalPartnerTenantId(?string $value): void {
+        $this->getBackingStore()->set('externalPartnerTenantId', $value);
     }
 
     /**
      * Sets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
      *  @param string|null $value Value to set for the objectType property.
     */
-    public function setObjectType(?string $value ): void {
-        $this->objectType = $value;
+    public function setObjectType(?string $value): void {
+        $this->getBackingStore()->set('objectType', $value);
     }
 
 }

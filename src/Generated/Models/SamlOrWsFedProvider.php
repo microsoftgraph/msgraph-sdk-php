@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * @var string|null $issuerUri Issuer URI of the federation server.
-    */
-    private ?string $issuerUri = null;
-    
-    /**
-     * @var string|null $metadataExchangeUri URI of the metadata exchange endpoint used for authentication from rich client applications.
-    */
-    private ?string $metadataExchangeUri = null;
-    
-    /**
-     * @var string|null $passiveSignInUri URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
-    */
-    private ?string $passiveSignInUri = null;
-    
-    /**
-     * @var AuthenticationProtocol|null $preferredAuthenticationProtocol Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
-    */
-    private ?AuthenticationProtocol $preferredAuthenticationProtocol = null;
-    
-    /**
-     * @var string|null $signingCertificate Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
-    */
-    private ?string $signingCertificate = null;
-    
-    /**
      * Instantiates a new SamlOrWsFedProvider and sets the default values.
     */
     public function __construct() {
@@ -78,7 +53,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getIssuerUri(): ?string {
-        return $this->issuerUri;
+        return $this->getBackingStore()->get('issuerUri');
     }
 
     /**
@@ -86,7 +61,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getMetadataExchangeUri(): ?string {
-        return $this->metadataExchangeUri;
+        return $this->getBackingStore()->get('metadataExchangeUri');
     }
 
     /**
@@ -94,7 +69,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getPassiveSignInUri(): ?string {
-        return $this->passiveSignInUri;
+        return $this->getBackingStore()->get('passiveSignInUri');
     }
 
     /**
@@ -102,7 +77,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return AuthenticationProtocol|null
     */
     public function getPreferredAuthenticationProtocol(): ?AuthenticationProtocol {
-        return $this->preferredAuthenticationProtocol;
+        return $this->getBackingStore()->get('preferredAuthenticationProtocol');
     }
 
     /**
@@ -110,7 +85,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getSigningCertificate(): ?string {
-        return $this->signingCertificate;
+        return $this->getBackingStore()->get('signingCertificate');
     }
 
     /**
@@ -119,51 +94,51 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('issuerUri', $this->issuerUri);
-        $writer->writeStringValue('metadataExchangeUri', $this->metadataExchangeUri);
-        $writer->writeStringValue('passiveSignInUri', $this->passiveSignInUri);
-        $writer->writeEnumValue('preferredAuthenticationProtocol', $this->preferredAuthenticationProtocol);
-        $writer->writeStringValue('signingCertificate', $this->signingCertificate);
+        $writer->writeStringValue('issuerUri', $this->getIssuerUri());
+        $writer->writeStringValue('metadataExchangeUri', $this->getMetadataExchangeUri());
+        $writer->writeStringValue('passiveSignInUri', $this->getPassiveSignInUri());
+        $writer->writeEnumValue('preferredAuthenticationProtocol', $this->getPreferredAuthenticationProtocol());
+        $writer->writeStringValue('signingCertificate', $this->getSigningCertificate());
     }
 
     /**
      * Sets the issuerUri property value. Issuer URI of the federation server.
      *  @param string|null $value Value to set for the issuerUri property.
     */
-    public function setIssuerUri(?string $value ): void {
-        $this->issuerUri = $value;
+    public function setIssuerUri(?string $value): void {
+        $this->getBackingStore()->set('issuerUri', $value);
     }
 
     /**
      * Sets the metadataExchangeUri property value. URI of the metadata exchange endpoint used for authentication from rich client applications.
      *  @param string|null $value Value to set for the metadataExchangeUri property.
     */
-    public function setMetadataExchangeUri(?string $value ): void {
-        $this->metadataExchangeUri = $value;
+    public function setMetadataExchangeUri(?string $value): void {
+        $this->getBackingStore()->set('metadataExchangeUri', $value);
     }
 
     /**
      * Sets the passiveSignInUri property value. URI that web-based clients are directed to when signing in to Azure Active Directory (Azure AD) services.
      *  @param string|null $value Value to set for the passiveSignInUri property.
     */
-    public function setPassiveSignInUri(?string $value ): void {
-        $this->passiveSignInUri = $value;
+    public function setPassiveSignInUri(?string $value): void {
+        $this->getBackingStore()->set('passiveSignInUri', $value);
     }
 
     /**
      * Sets the preferredAuthenticationProtocol property value. Preferred authentication protocol. The possible values are: wsFed, saml, unknownFutureValue.
      *  @param AuthenticationProtocol|null $value Value to set for the preferredAuthenticationProtocol property.
     */
-    public function setPreferredAuthenticationProtocol(?AuthenticationProtocol $value ): void {
-        $this->preferredAuthenticationProtocol = $value;
+    public function setPreferredAuthenticationProtocol(?AuthenticationProtocol $value): void {
+        $this->getBackingStore()->set('preferredAuthenticationProtocol', $value);
     }
 
     /**
      * Sets the signingCertificate property value. Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available.
      *  @param string|null $value Value to set for the signingCertificate property.
     */
-    public function setSigningCertificate(?string $value ): void {
-        $this->signingCertificate = $value;
+    public function setSigningCertificate(?string $value): void {
+        $this->getBackingStore()->set('signingCertificate', $value);
     }
 
 }

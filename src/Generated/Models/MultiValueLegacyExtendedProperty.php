@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MultiValueLegacyExtendedProperty extends Entity implements Parsable 
 {
     /**
-     * @var array<string>|null $value A collection of property values.
-    */
-    private ?array $value = null;
-    
-    /**
      * Instantiates a new multiValueLegacyExtendedProperty and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.multiValueLegacyExtendedProperty');
     }
 
     /**
@@ -46,7 +40,7 @@ class MultiValueLegacyExtendedProperty extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getValue(): ?array {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -55,15 +49,15 @@ class MultiValueLegacyExtendedProperty extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('value', $this->value);
+        $writer->writeCollectionOfPrimitiveValues('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. A collection of property values.
      *  @param array<string>|null $value Value to set for the value property.
     */
-    public function setValue(?array $value ): void {
-        $this->value = $value;
+    public function setValue(?array $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

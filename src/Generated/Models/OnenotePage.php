@@ -11,61 +11,6 @@ use Psr\Http\Message\StreamInterface;
 class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable 
 {
     /**
-     * @var StreamInterface|null $content The page's HTML content.
-    */
-    private ?StreamInterface $content = null;
-    
-    /**
-     * @var string|null $contentUrl The URL for the page's HTML content.  Read-only.
-    */
-    private ?string $contentUrl = null;
-    
-    /**
-     * @var string|null $createdByAppId The unique identifier of the application that created the page. Read-only.
-    */
-    private ?string $createdByAppId = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var int|null $level The indentation level of the page. Read-only.
-    */
-    private ?int $level = null;
-    
-    /**
-     * @var PageLinks|null $links Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-    */
-    private ?PageLinks $links = null;
-    
-    /**
-     * @var int|null $order The order of the page within its parent section. Read-only.
-    */
-    private ?int $order = null;
-    
-    /**
-     * @var Notebook|null $parentNotebook The notebook that contains the page.  Read-only.
-    */
-    private ?Notebook $parentNotebook = null;
-    
-    /**
-     * @var OnenoteSection|null $parentSection The section that contains the page. Read-only.
-    */
-    private ?OnenoteSection $parentSection = null;
-    
-    /**
-     * @var string|null $title The title of the page.
-    */
-    private ?string $title = null;
-    
-    /**
-     * @var array<string>|null $userTags The userTags property
-    */
-    private ?array $userTags = null;
-    
-    /**
      * Instantiates a new onenotePage and sets the default values.
     */
     public function __construct() {
@@ -84,10 +29,10 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Gets the content property value. The page's HTML content.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContent(): StreamInterface {
-        return $this->content;
+    public function getContent(): ?StreamInterface {
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -95,7 +40,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->contentUrl;
+        return $this->getBackingStore()->get('contentUrl');
     }
 
     /**
@@ -103,7 +48,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getCreatedByAppId(): ?string {
-        return $this->createdByAppId;
+        return $this->getBackingStore()->get('createdByAppId');
     }
 
     /**
@@ -132,7 +77,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -140,7 +85,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return int|null
     */
     public function getLevel(): ?int {
-        return $this->level;
+        return $this->getBackingStore()->get('level');
     }
 
     /**
@@ -148,7 +93,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return PageLinks|null
     */
     public function getLinks(): ?PageLinks {
-        return $this->links;
+        return $this->getBackingStore()->get('links');
     }
 
     /**
@@ -156,7 +101,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return int|null
     */
     public function getOrder(): ?int {
-        return $this->order;
+        return $this->getBackingStore()->get('order');
     }
 
     /**
@@ -164,7 +109,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return Notebook|null
     */
     public function getParentNotebook(): ?Notebook {
-        return $this->parentNotebook;
+        return $this->getBackingStore()->get('parentNotebook');
     }
 
     /**
@@ -172,7 +117,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return OnenoteSection|null
     */
     public function getParentSection(): ?OnenoteSection {
-        return $this->parentSection;
+        return $this->getBackingStore()->get('parentSection');
     }
 
     /**
@@ -180,7 +125,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -188,7 +133,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return array<string>|null
     */
     public function getUserTags(): ?array {
-        return $this->userTags;
+        return $this->getBackingStore()->get('userTags');
     }
 
     /**
@@ -197,105 +142,105 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('content', $this->content);
-        $writer->writeStringValue('contentUrl', $this->contentUrl);
-        $writer->writeStringValue('createdByAppId', $this->createdByAppId);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeIntegerValue('level', $this->level);
-        $writer->writeObjectValue('links', $this->links);
-        $writer->writeIntegerValue('order', $this->order);
-        $writer->writeObjectValue('parentNotebook', $this->parentNotebook);
-        $writer->writeObjectValue('parentSection', $this->parentSection);
-        $writer->writeStringValue('title', $this->title);
-        $writer->writeCollectionOfPrimitiveValues('userTags', $this->userTags);
+        $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeStringValue('contentUrl', $this->getContentUrl());
+        $writer->writeStringValue('createdByAppId', $this->getCreatedByAppId());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeIntegerValue('level', $this->getLevel());
+        $writer->writeObjectValue('links', $this->getLinks());
+        $writer->writeIntegerValue('order', $this->getOrder());
+        $writer->writeObjectValue('parentNotebook', $this->getParentNotebook());
+        $writer->writeObjectValue('parentSection', $this->getParentSection());
+        $writer->writeStringValue('title', $this->getTitle());
+        $writer->writeCollectionOfPrimitiveValues('userTags', $this->getUserTags());
     }
 
     /**
      * Sets the content property value. The page's HTML content.
      *  @param StreamInterface|null $value Value to set for the content property.
     */
-    public function setContent(?StreamInterface $value ): void {
-        $this->content = $value;
+    public function setContent(?StreamInterface $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the contentUrl property value. The URL for the page's HTML content.  Read-only.
      *  @param string|null $value Value to set for the contentUrl property.
     */
-    public function setContentUrl(?string $value ): void {
-        $this->contentUrl = $value;
+    public function setContentUrl(?string $value): void {
+        $this->getBackingStore()->set('contentUrl', $value);
     }
 
     /**
      * Sets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
      *  @param string|null $value Value to set for the createdByAppId property.
     */
-    public function setCreatedByAppId(?string $value ): void {
-        $this->createdByAppId = $value;
+    public function setCreatedByAppId(?string $value): void {
+        $this->getBackingStore()->set('createdByAppId', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the level property value. The indentation level of the page. Read-only.
      *  @param int|null $value Value to set for the level property.
     */
-    public function setLevel(?int $value ): void {
-        $this->level = $value;
+    public function setLevel(?int $value): void {
+        $this->getBackingStore()->set('level', $value);
     }
 
     /**
      * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
      *  @param PageLinks|null $value Value to set for the links property.
     */
-    public function setLinks(?PageLinks $value ): void {
-        $this->links = $value;
+    public function setLinks(?PageLinks $value): void {
+        $this->getBackingStore()->set('links', $value);
     }
 
     /**
      * Sets the order property value. The order of the page within its parent section. Read-only.
      *  @param int|null $value Value to set for the order property.
     */
-    public function setOrder(?int $value ): void {
-        $this->order = $value;
+    public function setOrder(?int $value): void {
+        $this->getBackingStore()->set('order', $value);
     }
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the page.  Read-only.
      *  @param Notebook|null $value Value to set for the parentNotebook property.
     */
-    public function setParentNotebook(?Notebook $value ): void {
-        $this->parentNotebook = $value;
+    public function setParentNotebook(?Notebook $value): void {
+        $this->getBackingStore()->set('parentNotebook', $value);
     }
 
     /**
      * Sets the parentSection property value. The section that contains the page. Read-only.
      *  @param OnenoteSection|null $value Value to set for the parentSection property.
     */
-    public function setParentSection(?OnenoteSection $value ): void {
-        $this->parentSection = $value;
+    public function setParentSection(?OnenoteSection $value): void {
+        $this->getBackingStore()->set('parentSection', $value);
     }
 
     /**
      * Sets the title property value. The title of the page.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
     /**
      * Sets the userTags property value. The userTags property
      *  @param array<string>|null $value Value to set for the userTags property.
     */
-    public function setUserTags(?array $value ): void {
-        $this->userTags = $value;
+    public function setUserTags(?array $value): void {
+        $this->getBackingStore()->set('userTags', $value);
     }
 
 }

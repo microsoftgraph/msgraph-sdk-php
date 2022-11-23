@@ -10,36 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Trending extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $lastModifiedDateTime The lastModifiedDateTime property
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var Entity|null $resource Used for navigating to the trending document.
-    */
-    private ?Entity $resource = null;
-    
-    /**
-     * @var ResourceReference|null $resourceReference Reference properties of the trending document, such as the url and type of the document.
-    */
-    private ?ResourceReference $resourceReference = null;
-    
-    /**
-     * @var ResourceVisualization|null $resourceVisualization Properties that you can use to visualize the document in your experience.
-    */
-    private ?ResourceVisualization $resourceVisualization = null;
-    
-    /**
-     * @var float|null $weight Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-    */
-    private ?float $weight = null;
-    
-    /**
      * Instantiates a new trending and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.trending');
     }
 
     /**
@@ -71,7 +45,7 @@ class Trending extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -79,7 +53,7 @@ class Trending extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->resource;
+        return $this->getBackingStore()->get('resource');
     }
 
     /**
@@ -87,7 +61,7 @@ class Trending extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->resourceReference;
+        return $this->getBackingStore()->get('resourceReference');
     }
 
     /**
@@ -95,7 +69,7 @@ class Trending extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->resourceVisualization;
+        return $this->getBackingStore()->get('resourceVisualization');
     }
 
     /**
@@ -103,7 +77,7 @@ class Trending extends Entity implements Parsable
      * @return float|null
     */
     public function getWeight(): ?float {
-        return $this->weight;
+        return $this->getBackingStore()->get('weight');
     }
 
     /**
@@ -112,49 +86,49 @@ class Trending extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeObjectValue('resource', $this->resource);
-        $writer->writeFloatValue('weight', $this->weight);
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeObjectValue('resource', $this->getResource());
+        $writer->writeFloatValue('weight', $this->getWeight());
     }
 
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the resource property value. Used for navigating to the trending document.
      *  @param Entity|null $value Value to set for the resource property.
     */
-    public function setResource(?Entity $value ): void {
-        $this->resource = $value;
+    public function setResource(?Entity $value): void {
+        $this->getBackingStore()->set('resource', $value);
     }
 
     /**
      * Sets the resourceReference property value. Reference properties of the trending document, such as the url and type of the document.
      *  @param ResourceReference|null $value Value to set for the resourceReference property.
     */
-    public function setResourceReference(?ResourceReference $value ): void {
-        $this->resourceReference = $value;
+    public function setResourceReference(?ResourceReference $value): void {
+        $this->getBackingStore()->set('resourceReference', $value);
     }
 
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience.
      *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
     */
-    public function setResourceVisualization(?ResourceVisualization $value ): void {
-        $this->resourceVisualization = $value;
+    public function setResourceVisualization(?ResourceVisualization $value): void {
+        $this->getBackingStore()->set('resourceVisualization', $value);
     }
 
     /**
      * Sets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      *  @param float|null $value Value to set for the weight property.
     */
-    public function setWeight(?float $value ): void {
-        $this->weight = $value;
+    public function setWeight(?float $value): void {
+        $this->getBackingStore()->set('weight', $value);
     }
 
 }

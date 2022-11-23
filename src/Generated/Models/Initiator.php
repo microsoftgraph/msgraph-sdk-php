@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Initiator extends Identity implements Parsable 
 {
     /**
-     * @var InitiatorType|null $initiatorType Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-    */
-    private ?InitiatorType $initiatorType = null;
-    
-    /**
      * Instantiates a new Initiator and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class Initiator extends Identity implements Parsable
      * @return InitiatorType|null
     */
     public function getInitiatorType(): ?InitiatorType {
-        return $this->initiatorType;
+        return $this->getBackingStore()->get('initiatorType');
     }
 
     /**
@@ -55,15 +50,15 @@ class Initiator extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('initiatorType', $this->initiatorType);
+        $writer->writeEnumValue('initiatorType', $this->getInitiatorType());
     }
 
     /**
      * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
      *  @param InitiatorType|null $value Value to set for the initiatorType property.
     */
-    public function setInitiatorType(?InitiatorType $value ): void {
-        $this->initiatorType = $value;
+    public function setInitiatorType(?InitiatorType $value): void {
+        $this->getBackingStore()->set('initiatorType', $value);
     }
 
 }

@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartGridlines extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartGridlinesFormat|null $format Represents the formatting of chart gridlines. Read-only.
-    */
-    private ?WorkbookChartGridlinesFormat $format = null;
-    
-    /**
-     * @var bool|null $visible Boolean value representing if the axis gridlines are visible or not.
-    */
-    private ?bool $visible = null;
-    
-    /**
      * Instantiates a new workbookChartGridlines and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartGridlines');
     }
 
     /**
@@ -52,7 +41,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
      * @return WorkbookChartGridlinesFormat|null
     */
     public function getFormat(): ?WorkbookChartGridlinesFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -60,7 +49,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->visible;
+        return $this->getBackingStore()->get('visible');
     }
 
     /**
@@ -69,24 +58,24 @@ class WorkbookChartGridlines extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeBooleanValue('visible', $this->visible);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeBooleanValue('visible', $this->getVisible());
     }
 
     /**
      * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
      *  @param WorkbookChartGridlinesFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartGridlinesFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartGridlinesFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
      *  @param bool|null $value Value to set for the visible property.
     */
-    public function setVisible(?bool $value ): void {
-        $this->visible = $value;
+    public function setVisible(?bool $value): void {
+        $this->getBackingStore()->set('visible', $value);
     }
 
 }

@@ -9,36 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityContainer extends Entity implements Parsable 
 {
     /**
-     * @var array<IdentityApiConnector>|null $apiConnectors Represents entry point for API connectors.
-    */
-    private ?array $apiConnectors = null;
-    
-    /**
-     * @var array<B2xIdentityUserFlow>|null $b2xUserFlows Represents entry point for B2X/self-service sign-up identity userflows.
-    */
-    private ?array $b2xUserFlows = null;
-    
-    /**
-     * @var ConditionalAccessRoot|null $conditionalAccess the entry point for the Conditional Access (CA) object model.
-    */
-    private ?ConditionalAccessRoot $conditionalAccess = null;
-    
-    /**
-     * @var array<IdentityProviderBase>|null $identityProviders The identityProviders property
-    */
-    private ?array $identityProviders = null;
-    
-    /**
-     * @var array<IdentityUserFlowAttribute>|null $userFlowAttributes Represents entry point for identity userflow attributes.
-    */
-    private ?array $userFlowAttributes = null;
-    
-    /**
      * Instantiates a new IdentityContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.identityContainer');
     }
 
     /**
@@ -55,7 +29,7 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityApiConnector>|null
     */
     public function getApiConnectors(): ?array {
-        return $this->apiConnectors;
+        return $this->getBackingStore()->get('apiConnectors');
     }
 
     /**
@@ -63,7 +37,7 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<B2xIdentityUserFlow>|null
     */
     public function getB2xUserFlows(): ?array {
-        return $this->b2xUserFlows;
+        return $this->getBackingStore()->get('b2xUserFlows');
     }
 
     /**
@@ -71,7 +45,7 @@ class IdentityContainer extends Entity implements Parsable
      * @return ConditionalAccessRoot|null
     */
     public function getConditionalAccess(): ?ConditionalAccessRoot {
-        return $this->conditionalAccess;
+        return $this->getBackingStore()->get('conditionalAccess');
     }
 
     /**
@@ -94,7 +68,7 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityProviderBase>|null
     */
     public function getIdentityProviders(): ?array {
-        return $this->identityProviders;
+        return $this->getBackingStore()->get('identityProviders');
     }
 
     /**
@@ -102,7 +76,7 @@ class IdentityContainer extends Entity implements Parsable
      * @return array<IdentityUserFlowAttribute>|null
     */
     public function getUserFlowAttributes(): ?array {
-        return $this->userFlowAttributes;
+        return $this->getBackingStore()->get('userFlowAttributes');
     }
 
     /**
@@ -111,51 +85,51 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('apiConnectors', $this->apiConnectors);
-        $writer->writeCollectionOfObjectValues('b2xUserFlows', $this->b2xUserFlows);
-        $writer->writeObjectValue('conditionalAccess', $this->conditionalAccess);
-        $writer->writeCollectionOfObjectValues('identityProviders', $this->identityProviders);
-        $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->userFlowAttributes);
+        $writer->writeCollectionOfObjectValues('apiConnectors', $this->getApiConnectors());
+        $writer->writeCollectionOfObjectValues('b2xUserFlows', $this->getB2xUserFlows());
+        $writer->writeObjectValue('conditionalAccess', $this->getConditionalAccess());
+        $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
+        $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->getUserFlowAttributes());
     }
 
     /**
      * Sets the apiConnectors property value. Represents entry point for API connectors.
      *  @param array<IdentityApiConnector>|null $value Value to set for the apiConnectors property.
     */
-    public function setApiConnectors(?array $value ): void {
-        $this->apiConnectors = $value;
+    public function setApiConnectors(?array $value): void {
+        $this->getBackingStore()->set('apiConnectors', $value);
     }
 
     /**
      * Sets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      *  @param array<B2xIdentityUserFlow>|null $value Value to set for the b2xUserFlows property.
     */
-    public function setB2xUserFlows(?array $value ): void {
-        $this->b2xUserFlows = $value;
+    public function setB2xUserFlows(?array $value): void {
+        $this->getBackingStore()->set('b2xUserFlows', $value);
     }
 
     /**
      * Sets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
      *  @param ConditionalAccessRoot|null $value Value to set for the conditionalAccess property.
     */
-    public function setConditionalAccess(?ConditionalAccessRoot $value ): void {
-        $this->conditionalAccess = $value;
+    public function setConditionalAccess(?ConditionalAccessRoot $value): void {
+        $this->getBackingStore()->set('conditionalAccess', $value);
     }
 
     /**
      * Sets the identityProviders property value. The identityProviders property
      *  @param array<IdentityProviderBase>|null $value Value to set for the identityProviders property.
     */
-    public function setIdentityProviders(?array $value ): void {
-        $this->identityProviders = $value;
+    public function setIdentityProviders(?array $value): void {
+        $this->getBackingStore()->set('identityProviders', $value);
     }
 
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
      *  @param array<IdentityUserFlowAttribute>|null $value Value to set for the userFlowAttributes property.
     */
-    public function setUserFlowAttributes(?array $value ): void {
-        $this->userFlowAttributes = $value;
+    public function setUserFlowAttributes(?array $value): void {
+        $this->getBackingStore()->set('userFlowAttributes', $value);
     }
 
 }

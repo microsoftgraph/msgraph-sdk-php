@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable 
+class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var PublicError|null $error Describes the error, if any, for the current stage.
-    */
-    private ?PublicError $error = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var SubjectRightsRequestStage|null $stage The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
-    */
-    private ?SubjectRightsRequestStage $stage = null;
-    
-    /**
-     * @var SubjectRightsRequestStageStatus|null $status Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-    */
-    private ?SubjectRightsRequestStageStatus $status = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new subjectRightsRequestStageDetail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.subjectRightsRequestStageDetail');
     }
 
     /**
@@ -55,8 +38,16 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->error;
+        return $this->getBackingStore()->get('error');
     }
 
     /**
@@ -86,7 +77,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +85,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @return SubjectRightsRequestStage|null
     */
     public function getStage(): ?SubjectRightsRequestStage {
-        return $this->stage;
+        return $this->getBackingStore()->get('stage');
     }
 
     /**
@@ -102,7 +93,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @return SubjectRightsRequestStageStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStageStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -110,51 +101,59 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('error', $this->error);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('stage', $this->stage);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('error', $this->getError());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('stage', $this->getStage());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the error property value. Describes the error, if any, for the current stage.
      *  @param PublicError|null $value Value to set for the error property.
     */
-    public function setError(?PublicError $value ): void {
-        $this->error = $value;
+    public function setError(?PublicError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      *  @param SubjectRightsRequestStage|null $value Value to set for the stage property.
     */
-    public function setStage(?SubjectRightsRequestStage $value ): void {
-        $this->stage = $value;
+    public function setStage(?SubjectRightsRequestStage $value): void {
+        $this->getBackingStore()->set('stage', $value);
     }
 
     /**
      * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      *  @param SubjectRightsRequestStageStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?SubjectRightsRequestStageStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?SubjectRightsRequestStageStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

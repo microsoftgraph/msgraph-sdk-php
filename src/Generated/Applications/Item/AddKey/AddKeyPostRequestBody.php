@@ -8,33 +8,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable 
+class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var KeyCredential|null $keyCredential The keyCredential property
-    */
-    private ?KeyCredential $keyCredential = null;
-    
-    /**
-     * @var PasswordCredential|null $passwordCredential The passwordCredential property
-    */
-    private ?PasswordCredential $passwordCredential = null;
-    
-    /**
-     * @var string|null $proof The proof property
-    */
-    private ?string $proof = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new addKeyPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -51,8 +40,16 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -73,7 +70,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
      * @return KeyCredential|null
     */
     public function getKeyCredential(): ?KeyCredential {
-        return $this->keyCredential;
+        return $this->getBackingStore()->get('keyCredential');
     }
 
     /**
@@ -81,7 +78,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
-        return $this->passwordCredential;
+        return $this->getBackingStore()->get('passwordCredential');
     }
 
     /**
@@ -89,7 +86,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProof(): ?string {
-        return $this->proof;
+        return $this->getBackingStore()->get('proof');
     }
 
     /**
@@ -97,42 +94,50 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('keyCredential', $this->keyCredential);
-        $writer->writeObjectValue('passwordCredential', $this->passwordCredential);
-        $writer->writeStringValue('proof', $this->proof);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('keyCredential', $this->getKeyCredential());
+        $writer->writeObjectValue('passwordCredential', $this->getPasswordCredential());
+        $writer->writeStringValue('proof', $this->getProof());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the keyCredential property value. The keyCredential property
      *  @param KeyCredential|null $value Value to set for the keyCredential property.
     */
-    public function setKeyCredential(?KeyCredential $value ): void {
-        $this->keyCredential = $value;
+    public function setKeyCredential(?KeyCredential $value): void {
+        $this->getBackingStore()->set('keyCredential', $value);
     }
 
     /**
      * Sets the passwordCredential property value. The passwordCredential property
      *  @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
-    public function setPasswordCredential(?PasswordCredential $value ): void {
-        $this->passwordCredential = $value;
+    public function setPasswordCredential(?PasswordCredential $value): void {
+        $this->getBackingStore()->set('passwordCredential', $value);
     }
 
     /**
      * Sets the proof property value. The proof property
      *  @param string|null $value Value to set for the proof property.
     */
-    public function setProof(?string $value ): void {
-        $this->proof = $value;
+    public function setProof(?string $value): void {
+        $this->getBackingStore()->set('proof', $value);
     }
 
 }

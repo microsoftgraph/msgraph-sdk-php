@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable 
 {
     /**
-     * @var int|null $daylightBias The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
-    */
-    private ?int $daylightBias = null;
-    
-    /**
      * Instantiates a new DaylightTimeZoneOffset and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable
      * @return int|null
     */
     public function getDaylightBias(): ?int {
-        return $this->daylightBias;
+        return $this->getBackingStore()->get('daylightBias');
     }
 
     /**
@@ -55,15 +50,15 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('daylightBias', $this->daylightBias);
+        $writer->writeIntegerValue('daylightBias', $this->getDaylightBias());
     }
 
     /**
      * Sets the daylightBias property value. The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
      *  @param int|null $value Value to set for the daylightBias property.
     */
-    public function setDaylightBias(?int $value ): void {
-        $this->daylightBias = $value;
+    public function setDaylightBias(?int $value): void {
+        $this->getBackingStore()->set('daylightBias', $value);
     }
 
 }

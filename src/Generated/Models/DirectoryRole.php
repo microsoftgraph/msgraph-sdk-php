@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryRole extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $description The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<DirectoryObject>|null $members Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
-    */
-    private ?array $members = null;
-    
-    /**
-     * @var string|null $roleTemplateId The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
-    */
-    private ?string $roleTemplateId = null;
-    
-    /**
-     * @var array<ScopedRoleMembership>|null $scopedMembers Members of this directory role that are scoped to administrative units. Read-only. Nullable.
-    */
-    private ?array $scopedMembers = null;
-    
-    /**
      * Instantiates a new DirectoryRole and sets the default values.
     */
     public function __construct() {
@@ -55,7 +30,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -63,7 +38,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -86,7 +61,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -94,7 +69,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getRoleTemplateId(): ?string {
-        return $this->roleTemplateId;
+        return $this->getBackingStore()->get('roleTemplateId');
     }
 
     /**
@@ -102,7 +77,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return array<ScopedRoleMembership>|null
     */
     public function getScopedMembers(): ?array {
-        return $this->scopedMembers;
+        return $this->getBackingStore()->get('scopedMembers');
     }
 
     /**
@@ -111,51 +86,51 @@ class DirectoryRole extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
-        $writer->writeStringValue('roleTemplateId', $this->roleTemplateId);
-        $writer->writeCollectionOfObjectValues('scopedMembers', $this->scopedMembers);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeStringValue('roleTemplateId', $this->getRoleTemplateId());
+        $writer->writeCollectionOfObjectValues('scopedMembers', $this->getScopedMembers());
     }
 
     /**
      * Sets the description property value. The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the members property value. Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
      *  @param array<DirectoryObject>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
     /**
      * Sets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
      *  @param string|null $value Value to set for the roleTemplateId property.
     */
-    public function setRoleTemplateId(?string $value ): void {
-        $this->roleTemplateId = $value;
+    public function setRoleTemplateId(?string $value): void {
+        $this->getBackingStore()->set('roleTemplateId', $value);
     }
 
     /**
      * Sets the scopedMembers property value. Members of this directory role that are scoped to administrative units. Read-only. Nullable.
      *  @param array<ScopedRoleMembership>|null $value Value to set for the scopedMembers property.
     */
-    public function setScopedMembers(?array $value ): void {
-        $this->scopedMembers = $value;
+    public function setScopedMembers(?array $value): void {
+        $this->getBackingStore()->set('scopedMembers', $value);
     }
 
 }

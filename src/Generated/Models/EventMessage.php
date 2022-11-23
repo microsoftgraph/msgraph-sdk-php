@@ -9,56 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EventMessage extends Message implements Parsable 
 {
     /**
-     * @var DateTimeTimeZone|null $endDateTime The endDateTime property
-    */
-    private ?DateTimeTimeZone $endDateTime = null;
-    
-    /**
-     * @var Event|null $event The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
-    */
-    private ?Event $event = null;
-    
-    /**
-     * @var bool|null $isAllDay The isAllDay property
-    */
-    private ?bool $isAllDay = null;
-    
-    /**
-     * @var bool|null $isDelegated The isDelegated property
-    */
-    private ?bool $isDelegated = null;
-    
-    /**
-     * @var bool|null $isOutOfDate The isOutOfDate property
-    */
-    private ?bool $isOutOfDate = null;
-    
-    /**
-     * @var Location|null $location The location property
-    */
-    private ?Location $location = null;
-    
-    /**
-     * @var MeetingMessageType|null $meetingMessageType The meetingMessageType property
-    */
-    private ?MeetingMessageType $meetingMessageType = null;
-    
-    /**
-     * @var PatternedRecurrence|null $recurrence The recurrence property
-    */
-    private ?PatternedRecurrence $recurrence = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $startDateTime The startDateTime property
-    */
-    private ?DateTimeTimeZone $startDateTime = null;
-    
-    /**
-     * @var EventType|null $type The type property
-    */
-    private ?EventType $type = null;
-    
-    /**
      * Instantiates a new EventMessage and sets the default values.
     */
     public function __construct() {
@@ -88,7 +38,7 @@ class EventMessage extends Message implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -96,7 +46,7 @@ class EventMessage extends Message implements Parsable
      * @return Event|null
     */
     public function getEvent(): ?Event {
-        return $this->event;
+        return $this->getBackingStore()->get('event');
     }
 
     /**
@@ -124,7 +74,7 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsAllDay(): ?bool {
-        return $this->isAllDay;
+        return $this->getBackingStore()->get('isAllDay');
     }
 
     /**
@@ -132,7 +82,7 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsDelegated(): ?bool {
-        return $this->isDelegated;
+        return $this->getBackingStore()->get('isDelegated');
     }
 
     /**
@@ -140,7 +90,7 @@ class EventMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getIsOutOfDate(): ?bool {
-        return $this->isOutOfDate;
+        return $this->getBackingStore()->get('isOutOfDate');
     }
 
     /**
@@ -148,7 +98,7 @@ class EventMessage extends Message implements Parsable
      * @return Location|null
     */
     public function getLocation(): ?Location {
-        return $this->location;
+        return $this->getBackingStore()->get('location');
     }
 
     /**
@@ -156,7 +106,7 @@ class EventMessage extends Message implements Parsable
      * @return MeetingMessageType|null
     */
     public function getMeetingMessageType(): ?MeetingMessageType {
-        return $this->meetingMessageType;
+        return $this->getBackingStore()->get('meetingMessageType');
     }
 
     /**
@@ -164,7 +114,7 @@ class EventMessage extends Message implements Parsable
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
-        return $this->recurrence;
+        return $this->getBackingStore()->get('recurrence');
     }
 
     /**
@@ -172,7 +122,7 @@ class EventMessage extends Message implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -180,7 +130,7 @@ class EventMessage extends Message implements Parsable
      * @return EventType|null
     */
     public function getType(): ?EventType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -189,96 +139,96 @@ class EventMessage extends Message implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('endDateTime', $this->endDateTime);
-        $writer->writeObjectValue('event', $this->event);
-        $writer->writeBooleanValue('isAllDay', $this->isAllDay);
-        $writer->writeBooleanValue('isDelegated', $this->isDelegated);
-        $writer->writeBooleanValue('isOutOfDate', $this->isOutOfDate);
-        $writer->writeObjectValue('location', $this->location);
-        $writer->writeEnumValue('meetingMessageType', $this->meetingMessageType);
-        $writer->writeObjectValue('recurrence', $this->recurrence);
-        $writer->writeObjectValue('startDateTime', $this->startDateTime);
-        $writer->writeEnumValue('type', $this->type);
+        $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
+        $writer->writeObjectValue('event', $this->getEvent());
+        $writer->writeBooleanValue('isAllDay', $this->getIsAllDay());
+        $writer->writeBooleanValue('isDelegated', $this->getIsDelegated());
+        $writer->writeBooleanValue('isOutOfDate', $this->getIsOutOfDate());
+        $writer->writeObjectValue('location', $this->getLocation());
+        $writer->writeEnumValue('meetingMessageType', $this->getMeetingMessageType());
+        $writer->writeObjectValue('recurrence', $this->getRecurrence());
+        $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
+        $writer->writeEnumValue('type', $this->getType());
     }
 
     /**
      * Sets the endDateTime property value. The endDateTime property
      *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTimeTimeZone $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      *  @param Event|null $value Value to set for the event property.
     */
-    public function setEvent(?Event $value ): void {
-        $this->event = $value;
+    public function setEvent(?Event $value): void {
+        $this->getBackingStore()->set('event', $value);
     }
 
     /**
      * Sets the isAllDay property value. The isAllDay property
      *  @param bool|null $value Value to set for the isAllDay property.
     */
-    public function setIsAllDay(?bool $value ): void {
-        $this->isAllDay = $value;
+    public function setIsAllDay(?bool $value): void {
+        $this->getBackingStore()->set('isAllDay', $value);
     }
 
     /**
      * Sets the isDelegated property value. The isDelegated property
      *  @param bool|null $value Value to set for the isDelegated property.
     */
-    public function setIsDelegated(?bool $value ): void {
-        $this->isDelegated = $value;
+    public function setIsDelegated(?bool $value): void {
+        $this->getBackingStore()->set('isDelegated', $value);
     }
 
     /**
      * Sets the isOutOfDate property value. The isOutOfDate property
      *  @param bool|null $value Value to set for the isOutOfDate property.
     */
-    public function setIsOutOfDate(?bool $value ): void {
-        $this->isOutOfDate = $value;
+    public function setIsOutOfDate(?bool $value): void {
+        $this->getBackingStore()->set('isOutOfDate', $value);
     }
 
     /**
      * Sets the location property value. The location property
      *  @param Location|null $value Value to set for the location property.
     */
-    public function setLocation(?Location $value ): void {
-        $this->location = $value;
+    public function setLocation(?Location $value): void {
+        $this->getBackingStore()->set('location', $value);
     }
 
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
      *  @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
     */
-    public function setMeetingMessageType(?MeetingMessageType $value ): void {
-        $this->meetingMessageType = $value;
+    public function setMeetingMessageType(?MeetingMessageType $value): void {
+        $this->getBackingStore()->set('meetingMessageType', $value);
     }
 
     /**
      * Sets the recurrence property value. The recurrence property
      *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
-    public function setRecurrence(?PatternedRecurrence $value ): void {
-        $this->recurrence = $value;
+    public function setRecurrence(?PatternedRecurrence $value): void {
+        $this->getBackingStore()->set('recurrence', $value);
     }
 
     /**
      * Sets the startDateTime property value. The startDateTime property
      *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTimeTimeZone $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the type property value. The type property
      *  @param EventType|null $value Value to set for the type property.
     */
-    public function setType(?EventType $value ): void {
-        $this->type = $value;
+    public function setType(?EventType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

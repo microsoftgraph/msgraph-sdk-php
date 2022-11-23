@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkTagMember extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The member's display name.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $tenantId The ID of the tenant that the tag member is a part of.
-    */
-    private ?string $tenantId = null;
-    
-    /**
-     * @var string|null $userId The user ID of the member.
-    */
-    private ?string $userId = null;
-    
-    /**
      * Instantiates a new teamworkTagMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.teamworkTagMember');
     }
 
     /**
@@ -45,7 +29,7 @@ class TeamworkTagMember extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +50,7 @@ class TeamworkTagMember extends Entity implements Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->tenantId;
+        return $this->getBackingStore()->get('tenantId');
     }
 
     /**
@@ -74,7 +58,7 @@ class TeamworkTagMember extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->userId;
+        return $this->getBackingStore()->get('userId');
     }
 
     /**
@@ -83,33 +67,33 @@ class TeamworkTagMember extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('tenantId', $this->tenantId);
-        $writer->writeStringValue('userId', $this->userId);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('tenantId', $this->getTenantId());
+        $writer->writeStringValue('userId', $this->getUserId());
     }
 
     /**
      * Sets the displayName property value. The member's display name.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
      *  @param string|null $value Value to set for the tenantId property.
     */
-    public function setTenantId(?string $value ): void {
-        $this->tenantId = $value;
+    public function setTenantId(?string $value): void {
+        $this->getBackingStore()->set('tenantId', $value);
     }
 
     /**
      * Sets the userId property value. The user ID of the member.
      *  @param string|null $value Value to set for the userId property.
     */
-    public function setUserId(?string $value ): void {
-        $this->userId = $value;
+    public function setUserId(?string $value): void {
+        $this->getBackingStore()->set('userId', $value);
     }
 
 }

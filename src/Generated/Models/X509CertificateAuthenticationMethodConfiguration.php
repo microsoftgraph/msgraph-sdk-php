@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
     /**
-     * @var X509CertificateAuthenticationModeConfiguration|null $authenticationModeConfiguration Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
-    */
-    private ?X509CertificateAuthenticationModeConfiguration $authenticationModeConfiguration = null;
-    
-    /**
-     * @var array<X509CertificateUserBinding>|null $certificateUserBindings Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
-    */
-    private ?array $certificateUserBindings = null;
-    
-    /**
-     * @var array<AuthenticationMethodTarget>|null $includeTargets A collection of users or groups who are enabled to use the authentication method.
-    */
-    private ?array $includeTargets = null;
-    
-    /**
      * Instantiates a new X509CertificateAuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
      * @return X509CertificateAuthenticationModeConfiguration|null
     */
     public function getAuthenticationModeConfiguration(): ?X509CertificateAuthenticationModeConfiguration {
-        return $this->authenticationModeConfiguration;
+        return $this->getBackingStore()->get('authenticationModeConfiguration');
     }
 
     /**
@@ -53,7 +38,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
      * @return array<X509CertificateUserBinding>|null
     */
     public function getCertificateUserBindings(): ?array {
-        return $this->certificateUserBindings;
+        return $this->getBackingStore()->get('certificateUserBindings');
     }
 
     /**
@@ -74,7 +59,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->includeTargets;
+        return $this->getBackingStore()->get('includeTargets');
     }
 
     /**
@@ -83,33 +68,33 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('authenticationModeConfiguration', $this->authenticationModeConfiguration);
-        $writer->writeCollectionOfObjectValues('certificateUserBindings', $this->certificateUserBindings);
-        $writer->writeCollectionOfObjectValues('includeTargets', $this->includeTargets);
+        $writer->writeObjectValue('authenticationModeConfiguration', $this->getAuthenticationModeConfiguration());
+        $writer->writeCollectionOfObjectValues('certificateUserBindings', $this->getCertificateUserBindings());
+        $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
     }
 
     /**
      * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
      *  @param X509CertificateAuthenticationModeConfiguration|null $value Value to set for the authenticationModeConfiguration property.
     */
-    public function setAuthenticationModeConfiguration(?X509CertificateAuthenticationModeConfiguration $value ): void {
-        $this->authenticationModeConfiguration = $value;
+    public function setAuthenticationModeConfiguration(?X509CertificateAuthenticationModeConfiguration $value): void {
+        $this->getBackingStore()->set('authenticationModeConfiguration', $value);
     }
 
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      *  @param array<X509CertificateUserBinding>|null $value Value to set for the certificateUserBindings property.
     */
-    public function setCertificateUserBindings(?array $value ): void {
-        $this->certificateUserBindings = $value;
+    public function setCertificateUserBindings(?array $value): void {
+        $this->getBackingStore()->set('certificateUserBindings', $value);
     }
 
     /**
      * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
      *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
-    public function setIncludeTargets(?array $value ): void {
-        $this->includeTargets = $value;
+    public function setIncludeTargets(?array $value): void {
+        $this->getBackingStore()->set('includeTargets', $value);
     }
 
 }

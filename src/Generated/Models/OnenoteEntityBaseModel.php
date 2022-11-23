@@ -11,14 +11,13 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     /**
      * @var string|null $escapedSelf The endpoint where you can get details about the page. Read-only.
     */
-    private ?string $escapedSelf = null;
+    public ?string $escapedSelf = null;
     
     /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.onenoteEntityBaseModel');
     }
 
     /**
@@ -59,7 +58,7 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
      * @return string|null
     */
     public function getSelf(): ?string {
-        return $this->escapedSelf;
+        return $this->getBackingStore()->get('escapedSelf');
     }
 
     /**
@@ -68,15 +67,15 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('self', $this->escapedSelf);
+        $writer->writeStringValue('self', $this->getSelf());
     }
 
     /**
      * Sets the self property value. The endpoint where you can get details about the page. Read-only.
      *  @param string|null $value Value to set for the EscapedSelf property.
     */
-    public function setSelf(?string $value ): void {
-        $this->escapedSelf = $value;
+    public function setSelf(?string $value): void {
+        $this->getBackingStore()->set('escapedSelf', $value);
     }
 
 }

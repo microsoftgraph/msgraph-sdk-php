@@ -9,41 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Parsable 
 {
     /**
-     * @var CrossTenantAccessPolicyB2BSetting|null $b2bCollaborationInbound Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
-    */
-    private ?CrossTenantAccessPolicyB2BSetting $b2bCollaborationInbound = null;
-    
-    /**
-     * @var CrossTenantAccessPolicyB2BSetting|null $b2bCollaborationOutbound Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
-    */
-    private ?CrossTenantAccessPolicyB2BSetting $b2bCollaborationOutbound = null;
-    
-    /**
-     * @var CrossTenantAccessPolicyB2BSetting|null $b2bDirectConnectInbound Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
-    */
-    private ?CrossTenantAccessPolicyB2BSetting $b2bDirectConnectInbound = null;
-    
-    /**
-     * @var CrossTenantAccessPolicyB2BSetting|null $b2bDirectConnectOutbound Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
-    */
-    private ?CrossTenantAccessPolicyB2BSetting $b2bDirectConnectOutbound = null;
-    
-    /**
-     * @var CrossTenantAccessPolicyInboundTrust|null $inboundTrust Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
-    */
-    private ?CrossTenantAccessPolicyInboundTrust $inboundTrust = null;
-    
-    /**
-     * @var bool|null $isServiceDefault If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
-    */
-    private ?bool $isServiceDefault = null;
-    
-    /**
      * Instantiates a new crossTenantAccessPolicyConfigurationDefault and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.crossTenantAccessPolicyConfigurationDefault');
     }
 
     /**
@@ -60,7 +29,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->b2bCollaborationInbound;
+        return $this->getBackingStore()->get('b2bCollaborationInbound');
     }
 
     /**
@@ -68,7 +37,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->b2bCollaborationOutbound;
+        return $this->getBackingStore()->get('b2bCollaborationOutbound');
     }
 
     /**
@@ -76,7 +45,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->b2bDirectConnectInbound;
+        return $this->getBackingStore()->get('b2bDirectConnectInbound');
     }
 
     /**
@@ -84,7 +53,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->b2bDirectConnectOutbound;
+        return $this->getBackingStore()->get('b2bDirectConnectOutbound');
     }
 
     /**
@@ -108,7 +77,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyInboundTrust|null
     */
     public function getInboundTrust(): ?CrossTenantAccessPolicyInboundTrust {
-        return $this->inboundTrust;
+        return $this->getBackingStore()->get('inboundTrust');
     }
 
     /**
@@ -116,7 +85,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return bool|null
     */
     public function getIsServiceDefault(): ?bool {
-        return $this->isServiceDefault;
+        return $this->getBackingStore()->get('isServiceDefault');
     }
 
     /**
@@ -125,60 +94,60 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('b2bCollaborationInbound', $this->b2bCollaborationInbound);
-        $writer->writeObjectValue('b2bCollaborationOutbound', $this->b2bCollaborationOutbound);
-        $writer->writeObjectValue('b2bDirectConnectInbound', $this->b2bDirectConnectInbound);
-        $writer->writeObjectValue('b2bDirectConnectOutbound', $this->b2bDirectConnectOutbound);
-        $writer->writeObjectValue('inboundTrust', $this->inboundTrust);
-        $writer->writeBooleanValue('isServiceDefault', $this->isServiceDefault);
+        $writer->writeObjectValue('b2bCollaborationInbound', $this->getB2bCollaborationInbound());
+        $writer->writeObjectValue('b2bCollaborationOutbound', $this->getB2bCollaborationOutbound());
+        $writer->writeObjectValue('b2bDirectConnectInbound', $this->getB2bDirectConnectInbound());
+        $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
+        $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
+        $writer->writeBooleanValue('isServiceDefault', $this->getIsServiceDefault());
     }
 
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
     */
-    public function setB2bCollaborationInbound(?CrossTenantAccessPolicyB2BSetting $value ): void {
-        $this->b2bCollaborationInbound = $value;
+    public function setB2bCollaborationInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
+        $this->getBackingStore()->set('b2bCollaborationInbound', $value);
     }
 
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
     */
-    public function setB2bCollaborationOutbound(?CrossTenantAccessPolicyB2BSetting $value ): void {
-        $this->b2bCollaborationOutbound = $value;
+    public function setB2bCollaborationOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
+        $this->getBackingStore()->set('b2bCollaborationOutbound', $value);
     }
 
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
      *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectInbound property.
     */
-    public function setB2bDirectConnectInbound(?CrossTenantAccessPolicyB2BSetting $value ): void {
-        $this->b2bDirectConnectInbound = $value;
+    public function setB2bDirectConnectInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
+        $this->getBackingStore()->set('b2bDirectConnectInbound', $value);
     }
 
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
     */
-    public function setB2bDirectConnectOutbound(?CrossTenantAccessPolicyB2BSetting $value ): void {
-        $this->b2bDirectConnectOutbound = $value;
+    public function setB2bDirectConnectOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
+        $this->getBackingStore()->set('b2bDirectConnectOutbound', $value);
     }
 
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
      *  @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
     */
-    public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value ): void {
-        $this->inboundTrust = $value;
+    public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value): void {
+        $this->getBackingStore()->set('inboundTrust', $value);
     }
 
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
      *  @param bool|null $value Value to set for the isServiceDefault property.
     */
-    public function setIsServiceDefault(?bool $value ): void {
-        $this->isServiceDefault = $value;
+    public function setIsServiceDefault(?bool $value): void {
+        $this->getBackingStore()->set('isServiceDefault', $value);
     }
 
 }

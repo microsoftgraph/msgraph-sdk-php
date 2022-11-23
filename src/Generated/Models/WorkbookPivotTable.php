@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookPivotTable extends Entity implements Parsable 
 {
     /**
-     * @var string|null $name Name of the PivotTable.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var WorkbookWorksheet|null $worksheet The worksheet containing the current PivotTable. Read-only.
-    */
-    private ?WorkbookWorksheet $worksheet = null;
-    
-    /**
      * Instantiates a new workbookPivotTable and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookPivotTable');
     }
 
     /**
@@ -52,7 +41,7 @@ class WorkbookPivotTable extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -60,7 +49,7 @@ class WorkbookPivotTable extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->worksheet;
+        return $this->getBackingStore()->get('worksheet');
     }
 
     /**
@@ -69,24 +58,24 @@ class WorkbookPivotTable extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeObjectValue('worksheet', $this->worksheet);
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
 
     /**
      * Sets the name property value. Name of the PivotTable.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
      *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
-    public function setWorksheet(?WorkbookWorksheet $value ): void {
-        $this->worksheet = $value;
+    public function setWorksheet(?WorkbookWorksheet $value): void {
+        $this->getBackingStore()->set('worksheet', $value);
     }
 
 }

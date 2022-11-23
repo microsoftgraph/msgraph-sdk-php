@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable 
 {
     /**
-     * @var string|null $packageId The identifier for an app, as specified in the play store.
-    */
-    private ?string $packageId = null;
-    
-    /**
      * Instantiates a new AndroidMobileAppIdentifier and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable
      * @return string|null
     */
     public function getPackageId(): ?string {
-        return $this->packageId;
+        return $this->getBackingStore()->get('packageId');
     }
 
     /**
@@ -55,15 +50,15 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('packageId', $this->packageId);
+        $writer->writeStringValue('packageId', $this->getPackageId());
     }
 
     /**
      * Sets the packageId property value. The identifier for an app, as specified in the play store.
      *  @param string|null $value Value to set for the packageId property.
     */
-    public function setPackageId(?string $value ): void {
-        $this->packageId = $value;
+    public function setPackageId(?string $value): void {
+        $this->getBackingStore()->set('packageId', $value);
     }
 
 }

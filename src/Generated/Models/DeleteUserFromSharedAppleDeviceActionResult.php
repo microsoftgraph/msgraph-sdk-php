@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult implements Parsable 
 {
     /**
-     * @var string|null $userPrincipalName User principal name of the user to be deleted
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new DeleteUserFromSharedAppleDeviceActionResult and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deleteUserFromSharedAppleDeviceActionResult');
     }
 
     /**
@@ -46,7 +40,7 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult imp
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -55,15 +49,15 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the userPrincipalName property value. User principal name of the user to be deleted
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

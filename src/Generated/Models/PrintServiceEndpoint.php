@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintServiceEndpoint extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName A human-readable display name for the endpoint.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $uri The URI that can be used to access the service.
-    */
-    private ?string $uri = null;
-    
-    /**
      * Instantiates a new printServiceEndpoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.printServiceEndpoint');
     }
 
     /**
@@ -40,7 +29,7 @@ class PrintServiceEndpoint extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -60,7 +49,7 @@ class PrintServiceEndpoint extends Entity implements Parsable
      * @return string|null
     */
     public function getUri(): ?string {
-        return $this->uri;
+        return $this->getBackingStore()->get('uri');
     }
 
     /**
@@ -69,24 +58,24 @@ class PrintServiceEndpoint extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('uri', $this->uri);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('uri', $this->getUri());
     }
 
     /**
      * Sets the displayName property value. A human-readable display name for the endpoint.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the uri property value. The URI that can be used to access the service.
      *  @param string|null $value Value to set for the uri property.
     */
-    public function setUri(?string $value ): void {
-        $this->uri = $value;
+    public function setUri(?string $value): void {
+        $this->getBackingStore()->set('uri', $value);
     }
 
 }

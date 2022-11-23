@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable 
+class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ConditionalAccessConditionSet|null $conditions The conditions property
-    */
-    private ?ConditionalAccessConditionSet $conditions = null;
-    
-    /**
-     * @var ConditionalAccessGrantControls|null $grantControls Represents grant controls that must be fulfilled for the policy.
-    */
-    private ?ConditionalAccessGrantControls $grantControls = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var ConditionalAccessSessionControls|null $sessionControls Represents a complex type of session controls that is enforced after sign-in.
-    */
-    private ?ConditionalAccessSessionControls $sessionControls = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new conditionalAccessPolicyDetail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.conditionalAccessPolicyDetail');
     }
 
     /**
@@ -55,8 +38,16 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessConditionSet|null
     */
     public function getConditions(): ?ConditionalAccessConditionSet {
-        return $this->conditions;
+        return $this->getBackingStore()->get('conditions');
     }
 
     /**
@@ -86,7 +77,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessGrantControls|null
     */
     public function getGrantControls(): ?ConditionalAccessGrantControls {
-        return $this->grantControls;
+        return $this->getBackingStore()->get('grantControls');
     }
 
     /**
@@ -94,7 +85,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +93,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * @return ConditionalAccessSessionControls|null
     */
     public function getSessionControls(): ?ConditionalAccessSessionControls {
-        return $this->sessionControls;
+        return $this->getBackingStore()->get('sessionControls');
     }
 
     /**
@@ -110,51 +101,59 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('conditions', $this->conditions);
-        $writer->writeObjectValue('grantControls', $this->grantControls);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('sessionControls', $this->sessionControls);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('conditions', $this->getConditions());
+        $writer->writeObjectValue('grantControls', $this->getGrantControls());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('sessionControls', $this->getSessionControls());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the conditions property value. The conditions property
      *  @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
     */
-    public function setConditions(?ConditionalAccessConditionSet $value ): void {
-        $this->conditions = $value;
+    public function setConditions(?ConditionalAccessConditionSet $value): void {
+        $this->getBackingStore()->set('conditions', $value);
     }
 
     /**
      * Sets the grantControls property value. Represents grant controls that must be fulfilled for the policy.
      *  @param ConditionalAccessGrantControls|null $value Value to set for the grantControls property.
     */
-    public function setGrantControls(?ConditionalAccessGrantControls $value ): void {
-        $this->grantControls = $value;
+    public function setGrantControls(?ConditionalAccessGrantControls $value): void {
+        $this->getBackingStore()->set('grantControls', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sessionControls property value. Represents a complex type of session controls that is enforced after sign-in.
      *  @param ConditionalAccessSessionControls|null $value Value to set for the sessionControls property.
     */
-    public function setSessionControls(?ConditionalAccessSessionControls $value ): void {
-        $this->sessionControls = $value;
+    public function setSessionControls(?ConditionalAccessSessionControls $value): void {
+        $this->getBackingStore()->set('sessionControls', $value);
     }
 
 }

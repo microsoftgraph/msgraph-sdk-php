@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable 
 {
     /**
-     * @var string|null $productCode The product code of the app.
-    */
-    private ?string $productCode = null;
-    
-    /**
-     * @var string|null $productVersion The product version comparison value.
-    */
-    private ?string $productVersion = null;
-    
-    /**
-     * @var Win32LobAppRuleOperator|null $productVersionOperator Contains properties for detection operator.
-    */
-    private ?Win32LobAppRuleOperator $productVersionOperator = null;
-    
-    /**
      * Instantiates a new Win32LobAppProductCodeRule and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getProductCode(): ?string {
-        return $this->productCode;
+        return $this->getBackingStore()->get('productCode');
     }
 
     /**
@@ -66,7 +51,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getProductVersion(): ?string {
-        return $this->productVersion;
+        return $this->getBackingStore()->get('productVersion');
     }
 
     /**
@@ -74,7 +59,7 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
      * @return Win32LobAppRuleOperator|null
     */
     public function getProductVersionOperator(): ?Win32LobAppRuleOperator {
-        return $this->productVersionOperator;
+        return $this->getBackingStore()->get('productVersionOperator');
     }
 
     /**
@@ -83,33 +68,33 @@ class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('productCode', $this->productCode);
-        $writer->writeStringValue('productVersion', $this->productVersion);
-        $writer->writeEnumValue('productVersionOperator', $this->productVersionOperator);
+        $writer->writeStringValue('productCode', $this->getProductCode());
+        $writer->writeStringValue('productVersion', $this->getProductVersion());
+        $writer->writeEnumValue('productVersionOperator', $this->getProductVersionOperator());
     }
 
     /**
      * Sets the productCode property value. The product code of the app.
      *  @param string|null $value Value to set for the productCode property.
     */
-    public function setProductCode(?string $value ): void {
-        $this->productCode = $value;
+    public function setProductCode(?string $value): void {
+        $this->getBackingStore()->set('productCode', $value);
     }
 
     /**
      * Sets the productVersion property value. The product version comparison value.
      *  @param string|null $value Value to set for the productVersion property.
     */
-    public function setProductVersion(?string $value ): void {
-        $this->productVersion = $value;
+    public function setProductVersion(?string $value): void {
+        $this->getBackingStore()->set('productVersion', $value);
     }
 
     /**
      * Sets the productVersionOperator property value. Contains properties for detection operator.
      *  @param Win32LobAppRuleOperator|null $value Value to set for the productVersionOperator property.
     */
-    public function setProductVersionOperator(?Win32LobAppRuleOperator $value ): void {
-        $this->productVersionOperator = $value;
+    public function setProductVersionOperator(?Win32LobAppRuleOperator $value): void {
+        $this->getBackingStore()->set('productVersionOperator', $value);
     }
 
 }

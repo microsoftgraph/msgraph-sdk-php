@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType implements Parsable 
 {
     /**
-     * @var float|null $maxPoints Max points possible for this assignment.
-    */
-    private ?float $maxPoints = null;
-    
-    /**
      * Instantiates a new EducationAssignmentPointsGradeType and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
      * @return float|null
     */
     public function getMaxPoints(): ?float {
-        return $this->maxPoints;
+        return $this->getBackingStore()->get('maxPoints');
     }
 
     /**
@@ -55,15 +50,15 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('maxPoints', $this->maxPoints);
+        $writer->writeFloatValue('maxPoints', $this->getMaxPoints());
     }
 
     /**
      * Sets the maxPoints property value. Max points possible for this assignment.
      *  @param float|null $value Value to set for the maxPoints property.
     */
-    public function setMaxPoints(?float $value ): void {
-        $this->maxPoints = $value;
+    public function setMaxPoints(?float $value): void {
+        $this->getBackingStore()->set('maxPoints', $value);
     }
 
 }

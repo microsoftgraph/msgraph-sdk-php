@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Place extends Entity implements Parsable 
 {
     /**
-     * @var PhysicalAddress|null $address The street address of the place.
-    */
-    private ?PhysicalAddress $address = null;
-    
-    /**
-     * @var string|null $displayName The name associated with the place.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var OutlookGeoCoordinates|null $geoCoordinates Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-    */
-    private ?OutlookGeoCoordinates $geoCoordinates = null;
-    
-    /**
-     * @var string|null $phone The phone number of the place.
-    */
-    private ?string $phone = null;
-    
-    /**
      * Instantiates a new Place and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.place');
     }
 
     /**
@@ -58,7 +37,7 @@ class Place extends Entity implements Parsable
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
-        return $this->address;
+        return $this->getBackingStore()->get('address');
     }
 
     /**
@@ -66,7 +45,7 @@ class Place extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -88,7 +67,7 @@ class Place extends Entity implements Parsable
      * @return OutlookGeoCoordinates|null
     */
     public function getGeoCoordinates(): ?OutlookGeoCoordinates {
-        return $this->geoCoordinates;
+        return $this->getBackingStore()->get('geoCoordinates');
     }
 
     /**
@@ -96,7 +75,7 @@ class Place extends Entity implements Parsable
      * @return string|null
     */
     public function getPhone(): ?string {
-        return $this->phone;
+        return $this->getBackingStore()->get('phone');
     }
 
     /**
@@ -105,42 +84,42 @@ class Place extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('address', $this->address);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('geoCoordinates', $this->geoCoordinates);
-        $writer->writeStringValue('phone', $this->phone);
+        $writer->writeObjectValue('address', $this->getAddress());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('geoCoordinates', $this->getGeoCoordinates());
+        $writer->writeStringValue('phone', $this->getPhone());
     }
 
     /**
      * Sets the address property value. The street address of the place.
      *  @param PhysicalAddress|null $value Value to set for the address property.
     */
-    public function setAddress(?PhysicalAddress $value ): void {
-        $this->address = $value;
+    public function setAddress(?PhysicalAddress $value): void {
+        $this->getBackingStore()->set('address', $value);
     }
 
     /**
      * Sets the displayName property value. The name associated with the place.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      *  @param OutlookGeoCoordinates|null $value Value to set for the geoCoordinates property.
     */
-    public function setGeoCoordinates(?OutlookGeoCoordinates $value ): void {
-        $this->geoCoordinates = $value;
+    public function setGeoCoordinates(?OutlookGeoCoordinates $value): void {
+        $this->getBackingStore()->set('geoCoordinates', $value);
     }
 
     /**
      * Sets the phone property value. The phone number of the place.
      *  @param string|null $value Value to set for the phone property.
     */
-    public function setPhone(?string $value ): void {
-        $this->phone = $value;
+    public function setPhone(?string $value): void {
+        $this->getBackingStore()->set('phone', $value);
     }
 
 }

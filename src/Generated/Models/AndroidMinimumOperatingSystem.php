@@ -6,105 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable 
+class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $v10_0 Version 10.0 or later.
-    */
-    private ?bool $v10_0 = null;
-    
-    /**
-     * @var bool|null $v11_0 Version 11.0 or later.
-    */
-    private ?bool $v11_0 = null;
-    
-    /**
-     * @var bool|null $v4_0 Version 4.0 or later.
-    */
-    private ?bool $v4_0 = null;
-    
-    /**
-     * @var bool|null $v4_0_3 Version 4.0.3 or later.
-    */
-    private ?bool $v4_0_3 = null;
-    
-    /**
-     * @var bool|null $v4_1 Version 4.1 or later.
-    */
-    private ?bool $v4_1 = null;
-    
-    /**
-     * @var bool|null $v4_2 Version 4.2 or later.
-    */
-    private ?bool $v4_2 = null;
-    
-    /**
-     * @var bool|null $v4_3 Version 4.3 or later.
-    */
-    private ?bool $v4_3 = null;
-    
-    /**
-     * @var bool|null $v4_4 Version 4.4 or later.
-    */
-    private ?bool $v4_4 = null;
-    
-    /**
-     * @var bool|null $v5_0 Version 5.0 or later.
-    */
-    private ?bool $v5_0 = null;
-    
-    /**
-     * @var bool|null $v5_1 Version 5.1 or later.
-    */
-    private ?bool $v5_1 = null;
-    
-    /**
-     * @var bool|null $v6_0 Version 6.0 or later.
-    */
-    private ?bool $v6_0 = null;
-    
-    /**
-     * @var bool|null $v7_0 Version 7.0 or later.
-    */
-    private ?bool $v7_0 = null;
-    
-    /**
-     * @var bool|null $v7_1 Version 7.1 or later.
-    */
-    private ?bool $v7_1 = null;
-    
-    /**
-     * @var bool|null $v8_0 Version 8.0 or later.
-    */
-    private ?bool $v8_0 = null;
-    
-    /**
-     * @var bool|null $v8_1 Version 8.1 or later.
-    */
-    private ?bool $v8_1 = null;
-    
-    /**
-     * @var bool|null $v9_0 Version 9.0 or later.
-    */
-    private ?bool $v9_0 = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new androidMinimumOperatingSystem and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.androidMinimumOperatingSystem');
     }
 
     /**
@@ -120,8 +38,16 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -156,7 +82,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -164,7 +90,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV10_0(): ?bool {
-        return $this->v10_0;
+        return $this->getBackingStore()->get('v10_0');
     }
 
     /**
@@ -172,7 +98,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV11_0(): ?bool {
-        return $this->v11_0;
+        return $this->getBackingStore()->get('v11_0');
     }
 
     /**
@@ -180,7 +106,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_0(): ?bool {
-        return $this->v4_0;
+        return $this->getBackingStore()->get('v4_0');
     }
 
     /**
@@ -188,7 +114,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_0_3(): ?bool {
-        return $this->v4_0_3;
+        return $this->getBackingStore()->get('v4_0_3');
     }
 
     /**
@@ -196,7 +122,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_1(): ?bool {
-        return $this->v4_1;
+        return $this->getBackingStore()->get('v4_1');
     }
 
     /**
@@ -204,7 +130,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_2(): ?bool {
-        return $this->v4_2;
+        return $this->getBackingStore()->get('v4_2');
     }
 
     /**
@@ -212,7 +138,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_3(): ?bool {
-        return $this->v4_3;
+        return $this->getBackingStore()->get('v4_3');
     }
 
     /**
@@ -220,7 +146,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV4_4(): ?bool {
-        return $this->v4_4;
+        return $this->getBackingStore()->get('v4_4');
     }
 
     /**
@@ -228,7 +154,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV5_0(): ?bool {
-        return $this->v5_0;
+        return $this->getBackingStore()->get('v5_0');
     }
 
     /**
@@ -236,7 +162,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV5_1(): ?bool {
-        return $this->v5_1;
+        return $this->getBackingStore()->get('v5_1');
     }
 
     /**
@@ -244,7 +170,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV6_0(): ?bool {
-        return $this->v6_0;
+        return $this->getBackingStore()->get('v6_0');
     }
 
     /**
@@ -252,7 +178,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV7_0(): ?bool {
-        return $this->v7_0;
+        return $this->getBackingStore()->get('v7_0');
     }
 
     /**
@@ -260,7 +186,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV7_1(): ?bool {
-        return $this->v7_1;
+        return $this->getBackingStore()->get('v7_1');
     }
 
     /**
@@ -268,7 +194,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV8_0(): ?bool {
-        return $this->v8_0;
+        return $this->getBackingStore()->get('v8_0');
     }
 
     /**
@@ -276,7 +202,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV8_1(): ?bool {
-        return $this->v8_1;
+        return $this->getBackingStore()->get('v8_1');
     }
 
     /**
@@ -284,7 +210,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getV9_0(): ?bool {
-        return $this->v9_0;
+        return $this->getBackingStore()->get('v9_0');
     }
 
     /**
@@ -292,168 +218,176 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('v10_0', $this->v10_0);
-        $writer->writeBooleanValue('v11_0', $this->v11_0);
-        $writer->writeBooleanValue('v4_0', $this->v4_0);
-        $writer->writeBooleanValue('v4_0_3', $this->v4_0_3);
-        $writer->writeBooleanValue('v4_1', $this->v4_1);
-        $writer->writeBooleanValue('v4_2', $this->v4_2);
-        $writer->writeBooleanValue('v4_3', $this->v4_3);
-        $writer->writeBooleanValue('v4_4', $this->v4_4);
-        $writer->writeBooleanValue('v5_0', $this->v5_0);
-        $writer->writeBooleanValue('v5_1', $this->v5_1);
-        $writer->writeBooleanValue('v6_0', $this->v6_0);
-        $writer->writeBooleanValue('v7_0', $this->v7_0);
-        $writer->writeBooleanValue('v7_1', $this->v7_1);
-        $writer->writeBooleanValue('v8_0', $this->v8_0);
-        $writer->writeBooleanValue('v8_1', $this->v8_1);
-        $writer->writeBooleanValue('v9_0', $this->v9_0);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('v10_0', $this->getV10_0());
+        $writer->writeBooleanValue('v11_0', $this->getV11_0());
+        $writer->writeBooleanValue('v4_0', $this->getV4_0());
+        $writer->writeBooleanValue('v4_0_3', $this->getV4_0_3());
+        $writer->writeBooleanValue('v4_1', $this->getV4_1());
+        $writer->writeBooleanValue('v4_2', $this->getV4_2());
+        $writer->writeBooleanValue('v4_3', $this->getV4_3());
+        $writer->writeBooleanValue('v4_4', $this->getV4_4());
+        $writer->writeBooleanValue('v5_0', $this->getV5_0());
+        $writer->writeBooleanValue('v5_1', $this->getV5_1());
+        $writer->writeBooleanValue('v6_0', $this->getV6_0());
+        $writer->writeBooleanValue('v7_0', $this->getV7_0());
+        $writer->writeBooleanValue('v7_1', $this->getV7_1());
+        $writer->writeBooleanValue('v8_0', $this->getV8_0());
+        $writer->writeBooleanValue('v8_1', $this->getV8_1());
+        $writer->writeBooleanValue('v9_0', $this->getV9_0());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the v10_0 property value. Version 10.0 or later.
      *  @param bool|null $value Value to set for the v10_0 property.
     */
-    public function setV10_0(?bool $value ): void {
-        $this->v10_0 = $value;
+    public function setV10_0(?bool $value): void {
+        $this->getBackingStore()->set('v10_0', $value);
     }
 
     /**
      * Sets the v11_0 property value. Version 11.0 or later.
      *  @param bool|null $value Value to set for the v11_0 property.
     */
-    public function setV11_0(?bool $value ): void {
-        $this->v11_0 = $value;
+    public function setV11_0(?bool $value): void {
+        $this->getBackingStore()->set('v11_0', $value);
     }
 
     /**
      * Sets the v4_0 property value. Version 4.0 or later.
      *  @param bool|null $value Value to set for the v4_0 property.
     */
-    public function setV4_0(?bool $value ): void {
-        $this->v4_0 = $value;
+    public function setV4_0(?bool $value): void {
+        $this->getBackingStore()->set('v4_0', $value);
     }
 
     /**
      * Sets the v4_0_3 property value. Version 4.0.3 or later.
      *  @param bool|null $value Value to set for the v4_0_3 property.
     */
-    public function setV4_0_3(?bool $value ): void {
-        $this->v4_0_3 = $value;
+    public function setV4_0_3(?bool $value): void {
+        $this->getBackingStore()->set('v4_0_3', $value);
     }
 
     /**
      * Sets the v4_1 property value. Version 4.1 or later.
      *  @param bool|null $value Value to set for the v4_1 property.
     */
-    public function setV4_1(?bool $value ): void {
-        $this->v4_1 = $value;
+    public function setV4_1(?bool $value): void {
+        $this->getBackingStore()->set('v4_1', $value);
     }
 
     /**
      * Sets the v4_2 property value. Version 4.2 or later.
      *  @param bool|null $value Value to set for the v4_2 property.
     */
-    public function setV4_2(?bool $value ): void {
-        $this->v4_2 = $value;
+    public function setV4_2(?bool $value): void {
+        $this->getBackingStore()->set('v4_2', $value);
     }
 
     /**
      * Sets the v4_3 property value. Version 4.3 or later.
      *  @param bool|null $value Value to set for the v4_3 property.
     */
-    public function setV4_3(?bool $value ): void {
-        $this->v4_3 = $value;
+    public function setV4_3(?bool $value): void {
+        $this->getBackingStore()->set('v4_3', $value);
     }
 
     /**
      * Sets the v4_4 property value. Version 4.4 or later.
      *  @param bool|null $value Value to set for the v4_4 property.
     */
-    public function setV4_4(?bool $value ): void {
-        $this->v4_4 = $value;
+    public function setV4_4(?bool $value): void {
+        $this->getBackingStore()->set('v4_4', $value);
     }
 
     /**
      * Sets the v5_0 property value. Version 5.0 or later.
      *  @param bool|null $value Value to set for the v5_0 property.
     */
-    public function setV5_0(?bool $value ): void {
-        $this->v5_0 = $value;
+    public function setV5_0(?bool $value): void {
+        $this->getBackingStore()->set('v5_0', $value);
     }
 
     /**
      * Sets the v5_1 property value. Version 5.1 or later.
      *  @param bool|null $value Value to set for the v5_1 property.
     */
-    public function setV5_1(?bool $value ): void {
-        $this->v5_1 = $value;
+    public function setV5_1(?bool $value): void {
+        $this->getBackingStore()->set('v5_1', $value);
     }
 
     /**
      * Sets the v6_0 property value. Version 6.0 or later.
      *  @param bool|null $value Value to set for the v6_0 property.
     */
-    public function setV6_0(?bool $value ): void {
-        $this->v6_0 = $value;
+    public function setV6_0(?bool $value): void {
+        $this->getBackingStore()->set('v6_0', $value);
     }
 
     /**
      * Sets the v7_0 property value. Version 7.0 or later.
      *  @param bool|null $value Value to set for the v7_0 property.
     */
-    public function setV7_0(?bool $value ): void {
-        $this->v7_0 = $value;
+    public function setV7_0(?bool $value): void {
+        $this->getBackingStore()->set('v7_0', $value);
     }
 
     /**
      * Sets the v7_1 property value. Version 7.1 or later.
      *  @param bool|null $value Value to set for the v7_1 property.
     */
-    public function setV7_1(?bool $value ): void {
-        $this->v7_1 = $value;
+    public function setV7_1(?bool $value): void {
+        $this->getBackingStore()->set('v7_1', $value);
     }
 
     /**
      * Sets the v8_0 property value. Version 8.0 or later.
      *  @param bool|null $value Value to set for the v8_0 property.
     */
-    public function setV8_0(?bool $value ): void {
-        $this->v8_0 = $value;
+    public function setV8_0(?bool $value): void {
+        $this->getBackingStore()->set('v8_0', $value);
     }
 
     /**
      * Sets the v8_1 property value. Version 8.1 or later.
      *  @param bool|null $value Value to set for the v8_1 property.
     */
-    public function setV8_1(?bool $value ): void {
-        $this->v8_1 = $value;
+    public function setV8_1(?bool $value): void {
+        $this->getBackingStore()->set('v8_1', $value);
     }
 
     /**
      * Sets the v9_0 property value. Version 9.0 or later.
      *  @param bool|null $value Value to set for the v9_0 property.
     */
-    public function setV9_0(?bool $value ): void {
-        $this->v9_0 = $value;
+    public function setV9_0(?bool $value): void {
+        $this->getBackingStore()->set('v9_0', $value);
     }
 
 }

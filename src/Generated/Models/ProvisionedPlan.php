@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ProvisionedPlan implements AdditionalDataHolder, Parsable 
+class ProvisionedPlan implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $capabilityStatus For example, 'Enabled'.
-    */
-    private ?string $capabilityStatus = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $provisioningStatus For example, 'Success'.
-    */
-    private ?string $provisioningStatus = null;
-    
-    /**
-     * @var string|null $service The name of the service; for example, 'AccessControlS2S'
-    */
-    private ?string $service = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new provisionedPlan and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.provisionedPlan');
     }
 
     /**
@@ -55,8 +38,16 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -64,7 +55,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCapabilityStatus(): ?string {
-        return $this->capabilityStatus;
+        return $this->getBackingStore()->get('capabilityStatus');
     }
 
     /**
@@ -86,7 +77,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -94,7 +85,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getProvisioningStatus(): ?string {
-        return $this->provisioningStatus;
+        return $this->getBackingStore()->get('provisioningStatus');
     }
 
     /**
@@ -102,7 +93,7 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->service;
+        return $this->getBackingStore()->get('service');
     }
 
     /**
@@ -110,51 +101,59 @@ class ProvisionedPlan implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('capabilityStatus', $this->capabilityStatus);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('provisioningStatus', $this->provisioningStatus);
-        $writer->writeStringValue('service', $this->service);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('capabilityStatus', $this->getCapabilityStatus());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('provisioningStatus', $this->getProvisioningStatus());
+        $writer->writeStringValue('service', $this->getService());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the capabilityStatus property value. For example, 'Enabled'.
      *  @param string|null $value Value to set for the capabilityStatus property.
     */
-    public function setCapabilityStatus(?string $value ): void {
-        $this->capabilityStatus = $value;
+    public function setCapabilityStatus(?string $value): void {
+        $this->getBackingStore()->set('capabilityStatus', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the provisioningStatus property value. For example, 'Success'.
      *  @param string|null $value Value to set for the provisioningStatus property.
     */
-    public function setProvisioningStatus(?string $value ): void {
-        $this->provisioningStatus = $value;
+    public function setProvisioningStatus(?string $value): void {
+        $this->getBackingStore()->set('provisioningStatus', $value);
     }
 
     /**
      * Sets the service property value. The name of the service; for example, 'AccessControlS2S'
      *  @param string|null $value Value to set for the service property.
     */
-    public function setService(?string $value ): void {
-        $this->service = $value;
+    public function setService(?string $value): void {
+        $this->getBackingStore()->set('service', $value);
     }
 
 }

@@ -9,76 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSchool extends EducationOrganization implements Parsable 
 {
     /**
-     * @var PhysicalAddress|null $address Address of the school.
-    */
-    private ?PhysicalAddress $address = null;
-    
-    /**
-     * @var AdministrativeUnit|null $administrativeUnit The underlying administrativeUnit for this school.
-    */
-    private ?AdministrativeUnit $administrativeUnit = null;
-    
-    /**
-     * @var array<EducationClass>|null $classes Classes taught at the school. Nullable.
-    */
-    private ?array $classes = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy Entity who created the school.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var string|null $externalId ID of school in syncing system.
-    */
-    private ?string $externalId = null;
-    
-    /**
-     * @var string|null $externalPrincipalId ID of principal in syncing system.
-    */
-    private ?string $externalPrincipalId = null;
-    
-    /**
-     * @var string|null $fax The fax property
-    */
-    private ?string $fax = null;
-    
-    /**
-     * @var string|null $highestGrade Highest grade taught.
-    */
-    private ?string $highestGrade = null;
-    
-    /**
-     * @var string|null $lowestGrade Lowest grade taught.
-    */
-    private ?string $lowestGrade = null;
-    
-    /**
-     * @var string|null $phone Phone number of school.
-    */
-    private ?string $phone = null;
-    
-    /**
-     * @var string|null $principalEmail Email address of the principal.
-    */
-    private ?string $principalEmail = null;
-    
-    /**
-     * @var string|null $principalName Name of the principal.
-    */
-    private ?string $principalName = null;
-    
-    /**
-     * @var string|null $schoolNumber School Number.
-    */
-    private ?string $schoolNumber = null;
-    
-    /**
-     * @var array<EducationUser>|null $users Users in the school. Nullable.
-    */
-    private ?array $users = null;
-    
-    /**
      * Instantiates a new EducationSchool and sets the default values.
     */
     public function __construct() {
@@ -100,7 +30,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
-        return $this->address;
+        return $this->getBackingStore()->get('address');
     }
 
     /**
@@ -108,7 +38,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return AdministrativeUnit|null
     */
     public function getAdministrativeUnit(): ?AdministrativeUnit {
-        return $this->administrativeUnit;
+        return $this->getBackingStore()->get('administrativeUnit');
     }
 
     /**
@@ -116,7 +46,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return array<EducationClass>|null
     */
     public function getClasses(): ?array {
-        return $this->classes;
+        return $this->getBackingStore()->get('classes');
     }
 
     /**
@@ -124,7 +54,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -132,7 +62,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->externalId;
+        return $this->getBackingStore()->get('externalId');
     }
 
     /**
@@ -140,7 +70,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getExternalPrincipalId(): ?string {
-        return $this->externalPrincipalId;
+        return $this->getBackingStore()->get('externalPrincipalId');
     }
 
     /**
@@ -148,7 +78,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getFax(): ?string {
-        return $this->fax;
+        return $this->getBackingStore()->get('fax');
     }
 
     /**
@@ -180,7 +110,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getHighestGrade(): ?string {
-        return $this->highestGrade;
+        return $this->getBackingStore()->get('highestGrade');
     }
 
     /**
@@ -188,7 +118,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getLowestGrade(): ?string {
-        return $this->lowestGrade;
+        return $this->getBackingStore()->get('lowestGrade');
     }
 
     /**
@@ -196,7 +126,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPhone(): ?string {
-        return $this->phone;
+        return $this->getBackingStore()->get('phone');
     }
 
     /**
@@ -204,7 +134,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPrincipalEmail(): ?string {
-        return $this->principalEmail;
+        return $this->getBackingStore()->get('principalEmail');
     }
 
     /**
@@ -212,7 +142,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPrincipalName(): ?string {
-        return $this->principalName;
+        return $this->getBackingStore()->get('principalName');
     }
 
     /**
@@ -220,7 +150,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getSchoolNumber(): ?string {
-        return $this->schoolNumber;
+        return $this->getBackingStore()->get('schoolNumber');
     }
 
     /**
@@ -228,7 +158,7 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return array<EducationUser>|null
     */
     public function getUsers(): ?array {
-        return $this->users;
+        return $this->getBackingStore()->get('users');
     }
 
     /**
@@ -237,132 +167,132 @@ class EducationSchool extends EducationOrganization implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('address', $this->address);
-        $writer->writeObjectValue('administrativeUnit', $this->administrativeUnit);
-        $writer->writeCollectionOfObjectValues('classes', $this->classes);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeStringValue('externalId', $this->externalId);
-        $writer->writeStringValue('externalPrincipalId', $this->externalPrincipalId);
-        $writer->writeStringValue('fax', $this->fax);
-        $writer->writeStringValue('highestGrade', $this->highestGrade);
-        $writer->writeStringValue('lowestGrade', $this->lowestGrade);
-        $writer->writeStringValue('phone', $this->phone);
-        $writer->writeStringValue('principalEmail', $this->principalEmail);
-        $writer->writeStringValue('principalName', $this->principalName);
-        $writer->writeStringValue('schoolNumber', $this->schoolNumber);
-        $writer->writeCollectionOfObjectValues('users', $this->users);
+        $writer->writeObjectValue('address', $this->getAddress());
+        $writer->writeObjectValue('administrativeUnit', $this->getAdministrativeUnit());
+        $writer->writeCollectionOfObjectValues('classes', $this->getClasses());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeStringValue('externalId', $this->getExternalId());
+        $writer->writeStringValue('externalPrincipalId', $this->getExternalPrincipalId());
+        $writer->writeStringValue('fax', $this->getFax());
+        $writer->writeStringValue('highestGrade', $this->getHighestGrade());
+        $writer->writeStringValue('lowestGrade', $this->getLowestGrade());
+        $writer->writeStringValue('phone', $this->getPhone());
+        $writer->writeStringValue('principalEmail', $this->getPrincipalEmail());
+        $writer->writeStringValue('principalName', $this->getPrincipalName());
+        $writer->writeStringValue('schoolNumber', $this->getSchoolNumber());
+        $writer->writeCollectionOfObjectValues('users', $this->getUsers());
     }
 
     /**
      * Sets the address property value. Address of the school.
      *  @param PhysicalAddress|null $value Value to set for the address property.
     */
-    public function setAddress(?PhysicalAddress $value ): void {
-        $this->address = $value;
+    public function setAddress(?PhysicalAddress $value): void {
+        $this->getBackingStore()->set('address', $value);
     }
 
     /**
      * Sets the administrativeUnit property value. The underlying administrativeUnit for this school.
      *  @param AdministrativeUnit|null $value Value to set for the administrativeUnit property.
     */
-    public function setAdministrativeUnit(?AdministrativeUnit $value ): void {
-        $this->administrativeUnit = $value;
+    public function setAdministrativeUnit(?AdministrativeUnit $value): void {
+        $this->getBackingStore()->set('administrativeUnit', $value);
     }
 
     /**
      * Sets the classes property value. Classes taught at the school. Nullable.
      *  @param array<EducationClass>|null $value Value to set for the classes property.
     */
-    public function setClasses(?array $value ): void {
-        $this->classes = $value;
+    public function setClasses(?array $value): void {
+        $this->getBackingStore()->set('classes', $value);
     }
 
     /**
      * Sets the createdBy property value. Entity who created the school.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the externalId property value. ID of school in syncing system.
      *  @param string|null $value Value to set for the externalId property.
     */
-    public function setExternalId(?string $value ): void {
-        $this->externalId = $value;
+    public function setExternalId(?string $value): void {
+        $this->getBackingStore()->set('externalId', $value);
     }
 
     /**
      * Sets the externalPrincipalId property value. ID of principal in syncing system.
      *  @param string|null $value Value to set for the externalPrincipalId property.
     */
-    public function setExternalPrincipalId(?string $value ): void {
-        $this->externalPrincipalId = $value;
+    public function setExternalPrincipalId(?string $value): void {
+        $this->getBackingStore()->set('externalPrincipalId', $value);
     }
 
     /**
      * Sets the fax property value. The fax property
      *  @param string|null $value Value to set for the fax property.
     */
-    public function setFax(?string $value ): void {
-        $this->fax = $value;
+    public function setFax(?string $value): void {
+        $this->getBackingStore()->set('fax', $value);
     }
 
     /**
      * Sets the highestGrade property value. Highest grade taught.
      *  @param string|null $value Value to set for the highestGrade property.
     */
-    public function setHighestGrade(?string $value ): void {
-        $this->highestGrade = $value;
+    public function setHighestGrade(?string $value): void {
+        $this->getBackingStore()->set('highestGrade', $value);
     }
 
     /**
      * Sets the lowestGrade property value. Lowest grade taught.
      *  @param string|null $value Value to set for the lowestGrade property.
     */
-    public function setLowestGrade(?string $value ): void {
-        $this->lowestGrade = $value;
+    public function setLowestGrade(?string $value): void {
+        $this->getBackingStore()->set('lowestGrade', $value);
     }
 
     /**
      * Sets the phone property value. Phone number of school.
      *  @param string|null $value Value to set for the phone property.
     */
-    public function setPhone(?string $value ): void {
-        $this->phone = $value;
+    public function setPhone(?string $value): void {
+        $this->getBackingStore()->set('phone', $value);
     }
 
     /**
      * Sets the principalEmail property value. Email address of the principal.
      *  @param string|null $value Value to set for the principalEmail property.
     */
-    public function setPrincipalEmail(?string $value ): void {
-        $this->principalEmail = $value;
+    public function setPrincipalEmail(?string $value): void {
+        $this->getBackingStore()->set('principalEmail', $value);
     }
 
     /**
      * Sets the principalName property value. Name of the principal.
      *  @param string|null $value Value to set for the principalName property.
     */
-    public function setPrincipalName(?string $value ): void {
-        $this->principalName = $value;
+    public function setPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('principalName', $value);
     }
 
     /**
      * Sets the schoolNumber property value. School Number.
      *  @param string|null $value Value to set for the schoolNumber property.
     */
-    public function setSchoolNumber(?string $value ): void {
-        $this->schoolNumber = $value;
+    public function setSchoolNumber(?string $value): void {
+        $this->getBackingStore()->set('schoolNumber', $value);
     }
 
     /**
      * Sets the users property value. Users in the school. Nullable.
      *  @param array<EducationUser>|null $value Value to set for the users property.
     */
-    public function setUsers(?array $value ): void {
-        $this->users = $value;
+    public function setUsers(?array $value): void {
+        $this->getBackingStore()->set('users', $value);
     }
 
 }

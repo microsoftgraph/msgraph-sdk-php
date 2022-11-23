@@ -12,31 +12,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DataSource extends Entity implements Parsable 
 {
     /**
-     * @var IdentitySet|null $createdBy The user who created the dataSource.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The date and time the dataSource was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $displayName The display name of the dataSource. This will be the name of the SharePoint site.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var DataSourceHoldStatus|null $holdStatus The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-    */
-    private ?DataSourceHoldStatus $holdStatus = null;
-    
-    /**
      * Instantiates a new dataSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.security.dataSource');
     }
 
     /**
@@ -62,7 +41,7 @@ class DataSource extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -70,7 +49,7 @@ class DataSource extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -78,7 +57,7 @@ class DataSource extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -100,7 +79,7 @@ class DataSource extends Entity implements Parsable
      * @return DataSourceHoldStatus|null
     */
     public function getHoldStatus(): ?DataSourceHoldStatus {
-        return $this->holdStatus;
+        return $this->getBackingStore()->get('holdStatus');
     }
 
     /**
@@ -109,42 +88,42 @@ class DataSource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('holdStatus', $this->holdStatus);
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('holdStatus', $this->getHoldStatus());
     }
 
     /**
      * Sets the createdBy property value. The user who created the dataSource.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The date and time the dataSource was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
      *  @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
     */
-    public function setHoldStatus(?DataSourceHoldStatus $value ): void {
-        $this->holdStatus = $value;
+    public function setHoldStatus(?DataSourceHoldStatus $value): void {
+        $this->getBackingStore()->set('holdStatus', $value);
     }
 
 }

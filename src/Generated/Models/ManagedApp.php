@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedApp extends MobileApp implements Parsable 
 {
     /**
-     * @var ManagedAppAvailability|null $appAvailability A managed (MAM) application's availability.
-    */
-    private ?ManagedAppAvailability $appAvailability = null;
-    
-    /**
-     * @var string|null $version The Application's version.
-    */
-    private ?string $version = null;
-    
-    /**
      * Instantiates a new ManagedApp and sets the default values.
     */
     public function __construct() {
@@ -51,7 +41,7 @@ class ManagedApp extends MobileApp implements Parsable
      * @return ManagedAppAvailability|null
     */
     public function getAppAvailability(): ?ManagedAppAvailability {
-        return $this->appAvailability;
+        return $this->getBackingStore()->get('appAvailability');
     }
 
     /**
@@ -71,7 +61,7 @@ class ManagedApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -80,24 +70,24 @@ class ManagedApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('appAvailability', $this->appAvailability);
-        $writer->writeStringValue('version', $this->version);
+        $writer->writeEnumValue('appAvailability', $this->getAppAvailability());
+        $writer->writeStringValue('version', $this->getVersion());
     }
 
     /**
      * Sets the appAvailability property value. A managed (MAM) application's availability.
      *  @param ManagedAppAvailability|null $value Value to set for the appAvailability property.
     */
-    public function setAppAvailability(?ManagedAppAvailability $value ): void {
-        $this->appAvailability = $value;
+    public function setAppAvailability(?ManagedAppAvailability $value): void {
+        $this->getBackingStore()->set('appAvailability', $value);
     }
 
     /**
      * Sets the version property value. The Application's version.
      *  @param string|null $value Value to set for the version property.
     */
-    public function setVersion(?string $value ): void {
-        $this->version = $value;
+    public function setVersion(?string $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

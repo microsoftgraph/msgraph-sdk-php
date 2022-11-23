@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EventMessageRequest extends EventMessage implements Parsable 
 {
     /**
-     * @var bool|null $allowNewTimeProposals True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
-    */
-    private ?bool $allowNewTimeProposals = null;
-    
-    /**
-     * @var MeetingRequestType|null $meetingRequestType The meetingRequestType property
-    */
-    private ?MeetingRequestType $meetingRequestType = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $previousEndDateTime If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
-    */
-    private ?DateTimeTimeZone $previousEndDateTime = null;
-    
-    /**
-     * @var Location|null $previousLocation If the meeting update changes the meeting location, this property specifies the previous meeting location.
-    */
-    private ?Location $previousLocation = null;
-    
-    /**
-     * @var DateTimeTimeZone|null $previousStartDateTime If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
-    */
-    private ?DateTimeTimeZone $previousStartDateTime = null;
-    
-    /**
-     * @var bool|null $responseRequested Set to true if the sender would like the invitee to send a response to the requested meeting.
-    */
-    private ?bool $responseRequested = null;
-    
-    /**
      * Instantiates a new EventMessageRequest and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return bool|null
     */
     public function getAllowNewTimeProposals(): ?bool {
-        return $this->allowNewTimeProposals;
+        return $this->getBackingStore()->get('allowNewTimeProposals');
     }
 
     /**
@@ -84,7 +54,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return MeetingRequestType|null
     */
     public function getMeetingRequestType(): ?MeetingRequestType {
-        return $this->meetingRequestType;
+        return $this->getBackingStore()->get('meetingRequestType');
     }
 
     /**
@@ -92,7 +62,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getPreviousEndDateTime(): ?DateTimeTimeZone {
-        return $this->previousEndDateTime;
+        return $this->getBackingStore()->get('previousEndDateTime');
     }
 
     /**
@@ -100,7 +70,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return Location|null
     */
     public function getPreviousLocation(): ?Location {
-        return $this->previousLocation;
+        return $this->getBackingStore()->get('previousLocation');
     }
 
     /**
@@ -108,7 +78,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getPreviousStartDateTime(): ?DateTimeTimeZone {
-        return $this->previousStartDateTime;
+        return $this->getBackingStore()->get('previousStartDateTime');
     }
 
     /**
@@ -116,7 +86,7 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return bool|null
     */
     public function getResponseRequested(): ?bool {
-        return $this->responseRequested;
+        return $this->getBackingStore()->get('responseRequested');
     }
 
     /**
@@ -125,60 +95,60 @@ class EventMessageRequest extends EventMessage implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('allowNewTimeProposals', $this->allowNewTimeProposals);
-        $writer->writeEnumValue('meetingRequestType', $this->meetingRequestType);
-        $writer->writeObjectValue('previousEndDateTime', $this->previousEndDateTime);
-        $writer->writeObjectValue('previousLocation', $this->previousLocation);
-        $writer->writeObjectValue('previousStartDateTime', $this->previousStartDateTime);
-        $writer->writeBooleanValue('responseRequested', $this->responseRequested);
+        $writer->writeBooleanValue('allowNewTimeProposals', $this->getAllowNewTimeProposals());
+        $writer->writeEnumValue('meetingRequestType', $this->getMeetingRequestType());
+        $writer->writeObjectValue('previousEndDateTime', $this->getPreviousEndDateTime());
+        $writer->writeObjectValue('previousLocation', $this->getPreviousLocation());
+        $writer->writeObjectValue('previousStartDateTime', $this->getPreviousStartDateTime());
+        $writer->writeBooleanValue('responseRequested', $this->getResponseRequested());
     }
 
     /**
      * Sets the allowNewTimeProposals property value. True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
      *  @param bool|null $value Value to set for the allowNewTimeProposals property.
     */
-    public function setAllowNewTimeProposals(?bool $value ): void {
-        $this->allowNewTimeProposals = $value;
+    public function setAllowNewTimeProposals(?bool $value): void {
+        $this->getBackingStore()->set('allowNewTimeProposals', $value);
     }
 
     /**
      * Sets the meetingRequestType property value. The meetingRequestType property
      *  @param MeetingRequestType|null $value Value to set for the meetingRequestType property.
     */
-    public function setMeetingRequestType(?MeetingRequestType $value ): void {
-        $this->meetingRequestType = $value;
+    public function setMeetingRequestType(?MeetingRequestType $value): void {
+        $this->getBackingStore()->set('meetingRequestType', $value);
     }
 
     /**
      * Sets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
      *  @param DateTimeTimeZone|null $value Value to set for the previousEndDateTime property.
     */
-    public function setPreviousEndDateTime(?DateTimeTimeZone $value ): void {
-        $this->previousEndDateTime = $value;
+    public function setPreviousEndDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('previousEndDateTime', $value);
     }
 
     /**
      * Sets the previousLocation property value. If the meeting update changes the meeting location, this property specifies the previous meeting location.
      *  @param Location|null $value Value to set for the previousLocation property.
     */
-    public function setPreviousLocation(?Location $value ): void {
-        $this->previousLocation = $value;
+    public function setPreviousLocation(?Location $value): void {
+        $this->getBackingStore()->set('previousLocation', $value);
     }
 
     /**
      * Sets the previousStartDateTime property value. If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
      *  @param DateTimeTimeZone|null $value Value to set for the previousStartDateTime property.
     */
-    public function setPreviousStartDateTime(?DateTimeTimeZone $value ): void {
-        $this->previousStartDateTime = $value;
+    public function setPreviousStartDateTime(?DateTimeTimeZone $value): void {
+        $this->getBackingStore()->set('previousStartDateTime', $value);
     }
 
     /**
      * Sets the responseRequested property value. Set to true if the sender would like the invitee to send a response to the requested meeting.
      *  @param bool|null $value Value to set for the responseRequested property.
     */
-    public function setResponseRequested(?bool $value ): void {
-        $this->responseRequested = $value;
+    public function setResponseRequested(?bool $value): void {
+        $this->getBackingStore()->set('responseRequested', $value);
     }
 
 }

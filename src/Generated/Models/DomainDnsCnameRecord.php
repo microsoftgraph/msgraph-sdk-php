@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * @var string|null $canonicalName The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
-    */
-    private ?string $canonicalName = null;
-    
-    /**
      * Instantiates a new DomainDnsCnameRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.domainDnsCnameRecord');
     }
 
     /**
@@ -35,7 +29,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getCanonicalName(): ?string {
-        return $this->canonicalName;
+        return $this->getBackingStore()->get('canonicalName');
     }
 
     /**
@@ -55,15 +49,15 @@ class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('canonicalName', $this->canonicalName);
+        $writer->writeStringValue('canonicalName', $this->getCanonicalName());
     }
 
     /**
      * Sets the canonicalName property value. The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
      *  @param string|null $value Value to set for the canonicalName property.
     */
-    public function setCanonicalName(?string $value ): void {
-        $this->canonicalName = $value;
+    public function setCanonicalName(?string $value): void {
+        $this->getBackingStore()->set('canonicalName', $value);
     }
 
 }

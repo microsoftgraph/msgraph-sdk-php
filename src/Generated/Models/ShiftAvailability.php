@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ShiftAvailability implements AdditionalDataHolder, Parsable 
+class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var PatternedRecurrence|null $recurrence Specifies the pattern for recurrence
-    */
-    private ?PatternedRecurrence $recurrence = null;
-    
-    /**
-     * @var array<TimeRange>|null $timeSlots The time slot(s) preferred by the user.
-    */
-    private ?array $timeSlots = null;
-    
-    /**
-     * @var string|null $timeZone Specifies the time zone for the indicated time.
-    */
-    private ?string $timeZone = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new shiftAvailability and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.shiftAvailability');
     }
 
     /**
@@ -55,8 +38,16 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +69,7 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -86,7 +77,7 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
-        return $this->recurrence;
+        return $this->getBackingStore()->get('recurrence');
     }
 
     /**
@@ -94,7 +85,7 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @return array<TimeRange>|null
     */
     public function getTimeSlots(): ?array {
-        return $this->timeSlots;
+        return $this->getBackingStore()->get('timeSlots');
     }
 
     /**
@@ -102,7 +93,7 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->timeZone;
+        return $this->getBackingStore()->get('timeZone');
     }
 
     /**
@@ -110,51 +101,59 @@ class ShiftAvailability implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('recurrence', $this->recurrence);
-        $writer->writeCollectionOfObjectValues('timeSlots', $this->timeSlots);
-        $writer->writeStringValue('timeZone', $this->timeZone);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('recurrence', $this->getRecurrence());
+        $writer->writeCollectionOfObjectValues('timeSlots', $this->getTimeSlots());
+        $writer->writeStringValue('timeZone', $this->getTimeZone());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the recurrence property value. Specifies the pattern for recurrence
      *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
-    public function setRecurrence(?PatternedRecurrence $value ): void {
-        $this->recurrence = $value;
+    public function setRecurrence(?PatternedRecurrence $value): void {
+        $this->getBackingStore()->set('recurrence', $value);
     }
 
     /**
      * Sets the timeSlots property value. The time slot(s) preferred by the user.
      *  @param array<TimeRange>|null $value Value to set for the timeSlots property.
     */
-    public function setTimeSlots(?array $value ): void {
-        $this->timeSlots = $value;
+    public function setTimeSlots(?array $value): void {
+        $this->getBackingStore()->set('timeSlots', $value);
     }
 
     /**
      * Sets the timeZone property value. Specifies the time zone for the indicated time.
      *  @param string|null $value Value to set for the timeZone property.
     */
-    public function setTimeZone(?string $value ): void {
-        $this->timeZone = $value;
+    public function setTimeZone(?string $value): void {
+        $this->getBackingStore()->set('timeZone', $value);
     }
 
 }

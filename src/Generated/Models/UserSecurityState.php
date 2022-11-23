@@ -7,95 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UserSecurityState implements AdditionalDataHolder, Parsable 
+class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var string|null $aadUserId AAD User object identifier (GUID) - represents the physical/multi-account user entity.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?string $aadUserId = null;
-    
-    /**
-     * @var string|null $accountName Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
-    */
-    private ?string $accountName = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $domainName NetBIOS/Active Directory domain of user account (that is, domain/account format).
-    */
-    private ?string $domainName = null;
-    
-    /**
-     * @var EmailRole|null $emailRole For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-    */
-    private ?EmailRole $emailRole = null;
-    
-    /**
-     * @var bool|null $isVpn Indicates whether the user logged on through a VPN.
-    */
-    private ?bool $isVpn = null;
-    
-    /**
-     * @var DateTime|null $logonDateTime Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $logonDateTime = null;
-    
-    /**
-     * @var string|null $logonId User sign-in ID.
-    */
-    private ?string $logonId = null;
-    
-    /**
-     * @var string|null $logonIp IP Address the sign-in request originated from.
-    */
-    private ?string $logonIp = null;
-    
-    /**
-     * @var string|null $logonLocation Location (by IP address mapping) associated with a user sign-in event by this user.
-    */
-    private ?string $logonLocation = null;
-    
-    /**
-     * @var LogonType|null $logonType Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-    */
-    private ?LogonType $logonType = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $onPremisesSecurityIdentifier Active Directory (on-premises) Security Identifier (SID) of the user.
-    */
-    private ?string $onPremisesSecurityIdentifier = null;
-    
-    /**
-     * @var string|null $riskScore Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
-    */
-    private ?string $riskScore = null;
-    
-    /**
-     * @var UserAccountSecurityType|null $userAccountType User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-    */
-    private ?UserAccountSecurityType $userAccountType = null;
-    
-    /**
-     * @var string|null $userPrincipalName User sign-in name - internet format: (user account name)@(user account DNS domain name).
-    */
-    private ?string $userPrincipalName = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new userSecurityState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.userSecurityState');
     }
 
     /**
@@ -112,7 +40,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAadUserId(): ?string {
-        return $this->aadUserId;
+        return $this->getBackingStore()->get('aadUserId');
     }
 
     /**
@@ -120,15 +48,23 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAccountName(): ?string {
-        return $this->accountName;
+        return $this->getBackingStore()->get('accountName');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -136,7 +72,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDomainName(): ?string {
-        return $this->domainName;
+        return $this->getBackingStore()->get('domainName');
     }
 
     /**
@@ -144,7 +80,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return EmailRole|null
     */
     public function getEmailRole(): ?EmailRole {
-        return $this->emailRole;
+        return $this->getBackingStore()->get('emailRole');
     }
 
     /**
@@ -177,7 +113,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsVpn(): ?bool {
-        return $this->isVpn;
+        return $this->getBackingStore()->get('isVpn');
     }
 
     /**
@@ -185,7 +121,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLogonDateTime(): ?DateTime {
-        return $this->logonDateTime;
+        return $this->getBackingStore()->get('logonDateTime');
     }
 
     /**
@@ -193,7 +129,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLogonId(): ?string {
-        return $this->logonId;
+        return $this->getBackingStore()->get('logonId');
     }
 
     /**
@@ -201,7 +137,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLogonIp(): ?string {
-        return $this->logonIp;
+        return $this->getBackingStore()->get('logonIp');
     }
 
     /**
@@ -209,7 +145,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLogonLocation(): ?string {
-        return $this->logonLocation;
+        return $this->getBackingStore()->get('logonLocation');
     }
 
     /**
@@ -217,7 +153,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return LogonType|null
     */
     public function getLogonType(): ?LogonType {
-        return $this->logonType;
+        return $this->getBackingStore()->get('logonType');
     }
 
     /**
@@ -225,7 +161,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -233,7 +169,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
-        return $this->onPremisesSecurityIdentifier;
+        return $this->getBackingStore()->get('onPremisesSecurityIdentifier');
     }
 
     /**
@@ -241,7 +177,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getRiskScore(): ?string {
-        return $this->riskScore;
+        return $this->getBackingStore()->get('riskScore');
     }
 
     /**
@@ -249,7 +185,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return UserAccountSecurityType|null
     */
     public function getUserAccountType(): ?UserAccountSecurityType {
-        return $this->userAccountType;
+        return $this->getBackingStore()->get('userAccountType');
     }
 
     /**
@@ -257,7 +193,7 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -265,150 +201,158 @@ class UserSecurityState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('aadUserId', $this->aadUserId);
-        $writer->writeStringValue('accountName', $this->accountName);
-        $writer->writeStringValue('domainName', $this->domainName);
-        $writer->writeEnumValue('emailRole', $this->emailRole);
-        $writer->writeBooleanValue('isVpn', $this->isVpn);
-        $writer->writeDateTimeValue('logonDateTime', $this->logonDateTime);
-        $writer->writeStringValue('logonId', $this->logonId);
-        $writer->writeStringValue('logonIp', $this->logonIp);
-        $writer->writeStringValue('logonLocation', $this->logonLocation);
-        $writer->writeEnumValue('logonType', $this->logonType);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('onPremisesSecurityIdentifier', $this->onPremisesSecurityIdentifier);
-        $writer->writeStringValue('riskScore', $this->riskScore);
-        $writer->writeEnumValue('userAccountType', $this->userAccountType);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('aadUserId', $this->getAadUserId());
+        $writer->writeStringValue('accountName', $this->getAccountName());
+        $writer->writeStringValue('domainName', $this->getDomainName());
+        $writer->writeEnumValue('emailRole', $this->getEmailRole());
+        $writer->writeBooleanValue('isVpn', $this->getIsVpn());
+        $writer->writeDateTimeValue('logonDateTime', $this->getLogonDateTime());
+        $writer->writeStringValue('logonId', $this->getLogonId());
+        $writer->writeStringValue('logonIp', $this->getLogonIp());
+        $writer->writeStringValue('logonLocation', $this->getLogonLocation());
+        $writer->writeEnumValue('logonType', $this->getLogonType());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('onPremisesSecurityIdentifier', $this->getOnPremisesSecurityIdentifier());
+        $writer->writeStringValue('riskScore', $this->getRiskScore());
+        $writer->writeEnumValue('userAccountType', $this->getUserAccountType());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the aadUserId property value. AAD User object identifier (GUID) - represents the physical/multi-account user entity.
      *  @param string|null $value Value to set for the aadUserId property.
     */
-    public function setAadUserId(?string $value ): void {
-        $this->aadUserId = $value;
+    public function setAadUserId(?string $value): void {
+        $this->getBackingStore()->set('aadUserId', $value);
     }
 
     /**
      * Sets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
      *  @param string|null $value Value to set for the accountName property.
     */
-    public function setAccountName(?string $value ): void {
-        $this->accountName = $value;
+    public function setAccountName(?string $value): void {
+        $this->getBackingStore()->set('accountName', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
      *  @param string|null $value Value to set for the domainName property.
     */
-    public function setDomainName(?string $value ): void {
-        $this->domainName = $value;
+    public function setDomainName(?string $value): void {
+        $this->getBackingStore()->set('domainName', $value);
     }
 
     /**
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
      *  @param EmailRole|null $value Value to set for the emailRole property.
     */
-    public function setEmailRole(?EmailRole $value ): void {
-        $this->emailRole = $value;
+    public function setEmailRole(?EmailRole $value): void {
+        $this->getBackingStore()->set('emailRole', $value);
     }
 
     /**
      * Sets the isVpn property value. Indicates whether the user logged on through a VPN.
      *  @param bool|null $value Value to set for the isVpn property.
     */
-    public function setIsVpn(?bool $value ): void {
-        $this->isVpn = $value;
+    public function setIsVpn(?bool $value): void {
+        $this->getBackingStore()->set('isVpn', $value);
     }
 
     /**
      * Sets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the logonDateTime property.
     */
-    public function setLogonDateTime(?DateTime $value ): void {
-        $this->logonDateTime = $value;
+    public function setLogonDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('logonDateTime', $value);
     }
 
     /**
      * Sets the logonId property value. User sign-in ID.
      *  @param string|null $value Value to set for the logonId property.
     */
-    public function setLogonId(?string $value ): void {
-        $this->logonId = $value;
+    public function setLogonId(?string $value): void {
+        $this->getBackingStore()->set('logonId', $value);
     }
 
     /**
      * Sets the logonIp property value. IP Address the sign-in request originated from.
      *  @param string|null $value Value to set for the logonIp property.
     */
-    public function setLogonIp(?string $value ): void {
-        $this->logonIp = $value;
+    public function setLogonIp(?string $value): void {
+        $this->getBackingStore()->set('logonIp', $value);
     }
 
     /**
      * Sets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
      *  @param string|null $value Value to set for the logonLocation property.
     */
-    public function setLogonLocation(?string $value ): void {
-        $this->logonLocation = $value;
+    public function setLogonLocation(?string $value): void {
+        $this->getBackingStore()->set('logonLocation', $value);
     }
 
     /**
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      *  @param LogonType|null $value Value to set for the logonType property.
     */
-    public function setLogonType(?LogonType $value ): void {
-        $this->logonType = $value;
+    public function setLogonType(?LogonType $value): void {
+        $this->getBackingStore()->set('logonType', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
      *  @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
-    public function setOnPremisesSecurityIdentifier(?string $value ): void {
-        $this->onPremisesSecurityIdentifier = $value;
+    public function setOnPremisesSecurityIdentifier(?string $value): void {
+        $this->getBackingStore()->set('onPremisesSecurityIdentifier', $value);
     }
 
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
      *  @param string|null $value Value to set for the riskScore property.
     */
-    public function setRiskScore(?string $value ): void {
-        $this->riskScore = $value;
+    public function setRiskScore(?string $value): void {
+        $this->getBackingStore()->set('riskScore', $value);
     }
 
     /**
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
      *  @param UserAccountSecurityType|null $value Value to set for the userAccountType property.
     */
-    public function setUserAccountType(?UserAccountSecurityType $value ): void {
-        $this->userAccountType = $value;
+    public function setUserAccountType(?UserAccountSecurityType $value): void {
+        $this->getBackingStore()->set('userAccountType', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }
