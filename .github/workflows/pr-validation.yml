@@ -5,9 +5,9 @@ name: "Validate Pull Request"
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main, dev, feat/kiota-preview ]
   pull_request:
-    branches: [ main, dev ]
+    branches: [ main, dev, feat/kiota-preview ]
     # Add assigned to defaults as a hack to easily trigger code-gen PRs to run validation
     types: [assigned, opened, synchronize, reopened]
 
