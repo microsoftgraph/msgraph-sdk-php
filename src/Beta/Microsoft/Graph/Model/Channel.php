@@ -240,6 +240,37 @@ class Channel extends Entity
     }
 
     /**
+    * Gets the summary
+    *
+    * @return ChannelSummary|null The summary
+    */
+    public function getSummary()
+    {
+        if (array_key_exists("summary", $this->_propDict)) {
+            if (is_a($this->_propDict["summary"], "\Beta\Microsoft\Graph\Model\ChannelSummary") || is_null($this->_propDict["summary"])) {
+                return $this->_propDict["summary"];
+            } else {
+                $this->_propDict["summary"] = new ChannelSummary($this->_propDict["summary"]);
+                return $this->_propDict["summary"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the summary
+    *
+    * @param ChannelSummary $val The summary
+    *
+    * @return Channel
+    */
+    public function setSummary($val)
+    {
+        $this->_propDict["summary"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the tenantId
     * The ID of the Azure Active Directory tenant.
     *

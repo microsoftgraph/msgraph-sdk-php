@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* TaskStatus_v2 File
+* PlannerCreationSourceKind File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* TaskStatus_v2 class
+* PlannerCreationSourceKind class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class TaskStatus_v2 extends Enum
+class PlannerCreationSourceKind extends Enum
 {
     /**
-    * The Enum TaskStatus_v2
+    * The Enum PlannerCreationSourceKind
     */
-    const NOT_STARTED = "notStarted";
-    const IN_PROGRESS = "inProgress";
-    const COMPLETED = "completed";
+    const NONE = "none";
+    const EXTERNAL = "external";
+    const PUBLICATION = "publication";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

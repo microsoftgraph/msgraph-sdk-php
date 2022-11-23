@@ -82,6 +82,8 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE = "permissionCheckNoResourceGroupNetworkContributorRole";
     const PERMISSION_CHECK_TRANSIENT_SERVICE_ERROR = "permissionCheckTransientServiceError";
     const PERMISSION_CHECK_UNKNOWN_ERROR = "permissionCheckUnknownError";
+    const UDP_CONNECTIVITY_CHECK_STUN_URL_NOT_ALLOW_LISTED = "udpConnectivityCheckStunUrlNotAllowListed";
+    const UDP_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "udpConnectivityCheckUnknownError";
     const INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED = "internalServerErrorDeploymentCanceled";
     const INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED = "internalServerErrorAllocateResourceFailed";
     const INTERNAL_SERVER_ERROR_VM_DEPLOYMENT_TIMEOUT = "internalServerErrorVMDeploymentTimeout";

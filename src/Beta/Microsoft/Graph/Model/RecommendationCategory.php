@@ -31,8 +31,8 @@ class RecommendationCategory extends Enum
     */
     const USAGE_AND_COMPLIANCE = "usageAndCompliance";
     const SECURITY = "security";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const PRODUCTIVITY = "productivity";
     const HEALTH = "health";
     const CONFIGURATION = "configuration";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

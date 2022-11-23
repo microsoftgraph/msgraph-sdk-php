@@ -4219,37 +4219,6 @@ class User extends DirectoryObject
         return $this;
     }
 
-    /**
-    * Gets the tasks
-    *
-    * @return Tasks|null The tasks
-    */
-    public function getTasks()
-    {
-        if (array_key_exists("tasks", $this->_propDict)) {
-            if (is_a($this->_propDict["tasks"], "\Beta\Microsoft\Graph\Model\Tasks") || is_null($this->_propDict["tasks"])) {
-                return $this->_propDict["tasks"];
-            } else {
-                $this->_propDict["tasks"] = new Tasks($this->_propDict["tasks"]);
-                return $this->_propDict["tasks"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the tasks
-    *
-    * @param Tasks $val The tasks
-    *
-    * @return User
-    */
-    public function setTasks($val)
-    {
-        $this->_propDict["tasks"] = $val;
-        return $this;
-    }
-
 
      /**
      * Gets the chats
