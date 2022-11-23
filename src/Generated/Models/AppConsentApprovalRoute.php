@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppConsentApprovalRoute extends Entity implements Parsable 
 {
     /**
-     * @var array<AppConsentRequest>|null $appConsentRequests A collection of userConsentRequest objects for a specific application.
-    */
-    private ?array $appConsentRequests = null;
-    
-    /**
      * Instantiates a new AppConsentApprovalRoute and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.appConsentApprovalRoute');
     }
 
     /**
@@ -35,7 +29,7 @@ class AppConsentApprovalRoute extends Entity implements Parsable
      * @return array<AppConsentRequest>|null
     */
     public function getAppConsentRequests(): ?array {
-        return $this->appConsentRequests;
+        return $this->getBackingStore()->get('appConsentRequests');
     }
 
     /**
@@ -55,15 +49,15 @@ class AppConsentApprovalRoute extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('appConsentRequests', $this->appConsentRequests);
+        $writer->writeCollectionOfObjectValues('appConsentRequests', $this->getAppConsentRequests());
     }
 
     /**
      * Sets the appConsentRequests property value. A collection of userConsentRequest objects for a specific application.
      *  @param array<AppConsentRequest>|null $value Value to set for the appConsentRequests property.
     */
-    public function setAppConsentRequests(?array $value ): void {
-        $this->appConsentRequests = $value;
+    public function setAppConsentRequests(?array $value): void {
+        $this->getBackingStore()->set('appConsentRequests', $value);
     }
 
 }

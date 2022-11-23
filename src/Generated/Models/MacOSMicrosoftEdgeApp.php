@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable 
 {
     /**
-     * @var MicrosoftEdgeChannel|null $channel The enum to specify the channels for Microsoft Edge apps.
-    */
-    private ?MicrosoftEdgeChannel $channel = null;
-    
-    /**
      * Instantiates a new MacOSMicrosoftEdgeApp and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable
      * @return MicrosoftEdgeChannel|null
     */
     public function getChannel(): ?MicrosoftEdgeChannel {
-        return $this->channel;
+        return $this->getBackingStore()->get('channel');
     }
 
     /**
@@ -55,15 +50,15 @@ class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('channel', $this->channel);
+        $writer->writeEnumValue('channel', $this->getChannel());
     }
 
     /**
      * Sets the channel property value. The enum to specify the channels for Microsoft Edge apps.
      *  @param MicrosoftEdgeChannel|null $value Value to set for the channel property.
     */
-    public function setChannel(?MicrosoftEdgeChannel $value ): void {
-        $this->channel = $value;
+    public function setChannel(?MicrosoftEdgeChannel $value): void {
+        $this->getBackingStore()->set('channel', $value);
     }
 
 }

@@ -10,21 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var array<TeamworkUserIdentity>|null $members List of members added.
-    */
-    private ?array $members = null;
-    
-    /**
-     * @var DateTime|null $visibleHistoryStartDateTime The timestamp that denotes how far back a conversation's history is shared with the conversation members.
-    */
-    private ?DateTime $visibleHistoryStartDateTime = null;
-    
-    /**
      * Instantiates a new MembersAddedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -59,7 +44,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -67,7 +52,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return array<TeamworkUserIdentity>|null
     */
     public function getMembers(): ?array {
-        return $this->members;
+        return $this->getBackingStore()->get('members');
     }
 
     /**
@@ -75,7 +60,7 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
      * @return DateTime|null
     */
     public function getVisibleHistoryStartDateTime(): ?DateTime {
-        return $this->visibleHistoryStartDateTime;
+        return $this->getBackingStore()->get('visibleHistoryStartDateTime');
     }
 
     /**
@@ -84,33 +69,33 @@ class MembersAddedEventMessageDetail extends EventMessageDetail implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeCollectionOfObjectValues('members', $this->members);
-        $writer->writeDateTimeValue('visibleHistoryStartDateTime', $this->visibleHistoryStartDateTime);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeDateTimeValue('visibleHistoryStartDateTime', $this->getVisibleHistoryStartDateTime());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the members property value. List of members added.
      *  @param array<TeamworkUserIdentity>|null $value Value to set for the members property.
     */
-    public function setMembers(?array $value ): void {
-        $this->members = $value;
+    public function setMembers(?array $value): void {
+        $this->getBackingStore()->set('members', $value);
     }
 
     /**
      * Sets the visibleHistoryStartDateTime property value. The timestamp that denotes how far back a conversation's history is shared with the conversation members.
      *  @param DateTime|null $value Value to set for the visibleHistoryStartDateTime property.
     */
-    public function setVisibleHistoryStartDateTime(?DateTime $value ): void {
-        $this->visibleHistoryStartDateTime = $value;
+    public function setVisibleHistoryStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('visibleHistoryStartDateTime', $value);
     }
 
 }

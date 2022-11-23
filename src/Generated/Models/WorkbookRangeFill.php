@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookRangeFill extends Entity implements Parsable 
 {
     /**
-     * @var string|null $color HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
-    */
-    private ?string $color = null;
-    
-    /**
      * Instantiates a new workbookRangeFill and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookRangeFill');
     }
 
     /**
@@ -35,7 +29,7 @@ class WorkbookRangeFill extends Entity implements Parsable
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->color;
+        return $this->getBackingStore()->get('color');
     }
 
     /**
@@ -55,15 +49,15 @@ class WorkbookRangeFill extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('color', $this->color);
+        $writer->writeStringValue('color', $this->getColor());
     }
 
     /**
      * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
      *  @param string|null $value Value to set for the color property.
     */
-    public function setColor(?string $value ): void {
-        $this->color = $value;
+    public function setColor(?string $value): void {
+        $this->getBackingStore()->set('color', $value);
     }
 
 }

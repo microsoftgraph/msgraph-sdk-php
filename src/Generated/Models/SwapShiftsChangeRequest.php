@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable 
 {
     /**
-     * @var string|null $recipientShiftId ShiftId for the recipient user with whom the request is to swap.
-    */
-    private ?string $recipientShiftId = null;
-    
-    /**
      * Instantiates a new SwapShiftsChangeRequest and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
      * @return string|null
     */
     public function getRecipientShiftId(): ?string {
-        return $this->recipientShiftId;
+        return $this->getBackingStore()->get('recipientShiftId');
     }
 
     /**
@@ -55,15 +50,15 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('recipientShiftId', $this->recipientShiftId);
+        $writer->writeStringValue('recipientShiftId', $this->getRecipientShiftId());
     }
 
     /**
      * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
      *  @param string|null $value Value to set for the recipientShiftId property.
     */
-    public function setRecipientShiftId(?string $value ): void {
-        $this->recipientShiftId = $value;
+    public function setRecipientShiftId(?string $value): void {
+        $this->getBackingStore()->set('recipientShiftId', $value);
     }
 
 }

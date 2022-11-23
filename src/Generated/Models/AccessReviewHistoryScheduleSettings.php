@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsable 
+class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var PatternedRecurrence|null $recurrence The recurrence property
-    */
-    private ?PatternedRecurrence $recurrence = null;
-    
-    /**
-     * @var string|null $reportRange A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
-    */
-    private ?string $reportRange = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new accessReviewHistoryScheduleSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.accessReviewHistoryScheduleSettings');
     }
 
     /**
@@ -50,8 +38,16 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +68,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -80,7 +76,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
-        return $this->recurrence;
+        return $this->getBackingStore()->get('recurrence');
     }
 
     /**
@@ -88,7 +84,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @return string|null
     */
     public function getReportRange(): ?string {
-        return $this->reportRange;
+        return $this->getBackingStore()->get('reportRange');
     }
 
     /**
@@ -96,42 +92,50 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('recurrence', $this->recurrence);
-        $writer->writeStringValue('reportRange', $this->reportRange);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('recurrence', $this->getRecurrence());
+        $writer->writeStringValue('reportRange', $this->getReportRange());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the recurrence property value. The recurrence property
      *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
-    public function setRecurrence(?PatternedRecurrence $value ): void {
-        $this->recurrence = $value;
+    public function setRecurrence(?PatternedRecurrence $value): void {
+        $this->getBackingStore()->set('recurrence', $value);
     }
 
     /**
      * Sets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
      *  @param string|null $value Value to set for the reportRange property.
     */
-    public function setReportRange(?string $value ): void {
-        $this->reportRange = $value;
+    public function setReportRange(?string $value): void {
+        $this->getBackingStore()->set('reportRange', $value);
     }
 
 }

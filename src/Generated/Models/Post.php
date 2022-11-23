@@ -10,71 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Post extends OutlookItem implements Parsable 
 {
     /**
-     * @var array<Attachment>|null $attachments Read-only. Nullable. Supports $expand.
-    */
-    private ?array $attachments = null;
-    
-    /**
-     * @var ItemBody|null $body The contents of the post. This is a default property. This property can be null.
-    */
-    private ?ItemBody $body = null;
-    
-    /**
-     * @var string|null $conversationId Unique ID of the conversation. Read-only.
-    */
-    private ?string $conversationId = null;
-    
-    /**
-     * @var string|null $conversationThreadId Unique ID of the conversation thread. Read-only.
-    */
-    private ?string $conversationThreadId = null;
-    
-    /**
-     * @var array<Extension>|null $extensions The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
-    */
-    private ?array $extensions = null;
-    
-    /**
-     * @var Recipient|null $from The from property
-    */
-    private ?Recipient $from = null;
-    
-    /**
-     * @var bool|null $hasAttachments Indicates whether the post has at least one attachment. This is a default property.
-    */
-    private ?bool $hasAttachments = null;
-    
-    /**
-     * @var Post|null $inReplyTo Read-only. Supports $expand.
-    */
-    private ?Post $inReplyTo = null;
-    
-    /**
-     * @var array<MultiValueLegacyExtendedProperty>|null $multiValueExtendedProperties The collection of multi-value extended properties defined for the post. Read-only. Nullable.
-    */
-    private ?array $multiValueExtendedProperties = null;
-    
-    /**
-     * @var array<Recipient>|null $newParticipants Conversation participants that were added to the thread as part of this post.
-    */
-    private ?array $newParticipants = null;
-    
-    /**
-     * @var DateTime|null $receivedDateTime Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $receivedDateTime = null;
-    
-    /**
-     * @var Recipient|null $sender Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
-    */
-    private ?Recipient $sender = null;
-    
-    /**
-     * @var array<SingleValueLegacyExtendedProperty>|null $singleValueExtendedProperties The collection of single-value extended properties defined for the post. Read-only. Nullable.
-    */
-    private ?array $singleValueExtendedProperties = null;
-    
-    /**
      * Instantiates a new Post and sets the default values.
     */
     public function __construct() {
@@ -96,7 +31,7 @@ class Post extends OutlookItem implements Parsable
      * @return array<Attachment>|null
     */
     public function getAttachments(): ?array {
-        return $this->attachments;
+        return $this->getBackingStore()->get('attachments');
     }
 
     /**
@@ -104,7 +39,7 @@ class Post extends OutlookItem implements Parsable
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
-        return $this->body;
+        return $this->getBackingStore()->get('body');
     }
 
     /**
@@ -112,7 +47,7 @@ class Post extends OutlookItem implements Parsable
      * @return string|null
     */
     public function getConversationId(): ?string {
-        return $this->conversationId;
+        return $this->getBackingStore()->get('conversationId');
     }
 
     /**
@@ -120,7 +55,7 @@ class Post extends OutlookItem implements Parsable
      * @return string|null
     */
     public function getConversationThreadId(): ?string {
-        return $this->conversationThreadId;
+        return $this->getBackingStore()->get('conversationThreadId');
     }
 
     /**
@@ -128,7 +63,7 @@ class Post extends OutlookItem implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->extensions;
+        return $this->getBackingStore()->get('extensions');
     }
 
     /**
@@ -159,7 +94,7 @@ class Post extends OutlookItem implements Parsable
      * @return Recipient|null
     */
     public function getFrom(): ?Recipient {
-        return $this->from;
+        return $this->getBackingStore()->get('from');
     }
 
     /**
@@ -167,7 +102,7 @@ class Post extends OutlookItem implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->hasAttachments;
+        return $this->getBackingStore()->get('hasAttachments');
     }
 
     /**
@@ -175,7 +110,7 @@ class Post extends OutlookItem implements Parsable
      * @return Post|null
     */
     public function getInReplyTo(): ?Post {
-        return $this->inReplyTo;
+        return $this->getBackingStore()->get('inReplyTo');
     }
 
     /**
@@ -183,7 +118,7 @@ class Post extends OutlookItem implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->multiValueExtendedProperties;
+        return $this->getBackingStore()->get('multiValueExtendedProperties');
     }
 
     /**
@@ -191,7 +126,7 @@ class Post extends OutlookItem implements Parsable
      * @return array<Recipient>|null
     */
     public function getNewParticipants(): ?array {
-        return $this->newParticipants;
+        return $this->getBackingStore()->get('newParticipants');
     }
 
     /**
@@ -199,7 +134,7 @@ class Post extends OutlookItem implements Parsable
      * @return DateTime|null
     */
     public function getReceivedDateTime(): ?DateTime {
-        return $this->receivedDateTime;
+        return $this->getBackingStore()->get('receivedDateTime');
     }
 
     /**
@@ -207,7 +142,7 @@ class Post extends OutlookItem implements Parsable
      * @return Recipient|null
     */
     public function getSender(): ?Recipient {
-        return $this->sender;
+        return $this->getBackingStore()->get('sender');
     }
 
     /**
@@ -215,7 +150,7 @@ class Post extends OutlookItem implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->singleValueExtendedProperties;
+        return $this->getBackingStore()->get('singleValueExtendedProperties');
     }
 
     /**
@@ -224,123 +159,123 @@ class Post extends OutlookItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('attachments', $this->attachments);
-        $writer->writeObjectValue('body', $this->body);
-        $writer->writeStringValue('conversationId', $this->conversationId);
-        $writer->writeStringValue('conversationThreadId', $this->conversationThreadId);
-        $writer->writeCollectionOfObjectValues('extensions', $this->extensions);
-        $writer->writeObjectValue('from', $this->from);
-        $writer->writeBooleanValue('hasAttachments', $this->hasAttachments);
-        $writer->writeObjectValue('inReplyTo', $this->inReplyTo);
-        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->multiValueExtendedProperties);
-        $writer->writeCollectionOfObjectValues('newParticipants', $this->newParticipants);
-        $writer->writeDateTimeValue('receivedDateTime', $this->receivedDateTime);
-        $writer->writeObjectValue('sender', $this->sender);
-        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->singleValueExtendedProperties);
+        $writer->writeCollectionOfObjectValues('attachments', $this->getAttachments());
+        $writer->writeObjectValue('body', $this->getBody());
+        $writer->writeStringValue('conversationId', $this->getConversationId());
+        $writer->writeStringValue('conversationThreadId', $this->getConversationThreadId());
+        $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
+        $writer->writeObjectValue('from', $this->getFrom());
+        $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
+        $writer->writeObjectValue('inReplyTo', $this->getInReplyTo());
+        $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
+        $writer->writeCollectionOfObjectValues('newParticipants', $this->getNewParticipants());
+        $writer->writeDateTimeValue('receivedDateTime', $this->getReceivedDateTime());
+        $writer->writeObjectValue('sender', $this->getSender());
+        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
     }
 
     /**
      * Sets the attachments property value. Read-only. Nullable. Supports $expand.
      *  @param array<Attachment>|null $value Value to set for the attachments property.
     */
-    public function setAttachments(?array $value ): void {
-        $this->attachments = $value;
+    public function setAttachments(?array $value): void {
+        $this->getBackingStore()->set('attachments', $value);
     }
 
     /**
      * Sets the body property value. The contents of the post. This is a default property. This property can be null.
      *  @param ItemBody|null $value Value to set for the body property.
     */
-    public function setBody(?ItemBody $value ): void {
-        $this->body = $value;
+    public function setBody(?ItemBody $value): void {
+        $this->getBackingStore()->set('body', $value);
     }
 
     /**
      * Sets the conversationId property value. Unique ID of the conversation. Read-only.
      *  @param string|null $value Value to set for the conversationId property.
     */
-    public function setConversationId(?string $value ): void {
-        $this->conversationId = $value;
+    public function setConversationId(?string $value): void {
+        $this->getBackingStore()->set('conversationId', $value);
     }
 
     /**
      * Sets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
      *  @param string|null $value Value to set for the conversationThreadId property.
     */
-    public function setConversationThreadId(?string $value ): void {
-        $this->conversationThreadId = $value;
+    public function setConversationThreadId(?string $value): void {
+        $this->getBackingStore()->set('conversationThreadId', $value);
     }
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
      *  @param array<Extension>|null $value Value to set for the extensions property.
     */
-    public function setExtensions(?array $value ): void {
-        $this->extensions = $value;
+    public function setExtensions(?array $value): void {
+        $this->getBackingStore()->set('extensions', $value);
     }
 
     /**
      * Sets the from property value. The from property
      *  @param Recipient|null $value Value to set for the from property.
     */
-    public function setFrom(?Recipient $value ): void {
-        $this->from = $value;
+    public function setFrom(?Recipient $value): void {
+        $this->getBackingStore()->set('from', $value);
     }
 
     /**
      * Sets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
      *  @param bool|null $value Value to set for the hasAttachments property.
     */
-    public function setHasAttachments(?bool $value ): void {
-        $this->hasAttachments = $value;
+    public function setHasAttachments(?bool $value): void {
+        $this->getBackingStore()->set('hasAttachments', $value);
     }
 
     /**
      * Sets the inReplyTo property value. Read-only. Supports $expand.
      *  @param Post|null $value Value to set for the inReplyTo property.
     */
-    public function setInReplyTo(?Post $value ): void {
-        $this->inReplyTo = $value;
+    public function setInReplyTo(?Post $value): void {
+        $this->getBackingStore()->set('inReplyTo', $value);
     }
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
-    public function setMultiValueExtendedProperties(?array $value ): void {
-        $this->multiValueExtendedProperties = $value;
+    public function setMultiValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('multiValueExtendedProperties', $value);
     }
 
     /**
      * Sets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
      *  @param array<Recipient>|null $value Value to set for the newParticipants property.
     */
-    public function setNewParticipants(?array $value ): void {
-        $this->newParticipants = $value;
+    public function setNewParticipants(?array $value): void {
+        $this->getBackingStore()->set('newParticipants', $value);
     }
 
     /**
      * Sets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the receivedDateTime property.
     */
-    public function setReceivedDateTime(?DateTime $value ): void {
-        $this->receivedDateTime = $value;
+    public function setReceivedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('receivedDateTime', $value);
     }
 
     /**
      * Sets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      *  @param Recipient|null $value Value to set for the sender property.
     */
-    public function setSender(?Recipient $value ): void {
-        $this->sender = $value;
+    public function setSender(?Recipient $value): void {
+        $this->getBackingStore()->set('sender', $value);
     }
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
      *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
-    public function setSingleValueExtendedProperties(?array $value ): void {
-        $this->singleValueExtendedProperties = $value;
+    public function setSingleValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('singleValueExtendedProperties', $value);
     }
 
 }

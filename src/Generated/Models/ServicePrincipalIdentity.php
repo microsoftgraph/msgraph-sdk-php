@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServicePrincipalIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $appId The application identifier of the service principal.
-    */
-    private ?string $appId = null;
-    
-    /**
      * Instantiates a new ServicePrincipalIdentity and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ServicePrincipalIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->appId;
+        return $this->getBackingStore()->get('appId');
     }
 
     /**
@@ -55,15 +50,15 @@ class ServicePrincipalIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appId', $this->appId);
+        $writer->writeStringValue('appId', $this->getAppId());
     }
 
     /**
      * Sets the appId property value. The application identifier of the service principal.
      *  @param string|null $value Value to set for the appId property.
     */
-    public function setAppId(?string $value ): void {
-        $this->appId = $value;
+    public function setAppId(?string $value): void {
+        $this->getBackingStore()->set('appId', $value);
     }
 
 }

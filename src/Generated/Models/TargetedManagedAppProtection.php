@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable 
 {
     /**
-     * @var array<TargetedManagedAppPolicyAssignment>|null $assignments Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-    */
-    private ?array $assignments = null;
-    
-    /**
-     * @var bool|null $isAssigned Indicates if the policy is deployed to any inclusion groups or not.
-    */
-    private ?bool $isAssigned = null;
-    
-    /**
      * Instantiates a new TargetedManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -48,7 +38,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection implements Parsa
      * @return array<TargetedManagedAppPolicyAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -68,7 +58,7 @@ class TargetedManagedAppProtection extends ManagedAppProtection implements Parsa
      * @return bool|null
     */
     public function getIsAssigned(): ?bool {
-        return $this->isAssigned;
+        return $this->getBackingStore()->get('isAssigned');
     }
 
     /**
@@ -77,24 +67,24 @@ class TargetedManagedAppProtection extends ManagedAppProtection implements Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('assignments', $this->assignments);
-        $writer->writeBooleanValue('isAssigned', $this->isAssigned);
+        $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeBooleanValue('isAssigned', $this->getIsAssigned());
     }
 
     /**
      * Sets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      *  @param array<TargetedManagedAppPolicyAssignment>|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?array $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?array $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
      *  @param bool|null $value Value to set for the isAssigned property.
     */
-    public function setIsAssigned(?bool $value ): void {
-        $this->isAssigned = $value;
+    public function setIsAssigned(?bool $value): void {
+        $this->getBackingStore()->set('isAssigned', $value);
     }
 
 }

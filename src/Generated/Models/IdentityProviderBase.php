@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityProviderBase extends Entity implements Parsable 
 {
     /**
-     * @var string|null $displayName The display name of the identity provider.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new identityProviderBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.identityProviderBase');
     }
 
     /**
@@ -47,7 +41,7 @@ class IdentityProviderBase extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -67,15 +61,15 @@ class IdentityProviderBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the displayName property value. The display name of the identity provider.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

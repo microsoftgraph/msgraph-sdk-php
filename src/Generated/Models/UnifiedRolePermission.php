@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class UnifiedRolePermission implements AdditionalDataHolder, Parsable 
+class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $allowedResourceActions Set of tasks that can be performed on a resource. Required.
-    */
-    private ?array $allowedResourceActions = null;
-    
-    /**
-     * @var string|null $condition Optional constraints that must be met for the permission to be effective.
-    */
-    private ?string $condition = null;
-    
-    /**
-     * @var array<string>|null $excludedResourceActions Set of tasks that may not be performed on a resource. Not yet supported.
-    */
-    private ?array $excludedResourceActions = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new unifiedRolePermission and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.unifiedRolePermission');
     }
 
     /**
@@ -55,8 +38,8 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +47,15 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAllowedResourceActions(): ?array {
-        return $this->allowedResourceActions;
+        return $this->getBackingStore()->get('allowedResourceActions');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +63,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCondition(): ?string {
-        return $this->condition;
+        return $this->getBackingStore()->get('condition');
     }
 
     /**
@@ -80,7 +71,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExcludedResourceActions(): ?array {
-        return $this->excludedResourceActions;
+        return $this->getBackingStore()->get('excludedResourceActions');
     }
 
     /**
@@ -102,7 +93,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +101,59 @@ class UnifiedRolePermission implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('allowedResourceActions', $this->allowedResourceActions);
-        $writer->writeStringValue('condition', $this->condition);
-        $writer->writeCollectionOfPrimitiveValues('excludedResourceActions', $this->excludedResourceActions);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('allowedResourceActions', $this->getAllowedResourceActions());
+        $writer->writeStringValue('condition', $this->getCondition());
+        $writer->writeCollectionOfPrimitiveValues('excludedResourceActions', $this->getExcludedResourceActions());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
      *  @param array<string>|null $value Value to set for the allowedResourceActions property.
     */
-    public function setAllowedResourceActions(?array $value ): void {
-        $this->allowedResourceActions = $value;
+    public function setAllowedResourceActions(?array $value): void {
+        $this->getBackingStore()->set('allowedResourceActions', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the condition property value. Optional constraints that must be met for the permission to be effective.
      *  @param string|null $value Value to set for the condition property.
     */
-    public function setCondition(?string $value ): void {
-        $this->condition = $value;
+    public function setCondition(?string $value): void {
+        $this->getBackingStore()->set('condition', $value);
     }
 
     /**
      * Sets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
      *  @param array<string>|null $value Value to set for the excludedResourceActions property.
     */
-    public function setExcludedResourceActions(?array $value ): void {
-        $this->excludedResourceActions = $value;
+    public function setExcludedResourceActions(?array $value): void {
+        $this->getBackingStore()->set('excludedResourceActions', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -16,6 +16,7 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\NoncustodialSourcesRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\PurgeData\PurgeDataRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -72,6 +73,13 @@ class EdiscoverySearchItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the purgeData method.
+    */
+    public function purgeData(): PurgeDataRequestBuilder {
+        return new PurgeDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

@@ -10,26 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Operation extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The start time of the operation.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastActionDateTime The time of the last action of the operation.
-    */
-    private ?DateTime $lastActionDateTime = null;
-    
-    /**
-     * @var OperationStatus|null $status The current status of the operation: notStarted, running, completed, failed
-    */
-    private ?OperationStatus $status = null;
-    
-    /**
      * Instantiates a new operation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.operation');
     }
 
     /**
@@ -53,7 +37,7 @@ class Operation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -74,7 +58,7 @@ class Operation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastActionDateTime(): ?DateTime {
-        return $this->lastActionDateTime;
+        return $this->getBackingStore()->get('lastActionDateTime');
     }
 
     /**
@@ -82,7 +66,7 @@ class Operation extends Entity implements Parsable
      * @return OperationStatus|null
     */
     public function getStatus(): ?OperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -91,33 +75,33 @@ class Operation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeDateTimeValue('lastActionDateTime', $this->lastActionDateTime);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeDateTimeValue('lastActionDateTime', $this->getLastActionDateTime());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the createdDateTime property value. The start time of the operation.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the lastActionDateTime property value. The time of the last action of the operation.
      *  @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
-    public function setLastActionDateTime(?DateTime $value ): void {
-        $this->lastActionDateTime = $value;
+    public function setLastActionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastActionDateTime', $value);
     }
 
     /**
      * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
      *  @param OperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?OperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?OperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

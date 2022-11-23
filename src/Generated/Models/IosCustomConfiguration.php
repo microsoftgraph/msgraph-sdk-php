@@ -10,21 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class IosCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var StreamInterface|null $payload Payload. (UTF8 encoded byte array)
-    */
-    private ?StreamInterface $payload = null;
-    
-    /**
-     * @var string|null $payloadFileName Payload file name (.mobileconfig
-    */
-    private ?string $payloadFileName = null;
-    
-    /**
-     * @var string|null $payloadName Name that is displayed to the user.
-    */
-    private ?string $payloadName = null;
-    
-    /**
      * Instantiates a new IosCustomConfiguration and sets the default values.
     */
     public function __construct() {
@@ -56,10 +41,10 @@ class IosCustomConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getPayload(): StreamInterface {
-        return $this->payload;
+    public function getPayload(): ?StreamInterface {
+        return $this->getBackingStore()->get('payload');
     }
 
     /**
@@ -67,7 +52,7 @@ class IosCustomConfiguration extends DeviceConfiguration implements Parsable
      * @return string|null
     */
     public function getPayloadFileName(): ?string {
-        return $this->payloadFileName;
+        return $this->getBackingStore()->get('payloadFileName');
     }
 
     /**
@@ -75,7 +60,7 @@ class IosCustomConfiguration extends DeviceConfiguration implements Parsable
      * @return string|null
     */
     public function getPayloadName(): ?string {
-        return $this->payloadName;
+        return $this->getBackingStore()->get('payloadName');
     }
 
     /**
@@ -84,33 +69,33 @@ class IosCustomConfiguration extends DeviceConfiguration implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('payload', $this->payload);
-        $writer->writeStringValue('payloadFileName', $this->payloadFileName);
-        $writer->writeStringValue('payloadName', $this->payloadName);
+        $writer->writeBinaryContent('payload', $this->getPayload());
+        $writer->writeStringValue('payloadFileName', $this->getPayloadFileName());
+        $writer->writeStringValue('payloadName', $this->getPayloadName());
     }
 
     /**
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      *  @param StreamInterface|null $value Value to set for the payload property.
     */
-    public function setPayload(?StreamInterface $value ): void {
-        $this->payload = $value;
+    public function setPayload(?StreamInterface $value): void {
+        $this->getBackingStore()->set('payload', $value);
     }
 
     /**
      * Sets the payloadFileName property value. Payload file name (.mobileconfig
      *  @param string|null $value Value to set for the payloadFileName property.
     */
-    public function setPayloadFileName(?string $value ): void {
-        $this->payloadFileName = $value;
+    public function setPayloadFileName(?string $value): void {
+        $this->getBackingStore()->set('payloadFileName', $value);
     }
 
     /**
      * Sets the payloadName property value. Name that is displayed to the user.
      *  @param string|null $value Value to set for the payloadName property.
     */
-    public function setPayloadName(?string $value ): void {
-        $this->payloadName = $value;
+    public function setPayloadName(?string $value): void {
+        $this->getBackingStore()->set('payloadName', $value);
     }
 
 }

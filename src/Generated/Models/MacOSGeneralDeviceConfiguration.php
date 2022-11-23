@@ -9,66 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var AppListType|null $compliantAppListType Possible values of the compliance app list.
-    */
-    private ?AppListType $compliantAppListType = null;
-    
-    /**
-     * @var array<AppListItem>|null $compliantAppsList List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-    */
-    private ?array $compliantAppsList = null;
-    
-    /**
-     * @var array<string>|null $emailInDomainSuffixes An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-    */
-    private ?array $emailInDomainSuffixes = null;
-    
-    /**
-     * @var bool|null $passwordBlockSimple Block simple passwords.
-    */
-    private ?bool $passwordBlockSimple = null;
-    
-    /**
-     * @var int|null $passwordExpirationDays Number of days before the password expires.
-    */
-    private ?int $passwordExpirationDays = null;
-    
-    /**
-     * @var int|null $passwordMinimumCharacterSetCount Number of character sets a password must contain. Valid values 0 to 4
-    */
-    private ?int $passwordMinimumCharacterSetCount = null;
-    
-    /**
-     * @var int|null $passwordMinimumLength Minimum length of passwords.
-    */
-    private ?int $passwordMinimumLength = null;
-    
-    /**
-     * @var int|null $passwordMinutesOfInactivityBeforeLock Minutes of inactivity required before a password is required.
-    */
-    private ?int $passwordMinutesOfInactivityBeforeLock = null;
-    
-    /**
-     * @var int|null $passwordMinutesOfInactivityBeforeScreenTimeout Minutes of inactivity required before the screen times out.
-    */
-    private ?int $passwordMinutesOfInactivityBeforeScreenTimeout = null;
-    
-    /**
-     * @var int|null $passwordPreviousPasswordBlockCount Number of previous passwords to block.
-    */
-    private ?int $passwordPreviousPasswordBlockCount = null;
-    
-    /**
-     * @var bool|null $passwordRequired Whether or not to require a password.
-    */
-    private ?bool $passwordRequired = null;
-    
-    /**
-     * @var RequiredPasswordType|null $passwordRequiredType Possible values of required passwords.
-    */
-    private ?RequiredPasswordType $passwordRequiredType = null;
-    
-    /**
      * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
     */
     public function __construct() {
@@ -90,7 +30,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return AppListType|null
     */
     public function getCompliantAppListType(): ?AppListType {
-        return $this->compliantAppListType;
+        return $this->getBackingStore()->get('compliantAppListType');
     }
 
     /**
@@ -98,7 +38,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return array<AppListItem>|null
     */
     public function getCompliantAppsList(): ?array {
-        return $this->compliantAppsList;
+        return $this->getBackingStore()->get('compliantAppsList');
     }
 
     /**
@@ -106,7 +46,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return array<string>|null
     */
     public function getEmailInDomainSuffixes(): ?array {
-        return $this->emailInDomainSuffixes;
+        return $this->getBackingStore()->get('emailInDomainSuffixes');
     }
 
     /**
@@ -136,7 +76,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return bool|null
     */
     public function getPasswordBlockSimple(): ?bool {
-        return $this->passwordBlockSimple;
+        return $this->getBackingStore()->get('passwordBlockSimple');
     }
 
     /**
@@ -144,7 +84,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordExpirationDays(): ?int {
-        return $this->passwordExpirationDays;
+        return $this->getBackingStore()->get('passwordExpirationDays');
     }
 
     /**
@@ -152,7 +92,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinimumCharacterSetCount(): ?int {
-        return $this->passwordMinimumCharacterSetCount;
+        return $this->getBackingStore()->get('passwordMinimumCharacterSetCount');
     }
 
     /**
@@ -160,7 +100,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinimumLength(): ?int {
-        return $this->passwordMinimumLength;
+        return $this->getBackingStore()->get('passwordMinimumLength');
     }
 
     /**
@@ -168,7 +108,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeLock(): ?int {
-        return $this->passwordMinutesOfInactivityBeforeLock;
+        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeLock');
     }
 
     /**
@@ -176,7 +116,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordMinutesOfInactivityBeforeScreenTimeout(): ?int {
-        return $this->passwordMinutesOfInactivityBeforeScreenTimeout;
+        return $this->getBackingStore()->get('passwordMinutesOfInactivityBeforeScreenTimeout');
     }
 
     /**
@@ -184,7 +124,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return int|null
     */
     public function getPasswordPreviousPasswordBlockCount(): ?int {
-        return $this->passwordPreviousPasswordBlockCount;
+        return $this->getBackingStore()->get('passwordPreviousPasswordBlockCount');
     }
 
     /**
@@ -192,7 +132,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return bool|null
     */
     public function getPasswordRequired(): ?bool {
-        return $this->passwordRequired;
+        return $this->getBackingStore()->get('passwordRequired');
     }
 
     /**
@@ -200,7 +140,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
      * @return RequiredPasswordType|null
     */
     public function getPasswordRequiredType(): ?RequiredPasswordType {
-        return $this->passwordRequiredType;
+        return $this->getBackingStore()->get('passwordRequiredType');
     }
 
     /**
@@ -209,114 +149,114 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('compliantAppListType', $this->compliantAppListType);
-        $writer->writeCollectionOfObjectValues('compliantAppsList', $this->compliantAppsList);
-        $writer->writeCollectionOfPrimitiveValues('emailInDomainSuffixes', $this->emailInDomainSuffixes);
-        $writer->writeBooleanValue('passwordBlockSimple', $this->passwordBlockSimple);
-        $writer->writeIntegerValue('passwordExpirationDays', $this->passwordExpirationDays);
-        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->passwordMinimumCharacterSetCount);
-        $writer->writeIntegerValue('passwordMinimumLength', $this->passwordMinimumLength);
-        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeLock', $this->passwordMinutesOfInactivityBeforeLock);
-        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeScreenTimeout', $this->passwordMinutesOfInactivityBeforeScreenTimeout);
-        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->passwordPreviousPasswordBlockCount);
-        $writer->writeBooleanValue('passwordRequired', $this->passwordRequired);
-        $writer->writeEnumValue('passwordRequiredType', $this->passwordRequiredType);
+        $writer->writeEnumValue('compliantAppListType', $this->getCompliantAppListType());
+        $writer->writeCollectionOfObjectValues('compliantAppsList', $this->getCompliantAppsList());
+        $writer->writeCollectionOfPrimitiveValues('emailInDomainSuffixes', $this->getEmailInDomainSuffixes());
+        $writer->writeBooleanValue('passwordBlockSimple', $this->getPasswordBlockSimple());
+        $writer->writeIntegerValue('passwordExpirationDays', $this->getPasswordExpirationDays());
+        $writer->writeIntegerValue('passwordMinimumCharacterSetCount', $this->getPasswordMinimumCharacterSetCount());
+        $writer->writeIntegerValue('passwordMinimumLength', $this->getPasswordMinimumLength());
+        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeLock', $this->getPasswordMinutesOfInactivityBeforeLock());
+        $writer->writeIntegerValue('passwordMinutesOfInactivityBeforeScreenTimeout', $this->getPasswordMinutesOfInactivityBeforeScreenTimeout());
+        $writer->writeIntegerValue('passwordPreviousPasswordBlockCount', $this->getPasswordPreviousPasswordBlockCount());
+        $writer->writeBooleanValue('passwordRequired', $this->getPasswordRequired());
+        $writer->writeEnumValue('passwordRequiredType', $this->getPasswordRequiredType());
     }
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
      *  @param AppListType|null $value Value to set for the compliantAppListType property.
     */
-    public function setCompliantAppListType(?AppListType $value ): void {
-        $this->compliantAppListType = $value;
+    public function setCompliantAppListType(?AppListType $value): void {
+        $this->getBackingStore()->set('compliantAppListType', $value);
     }
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
-    public function setCompliantAppsList(?array $value ): void {
-        $this->compliantAppsList = $value;
+    public function setCompliantAppsList(?array $value): void {
+        $this->getBackingStore()->set('compliantAppsList', $value);
     }
 
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      *  @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
     */
-    public function setEmailInDomainSuffixes(?array $value ): void {
-        $this->emailInDomainSuffixes = $value;
+    public function setEmailInDomainSuffixes(?array $value): void {
+        $this->getBackingStore()->set('emailInDomainSuffixes', $value);
     }
 
     /**
      * Sets the passwordBlockSimple property value. Block simple passwords.
      *  @param bool|null $value Value to set for the passwordBlockSimple property.
     */
-    public function setPasswordBlockSimple(?bool $value ): void {
-        $this->passwordBlockSimple = $value;
+    public function setPasswordBlockSimple(?bool $value): void {
+        $this->getBackingStore()->set('passwordBlockSimple', $value);
     }
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
      *  @param int|null $value Value to set for the passwordExpirationDays property.
     */
-    public function setPasswordExpirationDays(?int $value ): void {
-        $this->passwordExpirationDays = $value;
+    public function setPasswordExpirationDays(?int $value): void {
+        $this->getBackingStore()->set('passwordExpirationDays', $value);
     }
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
      *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
-    public function setPasswordMinimumCharacterSetCount(?int $value ): void {
-        $this->passwordMinimumCharacterSetCount = $value;
+    public function setPasswordMinimumCharacterSetCount(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
     }
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
      *  @param int|null $value Value to set for the passwordMinimumLength property.
     */
-    public function setPasswordMinimumLength(?int $value ): void {
-        $this->passwordMinimumLength = $value;
+    public function setPasswordMinimumLength(?int $value): void {
+        $this->getBackingStore()->set('passwordMinimumLength', $value);
     }
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
      *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
-    public function setPasswordMinutesOfInactivityBeforeLock(?int $value ): void {
-        $this->passwordMinutesOfInactivityBeforeLock = $value;
+    public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
+        $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
     }
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
      *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
-    public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value ): void {
-        $this->passwordMinutesOfInactivityBeforeScreenTimeout = $value;
+    public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
+        $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
     }
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
      *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
-    public function setPasswordPreviousPasswordBlockCount(?int $value ): void {
-        $this->passwordPreviousPasswordBlockCount = $value;
+    public function setPasswordPreviousPasswordBlockCount(?int $value): void {
+        $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
     }
 
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
      *  @param bool|null $value Value to set for the passwordRequired property.
     */
-    public function setPasswordRequired(?bool $value ): void {
-        $this->passwordRequired = $value;
+    public function setPasswordRequired(?bool $value): void {
+        $this->getBackingStore()->set('passwordRequired', $value);
     }
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
-    public function setPasswordRequiredType(?RequiredPasswordType $value ): void {
-        $this->passwordRequiredType = $value;
+    public function setPasswordRequiredType(?RequiredPasswordType $value): void {
+        $this->getBackingStore()->set('passwordRequiredType', $value);
     }
 
 }

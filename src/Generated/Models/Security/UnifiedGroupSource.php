@@ -10,16 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedGroupSource extends DataSource implements Parsable 
 {
     /**
-     * @var Group|null $group The group property
-    */
-    private ?Group $group = null;
-    
-    /**
-     * @var SourceType|null $includedSources Specifies which sources are included in this group. Possible values are: mailbox, site.
-    */
-    private ?SourceType $includedSources = null;
-    
-    /**
      * Instantiates a new UnifiedGroupSource and sets the default values.
     */
     public function __construct() {
@@ -53,7 +43,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
      * @return Group|null
     */
     public function getGroup(): ?Group {
-        return $this->group;
+        return $this->getBackingStore()->get('group');
     }
 
     /**
@@ -61,7 +51,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
      * @return SourceType|null
     */
     public function getIncludedSources(): ?SourceType {
-        return $this->includedSources;
+        return $this->getBackingStore()->get('includedSources');
     }
 
     /**
@@ -70,24 +60,24 @@ class UnifiedGroupSource extends DataSource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('group', $this->group);
-        $writer->writeEnumValue('includedSources', $this->includedSources);
+        $writer->writeObjectValue('group', $this->getGroup());
+        $writer->writeEnumValue('includedSources', $this->getIncludedSources());
     }
 
     /**
      * Sets the group property value. The group property
      *  @param Group|null $value Value to set for the group property.
     */
-    public function setGroup(?Group $value ): void {
-        $this->group = $value;
+    public function setGroup(?Group $value): void {
+        $this->getBackingStore()->set('group', $value);
     }
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      *  @param SourceType|null $value Value to set for the includedSources property.
     */
-    public function setIncludedSources(?SourceType $value ): void {
-        $this->includedSources = $value;
+    public function setIncludedSources(?SourceType $value): void {
+        $this->getBackingStore()->set('includedSources', $value);
     }
 
 }

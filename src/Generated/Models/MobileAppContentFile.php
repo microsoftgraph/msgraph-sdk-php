@@ -11,56 +11,10 @@ use Psr\Http\Message\StreamInterface;
 class MobileAppContentFile extends Entity implements Parsable 
 {
     /**
-     * @var string|null $azureStorageUri The Azure Storage URI.
-    */
-    private ?string $azureStorageUri = null;
-    
-    /**
-     * @var DateTime|null $azureStorageUriExpirationDateTime The time the Azure storage Uri expires.
-    */
-    private ?DateTime $azureStorageUriExpirationDateTime = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The time the file was created.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var bool|null $isCommitted A value indicating whether the file is committed.
-    */
-    private ?bool $isCommitted = null;
-    
-    /**
-     * @var StreamInterface|null $manifest The manifest information.
-    */
-    private ?StreamInterface $manifest = null;
-    
-    /**
-     * @var string|null $name the file name.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var int|null $size The size of the file prior to encryption.
-    */
-    private ?int $size = null;
-    
-    /**
-     * @var int|null $sizeEncrypted The size of the file after encryption.
-    */
-    private ?int $sizeEncrypted = null;
-    
-    /**
-     * @var MobileAppContentFileUploadState|null $uploadState Contains properties for upload request states.
-    */
-    private ?MobileAppContentFileUploadState $uploadState = null;
-    
-    /**
      * Instantiates a new mobileAppContentFile and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.mobileAppContentFile');
     }
 
     /**
@@ -77,7 +31,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureStorageUri(): ?string {
-        return $this->azureStorageUri;
+        return $this->getBackingStore()->get('azureStorageUri');
     }
 
     /**
@@ -85,7 +39,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAzureStorageUriExpirationDateTime(): ?DateTime {
-        return $this->azureStorageUriExpirationDateTime;
+        return $this->getBackingStore()->get('azureStorageUriExpirationDateTime');
     }
 
     /**
@@ -93,7 +47,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -120,15 +74,15 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsCommitted(): ?bool {
-        return $this->isCommitted;
+        return $this->getBackingStore()->get('isCommitted');
     }
 
     /**
      * Gets the manifest property value. The manifest information.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getManifest(): StreamInterface {
-        return $this->manifest;
+    public function getManifest(): ?StreamInterface {
+        return $this->getBackingStore()->get('manifest');
     }
 
     /**
@@ -136,7 +90,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -144,7 +98,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -152,7 +106,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return int|null
     */
     public function getSizeEncrypted(): ?int {
-        return $this->sizeEncrypted;
+        return $this->getBackingStore()->get('sizeEncrypted');
     }
 
     /**
@@ -160,7 +114,7 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return MobileAppContentFileUploadState|null
     */
     public function getUploadState(): ?MobileAppContentFileUploadState {
-        return $this->uploadState;
+        return $this->getBackingStore()->get('uploadState');
     }
 
     /**
@@ -169,87 +123,87 @@ class MobileAppContentFile extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('azureStorageUri', $this->azureStorageUri);
-        $writer->writeDateTimeValue('azureStorageUriExpirationDateTime', $this->azureStorageUriExpirationDateTime);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeBooleanValue('isCommitted', $this->isCommitted);
-        $writer->writeBinaryContent('manifest', $this->manifest);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeIntegerValue('size', $this->size);
-        $writer->writeIntegerValue('sizeEncrypted', $this->sizeEncrypted);
-        $writer->writeEnumValue('uploadState', $this->uploadState);
+        $writer->writeStringValue('azureStorageUri', $this->getAzureStorageUri());
+        $writer->writeDateTimeValue('azureStorageUriExpirationDateTime', $this->getAzureStorageUriExpirationDateTime());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeBooleanValue('isCommitted', $this->getIsCommitted());
+        $writer->writeBinaryContent('manifest', $this->getManifest());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeIntegerValue('size', $this->getSize());
+        $writer->writeIntegerValue('sizeEncrypted', $this->getSizeEncrypted());
+        $writer->writeEnumValue('uploadState', $this->getUploadState());
     }
 
     /**
      * Sets the azureStorageUri property value. The Azure Storage URI.
      *  @param string|null $value Value to set for the azureStorageUri property.
     */
-    public function setAzureStorageUri(?string $value ): void {
-        $this->azureStorageUri = $value;
+    public function setAzureStorageUri(?string $value): void {
+        $this->getBackingStore()->set('azureStorageUri', $value);
     }
 
     /**
      * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
      *  @param DateTime|null $value Value to set for the azureStorageUriExpirationDateTime property.
     */
-    public function setAzureStorageUriExpirationDateTime(?DateTime $value ): void {
-        $this->azureStorageUriExpirationDateTime = $value;
+    public function setAzureStorageUriExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('azureStorageUriExpirationDateTime', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The time the file was created.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the isCommitted property value. A value indicating whether the file is committed.
      *  @param bool|null $value Value to set for the isCommitted property.
     */
-    public function setIsCommitted(?bool $value ): void {
-        $this->isCommitted = $value;
+    public function setIsCommitted(?bool $value): void {
+        $this->getBackingStore()->set('isCommitted', $value);
     }
 
     /**
      * Sets the manifest property value. The manifest information.
      *  @param StreamInterface|null $value Value to set for the manifest property.
     */
-    public function setManifest(?StreamInterface $value ): void {
-        $this->manifest = $value;
+    public function setManifest(?StreamInterface $value): void {
+        $this->getBackingStore()->set('manifest', $value);
     }
 
     /**
      * Sets the name property value. the file name.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the size property value. The size of the file prior to encryption.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
     /**
      * Sets the sizeEncrypted property value. The size of the file after encryption.
      *  @param int|null $value Value to set for the sizeEncrypted property.
     */
-    public function setSizeEncrypted(?int $value ): void {
-        $this->sizeEncrypted = $value;
+    public function setSizeEncrypted(?int $value): void {
+        $this->getBackingStore()->set('sizeEncrypted', $value);
     }
 
     /**
      * Sets the uploadState property value. Contains properties for upload request states.
      *  @param MobileAppContentFileUploadState|null $value Value to set for the uploadState property.
     */
-    public function setUploadState(?MobileAppContentFileUploadState $value ): void {
-        $this->uploadState = $value;
+    public function setUploadState(?MobileAppContentFileUploadState $value): void {
+        $this->getBackingStore()->set('uploadState', $value);
     }
 
 }

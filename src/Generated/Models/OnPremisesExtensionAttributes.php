@@ -6,100 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable 
+class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $extensionAttribute1 First customizable extension attribute.
-    */
-    private ?string $extensionAttribute1 = null;
-    
-    /**
-     * @var string|null $extensionAttribute10 Tenth customizable extension attribute.
-    */
-    private ?string $extensionAttribute10 = null;
-    
-    /**
-     * @var string|null $extensionAttribute11 Eleventh customizable extension attribute.
-    */
-    private ?string $extensionAttribute11 = null;
-    
-    /**
-     * @var string|null $extensionAttribute12 Twelfth customizable extension attribute.
-    */
-    private ?string $extensionAttribute12 = null;
-    
-    /**
-     * @var string|null $extensionAttribute13 Thirteenth customizable extension attribute.
-    */
-    private ?string $extensionAttribute13 = null;
-    
-    /**
-     * @var string|null $extensionAttribute14 Fourteenth customizable extension attribute.
-    */
-    private ?string $extensionAttribute14 = null;
-    
-    /**
-     * @var string|null $extensionAttribute15 Fifteenth customizable extension attribute.
-    */
-    private ?string $extensionAttribute15 = null;
-    
-    /**
-     * @var string|null $extensionAttribute2 Second customizable extension attribute.
-    */
-    private ?string $extensionAttribute2 = null;
-    
-    /**
-     * @var string|null $extensionAttribute3 Third customizable extension attribute.
-    */
-    private ?string $extensionAttribute3 = null;
-    
-    /**
-     * @var string|null $extensionAttribute4 Fourth customizable extension attribute.
-    */
-    private ?string $extensionAttribute4 = null;
-    
-    /**
-     * @var string|null $extensionAttribute5 Fifth customizable extension attribute.
-    */
-    private ?string $extensionAttribute5 = null;
-    
-    /**
-     * @var string|null $extensionAttribute6 Sixth customizable extension attribute.
-    */
-    private ?string $extensionAttribute6 = null;
-    
-    /**
-     * @var string|null $extensionAttribute7 Seventh customizable extension attribute.
-    */
-    private ?string $extensionAttribute7 = null;
-    
-    /**
-     * @var string|null $extensionAttribute8 Eighth customizable extension attribute.
-    */
-    private ?string $extensionAttribute8 = null;
-    
-    /**
-     * @var string|null $extensionAttribute9 Ninth customizable extension attribute.
-    */
-    private ?string $extensionAttribute9 = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new onPremisesExtensionAttributes and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.onPremisesExtensionAttributes');
     }
 
     /**
@@ -115,8 +38,16 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -124,7 +55,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute1(): ?string {
-        return $this->extensionAttribute1;
+        return $this->getBackingStore()->get('extensionAttribute1');
     }
 
     /**
@@ -132,7 +63,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute10(): ?string {
-        return $this->extensionAttribute10;
+        return $this->getBackingStore()->get('extensionAttribute10');
     }
 
     /**
@@ -140,7 +71,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute11(): ?string {
-        return $this->extensionAttribute11;
+        return $this->getBackingStore()->get('extensionAttribute11');
     }
 
     /**
@@ -148,7 +79,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute12(): ?string {
-        return $this->extensionAttribute12;
+        return $this->getBackingStore()->get('extensionAttribute12');
     }
 
     /**
@@ -156,7 +87,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute13(): ?string {
-        return $this->extensionAttribute13;
+        return $this->getBackingStore()->get('extensionAttribute13');
     }
 
     /**
@@ -164,7 +95,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute14(): ?string {
-        return $this->extensionAttribute14;
+        return $this->getBackingStore()->get('extensionAttribute14');
     }
 
     /**
@@ -172,7 +103,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute15(): ?string {
-        return $this->extensionAttribute15;
+        return $this->getBackingStore()->get('extensionAttribute15');
     }
 
     /**
@@ -180,7 +111,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute2(): ?string {
-        return $this->extensionAttribute2;
+        return $this->getBackingStore()->get('extensionAttribute2');
     }
 
     /**
@@ -188,7 +119,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute3(): ?string {
-        return $this->extensionAttribute3;
+        return $this->getBackingStore()->get('extensionAttribute3');
     }
 
     /**
@@ -196,7 +127,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute4(): ?string {
-        return $this->extensionAttribute4;
+        return $this->getBackingStore()->get('extensionAttribute4');
     }
 
     /**
@@ -204,7 +135,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute5(): ?string {
-        return $this->extensionAttribute5;
+        return $this->getBackingStore()->get('extensionAttribute5');
     }
 
     /**
@@ -212,7 +143,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute6(): ?string {
-        return $this->extensionAttribute6;
+        return $this->getBackingStore()->get('extensionAttribute6');
     }
 
     /**
@@ -220,7 +151,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute7(): ?string {
-        return $this->extensionAttribute7;
+        return $this->getBackingStore()->get('extensionAttribute7');
     }
 
     /**
@@ -228,7 +159,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute8(): ?string {
-        return $this->extensionAttribute8;
+        return $this->getBackingStore()->get('extensionAttribute8');
     }
 
     /**
@@ -236,7 +167,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getExtensionAttribute9(): ?string {
-        return $this->extensionAttribute9;
+        return $this->getBackingStore()->get('extensionAttribute9');
     }
 
     /**
@@ -270,7 +201,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -278,159 +209,167 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('extensionAttribute1', $this->extensionAttribute1);
-        $writer->writeStringValue('extensionAttribute10', $this->extensionAttribute10);
-        $writer->writeStringValue('extensionAttribute11', $this->extensionAttribute11);
-        $writer->writeStringValue('extensionAttribute12', $this->extensionAttribute12);
-        $writer->writeStringValue('extensionAttribute13', $this->extensionAttribute13);
-        $writer->writeStringValue('extensionAttribute14', $this->extensionAttribute14);
-        $writer->writeStringValue('extensionAttribute15', $this->extensionAttribute15);
-        $writer->writeStringValue('extensionAttribute2', $this->extensionAttribute2);
-        $writer->writeStringValue('extensionAttribute3', $this->extensionAttribute3);
-        $writer->writeStringValue('extensionAttribute4', $this->extensionAttribute4);
-        $writer->writeStringValue('extensionAttribute5', $this->extensionAttribute5);
-        $writer->writeStringValue('extensionAttribute6', $this->extensionAttribute6);
-        $writer->writeStringValue('extensionAttribute7', $this->extensionAttribute7);
-        $writer->writeStringValue('extensionAttribute8', $this->extensionAttribute8);
-        $writer->writeStringValue('extensionAttribute9', $this->extensionAttribute9);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('extensionAttribute1', $this->getExtensionAttribute1());
+        $writer->writeStringValue('extensionAttribute10', $this->getExtensionAttribute10());
+        $writer->writeStringValue('extensionAttribute11', $this->getExtensionAttribute11());
+        $writer->writeStringValue('extensionAttribute12', $this->getExtensionAttribute12());
+        $writer->writeStringValue('extensionAttribute13', $this->getExtensionAttribute13());
+        $writer->writeStringValue('extensionAttribute14', $this->getExtensionAttribute14());
+        $writer->writeStringValue('extensionAttribute15', $this->getExtensionAttribute15());
+        $writer->writeStringValue('extensionAttribute2', $this->getExtensionAttribute2());
+        $writer->writeStringValue('extensionAttribute3', $this->getExtensionAttribute3());
+        $writer->writeStringValue('extensionAttribute4', $this->getExtensionAttribute4());
+        $writer->writeStringValue('extensionAttribute5', $this->getExtensionAttribute5());
+        $writer->writeStringValue('extensionAttribute6', $this->getExtensionAttribute6());
+        $writer->writeStringValue('extensionAttribute7', $this->getExtensionAttribute7());
+        $writer->writeStringValue('extensionAttribute8', $this->getExtensionAttribute8());
+        $writer->writeStringValue('extensionAttribute9', $this->getExtensionAttribute9());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the extensionAttribute1 property value. First customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute1 property.
     */
-    public function setExtensionAttribute1(?string $value ): void {
-        $this->extensionAttribute1 = $value;
+    public function setExtensionAttribute1(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute1', $value);
     }
 
     /**
      * Sets the extensionAttribute10 property value. Tenth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute10 property.
     */
-    public function setExtensionAttribute10(?string $value ): void {
-        $this->extensionAttribute10 = $value;
+    public function setExtensionAttribute10(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute10', $value);
     }
 
     /**
      * Sets the extensionAttribute11 property value. Eleventh customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute11 property.
     */
-    public function setExtensionAttribute11(?string $value ): void {
-        $this->extensionAttribute11 = $value;
+    public function setExtensionAttribute11(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute11', $value);
     }
 
     /**
      * Sets the extensionAttribute12 property value. Twelfth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute12 property.
     */
-    public function setExtensionAttribute12(?string $value ): void {
-        $this->extensionAttribute12 = $value;
+    public function setExtensionAttribute12(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute12', $value);
     }
 
     /**
      * Sets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute13 property.
     */
-    public function setExtensionAttribute13(?string $value ): void {
-        $this->extensionAttribute13 = $value;
+    public function setExtensionAttribute13(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute13', $value);
     }
 
     /**
      * Sets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute14 property.
     */
-    public function setExtensionAttribute14(?string $value ): void {
-        $this->extensionAttribute14 = $value;
+    public function setExtensionAttribute14(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute14', $value);
     }
 
     /**
      * Sets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute15 property.
     */
-    public function setExtensionAttribute15(?string $value ): void {
-        $this->extensionAttribute15 = $value;
+    public function setExtensionAttribute15(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute15', $value);
     }
 
     /**
      * Sets the extensionAttribute2 property value. Second customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute2 property.
     */
-    public function setExtensionAttribute2(?string $value ): void {
-        $this->extensionAttribute2 = $value;
+    public function setExtensionAttribute2(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute2', $value);
     }
 
     /**
      * Sets the extensionAttribute3 property value. Third customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute3 property.
     */
-    public function setExtensionAttribute3(?string $value ): void {
-        $this->extensionAttribute3 = $value;
+    public function setExtensionAttribute3(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute3', $value);
     }
 
     /**
      * Sets the extensionAttribute4 property value. Fourth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute4 property.
     */
-    public function setExtensionAttribute4(?string $value ): void {
-        $this->extensionAttribute4 = $value;
+    public function setExtensionAttribute4(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute4', $value);
     }
 
     /**
      * Sets the extensionAttribute5 property value. Fifth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute5 property.
     */
-    public function setExtensionAttribute5(?string $value ): void {
-        $this->extensionAttribute5 = $value;
+    public function setExtensionAttribute5(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute5', $value);
     }
 
     /**
      * Sets the extensionAttribute6 property value. Sixth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute6 property.
     */
-    public function setExtensionAttribute6(?string $value ): void {
-        $this->extensionAttribute6 = $value;
+    public function setExtensionAttribute6(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute6', $value);
     }
 
     /**
      * Sets the extensionAttribute7 property value. Seventh customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute7 property.
     */
-    public function setExtensionAttribute7(?string $value ): void {
-        $this->extensionAttribute7 = $value;
+    public function setExtensionAttribute7(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute7', $value);
     }
 
     /**
      * Sets the extensionAttribute8 property value. Eighth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute8 property.
     */
-    public function setExtensionAttribute8(?string $value ): void {
-        $this->extensionAttribute8 = $value;
+    public function setExtensionAttribute8(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute8', $value);
     }
 
     /**
      * Sets the extensionAttribute9 property value. Ninth customizable extension attribute.
      *  @param string|null $value Value to set for the extensionAttribute9 property.
     */
-    public function setExtensionAttribute9(?string $value ): void {
-        $this->extensionAttribute9 = $value;
+    public function setExtensionAttribute9(?string $value): void {
+        $this->getBackingStore()->set('extensionAttribute9', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

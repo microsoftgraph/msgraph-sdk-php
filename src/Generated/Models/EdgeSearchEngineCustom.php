@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable 
 {
     /**
-     * @var string|null $edgeSearchEngineOpenSearchXmlUrl Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
-    */
-    private ?string $edgeSearchEngineOpenSearchXmlUrl = null;
-    
-    /**
      * Instantiates a new EdgeSearchEngineCustom and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
      * @return string|null
     */
     public function getEdgeSearchEngineOpenSearchXmlUrl(): ?string {
-        return $this->edgeSearchEngineOpenSearchXmlUrl;
+        return $this->getBackingStore()->get('edgeSearchEngineOpenSearchXmlUrl');
     }
 
     /**
@@ -55,15 +50,15 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('edgeSearchEngineOpenSearchXmlUrl', $this->edgeSearchEngineOpenSearchXmlUrl);
+        $writer->writeStringValue('edgeSearchEngineOpenSearchXmlUrl', $this->getEdgeSearchEngineOpenSearchXmlUrl());
     }
 
     /**
      * Sets the edgeSearchEngineOpenSearchXmlUrl property value. Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
      *  @param string|null $value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
     */
-    public function setEdgeSearchEngineOpenSearchXmlUrl(?string $value ): void {
-        $this->edgeSearchEngineOpenSearchXmlUrl = $value;
+    public function setEdgeSearchEngineOpenSearchXmlUrl(?string $value): void {
+        $this->getBackingStore()->set('edgeSearchEngineOpenSearchXmlUrl', $value);
     }
 
 }

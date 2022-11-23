@@ -6,50 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class VisualInfo implements AdditionalDataHolder, Parsable 
+class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var ImageInfo|null $attribution Optional. JSON object used to represent an icon which represents the application used to generate the activity
-    */
-    private ?ImageInfo $attribution = null;
-    
-    /**
-     * @var string|null $backgroundColor Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-    */
-    private ?string $backgroundColor = null;
-    
-    /**
-     * @var Json|null $content Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-    */
-    private ?Json $content = null;
-    
-    /**
-     * @var string|null $description Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayText Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-    */
-    private ?string $displayText = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new visualInfo and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.visualInfo');
     }
 
     /**
@@ -65,8 +38,8 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -74,7 +47,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return ImageInfo|null
     */
     public function getAttribution(): ?ImageInfo {
-        return $this->attribution;
+        return $this->getBackingStore()->get('attribution');
     }
 
     /**
@@ -82,7 +55,15 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getBackgroundColor(): ?string {
-        return $this->backgroundColor;
+        return $this->getBackingStore()->get('backgroundColor');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -90,7 +71,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return Json|null
     */
     public function getContent(): ?Json {
-        return $this->content;
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -98,7 +79,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -106,7 +87,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayText(): ?string {
-        return $this->displayText;
+        return $this->getBackingStore()->get('displayText');
     }
 
     /**
@@ -130,7 +111,7 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -138,69 +119,77 @@ class VisualInfo implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('attribution', $this->attribution);
-        $writer->writeStringValue('backgroundColor', $this->backgroundColor);
-        $writer->writeObjectValue('content', $this->content);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayText', $this->displayText);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('attribution', $this->getAttribution());
+        $writer->writeStringValue('backgroundColor', $this->getBackgroundColor());
+        $writer->writeObjectValue('content', $this->getContent());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayText', $this->getDisplayText());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
      *  @param ImageInfo|null $value Value to set for the attribution property.
     */
-    public function setAttribution(?ImageInfo $value ): void {
-        $this->attribution = $value;
+    public function setAttribution(?ImageInfo $value): void {
+        $this->getBackingStore()->set('attribution', $value);
     }
 
     /**
      * Sets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
      *  @param string|null $value Value to set for the backgroundColor property.
     */
-    public function setBackgroundColor(?string $value ): void {
-        $this->backgroundColor = $value;
+    public function setBackgroundColor(?string $value): void {
+        $this->getBackingStore()->set('backgroundColor', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
      *  @param Json|null $value Value to set for the content property.
     */
-    public function setContent(?Json $value ): void {
-        $this->content = $value;
+    public function setContent(?Json $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
      *  @param string|null $value Value to set for the displayText property.
     */
-    public function setDisplayText(?string $value ): void {
-        $this->displayText = $value;
+    public function setDisplayText(?string $value): void {
+        $this->getBackingStore()->set('displayText', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

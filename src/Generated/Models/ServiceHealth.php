@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceHealth extends Entity implements Parsable 
 {
     /**
-     * @var array<ServiceHealthIssue>|null $issues A collection of issues that happened on the service, with detailed information for each issue.
-    */
-    private ?array $issues = null;
-    
-    /**
-     * @var string|null $service The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
-    */
-    private ?string $service = null;
-    
-    /**
-     * @var ServiceHealthStatus|null $status The status property
-    */
-    private ?ServiceHealthStatus $status = null;
-    
-    /**
      * Instantiates a new serviceHealth and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.serviceHealth');
     }
 
     /**
@@ -58,7 +42,7 @@ class ServiceHealth extends Entity implements Parsable
      * @return array<ServiceHealthIssue>|null
     */
     public function getIssues(): ?array {
-        return $this->issues;
+        return $this->getBackingStore()->get('issues');
     }
 
     /**
@@ -66,7 +50,7 @@ class ServiceHealth extends Entity implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->service;
+        return $this->getBackingStore()->get('service');
     }
 
     /**
@@ -74,7 +58,7 @@ class ServiceHealth extends Entity implements Parsable
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -83,33 +67,33 @@ class ServiceHealth extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('issues', $this->issues);
-        $writer->writeStringValue('service', $this->service);
-        $writer->writeEnumValue('status', $this->status);
+        $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
+        $writer->writeStringValue('service', $this->getService());
+        $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
      * Sets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.
      *  @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
     */
-    public function setIssues(?array $value ): void {
-        $this->issues = $value;
+    public function setIssues(?array $value): void {
+        $this->getBackingStore()->set('issues', $value);
     }
 
     /**
      * Sets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
      *  @param string|null $value Value to set for the service property.
     */
-    public function setService(?string $value ): void {
-        $this->service = $value;
+    public function setService(?string $value): void {
+        $this->getBackingStore()->set('service', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param ServiceHealthStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?ServiceHealthStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?ServiceHealthStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
 }

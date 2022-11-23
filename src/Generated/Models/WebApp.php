@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WebApp extends MobileApp implements Parsable 
 {
     /**
-     * @var string|null $appUrl The web app URL. This property cannot be PATCHed.
-    */
-    private ?string $appUrl = null;
-    
-    /**
-     * @var bool|null $useManagedBrowser Whether or not to use managed browser. This property is only applicable for Android and IOS.
-    */
-    private ?bool $useManagedBrowser = null;
-    
-    /**
      * Instantiates a new WebApp and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class WebApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getAppUrl(): ?string {
-        return $this->appUrl;
+        return $this->getBackingStore()->get('appUrl');
     }
 
     /**
@@ -60,7 +50,7 @@ class WebApp extends MobileApp implements Parsable
      * @return bool|null
     */
     public function getUseManagedBrowser(): ?bool {
-        return $this->useManagedBrowser;
+        return $this->getBackingStore()->get('useManagedBrowser');
     }
 
     /**
@@ -69,24 +59,24 @@ class WebApp extends MobileApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appUrl', $this->appUrl);
-        $writer->writeBooleanValue('useManagedBrowser', $this->useManagedBrowser);
+        $writer->writeStringValue('appUrl', $this->getAppUrl());
+        $writer->writeBooleanValue('useManagedBrowser', $this->getUseManagedBrowser());
     }
 
     /**
      * Sets the appUrl property value. The web app URL. This property cannot be PATCHed.
      *  @param string|null $value Value to set for the appUrl property.
     */
-    public function setAppUrl(?string $value ): void {
-        $this->appUrl = $value;
+    public function setAppUrl(?string $value): void {
+        $this->getBackingStore()->set('appUrl', $value);
     }
 
     /**
      * Sets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
      *  @param bool|null $value Value to set for the useManagedBrowser property.
     */
-    public function setUseManagedBrowser(?bool $value ): void {
-        $this->useManagedBrowser = $value;
+    public function setUseManagedBrowser(?bool $value): void {
+        $this->getBackingStore()->set('useManagedBrowser', $value);
     }
 
 }

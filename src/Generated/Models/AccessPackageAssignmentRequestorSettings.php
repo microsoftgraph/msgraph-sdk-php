@@ -6,65 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, Parsable 
+class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowCustomAssignmentSchedule If false, the requestor is not permitted to include a schedule in their request.
-    */
-    private ?bool $allowCustomAssignmentSchedule = null;
-    
-    /**
-     * @var bool|null $enableOnBehalfRequestorsToAddAccess If true, allows on-behalf-of requestors to create a request to add access for another principal.
-    */
-    private ?bool $enableOnBehalfRequestorsToAddAccess = null;
-    
-    /**
-     * @var bool|null $enableOnBehalfRequestorsToRemoveAccess If true, allows on-behalf-of requestors to create a request to remove access for another principal.
-    */
-    private ?bool $enableOnBehalfRequestorsToRemoveAccess = null;
-    
-    /**
-     * @var bool|null $enableOnBehalfRequestorsToUpdateAccess If true, allows on-behalf-of requestors to create a request to update access for another principal.
-    */
-    private ?bool $enableOnBehalfRequestorsToUpdateAccess = null;
-    
-    /**
-     * @var bool|null $enableTargetsToSelfAddAccess If true, allows requestors to create a request to add access for themselves.
-    */
-    private ?bool $enableTargetsToSelfAddAccess = null;
-    
-    /**
-     * @var bool|null $enableTargetsToSelfRemoveAccess If true, allows requestors to create a request to remove their access.
-    */
-    private ?bool $enableTargetsToSelfRemoveAccess = null;
-    
-    /**
-     * @var bool|null $enableTargetsToSelfUpdateAccess If true, allows requestors to create a request to update their access.
-    */
-    private ?bool $enableTargetsToSelfUpdateAccess = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<SubjectSet>|null $onBehalfRequestors The principals who can request on-behalf-of others.
-    */
-    private ?array $onBehalfRequestors = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new accessPackageAssignmentRequestorSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.accessPackageAssignmentRequestorSettings');
     }
 
     /**
@@ -80,8 +38,8 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -89,7 +47,15 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getAllowCustomAssignmentSchedule(): ?bool {
-        return $this->allowCustomAssignmentSchedule;
+        return $this->getBackingStore()->get('allowCustomAssignmentSchedule');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -97,7 +63,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToAddAccess(): ?bool {
-        return $this->enableOnBehalfRequestorsToAddAccess;
+        return $this->getBackingStore()->get('enableOnBehalfRequestorsToAddAccess');
     }
 
     /**
@@ -105,7 +71,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToRemoveAccess(): ?bool {
-        return $this->enableOnBehalfRequestorsToRemoveAccess;
+        return $this->getBackingStore()->get('enableOnBehalfRequestorsToRemoveAccess');
     }
 
     /**
@@ -113,7 +79,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToUpdateAccess(): ?bool {
-        return $this->enableOnBehalfRequestorsToUpdateAccess;
+        return $this->getBackingStore()->get('enableOnBehalfRequestorsToUpdateAccess');
     }
 
     /**
@@ -121,7 +87,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfAddAccess(): ?bool {
-        return $this->enableTargetsToSelfAddAccess;
+        return $this->getBackingStore()->get('enableTargetsToSelfAddAccess');
     }
 
     /**
@@ -129,7 +95,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfRemoveAccess(): ?bool {
-        return $this->enableTargetsToSelfRemoveAccess;
+        return $this->getBackingStore()->get('enableTargetsToSelfRemoveAccess');
     }
 
     /**
@@ -137,7 +103,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return bool|null
     */
     public function getEnableTargetsToSelfUpdateAccess(): ?bool {
-        return $this->enableTargetsToSelfUpdateAccess;
+        return $this->getBackingStore()->get('enableTargetsToSelfUpdateAccess');
     }
 
     /**
@@ -164,7 +130,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -172,7 +138,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @return array<SubjectSet>|null
     */
     public function getOnBehalfRequestors(): ?array {
-        return $this->onBehalfRequestors;
+        return $this->getBackingStore()->get('onBehalfRequestors');
     }
 
     /**
@@ -180,96 +146,104 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowCustomAssignmentSchedule', $this->allowCustomAssignmentSchedule);
-        $writer->writeBooleanValue('enableOnBehalfRequestorsToAddAccess', $this->enableOnBehalfRequestorsToAddAccess);
-        $writer->writeBooleanValue('enableOnBehalfRequestorsToRemoveAccess', $this->enableOnBehalfRequestorsToRemoveAccess);
-        $writer->writeBooleanValue('enableOnBehalfRequestorsToUpdateAccess', $this->enableOnBehalfRequestorsToUpdateAccess);
-        $writer->writeBooleanValue('enableTargetsToSelfAddAccess', $this->enableTargetsToSelfAddAccess);
-        $writer->writeBooleanValue('enableTargetsToSelfRemoveAccess', $this->enableTargetsToSelfRemoveAccess);
-        $writer->writeBooleanValue('enableTargetsToSelfUpdateAccess', $this->enableTargetsToSelfUpdateAccess);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('onBehalfRequestors', $this->onBehalfRequestors);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowCustomAssignmentSchedule', $this->getAllowCustomAssignmentSchedule());
+        $writer->writeBooleanValue('enableOnBehalfRequestorsToAddAccess', $this->getEnableOnBehalfRequestorsToAddAccess());
+        $writer->writeBooleanValue('enableOnBehalfRequestorsToRemoveAccess', $this->getEnableOnBehalfRequestorsToRemoveAccess());
+        $writer->writeBooleanValue('enableOnBehalfRequestorsToUpdateAccess', $this->getEnableOnBehalfRequestorsToUpdateAccess());
+        $writer->writeBooleanValue('enableTargetsToSelfAddAccess', $this->getEnableTargetsToSelfAddAccess());
+        $writer->writeBooleanValue('enableTargetsToSelfRemoveAccess', $this->getEnableTargetsToSelfRemoveAccess());
+        $writer->writeBooleanValue('enableTargetsToSelfUpdateAccess', $this->getEnableTargetsToSelfUpdateAccess());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('onBehalfRequestors', $this->getOnBehalfRequestors());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
      *  @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
     */
-    public function setAllowCustomAssignmentSchedule(?bool $value ): void {
-        $this->allowCustomAssignmentSchedule = $value;
+    public function setAllowCustomAssignmentSchedule(?bool $value): void {
+        $this->getBackingStore()->set('allowCustomAssignmentSchedule', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
      *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToAddAccess property.
     */
-    public function setEnableOnBehalfRequestorsToAddAccess(?bool $value ): void {
-        $this->enableOnBehalfRequestorsToAddAccess = $value;
+    public function setEnableOnBehalfRequestorsToAddAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableOnBehalfRequestorsToAddAccess', $value);
     }
 
     /**
      * Sets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
      *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
     */
-    public function setEnableOnBehalfRequestorsToRemoveAccess(?bool $value ): void {
-        $this->enableOnBehalfRequestorsToRemoveAccess = $value;
+    public function setEnableOnBehalfRequestorsToRemoveAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableOnBehalfRequestorsToRemoveAccess', $value);
     }
 
     /**
      * Sets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
      *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
     */
-    public function setEnableOnBehalfRequestorsToUpdateAccess(?bool $value ): void {
-        $this->enableOnBehalfRequestorsToUpdateAccess = $value;
+    public function setEnableOnBehalfRequestorsToUpdateAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableOnBehalfRequestorsToUpdateAccess', $value);
     }
 
     /**
      * Sets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
      *  @param bool|null $value Value to set for the enableTargetsToSelfAddAccess property.
     */
-    public function setEnableTargetsToSelfAddAccess(?bool $value ): void {
-        $this->enableTargetsToSelfAddAccess = $value;
+    public function setEnableTargetsToSelfAddAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableTargetsToSelfAddAccess', $value);
     }
 
     /**
      * Sets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
      *  @param bool|null $value Value to set for the enableTargetsToSelfRemoveAccess property.
     */
-    public function setEnableTargetsToSelfRemoveAccess(?bool $value ): void {
-        $this->enableTargetsToSelfRemoveAccess = $value;
+    public function setEnableTargetsToSelfRemoveAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableTargetsToSelfRemoveAccess', $value);
     }
 
     /**
      * Sets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
      *  @param bool|null $value Value to set for the enableTargetsToSelfUpdateAccess property.
     */
-    public function setEnableTargetsToSelfUpdateAccess(?bool $value ): void {
-        $this->enableTargetsToSelfUpdateAccess = $value;
+    public function setEnableTargetsToSelfUpdateAccess(?bool $value): void {
+        $this->getBackingStore()->set('enableTargetsToSelfUpdateAccess', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
      *  @param array<SubjectSet>|null $value Value to set for the onBehalfRequestors property.
     */
-    public function setOnBehalfRequestors(?array $value ): void {
-        $this->onBehalfRequestors = $value;
+    public function setOnBehalfRequestors(?array $value): void {
+        $this->getBackingStore()->set('onBehalfRequestors', $value);
     }
 
 }

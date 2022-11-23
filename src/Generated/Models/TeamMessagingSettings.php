@@ -6,50 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeamMessagingSettings implements AdditionalDataHolder, Parsable 
+class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var bool|null $allowChannelMentions If set to true, @channel mentions are allowed.
-    */
-    private ?bool $allowChannelMentions = null;
-    
-    /**
-     * @var bool|null $allowOwnerDeleteMessages If set to true, owners can delete any message.
-    */
-    private ?bool $allowOwnerDeleteMessages = null;
-    
-    /**
-     * @var bool|null $allowTeamMentions If set to true, @team mentions are allowed.
-    */
-    private ?bool $allowTeamMentions = null;
-    
-    /**
-     * @var bool|null $allowUserDeleteMessages If set to true, users can delete their messages.
-    */
-    private ?bool $allowUserDeleteMessages = null;
-    
-    /**
-     * @var bool|null $allowUserEditMessages If set to true, users can edit their messages.
-    */
-    private ?bool $allowUserEditMessages = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teamMessagingSettings and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.teamMessagingSettings');
     }
 
     /**
@@ -65,8 +38,8 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -74,7 +47,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowChannelMentions(): ?bool {
-        return $this->allowChannelMentions;
+        return $this->getBackingStore()->get('allowChannelMentions');
     }
 
     /**
@@ -82,7 +55,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowOwnerDeleteMessages(): ?bool {
-        return $this->allowOwnerDeleteMessages;
+        return $this->getBackingStore()->get('allowOwnerDeleteMessages');
     }
 
     /**
@@ -90,7 +63,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowTeamMentions(): ?bool {
-        return $this->allowTeamMentions;
+        return $this->getBackingStore()->get('allowTeamMentions');
     }
 
     /**
@@ -98,7 +71,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowUserDeleteMessages(): ?bool {
-        return $this->allowUserDeleteMessages;
+        return $this->getBackingStore()->get('allowUserDeleteMessages');
     }
 
     /**
@@ -106,7 +79,15 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getAllowUserEditMessages(): ?bool {
-        return $this->allowUserEditMessages;
+        return $this->getBackingStore()->get('allowUserEditMessages');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -130,7 +111,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -138,69 +119,77 @@ class TeamMessagingSettings implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBooleanValue('allowChannelMentions', $this->allowChannelMentions);
-        $writer->writeBooleanValue('allowOwnerDeleteMessages', $this->allowOwnerDeleteMessages);
-        $writer->writeBooleanValue('allowTeamMentions', $this->allowTeamMentions);
-        $writer->writeBooleanValue('allowUserDeleteMessages', $this->allowUserDeleteMessages);
-        $writer->writeBooleanValue('allowUserEditMessages', $this->allowUserEditMessages);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBooleanValue('allowChannelMentions', $this->getAllowChannelMentions());
+        $writer->writeBooleanValue('allowOwnerDeleteMessages', $this->getAllowOwnerDeleteMessages());
+        $writer->writeBooleanValue('allowTeamMentions', $this->getAllowTeamMentions());
+        $writer->writeBooleanValue('allowUserDeleteMessages', $this->getAllowUserDeleteMessages());
+        $writer->writeBooleanValue('allowUserEditMessages', $this->getAllowUserEditMessages());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
      *  @param bool|null $value Value to set for the allowChannelMentions property.
     */
-    public function setAllowChannelMentions(?bool $value ): void {
-        $this->allowChannelMentions = $value;
+    public function setAllowChannelMentions(?bool $value): void {
+        $this->getBackingStore()->set('allowChannelMentions', $value);
     }
 
     /**
      * Sets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
      *  @param bool|null $value Value to set for the allowOwnerDeleteMessages property.
     */
-    public function setAllowOwnerDeleteMessages(?bool $value ): void {
-        $this->allowOwnerDeleteMessages = $value;
+    public function setAllowOwnerDeleteMessages(?bool $value): void {
+        $this->getBackingStore()->set('allowOwnerDeleteMessages', $value);
     }
 
     /**
      * Sets the allowTeamMentions property value. If set to true, @team mentions are allowed.
      *  @param bool|null $value Value to set for the allowTeamMentions property.
     */
-    public function setAllowTeamMentions(?bool $value ): void {
-        $this->allowTeamMentions = $value;
+    public function setAllowTeamMentions(?bool $value): void {
+        $this->getBackingStore()->set('allowTeamMentions', $value);
     }
 
     /**
      * Sets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
      *  @param bool|null $value Value to set for the allowUserDeleteMessages property.
     */
-    public function setAllowUserDeleteMessages(?bool $value ): void {
-        $this->allowUserDeleteMessages = $value;
+    public function setAllowUserDeleteMessages(?bool $value): void {
+        $this->getBackingStore()->set('allowUserDeleteMessages', $value);
     }
 
     /**
      * Sets the allowUserEditMessages property value. If set to true, users can edit their messages.
      *  @param bool|null $value Value to set for the allowUserEditMessages property.
     */
-    public function setAllowUserEditMessages(?bool $value ): void {
-        $this->allowUserEditMessages = $value;
+    public function setAllowUserEditMessages(?bool $value): void {
+        $this->getBackingStore()->set('allowUserEditMessages', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

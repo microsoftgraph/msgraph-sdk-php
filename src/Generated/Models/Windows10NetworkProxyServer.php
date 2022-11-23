@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable 
+class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $address Address to the proxy server. Specify an address in the format [':']
-    */
-    private ?string $address = null;
-    
-    /**
-     * @var array<string>|null $exceptions Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
-    */
-    private ?array $exceptions = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var bool|null $useForLocalAddresses Specifies whether the proxy server should be used for local (intranet) addresses.
-    */
-    private ?bool $useForLocalAddresses = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new windows10NetworkProxyServer and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.windows10NetworkProxyServer');
     }
 
     /**
@@ -55,8 +38,8 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +47,15 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAddress(): ?string {
-        return $this->address;
+        return $this->getBackingStore()->get('address');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +63,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getExceptions(): ?array {
-        return $this->exceptions;
+        return $this->getBackingStore()->get('exceptions');
     }
 
     /**
@@ -94,7 +85,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +93,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getUseForLocalAddresses(): ?bool {
-        return $this->useForLocalAddresses;
+        return $this->getBackingStore()->get('useForLocalAddresses');
     }
 
     /**
@@ -110,51 +101,59 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('address', $this->address);
-        $writer->writeCollectionOfPrimitiveValues('exceptions', $this->exceptions);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeBooleanValue('useForLocalAddresses', $this->useForLocalAddresses);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('address', $this->getAddress());
+        $writer->writeCollectionOfPrimitiveValues('exceptions', $this->getExceptions());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeBooleanValue('useForLocalAddresses', $this->getUseForLocalAddresses());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
      *  @param string|null $value Value to set for the address property.
     */
-    public function setAddress(?string $value ): void {
-        $this->address = $value;
+    public function setAddress(?string $value): void {
+        $this->getBackingStore()->set('address', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
      *  @param array<string>|null $value Value to set for the exceptions property.
     */
-    public function setExceptions(?array $value ): void {
-        $this->exceptions = $value;
+    public function setExceptions(?array $value): void {
+        $this->getBackingStore()->set('exceptions', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
      *  @param bool|null $value Value to set for the useForLocalAddresses property.
     */
-    public function setUseForLocalAddresses(?bool $value ): void {
-        $this->useForLocalAddresses = $value;
+    public function setUseForLocalAddresses(?bool $value): void {
+        $this->getBackingStore()->set('useForLocalAddresses', $value);
     }
 
 }

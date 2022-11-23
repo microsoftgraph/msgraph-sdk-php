@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOffItem extends ScheduleEntity implements Parsable 
 {
     /**
-     * @var string|null $timeOffReasonId ID of the timeOffReason for this timeOffItem. Required.
-    */
-    private ?string $timeOffReasonId = null;
-    
-    /**
      * Instantiates a new TimeOffItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.timeOffItem');
     }
 
     /**
@@ -46,7 +40,7 @@ class TimeOffItem extends ScheduleEntity implements Parsable
      * @return string|null
     */
     public function getTimeOffReasonId(): ?string {
-        return $this->timeOffReasonId;
+        return $this->getBackingStore()->get('timeOffReasonId');
     }
 
     /**
@@ -55,15 +49,15 @@ class TimeOffItem extends ScheduleEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('timeOffReasonId', $this->timeOffReasonId);
+        $writer->writeStringValue('timeOffReasonId', $this->getTimeOffReasonId());
     }
 
     /**
      * Sets the timeOffReasonId property value. ID of the timeOffReason for this timeOffItem. Required.
      *  @param string|null $value Value to set for the timeOffReasonId property.
     */
-    public function setTimeOffReasonId(?string $value ): void {
-        $this->timeOffReasonId = $value;
+    public function setTimeOffReasonId(?string $value): void {
+        $this->getBackingStore()->set('timeOffReasonId', $value);
     }
 
 }

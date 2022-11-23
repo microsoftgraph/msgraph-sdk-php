@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceHostedMediaConfig extends MediaConfig implements Parsable 
 {
     /**
-     * @var array<MediaInfo>|null $preFetchMedia The list of media to pre-fetch.
-    */
-    private ?array $preFetchMedia = null;
-    
-    /**
      * Instantiates a new ServiceHostedMediaConfig and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class ServiceHostedMediaConfig extends MediaConfig implements Parsable
      * @return array<MediaInfo>|null
     */
     public function getPreFetchMedia(): ?array {
-        return $this->preFetchMedia;
+        return $this->getBackingStore()->get('preFetchMedia');
     }
 
     /**
@@ -55,15 +50,15 @@ class ServiceHostedMediaConfig extends MediaConfig implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('preFetchMedia', $this->preFetchMedia);
+        $writer->writeCollectionOfObjectValues('preFetchMedia', $this->getPreFetchMedia());
     }
 
     /**
      * Sets the preFetchMedia property value. The list of media to pre-fetch.
      *  @param array<MediaInfo>|null $value Value to set for the preFetchMedia property.
     */
-    public function setPreFetchMedia(?array $value ): void {
-        $this->preFetchMedia = $value;
+    public function setPreFetchMedia(?array $value): void {
+        $this->getBackingStore()->set('preFetchMedia', $value);
     }
 
 }

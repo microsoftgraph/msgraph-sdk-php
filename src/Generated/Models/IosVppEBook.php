@@ -9,46 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppEBook extends ManagedEBook implements Parsable 
 {
     /**
-     * @var string|null $appleId The Apple ID associated with Vpp token.
-    */
-    private ?string $appleId = null;
-    
-    /**
-     * @var array<string>|null $genres Genres.
-    */
-    private ?array $genres = null;
-    
-    /**
-     * @var string|null $language Language.
-    */
-    private ?string $language = null;
-    
-    /**
-     * @var string|null $seller Seller.
-    */
-    private ?string $seller = null;
-    
-    /**
-     * @var int|null $totalLicenseCount Total license count.
-    */
-    private ?int $totalLicenseCount = null;
-    
-    /**
-     * @var int|null $usedLicenseCount Used license count.
-    */
-    private ?int $usedLicenseCount = null;
-    
-    /**
-     * @var string|null $vppOrganizationName The Vpp token's organization name.
-    */
-    private ?string $vppOrganizationName = null;
-    
-    /**
-     * @var string|null $vppTokenId The Vpp token ID.
-    */
-    private ?string $vppTokenId = null;
-    
-    /**
      * Instantiates a new IosVppEBook and sets the default values.
     */
     public function __construct() {
@@ -70,7 +30,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getAppleId(): ?string {
-        return $this->appleId;
+        return $this->getBackingStore()->get('appleId');
     }
 
     /**
@@ -96,7 +56,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return array<string>|null
     */
     public function getGenres(): ?array {
-        return $this->genres;
+        return $this->getBackingStore()->get('genres');
     }
 
     /**
@@ -104,7 +64,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getLanguage(): ?string {
-        return $this->language;
+        return $this->getBackingStore()->get('language');
     }
 
     /**
@@ -112,7 +72,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getSeller(): ?string {
-        return $this->seller;
+        return $this->getBackingStore()->get('seller');
     }
 
     /**
@@ -120,7 +80,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return int|null
     */
     public function getTotalLicenseCount(): ?int {
-        return $this->totalLicenseCount;
+        return $this->getBackingStore()->get('totalLicenseCount');
     }
 
     /**
@@ -128,7 +88,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return int|null
     */
     public function getUsedLicenseCount(): ?int {
-        return $this->usedLicenseCount;
+        return $this->getBackingStore()->get('usedLicenseCount');
     }
 
     /**
@@ -136,7 +96,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getVppOrganizationName(): ?string {
-        return $this->vppOrganizationName;
+        return $this->getBackingStore()->get('vppOrganizationName');
     }
 
     /**
@@ -144,7 +104,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getVppTokenId(): ?string {
-        return $this->vppTokenId;
+        return $this->getBackingStore()->get('vppTokenId');
     }
 
     /**
@@ -153,78 +113,78 @@ class IosVppEBook extends ManagedEBook implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appleId', $this->appleId);
-        $writer->writeCollectionOfPrimitiveValues('genres', $this->genres);
-        $writer->writeStringValue('language', $this->language);
-        $writer->writeStringValue('seller', $this->seller);
-        $writer->writeIntegerValue('totalLicenseCount', $this->totalLicenseCount);
-        $writer->writeIntegerValue('usedLicenseCount', $this->usedLicenseCount);
-        $writer->writeStringValue('vppOrganizationName', $this->vppOrganizationName);
-        $writer->writeStringValue('vppTokenId', $this->vppTokenId);
+        $writer->writeStringValue('appleId', $this->getAppleId());
+        $writer->writeCollectionOfPrimitiveValues('genres', $this->getGenres());
+        $writer->writeStringValue('language', $this->getLanguage());
+        $writer->writeStringValue('seller', $this->getSeller());
+        $writer->writeIntegerValue('totalLicenseCount', $this->getTotalLicenseCount());
+        $writer->writeIntegerValue('usedLicenseCount', $this->getUsedLicenseCount());
+        $writer->writeStringValue('vppOrganizationName', $this->getVppOrganizationName());
+        $writer->writeStringValue('vppTokenId', $this->getVppTokenId());
     }
 
     /**
      * Sets the appleId property value. The Apple ID associated with Vpp token.
      *  @param string|null $value Value to set for the appleId property.
     */
-    public function setAppleId(?string $value ): void {
-        $this->appleId = $value;
+    public function setAppleId(?string $value): void {
+        $this->getBackingStore()->set('appleId', $value);
     }
 
     /**
      * Sets the genres property value. Genres.
      *  @param array<string>|null $value Value to set for the genres property.
     */
-    public function setGenres(?array $value ): void {
-        $this->genres = $value;
+    public function setGenres(?array $value): void {
+        $this->getBackingStore()->set('genres', $value);
     }
 
     /**
      * Sets the language property value. Language.
      *  @param string|null $value Value to set for the language property.
     */
-    public function setLanguage(?string $value ): void {
-        $this->language = $value;
+    public function setLanguage(?string $value): void {
+        $this->getBackingStore()->set('language', $value);
     }
 
     /**
      * Sets the seller property value. Seller.
      *  @param string|null $value Value to set for the seller property.
     */
-    public function setSeller(?string $value ): void {
-        $this->seller = $value;
+    public function setSeller(?string $value): void {
+        $this->getBackingStore()->set('seller', $value);
     }
 
     /**
      * Sets the totalLicenseCount property value. Total license count.
      *  @param int|null $value Value to set for the totalLicenseCount property.
     */
-    public function setTotalLicenseCount(?int $value ): void {
-        $this->totalLicenseCount = $value;
+    public function setTotalLicenseCount(?int $value): void {
+        $this->getBackingStore()->set('totalLicenseCount', $value);
     }
 
     /**
      * Sets the usedLicenseCount property value. Used license count.
      *  @param int|null $value Value to set for the usedLicenseCount property.
     */
-    public function setUsedLicenseCount(?int $value ): void {
-        $this->usedLicenseCount = $value;
+    public function setUsedLicenseCount(?int $value): void {
+        $this->getBackingStore()->set('usedLicenseCount', $value);
     }
 
     /**
      * Sets the vppOrganizationName property value. The Vpp token's organization name.
      *  @param string|null $value Value to set for the vppOrganizationName property.
     */
-    public function setVppOrganizationName(?string $value ): void {
-        $this->vppOrganizationName = $value;
+    public function setVppOrganizationName(?string $value): void {
+        $this->getBackingStore()->set('vppOrganizationName', $value);
     }
 
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
      *  @param string|null $value Value to set for the vppTokenId property.
     */
-    public function setVppTokenId(?string $value ): void {
-        $this->vppTokenId = $value;
+    public function setVppTokenId(?string $value): void {
+        $this->getBackingStore()->set('vppTokenId', $value);
     }
 
 }

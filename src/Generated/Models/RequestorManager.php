@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RequestorManager extends SubjectSet implements Parsable 
 {
     /**
-     * @var int|null $managerLevel The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
-    */
-    private ?int $managerLevel = null;
-    
-    /**
      * Instantiates a new RequestorManager and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class RequestorManager extends SubjectSet implements Parsable
      * @return int|null
     */
     public function getManagerLevel(): ?int {
-        return $this->managerLevel;
+        return $this->getBackingStore()->get('managerLevel');
     }
 
     /**
@@ -55,15 +50,15 @@ class RequestorManager extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('managerLevel', $this->managerLevel);
+        $writer->writeIntegerValue('managerLevel', $this->getManagerLevel());
     }
 
     /**
      * Sets the managerLevel property value. The hierarchical level of the manager with respect to the requestor. For example, the direct manager of a requestor would have a managerLevel of 1, while the manager of the requestor's manager would have a managerLevel of 2. Default value for managerLevel is 1. Possible values for this property range from 1 to 2.
      *  @param int|null $value Value to set for the managerLevel property.
     */
-    public function setManagerLevel(?int $value ): void {
-        $this->managerLevel = $value;
+    public function setManagerLevel(?int $value): void {
+        $this->getBackingStore()->set('managerLevel', $value);
     }
 
 }

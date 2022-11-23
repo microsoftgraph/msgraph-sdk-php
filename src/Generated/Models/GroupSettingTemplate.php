@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupSettingTemplate extends DirectoryObject implements Parsable 
 {
     /**
-     * @var string|null $description Description of the template.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var array<SettingTemplateValue>|null $values Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
-    */
-    private ?array $values = null;
-    
-    /**
      * Instantiates a new GroupSettingTemplate and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -53,7 +38,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +59,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
      * @return array<SettingTemplateValue>|null
     */
     public function getValues(): ?array {
-        return $this->values;
+        return $this->getBackingStore()->get('values');
     }
 
     /**
@@ -83,33 +68,33 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeCollectionOfObjectValues('values', $this->values);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('values', $this->getValues());
     }
 
     /**
      * Sets the description property value. Description of the template.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      *  @param array<SettingTemplateValue>|null $value Value to set for the values property.
     */
-    public function setValues(?array $value ): void {
-        $this->values = $value;
+    public function setValues(?array $value): void {
+        $this->getBackingStore()->set('values', $value);
     }
 
 }

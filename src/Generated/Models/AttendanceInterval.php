@@ -7,40 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AttendanceInterval implements AdditionalDataHolder, Parsable 
+class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $durationInSeconds Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-    */
-    private ?int $durationInSeconds = null;
-    
-    /**
-     * @var DateTime|null $joinDateTime The time the attendee joined in UTC.
-    */
-    private ?DateTime $joinDateTime = null;
-    
-    /**
-     * @var DateTime|null $leaveDateTime The time the attendee left in UTC.
-    */
-    private ?DateTime $leaveDateTime = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new attendanceInterval and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.attendanceInterval');
     }
 
     /**
@@ -56,8 +39,16 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -65,7 +56,7 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getDurationInSeconds(): ?int {
-        return $this->durationInSeconds;
+        return $this->getBackingStore()->get('durationInSeconds');
     }
 
     /**
@@ -87,7 +78,7 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getJoinDateTime(): ?DateTime {
-        return $this->joinDateTime;
+        return $this->getBackingStore()->get('joinDateTime');
     }
 
     /**
@@ -95,7 +86,7 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getLeaveDateTime(): ?DateTime {
-        return $this->leaveDateTime;
+        return $this->getBackingStore()->get('leaveDateTime');
     }
 
     /**
@@ -103,7 +94,7 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -111,51 +102,59 @@ class AttendanceInterval implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('durationInSeconds', $this->durationInSeconds);
-        $writer->writeDateTimeValue('joinDateTime', $this->joinDateTime);
-        $writer->writeDateTimeValue('leaveDateTime', $this->leaveDateTime);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('durationInSeconds', $this->getDurationInSeconds());
+        $writer->writeDateTimeValue('joinDateTime', $this->getJoinDateTime());
+        $writer->writeDateTimeValue('leaveDateTime', $this->getLeaveDateTime());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
      *  @param int|null $value Value to set for the durationInSeconds property.
     */
-    public function setDurationInSeconds(?int $value ): void {
-        $this->durationInSeconds = $value;
+    public function setDurationInSeconds(?int $value): void {
+        $this->getBackingStore()->set('durationInSeconds', $value);
     }
 
     /**
      * Sets the joinDateTime property value. The time the attendee joined in UTC.
      *  @param DateTime|null $value Value to set for the joinDateTime property.
     */
-    public function setJoinDateTime(?DateTime $value ): void {
-        $this->joinDateTime = $value;
+    public function setJoinDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('joinDateTime', $value);
     }
 
     /**
      * Sets the leaveDateTime property value. The time the attendee left in UTC.
      *  @param DateTime|null $value Value to set for the leaveDateTime property.
     */
-    public function setLeaveDateTime(?DateTime $value ): void {
-        $this->leaveDateTime = $value;
+    public function setLeaveDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('leaveDateTime', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

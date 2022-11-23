@@ -7,53 +7,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class CreatePostRequestBody implements AdditionalDataHolder, Parsable 
+class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var PrintCertificateSigningRequest|null $certificateSigningRequest The certificateSigningRequest property
-    */
-    private ?PrintCertificateSigningRequest $certificateSigningRequest = null;
-    
-    /**
-     * @var string|null $connectorId The connectorId property
-    */
-    private ?string $connectorId = null;
-    
-    /**
-     * @var string|null $displayName The displayName property
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $hasPhysicalDevice The hasPhysicalDevice property
-    */
-    private ?bool $hasPhysicalDevice = null;
-    
-    /**
-     * @var string|null $manufacturer The manufacturer property
-    */
-    private ?string $manufacturer = null;
-    
-    /**
-     * @var string|null $model The model property
-    */
-    private ?string $model = null;
-    
-    /**
-     * @var string|null $physicalDeviceId The physicalDeviceId property
-    */
-    private ?string $physicalDeviceId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new createPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -70,8 +39,16 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +56,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return PrintCertificateSigningRequest|null
     */
     public function getCertificateSigningRequest(): ?PrintCertificateSigningRequest {
-        return $this->certificateSigningRequest;
+        return $this->getBackingStore()->get('certificateSigningRequest');
     }
 
     /**
@@ -87,7 +64,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getConnectorId(): ?string {
-        return $this->connectorId;
+        return $this->getBackingStore()->get('connectorId');
     }
 
     /**
@@ -95,7 +72,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -120,7 +97,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
-        return $this->hasPhysicalDevice;
+        return $this->getBackingStore()->get('hasPhysicalDevice');
     }
 
     /**
@@ -128,7 +105,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getManufacturer(): ?string {
-        return $this->manufacturer;
+        return $this->getBackingStore()->get('manufacturer');
     }
 
     /**
@@ -136,7 +113,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getModel(): ?string {
-        return $this->model;
+        return $this->getBackingStore()->get('model');
     }
 
     /**
@@ -144,7 +121,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPhysicalDeviceId(): ?string {
-        return $this->physicalDeviceId;
+        return $this->getBackingStore()->get('physicalDeviceId');
     }
 
     /**
@@ -152,78 +129,86 @@ class CreatePostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('certificateSigningRequest', $this->certificateSigningRequest);
-        $writer->writeStringValue('connectorId', $this->connectorId);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('hasPhysicalDevice', $this->hasPhysicalDevice);
-        $writer->writeStringValue('manufacturer', $this->manufacturer);
-        $writer->writeStringValue('model', $this->model);
-        $writer->writeStringValue('physicalDeviceId', $this->physicalDeviceId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('certificateSigningRequest', $this->getCertificateSigningRequest());
+        $writer->writeStringValue('connectorId', $this->getConnectorId());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('hasPhysicalDevice', $this->getHasPhysicalDevice());
+        $writer->writeStringValue('manufacturer', $this->getManufacturer());
+        $writer->writeStringValue('model', $this->getModel());
+        $writer->writeStringValue('physicalDeviceId', $this->getPhysicalDeviceId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the certificateSigningRequest property value. The certificateSigningRequest property
      *  @param PrintCertificateSigningRequest|null $value Value to set for the certificateSigningRequest property.
     */
-    public function setCertificateSigningRequest(?PrintCertificateSigningRequest $value ): void {
-        $this->certificateSigningRequest = $value;
+    public function setCertificateSigningRequest(?PrintCertificateSigningRequest $value): void {
+        $this->getBackingStore()->set('certificateSigningRequest', $value);
     }
 
     /**
      * Sets the connectorId property value. The connectorId property
      *  @param string|null $value Value to set for the connectorId property.
     */
-    public function setConnectorId(?string $value ): void {
-        $this->connectorId = $value;
+    public function setConnectorId(?string $value): void {
+        $this->getBackingStore()->set('connectorId', $value);
     }
 
     /**
      * Sets the displayName property value. The displayName property
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
      *  @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
-    public function setHasPhysicalDevice(?bool $value ): void {
-        $this->hasPhysicalDevice = $value;
+    public function setHasPhysicalDevice(?bool $value): void {
+        $this->getBackingStore()->set('hasPhysicalDevice', $value);
     }
 
     /**
      * Sets the manufacturer property value. The manufacturer property
      *  @param string|null $value Value to set for the manufacturer property.
     */
-    public function setManufacturer(?string $value ): void {
-        $this->manufacturer = $value;
+    public function setManufacturer(?string $value): void {
+        $this->getBackingStore()->set('manufacturer', $value);
     }
 
     /**
      * Sets the model property value. The model property
      *  @param string|null $value Value to set for the model property.
     */
-    public function setModel(?string $value ): void {
-        $this->model = $value;
+    public function setModel(?string $value): void {
+        $this->getBackingStore()->set('model', $value);
     }
 
     /**
      * Sets the physicalDeviceId property value. The physicalDeviceId property
      *  @param string|null $value Value to set for the physicalDeviceId property.
     */
-    public function setPhysicalDeviceId(?string $value ): void {
-        $this->physicalDeviceId = $value;
+    public function setPhysicalDeviceId(?string $value): void {
+        $this->getBackingStore()->set('physicalDeviceId', $value);
     }
 
 }

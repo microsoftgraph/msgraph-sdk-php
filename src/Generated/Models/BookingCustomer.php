@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCustomer extends BookingCustomerBase implements Parsable 
 {
     /**
-     * @var array<PhysicalAddress>|null $addresses Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
-    */
-    private ?array $addresses = null;
-    
-    /**
-     * @var string|null $displayName The name of the customer.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $emailAddress The SMTP address of the customer.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var array<Phone>|null $phones Phone numbers associated with the customer, including home, business and mobile numbers.
-    */
-    private ?array $phones = null;
-    
-    /**
      * Instantiates a new BookingCustomer and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
      * @return array<PhysicalAddress>|null
     */
     public function getAddresses(): ?array {
-        return $this->addresses;
+        return $this->getBackingStore()->get('addresses');
     }
 
     /**
@@ -58,7 +38,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -66,7 +46,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -88,7 +68,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
      * @return array<Phone>|null
     */
     public function getPhones(): ?array {
-        return $this->phones;
+        return $this->getBackingStore()->get('phones');
     }
 
     /**
@@ -97,42 +77,42 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('addresses', $this->addresses);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeCollectionOfObjectValues('phones', $this->phones);
+        $writer->writeCollectionOfObjectValues('addresses', $this->getAddresses());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeCollectionOfObjectValues('phones', $this->getPhones());
     }
 
     /**
      * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
      *  @param array<PhysicalAddress>|null $value Value to set for the addresses property.
     */
-    public function setAddresses(?array $value ): void {
-        $this->addresses = $value;
+    public function setAddresses(?array $value): void {
+        $this->getBackingStore()->set('addresses', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the customer.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the emailAddress property value. The SMTP address of the customer.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      *  @param array<Phone>|null $value Value to set for the phones property.
     */
-    public function setPhones(?array $value ): void {
-        $this->phones = $value;
+    public function setPhones(?array $value): void {
+        $this->getBackingStore()->set('phones', $value);
     }
 
 }

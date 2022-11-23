@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, Parsable 
+class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<X509CertificateRule>|null $rules Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-    */
-    private ?array $rules = null;
-    
-    /**
-     * @var X509CertificateAuthenticationMode|null $x509CertificateAuthenticationDefaultMode The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-    */
-    private ?X509CertificateAuthenticationMode $x509CertificateAuthenticationDefaultMode = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new x509CertificateAuthenticationModeConfiguration and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.x509CertificateAuthenticationModeConfiguration');
     }
 
     /**
@@ -50,8 +38,16 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +68,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -80,7 +76,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
      * @return array<X509CertificateRule>|null
     */
     public function getRules(): ?array {
-        return $this->rules;
+        return $this->getBackingStore()->get('rules');
     }
 
     /**
@@ -88,7 +84,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
      * @return X509CertificateAuthenticationMode|null
     */
     public function getX509CertificateAuthenticationDefaultMode(): ?X509CertificateAuthenticationMode {
-        return $this->x509CertificateAuthenticationDefaultMode;
+        return $this->getBackingStore()->get('x509CertificateAuthenticationDefaultMode');
     }
 
     /**
@@ -96,42 +92,50 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('rules', $this->rules);
-        $writer->writeEnumValue('x509CertificateAuthenticationDefaultMode', $this->x509CertificateAuthenticationDefaultMode);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('rules', $this->getRules());
+        $writer->writeEnumValue('x509CertificateAuthenticationDefaultMode', $this->getX509CertificateAuthenticationDefaultMode());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      *  @param array<X509CertificateRule>|null $value Value to set for the rules property.
     */
-    public function setRules(?array $value ): void {
-        $this->rules = $value;
+    public function setRules(?array $value): void {
+        $this->getBackingStore()->set('rules', $value);
     }
 
     /**
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      *  @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationDefaultMode property.
     */
-    public function setX509CertificateAuthenticationDefaultMode(?X509CertificateAuthenticationMode $value ): void {
-        $this->x509CertificateAuthenticationDefaultMode = $value;
+    public function setX509CertificateAuthenticationDefaultMode(?X509CertificateAuthenticationMode $value): void {
+        $this->getBackingStore()->set('x509CertificateAuthenticationDefaultMode', $value);
     }
 
 }

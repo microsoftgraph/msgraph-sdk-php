@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * @var string|null $license Edition Upgrade License File Content.
-    */
-    private ?string $license = null;
-    
-    /**
-     * @var EditionUpgradeLicenseType|null $licenseType Edition Upgrade License type
-    */
-    private ?EditionUpgradeLicenseType $licenseType = null;
-    
-    /**
-     * @var string|null $productKey Edition Upgrade Product Key.
-    */
-    private ?string $productKey = null;
-    
-    /**
-     * @var Windows10EditionType|null $targetEdition Windows 10 Edition type.
-    */
-    private ?Windows10EditionType $targetEdition = null;
-    
-    /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return string|null
     */
     public function getLicense(): ?string {
-        return $this->license;
+        return $this->getBackingStore()->get('license');
     }
 
     /**
@@ -72,7 +52,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return EditionUpgradeLicenseType|null
     */
     public function getLicenseType(): ?EditionUpgradeLicenseType {
-        return $this->licenseType;
+        return $this->getBackingStore()->get('licenseType');
     }
 
     /**
@@ -80,7 +60,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return string|null
     */
     public function getProductKey(): ?string {
-        return $this->productKey;
+        return $this->getBackingStore()->get('productKey');
     }
 
     /**
@@ -88,7 +68,7 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
      * @return Windows10EditionType|null
     */
     public function getTargetEdition(): ?Windows10EditionType {
-        return $this->targetEdition;
+        return $this->getBackingStore()->get('targetEdition');
     }
 
     /**
@@ -97,42 +77,42 @@ class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('license', $this->license);
-        $writer->writeEnumValue('licenseType', $this->licenseType);
-        $writer->writeStringValue('productKey', $this->productKey);
-        $writer->writeEnumValue('targetEdition', $this->targetEdition);
+        $writer->writeStringValue('license', $this->getLicense());
+        $writer->writeEnumValue('licenseType', $this->getLicenseType());
+        $writer->writeStringValue('productKey', $this->getProductKey());
+        $writer->writeEnumValue('targetEdition', $this->getTargetEdition());
     }
 
     /**
      * Sets the license property value. Edition Upgrade License File Content.
      *  @param string|null $value Value to set for the license property.
     */
-    public function setLicense(?string $value ): void {
-        $this->license = $value;
+    public function setLicense(?string $value): void {
+        $this->getBackingStore()->set('license', $value);
     }
 
     /**
      * Sets the licenseType property value. Edition Upgrade License type
      *  @param EditionUpgradeLicenseType|null $value Value to set for the licenseType property.
     */
-    public function setLicenseType(?EditionUpgradeLicenseType $value ): void {
-        $this->licenseType = $value;
+    public function setLicenseType(?EditionUpgradeLicenseType $value): void {
+        $this->getBackingStore()->set('licenseType', $value);
     }
 
     /**
      * Sets the productKey property value. Edition Upgrade Product Key.
      *  @param string|null $value Value to set for the productKey property.
     */
-    public function setProductKey(?string $value ): void {
-        $this->productKey = $value;
+    public function setProductKey(?string $value): void {
+        $this->getBackingStore()->set('productKey', $value);
     }
 
     /**
      * Sets the targetEdition property value. Windows 10 Edition type.
      *  @param Windows10EditionType|null $value Value to set for the targetEdition property.
     */
-    public function setTargetEdition(?Windows10EditionType $value ): void {
-        $this->targetEdition = $value;
+    public function setTargetEdition(?Windows10EditionType $value): void {
+        $this->getBackingStore()->set('targetEdition', $value);
     }
 
 }

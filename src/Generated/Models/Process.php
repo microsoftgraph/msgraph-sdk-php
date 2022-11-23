@@ -7,85 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Process implements AdditionalDataHolder, Parsable 
+class Process implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var string|null $accountName User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?string $accountName = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $commandLine The full process invocation commandline including all parameters.
-    */
-    private ?string $commandLine = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var FileHash|null $fileHash Complex type containing file hashes (cryptographic and location-sensitive).
-    */
-    private ?FileHash $fileHash = null;
-    
-    /**
-     * @var ProcessIntegrityLevel|null $integrityLevel The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-    */
-    private ?ProcessIntegrityLevel $integrityLevel = null;
-    
-    /**
-     * @var bool|null $isElevated True if the process is elevated.
-    */
-    private ?bool $isElevated = null;
-    
-    /**
-     * @var string|null $name The name of the process' Image file.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var DateTime|null $parentProcessCreatedDateTime DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-    */
-    private ?DateTime $parentProcessCreatedDateTime = null;
-    
-    /**
-     * @var int|null $parentProcessId The Process ID (PID) of the parent process.
-    */
-    private ?int $parentProcessId = null;
-    
-    /**
-     * @var string|null $parentProcessName The name of the image file of the parent process.
-    */
-    private ?string $parentProcessName = null;
-    
-    /**
-     * @var string|null $path Full path, including filename.
-    */
-    private ?string $path = null;
-    
-    /**
-     * @var int|null $processId The Process ID (PID) of the process.
-    */
-    private ?int $processId = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new process and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.process');
     }
 
     /**
@@ -102,15 +40,23 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAccountName(): ?string {
-        return $this->accountName;
+        return $this->getBackingStore()->get('accountName');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -118,7 +64,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getCommandLine(): ?string {
-        return $this->commandLine;
+        return $this->getBackingStore()->get('commandLine');
     }
 
     /**
@@ -126,7 +72,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -157,7 +103,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return FileHash|null
     */
     public function getFileHash(): ?FileHash {
-        return $this->fileHash;
+        return $this->getBackingStore()->get('fileHash');
     }
 
     /**
@@ -165,7 +111,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return ProcessIntegrityLevel|null
     */
     public function getIntegrityLevel(): ?ProcessIntegrityLevel {
-        return $this->integrityLevel;
+        return $this->getBackingStore()->get('integrityLevel');
     }
 
     /**
@@ -173,7 +119,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsElevated(): ?bool {
-        return $this->isElevated;
+        return $this->getBackingStore()->get('isElevated');
     }
 
     /**
@@ -181,7 +127,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -189,7 +135,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -197,7 +143,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getParentProcessCreatedDateTime(): ?DateTime {
-        return $this->parentProcessCreatedDateTime;
+        return $this->getBackingStore()->get('parentProcessCreatedDateTime');
     }
 
     /**
@@ -205,7 +151,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getParentProcessId(): ?int {
-        return $this->parentProcessId;
+        return $this->getBackingStore()->get('parentProcessId');
     }
 
     /**
@@ -213,7 +159,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getParentProcessName(): ?string {
-        return $this->parentProcessName;
+        return $this->getBackingStore()->get('parentProcessName');
     }
 
     /**
@@ -221,7 +167,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->path;
+        return $this->getBackingStore()->get('path');
     }
 
     /**
@@ -229,7 +175,7 @@ class Process implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getProcessId(): ?int {
-        return $this->processId;
+        return $this->getBackingStore()->get('processId');
     }
 
     /**
@@ -237,132 +183,140 @@ class Process implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('accountName', $this->accountName);
-        $writer->writeStringValue('commandLine', $this->commandLine);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('fileHash', $this->fileHash);
-        $writer->writeEnumValue('integrityLevel', $this->integrityLevel);
-        $writer->writeBooleanValue('isElevated', $this->isElevated);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeDateTimeValue('parentProcessCreatedDateTime', $this->parentProcessCreatedDateTime);
-        $writer->writeIntegerValue('parentProcessId', $this->parentProcessId);
-        $writer->writeStringValue('parentProcessName', $this->parentProcessName);
-        $writer->writeStringValue('path', $this->path);
-        $writer->writeIntegerValue('processId', $this->processId);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('accountName', $this->getAccountName());
+        $writer->writeStringValue('commandLine', $this->getCommandLine());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('fileHash', $this->getFileHash());
+        $writer->writeEnumValue('integrityLevel', $this->getIntegrityLevel());
+        $writer->writeBooleanValue('isElevated', $this->getIsElevated());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeDateTimeValue('parentProcessCreatedDateTime', $this->getParentProcessCreatedDateTime());
+        $writer->writeIntegerValue('parentProcessId', $this->getParentProcessId());
+        $writer->writeStringValue('parentProcessName', $this->getParentProcessName());
+        $writer->writeStringValue('path', $this->getPath());
+        $writer->writeIntegerValue('processId', $this->getProcessId());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
      *  @param string|null $value Value to set for the accountName property.
     */
-    public function setAccountName(?string $value ): void {
-        $this->accountName = $value;
+    public function setAccountName(?string $value): void {
+        $this->getBackingStore()->set('accountName', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the commandLine property value. The full process invocation commandline including all parameters.
      *  @param string|null $value Value to set for the commandLine property.
     */
-    public function setCommandLine(?string $value ): void {
-        $this->commandLine = $value;
+    public function setCommandLine(?string $value): void {
+        $this->getBackingStore()->set('commandLine', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
      *  @param FileHash|null $value Value to set for the fileHash property.
     */
-    public function setFileHash(?FileHash $value ): void {
-        $this->fileHash = $value;
+    public function setFileHash(?FileHash $value): void {
+        $this->getBackingStore()->set('fileHash', $value);
     }
 
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      *  @param ProcessIntegrityLevel|null $value Value to set for the integrityLevel property.
     */
-    public function setIntegrityLevel(?ProcessIntegrityLevel $value ): void {
-        $this->integrityLevel = $value;
+    public function setIntegrityLevel(?ProcessIntegrityLevel $value): void {
+        $this->getBackingStore()->set('integrityLevel', $value);
     }
 
     /**
      * Sets the isElevated property value. True if the process is elevated.
      *  @param bool|null $value Value to set for the isElevated property.
     */
-    public function setIsElevated(?bool $value ): void {
-        $this->isElevated = $value;
+    public function setIsElevated(?bool $value): void {
+        $this->getBackingStore()->set('isElevated', $value);
     }
 
     /**
      * Sets the name property value. The name of the process' Image file.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      *  @param DateTime|null $value Value to set for the parentProcessCreatedDateTime property.
     */
-    public function setParentProcessCreatedDateTime(?DateTime $value ): void {
-        $this->parentProcessCreatedDateTime = $value;
+    public function setParentProcessCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('parentProcessCreatedDateTime', $value);
     }
 
     /**
      * Sets the parentProcessId property value. The Process ID (PID) of the parent process.
      *  @param int|null $value Value to set for the parentProcessId property.
     */
-    public function setParentProcessId(?int $value ): void {
-        $this->parentProcessId = $value;
+    public function setParentProcessId(?int $value): void {
+        $this->getBackingStore()->set('parentProcessId', $value);
     }
 
     /**
      * Sets the parentProcessName property value. The name of the image file of the parent process.
      *  @param string|null $value Value to set for the parentProcessName property.
     */
-    public function setParentProcessName(?string $value ): void {
-        $this->parentProcessName = $value;
+    public function setParentProcessName(?string $value): void {
+        $this->getBackingStore()->set('parentProcessName', $value);
     }
 
     /**
      * Sets the path property value. Full path, including filename.
      *  @param string|null $value Value to set for the path property.
     */
-    public function setPath(?string $value ): void {
-        $this->path = $value;
+    public function setPath(?string $value): void {
+        $this->getBackingStore()->set('path', $value);
     }
 
     /**
      * Sets the processId property value. The Process ID (PID) of the process.
      *  @param int|null $value Value to set for the processId property.
     */
-    public function setProcessId(?int $value ): void {
-        $this->processId = $value;
+    public function setProcessId(?int $value): void {
+        $this->getBackingStore()->set('processId', $value);
     }
 
 }

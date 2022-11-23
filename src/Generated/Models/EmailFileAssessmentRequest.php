@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Parsable 
 {
     /**
-     * @var string|null $contentData Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
-    */
-    private ?string $contentData = null;
-    
-    /**
-     * @var MailDestinationRoutingReason|null $destinationRoutingReason The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-    */
-    private ?MailDestinationRoutingReason $destinationRoutingReason = null;
-    
-    /**
-     * @var string|null $recipientEmail The mail recipient whose policies are used to assess the mail.
-    */
-    private ?string $recipientEmail = null;
-    
-    /**
      * Instantiates a new EmailFileAssessmentRequest and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
      * @return string|null
     */
     public function getContentData(): ?string {
-        return $this->contentData;
+        return $this->getBackingStore()->get('contentData');
     }
 
     /**
@@ -53,7 +38,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
      * @return MailDestinationRoutingReason|null
     */
     public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
-        return $this->destinationRoutingReason;
+        return $this->getBackingStore()->get('destinationRoutingReason');
     }
 
     /**
@@ -74,7 +59,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
      * @return string|null
     */
     public function getRecipientEmail(): ?string {
-        return $this->recipientEmail;
+        return $this->getBackingStore()->get('recipientEmail');
     }
 
     /**
@@ -83,33 +68,33 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('contentData', $this->contentData);
-        $writer->writeEnumValue('destinationRoutingReason', $this->destinationRoutingReason);
-        $writer->writeStringValue('recipientEmail', $this->recipientEmail);
+        $writer->writeStringValue('contentData', $this->getContentData());
+        $writer->writeEnumValue('destinationRoutingReason', $this->getDestinationRoutingReason());
+        $writer->writeStringValue('recipientEmail', $this->getRecipientEmail());
     }
 
     /**
      * Sets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
      *  @param string|null $value Value to set for the contentData property.
     */
-    public function setContentData(?string $value ): void {
-        $this->contentData = $value;
+    public function setContentData(?string $value): void {
+        $this->getBackingStore()->set('contentData', $value);
     }
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      *  @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
-    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value ): void {
-        $this->destinationRoutingReason = $value;
+    public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
+        $this->getBackingStore()->set('destinationRoutingReason', $value);
     }
 
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
      *  @param string|null $value Value to set for the recipientEmail property.
     */
-    public function setRecipientEmail(?string $value ): void {
-        $this->recipientEmail = $value;
+    public function setRecipientEmail(?string $value): void {
+        $this->getBackingStore()->set('recipientEmail', $value);
     }
 
 }

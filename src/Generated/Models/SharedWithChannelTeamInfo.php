@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharedWithChannelTeamInfo extends TeamInfo implements Parsable 
 {
     /**
-     * @var array<ConversationMember>|null $allowedMembers A collection of team members who have access to the shared channel.
-    */
-    private ?array $allowedMembers = null;
-    
-    /**
-     * @var bool|null $isHostTeam Indicates whether the team is the host of the channel.
-    */
-    private ?bool $isHostTeam = null;
-    
-    /**
      * Instantiates a new SharedWithChannelTeamInfo and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.sharedWithChannelTeamInfo');
     }
 
     /**
@@ -40,7 +29,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
      * @return array<ConversationMember>|null
     */
     public function getAllowedMembers(): ?array {
-        return $this->allowedMembers;
+        return $this->getBackingStore()->get('allowedMembers');
     }
 
     /**
@@ -60,7 +49,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
      * @return bool|null
     */
     public function getIsHostTeam(): ?bool {
-        return $this->isHostTeam;
+        return $this->getBackingStore()->get('isHostTeam');
     }
 
     /**
@@ -69,24 +58,24 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('allowedMembers', $this->allowedMembers);
-        $writer->writeBooleanValue('isHostTeam', $this->isHostTeam);
+        $writer->writeCollectionOfObjectValues('allowedMembers', $this->getAllowedMembers());
+        $writer->writeBooleanValue('isHostTeam', $this->getIsHostTeam());
     }
 
     /**
      * Sets the allowedMembers property value. A collection of team members who have access to the shared channel.
      *  @param array<ConversationMember>|null $value Value to set for the allowedMembers property.
     */
-    public function setAllowedMembers(?array $value ): void {
-        $this->allowedMembers = $value;
+    public function setAllowedMembers(?array $value): void {
+        $this->getBackingStore()->set('allowedMembers', $value);
     }
 
     /**
      * Sets the isHostTeam property value. Indicates whether the team is the host of the channel.
      *  @param bool|null $value Value to set for the isHostTeam property.
     */
-    public function setIsHostTeam(?bool $value ): void {
-        $this->isHostTeam = $value;
+    public function setIsHostTeam(?bool $value): void {
+        $this->getBackingStore()->set('isHostTeam', $value);
     }
 
 }

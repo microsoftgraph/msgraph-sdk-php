@@ -9,46 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable 
 {
     /**
-     * @var string|null $customerId The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-    */
-    private ?string $customerId = null;
-    
-    /**
-     * @var array<BookingQuestionAnswer>|null $customQuestionAnswers It consists of the list of custom questions and answers given by the customer as part of the appointment
-    */
-    private ?array $customQuestionAnswers = null;
-    
-    /**
-     * @var string|null $emailAddress The SMTP address of the bookingCustomer who is booking the appointment
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var Location|null $location Represents location information for the bookingCustomer who is booking the appointment.
-    */
-    private ?Location $location = null;
-    
-    /**
-     * @var string|null $name The customer's name.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $notes Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-    */
-    private ?string $notes = null;
-    
-    /**
-     * @var string|null $phone The customer's phone number.
-    */
-    private ?string $phone = null;
-    
-    /**
-     * @var string|null $timeZone The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-    */
-    private ?string $timeZone = null;
-    
-    /**
      * Instantiates a new BookingCustomerInformation and sets the default values.
     */
     public function __construct() {
@@ -70,7 +30,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getCustomerId(): ?string {
-        return $this->customerId;
+        return $this->getBackingStore()->get('customerId');
     }
 
     /**
@@ -78,7 +38,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return array<BookingQuestionAnswer>|null
     */
     public function getCustomQuestionAnswers(): ?array {
-        return $this->customQuestionAnswers;
+        return $this->getBackingStore()->get('customQuestionAnswers');
     }
 
     /**
@@ -86,7 +46,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -112,7 +72,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return Location|null
     */
     public function getLocation(): ?Location {
-        return $this->location;
+        return $this->getBackingStore()->get('location');
     }
 
     /**
@@ -120,7 +80,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -128,7 +88,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getNotes(): ?string {
-        return $this->notes;
+        return $this->getBackingStore()->get('notes');
     }
 
     /**
@@ -136,7 +96,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getPhone(): ?string {
-        return $this->phone;
+        return $this->getBackingStore()->get('phone');
     }
 
     /**
@@ -144,7 +104,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->timeZone;
+        return $this->getBackingStore()->get('timeZone');
     }
 
     /**
@@ -153,78 +113,78 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('customerId', $this->customerId);
-        $writer->writeCollectionOfObjectValues('customQuestionAnswers', $this->customQuestionAnswers);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeObjectValue('location', $this->location);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('notes', $this->notes);
-        $writer->writeStringValue('phone', $this->phone);
-        $writer->writeStringValue('timeZone', $this->timeZone);
+        $writer->writeStringValue('customerId', $this->getCustomerId());
+        $writer->writeCollectionOfObjectValues('customQuestionAnswers', $this->getCustomQuestionAnswers());
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeObjectValue('location', $this->getLocation());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('notes', $this->getNotes());
+        $writer->writeStringValue('phone', $this->getPhone());
+        $writer->writeStringValue('timeZone', $this->getTimeZone());
     }
 
     /**
      * Sets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
      *  @param string|null $value Value to set for the customerId property.
     */
-    public function setCustomerId(?string $value ): void {
-        $this->customerId = $value;
+    public function setCustomerId(?string $value): void {
+        $this->getBackingStore()->set('customerId', $value);
     }
 
     /**
      * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
      *  @param array<BookingQuestionAnswer>|null $value Value to set for the customQuestionAnswers property.
     */
-    public function setCustomQuestionAnswers(?array $value ): void {
-        $this->customQuestionAnswers = $value;
+    public function setCustomQuestionAnswers(?array $value): void {
+        $this->getBackingStore()->set('customQuestionAnswers', $value);
     }
 
     /**
      * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
      *  @param Location|null $value Value to set for the location property.
     */
-    public function setLocation(?Location $value ): void {
-        $this->location = $value;
+    public function setLocation(?Location $value): void {
+        $this->getBackingStore()->set('location', $value);
     }
 
     /**
      * Sets the name property value. The customer's name.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
      *  @param string|null $value Value to set for the notes property.
     */
-    public function setNotes(?string $value ): void {
-        $this->notes = $value;
+    public function setNotes(?string $value): void {
+        $this->getBackingStore()->set('notes', $value);
     }
 
     /**
      * Sets the phone property value. The customer's phone number.
      *  @param string|null $value Value to set for the phone property.
     */
-    public function setPhone(?string $value ): void {
-        $this->phone = $value;
+    public function setPhone(?string $value): void {
+        $this->getBackingStore()->set('phone', $value);
     }
 
     /**
      * Sets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      *  @param string|null $value Value to set for the timeZone property.
     */
-    public function setTimeZone(?string $value ): void {
-        $this->timeZone = $value;
+    public function setTimeZone(?string $value): void {
+        $this->getBackingStore()->set('timeZone', $value);
     }
 
 }

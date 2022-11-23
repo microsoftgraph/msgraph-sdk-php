@@ -9,41 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
     /**
-     * @var ManagedAppDataEncryptionType|null $appDataEncryptionType Represents the level to which app data is encrypted for managed apps
-    */
-    private ?ManagedAppDataEncryptionType $appDataEncryptionType = null;
-    
-    /**
-     * @var array<ManagedMobileApp>|null $apps List of apps to which the policy is deployed.
-    */
-    private ?array $apps = null;
-    
-    /**
-     * @var string|null $customBrowserProtocol A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-    */
-    private ?string $customBrowserProtocol = null;
-    
-    /**
-     * @var int|null $deployedAppCount Count of apps to which the current policy is deployed.
-    */
-    private ?int $deployedAppCount = null;
-    
-    /**
-     * @var ManagedAppPolicyDeploymentSummary|null $deploymentSummary Navigation property to deployment summary of the configuration.
-    */
-    private ?ManagedAppPolicyDeploymentSummary $deploymentSummary = null;
-    
-    /**
-     * @var bool|null $faceIdBlocked Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-    */
-    private ?bool $faceIdBlocked = null;
-    
-    /**
-     * @var string|null $minimumRequiredSdkVersion Versions less than the specified version will block the managed app from accessing company data.
-    */
-    private ?string $minimumRequiredSdkVersion = null;
-    
-    /**
      * Instantiates a new IosManagedAppProtection and sets the default values.
     */
     public function __construct() {
@@ -65,7 +30,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return ManagedAppDataEncryptionType|null
     */
     public function getAppDataEncryptionType(): ?ManagedAppDataEncryptionType {
-        return $this->appDataEncryptionType;
+        return $this->getBackingStore()->get('appDataEncryptionType');
     }
 
     /**
@@ -73,7 +38,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->apps;
+        return $this->getBackingStore()->get('apps');
     }
 
     /**
@@ -81,7 +46,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return string|null
     */
     public function getCustomBrowserProtocol(): ?string {
-        return $this->customBrowserProtocol;
+        return $this->getBackingStore()->get('customBrowserProtocol');
     }
 
     /**
@@ -89,7 +54,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->deployedAppCount;
+        return $this->getBackingStore()->get('deployedAppCount');
     }
 
     /**
@@ -97,7 +62,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->deploymentSummary;
+        return $this->getBackingStore()->get('deploymentSummary');
     }
 
     /**
@@ -105,7 +70,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return bool|null
     */
     public function getFaceIdBlocked(): ?bool {
-        return $this->faceIdBlocked;
+        return $this->getBackingStore()->get('faceIdBlocked');
     }
 
     /**
@@ -130,7 +95,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return string|null
     */
     public function getMinimumRequiredSdkVersion(): ?string {
-        return $this->minimumRequiredSdkVersion;
+        return $this->getBackingStore()->get('minimumRequiredSdkVersion');
     }
 
     /**
@@ -139,69 +104,69 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('appDataEncryptionType', $this->appDataEncryptionType);
-        $writer->writeCollectionOfObjectValues('apps', $this->apps);
-        $writer->writeStringValue('customBrowserProtocol', $this->customBrowserProtocol);
-        $writer->writeIntegerValue('deployedAppCount', $this->deployedAppCount);
-        $writer->writeObjectValue('deploymentSummary', $this->deploymentSummary);
-        $writer->writeBooleanValue('faceIdBlocked', $this->faceIdBlocked);
-        $writer->writeStringValue('minimumRequiredSdkVersion', $this->minimumRequiredSdkVersion);
+        $writer->writeEnumValue('appDataEncryptionType', $this->getAppDataEncryptionType());
+        $writer->writeCollectionOfObjectValues('apps', $this->getApps());
+        $writer->writeStringValue('customBrowserProtocol', $this->getCustomBrowserProtocol());
+        $writer->writeIntegerValue('deployedAppCount', $this->getDeployedAppCount());
+        $writer->writeObjectValue('deploymentSummary', $this->getDeploymentSummary());
+        $writer->writeBooleanValue('faceIdBlocked', $this->getFaceIdBlocked());
+        $writer->writeStringValue('minimumRequiredSdkVersion', $this->getMinimumRequiredSdkVersion());
     }
 
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      *  @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
     */
-    public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value ): void {
-        $this->appDataEncryptionType = $value;
+    public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value): void {
+        $this->getBackingStore()->set('appDataEncryptionType', $value);
     }
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
-    public function setApps(?array $value ): void {
-        $this->apps = $value;
+    public function setApps(?array $value): void {
+        $this->getBackingStore()->set('apps', $value);
     }
 
     /**
      * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      *  @param string|null $value Value to set for the customBrowserProtocol property.
     */
-    public function setCustomBrowserProtocol(?string $value ): void {
-        $this->customBrowserProtocol = $value;
+    public function setCustomBrowserProtocol(?string $value): void {
+        $this->getBackingStore()->set('customBrowserProtocol', $value);
     }
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      *  @param int|null $value Value to set for the deployedAppCount property.
     */
-    public function setDeployedAppCount(?int $value ): void {
-        $this->deployedAppCount = $value;
+    public function setDeployedAppCount(?int $value): void {
+        $this->getBackingStore()->set('deployedAppCount', $value);
     }
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
-    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value ): void {
-        $this->deploymentSummary = $value;
+    public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
+        $this->getBackingStore()->set('deploymentSummary', $value);
     }
 
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      *  @param bool|null $value Value to set for the faceIdBlocked property.
     */
-    public function setFaceIdBlocked(?bool $value ): void {
-        $this->faceIdBlocked = $value;
+    public function setFaceIdBlocked(?bool $value): void {
+        $this->getBackingStore()->set('faceIdBlocked', $value);
     }
 
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
      *  @param string|null $value Value to set for the minimumRequiredSdkVersion property.
     */
-    public function setMinimumRequiredSdkVersion(?string $value ): void {
-        $this->minimumRequiredSdkVersion = $value;
+    public function setMinimumRequiredSdkVersion(?string $value): void {
+        $this->getBackingStore()->set('minimumRequiredSdkVersion', $value);
     }
 
 }

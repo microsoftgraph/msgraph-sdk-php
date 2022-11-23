@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable 
+class MeetingTimeSuggestionsResult implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $emptySuggestionsReason A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
-    */
-    private ?string $emptySuggestionsReason = null;
-    
-    /**
-     * @var array<MeetingTimeSuggestion>|null $meetingTimeSuggestions An array of meeting suggestions.
-    */
-    private ?array $meetingTimeSuggestions = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.meetingTimeSuggestionsResult');
     }
 
     /**
@@ -50,8 +38,16 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -59,7 +55,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEmptySuggestionsReason(): ?string {
-        return $this->emptySuggestionsReason;
+        return $this->getBackingStore()->get('emptySuggestionsReason');
     }
 
     /**
@@ -80,7 +76,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @return array<MeetingTimeSuggestion>|null
     */
     public function getMeetingTimeSuggestions(): ?array {
-        return $this->meetingTimeSuggestions;
+        return $this->getBackingStore()->get('meetingTimeSuggestions');
     }
 
     /**
@@ -88,7 +84,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +92,50 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('emptySuggestionsReason', $this->emptySuggestionsReason);
-        $writer->writeCollectionOfObjectValues('meetingTimeSuggestions', $this->meetingTimeSuggestions);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('emptySuggestionsReason', $this->getEmptySuggestionsReason());
+        $writer->writeCollectionOfObjectValues('meetingTimeSuggestions', $this->getMeetingTimeSuggestions());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      *  @param string|null $value Value to set for the emptySuggestionsReason property.
     */
-    public function setEmptySuggestionsReason(?string $value ): void {
-        $this->emptySuggestionsReason = $value;
+    public function setEmptySuggestionsReason(?string $value): void {
+        $this->getBackingStore()->set('emptySuggestionsReason', $value);
     }
 
     /**
      * Sets the meetingTimeSuggestions property value. An array of meeting suggestions.
      *  @param array<MeetingTimeSuggestion>|null $value Value to set for the meetingTimeSuggestions property.
     */
-    public function setMeetingTimeSuggestions(?array $value ): void {
-        $this->meetingTimeSuggestions = $value;
+    public function setMeetingTimeSuggestions(?array $value): void {
+        $this->getBackingStore()->set('meetingTimeSuggestions', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

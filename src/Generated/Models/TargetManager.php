@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetManager extends SubjectSet implements Parsable 
 {
     /**
-     * @var int|null $managerLevel Manager level, between 1 and 4. The direct manager is 1.
-    */
-    private ?int $managerLevel = null;
-    
-    /**
      * Instantiates a new TargetManager and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class TargetManager extends SubjectSet implements Parsable
      * @return int|null
     */
     public function getManagerLevel(): ?int {
-        return $this->managerLevel;
+        return $this->getBackingStore()->get('managerLevel');
     }
 
     /**
@@ -55,15 +50,15 @@ class TargetManager extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('managerLevel', $this->managerLevel);
+        $writer->writeIntegerValue('managerLevel', $this->getManagerLevel());
     }
 
     /**
      * Sets the managerLevel property value. Manager level, between 1 and 4. The direct manager is 1.
      *  @param int|null $value Value to set for the managerLevel property.
     */
-    public function setManagerLevel(?int $value ): void {
-        $this->managerLevel = $value;
+    public function setManagerLevel(?int $value): void {
+        $this->getBackingStore()->set('managerLevel', $value);
     }
 
 }

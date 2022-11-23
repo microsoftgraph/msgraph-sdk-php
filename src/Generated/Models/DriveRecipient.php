@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class DriveRecipient implements AdditionalDataHolder, Parsable 
+class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $alias The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-    */
-    private ?string $alias = null;
-    
-    /**
-     * @var string|null $email The email address for the recipient, if the recipient has an associated email address.
-    */
-    private ?string $email = null;
-    
-    /**
-     * @var string|null $objectId The unique identifier for the recipient in the directory.
-    */
-    private ?string $objectId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new driveRecipient and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.driveRecipient');
     }
 
     /**
@@ -55,8 +38,8 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -64,7 +47,15 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAlias(): ?string {
-        return $this->alias;
+        return $this->getBackingStore()->get('alias');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -72,7 +63,7 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->email;
+        return $this->getBackingStore()->get('email');
     }
 
     /**
@@ -94,7 +85,7 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getObjectId(): ?string {
-        return $this->objectId;
+        return $this->getBackingStore()->get('objectId');
     }
 
     /**
@@ -102,7 +93,7 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -110,51 +101,59 @@ class DriveRecipient implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('alias', $this->alias);
-        $writer->writeStringValue('email', $this->email);
-        $writer->writeStringValue('objectId', $this->objectId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('alias', $this->getAlias());
+        $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeStringValue('objectId', $this->getObjectId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
      *  @param string|null $value Value to set for the alias property.
     */
-    public function setAlias(?string $value ): void {
-        $this->alias = $value;
+    public function setAlias(?string $value): void {
+        $this->getBackingStore()->set('alias', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the email property value. The email address for the recipient, if the recipient has an associated email address.
      *  @param string|null $value Value to set for the email property.
     */
-    public function setEmail(?string $value ): void {
-        $this->email = $value;
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
     /**
      * Sets the objectId property value. The unique identifier for the recipient in the directory.
      *  @param string|null $value Value to set for the objectId property.
     */
-    public function setObjectId(?string $value ): void {
-        $this->objectId = $value;
+    public function setObjectId(?string $value): void {
+        $this->getBackingStore()->set('objectId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

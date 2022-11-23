@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttendeeBase extends Recipient implements Parsable 
 {
     /**
-     * @var AttendeeType|null $type The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-    */
-    private ?AttendeeType $type = null;
-    
-    /**
      * Instantiates a new AttendeeBase and sets the default values.
     */
     public function __construct() {
@@ -53,7 +48,7 @@ class AttendeeBase extends Recipient implements Parsable
      * @return AttendeeType|null
     */
     public function getType(): ?AttendeeType {
-        return $this->type;
+        return $this->getBackingStore()->get('type');
     }
 
     /**
@@ -62,15 +57,15 @@ class AttendeeBase extends Recipient implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('type', $this->type);
+        $writer->writeEnumValue('type', $this->getType());
     }
 
     /**
      * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      *  @param AttendeeType|null $value Value to set for the type property.
     */
-    public function setType(?AttendeeType $value ): void {
-        $this->type = $value;
+    public function setType(?AttendeeType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

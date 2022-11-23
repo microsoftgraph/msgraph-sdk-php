@@ -10,31 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudCommunications extends Entity implements Parsable 
 {
     /**
-     * @var array<CallRecord>|null $callRecords The callRecords property
-    */
-    private ?array $callRecords = null;
-    
-    /**
-     * @var array<Call>|null $calls The calls property
-    */
-    private ?array $calls = null;
-    
-    /**
-     * @var array<OnlineMeeting>|null $onlineMeetings The onlineMeetings property
-    */
-    private ?array $onlineMeetings = null;
-    
-    /**
-     * @var array<Presence>|null $presences The presences property
-    */
-    private ?array $presences = null;
-    
-    /**
      * Instantiates a new CloudCommunications and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.cloudCommunications');
     }
 
     /**
@@ -51,7 +30,7 @@ class CloudCommunications extends Entity implements Parsable
      * @return array<CallRecord>|null
     */
     public function getCallRecords(): ?array {
-        return $this->callRecords;
+        return $this->getBackingStore()->get('callRecords');
     }
 
     /**
@@ -59,7 +38,7 @@ class CloudCommunications extends Entity implements Parsable
      * @return array<Call>|null
     */
     public function getCalls(): ?array {
-        return $this->calls;
+        return $this->getBackingStore()->get('calls');
     }
 
     /**
@@ -81,7 +60,7 @@ class CloudCommunications extends Entity implements Parsable
      * @return array<OnlineMeeting>|null
     */
     public function getOnlineMeetings(): ?array {
-        return $this->onlineMeetings;
+        return $this->getBackingStore()->get('onlineMeetings');
     }
 
     /**
@@ -89,7 +68,7 @@ class CloudCommunications extends Entity implements Parsable
      * @return array<Presence>|null
     */
     public function getPresences(): ?array {
-        return $this->presences;
+        return $this->getBackingStore()->get('presences');
     }
 
     /**
@@ -98,42 +77,42 @@ class CloudCommunications extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('callRecords', $this->callRecords);
-        $writer->writeCollectionOfObjectValues('calls', $this->calls);
-        $writer->writeCollectionOfObjectValues('onlineMeetings', $this->onlineMeetings);
-        $writer->writeCollectionOfObjectValues('presences', $this->presences);
+        $writer->writeCollectionOfObjectValues('callRecords', $this->getCallRecords());
+        $writer->writeCollectionOfObjectValues('calls', $this->getCalls());
+        $writer->writeCollectionOfObjectValues('onlineMeetings', $this->getOnlineMeetings());
+        $writer->writeCollectionOfObjectValues('presences', $this->getPresences());
     }
 
     /**
      * Sets the callRecords property value. The callRecords property
      *  @param array<CallRecord>|null $value Value to set for the callRecords property.
     */
-    public function setCallRecords(?array $value ): void {
-        $this->callRecords = $value;
+    public function setCallRecords(?array $value): void {
+        $this->getBackingStore()->set('callRecords', $value);
     }
 
     /**
      * Sets the calls property value. The calls property
      *  @param array<Call>|null $value Value to set for the calls property.
     */
-    public function setCalls(?array $value ): void {
-        $this->calls = $value;
+    public function setCalls(?array $value): void {
+        $this->getBackingStore()->set('calls', $value);
     }
 
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
      *  @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
     */
-    public function setOnlineMeetings(?array $value ): void {
-        $this->onlineMeetings = $value;
+    public function setOnlineMeetings(?array $value): void {
+        $this->getBackingStore()->set('onlineMeetings', $value);
     }
 
     /**
      * Sets the presences property value. The presences property
      *  @param array<Presence>|null $value Value to set for the presences property.
     */
-    public function setPresences(?array $value ): void {
-        $this->presences = $value;
+    public function setPresences(?array $value): void {
+        $this->getBackingStore()->set('presences', $value);
     }
 
 }

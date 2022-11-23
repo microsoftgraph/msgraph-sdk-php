@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable 
 {
     /**
-     * @var bool|null $useDeviceLicensing Whether or not to use device licensing.
-    */
-    private ?bool $useDeviceLicensing = null;
-    
-    /**
-     * @var string|null $vpnConfigurationId The VPN Configuration Id to apply for this app.
-    */
-    private ?string $vpnConfigurationId = null;
-    
-    /**
      * Instantiates a new IosVppAppAssignmentSettings and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return bool|null
     */
     public function getUseDeviceLicensing(): ?bool {
-        return $this->useDeviceLicensing;
+        return $this->getBackingStore()->get('useDeviceLicensing');
     }
 
     /**
@@ -60,7 +50,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return string|null
     */
     public function getVpnConfigurationId(): ?string {
-        return $this->vpnConfigurationId;
+        return $this->getBackingStore()->get('vpnConfigurationId');
     }
 
     /**
@@ -69,24 +59,24 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('useDeviceLicensing', $this->useDeviceLicensing);
-        $writer->writeStringValue('vpnConfigurationId', $this->vpnConfigurationId);
+        $writer->writeBooleanValue('useDeviceLicensing', $this->getUseDeviceLicensing());
+        $writer->writeStringValue('vpnConfigurationId', $this->getVpnConfigurationId());
     }
 
     /**
      * Sets the useDeviceLicensing property value. Whether or not to use device licensing.
      *  @param bool|null $value Value to set for the useDeviceLicensing property.
     */
-    public function setUseDeviceLicensing(?bool $value ): void {
-        $this->useDeviceLicensing = $value;
+    public function setUseDeviceLicensing(?bool $value): void {
+        $this->getBackingStore()->set('useDeviceLicensing', $value);
     }
 
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
      *  @param string|null $value Value to set for the vpnConfigurationId property.
     */
-    public function setVpnConfigurationId(?string $value ): void {
-        $this->vpnConfigurationId = $value;
+    public function setVpnConfigurationId(?string $value): void {
+        $this->getBackingStore()->set('vpnConfigurationId', $value);
     }
 
 }

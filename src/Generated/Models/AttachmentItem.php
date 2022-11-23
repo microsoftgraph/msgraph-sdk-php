@@ -6,55 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AttachmentItem implements AdditionalDataHolder, Parsable 
+class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var AttachmentType|null $attachmentType The type of attachment. Possible values are: file, item, reference. Required.
-    */
-    private ?AttachmentType $attachmentType = null;
-    
-    /**
-     * @var string|null $contentId The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
-    */
-    private ?string $contentId = null;
-    
-    /**
-     * @var string|null $contentType The nature of the data in the attachment. Optional.
-    */
-    private ?string $contentType = null;
-    
-    /**
-     * @var bool|null $isInline true if the attachment is an inline attachment; otherwise, false. Optional.
-    */
-    private ?bool $isInline = null;
-    
-    /**
-     * @var string|null $name The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $size The length of the attachment in bytes. Required.
-    */
-    private ?int $size = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new attachmentItem and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.attachmentItem');
     }
 
     /**
@@ -70,8 +38,8 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -79,7 +47,15 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return AttachmentType|null
     */
     public function getAttachmentType(): ?AttachmentType {
-        return $this->attachmentType;
+        return $this->getBackingStore()->get('attachmentType');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -87,7 +63,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContentId(): ?string {
-        return $this->contentId;
+        return $this->getBackingStore()->get('contentId');
     }
 
     /**
@@ -95,7 +71,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->contentType;
+        return $this->getBackingStore()->get('contentType');
     }
 
     /**
@@ -120,7 +96,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsInline(): ?bool {
-        return $this->isInline;
+        return $this->getBackingStore()->get('isInline');
     }
 
     /**
@@ -128,7 +104,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -136,7 +112,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -144,7 +120,7 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -152,78 +128,86 @@ class AttachmentItem implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('attachmentType', $this->attachmentType);
-        $writer->writeStringValue('contentId', $this->contentId);
-        $writer->writeStringValue('contentType', $this->contentType);
-        $writer->writeBooleanValue('isInline', $this->isInline);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('size', $this->size);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeEnumValue('attachmentType', $this->getAttachmentType());
+        $writer->writeStringValue('contentId', $this->getContentId());
+        $writer->writeStringValue('contentType', $this->getContentType());
+        $writer->writeBooleanValue('isInline', $this->getIsInline());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('size', $this->getSize());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
      *  @param AttachmentType|null $value Value to set for the attachmentType property.
     */
-    public function setAttachmentType(?AttachmentType $value ): void {
-        $this->attachmentType = $value;
+    public function setAttachmentType(?AttachmentType $value): void {
+        $this->getBackingStore()->set('attachmentType', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
      *  @param string|null $value Value to set for the contentId property.
     */
-    public function setContentId(?string $value ): void {
-        $this->contentId = $value;
+    public function setContentId(?string $value): void {
+        $this->getBackingStore()->set('contentId', $value);
     }
 
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
      *  @param string|null $value Value to set for the contentType property.
     */
-    public function setContentType(?string $value ): void {
-        $this->contentType = $value;
+    public function setContentType(?string $value): void {
+        $this->getBackingStore()->set('contentType', $value);
     }
 
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
      *  @param bool|null $value Value to set for the isInline property.
     */
-    public function setIsInline(?bool $value ): void {
-        $this->isInline = $value;
+    public function setIsInline(?bool $value): void {
+        $this->getBackingStore()->set('isInline', $value);
     }
 
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
 }

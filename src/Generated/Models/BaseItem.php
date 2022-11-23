@@ -10,66 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BaseItem extends Entity implements Parsable 
 {
     /**
-     * @var IdentitySet|null $createdBy Identity of the user, device, or application which created the item. Read-only.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var User|null $createdByUser Identity of the user who created the item. Read-only.
-    */
-    private ?User $createdByUser = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Date and time of item creation. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $description Provides a user-visible description of the item. Optional.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $eTag ETag for the item. Read-only.
-    */
-    private ?string $eTag = null;
-    
-    /**
-     * @var IdentitySet|null $lastModifiedBy Identity of the user, device, and application which last modified the item. Read-only.
-    */
-    private ?IdentitySet $lastModifiedBy = null;
-    
-    /**
-     * @var User|null $lastModifiedByUser Identity of the user who last modified the item. Read-only.
-    */
-    private ?User $lastModifiedByUser = null;
-    
-    /**
-     * @var DateTime|null $lastModifiedDateTime Date and time the item was last modified. Read-only.
-    */
-    private ?DateTime $lastModifiedDateTime = null;
-    
-    /**
-     * @var string|null $name The name of the item. Read-write.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var ItemReference|null $parentReference Parent information, if the item has a parent. Read-write.
-    */
-    private ?ItemReference $parentReference = null;
-    
-    /**
-     * @var string|null $webUrl URL that displays the resource in the browser. Read-only.
-    */
-    private ?string $webUrl = null;
-    
-    /**
      * Instantiates a new baseItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.baseItem');
     }
 
     /**
@@ -98,7 +42,7 @@ class BaseItem extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -106,7 +50,7 @@ class BaseItem extends Entity implements Parsable
      * @return User|null
     */
     public function getCreatedByUser(): ?User {
-        return $this->createdByUser;
+        return $this->getBackingStore()->get('createdByUser');
     }
 
     /**
@@ -114,7 +58,7 @@ class BaseItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -122,7 +66,7 @@ class BaseItem extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -130,7 +74,7 @@ class BaseItem extends Entity implements Parsable
      * @return string|null
     */
     public function getETag(): ?string {
-        return $this->eTag;
+        return $this->getBackingStore()->get('eTag');
     }
 
     /**
@@ -159,7 +103,7 @@ class BaseItem extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->lastModifiedBy;
+        return $this->getBackingStore()->get('lastModifiedBy');
     }
 
     /**
@@ -167,7 +111,7 @@ class BaseItem extends Entity implements Parsable
      * @return User|null
     */
     public function getLastModifiedByUser(): ?User {
-        return $this->lastModifiedByUser;
+        return $this->getBackingStore()->get('lastModifiedByUser');
     }
 
     /**
@@ -175,7 +119,7 @@ class BaseItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->lastModifiedDateTime;
+        return $this->getBackingStore()->get('lastModifiedDateTime');
     }
 
     /**
@@ -183,7 +127,7 @@ class BaseItem extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -191,7 +135,7 @@ class BaseItem extends Entity implements Parsable
      * @return ItemReference|null
     */
     public function getParentReference(): ?ItemReference {
-        return $this->parentReference;
+        return $this->getBackingStore()->get('parentReference');
     }
 
     /**
@@ -199,7 +143,7 @@ class BaseItem extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->webUrl;
+        return $this->getBackingStore()->get('webUrl');
     }
 
     /**
@@ -208,105 +152,105 @@ class BaseItem extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeObjectValue('createdByUser', $this->createdByUser);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('eTag', $this->eTag);
-        $writer->writeObjectValue('lastModifiedBy', $this->lastModifiedBy);
-        $writer->writeObjectValue('lastModifiedByUser', $this->lastModifiedByUser);
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->lastModifiedDateTime);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeObjectValue('parentReference', $this->parentReference);
-        $writer->writeStringValue('webUrl', $this->webUrl);
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeObjectValue('createdByUser', $this->getCreatedByUser());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('eTag', $this->getETag());
+        $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
+        $writer->writeObjectValue('lastModifiedByUser', $this->getLastModifiedByUser());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeObjectValue('parentReference', $this->getParentReference());
+        $writer->writeStringValue('webUrl', $this->getWebUrl());
     }
 
     /**
      * Sets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdByUser property value. Identity of the user who created the item. Read-only.
      *  @param User|null $value Value to set for the createdByUser property.
     */
-    public function setCreatedByUser(?User $value ): void {
-        $this->createdByUser = $value;
+    public function setCreatedByUser(?User $value): void {
+        $this->getBackingStore()->set('createdByUser', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the description property value. Provides a user-visible description of the item. Optional.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the eTag property value. ETag for the item. Read-only.
      *  @param string|null $value Value to set for the eTag property.
     */
-    public function setETag(?string $value ): void {
-        $this->eTag = $value;
+    public function setETag(?string $value): void {
+        $this->getBackingStore()->set('eTag', $value);
     }
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
-    public function setLastModifiedBy(?IdentitySet $value ): void {
-        $this->lastModifiedBy = $value;
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
     }
 
     /**
      * Sets the lastModifiedByUser property value. Identity of the user who last modified the item. Read-only.
      *  @param User|null $value Value to set for the lastModifiedByUser property.
     */
-    public function setLastModifiedByUser(?User $value ): void {
-        $this->lastModifiedByUser = $value;
+    public function setLastModifiedByUser(?User $value): void {
+        $this->getBackingStore()->set('lastModifiedByUser', $value);
     }
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
-    public function setLastModifiedDateTime(?DateTime $value ): void {
-        $this->lastModifiedDateTime = $value;
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
      * Sets the name property value. The name of the item. Read-write.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the parentReference property value. Parent information, if the item has a parent. Read-write.
      *  @param ItemReference|null $value Value to set for the parentReference property.
     */
-    public function setParentReference(?ItemReference $value ): void {
-        $this->parentReference = $value;
+    public function setParentReference(?ItemReference $value): void {
+        $this->getBackingStore()->set('parentReference', $value);
     }
 
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
      *  @param string|null $value Value to set for the webUrl property.
     */
-    public function setWebUrl(?string $value ): void {
-        $this->webUrl = $value;
+    public function setWebUrl(?string $value): void {
+        $this->getBackingStore()->set('webUrl', $value);
     }
 
 }

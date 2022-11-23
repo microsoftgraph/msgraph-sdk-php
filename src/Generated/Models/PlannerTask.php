@@ -10,136 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PlannerTask extends Entity implements Parsable 
 {
     /**
-     * @var int|null $activeChecklistItemCount Number of checklist items with value set to false, representing incomplete items.
-    */
-    private ?int $activeChecklistItemCount = null;
-    
-    /**
-     * @var PlannerAppliedCategories|null $appliedCategories The categories to which the task has been applied. See applied Categories for possible values.
-    */
-    private ?PlannerAppliedCategories $appliedCategories = null;
-    
-    /**
-     * @var PlannerAssignedToTaskBoardTaskFormat|null $assignedToTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
-    */
-    private ?PlannerAssignedToTaskBoardTaskFormat $assignedToTaskBoardFormat = null;
-    
-    /**
-     * @var string|null $assigneePriority Hint used to order items of this type in a list view. The format is defined as outlined here.
-    */
-    private ?string $assigneePriority = null;
-    
-    /**
-     * @var PlannerAssignments|null $assignments The set of assignees the task is assigned to.
-    */
-    private ?PlannerAssignments $assignments = null;
-    
-    /**
-     * @var string|null $bucketId Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
-    */
-    private ?string $bucketId = null;
-    
-    /**
-     * @var PlannerBucketTaskBoardTaskFormat|null $bucketTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
-    */
-    private ?PlannerBucketTaskBoardTaskFormat $bucketTaskBoardFormat = null;
-    
-    /**
-     * @var int|null $checklistItemCount Number of checklist items that are present on the task.
-    */
-    private ?int $checklistItemCount = null;
-    
-    /**
-     * @var IdentitySet|null $completedBy Identity of the user that completed the task.
-    */
-    private ?IdentitySet $completedBy = null;
-    
-    /**
-     * @var DateTime|null $completedDateTime Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $completedDateTime = null;
-    
-    /**
-     * @var string|null $conversationThreadId Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-    */
-    private ?string $conversationThreadId = null;
-    
-    /**
-     * @var IdentitySet|null $createdBy Identity of the user that created the task.
-    */
-    private ?IdentitySet $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var PlannerTaskDetails|null $details Read-only. Nullable. Additional details about the task.
-    */
-    private ?PlannerTaskDetails $details = null;
-    
-    /**
-     * @var DateTime|null $dueDateTime Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $dueDateTime = null;
-    
-    /**
-     * @var bool|null $hasDescription Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
-    */
-    private ?bool $hasDescription = null;
-    
-    /**
-     * @var string|null $orderHint Hint used to order items of this type in a list view. The format is defined as outlined here.
-    */
-    private ?string $orderHint = null;
-    
-    /**
-     * @var int|null $percentComplete Percentage of task completion. When set to 100, the task is considered completed.
-    */
-    private ?int $percentComplete = null;
-    
-    /**
-     * @var string|null $planId Plan ID to which the task belongs.
-    */
-    private ?string $planId = null;
-    
-    /**
-     * @var PlannerPreviewType|null $previewType This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
-    */
-    private ?PlannerPreviewType $previewType = null;
-    
-    /**
-     * @var int|null $priority Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
-    */
-    private ?int $priority = null;
-    
-    /**
-     * @var PlannerProgressTaskBoardTaskFormat|null $progressTaskBoardFormat Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-    */
-    private ?PlannerProgressTaskBoardTaskFormat $progressTaskBoardFormat = null;
-    
-    /**
-     * @var int|null $referenceCount Number of external references that exist on the task.
-    */
-    private ?int $referenceCount = null;
-    
-    /**
-     * @var DateTime|null $startDateTime Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
-     * @var string|null $title Title of the task.
-    */
-    private ?string $title = null;
-    
-    /**
      * Instantiates a new plannerTask and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.plannerTask');
     }
 
     /**
@@ -156,7 +30,7 @@ class PlannerTask extends Entity implements Parsable
      * @return int|null
     */
     public function getActiveChecklistItemCount(): ?int {
-        return $this->activeChecklistItemCount;
+        return $this->getBackingStore()->get('activeChecklistItemCount');
     }
 
     /**
@@ -164,7 +38,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerAppliedCategories|null
     */
     public function getAppliedCategories(): ?PlannerAppliedCategories {
-        return $this->appliedCategories;
+        return $this->getBackingStore()->get('appliedCategories');
     }
 
     /**
@@ -172,7 +46,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerAssignedToTaskBoardTaskFormat|null
     */
     public function getAssignedToTaskBoardFormat(): ?PlannerAssignedToTaskBoardTaskFormat {
-        return $this->assignedToTaskBoardFormat;
+        return $this->getBackingStore()->get('assignedToTaskBoardFormat');
     }
 
     /**
@@ -180,7 +54,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getAssigneePriority(): ?string {
-        return $this->assigneePriority;
+        return $this->getBackingStore()->get('assigneePriority');
     }
 
     /**
@@ -188,7 +62,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerAssignments|null
     */
     public function getAssignments(): ?PlannerAssignments {
-        return $this->assignments;
+        return $this->getBackingStore()->get('assignments');
     }
 
     /**
@@ -196,7 +70,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getBucketId(): ?string {
-        return $this->bucketId;
+        return $this->getBackingStore()->get('bucketId');
     }
 
     /**
@@ -204,7 +78,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerBucketTaskBoardTaskFormat|null
     */
     public function getBucketTaskBoardFormat(): ?PlannerBucketTaskBoardTaskFormat {
-        return $this->bucketTaskBoardFormat;
+        return $this->getBackingStore()->get('bucketTaskBoardFormat');
     }
 
     /**
@@ -212,7 +86,7 @@ class PlannerTask extends Entity implements Parsable
      * @return int|null
     */
     public function getChecklistItemCount(): ?int {
-        return $this->checklistItemCount;
+        return $this->getBackingStore()->get('checklistItemCount');
     }
 
     /**
@@ -220,7 +94,7 @@ class PlannerTask extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCompletedBy(): ?IdentitySet {
-        return $this->completedBy;
+        return $this->getBackingStore()->get('completedBy');
     }
 
     /**
@@ -228,7 +102,7 @@ class PlannerTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->completedDateTime;
+        return $this->getBackingStore()->get('completedDateTime');
     }
 
     /**
@@ -236,7 +110,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getConversationThreadId(): ?string {
-        return $this->conversationThreadId;
+        return $this->getBackingStore()->get('conversationThreadId');
     }
 
     /**
@@ -244,7 +118,7 @@ class PlannerTask extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -252,7 +126,7 @@ class PlannerTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -260,7 +134,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerTaskDetails|null
     */
     public function getDetails(): ?PlannerTaskDetails {
-        return $this->details;
+        return $this->getBackingStore()->get('details');
     }
 
     /**
@@ -268,7 +142,7 @@ class PlannerTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDueDateTime(): ?DateTime {
-        return $this->dueDateTime;
+        return $this->getBackingStore()->get('dueDateTime');
     }
 
     /**
@@ -311,7 +185,7 @@ class PlannerTask extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasDescription(): ?bool {
-        return $this->hasDescription;
+        return $this->getBackingStore()->get('hasDescription');
     }
 
     /**
@@ -319,7 +193,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getOrderHint(): ?string {
-        return $this->orderHint;
+        return $this->getBackingStore()->get('orderHint');
     }
 
     /**
@@ -327,7 +201,7 @@ class PlannerTask extends Entity implements Parsable
      * @return int|null
     */
     public function getPercentComplete(): ?int {
-        return $this->percentComplete;
+        return $this->getBackingStore()->get('percentComplete');
     }
 
     /**
@@ -335,7 +209,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getPlanId(): ?string {
-        return $this->planId;
+        return $this->getBackingStore()->get('planId');
     }
 
     /**
@@ -343,7 +217,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerPreviewType|null
     */
     public function getPreviewType(): ?PlannerPreviewType {
-        return $this->previewType;
+        return $this->getBackingStore()->get('previewType');
     }
 
     /**
@@ -351,7 +225,7 @@ class PlannerTask extends Entity implements Parsable
      * @return int|null
     */
     public function getPriority(): ?int {
-        return $this->priority;
+        return $this->getBackingStore()->get('priority');
     }
 
     /**
@@ -359,7 +233,7 @@ class PlannerTask extends Entity implements Parsable
      * @return PlannerProgressTaskBoardTaskFormat|null
     */
     public function getProgressTaskBoardFormat(): ?PlannerProgressTaskBoardTaskFormat {
-        return $this->progressTaskBoardFormat;
+        return $this->getBackingStore()->get('progressTaskBoardFormat');
     }
 
     /**
@@ -367,7 +241,7 @@ class PlannerTask extends Entity implements Parsable
      * @return int|null
     */
     public function getReferenceCount(): ?int {
-        return $this->referenceCount;
+        return $this->getBackingStore()->get('referenceCount');
     }
 
     /**
@@ -375,7 +249,7 @@ class PlannerTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -383,7 +257,7 @@ class PlannerTask extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->title;
+        return $this->getBackingStore()->get('title');
     }
 
     /**
@@ -392,231 +266,231 @@ class PlannerTask extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('activeChecklistItemCount', $this->activeChecklistItemCount);
-        $writer->writeObjectValue('appliedCategories', $this->appliedCategories);
-        $writer->writeObjectValue('assignedToTaskBoardFormat', $this->assignedToTaskBoardFormat);
-        $writer->writeStringValue('assigneePriority', $this->assigneePriority);
-        $writer->writeObjectValue('assignments', $this->assignments);
-        $writer->writeStringValue('bucketId', $this->bucketId);
-        $writer->writeObjectValue('bucketTaskBoardFormat', $this->bucketTaskBoardFormat);
-        $writer->writeIntegerValue('checklistItemCount', $this->checklistItemCount);
-        $writer->writeObjectValue('completedBy', $this->completedBy);
-        $writer->writeDateTimeValue('completedDateTime', $this->completedDateTime);
-        $writer->writeStringValue('conversationThreadId', $this->conversationThreadId);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeObjectValue('details', $this->details);
-        $writer->writeDateTimeValue('dueDateTime', $this->dueDateTime);
-        $writer->writeBooleanValue('hasDescription', $this->hasDescription);
-        $writer->writeStringValue('orderHint', $this->orderHint);
-        $writer->writeIntegerValue('percentComplete', $this->percentComplete);
-        $writer->writeStringValue('planId', $this->planId);
-        $writer->writeEnumValue('previewType', $this->previewType);
-        $writer->writeIntegerValue('priority', $this->priority);
-        $writer->writeObjectValue('progressTaskBoardFormat', $this->progressTaskBoardFormat);
-        $writer->writeIntegerValue('referenceCount', $this->referenceCount);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
-        $writer->writeStringValue('title', $this->title);
+        $writer->writeIntegerValue('activeChecklistItemCount', $this->getActiveChecklistItemCount());
+        $writer->writeObjectValue('appliedCategories', $this->getAppliedCategories());
+        $writer->writeObjectValue('assignedToTaskBoardFormat', $this->getAssignedToTaskBoardFormat());
+        $writer->writeStringValue('assigneePriority', $this->getAssigneePriority());
+        $writer->writeObjectValue('assignments', $this->getAssignments());
+        $writer->writeStringValue('bucketId', $this->getBucketId());
+        $writer->writeObjectValue('bucketTaskBoardFormat', $this->getBucketTaskBoardFormat());
+        $writer->writeIntegerValue('checklistItemCount', $this->getChecklistItemCount());
+        $writer->writeObjectValue('completedBy', $this->getCompletedBy());
+        $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
+        $writer->writeStringValue('conversationThreadId', $this->getConversationThreadId());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('details', $this->getDetails());
+        $writer->writeDateTimeValue('dueDateTime', $this->getDueDateTime());
+        $writer->writeBooleanValue('hasDescription', $this->getHasDescription());
+        $writer->writeStringValue('orderHint', $this->getOrderHint());
+        $writer->writeIntegerValue('percentComplete', $this->getPercentComplete());
+        $writer->writeStringValue('planId', $this->getPlanId());
+        $writer->writeEnumValue('previewType', $this->getPreviewType());
+        $writer->writeIntegerValue('priority', $this->getPriority());
+        $writer->writeObjectValue('progressTaskBoardFormat', $this->getProgressTaskBoardFormat());
+        $writer->writeIntegerValue('referenceCount', $this->getReferenceCount());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('title', $this->getTitle());
     }
 
     /**
      * Sets the activeChecklistItemCount property value. Number of checklist items with value set to false, representing incomplete items.
      *  @param int|null $value Value to set for the activeChecklistItemCount property.
     */
-    public function setActiveChecklistItemCount(?int $value ): void {
-        $this->activeChecklistItemCount = $value;
+    public function setActiveChecklistItemCount(?int $value): void {
+        $this->getBackingStore()->set('activeChecklistItemCount', $value);
     }
 
     /**
      * Sets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
      *  @param PlannerAppliedCategories|null $value Value to set for the appliedCategories property.
     */
-    public function setAppliedCategories(?PlannerAppliedCategories $value ): void {
-        $this->appliedCategories = $value;
+    public function setAppliedCategories(?PlannerAppliedCategories $value): void {
+        $this->getBackingStore()->set('appliedCategories', $value);
     }
 
     /**
      * Sets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      *  @param PlannerAssignedToTaskBoardTaskFormat|null $value Value to set for the assignedToTaskBoardFormat property.
     */
-    public function setAssignedToTaskBoardFormat(?PlannerAssignedToTaskBoardTaskFormat $value ): void {
-        $this->assignedToTaskBoardFormat = $value;
+    public function setAssignedToTaskBoardFormat(?PlannerAssignedToTaskBoardTaskFormat $value): void {
+        $this->getBackingStore()->set('assignedToTaskBoardFormat', $value);
     }
 
     /**
      * Sets the assigneePriority property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      *  @param string|null $value Value to set for the assigneePriority property.
     */
-    public function setAssigneePriority(?string $value ): void {
-        $this->assigneePriority = $value;
+    public function setAssigneePriority(?string $value): void {
+        $this->getBackingStore()->set('assigneePriority', $value);
     }
 
     /**
      * Sets the assignments property value. The set of assignees the task is assigned to.
      *  @param PlannerAssignments|null $value Value to set for the assignments property.
     */
-    public function setAssignments(?PlannerAssignments $value ): void {
-        $this->assignments = $value;
+    public function setAssignments(?PlannerAssignments $value): void {
+        $this->getBackingStore()->set('assignments', $value);
     }
 
     /**
      * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      *  @param string|null $value Value to set for the bucketId property.
     */
-    public function setBucketId(?string $value ): void {
-        $this->bucketId = $value;
+    public function setBucketId(?string $value): void {
+        $this->getBackingStore()->set('bucketId', $value);
     }
 
     /**
      * Sets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      *  @param PlannerBucketTaskBoardTaskFormat|null $value Value to set for the bucketTaskBoardFormat property.
     */
-    public function setBucketTaskBoardFormat(?PlannerBucketTaskBoardTaskFormat $value ): void {
-        $this->bucketTaskBoardFormat = $value;
+    public function setBucketTaskBoardFormat(?PlannerBucketTaskBoardTaskFormat $value): void {
+        $this->getBackingStore()->set('bucketTaskBoardFormat', $value);
     }
 
     /**
      * Sets the checklistItemCount property value. Number of checklist items that are present on the task.
      *  @param int|null $value Value to set for the checklistItemCount property.
     */
-    public function setChecklistItemCount(?int $value ): void {
-        $this->checklistItemCount = $value;
+    public function setChecklistItemCount(?int $value): void {
+        $this->getBackingStore()->set('checklistItemCount', $value);
     }
 
     /**
      * Sets the completedBy property value. Identity of the user that completed the task.
      *  @param IdentitySet|null $value Value to set for the completedBy property.
     */
-    public function setCompletedBy(?IdentitySet $value ): void {
-        $this->completedBy = $value;
+    public function setCompletedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('completedBy', $value);
     }
 
     /**
      * Sets the completedDateTime property value. Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the completedDateTime property.
     */
-    public function setCompletedDateTime(?DateTime $value ): void {
-        $this->completedDateTime = $value;
+    public function setCompletedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('completedDateTime', $value);
     }
 
     /**
      * Sets the conversationThreadId property value. Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      *  @param string|null $value Value to set for the conversationThreadId property.
     */
-    public function setConversationThreadId(?string $value ): void {
-        $this->conversationThreadId = $value;
+    public function setConversationThreadId(?string $value): void {
+        $this->getBackingStore()->set('conversationThreadId', $value);
     }
 
     /**
      * Sets the createdBy property value. Identity of the user that created the task.
      *  @param IdentitySet|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?IdentitySet $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the details property value. Read-only. Nullable. Additional details about the task.
      *  @param PlannerTaskDetails|null $value Value to set for the details property.
     */
-    public function setDetails(?PlannerTaskDetails $value ): void {
-        $this->details = $value;
+    public function setDetails(?PlannerTaskDetails $value): void {
+        $this->getBackingStore()->set('details', $value);
     }
 
     /**
      * Sets the dueDateTime property value. Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the dueDateTime property.
     */
-    public function setDueDateTime(?DateTime $value ): void {
-        $this->dueDateTime = $value;
+    public function setDueDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('dueDateTime', $value);
     }
 
     /**
      * Sets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
      *  @param bool|null $value Value to set for the hasDescription property.
     */
-    public function setHasDescription(?bool $value ): void {
-        $this->hasDescription = $value;
+    public function setHasDescription(?bool $value): void {
+        $this->getBackingStore()->set('hasDescription', $value);
     }
 
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      *  @param string|null $value Value to set for the orderHint property.
     */
-    public function setOrderHint(?string $value ): void {
-        $this->orderHint = $value;
+    public function setOrderHint(?string $value): void {
+        $this->getBackingStore()->set('orderHint', $value);
     }
 
     /**
      * Sets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
      *  @param int|null $value Value to set for the percentComplete property.
     */
-    public function setPercentComplete(?int $value ): void {
-        $this->percentComplete = $value;
+    public function setPercentComplete(?int $value): void {
+        $this->getBackingStore()->set('percentComplete', $value);
     }
 
     /**
      * Sets the planId property value. Plan ID to which the task belongs.
      *  @param string|null $value Value to set for the planId property.
     */
-    public function setPlanId(?string $value ): void {
-        $this->planId = $value;
+    public function setPlanId(?string $value): void {
+        $this->getBackingStore()->set('planId', $value);
     }
 
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      *  @param PlannerPreviewType|null $value Value to set for the previewType property.
     */
-    public function setPreviewType(?PlannerPreviewType $value ): void {
-        $this->previewType = $value;
+    public function setPreviewType(?PlannerPreviewType $value): void {
+        $this->getBackingStore()->set('previewType', $value);
     }
 
     /**
      * Sets the priority property value. Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2, 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Additionally, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      *  @param int|null $value Value to set for the priority property.
     */
-    public function setPriority(?int $value ): void {
-        $this->priority = $value;
+    public function setPriority(?int $value): void {
+        $this->getBackingStore()->set('priority', $value);
     }
 
     /**
      * Sets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      *  @param PlannerProgressTaskBoardTaskFormat|null $value Value to set for the progressTaskBoardFormat property.
     */
-    public function setProgressTaskBoardFormat(?PlannerProgressTaskBoardTaskFormat $value ): void {
-        $this->progressTaskBoardFormat = $value;
+    public function setProgressTaskBoardFormat(?PlannerProgressTaskBoardTaskFormat $value): void {
+        $this->getBackingStore()->set('progressTaskBoardFormat', $value);
     }
 
     /**
      * Sets the referenceCount property value. Number of external references that exist on the task.
      *  @param int|null $value Value to set for the referenceCount property.
     */
-    public function setReferenceCount(?int $value ): void {
-        $this->referenceCount = $value;
+    public function setReferenceCount(?int $value): void {
+        $this->getBackingStore()->set('referenceCount', $value);
     }
 
     /**
      * Sets the startDateTime property value. Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
     /**
      * Sets the title property value. Title of the task.
      *  @param string|null $value Value to set for the title property.
     */
-    public function setTitle(?string $value ): void {
-        $this->title = $value;
+    public function setTitle(?string $value): void {
+        $this->getBackingStore()->set('title', $value);
     }
 
 }

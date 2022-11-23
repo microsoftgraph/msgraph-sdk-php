@@ -10,16 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class DriveItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * @var StreamInterface|null $content The content stream for this version of the item.
-    */
-    private ?StreamInterface $content = null;
-    
-    /**
-     * @var int|null $size Indicates the size of the content stream for this version of the item.
-    */
-    private ?int $size = null;
-    
-    /**
      * Instantiates a new DriveItemVersion and sets the default values.
     */
     public function __construct() {
@@ -38,10 +28,10 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * Gets the content property value. The content stream for this version of the item.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContent(): StreamInterface {
-        return $this->content;
+    public function getContent(): ?StreamInterface {
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -61,7 +51,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -70,24 +60,24 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('content', $this->content);
-        $writer->writeIntegerValue('size', $this->size);
+        $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeIntegerValue('size', $this->getSize());
     }
 
     /**
      * Sets the content property value. The content stream for this version of the item.
      *  @param StreamInterface|null $value Value to set for the content property.
     */
-    public function setContent(?StreamInterface $value ): void {
-        $this->content = $value;
+    public function setContent(?StreamInterface $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the size property value. Indicates the size of the content stream for this version of the item.
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
 }

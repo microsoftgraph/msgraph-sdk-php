@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Bundle implements AdditionalDataHolder, Parsable 
+class Bundle implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var Album|null $album If the bundle is an [album][], then the album property is included
-    */
-    private ?Album $album = null;
-    
-    /**
-     * @var int|null $childCount Number of children contained immediately within this container.
-    */
-    private ?int $childCount = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new bundle and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.bundle');
     }
 
     /**
@@ -50,8 +38,8 @@ class Bundle implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -59,7 +47,15 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @return Album|null
     */
     public function getAlbum(): ?Album {
-        return $this->album;
+        return $this->getBackingStore()->get('album');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -67,7 +63,7 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getChildCount(): ?int {
-        return $this->childCount;
+        return $this->getBackingStore()->get('childCount');
     }
 
     /**
@@ -88,7 +84,7 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -96,42 +92,50 @@ class Bundle implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('album', $this->album);
-        $writer->writeIntegerValue('childCount', $this->childCount);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeObjectValue('album', $this->getAlbum());
+        $writer->writeIntegerValue('childCount', $this->getChildCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the album property value. If the bundle is an [album][], then the album property is included
      *  @param Album|null $value Value to set for the album property.
     */
-    public function setAlbum(?Album $value ): void {
-        $this->album = $value;
+    public function setAlbum(?Album $value): void {
+        $this->getBackingStore()->set('album', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the childCount property value. Number of children contained immediately within this container.
      *  @param int|null $value Value to set for the childCount property.
     */
-    public function setChildCount(?int $value ): void {
-        $this->childCount = $value;
+    public function setChildCount(?int $value): void {
+        $this->getBackingStore()->set('childCount', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

@@ -9,41 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AdminConsentRequestPolicy extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $isEnabled Specifies whether the admin consent request feature is enabled or disabled. Required.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var bool|null $notifyReviewers Specifies whether reviewers will receive notifications. Required.
-    */
-    private ?bool $notifyReviewers = null;
-    
-    /**
-     * @var bool|null $remindersEnabled Specifies whether reviewers will receive reminder emails. Required.
-    */
-    private ?bool $remindersEnabled = null;
-    
-    /**
-     * @var int|null $requestDurationInDays Specifies the duration the request is active before it automatically expires if no decision is applied.
-    */
-    private ?int $requestDurationInDays = null;
-    
-    /**
-     * @var array<AccessReviewReviewerScope>|null $reviewers The list of reviewers for the admin consent. Required.
-    */
-    private ?array $reviewers = null;
-    
-    /**
-     * @var int|null $version Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
-    */
-    private ?int $version = null;
-    
-    /**
      * Instantiates a new adminConsentRequestPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.adminConsentRequestPolicy');
     }
 
     /**
@@ -76,7 +45,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -84,7 +53,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getNotifyReviewers(): ?bool {
-        return $this->notifyReviewers;
+        return $this->getBackingStore()->get('notifyReviewers');
     }
 
     /**
@@ -92,7 +61,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getRemindersEnabled(): ?bool {
-        return $this->remindersEnabled;
+        return $this->getBackingStore()->get('remindersEnabled');
     }
 
     /**
@@ -100,7 +69,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getRequestDurationInDays(): ?int {
-        return $this->requestDurationInDays;
+        return $this->getBackingStore()->get('requestDurationInDays');
     }
 
     /**
@@ -108,7 +77,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
-        return $this->reviewers;
+        return $this->getBackingStore()->get('reviewers');
     }
 
     /**
@@ -116,7 +85,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->version;
+        return $this->getBackingStore()->get('version');
     }
 
     /**
@@ -125,60 +94,60 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeBooleanValue('notifyReviewers', $this->notifyReviewers);
-        $writer->writeBooleanValue('remindersEnabled', $this->remindersEnabled);
-        $writer->writeIntegerValue('requestDurationInDays', $this->requestDurationInDays);
-        $writer->writeCollectionOfObjectValues('reviewers', $this->reviewers);
-        $writer->writeIntegerValue('version', $this->version);
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeBooleanValue('notifyReviewers', $this->getNotifyReviewers());
+        $writer->writeBooleanValue('remindersEnabled', $this->getRemindersEnabled());
+        $writer->writeIntegerValue('requestDurationInDays', $this->getRequestDurationInDays());
+        $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());
+        $writer->writeIntegerValue('version', $this->getVersion());
     }
 
     /**
      * Sets the isEnabled property value. Specifies whether the admin consent request feature is enabled or disabled. Required.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
      *  @param bool|null $value Value to set for the notifyReviewers property.
     */
-    public function setNotifyReviewers(?bool $value ): void {
-        $this->notifyReviewers = $value;
+    public function setNotifyReviewers(?bool $value): void {
+        $this->getBackingStore()->set('notifyReviewers', $value);
     }
 
     /**
      * Sets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
      *  @param bool|null $value Value to set for the remindersEnabled property.
     */
-    public function setRemindersEnabled(?bool $value ): void {
-        $this->remindersEnabled = $value;
+    public function setRemindersEnabled(?bool $value): void {
+        $this->getBackingStore()->set('remindersEnabled', $value);
     }
 
     /**
      * Sets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
      *  @param int|null $value Value to set for the requestDurationInDays property.
     */
-    public function setRequestDurationInDays(?int $value ): void {
-        $this->requestDurationInDays = $value;
+    public function setRequestDurationInDays(?int $value): void {
+        $this->getBackingStore()->set('requestDurationInDays', $value);
     }
 
     /**
      * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
      *  @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
     */
-    public function setReviewers(?array $value ): void {
-        $this->reviewers = $value;
+    public function setReviewers(?array $value): void {
+        $this->getBackingStore()->set('reviewers', $value);
     }
 
     /**
      * Sets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
      *  @param int|null $value Value to set for the version property.
     */
-    public function setVersion(?int $value ): void {
-        $this->version = $value;
+    public function setVersion(?int $value): void {
+        $this->getBackingStore()->set('version', $value);
     }
 
 }

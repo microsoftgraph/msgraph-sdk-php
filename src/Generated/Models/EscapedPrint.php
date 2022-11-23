@@ -6,60 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class EscapedPrint implements AdditionalDataHolder, Parsable 
+class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<PrintConnector>|null $connectors The list of available print connectors.
-    */
-    private ?array $connectors = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<PrintOperation>|null $operations The list of print long running operations.
-    */
-    private ?array $operations = null;
-    
-    /**
-     * @var array<Printer>|null $printers The list of printers registered in the tenant.
-    */
-    private ?array $printers = null;
-    
-    /**
-     * @var array<PrintService>|null $services The list of available Universal Print service endpoints.
-    */
-    private ?array $services = null;
-    
-    /**
-     * @var PrintSettings|null $settings Tenant-wide settings for the Universal Print service.
-    */
-    private ?PrintSettings $settings = null;
-    
-    /**
-     * @var array<PrinterShare>|null $shares The list of printer shares registered in the tenant.
-    */
-    private ?array $shares = null;
-    
-    /**
-     * @var array<PrintTaskDefinition>|null $taskDefinitions List of abstract definition for a task that can be triggered when various events occur within Universal Print.
-    */
-    private ?array $taskDefinitions = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new EscapedPrint and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.print');
     }
 
     /**
@@ -75,8 +38,16 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +55,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<PrintConnector>|null
     */
     public function getConnectors(): ?array {
-        return $this->connectors;
+        return $this->getBackingStore()->get('connectors');
     }
 
     /**
@@ -110,7 +81,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -118,7 +89,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<PrintOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->operations;
+        return $this->getBackingStore()->get('operations');
     }
 
     /**
@@ -126,7 +97,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<Printer>|null
     */
     public function getPrinters(): ?array {
-        return $this->printers;
+        return $this->getBackingStore()->get('printers');
     }
 
     /**
@@ -134,7 +105,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<PrintService>|null
     */
     public function getServices(): ?array {
-        return $this->services;
+        return $this->getBackingStore()->get('services');
     }
 
     /**
@@ -142,7 +113,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return PrintSettings|null
     */
     public function getSettings(): ?PrintSettings {
-        return $this->settings;
+        return $this->getBackingStore()->get('settings');
     }
 
     /**
@@ -150,7 +121,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<PrinterShare>|null
     */
     public function getShares(): ?array {
-        return $this->shares;
+        return $this->getBackingStore()->get('shares');
     }
 
     /**
@@ -158,7 +129,7 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @return array<PrintTaskDefinition>|null
     */
     public function getTaskDefinitions(): ?array {
-        return $this->taskDefinitions;
+        return $this->getBackingStore()->get('taskDefinitions');
     }
 
     /**
@@ -166,87 +137,95 @@ class EscapedPrint implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfObjectValues('connectors', $this->connectors);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfObjectValues('operations', $this->operations);
-        $writer->writeCollectionOfObjectValues('printers', $this->printers);
-        $writer->writeCollectionOfObjectValues('services', $this->services);
-        $writer->writeObjectValue('settings', $this->settings);
-        $writer->writeCollectionOfObjectValues('shares', $this->shares);
-        $writer->writeCollectionOfObjectValues('taskDefinitions', $this->taskDefinitions);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfObjectValues('connectors', $this->getConnectors());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('printers', $this->getPrinters());
+        $writer->writeCollectionOfObjectValues('services', $this->getServices());
+        $writer->writeObjectValue('settings', $this->getSettings());
+        $writer->writeCollectionOfObjectValues('shares', $this->getShares());
+        $writer->writeCollectionOfObjectValues('taskDefinitions', $this->getTaskDefinitions());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the connectors property value. The list of available print connectors.
      *  @param array<PrintConnector>|null $value Value to set for the connectors property.
     */
-    public function setConnectors(?array $value ): void {
-        $this->connectors = $value;
+    public function setConnectors(?array $value): void {
+        $this->getBackingStore()->set('connectors', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the operations property value. The list of print long running operations.
      *  @param array<PrintOperation>|null $value Value to set for the operations property.
     */
-    public function setOperations(?array $value ): void {
-        $this->operations = $value;
+    public function setOperations(?array $value): void {
+        $this->getBackingStore()->set('operations', $value);
     }
 
     /**
      * Sets the printers property value. The list of printers registered in the tenant.
      *  @param array<Printer>|null $value Value to set for the printers property.
     */
-    public function setPrinters(?array $value ): void {
-        $this->printers = $value;
+    public function setPrinters(?array $value): void {
+        $this->getBackingStore()->set('printers', $value);
     }
 
     /**
      * Sets the services property value. The list of available Universal Print service endpoints.
      *  @param array<PrintService>|null $value Value to set for the services property.
     */
-    public function setServices(?array $value ): void {
-        $this->services = $value;
+    public function setServices(?array $value): void {
+        $this->getBackingStore()->set('services', $value);
     }
 
     /**
      * Sets the settings property value. Tenant-wide settings for the Universal Print service.
      *  @param PrintSettings|null $value Value to set for the settings property.
     */
-    public function setSettings(?PrintSettings $value ): void {
-        $this->settings = $value;
+    public function setSettings(?PrintSettings $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
     /**
      * Sets the shares property value. The list of printer shares registered in the tenant.
      *  @param array<PrinterShare>|null $value Value to set for the shares property.
     */
-    public function setShares(?array $value ): void {
-        $this->shares = $value;
+    public function setShares(?array $value): void {
+        $this->getBackingStore()->set('shares', $value);
     }
 
     /**
      * Sets the taskDefinitions property value. List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      *  @param array<PrintTaskDefinition>|null $value Value to set for the taskDefinitions property.
     */
-    public function setTaskDefinitions(?array $value ): void {
-        $this->taskDefinitions = $value;
+    public function setTaskDefinitions(?array $value): void {
+        $this->getBackingStore()->set('taskDefinitions', $value);
     }
 
 }

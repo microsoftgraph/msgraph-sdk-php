@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScopedRoleMembership extends Entity implements Parsable 
 {
     /**
-     * @var string|null $administrativeUnitId Unique identifier for the administrative unit that the directory role is scoped to
-    */
-    private ?string $administrativeUnitId = null;
-    
-    /**
-     * @var string|null $roleId Unique identifier for the directory role that the member is in.
-    */
-    private ?string $roleId = null;
-    
-    /**
-     * @var Identity|null $roleMemberInfo The roleMemberInfo property
-    */
-    private ?Identity $roleMemberInfo = null;
-    
-    /**
      * Instantiates a new scopedRoleMembership and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.scopedRoleMembership');
     }
 
     /**
@@ -45,7 +29,7 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return string|null
     */
     public function getAdministrativeUnitId(): ?string {
-        return $this->administrativeUnitId;
+        return $this->getBackingStore()->get('administrativeUnitId');
     }
 
     /**
@@ -66,7 +50,7 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return string|null
     */
     public function getRoleId(): ?string {
-        return $this->roleId;
+        return $this->getBackingStore()->get('roleId');
     }
 
     /**
@@ -74,7 +58,7 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return Identity|null
     */
     public function getRoleMemberInfo(): ?Identity {
-        return $this->roleMemberInfo;
+        return $this->getBackingStore()->get('roleMemberInfo');
     }
 
     /**
@@ -83,33 +67,33 @@ class ScopedRoleMembership extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('administrativeUnitId', $this->administrativeUnitId);
-        $writer->writeStringValue('roleId', $this->roleId);
-        $writer->writeObjectValue('roleMemberInfo', $this->roleMemberInfo);
+        $writer->writeStringValue('administrativeUnitId', $this->getAdministrativeUnitId());
+        $writer->writeStringValue('roleId', $this->getRoleId());
+        $writer->writeObjectValue('roleMemberInfo', $this->getRoleMemberInfo());
     }
 
     /**
      * Sets the administrativeUnitId property value. Unique identifier for the administrative unit that the directory role is scoped to
      *  @param string|null $value Value to set for the administrativeUnitId property.
     */
-    public function setAdministrativeUnitId(?string $value ): void {
-        $this->administrativeUnitId = $value;
+    public function setAdministrativeUnitId(?string $value): void {
+        $this->getBackingStore()->set('administrativeUnitId', $value);
     }
 
     /**
      * Sets the roleId property value. Unique identifier for the directory role that the member is in.
      *  @param string|null $value Value to set for the roleId property.
     */
-    public function setRoleId(?string $value ): void {
-        $this->roleId = $value;
+    public function setRoleId(?string $value): void {
+        $this->getBackingStore()->set('roleId', $value);
     }
 
     /**
      * Sets the roleMemberInfo property value. The roleMemberInfo property
      *  @param Identity|null $value Value to set for the roleMemberInfo property.
     */
-    public function setRoleMemberInfo(?Identity $value ): void {
-        $this->roleMemberInfo = $value;
+    public function setRoleMemberInfo(?Identity $value): void {
+        $this->getBackingStore()->set('roleMemberInfo', $value);
     }
 
 }

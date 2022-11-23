@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var string|null $channelId Unique identifier of the channel.
-    */
-    private ?string $channelId = null;
-    
-    /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
      * Instantiates a new ChannelUnsetAsFavoriteByDefaultEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
      * @return string|null
     */
     public function getChannelId(): ?string {
-        return $this->channelId;
+        return $this->getBackingStore()->get('channelId');
     }
 
     /**
@@ -60,7 +50,7 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -69,24 +59,24 @@ class ChannelUnsetAsFavoriteByDefaultEventMessageDetail extends EventMessageDeta
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('channelId', $this->channelId);
-        $writer->writeObjectValue('initiator', $this->initiator);
+        $writer->writeStringValue('channelId', $this->getChannelId());
+        $writer->writeObjectValue('initiator', $this->getInitiator());
     }
 
     /**
      * Sets the channelId property value. Unique identifier of the channel.
      *  @param string|null $value Value to set for the channelId property.
     */
-    public function setChannelId(?string $value ): void {
-        $this->channelId = $value;
+    public function setChannelId(?string $value): void {
+        $this->getBackingStore()->set('channelId', $value);
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
 }

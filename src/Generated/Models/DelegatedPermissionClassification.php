@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedPermissionClassification extends Entity implements Parsable 
 {
     /**
-     * @var PermissionClassificationType|null $classification The classification value being given. Possible value: low. Does not support $filter.
-    */
-    private ?PermissionClassificationType $classification = null;
-    
-    /**
-     * @var string|null $permissionId The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
-    */
-    private ?string $permissionId = null;
-    
-    /**
-     * @var string|null $permissionName The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
-    */
-    private ?string $permissionName = null;
-    
-    /**
      * Instantiates a new delegatedPermissionClassification and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.delegatedPermissionClassification');
     }
 
     /**
@@ -45,7 +29,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return PermissionClassificationType|null
     */
     public function getClassification(): ?PermissionClassificationType {
-        return $this->classification;
+        return $this->getBackingStore()->get('classification');
     }
 
     /**
@@ -66,7 +50,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return string|null
     */
     public function getPermissionId(): ?string {
-        return $this->permissionId;
+        return $this->getBackingStore()->get('permissionId');
     }
 
     /**
@@ -74,7 +58,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
      * @return string|null
     */
     public function getPermissionName(): ?string {
-        return $this->permissionName;
+        return $this->getBackingStore()->get('permissionName');
     }
 
     /**
@@ -83,33 +67,33 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('classification', $this->classification);
-        $writer->writeStringValue('permissionId', $this->permissionId);
-        $writer->writeStringValue('permissionName', $this->permissionName);
+        $writer->writeEnumValue('classification', $this->getClassification());
+        $writer->writeStringValue('permissionId', $this->getPermissionId());
+        $writer->writeStringValue('permissionName', $this->getPermissionName());
     }
 
     /**
      * Sets the classification property value. The classification value being given. Possible value: low. Does not support $filter.
      *  @param PermissionClassificationType|null $value Value to set for the classification property.
     */
-    public function setClassification(?PermissionClassificationType $value ): void {
-        $this->classification = $value;
+    public function setClassification(?PermissionClassificationType $value): void {
+        $this->getBackingStore()->set('classification', $value);
     }
 
     /**
      * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      *  @param string|null $value Value to set for the permissionId property.
     */
-    public function setPermissionId(?string $value ): void {
-        $this->permissionId = $value;
+    public function setPermissionId(?string $value): void {
+        $this->getBackingStore()->set('permissionId', $value);
     }
 
     /**
      * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      *  @param string|null $value Value to set for the permissionName property.
     */
-    public function setPermissionName(?string $value ): void {
-        $this->permissionName = $value;
+    public function setPermissionName(?string $value): void {
+        $this->getBackingStore()->set('permissionName', $value);
     }
 
 }

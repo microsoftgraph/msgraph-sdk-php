@@ -9,66 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable 
 {
     /**
-     * @var int|null $daysWithoutContactBeforeUnenroll Offline interval before app data is wiped (days)
-    */
-    private ?int $daysWithoutContactBeforeUnenroll = null;
-    
-    /**
-     * @var string|null $mdmEnrollmentUrl Enrollment url for the MDM
-    */
-    private ?string $mdmEnrollmentUrl = null;
-    
-    /**
-     * @var int|null $minutesOfInactivityBeforeDeviceLock Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
-    */
-    private ?int $minutesOfInactivityBeforeDeviceLock = null;
-    
-    /**
-     * @var int|null $numberOfPastPinsRemembered Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
-    */
-    private ?int $numberOfPastPinsRemembered = null;
-    
-    /**
-     * @var int|null $passwordMaximumAttemptCount The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
-    */
-    private ?int $passwordMaximumAttemptCount = null;
-    
-    /**
-     * @var int|null $pinExpirationDays Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
-    */
-    private ?int $pinExpirationDays = null;
-    
-    /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinLowercaseLetters Pin Character Requirements
-    */
-    private ?WindowsInformationProtectionPinCharacterRequirements $pinLowercaseLetters = null;
-    
-    /**
-     * @var int|null $pinMinimumLength Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
-    */
-    private ?int $pinMinimumLength = null;
-    
-    /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinSpecialCharacters Pin Character Requirements
-    */
-    private ?WindowsInformationProtectionPinCharacterRequirements $pinSpecialCharacters = null;
-    
-    /**
-     * @var WindowsInformationProtectionPinCharacterRequirements|null $pinUppercaseLetters Pin Character Requirements
-    */
-    private ?WindowsInformationProtectionPinCharacterRequirements $pinUppercaseLetters = null;
-    
-    /**
-     * @var bool|null $revokeOnMdmHandoffDisabled New property in RS2, pending documentation
-    */
-    private ?bool $revokeOnMdmHandoffDisabled = null;
-    
-    /**
-     * @var bool|null $windowsHelloForBusinessBlocked Boolean value that sets Windows Hello for Business as a method for signing into Windows.
-    */
-    private ?bool $windowsHelloForBusinessBlocked = null;
-    
-    /**
      * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
     */
     public function __construct() {
@@ -90,7 +30,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getDaysWithoutContactBeforeUnenroll(): ?int {
-        return $this->daysWithoutContactBeforeUnenroll;
+        return $this->getBackingStore()->get('daysWithoutContactBeforeUnenroll');
     }
 
     /**
@@ -120,7 +60,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return string|null
     */
     public function getMdmEnrollmentUrl(): ?string {
-        return $this->mdmEnrollmentUrl;
+        return $this->getBackingStore()->get('mdmEnrollmentUrl');
     }
 
     /**
@@ -128,7 +68,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getMinutesOfInactivityBeforeDeviceLock(): ?int {
-        return $this->minutesOfInactivityBeforeDeviceLock;
+        return $this->getBackingStore()->get('minutesOfInactivityBeforeDeviceLock');
     }
 
     /**
@@ -136,7 +76,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getNumberOfPastPinsRemembered(): ?int {
-        return $this->numberOfPastPinsRemembered;
+        return $this->getBackingStore()->get('numberOfPastPinsRemembered');
     }
 
     /**
@@ -144,7 +84,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPasswordMaximumAttemptCount(): ?int {
-        return $this->passwordMaximumAttemptCount;
+        return $this->getBackingStore()->get('passwordMaximumAttemptCount');
     }
 
     /**
@@ -152,7 +92,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPinExpirationDays(): ?int {
-        return $this->pinExpirationDays;
+        return $this->getBackingStore()->get('pinExpirationDays');
     }
 
     /**
@@ -160,7 +100,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinLowercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->pinLowercaseLetters;
+        return $this->getBackingStore()->get('pinLowercaseLetters');
     }
 
     /**
@@ -168,7 +108,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPinMinimumLength(): ?int {
-        return $this->pinMinimumLength;
+        return $this->getBackingStore()->get('pinMinimumLength');
     }
 
     /**
@@ -176,7 +116,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinSpecialCharacters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->pinSpecialCharacters;
+        return $this->getBackingStore()->get('pinSpecialCharacters');
     }
 
     /**
@@ -184,7 +124,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinUppercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->pinUppercaseLetters;
+        return $this->getBackingStore()->get('pinUppercaseLetters');
     }
 
     /**
@@ -192,7 +132,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return bool|null
     */
     public function getRevokeOnMdmHandoffDisabled(): ?bool {
-        return $this->revokeOnMdmHandoffDisabled;
+        return $this->getBackingStore()->get('revokeOnMdmHandoffDisabled');
     }
 
     /**
@@ -200,7 +140,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return bool|null
     */
     public function getWindowsHelloForBusinessBlocked(): ?bool {
-        return $this->windowsHelloForBusinessBlocked;
+        return $this->getBackingStore()->get('windowsHelloForBusinessBlocked');
     }
 
     /**
@@ -209,114 +149,114 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('daysWithoutContactBeforeUnenroll', $this->daysWithoutContactBeforeUnenroll);
-        $writer->writeStringValue('mdmEnrollmentUrl', $this->mdmEnrollmentUrl);
-        $writer->writeIntegerValue('minutesOfInactivityBeforeDeviceLock', $this->minutesOfInactivityBeforeDeviceLock);
-        $writer->writeIntegerValue('numberOfPastPinsRemembered', $this->numberOfPastPinsRemembered);
-        $writer->writeIntegerValue('passwordMaximumAttemptCount', $this->passwordMaximumAttemptCount);
-        $writer->writeIntegerValue('pinExpirationDays', $this->pinExpirationDays);
-        $writer->writeEnumValue('pinLowercaseLetters', $this->pinLowercaseLetters);
-        $writer->writeIntegerValue('pinMinimumLength', $this->pinMinimumLength);
-        $writer->writeEnumValue('pinSpecialCharacters', $this->pinSpecialCharacters);
-        $writer->writeEnumValue('pinUppercaseLetters', $this->pinUppercaseLetters);
-        $writer->writeBooleanValue('revokeOnMdmHandoffDisabled', $this->revokeOnMdmHandoffDisabled);
-        $writer->writeBooleanValue('windowsHelloForBusinessBlocked', $this->windowsHelloForBusinessBlocked);
+        $writer->writeIntegerValue('daysWithoutContactBeforeUnenroll', $this->getDaysWithoutContactBeforeUnenroll());
+        $writer->writeStringValue('mdmEnrollmentUrl', $this->getMdmEnrollmentUrl());
+        $writer->writeIntegerValue('minutesOfInactivityBeforeDeviceLock', $this->getMinutesOfInactivityBeforeDeviceLock());
+        $writer->writeIntegerValue('numberOfPastPinsRemembered', $this->getNumberOfPastPinsRemembered());
+        $writer->writeIntegerValue('passwordMaximumAttemptCount', $this->getPasswordMaximumAttemptCount());
+        $writer->writeIntegerValue('pinExpirationDays', $this->getPinExpirationDays());
+        $writer->writeEnumValue('pinLowercaseLetters', $this->getPinLowercaseLetters());
+        $writer->writeIntegerValue('pinMinimumLength', $this->getPinMinimumLength());
+        $writer->writeEnumValue('pinSpecialCharacters', $this->getPinSpecialCharacters());
+        $writer->writeEnumValue('pinUppercaseLetters', $this->getPinUppercaseLetters());
+        $writer->writeBooleanValue('revokeOnMdmHandoffDisabled', $this->getRevokeOnMdmHandoffDisabled());
+        $writer->writeBooleanValue('windowsHelloForBusinessBlocked', $this->getWindowsHelloForBusinessBlocked());
     }
 
     /**
      * Sets the daysWithoutContactBeforeUnenroll property value. Offline interval before app data is wiped (days)
      *  @param int|null $value Value to set for the daysWithoutContactBeforeUnenroll property.
     */
-    public function setDaysWithoutContactBeforeUnenroll(?int $value ): void {
-        $this->daysWithoutContactBeforeUnenroll = $value;
+    public function setDaysWithoutContactBeforeUnenroll(?int $value): void {
+        $this->getBackingStore()->set('daysWithoutContactBeforeUnenroll', $value);
     }
 
     /**
      * Sets the mdmEnrollmentUrl property value. Enrollment url for the MDM
      *  @param string|null $value Value to set for the mdmEnrollmentUrl property.
     */
-    public function setMdmEnrollmentUrl(?string $value ): void {
-        $this->mdmEnrollmentUrl = $value;
+    public function setMdmEnrollmentUrl(?string $value): void {
+        $this->getBackingStore()->set('mdmEnrollmentUrl', $value);
     }
 
     /**
      * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
      *  @param int|null $value Value to set for the minutesOfInactivityBeforeDeviceLock property.
     */
-    public function setMinutesOfInactivityBeforeDeviceLock(?int $value ): void {
-        $this->minutesOfInactivityBeforeDeviceLock = $value;
+    public function setMinutesOfInactivityBeforeDeviceLock(?int $value): void {
+        $this->getBackingStore()->set('minutesOfInactivityBeforeDeviceLock', $value);
     }
 
     /**
      * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
      *  @param int|null $value Value to set for the numberOfPastPinsRemembered property.
     */
-    public function setNumberOfPastPinsRemembered(?int $value ): void {
-        $this->numberOfPastPinsRemembered = $value;
+    public function setNumberOfPastPinsRemembered(?int $value): void {
+        $this->getBackingStore()->set('numberOfPastPinsRemembered', $value);
     }
 
     /**
      * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
      *  @param int|null $value Value to set for the passwordMaximumAttemptCount property.
     */
-    public function setPasswordMaximumAttemptCount(?int $value ): void {
-        $this->passwordMaximumAttemptCount = $value;
+    public function setPasswordMaximumAttemptCount(?int $value): void {
+        $this->getBackingStore()->set('passwordMaximumAttemptCount', $value);
     }
 
     /**
      * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
      *  @param int|null $value Value to set for the pinExpirationDays property.
     */
-    public function setPinExpirationDays(?int $value ): void {
-        $this->pinExpirationDays = $value;
+    public function setPinExpirationDays(?int $value): void {
+        $this->getBackingStore()->set('pinExpirationDays', $value);
     }
 
     /**
      * Sets the pinLowercaseLetters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinLowercaseLetters property.
     */
-    public function setPinLowercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {
-        $this->pinLowercaseLetters = $value;
+    public function setPinLowercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
+        $this->getBackingStore()->set('pinLowercaseLetters', $value);
     }
 
     /**
      * Sets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
      *  @param int|null $value Value to set for the pinMinimumLength property.
     */
-    public function setPinMinimumLength(?int $value ): void {
-        $this->pinMinimumLength = $value;
+    public function setPinMinimumLength(?int $value): void {
+        $this->getBackingStore()->set('pinMinimumLength', $value);
     }
 
     /**
      * Sets the pinSpecialCharacters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinSpecialCharacters property.
     */
-    public function setPinSpecialCharacters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {
-        $this->pinSpecialCharacters = $value;
+    public function setPinSpecialCharacters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
+        $this->getBackingStore()->set('pinSpecialCharacters', $value);
     }
 
     /**
      * Sets the pinUppercaseLetters property value. Pin Character Requirements
      *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinUppercaseLetters property.
     */
-    public function setPinUppercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value ): void {
-        $this->pinUppercaseLetters = $value;
+    public function setPinUppercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
+        $this->getBackingStore()->set('pinUppercaseLetters', $value);
     }
 
     /**
      * Sets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
      *  @param bool|null $value Value to set for the revokeOnMdmHandoffDisabled property.
     */
-    public function setRevokeOnMdmHandoffDisabled(?bool $value ): void {
-        $this->revokeOnMdmHandoffDisabled = $value;
+    public function setRevokeOnMdmHandoffDisabled(?bool $value): void {
+        $this->getBackingStore()->set('revokeOnMdmHandoffDisabled', $value);
     }
 
     /**
      * Sets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
      *  @param bool|null $value Value to set for the windowsHelloForBusinessBlocked property.
     */
-    public function setWindowsHelloForBusinessBlocked(?bool $value ): void {
-        $this->windowsHelloForBusinessBlocked = $value;
+    public function setWindowsHelloForBusinessBlocked(?bool $value): void {
+        $this->getBackingStore()->set('windowsHelloForBusinessBlocked', $value);
     }
 
 }

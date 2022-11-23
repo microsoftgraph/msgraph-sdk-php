@@ -10,61 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagementExportJob extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $expirationDateTime Time that the exported report expires
-    */
-    private ?DateTime $expirationDateTime = null;
-    
-    /**
-     * @var string|null $filter Filters applied on the report
-    */
-    private ?string $filter = null;
-    
-    /**
-     * @var DeviceManagementReportFileFormat|null $format Possible values for the file format of a report
-    */
-    private ?DeviceManagementReportFileFormat $format = null;
-    
-    /**
-     * @var DeviceManagementExportJobLocalizationType|null $localizationType Configures how the requested export job is localized
-    */
-    private ?DeviceManagementExportJobLocalizationType $localizationType = null;
-    
-    /**
-     * @var string|null $reportName Name of the report
-    */
-    private ?string $reportName = null;
-    
-    /**
-     * @var DateTime|null $requestDateTime Time that the exported report was requested
-    */
-    private ?DateTime $requestDateTime = null;
-    
-    /**
-     * @var array<string>|null $select Columns selected from the report
-    */
-    private ?array $select = null;
-    
-    /**
-     * @var string|null $snapshotId A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
-    */
-    private ?string $snapshotId = null;
-    
-    /**
-     * @var DeviceManagementReportStatus|null $status Possible statuses associated with a generated report
-    */
-    private ?DeviceManagementReportStatus $status = null;
-    
-    /**
-     * @var string|null $url Temporary location of the exported report
-    */
-    private ?string $url = null;
-    
-    /**
      * Instantiates a new deviceManagementExportJob and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.deviceManagementExportJob');
     }
 
     /**
@@ -81,7 +30,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->expirationDateTime;
+        return $this->getBackingStore()->get('expirationDateTime');
     }
 
     /**
@@ -109,7 +58,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getFilter(): ?string {
-        return $this->filter;
+        return $this->getBackingStore()->get('filter');
     }
 
     /**
@@ -117,7 +66,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementReportFileFormat|null
     */
     public function getFormat(): ?DeviceManagementReportFileFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -125,7 +74,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementExportJobLocalizationType|null
     */
     public function getLocalizationType(): ?DeviceManagementExportJobLocalizationType {
-        return $this->localizationType;
+        return $this->getBackingStore()->get('localizationType');
     }
 
     /**
@@ -133,7 +82,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getReportName(): ?string {
-        return $this->reportName;
+        return $this->getBackingStore()->get('reportName');
     }
 
     /**
@@ -141,7 +90,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRequestDateTime(): ?DateTime {
-        return $this->requestDateTime;
+        return $this->getBackingStore()->get('requestDateTime');
     }
 
     /**
@@ -149,7 +98,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSelect(): ?array {
-        return $this->select;
+        return $this->getBackingStore()->get('select');
     }
 
     /**
@@ -157,7 +106,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getSnapshotId(): ?string {
-        return $this->snapshotId;
+        return $this->getBackingStore()->get('snapshotId');
     }
 
     /**
@@ -165,7 +114,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return DeviceManagementReportStatus|null
     */
     public function getStatus(): ?DeviceManagementReportStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -173,7 +122,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->url;
+        return $this->getBackingStore()->get('url');
     }
 
     /**
@@ -182,96 +131,96 @@ class DeviceManagementExportJob extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('expirationDateTime', $this->expirationDateTime);
-        $writer->writeStringValue('filter', $this->filter);
-        $writer->writeEnumValue('format', $this->format);
-        $writer->writeEnumValue('localizationType', $this->localizationType);
-        $writer->writeStringValue('reportName', $this->reportName);
-        $writer->writeDateTimeValue('requestDateTime', $this->requestDateTime);
-        $writer->writeCollectionOfPrimitiveValues('select', $this->select);
-        $writer->writeStringValue('snapshotId', $this->snapshotId);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeStringValue('url', $this->url);
+        $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
+        $writer->writeStringValue('filter', $this->getFilter());
+        $writer->writeEnumValue('format', $this->getFormat());
+        $writer->writeEnumValue('localizationType', $this->getLocalizationType());
+        $writer->writeStringValue('reportName', $this->getReportName());
+        $writer->writeDateTimeValue('requestDateTime', $this->getRequestDateTime());
+        $writer->writeCollectionOfPrimitiveValues('select', $this->getSelect());
+        $writer->writeStringValue('snapshotId', $this->getSnapshotId());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeStringValue('url', $this->getUrl());
     }
 
     /**
      * Sets the expirationDateTime property value. Time that the exported report expires
      *  @param DateTime|null $value Value to set for the expirationDateTime property.
     */
-    public function setExpirationDateTime(?DateTime $value ): void {
-        $this->expirationDateTime = $value;
+    public function setExpirationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expirationDateTime', $value);
     }
 
     /**
      * Sets the filter property value. Filters applied on the report
      *  @param string|null $value Value to set for the filter property.
     */
-    public function setFilter(?string $value ): void {
-        $this->filter = $value;
+    public function setFilter(?string $value): void {
+        $this->getBackingStore()->set('filter', $value);
     }
 
     /**
      * Sets the format property value. Possible values for the file format of a report
      *  @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?DeviceManagementReportFileFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?DeviceManagementReportFileFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the localizationType property value. Configures how the requested export job is localized
      *  @param DeviceManagementExportJobLocalizationType|null $value Value to set for the localizationType property.
     */
-    public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value ): void {
-        $this->localizationType = $value;
+    public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value): void {
+        $this->getBackingStore()->set('localizationType', $value);
     }
 
     /**
      * Sets the reportName property value. Name of the report
      *  @param string|null $value Value to set for the reportName property.
     */
-    public function setReportName(?string $value ): void {
-        $this->reportName = $value;
+    public function setReportName(?string $value): void {
+        $this->getBackingStore()->set('reportName', $value);
     }
 
     /**
      * Sets the requestDateTime property value. Time that the exported report was requested
      *  @param DateTime|null $value Value to set for the requestDateTime property.
     */
-    public function setRequestDateTime(?DateTime $value ): void {
-        $this->requestDateTime = $value;
+    public function setRequestDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('requestDateTime', $value);
     }
 
     /**
      * Sets the select property value. Columns selected from the report
      *  @param array<string>|null $value Value to set for the select property.
     */
-    public function setSelect(?array $value ): void {
-        $this->select = $value;
+    public function setSelect(?array $value): void {
+        $this->getBackingStore()->set('select', $value);
     }
 
     /**
      * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
      *  @param string|null $value Value to set for the snapshotId property.
     */
-    public function setSnapshotId(?string $value ): void {
-        $this->snapshotId = $value;
+    public function setSnapshotId(?string $value): void {
+        $this->getBackingStore()->set('snapshotId', $value);
     }
 
     /**
      * Sets the status property value. Possible statuses associated with a generated report
      *  @param DeviceManagementReportStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?DeviceManagementReportStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?DeviceManagementReportStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the url property value. Temporary location of the exported report
      *  @param string|null $value Value to set for the url property.
     */
-    public function setUrl(?string $value ): void {
-        $this->url = $value;
+    public function setUrl(?string $value): void {
+        $this->getBackingStore()->set('url', $value);
     }
 
 }

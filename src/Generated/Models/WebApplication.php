@@ -6,50 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class WebApplication implements AdditionalDataHolder, Parsable 
+class WebApplication implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $homePageUrl Home page or landing page of the application.
-    */
-    private ?string $homePageUrl = null;
-    
-    /**
-     * @var ImplicitGrantSettings|null $implicitGrantSettings Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
-    */
-    private ?ImplicitGrantSettings $implicitGrantSettings = null;
-    
-    /**
-     * @var string|null $logoutUrl Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
-    */
-    private ?string $logoutUrl = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var array<string>|null $redirectUris Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
-    */
-    private ?array $redirectUris = null;
-    
-    /**
-     * @var array<RedirectUriSettings>|null $redirectUriSettings The redirectUriSettings property
-    */
-    private ?array $redirectUriSettings = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new webApplication and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.webApplication');
     }
 
     /**
@@ -65,8 +38,16 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -90,7 +71,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getHomePageUrl(): ?string {
-        return $this->homePageUrl;
+        return $this->getBackingStore()->get('homePageUrl');
     }
 
     /**
@@ -98,7 +79,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return ImplicitGrantSettings|null
     */
     public function getImplicitGrantSettings(): ?ImplicitGrantSettings {
-        return $this->implicitGrantSettings;
+        return $this->getBackingStore()->get('implicitGrantSettings');
     }
 
     /**
@@ -106,7 +87,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getLogoutUrl(): ?string {
-        return $this->logoutUrl;
+        return $this->getBackingStore()->get('logoutUrl');
     }
 
     /**
@@ -114,7 +95,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -122,7 +103,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getRedirectUris(): ?array {
-        return $this->redirectUris;
+        return $this->getBackingStore()->get('redirectUris');
     }
 
     /**
@@ -130,7 +111,7 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @return array<RedirectUriSettings>|null
     */
     public function getRedirectUriSettings(): ?array {
-        return $this->redirectUriSettings;
+        return $this->getBackingStore()->get('redirectUriSettings');
     }
 
     /**
@@ -138,69 +119,77 @@ class WebApplication implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('homePageUrl', $this->homePageUrl);
-        $writer->writeObjectValue('implicitGrantSettings', $this->implicitGrantSettings);
-        $writer->writeStringValue('logoutUrl', $this->logoutUrl);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeCollectionOfPrimitiveValues('redirectUris', $this->redirectUris);
-        $writer->writeCollectionOfObjectValues('redirectUriSettings', $this->redirectUriSettings);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('homePageUrl', $this->getHomePageUrl());
+        $writer->writeObjectValue('implicitGrantSettings', $this->getImplicitGrantSettings());
+        $writer->writeStringValue('logoutUrl', $this->getLogoutUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfPrimitiveValues('redirectUris', $this->getRedirectUris());
+        $writer->writeCollectionOfObjectValues('redirectUriSettings', $this->getRedirectUriSettings());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the homePageUrl property value. Home page or landing page of the application.
      *  @param string|null $value Value to set for the homePageUrl property.
     */
-    public function setHomePageUrl(?string $value ): void {
-        $this->homePageUrl = $value;
+    public function setHomePageUrl(?string $value): void {
+        $this->getBackingStore()->set('homePageUrl', $value);
     }
 
     /**
      * Sets the implicitGrantSettings property value. Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      *  @param ImplicitGrantSettings|null $value Value to set for the implicitGrantSettings property.
     */
-    public function setImplicitGrantSettings(?ImplicitGrantSettings $value ): void {
-        $this->implicitGrantSettings = $value;
+    public function setImplicitGrantSettings(?ImplicitGrantSettings $value): void {
+        $this->getBackingStore()->set('implicitGrantSettings', $value);
     }
 
     /**
      * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
      *  @param string|null $value Value to set for the logoutUrl property.
     */
-    public function setLogoutUrl(?string $value ): void {
-        $this->logoutUrl = $value;
+    public function setLogoutUrl(?string $value): void {
+        $this->getBackingStore()->set('logoutUrl', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the redirectUris property value. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      *  @param array<string>|null $value Value to set for the redirectUris property.
     */
-    public function setRedirectUris(?array $value ): void {
-        $this->redirectUris = $value;
+    public function setRedirectUris(?array $value): void {
+        $this->getBackingStore()->set('redirectUris', $value);
     }
 
     /**
      * Sets the redirectUriSettings property value. The redirectUriSettings property
      *  @param array<RedirectUriSettings>|null $value Value to set for the redirectUriSettings property.
     */
-    public function setRedirectUriSettings(?array $value ): void {
-        $this->redirectUriSettings = $value;
+    public function setRedirectUriSettings(?array $value): void {
+        $this->getBackingStore()->set('redirectUriSettings', $value);
     }
 
 }

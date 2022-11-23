@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ClientUserAgent extends UserAgent implements Parsable 
 {
     /**
-     * @var string|null $azureADAppId The unique identifier of the Azure AD application used by this endpoint.
-    */
-    private ?string $azureADAppId = null;
-    
-    /**
-     * @var string|null $communicationServiceId Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
-    */
-    private ?string $communicationServiceId = null;
-    
-    /**
-     * @var ClientPlatform|null $platform The platform property
-    */
-    private ?ClientPlatform $platform = null;
-    
-    /**
-     * @var ProductFamily|null $productFamily The productFamily property
-    */
-    private ?ProductFamily $productFamily = null;
-    
-    /**
      * Instantiates a new ClientUserAgent and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return string|null
     */
     public function getAzureADAppId(): ?string {
-        return $this->azureADAppId;
+        return $this->getBackingStore()->get('azureADAppId');
     }
 
     /**
@@ -58,7 +38,7 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return string|null
     */
     public function getCommunicationServiceId(): ?string {
-        return $this->communicationServiceId;
+        return $this->getBackingStore()->get('communicationServiceId');
     }
 
     /**
@@ -80,7 +60,7 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return ClientPlatform|null
     */
     public function getPlatform(): ?ClientPlatform {
-        return $this->platform;
+        return $this->getBackingStore()->get('platform');
     }
 
     /**
@@ -88,7 +68,7 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return ProductFamily|null
     */
     public function getProductFamily(): ?ProductFamily {
-        return $this->productFamily;
+        return $this->getBackingStore()->get('productFamily');
     }
 
     /**
@@ -97,42 +77,42 @@ class ClientUserAgent extends UserAgent implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('azureADAppId', $this->azureADAppId);
-        $writer->writeStringValue('communicationServiceId', $this->communicationServiceId);
-        $writer->writeEnumValue('platform', $this->platform);
-        $writer->writeEnumValue('productFamily', $this->productFamily);
+        $writer->writeStringValue('azureADAppId', $this->getAzureADAppId());
+        $writer->writeStringValue('communicationServiceId', $this->getCommunicationServiceId());
+        $writer->writeEnumValue('platform', $this->getPlatform());
+        $writer->writeEnumValue('productFamily', $this->getProductFamily());
     }
 
     /**
      * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
      *  @param string|null $value Value to set for the azureADAppId property.
     */
-    public function setAzureADAppId(?string $value ): void {
-        $this->azureADAppId = $value;
+    public function setAzureADAppId(?string $value): void {
+        $this->getBackingStore()->set('azureADAppId', $value);
     }
 
     /**
      * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
      *  @param string|null $value Value to set for the communicationServiceId property.
     */
-    public function setCommunicationServiceId(?string $value ): void {
-        $this->communicationServiceId = $value;
+    public function setCommunicationServiceId(?string $value): void {
+        $this->getBackingStore()->set('communicationServiceId', $value);
     }
 
     /**
      * Sets the platform property value. The platform property
      *  @param ClientPlatform|null $value Value to set for the platform property.
     */
-    public function setPlatform(?ClientPlatform $value ): void {
-        $this->platform = $value;
+    public function setPlatform(?ClientPlatform $value): void {
+        $this->getBackingStore()->set('platform', $value);
     }
 
     /**
      * Sets the productFamily property value. The productFamily property
      *  @param ProductFamily|null $value Value to set for the productFamily property.
     */
-    public function setProductFamily(?ProductFamily $value ): void {
-        $this->productFamily = $value;
+    public function setProductFamily(?ProductFamily $value): void {
+        $this->getBackingStore()->set('productFamily', $value);
     }
 
 }

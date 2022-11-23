@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceUserAgent extends UserAgent implements Parsable 
 {
     /**
-     * @var ServiceRole|null $role The role property
-    */
-    private ?ServiceRole $role = null;
-    
-    /**
      * Instantiates a new ServiceUserAgent and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
      * @return ServiceRole|null
     */
     public function getRole(): ?ServiceRole {
-        return $this->role;
+        return $this->getBackingStore()->get('role');
     }
 
     /**
@@ -55,15 +50,15 @@ class ServiceUserAgent extends UserAgent implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('role', $this->role);
+        $writer->writeEnumValue('role', $this->getRole());
     }
 
     /**
      * Sets the role property value. The role property
      *  @param ServiceRole|null $value Value to set for the role property.
     */
-    public function setRole(?ServiceRole $value ): void {
-        $this->role = $value;
+    public function setRole(?ServiceRole $value): void {
+        $this->getBackingStore()->set('role', $value);
     }
 
 }

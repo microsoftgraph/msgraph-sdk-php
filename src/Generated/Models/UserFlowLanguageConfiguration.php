@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserFlowLanguageConfiguration extends Entity implements Parsable 
 {
     /**
-     * @var array<UserFlowLanguagePage>|null $defaultPages Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
-    */
-    private ?array $defaultPages = null;
-    
-    /**
-     * @var string|null $displayName The language name to display. This property is read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var bool|null $isEnabled Indicates whether the language is enabled within the user flow.
-    */
-    private ?bool $isEnabled = null;
-    
-    /**
-     * @var array<UserFlowLanguagePage>|null $overridesPages Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
-    */
-    private ?array $overridesPages = null;
-    
-    /**
      * Instantiates a new userFlowLanguageConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.userFlowLanguageConfiguration');
     }
 
     /**
@@ -50,7 +29,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return array<UserFlowLanguagePage>|null
     */
     public function getDefaultPages(): ?array {
-        return $this->defaultPages;
+        return $this->getBackingStore()->get('defaultPages');
     }
 
     /**
@@ -58,7 +37,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -80,7 +59,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->isEnabled;
+        return $this->getBackingStore()->get('isEnabled');
     }
 
     /**
@@ -88,7 +67,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
      * @return array<UserFlowLanguagePage>|null
     */
     public function getOverridesPages(): ?array {
-        return $this->overridesPages;
+        return $this->getBackingStore()->get('overridesPages');
     }
 
     /**
@@ -97,42 +76,42 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('defaultPages', $this->defaultPages);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeBooleanValue('isEnabled', $this->isEnabled);
-        $writer->writeCollectionOfObjectValues('overridesPages', $this->overridesPages);
+        $writer->writeCollectionOfObjectValues('defaultPages', $this->getDefaultPages());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeCollectionOfObjectValues('overridesPages', $this->getOverridesPages());
     }
 
     /**
      * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
      *  @param array<UserFlowLanguagePage>|null $value Value to set for the defaultPages property.
     */
-    public function setDefaultPages(?array $value ): void {
-        $this->defaultPages = $value;
+    public function setDefaultPages(?array $value): void {
+        $this->getBackingStore()->set('defaultPages', $value);
     }
 
     /**
      * Sets the displayName property value. The language name to display. This property is read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the isEnabled property value. Indicates whether the language is enabled within the user flow.
      *  @param bool|null $value Value to set for the isEnabled property.
     */
-    public function setIsEnabled(?bool $value ): void {
-        $this->isEnabled = $value;
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**
      * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
      *  @param array<UserFlowLanguagePage>|null $value Value to set for the overridesPages property.
     */
-    public function setOverridesPages(?array $value ): void {
-        $this->overridesPages = $value;
+    public function setOverridesPages(?array $value): void {
+        $this->getBackingStore()->set('overridesPages', $value);
     }
 
 }

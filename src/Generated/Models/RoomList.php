@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RoomList extends Place implements Parsable 
 {
     /**
-     * @var string|null $emailAddress The email address of the room list.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var array<Room>|null $rooms The rooms property
-    */
-    private ?array $rooms = null;
-    
-    /**
      * Instantiates a new RoomList and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class RoomList extends Place implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -60,7 +50,7 @@ class RoomList extends Place implements Parsable
      * @return array<Room>|null
     */
     public function getRooms(): ?array {
-        return $this->rooms;
+        return $this->getBackingStore()->get('rooms');
     }
 
     /**
@@ -69,24 +59,24 @@ class RoomList extends Place implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeCollectionOfObjectValues('rooms', $this->rooms);
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeCollectionOfObjectValues('rooms', $this->getRooms());
     }
 
     /**
      * Sets the emailAddress property value. The email address of the room list.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the rooms property value. The rooms property
      *  @param array<Room>|null $value Value to set for the rooms property.
     */
-    public function setRooms(?array $value ): void {
-        $this->rooms = $value;
+    public function setRooms(?array $value): void {
+        $this->getBackingStore()->set('rooms', $value);
     }
 
 }

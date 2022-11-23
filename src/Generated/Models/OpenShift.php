@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenShift extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var OpenShiftItem|null $draftOpenShift An unpublished open shift.
-    */
-    private ?OpenShiftItem $draftOpenShift = null;
-    
-    /**
-     * @var string|null $schedulingGroupId ID for the scheduling group that the open shift belongs to.
-    */
-    private ?string $schedulingGroupId = null;
-    
-    /**
-     * @var OpenShiftItem|null $sharedOpenShift A published open shift.
-    */
-    private ?OpenShiftItem $sharedOpenShift = null;
-    
-    /**
      * Instantiates a new OpenShift and sets the default values.
     */
     public function __construct() {
@@ -45,7 +30,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return OpenShiftItem|null
     */
     public function getDraftOpenShift(): ?OpenShiftItem {
-        return $this->draftOpenShift;
+        return $this->getBackingStore()->get('draftOpenShift');
     }
 
     /**
@@ -66,7 +51,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSchedulingGroupId(): ?string {
-        return $this->schedulingGroupId;
+        return $this->getBackingStore()->get('schedulingGroupId');
     }
 
     /**
@@ -74,7 +59,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
      * @return OpenShiftItem|null
     */
     public function getSharedOpenShift(): ?OpenShiftItem {
-        return $this->sharedOpenShift;
+        return $this->getBackingStore()->get('sharedOpenShift');
     }
 
     /**
@@ -83,33 +68,33 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('draftOpenShift', $this->draftOpenShift);
-        $writer->writeStringValue('schedulingGroupId', $this->schedulingGroupId);
-        $writer->writeObjectValue('sharedOpenShift', $this->sharedOpenShift);
+        $writer->writeObjectValue('draftOpenShift', $this->getDraftOpenShift());
+        $writer->writeStringValue('schedulingGroupId', $this->getSchedulingGroupId());
+        $writer->writeObjectValue('sharedOpenShift', $this->getSharedOpenShift());
     }
 
     /**
      * Sets the draftOpenShift property value. An unpublished open shift.
      *  @param OpenShiftItem|null $value Value to set for the draftOpenShift property.
     */
-    public function setDraftOpenShift(?OpenShiftItem $value ): void {
-        $this->draftOpenShift = $value;
+    public function setDraftOpenShift(?OpenShiftItem $value): void {
+        $this->getBackingStore()->set('draftOpenShift', $value);
     }
 
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
      *  @param string|null $value Value to set for the schedulingGroupId property.
     */
-    public function setSchedulingGroupId(?string $value ): void {
-        $this->schedulingGroupId = $value;
+    public function setSchedulingGroupId(?string $value): void {
+        $this->getBackingStore()->set('schedulingGroupId', $value);
     }
 
     /**
      * Sets the sharedOpenShift property value. A published open shift.
      *  @param OpenShiftItem|null $value Value to set for the sharedOpenShift property.
     */
-    public function setSharedOpenShift(?OpenShiftItem $value ): void {
-        $this->sharedOpenShift = $value;
+    public function setSharedOpenShift(?OpenShiftItem $value): void {
+        $this->getBackingStore()->set('sharedOpenShift', $value);
     }
 
 }

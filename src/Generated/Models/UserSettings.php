@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserSettings extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $contributionToContentDiscoveryAsOrganizationDisabled The contributionToContentDiscoveryAsOrganizationDisabled property
-    */
-    private ?bool $contributionToContentDiscoveryAsOrganizationDisabled = null;
-    
-    /**
-     * @var bool|null $contributionToContentDiscoveryDisabled The contributionToContentDiscoveryDisabled property
-    */
-    private ?bool $contributionToContentDiscoveryDisabled = null;
-    
-    /**
-     * @var ShiftPreferences|null $shiftPreferences The shiftPreferences property
-    */
-    private ?ShiftPreferences $shiftPreferences = null;
-    
-    /**
      * Instantiates a new userSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.userSettings');
     }
 
     /**
@@ -45,7 +29,7 @@ class UserSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getContributionToContentDiscoveryAsOrganizationDisabled(): ?bool {
-        return $this->contributionToContentDiscoveryAsOrganizationDisabled;
+        return $this->getBackingStore()->get('contributionToContentDiscoveryAsOrganizationDisabled');
     }
 
     /**
@@ -53,7 +37,7 @@ class UserSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getContributionToContentDiscoveryDisabled(): ?bool {
-        return $this->contributionToContentDiscoveryDisabled;
+        return $this->getBackingStore()->get('contributionToContentDiscoveryDisabled');
     }
 
     /**
@@ -74,7 +58,7 @@ class UserSettings extends Entity implements Parsable
      * @return ShiftPreferences|null
     */
     public function getShiftPreferences(): ?ShiftPreferences {
-        return $this->shiftPreferences;
+        return $this->getBackingStore()->get('shiftPreferences');
     }
 
     /**
@@ -83,33 +67,33 @@ class UserSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->contributionToContentDiscoveryAsOrganizationDisabled);
-        $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->contributionToContentDiscoveryDisabled);
-        $writer->writeObjectValue('shiftPreferences', $this->shiftPreferences);
+        $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->getContributionToContentDiscoveryAsOrganizationDisabled());
+        $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->getContributionToContentDiscoveryDisabled());
+        $writer->writeObjectValue('shiftPreferences', $this->getShiftPreferences());
     }
 
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
      *  @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
     */
-    public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value ): void {
-        $this->contributionToContentDiscoveryAsOrganizationDisabled = $value;
+    public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value): void {
+        $this->getBackingStore()->set('contributionToContentDiscoveryAsOrganizationDisabled', $value);
     }
 
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
      *  @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
     */
-    public function setContributionToContentDiscoveryDisabled(?bool $value ): void {
-        $this->contributionToContentDiscoveryDisabled = $value;
+    public function setContributionToContentDiscoveryDisabled(?bool $value): void {
+        $this->getBackingStore()->set('contributionToContentDiscoveryDisabled', $value);
     }
 
     /**
      * Sets the shiftPreferences property value. The shiftPreferences property
      *  @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
     */
-    public function setShiftPreferences(?ShiftPreferences $value ): void {
-        $this->shiftPreferences = $value;
+    public function setShiftPreferences(?ShiftPreferences $value): void {
+        $this->getBackingStore()->set('shiftPreferences', $value);
     }
 
 }

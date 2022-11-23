@@ -9,21 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var string|null $teamsAppDisplayName Display name of the teamsApp.
-    */
-    private ?string $teamsAppDisplayName = null;
-    
-    /**
-     * @var string|null $teamsAppId Unique identifier of the teamsApp.
-    */
-    private ?string $teamsAppId = null;
-    
-    /**
      * Instantiates a new TeamsAppUpgradedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -58,7 +43,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -66,7 +51,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
      * @return string|null
     */
     public function getTeamsAppDisplayName(): ?string {
-        return $this->teamsAppDisplayName;
+        return $this->getBackingStore()->get('teamsAppDisplayName');
     }
 
     /**
@@ -74,7 +59,7 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
-        return $this->teamsAppId;
+        return $this->getBackingStore()->get('teamsAppId');
     }
 
     /**
@@ -83,33 +68,33 @@ class TeamsAppUpgradedEventMessageDetail extends EventMessageDetail implements P
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeStringValue('teamsAppDisplayName', $this->teamsAppDisplayName);
-        $writer->writeStringValue('teamsAppId', $this->teamsAppId);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('teamsAppDisplayName', $this->getTeamsAppDisplayName());
+        $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
      *  @param string|null $value Value to set for the teamsAppDisplayName property.
     */
-    public function setTeamsAppDisplayName(?string $value ): void {
-        $this->teamsAppDisplayName = $value;
+    public function setTeamsAppDisplayName(?string $value): void {
+        $this->getBackingStore()->set('teamsAppDisplayName', $value);
     }
 
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
      *  @param string|null $value Value to set for the teamsAppId property.
     */
-    public function setTeamsAppId(?string $value ): void {
-        $this->teamsAppId = $value;
+    public function setTeamsAppId(?string $value): void {
+        $this->getBackingStore()->set('teamsAppId', $value);
     }
 
 }

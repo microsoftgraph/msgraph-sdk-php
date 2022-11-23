@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessRoot extends Entity implements Parsable 
 {
     /**
-     * @var array<AuthenticationContextClassReference>|null $authenticationContextClassReferences Read-only. Nullable. Returns a collection of the specified authentication context class references.
-    */
-    private ?array $authenticationContextClassReferences = null;
-    
-    /**
-     * @var array<NamedLocation>|null $namedLocations Read-only. Nullable. Returns a collection of the specified named locations.
-    */
-    private ?array $namedLocations = null;
-    
-    /**
-     * @var array<ConditionalAccessPolicy>|null $policies Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
-    */
-    private ?array $policies = null;
-    
-    /**
-     * @var array<ConditionalAccessTemplate>|null $templates Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
-    */
-    private ?array $templates = null;
-    
-    /**
      * Instantiates a new conditionalAccessRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.conditionalAccessRoot');
     }
 
     /**
@@ -50,7 +29,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<AuthenticationContextClassReference>|null
     */
     public function getAuthenticationContextClassReferences(): ?array {
-        return $this->authenticationContextClassReferences;
+        return $this->getBackingStore()->get('authenticationContextClassReferences');
     }
 
     /**
@@ -72,7 +51,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<NamedLocation>|null
     */
     public function getNamedLocations(): ?array {
-        return $this->namedLocations;
+        return $this->getBackingStore()->get('namedLocations');
     }
 
     /**
@@ -80,7 +59,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<ConditionalAccessPolicy>|null
     */
     public function getPolicies(): ?array {
-        return $this->policies;
+        return $this->getBackingStore()->get('policies');
     }
 
     /**
@@ -88,7 +67,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<ConditionalAccessTemplate>|null
     */
     public function getTemplates(): ?array {
-        return $this->templates;
+        return $this->getBackingStore()->get('templates');
     }
 
     /**
@@ -97,42 +76,42 @@ class ConditionalAccessRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('authenticationContextClassReferences', $this->authenticationContextClassReferences);
-        $writer->writeCollectionOfObjectValues('namedLocations', $this->namedLocations);
-        $writer->writeCollectionOfObjectValues('policies', $this->policies);
-        $writer->writeCollectionOfObjectValues('templates', $this->templates);
+        $writer->writeCollectionOfObjectValues('authenticationContextClassReferences', $this->getAuthenticationContextClassReferences());
+        $writer->writeCollectionOfObjectValues('namedLocations', $this->getNamedLocations());
+        $writer->writeCollectionOfObjectValues('policies', $this->getPolicies());
+        $writer->writeCollectionOfObjectValues('templates', $this->getTemplates());
     }
 
     /**
      * Sets the authenticationContextClassReferences property value. Read-only. Nullable. Returns a collection of the specified authentication context class references.
      *  @param array<AuthenticationContextClassReference>|null $value Value to set for the authenticationContextClassReferences property.
     */
-    public function setAuthenticationContextClassReferences(?array $value ): void {
-        $this->authenticationContextClassReferences = $value;
+    public function setAuthenticationContextClassReferences(?array $value): void {
+        $this->getBackingStore()->set('authenticationContextClassReferences', $value);
     }
 
     /**
      * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
      *  @param array<NamedLocation>|null $value Value to set for the namedLocations property.
     */
-    public function setNamedLocations(?array $value ): void {
-        $this->namedLocations = $value;
+    public function setNamedLocations(?array $value): void {
+        $this->getBackingStore()->set('namedLocations', $value);
     }
 
     /**
      * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      *  @param array<ConditionalAccessPolicy>|null $value Value to set for the policies property.
     */
-    public function setPolicies(?array $value ): void {
-        $this->policies = $value;
+    public function setPolicies(?array $value): void {
+        $this->getBackingStore()->set('policies', $value);
     }
 
     /**
      * Sets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
      *  @param array<ConditionalAccessTemplate>|null $value Value to set for the templates property.
     */
-    public function setTemplates(?array $value ): void {
-        $this->templates = $value;
+    public function setTemplates(?array $value): void {
+        $this->getBackingStore()->set('templates', $value);
     }
 
 }

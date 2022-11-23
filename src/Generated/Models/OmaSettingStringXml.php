@@ -10,16 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class OmaSettingStringXml extends OmaSetting implements Parsable 
 {
     /**
-     * @var string|null $fileName File name associated with the Value property (.xml).
-    */
-    private ?string $fileName = null;
-    
-    /**
-     * @var StreamInterface|null $value Value. (UTF8 encoded byte array)
-    */
-    private ?StreamInterface $value = null;
-    
-    /**
      * Instantiates a new OmaSettingStringXml and sets the default values.
     */
     public function __construct() {
@@ -53,15 +43,15 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->fileName;
+        return $this->getBackingStore()->get('fileName');
     }
 
     /**
      * Gets the value property value. Value. (UTF8 encoded byte array)
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getValue(): StreamInterface {
-        return $this->value;
+    public function getValue(): ?StreamInterface {
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -70,24 +60,24 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('fileName', $this->fileName);
-        $writer->writeBinaryContent('value', $this->value);
+        $writer->writeStringValue('fileName', $this->getFileName());
+        $writer->writeBinaryContent('value', $this->getValue());
     }
 
     /**
      * Sets the fileName property value. File name associated with the Value property (.xml).
      *  @param string|null $value Value to set for the fileName property.
     */
-    public function setFileName(?string $value ): void {
-        $this->fileName = $value;
+    public function setFileName(?string $value): void {
+        $this->getBackingStore()->set('fileName', $value);
     }
 
     /**
      * Sets the value property value. Value. (UTF8 encoded byte array)
      *  @param StreamInterface|null $value Value to set for the value property.
     */
-    public function setValue(?StreamInterface $value ): void {
-        $this->value = $value;
+    public function setValue(?StreamInterface $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

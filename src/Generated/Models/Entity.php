@@ -6,30 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Entity implements AdditionalDataHolder, Parsable 
+class Entity implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $id The unique idenfier for an entity. Read-only.
-    */
-    private ?string $id = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new entity and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.entity');
     }
 
     /**
@@ -79,6 +72,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.androidWorkProfileCompliancePolicy': return new AndroidWorkProfileCompliancePolicy();
                 case '#microsoft.graph.androidWorkProfileCustomConfiguration': return new AndroidWorkProfileCustomConfiguration();
                 case '#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration': return new AndroidWorkProfileGeneralDeviceConfiguration();
+                case '#microsoft.graph.anonymousGuestConversationMember': return new AnonymousGuestConversationMember();
                 case '#microsoft.graph.appCatalogs': return new AppCatalogs();
                 case '#microsoft.graph.appConsentApprovalRoute': return new AppConsentApprovalRoute();
                 case '#microsoft.graph.appConsentRequest': return new AppConsentRequest();
@@ -355,6 +349,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.meetingAttendanceReport': return new MeetingAttendanceReport();
                 case '#microsoft.graph.message': return new Message();
                 case '#microsoft.graph.messageRule': return new MessageRule();
+                case '#microsoft.graph.microsoftAccountUserConversationMember': return new MicrosoftAccountUserConversationMember();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethod': return new MicrosoftAuthenticatorAuthenticationMethod();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration': return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget': return new MicrosoftAuthenticatorAuthenticationMethodTarget();
@@ -483,6 +478,7 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.security.ediscoveryHoldOperation': return new EdiscoveryHoldOperation();
                 case '#microsoft.graph.security.ediscoveryIndexOperation': return new EdiscoveryIndexOperation();
                 case '#microsoft.graph.security.ediscoveryNoncustodialDataSource': return new EdiscoveryNoncustodialDataSource();
+                case '#microsoft.graph.security.ediscoveryPurgeDataOperation': return new EdiscoveryPurgeDataOperation();
                 case '#microsoft.graph.security.ediscoveryReviewSet': return new EdiscoveryReviewSet();
                 case '#microsoft.graph.security.ediscoveryReviewSetQuery': return new EdiscoveryReviewSetQuery();
                 case '#microsoft.graph.security.ediscoveryReviewTag': return new EdiscoveryReviewTag();
@@ -514,6 +510,8 @@ class Entity implements AdditionalDataHolder, Parsable
                 case '#microsoft.graph.simulationAutomationRun': return new SimulationAutomationRun();
                 case '#microsoft.graph.singleValueLegacyExtendedProperty': return new SingleValueLegacyExtendedProperty();
                 case '#microsoft.graph.site': return new Site();
+                case '#microsoft.graph.skypeForBusinessUserConversationMember': return new SkypeForBusinessUserConversationMember();
+                case '#microsoft.graph.skypeUserConversationMember': return new SkypeUserConversationMember();
                 case '#microsoft.graph.socialIdentityProvider': return new SocialIdentityProvider();
                 case '#microsoft.graph.softwareOathAuthenticationMethod': return new SoftwareOathAuthenticationMethod();
                 case '#microsoft.graph.softwareUpdateStatusSummary': return new SoftwareUpdateStatusSummary();
@@ -682,8 +680,16 @@ class Entity implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -703,7 +709,7 @@ class Entity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->id;
+        return $this->getBackingStore()->get('id');
     }
 
     /**
@@ -711,7 +717,7 @@ class Entity implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -719,33 +725,41 @@ class Entity implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('id', $this->id);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('id', $this->getId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the id property value. The unique idenfier for an entity. Read-only.
      *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?string $value ): void {
-        $this->id = $value;
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

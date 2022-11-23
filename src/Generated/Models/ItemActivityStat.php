@@ -10,61 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemActivityStat extends Entity implements Parsable 
 {
     /**
-     * @var ItemActionStat|null $access Statistics about the access actions in this interval. Read-only.
-    */
-    private ?ItemActionStat $access = null;
-    
-    /**
-     * @var array<ItemActivity>|null $activities Exposes the itemActivities represented in this itemActivityStat resource.
-    */
-    private ?array $activities = null;
-    
-    /**
-     * @var ItemActionStat|null $create Statistics about the create actions in this interval. Read-only.
-    */
-    private ?ItemActionStat $create = null;
-    
-    /**
-     * @var ItemActionStat|null $delete Statistics about the delete actions in this interval. Read-only.
-    */
-    private ?ItemActionStat $delete = null;
-    
-    /**
-     * @var ItemActionStat|null $edit Statistics about the edit actions in this interval. Read-only.
-    */
-    private ?ItemActionStat $edit = null;
-    
-    /**
-     * @var DateTime|null $endDateTime When the interval ends. Read-only.
-    */
-    private ?DateTime $endDateTime = null;
-    
-    /**
-     * @var IncompleteData|null $incompleteData Indicates that the statistics in this interval are based on incomplete data. Read-only.
-    */
-    private ?IncompleteData $incompleteData = null;
-    
-    /**
-     * @var bool|null $isTrending Indicates whether the item is 'trending.' Read-only.
-    */
-    private ?bool $isTrending = null;
-    
-    /**
-     * @var ItemActionStat|null $move Statistics about the move actions in this interval. Read-only.
-    */
-    private ?ItemActionStat $move = null;
-    
-    /**
-     * @var DateTime|null $startDateTime When the interval starts. Read-only.
-    */
-    private ?DateTime $startDateTime = null;
-    
-    /**
      * Instantiates a new itemActivityStat and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.itemActivityStat');
     }
 
     /**
@@ -81,7 +30,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getAccess(): ?ItemActionStat {
-        return $this->access;
+        return $this->getBackingStore()->get('access');
     }
 
     /**
@@ -89,7 +38,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return array<ItemActivity>|null
     */
     public function getActivities(): ?array {
-        return $this->activities;
+        return $this->getBackingStore()->get('activities');
     }
 
     /**
@@ -97,7 +46,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getCreate(): ?ItemActionStat {
-        return $this->create;
+        return $this->getBackingStore()->get('create');
     }
 
     /**
@@ -105,7 +54,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getDelete(): ?ItemActionStat {
-        return $this->delete;
+        return $this->getBackingStore()->get('delete');
     }
 
     /**
@@ -113,7 +62,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getEdit(): ?ItemActionStat {
-        return $this->edit;
+        return $this->getBackingStore()->get('edit');
     }
 
     /**
@@ -121,7 +70,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->endDateTime;
+        return $this->getBackingStore()->get('endDateTime');
     }
 
     /**
@@ -149,7 +98,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return IncompleteData|null
     */
     public function getIncompleteData(): ?IncompleteData {
-        return $this->incompleteData;
+        return $this->getBackingStore()->get('incompleteData');
     }
 
     /**
@@ -157,7 +106,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsTrending(): ?bool {
-        return $this->isTrending;
+        return $this->getBackingStore()->get('isTrending');
     }
 
     /**
@@ -165,7 +114,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return ItemActionStat|null
     */
     public function getMove(): ?ItemActionStat {
-        return $this->move;
+        return $this->getBackingStore()->get('move');
     }
 
     /**
@@ -173,7 +122,7 @@ class ItemActivityStat extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->startDateTime;
+        return $this->getBackingStore()->get('startDateTime');
     }
 
     /**
@@ -182,96 +131,96 @@ class ItemActivityStat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('access', $this->access);
-        $writer->writeCollectionOfObjectValues('activities', $this->activities);
-        $writer->writeObjectValue('create', $this->create);
-        $writer->writeObjectValue('delete', $this->delete);
-        $writer->writeObjectValue('edit', $this->edit);
-        $writer->writeDateTimeValue('endDateTime', $this->endDateTime);
-        $writer->writeObjectValue('incompleteData', $this->incompleteData);
-        $writer->writeBooleanValue('isTrending', $this->isTrending);
-        $writer->writeObjectValue('move', $this->move);
-        $writer->writeDateTimeValue('startDateTime', $this->startDateTime);
+        $writer->writeObjectValue('access', $this->getAccess());
+        $writer->writeCollectionOfObjectValues('activities', $this->getActivities());
+        $writer->writeObjectValue('create', $this->getCreate());
+        $writer->writeObjectValue('delete', $this->getDelete());
+        $writer->writeObjectValue('edit', $this->getEdit());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeObjectValue('incompleteData', $this->getIncompleteData());
+        $writer->writeBooleanValue('isTrending', $this->getIsTrending());
+        $writer->writeObjectValue('move', $this->getMove());
+        $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
     }
 
     /**
      * Sets the access property value. Statistics about the access actions in this interval. Read-only.
      *  @param ItemActionStat|null $value Value to set for the access property.
     */
-    public function setAccess(?ItemActionStat $value ): void {
-        $this->access = $value;
+    public function setAccess(?ItemActionStat $value): void {
+        $this->getBackingStore()->set('access', $value);
     }
 
     /**
      * Sets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
      *  @param array<ItemActivity>|null $value Value to set for the activities property.
     */
-    public function setActivities(?array $value ): void {
-        $this->activities = $value;
+    public function setActivities(?array $value): void {
+        $this->getBackingStore()->set('activities', $value);
     }
 
     /**
      * Sets the create property value. Statistics about the create actions in this interval. Read-only.
      *  @param ItemActionStat|null $value Value to set for the create property.
     */
-    public function setCreate(?ItemActionStat $value ): void {
-        $this->create = $value;
+    public function setCreate(?ItemActionStat $value): void {
+        $this->getBackingStore()->set('create', $value);
     }
 
     /**
      * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
      *  @param ItemActionStat|null $value Value to set for the delete property.
     */
-    public function setDelete(?ItemActionStat $value ): void {
-        $this->delete = $value;
+    public function setDelete(?ItemActionStat $value): void {
+        $this->getBackingStore()->set('delete', $value);
     }
 
     /**
      * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
      *  @param ItemActionStat|null $value Value to set for the edit property.
     */
-    public function setEdit(?ItemActionStat $value ): void {
-        $this->edit = $value;
+    public function setEdit(?ItemActionStat $value): void {
+        $this->getBackingStore()->set('edit', $value);
     }
 
     /**
      * Sets the endDateTime property value. When the interval ends. Read-only.
      *  @param DateTime|null $value Value to set for the endDateTime property.
     */
-    public function setEndDateTime(?DateTime $value ): void {
-        $this->endDateTime = $value;
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**
      * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
      *  @param IncompleteData|null $value Value to set for the incompleteData property.
     */
-    public function setIncompleteData(?IncompleteData $value ): void {
-        $this->incompleteData = $value;
+    public function setIncompleteData(?IncompleteData $value): void {
+        $this->getBackingStore()->set('incompleteData', $value);
     }
 
     /**
      * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
      *  @param bool|null $value Value to set for the isTrending property.
     */
-    public function setIsTrending(?bool $value ): void {
-        $this->isTrending = $value;
+    public function setIsTrending(?bool $value): void {
+        $this->getBackingStore()->set('isTrending', $value);
     }
 
     /**
      * Sets the move property value. Statistics about the move actions in this interval. Read-only.
      *  @param ItemActionStat|null $value Value to set for the move property.
     */
-    public function setMove(?ItemActionStat $value ): void {
-        $this->move = $value;
+    public function setMove(?ItemActionStat $value): void {
+        $this->getBackingStore()->set('move', $value);
     }
 
     /**
      * Sets the startDateTime property value. When the interval starts. Read-only.
      *  @param DateTime|null $value Value to set for the startDateTime property.
     */
-    public function setStartDateTime(?DateTime $value ): void {
-        $this->startDateTime = $value;
+    public function setStartDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('startDateTime', $value);
     }
 
 }

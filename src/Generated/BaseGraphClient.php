@@ -112,6 +112,8 @@ use Microsoft\Graph\Generated\Workbooks\Item\DriveItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Workbooks\WorkbooksRequestBuilder;
 use Microsoft\Kiota\Abstractions\ApiClientBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactory;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Microsoft\Kiota\Serialization\Json\JsonParseNodeFactory;
 use Microsoft\Kiota\Serialization\Json\JsonSerializationWriterFactory;
 use Microsoft\Kiota\Serialization\Text\TextParseNodeFactory;
@@ -701,8 +703,9 @@ class BaseGraphClient
     /**
      * Instantiates a new BaseGraphClient and sets the default values.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param BackingStoreFactory|null $backingStore The backing store to use for the models.
     */
-    public function __construct(RequestAdapter $requestAdapter) {
+    public function __construct(RequestAdapter $requestAdapter, ?BackingStoreFactory $backingStore = null) {
         $this->pathParameters = [];
         $this->urlTemplate = '{+baseurl}';
         $this->requestAdapter = $requestAdapter;
@@ -713,6 +716,7 @@ class BaseGraphClient
         if (empty($this->requestAdapter->getBaseUrl())) {
             $this->requestAdapter->setBaseUrl('https://graph.microsoft.com/v1.0');
         }
+        $this->requestAdapter->enableBackingStore($backingStore ?? BackingStoreFactorySingleton::getInstance());
     }
 
     /**

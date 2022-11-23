@@ -6,40 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TeamSummary implements AdditionalDataHolder, Parsable 
+class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $guestsCount The guestsCount property
-    */
-    private ?int $guestsCount = null;
-    
-    /**
-     * @var int|null $membersCount The membersCount property
-    */
-    private ?int $membersCount = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $ownersCount The ownersCount property
-    */
-    private ?int $ownersCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new teamSummary and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.teamSummary');
     }
 
     /**
@@ -55,8 +38,16 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -78,7 +69,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getGuestsCount(): ?int {
-        return $this->guestsCount;
+        return $this->getBackingStore()->get('guestsCount');
     }
 
     /**
@@ -86,7 +77,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMembersCount(): ?int {
-        return $this->membersCount;
+        return $this->getBackingStore()->get('membersCount');
     }
 
     /**
@@ -94,7 +85,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -102,7 +93,7 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getOwnersCount(): ?int {
-        return $this->ownersCount;
+        return $this->getBackingStore()->get('ownersCount');
     }
 
     /**
@@ -110,51 +101,59 @@ class TeamSummary implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeIntegerValue('guestsCount', $this->guestsCount);
-        $writer->writeIntegerValue('membersCount', $this->membersCount);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('ownersCount', $this->ownersCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeIntegerValue('guestsCount', $this->getGuestsCount());
+        $writer->writeIntegerValue('membersCount', $this->getMembersCount());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('ownersCount', $this->getOwnersCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the guestsCount property value. The guestsCount property
      *  @param int|null $value Value to set for the guestsCount property.
     */
-    public function setGuestsCount(?int $value ): void {
-        $this->guestsCount = $value;
+    public function setGuestsCount(?int $value): void {
+        $this->getBackingStore()->set('guestsCount', $value);
     }
 
     /**
      * Sets the membersCount property value. The membersCount property
      *  @param int|null $value Value to set for the membersCount property.
     */
-    public function setMembersCount(?int $value ): void {
-        $this->membersCount = $value;
+    public function setMembersCount(?int $value): void {
+        $this->getBackingStore()->set('membersCount', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the ownersCount property value. The ownersCount property
      *  @param int|null $value Value to set for the ownersCount property.
     */
-    public function setOwnersCount(?int $value ): void {
-        $this->ownersCount = $value;
+    public function setOwnersCount(?int $value): void {
+        $this->getBackingStore()->set('ownersCount', $value);
     }
 
 }

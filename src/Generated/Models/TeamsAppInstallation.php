@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppInstallation extends Entity implements Parsable 
 {
     /**
-     * @var TeamsApp|null $teamsApp The app that is installed.
-    */
-    private ?TeamsApp $teamsApp = null;
-    
-    /**
-     * @var TeamsAppDefinition|null $teamsAppDefinition The details of this version of the app.
-    */
-    private ?TeamsAppDefinition $teamsAppDefinition = null;
-    
-    /**
      * Instantiates a new teamsAppInstallation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.teamsAppInstallation');
     }
 
     /**
@@ -59,7 +48,7 @@ class TeamsAppInstallation extends Entity implements Parsable
      * @return TeamsApp|null
     */
     public function getTeamsApp(): ?TeamsApp {
-        return $this->teamsApp;
+        return $this->getBackingStore()->get('teamsApp');
     }
 
     /**
@@ -67,7 +56,7 @@ class TeamsAppInstallation extends Entity implements Parsable
      * @return TeamsAppDefinition|null
     */
     public function getTeamsAppDefinition(): ?TeamsAppDefinition {
-        return $this->teamsAppDefinition;
+        return $this->getBackingStore()->get('teamsAppDefinition');
     }
 
     /**
@@ -76,24 +65,24 @@ class TeamsAppInstallation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('teamsApp', $this->teamsApp);
-        $writer->writeObjectValue('teamsAppDefinition', $this->teamsAppDefinition);
+        $writer->writeObjectValue('teamsApp', $this->getTeamsApp());
+        $writer->writeObjectValue('teamsAppDefinition', $this->getTeamsAppDefinition());
     }
 
     /**
      * Sets the teamsApp property value. The app that is installed.
      *  @param TeamsApp|null $value Value to set for the teamsApp property.
     */
-    public function setTeamsApp(?TeamsApp $value ): void {
-        $this->teamsApp = $value;
+    public function setTeamsApp(?TeamsApp $value): void {
+        $this->getBackingStore()->set('teamsApp', $value);
     }
 
     /**
      * Sets the teamsAppDefinition property value. The details of this version of the app.
      *  @param TeamsAppDefinition|null $value Value to set for the teamsAppDefinition property.
     */
-    public function setTeamsAppDefinition(?TeamsAppDefinition $value ): void {
-        $this->teamsAppDefinition = $value;
+    public function setTeamsAppDefinition(?TeamsAppDefinition $value): void {
+        $this->getBackingStore()->set('teamsAppDefinition', $value);
     }
 
 }

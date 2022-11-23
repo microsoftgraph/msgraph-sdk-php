@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var int|null $limit The maximum number of devices that a user can enroll
-    */
-    private ?int $limit = null;
-    
-    /**
      * Instantiates a new DeviceEnrollmentLimitConfiguration and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
      * @return int|null
     */
     public function getLimit(): ?int {
-        return $this->limit;
+        return $this->getBackingStore()->get('limit');
     }
 
     /**
@@ -55,15 +50,15 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('limit', $this->limit);
+        $writer->writeIntegerValue('limit', $this->getLimit());
     }
 
     /**
      * Sets the limit property value. The maximum number of devices that a user can enroll
      *  @param int|null $value Value to set for the limit property.
     */
-    public function setLimit(?int $value ): void {
-        $this->limit = $value;
+    public function setLimit(?int $value): void {
+        $this->getBackingStore()->set('limit', $value);
     }
 
 }

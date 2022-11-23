@@ -10,58 +10,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable 
+class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<AttendeeBase>|null $attendees The attendees property
-    */
-    private ?array $attendees = null;
-    
-    /**
-     * @var bool|null $isOrganizerOptional The isOrganizerOptional property
-    */
-    private ?bool $isOrganizerOptional = null;
-    
-    /**
-     * @var LocationConstraint|null $locationConstraint The locationConstraint property
-    */
-    private ?LocationConstraint $locationConstraint = null;
-    
-    /**
-     * @var int|null $maxCandidates The maxCandidates property
-    */
-    private ?int $maxCandidates = null;
-    
-    /**
-     * @var DateInterval|null $meetingDuration The meetingDuration property
-    */
-    private ?DateInterval $meetingDuration = null;
-    
-    /**
-     * @var float|null $minimumAttendeePercentage The minimumAttendeePercentage property
-    */
-    private ?float $minimumAttendeePercentage = null;
-    
-    /**
-     * @var bool|null $returnSuggestionReasons The returnSuggestionReasons property
-    */
-    private ?bool $returnSuggestionReasons = null;
-    
-    /**
-     * @var TimeConstraint|null $timeConstraint The timeConstraint property
-    */
-    private ?TimeConstraint $timeConstraint = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new findMeetingTimesPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -78,8 +42,8 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -87,7 +51,15 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return array<AttendeeBase>|null
     */
     public function getAttendees(): ?array {
-        return $this->attendees;
+        return $this->getBackingStore()->get('attendees');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -113,7 +85,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getIsOrganizerOptional(): ?bool {
-        return $this->isOrganizerOptional;
+        return $this->getBackingStore()->get('isOrganizerOptional');
     }
 
     /**
@@ -121,7 +93,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return LocationConstraint|null
     */
     public function getLocationConstraint(): ?LocationConstraint {
-        return $this->locationConstraint;
+        return $this->getBackingStore()->get('locationConstraint');
     }
 
     /**
@@ -129,7 +101,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getMaxCandidates(): ?int {
-        return $this->maxCandidates;
+        return $this->getBackingStore()->get('maxCandidates');
     }
 
     /**
@@ -137,7 +109,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return DateInterval|null
     */
     public function getMeetingDuration(): ?DateInterval {
-        return $this->meetingDuration;
+        return $this->getBackingStore()->get('meetingDuration');
     }
 
     /**
@@ -145,7 +117,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return float|null
     */
     public function getMinimumAttendeePercentage(): ?float {
-        return $this->minimumAttendeePercentage;
+        return $this->getBackingStore()->get('minimumAttendeePercentage');
     }
 
     /**
@@ -153,7 +125,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getReturnSuggestionReasons(): ?bool {
-        return $this->returnSuggestionReasons;
+        return $this->getBackingStore()->get('returnSuggestionReasons');
     }
 
     /**
@@ -161,7 +133,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @return TimeConstraint|null
     */
     public function getTimeConstraint(): ?TimeConstraint {
-        return $this->timeConstraint;
+        return $this->getBackingStore()->get('timeConstraint');
     }
 
     /**
@@ -169,87 +141,95 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfObjectValues('attendees', $this->attendees);
-        $writer->writeBooleanValue('isOrganizerOptional', $this->isOrganizerOptional);
-        $writer->writeObjectValue('locationConstraint', $this->locationConstraint);
-        $writer->writeIntegerValue('maxCandidates', $this->maxCandidates);
-        $writer->writeDateIntervalValue('meetingDuration', $this->meetingDuration);
-        $writer->writeFloatValue('minimumAttendeePercentage', $this->minimumAttendeePercentage);
-        $writer->writeBooleanValue('returnSuggestionReasons', $this->returnSuggestionReasons);
-        $writer->writeObjectValue('timeConstraint', $this->timeConstraint);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfObjectValues('attendees', $this->getAttendees());
+        $writer->writeBooleanValue('isOrganizerOptional', $this->getIsOrganizerOptional());
+        $writer->writeObjectValue('locationConstraint', $this->getLocationConstraint());
+        $writer->writeIntegerValue('maxCandidates', $this->getMaxCandidates());
+        $writer->writeDateIntervalValue('meetingDuration', $this->getMeetingDuration());
+        $writer->writeFloatValue('minimumAttendeePercentage', $this->getMinimumAttendeePercentage());
+        $writer->writeBooleanValue('returnSuggestionReasons', $this->getReturnSuggestionReasons());
+        $writer->writeObjectValue('timeConstraint', $this->getTimeConstraint());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the attendees property value. The attendees property
      *  @param array<AttendeeBase>|null $value Value to set for the attendees property.
     */
-    public function setAttendees(?array $value ): void {
-        $this->attendees = $value;
+    public function setAttendees(?array $value): void {
+        $this->getBackingStore()->set('attendees', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the isOrganizerOptional property value. The isOrganizerOptional property
      *  @param bool|null $value Value to set for the isOrganizerOptional property.
     */
-    public function setIsOrganizerOptional(?bool $value ): void {
-        $this->isOrganizerOptional = $value;
+    public function setIsOrganizerOptional(?bool $value): void {
+        $this->getBackingStore()->set('isOrganizerOptional', $value);
     }
 
     /**
      * Sets the locationConstraint property value. The locationConstraint property
      *  @param LocationConstraint|null $value Value to set for the locationConstraint property.
     */
-    public function setLocationConstraint(?LocationConstraint $value ): void {
-        $this->locationConstraint = $value;
+    public function setLocationConstraint(?LocationConstraint $value): void {
+        $this->getBackingStore()->set('locationConstraint', $value);
     }
 
     /**
      * Sets the maxCandidates property value. The maxCandidates property
      *  @param int|null $value Value to set for the maxCandidates property.
     */
-    public function setMaxCandidates(?int $value ): void {
-        $this->maxCandidates = $value;
+    public function setMaxCandidates(?int $value): void {
+        $this->getBackingStore()->set('maxCandidates', $value);
     }
 
     /**
      * Sets the meetingDuration property value. The meetingDuration property
      *  @param DateInterval|null $value Value to set for the meetingDuration property.
     */
-    public function setMeetingDuration(?DateInterval $value ): void {
-        $this->meetingDuration = $value;
+    public function setMeetingDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('meetingDuration', $value);
     }
 
     /**
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      *  @param float|null $value Value to set for the minimumAttendeePercentage property.
     */
-    public function setMinimumAttendeePercentage(?float $value ): void {
-        $this->minimumAttendeePercentage = $value;
+    public function setMinimumAttendeePercentage(?float $value): void {
+        $this->getBackingStore()->set('minimumAttendeePercentage', $value);
     }
 
     /**
      * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
      *  @param bool|null $value Value to set for the returnSuggestionReasons property.
     */
-    public function setReturnSuggestionReasons(?bool $value ): void {
-        $this->returnSuggestionReasons = $value;
+    public function setReturnSuggestionReasons(?bool $value): void {
+        $this->getBackingStore()->set('returnSuggestionReasons', $value);
     }
 
     /**
      * Sets the timeConstraint property value. The timeConstraint property
      *  @param TimeConstraint|null $value Value to set for the timeConstraint property.
     */
-    public function setTimeConstraint(?TimeConstraint $value ): void {
-        $this->timeConstraint = $value;
+    public function setTimeConstraint(?TimeConstraint $value): void {
+        $this->getBackingStore()->set('timeConstraint', $value);
     }
 
 }

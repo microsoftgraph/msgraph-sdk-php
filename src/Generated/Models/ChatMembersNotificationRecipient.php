@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient implements Parsable 
 {
     /**
-     * @var string|null $chatId The unique identifier for the chat whose members should receive the notifications.
-    */
-    private ?string $chatId = null;
-    
-    /**
      * Instantiates a new ChatMembersNotificationRecipient and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient imp
      * @return string|null
     */
     public function getChatId(): ?string {
-        return $this->chatId;
+        return $this->getBackingStore()->get('chatId');
     }
 
     /**
@@ -55,15 +50,15 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('chatId', $this->chatId);
+        $writer->writeStringValue('chatId', $this->getChatId());
     }
 
     /**
      * Sets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
      *  @param string|null $value Value to set for the chatId property.
     */
-    public function setChatId(?string $value ): void {
-        $this->chatId = $value;
+    public function setChatId(?string $value): void {
+        $this->getBackingStore()->set('chatId', $value);
     }
 
 }

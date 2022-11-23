@@ -7,60 +7,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AlertHistoryState implements AdditionalDataHolder, Parsable 
+class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $appId The appId property
-    */
-    private ?string $appId = null;
-    
-    /**
-     * @var string|null $assignedTo The assignedTo property
-    */
-    private ?string $assignedTo = null;
-    
-    /**
-     * @var array<string>|null $comments The comments property
-    */
-    private ?array $comments = null;
-    
-    /**
-     * @var AlertFeedback|null $feedback The feedback property
-    */
-    private ?AlertFeedback $feedback = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var AlertStatus|null $status The status property
-    */
-    private ?AlertStatus $status = null;
-    
-    /**
-     * @var DateTime|null $updatedDateTime The updatedDateTime property
-    */
-    private ?DateTime $updatedDateTime = null;
-    
-    /**
-     * @var string|null $user The user property
-    */
-    private ?string $user = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new alertHistoryState and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.alertHistoryState');
     }
 
     /**
@@ -76,8 +39,8 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -85,7 +48,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->appId;
+        return $this->getBackingStore()->get('appId');
     }
 
     /**
@@ -93,7 +56,15 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getAssignedTo(): ?string {
-        return $this->assignedTo;
+        return $this->getBackingStore()->get('assignedTo');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -101,7 +72,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getComments(): ?array {
-        return $this->comments;
+        return $this->getBackingStore()->get('comments');
     }
 
     /**
@@ -109,7 +80,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
-        return $this->feedback;
+        return $this->getBackingStore()->get('feedback');
     }
 
     /**
@@ -135,7 +106,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -143,7 +114,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -151,7 +122,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return DateTime|null
     */
     public function getUpdatedDateTime(): ?DateTime {
-        return $this->updatedDateTime;
+        return $this->getBackingStore()->get('updatedDateTime');
     }
 
     /**
@@ -159,7 +130,7 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUser(): ?string {
-        return $this->user;
+        return $this->getBackingStore()->get('user');
     }
 
     /**
@@ -167,87 +138,95 @@ class AlertHistoryState implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('appId', $this->appId);
-        $writer->writeStringValue('assignedTo', $this->assignedTo);
-        $writer->writeCollectionOfPrimitiveValues('comments', $this->comments);
-        $writer->writeEnumValue('feedback', $this->feedback);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeDateTimeValue('updatedDateTime', $this->updatedDateTime);
-        $writer->writeStringValue('user', $this->user);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('appId', $this->getAppId());
+        $writer->writeStringValue('assignedTo', $this->getAssignedTo());
+        $writer->writeCollectionOfPrimitiveValues('comments', $this->getComments());
+        $writer->writeEnumValue('feedback', $this->getFeedback());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeDateTimeValue('updatedDateTime', $this->getUpdatedDateTime());
+        $writer->writeStringValue('user', $this->getUser());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the appId property value. The appId property
      *  @param string|null $value Value to set for the appId property.
     */
-    public function setAppId(?string $value ): void {
-        $this->appId = $value;
+    public function setAppId(?string $value): void {
+        $this->getBackingStore()->set('appId', $value);
     }
 
     /**
      * Sets the assignedTo property value. The assignedTo property
      *  @param string|null $value Value to set for the assignedTo property.
     */
-    public function setAssignedTo(?string $value ): void {
-        $this->assignedTo = $value;
+    public function setAssignedTo(?string $value): void {
+        $this->getBackingStore()->set('assignedTo', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the comments property value. The comments property
      *  @param array<string>|null $value Value to set for the comments property.
     */
-    public function setComments(?array $value ): void {
-        $this->comments = $value;
+    public function setComments(?array $value): void {
+        $this->getBackingStore()->set('comments', $value);
     }
 
     /**
      * Sets the feedback property value. The feedback property
      *  @param AlertFeedback|null $value Value to set for the feedback property.
     */
-    public function setFeedback(?AlertFeedback $value ): void {
-        $this->feedback = $value;
+    public function setFeedback(?AlertFeedback $value): void {
+        $this->getBackingStore()->set('feedback', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param AlertStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?AlertStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?AlertStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
      *  @param DateTime|null $value Value to set for the updatedDateTime property.
     */
-    public function setUpdatedDateTime(?DateTime $value ): void {
-        $this->updatedDateTime = $value;
+    public function setUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('updatedDateTime', $value);
     }
 
     /**
      * Sets the user property value. The user property
      *  @param string|null $value Value to set for the user property.
     */
-    public function setUser(?string $value ): void {
-        $this->user = $value;
+    public function setUser(?string $value): void {
+        $this->getBackingStore()->set('user', $value);
     }
 
 }

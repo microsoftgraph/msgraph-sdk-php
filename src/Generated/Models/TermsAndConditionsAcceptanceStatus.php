@@ -10,36 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $acceptedDateTime DateTime when the terms were last accepted by the user.
-    */
-    private ?DateTime $acceptedDateTime = null;
-    
-    /**
-     * @var int|null $acceptedVersion Most recent version number of the T&C accepted by the user.
-    */
-    private ?int $acceptedVersion = null;
-    
-    /**
-     * @var TermsAndConditions|null $termsAndConditions Navigation link to the terms and conditions that are assigned.
-    */
-    private ?TermsAndConditions $termsAndConditions = null;
-    
-    /**
-     * @var string|null $userDisplayName Display name of the user whose acceptance the entity represents.
-    */
-    private ?string $userDisplayName = null;
-    
-    /**
-     * @var string|null $userPrincipalName The userPrincipalName of the User that accepted the term.
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.termsAndConditionsAcceptanceStatus');
     }
 
     /**
@@ -56,7 +30,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAcceptedDateTime(): ?DateTime {
-        return $this->acceptedDateTime;
+        return $this->getBackingStore()->get('acceptedDateTime');
     }
 
     /**
@@ -64,7 +38,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
      * @return int|null
     */
     public function getAcceptedVersion(): ?int {
-        return $this->acceptedVersion;
+        return $this->getBackingStore()->get('acceptedVersion');
     }
 
     /**
@@ -87,7 +61,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
      * @return TermsAndConditions|null
     */
     public function getTermsAndConditions(): ?TermsAndConditions {
-        return $this->termsAndConditions;
+        return $this->getBackingStore()->get('termsAndConditions');
     }
 
     /**
@@ -95,7 +69,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->userDisplayName;
+        return $this->getBackingStore()->get('userDisplayName');
     }
 
     /**
@@ -103,7 +77,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -112,51 +86,51 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('acceptedDateTime', $this->acceptedDateTime);
-        $writer->writeIntegerValue('acceptedVersion', $this->acceptedVersion);
-        $writer->writeObjectValue('termsAndConditions', $this->termsAndConditions);
-        $writer->writeStringValue('userDisplayName', $this->userDisplayName);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeDateTimeValue('acceptedDateTime', $this->getAcceptedDateTime());
+        $writer->writeIntegerValue('acceptedVersion', $this->getAcceptedVersion());
+        $writer->writeObjectValue('termsAndConditions', $this->getTermsAndConditions());
+        $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
      *  @param DateTime|null $value Value to set for the acceptedDateTime property.
     */
-    public function setAcceptedDateTime(?DateTime $value ): void {
-        $this->acceptedDateTime = $value;
+    public function setAcceptedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('acceptedDateTime', $value);
     }
 
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
      *  @param int|null $value Value to set for the acceptedVersion property.
     */
-    public function setAcceptedVersion(?int $value ): void {
-        $this->acceptedVersion = $value;
+    public function setAcceptedVersion(?int $value): void {
+        $this->getBackingStore()->set('acceptedVersion', $value);
     }
 
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      *  @param TermsAndConditions|null $value Value to set for the termsAndConditions property.
     */
-    public function setTermsAndConditions(?TermsAndConditions $value ): void {
-        $this->termsAndConditions = $value;
+    public function setTermsAndConditions(?TermsAndConditions $value): void {
+        $this->getBackingStore()->set('termsAndConditions', $value);
     }
 
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
      *  @param string|null $value Value to set for the userDisplayName property.
     */
-    public function setUserDisplayName(?string $value ): void {
-        $this->userDisplayName = $value;
+    public function setUserDisplayName(?string $value): void {
+        $this->getBackingStore()->set('userDisplayName', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

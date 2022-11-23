@@ -9,21 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class InformationProtection extends Entity implements Parsable 
 {
     /**
-     * @var Bitlocker|null $bitlocker The bitlocker property
-    */
-    private ?Bitlocker $bitlocker = null;
-    
-    /**
-     * @var array<ThreatAssessmentRequest>|null $threatAssessmentRequests The threatAssessmentRequests property
-    */
-    private ?array $threatAssessmentRequests = null;
-    
-    /**
      * Instantiates a new InformationProtection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.informationProtection');
     }
 
     /**
@@ -40,7 +29,7 @@ class InformationProtection extends Entity implements Parsable
      * @return Bitlocker|null
     */
     public function getBitlocker(): ?Bitlocker {
-        return $this->bitlocker;
+        return $this->getBackingStore()->get('bitlocker');
     }
 
     /**
@@ -60,7 +49,7 @@ class InformationProtection extends Entity implements Parsable
      * @return array<ThreatAssessmentRequest>|null
     */
     public function getThreatAssessmentRequests(): ?array {
-        return $this->threatAssessmentRequests;
+        return $this->getBackingStore()->get('threatAssessmentRequests');
     }
 
     /**
@@ -69,24 +58,24 @@ class InformationProtection extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('bitlocker', $this->bitlocker);
-        $writer->writeCollectionOfObjectValues('threatAssessmentRequests', $this->threatAssessmentRequests);
+        $writer->writeObjectValue('bitlocker', $this->getBitlocker());
+        $writer->writeCollectionOfObjectValues('threatAssessmentRequests', $this->getThreatAssessmentRequests());
     }
 
     /**
      * Sets the bitlocker property value. The bitlocker property
      *  @param Bitlocker|null $value Value to set for the bitlocker property.
     */
-    public function setBitlocker(?Bitlocker $value ): void {
-        $this->bitlocker = $value;
+    public function setBitlocker(?Bitlocker $value): void {
+        $this->getBackingStore()->set('bitlocker', $value);
     }
 
     /**
      * Sets the threatAssessmentRequests property value. The threatAssessmentRequests property
      *  @param array<ThreatAssessmentRequest>|null $value Value to set for the threatAssessmentRequests property.
     */
-    public function setThreatAssessmentRequests(?array $value ): void {
-        $this->threatAssessmentRequests = $value;
+    public function setThreatAssessmentRequests(?array $value): void {
+        $this->getBackingStore()->set('threatAssessmentRequests', $value);
     }
 
 }

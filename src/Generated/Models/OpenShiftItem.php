@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OpenShiftItem extends ShiftItem implements Parsable 
 {
     /**
-     * @var int|null $openSlotCount Count of the number of slots for the given open shift.
-    */
-    private ?int $openSlotCount = null;
-    
-    /**
      * Instantiates a new OpenShiftItem and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class OpenShiftItem extends ShiftItem implements Parsable
      * @return int|null
     */
     public function getOpenSlotCount(): ?int {
-        return $this->openSlotCount;
+        return $this->getBackingStore()->get('openSlotCount');
     }
 
     /**
@@ -55,15 +50,15 @@ class OpenShiftItem extends ShiftItem implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeIntegerValue('openSlotCount', $this->openSlotCount);
+        $writer->writeIntegerValue('openSlotCount', $this->getOpenSlotCount());
     }
 
     /**
      * Sets the openSlotCount property value. Count of the number of slots for the given open shift.
      *  @param int|null $value Value to set for the openSlotCount property.
     */
-    public function setOpenSlotCount(?int $value ): void {
-        $this->openSlotCount = $value;
+    public function setOpenSlotCount(?int $value): void {
+        $this->getBackingStore()->set('openSlotCount', $value);
     }
 
 }

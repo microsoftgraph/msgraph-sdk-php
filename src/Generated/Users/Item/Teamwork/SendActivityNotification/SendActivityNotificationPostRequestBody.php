@@ -9,43 +9,22 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, Parsable 
+class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var string|null $activityType The activityType property
+     * @var BackingStore $backingStore Stores model information.
     */
-    private ?string $activityType = null;
-    
-    /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-    */
-    private array $additionalData;
-    
-    /**
-     * @var int|null $chainId The chainId property
-    */
-    private ?int $chainId = null;
-    
-    /**
-     * @var ItemBody|null $previewText The previewText property
-    */
-    private ?ItemBody $previewText = null;
-    
-    /**
-     * @var array<KeyValuePair>|null $templateParameters The templateParameters property
-    */
-    private ?array $templateParameters = null;
-    
-    /**
-     * @var TeamworkActivityTopic|null $topic The topic property
-    */
-    private ?TeamworkActivityTopic $topic = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new sendActivityNotificationPostRequestBody and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }
 
@@ -63,15 +42,23 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @return string|null
     */
     public function getActivityType(): ?string {
-        return $this->activityType;
+        return $this->getBackingStore()->get('activityType');
     }
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -79,7 +66,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @return int|null
     */
     public function getChainId(): ?int {
-        return $this->chainId;
+        return $this->getBackingStore()->get('chainId');
     }
 
     /**
@@ -102,7 +89,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @return ItemBody|null
     */
     public function getPreviewText(): ?ItemBody {
-        return $this->previewText;
+        return $this->getBackingStore()->get('previewText');
     }
 
     /**
@@ -110,7 +97,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @return array<KeyValuePair>|null
     */
     public function getTemplateParameters(): ?array {
-        return $this->templateParameters;
+        return $this->getBackingStore()->get('templateParameters');
     }
 
     /**
@@ -118,7 +105,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @return TeamworkActivityTopic|null
     */
     public function getTopic(): ?TeamworkActivityTopic {
-        return $this->topic;
+        return $this->getBackingStore()->get('topic');
     }
 
     /**
@@ -126,60 +113,68 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('activityType', $this->activityType);
-        $writer->writeIntegerValue('chainId', $this->chainId);
-        $writer->writeObjectValue('previewText', $this->previewText);
-        $writer->writeCollectionOfObjectValues('templateParameters', $this->templateParameters);
-        $writer->writeObjectValue('topic', $this->topic);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('activityType', $this->getActivityType());
+        $writer->writeIntegerValue('chainId', $this->getChainId());
+        $writer->writeObjectValue('previewText', $this->getPreviewText());
+        $writer->writeCollectionOfObjectValues('templateParameters', $this->getTemplateParameters());
+        $writer->writeObjectValue('topic', $this->getTopic());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the activityType property value. The activityType property
      *  @param string|null $value Value to set for the activityType property.
     */
-    public function setActivityType(?string $value ): void {
-        $this->activityType = $value;
+    public function setActivityType(?string $value): void {
+        $this->getBackingStore()->set('activityType', $value);
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the chainId property value. The chainId property
      *  @param int|null $value Value to set for the chainId property.
     */
-    public function setChainId(?int $value ): void {
-        $this->chainId = $value;
+    public function setChainId(?int $value): void {
+        $this->getBackingStore()->set('chainId', $value);
     }
 
     /**
      * Sets the previewText property value. The previewText property
      *  @param ItemBody|null $value Value to set for the previewText property.
     */
-    public function setPreviewText(?ItemBody $value ): void {
-        $this->previewText = $value;
+    public function setPreviewText(?ItemBody $value): void {
+        $this->getBackingStore()->set('previewText', $value);
     }
 
     /**
      * Sets the templateParameters property value. The templateParameters property
      *  @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
     */
-    public function setTemplateParameters(?array $value ): void {
-        $this->templateParameters = $value;
+    public function setTemplateParameters(?array $value): void {
+        $this->getBackingStore()->set('templateParameters', $value);
     }
 
     /**
      * Sets the topic property value. The topic property
      *  @param TeamworkActivityTopic|null $value Value to set for the topic property.
     */
-    public function setTopic(?TeamworkActivityTopic $value ): void {
-        $this->topic = $value;
+    public function setTopic(?TeamworkActivityTopic $value): void {
+        $this->getBackingStore()->set('topic', $value);
     }
 
 }

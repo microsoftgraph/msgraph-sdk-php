@@ -10,26 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewReviewer extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The date when the reviewer was added for the access review.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var string|null $displayName Name of reviewer.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $userPrincipalName User principal name of the reviewer.
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new accessReviewReviewer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.accessReviewReviewer');
     }
 
     /**
@@ -46,7 +30,7 @@ class AccessReviewReviewer extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -54,7 +38,7 @@ class AccessReviewReviewer extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -75,7 +59,7 @@ class AccessReviewReviewer extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -84,33 +68,33 @@ class AccessReviewReviewer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the createdDateTime property value. The date when the reviewer was added for the access review.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the displayName property value. Name of reviewer.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. User principal name of the reviewer.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

@@ -10,56 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintJob extends Entity implements Parsable 
 {
     /**
-     * @var PrintJobConfiguration|null $configuration The configuration property
-    */
-    private ?PrintJobConfiguration $configuration = null;
-    
-    /**
-     * @var UserIdentity|null $createdBy The createdBy property
-    */
-    private ?UserIdentity $createdBy = null;
-    
-    /**
-     * @var DateTime|null $createdDateTime The DateTimeOffset when the job was created. Read-only.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var array<PrintDocument>|null $documents The documents property
-    */
-    private ?array $documents = null;
-    
-    /**
-     * @var bool|null $isFetchable If true, document can be fetched by printer.
-    */
-    private ?bool $isFetchable = null;
-    
-    /**
-     * @var string|null $redirectedFrom Contains the source job URL, if the job has been redirected from another printer.
-    */
-    private ?string $redirectedFrom = null;
-    
-    /**
-     * @var string|null $redirectedTo Contains the destination job URL, if the job has been redirected to another printer.
-    */
-    private ?string $redirectedTo = null;
-    
-    /**
-     * @var PrintJobStatus|null $status The status property
-    */
-    private ?PrintJobStatus $status = null;
-    
-    /**
-     * @var array<PrintTask>|null $tasks A list of printTasks that were triggered by this print job.
-    */
-    private ?array $tasks = null;
-    
-    /**
      * Instantiates a new printJob and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.printJob');
     }
 
     /**
@@ -76,7 +30,7 @@ class PrintJob extends Entity implements Parsable
      * @return PrintJobConfiguration|null
     */
     public function getConfiguration(): ?PrintJobConfiguration {
-        return $this->configuration;
+        return $this->getBackingStore()->get('configuration');
     }
 
     /**
@@ -84,7 +38,7 @@ class PrintJob extends Entity implements Parsable
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
-        return $this->createdBy;
+        return $this->getBackingStore()->get('createdBy');
     }
 
     /**
@@ -92,7 +46,7 @@ class PrintJob extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -100,7 +54,7 @@ class PrintJob extends Entity implements Parsable
      * @return array<PrintDocument>|null
     */
     public function getDocuments(): ?array {
-        return $this->documents;
+        return $this->getBackingStore()->get('documents');
     }
 
     /**
@@ -127,7 +81,7 @@ class PrintJob extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsFetchable(): ?bool {
-        return $this->isFetchable;
+        return $this->getBackingStore()->get('isFetchable');
     }
 
     /**
@@ -135,7 +89,7 @@ class PrintJob extends Entity implements Parsable
      * @return string|null
     */
     public function getRedirectedFrom(): ?string {
-        return $this->redirectedFrom;
+        return $this->getBackingStore()->get('redirectedFrom');
     }
 
     /**
@@ -143,7 +97,7 @@ class PrintJob extends Entity implements Parsable
      * @return string|null
     */
     public function getRedirectedTo(): ?string {
-        return $this->redirectedTo;
+        return $this->getBackingStore()->get('redirectedTo');
     }
 
     /**
@@ -151,7 +105,7 @@ class PrintJob extends Entity implements Parsable
      * @return PrintJobStatus|null
     */
     public function getStatus(): ?PrintJobStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -159,7 +113,7 @@ class PrintJob extends Entity implements Parsable
      * @return array<PrintTask>|null
     */
     public function getTasks(): ?array {
-        return $this->tasks;
+        return $this->getBackingStore()->get('tasks');
     }
 
     /**
@@ -168,87 +122,87 @@ class PrintJob extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('configuration', $this->configuration);
-        $writer->writeObjectValue('createdBy', $this->createdBy);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeCollectionOfObjectValues('documents', $this->documents);
-        $writer->writeBooleanValue('isFetchable', $this->isFetchable);
-        $writer->writeStringValue('redirectedFrom', $this->redirectedFrom);
-        $writer->writeStringValue('redirectedTo', $this->redirectedTo);
-        $writer->writeObjectValue('status', $this->status);
-        $writer->writeCollectionOfObjectValues('tasks', $this->tasks);
+        $writer->writeObjectValue('configuration', $this->getConfiguration());
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfObjectValues('documents', $this->getDocuments());
+        $writer->writeBooleanValue('isFetchable', $this->getIsFetchable());
+        $writer->writeStringValue('redirectedFrom', $this->getRedirectedFrom());
+        $writer->writeStringValue('redirectedTo', $this->getRedirectedTo());
+        $writer->writeObjectValue('status', $this->getStatus());
+        $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
     }
 
     /**
      * Sets the configuration property value. The configuration property
      *  @param PrintJobConfiguration|null $value Value to set for the configuration property.
     */
-    public function setConfiguration(?PrintJobConfiguration $value ): void {
-        $this->configuration = $value;
+    public function setConfiguration(?PrintJobConfiguration $value): void {
+        $this->getBackingStore()->set('configuration', $value);
     }
 
     /**
      * Sets the createdBy property value. The createdBy property
      *  @param UserIdentity|null $value Value to set for the createdBy property.
     */
-    public function setCreatedBy(?UserIdentity $value ): void {
-        $this->createdBy = $value;
+    public function setCreatedBy(?UserIdentity $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the job was created. Read-only.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the documents property value. The documents property
      *  @param array<PrintDocument>|null $value Value to set for the documents property.
     */
-    public function setDocuments(?array $value ): void {
-        $this->documents = $value;
+    public function setDocuments(?array $value): void {
+        $this->getBackingStore()->set('documents', $value);
     }
 
     /**
      * Sets the isFetchable property value. If true, document can be fetched by printer.
      *  @param bool|null $value Value to set for the isFetchable property.
     */
-    public function setIsFetchable(?bool $value ): void {
-        $this->isFetchable = $value;
+    public function setIsFetchable(?bool $value): void {
+        $this->getBackingStore()->set('isFetchable', $value);
     }
 
     /**
      * Sets the redirectedFrom property value. Contains the source job URL, if the job has been redirected from another printer.
      *  @param string|null $value Value to set for the redirectedFrom property.
     */
-    public function setRedirectedFrom(?string $value ): void {
-        $this->redirectedFrom = $value;
+    public function setRedirectedFrom(?string $value): void {
+        $this->getBackingStore()->set('redirectedFrom', $value);
     }
 
     /**
      * Sets the redirectedTo property value. Contains the destination job URL, if the job has been redirected to another printer.
      *  @param string|null $value Value to set for the redirectedTo property.
     */
-    public function setRedirectedTo(?string $value ): void {
-        $this->redirectedTo = $value;
+    public function setRedirectedTo(?string $value): void {
+        $this->getBackingStore()->set('redirectedTo', $value);
     }
 
     /**
      * Sets the status property value. The status property
      *  @param PrintJobStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?PrintJobStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?PrintJobStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the tasks property value. A list of printTasks that were triggered by this print job.
      *  @param array<PrintTask>|null $value Value to set for the tasks property.
     */
-    public function setTasks(?array $value ): void {
-        $this->tasks = $value;
+    public function setTasks(?array $value): void {
+        $this->getBackingStore()->set('tasks', $value);
     }
 
 }

@@ -6,35 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class TrainingEventsContent implements AdditionalDataHolder, Parsable 
+class TrainingEventsContent implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<AssignedTrainingInfo>|null $assignedTrainingsInfos List of assigned trainings and their information in an attack simulation and training campaign.
-    */
-    private ?array $assignedTrainingsInfos = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var int|null $trainingsAssignedUserCount Number of users who were assigned trainings in an attack simulation and training campaign.
-    */
-    private ?int $trainingsAssignedUserCount = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new trainingEventsContent and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.trainingEventsContent');
     }
 
     /**
@@ -50,8 +38,8 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -59,7 +47,15 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
      * @return array<AssignedTrainingInfo>|null
     */
     public function getAssignedTrainingsInfos(): ?array {
-        return $this->assignedTrainingsInfos;
+        return $this->getBackingStore()->get('assignedTrainingsInfos');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -80,7 +76,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -88,7 +84,7 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getTrainingsAssignedUserCount(): ?int {
-        return $this->trainingsAssignedUserCount;
+        return $this->getBackingStore()->get('trainingsAssignedUserCount');
     }
 
     /**
@@ -96,42 +92,50 @@ class TrainingEventsContent implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfObjectValues('assignedTrainingsInfos', $this->assignedTrainingsInfos);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeIntegerValue('trainingsAssignedUserCount', $this->trainingsAssignedUserCount);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfObjectValues('assignedTrainingsInfos', $this->getAssignedTrainingsInfos());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeIntegerValue('trainingsAssignedUserCount', $this->getTrainingsAssignedUserCount());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
      *  @param array<AssignedTrainingInfo>|null $value Value to set for the assignedTrainingsInfos property.
     */
-    public function setAssignedTrainingsInfos(?array $value ): void {
-        $this->assignedTrainingsInfos = $value;
+    public function setAssignedTrainingsInfos(?array $value): void {
+        $this->getBackingStore()->set('assignedTrainingsInfos', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
      *  @param int|null $value Value to set for the trainingsAssignedUserCount property.
     */
-    public function setTrainingsAssignedUserCount(?int $value ): void {
-        $this->trainingsAssignedUserCount = $value;
+    public function setTrainingsAssignedUserCount(?int $value): void {
+        $this->getBackingStore()->set('trainingsAssignedUserCount', $value);
     }
 
 }

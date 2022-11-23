@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * @var IdentitySet|null $initiator Initiator of the event.
-    */
-    private ?IdentitySet $initiator = null;
-    
-    /**
-     * @var string|null $teamDescription Description for the team.
-    */
-    private ?string $teamDescription = null;
-    
-    /**
-     * @var string|null $teamDisplayName Display name of the team.
-    */
-    private ?string $teamDisplayName = null;
-    
-    /**
-     * @var string|null $teamId Unique identifier of the team.
-    */
-    private ?string $teamId = null;
-    
-    /**
      * Instantiates a new TeamCreatedEventMessageDetail and sets the default values.
     */
     public function __construct() {
@@ -64,7 +44,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->initiator;
+        return $this->getBackingStore()->get('initiator');
     }
 
     /**
@@ -72,7 +52,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getTeamDescription(): ?string {
-        return $this->teamDescription;
+        return $this->getBackingStore()->get('teamDescription');
     }
 
     /**
@@ -80,7 +60,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getTeamDisplayName(): ?string {
-        return $this->teamDisplayName;
+        return $this->getBackingStore()->get('teamDisplayName');
     }
 
     /**
@@ -88,7 +68,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->teamId;
+        return $this->getBackingStore()->get('teamId');
     }
 
     /**
@@ -97,42 +77,42 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('initiator', $this->initiator);
-        $writer->writeStringValue('teamDescription', $this->teamDescription);
-        $writer->writeStringValue('teamDisplayName', $this->teamDisplayName);
-        $writer->writeStringValue('teamId', $this->teamId);
+        $writer->writeObjectValue('initiator', $this->getInitiator());
+        $writer->writeStringValue('teamDescription', $this->getTeamDescription());
+        $writer->writeStringValue('teamDisplayName', $this->getTeamDisplayName());
+        $writer->writeStringValue('teamId', $this->getTeamId());
     }
 
     /**
      * Sets the initiator property value. Initiator of the event.
      *  @param IdentitySet|null $value Value to set for the initiator property.
     */
-    public function setInitiator(?IdentitySet $value ): void {
-        $this->initiator = $value;
+    public function setInitiator(?IdentitySet $value): void {
+        $this->getBackingStore()->set('initiator', $value);
     }
 
     /**
      * Sets the teamDescription property value. Description for the team.
      *  @param string|null $value Value to set for the teamDescription property.
     */
-    public function setTeamDescription(?string $value ): void {
-        $this->teamDescription = $value;
+    public function setTeamDescription(?string $value): void {
+        $this->getBackingStore()->set('teamDescription', $value);
     }
 
     /**
      * Sets the teamDisplayName property value. Display name of the team.
      *  @param string|null $value Value to set for the teamDisplayName property.
     */
-    public function setTeamDisplayName(?string $value ): void {
-        $this->teamDisplayName = $value;
+    public function setTeamDisplayName(?string $value): void {
+        $this->getBackingStore()->set('teamDisplayName', $value);
     }
 
     /**
      * Sets the teamId property value. Unique identifier of the team.
      *  @param string|null $value Value to set for the teamId property.
     */
-    public function setTeamId(?string $value ): void {
-        $this->teamId = $value;
+    public function setTeamId(?string $value): void {
+        $this->getBackingStore()->set('teamId', $value);
     }
 
 }

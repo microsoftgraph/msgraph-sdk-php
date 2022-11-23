@@ -6,51 +6,24 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
-class Thumbnail implements AdditionalDataHolder, Parsable 
+class Thumbnail implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var StreamInterface|null $content The content stream for the thumbnail.
-    */
-    private ?StreamInterface $content = null;
-    
-    /**
-     * @var int|null $height The height of the thumbnail, in pixels.
-    */
-    private ?int $height = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var string|null $sourceItemId The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
-    */
-    private ?string $sourceItemId = null;
-    
-    /**
-     * @var string|null $url The URL used to fetch the thumbnail content.
-    */
-    private ?string $url = null;
-    
-    /**
-     * @var int|null $width The width of the thumbnail, in pixels.
-    */
-    private ?int $width = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new thumbnail and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.thumbnail');
     }
 
     /**
@@ -66,16 +39,24 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
      * Gets the content property value. The content stream for the thumbnail.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContent(): StreamInterface {
-        return $this->content;
+    public function getContent(): ?StreamInterface {
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -99,7 +80,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getHeight(): ?int {
-        return $this->height;
+        return $this->getBackingStore()->get('height');
     }
 
     /**
@@ -107,7 +88,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -115,7 +96,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSourceItemId(): ?string {
-        return $this->sourceItemId;
+        return $this->getBackingStore()->get('sourceItemId');
     }
 
     /**
@@ -123,7 +104,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->url;
+        return $this->getBackingStore()->get('url');
     }
 
     /**
@@ -131,7 +112,7 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getWidth(): ?int {
-        return $this->width;
+        return $this->getBackingStore()->get('width');
     }
 
     /**
@@ -139,69 +120,77 @@ class Thumbnail implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeBinaryContent('content', $this->content);
-        $writer->writeIntegerValue('height', $this->height);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeStringValue('sourceItemId', $this->sourceItemId);
-        $writer->writeStringValue('url', $this->url);
-        $writer->writeIntegerValue('width', $this->width);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeIntegerValue('height', $this->getHeight());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('sourceItemId', $this->getSourceItemId());
+        $writer->writeStringValue('url', $this->getUrl());
+        $writer->writeIntegerValue('width', $this->getWidth());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the content property value. The content stream for the thumbnail.
      *  @param StreamInterface|null $value Value to set for the content property.
     */
-    public function setContent(?StreamInterface $value ): void {
-        $this->content = $value;
+    public function setContent(?StreamInterface $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the height property value. The height of the thumbnail, in pixels.
      *  @param int|null $value Value to set for the height property.
     */
-    public function setHeight(?int $value ): void {
-        $this->height = $value;
+    public function setHeight(?int $value): void {
+        $this->getBackingStore()->set('height', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the sourceItemId property value. The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
      *  @param string|null $value Value to set for the sourceItemId property.
     */
-    public function setSourceItemId(?string $value ): void {
-        $this->sourceItemId = $value;
+    public function setSourceItemId(?string $value): void {
+        $this->getBackingStore()->set('sourceItemId', $value);
     }
 
     /**
      * Sets the url property value. The URL used to fetch the thumbnail content.
      *  @param string|null $value Value to set for the url property.
     */
-    public function setUrl(?string $value ): void {
-        $this->url = $value;
+    public function setUrl(?string $value): void {
+        $this->getBackingStore()->set('url', $value);
     }
 
     /**
      * Sets the width property value. The width of the thumbnail, in pixels.
      *  @param int|null $value Value to set for the width property.
     */
-    public function setWidth(?int $value ): void {
-        $this->width = $value;
+    public function setWidth(?int $value): void {
+        $this->getBackingStore()->set('width', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupMembers extends SubjectSet implements Parsable 
 {
     /**
-     * @var string|null $description The name of the group in Azure AD. Read only.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $groupId The ID of the group in Azure AD.
-    */
-    private ?string $groupId = null;
-    
-    /**
      * Instantiates a new GroupMembers and sets the default values.
     */
     public function __construct() {
@@ -40,7 +30,7 @@ class GroupMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -60,7 +50,7 @@ class GroupMembers extends SubjectSet implements Parsable
      * @return string|null
     */
     public function getGroupId(): ?string {
-        return $this->groupId;
+        return $this->getBackingStore()->get('groupId');
     }
 
     /**
@@ -69,24 +59,24 @@ class GroupMembers extends SubjectSet implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('groupId', $this->groupId);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('groupId', $this->getGroupId());
     }
 
     /**
      * Sets the description property value. The name of the group in Azure AD. Read only.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the groupId property value. The ID of the group in Azure AD.
      *  @param string|null $value Value to set for the groupId property.
     */
-    public function setGroupId(?string $value ): void {
-        $this->groupId = $value;
+    public function setGroupId(?string $value): void {
+        $this->getBackingStore()->set('groupId', $value);
     }
 
 }

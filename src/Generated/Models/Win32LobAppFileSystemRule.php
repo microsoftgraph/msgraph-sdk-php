@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable 
 {
     /**
-     * @var bool|null $check32BitOn64System A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
-    */
-    private ?bool $check32BitOn64System = null;
-    
-    /**
-     * @var string|null $comparisonValue The file or folder comparison value.
-    */
-    private ?string $comparisonValue = null;
-    
-    /**
-     * @var string|null $fileOrFolderName The file or folder name to look up.
-    */
-    private ?string $fileOrFolderName = null;
-    
-    /**
-     * @var Win32LobAppFileSystemOperationType|null $operationType Contains all supported file system detection type.
-    */
-    private ?Win32LobAppFileSystemOperationType $operationType = null;
-    
-    /**
-     * @var Win32LobAppRuleOperator|null $operator Contains properties for detection operator.
-    */
-    private ?Win32LobAppRuleOperator $operator = null;
-    
-    /**
-     * @var string|null $path The file or folder path to look up.
-    */
-    private ?string $path = null;
-    
-    /**
      * Instantiates a new Win32LobAppFileSystemRule and sets the default values.
     */
     public function __construct() {
@@ -60,7 +30,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return bool|null
     */
     public function getCheck32BitOn64System(): ?bool {
-        return $this->check32BitOn64System;
+        return $this->getBackingStore()->get('check32BitOn64System');
     }
 
     /**
@@ -68,7 +38,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getComparisonValue(): ?string {
-        return $this->comparisonValue;
+        return $this->getBackingStore()->get('comparisonValue');
     }
 
     /**
@@ -92,7 +62,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getFileOrFolderName(): ?string {
-        return $this->fileOrFolderName;
+        return $this->getBackingStore()->get('fileOrFolderName');
     }
 
     /**
@@ -100,7 +70,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return Win32LobAppFileSystemOperationType|null
     */
     public function getOperationType(): ?Win32LobAppFileSystemOperationType {
-        return $this->operationType;
+        return $this->getBackingStore()->get('operationType');
     }
 
     /**
@@ -108,7 +78,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return Win32LobAppRuleOperator|null
     */
     public function getOperator(): ?Win32LobAppRuleOperator {
-        return $this->operator;
+        return $this->getBackingStore()->get('operator');
     }
 
     /**
@@ -116,7 +86,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->path;
+        return $this->getBackingStore()->get('path');
     }
 
     /**
@@ -125,60 +95,60 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('check32BitOn64System', $this->check32BitOn64System);
-        $writer->writeStringValue('comparisonValue', $this->comparisonValue);
-        $writer->writeStringValue('fileOrFolderName', $this->fileOrFolderName);
-        $writer->writeEnumValue('operationType', $this->operationType);
-        $writer->writeEnumValue('operator', $this->operator);
-        $writer->writeStringValue('path', $this->path);
+        $writer->writeBooleanValue('check32BitOn64System', $this->getCheck32BitOn64System());
+        $writer->writeStringValue('comparisonValue', $this->getComparisonValue());
+        $writer->writeStringValue('fileOrFolderName', $this->getFileOrFolderName());
+        $writer->writeEnumValue('operationType', $this->getOperationType());
+        $writer->writeEnumValue('operator', $this->getOperator());
+        $writer->writeStringValue('path', $this->getPath());
     }
 
     /**
      * Sets the check32BitOn64System property value. A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
      *  @param bool|null $value Value to set for the check32BitOn64System property.
     */
-    public function setCheck32BitOn64System(?bool $value ): void {
-        $this->check32BitOn64System = $value;
+    public function setCheck32BitOn64System(?bool $value): void {
+        $this->getBackingStore()->set('check32BitOn64System', $value);
     }
 
     /**
      * Sets the comparisonValue property value. The file or folder comparison value.
      *  @param string|null $value Value to set for the comparisonValue property.
     */
-    public function setComparisonValue(?string $value ): void {
-        $this->comparisonValue = $value;
+    public function setComparisonValue(?string $value): void {
+        $this->getBackingStore()->set('comparisonValue', $value);
     }
 
     /**
      * Sets the fileOrFolderName property value. The file or folder name to look up.
      *  @param string|null $value Value to set for the fileOrFolderName property.
     */
-    public function setFileOrFolderName(?string $value ): void {
-        $this->fileOrFolderName = $value;
+    public function setFileOrFolderName(?string $value): void {
+        $this->getBackingStore()->set('fileOrFolderName', $value);
     }
 
     /**
      * Sets the operationType property value. Contains all supported file system detection type.
      *  @param Win32LobAppFileSystemOperationType|null $value Value to set for the operationType property.
     */
-    public function setOperationType(?Win32LobAppFileSystemOperationType $value ): void {
-        $this->operationType = $value;
+    public function setOperationType(?Win32LobAppFileSystemOperationType $value): void {
+        $this->getBackingStore()->set('operationType', $value);
     }
 
     /**
      * Sets the operator property value. Contains properties for detection operator.
      *  @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
     */
-    public function setOperator(?Win32LobAppRuleOperator $value ): void {
-        $this->operator = $value;
+    public function setOperator(?Win32LobAppRuleOperator $value): void {
+        $this->getBackingStore()->set('operator', $value);
     }
 
     /**
      * Sets the path property value. The file or folder path to look up.
      *  @param string|null $value Value to set for the path property.
     */
-    public function setPath(?string $value ): void {
-        $this->path = $value;
+    public function setPath(?string $value): void {
+        $this->getBackingStore()->set('path', $value);
     }
 
 }

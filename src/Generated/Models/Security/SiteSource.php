@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SiteSource extends DataSource implements Parsable 
 {
     /**
-     * @var Site|null $site The site property
-    */
-    private ?Site $site = null;
-    
-    /**
      * Instantiates a new SiteSource and sets the default values.
     */
     public function __construct() {
@@ -47,7 +42,7 @@ class SiteSource extends DataSource implements Parsable
      * @return Site|null
     */
     public function getSite(): ?Site {
-        return $this->site;
+        return $this->getBackingStore()->get('site');
     }
 
     /**
@@ -56,15 +51,15 @@ class SiteSource extends DataSource implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('site', $this->site);
+        $writer->writeObjectValue('site', $this->getSite());
     }
 
     /**
      * Sets the site property value. The site property
      *  @param Site|null $value Value to set for the site property.
     */
-    public function setSite(?Site $value ): void {
-        $this->site = $value;
+    public function setSite(?Site $value): void {
+        $this->getBackingStore()->set('site', $value);
     }
 
 }

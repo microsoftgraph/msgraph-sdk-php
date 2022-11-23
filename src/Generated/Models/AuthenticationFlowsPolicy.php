@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationFlowsPolicy extends Entity implements Parsable 
 {
     /**
-     * @var string|null $description Inherited property. A description of the policy. Optional. Read-only.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName Inherited property. The human-readable name of the policy. Optional. Read-only.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var SelfServiceSignUpAuthenticationFlowConfiguration|null $selfServiceSignUp Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
-    */
-    private ?SelfServiceSignUpAuthenticationFlowConfiguration $selfServiceSignUp = null;
-    
-    /**
      * Instantiates a new authenticationFlowsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.authenticationFlowsPolicy');
     }
 
     /**
@@ -45,7 +29,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -53,7 +37,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -74,7 +58,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return SelfServiceSignUpAuthenticationFlowConfiguration|null
     */
     public function getSelfServiceSignUp(): ?SelfServiceSignUpAuthenticationFlowConfiguration {
-        return $this->selfServiceSignUp;
+        return $this->getBackingStore()->get('selfServiceSignUp');
     }
 
     /**
@@ -83,33 +67,33 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeObjectValue('selfServiceSignUp', $this->selfServiceSignUp);
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeObjectValue('selfServiceSignUp', $this->getSelfServiceSignUp());
     }
 
     /**
      * Sets the description property value. Inherited property. A description of the policy. Optional. Read-only.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
      *  @param SelfServiceSignUpAuthenticationFlowConfiguration|null $value Value to set for the selfServiceSignUp property.
     */
-    public function setSelfServiceSignUp(?SelfServiceSignUpAuthenticationFlowConfiguration $value ): void {
-        $this->selfServiceSignUp = $value;
+    public function setSelfServiceSignUp(?SelfServiceSignUpAuthenticationFlowConfiguration $value): void {
+        $this->getBackingStore()->set('selfServiceSignUp', $value);
     }
 
 }

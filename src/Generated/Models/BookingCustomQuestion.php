@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCustomQuestion extends Entity implements Parsable 
 {
     /**
-     * @var AnswerInputType|null $answerInputType The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-    */
-    private ?AnswerInputType $answerInputType = null;
-    
-    /**
-     * @var array<string>|null $answerOptions List of possible answer values.
-    */
-    private ?array $answerOptions = null;
-    
-    /**
-     * @var string|null $displayName The question.
-    */
-    private ?string $displayName = null;
-    
-    /**
      * Instantiates a new bookingCustomQuestion and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.bookingCustomQuestion');
     }
 
     /**
@@ -45,7 +29,7 @@ class BookingCustomQuestion extends Entity implements Parsable
      * @return AnswerInputType|null
     */
     public function getAnswerInputType(): ?AnswerInputType {
-        return $this->answerInputType;
+        return $this->getBackingStore()->get('answerInputType');
     }
 
     /**
@@ -53,7 +37,7 @@ class BookingCustomQuestion extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAnswerOptions(): ?array {
-        return $this->answerOptions;
+        return $this->getBackingStore()->get('answerOptions');
     }
 
     /**
@@ -61,7 +45,7 @@ class BookingCustomQuestion extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -83,33 +67,33 @@ class BookingCustomQuestion extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('answerInputType', $this->answerInputType);
-        $writer->writeCollectionOfPrimitiveValues('answerOptions', $this->answerOptions);
-        $writer->writeStringValue('displayName', $this->displayName);
+        $writer->writeEnumValue('answerInputType', $this->getAnswerInputType());
+        $writer->writeCollectionOfPrimitiveValues('answerOptions', $this->getAnswerOptions());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      *  @param AnswerInputType|null $value Value to set for the answerInputType property.
     */
-    public function setAnswerInputType(?AnswerInputType $value ): void {
-        $this->answerInputType = $value;
+    public function setAnswerInputType(?AnswerInputType $value): void {
+        $this->getBackingStore()->set('answerInputType', $value);
     }
 
     /**
      * Sets the answerOptions property value. List of possible answer values.
      *  @param array<string>|null $value Value to set for the answerOptions property.
     */
-    public function setAnswerOptions(?array $value ): void {
-        $this->answerOptions = $value;
+    public function setAnswerOptions(?array $value): void {
+        $this->getBackingStore()->set('answerOptions', $value);
     }
 
     /**
      * Sets the displayName property value. The question.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

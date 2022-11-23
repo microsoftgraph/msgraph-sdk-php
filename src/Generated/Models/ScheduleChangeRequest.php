@@ -10,46 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * @var ScheduleChangeRequestActor|null $assignedTo The assignedTo property
-    */
-    private ?ScheduleChangeRequestActor $assignedTo = null;
-    
-    /**
-     * @var DateTime|null $managerActionDateTime The managerActionDateTime property
-    */
-    private ?DateTime $managerActionDateTime = null;
-    
-    /**
-     * @var string|null $managerActionMessage The managerActionMessage property
-    */
-    private ?string $managerActionMessage = null;
-    
-    /**
-     * @var string|null $managerUserId The managerUserId property
-    */
-    private ?string $managerUserId = null;
-    
-    /**
-     * @var DateTime|null $senderDateTime The senderDateTime property
-    */
-    private ?DateTime $senderDateTime = null;
-    
-    /**
-     * @var string|null $senderMessage The senderMessage property
-    */
-    private ?string $senderMessage = null;
-    
-    /**
-     * @var string|null $senderUserId The senderUserId property
-    */
-    private ?string $senderUserId = null;
-    
-    /**
-     * @var ScheduleChangeState|null $state The state property
-    */
-    private ?ScheduleChangeState $state = null;
-    
-    /**
      * Instantiates a new ScheduleChangeRequest and sets the default values.
     */
     public function __construct() {
@@ -81,7 +41,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return ScheduleChangeRequestActor|null
     */
     public function getAssignedTo(): ?ScheduleChangeRequestActor {
-        return $this->assignedTo;
+        return $this->getBackingStore()->get('assignedTo');
     }
 
     /**
@@ -107,7 +67,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return DateTime|null
     */
     public function getManagerActionDateTime(): ?DateTime {
-        return $this->managerActionDateTime;
+        return $this->getBackingStore()->get('managerActionDateTime');
     }
 
     /**
@@ -115,7 +75,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getManagerActionMessage(): ?string {
-        return $this->managerActionMessage;
+        return $this->getBackingStore()->get('managerActionMessage');
     }
 
     /**
@@ -123,7 +83,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getManagerUserId(): ?string {
-        return $this->managerUserId;
+        return $this->getBackingStore()->get('managerUserId');
     }
 
     /**
@@ -131,7 +91,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return DateTime|null
     */
     public function getSenderDateTime(): ?DateTime {
-        return $this->senderDateTime;
+        return $this->getBackingStore()->get('senderDateTime');
     }
 
     /**
@@ -139,7 +99,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSenderMessage(): ?string {
-        return $this->senderMessage;
+        return $this->getBackingStore()->get('senderMessage');
     }
 
     /**
@@ -147,7 +107,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSenderUserId(): ?string {
-        return $this->senderUserId;
+        return $this->getBackingStore()->get('senderUserId');
     }
 
     /**
@@ -155,7 +115,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return ScheduleChangeState|null
     */
     public function getState(): ?ScheduleChangeState {
-        return $this->state;
+        return $this->getBackingStore()->get('state');
     }
 
     /**
@@ -164,74 +124,74 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('assignedTo', $this->assignedTo);
-        $writer->writeStringValue('managerActionMessage', $this->managerActionMessage);
-        $writer->writeStringValue('senderMessage', $this->senderMessage);
-        $writer->writeEnumValue('state', $this->state);
+        $writer->writeEnumValue('assignedTo', $this->getAssignedTo());
+        $writer->writeStringValue('managerActionMessage', $this->getManagerActionMessage());
+        $writer->writeStringValue('senderMessage', $this->getSenderMessage());
+        $writer->writeEnumValue('state', $this->getState());
     }
 
     /**
      * Sets the assignedTo property value. The assignedTo property
      *  @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
     */
-    public function setAssignedTo(?ScheduleChangeRequestActor $value ): void {
-        $this->assignedTo = $value;
+    public function setAssignedTo(?ScheduleChangeRequestActor $value): void {
+        $this->getBackingStore()->set('assignedTo', $value);
     }
 
     /**
      * Sets the managerActionDateTime property value. The managerActionDateTime property
      *  @param DateTime|null $value Value to set for the managerActionDateTime property.
     */
-    public function setManagerActionDateTime(?DateTime $value ): void {
-        $this->managerActionDateTime = $value;
+    public function setManagerActionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('managerActionDateTime', $value);
     }
 
     /**
      * Sets the managerActionMessage property value. The managerActionMessage property
      *  @param string|null $value Value to set for the managerActionMessage property.
     */
-    public function setManagerActionMessage(?string $value ): void {
-        $this->managerActionMessage = $value;
+    public function setManagerActionMessage(?string $value): void {
+        $this->getBackingStore()->set('managerActionMessage', $value);
     }
 
     /**
      * Sets the managerUserId property value. The managerUserId property
      *  @param string|null $value Value to set for the managerUserId property.
     */
-    public function setManagerUserId(?string $value ): void {
-        $this->managerUserId = $value;
+    public function setManagerUserId(?string $value): void {
+        $this->getBackingStore()->set('managerUserId', $value);
     }
 
     /**
      * Sets the senderDateTime property value. The senderDateTime property
      *  @param DateTime|null $value Value to set for the senderDateTime property.
     */
-    public function setSenderDateTime(?DateTime $value ): void {
-        $this->senderDateTime = $value;
+    public function setSenderDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('senderDateTime', $value);
     }
 
     /**
      * Sets the senderMessage property value. The senderMessage property
      *  @param string|null $value Value to set for the senderMessage property.
     */
-    public function setSenderMessage(?string $value ): void {
-        $this->senderMessage = $value;
+    public function setSenderMessage(?string $value): void {
+        $this->getBackingStore()->set('senderMessage', $value);
     }
 
     /**
      * Sets the senderUserId property value. The senderUserId property
      *  @param string|null $value Value to set for the senderUserId property.
     */
-    public function setSenderUserId(?string $value ): void {
-        $this->senderUserId = $value;
+    public function setSenderUserId(?string $value): void {
+        $this->getBackingStore()->set('senderUserId', $value);
     }
 
     /**
      * Sets the state property value. The state property
      *  @param ScheduleChangeState|null $value Value to set for the state property.
     */
-    public function setState(?ScheduleChangeState $value ): void {
-        $this->state = $value;
+    public function setState(?ScheduleChangeState $value): void {
+        $this->getBackingStore()->set('state', $value);
     }
 
 }

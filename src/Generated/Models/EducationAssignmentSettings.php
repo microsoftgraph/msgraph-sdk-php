@@ -9,16 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationAssignmentSettings extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $submissionAnimationDisabled Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
-    */
-    private ?bool $submissionAnimationDisabled = null;
-    
-    /**
-     * Instantiates a new EducationAssignmentSettings and sets the default values.
+     * Instantiates a new educationAssignmentSettings and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.educationAssignmentSettings');
     }
 
     /**
@@ -46,7 +40,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getSubmissionAnimationDisabled(): ?bool {
-        return $this->submissionAnimationDisabled;
+        return $this->getBackingStore()->get('submissionAnimationDisabled');
     }
 
     /**
@@ -55,15 +49,15 @@ class EducationAssignmentSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('submissionAnimationDisabled', $this->submissionAnimationDisabled);
+        $writer->writeBooleanValue('submissionAnimationDisabled', $this->getSubmissionAnimationDisabled());
     }
 
     /**
      * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
      *  @param bool|null $value Value to set for the submissionAnimationDisabled property.
     */
-    public function setSubmissionAnimationDisabled(?bool $value ): void {
-        $this->submissionAnimationDisabled = $value;
+    public function setSubmissionAnimationDisabled(?bool $value): void {
+        $this->getBackingStore()->set('submissionAnimationDisabled', $value);
     }
 
 }

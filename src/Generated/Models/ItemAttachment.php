@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ItemAttachment extends Attachment implements Parsable 
 {
     /**
-     * @var OutlookItem|null $item The attached message or event. Navigation property.
-    */
-    private ?OutlookItem $item = null;
-    
-    /**
      * Instantiates a new ItemAttachment and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class ItemAttachment extends Attachment implements Parsable
      * @return OutlookItem|null
     */
     public function getItem(): ?OutlookItem {
-        return $this->item;
+        return $this->getBackingStore()->get('item');
     }
 
     /**
@@ -55,15 +50,15 @@ class ItemAttachment extends Attachment implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('item', $this->item);
+        $writer->writeObjectValue('item', $this->getItem());
     }
 
     /**
      * Sets the item property value. The attached message or event. Navigation property.
      *  @param OutlookItem|null $value Value to set for the item property.
     */
-    public function setItem(?OutlookItem $value ): void {
-        $this->item = $value;
+    public function setItem(?OutlookItem $value): void {
+        $this->getBackingStore()->set('item', $value);
     }
 
 }

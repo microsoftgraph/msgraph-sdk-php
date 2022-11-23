@@ -9,31 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {
     /**
-     * @var DeviceEnrollmentPlatformRestriction|null $androidRestriction Android restrictions based on platform, platform operating system version, and device ownership
-    */
-    private ?DeviceEnrollmentPlatformRestriction $androidRestriction = null;
-    
-    /**
-     * @var DeviceEnrollmentPlatformRestriction|null $iosRestriction Ios restrictions based on platform, platform operating system version, and device ownership
-    */
-    private ?DeviceEnrollmentPlatformRestriction $iosRestriction = null;
-    
-    /**
-     * @var DeviceEnrollmentPlatformRestriction|null $macOSRestriction Mac restrictions based on platform, platform operating system version, and device ownership
-    */
-    private ?DeviceEnrollmentPlatformRestriction $macOSRestriction = null;
-    
-    /**
-     * @var DeviceEnrollmentPlatformRestriction|null $windowsMobileRestriction Windows mobile restrictions based on platform, platform operating system version, and device ownership
-    */
-    private ?DeviceEnrollmentPlatformRestriction $windowsMobileRestriction = null;
-    
-    /**
-     * @var DeviceEnrollmentPlatformRestriction|null $windowsRestriction Windows restrictions based on platform, platform operating system version, and device ownership
-    */
-    private ?DeviceEnrollmentPlatformRestriction $windowsRestriction = null;
-    
-    /**
      * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
     */
     public function __construct() {
@@ -55,7 +30,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getAndroidRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->androidRestriction;
+        return $this->getBackingStore()->get('androidRestriction');
     }
 
     /**
@@ -78,7 +53,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getIosRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->iosRestriction;
+        return $this->getBackingStore()->get('iosRestriction');
     }
 
     /**
@@ -86,7 +61,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getMacOSRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->macOSRestriction;
+        return $this->getBackingStore()->get('macOSRestriction');
     }
 
     /**
@@ -94,7 +69,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getWindowsMobileRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->windowsMobileRestriction;
+        return $this->getBackingStore()->get('windowsMobileRestriction');
     }
 
     /**
@@ -102,7 +77,7 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getWindowsRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->windowsRestriction;
+        return $this->getBackingStore()->get('windowsRestriction');
     }
 
     /**
@@ -111,51 +86,51 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('androidRestriction', $this->androidRestriction);
-        $writer->writeObjectValue('iosRestriction', $this->iosRestriction);
-        $writer->writeObjectValue('macOSRestriction', $this->macOSRestriction);
-        $writer->writeObjectValue('windowsMobileRestriction', $this->windowsMobileRestriction);
-        $writer->writeObjectValue('windowsRestriction', $this->windowsRestriction);
+        $writer->writeObjectValue('androidRestriction', $this->getAndroidRestriction());
+        $writer->writeObjectValue('iosRestriction', $this->getIosRestriction());
+        $writer->writeObjectValue('macOSRestriction', $this->getMacOSRestriction());
+        $writer->writeObjectValue('windowsMobileRestriction', $this->getWindowsMobileRestriction());
+        $writer->writeObjectValue('windowsRestriction', $this->getWindowsRestriction());
     }
 
     /**
      * Sets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
      *  @param DeviceEnrollmentPlatformRestriction|null $value Value to set for the androidRestriction property.
     */
-    public function setAndroidRestriction(?DeviceEnrollmentPlatformRestriction $value ): void {
-        $this->androidRestriction = $value;
+    public function setAndroidRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
+        $this->getBackingStore()->set('androidRestriction', $value);
     }
 
     /**
      * Sets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
      *  @param DeviceEnrollmentPlatformRestriction|null $value Value to set for the iosRestriction property.
     */
-    public function setIosRestriction(?DeviceEnrollmentPlatformRestriction $value ): void {
-        $this->iosRestriction = $value;
+    public function setIosRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
+        $this->getBackingStore()->set('iosRestriction', $value);
     }
 
     /**
      * Sets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
      *  @param DeviceEnrollmentPlatformRestriction|null $value Value to set for the macOSRestriction property.
     */
-    public function setMacOSRestriction(?DeviceEnrollmentPlatformRestriction $value ): void {
-        $this->macOSRestriction = $value;
+    public function setMacOSRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
+        $this->getBackingStore()->set('macOSRestriction', $value);
     }
 
     /**
      * Sets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
      *  @param DeviceEnrollmentPlatformRestriction|null $value Value to set for the windowsMobileRestriction property.
     */
-    public function setWindowsMobileRestriction(?DeviceEnrollmentPlatformRestriction $value ): void {
-        $this->windowsMobileRestriction = $value;
+    public function setWindowsMobileRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
+        $this->getBackingStore()->set('windowsMobileRestriction', $value);
     }
 
     /**
      * Sets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
      *  @param DeviceEnrollmentPlatformRestriction|null $value Value to set for the windowsRestriction property.
     */
-    public function setWindowsRestriction(?DeviceEnrollmentPlatformRestriction $value ): void {
-        $this->windowsRestriction = $value;
+    public function setWindowsRestriction(?DeviceEnrollmentPlatformRestriction $value): void {
+        $this->getBackingStore()->set('windowsRestriction', $value);
     }
 
 }

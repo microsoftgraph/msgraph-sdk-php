@@ -9,41 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable 
 {
     /**
-     * @var string|null $nameTarget Value to use when configuring the Target property of the SRV record at the DNS host.
-    */
-    private ?string $nameTarget = null;
-    
-    /**
-     * @var int|null $port Value to use when configuring the port property of the SRV record at the DNS host.
-    */
-    private ?int $port = null;
-    
-    /**
-     * @var int|null $priority Value to use when configuring the priority property of the SRV record at the DNS host.
-    */
-    private ?int $priority = null;
-    
-    /**
-     * @var string|null $protocol Value to use when configuring the protocol property of the SRV record at the DNS host.
-    */
-    private ?string $protocol = null;
-    
-    /**
-     * @var string|null $service Value to use when configuring the service property of the SRV record at the DNS host.
-    */
-    private ?string $service = null;
-    
-    /**
-     * @var int|null $weight Value to use when configuring the weight property of the SRV record at the DNS host.
-    */
-    private ?int $weight = null;
-    
-    /**
      * Instantiates a new DomainDnsSrvRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.domainDnsSrvRecord');
     }
 
     /**
@@ -76,7 +45,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getNameTarget(): ?string {
-        return $this->nameTarget;
+        return $this->getBackingStore()->get('nameTarget');
     }
 
     /**
@@ -84,7 +53,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPort(): ?int {
-        return $this->port;
+        return $this->getBackingStore()->get('port');
     }
 
     /**
@@ -92,7 +61,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPriority(): ?int {
-        return $this->priority;
+        return $this->getBackingStore()->get('priority');
     }
 
     /**
@@ -100,7 +69,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getProtocol(): ?string {
-        return $this->protocol;
+        return $this->getBackingStore()->get('protocol');
     }
 
     /**
@@ -108,7 +77,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->service;
+        return $this->getBackingStore()->get('service');
     }
 
     /**
@@ -116,7 +85,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getWeight(): ?int {
-        return $this->weight;
+        return $this->getBackingStore()->get('weight');
     }
 
     /**
@@ -125,60 +94,60 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('nameTarget', $this->nameTarget);
-        $writer->writeIntegerValue('port', $this->port);
-        $writer->writeIntegerValue('priority', $this->priority);
-        $writer->writeStringValue('protocol', $this->protocol);
-        $writer->writeStringValue('service', $this->service);
-        $writer->writeIntegerValue('weight', $this->weight);
+        $writer->writeStringValue('nameTarget', $this->getNameTarget());
+        $writer->writeIntegerValue('port', $this->getPort());
+        $writer->writeIntegerValue('priority', $this->getPriority());
+        $writer->writeStringValue('protocol', $this->getProtocol());
+        $writer->writeStringValue('service', $this->getService());
+        $writer->writeIntegerValue('weight', $this->getWeight());
     }
 
     /**
      * Sets the nameTarget property value. Value to use when configuring the Target property of the SRV record at the DNS host.
      *  @param string|null $value Value to set for the nameTarget property.
     */
-    public function setNameTarget(?string $value ): void {
-        $this->nameTarget = $value;
+    public function setNameTarget(?string $value): void {
+        $this->getBackingStore()->set('nameTarget', $value);
     }
 
     /**
      * Sets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
      *  @param int|null $value Value to set for the port property.
     */
-    public function setPort(?int $value ): void {
-        $this->port = $value;
+    public function setPort(?int $value): void {
+        $this->getBackingStore()->set('port', $value);
     }
 
     /**
      * Sets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
      *  @param int|null $value Value to set for the priority property.
     */
-    public function setPriority(?int $value ): void {
-        $this->priority = $value;
+    public function setPriority(?int $value): void {
+        $this->getBackingStore()->set('priority', $value);
     }
 
     /**
      * Sets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
      *  @param string|null $value Value to set for the protocol property.
     */
-    public function setProtocol(?string $value ): void {
-        $this->protocol = $value;
+    public function setProtocol(?string $value): void {
+        $this->getBackingStore()->set('protocol', $value);
     }
 
     /**
      * Sets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
      *  @param string|null $value Value to set for the service property.
     */
-    public function setService(?string $value ): void {
-        $this->service = $value;
+    public function setService(?string $value): void {
+        $this->getBackingStore()->set('service', $value);
     }
 
     /**
      * Sets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
      *  @param int|null $value Value to set for the weight property.
     */
-    public function setWeight(?int $value ): void {
-        $this->weight = $value;
+    public function setWeight(?int $value): void {
+        $this->getBackingStore()->set('weight', $value);
     }
 
 }

@@ -9,26 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedIOSStoreApp extends ManagedApp implements Parsable 
 {
     /**
-     * @var IosDeviceType|null $applicableDeviceType Contains properties of the possible iOS device types the mobile app can run on.
-    */
-    private ?IosDeviceType $applicableDeviceType = null;
-    
-    /**
-     * @var string|null $appStoreUrl The Apple AppStoreUrl.
-    */
-    private ?string $appStoreUrl = null;
-    
-    /**
-     * @var string|null $bundleId The app's Bundle ID.
-    */
-    private ?string $bundleId = null;
-    
-    /**
-     * @var IosMinimumOperatingSystem|null $minimumSupportedOperatingSystem Contains properties of the minimum operating system required for an iOS mobile app.
-    */
-    private ?IosMinimumOperatingSystem $minimumSupportedOperatingSystem = null;
-    
-    /**
      * Instantiates a new ManagedIOSStoreApp and sets the default values.
     */
     public function __construct() {
@@ -50,7 +30,7 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return IosDeviceType|null
     */
     public function getApplicableDeviceType(): ?IosDeviceType {
-        return $this->applicableDeviceType;
+        return $this->getBackingStore()->get('applicableDeviceType');
     }
 
     /**
@@ -58,7 +38,7 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getAppStoreUrl(): ?string {
-        return $this->appStoreUrl;
+        return $this->getBackingStore()->get('appStoreUrl');
     }
 
     /**
@@ -66,7 +46,7 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getBundleId(): ?string {
-        return $this->bundleId;
+        return $this->getBackingStore()->get('bundleId');
     }
 
     /**
@@ -88,7 +68,7 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return IosMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?IosMinimumOperatingSystem {
-        return $this->minimumSupportedOperatingSystem;
+        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
     }
 
     /**
@@ -97,42 +77,42 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('applicableDeviceType', $this->applicableDeviceType);
-        $writer->writeStringValue('appStoreUrl', $this->appStoreUrl);
-        $writer->writeStringValue('bundleId', $this->bundleId);
-        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->minimumSupportedOperatingSystem);
+        $writer->writeObjectValue('applicableDeviceType', $this->getApplicableDeviceType());
+        $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
+        $writer->writeStringValue('bundleId', $this->getBundleId());
+        $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
     }
 
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      *  @param IosDeviceType|null $value Value to set for the applicableDeviceType property.
     */
-    public function setApplicableDeviceType(?IosDeviceType $value ): void {
-        $this->applicableDeviceType = $value;
+    public function setApplicableDeviceType(?IosDeviceType $value): void {
+        $this->getBackingStore()->set('applicableDeviceType', $value);
     }
 
     /**
      * Sets the appStoreUrl property value. The Apple AppStoreUrl.
      *  @param string|null $value Value to set for the appStoreUrl property.
     */
-    public function setAppStoreUrl(?string $value ): void {
-        $this->appStoreUrl = $value;
+    public function setAppStoreUrl(?string $value): void {
+        $this->getBackingStore()->set('appStoreUrl', $value);
     }
 
     /**
      * Sets the bundleId property value. The app's Bundle ID.
      *  @param string|null $value Value to set for the bundleId property.
     */
-    public function setBundleId(?string $value ): void {
-        $this->bundleId = $value;
+    public function setBundleId(?string $value): void {
+        $this->getBackingStore()->set('bundleId', $value);
     }
 
     /**
      * Sets the minimumSupportedOperatingSystem property value. Contains properties of the minimum operating system required for an iOS mobile app.
      *  @param IosMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
     */
-    public function setMinimumSupportedOperatingSystem(?IosMinimumOperatingSystem $value ): void {
-        $this->minimumSupportedOperatingSystem = $value;
+    public function setMinimumSupportedOperatingSystem(?IosMinimumOperatingSystem $value): void {
+        $this->getBackingStore()->set('minimumSupportedOperatingSystem', $value);
     }
 
 }

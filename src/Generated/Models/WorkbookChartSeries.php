@@ -9,26 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartSeries extends Entity implements Parsable 
 {
     /**
-     * @var WorkbookChartSeriesFormat|null $format Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
-    */
-    private ?WorkbookChartSeriesFormat $format = null;
-    
-    /**
-     * @var string|null $name Represents the name of a series in a chart.
-    */
-    private ?string $name = null;
-    
-    /**
-     * @var array<WorkbookChartPoint>|null $points Represents a collection of all points in the series. Read-only.
-    */
-    private ?array $points = null;
-    
-    /**
      * Instantiates a new workbookChartSeries and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.workbookChartSeries');
     }
 
     /**
@@ -58,7 +42,7 @@ class WorkbookChartSeries extends Entity implements Parsable
      * @return WorkbookChartSeriesFormat|null
     */
     public function getFormat(): ?WorkbookChartSeriesFormat {
-        return $this->format;
+        return $this->getBackingStore()->get('format');
     }
 
     /**
@@ -66,7 +50,7 @@ class WorkbookChartSeries extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->name;
+        return $this->getBackingStore()->get('name');
     }
 
     /**
@@ -74,7 +58,7 @@ class WorkbookChartSeries extends Entity implements Parsable
      * @return array<WorkbookChartPoint>|null
     */
     public function getPoints(): ?array {
-        return $this->points;
+        return $this->getBackingStore()->get('points');
     }
 
     /**
@@ -83,33 +67,33 @@ class WorkbookChartSeries extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->format);
-        $writer->writeStringValue('name', $this->name);
-        $writer->writeCollectionOfObjectValues('points', $this->points);
+        $writer->writeObjectValue('format', $this->getFormat());
+        $writer->writeStringValue('name', $this->getName());
+        $writer->writeCollectionOfObjectValues('points', $this->getPoints());
     }
 
     /**
      * Sets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
      *  @param WorkbookChartSeriesFormat|null $value Value to set for the format property.
     */
-    public function setFormat(?WorkbookChartSeriesFormat $value ): void {
-        $this->format = $value;
+    public function setFormat(?WorkbookChartSeriesFormat $value): void {
+        $this->getBackingStore()->set('format', $value);
     }
 
     /**
      * Sets the name property value. Represents the name of a series in a chart.
      *  @param string|null $value Value to set for the name property.
     */
-    public function setName(?string $value ): void {
-        $this->name = $value;
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
     /**
      * Sets the points property value. Represents a collection of all points in the series. Read-only.
      *  @param array<WorkbookChartPoint>|null $value Value to set for the points property.
     */
-    public function setPoints(?array $value ): void {
-        $this->points = $value;
+    public function setPoints(?array $value): void {
+        $this->getBackingStore()->set('points', $value);
     }
 
 }

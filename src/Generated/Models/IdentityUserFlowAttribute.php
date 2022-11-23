@@ -9,31 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityUserFlowAttribute extends Entity implements Parsable 
 {
     /**
-     * @var IdentityUserFlowAttributeDataType|null $dataType The dataType property
-    */
-    private ?IdentityUserFlowAttributeDataType $dataType = null;
-    
-    /**
-     * @var string|null $description The description of the user flow attribute that's shown to the user at the time of sign-up.
-    */
-    private ?string $description = null;
-    
-    /**
-     * @var string|null $displayName The display name of the user flow attribute.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var IdentityUserFlowAttributeType|null $userFlowAttributeType The userFlowAttributeType property
-    */
-    private ?IdentityUserFlowAttributeType $userFlowAttributeType = null;
-    
-    /**
      * Instantiates a new identityUserFlowAttribute and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.identityUserFlowAttribute');
     }
 
     /**
@@ -58,7 +37,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return IdentityUserFlowAttributeDataType|null
     */
     public function getDataType(): ?IdentityUserFlowAttributeDataType {
-        return $this->dataType;
+        return $this->getBackingStore()->get('dataType');
     }
 
     /**
@@ -66,7 +45,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->description;
+        return $this->getBackingStore()->get('description');
     }
 
     /**
@@ -74,7 +53,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -96,7 +75,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
      * @return IdentityUserFlowAttributeType|null
     */
     public function getUserFlowAttributeType(): ?IdentityUserFlowAttributeType {
-        return $this->userFlowAttributeType;
+        return $this->getBackingStore()->get('userFlowAttributeType');
     }
 
     /**
@@ -105,42 +84,42 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('dataType', $this->dataType);
-        $writer->writeStringValue('description', $this->description);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeEnumValue('userFlowAttributeType', $this->userFlowAttributeType);
+        $writer->writeEnumValue('dataType', $this->getDataType());
+        $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('userFlowAttributeType', $this->getUserFlowAttributeType());
     }
 
     /**
      * Sets the dataType property value. The dataType property
      *  @param IdentityUserFlowAttributeDataType|null $value Value to set for the dataType property.
     */
-    public function setDataType(?IdentityUserFlowAttributeDataType $value ): void {
-        $this->dataType = $value;
+    public function setDataType(?IdentityUserFlowAttributeDataType $value): void {
+        $this->getBackingStore()->set('dataType', $value);
     }
 
     /**
      * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
      *  @param string|null $value Value to set for the description property.
     */
-    public function setDescription(?string $value ): void {
-        $this->description = $value;
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**
      * Sets the displayName property value. The display name of the user flow attribute.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the userFlowAttributeType property value. The userFlowAttributeType property
      *  @param IdentityUserFlowAttributeType|null $value Value to set for the userFlowAttributeType property.
     */
-    public function setUserFlowAttributeType(?IdentityUserFlowAttributeType $value ): void {
-        $this->userFlowAttributeType = $value;
+    public function setUserFlowAttributeType(?IdentityUserFlowAttributeType $value): void {
+        $this->getBackingStore()->set('userFlowAttributeType', $value);
     }
 
 }

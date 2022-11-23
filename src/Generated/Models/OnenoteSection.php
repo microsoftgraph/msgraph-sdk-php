@@ -9,36 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable 
 {
     /**
-     * @var bool|null $isDefault Indicates whether this is the user's default section. Read-only.
-    */
-    private ?bool $isDefault = null;
-    
-    /**
-     * @var SectionLinks|null $links Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
-    */
-    private ?SectionLinks $links = null;
-    
-    /**
-     * @var array<OnenotePage>|null $pages The collection of pages in the section.  Read-only. Nullable.
-    */
-    private ?array $pages = null;
-    
-    /**
-     * @var string|null $pagesUrl The pages endpoint where you can get details for all the pages in the section. Read-only.
-    */
-    private ?string $pagesUrl = null;
-    
-    /**
-     * @var Notebook|null $parentNotebook The notebook that contains the section.  Read-only.
-    */
-    private ?Notebook $parentNotebook = null;
-    
-    /**
-     * @var SectionGroup|null $parentSectionGroup The section group that contains the section.  Read-only.
-    */
-    private ?SectionGroup $parentSectionGroup = null;
-    
-    /**
      * Instantiates a new onenoteSection and sets the default values.
     */
     public function __construct() {
@@ -76,7 +46,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->isDefault;
+        return $this->getBackingStore()->get('isDefault');
     }
 
     /**
@@ -84,7 +54,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return SectionLinks|null
     */
     public function getLinks(): ?SectionLinks {
-        return $this->links;
+        return $this->getBackingStore()->get('links');
     }
 
     /**
@@ -92,7 +62,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<OnenotePage>|null
     */
     public function getPages(): ?array {
-        return $this->pages;
+        return $this->getBackingStore()->get('pages');
     }
 
     /**
@@ -100,7 +70,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getPagesUrl(): ?string {
-        return $this->pagesUrl;
+        return $this->getBackingStore()->get('pagesUrl');
     }
 
     /**
@@ -108,7 +78,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return Notebook|null
     */
     public function getParentNotebook(): ?Notebook {
-        return $this->parentNotebook;
+        return $this->getBackingStore()->get('parentNotebook');
     }
 
     /**
@@ -116,7 +86,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
      * @return SectionGroup|null
     */
     public function getParentSectionGroup(): ?SectionGroup {
-        return $this->parentSectionGroup;
+        return $this->getBackingStore()->get('parentSectionGroup');
     }
 
     /**
@@ -125,60 +95,60 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isDefault', $this->isDefault);
-        $writer->writeObjectValue('links', $this->links);
-        $writer->writeCollectionOfObjectValues('pages', $this->pages);
-        $writer->writeStringValue('pagesUrl', $this->pagesUrl);
-        $writer->writeObjectValue('parentNotebook', $this->parentNotebook);
-        $writer->writeObjectValue('parentSectionGroup', $this->parentSectionGroup);
+        $writer->writeBooleanValue('isDefault', $this->getIsDefault());
+        $writer->writeObjectValue('links', $this->getLinks());
+        $writer->writeCollectionOfObjectValues('pages', $this->getPages());
+        $writer->writeStringValue('pagesUrl', $this->getPagesUrl());
+        $writer->writeObjectValue('parentNotebook', $this->getParentNotebook());
+        $writer->writeObjectValue('parentSectionGroup', $this->getParentSectionGroup());
     }
 
     /**
      * Sets the isDefault property value. Indicates whether this is the user's default section. Read-only.
      *  @param bool|null $value Value to set for the isDefault property.
     */
-    public function setIsDefault(?bool $value ): void {
-        $this->isDefault = $value;
+    public function setIsDefault(?bool $value): void {
+        $this->getBackingStore()->set('isDefault', $value);
     }
 
     /**
      * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
      *  @param SectionLinks|null $value Value to set for the links property.
     */
-    public function setLinks(?SectionLinks $value ): void {
-        $this->links = $value;
+    public function setLinks(?SectionLinks $value): void {
+        $this->getBackingStore()->set('links', $value);
     }
 
     /**
      * Sets the pages property value. The collection of pages in the section.  Read-only. Nullable.
      *  @param array<OnenotePage>|null $value Value to set for the pages property.
     */
-    public function setPages(?array $value ): void {
-        $this->pages = $value;
+    public function setPages(?array $value): void {
+        $this->getBackingStore()->set('pages', $value);
     }
 
     /**
      * Sets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
      *  @param string|null $value Value to set for the pagesUrl property.
     */
-    public function setPagesUrl(?string $value ): void {
-        $this->pagesUrl = $value;
+    public function setPagesUrl(?string $value): void {
+        $this->getBackingStore()->set('pagesUrl', $value);
     }
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the section.  Read-only.
      *  @param Notebook|null $value Value to set for the parentNotebook property.
     */
-    public function setParentNotebook(?Notebook $value ): void {
-        $this->parentNotebook = $value;
+    public function setParentNotebook(?Notebook $value): void {
+        $this->getBackingStore()->set('parentNotebook', $value);
     }
 
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section.  Read-only.
      *  @param SectionGroup|null $value Value to set for the parentSectionGroup property.
     */
-    public function setParentSectionGroup(?SectionGroup $value ): void {
-        $this->parentSectionGroup = $value;
+    public function setParentSectionGroup(?SectionGroup $value): void {
+        $this->getBackingStore()->set('parentSectionGroup', $value);
     }
 
 }

@@ -10,21 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class FileAttachment extends Attachment implements Parsable 
 {
     /**
-     * @var StreamInterface|null $contentBytes The base64-encoded contents of the file.
-    */
-    private ?StreamInterface $contentBytes = null;
-    
-    /**
-     * @var string|null $contentId The ID of the attachment in the Exchange store.
-    */
-    private ?string $contentId = null;
-    
-    /**
-     * @var string|null $contentLocation Do not use this property as it is not supported.
-    */
-    private ?string $contentLocation = null;
-    
-    /**
      * Instantiates a new FileAttachment and sets the default values.
     */
     public function __construct() {
@@ -43,10 +28,10 @@ class FileAttachment extends Attachment implements Parsable
 
     /**
      * Gets the contentBytes property value. The base64-encoded contents of the file.
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContentBytes(): StreamInterface {
-        return $this->contentBytes;
+    public function getContentBytes(): ?StreamInterface {
+        return $this->getBackingStore()->get('contentBytes');
     }
 
     /**
@@ -54,7 +39,7 @@ class FileAttachment extends Attachment implements Parsable
      * @return string|null
     */
     public function getContentId(): ?string {
-        return $this->contentId;
+        return $this->getBackingStore()->get('contentId');
     }
 
     /**
@@ -62,7 +47,7 @@ class FileAttachment extends Attachment implements Parsable
      * @return string|null
     */
     public function getContentLocation(): ?string {
-        return $this->contentLocation;
+        return $this->getBackingStore()->get('contentLocation');
     }
 
     /**
@@ -84,33 +69,33 @@ class FileAttachment extends Attachment implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('contentBytes', $this->contentBytes);
-        $writer->writeStringValue('contentId', $this->contentId);
-        $writer->writeStringValue('contentLocation', $this->contentLocation);
+        $writer->writeBinaryContent('contentBytes', $this->getContentBytes());
+        $writer->writeStringValue('contentId', $this->getContentId());
+        $writer->writeStringValue('contentLocation', $this->getContentLocation());
     }
 
     /**
      * Sets the contentBytes property value. The base64-encoded contents of the file.
      *  @param StreamInterface|null $value Value to set for the contentBytes property.
     */
-    public function setContentBytes(?StreamInterface $value ): void {
-        $this->contentBytes = $value;
+    public function setContentBytes(?StreamInterface $value): void {
+        $this->getBackingStore()->set('contentBytes', $value);
     }
 
     /**
      * Sets the contentId property value. The ID of the attachment in the Exchange store.
      *  @param string|null $value Value to set for the contentId property.
     */
-    public function setContentId(?string $value ): void {
-        $this->contentId = $value;
+    public function setContentId(?string $value): void {
+        $this->getBackingStore()->set('contentId', $value);
     }
 
     /**
      * Sets the contentLocation property value. Do not use this property as it is not supported.
      *  @param string|null $value Value to set for the contentLocation property.
     */
-    public function setContentLocation(?string $value ): void {
-        $this->contentLocation = $value;
+    public function setContentLocation(?string $value): void {
+        $this->getBackingStore()->set('contentLocation', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationPointsOutcome extends EducationOutcome implements Parsable 
 {
     /**
-     * @var EducationAssignmentPointsGrade|null $points The numeric grade the teacher has given the student for this assignment.
-    */
-    private ?EducationAssignmentPointsGrade $points = null;
-    
-    /**
-     * @var EducationAssignmentPointsGrade|null $publishedPoints A copy of the points property that is made when the grade is released to the student.
-    */
-    private ?EducationAssignmentPointsGrade $publishedPoints = null;
-    
-    /**
      * Instantiates a new EducationPointsOutcome and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @return EducationAssignmentPointsGrade|null
     */
     public function getPoints(): ?EducationAssignmentPointsGrade {
-        return $this->points;
+        return $this->getBackingStore()->get('points');
     }
 
     /**
@@ -60,7 +50,7 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @return EducationAssignmentPointsGrade|null
     */
     public function getPublishedPoints(): ?EducationAssignmentPointsGrade {
-        return $this->publishedPoints;
+        return $this->getBackingStore()->get('publishedPoints');
     }
 
     /**
@@ -69,24 +59,24 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('points', $this->points);
-        $writer->writeObjectValue('publishedPoints', $this->publishedPoints);
+        $writer->writeObjectValue('points', $this->getPoints());
+        $writer->writeObjectValue('publishedPoints', $this->getPublishedPoints());
     }
 
     /**
      * Sets the points property value. The numeric grade the teacher has given the student for this assignment.
      *  @param EducationAssignmentPointsGrade|null $value Value to set for the points property.
     */
-    public function setPoints(?EducationAssignmentPointsGrade $value ): void {
-        $this->points = $value;
+    public function setPoints(?EducationAssignmentPointsGrade $value): void {
+        $this->getBackingStore()->set('points', $value);
     }
 
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      *  @param EducationAssignmentPointsGrade|null $value Value to set for the publishedPoints property.
     */
-    public function setPublishedPoints(?EducationAssignmentPointsGrade $value ): void {
-        $this->publishedPoints = $value;
+    public function setPublishedPoints(?EducationAssignmentPointsGrade $value): void {
+        $this->getBackingStore()->set('publishedPoints', $value);
     }
 
 }

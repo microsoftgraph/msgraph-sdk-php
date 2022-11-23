@@ -10,41 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintConnector extends Entity implements Parsable 
 {
     /**
-     * @var string|null $appVersion The connector's version.
-    */
-    private ?string $appVersion = null;
-    
-    /**
-     * @var string|null $displayName The name of the connector.
-    */
-    private ?string $displayName = null;
-    
-    /**
-     * @var string|null $fullyQualifiedDomainName The connector machine's hostname.
-    */
-    private ?string $fullyQualifiedDomainName = null;
-    
-    /**
-     * @var PrinterLocation|null $location The physical and/or organizational location of the connector.
-    */
-    private ?PrinterLocation $location = null;
-    
-    /**
-     * @var string|null $operatingSystem The connector machine's operating system version.
-    */
-    private ?string $operatingSystem = null;
-    
-    /**
-     * @var DateTime|null $registeredDateTime The DateTimeOffset when the connector was registered.
-    */
-    private ?DateTime $registeredDateTime = null;
-    
-    /**
      * Instantiates a new printConnector and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.printConnector');
     }
 
     /**
@@ -61,7 +30,7 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getAppVersion(): ?string {
-        return $this->appVersion;
+        return $this->getBackingStore()->get('appVersion');
     }
 
     /**
@@ -69,7 +38,7 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->displayName;
+        return $this->getBackingStore()->get('displayName');
     }
 
     /**
@@ -93,7 +62,7 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getFullyQualifiedDomainName(): ?string {
-        return $this->fullyQualifiedDomainName;
+        return $this->getBackingStore()->get('fullyQualifiedDomainName');
     }
 
     /**
@@ -101,7 +70,7 @@ class PrintConnector extends Entity implements Parsable
      * @return PrinterLocation|null
     */
     public function getLocation(): ?PrinterLocation {
-        return $this->location;
+        return $this->getBackingStore()->get('location');
     }
 
     /**
@@ -109,7 +78,7 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->operatingSystem;
+        return $this->getBackingStore()->get('operatingSystem');
     }
 
     /**
@@ -117,7 +86,7 @@ class PrintConnector extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRegisteredDateTime(): ?DateTime {
-        return $this->registeredDateTime;
+        return $this->getBackingStore()->get('registeredDateTime');
     }
 
     /**
@@ -126,60 +95,60 @@ class PrintConnector extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('appVersion', $this->appVersion);
-        $writer->writeStringValue('displayName', $this->displayName);
-        $writer->writeStringValue('fullyQualifiedDomainName', $this->fullyQualifiedDomainName);
-        $writer->writeObjectValue('location', $this->location);
-        $writer->writeStringValue('operatingSystem', $this->operatingSystem);
-        $writer->writeDateTimeValue('registeredDateTime', $this->registeredDateTime);
+        $writer->writeStringValue('appVersion', $this->getAppVersion());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('fullyQualifiedDomainName', $this->getFullyQualifiedDomainName());
+        $writer->writeObjectValue('location', $this->getLocation());
+        $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
+        $writer->writeDateTimeValue('registeredDateTime', $this->getRegisteredDateTime());
     }
 
     /**
      * Sets the appVersion property value. The connector's version.
      *  @param string|null $value Value to set for the appVersion property.
     */
-    public function setAppVersion(?string $value ): void {
-        $this->appVersion = $value;
+    public function setAppVersion(?string $value): void {
+        $this->getBackingStore()->set('appVersion', $value);
     }
 
     /**
      * Sets the displayName property value. The name of the connector.
      *  @param string|null $value Value to set for the displayName property.
     */
-    public function setDisplayName(?string $value ): void {
-        $this->displayName = $value;
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
      *  @param string|null $value Value to set for the fullyQualifiedDomainName property.
     */
-    public function setFullyQualifiedDomainName(?string $value ): void {
-        $this->fullyQualifiedDomainName = $value;
+    public function setFullyQualifiedDomainName(?string $value): void {
+        $this->getBackingStore()->set('fullyQualifiedDomainName', $value);
     }
 
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
      *  @param PrinterLocation|null $value Value to set for the location property.
     */
-    public function setLocation(?PrinterLocation $value ): void {
-        $this->location = $value;
+    public function setLocation(?PrinterLocation $value): void {
+        $this->getBackingStore()->set('location', $value);
     }
 
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
      *  @param string|null $value Value to set for the operatingSystem property.
     */
-    public function setOperatingSystem(?string $value ): void {
-        $this->operatingSystem = $value;
+    public function setOperatingSystem(?string $value): void {
+        $this->getBackingStore()->set('operatingSystem', $value);
     }
 
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
      *  @param DateTime|null $value Value to set for the registeredDateTime property.
     */
-    public function setRegisteredDateTime(?DateTime $value ): void {
-        $this->registeredDateTime = $value;
+    public function setRegisteredDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('registeredDateTime', $value);
     }
 
 }

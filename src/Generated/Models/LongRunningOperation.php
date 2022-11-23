@@ -10,36 +10,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class LongRunningOperation extends Entity implements Parsable 
 {
     /**
-     * @var DateTime|null $createdDateTime The start time of the operation.
-    */
-    private ?DateTime $createdDateTime = null;
-    
-    /**
-     * @var DateTime|null $lastActionDateTime The time of the last action in the operation.
-    */
-    private ?DateTime $lastActionDateTime = null;
-    
-    /**
-     * @var string|null $resourceLocation URI of the resource that the operation is performed on.
-    */
-    private ?string $resourceLocation = null;
-    
-    /**
-     * @var LongRunningOperationStatus|null $status The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-    */
-    private ?LongRunningOperationStatus $status = null;
-    
-    /**
-     * @var string|null $statusDetail Details about the status of the operation.
-    */
-    private ?string $statusDetail = null;
-    
-    /**
      * Instantiates a new longRunningOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.longRunningOperation');
     }
 
     /**
@@ -63,7 +37,7 @@ class LongRunningOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->createdDateTime;
+        return $this->getBackingStore()->get('createdDateTime');
     }
 
     /**
@@ -86,7 +60,7 @@ class LongRunningOperation extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastActionDateTime(): ?DateTime {
-        return $this->lastActionDateTime;
+        return $this->getBackingStore()->get('lastActionDateTime');
     }
 
     /**
@@ -94,7 +68,7 @@ class LongRunningOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceLocation(): ?string {
-        return $this->resourceLocation;
+        return $this->getBackingStore()->get('resourceLocation');
     }
 
     /**
@@ -102,7 +76,7 @@ class LongRunningOperation extends Entity implements Parsable
      * @return LongRunningOperationStatus|null
     */
     public function getStatus(): ?LongRunningOperationStatus {
-        return $this->status;
+        return $this->getBackingStore()->get('status');
     }
 
     /**
@@ -110,7 +84,7 @@ class LongRunningOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getStatusDetail(): ?string {
-        return $this->statusDetail;
+        return $this->getBackingStore()->get('statusDetail');
     }
 
     /**
@@ -119,51 +93,51 @@ class LongRunningOperation extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->createdDateTime);
-        $writer->writeDateTimeValue('lastActionDateTime', $this->lastActionDateTime);
-        $writer->writeStringValue('resourceLocation', $this->resourceLocation);
-        $writer->writeEnumValue('status', $this->status);
-        $writer->writeStringValue('statusDetail', $this->statusDetail);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeDateTimeValue('lastActionDateTime', $this->getLastActionDateTime());
+        $writer->writeStringValue('resourceLocation', $this->getResourceLocation());
+        $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeStringValue('statusDetail', $this->getStatusDetail());
     }
 
     /**
      * Sets the createdDateTime property value. The start time of the operation.
      *  @param DateTime|null $value Value to set for the createdDateTime property.
     */
-    public function setCreatedDateTime(?DateTime $value ): void {
-        $this->createdDateTime = $value;
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
      * Sets the lastActionDateTime property value. The time of the last action in the operation.
      *  @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
-    public function setLastActionDateTime(?DateTime $value ): void {
-        $this->lastActionDateTime = $value;
+    public function setLastActionDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastActionDateTime', $value);
     }
 
     /**
      * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
      *  @param string|null $value Value to set for the resourceLocation property.
     */
-    public function setResourceLocation(?string $value ): void {
-        $this->resourceLocation = $value;
+    public function setResourceLocation(?string $value): void {
+        $this->getBackingStore()->set('resourceLocation', $value);
     }
 
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      *  @param LongRunningOperationStatus|null $value Value to set for the status property.
     */
-    public function setStatus(?LongRunningOperationStatus $value ): void {
-        $this->status = $value;
+    public function setStatus(?LongRunningOperationStatus $value): void {
+        $this->getBackingStore()->set('status', $value);
     }
 
     /**
      * Sets the statusDetail property value. Details about the status of the operation.
      *  @param string|null $value Value to set for the statusDetail property.
     */
-    public function setStatusDetail(?string $value ): void {
-        $this->statusDetail = $value;
+    public function setStatusDetail(?string $value): void {
+        $this->getBackingStore()->set('statusDetail', $value);
     }
 
 }

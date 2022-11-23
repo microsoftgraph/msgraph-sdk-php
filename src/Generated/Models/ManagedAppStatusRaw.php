@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable 
 {
     /**
-     * @var Json|null $content Status report content.
-    */
-    private ?Json $content = null;
-    
-    /**
      * Instantiates a new ManagedAppStatusRaw and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable
      * @return Json|null
     */
     public function getContent(): ?Json {
-        return $this->content;
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -55,15 +50,15 @@ class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('content', $this->content);
+        $writer->writeObjectValue('content', $this->getContent());
     }
 
     /**
      * Sets the content property value. Status report content.
      *  @param Json|null $value Value to set for the content property.
     */
-    public function setContent(?Json $value ): void {
-        $this->content = $value;
+    public function setContent(?Json $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
 }

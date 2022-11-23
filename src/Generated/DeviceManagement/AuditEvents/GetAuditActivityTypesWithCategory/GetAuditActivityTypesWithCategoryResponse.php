@@ -10,11 +10,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GetAuditActivityTypesWithCategoryResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * @var array<string>|null $value The value property
-    */
-    private ?array $value = null;
-    
-    /**
      * Instantiates a new getAuditActivityTypesWithCategoryResponse and sets the default values.
     */
     public function __construct() {
@@ -46,7 +41,7 @@ class GetAuditActivityTypesWithCategoryResponse extends BaseCollectionPagination
      * @return array<string>|null
     */
     public function getValue(): ?array {
-        return $this->value;
+        return $this->getBackingStore()->get('value');
     }
 
     /**
@@ -55,15 +50,15 @@ class GetAuditActivityTypesWithCategoryResponse extends BaseCollectionPagination
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('value', $this->value);
+        $writer->writeCollectionOfPrimitiveValues('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. The value property
      *  @param array<string>|null $value Value to set for the value property.
     */
-    public function setValue(?array $value ): void {
-        $this->value = $value;
+    public function setValue(?array $value): void {
+        $this->getBackingStore()->set('value', $value);
     }
 
 }

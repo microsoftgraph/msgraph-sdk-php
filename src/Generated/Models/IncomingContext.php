@@ -6,45 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class IncomingContext implements AdditionalDataHolder, Parsable 
+class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var string|null $observedParticipantId The ID of the participant that is under observation. Read-only.
-    */
-    private ?string $observedParticipantId = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var IdentitySet|null $onBehalfOf The identity that the call is happening on behalf of.
-    */
-    private ?IdentitySet $onBehalfOf = null;
-    
-    /**
-     * @var string|null $sourceParticipantId The ID of the participant that triggered the incoming call. Read-only.
-    */
-    private ?string $sourceParticipantId = null;
-    
-    /**
-     * @var IdentitySet|null $transferor The identity that transferred the call.
-    */
-    private ?IdentitySet $transferor = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new incomingContext and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.incomingContext');
     }
 
     /**
@@ -60,8 +38,16 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -84,7 +70,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getObservedParticipantId(): ?string {
-        return $this->observedParticipantId;
+        return $this->getBackingStore()->get('observedParticipantId');
     }
 
     /**
@@ -92,7 +78,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -100,7 +86,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getOnBehalfOf(): ?IdentitySet {
-        return $this->onBehalfOf;
+        return $this->getBackingStore()->get('onBehalfOf');
     }
 
     /**
@@ -108,7 +94,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getSourceParticipantId(): ?string {
-        return $this->sourceParticipantId;
+        return $this->getBackingStore()->get('sourceParticipantId');
     }
 
     /**
@@ -116,7 +102,7 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @return IdentitySet|null
     */
     public function getTransferor(): ?IdentitySet {
-        return $this->transferor;
+        return $this->getBackingStore()->get('transferor');
     }
 
     /**
@@ -124,60 +110,68 @@ class IncomingContext implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('observedParticipantId', $this->observedParticipantId);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('onBehalfOf', $this->onBehalfOf);
-        $writer->writeStringValue('sourceParticipantId', $this->sourceParticipantId);
-        $writer->writeObjectValue('transferor', $this->transferor);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeStringValue('observedParticipantId', $this->getObservedParticipantId());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('onBehalfOf', $this->getOnBehalfOf());
+        $writer->writeStringValue('sourceParticipantId', $this->getSourceParticipantId());
+        $writer->writeObjectValue('transferor', $this->getTransferor());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
      *  @param string|null $value Value to set for the observedParticipantId property.
     */
-    public function setObservedParticipantId(?string $value ): void {
-        $this->observedParticipantId = $value;
+    public function setObservedParticipantId(?string $value): void {
+        $this->getBackingStore()->set('observedParticipantId', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the onBehalfOf property value. The identity that the call is happening on behalf of.
      *  @param IdentitySet|null $value Value to set for the onBehalfOf property.
     */
-    public function setOnBehalfOf(?IdentitySet $value ): void {
-        $this->onBehalfOf = $value;
+    public function setOnBehalfOf(?IdentitySet $value): void {
+        $this->getBackingStore()->set('onBehalfOf', $value);
     }
 
     /**
      * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
      *  @param string|null $value Value to set for the sourceParticipantId property.
     */
-    public function setSourceParticipantId(?string $value ): void {
-        $this->sourceParticipantId = $value;
+    public function setSourceParticipantId(?string $value): void {
+        $this->getBackingStore()->set('sourceParticipantId', $value);
     }
 
     /**
      * Sets the transferor property value. The identity that transferred the call.
      *  @param IdentitySet|null $value Value to set for the transferor property.
     */
-    public function setTransferor(?IdentitySet $value ): void {
-        $this->transferor = $value;
+    public function setTransferor(?IdentitySet $value): void {
+        $this->getBackingStore()->set('transferor', $value);
     }
 
 }

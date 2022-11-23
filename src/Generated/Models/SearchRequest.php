@@ -6,85 +6,23 @@ use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class SearchRequest implements AdditionalDataHolder, Parsable 
+class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
-     * @var array<string, mixed> $additionalData Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @var BackingStore $backingStore Stores model information.
     */
-    private array $additionalData;
-    
-    /**
-     * @var array<string>|null $aggregationFilters The aggregationFilters property
-    */
-    private ?array $aggregationFilters = null;
-    
-    /**
-     * @var array<AggregationOption>|null $aggregations The aggregations property
-    */
-    private ?array $aggregations = null;
-    
-    /**
-     * @var array<string>|null $contentSources The contentSources property
-    */
-    private ?array $contentSources = null;
-    
-    /**
-     * @var bool|null $enableTopResults The enableTopResults property
-    */
-    private ?bool $enableTopResults = null;
-    
-    /**
-     * @var array<EntityType>|null $entityTypes The entityTypes property
-    */
-    private ?array $entityTypes = null;
-    
-    /**
-     * @var array<string>|null $fields The fields property
-    */
-    private ?array $fields = null;
-    
-    /**
-     * @var int|null $from The from property
-    */
-    private ?int $from = null;
-    
-    /**
-     * @var string|null $odataType The OdataType property
-    */
-    private ?string $odataType = null;
-    
-    /**
-     * @var SearchQuery|null $query The query property
-    */
-    private ?SearchQuery $query = null;
-    
-    /**
-     * @var SearchAlterationOptions|null $queryAlterationOptions The queryAlterationOptions property
-    */
-    private ?SearchAlterationOptions $queryAlterationOptions = null;
-    
-    /**
-     * @var ResultTemplateOption|null $resultTemplateOptions The resultTemplateOptions property
-    */
-    private ?ResultTemplateOption $resultTemplateOptions = null;
-    
-    /**
-     * @var int|null $size The size property
-    */
-    private ?int $size = null;
-    
-    /**
-     * @var array<SortProperty>|null $sortProperties The sortProperties property
-    */
-    private ?array $sortProperties = null;
+    private BackingStore $backingStore;
     
     /**
      * Instantiates a new searchRequest and sets the default values.
     */
     public function __construct() {
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setOdataType('#microsoft.graph.searchRequest');
     }
 
     /**
@@ -100,8 +38,8 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>
     */
-    public function getAdditionalData(): array {
-        return $this->additionalData;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -109,7 +47,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getAggregationFilters(): ?array {
-        return $this->aggregationFilters;
+        return $this->getBackingStore()->get('aggregationFilters');
     }
 
     /**
@@ -117,7 +55,15 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<AggregationOption>|null
     */
     public function getAggregations(): ?array {
-        return $this->aggregations;
+        return $this->getBackingStore()->get('aggregations');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -125,7 +71,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getContentSources(): ?array {
-        return $this->contentSources;
+        return $this->getBackingStore()->get('contentSources');
     }
 
     /**
@@ -133,7 +79,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return bool|null
     */
     public function getEnableTopResults(): ?bool {
-        return $this->enableTopResults;
+        return $this->getBackingStore()->get('enableTopResults');
     }
 
     /**
@@ -141,7 +87,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<EntityType>|null
     */
     public function getEntityTypes(): ?array {
-        return $this->entityTypes;
+        return $this->getBackingStore()->get('entityTypes');
     }
 
     /**
@@ -172,7 +118,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<string>|null
     */
     public function getFields(): ?array {
-        return $this->fields;
+        return $this->getBackingStore()->get('fields');
     }
 
     /**
@@ -180,7 +126,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getFrom(): ?int {
-        return $this->from;
+        return $this->getBackingStore()->get('from');
     }
 
     /**
@@ -188,7 +134,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->odataType;
+        return $this->getBackingStore()->get('odataType');
     }
 
     /**
@@ -196,7 +142,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return SearchQuery|null
     */
     public function getQuery(): ?SearchQuery {
-        return $this->query;
+        return $this->getBackingStore()->get('query');
     }
 
     /**
@@ -204,7 +150,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return SearchAlterationOptions|null
     */
     public function getQueryAlterationOptions(): ?SearchAlterationOptions {
-        return $this->queryAlterationOptions;
+        return $this->getBackingStore()->get('queryAlterationOptions');
     }
 
     /**
@@ -212,7 +158,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return ResultTemplateOption|null
     */
     public function getResultTemplateOptions(): ?ResultTemplateOption {
-        return $this->resultTemplateOptions;
+        return $this->getBackingStore()->get('resultTemplateOptions');
     }
 
     /**
@@ -220,7 +166,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->size;
+        return $this->getBackingStore()->get('size');
     }
 
     /**
@@ -228,7 +174,7 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @return array<SortProperty>|null
     */
     public function getSortProperties(): ?array {
-        return $this->sortProperties;
+        return $this->getBackingStore()->get('sortProperties');
     }
 
     /**
@@ -236,132 +182,140 @@ class SearchRequest implements AdditionalDataHolder, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('aggregationFilters', $this->aggregationFilters);
-        $writer->writeCollectionOfObjectValues('aggregations', $this->aggregations);
-        $writer->writeCollectionOfPrimitiveValues('contentSources', $this->contentSources);
-        $writer->writeBooleanValue('enableTopResults', $this->enableTopResults);
-        $writer->writeCollectionOfEnumValues('entityTypes', $this->entityTypes);
-        $writer->writeCollectionOfPrimitiveValues('fields', $this->fields);
-        $writer->writeIntegerValue('from', $this->from);
-        $writer->writeStringValue('@odata.type', $this->odataType);
-        $writer->writeObjectValue('query', $this->query);
-        $writer->writeObjectValue('queryAlterationOptions', $this->queryAlterationOptions);
-        $writer->writeObjectValue('resultTemplateOptions', $this->resultTemplateOptions);
-        $writer->writeIntegerValue('size', $this->size);
-        $writer->writeCollectionOfObjectValues('sortProperties', $this->sortProperties);
-        $writer->writeAdditionalData($this->additionalData);
+        $writer->writeCollectionOfPrimitiveValues('aggregationFilters', $this->getAggregationFilters());
+        $writer->writeCollectionOfObjectValues('aggregations', $this->getAggregations());
+        $writer->writeCollectionOfPrimitiveValues('contentSources', $this->getContentSources());
+        $writer->writeBooleanValue('enableTopResults', $this->getEnableTopResults());
+        $writer->writeCollectionOfEnumValues('entityTypes', $this->getEntityTypes());
+        $writer->writeCollectionOfPrimitiveValues('fields', $this->getFields());
+        $writer->writeIntegerValue('from', $this->getFrom());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('query', $this->getQuery());
+        $writer->writeObjectValue('queryAlterationOptions', $this->getQueryAlterationOptions());
+        $writer->writeObjectValue('resultTemplateOptions', $this->getResultTemplateOptions());
+        $writer->writeIntegerValue('size', $this->getSize());
+        $writer->writeCollectionOfObjectValues('sortProperties', $this->getSortProperties());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      *  @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setAdditionalData(?array $value ): void {
-        $this->additionalData = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
      * Sets the aggregationFilters property value. The aggregationFilters property
      *  @param array<string>|null $value Value to set for the aggregationFilters property.
     */
-    public function setAggregationFilters(?array $value ): void {
-        $this->aggregationFilters = $value;
+    public function setAggregationFilters(?array $value): void {
+        $this->getBackingStore()->set('aggregationFilters', $value);
     }
 
     /**
      * Sets the aggregations property value. The aggregations property
      *  @param array<AggregationOption>|null $value Value to set for the aggregations property.
     */
-    public function setAggregations(?array $value ): void {
-        $this->aggregations = $value;
+    public function setAggregations(?array $value): void {
+        $this->getBackingStore()->set('aggregations', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     *  @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
      * Sets the contentSources property value. The contentSources property
      *  @param array<string>|null $value Value to set for the contentSources property.
     */
-    public function setContentSources(?array $value ): void {
-        $this->contentSources = $value;
+    public function setContentSources(?array $value): void {
+        $this->getBackingStore()->set('contentSources', $value);
     }
 
     /**
      * Sets the enableTopResults property value. The enableTopResults property
      *  @param bool|null $value Value to set for the enableTopResults property.
     */
-    public function setEnableTopResults(?bool $value ): void {
-        $this->enableTopResults = $value;
+    public function setEnableTopResults(?bool $value): void {
+        $this->getBackingStore()->set('enableTopResults', $value);
     }
 
     /**
      * Sets the entityTypes property value. The entityTypes property
      *  @param array<EntityType>|null $value Value to set for the entityTypes property.
     */
-    public function setEntityTypes(?array $value ): void {
-        $this->entityTypes = $value;
+    public function setEntityTypes(?array $value): void {
+        $this->getBackingStore()->set('entityTypes', $value);
     }
 
     /**
      * Sets the fields property value. The fields property
      *  @param array<string>|null $value Value to set for the fields property.
     */
-    public function setFields(?array $value ): void {
-        $this->fields = $value;
+    public function setFields(?array $value): void {
+        $this->getBackingStore()->set('fields', $value);
     }
 
     /**
      * Sets the from property value. The from property
      *  @param int|null $value Value to set for the from property.
     */
-    public function setFrom(?int $value ): void {
-        $this->from = $value;
+    public function setFrom(?int $value): void {
+        $this->getBackingStore()->set('from', $value);
     }
 
     /**
      * Sets the @odata.type property value. The OdataType property
      *  @param string|null $value Value to set for the OdataType property.
     */
-    public function setOdataType(?string $value ): void {
-        $this->odataType = $value;
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
      * Sets the query property value. The query property
      *  @param SearchQuery|null $value Value to set for the query property.
     */
-    public function setQuery(?SearchQuery $value ): void {
-        $this->query = $value;
+    public function setQuery(?SearchQuery $value): void {
+        $this->getBackingStore()->set('query', $value);
     }
 
     /**
      * Sets the queryAlterationOptions property value. The queryAlterationOptions property
      *  @param SearchAlterationOptions|null $value Value to set for the queryAlterationOptions property.
     */
-    public function setQueryAlterationOptions(?SearchAlterationOptions $value ): void {
-        $this->queryAlterationOptions = $value;
+    public function setQueryAlterationOptions(?SearchAlterationOptions $value): void {
+        $this->getBackingStore()->set('queryAlterationOptions', $value);
     }
 
     /**
      * Sets the resultTemplateOptions property value. The resultTemplateOptions property
      *  @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
     */
-    public function setResultTemplateOptions(?ResultTemplateOption $value ): void {
-        $this->resultTemplateOptions = $value;
+    public function setResultTemplateOptions(?ResultTemplateOption $value): void {
+        $this->getBackingStore()->set('resultTemplateOptions', $value);
     }
 
     /**
      * Sets the size property value. The size property
      *  @param int|null $value Value to set for the size property.
     */
-    public function setSize(?int $value ): void {
-        $this->size = $value;
+    public function setSize(?int $value): void {
+        $this->getBackingStore()->set('size', $value);
     }
 
     /**
      * Sets the sortProperties property value. The sortProperties property
      *  @param array<SortProperty>|null $value Value to set for the sortProperties property.
     */
-    public function setSortProperties(?array $value ): void {
-        $this->sortProperties = $value;
+    public function setSortProperties(?array $value): void {
+        $this->getBackingStore()->set('sortProperties', $value);
     }
 
 }

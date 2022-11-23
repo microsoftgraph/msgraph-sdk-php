@@ -9,36 +9,10 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttendanceRecord extends Entity implements Parsable 
 {
     /**
-     * @var array<AttendanceInterval>|null $attendanceIntervals List of time periods between joining and leaving a meeting.
-    */
-    private ?array $attendanceIntervals = null;
-    
-    /**
-     * @var string|null $emailAddress Email address of the user associated with this atttendance record.
-    */
-    private ?string $emailAddress = null;
-    
-    /**
-     * @var Identity|null $identity Identity of the user associated with this atttendance record.
-    */
-    private ?Identity $identity = null;
-    
-    /**
-     * @var string|null $role Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
-    */
-    private ?string $role = null;
-    
-    /**
-     * @var int|null $totalAttendanceInSeconds Total duration of the attendances in seconds.
-    */
-    private ?int $totalAttendanceInSeconds = null;
-    
-    /**
      * Instantiates a new attendanceRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setOdataType('#microsoft.graph.attendanceRecord');
     }
 
     /**
@@ -55,7 +29,7 @@ class AttendanceRecord extends Entity implements Parsable
      * @return array<AttendanceInterval>|null
     */
     public function getAttendanceIntervals(): ?array {
-        return $this->attendanceIntervals;
+        return $this->getBackingStore()->get('attendanceIntervals');
     }
 
     /**
@@ -63,7 +37,7 @@ class AttendanceRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->emailAddress;
+        return $this->getBackingStore()->get('emailAddress');
     }
 
     /**
@@ -86,7 +60,7 @@ class AttendanceRecord extends Entity implements Parsable
      * @return Identity|null
     */
     public function getIdentity(): ?Identity {
-        return $this->identity;
+        return $this->getBackingStore()->get('identity');
     }
 
     /**
@@ -94,7 +68,7 @@ class AttendanceRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getRole(): ?string {
-        return $this->role;
+        return $this->getBackingStore()->get('role');
     }
 
     /**
@@ -102,7 +76,7 @@ class AttendanceRecord extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalAttendanceInSeconds(): ?int {
-        return $this->totalAttendanceInSeconds;
+        return $this->getBackingStore()->get('totalAttendanceInSeconds');
     }
 
     /**
@@ -111,51 +85,51 @@ class AttendanceRecord extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('attendanceIntervals', $this->attendanceIntervals);
-        $writer->writeStringValue('emailAddress', $this->emailAddress);
-        $writer->writeObjectValue('identity', $this->identity);
-        $writer->writeStringValue('role', $this->role);
-        $writer->writeIntegerValue('totalAttendanceInSeconds', $this->totalAttendanceInSeconds);
+        $writer->writeCollectionOfObjectValues('attendanceIntervals', $this->getAttendanceIntervals());
+        $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeObjectValue('identity', $this->getIdentity());
+        $writer->writeStringValue('role', $this->getRole());
+        $writer->writeIntegerValue('totalAttendanceInSeconds', $this->getTotalAttendanceInSeconds());
     }
 
     /**
      * Sets the attendanceIntervals property value. List of time periods between joining and leaving a meeting.
      *  @param array<AttendanceInterval>|null $value Value to set for the attendanceIntervals property.
     */
-    public function setAttendanceIntervals(?array $value ): void {
-        $this->attendanceIntervals = $value;
+    public function setAttendanceIntervals(?array $value): void {
+        $this->getBackingStore()->set('attendanceIntervals', $value);
     }
 
     /**
      * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
      *  @param string|null $value Value to set for the emailAddress property.
     */
-    public function setEmailAddress(?string $value ): void {
-        $this->emailAddress = $value;
+    public function setEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('emailAddress', $value);
     }
 
     /**
      * Sets the identity property value. Identity of the user associated with this atttendance record.
      *  @param Identity|null $value Value to set for the identity property.
     */
-    public function setIdentity(?Identity $value ): void {
-        $this->identity = $value;
+    public function setIdentity(?Identity $value): void {
+        $this->getBackingStore()->set('identity', $value);
     }
 
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
      *  @param string|null $value Value to set for the role property.
     */
-    public function setRole(?string $value ): void {
-        $this->role = $value;
+    public function setRole(?string $value): void {
+        $this->getBackingStore()->set('role', $value);
     }
 
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
      *  @param int|null $value Value to set for the totalAttendanceInSeconds property.
     */
-    public function setTotalAttendanceInSeconds(?int $value ): void {
-        $this->totalAttendanceInSeconds = $value;
+    public function setTotalAttendanceInSeconds(?int $value): void {
+        $this->getBackingStore()->set('totalAttendanceInSeconds', $value);
     }
 
 }

@@ -10,16 +10,6 @@ use Psr\Http\Message\StreamInterface;
 class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
 {
     /**
-     * @var StreamInterface|null $content The content stream
-    */
-    private ?StreamInterface $content = null;
-    
-    /**
-     * @var string|null $contentUrl The URL for downloading the content
-    */
-    private ?string $contentUrl = null;
-    
-    /**
      * Instantiates a new OnenoteResource and sets the default values.
     */
     public function __construct() {
@@ -38,10 +28,10 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
 
     /**
      * Gets the content property value. The content stream
-     * @return StreamInterface
+     * @return StreamInterface|null
     */
-    public function getContent(): StreamInterface {
-        return $this->content;
+    public function getContent(): ?StreamInterface {
+        return $this->getBackingStore()->get('content');
     }
 
     /**
@@ -49,7 +39,7 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->contentUrl;
+        return $this->getBackingStore()->get('contentUrl');
     }
 
     /**
@@ -70,24 +60,24 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBinaryContent('content', $this->content);
-        $writer->writeStringValue('contentUrl', $this->contentUrl);
+        $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeStringValue('contentUrl', $this->getContentUrl());
     }
 
     /**
      * Sets the content property value. The content stream
      *  @param StreamInterface|null $value Value to set for the content property.
     */
-    public function setContent(?StreamInterface $value ): void {
-        $this->content = $value;
+    public function setContent(?StreamInterface $value): void {
+        $this->getBackingStore()->set('content', $value);
     }
 
     /**
      * Sets the contentUrl property value. The URL for downloading the content
      *  @param string|null $value Value to set for the contentUrl property.
     */
-    public function setContentUrl(?string $value ): void {
-        $this->contentUrl = $value;
+    public function setContentUrl(?string $value): void {
+        $this->getBackingStore()->set('contentUrl', $value);
     }
 
 }

@@ -9,16 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserIdentity extends Identity implements Parsable 
 {
     /**
-     * @var string|null $ipAddress Indicates the client IP address used by user performing the activity (audit log only).
-    */
-    private ?string $ipAddress = null;
-    
-    /**
-     * @var string|null $userPrincipalName The userPrincipalName attribute of the user.
-    */
-    private ?string $userPrincipalName = null;
-    
-    /**
      * Instantiates a new UserIdentity and sets the default values.
     */
     public function __construct() {
@@ -52,7 +42,7 @@ class UserIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->ipAddress;
+        return $this->getBackingStore()->get('ipAddress');
     }
 
     /**
@@ -60,7 +50,7 @@ class UserIdentity extends Identity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->userPrincipalName;
+        return $this->getBackingStore()->get('userPrincipalName');
     }
 
     /**
@@ -69,24 +59,24 @@ class UserIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('ipAddress', $this->ipAddress);
-        $writer->writeStringValue('userPrincipalName', $this->userPrincipalName);
+        $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
     }
 
     /**
      * Sets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
      *  @param string|null $value Value to set for the ipAddress property.
     */
-    public function setIpAddress(?string $value ): void {
-        $this->ipAddress = $value;
+    public function setIpAddress(?string $value): void {
+        $this->getBackingStore()->set('ipAddress', $value);
     }
 
     /**
      * Sets the userPrincipalName property value. The userPrincipalName attribute of the user.
      *  @param string|null $value Value to set for the userPrincipalName property.
     */
-    public function setUserPrincipalName(?string $value ): void {
-        $this->userPrincipalName = $value;
+    public function setUserPrincipalName(?string $value): void {
+        $this->getBackingStore()->set('userPrincipalName', $value);
     }
 
 }

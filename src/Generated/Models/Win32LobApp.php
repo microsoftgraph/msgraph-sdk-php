@@ -9,71 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Win32LobApp extends MobileLobApp implements Parsable 
 {
     /**
-     * @var WindowsArchitecture|null $applicableArchitectures Contains properties for Windows architecture.
-    */
-    private ?WindowsArchitecture $applicableArchitectures = null;
-    
-    /**
-     * @var string|null $installCommandLine The command line to install this app
-    */
-    private ?string $installCommandLine = null;
-    
-    /**
-     * @var Win32LobAppInstallExperience|null $installExperience The install experience for this app.
-    */
-    private ?Win32LobAppInstallExperience $installExperience = null;
-    
-    /**
-     * @var int|null $minimumCpuSpeedInMHz The value for the minimum CPU speed which is required to install this app.
-    */
-    private ?int $minimumCpuSpeedInMHz = null;
-    
-    /**
-     * @var int|null $minimumFreeDiskSpaceInMB The value for the minimum free disk space which is required to install this app.
-    */
-    private ?int $minimumFreeDiskSpaceInMB = null;
-    
-    /**
-     * @var int|null $minimumMemoryInMB The value for the minimum physical memory which is required to install this app.
-    */
-    private ?int $minimumMemoryInMB = null;
-    
-    /**
-     * @var int|null $minimumNumberOfProcessors The value for the minimum number of processors which is required to install this app.
-    */
-    private ?int $minimumNumberOfProcessors = null;
-    
-    /**
-     * @var string|null $minimumSupportedWindowsRelease The value for the minimum supported windows release.
-    */
-    private ?string $minimumSupportedWindowsRelease = null;
-    
-    /**
-     * @var Win32LobAppMsiInformation|null $msiInformation The MSI details if this Win32 app is an MSI app.
-    */
-    private ?Win32LobAppMsiInformation $msiInformation = null;
-    
-    /**
-     * @var array<Win32LobAppReturnCode>|null $returnCodes The return codes for post installation behavior.
-    */
-    private ?array $returnCodes = null;
-    
-    /**
-     * @var array<Win32LobAppRule>|null $rules The detection and requirement rules for this app.
-    */
-    private ?array $rules = null;
-    
-    /**
-     * @var string|null $setupFilePath The relative path of the setup file in the encrypted Win32LobApp package.
-    */
-    private ?string $setupFilePath = null;
-    
-    /**
-     * @var string|null $uninstallCommandLine The command line to uninstall this app
-    */
-    private ?string $uninstallCommandLine = null;
-    
-    /**
      * Instantiates a new Win32LobApp and sets the default values.
     */
     public function __construct() {
@@ -95,7 +30,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return WindowsArchitecture|null
     */
     public function getApplicableArchitectures(): ?WindowsArchitecture {
-        return $this->applicableArchitectures;
+        return $this->getBackingStore()->get('applicableArchitectures');
     }
 
     /**
@@ -126,7 +61,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getInstallCommandLine(): ?string {
-        return $this->installCommandLine;
+        return $this->getBackingStore()->get('installCommandLine');
     }
 
     /**
@@ -134,7 +69,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return Win32LobAppInstallExperience|null
     */
     public function getInstallExperience(): ?Win32LobAppInstallExperience {
-        return $this->installExperience;
+        return $this->getBackingStore()->get('installExperience');
     }
 
     /**
@@ -142,7 +77,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumCpuSpeedInMHz(): ?int {
-        return $this->minimumCpuSpeedInMHz;
+        return $this->getBackingStore()->get('minimumCpuSpeedInMHz');
     }
 
     /**
@@ -150,7 +85,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumFreeDiskSpaceInMB(): ?int {
-        return $this->minimumFreeDiskSpaceInMB;
+        return $this->getBackingStore()->get('minimumFreeDiskSpaceInMB');
     }
 
     /**
@@ -158,7 +93,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumMemoryInMB(): ?int {
-        return $this->minimumMemoryInMB;
+        return $this->getBackingStore()->get('minimumMemoryInMB');
     }
 
     /**
@@ -166,7 +101,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMinimumNumberOfProcessors(): ?int {
-        return $this->minimumNumberOfProcessors;
+        return $this->getBackingStore()->get('minimumNumberOfProcessors');
     }
 
     /**
@@ -174,7 +109,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getMinimumSupportedWindowsRelease(): ?string {
-        return $this->minimumSupportedWindowsRelease;
+        return $this->getBackingStore()->get('minimumSupportedWindowsRelease');
     }
 
     /**
@@ -182,7 +117,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return Win32LobAppMsiInformation|null
     */
     public function getMsiInformation(): ?Win32LobAppMsiInformation {
-        return $this->msiInformation;
+        return $this->getBackingStore()->get('msiInformation');
     }
 
     /**
@@ -190,7 +125,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return array<Win32LobAppReturnCode>|null
     */
     public function getReturnCodes(): ?array {
-        return $this->returnCodes;
+        return $this->getBackingStore()->get('returnCodes');
     }
 
     /**
@@ -198,7 +133,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return array<Win32LobAppRule>|null
     */
     public function getRules(): ?array {
-        return $this->rules;
+        return $this->getBackingStore()->get('rules');
     }
 
     /**
@@ -206,7 +141,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getSetupFilePath(): ?string {
-        return $this->setupFilePath;
+        return $this->getBackingStore()->get('setupFilePath');
     }
 
     /**
@@ -214,7 +149,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getUninstallCommandLine(): ?string {
-        return $this->uninstallCommandLine;
+        return $this->getBackingStore()->get('uninstallCommandLine');
     }
 
     /**
@@ -223,123 +158,123 @@ class Win32LobApp extends MobileLobApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeEnumValue('applicableArchitectures', $this->applicableArchitectures);
-        $writer->writeStringValue('installCommandLine', $this->installCommandLine);
-        $writer->writeObjectValue('installExperience', $this->installExperience);
-        $writer->writeIntegerValue('minimumCpuSpeedInMHz', $this->minimumCpuSpeedInMHz);
-        $writer->writeIntegerValue('minimumFreeDiskSpaceInMB', $this->minimumFreeDiskSpaceInMB);
-        $writer->writeIntegerValue('minimumMemoryInMB', $this->minimumMemoryInMB);
-        $writer->writeIntegerValue('minimumNumberOfProcessors', $this->minimumNumberOfProcessors);
-        $writer->writeStringValue('minimumSupportedWindowsRelease', $this->minimumSupportedWindowsRelease);
-        $writer->writeObjectValue('msiInformation', $this->msiInformation);
-        $writer->writeCollectionOfObjectValues('returnCodes', $this->returnCodes);
-        $writer->writeCollectionOfObjectValues('rules', $this->rules);
-        $writer->writeStringValue('setupFilePath', $this->setupFilePath);
-        $writer->writeStringValue('uninstallCommandLine', $this->uninstallCommandLine);
+        $writer->writeEnumValue('applicableArchitectures', $this->getApplicableArchitectures());
+        $writer->writeStringValue('installCommandLine', $this->getInstallCommandLine());
+        $writer->writeObjectValue('installExperience', $this->getInstallExperience());
+        $writer->writeIntegerValue('minimumCpuSpeedInMHz', $this->getMinimumCpuSpeedInMHz());
+        $writer->writeIntegerValue('minimumFreeDiskSpaceInMB', $this->getMinimumFreeDiskSpaceInMB());
+        $writer->writeIntegerValue('minimumMemoryInMB', $this->getMinimumMemoryInMB());
+        $writer->writeIntegerValue('minimumNumberOfProcessors', $this->getMinimumNumberOfProcessors());
+        $writer->writeStringValue('minimumSupportedWindowsRelease', $this->getMinimumSupportedWindowsRelease());
+        $writer->writeObjectValue('msiInformation', $this->getMsiInformation());
+        $writer->writeCollectionOfObjectValues('returnCodes', $this->getReturnCodes());
+        $writer->writeCollectionOfObjectValues('rules', $this->getRules());
+        $writer->writeStringValue('setupFilePath', $this->getSetupFilePath());
+        $writer->writeStringValue('uninstallCommandLine', $this->getUninstallCommandLine());
     }
 
     /**
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      *  @param WindowsArchitecture|null $value Value to set for the applicableArchitectures property.
     */
-    public function setApplicableArchitectures(?WindowsArchitecture $value ): void {
-        $this->applicableArchitectures = $value;
+    public function setApplicableArchitectures(?WindowsArchitecture $value): void {
+        $this->getBackingStore()->set('applicableArchitectures', $value);
     }
 
     /**
      * Sets the installCommandLine property value. The command line to install this app
      *  @param string|null $value Value to set for the installCommandLine property.
     */
-    public function setInstallCommandLine(?string $value ): void {
-        $this->installCommandLine = $value;
+    public function setInstallCommandLine(?string $value): void {
+        $this->getBackingStore()->set('installCommandLine', $value);
     }
 
     /**
      * Sets the installExperience property value. The install experience for this app.
      *  @param Win32LobAppInstallExperience|null $value Value to set for the installExperience property.
     */
-    public function setInstallExperience(?Win32LobAppInstallExperience $value ): void {
-        $this->installExperience = $value;
+    public function setInstallExperience(?Win32LobAppInstallExperience $value): void {
+        $this->getBackingStore()->set('installExperience', $value);
     }
 
     /**
      * Sets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
      *  @param int|null $value Value to set for the minimumCpuSpeedInMHz property.
     */
-    public function setMinimumCpuSpeedInMHz(?int $value ): void {
-        $this->minimumCpuSpeedInMHz = $value;
+    public function setMinimumCpuSpeedInMHz(?int $value): void {
+        $this->getBackingStore()->set('minimumCpuSpeedInMHz', $value);
     }
 
     /**
      * Sets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
      *  @param int|null $value Value to set for the minimumFreeDiskSpaceInMB property.
     */
-    public function setMinimumFreeDiskSpaceInMB(?int $value ): void {
-        $this->minimumFreeDiskSpaceInMB = $value;
+    public function setMinimumFreeDiskSpaceInMB(?int $value): void {
+        $this->getBackingStore()->set('minimumFreeDiskSpaceInMB', $value);
     }
 
     /**
      * Sets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
      *  @param int|null $value Value to set for the minimumMemoryInMB property.
     */
-    public function setMinimumMemoryInMB(?int $value ): void {
-        $this->minimumMemoryInMB = $value;
+    public function setMinimumMemoryInMB(?int $value): void {
+        $this->getBackingStore()->set('minimumMemoryInMB', $value);
     }
 
     /**
      * Sets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
      *  @param int|null $value Value to set for the minimumNumberOfProcessors property.
     */
-    public function setMinimumNumberOfProcessors(?int $value ): void {
-        $this->minimumNumberOfProcessors = $value;
+    public function setMinimumNumberOfProcessors(?int $value): void {
+        $this->getBackingStore()->set('minimumNumberOfProcessors', $value);
     }
 
     /**
      * Sets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
      *  @param string|null $value Value to set for the minimumSupportedWindowsRelease property.
     */
-    public function setMinimumSupportedWindowsRelease(?string $value ): void {
-        $this->minimumSupportedWindowsRelease = $value;
+    public function setMinimumSupportedWindowsRelease(?string $value): void {
+        $this->getBackingStore()->set('minimumSupportedWindowsRelease', $value);
     }
 
     /**
      * Sets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
      *  @param Win32LobAppMsiInformation|null $value Value to set for the msiInformation property.
     */
-    public function setMsiInformation(?Win32LobAppMsiInformation $value ): void {
-        $this->msiInformation = $value;
+    public function setMsiInformation(?Win32LobAppMsiInformation $value): void {
+        $this->getBackingStore()->set('msiInformation', $value);
     }
 
     /**
      * Sets the returnCodes property value. The return codes for post installation behavior.
      *  @param array<Win32LobAppReturnCode>|null $value Value to set for the returnCodes property.
     */
-    public function setReturnCodes(?array $value ): void {
-        $this->returnCodes = $value;
+    public function setReturnCodes(?array $value): void {
+        $this->getBackingStore()->set('returnCodes', $value);
     }
 
     /**
      * Sets the rules property value. The detection and requirement rules for this app.
      *  @param array<Win32LobAppRule>|null $value Value to set for the rules property.
     */
-    public function setRules(?array $value ): void {
-        $this->rules = $value;
+    public function setRules(?array $value): void {
+        $this->getBackingStore()->set('rules', $value);
     }
 
     /**
      * Sets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
      *  @param string|null $value Value to set for the setupFilePath property.
     */
-    public function setSetupFilePath(?string $value ): void {
-        $this->setupFilePath = $value;
+    public function setSetupFilePath(?string $value): void {
+        $this->getBackingStore()->set('setupFilePath', $value);
     }
 
     /**
      * Sets the uninstallCommandLine property value. The command line to uninstall this app
      *  @param string|null $value Value to set for the uninstallCommandLine property.
     */
-    public function setUninstallCommandLine(?string $value ): void {
-        $this->uninstallCommandLine = $value;
+    public function setUninstallCommandLine(?string $value): void {
+        $this->getBackingStore()->set('uninstallCommandLine', $value);
     }
 
 }

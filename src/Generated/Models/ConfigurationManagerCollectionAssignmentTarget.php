@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable 
 {
     /**
-     * @var string|null $collectionId The collection Id that is the target of the assignment.
-    */
-    private ?string $collectionId = null;
-    
-    /**
      * Instantiates a new ConfigurationManagerCollectionAssignmentTarget and sets the default values.
     */
     public function __construct() {
@@ -35,7 +30,7 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
      * @return string|null
     */
     public function getCollectionId(): ?string {
-        return $this->collectionId;
+        return $this->getBackingStore()->get('collectionId');
     }
 
     /**
@@ -55,15 +50,15 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('collectionId', $this->collectionId);
+        $writer->writeStringValue('collectionId', $this->getCollectionId());
     }
 
     /**
      * Sets the collectionId property value. The collection Id that is the target of the assignment.
      *  @param string|null $value Value to set for the collectionId property.
     */
-    public function setCollectionId(?string $value ): void {
-        $this->collectionId = $value;
+    public function setCollectionId(?string $value): void {
+        $this->getBackingStore()->set('collectionId', $value);
     }
 
 }
