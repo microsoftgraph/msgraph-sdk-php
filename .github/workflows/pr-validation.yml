@@ -29,6 +29,6 @@ jobs:
     - name: run tests
       run : |
         vendor/bin/phpunit --exclude-group functional
-#    - name: Run static analysis
-#      run: |
-#        vendor/bin/phpstan analyse --memory-limit=1500M --error-format=github
+    - name: Run static analysis
+      run: |
+        vendor/bin/phpstan analyse --memory-limit=1500M --error-format=github
