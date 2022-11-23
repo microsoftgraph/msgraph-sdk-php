@@ -54,6 +54,37 @@ class CloudPcSupportedRegion extends Entity
     }
 
     /**
+    * Gets the regionGroup
+    *
+    * @return CloudPcRegionGroup|null The regionGroup
+    */
+    public function getRegionGroup()
+    {
+        if (array_key_exists("regionGroup", $this->_propDict)) {
+            if (is_a($this->_propDict["regionGroup"], "\Beta\Microsoft\Graph\Model\CloudPcRegionGroup") || is_null($this->_propDict["regionGroup"])) {
+                return $this->_propDict["regionGroup"];
+            } else {
+                $this->_propDict["regionGroup"] = new CloudPcRegionGroup($this->_propDict["regionGroup"]);
+                return $this->_propDict["regionGroup"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the regionGroup
+    *
+    * @param CloudPcRegionGroup $val The regionGroup
+    *
+    * @return CloudPcSupportedRegion
+    */
+    public function setRegionGroup($val)
+    {
+        $this->_propDict["regionGroup"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the regionStatus
     * The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
     *

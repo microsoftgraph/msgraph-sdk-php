@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Task File
+* PurgeType File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\SecurityNamespace\Model;
+
+use Microsoft\Graph\Core\Enum;
 
 /**
-* Task class
+* PurgeType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Task extends BaseTask
+class PurgeType extends Enum
 {
+    /**
+    * The Enum PurgeType
+    */
+    const RECOVERABLE = "recoverable";
+    const PERMANENTLY_DELETED = "permanentlyDeleted";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
