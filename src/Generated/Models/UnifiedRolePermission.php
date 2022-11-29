@@ -59,7 +59,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the condition property value. Optional constraints that must be met for the permission to be effective.
+     * Gets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
      * @return string|null
     */
     public function getCondition(): ?string {
@@ -133,7 +133,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the condition property value. Optional constraints that must be met for the permission to be effective.
+     * Sets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
      *  @param string|null $value Value to set for the condition property.
     */
     public function setCondition(?string $value): void {

@@ -42,7 +42,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -190,7 +190,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams.
+     * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      *  @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
