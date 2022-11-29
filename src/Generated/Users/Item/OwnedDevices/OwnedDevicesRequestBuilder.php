@@ -76,7 +76,7 @@ class OwnedDevicesRequestBuilder
     }
 
     /**
-     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param OwnedDevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -101,7 +101,7 @@ class OwnedDevicesRequestBuilder
     }
 
     /**
-     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param OwnedDevicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

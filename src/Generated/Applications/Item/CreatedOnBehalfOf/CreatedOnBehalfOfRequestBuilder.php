@@ -44,7 +44,7 @@ class CreatedOnBehalfOfRequestBuilder
     }
 
     /**
-     * Supports $filter (eq when counting empty collections). Read-only.
+     * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      * @param CreatedOnBehalfOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class CreatedOnBehalfOfRequestBuilder
     }
 
     /**
-     * Supports $filter (eq when counting empty collections). Read-only.
+     * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
      * @param CreatedOnBehalfOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
