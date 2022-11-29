@@ -854,7 +854,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantDefaultTimezone
-    * The default timezone of a tenant for newly created sites.
+    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @return string|null The tenantDefaultTimezone
     */
@@ -869,7 +869,7 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantDefaultTimezone
-    * The default timezone of a tenant for newly created sites.
+    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @param string $val The tenantDefaultTimezone
     *
