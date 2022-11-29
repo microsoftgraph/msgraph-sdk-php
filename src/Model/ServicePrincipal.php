@@ -1178,7 +1178,7 @@ class ServicePrincipal extends DirectoryObject
 
      /**
      * Gets the federatedIdentityCredentials
-    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
+    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      *
      * @return array|null The federatedIdentityCredentials
      */
@@ -1193,7 +1193,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the federatedIdentityCredentials
-    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (eq when counting empty collections).
+    * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
     *
     * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
     *
@@ -1298,7 +1298,7 @@ class ServicePrincipal extends DirectoryObject
 
      /**
      * Gets the ownedObjects
-    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      *
      * @return array|null The ownedObjects
      */
@@ -1313,7 +1313,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the ownedObjects
-    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
     *
     * @param DirectoryObject[] $val The ownedObjects
     *
@@ -1328,7 +1328,7 @@ class ServicePrincipal extends DirectoryObject
 
      /**
      * Gets the owners
-    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      *
      * @return array|null The owners
      */
@@ -1343,7 +1343,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the owners
-    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
+    * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
     *
     * @param DirectoryObject[] $val The owners
     *
