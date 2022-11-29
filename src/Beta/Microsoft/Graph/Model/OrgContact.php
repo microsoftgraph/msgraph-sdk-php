@@ -293,7 +293,7 @@ class OrgContact extends DirectoryObject
 
      /**
      * Gets the onPremisesProvisioningErrors
-    * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError) and eq to count empty collections.
+    * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
      *
      * @return array|null The onPremisesProvisioningErrors
      */
@@ -308,7 +308,7 @@ class OrgContact extends DirectoryObject
 
     /**
     * Sets the onPremisesProvisioningErrors
-    * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError) and eq to count empty collections.
+    * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
     *
     * @param OnPremisesProvisioningError[] $val The onPremisesProvisioningErrors
     *
@@ -381,7 +381,7 @@ class OrgContact extends DirectoryObject
 
     /**
     * Gets the proxyAddresses
-    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and eq to count empty collections).
+    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
     *
     * @return array|null The proxyAddresses
     */
@@ -396,7 +396,7 @@ class OrgContact extends DirectoryObject
 
     /**
     * Sets the proxyAddresses
-    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and eq to count empty collections).
+    * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
     *
     * @param string[] $val The proxyAddresses
     *

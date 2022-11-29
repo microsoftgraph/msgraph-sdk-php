@@ -1164,7 +1164,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the createdOnBehalfOf
-    * Supports $filter (eq when counting empty collections). Read-only.
+    * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
     *
     * @return DirectoryObject|null The createdOnBehalfOf
     */
@@ -1183,7 +1183,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the createdOnBehalfOf
-    * Supports $filter (eq when counting empty collections). Read-only.
+    * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
     *
     * @param DirectoryObject $val The createdOnBehalfOf
     *
@@ -1198,7 +1198,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the extensionProperties
-    * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+    * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      *
      * @return array|null The extensionProperties
      */
@@ -1213,7 +1213,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the extensionProperties
-    * Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections and only with advanced query parameters).
+    * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
     *
     * @param ExtensionProperty[] $val The extensionProperties
     *
@@ -1228,7 +1228,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the federatedIdentityCredentials
-    * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
+    * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      *
      * @return array|null The federatedIdentityCredentials
      */
@@ -1243,7 +1243,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the federatedIdentityCredentials
-    * Federated identities for applications. Supports $expand and $filter (startsWith, and eq, ne when counting empty collections and only with advanced query parameters).
+    * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
     *
     * @param FederatedIdentityCredential[] $val The federatedIdentityCredentials
     *
@@ -1286,7 +1286,7 @@ class Application extends DirectoryObject
 
      /**
      * Gets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      *
      * @return array|null The owners
      */
@@ -1301,7 +1301,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the owners
-    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (eq and ne when counting empty collections).
+    * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
     *
     * @param DirectoryObject[] $val The owners
     *
