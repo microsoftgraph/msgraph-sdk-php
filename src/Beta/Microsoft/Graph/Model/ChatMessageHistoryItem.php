@@ -26,6 +26,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Gets the actions
+    * The modification actions of a message item.The possible values are: reactionAdded, reactionRemoved, actionUndefined, unknownFutureValue.
     *
     * @return ChatMessageActions|null The actions
     */
@@ -44,6 +45,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Sets the actions
+    * The modification actions of a message item.The possible values are: reactionAdded, reactionRemoved, actionUndefined, unknownFutureValue.
     *
     * @param ChatMessageActions $val The value to assign to the actions
     *
@@ -57,6 +59,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Gets the modifiedDateTime
+    * The date and time when the message was modified.
     *
     * @return \DateTime|null The modifiedDateTime
     */
@@ -75,6 +78,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Sets the modifiedDateTime
+    * The date and time when the message was modified.
     *
     * @param \DateTime $val The value to assign to the modifiedDateTime
     *
@@ -88,6 +92,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Gets the reaction
+    * The reaction in the modified message.
     *
     * @return ChatMessageReaction|null The reaction
     */
@@ -106,6 +111,7 @@ class ChatMessageHistoryItem extends Entity
 
     /**
     * Sets the reaction
+    * The reaction in the modified message.
     *
     * @param ChatMessageReaction $val The value to assign to the reaction
     *

@@ -471,6 +471,7 @@ class ChatMessage extends Entity
 
      /**
      * Gets the messageHistory
+    * List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      *
      * @return array|null The messageHistory
      */
@@ -485,6 +486,7 @@ class ChatMessage extends Entity
 
     /**
     * Sets the messageHistory
+    * List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
     *
     * @param ChatMessageHistoryItem[] $val The messageHistory
     *
