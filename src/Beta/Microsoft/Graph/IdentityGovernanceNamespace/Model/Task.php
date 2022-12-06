@@ -89,7 +89,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the continueOnError
-    * A boolean value that determines if the failure of this task stops the subsequent workflows from running. Optional.
+    * A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
     *
     * @return bool|null The continueOnError
     */
@@ -104,7 +104,7 @@ class Task extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the continueOnError
-    * A boolean value that determines if the failure of this task stops the subsequent workflows from running. Optional.
+    * A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
     *
     * @param bool $val The continueOnError
     *

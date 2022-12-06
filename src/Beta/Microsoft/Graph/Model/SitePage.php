@@ -26,7 +26,7 @@ class SitePage extends BaseItem
 {
     /**
     * Gets the contentType
-    * The content type of the page.
+    * Inherited from baseItem.
     *
     * @return ContentTypeInfo|null The contentType
     */
@@ -45,7 +45,7 @@ class SitePage extends BaseItem
 
     /**
     * Sets the contentType
-    * The content type of the page.
+    * Inherited from baseItem.
     *
     * @param ContentTypeInfo $val The contentType
     *
@@ -86,6 +86,7 @@ class SitePage extends BaseItem
 
     /**
     * Gets the publishingState
+    * The publishing status and the MM.mm version of the page.
     *
     * @return PublicationFacet|null The publishingState
     */
@@ -104,6 +105,7 @@ class SitePage extends BaseItem
 
     /**
     * Sets the publishingState
+    * The publishing status and the MM.mm version of the page.
     *
     * @param PublicationFacet $val The publishingState
     *
@@ -117,6 +119,7 @@ class SitePage extends BaseItem
 
     /**
     * Gets the title
+    * Title of the sitePage.
     *
     * @return string|null The title
     */
@@ -131,6 +134,7 @@ class SitePage extends BaseItem
 
     /**
     * Sets the title
+    * Title of the sitePage.
     *
     * @param string $val The title
     *

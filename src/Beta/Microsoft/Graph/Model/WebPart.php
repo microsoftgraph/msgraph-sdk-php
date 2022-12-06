@@ -23,10 +23,20 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class WebPart extends Entity
 {
+    /**
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
+    */
+    public function __construct($propDict = array())
+    {
+        parent::__construct($propDict);
+        $this->setODataType("#microsoft.graph.webPart");
+    }
+
 
     /**
     * Gets the data
-    * The required properties for the webPart (varies by webPart)
     *
     * @return SitePageData|null The data
     */
@@ -45,7 +55,6 @@ class WebPart extends Entity
 
     /**
     * Sets the data
-    * The required properties for the webPart (varies by webPart)
     *
     * @param SitePageData $val The value to assign to the data
     *
@@ -58,7 +67,6 @@ class WebPart extends Entity
     }
     /**
     * Gets the type
-    * A unique identifier specifying the webPart type. Read-only.
     *
     * @return string|null The type
     */
@@ -73,7 +81,6 @@ class WebPart extends Entity
 
     /**
     * Sets the type
-    * A unique identifier specifying the webPart type. Read-only.
     *
     * @param string $val The value of the type
     *
