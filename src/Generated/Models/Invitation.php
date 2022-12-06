@@ -101,7 +101,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the resetRedemption property value. The resetRedemption property
+     * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
      * @return bool|null
     */
     public function getResetRedemption(): ?bool {
@@ -199,7 +199,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the resetRedemption property value. The resetRedemption property
+     * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
      *  @param bool|null $value Value to set for the resetRedemption property.
     */
     public function setResetRedemption(?bool $value): void {
