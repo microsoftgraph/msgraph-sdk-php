@@ -128,7 +128,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
+     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      * @return array<RiskLevel>|null
     */
     public function getServicePrincipalRiskLevels(): ?array {
@@ -152,7 +152,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
+     * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      * @return ConditionalAccessUsers|null
     */
     public function getUsers(): ?ConditionalAccessUsers {
@@ -251,7 +251,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the servicePrincipalRiskLevels property value. The servicePrincipalRiskLevels property
+     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      *  @param array<RiskLevel>|null $value Value to set for the servicePrincipalRiskLevels property.
     */
     public function setServicePrincipalRiskLevels(?array $value): void {
@@ -275,7 +275,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Required.
+     * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      *  @param ConditionalAccessUsers|null $value Value to set for the users property.
     */
     public function setUsers(?ConditionalAccessUsers $value): void {
