@@ -91,7 +91,7 @@ class ConditionalAccessPolicyItemRequestBuilder
 
     /**
      * Update the navigation property policies in identity
-     * @param ConditionalAccessPolicy $body 
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class ConditionalAccessPolicyItemRequestBuilder
 
     /**
      * Update the navigation property policies in identity
-     * @param ConditionalAccessPolicy $body 
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

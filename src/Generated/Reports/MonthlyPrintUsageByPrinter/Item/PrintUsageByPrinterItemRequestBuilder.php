@@ -91,7 +91,7 @@ class PrintUsageByPrinterItemRequestBuilder
 
     /**
      * Update the navigation property monthlyPrintUsageByPrinter in reports
-     * @param PrintUsageByPrinter $body 
+     * @param PrintUsageByPrinter $body The request body
      * @param PrintUsageByPrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class PrintUsageByPrinterItemRequestBuilder
 
     /**
      * Update the navigation property monthlyPrintUsageByPrinter in reports
-     * @param PrintUsageByPrinter $body 
+     * @param PrintUsageByPrinter $body The request body
      * @param PrintUsageByPrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

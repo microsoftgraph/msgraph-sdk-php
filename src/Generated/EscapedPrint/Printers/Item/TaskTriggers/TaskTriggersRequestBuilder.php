@@ -79,7 +79,7 @@ class TaskTriggersRequestBuilder
 
     /**
      * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
-     * @param PrintTaskTrigger $body 
+     * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class TaskTriggersRequestBuilder
 
     /**
      * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
-     * @param PrintTaskTrigger $body 
+     * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

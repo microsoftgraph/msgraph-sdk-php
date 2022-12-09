@@ -118,7 +118,7 @@ class InsightsRequestBuilder
 
     /**
      * Update the navigation property insights in users
-     * @param OfficeGraphInsights $body 
+     * @param OfficeGraphInsights $body The request body
      * @param InsightsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -180,7 +180,7 @@ class InsightsRequestBuilder
 
     /**
      * Update the navigation property insights in users
-     * @param OfficeGraphInsights $body 
+     * @param OfficeGraphInsights $body The request body
      * @param InsightsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

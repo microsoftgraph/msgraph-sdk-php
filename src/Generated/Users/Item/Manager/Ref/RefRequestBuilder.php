@@ -88,7 +88,7 @@ class RefRequestBuilder
 
     /**
      * Update the ref of navigation property manager in users
-     * @param ReferenceUpdate $body 
+     * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +149,7 @@ class RefRequestBuilder
 
     /**
      * Update the ref of navigation property manager in users
-     * @param ReferenceUpdate $body 
+     * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

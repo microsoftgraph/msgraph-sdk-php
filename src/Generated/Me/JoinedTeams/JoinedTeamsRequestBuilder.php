@@ -80,7 +80,7 @@ class JoinedTeamsRequestBuilder
 
     /**
      * Create new navigation property to joinedTeams for me
-     * @param Team $body 
+     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class JoinedTeamsRequestBuilder
 
     /**
      * Create new navigation property to joinedTeams for me
-     * @param Team $body 
+     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

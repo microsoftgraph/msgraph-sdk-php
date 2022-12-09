@@ -44,7 +44,7 @@ class ChangeScreenSharingRoleRequestBuilder
 
     /**
      * Allow applications to share screen content with the participants of a group call.
-     * @param ChangeScreenSharingRolePostRequestBody $body 
+     * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -67,7 +67,7 @@ class ChangeScreenSharingRoleRequestBuilder
 
     /**
      * Allow applications to share screen content with the participants of a group call.
-     * @param ChangeScreenSharingRolePostRequestBody $body 
+     * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -79,7 +79,7 @@ class Fido2MethodsRequestBuilder
 
     /**
      * Create new navigation property to fido2Methods for me
-     * @param Fido2AuthenticationMethod $body 
+     * @param Fido2AuthenticationMethod $body The request body
      * @param Fido2MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class Fido2MethodsRequestBuilder
 
     /**
      * Create new navigation property to fido2Methods for me
-     * @param Fido2AuthenticationMethod $body 
+     * @param Fido2AuthenticationMethod $body The request body
      * @param Fido2MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

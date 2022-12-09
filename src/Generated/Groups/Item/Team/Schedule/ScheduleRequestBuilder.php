@@ -180,7 +180,7 @@ class ScheduleRequestBuilder
 
     /**
      * Update the navigation property schedule in groups
-     * @param Schedule $body 
+     * @param Schedule $body The request body
      * @param ScheduleRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -275,7 +275,7 @@ class ScheduleRequestBuilder
 
     /**
      * Update the navigation property schedule in groups
-     * @param Schedule $body 
+     * @param Schedule $body The request body
      * @param ScheduleRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

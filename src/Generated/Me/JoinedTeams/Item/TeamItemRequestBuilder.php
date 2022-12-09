@@ -6,15 +6,12 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\AllChannels\AllChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\AllChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedMeJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedMeJoinedTeamsItemChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\IncomingChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedMeJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Members\Item\ConversationMemberItemRequestBuilder;
@@ -178,23 +175,23 @@ class TeamItemRequestBuilder
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\JoinedTeams\Item\AllChannels\Item\ChannelItemRequestBuilder
     */
-    public function allChannelsById(string $id): MicrosoftGraphGeneratedMeJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder {
+    public function allChannelsById(string $id): \Microsoft\Graph\Generated\Me\JoinedTeams\Item\AllChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeJoinedTeamsItemAllChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\JoinedTeams\Item\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeJoinedTeamsItemChannelsItemChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder
     */
-    public function channelsById(string $id): MicrosoftGraphGeneratedMeJoinedTeamsItemChannelsItemChannelItemRequestBuilder {
+    public function channelsById(string $id): \Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeJoinedTeamsItemChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -256,7 +253,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in me
-     * @param Team $body 
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -319,12 +316,12 @@ class TeamItemRequestBuilder
     /**
      * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\JoinedTeams\Item\IncomingChannels\Item\ChannelItemRequestBuilder
     */
-    public function incomingChannelsById(string $id): MicrosoftGraphGeneratedMeJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder {
+    public function incomingChannelsById(string $id): \Microsoft\Graph\Generated\Me\JoinedTeams\Item\IncomingChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeJoinedTeamsItemIncomingChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\JoinedTeams\Item\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -362,7 +359,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in me
-     * @param Team $body 
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

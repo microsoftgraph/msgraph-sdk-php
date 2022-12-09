@@ -79,7 +79,7 @@ class CalendarsRequestBuilder
 
     /**
      * Use this API to create a new calendar in a calendar group for a user.
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class CalendarsRequestBuilder
 
     /**
      * Use this API to create a new calendar in a calendar group for a user.
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -111,7 +111,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body 
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +173,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body 
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

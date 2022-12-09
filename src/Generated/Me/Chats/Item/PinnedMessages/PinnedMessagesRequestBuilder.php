@@ -79,7 +79,7 @@ class PinnedMessagesRequestBuilder
 
     /**
      * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
-     * @param PinnedChatMessageInfo $body 
+     * @param PinnedChatMessageInfo $body The request body
      * @param PinnedMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class PinnedMessagesRequestBuilder
 
     /**
      * Pin a chat message in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can pin a chat message.
-     * @param PinnedChatMessageInfo $body 
+     * @param PinnedChatMessageInfo $body The request body
      * @param PinnedMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

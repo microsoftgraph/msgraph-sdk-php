@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceManagement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DeviceManagement and sets the default values.
+     * Instantiates a new deviceManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -158,7 +158,7 @@ class DeviceManagement extends Entity implements Parsable
             'deviceManagementPartners' => fn(ParseNode $n) => $o->setDeviceManagementPartners($n->getCollectionOfObjectValues([DeviceManagementPartner::class, 'createFromDiscriminatorValue'])),
             'exchangeConnectors' => fn(ParseNode $n) => $o->setExchangeConnectors($n->getCollectionOfObjectValues([DeviceManagementExchangeConnector::class, 'createFromDiscriminatorValue'])),
             'importedWindowsAutopilotDeviceIdentities' => fn(ParseNode $n) => $o->setImportedWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues([ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
-            'intuneAccountId' => fn(ParseNode $n) => $o->setIntuneAccountId($n->getStringValue()),
+            'intuneAccountId' => fn(ParseNode $n) => $o->setIntuneAccountId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'intuneBrand' => fn(ParseNode $n) => $o->setIntuneBrand($n->getObjectValue([IntuneBrand::class, 'createFromDiscriminatorValue'])),
             'iosUpdateStatuses' => fn(ParseNode $n) => $o->setIosUpdateStatuses($n->getCollectionOfObjectValues([IosUpdateDeviceStatus::class, 'createFromDiscriminatorValue'])),
             'managedDeviceOverview' => fn(ParseNode $n) => $o->setManagedDeviceOverview($n->getObjectValue([ManagedDeviceOverview::class, 'createFromDiscriminatorValue'])),
@@ -192,9 +192,9 @@ class DeviceManagement extends Entity implements Parsable
 
     /**
      * Gets the intuneAccountId property value. Intune Account Id for given tenant
-     * @return string|null
+     * @return Guid|null
     */
-    public function getIntuneAccountId(): ?string {
+    public function getIntuneAccountId(): ?Guid {
         return $this->getBackingStore()->get('intuneAccountId');
     }
 
@@ -524,9 +524,9 @@ class DeviceManagement extends Entity implements Parsable
 
     /**
      * Sets the intuneAccountId property value. Intune Account Id for given tenant
-     *  @param string|null $value Value to set for the intuneAccountId property.
+     *  @param Guid|null $value Value to set for the intuneAccountId property.
     */
-    public function setIntuneAccountId(?string $value): void {
+    public function setIntuneAccountId(?Guid $value): void {
         $this->getBackingStore()->set('intuneAccountId', $value);
     }
 

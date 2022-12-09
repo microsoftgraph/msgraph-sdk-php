@@ -99,7 +99,7 @@ class RoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in deviceManagement
-     * @param RoleAssignment $body 
+     * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -161,7 +161,7 @@ class RoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in deviceManagement
-     * @param RoleAssignment $body 
+     * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

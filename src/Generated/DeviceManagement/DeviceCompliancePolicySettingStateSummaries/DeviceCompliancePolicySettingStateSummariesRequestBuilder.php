@@ -79,7 +79,7 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder
 
     /**
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
-     * @param DeviceCompliancePolicySettingStateSummary $body 
+     * @param DeviceCompliancePolicySettingStateSummary $body The request body
      * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder
 
     /**
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
-     * @param DeviceCompliancePolicySettingStateSummary $body 
+     * @param DeviceCompliancePolicySettingStateSummary $body The request body
      * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

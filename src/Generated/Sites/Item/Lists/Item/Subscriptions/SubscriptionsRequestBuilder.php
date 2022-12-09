@@ -79,7 +79,7 @@ class SubscriptionsRequestBuilder
 
     /**
      * Create new navigation property to subscriptions for sites
-     * @param Subscription $body 
+     * @param Subscription $body The request body
      * @param SubscriptionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class SubscriptionsRequestBuilder
 
     /**
      * Create new navigation property to subscriptions for sites
-     * @param Subscription $body 
+     * @param Subscription $body The request body
      * @param SubscriptionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

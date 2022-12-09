@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConnectionOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ConnectionOperation and sets the default values.
+     * Instantiates a new connectionOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

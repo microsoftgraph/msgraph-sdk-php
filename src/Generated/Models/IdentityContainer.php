@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityContainer extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new IdentityContainer and sets the default values.
+     * Instantiates a new identityContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();

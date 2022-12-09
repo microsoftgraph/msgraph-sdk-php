@@ -8,12 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\EducationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Rubrics\Item\EducationRubricItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Rubrics\RubricsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\TaughtClasses\TaughtClassesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\User\UserRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationUser;
@@ -99,12 +97,12 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder
     */
-    public function classesById(string $id): MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder {
+    public function classesById(string $id): \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -166,7 +164,7 @@ class MeRequestBuilder
 
     /**
      * Update the navigation property me in education
-     * @param EducationUser $body 
+     * @param EducationUser $body The request body
      * @param MeRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -228,7 +226,7 @@ class MeRequestBuilder
 
     /**
      * Update the navigation property me in education
-     * @param EducationUser $body 
+     * @param EducationUser $body The request body
      * @param MeRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -271,12 +269,12 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder
     */
-    public function taughtClassesById(string $id): MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder {
+    public function taughtClassesById(string $id): \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

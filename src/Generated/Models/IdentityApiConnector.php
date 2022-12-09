@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IdentityApiConnector extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new IdentityApiConnector and sets the default values.
+     * Instantiates a new identityApiConnector and sets the default values.
     */
     public function __construct() {
         parent::__construct();

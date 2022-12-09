@@ -9,9 +9,7 @@ use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\AllowedCalen
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\GetSchedule\GetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
@@ -109,12 +107,12 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder {
+    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -176,7 +174,7 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -220,12 +218,12 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder
     */
-    public function eventsById(string $id): MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder {
+    public function eventsById(string $id): \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCalendarGroupsItemCalendarsItemEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -260,7 +258,7 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -45,7 +45,7 @@ class PreviewRequestBuilder
 
     /**
      * Invoke action preview
-     * @param PreviewPostRequestBody $body 
+     * @param PreviewPostRequestBody $body The request body
      * @param PreviewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class PreviewRequestBuilder
 
     /**
      * Invoke action preview
-     * @param PreviewPostRequestBody $body 
+     * @param PreviewPostRequestBody $body The request body
      * @param PreviewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

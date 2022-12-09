@@ -9,9 +9,7 @@ use Microsoft\Graph\Generated\Me\Calendar\AllowedCalendarSharingRolesWithUser\Al
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\GetSchedule\GetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
@@ -109,12 +107,12 @@ class CalendarRequestBuilder
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder
     */
-    public function calendarViewById(string $id): MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder {
+    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -155,7 +153,7 @@ class CalendarRequestBuilder
 
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -180,12 +178,12 @@ class CalendarRequestBuilder
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder
     */
-    public function eventsById(string $id): MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder {
+    public function eventsById(string $id): \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -220,7 +218,7 @@ class CalendarRequestBuilder
 
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
-     * @param Calendar $body 
+     * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

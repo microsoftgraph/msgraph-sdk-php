@@ -79,7 +79,7 @@ class ManagedDevicesRequestBuilder
 
     /**
      * Create new navigation property to managedDevices for me
-     * @param ManagedDevice $body 
+     * @param ManagedDevice $body The request body
      * @param ManagedDevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ManagedDevicesRequestBuilder
 
     /**
      * Create new navigation property to managedDevices for me
-     * @param ManagedDevice $body 
+     * @param ManagedDevice $body The request body
      * @param ManagedDevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

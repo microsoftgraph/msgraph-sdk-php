@@ -79,7 +79,7 @@ class ItemsRequestBuilder
 
     /**
      * Create a new [listItem][] in a [list][].
-     * @param ListItem $body 
+     * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ItemsRequestBuilder
 
     /**
      * Create a new [listItem][] in a [list][].
-     * @param ListItem $body 
+     * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

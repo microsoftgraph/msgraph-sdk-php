@@ -79,7 +79,7 @@ class OpenShiftChangeRequestsRequestBuilder
 
     /**
      * Create instance of an openShiftChangeRequest object.
-     * @param OpenShiftChangeRequest $body 
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class OpenShiftChangeRequestsRequestBuilder
 
     /**
      * Create instance of an openShiftChangeRequest object.
-     * @param OpenShiftChangeRequest $body 
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

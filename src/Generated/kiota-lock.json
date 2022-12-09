@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "BEB001ECAEF2ECF4860FD1953A81BC8227A4F8D10F9B4BBE248FBCB21810A52B59D0F1AFEF45BD8E15289BA875A44DE4130F88C5A7CADAD8F4010D2FC2305A2B",
-  "descriptionLocation": "/home/vsts/work/1/s/msgraph-metadata/clean_v10_openapi/openapi.yaml",
+  "descriptionHash": "D9EE2D494A7942785D6747A9FED3A78E8E9FFBC580BDE0DB91B1B307245E0052B5535FAD96FD06B39328F3ADD82208536D6786B4A1F923F2B7F9A19ABCEE9911",
+  "descriptionLocation": "C:\\Users\\komondi\\Downloads\\work\\graph\\msgraph-metadata\\openapi\\v1.0\\openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "0.7.1.0",
+  "kiotaVersion": "0.8.3.0",
   "clientClassName": "BaseGraphClient",
   "clientNamespaceName": "Microsoft\\Graph\\Generated",
   "language": "PHP",
@@ -24,5 +24,6 @@
     "text/yaml"
   ],
   "includePatterns": [],
-  "excludePatterns": []
+  "excludePatterns": [],
+  "disabledValidationRules": []
 }

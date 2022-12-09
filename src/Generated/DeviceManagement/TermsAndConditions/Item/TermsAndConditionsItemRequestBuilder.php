@@ -131,7 +131,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body 
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -193,7 +193,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body 
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -1,3 +1,5 @@
+includes:
+	- ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
 parameters:
 	level: 1
 	polluteScopeWithAlwaysIterableForeach: false

@@ -179,7 +179,7 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
-     * @param DeviceCompliancePolicy $body 
+     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -263,7 +263,7 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
-     * @param DeviceCompliancePolicy $body 
+     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

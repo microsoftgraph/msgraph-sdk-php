@@ -111,7 +111,7 @@ class AuthenticationMethodsPolicyRequestBuilder
 
     /**
      * Update the properties of an authenticationMethodsPolicy object.
-     * @param AuthenticationMethodsPolicy $body 
+     * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +173,7 @@ class AuthenticationMethodsPolicyRequestBuilder
 
     /**
      * Update the properties of an authenticationMethodsPolicy object.
-     * @param AuthenticationMethodsPolicy $body 
+     * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -103,7 +103,7 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
-     * @param DirectoryRoleTemplate $body 
+     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -146,7 +146,7 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
-     * @param DirectoryRoleTemplate $body 
+     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

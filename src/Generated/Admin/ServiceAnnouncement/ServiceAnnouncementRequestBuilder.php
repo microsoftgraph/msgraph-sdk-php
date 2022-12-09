@@ -118,7 +118,7 @@ class ServiceAnnouncementRequestBuilder
 
     /**
      * Update the navigation property serviceAnnouncement in admin
-     * @param ServiceAnnouncement $body 
+     * @param ServiceAnnouncement $body The request body
      * @param ServiceAnnouncementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -213,7 +213,7 @@ class ServiceAnnouncementRequestBuilder
 
     /**
      * Update the navigation property serviceAnnouncement in admin
-     * @param ServiceAnnouncement $body 
+     * @param ServiceAnnouncement $body The request body
      * @param ServiceAnnouncementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

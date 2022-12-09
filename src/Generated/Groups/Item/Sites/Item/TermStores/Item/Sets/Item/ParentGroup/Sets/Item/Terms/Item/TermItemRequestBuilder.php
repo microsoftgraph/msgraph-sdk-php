@@ -60,12 +60,12 @@ class TermItemRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
      * @param string $id Unique identifier of the item
-     * @return TermItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder
     */
-    public function childrenById(string $id): TermItemRequestBuilder {
+    public function childrenById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did1'] = $id;
-        return new TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -127,7 +127,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property terms in groups
-     * @param Term $body 
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -189,7 +189,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property terms in groups
-     * @param Term $body 
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

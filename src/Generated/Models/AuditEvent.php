@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuditEvent extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new auditEvent and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -91,9 +91,9 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getCorrelationId(): ?string {
+    public function getCorrelationId(): ?Guid {
         return $this->getBackingStore()->get('correlationId');
     }
 
@@ -120,7 +120,7 @@ class AuditEvent extends Entity implements Parsable
             'actor' => fn(ParseNode $n) => $o->setActor($n->getObjectValue([AuditActor::class, 'createFromDiscriminatorValue'])),
             'category' => fn(ParseNode $n) => $o->setCategory($n->getStringValue()),
             'componentName' => fn(ParseNode $n) => $o->setComponentName($n->getStringValue()),
-            'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
+            'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AuditResource::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -219,9 +219,9 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     *  @param string|null $value Value to set for the correlationId property.
+     *  @param Guid|null $value Value to set for the correlationId property.
     */
-    public function setCorrelationId(?string $value): void {
+    public function setCorrelationId(?Guid $value): void {
         $this->getBackingStore()->set('correlationId', $value);
     }
 

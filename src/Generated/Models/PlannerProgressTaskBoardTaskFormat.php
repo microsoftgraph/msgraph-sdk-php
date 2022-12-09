@@ -36,7 +36,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the orderHint property value. Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
+     * Gets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
      * @return string|null
     */
     public function getOrderHint(): ?string {
@@ -53,7 +53,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the orderHint property value. Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
+     * Sets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
      *  @param string|null $value Value to set for the orderHint property.
     */
     public function setOrderHint(?string $value): void {

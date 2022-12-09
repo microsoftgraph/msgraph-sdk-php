@@ -79,7 +79,7 @@ class InvitationsRequestBuilder
 
     /**
      * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
-     * @param Invitation $body 
+     * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class InvitationsRequestBuilder
 
     /**
      * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
-     * @param Invitation $body 
+     * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

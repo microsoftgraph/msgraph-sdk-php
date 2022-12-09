@@ -110,7 +110,7 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body 
+     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -199,7 +199,7 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body 
+     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

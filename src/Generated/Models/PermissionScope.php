@@ -75,7 +75,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'adminConsentDescription' => fn(ParseNode $n) => $o->setAdminConsentDescription($n->getStringValue()),
             'adminConsentDisplayName' => fn(ParseNode $n) => $o->setAdminConsentDisplayName($n->getStringValue()),
-            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'origin' => fn(ParseNode $n) => $o->setOrigin($n->getStringValue()),
@@ -88,9 +88,9 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getId(): ?string {
+    public function getId(): ?Guid {
         return $this->getBackingStore()->get('id');
     }
 
@@ -202,9 +202,9 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-     *  @param string|null $value Value to set for the id property.
+     *  @param Guid|null $value Value to set for the id property.
     */
-    public function setId(?string $value): void {
+    public function setId(?Guid $value): void {
         $this->getBackingStore()->set('id', $value);
     }
 

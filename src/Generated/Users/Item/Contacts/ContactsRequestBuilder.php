@@ -80,7 +80,7 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
-     * @param Contact $body 
+     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
-     * @param Contact $body 
+     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -79,7 +79,7 @@ class MobileAppConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to mobileAppConfigurations for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfiguration $body 
+     * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param MobileAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class MobileAppConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to mobileAppConfigurations for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfiguration $body 
+     * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param MobileAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

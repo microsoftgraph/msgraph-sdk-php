@@ -79,7 +79,7 @@ class ThumbnailsRequestBuilder
 
     /**
      * Create new navigation property to thumbnails for workbooks
-     * @param ThumbnailSet $body 
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ThumbnailsRequestBuilder
 
     /**
      * Create new navigation property to thumbnails for workbooks
-     * @param ThumbnailSet $body 
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

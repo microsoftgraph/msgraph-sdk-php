@@ -79,7 +79,7 @@ class ManagedAppPoliciesRequestBuilder
 
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
-     * @param ManagedAppPolicy $body 
+     * @param ManagedAppPolicy $body The request body
      * @param ManagedAppPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ManagedAppPoliciesRequestBuilder
 
     /**
      * Create new navigation property to managedAppPolicies for deviceAppManagement
-     * @param ManagedAppPolicy $body 
+     * @param ManagedAppPolicy $body The request body
      * @param ManagedAppPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

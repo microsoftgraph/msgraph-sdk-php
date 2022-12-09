@@ -79,7 +79,7 @@ class AndroidManagedAppProtectionsRequestBuilder
 
     /**
      * Create new navigation property to androidManagedAppProtections for deviceAppManagement
-     * @param AndroidManagedAppProtection $body 
+     * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class AndroidManagedAppProtectionsRequestBuilder
 
     /**
      * Create new navigation property to androidManagedAppProtections for deviceAppManagement
-     * @param AndroidManagedAppProtection $body 
+     * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

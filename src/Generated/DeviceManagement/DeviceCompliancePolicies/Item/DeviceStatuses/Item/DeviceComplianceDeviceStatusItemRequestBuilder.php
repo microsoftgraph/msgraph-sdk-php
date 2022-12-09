@@ -91,7 +91,7 @@ class DeviceComplianceDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property deviceStatuses in deviceManagement
-     * @param DeviceComplianceDeviceStatus $body 
+     * @param DeviceComplianceDeviceStatus $body The request body
      * @param DeviceComplianceDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class DeviceComplianceDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property deviceStatuses in deviceManagement
-     * @param DeviceComplianceDeviceStatus $body 
+     * @param DeviceComplianceDeviceStatus $body The request body
      * @param DeviceComplianceDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

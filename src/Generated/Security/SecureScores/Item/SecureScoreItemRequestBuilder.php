@@ -91,7 +91,7 @@ class SecureScoreItemRequestBuilder
 
     /**
      * Update the navigation property secureScores in security
-     * @param SecureScore $body 
+     * @param SecureScore $body The request body
      * @param SecureScoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class SecureScoreItemRequestBuilder
 
     /**
      * Update the navigation property secureScores in security
-     * @param SecureScore $body 
+     * @param SecureScore $body The request body
      * @param SecureScoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

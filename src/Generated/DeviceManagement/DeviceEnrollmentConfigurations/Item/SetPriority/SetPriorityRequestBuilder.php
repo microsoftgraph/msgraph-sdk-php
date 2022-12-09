@@ -44,7 +44,7 @@ class SetPriorityRequestBuilder
 
     /**
      * Invoke action setPriority
-     * @param SetPriorityPostRequestBody $body 
+     * @param SetPriorityPostRequestBody $body The request body
      * @param SetPriorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -67,7 +67,7 @@ class SetPriorityRequestBuilder
 
     /**
      * Invoke action setPriority
-     * @param SetPriorityPostRequestBody $body 
+     * @param SetPriorityPostRequestBody $body The request body
      * @param SetPriorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

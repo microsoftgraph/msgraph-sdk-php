@@ -44,7 +44,7 @@ class ArchiveRequestBuilder
 
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
-     * @param ArchivePostRequestBody $body 
+     * @param ArchivePostRequestBody $body The request body
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -68,7 +68,7 @@ class ArchiveRequestBuilder
 
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
-     * @param ArchivePostRequestBody $body 
+     * @param ArchivePostRequestBody $body The request body
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

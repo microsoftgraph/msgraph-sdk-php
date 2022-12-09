@@ -45,7 +45,7 @@ class CopyRequestBuilder
 
     /**
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
-     * @param CopyPostRequestBody $body 
+     * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -69,7 +69,7 @@ class CopyRequestBuilder
 
     /**
      * Asynchronously creates a copy of an [driveItem][item-resource] (including any children), under a new parent item or with a new name.
-     * @param CopyPostRequestBody $body 
+     * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

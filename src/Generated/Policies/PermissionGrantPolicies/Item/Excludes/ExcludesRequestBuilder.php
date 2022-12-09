@@ -79,7 +79,7 @@ class ExcludesRequestBuilder
 
     /**
      * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **excludes** collection of a  permissionGrantPolicy.
-     * @param PermissionGrantConditionSet $body 
+     * @param PermissionGrantConditionSet $body The request body
      * @param ExcludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ExcludesRequestBuilder
 
     /**
      * Add conditions under which a permission grant event is *excluded* in a permission grant policy. You do this by adding a permissionGrantConditionSet to the **excludes** collection of a  permissionGrantPolicy.
-     * @param PermissionGrantConditionSet $body 
+     * @param PermissionGrantConditionSet $body The request body
      * @param ExcludesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

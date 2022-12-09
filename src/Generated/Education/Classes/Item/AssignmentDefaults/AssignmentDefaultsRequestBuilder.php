@@ -91,7 +91,7 @@ class AssignmentDefaultsRequestBuilder
 
     /**
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
-     * @param EducationAssignmentDefaults $body 
+     * @param EducationAssignmentDefaults $body The request body
      * @param AssignmentDefaultsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class AssignmentDefaultsRequestBuilder
 
     /**
      * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
-     * @param EducationAssignmentDefaults $body 
+     * @param EducationAssignmentDefaults $body The request body
      * @param AssignmentDefaultsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

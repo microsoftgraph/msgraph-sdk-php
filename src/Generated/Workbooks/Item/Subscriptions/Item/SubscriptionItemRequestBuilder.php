@@ -99,7 +99,7 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Update the navigation property subscriptions in workbooks
-     * @param Subscription $body 
+     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -161,7 +161,7 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Update the navigation property subscriptions in workbooks
-     * @param Subscription $body 
+     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

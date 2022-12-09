@@ -108,7 +108,7 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in me
-     * @param ChatMessage $body 
+     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -181,7 +181,7 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in me
-     * @param ChatMessage $body 
+     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -202,12 +202,12 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
-     * @return ChatMessageItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder
     */
-    public function repliesById(string $id): ChatMessageItemRequestBuilder {
+    public function repliesById(string $id): \Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did1'] = $id;
-        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

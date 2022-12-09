@@ -2,7 +2,11 @@
 
 namespace Microsoft\Graph\Generated\Models\Security;
 
-use Microsoft\Graph\Generated\Models\Security\CasesRoot;
+use Microsoft\Graph\Generated\Models\Alert;
+use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
+use Microsoft\Graph\Generated\Models\Entity;
+use Microsoft\Graph\Generated\Models\SecureScore;
+use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

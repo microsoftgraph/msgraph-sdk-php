@@ -100,7 +100,7 @@ class FileRequestBuilder
 
     /**
      * Update the navigation property file in identityGovernance
-     * @param AgreementFile $body 
+     * @param AgreementFile $body The request body
      * @param FileRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +173,7 @@ class FileRequestBuilder
 
     /**
      * Update the navigation property file in identityGovernance
-     * @param AgreementFile $body 
+     * @param AgreementFile $body The request body
      * @param FileRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

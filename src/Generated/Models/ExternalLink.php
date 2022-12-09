@@ -63,7 +63,7 @@ class ExternalLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the href property value. The url of the link.
+     * Gets the href property value. The URL of the link.
      * @return string|null
     */
     public function getHref(): ?string {
@@ -105,7 +105,7 @@ class ExternalLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the href property value. The url of the link.
+     * Sets the href property value. The URL of the link.
      *  @param string|null $value Value to set for the href property.
     */
     public function setHref(?string $value): void {

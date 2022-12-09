@@ -79,7 +79,7 @@ class LicenseDetailsRequestBuilder
 
     /**
      * Create new navigation property to licenseDetails for users
-     * @param LicenseDetails $body 
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class LicenseDetailsRequestBuilder
 
     /**
      * Create new navigation property to licenseDetails for users
-     * @param LicenseDetails $body 
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

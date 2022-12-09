@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Person extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new person and sets the default values.
+     * Instantiates a new Person and sets the default values.
     */
     public function __construct() {
         parent::__construct();

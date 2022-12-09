@@ -183,7 +183,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
             'protectedApps' => fn(ParseNode $n) => $o->setProtectedApps($n->getCollectionOfObjectValues([WindowsInformationProtectionApp::class, 'createFromDiscriminatorValue'])),
             'protectionUnderLockConfigRequired' => fn(ParseNode $n) => $o->setProtectionUnderLockConfigRequired($n->getBooleanValue()),
             'revokeOnUnenrollDisabled' => fn(ParseNode $n) => $o->setRevokeOnUnenrollDisabled($n->getBooleanValue()),
-            'rightsManagementServicesTemplateId' => fn(ParseNode $n) => $o->setRightsManagementServicesTemplateId($n->getStringValue()),
+            'rightsManagementServicesTemplateId' => fn(ParseNode $n) => $o->setRightsManagementServicesTemplateId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'smbAutoEncryptedFileExtensions' => fn(ParseNode $n) => $o->setSmbAutoEncryptedFileExtensions($n->getCollectionOfObjectValues([WindowsInformationProtectionResourceCollection::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -254,9 +254,9 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Gets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     * @return string|null
+     * @return Guid|null
     */
-    public function getRightsManagementServicesTemplateId(): ?string {
+    public function getRightsManagementServicesTemplateId(): ?Guid {
         return $this->getBackingStore()->get('rightsManagementServicesTemplateId');
     }
 
@@ -487,9 +487,9 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     *  @param string|null $value Value to set for the rightsManagementServicesTemplateId property.
+     *  @param Guid|null $value Value to set for the rightsManagementServicesTemplateId property.
     */
-    public function setRightsManagementServicesTemplateId(?string $value): void {
+    public function setRightsManagementServicesTemplateId(?Guid $value): void {
         $this->getBackingStore()->set('rightsManagementServicesTemplateId', $value);
     }
 

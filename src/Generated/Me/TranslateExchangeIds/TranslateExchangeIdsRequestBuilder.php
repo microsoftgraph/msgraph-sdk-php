@@ -44,7 +44,7 @@ class TranslateExchangeIdsRequestBuilder
 
     /**
      * Translate identifiers of Outlook-related resources between formats.
-     * @param TranslateExchangeIdsPostRequestBody $body 
+     * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -68,7 +68,7 @@ class TranslateExchangeIdsRequestBuilder
 
     /**
      * Translate identifiers of Outlook-related resources between formats.
-     * @param TranslateExchangeIdsPostRequestBody $body 
+     * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

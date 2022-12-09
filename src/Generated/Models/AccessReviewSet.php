@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewSet extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AccessReviewSet and sets the default values.
+     * Instantiates a new accessReviewSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -91,7 +91,7 @@ class AuthenticationFlowsPolicyRequestBuilder
 
     /**
      * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
-     * @param AuthenticationFlowsPolicy $body 
+     * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +153,7 @@ class AuthenticationFlowsPolicyRequestBuilder
 
     /**
      * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
-     * @param AuthenticationFlowsPolicy $body 
+     * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

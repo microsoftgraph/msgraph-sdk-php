@@ -79,7 +79,7 @@ class DelegatedPermissionClassificationsRequestBuilder
 
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
-     * @param DelegatedPermissionClassification $body 
+     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class DelegatedPermissionClassificationsRequestBuilder
 
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
-     * @param DelegatedPermissionClassification $body 
+     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
