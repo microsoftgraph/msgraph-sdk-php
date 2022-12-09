@@ -73,7 +73,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Gets the removeLicenses property value. The removeLicenses property
-     * @return array<Guid>|null
+     * @return array<string>|null
     */
     public function getRemoveLicenses(): ?array {
         return $this->getBackingStore()->get('removeLicenses');
@@ -115,7 +115,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the removeLicenses property value. The removeLicenses property
-     *  @param array<Guid>|null $value Value to set for the removeLicenses property.
+     *  @param array<string>|null $value Value to set for the removeLicenses property.
     */
     public function setRemoveLicenses(?array $value): void {
         $this->getBackingStore()->set('removeLicenses', $value);

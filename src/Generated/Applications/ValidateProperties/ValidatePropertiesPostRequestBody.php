@@ -76,7 +76,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'entityType' => fn(ParseNode $n) => $o->setEntityType($n->getStringValue()),
             'mailNickname' => fn(ParseNode $n) => $o->setMailNickname($n->getStringValue()),
-            'onBehalfOfUserId' => fn(ParseNode $n) => $o->setOnBehalfOfUserId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'onBehalfOfUserId' => fn(ParseNode $n) => $o->setOnBehalfOfUserId($n->getStringValue()),
         ];
     }
 
@@ -90,9 +90,9 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @return Guid|null
+     * @return string|null
     */
-    public function getOnBehalfOfUserId(): ?Guid {
+    public function getOnBehalfOfUserId(): ?string {
         return $this->getBackingStore()->get('onBehalfOfUserId');
     }
 
@@ -150,9 +150,9 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     *  @param Guid|null $value Value to set for the onBehalfOfUserId property.
+     *  @param string|null $value Value to set for the onBehalfOfUserId property.
     */
-    public function setOnBehalfOfUserId(?Guid $value): void {
+    public function setOnBehalfOfUserId(?string $value): void {
         $this->getBackingStore()->set('onBehalfOfUserId', $value);
     }
 

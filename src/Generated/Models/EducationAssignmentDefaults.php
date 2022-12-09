@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class EducationAssignmentDefaults extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new EducationAssignmentDefaults and sets the default values.
+     * Instantiates a new educationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
         parent::__construct();

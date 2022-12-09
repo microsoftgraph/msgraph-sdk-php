@@ -52,9 +52,9 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Gets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getCallChainId(): ?Guid {
+    public function getCallChainId(): ?string {
         return $this->getBackingStore()->get('callChainId');
     }
 
@@ -113,25 +113,25 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'callChainId' => fn(ParseNode $n) => $o->setCallChainId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'callChainId' => fn(ParseNode $n) => $o->setCallChainId($n->getStringValue()),
             'cloudServiceDeploymentEnvironment' => fn(ParseNode $n) => $o->setCloudServiceDeploymentEnvironment($n->getStringValue()),
             'cloudServiceDeploymentId' => fn(ParseNode $n) => $o->setCloudServiceDeploymentId($n->getStringValue()),
             'cloudServiceInstanceName' => fn(ParseNode $n) => $o->setCloudServiceInstanceName($n->getStringValue()),
             'cloudServiceName' => fn(ParseNode $n) => $o->setCloudServiceName($n->getStringValue()),
             'deviceDescription' => fn(ParseNode $n) => $o->setDeviceDescription($n->getStringValue()),
             'deviceName' => fn(ParseNode $n) => $o->setDeviceName($n->getStringValue()),
-            'mediaLegId' => fn(ParseNode $n) => $o->setMediaLegId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'mediaLegId' => fn(ParseNode $n) => $o->setMediaLegId($n->getStringValue()),
             'mediaQualityList' => fn(ParseNode $n) => $o->setMediaQualityList($n->getCollectionOfObjectValues([TeleconferenceDeviceMediaQuality::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'participantId' => fn(ParseNode $n) => $o->setParticipantId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'participantId' => fn(ParseNode $n) => $o->setParticipantId($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getMediaLegId(): ?Guid {
+    public function getMediaLegId(): ?string {
         return $this->getBackingStore()->get('mediaLegId');
     }
 
@@ -153,9 +153,9 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Gets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getParticipantId(): ?Guid {
+    public function getParticipantId(): ?string {
         return $this->getBackingStore()->get('participantId');
     }
 
@@ -196,9 +196,9 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     *  @param Guid|null $value Value to set for the callChainId property.
+     *  @param string|null $value Value to set for the callChainId property.
     */
-    public function setCallChainId(?Guid $value): void {
+    public function setCallChainId(?string $value): void {
         $this->getBackingStore()->set('callChainId', $value);
     }
 
@@ -252,9 +252,9 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     *  @param Guid|null $value Value to set for the mediaLegId property.
+     *  @param string|null $value Value to set for the mediaLegId property.
     */
-    public function setMediaLegId(?Guid $value): void {
+    public function setMediaLegId(?string $value): void {
         $this->getBackingStore()->set('mediaLegId', $value);
     }
 
@@ -276,9 +276,9 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     *  @param Guid|null $value Value to set for the participantId property.
+     *  @param string|null $value Value to set for the participantId property.
     */
-    public function setParticipantId(?Guid $value): void {
+    public function setParticipantId(?string $value): void {
         $this->getBackingStore()->set('participantId', $value);
     }
 

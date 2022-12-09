@@ -32,7 +32,7 @@ class LicenseDetails extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([ServicePlanInfo::class, 'createFromDiscriminatorValue'])),
-            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
             'skuPartNumber' => fn(ParseNode $n) => $o->setSkuPartNumber($n->getStringValue()),
         ]);
     }
@@ -47,9 +47,9 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * Gets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-     * @return Guid|null
+     * @return string|null
     */
-    public function getSkuId(): ?Guid {
+    public function getSkuId(): ?string {
         return $this->getBackingStore()->get('skuId');
     }
 
@@ -82,9 +82,9 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-     *  @param Guid|null $value Value to set for the skuId property.
+     *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?Guid $value): void {
+    public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
     }
 

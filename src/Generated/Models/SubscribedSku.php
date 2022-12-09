@@ -60,7 +60,7 @@ class SubscribedSku extends Entity implements Parsable
             'consumedUnits' => fn(ParseNode $n) => $o->setConsumedUnits($n->getIntegerValue()),
             'prepaidUnits' => fn(ParseNode $n) => $o->setPrepaidUnits($n->getObjectValue([LicenseUnitsDetail::class, 'createFromDiscriminatorValue'])),
             'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([ServicePlanInfo::class, 'createFromDiscriminatorValue'])),
-            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
             'skuPartNumber' => fn(ParseNode $n) => $o->setSkuPartNumber($n->getStringValue()),
         ]);
     }
@@ -83,9 +83,9 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Gets the skuId property value. The unique identifier (GUID) for the service SKU.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getSkuId(): ?Guid {
+    public function getSkuId(): ?string {
         return $this->getBackingStore()->get('skuId');
     }
 
@@ -154,9 +154,9 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
-     *  @param Guid|null $value Value to set for the skuId property.
+     *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?Guid $value): void {
+    public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
     }
 

@@ -158,7 +158,7 @@ class DeviceManagement extends Entity implements Parsable
             'deviceManagementPartners' => fn(ParseNode $n) => $o->setDeviceManagementPartners($n->getCollectionOfObjectValues([DeviceManagementPartner::class, 'createFromDiscriminatorValue'])),
             'exchangeConnectors' => fn(ParseNode $n) => $o->setExchangeConnectors($n->getCollectionOfObjectValues([DeviceManagementExchangeConnector::class, 'createFromDiscriminatorValue'])),
             'importedWindowsAutopilotDeviceIdentities' => fn(ParseNode $n) => $o->setImportedWindowsAutopilotDeviceIdentities($n->getCollectionOfObjectValues([ImportedWindowsAutopilotDeviceIdentity::class, 'createFromDiscriminatorValue'])),
-            'intuneAccountId' => fn(ParseNode $n) => $o->setIntuneAccountId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'intuneAccountId' => fn(ParseNode $n) => $o->setIntuneAccountId($n->getStringValue()),
             'intuneBrand' => fn(ParseNode $n) => $o->setIntuneBrand($n->getObjectValue([IntuneBrand::class, 'createFromDiscriminatorValue'])),
             'iosUpdateStatuses' => fn(ParseNode $n) => $o->setIosUpdateStatuses($n->getCollectionOfObjectValues([IosUpdateDeviceStatus::class, 'createFromDiscriminatorValue'])),
             'managedDeviceOverview' => fn(ParseNode $n) => $o->setManagedDeviceOverview($n->getObjectValue([ManagedDeviceOverview::class, 'createFromDiscriminatorValue'])),
@@ -192,9 +192,9 @@ class DeviceManagement extends Entity implements Parsable
 
     /**
      * Gets the intuneAccountId property value. Intune Account Id for given tenant
-     * @return Guid|null
+     * @return string|null
     */
-    public function getIntuneAccountId(): ?Guid {
+    public function getIntuneAccountId(): ?string {
         return $this->getBackingStore()->get('intuneAccountId');
     }
 
@@ -524,9 +524,9 @@ class DeviceManagement extends Entity implements Parsable
 
     /**
      * Sets the intuneAccountId property value. Intune Account Id for given tenant
-     *  @param Guid|null $value Value to set for the intuneAccountId property.
+     *  @param string|null $value Value to set for the intuneAccountId property.
     */
-    public function setIntuneAccountId(?Guid $value): void {
+    public function setIntuneAccountId(?string $value): void {
         $this->getBackingStore()->set('intuneAccountId', $value);
     }
 

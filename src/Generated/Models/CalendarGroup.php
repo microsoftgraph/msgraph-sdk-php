@@ -42,9 +42,9 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Gets the classId property value. The class identifier. Read-only.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getClassId(): ?Guid {
+    public function getClassId(): ?string {
         return $this->getBackingStore()->get('classId');
     }
 
@@ -57,7 +57,7 @@ class CalendarGroup extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'calendars' => fn(ParseNode $n) => $o->setCalendars($n->getCollectionOfObjectValues([Calendar::class, 'createFromDiscriminatorValue'])),
             'changeKey' => fn(ParseNode $n) => $o->setChangeKey($n->getStringValue()),
-            'classId' => fn(ParseNode $n) => $o->setClassId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'classId' => fn(ParseNode $n) => $o->setClassId($n->getStringValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
         ]);
     }
@@ -100,9 +100,9 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Sets the classId property value. The class identifier. Read-only.
-     *  @param Guid|null $value Value to set for the classId property.
+     *  @param string|null $value Value to set for the classId property.
     */
-    public function setClassId(?Guid $value): void {
+    public function setClassId(?string $value): void {
         $this->getBackingStore()->set('classId', $value);
     }
 

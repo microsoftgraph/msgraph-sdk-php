@@ -61,7 +61,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the disabledPlans property value. The disabledPlans property
-     * @return array<Guid>|null
+     * @return array<string>|null
     */
     public function getDisabledPlans(): ?array {
         return $this->getBackingStore()->get('disabledPlans');
@@ -87,7 +87,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
             'error' => fn(ParseNode $n) => $o->setError($n->getStringValue()),
             'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
         ];
     }
@@ -110,9 +110,9 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Gets the skuId property value. The skuId property
-     * @return Guid|null
+     * @return string|null
     */
-    public function getSkuId(): ?Guid {
+    public function getSkuId(): ?string {
         return $this->getBackingStore()->get('skuId');
     }
 
@@ -165,7 +165,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the disabledPlans property value. The disabledPlans property
-     *  @param array<Guid>|null $value Value to set for the disabledPlans property.
+     *  @param array<string>|null $value Value to set for the disabledPlans property.
     */
     public function setDisabledPlans(?array $value): void {
         $this->getBackingStore()->set('disabledPlans', $value);
@@ -197,9 +197,9 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the skuId property value. The skuId property
-     *  @param Guid|null $value Value to set for the skuId property.
+     *  @param string|null $value Value to set for the skuId property.
     */
-    public function setSkuId(?Guid $value): void {
+    public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
     }
 

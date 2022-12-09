@@ -76,7 +76,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     * @return array<Guid>|null
+     * @return array<string>|null
     */
     public function getKnownClientApplications(): ?array {
         return $this->getBackingStore()->get('knownClientApplications');
@@ -154,7 +154,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     *  @param array<Guid>|null $value Value to set for the knownClientApplications property.
+     *  @param array<string>|null $value Value to set for the knownClientApplications property.
     */
     public function setKnownClientApplications(?array $value): void {
         $this->getBackingStore()->set('knownClientApplications', $value);

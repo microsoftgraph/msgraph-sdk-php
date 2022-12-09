@@ -57,7 +57,7 @@ class ResourceAccess implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'id' => fn(ParseNode $n) => $o->setId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
@@ -65,9 +65,9 @@ class ResourceAccess implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the id property value. The unique identifier of an app role or delegated permission exposed by the resource application. For delegated permissions, this should match the id property of one of the delegated permissions in the oauth2PermissionScopes collection of the resource application's service principal. For app roles (application permissions), this should match the id property of an app role in the appRoles collection of the resource application's service principal.
-     * @return Guid|null
+     * @return string|null
     */
-    public function getId(): ?Guid {
+    public function getId(): ?string {
         return $this->getBackingStore()->get('id');
     }
 
@@ -116,9 +116,9 @@ class ResourceAccess implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. The unique identifier of an app role or delegated permission exposed by the resource application. For delegated permissions, this should match the id property of one of the delegated permissions in the oauth2PermissionScopes collection of the resource application's service principal. For app roles (application permissions), this should match the id property of an app role in the appRoles collection of the resource application's service principal.
-     *  @param Guid|null $value Value to set for the id property.
+     *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?Guid $value): void {
+    public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
     }
 

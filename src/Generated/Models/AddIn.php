@@ -57,7 +57,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'id' => fn(ParseNode $n) => $o->setId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([KeyValue::class, 'createFromDiscriminatorValue'])),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
@@ -66,9 +66,9 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the id property value. The id property
-     * @return Guid|null
+     * @return string|null
     */
-    public function getId(): ?Guid {
+    public function getId(): ?string {
         return $this->getBackingStore()->get('id');
     }
 
@@ -126,9 +126,9 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. The id property
-     *  @param Guid|null $value Value to set for the id property.
+     *  @param string|null $value Value to set for the id property.
     */
-    public function setId(?Guid $value): void {
+    public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
     }
 
