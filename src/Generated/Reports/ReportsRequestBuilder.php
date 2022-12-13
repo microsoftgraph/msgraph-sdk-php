@@ -9,7 +9,9 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ReportRoot;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\DailyPrintUsageByPrinterRequestBuilder;
+use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder as MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\DailyPrintUsageByUserRequestBuilder;
+use Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder as MicrosoftGraphGeneratedReportsDailyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DeviceConfigurationDeviceActivity\DeviceConfigurationDeviceActivityRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DeviceConfigurationUserActivity\DeviceConfigurationUserActivityRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetEmailActivityCountsWithPeriod\GetEmailActivityCountsWithPeriodRequestBuilder;
@@ -106,13 +108,18 @@ use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetails\Mana
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailures\ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod\ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder as MicrosoftGraphGeneratedReportsMonthlyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\MonthlyPrintUsageByPrinterRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder as MicrosoftGraphGeneratedReportsMonthlyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\MonthlyPrintUsageByUserRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Security\SecurityRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 use Microsoft\Kiota\Abstractions\Types\Date;
 
 class ReportsRequestBuilder 
@@ -230,23 +237,23 @@ class ReportsRequestBuilder
     /**
      * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder
+     * @return MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder
     */
-    public function dailyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
+    public function dailyPrintUsageByPrinterById(string $id): MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedReportsDailyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder
+     * @return MicrosoftGraphGeneratedReportsDailyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder
     */
-    public function dailyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
+    public function dailyPrintUsageByUserById(string $id): MicrosoftGraphGeneratedReportsDailyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedReportsDailyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -1137,23 +1144,23 @@ class ReportsRequestBuilder
     /**
      * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder
+     * @return MicrosoftGraphGeneratedReportsMonthlyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder
     */
-    public function monthlyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
+    public function monthlyPrintUsageByPrinterById(string $id): MicrosoftGraphGeneratedReportsMonthlyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedReportsMonthlyPrintUsageByPrinterItemPrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder
+     * @return MicrosoftGraphGeneratedReportsMonthlyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder
     */
-    public function monthlyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
+    public function monthlyPrintUsageByUserById(string $id): MicrosoftGraphGeneratedReportsMonthlyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedReportsMonthlyPrintUsageByUserItemPrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

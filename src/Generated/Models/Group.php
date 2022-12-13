@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Group extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new group and sets the default values.
+     * Instantiates a new Group and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -51,7 +51,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      * @return array<AssignedLabel>|null
     */
     public function getAssignedLabels(): ?array {
@@ -719,7 +719,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      *  @param array<AssignedLabel>|null $value Value to set for the assignedLabels property.
     */
     public function setAssignedLabels(?array $value): void {

@@ -28,9 +28,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Gets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getAppRoleId(): ?string {
+    public function getAppRoleId(): ?Guid {
         return $this->getBackingStore()->get('appRoleId');
     }
 
@@ -49,13 +49,13 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appRoleId' => fn(ParseNode $n) => $o->setAppRoleId($n->getStringValue()),
+            'appRoleId' => fn(ParseNode $n) => $o->setAppRoleId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'principalDisplayName' => fn(ParseNode $n) => $o->setPrincipalDisplayName($n->getStringValue()),
-            'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
+            'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'principalType' => fn(ParseNode $n) => $o->setPrincipalType($n->getStringValue()),
             'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
-            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
+            'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -69,9 +69,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Gets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getPrincipalId(): ?string {
+    public function getPrincipalId(): ?Guid {
         return $this->getBackingStore()->get('principalId');
     }
 
@@ -93,9 +93,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Gets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
-     * @return string|null
+     * @return Guid|null
     */
-    public function getResourceId(): ?string {
+    public function getResourceId(): ?Guid {
         return $this->getBackingStore()->get('resourceId');
     }
 
@@ -116,9 +116,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
-     *  @param string|null $value Value to set for the appRoleId property.
+     *  @param Guid|null $value Value to set for the appRoleId property.
     */
-    public function setAppRoleId(?string $value): void {
+    public function setAppRoleId(?Guid $value): void {
         $this->getBackingStore()->set('appRoleId', $value);
     }
 
@@ -140,9 +140,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
-     *  @param string|null $value Value to set for the principalId property.
+     *  @param Guid|null $value Value to set for the principalId property.
     */
-    public function setPrincipalId(?string $value): void {
+    public function setPrincipalId(?Guid $value): void {
         $this->getBackingStore()->set('principalId', $value);
     }
 
@@ -164,9 +164,9 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
-     *  @param string|null $value Value to set for the resourceId property.
+     *  @param Guid|null $value Value to set for the resourceId property.
     */
-    public function setResourceId(?string $value): void {
+    public function setResourceId(?Guid $value): void {
         $this->getBackingStore()->set('resourceId', $value);
     }
 

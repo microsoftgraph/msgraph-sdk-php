@@ -8,8 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\AdditionalSourcesRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder as MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemAdditionalSourcesItemDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AddToReviewSetOperation\AddToReviewSetOperationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\CustodianSourcesRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder as MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemCustodianSourcesItemDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\EstimateStatistics\EstimateStatisticsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
@@ -18,7 +20,10 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EdiscoverySearchItemRequestBuilder 
 {
@@ -89,12 +94,12 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemAdditionalSourcesItemDataSourceItemRequestBuilder
     */
-    public function additionalSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder {
+    public function additionalSourcesById(string $id): MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemAdditionalSourcesItemDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemAdditionalSourcesItemDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -181,12 +186,12 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder
+     * @return MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemCustodianSourcesItemDataSourceItemRequestBuilder
     */
-    public function custodianSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder {
+    public function custodianSourcesById(string $id): MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemCustodianSourcesItemDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedSecurityCasesEdiscoveryCasesItemSearchesItemCustodianSourcesItemDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

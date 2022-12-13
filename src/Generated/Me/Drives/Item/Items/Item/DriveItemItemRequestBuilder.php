@@ -38,7 +38,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DriveItemItemRequestBuilder 
 {
@@ -193,12 +196,12 @@ class DriveItemItemRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Children\Item\DriveItemItemRequestBuilder
+     * @return DriveItemItemRequestBuilder
     */
-    public function childrenById(string $id): \Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Children\Item\DriveItemItemRequestBuilder {
+    public function childrenById(string $id): DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\Children\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

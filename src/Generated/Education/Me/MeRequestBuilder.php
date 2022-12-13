@@ -8,10 +8,12 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\EducationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Classes\ClassesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Rubrics\Item\EducationRubricItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Rubrics\RubricsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Schools\SchoolsRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder as MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\TaughtClasses\TaughtClassesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\User\UserRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationUser;
@@ -19,7 +21,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MeRequestBuilder 
 {
@@ -94,12 +99,12 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the classes property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder
+     * @return MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder
     */
-    public function classesById(string $id): \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder {
+    public function classesById(string $id): MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\Classes\Item\EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedEducationMeClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -266,12 +271,12 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder
+     * @return MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder
     */
-    public function taughtClassesById(string $id): \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder {
+    public function taughtClassesById(string $id): MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\TaughtClasses\Item\EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedEducationMeTaughtClassesItemEducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

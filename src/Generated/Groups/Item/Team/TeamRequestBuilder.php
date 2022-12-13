@@ -6,12 +6,15 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\AllChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemTeamAllChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\ChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemTeamChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\IncomingChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemTeamIncomingChannelsItemChannelItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
@@ -31,7 +34,10 @@ use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TeamRequestBuilder 
 {
@@ -172,23 +178,23 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemTeamAllChannelsItemChannelItemRequestBuilder
     */
-    public function allChannelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder {
+    public function allChannelsById(string $id): MicrosoftGraphGeneratedGroupsItemTeamAllChannelsItemChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemTeamAllChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemTeamChannelsItemChannelItemRequestBuilder
     */
-    public function channelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder {
+    public function channelsById(string $id): MicrosoftGraphGeneratedGroupsItemTeamChannelsItemChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemTeamChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -313,12 +319,12 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemTeamIncomingChannelsItemChannelItemRequestBuilder
     */
-    public function incomingChannelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder {
+    public function incomingChannelsById(string $id): MicrosoftGraphGeneratedGroupsItemTeamIncomingChannelsItemChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemTeamIncomingChannelsItemChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

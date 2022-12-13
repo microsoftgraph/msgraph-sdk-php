@@ -17,7 +17,10 @@ use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\SingleValueExtended
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContactFolderItemRequestBuilder 
 {
@@ -67,12 +70,12 @@ class ContactFolderItemRequestBuilder
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder
+     * @return ContactFolderItemRequestBuilder
     */
-    public function childFoldersById(string $id): \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder {
+    public function childFoldersById(string $id): ContactFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contactFolder%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

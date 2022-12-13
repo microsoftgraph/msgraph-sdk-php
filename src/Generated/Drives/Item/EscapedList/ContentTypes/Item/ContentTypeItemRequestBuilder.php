@@ -11,7 +11,9 @@ use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseType
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
@@ -21,7 +23,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContentTypeItemRequestBuilder 
 {
@@ -106,12 +111,12 @@ class ContentTypeItemRequestBuilder
     /**
      * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder
+     * @return ContentTypeItemRequestBuilder
     */
-    public function baseTypesById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder {
+    public function baseTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -128,23 +133,23 @@ class ContentTypeItemRequestBuilder
     /**
      * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnPositionsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder {
+    public function columnPositionsById(string $id): MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnPositionsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDrivesItemEscapedListContentTypesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

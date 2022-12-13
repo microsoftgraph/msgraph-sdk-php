@@ -78,7 +78,7 @@ class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
             'capabilityStatus' => fn(ParseNode $n) => $o->setCapabilityStatus($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'service' => fn(ParseNode $n) => $o->setService($n->getStringValue()),
-            'servicePlanId' => fn(ParseNode $n) => $o->setServicePlanId($n->getStringValue()),
+            'servicePlanId' => fn(ParseNode $n) => $o->setServicePlanId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -100,9 +100,9 @@ class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getServicePlanId(): ?string {
+    public function getServicePlanId(): ?Guid {
         return $this->getBackingStore()->get('servicePlanId');
     }
 
@@ -169,9 +169,9 @@ class AssignedPlan implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the servicePlanId property value. A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
-     *  @param string|null $value Value to set for the servicePlanId property.
+     *  @param Guid|null $value Value to set for the servicePlanId property.
     */
-    public function setServicePlanId(?string $value): void {
+    public function setServicePlanId(?Guid $value): void {
         $this->getBackingStore()->set('servicePlanId', $value);
     }
 

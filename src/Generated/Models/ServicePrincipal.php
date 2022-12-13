@@ -83,9 +83,9 @@ class ServicePrincipal extends DirectoryObject implements Parsable
 
     /**
      * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
-     * @return string|null
+     * @return Guid|null
     */
-    public function getAppOwnerOrganizationId(): ?string {
+    public function getAppOwnerOrganizationId(): ?Guid {
         return $this->getBackingStore()->get('appOwnerOrganizationId');
     }
 
@@ -199,7 +199,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'applicationTemplateId' => fn(ParseNode $n) => $o->setApplicationTemplateId($n->getStringValue()),
-            'appOwnerOrganizationId' => fn(ParseNode $n) => $o->setAppOwnerOrganizationId($n->getStringValue()),
+            'appOwnerOrganizationId' => fn(ParseNode $n) => $o->setAppOwnerOrganizationId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'appRoleAssignedTo' => fn(ParseNode $n) => $o->setAppRoleAssignedTo($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'appRoleAssignmentRequired' => fn(ParseNode $n) => $o->setAppRoleAssignmentRequired($n->getBooleanValue()),
             'appRoleAssignments' => fn(ParseNode $n) => $o->setAppRoleAssignments($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
@@ -235,7 +235,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'servicePrincipalType' => fn(ParseNode $n) => $o->setServicePrincipalType($n->getStringValue()),
             'signInAudience' => fn(ParseNode $n) => $o->setSignInAudience($n->getStringValue()),
             'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
-            'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getStringValue()),
+            'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'tokenIssuancePolicies' => fn(ParseNode $n) => $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues([TokenIssuancePolicy::class, 'createFromDiscriminatorValue'])),
             'tokenLifetimePolicies' => fn(ParseNode $n) => $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues([TokenLifetimePolicy::class, 'createFromDiscriminatorValue'])),
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
@@ -429,9 +429,9 @@ class ServicePrincipal extends DirectoryObject implements Parsable
 
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getTokenEncryptionKeyId(): ?string {
+    public function getTokenEncryptionKeyId(): ?Guid {
         return $this->getBackingStore()->get('tokenEncryptionKeyId');
     }
 
@@ -581,9 +581,9 @@ class ServicePrincipal extends DirectoryObject implements Parsable
 
     /**
      * Sets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
-     *  @param string|null $value Value to set for the appOwnerOrganizationId property.
+     *  @param Guid|null $value Value to set for the appOwnerOrganizationId property.
     */
-    public function setAppOwnerOrganizationId(?string $value): void {
+    public function setAppOwnerOrganizationId(?Guid $value): void {
         $this->getBackingStore()->set('appOwnerOrganizationId', $value);
     }
 
@@ -869,9 +869,9 @@ class ServicePrincipal extends DirectoryObject implements Parsable
 
     /**
      * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     *  @param string|null $value Value to set for the tokenEncryptionKeyId property.
+     *  @param Guid|null $value Value to set for the tokenEncryptionKeyId property.
     */
-    public function setTokenEncryptionKeyId(?string $value): void {
+    public function setTokenEncryptionKeyId(?Guid $value): void {
         $this->getBackingStore()->set('tokenEncryptionKeyId', $value);
     }
 

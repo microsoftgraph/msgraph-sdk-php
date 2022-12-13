@@ -15,7 +15,10 @@ use Microsoft\Graph\Generated\Models\SectionGroup;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SectionGroupItemRequestBuilder 
 {
@@ -204,12 +207,12 @@ class SectionGroupItemRequestBuilder
     /**
      * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder
+     * @return SectionGroupItemRequestBuilder
     */
-    public function sectionGroupsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder {
+    public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

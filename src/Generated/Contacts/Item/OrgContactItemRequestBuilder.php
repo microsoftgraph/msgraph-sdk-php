@@ -8,18 +8,24 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Contacts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\DirectReports\DirectReportsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\Manager\ManagerRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder as MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrgContact;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OrgContactItemRequestBuilder 
 {
@@ -204,12 +210,12 @@ class OrgContactItemRequestBuilder
     /**
      * Provides operations to manage the directReports property of the microsoft.graph.orgContact entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder
     */
-    public function directReportsById(string $id): \Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder {
+    public function directReportsById(string $id): MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemDirectReportsItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -234,12 +240,12 @@ class OrgContactItemRequestBuilder
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.orgContact entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function memberOfById(string $id): \Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Contacts\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -265,12 +271,12 @@ class OrgContactItemRequestBuilder
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder
+     * @return MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder
     */
-    public function transitiveMemberOfById(string $id): \Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedContactsItemTransitiveMemberOfItemDirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

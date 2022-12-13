@@ -12,7 +12,10 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\Pare
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EdiscoveryReviewTagItemRequestBuilder 
 {
@@ -48,12 +51,12 @@ class EdiscoveryReviewTagItemRequestBuilder
     /**
      * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder
+     * @return EdiscoveryReviewTagItemRequestBuilder
     */
-    public function childTagsById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder {
+    public function childTagsById(string $id): EdiscoveryReviewTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewTag%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

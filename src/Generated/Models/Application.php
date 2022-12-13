@@ -182,7 +182,7 @@ class Application extends DirectoryObject implements Parsable
             'signInAudience' => fn(ParseNode $n) => $o->setSignInAudience($n->getStringValue()),
             'spa' => fn(ParseNode $n) => $o->setSpa($n->getObjectValue([SpaApplication::class, 'createFromDiscriminatorValue'])),
             'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
-            'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getStringValue()),
+            'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'tokenIssuancePolicies' => fn(ParseNode $n) => $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues([TokenIssuancePolicy::class, 'createFromDiscriminatorValue'])),
             'tokenLifetimePolicies' => fn(ParseNode $n) => $o->setTokenLifetimePolicies($n->getCollectionOfObjectValues([TokenLifetimePolicy::class, 'createFromDiscriminatorValue'])),
             'verifiedPublisher' => fn(ParseNode $n) => $o->setVerifiedPublisher($n->getObjectValue([VerifiedPublisher::class, 'createFromDiscriminatorValue'])),
@@ -368,9 +368,9 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getTokenEncryptionKeyId(): ?string {
+    public function getTokenEncryptionKeyId(): ?Guid {
         return $this->getBackingStore()->get('tokenEncryptionKeyId');
     }
 
@@ -745,9 +745,9 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     *  @param string|null $value Value to set for the tokenEncryptionKeyId property.
+     *  @param Guid|null $value Value to set for the tokenEncryptionKeyId property.
     */
-    public function setTokenEncryptionKeyId(?string $value): void {
+    public function setTokenEncryptionKeyId(?Guid $value): void {
         $this->getBackingStore()->set('tokenEncryptionKeyId', $value);
     }
 

@@ -87,7 +87,7 @@ class PasswordCredential implements AdditionalDataHolder, BackedModel, Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'hint' => fn(ParseNode $n) => $o->setHint($n->getStringValue()),
-            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getStringValue()),
+            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'secretText' => fn(ParseNode $n) => $o->setSecretText($n->getStringValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
@@ -104,9 +104,9 @@ class PasswordCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the keyId property value. The unique identifier for the password.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getKeyId(): ?string {
+    public function getKeyId(): ?Guid {
         return $this->getBackingStore()->get('keyId');
     }
 
@@ -200,9 +200,9 @@ class PasswordCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the keyId property value. The unique identifier for the password.
-     *  @param string|null $value Value to set for the keyId property.
+     *  @param Guid|null $value Value to set for the keyId property.
     */
-    public function setKeyId(?string $value): void {
+    public function setKeyId(?Guid $value): void {
         $this->getBackingStore()->set('keyId', $value);
     }
 

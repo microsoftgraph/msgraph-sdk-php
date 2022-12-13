@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewScheduleDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewScheduleDefinition and sets the default values.
+     * Instantiates a new AccessReviewScheduleDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();

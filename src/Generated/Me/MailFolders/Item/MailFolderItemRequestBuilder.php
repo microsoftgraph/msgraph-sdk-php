@@ -21,7 +21,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MailFolderItemRequestBuilder 
 {
@@ -92,12 +95,12 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder
+     * @return MailFolderItemRequestBuilder
     */
-    public function childFoldersById(string $id): \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder {
+    public function childFoldersById(string $id): MailFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mailFolder%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

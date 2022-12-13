@@ -6,16 +6,21 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\ChildrenRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemChildrenItemTermItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\ParentGroup\ParentGroupRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Relations\RelationsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\TermItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemTermsItemTermItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\TermsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Set;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SetItemRequestBuilder 
 {
@@ -65,12 +70,12 @@ class SetItemRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\TermItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemChildrenItemTermItemRequestBuilder
     */
-    public function childrenById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\TermItemRequestBuilder {
+    public function childrenById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemChildrenItemTermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemChildrenItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -226,12 +231,12 @@ class SetItemRequestBuilder
     /**
      * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\TermItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemTermsItemTermItemRequestBuilder
     */
-    public function termsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\TermItemRequestBuilder {
+    public function termsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemTermsItemTermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemSitesItemTermStoresItemGroupsItemSetsItemTermsItemTermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

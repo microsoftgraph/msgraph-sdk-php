@@ -18,7 +18,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class AccessPackageItemRequestBuilder 
 {
@@ -82,12 +85,12 @@ class AccessPackageItemRequestBuilder
     /**
      * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackagesIncompatibleWith\Item\AccessPackageItemRequestBuilder
+     * @return MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemAccessPackagesIncompatibleWithItemAccessPackageItemRequestBuilder
     */
-    public function accessPackagesIncompatibleWithById(string $id): \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackagesIncompatibleWith\Item\AccessPackageItemRequestBuilder {
+    public function accessPackagesIncompatibleWithById(string $id): MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemAccessPackagesIncompatibleWithItemAccessPackageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessPackage%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AccessPackagesIncompatibleWith\Item\AccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemAccessPackagesIncompatibleWithItemAccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -223,12 +226,12 @@ class AccessPackageItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.identityGovernance.entitlementManagement.catalogs.item.accessPackages.item.incompatibleAccessPackages.item collection
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\IncompatibleAccessPackages\Item\AccessPackageItemRequestBuilder
+     * @return MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemIncompatibleAccessPackagesItemAccessPackageItemRequestBuilder
     */
-    public function incompatibleAccessPackagesById(string $id): \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\IncompatibleAccessPackages\Item\AccessPackageItemRequestBuilder {
+    public function incompatibleAccessPackagesById(string $id): MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemIncompatibleAccessPackagesItemAccessPackageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessPackage%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\IncompatibleAccessPackages\Item\AccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedIdentityGovernanceEntitlementManagementCatalogsItemAccessPackagesItemIncompatibleAccessPackagesItemAccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

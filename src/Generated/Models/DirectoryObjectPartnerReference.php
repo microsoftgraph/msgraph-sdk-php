@@ -43,9 +43,9 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getExternalPartnerTenantId(): ?string {
+    public function getExternalPartnerTenantId(): ?Guid {
         return $this->getBackingStore()->get('externalPartnerTenantId');
     }
 
@@ -58,7 +58,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
         return array_merge(parent::getFieldDeserializers(), [
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'externalPartnerTenantId' => fn(ParseNode $n) => $o->setExternalPartnerTenantId($n->getStringValue()),
+            'externalPartnerTenantId' => fn(ParseNode $n) => $o->setExternalPartnerTenantId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'objectType' => fn(ParseNode $n) => $o->setObjectType($n->getStringValue()),
         ]);
     }
@@ -101,9 +101,9 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     *  @param string|null $value Value to set for the externalPartnerTenantId property.
+     *  @param Guid|null $value Value to set for the externalPartnerTenantId property.
     */
-    public function setExternalPartnerTenantId(?string $value): void {
+    public function setExternalPartnerTenantId(?Guid $value): void {
         $this->getBackingStore()->set('externalPartnerTenantId', $value);
     }
 

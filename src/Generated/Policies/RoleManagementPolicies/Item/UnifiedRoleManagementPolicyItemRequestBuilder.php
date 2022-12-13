@@ -8,11 +8,16 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicy;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\EffectiveRulesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder as MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemEffectiveRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder as MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\RulesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UnifiedRoleManagementPolicyItemRequestBuilder 
 {
@@ -148,12 +153,12 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     /**
      * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemEffectiveRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder
     */
-    public function effectiveRulesById(string $id): \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
+    public function effectiveRulesById(string $id): MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemEffectiveRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyRule%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemEffectiveRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -198,12 +203,12 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     /**
      * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder
     */
-    public function rulesById(string $id): \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
+    public function rulesById(string $id): MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyRule%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedPoliciesRoleManagementPoliciesItemRulesItemUnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

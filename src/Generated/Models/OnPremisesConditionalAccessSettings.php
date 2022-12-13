@@ -34,7 +34,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Gets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     * @return array<string>|null
+     * @return array<Guid>|null
     */
     public function getExcludedGroups(): ?array {
         return $this->getBackingStore()->get('excludedGroups');
@@ -56,7 +56,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Gets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     * @return array<string>|null
+     * @return array<Guid>|null
     */
     public function getIncludedGroups(): ?array {
         return $this->getBackingStore()->get('includedGroups');
@@ -92,7 +92,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     *  @param array<string>|null $value Value to set for the excludedGroups property.
+     *  @param array<Guid>|null $value Value to set for the excludedGroups property.
     */
     public function setExcludedGroups(?array $value): void {
         $this->getBackingStore()->set('excludedGroups', $value);
@@ -100,7 +100,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     *  @param array<string>|null $value Value to set for the includedGroups property.
+     *  @param array<Guid>|null $value Value to set for the includedGroups property.
     */
     public function setIncludedGroups(?array $value): void {
         $this->getBackingStore()->set('includedGroups', $value);

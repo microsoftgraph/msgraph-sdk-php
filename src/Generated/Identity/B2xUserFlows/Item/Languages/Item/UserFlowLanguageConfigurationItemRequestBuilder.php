@@ -6,13 +6,18 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\DefaultPagesRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder as MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\OverridesPagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserFlowLanguageConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class UserFlowLanguageConfigurationItemRequestBuilder 
 {
@@ -129,12 +134,12 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder
+     * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder
     */
-    public function defaultPagesById(string $id): \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder {
+    public function defaultPagesById(string $id): MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemDefaultPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -178,12 +183,12 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder
+     * @return MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder
     */
-    public function overridesPagesById(string $id): \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder {
+    public function overridesPagesById(string $id): MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedIdentityB2xUserFlowsItemLanguagesItemOverridesPagesItemUserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

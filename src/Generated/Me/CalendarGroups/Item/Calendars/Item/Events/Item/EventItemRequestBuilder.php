@@ -27,7 +27,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EventItemRequestBuilder 
 {
@@ -281,12 +284,12 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the instances property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\Item\EventItemRequestBuilder
+     * @return EventItemRequestBuilder
     */
-    public function instancesById(string $id): \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\Item\EventItemRequestBuilder {
+    public function instancesById(string $id): EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

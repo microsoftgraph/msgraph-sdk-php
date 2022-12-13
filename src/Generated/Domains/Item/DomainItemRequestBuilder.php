@@ -10,7 +10,10 @@ use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item\DirectoryOb
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\Promote\PromoteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder as MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\Verify\VerifyRequestBuilder;
 use Microsoft\Graph\Generated\Models\Domain;
@@ -18,7 +21,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class DomainItemRequestBuilder 
 {
@@ -47,6 +53,13 @@ class DomainItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the promote method.
+    */
+    public function promote(): PromoteRequestBuilder {
+        return new PromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -243,23 +256,23 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder
     */
-    public function serviceConfigurationRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder {
+    public function serviceConfigurationRecordsById(string $id): MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDomainsItemServiceConfigurationRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder
+     * @return MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder
     */
-    public function verificationDnsRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder {
+    public function verificationDnsRecordsById(string $id): MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedDomainsItemVerificationDnsRecordsItemDomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

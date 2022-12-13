@@ -57,16 +57,16 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getStringValue()),
+            'keyId' => fn(ParseNode $n) => $o->setKeyId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'proof' => fn(ParseNode $n) => $o->setProof($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the keyId property value. The keyId property
-     * @return string|null
+     * @return Guid|null
     */
-    public function getKeyId(): ?string {
+    public function getKeyId(): ?Guid {
         return $this->getBackingStore()->get('keyId');
     }
 
@@ -106,9 +106,9 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the keyId property value. The keyId property
-     *  @param string|null $value Value to set for the keyId property.
+     *  @param Guid|null $value Value to set for the keyId property.
     */
-    public function setKeyId(?string $value): void {
+    public function setKeyId(?Guid $value): void {
         $this->getBackingStore()->set('keyId', $value);
     }
 

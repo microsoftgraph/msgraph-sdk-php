@@ -13,7 +13,10 @@ use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Rep
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ChatMessageItemRequestBuilder 
 {
@@ -199,12 +202,12 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder
+     * @return ChatMessageItemRequestBuilder
     */
-    public function repliesById(string $id): \Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
+    public function repliesById(string $id): ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

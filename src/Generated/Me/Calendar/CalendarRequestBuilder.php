@@ -9,7 +9,9 @@ use Microsoft\Graph\Generated\Me\Calendar\AllowedCalendarSharingRolesWithUser\Al
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\Events\EventsRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder as MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\GetSchedule\GetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
@@ -20,7 +22,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class CalendarRequestBuilder 
 {
@@ -104,12 +109,12 @@ class CalendarRequestBuilder
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder
+     * @return MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder
     */
-    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder {
+    public function calendarViewById(string $id): MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedMeCalendarCalendarViewItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -175,12 +180,12 @@ class CalendarRequestBuilder
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder
+     * @return MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder
     */
-    public function eventsById(string $id): \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder {
+    public function eventsById(string $id): MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Me\Calendar\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedMeCalendarEventsItemEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

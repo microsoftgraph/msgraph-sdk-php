@@ -14,7 +14,10 @@ use Microsoft\Graph\Generated\Models\TermStore\Term;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TermItemRequestBuilder 
 {
@@ -57,12 +60,12 @@ class TermItemRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\Children\Item\TermItemRequestBuilder
+     * @return TermItemRequestBuilder
     */
-    public function childrenById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\Children\Item\TermItemRequestBuilder {
+    public function childrenById(string $id): TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Children\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

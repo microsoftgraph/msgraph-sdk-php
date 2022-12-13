@@ -2,11 +2,9 @@
 
 namespace Microsoft\Graph\Generated\Models\Security;
 
-use Microsoft\Graph\Generated\Models\Alert;
-use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
-use Microsoft\Graph\Generated\Models\Entity;
-use Microsoft\Graph\Generated\Models\SecureScore;
-use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
+use Microsoft\Graph\Generated\Models\Security\Alert;
+use Microsoft\Graph\Generated\Models\Security\CasesRoot;
+use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -38,6 +36,14 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the alerts_v2 property value. The alerts_v2 property
+     * @return array<Alert>|null
+    */
+    public function getAlerts_v2(): ?array {
+        return $this->getBackingStore()->get('alerts_v2');
+    }
+
+    /**
      * Gets the attackSimulation property value. The attackSimulation property
      * @return AttackSimulationRoot|null
     */
@@ -61,11 +67,21 @@ class Security extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
+            'alerts_v2' => fn(ParseNode $n) => $o->setAlerts_v2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the incidents property value. The incidents property
+     * @return array<Incident>|null
+    */
+    public function getIncidents(): ?array {
+        return $this->getBackingStore()->get('incidents');
     }
 
     /**
@@ -91,8 +107,10 @@ class Security extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('alerts', $this->getAlerts());
+        $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlerts_v2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
     }
@@ -103,6 +121,14 @@ class Security extends Entity implements Parsable
     */
     public function setAlerts(?array $value): void {
         $this->getBackingStore()->set('alerts', $value);
+    }
+
+    /**
+     * Sets the alerts_v2 property value. The alerts_v2 property
+     *  @param array<Alert>|null $value Value to set for the alerts_v2 property.
+    */
+    public function setAlerts_v2(?array $value): void {
+        $this->getBackingStore()->set('alerts_v2', $value);
     }
 
     /**
@@ -119,6 +145,14 @@ class Security extends Entity implements Parsable
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
+    }
+
+    /**
+     * Sets the incidents property value. The incidents property
+     *  @param array<Incident>|null $value Value to set for the incidents property.
+    */
+    public function setIncidents(?array $value): void {
+        $this->getBackingStore()->set('incidents', $value);
     }
 
     /**

@@ -75,7 +75,7 @@ class ResourceSpecificPermission implements AdditionalDataHolder, BackedModel, P
         return  [
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'value' => fn(ParseNode $n) => $o->setValue($n->getStringValue()),
@@ -84,9 +84,9 @@ class ResourceSpecificPermission implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Gets the id property value. The unique identifier for the resource-specific application permission.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getId(): ?string {
+    public function getId(): ?Guid {
         return $this->getBackingStore()->get('id');
     }
 
@@ -162,9 +162,9 @@ class ResourceSpecificPermission implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the id property value. The unique identifier for the resource-specific application permission.
-     *  @param string|null $value Value to set for the id property.
+     *  @param Guid|null $value Value to set for the id property.
     */
-    public function setId(?string $value): void {
+    public function setId(?Guid $value): void {
         $this->getBackingStore()->set('id', $value);
     }
 

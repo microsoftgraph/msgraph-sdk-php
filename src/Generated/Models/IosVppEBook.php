@@ -47,7 +47,7 @@ class IosVppEBook extends ManagedEBook implements Parsable
             'totalLicenseCount' => fn(ParseNode $n) => $o->setTotalLicenseCount($n->getIntegerValue()),
             'usedLicenseCount' => fn(ParseNode $n) => $o->setUsedLicenseCount($n->getIntegerValue()),
             'vppOrganizationName' => fn(ParseNode $n) => $o->setVppOrganizationName($n->getStringValue()),
-            'vppTokenId' => fn(ParseNode $n) => $o->setVppTokenId($n->getStringValue()),
+            'vppTokenId' => fn(ParseNode $n) => $o->setVppTokenId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -101,9 +101,9 @@ class IosVppEBook extends ManagedEBook implements Parsable
 
     /**
      * Gets the vppTokenId property value. The Vpp token ID.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getVppTokenId(): ?string {
+    public function getVppTokenId(): ?Guid {
         return $this->getBackingStore()->get('vppTokenId');
     }
 
@@ -181,9 +181,9 @@ class IosVppEBook extends ManagedEBook implements Parsable
 
     /**
      * Sets the vppTokenId property value. The Vpp token ID.
-     *  @param string|null $value Value to set for the vppTokenId property.
+     *  @param Guid|null $value Value to set for the vppTokenId property.
     */
-    public function setVppTokenId(?string $value): void {
+    public function setVppTokenId(?Guid $value): void {
         $this->getBackingStore()->set('vppTokenId', $value);
     }
 

@@ -7,12 +7,14 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Analytics\AnalyticsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\ContentTypesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder as MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
@@ -35,7 +37,10 @@ use Microsoft\Graph\Generated\Models\Site;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SiteItemRequestBuilder 
 {
@@ -155,12 +160,12 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function columnsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemSitesItemColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -248,12 +253,12 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder
+     * @return MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder
     */
-    public function externalColumnsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder {
+    public function externalColumnsById(string $id): MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftGraphGeneratedGroupsItemSitesItemExternalColumnsItemColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -379,12 +384,12 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\Item\SiteItemRequestBuilder
+     * @return SiteItemRequestBuilder
     */
-    public function sitesById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\Item\SiteItemRequestBuilder {
+    public function sitesById(string $id): SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -91,8 +91,8 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
             'resource' => fn(ParseNode $n) => $o->setResource($n->getStringValue()),
             'resourceData' => fn(ParseNode $n) => $o->setResourceData($n->getObjectValue([ResourceData::class, 'createFromDiscriminatorValue'])),
             'subscriptionExpirationDateTime' => fn(ParseNode $n) => $o->setSubscriptionExpirationDateTime($n->getDateTimeValue()),
-            'subscriptionId' => fn(ParseNode $n) => $o->setSubscriptionId($n->getStringValue()),
-            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
+            'subscriptionId' => fn(ParseNode $n) => $o->setSubscriptionId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getObjectValue([Guid::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -146,17 +146,17 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getSubscriptionId(): ?string {
+    public function getSubscriptionId(): ?Guid {
         return $this->getBackingStore()->get('subscriptionId');
     }
 
     /**
      * Gets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
-     * @return string|null
+     * @return Guid|null
     */
-    public function getTenantId(): ?string {
+    public function getTenantId(): ?Guid {
         return $this->getBackingStore()->get('tenantId');
     }
 
@@ -269,17 +269,17 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
-     *  @param string|null $value Value to set for the subscriptionId property.
+     *  @param Guid|null $value Value to set for the subscriptionId property.
     */
-    public function setSubscriptionId(?string $value): void {
+    public function setSubscriptionId(?Guid $value): void {
         $this->getBackingStore()->set('subscriptionId', $value);
     }
 
     /**
      * Sets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
-     *  @param string|null $value Value to set for the tenantId property.
+     *  @param Guid|null $value Value to set for the tenantId property.
     */
-    public function setTenantId(?string $value): void {
+    public function setTenantId(?Guid $value): void {
         $this->getBackingStore()->set('tenantId', $value);
     }
 
