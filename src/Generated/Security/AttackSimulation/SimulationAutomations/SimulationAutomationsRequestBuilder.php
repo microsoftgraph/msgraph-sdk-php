@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Co
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SimulationAutomationsRequestBuilder 
 {
@@ -79,7 +76,7 @@ class SimulationAutomationsRequestBuilder
 
     /**
      * Create new navigation property to simulationAutomations for security
-     * @param SimulationAutomation $body 
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +119,7 @@ class SimulationAutomationsRequestBuilder
 
     /**
      * Create new navigation property to simulationAutomations for security
-     * @param SimulationAutomation $body 
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -11,10 +11,7 @@ use Microsoft\Graph\Generated\Sites\Item\Permissions\Item\Grant\GrantRequestBuil
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PermissionItemRequestBuilder 
 {
@@ -99,7 +96,7 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in sites
-     * @param Permission $body 
+     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -161,7 +158,7 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in sites
-     * @param Permission $body 
+     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ite
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class FeatureRolloutPolicyItemRequestBuilder 
 {
@@ -111,7 +108,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body 
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -173,7 +170,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body 
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -13,10 +13,7 @@ use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationTrainingUserCo
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SecurityRequestBuilder 
 {
@@ -94,7 +91,7 @@ class SecurityRequestBuilder
 
     /**
      * Update the navigation property security in reports
-     * @param SecurityReportsRoot $body 
+     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -180,7 +177,7 @@ class SecurityRequestBuilder
 
     /**
      * Update the navigation property security in reports
-     * @param SecurityReportsRoot $body 
+     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

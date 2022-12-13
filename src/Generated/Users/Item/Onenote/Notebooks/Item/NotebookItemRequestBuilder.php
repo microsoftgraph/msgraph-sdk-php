@@ -15,10 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Section
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class NotebookItemRequestBuilder 
 {
@@ -117,7 +114,7 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in users
-     * @param Notebook $body 
+     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -179,7 +176,7 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in users
-     * @param Notebook $body 
+     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

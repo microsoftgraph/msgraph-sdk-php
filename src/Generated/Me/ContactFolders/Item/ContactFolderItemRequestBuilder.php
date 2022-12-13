@@ -17,10 +17,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ContactFolderItemRequestBuilder 
 {
@@ -70,12 +67,12 @@ class ContactFolderItemRequestBuilder
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
-     * @return ContactFolderItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder
     */
-    public function childFoldersById(string $id): ContactFolderItemRequestBuilder {
+    public function childFoldersById(string $id): \Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contactFolder%2Did1'] = $id;
-        return new ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -148,7 +145,7 @@ class ContactFolderItemRequestBuilder
 
     /**
      * Update the navigation property contactFolders in me
-     * @param ContactFolder $body 
+     * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -221,7 +218,7 @@ class ContactFolderItemRequestBuilder
 
     /**
      * Update the navigation property contactFolders in me
-     * @param ContactFolder $body 
+     * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

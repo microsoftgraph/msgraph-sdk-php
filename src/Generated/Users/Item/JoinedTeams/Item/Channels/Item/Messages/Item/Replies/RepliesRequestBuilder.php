@@ -13,10 +13,7 @@ use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RepliesRequestBuilder 
 {
@@ -80,7 +77,7 @@ class RepliesRequestBuilder
 
     /**
      * Create a new reply to a chatMessage in a specified channel.
-     * @param ChatMessage $body 
+     * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +128,7 @@ class RepliesRequestBuilder
 
     /**
      * Create a new reply to a chatMessage in a specified channel.
-     * @param ChatMessage $body 
+     * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

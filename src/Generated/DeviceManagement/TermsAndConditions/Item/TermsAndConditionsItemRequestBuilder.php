@@ -14,10 +14,7 @@ use Microsoft\Graph\Generated\Models\TermsAndConditions;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TermsAndConditionsItemRequestBuilder 
 {
@@ -131,7 +128,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body 
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -193,7 +190,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body 
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

@@ -21,10 +21,7 @@ use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\SingleValueExtendedPro
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class MailFolderItemRequestBuilder 
 {
@@ -95,12 +92,12 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return MailFolderItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder
     */
-    public function childFoldersById(string $id): MailFolderItemRequestBuilder {
+    public function childFoldersById(string $id): \Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mailFolder%2Did1'] = $id;
-        return new MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -162,7 +159,7 @@ class MailFolderItemRequestBuilder
 
     /**
      * Update the navigation property mailFolders in users
-     * @param MailFolder $body 
+     * @param MailFolder $body The request body
      * @param MailFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -257,7 +254,7 @@ class MailFolderItemRequestBuilder
 
     /**
      * Update the navigation property mailFolders in users
-     * @param MailFolder $body 
+     * @param MailFolder $body The request body
      * @param MailFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

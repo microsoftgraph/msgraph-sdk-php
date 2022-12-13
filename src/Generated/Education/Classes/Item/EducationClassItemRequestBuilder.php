@@ -12,21 +12,16 @@ use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\AssignmentsRequ
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\EducationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder as MicrosoftGraphGeneratedEducationClassesItemMembersItemEducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder as MicrosoftGraphGeneratedEducationClassesItemTeachersItemEducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\TeachersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationClass;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class EducationClassItemRequestBuilder 
 {
@@ -182,7 +177,7 @@ class EducationClassItemRequestBuilder
 
     /**
      * Update the navigation property classes in education
-     * @param EducationClass $body 
+     * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -245,17 +240,17 @@ class EducationClassItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.classes.item.members.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationClassesItemMembersItemEducationUserItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder
     */
-    public function membersById(string $id): MicrosoftGraphGeneratedEducationClassesItemMembersItemEducationUserItemRequestBuilder {
+    public function membersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationClassesItemMembersItemEducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
      * Update the navigation property classes in education
-     * @param EducationClass $body 
+     * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -287,12 +282,12 @@ class EducationClassItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.classes.item.teachers.item collection
      * @param string $id Unique identifier of the item
-     * @return MicrosoftGraphGeneratedEducationClassesItemTeachersItemEducationUserItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder
     */
-    public function teachersById(string $id): MicrosoftGraphGeneratedEducationClassesItemTeachersItemEducationUserItemRequestBuilder {
+    public function teachersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
-        return new MicrosoftGraphGeneratedEducationClassesItemTeachersItemEducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

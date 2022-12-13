@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Count\C
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class RulesRequestBuilder 
 {
@@ -79,7 +76,7 @@ class RulesRequestBuilder
 
     /**
      * Create new navigation property to rules for policies
-     * @param UnifiedRoleManagementPolicyRule $body 
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param RulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +119,7 @@ class RulesRequestBuilder
 
     /**
      * Create new navigation property to rules for policies
-     * @param UnifiedRoleManagementPolicyRule $body 
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param RulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

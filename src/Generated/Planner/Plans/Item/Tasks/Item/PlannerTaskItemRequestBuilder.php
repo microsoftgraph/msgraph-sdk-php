@@ -14,10 +14,7 @@ use Microsoft\Graph\Generated\Planner\Plans\Item\Tasks\Item\ProgressTaskBoardFor
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PlannerTaskItemRequestBuilder 
 {
@@ -123,7 +120,7 @@ class PlannerTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in planner
-     * @param PlannerTask $body 
+     * @param PlannerTask $body The request body
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +182,7 @@ class PlannerTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in planner
-     * @param PlannerTask $body 
+     * @param PlannerTask $body The request body
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

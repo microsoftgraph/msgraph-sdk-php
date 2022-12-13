@@ -1,6 +1,6 @@
 {
-  "descriptionHash": "A7167EB8124FCD32494CF7CB205F7F6CC3E0F0AE79758C2C90E5E9D351532DFBAD1228AEA4BC0A832A897F19BE118894C21D1B526CEA54B635CD0E2DBB6B4508",
-  "descriptionLocation": "/home/vsts/work/1/s/msgraph-metadata/clean_v10_openapi/openapi.yaml",
+  "descriptionHash": "D9EE2D494A7942785D6747A9FED3A78E8E9FFBC580BDE0DB91B1B307245E0052B5535FAD96FD06B39328F3ADD82208536D6786B4A1F923F2B7F9A19ABCEE9911",
+  "descriptionLocation": "C:\\Users\\komondi\\Downloads\\work\\graph\\msgraph-metadata\\openapi\\v1.0\\openapi.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "0.8.3.0",
   "clientClassName": "BaseGraphClient",
@@ -24,5 +24,6 @@
     "text/yaml"
   ],
   "includePatterns": [],
-  "excludePatterns": []
+  "excludePatterns": [],
+  "disabledValidationRules": []
 }

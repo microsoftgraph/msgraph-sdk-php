@@ -18,10 +18,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class B2xIdentityUserFlowItemRequestBuilder 
 {
@@ -127,7 +124,7 @@ class B2xIdentityUserFlowItemRequestBuilder
 
     /**
      * Update the navigation property b2xUserFlows in identity
-     * @param B2xIdentityUserFlow $body 
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xIdentityUserFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -211,7 +208,7 @@ class B2xIdentityUserFlowItemRequestBuilder
 
     /**
      * Update the navigation property b2xUserFlows in identity
-     * @param B2xIdentityUserFlow $body 
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xIdentityUserFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

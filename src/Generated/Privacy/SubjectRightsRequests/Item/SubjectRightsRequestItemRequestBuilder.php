@@ -15,10 +15,7 @@ use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamReques
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SubjectRightsRequestItemRequestBuilder 
 {
@@ -110,7 +107,7 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body 
+     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -199,7 +196,7 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body 
+     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

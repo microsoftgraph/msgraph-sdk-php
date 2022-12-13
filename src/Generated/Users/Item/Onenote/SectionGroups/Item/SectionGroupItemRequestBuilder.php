@@ -15,10 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Sec
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SectionGroupItemRequestBuilder 
 {
@@ -124,7 +121,7 @@ class SectionGroupItemRequestBuilder
 
     /**
      * Update the navigation property sectionGroups in users
-     * @param SectionGroup $body 
+     * @param SectionGroup $body The request body
      * @param SectionGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -186,7 +183,7 @@ class SectionGroupItemRequestBuilder
 
     /**
      * Update the navigation property sectionGroups in users
-     * @param SectionGroup $body 
+     * @param SectionGroup $body The request body
      * @param SectionGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -207,12 +204,12 @@ class SectionGroupItemRequestBuilder
     /**
      * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
-     * @return SectionGroupItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder
     */
-    public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
+    public function sectionGroupsById(string $id): \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did1'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

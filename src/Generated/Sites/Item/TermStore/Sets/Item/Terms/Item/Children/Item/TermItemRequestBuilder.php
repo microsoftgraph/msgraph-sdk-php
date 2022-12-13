@@ -13,10 +13,7 @@ use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Terms\Item\Children
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class TermItemRequestBuilder 
 {
@@ -108,7 +105,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property children in sites
-     * @param Term $body 
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -170,7 +167,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property children in sites
-     * @param Term $body 
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

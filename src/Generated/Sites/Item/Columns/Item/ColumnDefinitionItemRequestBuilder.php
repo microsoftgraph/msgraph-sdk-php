@@ -11,10 +11,7 @@ use Microsoft\Graph\Generated\Sites\Item\Columns\Item\SourceColumn\SourceColumnR
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class ColumnDefinitionItemRequestBuilder 
 {
@@ -99,7 +96,7 @@ class ColumnDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property columns in sites
-     * @param ColumnDefinition $body 
+     * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -161,7 +158,7 @@ class ColumnDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property columns in sites
-     * @param ColumnDefinition $body 
+     * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

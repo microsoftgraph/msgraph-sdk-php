@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Planner\Plans\Item\Buckets\Item\Tasks\TasksRequest
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class PlannerBucketItemRequestBuilder 
 {
@@ -100,7 +97,7 @@ class PlannerBucketItemRequestBuilder
 
     /**
      * Update the navigation property buckets in planner
-     * @param PlannerBucket $body 
+     * @param PlannerBucket $body The request body
      * @param PlannerBucketItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -162,7 +159,7 @@ class PlannerBucketItemRequestBuilder
 
     /**
      * Update the navigation property buckets in planner
-     * @param PlannerBucket $body 
+     * @param PlannerBucket $body The request body
      * @param PlannerBucketItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

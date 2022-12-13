@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Count\Count
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class Fido2MethodsRequestBuilder 
 {
@@ -79,7 +76,7 @@ class Fido2MethodsRequestBuilder
 
     /**
      * Create new navigation property to fido2Methods for users
-     * @param Fido2AuthenticationMethod $body 
+     * @param Fido2AuthenticationMethod $body The request body
      * @param Fido2MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +119,7 @@ class Fido2MethodsRequestBuilder
 
     /**
      * Create new navigation property to fido2Methods for users
-     * @param Fido2AuthenticationMethod $body 
+     * @param Fido2AuthenticationMethod $body The request body
      * @param Fido2MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

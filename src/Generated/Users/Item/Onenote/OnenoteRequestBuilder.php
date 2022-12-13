@@ -22,10 +22,7 @@ use Microsoft\Graph\Generated\Users\Item\Onenote\Sections\SectionsRequestBuilder
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class OnenoteRequestBuilder 
 {
@@ -145,7 +142,7 @@ class OnenoteRequestBuilder
 
     /**
      * Update the navigation property onenote in users
-     * @param Onenote $body 
+     * @param Onenote $body The request body
      * @param OnenoteRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -240,7 +237,7 @@ class OnenoteRequestBuilder
 
     /**
      * Update the navigation property onenote in users
-     * @param Onenote $body 
+     * @param Onenote $body The request body
      * @param OnenoteRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

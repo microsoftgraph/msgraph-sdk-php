@@ -10,10 +10,7 @@ use Microsoft\Graph\Generated\Models\SchedulingGroup;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SchedulingGroupItemRequestBuilder 
 {
@@ -91,7 +88,7 @@ class SchedulingGroupItemRequestBuilder
 
     /**
      * Update the navigation property schedulingGroups in users
-     * @param SchedulingGroup $body 
+     * @param SchedulingGroup $body The request body
      * @param SchedulingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -153,7 +150,7 @@ class SchedulingGroupItemRequestBuilder
 
     /**
      * Update the navigation property schedulingGroups in users
-     * @param SchedulingGroup $body 
+     * @param SchedulingGroup $body The request body
      * @param SchedulingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
