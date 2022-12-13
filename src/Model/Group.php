@@ -27,7 +27,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
      *
      * @return array|null The assignedLabels
      */
@@ -42,7 +42,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the assignedLabels
-    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
+    * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
     *
     * @param AssignedLabel[] $val The assignedLabels
     *

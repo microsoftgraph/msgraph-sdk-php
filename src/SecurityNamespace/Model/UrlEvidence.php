@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ActivityType File
+* UrlEvidence File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Microsoft\Graph\SecurityNamespace\Model;
 /**
-* ActivityType class
+* UrlEvidence class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ActivityType extends Enum
+class UrlEvidence extends AlertEvidence
 {
     /**
-    * The Enum ActivityType
+    * Gets the url
+    *
+    * @return string|null The url
     */
-    const SIGNIN = "signin";
-    const USER = "user";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SERVICE_PRINCIPAL = "servicePrincipal";
+    public function getUrl()
+    {
+        if (array_key_exists("url", $this->_propDict)) {
+            return $this->_propDict["url"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the url
+    *
+    * @param string $val The value of the url
+    *
+    * @return UrlEvidence
+    */
+    public function setUrl($val)
+    {
+        $this->_propDict["url"] = $val;
+        return $this;
+    }
 }

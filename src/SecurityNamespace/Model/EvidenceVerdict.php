@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ActivityType File
+* EvidenceVerdict File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\SecurityNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ActivityType class
+* EvidenceVerdict class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ActivityType extends Enum
+class EvidenceVerdict extends Enum
 {
     /**
-    * The Enum ActivityType
+    * The Enum EvidenceVerdict
     */
-    const SIGNIN = "signin";
-    const USER = "user";
+    const UNKNOWN = "unknown";
+    const SUSPICIOUS = "suspicious";
+    const MALICIOUS = "malicious";
+    const NO_THREATS_FOUND = "noThreatsFound";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SERVICE_PRINCIPAL = "servicePrincipal";
 }
