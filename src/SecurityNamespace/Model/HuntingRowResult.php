@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ActivityType File
+* HuntingRowResult File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Microsoft\Graph\SecurityNamespace\Model;
 /**
-* ActivityType class
+* HuntingRowResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ActivityType extends Enum
+class HuntingRowResult extends \Microsoft\Graph\Model\Entity
 {
-    /**
-    * The Enum ActivityType
-    */
-    const SIGNIN = "signin";
-    const USER = "user";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SERVICE_PRINCIPAL = "servicePrincipal";
 }

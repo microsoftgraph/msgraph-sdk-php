@@ -151,7 +151,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+    * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
     *
     * @return string|null The deviceId
     */
@@ -166,7 +166,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the deviceId
-    * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+    * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
     *
     * @param string $val The deviceId
     *

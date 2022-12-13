@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ActivityType File
+* DefenderAvStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Microsoft\Graph\SecurityNamespace\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ActivityType class
+* DefenderAvStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ActivityType extends Enum
+class DefenderAvStatus extends Enum
 {
     /**
-    * The Enum ActivityType
+    * The Enum DefenderAvStatus
     */
-    const SIGNIN = "signin";
-    const USER = "user";
+    const NOT_REPORTING = "notReporting";
+    const DISABLED = "disabled";
+    const NOT_UPDATED = "notUpdated";
+    const UPDATED = "updated";
+    const UNKNOWN = "unknown";
+    const NOT_SUPPORTED = "notSupported";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const SERVICE_PRINCIPAL = "servicePrincipal";
 }
