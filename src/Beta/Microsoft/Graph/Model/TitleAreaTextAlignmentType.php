@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WebPart File
+* TitleAreaTextAlignmentType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* WebPart class
+* TitleAreaTextAlignmentType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WebPart extends Entity
+class TitleAreaTextAlignmentType extends Enum
 {
+    /**
+    * The Enum TitleAreaTextAlignmentType
+    */
+    const LEFT = "left";
+    const CENTER = "center";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

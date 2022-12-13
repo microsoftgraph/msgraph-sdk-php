@@ -26,6 +26,7 @@ class PlannerBucket extends PlannerDelta
 {
     /**
     * Gets the creationSource
+    * Contains information about the origin of the bucket.
     *
     * @return PlannerBucketCreation|null The creationSource
     */
@@ -44,6 +45,7 @@ class PlannerBucket extends PlannerDelta
 
     /**
     * Sets the creationSource
+    * Contains information about the origin of the bucket.
     *
     * @param PlannerBucketCreation $val The creationSource
     *

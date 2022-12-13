@@ -26,6 +26,7 @@ class PlannerTaskCreation extends Entity
 
     /**
     * Gets the creationSourceKind
+    * Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
     *
     * @return PlannerCreationSourceKind|null The creationSourceKind
     */
@@ -44,6 +45,7 @@ class PlannerTaskCreation extends Entity
 
     /**
     * Sets the creationSourceKind
+    * Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
     *
     * @param PlannerCreationSourceKind $val The value to assign to the creationSourceKind
     *
@@ -57,7 +59,7 @@ class PlannerTaskCreation extends Entity
 
     /**
     * Gets the teamsPublicationInfo
-    * Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+    * Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
     *
     * @return PlannerTeamsPublicationInfo|null The teamsPublicationInfo
     */
@@ -76,7 +78,7 @@ class PlannerTaskCreation extends Entity
 
     /**
     * Sets the teamsPublicationInfo
-    * Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+    * Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
     *
     * @param PlannerTeamsPublicationInfo $val The value to assign to the teamsPublicationInfo
     *

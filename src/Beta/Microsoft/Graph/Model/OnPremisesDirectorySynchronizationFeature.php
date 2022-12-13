@@ -25,6 +25,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 {
     /**
     * Gets the blockCloudObjectTakeoverThroughHardMatchEnabled
+    * Used to block cloud object takeover via source anchor hard match if enabled.
     *
     * @return bool|null The blockCloudObjectTakeoverThroughHardMatchEnabled
     */
@@ -39,6 +40,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the blockCloudObjectTakeoverThroughHardMatchEnabled
+    * Used to block cloud object takeover via source anchor hard match if enabled.
     *
     * @param bool $val The value of the blockCloudObjectTakeoverThroughHardMatchEnabled
     *
@@ -51,6 +53,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the blockSoftMatchEnabled
+    * Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
     *
     * @return bool|null The blockSoftMatchEnabled
     */
@@ -65,6 +68,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the blockSoftMatchEnabled
+    * Use to block soft match for all objects if enabled for the  tenant. Customers are encouraged to enable this feature and keep it enabled until soft matching is required again for their tenancy. This flag should be enabled again after any soft matching has been completed and is no longer needed.
     *
     * @param bool $val The value of the blockSoftMatchEnabled
     *
@@ -77,6 +81,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the bypassDirSyncOverridesEnabled
+    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
     *
     * @return bool|null The bypassDirSyncOverridesEnabled
     */
@@ -91,6 +96,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the bypassDirSyncOverridesEnabled
+    * When true, persists the values of Mobile and OtherMobile in on-premises AD during sync cycles instead of values of MobilePhone or AlternateMobilePhones in Azure AD.
     *
     * @param bool $val The value of the bypassDirSyncOverridesEnabled
     *
@@ -103,6 +109,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the cloudPasswordPolicyForPasswordSyncedUsersEnabled
+    * Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
     *
     * @return bool|null The cloudPasswordPolicyForPasswordSyncedUsersEnabled
     */
@@ -117,6 +124,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the cloudPasswordPolicyForPasswordSyncedUsersEnabled
+    * Used to indicate that cloud password policy applies to users whose passwords are synchronized from on-premises.
     *
     * @param bool $val The value of the cloudPasswordPolicyForPasswordSyncedUsersEnabled
     *
@@ -129,6 +137,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the concurrentCredentialUpdateEnabled
+    * Used to enable concurrent user credentials update in OrgId.
     *
     * @return bool|null The concurrentCredentialUpdateEnabled
     */
@@ -143,6 +152,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the concurrentCredentialUpdateEnabled
+    * Used to enable concurrent user credentials update in OrgId.
     *
     * @param bool $val The value of the concurrentCredentialUpdateEnabled
     *
@@ -155,6 +165,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the concurrentOrgIdProvisioningEnabled
+    * Used to enable concurrent user creation in OrgId.
     *
     * @return bool|null The concurrentOrgIdProvisioningEnabled
     */
@@ -169,6 +180,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the concurrentOrgIdProvisioningEnabled
+    * Used to enable concurrent user creation in OrgId.
     *
     * @param bool $val The value of the concurrentOrgIdProvisioningEnabled
     *
@@ -181,6 +193,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the deviceWritebackEnabled
+    * Used to indicate that device write-back is enabled.
     *
     * @return bool|null The deviceWritebackEnabled
     */
@@ -195,6 +208,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the deviceWritebackEnabled
+    * Used to indicate that device write-back is enabled.
     *
     * @param bool $val The value of the deviceWritebackEnabled
     *
@@ -207,6 +221,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the directoryExtensionsEnabled
+    * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
     *
     * @return bool|null The directoryExtensionsEnabled
     */
@@ -221,6 +236,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the directoryExtensionsEnabled
+    * Used to indicate that directory extensions are being synced from on-premises AD to Azure AD.
     *
     * @param bool $val The value of the directoryExtensionsEnabled
     *
@@ -233,6 +249,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the fopeConflictResolutionEnabled
+    * Used to indicate that for a Microsoft Forefront Online Protection for Exchange (FOPE) migrated tenant, the conflicting proxy address should be migrated over.
     *
     * @return bool|null The fopeConflictResolutionEnabled
     */
@@ -247,6 +264,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the fopeConflictResolutionEnabled
+    * Used to indicate that for a Microsoft Forefront Online Protection for Exchange (FOPE) migrated tenant, the conflicting proxy address should be migrated over.
     *
     * @param bool $val The value of the fopeConflictResolutionEnabled
     *
@@ -259,6 +277,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the groupWriteBackEnabled
+    * Used to enable object-level group writeback feature for additional group types.
     *
     * @return bool|null The groupWriteBackEnabled
     */
@@ -273,6 +292,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the groupWriteBackEnabled
+    * Used to enable object-level group writeback feature for additional group types.
     *
     * @param bool $val The value of the groupWriteBackEnabled
     *
@@ -285,6 +305,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the passwordSyncEnabled
+    * Used to indicate on-premise password synchronization is enabled.
     *
     * @return bool|null The passwordSyncEnabled
     */
@@ -299,6 +320,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the passwordSyncEnabled
+    * Used to indicate on-premise password synchronization is enabled.
     *
     * @param bool $val The value of the passwordSyncEnabled
     *
@@ -311,6 +333,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the passwordWritebackEnabled
+    * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
     *
     * @return bool|null The passwordWritebackEnabled
     */
@@ -325,6 +348,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the passwordWritebackEnabled
+    * Used to indicate that writeback of password resets from Azure AD to on-premises AD is enabled.
     *
     * @param bool $val The value of the passwordWritebackEnabled
     *
@@ -337,6 +361,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the quarantineUponProxyAddressesConflictEnabled
+    * Used to indicate that we should quarantine objects with conflicting proxy address.
     *
     * @return bool|null The quarantineUponProxyAddressesConflictEnabled
     */
@@ -351,6 +376,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the quarantineUponProxyAddressesConflictEnabled
+    * Used to indicate that we should quarantine objects with conflicting proxy address.
     *
     * @param bool $val The value of the quarantineUponProxyAddressesConflictEnabled
     *
@@ -363,6 +389,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the quarantineUponUpnConflictEnabled
+    * Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
     *
     * @return bool|null The quarantineUponUpnConflictEnabled
     */
@@ -377,6 +404,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the quarantineUponUpnConflictEnabled
+    * Used to indicate that we should quarantine objects conflicting with duplicate userPrincipalName.
     *
     * @param bool $val The value of the quarantineUponUpnConflictEnabled
     *
@@ -389,6 +417,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the softMatchOnUpnEnabled
+    * Used to indicate that we should soft match objects based on userPrincipalName.
     *
     * @return bool|null The softMatchOnUpnEnabled
     */
@@ -403,6 +432,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the softMatchOnUpnEnabled
+    * Used to indicate that we should soft match objects based on userPrincipalName.
     *
     * @param bool $val The value of the softMatchOnUpnEnabled
     *
@@ -415,6 +445,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the synchronizeUpnForManagedUsersEnabled
+    * Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
     *
     * @return bool|null The synchronizeUpnForManagedUsersEnabled
     */
@@ -429,6 +460,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the synchronizeUpnForManagedUsersEnabled
+    * Used to indicate that we should synchronize userPrincipalName objects for managed users with licenses.
     *
     * @param bool $val The value of the synchronizeUpnForManagedUsersEnabled
     *
@@ -441,6 +473,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the unifiedGroupWritebackEnabled
+    * Used to indicate that Microsoft 365 Group write-back is enabled.
     *
     * @return bool|null The unifiedGroupWritebackEnabled
     */
@@ -455,6 +488,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the unifiedGroupWritebackEnabled
+    * Used to indicate that Microsoft 365 Group write-back is enabled.
     *
     * @param bool $val The value of the unifiedGroupWritebackEnabled
     *
@@ -467,6 +501,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the userForcePasswordChangeOnLogonEnabled
+    * Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
     *
     * @return bool|null The userForcePasswordChangeOnLogonEnabled
     */
@@ -481,6 +516,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the userForcePasswordChangeOnLogonEnabled
+    * Used to indicate that feature to force password change for a user on logon is enabled while synchronizing on-premise credentials.
     *
     * @param bool $val The value of the userForcePasswordChangeOnLogonEnabled
     *
@@ -493,6 +529,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
     }
     /**
     * Gets the userWritebackEnabled
+    * Used to indicate that user writeback is enabled.
     *
     * @return bool|null The userWritebackEnabled
     */
@@ -507,6 +544,7 @@ class OnPremisesDirectorySynchronizationFeature extends Entity
 
     /**
     * Sets the userWritebackEnabled
+    * Used to indicate that user writeback is enabled.
     *
     * @param bool $val The value of the userWritebackEnabled
     *

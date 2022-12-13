@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcReportName File
+* TextWebPart File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CloudPcReportName class
+* TextWebPart class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +22,35 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcReportName extends Enum
+class TextWebPart extends WebPart
 {
     /**
-    * The Enum CloudPcReportName
+    * Gets the innerHtml
+    * The HTML string in text web part.
+    *
+    * @return string|null The innerHtml
     */
-    const REMOTE_CONNECTION_HISTORICAL_REPORTS = "remoteConnectionHistoricalReports";
-    const DAILY_AGGREGATED_REMOTE_CONNECTION_REPORTS = "dailyAggregatedRemoteConnectionReports";
-    const TOTAL_AGGREGATED_REMOTE_CONNECTION_REPORTS = "totalAggregatedRemoteConnectionReports";
-    const SHARED_USE_LICENSE_USAGE_REPORT = "sharedUseLicenseUsageReport";
-    const SHARED_USE_LICENSE_USAGE_REAL_TIME_REPORT = "sharedUseLicenseUsageRealTimeReport";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function getInnerHtml()
+    {
+        if (array_key_exists("innerHtml", $this->_propDict)) {
+            return $this->_propDict["innerHtml"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the innerHtml
+    * The HTML string in text web part.
+    *
+    * @param string $val The innerHtml
+    *
+    * @return TextWebPart
+    */
+    public function setInnerHtml($val)
+    {
+        $this->_propDict["innerHtml"] = $val;
+        return $this;
+    }
+
 }

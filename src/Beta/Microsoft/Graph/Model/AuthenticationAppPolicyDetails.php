@@ -26,6 +26,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Gets the adminConfiguration
+    * The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
     *
     * @return AuthenticationAppAdminConfiguration|null The adminConfiguration
     */
@@ -44,6 +45,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Sets the adminConfiguration
+    * The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
     *
     * @param AuthenticationAppAdminConfiguration $val The value to assign to the adminConfiguration
     *
@@ -57,6 +59,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Gets the authenticationEvaluation
+    * Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
     *
     * @return AuthenticationAppEvaluation|null The authenticationEvaluation
     */
@@ -75,6 +78,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Sets the authenticationEvaluation
+    * Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
     *
     * @param AuthenticationAppEvaluation $val The value to assign to the authenticationEvaluation
     *
@@ -87,6 +91,7 @@ class AuthenticationAppPolicyDetails extends Entity
     }
     /**
     * Gets the policyName
+    * The name of the policy enforced on the user's authentication app.
     *
     * @return string|null The policyName
     */
@@ -101,6 +106,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Sets the policyName
+    * The name of the policy enforced on the user's authentication app.
     *
     * @param string $val The value of the policyName
     *
@@ -114,6 +120,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Gets the status
+    * Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
     *
     * @return AuthenticationAppPolicyStatus|null The status
     */
@@ -132,6 +139,7 @@ class AuthenticationAppPolicyDetails extends Entity
 
     /**
     * Sets the status
+    * Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
     *
     * @param AuthenticationAppPolicyStatus $val The value to assign to the status
     *

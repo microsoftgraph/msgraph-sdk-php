@@ -25,6 +25,7 @@ class AuthenticationAppDeviceDetails extends Entity
 {
     /**
     * Gets the appVersion
+    * The version of the client authentication app used during the authentication step.
     *
     * @return string|null The appVersion
     */
@@ -39,6 +40,7 @@ class AuthenticationAppDeviceDetails extends Entity
 
     /**
     * Sets the appVersion
+    * The version of the client authentication app used during the authentication step.
     *
     * @param string $val The value of the appVersion
     *
@@ -51,6 +53,7 @@ class AuthenticationAppDeviceDetails extends Entity
     }
     /**
     * Gets the clientApp
+    * The name of the client authentication app used during the authentication step.
     *
     * @return string|null The clientApp
     */
@@ -65,6 +68,7 @@ class AuthenticationAppDeviceDetails extends Entity
 
     /**
     * Sets the clientApp
+    * The name of the client authentication app used during the authentication step.
     *
     * @param string $val The value of the clientApp
     *
@@ -77,6 +81,7 @@ class AuthenticationAppDeviceDetails extends Entity
     }
     /**
     * Gets the deviceId
+    * ID of the device used during the authentication step.
     *
     * @return string|null The deviceId
     */
@@ -91,6 +96,7 @@ class AuthenticationAppDeviceDetails extends Entity
 
     /**
     * Sets the deviceId
+    * ID of the device used during the authentication step.
     *
     * @param string $val The value of the deviceId
     *
@@ -103,6 +109,7 @@ class AuthenticationAppDeviceDetails extends Entity
     }
     /**
     * Gets the operatingSystem
+    * The operating system running on the device used for the authentication step.
     *
     * @return string|null The operatingSystem
     */
@@ -117,6 +124,7 @@ class AuthenticationAppDeviceDetails extends Entity
 
     /**
     * Sets the operatingSystem
+    * The operating system running on the device used for the authentication step.
     *
     * @param string $val The value of the operatingSystem
     *
