@@ -26,6 +26,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Gets the installStatus
+    * The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
     *
     * @return CloudPcPartnerAgentInstallStatus|null The installStatus
     */
@@ -44,6 +45,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the installStatus
+    * The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
     *
     * @param CloudPcPartnerAgentInstallStatus $val The value to assign to the installStatus
     *
@@ -56,6 +58,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
     }
     /**
     * Gets the isThirdPartyPartner
+    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
     *
     * @return bool|null The isThirdPartyPartner
     */
@@ -70,6 +73,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the isThirdPartyPartner
+    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
     *
     * @param bool $val The value of the isThirdPartyPartner
     *
@@ -83,6 +87,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Gets the partnerAgentName
+    * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
     *
     * @return CloudPcPartnerAgentName|null The partnerAgentName
     */
@@ -101,6 +106,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the partnerAgentName
+    * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
     *
     * @param CloudPcPartnerAgentName $val The value to assign to the partnerAgentName
     *
@@ -113,6 +119,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
     }
     /**
     * Gets the retriable
+    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
     *
     * @return bool|null The retriable
     */
@@ -127,6 +134,7 @@ class CloudPcPartnerAgentInstallResult extends Entity
 
     /**
     * Sets the retriable
+    * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
     *
     * @param bool $val The value of the retriable
     *

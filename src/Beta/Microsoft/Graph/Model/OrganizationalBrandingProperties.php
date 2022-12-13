@@ -295,6 +295,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the customCSS
+    * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The customCSS
     */
@@ -313,6 +314,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the customCSS
+    * CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The customCSS
     *
@@ -326,6 +328,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the customCSSRelativeUrl
+    * A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
     *
     * @return string|null The customCSSRelativeUrl
     */
@@ -340,6 +343,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the customCSSRelativeUrl
+    * A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
     *
     * @param string $val The customCSSRelativeUrl
     *
@@ -618,6 +622,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the headerLogo
+    * A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The headerLogo
     */
@@ -636,6 +641,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the headerLogo
+    * A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The headerLogo
     *
@@ -649,6 +655,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the headerLogoRelativeUrl
+    * A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
     *
     * @return string|null The headerLogoRelativeUrl
     */
@@ -663,6 +670,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the headerLogoRelativeUrl
+    * A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
     *
     * @param string $val The headerLogoRelativeUrl
     *
@@ -676,6 +684,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the loginPageLayoutConfiguration
+    * Represents the layout configuration to be displayed on the login page for a tenant.
     *
     * @return LoginPageLayoutConfiguration|null The loginPageLayoutConfiguration
     */
@@ -694,6 +703,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the loginPageLayoutConfiguration
+    * Represents the layout configuration to be displayed on the login page for a tenant.
     *
     * @param LoginPageLayoutConfiguration $val The loginPageLayoutConfiguration
     *

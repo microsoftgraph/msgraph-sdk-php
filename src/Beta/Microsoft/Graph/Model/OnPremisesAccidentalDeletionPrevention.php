@@ -25,6 +25,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 {
     /**
     * Gets the alertThreshold
+    * Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
     *
     * @return int|null The alertThreshold
     */
@@ -39,6 +40,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 
     /**
     * Sets the alertThreshold
+    * Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
     *
     * @param int $val The value of the alertThreshold
     *
@@ -52,6 +54,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 
     /**
     * Gets the synchronizationPreventionType
+    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
     *
     * @return OnPremisesDirectorySynchronizationDeletionPreventionType|null The synchronizationPreventionType
     */
@@ -70,6 +73,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 
     /**
     * Sets the synchronizationPreventionType
+    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
     *
     * @param OnPremisesDirectorySynchronizationDeletionPreventionType $val The value to assign to the synchronizationPreventionType
     *

@@ -259,6 +259,7 @@ class Directory extends Entity
 
      /**
      * Gets the onPremisesSynchronization
+    * A container for on-premises directory synchronization functionalities that are available for the organization.
      *
      * @return array|null The onPremisesSynchronization
      */
@@ -273,6 +274,7 @@ class Directory extends Entity
 
     /**
     * Sets the onPremisesSynchronization
+    * A container for on-premises directory synchronization functionalities that are available for the organization.
     *
     * @param OnPremisesDirectorySynchronization[] $val The onPremisesSynchronization
     *

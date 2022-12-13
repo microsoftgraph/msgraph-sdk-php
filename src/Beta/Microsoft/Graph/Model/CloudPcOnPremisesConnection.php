@@ -504,4 +504,31 @@ class CloudPcOnPremisesConnection extends Entity
         return $this;
     }
 
+    /**
+    * Gets the virtualNetworkLocation
+    *
+    * @return string|null The virtualNetworkLocation
+    */
+    public function getVirtualNetworkLocation()
+    {
+        if (array_key_exists("virtualNetworkLocation", $this->_propDict)) {
+            return $this->_propDict["virtualNetworkLocation"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the virtualNetworkLocation
+    *
+    * @param string $val The virtualNetworkLocation
+    *
+    * @return CloudPcOnPremisesConnection
+    */
+    public function setVirtualNetworkLocation($val)
+    {
+        $this->_propDict["virtualNetworkLocation"] = $val;
+        return $this;
+    }
+
 }

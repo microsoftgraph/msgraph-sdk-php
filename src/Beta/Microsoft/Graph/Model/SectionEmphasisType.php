@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SitePageData File
+* SectionEmphasisType File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* SitePageData class
+* SectionEmphasisType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SitePageData extends Entity
+class SectionEmphasisType extends Enum
 {
+    /**
+    * The Enum SectionEmphasisType
+    */
+    const NONE = "none";
+    const NETURAL = "netural";
+    const SOFT = "soft";
+    const STRONG = "strong";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

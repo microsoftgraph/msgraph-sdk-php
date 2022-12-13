@@ -430,6 +430,7 @@ class CloudPC extends Entity
 
      /**
      * Gets the partnerAgentInstallResults
+    * The results of every partner agent's installation status on Cloud PC.
      *
      * @return array|null The partnerAgentInstallResults
      */
@@ -444,6 +445,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the partnerAgentInstallResults
+    * The results of every partner agent's installation status on Cloud PC.
     *
     * @param CloudPcPartnerAgentInstallResult[] $val The partnerAgentInstallResults
     *

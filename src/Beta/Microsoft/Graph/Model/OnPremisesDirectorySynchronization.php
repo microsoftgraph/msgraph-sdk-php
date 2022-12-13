@@ -26,6 +26,7 @@ class OnPremisesDirectorySynchronization extends Entity
 {
     /**
     * Gets the configuration
+    * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
     *
     * @return OnPremisesDirectorySynchronizationConfiguration|null The configuration
     */
@@ -44,6 +45,7 @@ class OnPremisesDirectorySynchronization extends Entity
 
     /**
     * Sets the configuration
+    * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
     *
     * @param OnPremisesDirectorySynchronizationConfiguration $val The configuration
     *
@@ -57,6 +59,7 @@ class OnPremisesDirectorySynchronization extends Entity
 
     /**
     * Gets the features
+    * Consists of directory synchronization features that can be enabled or disabled.
     *
     * @return OnPremisesDirectorySynchronizationFeature|null The features
     */
@@ -75,6 +78,7 @@ class OnPremisesDirectorySynchronization extends Entity
 
     /**
     * Sets the features
+    * Consists of directory synchronization features that can be enabled or disabled.
     *
     * @param OnPremisesDirectorySynchronizationFeature $val The features
     *

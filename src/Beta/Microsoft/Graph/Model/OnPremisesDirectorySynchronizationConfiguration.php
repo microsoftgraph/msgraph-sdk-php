@@ -26,6 +26,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Gets the accidentalDeletionPrevention
+    * Contains the accidental deletion prevention configuration for a tenant.
     *
     * @return OnPremisesAccidentalDeletionPrevention|null The accidentalDeletionPrevention
     */
@@ -44,6 +45,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Sets the accidentalDeletionPrevention
+    * Contains the accidental deletion prevention configuration for a tenant.
     *
     * @param OnPremisesAccidentalDeletionPrevention $val The value to assign to the accidentalDeletionPrevention
     *
@@ -57,6 +59,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Gets the customerRequestedSynchronizationInterval
+    * Interval of time that the customer requested the sync client waits between sync cycles.
     *
     * @return \DateInterval|null The customerRequestedSynchronizationInterval
     */
@@ -75,6 +78,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Sets the customerRequestedSynchronizationInterval
+    * Interval of time that the customer requested the sync client waits between sync cycles.
     *
     * @param \DateInterval $val The value to assign to the customerRequestedSynchronizationInterval
     *
@@ -88,6 +92,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Gets the synchronizationInterval
+    * Interval of time the sync client should honor between sync cycles
     *
     * @return \DateInterval|null The synchronizationInterval
     */
@@ -106,6 +111,7 @@ class OnPremisesDirectorySynchronizationConfiguration extends Entity
 
     /**
     * Sets the synchronizationInterval
+    * Interval of time the sync client should honor between sync cycles
     *
     * @param \DateInterval $val The value to assign to the synchronizationInterval
     *

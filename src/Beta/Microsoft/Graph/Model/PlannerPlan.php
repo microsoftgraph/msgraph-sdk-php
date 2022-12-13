@@ -158,6 +158,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Gets the creationSource
+    * Contains information about the origin of the plan.
     *
     * @return PlannerPlanCreation|null The creationSource
     */
@@ -176,6 +177,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Sets the creationSource
+    * Contains information about the origin of the plan.
     *
     * @param PlannerPlanCreation $val The creationSource
     *
