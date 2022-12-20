@@ -25,6 +25,7 @@ class IpEvidence extends AlertEvidence
 {
     /**
     * Gets the countryLetterCode
+    * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
     *
     * @return string|null The countryLetterCode
     */
@@ -39,6 +40,7 @@ class IpEvidence extends AlertEvidence
 
     /**
     * Sets the countryLetterCode
+    * The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
     *
     * @param string $val The value of the countryLetterCode
     *
