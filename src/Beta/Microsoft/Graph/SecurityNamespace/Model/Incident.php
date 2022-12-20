@@ -151,6 +151,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the customTags
+    * Array of custom tags associated with an incident.
     *
     * @return array|null The customTags
     */
@@ -165,6 +166,7 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the customTags
+    * Array of custom tags associated with an incident.
     *
     * @param string[] $val The customTags
     *
