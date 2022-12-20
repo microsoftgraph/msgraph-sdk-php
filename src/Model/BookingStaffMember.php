@@ -113,6 +113,7 @@ class BookingStaffMember extends BookingStaffMemberBase
 
     /**
     * Gets the isEmailNotificationEnabled
+    * True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
     *
     * @return bool|null The isEmailNotificationEnabled
     */
@@ -127,6 +128,7 @@ class BookingStaffMember extends BookingStaffMemberBase
 
     /**
     * Sets the isEmailNotificationEnabled
+    * True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
     *
     * @param bool $val The isEmailNotificationEnabled
     *
@@ -140,7 +142,7 @@ class BookingStaffMember extends BookingStaffMemberBase
 
     /**
     * Gets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler, teamMember. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: scheduler, teamMember. Required.
     *
     * @return BookingStaffRole|null The role
     */
@@ -159,7 +161,7 @@ class BookingStaffMember extends BookingStaffMemberBase
 
     /**
     * Sets the role
-    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+    * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler, teamMember. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: scheduler, teamMember. Required.
     *
     * @param BookingStaffRole $val The role
     *

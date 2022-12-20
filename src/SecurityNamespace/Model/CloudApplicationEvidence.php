@@ -25,6 +25,7 @@ class CloudApplicationEvidence extends AlertEvidence
 {
     /**
     * Gets the appId
+    * Unique identifier of the application.
     *
     * @return int|null The appId
     */
@@ -39,6 +40,7 @@ class CloudApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the appId
+    * Unique identifier of the application.
     *
     * @param int $val The value of the appId
     *
@@ -51,6 +53,7 @@ class CloudApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the displayName
+    * Name of the application.
     *
     * @return string|null The displayName
     */
@@ -65,6 +68,7 @@ class CloudApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the displayName
+    * Name of the application.
     *
     * @param string $val The value of the displayName
     *
@@ -77,6 +81,7 @@ class CloudApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the instanceId
+    * Identifier of the instance of the Software as a Service (SaaS) application.
     *
     * @return int|null The instanceId
     */
@@ -91,6 +96,7 @@ class CloudApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the instanceId
+    * Identifier of the instance of the Software as a Service (SaaS) application.
     *
     * @param int $val The value of the instanceId
     *
@@ -103,6 +109,7 @@ class CloudApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the instanceName
+    * Name of the instance of the SaaS application.
     *
     * @return string|null The instanceName
     */
@@ -117,6 +124,7 @@ class CloudApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the instanceName
+    * Name of the instance of the SaaS application.
     *
     * @param string $val The value of the instanceName
     *
@@ -129,6 +137,7 @@ class CloudApplicationEvidence extends AlertEvidence
     }
     /**
     * Gets the saasAppId
+    * The identifier of the SaaS application.
     *
     * @return int|null The saasAppId
     */
@@ -143,6 +152,7 @@ class CloudApplicationEvidence extends AlertEvidence
 
     /**
     * Sets the saasAppId
+    * The identifier of the SaaS application.
     *
     * @param int $val The value of the saasAppId
     *

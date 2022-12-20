@@ -25,6 +25,7 @@ class MailboxEvidence extends AlertEvidence
 {
     /**
     * Gets the displayName
+    * The name associated with the mailbox.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class MailboxEvidence extends AlertEvidence
 
     /**
     * Sets the displayName
+    * The name associated with the mailbox.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class MailboxEvidence extends AlertEvidence
     }
     /**
     * Gets the primaryAddress
+    * The primary email address of the mailbox.
     *
     * @return string|null The primaryAddress
     */
@@ -65,6 +68,7 @@ class MailboxEvidence extends AlertEvidence
 
     /**
     * Sets the primaryAddress
+    * The primary email address of the mailbox.
     *
     * @param string $val The value of the primaryAddress
     *
@@ -78,6 +82,7 @@ class MailboxEvidence extends AlertEvidence
 
     /**
     * Gets the userAccount
+    * The user account of the mailbox.
     *
     * @return UserAccount|null The userAccount
     */
@@ -96,6 +101,7 @@ class MailboxEvidence extends AlertEvidence
 
     /**
     * Sets the userAccount
+    * The user account of the mailbox.
     *
     * @param UserAccount $val The value to assign to the userAccount
     *

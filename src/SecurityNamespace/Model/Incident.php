@@ -26,6 +26,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the assignedTo
+    * Owner of the incident, or null if no owner is assigned. Free editable text.
     *
     * @return string|null The assignedTo
     */
@@ -40,6 +41,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the assignedTo
+    * Owner of the incident, or null if no owner is assigned. Free editable text.
     *
     * @param string $val The assignedTo
     *
@@ -53,6 +55,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the classification
+    * The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @return AlertClassification|null The classification
     */
@@ -71,6 +74,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the classification
+    * The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
     *
     * @param AlertClassification $val The classification
     *
@@ -85,6 +89,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
      /**
      * Gets the comments
+    * Array of comments created by the Security Operations (SecOps) team when the incident is managed.
      *
      * @return array|null The comments
      */
@@ -99,6 +104,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the comments
+    * Array of comments created by the Security Operations (SecOps) team when the incident is managed.
     *
     * @param AlertComment[] $val The comments
     *
@@ -112,6 +118,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
+    * Time when the incident was first created.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -130,6 +137,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * Time when the incident was first created.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -143,6 +151,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the customTags
+    * Array of custom tags associated with an incident.
     *
     * @return array|null The customTags
     */
@@ -157,6 +166,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the customTags
+    * Array of custom tags associated with an incident.
     *
     * @param string[] $val The customTags
     *
@@ -170,6 +180,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the determination
+    * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
     * @return AlertDetermination|null The determination
     */
@@ -188,6 +199,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the determination
+    * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
     * @param AlertDetermination $val The determination
     *
@@ -201,6 +213,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the displayName
+    * The incident name.
     *
     * @return string|null The displayName
     */
@@ -215,6 +228,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The incident name.
     *
     * @param string $val The displayName
     *
@@ -228,6 +242,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the incidentWebUrl
+    * The URL for the incident page in the Microsoft 365 Defender portal.
     *
     * @return string|null The incidentWebUrl
     */
@@ -242,6 +257,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the incidentWebUrl
+    * The URL for the incident page in the Microsoft 365 Defender portal.
     *
     * @param string $val The incidentWebUrl
     *
@@ -255,6 +271,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastUpdateDateTime
+    * Time when the incident was last updated.
     *
     * @return \DateTime|null The lastUpdateDateTime
     */
@@ -273,6 +290,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastUpdateDateTime
+    * Time when the incident was last updated.
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -286,6 +304,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the redirectIncidentId
+    * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
     *
     * @return string|null The redirectIncidentId
     */
@@ -300,6 +319,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the redirectIncidentId
+    * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
     *
     * @param string $val The redirectIncidentId
     *
@@ -313,6 +333,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the severity
+    * Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @return AlertSeverity|null The severity
     */
@@ -331,6 +352,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the severity
+    * Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @param AlertSeverity $val The severity
     *
@@ -344,6 +366,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
+    * The status of the incident. Possible values are: active, resolved, redirected, unknownFutureValue.
     *
     * @return IncidentStatus|null The status
     */
@@ -362,6 +385,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
+    * The status of the incident. Possible values are: active, resolved, redirected, unknownFutureValue.
     *
     * @param IncidentStatus $val The status
     *
@@ -375,6 +399,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant in which the alert was created.
     *
     * @return string|null The tenantId
     */
@@ -389,6 +414,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant in which the alert was created.
     *
     * @param string $val The tenantId
     *
@@ -403,6 +429,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
      /**
      * Gets the alerts
+    * The list of related alerts. Supports $expand.
      *
      * @return array|null The alerts
      */
@@ -417,6 +444,7 @@ class Incident extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alerts
+    * The list of related alerts. Supports $expand.
     *
     * @param Alert[] $val The alerts
     *

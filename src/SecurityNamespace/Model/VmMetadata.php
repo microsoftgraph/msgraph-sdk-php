@@ -26,6 +26,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the cloudProvider
+    * The cloud provider hosting the virtual machine. The possible values are: unknown, azure, unknownFutureValue.
     *
     * @return VmCloudProvider|null The cloudProvider
     */
@@ -44,6 +45,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the cloudProvider
+    * The cloud provider hosting the virtual machine. The possible values are: unknown, azure, unknownFutureValue.
     *
     * @param VmCloudProvider $val The value to assign to the cloudProvider
     *
@@ -56,6 +58,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the resourceId
+    * Unique identifier of the Azure resource.
     *
     * @return string|null The resourceId
     */
@@ -70,6 +73,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the resourceId
+    * Unique identifier of the Azure resource.
     *
     * @param string $val The value of the resourceId
     *
@@ -82,6 +86,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the subscriptionId
+    * Unique identifier of the Azure subscription the customer tenant belongs to.
     *
     * @return string|null The subscriptionId
     */
@@ -96,6 +101,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the subscriptionId
+    * Unique identifier of the Azure subscription the customer tenant belongs to.
     *
     * @param string $val The value of the subscriptionId
     *
@@ -108,6 +114,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the vmId
+    * Unique identifier of the virtual machine instance.
     *
     * @return string|null The vmId
     */
@@ -122,6 +129,7 @@ class VmMetadata extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the vmId
+    * Unique identifier of the virtual machine instance.
     *
     * @param string $val The value of the vmId
     *

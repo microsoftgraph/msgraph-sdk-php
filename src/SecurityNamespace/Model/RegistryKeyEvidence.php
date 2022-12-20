@@ -25,6 +25,7 @@ class RegistryKeyEvidence extends AlertEvidence
 {
     /**
     * Gets the registryHive
+    * Registry hive of the key that the recorded action was applied to.
     *
     * @return string|null The registryHive
     */
@@ -39,6 +40,7 @@ class RegistryKeyEvidence extends AlertEvidence
 
     /**
     * Sets the registryHive
+    * Registry hive of the key that the recorded action was applied to.
     *
     * @param string $val The value of the registryHive
     *
@@ -51,6 +53,7 @@ class RegistryKeyEvidence extends AlertEvidence
     }
     /**
     * Gets the registryKey
+    * Registry key that the recorded action was applied to.
     *
     * @return string|null The registryKey
     */
@@ -65,6 +68,7 @@ class RegistryKeyEvidence extends AlertEvidence
 
     /**
     * Sets the registryKey
+    * Registry key that the recorded action was applied to.
     *
     * @param string $val The value of the registryKey
     *

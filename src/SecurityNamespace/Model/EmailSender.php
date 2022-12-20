@@ -25,6 +25,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the displayName
+    * The name of the sender.
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the displayName
+    * The name of the sender.
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the domainName
+    * Sender domain.
     *
     * @return string|null The domainName
     */
@@ -65,6 +68,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the domainName
+    * Sender domain.
     *
     * @param string $val The value of the domainName
     *
@@ -77,6 +81,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the emailAddress
+    * Sender email address.
     *
     * @return string|null The emailAddress
     */
@@ -91,6 +96,7 @@ class EmailSender extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the emailAddress
+    * Sender email address.
     *
     * @param string $val The value of the emailAddress
     *
