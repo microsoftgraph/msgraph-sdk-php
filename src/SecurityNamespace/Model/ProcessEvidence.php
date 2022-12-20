@@ -26,6 +26,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the detectionStatus
+    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @return DetectionStatus|null The detectionStatus
     */
@@ -44,6 +45,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the detectionStatus
+    * The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
     *
     * @param DetectionStatus $val The value to assign to the detectionStatus
     *
@@ -57,6 +59,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the imageFile
+    * Image file details.
     *
     * @return FileDetails|null The imageFile
     */
@@ -75,6 +78,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the imageFile
+    * Image file details.
     *
     * @param FileDetails $val The value to assign to the imageFile
     *
@@ -87,6 +91,7 @@ class ProcessEvidence extends AlertEvidence
     }
     /**
     * Gets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @return string|null The mdeDeviceId
     */
@@ -101,6 +106,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the mdeDeviceId
+    * A unique identifier assigned to a device by Microsoft Defender for Endpoint.
     *
     * @param string $val The value of the mdeDeviceId
     *
@@ -114,6 +120,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the parentProcessCreationDateTime
+    * Date and time when the parent of the process was created.
     *
     * @return \DateTime|null The parentProcessCreationDateTime
     */
@@ -132,6 +139,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the parentProcessCreationDateTime
+    * Date and time when the parent of the process was created.
     *
     * @param \DateTime $val The value to assign to the parentProcessCreationDateTime
     *
@@ -144,6 +152,7 @@ class ProcessEvidence extends AlertEvidence
     }
     /**
     * Gets the parentProcessId
+    * Process ID (PID) of the parent process that spawned the process.
     *
     * @return int|null The parentProcessId
     */
@@ -158,6 +167,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the parentProcessId
+    * Process ID (PID) of the parent process that spawned the process.
     *
     * @param int $val The value of the parentProcessId
     *
@@ -171,6 +181,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the parentProcessImageFile
+    * Parent process image file details.
     *
     * @return FileDetails|null The parentProcessImageFile
     */
@@ -189,6 +200,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the parentProcessImageFile
+    * Parent process image file details.
     *
     * @param FileDetails $val The value to assign to the parentProcessImageFile
     *
@@ -201,6 +213,7 @@ class ProcessEvidence extends AlertEvidence
     }
     /**
     * Gets the processCommandLine
+    * Command line used to create the new process.
     *
     * @return string|null The processCommandLine
     */
@@ -215,6 +228,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the processCommandLine
+    * Command line used to create the new process.
     *
     * @param string $val The value of the processCommandLine
     *
@@ -228,6 +242,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the processCreationDateTime
+    * Date and time the process was created.
     *
     * @return \DateTime|null The processCreationDateTime
     */
@@ -246,6 +261,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the processCreationDateTime
+    * Date and time the process was created.
     *
     * @param \DateTime $val The value to assign to the processCreationDateTime
     *
@@ -258,6 +274,7 @@ class ProcessEvidence extends AlertEvidence
     }
     /**
     * Gets the processId
+    * Process ID (PID) of the newly created process.
     *
     * @return int|null The processId
     */
@@ -272,6 +289,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the processId
+    * Process ID (PID) of the newly created process.
     *
     * @param int $val The value of the processId
     *
@@ -285,6 +303,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Gets the userAccount
+    * User details of the user that ran the process.
     *
     * @return UserAccount|null The userAccount
     */
@@ -303,6 +322,7 @@ class ProcessEvidence extends AlertEvidence
 
     /**
     * Sets the userAccount
+    * User details of the user that ran the process.
     *
     * @param UserAccount $val The value to assign to the userAccount
     *

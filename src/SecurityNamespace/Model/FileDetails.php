@@ -25,6 +25,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the fileName
+    * The name of the file.
     *
     * @return string|null The fileName
     */
@@ -39,6 +40,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the fileName
+    * The name of the file.
     *
     * @param string $val The value of the fileName
     *
@@ -51,6 +53,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the filePath
+    * The file path (location) of the file instance.
     *
     * @return string|null The filePath
     */
@@ -65,6 +68,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the filePath
+    * The file path (location) of the file instance.
     *
     * @param string $val The value of the filePath
     *
@@ -77,6 +81,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the filePublisher
+    * The publisher of the file.
     *
     * @return string|null The filePublisher
     */
@@ -91,6 +96,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the filePublisher
+    * The publisher of the file.
     *
     * @param string $val The value of the filePublisher
     *
@@ -103,6 +109,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the fileSize
+    * The size of the file in bytes.
     *
     * @return int|null The fileSize
     */
@@ -117,6 +124,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the fileSize
+    * The size of the file in bytes.
     *
     * @param int $val The value of the fileSize
     *
@@ -129,6 +137,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the issuer
+    * The certificate authority (CA) that issued the certificate.
     *
     * @return string|null The issuer
     */
@@ -143,6 +152,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the issuer
+    * The certificate authority (CA) that issued the certificate.
     *
     * @param string $val The value of the issuer
     *
@@ -155,6 +165,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the sha1
+    * The Sha1 cryptographic hash of the file content.
     *
     * @return string|null The sha1
     */
@@ -169,6 +180,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sha1
+    * The Sha1 cryptographic hash of the file content.
     *
     * @param string $val The value of the sha1
     *
@@ -181,6 +193,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the sha256
+    * The Sha256 cryptographic hash of the file content.
     *
     * @return string|null The sha256
     */
@@ -195,6 +208,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sha256
+    * The Sha256 cryptographic hash of the file content.
     *
     * @param string $val The value of the sha256
     *
@@ -207,6 +221,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the signer
+    * The signer of the signed file.
     *
     * @return string|null The signer
     */
@@ -221,6 +236,7 @@ class FileDetails extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signer
+    * The signer of the signed file.
     *
     * @param string $val The value of the signer
     *

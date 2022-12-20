@@ -25,6 +25,7 @@ class UrlEvidence extends AlertEvidence
 {
     /**
     * Gets the url
+    * The Unique Resource Locator (URL).
     *
     * @return string|null The url
     */
@@ -39,6 +40,7 @@ class UrlEvidence extends AlertEvidence
 
     /**
     * Sets the url
+    * The Unique Resource Locator (URL).
     *
     * @param string $val The value of the url
     *

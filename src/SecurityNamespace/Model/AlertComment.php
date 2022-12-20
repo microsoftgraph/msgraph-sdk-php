@@ -25,6 +25,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the comment
+    * The comment text.
     *
     * @return string|null The comment
     */
@@ -39,6 +40,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the comment
+    * The comment text.
     *
     * @param string $val The value of the comment
     *
@@ -51,6 +53,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the createdByDisplayName
+    * The person or app name that submitted the comment.
     *
     * @return string|null The createdByDisplayName
     */
@@ -65,6 +68,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdByDisplayName
+    * The person or app name that submitted the comment.
     *
     * @param string $val The value of the createdByDisplayName
     *
@@ -78,6 +82,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
+    * The time when the comment was submitted.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -96,6 +101,7 @@ class AlertComment extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * The time when the comment was submitted.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *

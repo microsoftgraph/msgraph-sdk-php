@@ -26,6 +26,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the actorDisplayName
+    * The adversary or activity group that is associated with this alert.
     *
     * @return string|null The actorDisplayName
     */
@@ -40,6 +41,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the actorDisplayName
+    * The adversary or activity group that is associated with this alert.
     *
     * @param string $val The actorDisplayName
     *
@@ -53,6 +55,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the alertWebUrl
+    * URL for the alert page in the Microsoft 365 Defender portal.
     *
     * @return string|null The alertWebUrl
     */
@@ -67,6 +70,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alertWebUrl
+    * URL for the alert page in the Microsoft 365 Defender portal.
     *
     * @param string $val The alertWebUrl
     *
@@ -80,6 +84,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the assignedTo
+    * Owner of the alert, or null if no owner is assigned.
     *
     * @return string|null The assignedTo
     */
@@ -94,6 +99,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the assignedTo
+    * Owner of the alert, or null if no owner is assigned.
     *
     * @param string $val The assignedTo
     *
@@ -107,6 +113,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the category
+    * The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
     *
     * @return string|null The category
     */
@@ -121,6 +128,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the category
+    * The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&amp;CK framework.
     *
     * @param string $val The category
     *
@@ -134,6 +142,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the classification
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
     *
     * @return AlertClassification|null The classification
     */
@@ -152,6 +161,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the classification
+    * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
     *
     * @param AlertClassification $val The classification
     *
@@ -166,6 +176,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
      /**
      * Gets the comments
+    * Array of comments created by the Security Operations (SecOps) team during the alert management process.
      *
      * @return array|null The comments
      */
@@ -180,6 +191,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the comments
+    * Array of comments created by the Security Operations (SecOps) team during the alert management process.
     *
     * @param AlertComment[] $val The comments
     *
@@ -193,6 +205,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
+    * Time when Microsoft 365 Defender created the alert.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -211,6 +224,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
+    * Time when Microsoft 365 Defender created the alert.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -224,6 +238,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the description
+    * String value describing each alert.
     *
     * @return string|null The description
     */
@@ -238,6 +253,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the description
+    * String value describing each alert.
     *
     * @param string $val The description
     *
@@ -251,6 +267,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the detectionSource
+    * Detection technology or sensor that identified the notable component or activity.
     *
     * @return DetectionSource|null The detectionSource
     */
@@ -269,6 +286,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detectionSource
+    * Detection technology or sensor that identified the notable component or activity.
     *
     * @param DetectionSource $val The detectionSource
     *
@@ -282,6 +300,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the detectorId
+    * The ID of the detector that triggered the alert.
     *
     * @return string|null The detectorId
     */
@@ -296,6 +315,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detectorId
+    * The ID of the detector that triggered the alert.
     *
     * @param string $val The detectorId
     *
@@ -309,6 +329,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the determination
+    * Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
     * @return AlertDetermination|null The determination
     */
@@ -327,6 +348,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the determination
+    * Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
     * @param AlertDetermination $val The determination
     *
@@ -341,6 +363,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
      /**
      * Gets the evidence
+    * Collection of evidence related to the alert.
      *
      * @return array|null The evidence
      */
@@ -355,6 +378,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the evidence
+    * Collection of evidence related to the alert.
     *
     * @param AlertEvidence[] $val The evidence
     *
@@ -368,6 +392,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the firstActivityDateTime
+    * The earliest activity associated with the alert.
     *
     * @return \DateTime|null The firstActivityDateTime
     */
@@ -386,6 +411,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the firstActivityDateTime
+    * The earliest activity associated with the alert.
     *
     * @param \DateTime $val The firstActivityDateTime
     *
@@ -399,6 +425,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the incidentId
+    * Unique identifier to represent the incident this alert resource is associated with.
     *
     * @return string|null The incidentId
     */
@@ -413,6 +440,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the incidentId
+    * Unique identifier to represent the incident this alert resource is associated with.
     *
     * @param string $val The incidentId
     *
@@ -426,6 +454,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the incidentWebUrl
+    * URL for the incident page in the Microsoft 365 Defender portal.
     *
     * @return string|null The incidentWebUrl
     */
@@ -440,6 +469,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the incidentWebUrl
+    * URL for the incident page in the Microsoft 365 Defender portal.
     *
     * @param string $val The incidentWebUrl
     *
@@ -453,6 +483,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastActivityDateTime
+    * The oldest activity associated with the alert.
     *
     * @return \DateTime|null The lastActivityDateTime
     */
@@ -471,6 +502,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastActivityDateTime
+    * The oldest activity associated with the alert.
     *
     * @param \DateTime $val The lastActivityDateTime
     *
@@ -484,6 +516,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the lastUpdateDateTime
+    * Time when the alert was last updated at Microsoft 365 Defender.
     *
     * @return \DateTime|null The lastUpdateDateTime
     */
@@ -502,6 +535,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the lastUpdateDateTime
+    * Time when the alert was last updated at Microsoft 365 Defender.
     *
     * @param \DateTime $val The lastUpdateDateTime
     *
@@ -515,6 +549,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the mitreTechniques
+    * The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
     *
     * @return array|null The mitreTechniques
     */
@@ -529,6 +564,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mitreTechniques
+    * The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
     *
     * @param string[] $val The mitreTechniques
     *
@@ -542,6 +578,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the providerAlertId
+    * The ID of the alert as it appears in the security provider product that generated the alert.
     *
     * @return string|null The providerAlertId
     */
@@ -556,6 +593,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the providerAlertId
+    * The ID of the alert as it appears in the security provider product that generated the alert.
     *
     * @param string $val The providerAlertId
     *
@@ -569,6 +607,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the recommendedActions
+    * Recommended response and remediation actions to take in the event this alert was generated.
     *
     * @return string|null The recommendedActions
     */
@@ -583,6 +622,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the recommendedActions
+    * Recommended response and remediation actions to take in the event this alert was generated.
     *
     * @param string $val The recommendedActions
     *
@@ -596,6 +636,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the resolvedDateTime
+    * Time when the alert was resolved.
     *
     * @return \DateTime|null The resolvedDateTime
     */
@@ -614,6 +655,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the resolvedDateTime
+    * Time when the alert was resolved.
     *
     * @param \DateTime $val The resolvedDateTime
     *
@@ -627,6 +669,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the serviceSource
+    * The service or product that created this alert. Possible values are: microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftCloudAppSecurity, microsoftDefenderForOffice365, microsoft365Defender, aadIdentityProtection, appGovernance, dataLossPrevention.
     *
     * @return ServiceSource|null The serviceSource
     */
@@ -645,6 +688,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the serviceSource
+    * The service or product that created this alert. Possible values are: microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftCloudAppSecurity, microsoftDefenderForOffice365, microsoft365Defender, aadIdentityProtection, appGovernance, dataLossPrevention.
     *
     * @param ServiceSource $val The serviceSource
     *
@@ -658,6 +702,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the severity
+    * Indicates the possible impact on assets. The higher the severity the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @return AlertSeverity|null The severity
     */
@@ -676,6 +721,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the severity
+    * Indicates the possible impact on assets. The higher the severity the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @param AlertSeverity $val The severity
     *
@@ -689,6 +735,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the status
+    * The status of the alert. Possible values are: new, inProgress, resolved, unknownFutureValue.
     *
     * @return AlertStatus|null The status
     */
@@ -707,6 +754,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the status
+    * The status of the alert. Possible values are: new, inProgress, resolved, unknownFutureValue.
     *
     * @param AlertStatus $val The status
     *
@@ -720,6 +768,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantId
+    * The Azure Active Directory tenant the alert was created in.
     *
     * @return string|null The tenantId
     */
@@ -734,6 +783,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantId
+    * The Azure Active Directory tenant the alert was created in.
     *
     * @param string $val The tenantId
     *
@@ -747,6 +797,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the threatDisplayName
+    * The threat associated with this alert.
     *
     * @return string|null The threatDisplayName
     */
@@ -761,6 +812,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the threatDisplayName
+    * The threat associated with this alert.
     *
     * @param string $val The threatDisplayName
     *
@@ -774,6 +826,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the threatFamilyName
+    * Threat family associated with this alert.
     *
     * @return string|null The threatFamilyName
     */
@@ -788,6 +841,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the threatFamilyName
+    * Threat family associated with this alert.
     *
     * @param string $val The threatFamilyName
     *
@@ -801,6 +855,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Gets the title
+    * Brief identifying string value describing the alert.
     *
     * @return string|null The title
     */
@@ -815,6 +870,7 @@ class Alert extends \Microsoft\Graph\Model\Entity
 
     /**
     * Sets the title
+    * Brief identifying string value describing the alert.
     *
     * @param string $val The title
     *

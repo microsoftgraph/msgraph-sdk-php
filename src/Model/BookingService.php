@@ -301,6 +301,7 @@ class BookingService extends Entity
 
     /**
     * Gets the isAnonymousJoinEnabled
+    * True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
     *
     * @return bool|null The isAnonymousJoinEnabled
     */
@@ -315,6 +316,7 @@ class BookingService extends Entity
 
     /**
     * Sets the isAnonymousJoinEnabled
+    * True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
     *
     * @param bool $val The isAnonymousJoinEnabled
     *
@@ -386,6 +388,7 @@ class BookingService extends Entity
 
     /**
     * Gets the languageTag
+    * The language of the self-service booking page.
     *
     * @return string|null The languageTag
     */
@@ -400,6 +403,7 @@ class BookingService extends Entity
 
     /**
     * Sets the languageTag
+    * The language of the self-service booking page.
     *
     * @param string $val The languageTag
     *

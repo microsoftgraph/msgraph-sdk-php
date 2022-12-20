@@ -58,6 +58,7 @@ class Security extends Entity
 
      /**
      * Gets the alertsV2
+    * A collection of alerts in Microsoft 365 Defender.
      *
      * @return array|null The alertsV2
      */
@@ -72,6 +73,7 @@ class Security extends Entity
 
     /**
     * Sets the alertsV2
+    * A collection of alerts in Microsoft 365 Defender.
     *
     * @param \Microsoft\Graph\SecurityNamespace\Model\Alert[] $val The alertsV2
     *
@@ -86,6 +88,7 @@ class Security extends Entity
 
      /**
      * Gets the incidents
+    * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      *
      * @return array|null The incidents
      */
@@ -100,6 +103,7 @@ class Security extends Entity
 
     /**
     * Sets the incidents
+    * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
     *
     * @param \Microsoft\Graph\SecurityNamespace\Model\Incident[] $val The incidents
     *

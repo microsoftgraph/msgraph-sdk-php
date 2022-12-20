@@ -25,6 +25,7 @@ class RegistryValueEvidence extends AlertEvidence
 {
     /**
     * Gets the registryHive
+    * Registry hive of the key that the recorded action was applied to.
     *
     * @return string|null The registryHive
     */
@@ -39,6 +40,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the registryHive
+    * Registry hive of the key that the recorded action was applied to.
     *
     * @param string $val The value of the registryHive
     *
@@ -51,6 +53,7 @@ class RegistryValueEvidence extends AlertEvidence
     }
     /**
     * Gets the registryKey
+    * Registry key that the recorded action was applied to.
     *
     * @return string|null The registryKey
     */
@@ -65,6 +68,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the registryKey
+    * Registry key that the recorded action was applied to.
     *
     * @param string $val The value of the registryKey
     *
@@ -77,6 +81,7 @@ class RegistryValueEvidence extends AlertEvidence
     }
     /**
     * Gets the registryValue
+    * Data of the registry value that the recorded action was applied to.
     *
     * @return string|null The registryValue
     */
@@ -91,6 +96,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the registryValue
+    * Data of the registry value that the recorded action was applied to.
     *
     * @param string $val The value of the registryValue
     *
@@ -103,6 +109,7 @@ class RegistryValueEvidence extends AlertEvidence
     }
     /**
     * Gets the registryValueName
+    * Name of the registry value that the recorded action was applied to.
     *
     * @return string|null The registryValueName
     */
@@ -117,6 +124,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the registryValueName
+    * Name of the registry value that the recorded action was applied to.
     *
     * @param string $val The value of the registryValueName
     *
@@ -129,6 +137,7 @@ class RegistryValueEvidence extends AlertEvidence
     }
     /**
     * Gets the registryValueType
+    * Data type, such as binary or string, of the registry value that the recorded action was applied to.
     *
     * @return string|null The registryValueType
     */
@@ -143,6 +152,7 @@ class RegistryValueEvidence extends AlertEvidence
 
     /**
     * Sets the registryValueType
+    * Data type, such as binary or string, of the registry value that the recorded action was applied to.
     *
     * @param string $val The value of the registryValueType
     *

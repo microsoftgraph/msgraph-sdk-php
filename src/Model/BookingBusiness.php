@@ -234,6 +234,7 @@ class BookingBusiness extends Entity
 
     /**
     * Gets the languageTag
+    * The language of the self-service booking page.
     *
     * @return string|null The languageTag
     */
@@ -248,6 +249,7 @@ class BookingBusiness extends Entity
 
     /**
     * Sets the languageTag
+    * The language of the self-service booking page.
     *
     * @param string $val The languageTag
     *
