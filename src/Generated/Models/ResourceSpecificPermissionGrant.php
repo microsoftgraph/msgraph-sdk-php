@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new ResourceSpecificPermissionGrant and sets the default values.
+     * Instantiates a new resourceSpecificPermissionGrant and sets the default values.
     */
     public function __construct() {
         parent::__construct();

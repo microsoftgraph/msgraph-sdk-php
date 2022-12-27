@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroup;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\Identity;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\Schema;
+use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\CaseOperation;
 use Microsoft\Graph\Generated\Models\Security\CasesRoot;
 use Microsoft\Graph\Generated\Models\Security\DataSet;
@@ -31,6 +32,7 @@ use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTag;
 use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryTagOperation;
 use Microsoft\Graph\Generated\Models\Security\EscapedCase;
+use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Graph\Generated\Models\Security\Search;
 use Microsoft\Graph\Generated\Models\Security\Security;
 use Microsoft\Graph\Generated\Models\Security\SiteSource;
@@ -319,7 +321,6 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload': return new ImportedWindowsAutopilotDeviceIdentityUpload();
                 case '#microsoft.graph.inferenceClassification': return new InferenceClassification();
                 case '#microsoft.graph.inferenceClassificationOverride': return new InferenceClassificationOverride();
-                case '#microsoft.graph.informationProtection': return new InformationProtection();
                 case '#microsoft.graph.internalDomainFederation': return new InternalDomainFederation();
                 case '#microsoft.graph.invitation': return new Invitation();
                 case '#microsoft.graph.inviteParticipantsOperation': return new InviteParticipantsOperation();
@@ -486,6 +487,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
                 case '#microsoft.graph.richLongRunningOperation': return new RichLongRunningOperation();
                 case '#microsoft.graph.riskDetection': return new RiskDetection();
+                case '#microsoft.graph.riskyServicePrincipal': return new RiskyServicePrincipal();
+                case '#microsoft.graph.riskyServicePrincipalHistoryItem': return new RiskyServicePrincipalHistoryItem();
                 case '#microsoft.graph.riskyUser': return new RiskyUser();
                 case '#microsoft.graph.riskyUserHistoryItem': return new RiskyUserHistoryItem();
                 case '#microsoft.graph.roleAssignment': return new RoleAssignment();
@@ -504,6 +507,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.secureScore': return new SecureScore();
                 case '#microsoft.graph.secureScoreControlProfile': return new SecureScoreControlProfile();
                 case '#microsoft.graph.security': return new Security();
+                case '#microsoft.graph.security.alert': return new Alert();
                 case '#microsoft.graph.security.case': return new EscapedCase();
                 case '#microsoft.graph.security.caseOperation': return new CaseOperation();
                 case '#microsoft.graph.security.casesRoot': return new CasesRoot();
@@ -524,6 +528,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.ediscoveryReviewTag': return new EdiscoveryReviewTag();
                 case '#microsoft.graph.security.ediscoverySearch': return new EdiscoverySearch();
                 case '#microsoft.graph.security.ediscoveryTagOperation': return new EdiscoveryTagOperation();
+                case '#microsoft.graph.security.incident': return new Incident();
                 case '#microsoft.graph.security.search': return new Search();
                 case '#microsoft.graph.security.siteSource': return new SiteSource();
                 case '#microsoft.graph.security.tag': return new Tag();
@@ -536,6 +541,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.serviceHealth': return new ServiceHealth();
                 case '#microsoft.graph.serviceHealthIssue': return new ServiceHealthIssue();
                 case '#microsoft.graph.servicePrincipal': return new ServicePrincipal();
+                case '#microsoft.graph.servicePrincipalRiskDetection': return new ServicePrincipalRiskDetection();
                 case '#microsoft.graph.serviceUpdateMessage': return new ServiceUpdateMessage();
                 case '#microsoft.graph.settingStateDeviceSummary': return new SettingStateDeviceSummary();
                 case '#microsoft.graph.sharedDriveItem': return new SharedDriveItem();

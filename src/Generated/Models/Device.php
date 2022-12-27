@@ -59,7 +59,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return string|null
     */
     public function getDeviceId(): ?string {
@@ -317,7 +317,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      *  @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {

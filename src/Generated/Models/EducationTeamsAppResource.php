@@ -26,7 +26,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the appIconWebUrl property value. The appIconWebUrl property
+     * Gets the appIconWebUrl property value. URL that points to the icon of the app.
      * @return string|null
     */
     public function getAppIconWebUrl(): ?string {
@@ -34,7 +34,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. Teams app ID of the application.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -56,7 +56,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
+     * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      * @return string|null
     */
     public function getTeamsEmbeddedContentUrl(): ?string {
@@ -64,7 +64,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -84,7 +84,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the appIconWebUrl property value. The appIconWebUrl property
+     * Sets the appIconWebUrl property value. URL that points to the icon of the app.
      *  @param string|null $value Value to set for the appIconWebUrl property.
     */
     public function setAppIconWebUrl(?string $value): void {
@@ -92,7 +92,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. Teams app ID of the application.
      *  @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -100,7 +100,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the teamsEmbeddedContentUrl property value. The teamsEmbeddedContentUrl property
+     * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      *  @param string|null $value Value to set for the teamsEmbeddedContentUrl property.
     */
     public function setTeamsEmbeddedContentUrl(?string $value): void {
@@ -108,7 +108,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
      *  @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

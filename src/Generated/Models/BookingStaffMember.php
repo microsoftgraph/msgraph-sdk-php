@@ -68,7 +68,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @return bool|null
     */
     public function getIsEmailNotificationEnabled(): ?bool {
@@ -148,7 +148,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the isEmailNotificationEnabled property value. The isEmailNotificationEnabled property
+     * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      *  @param bool|null $value Value to set for the isEmailNotificationEnabled property.
     */
     public function setIsEmailNotificationEnabled(?bool $value): void {

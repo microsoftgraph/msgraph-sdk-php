@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OrgContact extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new orgContact and sets the default values.
+     * Instantiates a new OrgContact and sets the default values.
     */
     public function __construct() {
         parent::__construct();

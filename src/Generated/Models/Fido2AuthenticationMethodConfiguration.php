@@ -40,7 +40,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
@@ -84,7 +84,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {

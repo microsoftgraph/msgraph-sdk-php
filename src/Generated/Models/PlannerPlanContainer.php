@@ -51,7 +51,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the containerId property value. The identifier of the resource that contains the plan.
+     * Gets the containerId property value. The identifier of the resource that contains the plan. Optional.
      * @return string|null
     */
     public function getContainerId(): ?string {
@@ -81,7 +81,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      * @return PlannerContainerType|null
     */
     public function getType(): ?PlannerContainerType {
@@ -89,7 +89,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the url property value. The full canonical URL of the container.
+     * Gets the url property value. The full canonical URL of the container. Optional.
      * @return string|null
     */
     public function getUrl(): ?string {
@@ -125,7 +125,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the containerId property value. The identifier of the resource that contains the plan.
+     * Sets the containerId property value. The identifier of the resource that contains the plan. Optional.
      *  @param string|null $value Value to set for the containerId property.
     */
     public function setContainerId(?string $value): void {
@@ -141,7 +141,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. Optional.
      *  @param PlannerContainerType|null $value Value to set for the type property.
     */
     public function setType(?PlannerContainerType $value): void {
@@ -149,7 +149,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the url property value. The full canonical URL of the container.
+     * Sets the url property value. The full canonical URL of the container. Optional.
      *  @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {
