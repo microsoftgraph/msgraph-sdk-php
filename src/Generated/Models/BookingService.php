@@ -129,7 +129,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * Gets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
      * @return bool|null
     */
     public function getIsAnonymousJoinEnabled(): ?bool {
@@ -153,7 +153,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The language of the self-service booking page.
      * @return string|null
     */
     public function getLanguageTag(): ?string {
@@ -325,7 +325,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAnonymousJoinEnabled property value. The isAnonymousJoinEnabled property
+     * Sets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
      *  @param bool|null $value Value to set for the isAnonymousJoinEnabled property.
     */
     public function setIsAnonymousJoinEnabled(?bool $value): void {
@@ -349,7 +349,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The language of the self-service booking page.
      *  @param string|null $value Value to set for the languageTag property.
     */
     public function setLanguageTag(?string $value): void {

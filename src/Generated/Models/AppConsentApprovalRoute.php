@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppConsentApprovalRoute extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new appConsentApprovalRoute and sets the default values.
+     * Instantiates a new AppConsentApprovalRoute and sets the default values.
     */
     public function __construct() {
         parent::__construct();

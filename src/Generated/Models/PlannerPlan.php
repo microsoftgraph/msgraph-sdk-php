@@ -34,7 +34,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Gets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
      * @return PlannerPlanContainer|null
     */
     public function getContainer(): ?PlannerPlanContainer {
@@ -132,7 +132,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Sets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
      *  @param PlannerPlanContainer|null $value Value to set for the container property.
     */
     public function setContainer(?PlannerPlanContainer $value): void {

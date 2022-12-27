@@ -59,7 +59,9 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'riskDetections' => fn(ParseNode $n) => $o->setRiskDetections($n->getCollectionOfObjectValues([RiskDetection::class, 'createFromDiscriminatorValue'])),
+            'riskyServicePrincipals' => fn(ParseNode $n) => $o->setRiskyServicePrincipals($n->getCollectionOfObjectValues([RiskyServicePrincipal::class, 'createFromDiscriminatorValue'])),
             'riskyUsers' => fn(ParseNode $n) => $o->setRiskyUsers($n->getCollectionOfObjectValues([RiskyUser::class, 'createFromDiscriminatorValue'])),
+            'servicePrincipalRiskDetections' => fn(ParseNode $n) => $o->setServicePrincipalRiskDetections($n->getCollectionOfObjectValues([ServicePrincipalRiskDetection::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -80,11 +82,27 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
+     * Gets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * @return array<RiskyServicePrincipal>|null
+    */
+    public function getRiskyServicePrincipals(): ?array {
+        return $this->getBackingStore()->get('riskyServicePrincipals');
+    }
+
+    /**
      * Gets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
      * @return array<RiskyUser>|null
     */
     public function getRiskyUsers(): ?array {
         return $this->getBackingStore()->get('riskyUsers');
+    }
+
+    /**
+     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * @return array<ServicePrincipalRiskDetection>|null
+    */
+    public function getServicePrincipalRiskDetections(): ?array {
+        return $this->getBackingStore()->get('servicePrincipalRiskDetections');
     }
 
     /**
@@ -94,7 +112,9 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('riskDetections', $this->getRiskDetections());
+        $writer->writeCollectionOfObjectValues('riskyServicePrincipals', $this->getRiskyServicePrincipals());
         $writer->writeCollectionOfObjectValues('riskyUsers', $this->getRiskyUsers());
+        $writer->writeCollectionOfObjectValues('servicePrincipalRiskDetections', $this->getServicePrincipalRiskDetections());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -131,11 +151,27 @@ class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
+     * Sets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     *  @param array<RiskyServicePrincipal>|null $value Value to set for the riskyServicePrincipals property.
+    */
+    public function setRiskyServicePrincipals(?array $value): void {
+        $this->getBackingStore()->set('riskyServicePrincipals', $value);
+    }
+
+    /**
      * Sets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
      *  @param array<RiskyUser>|null $value Value to set for the riskyUsers property.
     */
     public function setRiskyUsers(?array $value): void {
         $this->getBackingStore()->set('riskyUsers', $value);
+    }
+
+    /**
+     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     *  @param array<ServicePrincipalRiskDetection>|null $value Value to set for the servicePrincipalRiskDetections property.
+    */
+    public function setServicePrincipalRiskDetections(?array $value): void {
+        $this->getBackingStore()->set('servicePrincipalRiskDetections', $value);
     }
 
 }

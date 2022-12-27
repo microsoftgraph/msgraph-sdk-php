@@ -7,10 +7,13 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Security;
+use Microsoft\Graph\Generated\Security\Alerts_v2\Alerts_v2RequestBuilder;
 use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
+use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
+use Microsoft\Graph\Generated\Security\RunHuntingQuery\RunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
@@ -18,7 +21,10 @@ use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class SecurityRequestBuilder 
 {
@@ -27,6 +33,13 @@ class SecurityRequestBuilder
     */
     public function alerts(): AlertsRequestBuilder {
         return new AlertsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
+    */
+    public function alerts_v2(): Alerts_v2RequestBuilder {
+        return new Alerts_v2RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,6 +57,13 @@ class SecurityRequestBuilder
     }
     
     /**
+     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+    */
+    public function incidents(): IncidentsRequestBuilder {
+        return new IncidentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -52,6 +72,13 @@ class SecurityRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the runHuntingQuery method.
+    */
+    public function runHuntingQuery(): RunHuntingQueryRequestBuilder {
+        return new RunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
@@ -73,14 +100,25 @@ class SecurityRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
+     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
      * @param string $id Unique identifier of the item
-     * @return AlertItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder
     */
-    public function alertsById(string $id): AlertItemRequestBuilder {
+    public function alerts_v2ById(string $id): \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['alert%2Did'] = $id;
-        return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
+     * @param string $id Unique identifier of the item
+     * @return \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder
+    */
+    public function alertsById(string $id): \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['alert%2Did'] = $id;
+        return new \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -160,6 +198,17 @@ class SecurityRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+     * @param string $id Unique identifier of the item
+     * @return IncidentItemRequestBuilder
+    */
+    public function incidentsById(string $id): IncidentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['incident%2Did'] = $id;
+        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

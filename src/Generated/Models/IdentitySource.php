@@ -36,6 +36,7 @@ class IdentitySource implements AdditionalDataHolder, BackedModel, Parsable
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
                 case '#microsoft.graph.azureActiveDirectoryTenant': return new AzureActiveDirectoryTenant();
+                case '#microsoft.graph.crossCloudAzureActiveDirectoryTenant': return new CrossCloudAzureActiveDirectoryTenant();
                 case '#microsoft.graph.domainIdentitySource': return new DomainIdentitySource();
                 case '#microsoft.graph.externalDomainFederation': return new ExternalDomainFederation();
             }

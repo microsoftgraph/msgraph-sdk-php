@@ -34,7 +34,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * Gets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
      * @return string|null
     */
     public function getAnonymousJoinWebUrl(): ?string {
@@ -42,7 +42,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customers property value. It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Gets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return array<BookingCustomerInformationBase>|null
     */
     public function getCustomers(): ?array {
@@ -290,7 +290,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the anonymousJoinWebUrl property value. The anonymousJoinWebUrl property
+     * Sets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
      *  @param string|null $value Value to set for the anonymousJoinWebUrl property.
     */
     public function setAnonymousJoinWebUrl(?string $value): void {
@@ -298,7 +298,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customers property value. It lists down the customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
+     * Sets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      *  @param array<BookingCustomerInformationBase>|null $value Value to set for the customers property.
     */
     public function setCustomers(?array $value): void {

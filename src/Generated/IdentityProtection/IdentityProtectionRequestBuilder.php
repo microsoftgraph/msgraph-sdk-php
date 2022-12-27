@@ -7,14 +7,21 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item\RiskDetectionItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Item\RiskyServicePrincipalItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\RiskyServicePrincipalsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetections\Item\ServicePrincipalRiskDetectionItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetections\ServicePrincipalRiskDetectionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProtectionRoot;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 class IdentityProtectionRequestBuilder 
 {
@@ -36,10 +43,24 @@ class IdentityProtectionRequestBuilder
     }
     
     /**
+     * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
+    */
+    public function riskyServicePrincipals(): RiskyServicePrincipalsRequestBuilder {
+        return new RiskyServicePrincipalsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
     */
     public function riskyUsers(): RiskyUsersRequestBuilder {
         return new RiskyUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
+    */
+    public function servicePrincipalRiskDetections(): ServicePrincipalRiskDetectionsRequestBuilder {
+        return new ServicePrincipalRiskDetectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -158,6 +179,17 @@ class IdentityProtectionRequestBuilder
     }
 
     /**
+     * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.
+     * @param string $id Unique identifier of the item
+     * @return RiskyServicePrincipalItemRequestBuilder
+    */
+    public function riskyServicePrincipalsById(string $id): RiskyServicePrincipalItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['riskyServicePrincipal%2Did'] = $id;
+        return new RiskyServicePrincipalItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
      * @param string $id Unique identifier of the item
      * @return RiskyUserItemRequestBuilder
@@ -166,6 +198,17 @@ class IdentityProtectionRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyUser%2Did'] = $id;
         return new RiskyUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
+     * @param string $id Unique identifier of the item
+     * @return ServicePrincipalRiskDetectionItemRequestBuilder
+    */
+    public function servicePrincipalRiskDetectionsById(string $id): ServicePrincipalRiskDetectionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['servicePrincipalRiskDetection%2Did'] = $id;
+        return new ServicePrincipalRiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

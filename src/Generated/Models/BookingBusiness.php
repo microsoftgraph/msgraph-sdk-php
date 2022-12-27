@@ -141,7 +141,7 @@ class BookingBusiness extends Entity implements Parsable
     }
 
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The language of the self-service booking page.
      * @return string|null
     */
     public function getLanguageTag(): ?string {
@@ -309,7 +309,7 @@ class BookingBusiness extends Entity implements Parsable
     }
 
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The language of the self-service booking page.
      *  @param string|null $value Value to set for the languageTag property.
     */
     public function setLanguageTag(?string $value): void {

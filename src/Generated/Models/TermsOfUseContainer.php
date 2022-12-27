@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsOfUseContainer extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new termsOfUseContainer and sets the default values.
+     * Instantiates a new TermsOfUseContainer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
