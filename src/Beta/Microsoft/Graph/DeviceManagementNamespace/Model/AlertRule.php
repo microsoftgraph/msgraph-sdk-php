@@ -146,7 +146,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSystemRule
-    * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only
+    * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
     *
     * @return bool|null The isSystemRule
     */
@@ -161,7 +161,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSystemRule
-    * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only
+    * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
     *
     * @param bool $val The isSystemRule
     *
@@ -176,6 +176,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the notificationChannels
+    * The notification channels of the rule selected by the user.
      *
      * @return array|null The notificationChannels
      */
@@ -190,6 +191,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the notificationChannels
+    * The notification channels of the rule selected by the user.
     *
     * @param NotificationChannel[] $val The notificationChannels
     *
@@ -203,6 +205,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the severity
+    * The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
     *
     * @return RuleSeverityType|null The severity
     */
@@ -221,6 +224,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the severity
+    * The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
     *
     * @param RuleSeverityType $val The severity
     *
@@ -234,6 +238,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the threshold
+    * The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
     *
     * @return RuleThreshold|null The threshold
     */
@@ -252,6 +257,7 @@ class AlertRule extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the threshold
+    * The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
     *
     * @param RuleThreshold $val The threshold
     *

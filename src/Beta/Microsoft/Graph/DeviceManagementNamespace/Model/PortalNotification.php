@@ -203,7 +203,7 @@ class PortalNotification extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the isPortalNotificationSent
-    * If true, the portal notification has already been sent for the user; otherwise, the portal notification hasn't been sent yet.
+    * true if the portal notification has already been sent to the user; false otherwise.
     *
     * @return bool|null The isPortalNotificationSent
     */
@@ -218,7 +218,7 @@ class PortalNotification extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isPortalNotificationSent
-    * If true, the portal notification has already been sent for the user; otherwise, the portal notification hasn't been sent yet.
+    * true if the portal notification has already been sent to the user; false otherwise.
     *
     * @param bool $val The value of the isPortalNotificationSent
     *
