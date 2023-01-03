@@ -44,7 +44,7 @@ class SetUpFeedbackResourcesFolderRequestBuilder
     }
 
     /**
-     * Create a SharePoint folder to upload feedback files for a given educationSubmission. The teacher determines the resources to upload in the feedback resources folder of a submission.
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -66,7 +66,7 @@ class SetUpFeedbackResourcesFolderRequestBuilder
     }
 
     /**
-     * Create a SharePoint folder to upload feedback files for a given educationSubmission. The teacher determines the resources to upload in the feedback resources folder of a submission.
+     * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
      * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise

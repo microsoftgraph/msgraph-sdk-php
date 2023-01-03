@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthoredNote extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authoredNote and sets the default values.
+     * Instantiates a new AuthoredNote and sets the default values.
     */
     public function __construct() {
         parent::__construct();
