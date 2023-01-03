@@ -243,9 +243,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return OfferShiftRequestItemRequestBuilder
+     * @return OfferShiftRequestItemRequestBuilder|null
     */
-    public function offerShiftRequestsById(string $id): OfferShiftRequestItemRequestBuilder {
+    public function offerShiftRequestsById(string $id): ?OfferShiftRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['offerShiftRequest%2Did'] = $id;
         return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -254,9 +254,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return OpenShiftChangeRequestItemRequestBuilder
+     * @return OpenShiftChangeRequestItemRequestBuilder|null
     */
-    public function openShiftChangeRequestsById(string $id): OpenShiftChangeRequestItemRequestBuilder {
+    public function openShiftChangeRequestsById(string $id): ?OpenShiftChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShiftChangeRequest%2Did'] = $id;
         return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -265,9 +265,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return OpenShiftItemRequestBuilder
+     * @return OpenShiftItemRequestBuilder|null
     */
-    public function openShiftsById(string $id): OpenShiftItemRequestBuilder {
+    public function openShiftsById(string $id): ?OpenShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShift%2Did'] = $id;
         return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -296,9 +296,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return SchedulingGroupItemRequestBuilder
+     * @return SchedulingGroupItemRequestBuilder|null
     */
-    public function schedulingGroupsById(string $id): SchedulingGroupItemRequestBuilder {
+    public function schedulingGroupsById(string $id): ?SchedulingGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['schedulingGroup%2Did'] = $id;
         return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -307,9 +307,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return ShiftItemRequestBuilder
+     * @return ShiftItemRequestBuilder|null
     */
-    public function shiftsById(string $id): ShiftItemRequestBuilder {
+    public function shiftsById(string $id): ?ShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['shift%2Did'] = $id;
         return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -318,9 +318,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return SwapShiftsChangeRequestItemRequestBuilder
+     * @return SwapShiftsChangeRequestItemRequestBuilder|null
     */
-    public function swapShiftsChangeRequestsById(string $id): SwapShiftsChangeRequestItemRequestBuilder {
+    public function swapShiftsChangeRequestsById(string $id): ?SwapShiftsChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['swapShiftsChangeRequest%2Did'] = $id;
         return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -329,9 +329,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return TimeOffReasonItemRequestBuilder
+     * @return TimeOffReasonItemRequestBuilder|null
     */
-    public function timeOffReasonsById(string $id): TimeOffReasonItemRequestBuilder {
+    public function timeOffReasonsById(string $id): ?TimeOffReasonItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffReason%2Did'] = $id;
         return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -340,9 +340,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return TimeOffRequestItemRequestBuilder
+     * @return TimeOffRequestItemRequestBuilder|null
     */
-    public function timeOffRequestsById(string $id): TimeOffRequestItemRequestBuilder {
+    public function timeOffRequestsById(string $id): ?TimeOffRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffRequest%2Did'] = $id;
         return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -351,9 +351,9 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
      * @param string $id Unique identifier of the item
-     * @return TimeOffItemRequestBuilder
+     * @return TimeOffItemRequestBuilder|null
     */
-    public function timesOffById(string $id): TimeOffItemRequestBuilder {
+    public function timesOffById(string $id): ?TimeOffItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOff%2Did'] = $id;
         return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter);

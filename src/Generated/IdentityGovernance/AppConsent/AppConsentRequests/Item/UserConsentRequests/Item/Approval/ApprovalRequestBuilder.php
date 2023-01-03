@@ -183,9 +183,9 @@ class ApprovalRequestBuilder
     /**
      * Provides operations to manage the stages property of the microsoft.graph.approval entity.
      * @param string $id Unique identifier of the item
-     * @return ApprovalStageItemRequestBuilder
+     * @return ApprovalStageItemRequestBuilder|null
     */
-    public function stagesById(string $id): ApprovalStageItemRequestBuilder {
+    public function stagesById(string $id): ?ApprovalStageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['approvalStage%2Did'] = $id;
         return new ApprovalStageItemRequestBuilder($urlTplParams, $this->requestAdapter);

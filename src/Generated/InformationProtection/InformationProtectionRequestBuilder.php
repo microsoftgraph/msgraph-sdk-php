@@ -151,9 +151,9 @@ class InformationProtectionRequestBuilder
     /**
      * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
      * @param string $id Unique identifier of the item
-     * @return ThreatAssessmentRequestItemRequestBuilder
+     * @return ThreatAssessmentRequestItemRequestBuilder|null
     */
-    public function threatAssessmentRequestsById(string $id): ThreatAssessmentRequestItemRequestBuilder {
+    public function threatAssessmentRequestsById(string $id): ?ThreatAssessmentRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['threatAssessmentRequest%2Did'] = $id;
         return new ThreatAssessmentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -44,9 +44,9 @@ class FeatureRolloutPolicyItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function appliesToById(string $id): DirectoryObjectItemRequestBuilder {
+    public function appliesToById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);

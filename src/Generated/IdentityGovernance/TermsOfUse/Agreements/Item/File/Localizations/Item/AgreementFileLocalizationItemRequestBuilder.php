@@ -183,9 +183,9 @@ class AgreementFileLocalizationItemRequestBuilder
     /**
      * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementFileVersionItemRequestBuilder
+     * @return AgreementFileVersionItemRequestBuilder|null
     */
-    public function versionsById(string $id): AgreementFileVersionItemRequestBuilder {
+    public function versionsById(string $id): ?AgreementFileVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementFileVersion%2Did'] = $id;
         return new AgreementFileVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);

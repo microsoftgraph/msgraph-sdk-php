@@ -79,9 +79,9 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
-     * @return CallRecordItemRequestBuilder
+     * @return CallRecordItemRequestBuilder|null
     */
-    public function callRecordsById(string $id): CallRecordItemRequestBuilder {
+    public function callRecordsById(string $id): ?CallRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['callRecord%2Did'] = $id;
         return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -90,9 +90,9 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
-     * @return CallItemRequestBuilder
+     * @return CallItemRequestBuilder|null
     */
-    public function callsById(string $id): CallItemRequestBuilder {
+    public function callsById(string $id): ?CallItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['call%2Did'] = $id;
         return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -180,9 +180,9 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
-     * @return OnlineMeetingItemRequestBuilder
+     * @return OnlineMeetingItemRequestBuilder|null
     */
-    public function onlineMeetingsById(string $id): OnlineMeetingItemRequestBuilder {
+    public function onlineMeetingsById(string $id): ?OnlineMeetingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onlineMeeting%2Did'] = $id;
         return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
      * @param string $id Unique identifier of the item
-     * @return PresenceItemRequestBuilder
+     * @return PresenceItemRequestBuilder|null
     */
-    public function presencesById(string $id): PresenceItemRequestBuilder {
+    public function presencesById(string $id): ?PresenceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['presence%2Did'] = $id;
         return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter);

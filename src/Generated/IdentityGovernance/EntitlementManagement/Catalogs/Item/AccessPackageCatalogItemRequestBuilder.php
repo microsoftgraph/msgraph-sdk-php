@@ -44,9 +44,9 @@ class AccessPackageCatalogItemRequestBuilder
     /**
      * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
      * @param string $id Unique identifier of the item
-     * @return AccessPackageItemRequestBuilder
+     * @return AccessPackageItemRequestBuilder|null
     */
-    public function accessPackagesById(string $id): AccessPackageItemRequestBuilder {
+    public function accessPackagesById(string $id): ?AccessPackageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessPackage%2Did'] = $id;
         return new AccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);

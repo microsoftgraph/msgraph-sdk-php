@@ -92,9 +92,9 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to manage the additionalSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder|null
     */
-    public function additionalSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder {
+    public function additionalSourcesById(string $id): ?\Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -184,9 +184,9 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to manage the custodianSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder|null
     */
-    public function custodianSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder {
+    public function custodianSourcesById(string $id): ?\Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -233,9 +233,9 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
      * @param string $id Unique identifier of the item
-     * @return EdiscoveryNoncustodialDataSourceItemRequestBuilder
+     * @return EdiscoveryNoncustodialDataSourceItemRequestBuilder|null
     */
-    public function noncustodialSourcesById(string $id): EdiscoveryNoncustodialDataSourceItemRequestBuilder {
+    public function noncustodialSourcesById(string $id): ?EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryNoncustodialDataSource%2Did'] = $id;
         return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);

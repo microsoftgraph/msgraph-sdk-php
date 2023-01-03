@@ -193,9 +193,9 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function domainNameReferencesById(string $id): DirectoryObjectItemRequestBuilder {
+    public function domainNameReferencesById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -204,9 +204,9 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return InternalDomainFederationItemRequestBuilder
+     * @return InternalDomainFederationItemRequestBuilder|null
     */
-    public function federationConfigurationById(string $id): InternalDomainFederationItemRequestBuilder {
+    public function federationConfigurationById(string $id): ?InternalDomainFederationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['internalDomainFederation%2Did'] = $id;
         return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -254,9 +254,9 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder|null
     */
-    public function serviceConfigurationRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder {
+    public function serviceConfigurationRecordsById(string $id): ?\Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -265,9 +265,9 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder|null
     */
-    public function verificationDnsRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder {
+    public function verificationDnsRecordsById(string $id): ?\Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);

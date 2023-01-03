@@ -190,9 +190,9 @@ class B2xIdentityUserFlowItemRequestBuilder
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityProviderItemRequestBuilder
+     * @return IdentityProviderItemRequestBuilder|null
     */
-    public function identityProvidersById(string $id): IdentityProviderItemRequestBuilder {
+    public function identityProvidersById(string $id): ?IdentityProviderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProvider%2Did'] = $id;
         return new IdentityProviderItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -201,9 +201,9 @@ class B2xIdentityUserFlowItemRequestBuilder
     /**
      * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
-     * @return UserFlowLanguageConfigurationItemRequestBuilder
+     * @return UserFlowLanguageConfigurationItemRequestBuilder|null
     */
-    public function languagesById(string $id): UserFlowLanguageConfigurationItemRequestBuilder {
+    public function languagesById(string $id): ?UserFlowLanguageConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguageConfiguration%2Did'] = $id;
         return new UserFlowLanguageConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -232,9 +232,9 @@ class B2xIdentityUserFlowItemRequestBuilder
     /**
      * Provides operations to manage the userAttributeAssignments property of the microsoft.graph.b2xIdentityUserFlow entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityUserFlowAttributeAssignmentItemRequestBuilder
+     * @return IdentityUserFlowAttributeAssignmentItemRequestBuilder|null
     */
-    public function userAttributeAssignmentsById(string $id): IdentityUserFlowAttributeAssignmentItemRequestBuilder {
+    public function userAttributeAssignmentsById(string $id): ?IdentityUserFlowAttributeAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityUserFlowAttributeAssignment%2Did'] = $id;
         return new IdentityUserFlowAttributeAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -243,9 +243,9 @@ class B2xIdentityUserFlowItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.identity.b2xUserFlows.item.userFlowIdentityProviders.item collection
      * @param string $id Unique identifier of the item
-     * @return IdentityProviderBaseItemRequestBuilder
+     * @return IdentityProviderBaseItemRequestBuilder|null
     */
-    public function userFlowIdentityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
+    public function userFlowIdentityProvidersById(string $id): ?IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
         return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);

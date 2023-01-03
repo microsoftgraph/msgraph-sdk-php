@@ -102,9 +102,9 @@ class OutlookRequestBuilder
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
      * @param string $id Unique identifier of the item
-     * @return OutlookCategoryItemRequestBuilder
+     * @return OutlookCategoryItemRequestBuilder|null
     */
-    public function masterCategoriesById(string $id): OutlookCategoryItemRequestBuilder {
+    public function masterCategoriesById(string $id): ?OutlookCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['outlookCategory%2Did'] = $id;
         return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -212,9 +212,9 @@ class DirectoryRoleItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item.members.item collection
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function membersById(string $id): DirectoryObjectItemRequestBuilder {
+    public function membersById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -243,9 +243,9 @@ class DirectoryRoleItemRequestBuilder
     /**
      * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
      * @param string $id Unique identifier of the item
-     * @return ScopedRoleMembershipItemRequestBuilder
+     * @return ScopedRoleMembershipItemRequestBuilder|null
     */
-    public function scopedMembersById(string $id): ScopedRoleMembershipItemRequestBuilder {
+    public function scopedMembersById(string $id): ?ScopedRoleMembershipItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['scopedRoleMembership%2Did'] = $id;
         return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);

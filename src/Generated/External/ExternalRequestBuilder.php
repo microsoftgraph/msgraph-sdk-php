@@ -44,9 +44,9 @@ class ExternalRequestBuilder
     /**
      * Provides operations to manage the connections property of the microsoft.graph.externalConnectors.external entity.
      * @param string $id Unique identifier of the item
-     * @return ExternalConnectionItemRequestBuilder
+     * @return ExternalConnectionItemRequestBuilder|null
     */
-    public function connectionsById(string $id): ExternalConnectionItemRequestBuilder {
+    public function connectionsById(string $id): ?ExternalConnectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalConnection%2Did'] = $id;
         return new ExternalConnectionItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -183,9 +183,9 @@ class CallRecordItemRequestBuilder
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
      * @param string $id Unique identifier of the item
-     * @return SessionItemRequestBuilder
+     * @return SessionItemRequestBuilder|null
     */
-    public function sessionsById(string $id): SessionItemRequestBuilder {
+    public function sessionsById(string $id): ?SessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['session%2Did'] = $id;
         return new SessionItemRequestBuilder($urlTplParams, $this->requestAdapter);

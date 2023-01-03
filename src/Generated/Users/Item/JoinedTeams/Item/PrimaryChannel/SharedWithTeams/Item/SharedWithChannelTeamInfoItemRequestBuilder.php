@@ -44,9 +44,9 @@ class SharedWithChannelTeamInfoItemRequestBuilder
     /**
      * Provides operations to manage the allowedMembers property of the microsoft.graph.sharedWithChannelTeamInfo entity.
      * @param string $id Unique identifier of the item
-     * @return ConversationMemberItemRequestBuilder
+     * @return ConversationMemberItemRequestBuilder|null
     */
-    public function allowedMembersById(string $id): ConversationMemberItemRequestBuilder {
+    public function allowedMembersById(string $id): ?ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
         return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);

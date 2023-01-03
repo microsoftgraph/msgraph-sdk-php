@@ -162,9 +162,9 @@ class AdministrativeUnitItemRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -192,9 +192,9 @@ class AdministrativeUnitItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.directory.administrativeUnits.item.members.item collection
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function membersById(string $id): DirectoryObjectItemRequestBuilder {
+    public function membersById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -223,9 +223,9 @@ class AdministrativeUnitItemRequestBuilder
     /**
      * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
      * @param string $id Unique identifier of the item
-     * @return ScopedRoleMembershipItemRequestBuilder
+     * @return ScopedRoleMembershipItemRequestBuilder|null
     */
-    public function scopedRoleMembersById(string $id): ScopedRoleMembershipItemRequestBuilder {
+    public function scopedRoleMembersById(string $id): ?ScopedRoleMembershipItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['scopedRoleMembership%2Did'] = $id;
         return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);

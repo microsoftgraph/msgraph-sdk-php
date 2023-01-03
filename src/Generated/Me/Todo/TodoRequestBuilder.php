@@ -163,9 +163,9 @@ class TodoRequestBuilder
     /**
      * Provides operations to manage the lists property of the microsoft.graph.todo entity.
      * @param string $id Unique identifier of the item
-     * @return TodoTaskListItemRequestBuilder
+     * @return TodoTaskListItemRequestBuilder|null
     */
-    public function listsById(string $id): TodoTaskListItemRequestBuilder {
+    public function listsById(string $id): ?TodoTaskListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['todoTaskList%2Did'] = $id;
         return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter);

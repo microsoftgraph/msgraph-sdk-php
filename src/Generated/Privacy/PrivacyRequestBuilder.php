@@ -143,9 +143,9 @@ class PrivacyRequestBuilder
     /**
      * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
      * @param string $id Unique identifier of the item
-     * @return SubjectRightsRequestItemRequestBuilder
+     * @return SubjectRightsRequestItemRequestBuilder|null
     */
-    public function subjectRightsRequestsById(string $id): SubjectRightsRequestItemRequestBuilder {
+    public function subjectRightsRequestsById(string $id): ?SubjectRightsRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subjectRightsRequest%2Did'] = $id;
         return new SubjectRightsRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -183,9 +183,9 @@ class SessionItemRequestBuilder
     /**
      * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
      * @param string $id Unique identifier of the item
-     * @return SegmentItemRequestBuilder
+     * @return SegmentItemRequestBuilder|null
     */
-    public function segmentsById(string $id): SegmentItemRequestBuilder {
+    public function segmentsById(string $id): ?SegmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['segment%2Did'] = $id;
         return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter);

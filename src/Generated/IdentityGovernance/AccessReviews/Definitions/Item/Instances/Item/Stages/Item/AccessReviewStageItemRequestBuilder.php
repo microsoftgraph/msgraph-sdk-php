@@ -133,9 +133,9 @@ class AccessReviewStageItemRequestBuilder
     /**
      * Provides operations to manage the decisions property of the microsoft.graph.accessReviewStage entity.
      * @param string $id Unique identifier of the item
-     * @return AccessReviewInstanceDecisionItemItemRequestBuilder
+     * @return AccessReviewInstanceDecisionItemItemRequestBuilder|null
     */
-    public function decisionsById(string $id): AccessReviewInstanceDecisionItemItemRequestBuilder {
+    public function decisionsById(string $id): ?AccessReviewInstanceDecisionItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstanceDecisionItem%2Did'] = $id;
         return new AccessReviewInstanceDecisionItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

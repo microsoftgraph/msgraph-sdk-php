@@ -191,9 +191,9 @@ class EdiscoveryReviewSetItemRequestBuilder
     /**
      * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
      * @param string $id Unique identifier of the item
-     * @return EdiscoveryReviewSetQueryItemRequestBuilder
+     * @return EdiscoveryReviewSetQueryItemRequestBuilder|null
     */
-    public function queriesById(string $id): EdiscoveryReviewSetQueryItemRequestBuilder {
+    public function queriesById(string $id): ?EdiscoveryReviewSetQueryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewSetQuery%2Did'] = $id;
         return new EdiscoveryReviewSetQueryItemRequestBuilder($urlTplParams, $this->requestAdapter);

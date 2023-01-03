@@ -77,9 +77,9 @@ class MobileAppItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
      * @param string $id Unique identifier of the item
-     * @return MobileAppAssignmentItemRequestBuilder
+     * @return MobileAppAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): MobileAppAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?MobileAppAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppAssignment%2Did'] = $id;
         return new MobileAppAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -88,9 +88,9 @@ class MobileAppItemRequestBuilder
     /**
      * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
      * @param string $id Unique identifier of the item
-     * @return MobileAppCategoryItemRequestBuilder
+     * @return MobileAppCategoryItemRequestBuilder|null
     */
-    public function categoriesById(string $id): MobileAppCategoryItemRequestBuilder {
+    public function categoriesById(string $id): ?MobileAppCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppCategory%2Did'] = $id;
         return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);

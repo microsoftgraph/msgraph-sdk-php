@@ -183,9 +183,9 @@ class ParentGroupRequestBuilder
     /**
      * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
      * @param string $id Unique identifier of the item
-     * @return SetItemRequestBuilder
+     * @return SetItemRequestBuilder|null
     */
-    public function setsById(string $id): SetItemRequestBuilder {
+    public function setsById(string $id): ?SetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['set%2Did1'] = $id;
         return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);

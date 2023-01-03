@@ -201,9 +201,9 @@ class InsightsRequestBuilder
     /**
      * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
-     * @return SharedInsightItemRequestBuilder
+     * @return SharedInsightItemRequestBuilder|null
     */
-    public function sharedById(string $id): SharedInsightItemRequestBuilder {
+    public function sharedById(string $id): ?SharedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedInsight%2Did'] = $id;
         return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -212,9 +212,9 @@ class InsightsRequestBuilder
     /**
      * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
-     * @return TrendingItemRequestBuilder
+     * @return TrendingItemRequestBuilder|null
     */
-    public function trendingById(string $id): TrendingItemRequestBuilder {
+    public function trendingById(string $id): ?TrendingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['trending%2Did'] = $id;
         return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -223,9 +223,9 @@ class InsightsRequestBuilder
     /**
      * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
      * @param string $id Unique identifier of the item
-     * @return UsedInsightItemRequestBuilder
+     * @return UsedInsightItemRequestBuilder|null
     */
-    public function usedById(string $id): UsedInsightItemRequestBuilder {
+    public function usedById(string $id): ?UsedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['usedInsight%2Did'] = $id;
         return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);

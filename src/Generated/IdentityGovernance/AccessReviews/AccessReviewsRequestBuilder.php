@@ -134,9 +134,9 @@ class AccessReviewsRequestBuilder
     /**
      * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
      * @param string $id Unique identifier of the item
-     * @return AccessReviewScheduleDefinitionItemRequestBuilder
+     * @return AccessReviewScheduleDefinitionItemRequestBuilder|null
     */
-    public function definitionsById(string $id): AccessReviewScheduleDefinitionItemRequestBuilder {
+    public function definitionsById(string $id): ?AccessReviewScheduleDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewScheduleDefinition%2Did'] = $id;
         return new AccessReviewScheduleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -183,9 +183,9 @@ class AccessReviewsRequestBuilder
     /**
      * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
      * @param string $id Unique identifier of the item
-     * @return AccessReviewHistoryDefinitionItemRequestBuilder
+     * @return AccessReviewHistoryDefinitionItemRequestBuilder|null
     */
-    public function historyDefinitionsById(string $id): AccessReviewHistoryDefinitionItemRequestBuilder {
+    public function historyDefinitionsById(string $id): ?AccessReviewHistoryDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewHistoryDefinition%2Did'] = $id;
         return new AccessReviewHistoryDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);

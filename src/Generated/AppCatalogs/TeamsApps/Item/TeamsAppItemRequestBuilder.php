@@ -44,9 +44,9 @@ class TeamsAppItemRequestBuilder
     /**
      * Provides operations to manage the appDefinitions property of the microsoft.graph.teamsApp entity.
      * @param string $id Unique identifier of the item
-     * @return TeamsAppDefinitionItemRequestBuilder
+     * @return TeamsAppDefinitionItemRequestBuilder|null
     */
-    public function appDefinitionsById(string $id): TeamsAppDefinitionItemRequestBuilder {
+    public function appDefinitionsById(string $id): ?TeamsAppDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsAppDefinition%2Did'] = $id;
         return new TeamsAppDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -246,9 +246,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleAssignmentItemRequestBuilder
+     * @return UnifiedRoleAssignmentItemRequestBuilder|null
     */
-    public function roleAssignmentsById(string $id): UnifiedRoleAssignmentItemRequestBuilder {
+    public function roleAssignmentsById(string $id): ?UnifiedRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignment%2Did'] = $id;
         return new UnifiedRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -257,9 +257,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder
+     * @return UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder|null
     */
-    public function roleAssignmentScheduleInstancesById(string $id): UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
+    public function roleAssignmentScheduleInstancesById(string $id): ?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentScheduleInstance%2Did'] = $id;
         return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -268,9 +268,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
+     * @return UnifiedRoleAssignmentScheduleRequestItemRequestBuilder|null
     */
-    public function roleAssignmentScheduleRequestsById(string $id): UnifiedRoleAssignmentScheduleRequestItemRequestBuilder {
+    public function roleAssignmentScheduleRequestsById(string $id): ?UnifiedRoleAssignmentScheduleRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentScheduleRequest%2Did'] = $id;
         return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -279,9 +279,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleAssignmentScheduleItemRequestBuilder
+     * @return UnifiedRoleAssignmentScheduleItemRequestBuilder|null
     */
-    public function roleAssignmentSchedulesById(string $id): UnifiedRoleAssignmentScheduleItemRequestBuilder {
+    public function roleAssignmentSchedulesById(string $id): ?UnifiedRoleAssignmentScheduleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentSchedule%2Did'] = $id;
         return new UnifiedRoleAssignmentScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -290,9 +290,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleDefinitionItemRequestBuilder
+     * @return UnifiedRoleDefinitionItemRequestBuilder|null
     */
-    public function roleDefinitionsById(string $id): UnifiedRoleDefinitionItemRequestBuilder {
+    public function roleDefinitionsById(string $id): ?UnifiedRoleDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleDefinition%2Did'] = $id;
         return new UnifiedRoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -301,9 +301,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
+     * @return UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder|null
     */
-    public function roleEligibilityScheduleInstancesById(string $id): UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
+    public function roleEligibilityScheduleInstancesById(string $id): ?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilityScheduleInstance%2Did'] = $id;
         return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -312,9 +312,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
+     * @return UnifiedRoleEligibilityScheduleRequestItemRequestBuilder|null
     */
-    public function roleEligibilityScheduleRequestsById(string $id): UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
+    public function roleEligibilityScheduleRequestsById(string $id): ?UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilityScheduleRequest%2Did'] = $id;
         return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -323,9 +323,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleEligibilityScheduleItemRequestBuilder
+     * @return UnifiedRoleEligibilityScheduleItemRequestBuilder|null
     */
-    public function roleEligibilitySchedulesById(string $id): UnifiedRoleEligibilityScheduleItemRequestBuilder {
+    public function roleEligibilitySchedulesById(string $id): ?UnifiedRoleEligibilityScheduleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilitySchedule%2Did'] = $id;
         return new UnifiedRoleEligibilityScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -179,9 +179,9 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
-     * @return ChatMessageHostedContentItemRequestBuilder
+     * @return ChatMessageHostedContentItemRequestBuilder|null
     */
-    public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
+    public function hostedContentsById(string $id): ?ChatMessageHostedContentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessageHostedContent%2Did'] = $id;
         return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);

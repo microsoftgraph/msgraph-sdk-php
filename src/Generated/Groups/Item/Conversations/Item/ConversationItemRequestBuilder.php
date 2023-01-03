@@ -139,9 +139,9 @@ class ConversationItemRequestBuilder
     /**
      * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
      * @param string $id Unique identifier of the item
-     * @return ConversationThreadItemRequestBuilder
+     * @return ConversationThreadItemRequestBuilder|null
     */
-    public function threadsById(string $id): ConversationThreadItemRequestBuilder {
+    public function threadsById(string $id): ?ConversationThreadItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationThread%2Did'] = $id;
         return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);

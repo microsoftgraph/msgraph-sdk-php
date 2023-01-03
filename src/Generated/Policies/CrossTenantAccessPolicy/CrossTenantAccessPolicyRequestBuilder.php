@@ -171,9 +171,9 @@ class CrossTenantAccessPolicyRequestBuilder
     /**
      * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
+     * @return CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder|null
     */
-    public function partnersById(string $id): CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder {
+    public function partnersById(string $id): ?CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['crossTenantAccessPolicyConfigurationPartner%2DtenantId'] = $id;
         return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder($urlTplParams, $this->requestAdapter);

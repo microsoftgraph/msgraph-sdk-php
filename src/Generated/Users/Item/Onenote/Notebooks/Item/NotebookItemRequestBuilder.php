@@ -200,9 +200,9 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
      * @param string $id Unique identifier of the item
-     * @return SectionGroupItemRequestBuilder
+     * @return SectionGroupItemRequestBuilder|null
     */
-    public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
+    public function sectionGroupsById(string $id): ?SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did'] = $id;
         return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
      * @param string $id Unique identifier of the item
-     * @return OnenoteSectionItemRequestBuilder
+     * @return OnenoteSectionItemRequestBuilder|null
     */
-    public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
+    public function sectionsById(string $id): ?OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
         return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);

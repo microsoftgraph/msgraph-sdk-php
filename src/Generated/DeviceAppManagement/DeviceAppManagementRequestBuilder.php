@@ -169,9 +169,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return AndroidManagedAppProtectionItemRequestBuilder
+     * @return AndroidManagedAppProtectionItemRequestBuilder|null
     */
-    public function androidManagedAppProtectionsById(string $id): AndroidManagedAppProtectionItemRequestBuilder {
+    public function androidManagedAppProtectionsById(string $id): ?AndroidManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['androidManagedAppProtection%2Did'] = $id;
         return new AndroidManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -240,9 +240,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return DefaultManagedAppProtectionItemRequestBuilder
+     * @return DefaultManagedAppProtectionItemRequestBuilder|null
     */
-    public function defaultManagedAppProtectionsById(string $id): DefaultManagedAppProtectionItemRequestBuilder {
+    public function defaultManagedAppProtectionsById(string $id): ?DefaultManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['defaultManagedAppProtection%2Did'] = $id;
         return new DefaultManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -270,9 +270,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return IosManagedAppProtectionItemRequestBuilder
+     * @return IosManagedAppProtectionItemRequestBuilder|null
     */
-    public function iosManagedAppProtectionsById(string $id): IosManagedAppProtectionItemRequestBuilder {
+    public function iosManagedAppProtectionsById(string $id): ?IosManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['iosManagedAppProtection%2Did'] = $id;
         return new IosManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -281,9 +281,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedAppPolicyItemRequestBuilder
+     * @return ManagedAppPolicyItemRequestBuilder|null
     */
-    public function managedAppPoliciesById(string $id): ManagedAppPolicyItemRequestBuilder {
+    public function managedAppPoliciesById(string $id): ?ManagedAppPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppPolicy%2Did'] = $id;
         return new ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -292,9 +292,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedAppRegistrationItemRequestBuilder
+     * @return ManagedAppRegistrationItemRequestBuilder|null
     */
-    public function managedAppRegistrationsById(string $id): ManagedAppRegistrationItemRequestBuilder {
+    public function managedAppRegistrationsById(string $id): ?ManagedAppRegistrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppRegistration%2Did'] = $id;
         return new ManagedAppRegistrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -303,9 +303,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedAppStatusItemRequestBuilder
+     * @return ManagedAppStatusItemRequestBuilder|null
     */
-    public function managedAppStatusesById(string $id): ManagedAppStatusItemRequestBuilder {
+    public function managedAppStatusesById(string $id): ?ManagedAppStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppStatus%2Did'] = $id;
         return new ManagedAppStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -314,9 +314,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedEBookItemRequestBuilder
+     * @return ManagedEBookItemRequestBuilder|null
     */
-    public function managedEBooksById(string $id): ManagedEBookItemRequestBuilder {
+    public function managedEBooksById(string $id): ?ManagedEBookItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedEBook%2Did'] = $id;
         return new ManagedEBookItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -325,9 +325,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return MdmWindowsInformationProtectionPolicyItemRequestBuilder
+     * @return MdmWindowsInformationProtectionPolicyItemRequestBuilder|null
     */
-    public function mdmWindowsInformationProtectionPoliciesById(string $id): MdmWindowsInformationProtectionPolicyItemRequestBuilder {
+    public function mdmWindowsInformationProtectionPoliciesById(string $id): ?MdmWindowsInformationProtectionPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mdmWindowsInformationProtectionPolicy%2Did'] = $id;
         return new MdmWindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -336,9 +336,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return MobileAppCategoryItemRequestBuilder
+     * @return MobileAppCategoryItemRequestBuilder|null
     */
-    public function mobileAppCategoriesById(string $id): MobileAppCategoryItemRequestBuilder {
+    public function mobileAppCategoriesById(string $id): ?MobileAppCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppCategory%2Did'] = $id;
         return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -347,9 +347,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedDeviceMobileAppConfigurationItemRequestBuilder
+     * @return ManagedDeviceMobileAppConfigurationItemRequestBuilder|null
     */
-    public function mobileAppConfigurationsById(string $id): ManagedDeviceMobileAppConfigurationItemRequestBuilder {
+    public function mobileAppConfigurationsById(string $id): ?ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfiguration%2Did'] = $id;
         return new ManagedDeviceMobileAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -358,9 +358,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return MobileAppItemRequestBuilder
+     * @return MobileAppItemRequestBuilder|null
     */
-    public function mobileAppsById(string $id): MobileAppItemRequestBuilder {
+    public function mobileAppsById(string $id): ?MobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileApp%2Did'] = $id;
         return new MobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -389,9 +389,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return TargetedManagedAppConfigurationItemRequestBuilder
+     * @return TargetedManagedAppConfigurationItemRequestBuilder|null
     */
-    public function targetedManagedAppConfigurationsById(string $id): TargetedManagedAppConfigurationItemRequestBuilder {
+    public function targetedManagedAppConfigurationsById(string $id): ?TargetedManagedAppConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['targetedManagedAppConfiguration%2Did'] = $id;
         return new TargetedManagedAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -400,9 +400,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return VppTokenItemRequestBuilder
+     * @return VppTokenItemRequestBuilder|null
     */
-    public function vppTokensById(string $id): VppTokenItemRequestBuilder {
+    public function vppTokensById(string $id): ?VppTokenItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['vppToken%2Did'] = $id;
         return new VppTokenItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -411,9 +411,9 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param string $id Unique identifier of the item
-     * @return WindowsInformationProtectionPolicyItemRequestBuilder
+     * @return WindowsInformationProtectionPolicyItemRequestBuilder|null
     */
-    public function windowsInformationProtectionPoliciesById(string $id): WindowsInformationProtectionPolicyItemRequestBuilder {
+    public function windowsInformationProtectionPoliciesById(string $id): ?WindowsInformationProtectionPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['windowsInformationProtectionPolicy%2Did'] = $id;
         return new WindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);

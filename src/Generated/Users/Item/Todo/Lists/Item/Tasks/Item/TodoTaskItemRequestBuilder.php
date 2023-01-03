@@ -80,9 +80,9 @@ class TodoTaskItemRequestBuilder
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
-     * @return AttachmentBaseItemRequestBuilder
+     * @return AttachmentBaseItemRequestBuilder|null
     */
-    public function attachmentsById(string $id): AttachmentBaseItemRequestBuilder {
+    public function attachmentsById(string $id): ?AttachmentBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentBase%2Did'] = $id;
         return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -91,9 +91,9 @@ class TodoTaskItemRequestBuilder
     /**
      * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
-     * @return AttachmentSessionItemRequestBuilder
+     * @return AttachmentSessionItemRequestBuilder|null
     */
-    public function attachmentSessionsById(string $id): AttachmentSessionItemRequestBuilder {
+    public function attachmentSessionsById(string $id): ?AttachmentSessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentSession%2Did'] = $id;
         return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -102,9 +102,9 @@ class TodoTaskItemRequestBuilder
     /**
      * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
-     * @return ChecklistItemItemRequestBuilder
+     * @return ChecklistItemItemRequestBuilder|null
     */
-    public function checklistItemsById(string $id): ChecklistItemItemRequestBuilder {
+    public function checklistItemsById(string $id): ?ChecklistItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['checklistItem%2Did'] = $id;
         return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -213,9 +213,9 @@ class TodoTaskItemRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -243,9 +243,9 @@ class TodoTaskItemRequestBuilder
     /**
      * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
      * @param string $id Unique identifier of the item
-     * @return LinkedResourceItemRequestBuilder
+     * @return LinkedResourceItemRequestBuilder|null
     */
-    public function linkedResourcesById(string $id): LinkedResourceItemRequestBuilder {
+    public function linkedResourcesById(string $id): ?LinkedResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['linkedResource%2Did'] = $id;
         return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);

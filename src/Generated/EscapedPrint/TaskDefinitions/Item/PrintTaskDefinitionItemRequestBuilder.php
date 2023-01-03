@@ -183,9 +183,9 @@ class PrintTaskDefinitionItemRequestBuilder
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
      * @param string $id Unique identifier of the item
-     * @return PrintTaskItemRequestBuilder
+     * @return PrintTaskItemRequestBuilder|null
     */
-    public function tasksById(string $id): PrintTaskItemRequestBuilder {
+    public function tasksById(string $id): ?PrintTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printTask%2Did'] = $id;
         return new PrintTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);

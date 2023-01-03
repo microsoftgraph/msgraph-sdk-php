@@ -211,9 +211,9 @@ class SharedDriveItemItemRequestBuilder
     /**
      * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
      * @param string $id Unique identifier of the item
-     * @return DriveItemItemRequestBuilder
+     * @return DriveItemItemRequestBuilder|null
     */
-    public function itemsById(string $id): DriveItemItemRequestBuilder {
+    public function itemsById(string $id): ?DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -86,9 +86,9 @@ class DriveRequestBuilder
     /**
      * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drive\Bundles\Item\DriveItemItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Drive\Bundles\Item\DriveItemItemRequestBuilder|null
     */
-    public function bundlesById(string $id): \Microsoft\Graph\Generated\Drive\Bundles\Item\DriveItemItemRequestBuilder {
+    public function bundlesById(string $id): ?\Microsoft\Graph\Generated\Drive\Bundles\Item\DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Drive\Bundles\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -157,9 +157,9 @@ class DriveRequestBuilder
     /**
      * Provides operations to manage the following property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drive\Following\Item\DriveItemItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Drive\Following\Item\DriveItemItemRequestBuilder|null
     */
-    public function followingById(string $id): \Microsoft\Graph\Generated\Drive\Following\Item\DriveItemItemRequestBuilder {
+    public function followingById(string $id): ?\Microsoft\Graph\Generated\Drive\Following\Item\DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Drive\Following\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -187,9 +187,9 @@ class DriveRequestBuilder
     /**
      * Provides operations to manage the items property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drive\Items\Item\DriveItemItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Drive\Items\Item\DriveItemItemRequestBuilder|null
     */
-    public function itemsById(string $id): \Microsoft\Graph\Generated\Drive\Items\Item\DriveItemItemRequestBuilder {
+    public function itemsById(string $id): ?\Microsoft\Graph\Generated\Drive\Items\Item\DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Drive\Items\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -243,9 +243,9 @@ class DriveRequestBuilder
     /**
      * Provides operations to manage the special property of the microsoft.graph.drive entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drive\Special\Item\DriveItemItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Drive\Special\Item\DriveItemItemRequestBuilder|null
     */
-    public function specialById(string $id): \Microsoft\Graph\Generated\Drive\Special\Item\DriveItemItemRequestBuilder {
+    public function specialById(string $id): ?\Microsoft\Graph\Generated\Drive\Special\Item\DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Drive\Special\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

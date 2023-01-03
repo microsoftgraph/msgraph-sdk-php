@@ -557,9 +557,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the activities property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return UserActivityItemRequestBuilder
+     * @return UserActivityItemRequestBuilder|null
     */
-    public function activitiesById(string $id): UserActivityItemRequestBuilder {
+    public function activitiesById(string $id): ?UserActivityItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userActivity%2Did'] = $id;
         return new UserActivityItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -568,9 +568,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementAcceptanceItemRequestBuilder
+     * @return AgreementAcceptanceItemRequestBuilder|null
     */
-    public function agreementAcceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
+    public function agreementAcceptancesById(string $id): ?AgreementAcceptanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementAcceptance%2Did'] = $id;
         return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -579,9 +579,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return AppRoleAssignmentItemRequestBuilder
+     * @return AppRoleAssignmentItemRequestBuilder|null
     */
-    public function appRoleAssignmentsById(string $id): AppRoleAssignmentItemRequestBuilder {
+    public function appRoleAssignmentsById(string $id): ?AppRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appRoleAssignment%2Did'] = $id;
         return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -590,9 +590,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return CalendarGroupItemRequestBuilder
+     * @return CalendarGroupItemRequestBuilder|null
     */
-    public function calendarGroupsById(string $id): CalendarGroupItemRequestBuilder {
+    public function calendarGroupsById(string $id): ?CalendarGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendarGroup%2Did'] = $id;
         return new CalendarGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -601,9 +601,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the calendars property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return CalendarItemRequestBuilder
+     * @return CalendarItemRequestBuilder|null
     */
-    public function calendarsById(string $id): CalendarItemRequestBuilder {
+    public function calendarsById(string $id): ?CalendarItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendar%2Did'] = $id;
         return new CalendarItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -612,9 +612,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder|null
     */
-    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder {
+    public function calendarViewById(string $id): ?\Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -623,9 +623,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the chats property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ChatItemRequestBuilder
+     * @return ChatItemRequestBuilder|null
     */
-    public function chatsById(string $id): ChatItemRequestBuilder {
+    public function chatsById(string $id): ?ChatItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chat%2Did'] = $id;
         return new ChatItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -645,9 +645,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ContactFolderItemRequestBuilder
+     * @return ContactFolderItemRequestBuilder|null
     */
-    public function contactFoldersById(string $id): ContactFolderItemRequestBuilder {
+    public function contactFoldersById(string $id): ?ContactFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contactFolder%2Did'] = $id;
         return new ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -656,9 +656,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the contacts property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ContactItemRequestBuilder
+     * @return ContactItemRequestBuilder|null
     */
-    public function contactsById(string $id): ContactItemRequestBuilder {
+    public function contactsById(string $id): ?ContactItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contact%2Did'] = $id;
         return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -667,9 +667,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the createdObjects property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function createdObjectsById(string $id): \Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder {
+    public function createdObjectsById(string $id): ?\Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\CreatedObjects\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -727,9 +727,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceManagementTroubleshootingEventItemRequestBuilder
+     * @return DeviceManagementTroubleshootingEventItemRequestBuilder|null
     */
-    public function deviceManagementTroubleshootingEventsById(string $id): DeviceManagementTroubleshootingEventItemRequestBuilder {
+    public function deviceManagementTroubleshootingEventsById(string $id): ?DeviceManagementTroubleshootingEventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceManagementTroubleshootingEvent%2Did'] = $id;
         return new DeviceManagementTroubleshootingEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -738,9 +738,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the directReports property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function directReportsById(string $id): \Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder {
+    public function directReportsById(string $id): ?\Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\DirectReports\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -749,9 +749,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the drives property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return DriveItemRequestBuilder
+     * @return DriveItemRequestBuilder|null
     */
-    public function drivesById(string $id): DriveItemRequestBuilder {
+    public function drivesById(string $id): ?DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
         return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -760,9 +760,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the events property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder|null
     */
-    public function eventsById(string $id): \Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder {
+    public function eventsById(string $id): ?\Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -771,9 +771,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -782,9 +782,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return SiteItemRequestBuilder
+     * @return SiteItemRequestBuilder|null
     */
-    public function followedSitesById(string $id): SiteItemRequestBuilder {
+    public function followedSitesById(string $id): ?SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did'] = $id;
         return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -828,9 +828,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return TeamItemRequestBuilder
+     * @return TeamItemRequestBuilder|null
     */
-    public function joinedTeamsById(string $id): TeamItemRequestBuilder {
+    public function joinedTeamsById(string $id): ?TeamItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['team%2Did'] = $id;
         return new TeamItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -839,9 +839,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return LicenseDetailsItemRequestBuilder
+     * @return LicenseDetailsItemRequestBuilder|null
     */
-    public function licenseDetailsById(string $id): LicenseDetailsItemRequestBuilder {
+    public function licenseDetailsById(string $id): ?LicenseDetailsItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['licenseDetails%2Did'] = $id;
         return new LicenseDetailsItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -850,9 +850,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return MailFolderItemRequestBuilder
+     * @return MailFolderItemRequestBuilder|null
     */
-    public function mailFoldersById(string $id): MailFolderItemRequestBuilder {
+    public function mailFoldersById(string $id): ?MailFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mailFolder%2Did'] = $id;
         return new MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -861,9 +861,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedAppRegistrationItemRequestBuilder
+     * @return ManagedAppRegistrationItemRequestBuilder|null
     */
-    public function managedAppRegistrationsById(string $id): ManagedAppRegistrationItemRequestBuilder {
+    public function managedAppRegistrationsById(string $id): ?ManagedAppRegistrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppRegistration%2Did'] = $id;
         return new ManagedAppRegistrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -872,9 +872,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedDeviceItemRequestBuilder
+     * @return ManagedDeviceItemRequestBuilder|null
     */
-    public function managedDevicesById(string $id): ManagedDeviceItemRequestBuilder {
+    public function managedDevicesById(string $id): ?ManagedDeviceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDevice%2Did'] = $id;
         return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -883,9 +883,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function memberOfById(string $id): \Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder {
+    public function memberOfById(string $id): ?\Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -894,9 +894,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the messages property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return MessageItemRequestBuilder
+     * @return MessageItemRequestBuilder|null
     */
-    public function messagesById(string $id): MessageItemRequestBuilder {
+    public function messagesById(string $id): ?MessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['message%2Did'] = $id;
         return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -905,9 +905,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return OAuth2PermissionGrantItemRequestBuilder
+     * @return OAuth2PermissionGrantItemRequestBuilder|null
     */
-    public function oauth2PermissionGrantsById(string $id): OAuth2PermissionGrantItemRequestBuilder {
+    public function oauth2PermissionGrantsById(string $id): ?OAuth2PermissionGrantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['oAuth2PermissionGrant%2Did'] = $id;
         return new OAuth2PermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -916,9 +916,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return OnlineMeetingItemRequestBuilder
+     * @return OnlineMeetingItemRequestBuilder|null
     */
-    public function onlineMeetingsById(string $id): OnlineMeetingItemRequestBuilder {
+    public function onlineMeetingsById(string $id): ?OnlineMeetingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onlineMeeting%2Did'] = $id;
         return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -927,9 +927,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the ownedDevices property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function ownedDevicesById(string $id): \Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder {
+    public function ownedDevicesById(string $id): ?\Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\OwnedDevices\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -938,9 +938,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function ownedObjectsById(string $id): \Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder {
+    public function ownedObjectsById(string $id): ?\Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\OwnedObjects\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -969,9 +969,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the people property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return PersonItemRequestBuilder
+     * @return PersonItemRequestBuilder|null
     */
-    public function peopleById(string $id): PersonItemRequestBuilder {
+    public function peopleById(string $id): ?PersonItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['person%2Did'] = $id;
         return new PersonItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -980,9 +980,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the photos property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ProfilePhotoItemRequestBuilder
+     * @return ProfilePhotoItemRequestBuilder|null
     */
-    public function photosById(string $id): ProfilePhotoItemRequestBuilder {
+    public function photosById(string $id): ?ProfilePhotoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['profilePhoto%2Did'] = $id;
         return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -991,9 +991,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the registeredDevices property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function registeredDevicesById(string $id): \Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder {
+    public function registeredDevicesById(string $id): ?\Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\RegisteredDevices\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -1012,9 +1012,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return ScopedRoleMembershipItemRequestBuilder
+     * @return ScopedRoleMembershipItemRequestBuilder|null
     */
-    public function scopedRoleMemberOfById(string $id): ScopedRoleMembershipItemRequestBuilder {
+    public function scopedRoleMemberOfById(string $id): ?ScopedRoleMembershipItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['scopedRoleMembership%2Did'] = $id;
         return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -1023,9 +1023,9 @@ class MeRequestBuilder
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder|null
     */
-    public function transitiveMemberOfById(string $id): \Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
+    public function transitiveMemberOfById(string $id): ?\Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);

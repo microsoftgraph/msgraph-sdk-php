@@ -143,9 +143,9 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return AttachmentItemRequestBuilder
+     * @return AttachmentItemRequestBuilder|null
     */
-    public function attachmentsById(string $id): AttachmentItemRequestBuilder {
+    public function attachmentsById(string $id): ?AttachmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachment%2Did'] = $id;
         return new AttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -190,9 +190,9 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -220,9 +220,9 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the instances property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\EventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\EventItemRequestBuilder|null
     */
-    public function instancesById(string $id): \Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\EventItemRequestBuilder {
+    public function instancesById(string $id): ?\Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did1'] = $id;
         return new \Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instances\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -231,9 +231,9 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
+    public function multiValueExtendedPropertiesById(string $id): ?MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -242,9 +242,9 @@ class EventItemRequestBuilder
     /**
      * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
      * @param string $id Unique identifier of the item
-     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
+    public function singleValueExtendedPropertiesById(string $id): ?SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);

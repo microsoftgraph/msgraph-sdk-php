@@ -158,9 +158,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder|null
     */
-    public function columnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): ?\Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -180,9 +180,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return ContentTypeItemRequestBuilder
+     * @return ContentTypeItemRequestBuilder|null
     */
-    public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
+    public function contentTypesById(string $id): ?ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
         return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -240,9 +240,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return DriveItemRequestBuilder
+     * @return DriveItemRequestBuilder|null
     */
-    public function drivesById(string $id): DriveItemRequestBuilder {
+    public function drivesById(string $id): ?DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
         return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -251,9 +251,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder|null
     */
-    public function externalColumnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder {
+    public function externalColumnsById(string $id): ?\Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -318,9 +318,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return BaseItemItemRequestBuilder
+     * @return BaseItemItemRequestBuilder|null
     */
-    public function itemsById(string $id): BaseItemItemRequestBuilder {
+    public function itemsById(string $id): ?BaseItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['baseItem%2Did'] = $id;
         return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -329,9 +329,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the lists property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return ListItemRequestBuilder
+     * @return ListItemRequestBuilder|null
     */
-    public function listsById(string $id): ListItemRequestBuilder {
+    public function listsById(string $id): ?ListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['list%2Did'] = $id;
         return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -340,9 +340,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return RichLongRunningOperationItemRequestBuilder
+     * @return RichLongRunningOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
+    public function operationsById(string $id): ?RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
         return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -371,9 +371,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return PermissionItemRequestBuilder
+     * @return PermissionItemRequestBuilder|null
     */
-    public function permissionsById(string $id): PermissionItemRequestBuilder {
+    public function permissionsById(string $id): ?PermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permission%2Did'] = $id;
         return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -382,9 +382,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder|null
     */
-    public function sitesById(string $id): \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder {
+    public function sitesById(string $id): ?\Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did1'] = $id;
         return new \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -393,9 +393,9 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to manage the termStores property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
-     * @return StoreItemRequestBuilder
+     * @return StoreItemRequestBuilder|null
     */
-    public function termStoresById(string $id): StoreItemRequestBuilder {
+    public function termStoresById(string $id): ?StoreItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['store%2Did'] = $id;
         return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter);

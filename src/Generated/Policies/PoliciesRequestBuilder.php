@@ -173,9 +173,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return ActivityBasedTimeoutPolicyItemRequestBuilder
+     * @return ActivityBasedTimeoutPolicyItemRequestBuilder|null
     */
-    public function activityBasedTimeoutPoliciesById(string $id): ActivityBasedTimeoutPolicyItemRequestBuilder {
+    public function activityBasedTimeoutPoliciesById(string $id): ?ActivityBasedTimeoutPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityBasedTimeoutPolicy%2Did'] = $id;
         return new ActivityBasedTimeoutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -184,9 +184,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return ClaimsMappingPolicyItemRequestBuilder
+     * @return ClaimsMappingPolicyItemRequestBuilder|null
     */
-    public function claimsMappingPoliciesById(string $id): ClaimsMappingPolicyItemRequestBuilder {
+    public function claimsMappingPoliciesById(string $id): ?ClaimsMappingPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['claimsMappingPolicy%2Did'] = $id;
         return new ClaimsMappingPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -195,9 +195,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return ConditionalAccessPolicyItemRequestBuilder
+     * @return ConditionalAccessPolicyItemRequestBuilder|null
     */
-    public function conditionalAccessPoliciesById(string $id): ConditionalAccessPolicyItemRequestBuilder {
+    public function conditionalAccessPoliciesById(string $id): ?ConditionalAccessPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conditionalAccessPolicy%2Did'] = $id;
         return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -266,9 +266,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return FeatureRolloutPolicyItemRequestBuilder
+     * @return FeatureRolloutPolicyItemRequestBuilder|null
     */
-    public function featureRolloutPoliciesById(string $id): FeatureRolloutPolicyItemRequestBuilder {
+    public function featureRolloutPoliciesById(string $id): ?FeatureRolloutPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['featureRolloutPolicy%2Did'] = $id;
         return new FeatureRolloutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -296,9 +296,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return HomeRealmDiscoveryPolicyItemRequestBuilder
+     * @return HomeRealmDiscoveryPolicyItemRequestBuilder|null
     */
-    public function homeRealmDiscoveryPoliciesById(string $id): HomeRealmDiscoveryPolicyItemRequestBuilder {
+    public function homeRealmDiscoveryPoliciesById(string $id): ?HomeRealmDiscoveryPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['homeRealmDiscoveryPolicy%2Did'] = $id;
         return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -327,9 +327,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return PermissionGrantPolicyItemRequestBuilder
+     * @return PermissionGrantPolicyItemRequestBuilder|null
     */
-    public function permissionGrantPoliciesById(string $id): PermissionGrantPolicyItemRequestBuilder {
+    public function permissionGrantPoliciesById(string $id): ?PermissionGrantPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantPolicy%2Did'] = $id;
         return new PermissionGrantPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -338,9 +338,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleManagementPolicyItemRequestBuilder
+     * @return UnifiedRoleManagementPolicyItemRequestBuilder|null
     */
-    public function roleManagementPoliciesById(string $id): UnifiedRoleManagementPolicyItemRequestBuilder {
+    public function roleManagementPoliciesById(string $id): ?UnifiedRoleManagementPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicy%2Did'] = $id;
         return new UnifiedRoleManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -349,9 +349,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
+     * @return UnifiedRoleManagementPolicyAssignmentItemRequestBuilder|null
     */
-    public function roleManagementPolicyAssignmentsById(string $id): UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
+    public function roleManagementPolicyAssignmentsById(string $id): ?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyAssignment%2Did'] = $id;
         return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -360,9 +360,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return TokenIssuancePolicyItemRequestBuilder
+     * @return TokenIssuancePolicyItemRequestBuilder|null
     */
-    public function tokenIssuancePoliciesById(string $id): TokenIssuancePolicyItemRequestBuilder {
+    public function tokenIssuancePoliciesById(string $id): ?TokenIssuancePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenIssuancePolicy%2Did'] = $id;
         return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -371,9 +371,9 @@ class PoliciesRequestBuilder
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
      * @param string $id Unique identifier of the item
-     * @return TokenLifetimePolicyItemRequestBuilder
+     * @return TokenLifetimePolicyItemRequestBuilder|null
     */
-    public function tokenLifetimePoliciesById(string $id): TokenLifetimePolicyItemRequestBuilder {
+    public function tokenLifetimePoliciesById(string $id): ?TokenLifetimePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenLifetimePolicy%2Did'] = $id;
         return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -77,9 +77,9 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedMobileAppItemRequestBuilder
+     * @return ManagedMobileAppItemRequestBuilder|null
     */
-    public function appsById(string $id): ManagedMobileAppItemRequestBuilder {
+    public function appsById(string $id): ?ManagedMobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedMobileApp%2Did'] = $id;
         return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -88,9 +88,9 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return TargetedManagedAppPolicyAssignmentItemRequestBuilder
+     * @return TargetedManagedAppPolicyAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): TargetedManagedAppPolicyAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['targetedManagedAppPolicyAssignment%2Did'] = $id;
         return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);

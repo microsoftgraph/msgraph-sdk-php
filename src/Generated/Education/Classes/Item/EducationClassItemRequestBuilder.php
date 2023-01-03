@@ -102,9 +102,9 @@ class EducationClassItemRequestBuilder
     /**
      * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
-     * @return EducationCategoryItemRequestBuilder
+     * @return EducationCategoryItemRequestBuilder|null
     */
-    public function assignmentCategoriesById(string $id): EducationCategoryItemRequestBuilder {
+    public function assignmentCategoriesById(string $id): ?EducationCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationCategory%2Did'] = $id;
         return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -113,9 +113,9 @@ class EducationClassItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
-     * @return EducationAssignmentItemRequestBuilder
+     * @return EducationAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): EducationAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?EducationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationAssignment%2Did'] = $id;
         return new EducationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -243,9 +243,9 @@ class EducationClassItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.classes.item.members.item collection
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder|null
     */
-    public function membersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder {
+    public function membersById(string $id): ?\Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -274,9 +274,9 @@ class EducationClassItemRequestBuilder
     /**
      * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
      * @param string $id Unique identifier of the item
-     * @return EducationSchoolItemRequestBuilder
+     * @return EducationSchoolItemRequestBuilder|null
     */
-    public function schoolsById(string $id): EducationSchoolItemRequestBuilder {
+    public function schoolsById(string $id): ?EducationSchoolItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSchool%2Did'] = $id;
         return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -285,9 +285,9 @@ class EducationClassItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.classes.item.teachers.item collection
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder|null
     */
-    public function teachersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder {
+    public function teachersById(string $id): ?\Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);

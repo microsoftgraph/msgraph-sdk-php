@@ -293,9 +293,9 @@ class ApplicationItemRequestBuilder
     /**
      * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionPropertyItemRequestBuilder
+     * @return ExtensionPropertyItemRequestBuilder|null
     */
-    public function extensionPropertiesById(string $id): ExtensionPropertyItemRequestBuilder {
+    public function extensionPropertiesById(string $id): ?ExtensionPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extensionProperty%2Did'] = $id;
         return new ExtensionPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -304,9 +304,9 @@ class ApplicationItemRequestBuilder
     /**
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
-     * @return FederatedIdentityCredentialItemRequestBuilder
+     * @return FederatedIdentityCredentialItemRequestBuilder|null
     */
-    public function federatedIdentityCredentialsById(string $id): FederatedIdentityCredentialItemRequestBuilder {
+    public function federatedIdentityCredentialsById(string $id): ?FederatedIdentityCredentialItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['federatedIdentityCredential%2Did'] = $id;
         return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -334,9 +334,9 @@ class ApplicationItemRequestBuilder
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
      * @param string $id Unique identifier of the item
-     * @return HomeRealmDiscoveryPolicyItemRequestBuilder
+     * @return HomeRealmDiscoveryPolicyItemRequestBuilder|null
     */
-    public function homeRealmDiscoveryPoliciesById(string $id): HomeRealmDiscoveryPolicyItemRequestBuilder {
+    public function homeRealmDiscoveryPoliciesById(string $id): ?HomeRealmDiscoveryPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['homeRealmDiscoveryPolicy%2Did'] = $id;
         return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -345,9 +345,9 @@ class ApplicationItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.applications.item.owners.item collection
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function ownersById(string $id): DirectoryObjectItemRequestBuilder {
+    public function ownersById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -376,9 +376,9 @@ class ApplicationItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.applications.item.tokenIssuancePolicies.item collection
      * @param string $id Unique identifier of the item
-     * @return TokenIssuancePolicyItemRequestBuilder
+     * @return TokenIssuancePolicyItemRequestBuilder|null
     */
-    public function tokenIssuancePoliciesById(string $id): TokenIssuancePolicyItemRequestBuilder {
+    public function tokenIssuancePoliciesById(string $id): ?TokenIssuancePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenIssuancePolicy%2Did'] = $id;
         return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -387,9 +387,9 @@ class ApplicationItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.applications.item.tokenLifetimePolicies.item collection
      * @param string $id Unique identifier of the item
-     * @return TokenLifetimePolicyItemRequestBuilder
+     * @return TokenLifetimePolicyItemRequestBuilder|null
     */
-    public function tokenLifetimePoliciesById(string $id): TokenLifetimePolicyItemRequestBuilder {
+    public function tokenLifetimePoliciesById(string $id): ?TokenLifetimePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenLifetimePolicy%2Did'] = $id;
         return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);

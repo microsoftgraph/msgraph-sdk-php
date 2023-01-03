@@ -112,9 +112,9 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceCompliancePolicyAssignmentItemRequestBuilder
+     * @return DeviceCompliancePolicyAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): DeviceCompliancePolicyAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?DeviceCompliancePolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceCompliancePolicyAssignment%2Did'] = $id;
         return new DeviceCompliancePolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -223,9 +223,9 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
-     * @return SettingStateDeviceSummaryItemRequestBuilder
+     * @return SettingStateDeviceSummaryItemRequestBuilder|null
     */
-    public function deviceSettingStateSummariesById(string $id): SettingStateDeviceSummaryItemRequestBuilder {
+    public function deviceSettingStateSummariesById(string $id): ?SettingStateDeviceSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['settingStateDeviceSummary%2Did'] = $id;
         return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -234,9 +234,9 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceComplianceDeviceStatusItemRequestBuilder
+     * @return DeviceComplianceDeviceStatusItemRequestBuilder|null
     */
-    public function deviceStatusesById(string $id): DeviceComplianceDeviceStatusItemRequestBuilder {
+    public function deviceStatusesById(string $id): ?DeviceComplianceDeviceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceDeviceStatus%2Did'] = $id;
         return new DeviceComplianceDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -284,9 +284,9 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceComplianceScheduledActionForRuleItemRequestBuilder
+     * @return DeviceComplianceScheduledActionForRuleItemRequestBuilder|null
     */
-    public function scheduledActionsForRuleById(string $id): DeviceComplianceScheduledActionForRuleItemRequestBuilder {
+    public function scheduledActionsForRuleById(string $id): ?DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceScheduledActionForRule%2Did'] = $id;
         return new DeviceComplianceScheduledActionForRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -295,9 +295,9 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceComplianceUserStatusItemRequestBuilder
+     * @return DeviceComplianceUserStatusItemRequestBuilder|null
     */
-    public function userStatusesById(string $id): DeviceComplianceUserStatusItemRequestBuilder {
+    public function userStatusesById(string $id): ?DeviceComplianceUserStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceUserStatus%2Did'] = $id;
         return new DeviceComplianceUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);

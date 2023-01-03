@@ -144,9 +144,9 @@ class CasesRequestBuilder
     /**
      * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
      * @param string $id Unique identifier of the item
-     * @return EdiscoveryCaseItemRequestBuilder
+     * @return EdiscoveryCaseItemRequestBuilder|null
     */
-    public function ediscoveryCasesById(string $id): EdiscoveryCaseItemRequestBuilder {
+    public function ediscoveryCasesById(string $id): ?EdiscoveryCaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryCase%2Did'] = $id;
         return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter);

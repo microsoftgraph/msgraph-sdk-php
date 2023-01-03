@@ -61,9 +61,9 @@ class PlannerPlanItemRequestBuilder
     /**
      * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
      * @param string $id Unique identifier of the item
-     * @return PlannerBucketItemRequestBuilder
+     * @return PlannerBucketItemRequestBuilder|null
     */
-    public function bucketsById(string $id): PlannerBucketItemRequestBuilder {
+    public function bucketsById(string $id): ?PlannerBucketItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerBucket%2Did'] = $id;
         return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class PlannerPlanItemRequestBuilder
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
      * @param string $id Unique identifier of the item
-     * @return PlannerTaskItemRequestBuilder
+     * @return PlannerTaskItemRequestBuilder|null
     */
-    public function tasksById(string $id): PlannerTaskItemRequestBuilder {
+    public function tasksById(string $id): ?PlannerTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerTask%2Did'] = $id;
         return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);

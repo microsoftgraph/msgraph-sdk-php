@@ -44,9 +44,9 @@ class MeetingAttendanceReportItemRequestBuilder
     /**
      * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
      * @param string $id Unique identifier of the item
-     * @return AttendanceRecordItemRequestBuilder
+     * @return AttendanceRecordItemRequestBuilder|null
     */
-    public function attendanceRecordsById(string $id): AttendanceRecordItemRequestBuilder {
+    public function attendanceRecordsById(string $id): ?AttendanceRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attendanceRecord%2Did'] = $id;
         return new AttendanceRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);

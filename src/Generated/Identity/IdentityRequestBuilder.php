@@ -79,9 +79,9 @@ class IdentityRequestBuilder
     /**
      * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityApiConnectorItemRequestBuilder
+     * @return IdentityApiConnectorItemRequestBuilder|null
     */
-    public function apiConnectorsById(string $id): IdentityApiConnectorItemRequestBuilder {
+    public function apiConnectorsById(string $id): ?IdentityApiConnectorItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityApiConnector%2Did'] = $id;
         return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -90,9 +90,9 @@ class IdentityRequestBuilder
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
-     * @return B2xIdentityUserFlowItemRequestBuilder
+     * @return B2xIdentityUserFlowItemRequestBuilder|null
     */
-    public function b2xUserFlowsById(string $id): B2xIdentityUserFlowItemRequestBuilder {
+    public function b2xUserFlowsById(string $id): ?B2xIdentityUserFlowItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['b2xIdentityUserFlow%2Did'] = $id;
         return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -180,9 +180,9 @@ class IdentityRequestBuilder
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityProviderBaseItemRequestBuilder
+     * @return IdentityProviderBaseItemRequestBuilder|null
     */
-    public function identityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
+    public function identityProvidersById(string $id): ?IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
         return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class IdentityRequestBuilder
     /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityUserFlowAttributeItemRequestBuilder
+     * @return IdentityUserFlowAttributeItemRequestBuilder|null
     */
-    public function userFlowAttributesById(string $id): IdentityUserFlowAttributeItemRequestBuilder {
+    public function userFlowAttributesById(string $id): ?IdentityUserFlowAttributeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityUserFlowAttribute%2Did'] = $id;
         return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter);

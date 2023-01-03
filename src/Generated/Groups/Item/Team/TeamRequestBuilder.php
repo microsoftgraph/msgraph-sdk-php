@@ -175,9 +175,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder|null
     */
-    public function allChannelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder {
+    public function allChannelsById(string $id): ?\Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -186,9 +186,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder|null
     */
-    public function channelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder {
+    public function channelsById(string $id): ?\Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -316,9 +316,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder|null
     */
-    public function incomingChannelsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder {
+    public function incomingChannelsById(string $id): ?\Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -327,9 +327,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return TeamsAppInstallationItemRequestBuilder
+     * @return TeamsAppInstallationItemRequestBuilder|null
     */
-    public function installedAppsById(string $id): TeamsAppInstallationItemRequestBuilder {
+    public function installedAppsById(string $id): ?TeamsAppInstallationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsAppInstallation%2Did'] = $id;
         return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -338,9 +338,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the members property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return ConversationMemberItemRequestBuilder
+     * @return ConversationMemberItemRequestBuilder|null
     */
-    public function membersById(string $id): ConversationMemberItemRequestBuilder {
+    public function membersById(string $id): ?ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
         return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -349,9 +349,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return TeamsAsyncOperationItemRequestBuilder
+     * @return TeamsAsyncOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): TeamsAsyncOperationItemRequestBuilder {
+    public function operationsById(string $id): ?TeamsAsyncOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsAsyncOperation%2Did'] = $id;
         return new TeamsAsyncOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -380,9 +380,9 @@ class TeamRequestBuilder
     /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
      * @param string $id Unique identifier of the item
-     * @return TeamworkTagItemRequestBuilder
+     * @return TeamworkTagItemRequestBuilder|null
     */
-    public function tagsById(string $id): TeamworkTagItemRequestBuilder {
+    public function tagsById(string $id): ?TeamworkTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamworkTag%2Did'] = $id;
         return new TeamworkTagItemRequestBuilder($urlTplParams, $this->requestAdapter);

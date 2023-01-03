@@ -61,9 +61,9 @@ class AgreementItemRequestBuilder
     /**
      * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementAcceptanceItemRequestBuilder
+     * @return AgreementAcceptanceItemRequestBuilder|null
     */
-    public function acceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
+    public function acceptancesById(string $id): ?AgreementAcceptanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementAcceptance%2Did'] = $id;
         return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -172,9 +172,9 @@ class AgreementItemRequestBuilder
     /**
      * Provides operations to manage the files property of the microsoft.graph.agreement entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementFileLocalizationItemRequestBuilder
+     * @return AgreementFileLocalizationItemRequestBuilder|null
     */
-    public function filesById(string $id): AgreementFileLocalizationItemRequestBuilder {
+    public function filesById(string $id): ?AgreementFileLocalizationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementFileLocalization%2Did'] = $id;
         return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);

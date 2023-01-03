@@ -88,9 +88,9 @@ class ListItemRequestBuilder
     /**
      * Provides operations to manage the columns property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
-     * @return ColumnDefinitionItemRequestBuilder
+     * @return ColumnDefinitionItemRequestBuilder|null
     */
-    public function columnsById(string $id): ColumnDefinitionItemRequestBuilder {
+    public function columnsById(string $id): ?ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
         return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -110,9 +110,9 @@ class ListItemRequestBuilder
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
-     * @return ContentTypeItemRequestBuilder
+     * @return ContentTypeItemRequestBuilder|null
     */
-    public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
+    public function contentTypesById(string $id): ?ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
         return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -229,9 +229,9 @@ class ListItemRequestBuilder
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
-     * @return ListItemItemRequestBuilder
+     * @return ListItemItemRequestBuilder|null
     */
-    public function itemsById(string $id): ListItemItemRequestBuilder {
+    public function itemsById(string $id): ?ListItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['listItem%2Did'] = $id;
         return new ListItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -240,9 +240,9 @@ class ListItemRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
-     * @return RichLongRunningOperationItemRequestBuilder
+     * @return RichLongRunningOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
+    public function operationsById(string $id): ?RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
         return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -271,9 +271,9 @@ class ListItemRequestBuilder
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
      * @param string $id Unique identifier of the item
-     * @return SubscriptionItemRequestBuilder
+     * @return SubscriptionItemRequestBuilder|null
     */
-    public function subscriptionsById(string $id): SubscriptionItemRequestBuilder {
+    public function subscriptionsById(string $id): ?SubscriptionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subscription%2Did'] = $id;
         return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter);

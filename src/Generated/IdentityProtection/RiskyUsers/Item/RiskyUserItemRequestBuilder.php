@@ -163,9 +163,9 @@ class RiskyUserItemRequestBuilder
     /**
      * Provides operations to manage the history property of the microsoft.graph.riskyUser entity.
      * @param string $id Unique identifier of the item
-     * @return RiskyUserHistoryItemItemRequestBuilder
+     * @return RiskyUserHistoryItemItemRequestBuilder|null
     */
-    public function historyById(string $id): RiskyUserHistoryItemItemRequestBuilder {
+    public function historyById(string $id): ?RiskyUserHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyUserHistoryItem%2Did'] = $id;
         return new RiskyUserHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -52,9 +52,9 @@ class ServiceUpdateMessageItemRequestBuilder
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
      * @param string $id Unique identifier of the item
-     * @return ServiceAnnouncementAttachmentItemRequestBuilder
+     * @return ServiceAnnouncementAttachmentItemRequestBuilder|null
     */
-    public function attachmentsById(string $id): ServiceAnnouncementAttachmentItemRequestBuilder {
+    public function attachmentsById(string $id): ?ServiceAnnouncementAttachmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceAnnouncementAttachment%2Did'] = $id;
         return new ServiceAnnouncementAttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -187,9 +187,9 @@ class BrandingRequestBuilder
     /**
      * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
      * @param string $id Unique identifier of the item
-     * @return OrganizationalBrandingLocalizationItemRequestBuilder
+     * @return OrganizationalBrandingLocalizationItemRequestBuilder|null
     */
-    public function localizationsById(string $id): OrganizationalBrandingLocalizationItemRequestBuilder {
+    public function localizationsById(string $id): ?OrganizationalBrandingLocalizationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['organizationalBrandingLocalization%2Did'] = $id;
         return new OrganizationalBrandingLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);

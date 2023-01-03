@@ -151,9 +151,9 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     /**
      * Provides operations to manage the effectiveRules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder|null
     */
-    public function effectiveRulesById(string $id): \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
+    public function effectiveRulesById(string $id): ?\Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyRule%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\EffectiveRules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -201,9 +201,9 @@ class UnifiedRoleManagementPolicyItemRequestBuilder
     /**
      * Provides operations to manage the rules property of the microsoft.graph.unifiedRoleManagementPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder|null
     */
-    public function rulesById(string $id): \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
+    public function rulesById(string $id): ?\Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyRule%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item\UnifiedRoleManagementPolicyRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -206,9 +206,9 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return MessageRuleItemRequestBuilder
+     * @return MessageRuleItemRequestBuilder|null
     */
-    public function messageRulesById(string $id): MessageRuleItemRequestBuilder {
+    public function messageRulesById(string $id): ?MessageRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['messageRule%2Did'] = $id;
         return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -217,9 +217,9 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return MessageItemRequestBuilder
+     * @return MessageItemRequestBuilder|null
     */
-    public function messagesById(string $id): MessageItemRequestBuilder {
+    public function messagesById(string $id): ?MessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['message%2Did'] = $id;
         return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -228,9 +228,9 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
+    public function multiValueExtendedPropertiesById(string $id): ?MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -259,9 +259,9 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity.
      * @param string $id Unique identifier of the item
-     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
+    public function singleValueExtendedPropertiesById(string $id): ?SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);

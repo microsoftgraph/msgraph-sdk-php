@@ -163,9 +163,9 @@ class ExternalGroupItemRequestBuilder
     /**
      * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityItemRequestBuilder
+     * @return IdentityItemRequestBuilder|null
     */
-    public function membersById(string $id): IdentityItemRequestBuilder {
+    public function membersById(string $id): ?IdentityItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identity%2Did'] = $id;
         return new IdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);

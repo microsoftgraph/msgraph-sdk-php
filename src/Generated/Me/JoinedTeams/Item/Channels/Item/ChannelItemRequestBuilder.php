@@ -231,9 +231,9 @@ class ChannelItemRequestBuilder
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
-     * @return ConversationMemberItemRequestBuilder
+     * @return ConversationMemberItemRequestBuilder|null
     */
-    public function membersById(string $id): ConversationMemberItemRequestBuilder {
+    public function membersById(string $id): ?ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
         return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -242,9 +242,9 @@ class ChannelItemRequestBuilder
     /**
      * Provides operations to manage the messages property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
-     * @return ChatMessageItemRequestBuilder
+     * @return ChatMessageItemRequestBuilder|null
     */
-    public function messagesById(string $id): ChatMessageItemRequestBuilder {
+    public function messagesById(string $id): ?ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did'] = $id;
         return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -273,9 +273,9 @@ class ChannelItemRequestBuilder
     /**
      * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
-     * @return SharedWithChannelTeamInfoItemRequestBuilder
+     * @return SharedWithChannelTeamInfoItemRequestBuilder|null
     */
-    public function sharedWithTeamsById(string $id): SharedWithChannelTeamInfoItemRequestBuilder {
+    public function sharedWithTeamsById(string $id): ?SharedWithChannelTeamInfoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedWithChannelTeamInfo%2Did'] = $id;
         return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -284,9 +284,9 @@ class ChannelItemRequestBuilder
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
      * @param string $id Unique identifier of the item
-     * @return TeamsTabItemRequestBuilder
+     * @return TeamsTabItemRequestBuilder|null
     */
-    public function tabsById(string $id): TeamsTabItemRequestBuilder {
+    public function tabsById(string $id): ?TeamsTabItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsTab%2Did'] = $id;
         return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter);

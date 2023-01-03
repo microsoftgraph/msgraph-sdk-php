@@ -219,9 +219,9 @@ class EducationSubmissionItemRequestBuilder
     /**
      * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
-     * @return EducationOutcomeItemRequestBuilder
+     * @return EducationOutcomeItemRequestBuilder|null
     */
-    public function outcomesById(string $id): EducationOutcomeItemRequestBuilder {
+    public function outcomesById(string $id): ?EducationOutcomeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationOutcome%2Did'] = $id;
         return new EducationOutcomeItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -250,9 +250,9 @@ class EducationSubmissionItemRequestBuilder
     /**
      * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder|null
     */
-    public function resourcesById(string $id): \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder {
+    public function resourcesById(string $id): ?\Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -261,9 +261,9 @@ class EducationSubmissionItemRequestBuilder
     /**
      * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder|null
     */
-    public function submittedResourcesById(string $id): \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder {
+    public function submittedResourcesById(string $id): ?\Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);

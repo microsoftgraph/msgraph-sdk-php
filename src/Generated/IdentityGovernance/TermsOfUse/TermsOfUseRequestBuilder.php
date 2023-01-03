@@ -53,9 +53,9 @@ class TermsOfUseRequestBuilder
     /**
      * Provides operations to manage the agreementAcceptances property of the microsoft.graph.termsOfUseContainer entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementAcceptanceItemRequestBuilder
+     * @return AgreementAcceptanceItemRequestBuilder|null
     */
-    public function agreementAcceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
+    public function agreementAcceptancesById(string $id): ?AgreementAcceptanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementAcceptance%2Did'] = $id;
         return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -64,9 +64,9 @@ class TermsOfUseRequestBuilder
     /**
      * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
      * @param string $id Unique identifier of the item
-     * @return AgreementItemRequestBuilder
+     * @return AgreementItemRequestBuilder|null
     */
-    public function agreementsById(string $id): AgreementItemRequestBuilder {
+    public function agreementsById(string $id): ?AgreementItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreement%2Did'] = $id;
         return new AgreementItemRequestBuilder($urlTplParams, $this->requestAdapter);

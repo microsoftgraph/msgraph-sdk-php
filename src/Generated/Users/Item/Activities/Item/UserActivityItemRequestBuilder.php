@@ -163,9 +163,9 @@ class UserActivityItemRequestBuilder
     /**
      * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
      * @param string $id Unique identifier of the item
-     * @return ActivityHistoryItemItemRequestBuilder
+     * @return ActivityHistoryItemItemRequestBuilder|null
     */
-    public function historyItemsById(string $id): ActivityHistoryItemItemRequestBuilder {
+    public function historyItemsById(string $id): ?ActivityHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityHistoryItem%2Did'] = $id;
         return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

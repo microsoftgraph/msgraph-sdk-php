@@ -192,9 +192,9 @@ class AttackSimulationRequestBuilder
     /**
      * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
      * @param string $id Unique identifier of the item
-     * @return SimulationAutomationItemRequestBuilder
+     * @return SimulationAutomationItemRequestBuilder|null
     */
-    public function simulationAutomationsById(string $id): SimulationAutomationItemRequestBuilder {
+    public function simulationAutomationsById(string $id): ?SimulationAutomationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulationAutomation%2Did'] = $id;
         return new SimulationAutomationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -203,9 +203,9 @@ class AttackSimulationRequestBuilder
     /**
      * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
      * @param string $id Unique identifier of the item
-     * @return SimulationItemRequestBuilder
+     * @return SimulationItemRequestBuilder|null
     */
-    public function simulationsById(string $id): SimulationItemRequestBuilder {
+    public function simulationsById(string $id): ?SimulationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulation%2Did'] = $id;
         return new SimulationItemRequestBuilder($urlTplParams, $this->requestAdapter);

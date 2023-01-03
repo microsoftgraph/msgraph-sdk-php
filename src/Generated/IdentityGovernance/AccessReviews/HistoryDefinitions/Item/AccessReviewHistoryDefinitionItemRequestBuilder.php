@@ -163,9 +163,9 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
     /**
      * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
      * @param string $id Unique identifier of the item
-     * @return AccessReviewHistoryInstanceItemRequestBuilder
+     * @return AccessReviewHistoryInstanceItemRequestBuilder|null
     */
-    public function instancesById(string $id): AccessReviewHistoryInstanceItemRequestBuilder {
+    public function instancesById(string $id): ?AccessReviewHistoryInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewHistoryInstance%2Did'] = $id;
         return new AccessReviewHistoryInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);

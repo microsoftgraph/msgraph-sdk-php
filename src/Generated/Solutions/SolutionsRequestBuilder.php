@@ -53,9 +53,9 @@ class SolutionsRequestBuilder
     /**
      * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
      * @param string $id Unique identifier of the item
-     * @return BookingBusinessItemRequestBuilder
+     * @return BookingBusinessItemRequestBuilder|null
     */
-    public function bookingBusinessesById(string $id): BookingBusinessItemRequestBuilder {
+    public function bookingBusinessesById(string $id): ?BookingBusinessItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingBusiness%2Did'] = $id;
         return new BookingBusinessItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -64,9 +64,9 @@ class SolutionsRequestBuilder
     /**
      * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
      * @param string $id Unique identifier of the item
-     * @return BookingCurrencyItemRequestBuilder
+     * @return BookingCurrencyItemRequestBuilder|null
     */
-    public function bookingCurrenciesById(string $id): BookingCurrencyItemRequestBuilder {
+    public function bookingCurrenciesById(string $id): ?BookingCurrencyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCurrency%2Did'] = $id;
         return new BookingCurrencyItemRequestBuilder($urlTplParams, $this->requestAdapter);

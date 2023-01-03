@@ -44,9 +44,9 @@ class CalendarGroupItemRequestBuilder
     /**
      * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
      * @param string $id Unique identifier of the item
-     * @return CalendarItemRequestBuilder
+     * @return CalendarItemRequestBuilder|null
     */
-    public function calendarsById(string $id): CalendarItemRequestBuilder {
+    public function calendarsById(string $id): ?CalendarItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendar%2Did'] = $id;
         return new CalendarItemRequestBuilder($urlTplParams, $this->requestAdapter);

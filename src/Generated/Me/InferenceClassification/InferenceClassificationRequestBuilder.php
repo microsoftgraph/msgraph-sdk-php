@@ -123,9 +123,9 @@ class InferenceClassificationRequestBuilder
     /**
      * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
      * @param string $id Unique identifier of the item
-     * @return InferenceClassificationOverrideItemRequestBuilder
+     * @return InferenceClassificationOverrideItemRequestBuilder|null
     */
-    public function overridesById(string $id): InferenceClassificationOverrideItemRequestBuilder {
+    public function overridesById(string $id): ?InferenceClassificationOverrideItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['inferenceClassificationOverride%2Did'] = $id;
         return new InferenceClassificationOverrideItemRequestBuilder($urlTplParams, $this->requestAdapter);

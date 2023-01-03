@@ -61,9 +61,9 @@ class EducationSchoolItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.schools.item.classes.item collection
      * @param string $id Unique identifier of the item
-     * @return EducationClassItemRequestBuilder
+     * @return EducationClassItemRequestBuilder|null
     */
-    public function classesById(string $id): EducationClassItemRequestBuilder {
+    public function classesById(string $id): ?EducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
         return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class EducationSchoolItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.education.schools.item.users.item collection
      * @param string $id Unique identifier of the item
-     * @return EducationUserItemRequestBuilder
+     * @return EducationUserItemRequestBuilder|null
     */
-    public function usersById(string $id): EducationUserItemRequestBuilder {
+    public function usersById(string $id): ?EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
         return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);

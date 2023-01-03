@@ -78,9 +78,9 @@ class ManagedEBookItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedEBookAssignmentItemRequestBuilder
+     * @return ManagedEBookAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): ManagedEBookAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?ManagedEBookAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedEBookAssignment%2Did'] = $id;
         return new ManagedEBookAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -189,9 +189,9 @@ class ManagedEBookItemRequestBuilder
     /**
      * Provides operations to manage the deviceStates property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceInstallStateItemRequestBuilder
+     * @return DeviceInstallStateItemRequestBuilder|null
     */
-    public function deviceStatesById(string $id): DeviceInstallStateItemRequestBuilder {
+    public function deviceStatesById(string $id): ?DeviceInstallStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceInstallState%2Did'] = $id;
         return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -239,9 +239,9 @@ class ManagedEBookItemRequestBuilder
     /**
      * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
      * @param string $id Unique identifier of the item
-     * @return UserInstallStateSummaryItemRequestBuilder
+     * @return UserInstallStateSummaryItemRequestBuilder|null
     */
-    public function userStateSummaryById(string $id): UserInstallStateSummaryItemRequestBuilder {
+    public function userStateSummaryById(string $id): ?UserInstallStateSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userInstallStateSummary%2Did'] = $id;
         return new UserInstallStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);

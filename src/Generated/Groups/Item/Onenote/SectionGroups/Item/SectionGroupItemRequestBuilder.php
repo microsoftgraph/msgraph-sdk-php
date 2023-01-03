@@ -207,9 +207,9 @@ class SectionGroupItemRequestBuilder
     /**
      * Provides operations to manage the sectionGroups property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder|null
     */
-    public function sectionGroupsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder {
+    public function sectionGroupsById(string $id): ?\Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did1'] = $id;
         return new \Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -218,9 +218,9 @@ class SectionGroupItemRequestBuilder
     /**
      * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
      * @param string $id Unique identifier of the item
-     * @return OnenoteSectionItemRequestBuilder
+     * @return OnenoteSectionItemRequestBuilder|null
     */
-    public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
+    public function sectionsById(string $id): ?OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
         return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);

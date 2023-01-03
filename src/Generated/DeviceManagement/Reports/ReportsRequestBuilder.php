@@ -280,9 +280,9 @@ class ReportsRequestBuilder
     /**
      * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceManagementExportJobItemRequestBuilder
+     * @return DeviceManagementExportJobItemRequestBuilder|null
     */
-    public function exportJobsById(string $id): DeviceManagementExportJobItemRequestBuilder {
+    public function exportJobsById(string $id): ?DeviceManagementExportJobItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceManagementExportJob%2Did'] = $id;
         return new DeviceManagementExportJobItemRequestBuilder($urlTplParams, $this->requestAdapter);

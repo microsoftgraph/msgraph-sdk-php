@@ -189,9 +189,9 @@ class SubjectRightsRequestItemRequestBuilder
     /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
      * @param string $id Unique identifier of the item
-     * @return AuthoredNoteItemRequestBuilder
+     * @return AuthoredNoteItemRequestBuilder|null
     */
-    public function notesById(string $id): AuthoredNoteItemRequestBuilder {
+    public function notesById(string $id): ?AuthoredNoteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authoredNote%2Did'] = $id;
         return new AuthoredNoteItemRequestBuilder($urlTplParams, $this->requestAdapter);

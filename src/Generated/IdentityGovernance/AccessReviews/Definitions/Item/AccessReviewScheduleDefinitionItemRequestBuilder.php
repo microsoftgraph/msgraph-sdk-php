@@ -171,9 +171,9 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     /**
      * Provides operations to manage the instances property of the microsoft.graph.accessReviewScheduleDefinition entity.
      * @param string $id Unique identifier of the item
-     * @return AccessReviewInstanceItemRequestBuilder
+     * @return AccessReviewInstanceItemRequestBuilder|null
     */
-    public function instancesById(string $id): AccessReviewInstanceItemRequestBuilder {
+    public function instancesById(string $id): ?AccessReviewInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstance%2Did'] = $id;
         return new AccessReviewInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);

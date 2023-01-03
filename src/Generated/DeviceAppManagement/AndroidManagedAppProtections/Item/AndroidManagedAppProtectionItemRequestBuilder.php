@@ -52,9 +52,9 @@ class AndroidManagedAppProtectionItemRequestBuilder
     /**
      * Provides operations to manage the apps property of the microsoft.graph.androidManagedAppProtection entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedMobileAppItemRequestBuilder
+     * @return ManagedMobileAppItemRequestBuilder|null
     */
-    public function appsById(string $id): ManagedMobileAppItemRequestBuilder {
+    public function appsById(string $id): ?ManagedMobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedMobileApp%2Did'] = $id;
         return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);

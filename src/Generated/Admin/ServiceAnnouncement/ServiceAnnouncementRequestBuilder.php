@@ -181,9 +181,9 @@ class ServiceAnnouncementRequestBuilder
     /**
      * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
-     * @return ServiceHealthItemRequestBuilder
+     * @return ServiceHealthItemRequestBuilder|null
     */
-    public function healthOverviewsById(string $id): ServiceHealthItemRequestBuilder {
+    public function healthOverviewsById(string $id): ?ServiceHealthItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealth%2Did'] = $id;
         return new ServiceHealthItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -192,9 +192,9 @@ class ServiceAnnouncementRequestBuilder
     /**
      * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
-     * @return ServiceHealthIssueItemRequestBuilder
+     * @return ServiceHealthIssueItemRequestBuilder|null
     */
-    public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
+    public function issuesById(string $id): ?ServiceHealthIssueItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealthIssue%2Did'] = $id;
         return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -203,9 +203,9 @@ class ServiceAnnouncementRequestBuilder
     /**
      * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
      * @param string $id Unique identifier of the item
-     * @return ServiceUpdateMessageItemRequestBuilder
+     * @return ServiceUpdateMessageItemRequestBuilder|null
     */
-    public function messagesById(string $id): ServiceUpdateMessageItemRequestBuilder {
+    public function messagesById(string $id): ?ServiceUpdateMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceUpdateMessage%2Did'] = $id;
         return new ServiceUpdateMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);

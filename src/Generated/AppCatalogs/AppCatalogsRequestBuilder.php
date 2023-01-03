@@ -143,9 +143,9 @@ class AppCatalogsRequestBuilder
     /**
      * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
      * @param string $id Unique identifier of the item
-     * @return TeamsAppItemRequestBuilder
+     * @return TeamsAppItemRequestBuilder|null
     */
-    public function teamsAppsById(string $id): TeamsAppItemRequestBuilder {
+    public function teamsAppsById(string $id): ?TeamsAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsApp%2Did'] = $id;
         return new TeamsAppItemRequestBuilder($urlTplParams, $this->requestAdapter);

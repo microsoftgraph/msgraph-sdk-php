@@ -179,9 +179,9 @@ class ListItemItemRequestBuilder
     /**
      * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
      * @param string $id Unique identifier of the item
-     * @return DocumentSetVersionItemRequestBuilder
+     * @return DocumentSetVersionItemRequestBuilder|null
     */
-    public function documentSetVersionsById(string $id): DocumentSetVersionItemRequestBuilder {
+    public function documentSetVersionsById(string $id): ?DocumentSetVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['documentSetVersion%2Did'] = $id;
         return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -248,9 +248,9 @@ class ListItemItemRequestBuilder
     /**
      * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
      * @param string $id Unique identifier of the item
-     * @return ListItemVersionItemRequestBuilder
+     * @return ListItemVersionItemRequestBuilder|null
     */
-    public function versionsById(string $id): ListItemVersionItemRequestBuilder {
+    public function versionsById(string $id): ?ListItemVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['listItemVersion%2Did'] = $id;
         return new ListItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);

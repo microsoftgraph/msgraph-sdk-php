@@ -183,9 +183,9 @@ class RoleDefinitionItemRequestBuilder
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.roleDefinition entity.
      * @param string $id Unique identifier of the item
-     * @return RoleAssignmentItemRequestBuilder
+     * @return RoleAssignmentItemRequestBuilder|null
     */
-    public function roleAssignmentsById(string $id): RoleAssignmentItemRequestBuilder {
+    public function roleAssignmentsById(string $id): ?RoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['roleAssignment%2Did'] = $id;
         return new RoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);

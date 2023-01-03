@@ -99,9 +99,9 @@ class BitlockerRequestBuilder
     /**
      * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
      * @param string $id Unique identifier of the item
-     * @return BitlockerRecoveryKeyItemRequestBuilder
+     * @return BitlockerRecoveryKeyItemRequestBuilder|null
     */
-    public function recoveryKeysById(string $id): BitlockerRecoveryKeyItemRequestBuilder {
+    public function recoveryKeysById(string $id): ?BitlockerRecoveryKeyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bitlockerRecoveryKey%2Did'] = $id;
         return new BitlockerRecoveryKeyItemRequestBuilder($urlTplParams, $this->requestAdapter);

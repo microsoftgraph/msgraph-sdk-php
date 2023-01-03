@@ -163,9 +163,9 @@ class TeamworkTagItemRequestBuilder
     /**
      * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
      * @param string $id Unique identifier of the item
-     * @return TeamworkTagMemberItemRequestBuilder
+     * @return TeamworkTagMemberItemRequestBuilder|null
     */
-    public function membersById(string $id): TeamworkTagMemberItemRequestBuilder {
+    public function membersById(string $id): ?TeamworkTagMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamworkTagMember%2Did'] = $id;
         return new TeamworkTagMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);

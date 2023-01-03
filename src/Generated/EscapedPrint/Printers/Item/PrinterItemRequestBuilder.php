@@ -70,9 +70,9 @@ class PrinterItemRequestBuilder
     /**
      * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
-     * @return PrintConnectorItemRequestBuilder
+     * @return PrintConnectorItemRequestBuilder|null
     */
-    public function connectorsById(string $id): PrintConnectorItemRequestBuilder {
+    public function connectorsById(string $id): ?PrintConnectorItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printConnector%2Did'] = $id;
         return new PrintConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -220,9 +220,9 @@ class PrinterItemRequestBuilder
     /**
      * Provides operations to manage the shares property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
-     * @return PrinterShareItemRequestBuilder
+     * @return PrinterShareItemRequestBuilder|null
     */
-    public function sharesById(string $id): PrinterShareItemRequestBuilder {
+    public function sharesById(string $id): ?PrinterShareItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printerShare%2Did'] = $id;
         return new PrinterShareItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -231,9 +231,9 @@ class PrinterItemRequestBuilder
     /**
      * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
      * @param string $id Unique identifier of the item
-     * @return PrintTaskTriggerItemRequestBuilder
+     * @return PrintTaskTriggerItemRequestBuilder|null
     */
-    public function taskTriggersById(string $id): PrintTaskTriggerItemRequestBuilder {
+    public function taskTriggersById(string $id): ?PrintTaskTriggerItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printTaskTrigger%2Did'] = $id;
         return new PrintTaskTriggerItemRequestBuilder($urlTplParams, $this->requestAdapter);

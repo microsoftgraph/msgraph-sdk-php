@@ -197,9 +197,9 @@ class RootRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return DriveItemItemRequestBuilder
+     * @return DriveItemItemRequestBuilder|null
     */
-    public function childrenById(string $id): DriveItemItemRequestBuilder {
+    public function childrenById(string $id): ?DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
         return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -383,9 +383,9 @@ class RootRequestBuilder
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return PermissionItemRequestBuilder
+     * @return PermissionItemRequestBuilder|null
     */
-    public function permissionsById(string $id): PermissionItemRequestBuilder {
+    public function permissionsById(string $id): ?PermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permission%2Did'] = $id;
         return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -403,9 +403,9 @@ class RootRequestBuilder
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return SubscriptionItemRequestBuilder
+     * @return SubscriptionItemRequestBuilder|null
     */
-    public function subscriptionsById(string $id): SubscriptionItemRequestBuilder {
+    public function subscriptionsById(string $id): ?SubscriptionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subscription%2Did'] = $id;
         return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -414,9 +414,9 @@ class RootRequestBuilder
     /**
      * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return ThumbnailSetItemRequestBuilder
+     * @return ThumbnailSetItemRequestBuilder|null
     */
-    public function thumbnailsById(string $id): ThumbnailSetItemRequestBuilder {
+    public function thumbnailsById(string $id): ?ThumbnailSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['thumbnailSet%2Did'] = $id;
         return new ThumbnailSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -425,9 +425,9 @@ class RootRequestBuilder
     /**
      * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
      * @param string $id Unique identifier of the item
-     * @return DriveItemVersionItemRequestBuilder
+     * @return DriveItemVersionItemRequestBuilder|null
     */
-    public function versionsById(string $id): DriveItemVersionItemRequestBuilder {
+    public function versionsById(string $id): ?DriveItemVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItemVersion%2Did'] = $id;
         return new DriveItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);

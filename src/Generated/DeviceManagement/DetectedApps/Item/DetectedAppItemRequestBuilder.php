@@ -163,9 +163,9 @@ class DetectedAppItemRequestBuilder
     /**
      * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
      * @param string $id Unique identifier of the item
-     * @return ManagedDeviceItemRequestBuilder
+     * @return ManagedDeviceItemRequestBuilder|null
     */
-    public function managedDevicesById(string $id): ManagedDeviceItemRequestBuilder {
+    public function managedDevicesById(string $id): ?ManagedDeviceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDevice%2Did'] = $id;
         return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);

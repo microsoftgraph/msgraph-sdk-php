@@ -60,9 +60,9 @@ class SetItemRequestBuilder
     /**
      * Provides operations to manage the children property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder|null
     */
-    public function childrenById(string $id): \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder {
+    public function childrenById(string $id): ?\Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -210,9 +210,9 @@ class SetItemRequestBuilder
     /**
      * Provides operations to manage the relations property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
-     * @return RelationItemRequestBuilder
+     * @return RelationItemRequestBuilder|null
     */
-    public function relationsById(string $id): RelationItemRequestBuilder {
+    public function relationsById(string $id): ?RelationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['relation%2Did'] = $id;
         return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -221,9 +221,9 @@ class SetItemRequestBuilder
     /**
      * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder|null
     */
-    public function termsById(string $id): \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder {
+    public function termsById(string $id): ?\Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Terms\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);

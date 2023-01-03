@@ -144,9 +144,9 @@ class PrintServiceItemRequestBuilder
     /**
      * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
      * @param string $id Unique identifier of the item
-     * @return PrintServiceEndpointItemRequestBuilder
+     * @return PrintServiceEndpointItemRequestBuilder|null
     */
-    public function endpointsById(string $id): PrintServiceEndpointItemRequestBuilder {
+    public function endpointsById(string $id): ?PrintServiceEndpointItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printServiceEndpoint%2Did'] = $id;
         return new PrintServiceEndpointItemRequestBuilder($urlTplParams, $this->requestAdapter);

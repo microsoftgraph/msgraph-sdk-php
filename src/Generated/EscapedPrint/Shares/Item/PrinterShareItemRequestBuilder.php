@@ -61,9 +61,9 @@ class PrinterShareItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.print.shares.item.allowedGroups.item collection
      * @param string $id Unique identifier of the item
-     * @return GroupItemRequestBuilder
+     * @return GroupItemRequestBuilder|null
     */
-    public function allowedGroupsById(string $id): GroupItemRequestBuilder {
+    public function allowedGroupsById(string $id): ?GroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['group%2Did'] = $id;
         return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -72,9 +72,9 @@ class PrinterShareItemRequestBuilder
     /**
      * Gets an item from the Microsoft\Graph\Generated.print.shares.item.allowedUsers.item collection
      * @param string $id Unique identifier of the item
-     * @return UserItemRequestBuilder
+     * @return UserItemRequestBuilder|null
     */
-    public function allowedUsersById(string $id): UserItemRequestBuilder {
+    public function allowedUsersById(string $id): ?UserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['user%2Did'] = $id;
         return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter);

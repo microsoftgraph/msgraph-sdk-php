@@ -132,9 +132,9 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the defaultPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder|null
     */
-    public function defaultPagesById(string $id): \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder {
+    public function defaultPagesById(string $id): ?\Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\DefaultPages\Item\UserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -181,9 +181,9 @@ class UserFlowLanguageConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the overridesPages property of the microsoft.graph.userFlowLanguageConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder|null
     */
-    public function overridesPagesById(string $id): \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder {
+    public function overridesPagesById(string $id): ?\Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguagePage%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\OverridesPages\Item\UserFlowLanguagePageItemRequestBuilder($urlTplParams, $this->requestAdapter);

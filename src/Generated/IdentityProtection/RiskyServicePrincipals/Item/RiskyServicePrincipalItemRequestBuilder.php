@@ -163,9 +163,9 @@ class RiskyServicePrincipalItemRequestBuilder
     /**
      * Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity.
      * @param string $id Unique identifier of the item
-     * @return RiskyServicePrincipalHistoryItemItemRequestBuilder
+     * @return RiskyServicePrincipalHistoryItemItemRequestBuilder|null
     */
-    public function historyById(string $id): RiskyServicePrincipalHistoryItemItemRequestBuilder {
+    public function historyById(string $id): ?RiskyServicePrincipalHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyServicePrincipalHistoryItem%2Did'] = $id;
         return new RiskyServicePrincipalHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);

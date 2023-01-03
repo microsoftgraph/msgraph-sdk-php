@@ -96,9 +96,9 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return CalendarPermissionItemRequestBuilder
+     * @return CalendarPermissionItemRequestBuilder|null
     */
-    public function calendarPermissionsById(string $id): CalendarPermissionItemRequestBuilder {
+    public function calendarPermissionsById(string $id): ?CalendarPermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendarPermission%2Did'] = $id;
         return new CalendarPermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -107,9 +107,9 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\EventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\EventItemRequestBuilder|null
     */
-    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\EventItemRequestBuilder {
+    public function calendarViewById(string $id): ?\Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -218,9 +218,9 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\EventItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\EventItemRequestBuilder|null
     */
-    public function eventsById(string $id): \Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\EventItemRequestBuilder {
+    public function eventsById(string $id): ?\Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Me\Calendars\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -248,9 +248,9 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
+    public function multiValueExtendedPropertiesById(string $id): ?MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -279,9 +279,9 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
-     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
+    public function singleValueExtendedPropertiesById(string $id): ?SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);

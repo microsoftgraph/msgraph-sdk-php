@@ -60,9 +60,9 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return EnrollmentConfigurationAssignmentItemRequestBuilder
+     * @return EnrollmentConfigurationAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): EnrollmentConfigurationAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?EnrollmentConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['enrollmentConfigurationAssignment%2Did'] = $id;
         return new EnrollmentConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);

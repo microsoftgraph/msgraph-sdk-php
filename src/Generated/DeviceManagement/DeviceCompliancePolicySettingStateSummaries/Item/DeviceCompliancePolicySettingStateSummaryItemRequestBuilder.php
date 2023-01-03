@@ -144,9 +144,9 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     /**
      * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceComplianceSettingStateItemRequestBuilder
+     * @return DeviceComplianceSettingStateItemRequestBuilder|null
     */
-    public function deviceComplianceSettingStatesById(string $id): DeviceComplianceSettingStateItemRequestBuilder {
+    public function deviceComplianceSettingStatesById(string $id): ?DeviceComplianceSettingStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceSettingState%2Did'] = $id;
         return new DeviceComplianceSettingStateItemRequestBuilder($urlTplParams, $this->requestAdapter);

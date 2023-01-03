@@ -183,9 +183,9 @@ class AppConsentRequestItemRequestBuilder
     /**
      * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
      * @param string $id Unique identifier of the item
-     * @return UserConsentRequestItemRequestBuilder
+     * @return UserConsentRequestItemRequestBuilder|null
     */
-    public function userConsentRequestsById(string $id): UserConsentRequestItemRequestBuilder {
+    public function userConsentRequestsById(string $id): ?UserConsentRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userConsentRequest%2Did'] = $id;
         return new UserConsentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);

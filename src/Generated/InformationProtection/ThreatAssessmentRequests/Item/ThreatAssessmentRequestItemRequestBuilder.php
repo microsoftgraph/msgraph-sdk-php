@@ -183,9 +183,9 @@ class ThreatAssessmentRequestItemRequestBuilder
     /**
      * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
      * @param string $id Unique identifier of the item
-     * @return ThreatAssessmentResultItemRequestBuilder
+     * @return ThreatAssessmentResultItemRequestBuilder|null
     */
-    public function resultsById(string $id): ThreatAssessmentResultItemRequestBuilder {
+    public function resultsById(string $id): ?ThreatAssessmentResultItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['threatAssessmentResult%2Did'] = $id;
         return new ThreatAssessmentResultItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -151,9 +151,9 @@ class TeamworkRequestBuilder
     /**
      * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
      * @param string $id Unique identifier of the item
-     * @return WorkforceIntegrationItemRequestBuilder
+     * @return WorkforceIntegrationItemRequestBuilder|null
     */
-    public function workforceIntegrationsById(string $id): WorkforceIntegrationItemRequestBuilder {
+    public function workforceIntegrationsById(string $id): ?WorkforceIntegrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workforceIntegration%2Did'] = $id;
         return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter);

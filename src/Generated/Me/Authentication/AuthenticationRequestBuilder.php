@@ -225,9 +225,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return EmailAuthenticationMethodItemRequestBuilder
+     * @return EmailAuthenticationMethodItemRequestBuilder|null
     */
-    public function emailMethodsById(string $id): EmailAuthenticationMethodItemRequestBuilder {
+    public function emailMethodsById(string $id): ?EmailAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['emailAuthenticationMethod%2Did'] = $id;
         return new EmailAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -236,9 +236,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return Fido2AuthenticationMethodItemRequestBuilder
+     * @return Fido2AuthenticationMethodItemRequestBuilder|null
     */
-    public function fido2MethodsById(string $id): Fido2AuthenticationMethodItemRequestBuilder {
+    public function fido2MethodsById(string $id): ?Fido2AuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['fido2AuthenticationMethod%2Did'] = $id;
         return new Fido2AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -266,9 +266,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return AuthenticationMethodItemRequestBuilder
+     * @return AuthenticationMethodItemRequestBuilder|null
     */
-    public function methodsById(string $id): AuthenticationMethodItemRequestBuilder {
+    public function methodsById(string $id): ?AuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authenticationMethod%2Did'] = $id;
         return new AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -277,9 +277,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
+     * @return MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder|null
     */
-    public function microsoftAuthenticatorMethodsById(string $id): MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
+    public function microsoftAuthenticatorMethodsById(string $id): ?MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['microsoftAuthenticatorAuthenticationMethod%2Did'] = $id;
         return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -288,9 +288,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return LongRunningOperationItemRequestBuilder
+     * @return LongRunningOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): LongRunningOperationItemRequestBuilder {
+    public function operationsById(string $id): ?LongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['longRunningOperation%2Did'] = $id;
         return new LongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -299,9 +299,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return PasswordAuthenticationMethodItemRequestBuilder
+     * @return PasswordAuthenticationMethodItemRequestBuilder|null
     */
-    public function passwordMethodsById(string $id): PasswordAuthenticationMethodItemRequestBuilder {
+    public function passwordMethodsById(string $id): ?PasswordAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['passwordAuthenticationMethod%2Did'] = $id;
         return new PasswordAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -330,9 +330,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return PhoneAuthenticationMethodItemRequestBuilder
+     * @return PhoneAuthenticationMethodItemRequestBuilder|null
     */
-    public function phoneMethodsById(string $id): PhoneAuthenticationMethodItemRequestBuilder {
+    public function phoneMethodsById(string $id): ?PhoneAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['phoneAuthenticationMethod%2Did'] = $id;
         return new PhoneAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -341,9 +341,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return SoftwareOathAuthenticationMethodItemRequestBuilder
+     * @return SoftwareOathAuthenticationMethodItemRequestBuilder|null
     */
-    public function softwareOathMethodsById(string $id): SoftwareOathAuthenticationMethodItemRequestBuilder {
+    public function softwareOathMethodsById(string $id): ?SoftwareOathAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['softwareOathAuthenticationMethod%2Did'] = $id;
         return new SoftwareOathAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -352,9 +352,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilder
+     * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilder|null
     */
-    public function temporaryAccessPassMethodsById(string $id): TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
+    public function temporaryAccessPassMethodsById(string $id): ?TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['temporaryAccessPassAuthenticationMethod%2Did'] = $id;
         return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -363,9 +363,9 @@ class AuthenticationRequestBuilder
     /**
      * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
      * @param string $id Unique identifier of the item
-     * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
+     * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder|null
     */
-    public function windowsHelloForBusinessMethodsById(string $id): WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
+    public function windowsHelloForBusinessMethodsById(string $id): ?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['windowsHelloForBusinessAuthenticationMethod%2Did'] = $id;
         return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);

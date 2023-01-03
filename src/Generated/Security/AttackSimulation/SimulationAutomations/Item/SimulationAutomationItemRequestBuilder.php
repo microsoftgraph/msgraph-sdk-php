@@ -183,9 +183,9 @@ class SimulationAutomationItemRequestBuilder
     /**
      * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
      * @param string $id Unique identifier of the item
-     * @return SimulationAutomationRunItemRequestBuilder
+     * @return SimulationAutomationRunItemRequestBuilder|null
     */
-    public function runsById(string $id): SimulationAutomationRunItemRequestBuilder {
+    public function runsById(string $id): ?SimulationAutomationRunItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulationAutomationRun%2Did'] = $id;
         return new SimulationAutomationRunItemRequestBuilder($urlTplParams, $this->requestAdapter);

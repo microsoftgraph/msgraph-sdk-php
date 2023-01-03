@@ -109,9 +109,9 @@ class OrganizationItemRequestBuilder
     /**
      * Provides operations to manage the certificateBasedAuthConfiguration property of the microsoft.graph.organization entity.
      * @param string $id Unique identifier of the item
-     * @return CertificateBasedAuthConfigurationItemRequestBuilder
+     * @return CertificateBasedAuthConfigurationItemRequestBuilder|null
     */
-    public function certificateBasedAuthConfigurationById(string $id): CertificateBasedAuthConfigurationItemRequestBuilder {
+    public function certificateBasedAuthConfigurationById(string $id): ?CertificateBasedAuthConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['certificateBasedAuthConfiguration%2Did'] = $id;
         return new CertificateBasedAuthConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -220,9 +220,9 @@ class OrganizationItemRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);

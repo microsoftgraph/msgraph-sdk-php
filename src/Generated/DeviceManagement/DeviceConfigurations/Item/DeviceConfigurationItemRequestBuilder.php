@@ -96,9 +96,9 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceConfigurationAssignmentItemRequestBuilder
+     * @return DeviceConfigurationAssignmentItemRequestBuilder|null
     */
-    public function assignmentsById(string $id): DeviceConfigurationAssignmentItemRequestBuilder {
+    public function assignmentsById(string $id): ?DeviceConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationAssignment%2Did'] = $id;
         return new DeviceConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -207,9 +207,9 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return SettingStateDeviceSummaryItemRequestBuilder
+     * @return SettingStateDeviceSummaryItemRequestBuilder|null
     */
-    public function deviceSettingStateSummariesById(string $id): SettingStateDeviceSummaryItemRequestBuilder {
+    public function deviceSettingStateSummariesById(string $id): ?SettingStateDeviceSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['settingStateDeviceSummary%2Did'] = $id;
         return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -218,9 +218,9 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceConfigurationDeviceStatusItemRequestBuilder
+     * @return DeviceConfigurationDeviceStatusItemRequestBuilder|null
     */
-    public function deviceStatusesById(string $id): DeviceConfigurationDeviceStatusItemRequestBuilder {
+    public function deviceStatusesById(string $id): ?DeviceConfigurationDeviceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationDeviceStatus%2Did'] = $id;
         return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -277,9 +277,9 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to manage the userStatuses property of the microsoft.graph.deviceConfiguration entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceConfigurationUserStatusItemRequestBuilder
+     * @return DeviceConfigurationUserStatusItemRequestBuilder|null
     */
-    public function userStatusesById(string $id): DeviceConfigurationUserStatusItemRequestBuilder {
+    public function userStatusesById(string $id): ?DeviceConfigurationUserStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationUserStatus%2Did'] = $id;
         return new DeviceConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);

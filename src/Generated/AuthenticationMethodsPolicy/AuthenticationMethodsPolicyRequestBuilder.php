@@ -44,9 +44,9 @@ class AuthenticationMethodsPolicyRequestBuilder
     /**
      * Provides operations to manage the authenticationMethodConfigurations property of the microsoft.graph.authenticationMethodsPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return AuthenticationMethodConfigurationItemRequestBuilder
+     * @return AuthenticationMethodConfigurationItemRequestBuilder|null
     */
-    public function authenticationMethodConfigurationsById(string $id): AuthenticationMethodConfigurationItemRequestBuilder {
+    public function authenticationMethodConfigurationsById(string $id): ?AuthenticationMethodConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authenticationMethodConfiguration%2Did'] = $id;
         return new AuthenticationMethodConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);

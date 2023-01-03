@@ -61,9 +61,9 @@ class TeamworkRequestBuilder
     /**
      * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
      * @param string $id Unique identifier of the item
-     * @return AssociatedTeamInfoItemRequestBuilder
+     * @return AssociatedTeamInfoItemRequestBuilder|null
     */
-    public function associatedTeamsById(string $id): AssociatedTeamInfoItemRequestBuilder {
+    public function associatedTeamsById(string $id): ?AssociatedTeamInfoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['associatedTeamInfo%2Did'] = $id;
         return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -191,9 +191,9 @@ class TeamworkRequestBuilder
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
      * @param string $id Unique identifier of the item
-     * @return UserScopeTeamsAppInstallationItemRequestBuilder
+     * @return UserScopeTeamsAppInstallationItemRequestBuilder|null
     */
-    public function installedAppsById(string $id): UserScopeTeamsAppInstallationItemRequestBuilder {
+    public function installedAppsById(string $id): ?UserScopeTeamsAppInstallationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userScopeTeamsAppInstallation%2Did'] = $id;
         return new UserScopeTeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);

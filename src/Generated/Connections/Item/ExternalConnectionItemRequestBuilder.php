@@ -189,9 +189,9 @@ class ExternalConnectionItemRequestBuilder
     /**
      * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
-     * @return ExternalGroupItemRequestBuilder
+     * @return ExternalGroupItemRequestBuilder|null
     */
-    public function groupsById(string $id): ExternalGroupItemRequestBuilder {
+    public function groupsById(string $id): ?ExternalGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalGroup%2Did'] = $id;
         return new ExternalGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -200,9 +200,9 @@ class ExternalConnectionItemRequestBuilder
     /**
      * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
-     * @return ExternalItemItemRequestBuilder
+     * @return ExternalItemItemRequestBuilder|null
     */
-    public function itemsById(string $id): ExternalItemItemRequestBuilder {
+    public function itemsById(string $id): ?ExternalItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalItem%2Did'] = $id;
         return new ExternalItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -211,9 +211,9 @@ class ExternalConnectionItemRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
      * @param string $id Unique identifier of the item
-     * @return ConnectionOperationItemRequestBuilder
+     * @return ConnectionOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): ConnectionOperationItemRequestBuilder {
+    public function operationsById(string $id): ?ConnectionOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['connectionOperation%2Did'] = $id;
         return new ConnectionOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);

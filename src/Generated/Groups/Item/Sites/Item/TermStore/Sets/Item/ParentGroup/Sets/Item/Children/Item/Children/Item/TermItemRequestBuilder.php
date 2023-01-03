@@ -191,9 +191,9 @@ class TermItemRequestBuilder
     /**
      * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
      * @param string $id Unique identifier of the item
-     * @return RelationItemRequestBuilder
+     * @return RelationItemRequestBuilder|null
     */
-    public function relationsById(string $id): RelationItemRequestBuilder {
+    public function relationsById(string $id): ?RelationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['relation%2Did'] = $id;
         return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);

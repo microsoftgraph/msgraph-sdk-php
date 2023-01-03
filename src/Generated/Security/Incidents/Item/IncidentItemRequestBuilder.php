@@ -44,9 +44,9 @@ class IncidentItemRequestBuilder
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security.incident entity.
      * @param string $id Unique identifier of the item
-     * @return AlertItemRequestBuilder
+     * @return AlertItemRequestBuilder|null
     */
-    public function alertsById(string $id): AlertItemRequestBuilder {
+    public function alertsById(string $id): ?AlertItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['alert%2Did'] = $id;
         return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);

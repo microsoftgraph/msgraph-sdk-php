@@ -52,9 +52,9 @@ class OnlineMeetingItemRequestBuilder
     /**
      * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
      * @param string $id Unique identifier of the item
-     * @return MeetingAttendanceReportItemRequestBuilder
+     * @return MeetingAttendanceReportItemRequestBuilder|null
     */
-    public function attendanceReportsById(string $id): MeetingAttendanceReportItemRequestBuilder {
+    public function attendanceReportsById(string $id): ?MeetingAttendanceReportItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['meetingAttendanceReport%2Did'] = $id;
         return new MeetingAttendanceReportItemRequestBuilder($urlTplParams, $this->requestAdapter);

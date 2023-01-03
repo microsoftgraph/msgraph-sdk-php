@@ -183,9 +183,9 @@ class CallItemRequestBuilder
     /**
      * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
-     * @return AudioRoutingGroupItemRequestBuilder
+     * @return AudioRoutingGroupItemRequestBuilder|null
     */
-    public function audioRoutingGroupsById(string $id): AudioRoutingGroupItemRequestBuilder {
+    public function audioRoutingGroupsById(string $id): ?AudioRoutingGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['audioRoutingGroup%2Did'] = $id;
         return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -205,9 +205,9 @@ class CallItemRequestBuilder
     /**
      * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
-     * @return ContentSharingSessionItemRequestBuilder
+     * @return ContentSharingSessionItemRequestBuilder|null
     */
-    public function contentSharingSessionsById(string $id): ContentSharingSessionItemRequestBuilder {
+    public function contentSharingSessionsById(string $id): ?ContentSharingSessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentSharingSession%2Did'] = $id;
         return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -324,9 +324,9 @@ class CallItemRequestBuilder
     /**
      * Provides operations to manage the operations property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
-     * @return CommsOperationItemRequestBuilder
+     * @return CommsOperationItemRequestBuilder|null
     */
-    public function operationsById(string $id): CommsOperationItemRequestBuilder {
+    public function operationsById(string $id): ?CommsOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['commsOperation%2Did'] = $id;
         return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -335,9 +335,9 @@ class CallItemRequestBuilder
     /**
      * Provides operations to manage the participants property of the microsoft.graph.call entity.
      * @param string $id Unique identifier of the item
-     * @return ParticipantItemRequestBuilder
+     * @return ParticipantItemRequestBuilder|null
     */
-    public function participantsById(string $id): ParticipantItemRequestBuilder {
+    public function participantsById(string $id): ?ParticipantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['participant%2Did'] = $id;
         return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -163,9 +163,9 @@ class ServiceHealthItemRequestBuilder
     /**
      * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
      * @param string $id Unique identifier of the item
-     * @return ServiceHealthIssueItemRequestBuilder
+     * @return ServiceHealthIssueItemRequestBuilder|null
     */
-    public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
+    public function issuesById(string $id): ?ServiceHealthIssueItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealthIssue%2Did'] = $id;
         return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);

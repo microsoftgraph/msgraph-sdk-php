@@ -153,9 +153,9 @@ class TodoTaskListItemRequestBuilder
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
      * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
+     * @return ExtensionItemRequestBuilder|null
     */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
+    public function extensionsById(string $id): ?ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
         return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -203,9 +203,9 @@ class TodoTaskListItemRequestBuilder
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
      * @param string $id Unique identifier of the item
-     * @return TodoTaskItemRequestBuilder
+     * @return TodoTaskItemRequestBuilder|null
     */
-    public function tasksById(string $id): TodoTaskItemRequestBuilder {
+    public function tasksById(string $id): ?TodoTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['todoTask%2Did'] = $id;
         return new TodoTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -144,9 +144,9 @@ class UserInstallStateSummaryItemRequestBuilder
     /**
      * Provides operations to manage the deviceStates property of the microsoft.graph.userInstallStateSummary entity.
      * @param string $id Unique identifier of the item
-     * @return DeviceInstallStateItemRequestBuilder
+     * @return DeviceInstallStateItemRequestBuilder|null
     */
-    public function deviceStatesById(string $id): DeviceInstallStateItemRequestBuilder {
+    public function deviceStatesById(string $id): ?DeviceInstallStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceInstallState%2Did'] = $id;
         return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter);

@@ -73,9 +73,9 @@ class ContactFolderItemRequestBuilder
     /**
      * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
-     * @return ContactItemRequestBuilder
+     * @return ContactItemRequestBuilder|null
     */
-    public function contactsById(string $id): ContactItemRequestBuilder {
+    public function contactsById(string $id): ?ContactItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contact%2Did'] = $id;
         return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -192,9 +192,9 @@ class ContactFolderItemRequestBuilder
     /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
-     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
+     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
+    public function multiValueExtendedPropertiesById(string $id): ?MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
         return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -223,9 +223,9 @@ class ContactFolderItemRequestBuilder
     /**
      * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
      * @param string $id Unique identifier of the item
-     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
+     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder|null
     */
-    public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
+    public function singleValueExtendedPropertiesById(string $id): ?SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
         return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);

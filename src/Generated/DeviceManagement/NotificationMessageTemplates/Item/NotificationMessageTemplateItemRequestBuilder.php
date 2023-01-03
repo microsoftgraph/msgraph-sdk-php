@@ -171,9 +171,9 @@ class NotificationMessageTemplateItemRequestBuilder
     /**
      * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
      * @param string $id Unique identifier of the item
-     * @return LocalizedNotificationMessageItemRequestBuilder
+     * @return LocalizedNotificationMessageItemRequestBuilder|null
     */
-    public function localizedNotificationMessagesById(string $id): LocalizedNotificationMessageItemRequestBuilder {
+    public function localizedNotificationMessagesById(string $id): ?LocalizedNotificationMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['localizedNotificationMessage%2Did'] = $id;
         return new LocalizedNotificationMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);

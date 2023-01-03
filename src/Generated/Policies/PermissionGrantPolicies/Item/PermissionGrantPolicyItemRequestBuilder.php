@@ -151,9 +151,9 @@ class PermissionGrantPolicyItemRequestBuilder
     /**
      * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder|null
     */
-    public function excludesById(string $id): \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder {
+    public function excludesById(string $id): ?\Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -181,9 +181,9 @@ class PermissionGrantPolicyItemRequestBuilder
     /**
      * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder|null
     */
-    public function includesById(string $id): \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder {
+    public function includesById(string $id): ?\Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
         return new \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);

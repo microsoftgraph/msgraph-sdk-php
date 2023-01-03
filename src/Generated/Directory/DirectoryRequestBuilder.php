@@ -62,9 +62,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
-     * @return AdministrativeUnitItemRequestBuilder
+     * @return AdministrativeUnitItemRequestBuilder|null
     */
-    public function administrativeUnitsById(string $id): AdministrativeUnitItemRequestBuilder {
+    public function administrativeUnitsById(string $id): ?AdministrativeUnitItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['administrativeUnit%2Did'] = $id;
         return new AdministrativeUnitItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -133,9 +133,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
+     * @return DirectoryObjectItemRequestBuilder|null
     */
-    public function deletedItemsById(string $id): DirectoryObjectItemRequestBuilder {
+    public function deletedItemsById(string $id): ?DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
         return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -144,9 +144,9 @@ class DirectoryRequestBuilder
     /**
      * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
      * @param string $id Unique identifier of the item
-     * @return IdentityProviderBaseItemRequestBuilder
+     * @return IdentityProviderBaseItemRequestBuilder|null
     */
-    public function federationConfigurationsById(string $id): IdentityProviderBaseItemRequestBuilder {
+    public function federationConfigurationsById(string $id): ?IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
         return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);

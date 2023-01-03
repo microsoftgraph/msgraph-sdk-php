@@ -187,9 +187,9 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
-     * @return ChatMessageHostedContentItemRequestBuilder
+     * @return ChatMessageHostedContentItemRequestBuilder|null
     */
-    public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
+    public function hostedContentsById(string $id): ?ChatMessageHostedContentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessageHostedContent%2Did'] = $id;
         return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
@@ -218,9 +218,9 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
      * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder
+     * @return \Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder|null
     */
-    public function repliesById(string $id): \Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
+    public function repliesById(string $id): ?\Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did1'] = $id;
         return new \Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
