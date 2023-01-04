@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class User extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new User and sets the default values.
+     * Instantiates a new user and sets the default values.
     */
     public function __construct() {
         parent::__construct();
