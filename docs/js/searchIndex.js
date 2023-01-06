@@ -526,6 +526,11 @@ Search.appendIndex(
             "summary": "The\u0020status\u0020code\u0020of\u0020the\u0020response",
             "url": "classes/Microsoft-Graph-Http-GraphResponse.html#property__httpStatusCode"
         },                {
+            "fqsen": "\\Microsoft\\Graph\\Http\\GraphResponse\u003A\u003A\u0024_request",
+            "name": "_request",
+            "summary": "",
+            "url": "classes/Microsoft-Graph-Http-GraphResponse.html#property__request"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
