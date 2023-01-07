@@ -142,6 +142,7 @@ class SignIn extends Entity
 
     /**
     * Gets the authenticationAppDeviceDetails
+    * Provides details about the app and device used during an Azure AD authentication step.
     *
     * @return AuthenticationAppDeviceDetails|null The authenticationAppDeviceDetails
     */
@@ -160,6 +161,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationAppDeviceDetails
+    * Provides details about the app and device used during an Azure AD authentication step.
     *
     * @param AuthenticationAppDeviceDetails $val The authenticationAppDeviceDetails
     *
@@ -174,6 +176,7 @@ class SignIn extends Entity
 
      /**
      * Gets the authenticationAppPolicyEvaluationDetails
+    * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
      *
      * @return array|null The authenticationAppPolicyEvaluationDetails
      */
@@ -188,6 +191,7 @@ class SignIn extends Entity
 
     /**
     * Sets the authenticationAppPolicyEvaluationDetails
+    * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
     *
     * @param AuthenticationAppPolicyDetails[] $val The authenticationAppPolicyEvaluationDetails
     *

@@ -36,6 +36,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
 
     /**
     * Gets the contextScenarioId
+    * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
     *
     * @return string|null The contextScenarioId
     */
@@ -50,6 +51,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
 
     /**
     * Sets the contextScenarioId
+    * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
     *
     * @param string $val The value of the contextScenarioId
     *
@@ -62,6 +64,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
     }
     /**
     * Gets the externalContextId
+    * Nullable. The id of the external entity's containing entity or context.
     *
     * @return string|null The externalContextId
     */
@@ -76,6 +79,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
 
     /**
     * Sets the externalContextId
+    * Nullable. The id of the external entity's containing entity or context.
     *
     * @param string $val The value of the externalContextId
     *
@@ -88,6 +92,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
     }
     /**
     * Gets the externalObjectId
+    * Nullable. The id of the entity that an external service associates with a plan.
     *
     * @return string|null The externalObjectId
     */
@@ -102,6 +107,7 @@ class PlannerExternalPlanSource extends PlannerPlanCreation
 
     /**
     * Sets the externalObjectId
+    * Nullable. The id of the entity that an external service associates with a plan.
     *
     * @param string $val The value of the externalObjectId
     *

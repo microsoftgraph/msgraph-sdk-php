@@ -150,6 +150,35 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the customTags
+    * Array of custom tags associated with an incident.
+    *
+    * @return array|null The customTags
+    */
+    public function getCustomTags()
+    {
+        if (array_key_exists("customTags", $this->_propDict)) {
+            return $this->_propDict["customTags"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customTags
+    * Array of custom tags associated with an incident.
+    *
+    * @param string[] $val The customTags
+    *
+    * @return Incident
+    */
+    public function setCustomTags($val)
+    {
+        $this->_propDict["customTags"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the determination
     * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
@@ -365,35 +394,6 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the tags
-    * Array of custom tags associated with an incident.
-    *
-    * @return array|null The tags
-    */
-    public function getTags()
-    {
-        if (array_key_exists("tags", $this->_propDict)) {
-            return $this->_propDict["tags"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tags
-    * Array of custom tags associated with an incident.
-    *
-    * @param string[] $val The tags
-    *
-    * @return Incident
-    */
-    public function setTags($val)
-    {
-        $this->_propDict["tags"] = $val;
         return $this;
     }
 

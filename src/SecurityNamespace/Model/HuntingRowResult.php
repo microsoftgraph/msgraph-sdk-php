@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SitePageData File
+* HuntingRowResult File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\SecurityNamespace\Model;
 /**
-* SitePageData class
+* HuntingRowResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +21,6 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SitePageData extends Entity
+class HuntingRowResult extends \Microsoft\Graph\Model\Entity
 {
 }

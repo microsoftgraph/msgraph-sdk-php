@@ -26,7 +26,7 @@ class PlannerPlan extends PlannerDelta
 {
     /**
     * Gets the container
-    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
     *
     * @return PlannerPlanContainer|null The container
     */
@@ -45,7 +45,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Sets the container
-    * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+    * Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
     *
     * @param PlannerPlanContainer $val The container
     *
@@ -158,6 +158,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Gets the creationSource
+    * Contains information about the origin of the plan.
     *
     * @return PlannerPlanCreation|null The creationSource
     */
@@ -176,6 +177,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Sets the creationSource
+    * Contains information about the origin of the plan.
     *
     * @param PlannerPlanCreation $val The creationSource
     *

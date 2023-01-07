@@ -25,6 +25,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 {
     /**
     * Gets the contextScenarioId
+    * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
     *
     * @return string|null The contextScenarioId
     */
@@ -39,6 +40,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the contextScenarioId
+    * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
     *
     * @param string $val The value of the contextScenarioId
     *
@@ -52,6 +54,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Gets the displayLinkType
+    * Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
     *
     * @return PlannerExternalTaskSourceDisplayType|null The displayLinkType
     */
@@ -70,6 +73,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the displayLinkType
+    * Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
     *
     * @param PlannerExternalTaskSourceDisplayType $val The value to assign to the displayLinkType
     *
@@ -82,6 +86,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
     }
     /**
     * Gets the displayNameSegments
+    * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
     *
     * @return string|null The displayNameSegments
     */
@@ -96,6 +101,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the displayNameSegments
+    * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
     *
     * @param string $val The value of the displayNameSegments
     *
@@ -108,6 +114,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
     }
     /**
     * Gets the externalContextId
+    * Nullable. The id of the external entity's containing entity or context.
     *
     * @return string|null The externalContextId
     */
@@ -122,6 +129,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the externalContextId
+    * Nullable. The id of the external entity's containing entity or context.
     *
     * @param string $val The value of the externalContextId
     *
@@ -134,6 +142,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
     }
     /**
     * Gets the externalObjectId
+    * Nullable. The id of the entity that an external service associates with a task.
     *
     * @return string|null The externalObjectId
     */
@@ -148,6 +157,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the externalObjectId
+    * Nullable. The id of the entity that an external service associates with a task.
     *
     * @param string $val The value of the externalObjectId
     *
@@ -160,6 +170,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
     }
     /**
     * Gets the externalObjectVersion
+    * Nullable. The external Item Version for the object specified by the externalObjectId.
     *
     * @return string|null The externalObjectVersion
     */
@@ -174,6 +185,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the externalObjectVersion
+    * Nullable. The external Item Version for the object specified by the externalObjectId.
     *
     * @param string $val The value of the externalObjectVersion
     *
@@ -186,6 +198,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
     }
     /**
     * Gets the webUrl
+    * Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
     *
     * @return string|null The webUrl
     */
@@ -200,6 +213,7 @@ class PlannerExternalTaskSource extends PlannerTaskCreation
 
     /**
     * Sets the webUrl
+    * Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
     *
     * @param string $val The value of the webUrl
     *

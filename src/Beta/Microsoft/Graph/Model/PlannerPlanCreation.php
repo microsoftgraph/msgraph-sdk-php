@@ -26,6 +26,7 @@ class PlannerPlanCreation extends Entity
 
     /**
     * Gets the creationSourceKind
+    * Specifies what kind of creation source the plan is created with. The possible values are: external, publication and unknownFutureValue.
     *
     * @return PlannerCreationSourceKind|null The creationSourceKind
     */
@@ -44,6 +45,7 @@ class PlannerPlanCreation extends Entity
 
     /**
     * Sets the creationSourceKind
+    * Specifies what kind of creation source the plan is created with. The possible values are: external, publication and unknownFutureValue.
     *
     * @param PlannerCreationSourceKind $val The value to assign to the creationSourceKind
     *

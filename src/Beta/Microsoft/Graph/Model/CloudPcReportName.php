@@ -32,5 +32,7 @@ class CloudPcReportName extends Enum
     const REMOTE_CONNECTION_HISTORICAL_REPORTS = "remoteConnectionHistoricalReports";
     const DAILY_AGGREGATED_REMOTE_CONNECTION_REPORTS = "dailyAggregatedRemoteConnectionReports";
     const TOTAL_AGGREGATED_REMOTE_CONNECTION_REPORTS = "totalAggregatedRemoteConnectionReports";
+    const SHARED_USE_LICENSE_USAGE_REPORT = "sharedUseLicenseUsageReport";
+    const SHARED_USE_LICENSE_USAGE_REAL_TIME_REPORT = "sharedUseLicenseUsageRealTimeReport";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

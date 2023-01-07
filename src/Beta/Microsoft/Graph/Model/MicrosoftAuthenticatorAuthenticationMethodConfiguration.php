@@ -60,7 +60,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
 
      /**
      * Gets the includeTargets
-    * A collection of users or groups who are enabled to use the authentication method. Expanded by default.
+    * A collection of groups that are enabled to use the authentication method. Expanded by default.
      *
      * @return array|null The includeTargets
      */
@@ -75,7 +75,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
 
     /**
     * Sets the includeTargets
-    * A collection of users or groups who are enabled to use the authentication method. Expanded by default.
+    * A collection of groups that are enabled to use the authentication method. Expanded by default.
     *
     * @param MicrosoftAuthenticatorAuthenticationMethodTarget[] $val The includeTargets
     *

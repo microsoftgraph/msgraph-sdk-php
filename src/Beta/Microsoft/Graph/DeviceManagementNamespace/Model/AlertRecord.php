@@ -26,7 +26,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the alertImpact
-    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 Count and 12 AffectedCloudPcPercentage.
+    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
     *
     * @return AlertImpact|null The alertImpact
     */
@@ -45,7 +45,7 @@ class AlertRecord extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the alertImpact
-    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 Count and 12 AffectedCloudPcPercentage.
+    * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
     *
     * @param AlertImpact $val The alertImpact
     *

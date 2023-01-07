@@ -55,6 +55,66 @@ class Security extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the alertsV2
+    * A collection of alerts in Microsoft 365 Defender.
+     *
+     * @return array|null The alertsV2
+     */
+    public function getAlertsV2()
+    {
+        if (array_key_exists("alertsV2", $this->_propDict)) {
+           return $this->_propDict["alertsV2"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the alertsV2
+    * A collection of alerts in Microsoft 365 Defender.
+    *
+    * @param \Microsoft\Graph\SecurityNamespace\Model\Alert[] $val The alertsV2
+    *
+    * @return Security
+    */
+    public function setAlertsV2($val)
+    {
+        $this->_propDict["alertsV2"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the incidents
+    * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+     *
+     * @return array|null The incidents
+     */
+    public function getIncidents()
+    {
+        if (array_key_exists("incidents", $this->_propDict)) {
+           return $this->_propDict["incidents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the incidents
+    * A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
+    *
+    * @param \Microsoft\Graph\SecurityNamespace\Model\Incident[] $val The incidents
+    *
+    * @return Security
+    */
+    public function setIncidents($val)
+    {
+        $this->_propDict["incidents"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the attackSimulation
     *

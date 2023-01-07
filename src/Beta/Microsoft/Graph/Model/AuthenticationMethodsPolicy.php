@@ -146,6 +146,7 @@ class AuthenticationMethodsPolicy extends Entity
 
     /**
     * Gets the reconfirmationInDays
+    * Days before the user will be asked to reconfirm their method.
     *
     * @return int|null The reconfirmationInDays
     */
@@ -160,6 +161,7 @@ class AuthenticationMethodsPolicy extends Entity
 
     /**
     * Sets the reconfirmationInDays
+    * Days before the user will be asked to reconfirm their method.
     *
     * @param int $val The reconfirmationInDays
     *
