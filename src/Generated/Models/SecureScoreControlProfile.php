@@ -50,7 +50,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the complianceInformation property value. The complianceInformation property
+     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
      * @return array<ComplianceInformation>|null
     */
     public function getComplianceInformation(): ?array {
@@ -66,7 +66,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the controlStateUpdates property value. The controlStateUpdates property
+     * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      * @return array<SecureScoreControlStateUpdate>|null
     */
     public function getControlStateUpdates(): ?array {
@@ -183,7 +183,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the title property value. Title of the control.
+     * Gets the title property value. The title property
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -258,7 +258,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the complianceInformation property value. The complianceInformation property
+     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
      *  @param array<ComplianceInformation>|null $value Value to set for the complianceInformation property.
     */
     public function setComplianceInformation(?array $value): void {
@@ -274,7 +274,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the controlStateUpdates property value. The controlStateUpdates property
+     * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      *  @param array<SecureScoreControlStateUpdate>|null $value Value to set for the controlStateUpdates property.
     */
     public function setControlStateUpdates(?array $value): void {
@@ -362,7 +362,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the title property value. Title of the control.
+     * Sets the title property value. The title property
      *  @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {

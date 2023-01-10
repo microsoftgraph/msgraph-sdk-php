@@ -161,7 +161,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
+     * Gets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
      * @return string|null
     */
     public function getMediaSize(): ?string {
@@ -169,7 +169,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mediaType property value. The default media (such as paper) type to print the document on.
+     * Gets the mediaType property value. The mediaType property
      * @return string|null
     */
     public function getMediaType(): ?string {
@@ -177,7 +177,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+     * Gets the multipageLayout property value. The multipageLayout property
      * @return PrintMultipageLayout|null
     */
     public function getMultipageLayout(): ?PrintMultipageLayout {
@@ -193,7 +193,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
+     * Gets the orientation property value. The orientation property
      * @return PrintOrientation|null
     */
     public function getOrientation(): ?PrintOrientation {
@@ -201,7 +201,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Gets the outputBin property value. The outputBin property
      * @return string|null
     */
     public function getOutputBin(): ?string {
@@ -209,7 +209,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the pageRanges property value. The page ranges to print. Read-only.
+     * Gets the pageRanges property value. The pageRanges property
      * @return array<IntegerRange>|null
     */
     public function getPageRanges(): ?array {
@@ -217,7 +217,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the pagesPerSheet property value. The number of document pages to print on each sheet.
+     * Gets the pagesPerSheet property value. The pagesPerSheet property
      * @return int|null
     */
     public function getPagesPerSheet(): ?int {
@@ -225,7 +225,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
+     * Gets the quality property value. The quality property
      * @return PrintQuality|null
     */
     public function getQuality(): ?PrintQuality {
@@ -233,7 +233,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
+     * Gets the scaling property value. The scaling property
      * @return PrintScaling|null
     */
     public function getScaling(): ?PrintScaling {
@@ -365,7 +365,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
+     * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
      *  @param string|null $value Value to set for the mediaSize property.
     */
     public function setMediaSize(?string $value): void {
@@ -373,7 +373,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mediaType property value. The default media (such as paper) type to print the document on.
+     * Sets the mediaType property value. The mediaType property
      *  @param string|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?string $value): void {
@@ -381,7 +381,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
+     * Sets the multipageLayout property value. The multipageLayout property
      *  @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
     */
     public function setMultipageLayout(?PrintMultipageLayout $value): void {
@@ -397,7 +397,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
+     * Sets the orientation property value. The orientation property
      *  @param PrintOrientation|null $value Value to set for the orientation property.
     */
     public function setOrientation(?PrintOrientation $value): void {
@@ -405,7 +405,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+     * Sets the outputBin property value. The outputBin property
      *  @param string|null $value Value to set for the outputBin property.
     */
     public function setOutputBin(?string $value): void {
@@ -413,7 +413,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the pageRanges property value. The page ranges to print. Read-only.
+     * Sets the pageRanges property value. The pageRanges property
      *  @param array<IntegerRange>|null $value Value to set for the pageRanges property.
     */
     public function setPageRanges(?array $value): void {
@@ -421,7 +421,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the pagesPerSheet property value. The number of document pages to print on each sheet.
+     * Sets the pagesPerSheet property value. The pagesPerSheet property
      *  @param int|null $value Value to set for the pagesPerSheet property.
     */
     public function setPagesPerSheet(?int $value): void {
@@ -429,7 +429,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
+     * Sets the quality property value. The quality property
      *  @param PrintQuality|null $value Value to set for the quality property.
     */
     public function setQuality(?PrintQuality $value): void {
@@ -437,7 +437,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
+     * Sets the scaling property value. The scaling property
      *  @param PrintScaling|null $value Value to set for the scaling property.
     */
     public function setScaling(?PrintScaling $value): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Shift extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new Shift and sets the default values.
+     * Instantiates a new shift and sets the default values.
     */
     public function __construct() {
         parent::__construct();

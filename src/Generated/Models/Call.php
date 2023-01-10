@@ -147,7 +147,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the meetingInfo property value. The meeting information that's required for joining a meeting.
+     * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      * @return MeetingInfo|null
     */
     public function getMeetingInfo(): ?MeetingInfo {
@@ -371,7 +371,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the meetingInfo property value. The meeting information that's required for joining a meeting.
+     * Sets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      *  @param MeetingInfo|null $value Value to set for the meetingInfo property.
     */
     public function setMeetingInfo(?MeetingInfo $value): void {
