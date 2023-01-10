@@ -26,7 +26,7 @@ class CloudPcExportJob extends Entity
 {
     /**
     * Gets the expirationDateTime
-    * The date time when the export job expires.
+    * The date and time when the export job expires.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -45,7 +45,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the expirationDateTime
-    * The date time when the export job expires.
+    * The date and time when the export job expires.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -59,7 +59,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the exportJobStatus
-    * The status of the export job.The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
+    * The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
     *
     * @return CloudPcExportJobStatus|null The exportJobStatus
     */
@@ -78,7 +78,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the exportJobStatus
-    * The status of the export job.The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
+    * The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
     *
     * @param CloudPcExportJobStatus $val The exportJobStatus
     *
@@ -92,7 +92,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the exportUrl
-    * The storage account url of the exported report, it can be used to download the file.
+    * The storage account URL of the exported report. It can be used to download the file.
     *
     * @return string|null The exportUrl
     */
@@ -107,7 +107,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the exportUrl
-    * The storage account url of the exported report, it can be used to download the file.
+    * The storage account URL of the exported report. It can be used to download the file.
     *
     * @param string $val The exportUrl
     *
@@ -179,7 +179,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the reportName
-    * The report name.The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
+    * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
     *
     * @return CloudPcReportName|null The reportName
     */
@@ -198,7 +198,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the reportName
-    * The report name.The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
+    * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
     *
     * @param CloudPcReportName $val The reportName
     *
@@ -212,7 +212,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Gets the requestDateTime
-    * The date time when the export job was requested.
+    * The date and time when the export job was requested.
     *
     * @return \DateTime|null The requestDateTime
     */
@@ -231,7 +231,7 @@ class CloudPcExportJob extends Entity
 
     /**
     * Sets the requestDateTime
-    * The date time when the export job was requested.
+    * The date and time when the export job was requested.
     *
     * @param \DateTime $val The requestDateTime
     *

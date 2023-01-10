@@ -55,6 +55,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Gets the regionGroup
+    * The geographic group this region belongs to. Multiple regions can belong to one region group. For example, the europeUnion region group contains the Northern Europe and Western Europe regions. A customer can select a region group when provisioning a Cloud PC; however, the Cloud PC will be put under one of the regions under the group based on resource capacity. The region with more quota will be chosen. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, norway, switzerland，southKorea, unknownFutureValue. Read-only.
     *
     * @return CloudPcRegionGroup|null The regionGroup
     */
@@ -73,6 +74,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Sets the regionGroup
+    * The geographic group this region belongs to. Multiple regions can belong to one region group. For example, the europeUnion region group contains the Northern Europe and Western Europe regions. A customer can select a region group when provisioning a Cloud PC; however, the Cloud PC will be put under one of the regions under the group based on resource capacity. The region with more quota will be chosen. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, norway, switzerland，southKorea, unknownFutureValue. Read-only.
     *
     * @param CloudPcRegionGroup $val The regionGroup
     *
@@ -119,7 +121,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Gets the supportedSolution
-    * The supported service or solution for the region. The possible values are: windows365, devBox, unknownFutureValue. Read-only.
+    * The supported service or solution for the region. The possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
     *
     * @return CloudPcManagementService|null The supportedSolution
     */
@@ -138,7 +140,7 @@ class CloudPcSupportedRegion extends Entity
 
     /**
     * Sets the supportedSolution
-    * The supported service or solution for the region. The possible values are: windows365, devBox, unknownFutureValue. Read-only.
+    * The supported service or solution for the region. The possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
     *
     * @param CloudPcManagementService $val The supportedSolution
     *
