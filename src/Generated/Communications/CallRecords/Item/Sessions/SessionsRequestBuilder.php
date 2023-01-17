@@ -55,9 +55,48 @@ class SessionsRequestBuilder
     /**
      * Retrieve the list of sessions associated with a callRecord object.
      * @param SessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
+     * @return Promise
+    */
+    public function get(?SessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->toGetRequestInformation($requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, [SessionCollectionResponse::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
+     * Create new navigation property to sessions for communications
+     * @param Session $body The request body
+     * @param SessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
+     * @return Promise
+    */
+    public function post(Session $body, ?SessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, [Session::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
+     * Retrieve the list of sessions associated with a callRecord object.
+     * @param SessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createGetRequestInformation(?SessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -83,7 +122,7 @@ class SessionsRequestBuilder
      * @param SessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function createPostRequestInformation(Session $body, ?SessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(Session $body, ?SessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -99,45 +138,6 @@ class SessionsRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Retrieve the list of sessions associated with a callRecord object.
-     * @param SessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function get(?SessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [SessionCollectionResponse::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Create new navigation property to sessions for communications
-     * @param Session $body The request body
-     * @param SessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return Promise
-    */
-    public function post(Session $body, ?SessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
-        $requestInfo = $this->createPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [Session::class, 'createFromDiscriminatorValue'], $responseHandler, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
     }
 
 }

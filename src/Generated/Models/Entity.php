@@ -400,6 +400,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.mobileAppCategory': return new MobileAppCategory();
                 case '#microsoft.graph.mobileAppContent': return new MobileAppContent();
                 case '#microsoft.graph.mobileAppContentFile': return new MobileAppContentFile();
+                case '#microsoft.graph.mobileContainedApp': return new MobileContainedApp();
                 case '#microsoft.graph.mobileLobApp': return new MobileLobApp();
                 case '#microsoft.graph.mobileThreatDefenseConnector': return new MobileThreatDefenseConnector();
                 case '#microsoft.graph.multiValueLegacyExtendedProperty': return new MultiValueLegacyExtendedProperty();
@@ -481,7 +482,6 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
                 case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
-                case '#microsoft.graph.reportRoot': return new ReportRoot();
                 case '#microsoft.graph.request': return new Request();
                 case '#microsoft.graph.resourceOperation': return new ResourceOperation();
                 case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
@@ -663,11 +663,13 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.windowsInformationProtectionAppLockerFile': return new WindowsInformationProtectionAppLockerFile();
                 case '#microsoft.graph.windowsInformationProtectionNetworkLearningSummary': return new WindowsInformationProtectionNetworkLearningSummary();
                 case '#microsoft.graph.windowsInformationProtectionPolicy': return new WindowsInformationProtectionPolicy();
+                case '#microsoft.graph.windowsMicrosoftEdgeApp': return new WindowsMicrosoftEdgeApp();
                 case '#microsoft.graph.windowsMobileMSI': return new WindowsMobileMSI();
                 case '#microsoft.graph.windowsPhone81CompliancePolicy': return new WindowsPhone81CompliancePolicy();
                 case '#microsoft.graph.windowsPhone81CustomConfiguration': return new WindowsPhone81CustomConfiguration();
                 case '#microsoft.graph.windowsPhone81GeneralConfiguration': return new WindowsPhone81GeneralConfiguration();
                 case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
+                case '#microsoft.graph.windowsUniversalAppXContainedApp': return new WindowsUniversalAppXContainedApp();
                 case '#microsoft.graph.windowsUpdateForBusinessConfiguration': return new WindowsUpdateForBusinessConfiguration();
                 case '#microsoft.graph.workbook': return new Workbook();
                 case '#microsoft.graph.workbookApplication': return new WorkbookApplication();

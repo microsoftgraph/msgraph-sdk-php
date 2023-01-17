@@ -127,6 +127,7 @@ class Organization extends DirectoryObject implements Parsable
             'mobileDeviceManagementAuthority' => fn(ParseNode $n) => $o->setMobileDeviceManagementAuthority($n->getEnumValue(MdmAuthority::class)),
             'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
             'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
+            'partnerTenantType' => fn(ParseNode $n) => $o->setPartnerTenantType($n->getEnumValue(PartnerTenantType::class)),
             'postalCode' => fn(ParseNode $n) => $o->setPostalCode($n->getStringValue()),
             'preferredLanguage' => fn(ParseNode $n) => $o->setPreferredLanguage($n->getStringValue()),
             'privacyProfile' => fn(ParseNode $n) => $o->setPrivacyProfile($n->getObjectValue([PrivacyProfile::class, 'createFromDiscriminatorValue'])),
@@ -171,6 +172,14 @@ class Organization extends DirectoryObject implements Parsable
     */
     public function getOnPremisesSyncEnabled(): ?bool {
         return $this->getBackingStore()->get('onPremisesSyncEnabled');
+    }
+
+    /**
+     * Gets the partnerTenantType property value. The partnerTenantType property
+     * @return PartnerTenantType|null
+    */
+    public function getPartnerTenantType(): ?PartnerTenantType {
+        return $this->getBackingStore()->get('partnerTenantType');
     }
 
     /**
@@ -281,6 +290,7 @@ class Organization extends DirectoryObject implements Parsable
         $writer->writeEnumValue('mobileDeviceManagementAuthority', $this->getMobileDeviceManagementAuthority());
         $writer->writeDateTimeValue('onPremisesLastSyncDateTime', $this->getOnPremisesLastSyncDateTime());
         $writer->writeBooleanValue('onPremisesSyncEnabled', $this->getOnPremisesSyncEnabled());
+        $writer->writeEnumValue('partnerTenantType', $this->getPartnerTenantType());
         $writer->writeStringValue('postalCode', $this->getPostalCode());
         $writer->writeStringValue('preferredLanguage', $this->getPreferredLanguage());
         $writer->writeObjectValue('privacyProfile', $this->getPrivacyProfile());
@@ -404,6 +414,14 @@ class Organization extends DirectoryObject implements Parsable
     */
     public function setOnPremisesSyncEnabled(?bool $value): void {
         $this->getBackingStore()->set('onPremisesSyncEnabled', $value);
+    }
+
+    /**
+     * Sets the partnerTenantType property value. The partnerTenantType property
+     *  @param PartnerTenantType|null $value Value to set for the partnerTenantType property.
+    */
+    public function setPartnerTenantType(?PartnerTenantType $value): void {
+        $this->getBackingStore()->set('partnerTenantType', $value);
     }
 
     /**

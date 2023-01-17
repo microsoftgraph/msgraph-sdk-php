@@ -35,6 +35,7 @@ class MeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.joinMeetingIdMeetingInfo': return new JoinMeetingIdMeetingInfo();
                 case '#microsoft.graph.organizerMeetingInfo': return new OrganizerMeetingInfo();
                 case '#microsoft.graph.tokenMeetingInfo': return new TokenMeetingInfo();
             }
