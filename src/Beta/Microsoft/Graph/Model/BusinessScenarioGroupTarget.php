@@ -36,6 +36,7 @@ class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase
 
     /**
     * Gets the groupId
+    * The unique identifier for the group.
     *
     * @return string|null The groupId
     */
@@ -50,6 +51,7 @@ class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase
 
     /**
     * Sets the groupId
+    * The unique identifier for the group.
     *
     * @param string $val The value of the groupId
     *

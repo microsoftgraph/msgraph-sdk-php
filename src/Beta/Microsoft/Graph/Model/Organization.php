@@ -415,6 +415,37 @@ class Organization extends DirectoryObject
     }
 
     /**
+    * Gets the partnerTenantType
+    *
+    * @return PartnerTenantType|null The partnerTenantType
+    */
+    public function getPartnerTenantType()
+    {
+        if (array_key_exists("partnerTenantType", $this->_propDict)) {
+            if (is_a($this->_propDict["partnerTenantType"], "\Beta\Microsoft\Graph\Model\PartnerTenantType") || is_null($this->_propDict["partnerTenantType"])) {
+                return $this->_propDict["partnerTenantType"];
+            } else {
+                $this->_propDict["partnerTenantType"] = new PartnerTenantType($this->_propDict["partnerTenantType"]);
+                return $this->_propDict["partnerTenantType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the partnerTenantType
+    *
+    * @param PartnerTenantType $val The partnerTenantType
+    *
+    * @return Organization
+    */
+    public function setPartnerTenantType($val)
+    {
+        $this->_propDict["partnerTenantType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the postalCode
     * Postal code of the address for the organization.
     *

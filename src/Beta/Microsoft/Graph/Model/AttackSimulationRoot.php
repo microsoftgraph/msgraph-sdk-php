@@ -26,6 +26,62 @@ class AttackSimulationRoot extends Entity
 {
 
      /**
+     * Gets the operations
+     *
+     * @return array|null The operations
+     */
+    public function getOperations()
+    {
+        if (array_key_exists("operations", $this->_propDict)) {
+           return $this->_propDict["operations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the operations
+    *
+    * @param AttackSimulationOperation[] $val The operations
+    *
+    * @return AttackSimulationRoot
+    */
+    public function setOperations($val)
+    {
+        $this->_propDict["operations"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the payloads
+     *
+     * @return array|null The payloads
+     */
+    public function getPayloads()
+    {
+        if (array_key_exists("payloads", $this->_propDict)) {
+           return $this->_propDict["payloads"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the payloads
+    *
+    * @param Payload[] $val The payloads
+    *
+    * @return AttackSimulationRoot
+    */
+    public function setPayloads($val)
+    {
+        $this->_propDict["payloads"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the simulationAutomations
     * Represents simulation automation created to run on a tenant.
      *

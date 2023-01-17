@@ -26,6 +26,7 @@ class BusinessScenarioTask extends PlannerTask
 {
     /**
     * Gets the businessScenarioProperties
+    * Scenario-specific properties of the task. externalObjectId and externalBucketId properties must be specified when creating a task.
     *
     * @return BusinessScenarioProperties|null The businessScenarioProperties
     */
@@ -44,6 +45,7 @@ class BusinessScenarioTask extends PlannerTask
 
     /**
     * Sets the businessScenarioProperties
+    * Scenario-specific properties of the task. externalObjectId and externalBucketId properties must be specified when creating a task.
     *
     * @param BusinessScenarioProperties $val The businessScenarioProperties
     *
@@ -57,6 +59,7 @@ class BusinessScenarioTask extends PlannerTask
 
     /**
     * Gets the target
+    * Target of the task that specifies where the task should be placed. Must be specified when creating a task.
     *
     * @return BusinessScenarioTaskTargetBase|null The target
     */
@@ -75,6 +78,7 @@ class BusinessScenarioTask extends PlannerTask
 
     /**
     * Sets the target
+    * Target of the task that specifies where the task should be placed. Must be specified when creating a task.
     *
     * @param BusinessScenarioTaskTargetBase $val The target
     *

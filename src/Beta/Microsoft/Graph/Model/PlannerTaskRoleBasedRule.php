@@ -25,6 +25,7 @@ class PlannerTaskRoleBasedRule extends Entity
 {
     /**
     * Gets the defaultRule
+    * Default rule that applies when a property or action-specific rule is not provided. Possible values are: Allow, Block
     *
     * @return string|null The defaultRule
     */
@@ -39,6 +40,7 @@ class PlannerTaskRoleBasedRule extends Entity
 
     /**
     * Sets the defaultRule
+    * Default rule that applies when a property or action-specific rule is not provided. Possible values are: Allow, Block
     *
     * @param string $val The value of the defaultRule
     *
@@ -52,6 +54,7 @@ class PlannerTaskRoleBasedRule extends Entity
 
     /**
     * Gets the propertyRule
+    * Rules for specific properties and actions.
     *
     * @return PlannerTaskPropertyRule|null The propertyRule
     */
@@ -70,6 +73,7 @@ class PlannerTaskRoleBasedRule extends Entity
 
     /**
     * Sets the propertyRule
+    * Rules for specific properties and actions.
     *
     * @param PlannerTaskPropertyRule $val The value to assign to the propertyRule
     *
@@ -83,6 +87,7 @@ class PlannerTaskRoleBasedRule extends Entity
 
     /**
     * Gets the role
+    * The role these rules apply to.
     *
     * @return PlannerTaskConfigurationRoleBase|null The role
     */
@@ -101,6 +106,7 @@ class PlannerTaskRoleBasedRule extends Entity
 
     /**
     * Sets the role
+    * The role these rules apply to.
     *
     * @param PlannerTaskConfigurationRoleBase $val The value to assign to the role
     *

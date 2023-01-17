@@ -25,7 +25,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
 {
     /**
     * Gets the highSeverityAnomalyCount
-    * The number of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @return int|null The highSeverityAnomalyCount
     */
@@ -40,7 +40,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
 
     /**
     * Sets the highSeverityAnomalyCount
-    * The number of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the highSeverityAnomalyCount
     *
@@ -53,7 +53,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
     }
     /**
     * Gets the informationalSeverityAnomalyCount
-    * The number of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @return int|null The informationalSeverityAnomalyCount
     */
@@ -68,7 +68,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
 
     /**
     * Sets the informationalSeverityAnomalyCount
-    * The number of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the informationalSeverityAnomalyCount
     *
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
     }
     /**
     * Gets the lowSeverityAnomalyCount
-    * The number of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @return int|null The lowSeverityAnomalyCount
     */
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
 
     /**
     * Sets the lowSeverityAnomalyCount
-    * The number of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the lowSeverityAnomalyCount
     *
@@ -109,7 +109,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
     }
     /**
     * Gets the mediumSeverityAnomalyCount
-    * The number of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @return int|null The mediumSeverityAnomalyCount
     */
@@ -124,7 +124,7 @@ class UserExperienceAnalyticsAnomalySeverityOverview extends Entity
 
     /**
     * Sets the mediumSeverityAnomalyCount
-    * The number of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+    * Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the mediumSeverityAnomalyCount
     *

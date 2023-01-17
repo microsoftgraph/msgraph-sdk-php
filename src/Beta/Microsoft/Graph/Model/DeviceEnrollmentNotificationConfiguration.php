@@ -146,7 +146,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
 
     /**
     * Gets the platformType
-    * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+    * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac, linux, unknownFutureValue.
     *
     * @return EnrollmentRestrictionPlatformType|null The platformType
     */
@@ -165,7 +165,7 @@ class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfigur
 
     /**
     * Sets the platformType
-    * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+    * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac, linux, unknownFutureValue.
     *
     * @param EnrollmentRestrictionPlatformType $val The platformType
     *
