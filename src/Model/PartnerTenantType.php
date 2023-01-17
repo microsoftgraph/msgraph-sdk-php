@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* NotificationTemplateBrandingOptions File
+* PartnerTenantType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* NotificationTemplateBrandingOptions class
+* PartnerTenantType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,15 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class NotificationTemplateBrandingOptions extends Enum
+class PartnerTenantType extends Enum
 {
     /**
-    * The Enum NotificationTemplateBrandingOptions
+    * The Enum PartnerTenantType
     */
-    const NONE = "none";
-    const INCLUDE_COMPANY_LOGO = "includeCompanyLogo";
-    const INCLUDE_COMPANY_NAME = "includeCompanyName";
-    const INCLUDE_CONTACT_INFORMATION = "includeContactInformation";
-    const INCLUDE_COMPANY_PORTAL_LINK = "includeCompanyPortalLink";
-    const INCLUDE_DEVICE_DETAILS = "includeDeviceDetails";
+    const MICROSOFT_SUPPORT = "microsoftSupport";
+    const SYNDICATE_PARTNER = "syndicatePartner";
+    const BREADTH_PARTNER = "breadthPartner";
+    const BREADTH_PARTNER_DELEGATED_ADMIN = "breadthPartnerDelegatedAdmin";
+    const RESELLER_PARTNER_DELEGATED_ADMIN = "resellerPartnerDelegatedAdmin";
+    const VALUE_ADDED_RESELLER_PARTNER_DELEGATED_ADMIN = "valueAddedResellerPartnerDelegatedAdmin";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
