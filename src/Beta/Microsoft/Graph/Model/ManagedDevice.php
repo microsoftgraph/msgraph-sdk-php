@@ -83,7 +83,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
+    * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @return string|null The activationLockBypassCode
     */
@@ -98,7 +98,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the activationLockBypassCode
-    * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
+    * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @param string $val The activationLockBypassCode
     *
@@ -945,7 +945,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the ethernetMacAddress
-    * Ethernet MAC. This property is read-only.
+    * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @return string|null The ethernetMacAddress
     */
@@ -960,7 +960,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the ethernetMacAddress
-    * Ethernet MAC. This property is read-only.
+    * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @param string $val The ethernetMacAddress
     *
@@ -2144,7 +2144,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the skuNumber
-    * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
     *
     * @return int|null The skuNumber
     */
@@ -2159,7 +2159,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the skuNumber
-    * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
     *
     * @param int $val The skuNumber
     *

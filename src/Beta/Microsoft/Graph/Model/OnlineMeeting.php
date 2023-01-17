@@ -860,6 +860,37 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the watermarkProtection
+    *
+    * @return WatermarkProtectionValues|null The watermarkProtection
+    */
+    public function getWatermarkProtection()
+    {
+        if (array_key_exists("watermarkProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["watermarkProtection"], "\Beta\Microsoft\Graph\Model\WatermarkProtectionValues") || is_null($this->_propDict["watermarkProtection"])) {
+                return $this->_propDict["watermarkProtection"];
+            } else {
+                $this->_propDict["watermarkProtection"] = new WatermarkProtectionValues($this->_propDict["watermarkProtection"]);
+                return $this->_propDict["watermarkProtection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the watermarkProtection
+    *
+    * @param WatermarkProtectionValues $val The watermarkProtection
+    *
+    * @return OnlineMeeting
+    */
+    public function setWatermarkProtection($val)
+    {
+        $this->_propDict["watermarkProtection"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the virtualAppointment
     *
     * @return VirtualAppointment|null The virtualAppointment

@@ -3624,6 +3624,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the userExperienceAnalyticsDeviceTimelineEvents
+    * The user experience analytics device events entity contains NRT device timeline events details.
+     *
+     * @return array|null The userExperienceAnalyticsDeviceTimelineEvents
+     */
+    public function getUserExperienceAnalyticsDeviceTimelineEvents()
+    {
+        if (array_key_exists("userExperienceAnalyticsDeviceTimelineEvents", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceTimelineEvents"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userExperienceAnalyticsDeviceTimelineEvents
+    * The user experience analytics device events entity contains NRT device timeline events details.
+    *
+    * @param UserExperienceAnalyticsDeviceTimelineEvents[] $val The userExperienceAnalyticsDeviceTimelineEvents
+    *
+    * @return DeviceManagement
+    */
+    public function setUserExperienceAnalyticsDeviceTimelineEvents($val)
+    {
+        $this->_propDict["userExperienceAnalyticsDeviceTimelineEvents"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the userExperienceAnalyticsImpactingProcess
     * User experience analytics impacting process
      *

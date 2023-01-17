@@ -277,6 +277,95 @@ class Simulation extends Entity
     }
 
     /**
+    * Gets the durationInDays
+    *
+    * @return int|null The durationInDays
+    */
+    public function getDurationInDays()
+    {
+        if (array_key_exists("durationInDays", $this->_propDict)) {
+            return $this->_propDict["durationInDays"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the durationInDays
+    *
+    * @param int $val The durationInDays
+    *
+    * @return Simulation
+    */
+    public function setDurationInDays($val)
+    {
+        $this->_propDict["durationInDays"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the excludedAccountTarget
+    *
+    * @return AccountTargetContent|null The excludedAccountTarget
+    */
+    public function getExcludedAccountTarget()
+    {
+        if (array_key_exists("excludedAccountTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["excludedAccountTarget"], "\Beta\Microsoft\Graph\Model\AccountTargetContent") || is_null($this->_propDict["excludedAccountTarget"])) {
+                return $this->_propDict["excludedAccountTarget"];
+            } else {
+                $this->_propDict["excludedAccountTarget"] = new AccountTargetContent($this->_propDict["excludedAccountTarget"]);
+                return $this->_propDict["excludedAccountTarget"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the excludedAccountTarget
+    *
+    * @param AccountTargetContent $val The excludedAccountTarget
+    *
+    * @return Simulation
+    */
+    public function setExcludedAccountTarget($val)
+    {
+        $this->_propDict["excludedAccountTarget"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the includedAccountTarget
+    *
+    * @return AccountTargetContent|null The includedAccountTarget
+    */
+    public function getIncludedAccountTarget()
+    {
+        if (array_key_exists("includedAccountTarget", $this->_propDict)) {
+            if (is_a($this->_propDict["includedAccountTarget"], "\Beta\Microsoft\Graph\Model\AccountTargetContent") || is_null($this->_propDict["includedAccountTarget"])) {
+                return $this->_propDict["includedAccountTarget"];
+            } else {
+                $this->_propDict["includedAccountTarget"] = new AccountTargetContent($this->_propDict["includedAccountTarget"]);
+                return $this->_propDict["includedAccountTarget"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the includedAccountTarget
+    *
+    * @param AccountTargetContent $val The includedAccountTarget
+    *
+    * @return Simulation
+    */
+    public function setIncludedAccountTarget($val)
+    {
+        $this->_propDict["includedAccountTarget"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the isAutomated
     * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
     *
@@ -500,6 +589,37 @@ class Simulation extends Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the payload
+    *
+    * @return Payload|null The payload
+    */
+    public function getPayload()
+    {
+        if (array_key_exists("payload", $this->_propDict)) {
+            if (is_a($this->_propDict["payload"], "\Beta\Microsoft\Graph\Model\Payload") || is_null($this->_propDict["payload"])) {
+                return $this->_propDict["payload"];
+            } else {
+                $this->_propDict["payload"] = new Payload($this->_propDict["payload"]);
+                return $this->_propDict["payload"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the payload
+    *
+    * @param Payload $val The payload
+    *
+    * @return Simulation
+    */
+    public function setPayload($val)
+    {
+        $this->_propDict["payload"] = $val;
         return $this;
     }
 

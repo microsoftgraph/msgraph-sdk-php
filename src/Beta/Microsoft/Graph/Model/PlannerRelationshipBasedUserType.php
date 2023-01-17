@@ -26,6 +26,7 @@ class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRoleBase
 
     /**
     * Gets the role
+    * Identifies the relationship of the caller to the task. The possible values are: defaultRules, groupOwners, groupMembers, taskAssignees, applications, unknownFutureValue.
     *
     * @return PlannerRelationshipUserRoles|null The role
     */
@@ -44,6 +45,7 @@ class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRoleBase
 
     /**
     * Sets the role
+    * Identifies the relationship of the caller to the task. The possible values are: defaultRules, groupOwners, groupMembers, taskAssignees, applications, unknownFutureValue.
     *
     * @param PlannerRelationshipUserRoles $val The value to assign to the role
     *

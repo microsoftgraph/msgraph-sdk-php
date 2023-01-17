@@ -25,6 +25,7 @@ class PlannerPlanConfigurationBucketDefinition extends Entity
 {
     /**
     * Gets the externalBucketId
+    * Application-specified identifier of the bucket.
     *
     * @return string|null The externalBucketId
     */
@@ -39,6 +40,7 @@ class PlannerPlanConfigurationBucketDefinition extends Entity
 
     /**
     * Sets the externalBucketId
+    * Application-specified identifier of the bucket.
     *
     * @param string $val The value of the externalBucketId
     *

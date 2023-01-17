@@ -25,6 +25,7 @@ class PlannerPlanConfigurationBucketLocalization extends Entity
 {
     /**
     * Gets the externalBucketId
+    * Application-specified identifier of the bucket.
     *
     * @return string|null The externalBucketId
     */
@@ -39,6 +40,7 @@ class PlannerPlanConfigurationBucketLocalization extends Entity
 
     /**
     * Sets the externalBucketId
+    * Application-specified identifier of the bucket.
     *
     * @param string $val The value of the externalBucketId
     *
@@ -51,6 +53,7 @@ class PlannerPlanConfigurationBucketLocalization extends Entity
     }
     /**
     * Gets the name
+    * Name of the bucket.
     *
     * @return string|null The name
     */
@@ -65,6 +68,7 @@ class PlannerPlanConfigurationBucketLocalization extends Entity
 
     /**
     * Sets the name
+    * Name of the bucket.
     *
     * @param string $val The value of the name
     *

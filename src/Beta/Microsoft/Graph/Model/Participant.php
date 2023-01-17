@@ -234,4 +234,35 @@ class Participant extends Entity
         return $this;
     }
 
+    /**
+    * Gets the restrictedExperience
+    *
+    * @return OnlineMeetingRestricted|null The restrictedExperience
+    */
+    public function getRestrictedExperience()
+    {
+        if (array_key_exists("restrictedExperience", $this->_propDict)) {
+            if (is_a($this->_propDict["restrictedExperience"], "\Beta\Microsoft\Graph\Model\OnlineMeetingRestricted") || is_null($this->_propDict["restrictedExperience"])) {
+                return $this->_propDict["restrictedExperience"];
+            } else {
+                $this->_propDict["restrictedExperience"] = new OnlineMeetingRestricted($this->_propDict["restrictedExperience"]);
+                return $this->_propDict["restrictedExperience"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the restrictedExperience
+    *
+    * @param OnlineMeetingRestricted $val The restrictedExperience
+    *
+    * @return Participant
+    */
+    public function setRestrictedExperience($val)
+    {
+        $this->_propDict["restrictedExperience"] = $val;
+        return $this;
+    }
+
 }

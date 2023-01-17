@@ -25,6 +25,7 @@ class PlannerFieldRules extends Entity
 {
     /**
     * Gets the defaultRules
+    * The default rules that apply if no override matches to the current data.
     *
     * @return string|null The defaultRules
     */
@@ -39,6 +40,7 @@ class PlannerFieldRules extends Entity
 
     /**
     * Sets the defaultRules
+    * The default rules that apply if no override matches to the current data.
     *
     * @param string $val The value of the defaultRules
     *
@@ -52,6 +54,7 @@ class PlannerFieldRules extends Entity
 
     /**
     * Gets the overrides
+    * Overrides that specify different rules for specific data associated with the field.
     *
     * @return PlannerRuleOverride|null The overrides
     */
@@ -70,6 +73,7 @@ class PlannerFieldRules extends Entity
 
     /**
     * Sets the overrides
+    * Overrides that specify different rules for specific data associated with the field.
     *
     * @param PlannerRuleOverride $val The value to assign to the overrides
     *
