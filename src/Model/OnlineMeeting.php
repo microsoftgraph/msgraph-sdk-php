@@ -494,6 +494,39 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the joinMeetingIdSettings
+    * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+    *
+    * @return JoinMeetingIdSettings|null The joinMeetingIdSettings
+    */
+    public function getJoinMeetingIdSettings()
+    {
+        if (array_key_exists("joinMeetingIdSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["joinMeetingIdSettings"], "\Microsoft\Graph\Model\JoinMeetingIdSettings") || is_null($this->_propDict["joinMeetingIdSettings"])) {
+                return $this->_propDict["joinMeetingIdSettings"];
+            } else {
+                $this->_propDict["joinMeetingIdSettings"] = new JoinMeetingIdSettings($this->_propDict["joinMeetingIdSettings"]);
+                return $this->_propDict["joinMeetingIdSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the joinMeetingIdSettings
+    * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+    *
+    * @param JoinMeetingIdSettings $val The joinMeetingIdSettings
+    *
+    * @return OnlineMeeting
+    */
+    public function setJoinMeetingIdSettings($val)
+    {
+        $this->_propDict["joinMeetingIdSettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the joinWebUrl
     * The join URL of the online meeting. Read-only.
     *
