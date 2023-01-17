@@ -9,5 +9,6 @@ class NotificationTemplateBrandingOptions extends Enum {
     public const INCLUDE_COMPANY_LOGO = 'includeCompanyLogo';
     public const INCLUDE_COMPANY_NAME = 'includeCompanyName';
     public const INCLUDE_CONTACT_INFORMATION = 'includeContactInformation';
+    public const INCLUDE_COMPANY_PORTAL_LINK = 'includeCompanyPortalLink';
     public const INCLUDE_DEVICE_DETAILS = 'includeDeviceDetails';
 }

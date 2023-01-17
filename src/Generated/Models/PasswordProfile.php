@@ -65,7 +65,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
+     * Gets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      * @return bool|null
     */
     public function getForceChangePasswordNextSignIn(): ?bool {
@@ -125,7 +125,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false. If not set, default is false. NOTE:  For Azure B2C tenants, set to false and instead use custom policies and user flows to force password reset at first sign in. See Force password reset at first logon.
+     * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
      *  @param bool|null $value Value to set for the forceChangePasswordNextSignIn property.
     */
     public function setForceChangePasswordNextSignIn(?bool $value): void {

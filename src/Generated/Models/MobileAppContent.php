@@ -25,12 +25,21 @@ class MobileAppContent extends Entity implements Parsable
     }
 
     /**
+     * Gets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
+     * @return array<MobileContainedApp>|null
+    */
+    public function getContainedApps(): ?array {
+        return $this->getBackingStore()->get('containedApps');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'containedApps' => fn(ParseNode $n) => $o->setContainedApps($n->getCollectionOfObjectValues([MobileContainedApp::class, 'createFromDiscriminatorValue'])),
             'files' => fn(ParseNode $n) => $o->setFiles($n->getCollectionOfObjectValues([MobileAppContentFile::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -49,7 +58,16 @@ class MobileAppContent extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('containedApps', $this->getContainedApps());
         $writer->writeCollectionOfObjectValues('files', $this->getFiles());
+    }
+
+    /**
+     * Sets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
+     *  @param array<MobileContainedApp>|null $value Value to set for the containedApps property.
+    */
+    public function setContainedApps(?array $value): void {
+        $this->getBackingStore()->set('containedApps', $value);
     }
 
     /**

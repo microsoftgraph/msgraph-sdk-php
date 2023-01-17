@@ -42,6 +42,14 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
+     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * @return array<MobileContainedApp>|null
+    */
+    public function getCommittedContainedApps(): ?array {
+        return $this->getBackingStore()->get('committedContainedApps');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -50,6 +58,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'applicableArchitectures' => fn(ParseNode $n) => $o->setApplicableArchitectures($n->getEnumValue(WindowsArchitecture::class)),
             'applicableDeviceTypes' => fn(ParseNode $n) => $o->setApplicableDeviceTypes($n->getEnumValue(WindowsDeviceType::class)),
+            'committedContainedApps' => fn(ParseNode $n) => $o->setCommittedContainedApps($n->getCollectionOfObjectValues([MobileContainedApp::class, 'createFromDiscriminatorValue'])),
             'identityName' => fn(ParseNode $n) => $o->setIdentityName($n->getStringValue()),
             'identityPublisherHash' => fn(ParseNode $n) => $o->setIdentityPublisherHash($n->getStringValue()),
             'identityResourceIdentifier' => fn(ParseNode $n) => $o->setIdentityResourceIdentifier($n->getStringValue()),
@@ -115,6 +124,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('applicableArchitectures', $this->getApplicableArchitectures());
         $writer->writeEnumValue('applicableDeviceTypes', $this->getApplicableDeviceTypes());
+        $writer->writeCollectionOfObjectValues('committedContainedApps', $this->getCommittedContainedApps());
         $writer->writeStringValue('identityName', $this->getIdentityName());
         $writer->writeStringValue('identityPublisherHash', $this->getIdentityPublisherHash());
         $writer->writeStringValue('identityResourceIdentifier', $this->getIdentityResourceIdentifier());
@@ -137,6 +147,14 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     */
     public function setApplicableDeviceTypes(?WindowsDeviceType $value): void {
         $this->getBackingStore()->set('applicableDeviceTypes', $value);
+    }
+
+    /**
+     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     *  @param array<MobileContainedApp>|null $value Value to set for the committedContainedApps property.
+    */
+    public function setCommittedContainedApps(?array $value): void {
+        $this->getBackingStore()->set('committedContainedApps', $value);
     }
 
     /**

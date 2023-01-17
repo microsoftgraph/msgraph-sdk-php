@@ -153,6 +153,7 @@ class OnlineMeeting extends Entity implements Parsable
             'isBroadcast' => fn(ParseNode $n) => $o->setIsBroadcast($n->getBooleanValue()),
             'isEntryExitAnnounced' => fn(ParseNode $n) => $o->setIsEntryExitAnnounced($n->getBooleanValue()),
             'joinInformation' => fn(ParseNode $n) => $o->setJoinInformation($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'joinMeetingIdSettings' => fn(ParseNode $n) => $o->setJoinMeetingIdSettings($n->getObjectValue([JoinMeetingIdSettings::class, 'createFromDiscriminatorValue'])),
             'joinWebUrl' => fn(ParseNode $n) => $o->setJoinWebUrl($n->getStringValue()),
             'lobbyBypassSettings' => fn(ParseNode $n) => $o->setLobbyBypassSettings($n->getObjectValue([LobbyBypassSettings::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getObjectValue([MeetingParticipants::class, 'createFromDiscriminatorValue'])),
@@ -185,6 +186,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function getJoinInformation(): ?ItemBody {
         return $this->getBackingStore()->get('joinInformation');
+    }
+
+    /**
+     * Gets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+     * @return JoinMeetingIdSettings|null
+    */
+    public function getJoinMeetingIdSettings(): ?JoinMeetingIdSettings {
+        return $this->getBackingStore()->get('joinMeetingIdSettings');
     }
 
     /**
@@ -265,6 +274,7 @@ class OnlineMeeting extends Entity implements Parsable
         $writer->writeBooleanValue('isBroadcast', $this->getIsBroadcast());
         $writer->writeBooleanValue('isEntryExitAnnounced', $this->getIsEntryExitAnnounced());
         $writer->writeObjectValue('joinInformation', $this->getJoinInformation());
+        $writer->writeObjectValue('joinMeetingIdSettings', $this->getJoinMeetingIdSettings());
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
         $writer->writeObjectValue('lobbyBypassSettings', $this->getLobbyBypassSettings());
         $writer->writeObjectValue('participants', $this->getParticipants());
@@ -400,6 +410,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setJoinInformation(?ItemBody $value): void {
         $this->getBackingStore()->set('joinInformation', $value);
+    }
+
+    /**
+     * Sets the joinMeetingIdSettings property value. Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
+     *  @param JoinMeetingIdSettings|null $value Value to set for the joinMeetingIdSettings property.
+    */
+    public function setJoinMeetingIdSettings(?JoinMeetingIdSettings $value): void {
+        $this->getBackingStore()->set('joinMeetingIdSettings', $value);
     }
 
     /**

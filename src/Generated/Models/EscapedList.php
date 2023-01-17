@@ -107,7 +107,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Gets the sharepointIds property value. The sharepointIds property
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
@@ -205,7 +205,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Sets the sharepointIds property value. The sharepointIds property
      *  @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
     public function setSharepointIds(?SharepointIds $value): void {
