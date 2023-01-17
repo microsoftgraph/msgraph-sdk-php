@@ -25,6 +25,7 @@ class BusinessScenarioProperties extends Entity
 {
     /**
     * Gets the externalBucketId
+    * The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
     *
     * @return string|null The externalBucketId
     */
@@ -39,6 +40,7 @@ class BusinessScenarioProperties extends Entity
 
     /**
     * Sets the externalBucketId
+    * The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
     *
     * @param string $val The value of the externalBucketId
     *
@@ -51,6 +53,7 @@ class BusinessScenarioProperties extends Entity
     }
     /**
     * Gets the externalContextId
+    * The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
     *
     * @return string|null The externalContextId
     */
@@ -65,6 +68,7 @@ class BusinessScenarioProperties extends Entity
 
     /**
     * Sets the externalContextId
+    * The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
     *
     * @param string $val The value of the externalContextId
     *
@@ -77,6 +81,7 @@ class BusinessScenarioProperties extends Entity
     }
     /**
     * Gets the externalObjectId
+    * Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
     *
     * @return string|null The externalObjectId
     */
@@ -91,6 +96,7 @@ class BusinessScenarioProperties extends Entity
 
     /**
     * Sets the externalObjectId
+    * Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
     *
     * @param string $val The value of the externalObjectId
     *
@@ -103,6 +109,7 @@ class BusinessScenarioProperties extends Entity
     }
     /**
     * Gets the externalObjectVersion
+    * Application-specific version of the task. Optional.
     *
     * @return string|null The externalObjectVersion
     */
@@ -117,6 +124,7 @@ class BusinessScenarioProperties extends Entity
 
     /**
     * Sets the externalObjectVersion
+    * Application-specific version of the task. Optional.
     *
     * @param string $val The value of the externalObjectVersion
     *
@@ -129,6 +137,7 @@ class BusinessScenarioProperties extends Entity
     }
     /**
     * Gets the webUrl
+    * The URL to the application-specific experience for this task. Optional.
     *
     * @return string|null The webUrl
     */
@@ -143,6 +152,7 @@ class BusinessScenarioProperties extends Entity
 
     /**
     * Sets the webUrl
+    * The URL to the application-specific experience for this task. Optional.
     *
     * @param string $val The value of the webUrl
     *

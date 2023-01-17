@@ -109,32 +109,4 @@ class AuthenticationEventListener extends Entity
         return $this;
     }
 
-
-     /**
-     * Gets the tags
-     *
-     * @return array|null The tags
-     */
-    public function getTags()
-    {
-        if (array_key_exists("tags", $this->_propDict)) {
-           return $this->_propDict["tags"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the tags
-    *
-    * @param KeyValuePair[] $val The tags
-    *
-    * @return AuthenticationEventListener
-    */
-    public function setTags($val)
-    {
-        $this->_propDict["tags"] = $val;
-        return $this;
-    }
-
 }

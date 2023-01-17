@@ -25,6 +25,7 @@ class PlannerRuleOverride extends Entity
 {
     /**
     * Gets the name
+    * Name of the override. Allowed override values will be dependent on the property affected by the rule.
     *
     * @return string|null The name
     */
@@ -39,6 +40,7 @@ class PlannerRuleOverride extends Entity
 
     /**
     * Sets the name
+    * Name of the override. Allowed override values will be dependent on the property affected by the rule.
     *
     * @param string $val The value of the name
     *
@@ -51,6 +53,7 @@ class PlannerRuleOverride extends Entity
     }
     /**
     * Gets the rules
+    * Overridden rules. These are used as rules for the override instead of the default rules.
     *
     * @return string|null The rules
     */
@@ -65,6 +68,7 @@ class PlannerRuleOverride extends Entity
 
     /**
     * Sets the rules
+    * Overridden rules. These are used as rules for the override instead of the default rules.
     *
     * @param string $val The value of the rules
     *

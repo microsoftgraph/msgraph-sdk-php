@@ -312,7 +312,7 @@ class Call extends Entity
 
     /**
     * Gets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @return MeetingInfo|null The meetingInfo
     */
@@ -331,7 +331,7 @@ class Call extends Entity
 
     /**
     * Sets the meetingInfo
-    * The meeting information that's required for joining a meeting.
+    * The meeting information. Required information for meeting scenarios.
     *
     * @param MeetingInfo $val The meetingInfo
     *

@@ -26,6 +26,7 @@ class BusinessScenarioPlanner extends Entity
 {
     /**
     * Gets the planConfiguration
+    * The configuration of Planner plans that will be created for the scenario.
     *
     * @return PlannerPlanConfiguration|null The planConfiguration
     */
@@ -44,6 +45,7 @@ class BusinessScenarioPlanner extends Entity
 
     /**
     * Sets the planConfiguration
+    * The configuration of Planner plans that will be created for the scenario.
     *
     * @param PlannerPlanConfiguration $val The planConfiguration
     *
@@ -57,6 +59,7 @@ class BusinessScenarioPlanner extends Entity
 
     /**
     * Gets the taskConfiguration
+    * The configuration of Planner tasks that will be created for the scenario.
     *
     * @return PlannerTaskConfiguration|null The taskConfiguration
     */
@@ -75,6 +78,7 @@ class BusinessScenarioPlanner extends Entity
 
     /**
     * Sets the taskConfiguration
+    * The configuration of Planner tasks that will be created for the scenario.
     *
     * @param PlannerTaskConfiguration $val The taskConfiguration
     *
@@ -89,6 +93,7 @@ class BusinessScenarioPlanner extends Entity
 
      /**
      * Gets the tasks
+    * The Planner tasks for the scenario.
      *
      * @return array|null The tasks
      */
@@ -103,6 +108,7 @@ class BusinessScenarioPlanner extends Entity
 
     /**
     * Sets the tasks
+    * The Planner tasks for the scenario.
     *
     * @param BusinessScenarioTask[] $val The tasks
     *

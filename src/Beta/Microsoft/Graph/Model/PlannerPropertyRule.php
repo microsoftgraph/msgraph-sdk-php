@@ -26,6 +26,7 @@ class PlannerPropertyRule extends Entity
 
     /**
     * Gets the ruleKind
+    * Identifies which type of property rules is represented by this instance. The possible values are: taskRule, bucketRule, planRule, unknownFutureValue.
     *
     * @return PlannerRuleKind|null The ruleKind
     */
@@ -44,6 +45,7 @@ class PlannerPropertyRule extends Entity
 
     /**
     * Sets the ruleKind
+    * Identifies which type of property rules is represented by this instance. The possible values are: taskRule, bucketRule, planRule, unknownFutureValue.
     *
     * @param PlannerRuleKind $val The value to assign to the ruleKind
     *

@@ -26,6 +26,7 @@ class PlannerTaskConfigurationRoleBase extends Entity
 
     /**
     * Gets the roleKind
+    * Type of the role. The possible values are: relationship, unknownFutureValue.
     *
     * @return PlannerUserRoleKind|null The roleKind
     */
@@ -44,6 +45,7 @@ class PlannerTaskConfigurationRoleBase extends Entity
 
     /**
     * Sets the roleKind
+    * Type of the role. The possible values are: relationship, unknownFutureValue.
     *
     * @param PlannerUserRoleKind $val The value to assign to the roleKind
     *

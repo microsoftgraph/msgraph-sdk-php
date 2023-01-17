@@ -26,6 +26,7 @@ class BusinessScenarioTaskTargetBase extends Entity
 
     /**
     * Gets the taskTargetKind
+    * Represents the kind of the target. The possible values are: group, unknownFutureValue.
     *
     * @return PlannerTaskTargetKind|null The taskTargetKind
     */
@@ -44,6 +45,7 @@ class BusinessScenarioTaskTargetBase extends Entity
 
     /**
     * Sets the taskTargetKind
+    * Represents the kind of the target. The possible values are: group, unknownFutureValue.
     *
     * @param PlannerTaskTargetKind $val The value to assign to the taskTargetKind
     *

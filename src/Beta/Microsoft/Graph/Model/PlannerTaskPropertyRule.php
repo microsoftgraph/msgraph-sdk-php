@@ -26,6 +26,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Gets the appliedCategories
+    * Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
     *
     * @return PlannerFieldRules|null The appliedCategories
     */
@@ -44,6 +45,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the appliedCategories
+    * Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
     *
     * @param PlannerFieldRules $val The value to assign to the appliedCategories
     *
@@ -57,6 +59,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Gets the assignments
+    * Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
     *
     * @return PlannerFieldRules|null The assignments
     */
@@ -75,6 +78,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the assignments
+    * Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
     *
     * @param PlannerFieldRules $val The value to assign to the assignments
     *
@@ -88,6 +92,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Gets the checkLists
+    * Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
     *
     * @return PlannerFieldRules|null The checkLists
     */
@@ -106,6 +111,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the checkLists
+    * Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
     *
     * @param PlannerFieldRules $val The value to assign to the checkLists
     *
@@ -118,6 +124,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the delete
+    * Rules and restrictions for deleting the task. Accepted values are allow and block.
     *
     * @return string|null The delete
     */
@@ -132,6 +139,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the delete
+    * Rules and restrictions for deleting the task. Accepted values are allow and block.
     *
     * @param string $val The value of the delete
     *
@@ -144,6 +152,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the dueDate
+    * Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
     *
     * @return string|null The dueDate
     */
@@ -158,6 +167,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the dueDate
+    * Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the dueDate
     *
@@ -170,6 +180,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the move
+    * Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
     *
     * @return string|null The move
     */
@@ -184,6 +195,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the move
+    * Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
     *
     * @param string $val The value of the move
     *
@@ -196,6 +208,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the notes
+    * Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
     *
     * @return string|null The notes
     */
@@ -210,6 +223,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the notes
+    * Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the notes
     *
@@ -222,6 +236,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the order
+    * Rules and restrictions for changing the order of the task. Accepted values are allow and block.
     *
     * @return string|null The order
     */
@@ -236,6 +251,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the order
+    * Rules and restrictions for changing the order of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the order
     *
@@ -248,6 +264,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the percentComplete
+    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
     *
     * @return string|null The percentComplete
     */
@@ -262,6 +279,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the percentComplete
+    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
     *
     * @param string $val The value of the percentComplete
     *
@@ -274,6 +292,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the previewType
+    * Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
     *
     * @return string|null The previewType
     */
@@ -288,6 +307,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the previewType
+    * Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the previewType
     *
@@ -300,6 +320,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the priority
+    * Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
     *
     * @return string|null The priority
     */
@@ -314,6 +335,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the priority
+    * Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the priority
     *
@@ -327,6 +349,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Gets the references
+    * Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
     *
     * @return PlannerFieldRules|null The references
     */
@@ -345,6 +368,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the references
+    * Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
     *
     * @param PlannerFieldRules $val The value to assign to the references
     *
@@ -357,6 +381,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the startDate
+    * Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
     *
     * @return string|null The startDate
     */
@@ -371,6 +396,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the startDate
+    * Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the startDate
     *
@@ -383,6 +409,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the title
+    * Rules and restrictions for changing the title of the task. Accepted values are allow and block.
     *
     * @return string|null The title
     */
@@ -397,6 +424,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the title
+    * Rules and restrictions for changing the title of the task. Accepted values are allow and block.
     *
     * @param string $val The value of the title
     *

@@ -26,6 +26,7 @@ class PlannerTaskConfiguration extends Entity
 {
     /**
     * Gets the editPolicy
+    * Policy configuration for tasks created for the businessScenario when they are being changed outside of the scenario.
     *
     * @return PlannerTaskPolicy|null The editPolicy
     */
@@ -44,6 +45,7 @@ class PlannerTaskConfiguration extends Entity
 
     /**
     * Sets the editPolicy
+    * Policy configuration for tasks created for the businessScenario when they are being changed outside of the scenario.
     *
     * @param PlannerTaskPolicy $val The editPolicy
     *

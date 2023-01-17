@@ -27,6 +27,7 @@ class PlannerPlanConfiguration extends Entity
 
      /**
      * Gets the buckets
+    * List the buckets that should be created in the plan.
      *
      * @return array|null The buckets
      */
@@ -41,6 +42,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the buckets
+    * List the buckets that should be created in the plan.
     *
     * @param PlannerPlanConfigurationBucketDefinition[] $val The buckets
     *
@@ -54,6 +56,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Gets the createdBy
+    * The identity of the creator of the plan configuration.
     *
     * @return IdentitySet|null The createdBy
     */
@@ -72,6 +75,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the createdBy
+    * The identity of the creator of the plan configuration.
     *
     * @param IdentitySet $val The createdBy
     *
@@ -85,6 +89,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time when the plan configuration was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -103,6 +108,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time when the plan configuration was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -116,6 +122,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Gets the defaultLanguage
+    * The language code for the default language to be used for the names of the objects created for the plan.
     *
     * @return string|null The defaultLanguage
     */
@@ -130,6 +137,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the defaultLanguage
+    * The language code for the default language to be used for the names of the objects created for the plan.
     *
     * @param string $val The defaultLanguage
     *
@@ -143,6 +151,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * The identity of the user who last modified the plan configuration.
     *
     * @return IdentitySet|null The lastModifiedBy
     */
@@ -161,6 +170,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * The identity of the user who last modified the plan configuration.
     *
     * @param IdentitySet $val The lastModifiedBy
     *
@@ -174,6 +184,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the plan configuration was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -192,6 +203,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the plan configuration was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -206,6 +218,7 @@ class PlannerPlanConfiguration extends Entity
 
      /**
      * Gets the localizations
+    * Localized names for the plan configuration.
      *
      * @return array|null The localizations
      */
@@ -220,6 +233,7 @@ class PlannerPlanConfiguration extends Entity
 
     /**
     * Sets the localizations
+    * Localized names for the plan configuration.
     *
     * @param PlannerPlanConfigurationLocalization[] $val The localizations
     *

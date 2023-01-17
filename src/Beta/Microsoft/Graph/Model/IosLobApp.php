@@ -149,35 +149,6 @@ class IosLobApp extends MobileLobApp
     }
 
     /**
-    * Gets the identityVersion
-    * The identity version. This property is being deprecated in 2211(November 2022)
-    *
-    * @return string|null The identityVersion
-    */
-    public function getIdentityVersion()
-    {
-        if (array_key_exists("identityVersion", $this->_propDict)) {
-            return $this->_propDict["identityVersion"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the identityVersion
-    * The identity version. This property is being deprecated in 2211(November 2022)
-    *
-    * @param string $val The identityVersion
-    *
-    * @return IosLobApp
-    */
-    public function setIdentityVersion($val)
-    {
-        $this->_propDict["identityVersion"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the minimumSupportedOperatingSystem
     * The value for the minimum applicable operating system.
     *

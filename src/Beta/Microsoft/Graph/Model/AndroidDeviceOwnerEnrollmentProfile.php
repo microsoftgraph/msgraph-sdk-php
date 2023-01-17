@@ -298,6 +298,35 @@ class AndroidDeviceOwnerEnrollmentProfile extends Entity
     }
 
     /**
+    * Gets the isTeamsDeviceProfile
+    * Boolean indicating if this profile is an Android AOSP for Teams device profile.
+    *
+    * @return bool|null The isTeamsDeviceProfile
+    */
+    public function getIsTeamsDeviceProfile()
+    {
+        if (array_key_exists("isTeamsDeviceProfile", $this->_propDict)) {
+            return $this->_propDict["isTeamsDeviceProfile"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isTeamsDeviceProfile
+    * Boolean indicating if this profile is an Android AOSP for Teams device profile.
+    *
+    * @param bool $val The isTeamsDeviceProfile
+    *
+    * @return AndroidDeviceOwnerEnrollmentProfile
+    */
+    public function setIsTeamsDeviceProfile($val)
+    {
+        $this->_propDict["isTeamsDeviceProfile"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the lastModifiedDateTime
     * Date time the enrollment profile was last modified.
     *

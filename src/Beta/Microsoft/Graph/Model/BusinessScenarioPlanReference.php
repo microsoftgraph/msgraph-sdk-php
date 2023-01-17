@@ -26,6 +26,7 @@ class BusinessScenarioPlanReference extends Entity
 {
     /**
     * Gets the title
+    * The title property of the plannerPlan.
     *
     * @return string|null The title
     */
@@ -40,6 +41,7 @@ class BusinessScenarioPlanReference extends Entity
 
     /**
     * Sets the title
+    * The title property of the plannerPlan.
     *
     * @param string $val The title
     *

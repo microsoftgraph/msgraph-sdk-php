@@ -27,6 +27,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
      /**
      * Gets the buckets
+    * Localized names for configured buckets in the plan configuration.
      *
      * @return array|null The buckets
      */
@@ -41,6 +42,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
     /**
     * Sets the buckets
+    * Localized names for configured buckets in the plan configuration.
     *
     * @param PlannerPlanConfigurationBucketLocalization[] $val The buckets
     *
@@ -54,6 +56,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
     /**
     * Gets the languageTag
+    * The language code associated with the localized names in this object.
     *
     * @return string|null The languageTag
     */
@@ -68,6 +71,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
     /**
     * Sets the languageTag
+    * The language code associated with the localized names in this object.
     *
     * @param string $val The languageTag
     *
@@ -81,6 +85,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
     /**
     * Gets the planTitle
+    * Localized title of the plan.
     *
     * @return string|null The planTitle
     */
@@ -95,6 +100,7 @@ class PlannerPlanConfigurationLocalization extends Entity
 
     /**
     * Sets the planTitle
+    * Localized title of the plan.
     *
     * @param string $val The planTitle
     *
