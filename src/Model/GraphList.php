@@ -88,6 +88,7 @@ class GraphList extends BaseItem
 
     /**
     * Gets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @return SharepointIds|null The sharepointIds
     */
@@ -106,6 +107,7 @@ class GraphList extends BaseItem
 
     /**
     * Sets the sharepointIds
+    * Returns identifiers useful for SharePoint REST compatibility. Read-only.
     *
     * @param SharepointIds $val The sharepointIds
     *
