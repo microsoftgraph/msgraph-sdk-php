@@ -42,7 +42,7 @@ class Directory extends Entity
     /**
     * Sets the impactedResources
     *
-    * @param RecommendationResource[] $val The impactedResources
+    * @param ImpactedResource[] $val The impactedResources
     *
     * @return Directory
     */

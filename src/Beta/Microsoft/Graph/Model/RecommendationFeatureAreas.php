@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Recommendation File
+* RecommendationFeatureAreas File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* Recommendation class
+* RecommendationFeatureAreas class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,17 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Recommendation extends RecommendationBase
+class RecommendationFeatureAreas extends Enum
 {
+    /**
+    * The Enum RecommendationFeatureAreas
+    */
+    const USERS = "users";
+    const GROUPS = "groups";
+    const DEVICES = "devices";
+    const APPLICATIONS = "applications";
+    const ACCESS_REVIEWS = "accessReviews";
+    const CONDITIONAL_ACCESS = "conditionalAccess";
+    const GOVERNANCE = "governance";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -26,6 +26,7 @@ class Payload extends Entity
 {
     /**
     * Gets the brand
+    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
     *
     * @return PayloadBrand|null The brand
     */
@@ -44,6 +45,7 @@ class Payload extends Entity
 
     /**
     * Sets the brand
+    * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
     *
     * @param PayloadBrand $val The brand
     *
@@ -57,6 +59,7 @@ class Payload extends Entity
 
     /**
     * Gets the complexity
+    * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
     *
     * @return PayloadComplexity|null The complexity
     */
@@ -75,6 +78,7 @@ class Payload extends Entity
 
     /**
     * Sets the complexity
+    * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
     *
     * @param PayloadComplexity $val The complexity
     *
@@ -88,6 +92,7 @@ class Payload extends Entity
 
     /**
     * Gets the createdBy
+    * Identity of the user who created the attack simulation and training campaign payload.
     *
     * @return EmailIdentity|null The createdBy
     */
@@ -106,6 +111,7 @@ class Payload extends Entity
 
     /**
     * Sets the createdBy
+    * Identity of the user who created the attack simulation and training campaign payload.
     *
     * @param EmailIdentity $val The createdBy
     *
@@ -119,6 +125,7 @@ class Payload extends Entity
 
     /**
     * Gets the createdDateTime
+    * Date and time when the attack simulation and training campaign payload.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -137,6 +144,7 @@ class Payload extends Entity
 
     /**
     * Sets the createdDateTime
+    * Date and time when the attack simulation and training campaign payload.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -150,6 +158,7 @@ class Payload extends Entity
 
     /**
     * Gets the description
+    * Description of the attack simulation and training campaign payload.
     *
     * @return string|null The description
     */
@@ -164,6 +173,7 @@ class Payload extends Entity
 
     /**
     * Sets the description
+    * Description of the attack simulation and training campaign payload.
     *
     * @param string $val The description
     *
@@ -177,6 +187,7 @@ class Payload extends Entity
 
     /**
     * Gets the detail
+    * Additional details about the payload.
     *
     * @return PayloadDetail|null The detail
     */
@@ -195,6 +206,7 @@ class Payload extends Entity
 
     /**
     * Sets the detail
+    * Additional details about the payload.
     *
     * @param PayloadDetail $val The detail
     *
@@ -208,6 +220,7 @@ class Payload extends Entity
 
     /**
     * Gets the displayName
+    * Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
     *
     * @return string|null The displayName
     */
@@ -222,6 +235,7 @@ class Payload extends Entity
 
     /**
     * Sets the displayName
+    * Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
     *
     * @param string $val The displayName
     *
@@ -235,6 +249,7 @@ class Payload extends Entity
 
     /**
     * Gets the industry
+    * Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
     *
     * @return PayloadIndustry|null The industry
     */
@@ -253,6 +268,7 @@ class Payload extends Entity
 
     /**
     * Sets the industry
+    * Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
     *
     * @param PayloadIndustry $val The industry
     *
@@ -266,6 +282,7 @@ class Payload extends Entity
 
     /**
     * Gets the isAutomated
+    * Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
     *
     * @return bool|null The isAutomated
     */
@@ -280,6 +297,7 @@ class Payload extends Entity
 
     /**
     * Sets the isAutomated
+    * Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
     *
     * @param bool $val The isAutomated
     *
@@ -293,6 +311,7 @@ class Payload extends Entity
 
     /**
     * Gets the isControversial
+    * Indicates whether the payload is controversial.
     *
     * @return bool|null The isControversial
     */
@@ -307,6 +326,7 @@ class Payload extends Entity
 
     /**
     * Sets the isControversial
+    * Indicates whether the payload is controversial.
     *
     * @param bool $val The isControversial
     *
@@ -320,6 +340,7 @@ class Payload extends Entity
 
     /**
     * Gets the isCurrentEvent
+    * Indicates whether the payload is from any recent event.
     *
     * @return bool|null The isCurrentEvent
     */
@@ -334,6 +355,7 @@ class Payload extends Entity
 
     /**
     * Sets the isCurrentEvent
+    * Indicates whether the payload is from any recent event.
     *
     * @param bool $val The isCurrentEvent
     *
@@ -347,6 +369,7 @@ class Payload extends Entity
 
     /**
     * Gets the language
+    * Payload language.
     *
     * @return string|null The language
     */
@@ -361,6 +384,7 @@ class Payload extends Entity
 
     /**
     * Sets the language
+    * Payload language.
     *
     * @param string $val The language
     *
@@ -374,6 +398,7 @@ class Payload extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation and training campaign payload.
     *
     * @return EmailIdentity|null The lastModifiedBy
     */
@@ -392,6 +417,7 @@ class Payload extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Identity of the user who most recently modified the attack simulation and training campaign payload.
     *
     * @param EmailIdentity $val The lastModifiedBy
     *
@@ -405,6 +431,7 @@ class Payload extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -423,6 +450,7 @@ class Payload extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -436,6 +464,7 @@ class Payload extends Entity
 
     /**
     * Gets the payloadTags
+    * Free text tags for a payload.
     *
     * @return array|null The payloadTags
     */
@@ -450,6 +479,7 @@ class Payload extends Entity
 
     /**
     * Sets the payloadTags
+    * Free text tags for a payload.
     *
     * @param string[] $val The payloadTags
     *
@@ -463,6 +493,7 @@ class Payload extends Entity
 
     /**
     * Gets the platform
+    * The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
     * @return PayloadDeliveryPlatform|null The platform
     */
@@ -481,6 +512,7 @@ class Payload extends Entity
 
     /**
     * Sets the platform
+    * The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
     *
     * @param PayloadDeliveryPlatform $val The platform
     *
@@ -494,6 +526,7 @@ class Payload extends Entity
 
     /**
     * Gets the predictedCompromiseRate
+    * Predicted probability for a payload to phish a targeted user.
     *
     * @return float|null The predictedCompromiseRate
     */
@@ -508,6 +541,7 @@ class Payload extends Entity
 
     /**
     * Sets the predictedCompromiseRate
+    * Predicted probability for a payload to phish a targeted user.
     *
     * @param float $val The predictedCompromiseRate
     *
@@ -521,6 +555,7 @@ class Payload extends Entity
 
     /**
     * Gets the simulationAttackType
+    * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
     *
     * @return SimulationAttackType|null The simulationAttackType
     */
@@ -539,6 +574,7 @@ class Payload extends Entity
 
     /**
     * Sets the simulationAttackType
+    * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
     *
     * @param SimulationAttackType $val The simulationAttackType
     *
@@ -552,6 +588,7 @@ class Payload extends Entity
 
     /**
     * Gets the source
+    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, tenant, global, unknownFutureValue. Inherited from simulation.
     *
     * @return SimulationContentSource|null The source
     */
@@ -570,6 +607,7 @@ class Payload extends Entity
 
     /**
     * Sets the source
+    * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, tenant, global, unknownFutureValue. Inherited from simulation.
     *
     * @param SimulationContentSource $val The source
     *
@@ -583,6 +621,7 @@ class Payload extends Entity
 
     /**
     * Gets the status
+    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
     *
     * @return SimulationContentStatus|null The status
     */
@@ -601,6 +640,7 @@ class Payload extends Entity
 
     /**
     * Sets the status
+    * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
     *
     * @param SimulationContentStatus $val The status
     *
@@ -614,6 +654,7 @@ class Payload extends Entity
 
     /**
     * Gets the technique
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @return SimulationAttackTechnique|null The technique
     */
@@ -632,6 +673,7 @@ class Payload extends Entity
 
     /**
     * Sets the technique
+    * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
     *
     * @param SimulationAttackTechnique $val The technique
     *
@@ -645,6 +687,7 @@ class Payload extends Entity
 
     /**
     * Gets the theme
+    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
     *
     * @return PayloadTheme|null The theme
     */
@@ -663,6 +706,7 @@ class Payload extends Entity
 
     /**
     * Sets the theme
+    * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
     *
     * @param PayloadTheme $val The theme
     *
