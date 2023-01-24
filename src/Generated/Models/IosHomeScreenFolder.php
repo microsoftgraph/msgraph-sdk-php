@@ -55,7 +55,7 @@ class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable
 
     /**
      * Sets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
-     *  @param array<IosHomeScreenFolderPage>|null $value Value to set for the pages property.
+     * @param array<IosHomeScreenFolderPage>|null $value Value to set for the pages property.
     */
     public function setPages(?array $value): void {
         $this->getBackingStore()->set('pages', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Assignments belonging to the user.
+*/
 class EducationAssignmentItemRequestBuilderGetQueryParameters 
 {
     /**

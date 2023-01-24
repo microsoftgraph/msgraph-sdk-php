@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\AppRoleAssignments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the app roles a user has been granted for an application. Supports $expand.
+*/
 class AppRoleAssignmentItemRequestBuilderGetQueryParameters 
 {
     /**

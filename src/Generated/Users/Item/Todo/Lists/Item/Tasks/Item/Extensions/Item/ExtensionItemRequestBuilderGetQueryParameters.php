@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Extens
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the task. Nullable.
+*/
 class ExtensionItemRequestBuilderGetQueryParameters 
 {
     /**

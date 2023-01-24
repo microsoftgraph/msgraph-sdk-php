@@ -200,7 +200,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -208,7 +208,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the aggregationFilters property value. The aggregationFilters property
-     *  @param array<string>|null $value Value to set for the aggregationFilters property.
+     * @param array<string>|null $value Value to set for the aggregationFilters property.
     */
     public function setAggregationFilters(?array $value): void {
         $this->getBackingStore()->set('aggregationFilters', $value);
@@ -216,7 +216,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the aggregations property value. The aggregations property
-     *  @param array<AggregationOption>|null $value Value to set for the aggregations property.
+     * @param array<AggregationOption>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value): void {
         $this->getBackingStore()->set('aggregations', $value);
@@ -224,7 +224,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -232,7 +232,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentSources property value. The contentSources property
-     *  @param array<string>|null $value Value to set for the contentSources property.
+     * @param array<string>|null $value Value to set for the contentSources property.
     */
     public function setContentSources(?array $value): void {
         $this->getBackingStore()->set('contentSources', $value);
@@ -240,7 +240,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the enableTopResults property value. The enableTopResults property
-     *  @param bool|null $value Value to set for the enableTopResults property.
+     * @param bool|null $value Value to set for the enableTopResults property.
     */
     public function setEnableTopResults(?bool $value): void {
         $this->getBackingStore()->set('enableTopResults', $value);
@@ -248,7 +248,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the entityTypes property value. The entityTypes property
-     *  @param array<EntityType>|null $value Value to set for the entityTypes property.
+     * @param array<EntityType>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value): void {
         $this->getBackingStore()->set('entityTypes', $value);
@@ -256,7 +256,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fields property value. The fields property
-     *  @param array<string>|null $value Value to set for the fields property.
+     * @param array<string>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value): void {
         $this->getBackingStore()->set('fields', $value);
@@ -264,7 +264,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the from property value. The from property
-     *  @param int|null $value Value to set for the from property.
+     * @param int|null $value Value to set for the from property.
     */
     public function setFrom(?int $value): void {
         $this->getBackingStore()->set('from', $value);
@@ -272,7 +272,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -280,7 +280,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the query property value. The query property
-     *  @param SearchQuery|null $value Value to set for the query property.
+     * @param SearchQuery|null $value Value to set for the query property.
     */
     public function setQuery(?SearchQuery $value): void {
         $this->getBackingStore()->set('query', $value);
@@ -288,7 +288,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryAlterationOptions property value. The queryAlterationOptions property
-     *  @param SearchAlterationOptions|null $value Value to set for the queryAlterationOptions property.
+     * @param SearchAlterationOptions|null $value Value to set for the queryAlterationOptions property.
     */
     public function setQueryAlterationOptions(?SearchAlterationOptions $value): void {
         $this->getBackingStore()->set('queryAlterationOptions', $value);
@@ -296,7 +296,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resultTemplateOptions property value. The resultTemplateOptions property
-     *  @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
+     * @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
     */
     public function setResultTemplateOptions(?ResultTemplateOption $value): void {
         $this->getBackingStore()->set('resultTemplateOptions', $value);
@@ -304,7 +304,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the size property value. The size property
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);
@@ -312,7 +312,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sortProperties property value. The sortProperties property
-     *  @param array<SortProperty>|null $value Value to set for the sortProperties property.
+     * @param array<SortProperty>|null $value Value to set for the sortProperties property.
     */
     public function setSortProperties(?array $value): void {
         $this->getBackingStore()->set('sortProperties', $value);

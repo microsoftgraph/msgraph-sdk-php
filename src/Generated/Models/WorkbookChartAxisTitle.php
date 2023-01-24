@@ -74,7 +74,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of chart axis title. Read-only.
-     *  @param WorkbookChartAxisTitleFormat|null $value Value to set for the format property.
+     * @param WorkbookChartAxisTitleFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartAxisTitleFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -82,7 +82,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
 
     /**
      * Sets the text property value. Represents the axis title.
-     *  @param string|null $value Value to set for the text property.
+     * @param string|null $value Value to set for the text property.
     */
     public function setText(?string $value): void {
         $this->getBackingStore()->set('text', $value);
@@ -90,7 +90,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
 
     /**
      * Sets the visible property value. A boolean that specifies the visibility of an axis title.
-     *  @param bool|null $value Value to set for the visible property.
+     * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
         $this->getBackingStore()->set('visible', $value);

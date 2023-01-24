@@ -64,7 +64,7 @@ class PrintTaskTrigger extends Entity implements Parsable
 
     /**
      * Sets the definition property value. The definition property
-     *  @param PrintTaskDefinition|null $value Value to set for the definition property.
+     * @param PrintTaskDefinition|null $value Value to set for the definition property.
     */
     public function setDefinition(?PrintTaskDefinition $value): void {
         $this->getBackingStore()->set('definition', $value);
@@ -72,7 +72,7 @@ class PrintTaskTrigger extends Entity implements Parsable
 
     /**
      * Sets the event property value. The event property
-     *  @param PrintEvent|null $value Value to set for the event property.
+     * @param PrintEvent|null $value Value to set for the event property.
     */
     public function setEvent(?PrintEvent $value): void {
         $this->getBackingStore()->set('event', $value);

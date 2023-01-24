@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\AuthorizationPolicy;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The policy that controls Azure AD authorization settings.
+*/
 class AuthorizationPolicyRequestBuilderGetQueryParameters 
 {
     /**

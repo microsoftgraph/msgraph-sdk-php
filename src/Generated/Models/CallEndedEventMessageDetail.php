@@ -96,7 +96,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the callDuration property value. Duration of the call.
-     *  @param DateInterval|null $value Value to set for the callDuration property.
+     * @param DateInterval|null $value Value to set for the callDuration property.
     */
     public function setCallDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('callDuration', $value);
@@ -104,7 +104,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     *  @param TeamworkCallEventType|null $value Value to set for the callEventType property.
+     * @param TeamworkCallEventType|null $value Value to set for the callEventType property.
     */
     public function setCallEventType(?TeamworkCallEventType $value): void {
         $this->getBackingStore()->set('callEventType', $value);
@@ -112,7 +112,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the callId property value. Unique identifier of the call.
-     *  @param string|null $value Value to set for the callId property.
+     * @param string|null $value Value to set for the callId property.
     */
     public function setCallId(?string $value): void {
         $this->getBackingStore()->set('callId', $value);
@@ -120,7 +120,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the callParticipants property value. List of call participants.
-     *  @param array<CallParticipantInfo>|null $value Value to set for the callParticipants property.
+     * @param array<CallParticipantInfo>|null $value Value to set for the callParticipants property.
     */
     public function setCallParticipants(?array $value): void {
         $this->getBackingStore()->set('callParticipants', $value);
@@ -128,7 +128,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

@@ -90,7 +90,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
 
     /**
      * Sets the password property value. The password property
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);
@@ -114,7 +114,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
 
     /**
      * Sets the pkcs12Value property value. The pkcs12Value property
-     *  @param string|null $value Value to set for the pkcs12Value property.
+     * @param string|null $value Value to set for the pkcs12Value property.
     */
     public function setPkcs12Value(?string $value): void {
         $this->getBackingStore()->set('pkcs12Value', $value);

@@ -153,7 +153,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -161,7 +161,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
-     *  @param Event|null $value Value to set for the event property.
+     * @param Event|null $value Value to set for the event property.
     */
     public function setEvent(?Event $value): void {
         $this->getBackingStore()->set('event', $value);
@@ -169,7 +169,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the isAllDay property value. The isAllDay property
-     *  @param bool|null $value Value to set for the isAllDay property.
+     * @param bool|null $value Value to set for the isAllDay property.
     */
     public function setIsAllDay(?bool $value): void {
         $this->getBackingStore()->set('isAllDay', $value);
@@ -177,7 +177,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the isDelegated property value. The isDelegated property
-     *  @param bool|null $value Value to set for the isDelegated property.
+     * @param bool|null $value Value to set for the isDelegated property.
     */
     public function setIsDelegated(?bool $value): void {
         $this->getBackingStore()->set('isDelegated', $value);
@@ -185,7 +185,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the isOutOfDate property value. The isOutOfDate property
-     *  @param bool|null $value Value to set for the isOutOfDate property.
+     * @param bool|null $value Value to set for the isOutOfDate property.
     */
     public function setIsOutOfDate(?bool $value): void {
         $this->getBackingStore()->set('isOutOfDate', $value);
@@ -193,7 +193,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the location property value. The location property
-     *  @param Location|null $value Value to set for the location property.
+     * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -201,7 +201,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
-     *  @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
+     * @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
     */
     public function setMeetingMessageType(?MeetingMessageType $value): void {
         $this->getBackingStore()->set('meetingMessageType', $value);
@@ -209,7 +209,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the recurrence property value. The recurrence property
-     *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
+     * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
         $this->getBackingStore()->set('recurrence', $value);
@@ -217,7 +217,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -225,7 +225,7 @@ class EventMessage extends Message implements Parsable
 
     /**
      * Sets the type property value. The type property
-     *  @param EventType|null $value Value to set for the type property.
+     * @param EventType|null $value Value to set for the type property.
     */
     public function setType(?EventType $value): void {
         $this->getBackingStore()->set('type', $value);

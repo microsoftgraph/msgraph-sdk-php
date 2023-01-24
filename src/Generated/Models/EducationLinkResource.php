@@ -55,7 +55,7 @@ class EducationLinkResource extends EducationResource implements Parsable
 
     /**
      * Sets the link property value. URL to the resource.
-     *  @param string|null $value Value to set for the link property.
+     * @param string|null $value Value to set for the link property.
     */
     public function setLink(?string $value): void {
         $this->getBackingStore()->set('link', $value);

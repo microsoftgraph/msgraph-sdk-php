@@ -56,7 +56,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
 
     /**
      * Sets the inactiveDuration property value. Defines the duration of inactivity. Inactivity is based on the last sign in date of the user compared to the access review instance's start date. If this property is not specified, it's assigned the default value PT0S.
-     *  @param DateInterval|null $value Value to set for the inactiveDuration property.
+     * @param DateInterval|null $value Value to set for the inactiveDuration property.
     */
     public function setInactiveDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('inactiveDuration', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\People\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * People that are relevant to the user. Read-only. Nullable.
+*/
 class PersonItemRequestBuilderGetQueryParameters 
 {
     /**

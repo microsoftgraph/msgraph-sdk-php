@@ -65,7 +65,7 @@ class GroupMembers extends SubjectSet implements Parsable
 
     /**
      * Sets the description property value. The name of the group in Azure AD. Read only.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -73,7 +73,7 @@ class GroupMembers extends SubjectSet implements Parsable
 
     /**
      * Sets the groupId property value. The ID of the group in Azure AD.
-     *  @param string|null $value Value to set for the groupId property.
+     * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
         $this->getBackingStore()->set('groupId', $value);

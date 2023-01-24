@@ -74,7 +74,7 @@ class PrintDocument extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. The document's content (MIME) type. Read-only.
-     *  @param string|null $value Value to set for the contentType property.
+     * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -82,7 +82,7 @@ class PrintDocument extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The document's name. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -90,7 +90,7 @@ class PrintDocument extends Entity implements Parsable
 
     /**
      * Sets the size property value. The document's size in bytes. Read-only.
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);

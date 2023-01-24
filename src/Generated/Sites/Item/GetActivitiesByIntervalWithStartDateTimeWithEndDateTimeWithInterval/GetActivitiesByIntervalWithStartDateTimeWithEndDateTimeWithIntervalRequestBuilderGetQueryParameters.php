@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\GetActivitiesByIntervalWithStartD
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getActivitiesByInterval
+*/
 class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetQueryParameters 
 {
     /**

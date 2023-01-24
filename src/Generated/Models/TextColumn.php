@@ -130,7 +130,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
-     *  @param bool|null $value Value to set for the allowMultipleLines property.
+     * @param bool|null $value Value to set for the allowMultipleLines property.
     */
     public function setAllowMultipleLines(?bool $value): void {
         $this->getBackingStore()->set('allowMultipleLines', $value);
@@ -146,7 +146,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
-     *  @param bool|null $value Value to set for the appendChangesToExistingText property.
+     * @param bool|null $value Value to set for the appendChangesToExistingText property.
     */
     public function setAppendChangesToExistingText(?bool $value): void {
         $this->getBackingStore()->set('appendChangesToExistingText', $value);
@@ -154,7 +154,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -162,7 +162,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the linesForEditing property value. The size of the text box.
-     *  @param int|null $value Value to set for the linesForEditing property.
+     * @param int|null $value Value to set for the linesForEditing property.
     */
     public function setLinesForEditing(?int $value): void {
         $this->getBackingStore()->set('linesForEditing', $value);
@@ -170,7 +170,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
-     *  @param int|null $value Value to set for the maxLength property.
+     * @param int|null $value Value to set for the maxLength property.
     */
     public function setMaxLength(?int $value): void {
         $this->getBackingStore()->set('maxLength', $value);
@@ -178,7 +178,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +186,7 @@ class TextColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
-     *  @param string|null $value Value to set for the textType property.
+     * @param string|null $value Value to set for the textType property.
     */
     public function setTextType(?string $value): void {
         $this->getBackingStore()->set('textType', $value);

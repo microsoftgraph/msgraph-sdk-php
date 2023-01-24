@@ -94,7 +94,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryHive property.
+     * @param string|null $value Value to set for the registryHive property.
     */
     public function setRegistryHive(?string $value): void {
         $this->getBackingStore()->set('registryHive', $value);
@@ -102,7 +102,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryKey property.
+     * @param string|null $value Value to set for the registryKey property.
     */
     public function setRegistryKey(?string $value): void {
         $this->getBackingStore()->set('registryKey', $value);
@@ -110,7 +110,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryValue property value. Data of the registry value that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryValue property.
+     * @param string|null $value Value to set for the registryValue property.
     */
     public function setRegistryValue(?string $value): void {
         $this->getBackingStore()->set('registryValue', $value);
@@ -118,7 +118,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryValueName property value. Name of the registry value that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryValueName property.
+     * @param string|null $value Value to set for the registryValueName property.
     */
     public function setRegistryValueName(?string $value): void {
         $this->getBackingStore()->set('registryValueName', $value);
@@ -126,7 +126,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryValueType property value. Data type, such as binary or string, of the registry value that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryValueType property.
+     * @param string|null $value Value to set for the registryValueType property.
     */
     public function setRegistryValueType(?string $value): void {
         $this->getBackingStore()->set('registryValueType', $value);

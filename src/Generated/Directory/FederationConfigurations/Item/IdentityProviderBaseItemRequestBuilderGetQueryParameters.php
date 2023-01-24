@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
+*/
 class IdentityProviderBaseItemRequestBuilderGetQueryParameters 
 {
     /**

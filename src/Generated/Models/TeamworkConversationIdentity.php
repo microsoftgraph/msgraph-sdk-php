@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkConversationIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new teamworkConversationIdentity and sets the default values.
+     * Instantiates a new TeamworkConversationIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,7 +55,7 @@ class TeamworkConversationIdentity extends Identity implements Parsable
 
     /**
      * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
-     *  @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
+     * @param TeamworkConversationIdentityType|null $value Value to set for the conversationIdentityType property.
     */
     public function setConversationIdentityType(?TeamworkConversationIdentityType $value): void {
         $this->getBackingStore()->set('conversationIdentityType', $value);

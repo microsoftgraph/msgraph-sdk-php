@@ -96,7 +96,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
 
     /**
      * Sets the comment property value. Comment about the captured version.
-     *  @param string|null $value Value to set for the comment property.
+     * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
@@ -104,7 +104,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
 
     /**
      * Sets the createdBy property value. User who captured the version.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -112,7 +112,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time when this version was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -120,7 +120,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
 
     /**
      * Sets the items property value. Items within the document set that are captured as part of this version.
-     *  @param array<DocumentSetVersionItem>|null $value Value to set for the items property.
+     * @param array<DocumentSetVersionItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
@@ -128,7 +128,7 @@ class DocumentSetVersion extends ListItemVersion implements Parsable
 
     /**
      * Sets the shouldCaptureMinorVersion property value. If true, minor versions of items are also captured; otherwise, only major versions will be captured. Default value is false.
-     *  @param bool|null $value Value to set for the shouldCaptureMinorVersion property.
+     * @param bool|null $value Value to set for the shouldCaptureMinorVersion property.
     */
     public function setShouldCaptureMinorVersion(?bool $value): void {
         $this->getBackingStore()->set('shouldCaptureMinorVersion', $value);

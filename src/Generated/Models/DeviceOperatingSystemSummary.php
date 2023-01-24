@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Device operating system summary.
+*/
 class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -200,7 +203,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -208,7 +211,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidCorporateWorkProfileCount property value. The count of Corporate work profile Android devices. Also known as Corporate Owned Personally Enabled (COPE). Valid values -1 to 2147483647
-     *  @param int|null $value Value to set for the androidCorporateWorkProfileCount property.
+     * @param int|null $value Value to set for the androidCorporateWorkProfileCount property.
     */
     public function setAndroidCorporateWorkProfileCount(?int $value): void {
         $this->getBackingStore()->set('androidCorporateWorkProfileCount', $value);
@@ -216,7 +219,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidCount property value. Number of android device count.
-     *  @param int|null $value Value to set for the androidCount property.
+     * @param int|null $value Value to set for the androidCount property.
     */
     public function setAndroidCount(?int $value): void {
         $this->getBackingStore()->set('androidCount', $value);
@@ -224,7 +227,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidDedicatedCount property value. Number of dedicated Android devices.
-     *  @param int|null $value Value to set for the androidDedicatedCount property.
+     * @param int|null $value Value to set for the androidDedicatedCount property.
     */
     public function setAndroidDedicatedCount(?int $value): void {
         $this->getBackingStore()->set('androidDedicatedCount', $value);
@@ -232,7 +235,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidDeviceAdminCount property value. Number of device admin Android devices.
-     *  @param int|null $value Value to set for the androidDeviceAdminCount property.
+     * @param int|null $value Value to set for the androidDeviceAdminCount property.
     */
     public function setAndroidDeviceAdminCount(?int $value): void {
         $this->getBackingStore()->set('androidDeviceAdminCount', $value);
@@ -240,7 +243,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidFullyManagedCount property value. Number of fully managed Android devices.
-     *  @param int|null $value Value to set for the androidFullyManagedCount property.
+     * @param int|null $value Value to set for the androidFullyManagedCount property.
     */
     public function setAndroidFullyManagedCount(?int $value): void {
         $this->getBackingStore()->set('androidFullyManagedCount', $value);
@@ -248,7 +251,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the androidWorkProfileCount property value. Number of work profile Android devices.
-     *  @param int|null $value Value to set for the androidWorkProfileCount property.
+     * @param int|null $value Value to set for the androidWorkProfileCount property.
     */
     public function setAndroidWorkProfileCount(?int $value): void {
         $this->getBackingStore()->set('androidWorkProfileCount', $value);
@@ -256,7 +259,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -264,7 +267,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the configMgrDeviceCount property value. Number of ConfigMgr managed devices.
-     *  @param int|null $value Value to set for the configMgrDeviceCount property.
+     * @param int|null $value Value to set for the configMgrDeviceCount property.
     */
     public function setConfigMgrDeviceCount(?int $value): void {
         $this->getBackingStore()->set('configMgrDeviceCount', $value);
@@ -272,7 +275,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the iosCount property value. Number of iOS device count.
-     *  @param int|null $value Value to set for the iosCount property.
+     * @param int|null $value Value to set for the iosCount property.
     */
     public function setIosCount(?int $value): void {
         $this->getBackingStore()->set('iosCount', $value);
@@ -280,7 +283,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the macOSCount property value. Number of Mac OS X device count.
-     *  @param int|null $value Value to set for the macOSCount property.
+     * @param int|null $value Value to set for the macOSCount property.
     */
     public function setMacOSCount(?int $value): void {
         $this->getBackingStore()->set('macOSCount', $value);
@@ -288,7 +291,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -296,7 +299,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the unknownCount property value. Number of unknown device count.
-     *  @param int|null $value Value to set for the unknownCount property.
+     * @param int|null $value Value to set for the unknownCount property.
     */
     public function setUnknownCount(?int $value): void {
         $this->getBackingStore()->set('unknownCount', $value);
@@ -304,7 +307,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the windowsCount property value. Number of Windows device count.
-     *  @param int|null $value Value to set for the windowsCount property.
+     * @param int|null $value Value to set for the windowsCount property.
     */
     public function setWindowsCount(?int $value): void {
         $this->getBackingStore()->set('windowsCount', $value);
@@ -312,7 +315,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the windowsMobileCount property value. Number of Windows mobile device count.
-     *  @param int|null $value Value to set for the windowsMobileCount property.
+     * @param int|null $value Value to set for the windowsMobileCount property.
     */
     public function setWindowsMobileCount(?int $value): void {
         $this->getBackingStore()->set('windowsMobileCount', $value);

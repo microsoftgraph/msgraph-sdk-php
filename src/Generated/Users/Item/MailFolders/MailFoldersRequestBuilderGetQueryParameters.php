@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+*/
 class MailFoldersRequestBuilderGetQueryParameters 
 {
     /**

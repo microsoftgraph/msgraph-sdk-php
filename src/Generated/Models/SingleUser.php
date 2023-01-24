@@ -65,7 +65,7 @@ class SingleUser extends SubjectSet implements Parsable
 
     /**
      * Sets the description property value. The name of the user in Azure AD. Read only.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -73,7 +73,7 @@ class SingleUser extends SubjectSet implements Parsable
 
     /**
      * Sets the userId property value. The ID of the user in Azure AD.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

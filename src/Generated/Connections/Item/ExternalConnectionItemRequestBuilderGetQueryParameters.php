@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Connections\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from connections by key (id)
+*/
 class ExternalConnectionItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -120,7 +120,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -144,7 +144,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the serviceId property value. Indicates the service ID in case of 1:n appointments. If the appointment is of type 1:n, this field will be present, otherwise, null.
-     *  @param string|null $value Value to set for the serviceId property.
+     * @param string|null $value Value to set for the serviceId property.
     */
     public function setServiceId(?string $value): void {
         $this->getBackingStore()->set('serviceId', $value);
@@ -160,7 +160,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -168,7 +168,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
-     *  @param BookingsAvailabilityStatus|null $value Value to set for the status property.
+     * @param BookingsAvailabilityStatus|null $value Value to set for the status property.
     */
     public function setStatus(?BookingsAvailabilityStatus $value): void {
         $this->getBackingStore()->set('status', $value);

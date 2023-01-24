@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\Item\User;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the item of type microsoft.graph.directoryObject as microsoft.graph.user
+*/
 class UserRequestBuilderGetQueryParameters 
 {
     /**

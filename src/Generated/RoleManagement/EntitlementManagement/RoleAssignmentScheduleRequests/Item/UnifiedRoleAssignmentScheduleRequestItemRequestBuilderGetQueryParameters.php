@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Requests for active role assignments to principals through PIM.
+*/
 class UnifiedRoleAssignmentScheduleRequestItemRequestBuilderGetQueryParameters 
 {
     /**

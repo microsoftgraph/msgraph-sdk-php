@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+*/
 class TokenIssuancePolicyItemRequestBuilderGetQueryParameters 
 {
     /**

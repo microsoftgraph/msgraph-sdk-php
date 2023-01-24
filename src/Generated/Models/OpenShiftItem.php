@@ -55,7 +55,7 @@ class OpenShiftItem extends ShiftItem implements Parsable
 
     /**
      * Sets the openSlotCount property value. Count of the number of slots for the given open shift.
-     *  @param int|null $value Value to set for the openSlotCount property.
+     * @param int|null $value Value to set for the openSlotCount property.
     */
     public function setOpenSlotCount(?int $value): void {
         $this->getBackingStore()->set('openSlotCount', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Applications;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the list of applications in this organization.
+*/
 class ApplicationsRequestBuilderGetQueryParameters 
 {
     /**

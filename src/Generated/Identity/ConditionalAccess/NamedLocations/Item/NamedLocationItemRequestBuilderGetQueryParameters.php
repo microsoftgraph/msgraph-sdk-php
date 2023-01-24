@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Read-only. Nullable. Returns a collection of the specified named locations.
+*/
 class NamedLocationItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Subscriptions\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of a subscription. See the table in the Permissions section for the list of resources that support subscribing to change notifications.
+*/
 class SubscriptionItemRequestBuilderGetQueryParameters 
 {
     /**

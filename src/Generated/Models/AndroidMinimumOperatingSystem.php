@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains properties for the minimum operating system required for an Android mobile app.
+*/
 class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -240,7 +243,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -248,7 +251,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -256,7 +259,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -264,7 +267,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v10_0 property.
+     * @param bool|null $value Value to set for the v10_0 property.
     */
     public function setV10_0(?bool $value): void {
         $this->getBackingStore()->set('v10_0', $value);
@@ -272,7 +275,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v11_0 property.
+     * @param bool|null $value Value to set for the v11_0 property.
     */
     public function setV11_0(?bool $value): void {
         $this->getBackingStore()->set('v11_0', $value);
@@ -280,7 +283,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_0 property.
+     * @param bool|null $value Value to set for the v4_0 property.
     */
     public function setV4_0(?bool $value): void {
         $this->getBackingStore()->set('v4_0', $value);
@@ -288,7 +291,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_0_3 property value. When TRUE, only Version 4.0.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_0_3 property.
+     * @param bool|null $value Value to set for the v4_0_3 property.
     */
     public function setV4_0_3(?bool $value): void {
         $this->getBackingStore()->set('v4_0_3', $value);
@@ -296,7 +299,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_1 property value. When TRUE, only Version 4.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_1 property.
+     * @param bool|null $value Value to set for the v4_1 property.
     */
     public function setV4_1(?bool $value): void {
         $this->getBackingStore()->set('v4_1', $value);
@@ -304,7 +307,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_2 property value. When TRUE, only Version 4.2 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_2 property.
+     * @param bool|null $value Value to set for the v4_2 property.
     */
     public function setV4_2(?bool $value): void {
         $this->getBackingStore()->set('v4_2', $value);
@@ -312,7 +315,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_3 property value. When TRUE, only Version 4.3 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_3 property.
+     * @param bool|null $value Value to set for the v4_3 property.
     */
     public function setV4_3(?bool $value): void {
         $this->getBackingStore()->set('v4_3', $value);
@@ -320,7 +323,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v4_4 property value. When TRUE, only Version 4.4 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v4_4 property.
+     * @param bool|null $value Value to set for the v4_4 property.
     */
     public function setV4_4(?bool $value): void {
         $this->getBackingStore()->set('v4_4', $value);
@@ -328,7 +331,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v5_0 property value. When TRUE, only Version 5.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v5_0 property.
+     * @param bool|null $value Value to set for the v5_0 property.
     */
     public function setV5_0(?bool $value): void {
         $this->getBackingStore()->set('v5_0', $value);
@@ -336,7 +339,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v5_1 property value. When TRUE, only Version 5.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v5_1 property.
+     * @param bool|null $value Value to set for the v5_1 property.
     */
     public function setV5_1(?bool $value): void {
         $this->getBackingStore()->set('v5_1', $value);
@@ -344,7 +347,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v6_0 property value. When TRUE, only Version 6.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v6_0 property.
+     * @param bool|null $value Value to set for the v6_0 property.
     */
     public function setV6_0(?bool $value): void {
         $this->getBackingStore()->set('v6_0', $value);
@@ -352,7 +355,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v7_0 property value. When TRUE, only Version 7.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v7_0 property.
+     * @param bool|null $value Value to set for the v7_0 property.
     */
     public function setV7_0(?bool $value): void {
         $this->getBackingStore()->set('v7_0', $value);
@@ -360,7 +363,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v7_1 property value. When TRUE, only Version 7.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v7_1 property.
+     * @param bool|null $value Value to set for the v7_1 property.
     */
     public function setV7_1(?bool $value): void {
         $this->getBackingStore()->set('v7_1', $value);
@@ -368,7 +371,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v8_0 property.
+     * @param bool|null $value Value to set for the v8_0 property.
     */
     public function setV8_0(?bool $value): void {
         $this->getBackingStore()->set('v8_0', $value);
@@ -376,7 +379,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v8_1 property value. When TRUE, only Version 8.1 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v8_1 property.
+     * @param bool|null $value Value to set for the v8_1 property.
     */
     public function setV8_1(?bool $value): void {
         $this->getBackingStore()->set('v8_1', $value);
@@ -384,7 +387,7 @@ class AndroidMinimumOperatingSystem implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     *  @param bool|null $value Value to set for the v9_0 property.
+     * @param bool|null $value Value to set for the v9_0 property.
     */
     public function setV9_0(?bool $value): void {
         $this->getBackingStore()->set('v9_0', $value);

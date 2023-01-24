@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The authentication methods that are supported for the user.
+*/
 class AuthenticationRequestBuilderGetQueryParameters 
 {
     /**

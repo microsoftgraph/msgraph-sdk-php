@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\AgreementAccep
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the current status of a user's response to a company's customizable terms of use agreement.
+*/
 class AgreementAcceptancesRequestBuilderGetQueryParameters 
 {
     /**

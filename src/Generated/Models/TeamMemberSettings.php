@@ -140,7 +140,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowAddRemoveApps property value. If set to true, members can add and remove apps.
-     *  @param bool|null $value Value to set for the allowAddRemoveApps property.
+     * @param bool|null $value Value to set for the allowAddRemoveApps property.
     */
     public function setAllowAddRemoveApps(?bool $value): void {
         $this->getBackingStore()->set('allowAddRemoveApps', $value);
@@ -156,7 +156,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowCreatePrivateChannels property value. If set to true, members can add and update private channels.
-     *  @param bool|null $value Value to set for the allowCreatePrivateChannels property.
+     * @param bool|null $value Value to set for the allowCreatePrivateChannels property.
     */
     public function setAllowCreatePrivateChannels(?bool $value): void {
         $this->getBackingStore()->set('allowCreatePrivateChannels', $value);
@@ -164,7 +164,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowCreateUpdateChannels property value. If set to true, members can add and update channels.
-     *  @param bool|null $value Value to set for the allowCreateUpdateChannels property.
+     * @param bool|null $value Value to set for the allowCreateUpdateChannels property.
     */
     public function setAllowCreateUpdateChannels(?bool $value): void {
         $this->getBackingStore()->set('allowCreateUpdateChannels', $value);
@@ -172,7 +172,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowCreateUpdateRemoveConnectors property value. If set to true, members can add, update, and remove connectors.
-     *  @param bool|null $value Value to set for the allowCreateUpdateRemoveConnectors property.
+     * @param bool|null $value Value to set for the allowCreateUpdateRemoveConnectors property.
     */
     public function setAllowCreateUpdateRemoveConnectors(?bool $value): void {
         $this->getBackingStore()->set('allowCreateUpdateRemoveConnectors', $value);
@@ -180,7 +180,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowCreateUpdateRemoveTabs property value. If set to true, members can add, update, and remove tabs.
-     *  @param bool|null $value Value to set for the allowCreateUpdateRemoveTabs property.
+     * @param bool|null $value Value to set for the allowCreateUpdateRemoveTabs property.
     */
     public function setAllowCreateUpdateRemoveTabs(?bool $value): void {
         $this->getBackingStore()->set('allowCreateUpdateRemoveTabs', $value);
@@ -188,7 +188,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowDeleteChannels property value. If set to true, members can delete channels.
-     *  @param bool|null $value Value to set for the allowDeleteChannels property.
+     * @param bool|null $value Value to set for the allowDeleteChannels property.
     */
     public function setAllowDeleteChannels(?bool $value): void {
         $this->getBackingStore()->set('allowDeleteChannels', $value);
@@ -196,7 +196,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -204,7 +204,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

@@ -110,7 +110,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
-     *  @param string|null $value Value to set for the dataLocationCode property.
+     * @param string|null $value Value to set for the dataLocationCode property.
     */
     public function setDataLocationCode(?string $value): void {
         $this->getBackingStore()->set('dataLocationCode', $value);
@@ -134,7 +134,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hostname property value. The hostname for the site collection. Read-only.
-     *  @param string|null $value Value to set for the hostname property.
+     * @param string|null $value Value to set for the hostname property.
     */
     public function setHostname(?string $value): void {
         $this->getBackingStore()->set('hostname', $value);
@@ -142,7 +142,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
-     *  @param Root|null $value Value to set for the root property.
+     * @param Root|null $value Value to set for the root property.
     */
     public function setRoot(?Root $value): void {
         $this->getBackingStore()->set('root', $value);

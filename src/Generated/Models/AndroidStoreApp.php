@@ -75,7 +75,7 @@ class AndroidStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the appStoreUrl property value. The Android app store URL.
-     *  @param string|null $value Value to set for the appStoreUrl property.
+     * @param string|null $value Value to set for the appStoreUrl property.
     */
     public function setAppStoreUrl(?string $value): void {
         $this->getBackingStore()->set('appStoreUrl', $value);
@@ -83,7 +83,7 @@ class AndroidStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     *  @param AndroidMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
+     * @param AndroidMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
     */
     public function setMinimumSupportedOperatingSystem(?AndroidMinimumOperatingSystem $value): void {
         $this->getBackingStore()->set('minimumSupportedOperatingSystem', $value);
@@ -91,7 +91,7 @@ class AndroidStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the packageId property value. The package identifier.
-     *  @param string|null $value Value to set for the packageId property.
+     * @param string|null $value Value to set for the packageId property.
     */
     public function setPackageId(?string $value): void {
         $this->getBackingStore()->set('packageId', $value);

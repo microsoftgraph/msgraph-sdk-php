@@ -64,7 +64,7 @@ class WorkbookChartTitleFormat extends Entity implements Parsable
 
     /**
      * Sets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
-     *  @param WorkbookChartFill|null $value Value to set for the fill property.
+     * @param WorkbookChartFill|null $value Value to set for the fill property.
     */
     public function setFill(?WorkbookChartFill $value): void {
         $this->getBackingStore()->set('fill', $value);
@@ -72,7 +72,7 @@ class WorkbookChartTitleFormat extends Entity implements Parsable
 
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
-     *  @param WorkbookChartFont|null $value Value to set for the font property.
+     * @param WorkbookChartFont|null $value Value to set for the font property.
     */
     public function setFont(?WorkbookChartFont $value): void {
         $this->getBackingStore()->set('font', $value);

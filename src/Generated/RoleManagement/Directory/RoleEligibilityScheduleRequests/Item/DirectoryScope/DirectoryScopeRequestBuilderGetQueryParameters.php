@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySche
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
+*/
 class DirectoryScopeRequestBuilderGetQueryParameters 
 {
     /**

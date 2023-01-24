@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Planner;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Entry-point to Planner resource that might exist for a Unified Group.
+*/
 class PlannerRequestBuilderGetQueryParameters 
 {
     /**

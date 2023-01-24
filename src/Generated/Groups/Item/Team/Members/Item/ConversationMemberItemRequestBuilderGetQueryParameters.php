@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Members\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Members and owners of the team.
+*/
 class ConversationMemberItemRequestBuilderGetQueryParameters 
 {
     /**

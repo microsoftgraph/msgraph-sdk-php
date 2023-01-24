@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Devices that are managed or pre-enrolled through Intune
+*/
 class ManagedDevice extends Entity implements Parsable 
 {
     /**
@@ -572,7 +575,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     *  @param string|null $value Value to set for the activationLockBypassCode property.
+     * @param string|null $value Value to set for the activationLockBypassCode property.
     */
     public function setActivationLockBypassCode(?string $value): void {
         $this->getBackingStore()->set('activationLockBypassCode', $value);
@@ -580,7 +583,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
-     *  @param string|null $value Value to set for the androidSecurityPatchLevel property.
+     * @param string|null $value Value to set for the androidSecurityPatchLevel property.
     */
     public function setAndroidSecurityPatchLevel(?string $value): void {
         $this->getBackingStore()->set('androidSecurityPatchLevel', $value);
@@ -588,7 +591,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
-     *  @param string|null $value Value to set for the azureADDeviceId property.
+     * @param string|null $value Value to set for the azureADDeviceId property.
     */
     public function setAzureADDeviceId(?string $value): void {
         $this->getBackingStore()->set('azureADDeviceId', $value);
@@ -596,7 +599,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
-     *  @param bool|null $value Value to set for the azureADRegistered property.
+     * @param bool|null $value Value to set for the azureADRegistered property.
     */
     public function setAzureADRegistered(?bool $value): void {
         $this->getBackingStore()->set('azureADRegistered', $value);
@@ -604,7 +607,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
-     *  @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
+     * @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
     */
     public function setComplianceGracePeriodExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('complianceGracePeriodExpirationDateTime', $value);
@@ -612,7 +615,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the complianceState property value. Compliance state.
-     *  @param ComplianceState|null $value Value to set for the complianceState property.
+     * @param ComplianceState|null $value Value to set for the complianceState property.
     */
     public function setComplianceState(?ComplianceState $value): void {
         $this->getBackingStore()->set('complianceState', $value);
@@ -620,7 +623,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
-     *  @param ConfigurationManagerClientEnabledFeatures|null $value Value to set for the configurationManagerClientEnabledFeatures property.
+     * @param ConfigurationManagerClientEnabledFeatures|null $value Value to set for the configurationManagerClientEnabledFeatures property.
     */
     public function setConfigurationManagerClientEnabledFeatures(?ConfigurationManagerClientEnabledFeatures $value): void {
         $this->getBackingStore()->set('configurationManagerClientEnabledFeatures', $value);
@@ -628,7 +631,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
-     *  @param array<DeviceActionResult>|null $value Value to set for the deviceActionResults property.
+     * @param array<DeviceActionResult>|null $value Value to set for the deviceActionResults property.
     */
     public function setDeviceActionResults(?array $value): void {
         $this->getBackingStore()->set('deviceActionResults', $value);
@@ -636,7 +639,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceCategory property value. Device category
-     *  @param DeviceCategory|null $value Value to set for the deviceCategory property.
+     * @param DeviceCategory|null $value Value to set for the deviceCategory property.
     */
     public function setDeviceCategory(?DeviceCategory $value): void {
         $this->getBackingStore()->set('deviceCategory', $value);
@@ -644,7 +647,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceCategoryDisplayName property value. Device category display name. This property is read-only.
-     *  @param string|null $value Value to set for the deviceCategoryDisplayName property.
+     * @param string|null $value Value to set for the deviceCategoryDisplayName property.
     */
     public function setDeviceCategoryDisplayName(?string $value): void {
         $this->getBackingStore()->set('deviceCategoryDisplayName', $value);
@@ -652,7 +655,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceCompliancePolicyStates property value. Device compliance policy states for this device.
-     *  @param array<DeviceCompliancePolicyState>|null $value Value to set for the deviceCompliancePolicyStates property.
+     * @param array<DeviceCompliancePolicyState>|null $value Value to set for the deviceCompliancePolicyStates property.
     */
     public function setDeviceCompliancePolicyStates(?array $value): void {
         $this->getBackingStore()->set('deviceCompliancePolicyStates', $value);
@@ -660,7 +663,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceConfigurationStates property value. Device configuration states for this device.
-     *  @param array<DeviceConfigurationState>|null $value Value to set for the deviceConfigurationStates property.
+     * @param array<DeviceConfigurationState>|null $value Value to set for the deviceConfigurationStates property.
     */
     public function setDeviceConfigurationStates(?array $value): void {
         $this->getBackingStore()->set('deviceConfigurationStates', $value);
@@ -668,7 +671,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
-     *  @param DeviceEnrollmentType|null $value Value to set for the deviceEnrollmentType property.
+     * @param DeviceEnrollmentType|null $value Value to set for the deviceEnrollmentType property.
     */
     public function setDeviceEnrollmentType(?DeviceEnrollmentType $value): void {
         $this->getBackingStore()->set('deviceEnrollmentType', $value);
@@ -676,7 +679,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
-     *  @param DeviceHealthAttestationState|null $value Value to set for the deviceHealthAttestationState property.
+     * @param DeviceHealthAttestationState|null $value Value to set for the deviceHealthAttestationState property.
     */
     public function setDeviceHealthAttestationState(?DeviceHealthAttestationState $value): void {
         $this->getBackingStore()->set('deviceHealthAttestationState', $value);
@@ -684,7 +687,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceName property value. Name of the device. This property is read-only.
-     *  @param string|null $value Value to set for the deviceName property.
+     * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
         $this->getBackingStore()->set('deviceName', $value);
@@ -692,7 +695,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the deviceRegistrationState property value. Device registration status.
-     *  @param DeviceRegistrationState|null $value Value to set for the deviceRegistrationState property.
+     * @param DeviceRegistrationState|null $value Value to set for the deviceRegistrationState property.
     */
     public function setDeviceRegistrationState(?DeviceRegistrationState $value): void {
         $this->getBackingStore()->set('deviceRegistrationState', $value);
@@ -700,7 +703,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
-     *  @param bool|null $value Value to set for the easActivated property.
+     * @param bool|null $value Value to set for the easActivated property.
     */
     public function setEasActivated(?bool $value): void {
         $this->getBackingStore()->set('easActivated', $value);
@@ -708,7 +711,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
-     *  @param DateTime|null $value Value to set for the easActivationDateTime property.
+     * @param DateTime|null $value Value to set for the easActivationDateTime property.
     */
     public function setEasActivationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('easActivationDateTime', $value);
@@ -716,7 +719,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
-     *  @param string|null $value Value to set for the easDeviceId property.
+     * @param string|null $value Value to set for the easDeviceId property.
     */
     public function setEasDeviceId(?string $value): void {
         $this->getBackingStore()->set('easDeviceId', $value);
@@ -724,7 +727,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -732,7 +735,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the enrolledDateTime property value. Enrollment time of the device. This property is read-only.
-     *  @param DateTime|null $value Value to set for the enrolledDateTime property.
+     * @param DateTime|null $value Value to set for the enrolledDateTime property.
     */
     public function setEnrolledDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('enrolledDateTime', $value);
@@ -740,7 +743,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the ethernetMacAddress property value. Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     *  @param string|null $value Value to set for the ethernetMacAddress property.
+     * @param string|null $value Value to set for the ethernetMacAddress property.
     */
     public function setEthernetMacAddress(?string $value): void {
         $this->getBackingStore()->set('ethernetMacAddress', $value);
@@ -748,7 +751,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the exchangeAccessState property value. Device Exchange Access State.
-     *  @param DeviceManagementExchangeAccessState|null $value Value to set for the exchangeAccessState property.
+     * @param DeviceManagementExchangeAccessState|null $value Value to set for the exchangeAccessState property.
     */
     public function setExchangeAccessState(?DeviceManagementExchangeAccessState $value): void {
         $this->getBackingStore()->set('exchangeAccessState', $value);
@@ -756,7 +759,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
-     *  @param DeviceManagementExchangeAccessStateReason|null $value Value to set for the exchangeAccessStateReason property.
+     * @param DeviceManagementExchangeAccessStateReason|null $value Value to set for the exchangeAccessStateReason property.
     */
     public function setExchangeAccessStateReason(?DeviceManagementExchangeAccessStateReason $value): void {
         $this->getBackingStore()->set('exchangeAccessStateReason', $value);
@@ -764,7 +767,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
-     *  @param DateTime|null $value Value to set for the exchangeLastSuccessfulSyncDateTime property.
+     * @param DateTime|null $value Value to set for the exchangeLastSuccessfulSyncDateTime property.
     */
     public function setExchangeLastSuccessfulSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('exchangeLastSuccessfulSyncDateTime', $value);
@@ -772,7 +775,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
-     *  @param int|null $value Value to set for the freeStorageSpaceInBytes property.
+     * @param int|null $value Value to set for the freeStorageSpaceInBytes property.
     */
     public function setFreeStorageSpaceInBytes(?int $value): void {
         $this->getBackingStore()->set('freeStorageSpaceInBytes', $value);
@@ -780,7 +783,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     *  @param string|null $value Value to set for the iccid property.
+     * @param string|null $value Value to set for the iccid property.
     */
     public function setIccid(?string $value): void {
         $this->getBackingStore()->set('iccid', $value);
@@ -788,7 +791,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the imei property value. IMEI. This property is read-only.
-     *  @param string|null $value Value to set for the imei property.
+     * @param string|null $value Value to set for the imei property.
     */
     public function setImei(?string $value): void {
         $this->getBackingStore()->set('imei', $value);
@@ -796,7 +799,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the isEncrypted property value. Device encryption status. This property is read-only.
-     *  @param bool|null $value Value to set for the isEncrypted property.
+     * @param bool|null $value Value to set for the isEncrypted property.
     */
     public function setIsEncrypted(?bool $value): void {
         $this->getBackingStore()->set('isEncrypted', $value);
@@ -804,7 +807,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the isSupervised property value. Device supervised status. This property is read-only.
-     *  @param bool|null $value Value to set for the isSupervised property.
+     * @param bool|null $value Value to set for the isSupervised property.
     */
     public function setIsSupervised(?bool $value): void {
         $this->getBackingStore()->set('isSupervised', $value);
@@ -812,7 +815,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the jailBroken property value. whether the device is jail broken or rooted. This property is read-only.
-     *  @param string|null $value Value to set for the jailBroken property.
+     * @param string|null $value Value to set for the jailBroken property.
     */
     public function setJailBroken(?string $value): void {
         $this->getBackingStore()->set('jailBroken', $value);
@@ -820,7 +823,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. This property is read-only.
-     *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
     public function setLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastSyncDateTime', $value);
@@ -828,7 +831,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
-     *  @param string|null $value Value to set for the managedDeviceName property.
+     * @param string|null $value Value to set for the managedDeviceName property.
     */
     public function setManagedDeviceName(?string $value): void {
         $this->getBackingStore()->set('managedDeviceName', $value);
@@ -836,7 +839,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the managedDeviceOwnerType property value. Owner type of device.
-     *  @param ManagedDeviceOwnerType|null $value Value to set for the managedDeviceOwnerType property.
+     * @param ManagedDeviceOwnerType|null $value Value to set for the managedDeviceOwnerType property.
     */
     public function setManagedDeviceOwnerType(?ManagedDeviceOwnerType $value): void {
         $this->getBackingStore()->set('managedDeviceOwnerType', $value);
@@ -844,7 +847,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the managementAgent property value. The managementAgent property
-     *  @param ManagementAgentType|null $value Value to set for the managementAgent property.
+     * @param ManagementAgentType|null $value Value to set for the managementAgent property.
     */
     public function setManagementAgent(?ManagementAgentType $value): void {
         $this->getBackingStore()->set('managementAgent', $value);
@@ -852,7 +855,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
-     *  @param DateTime|null $value Value to set for the managementCertificateExpirationDate property.
+     * @param DateTime|null $value Value to set for the managementCertificateExpirationDate property.
     */
     public function setManagementCertificateExpirationDate(?DateTime $value): void {
         $this->getBackingStore()->set('managementCertificateExpirationDate', $value);
@@ -860,7 +863,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
-     *  @param string|null $value Value to set for the manufacturer property.
+     * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
         $this->getBackingStore()->set('manufacturer', $value);
@@ -868,7 +871,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the meid property value. MEID. This property is read-only.
-     *  @param string|null $value Value to set for the meid property.
+     * @param string|null $value Value to set for the meid property.
     */
     public function setMeid(?string $value): void {
         $this->getBackingStore()->set('meid', $value);
@@ -876,7 +879,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the model property value. Model of the device. This property is read-only.
-     *  @param string|null $value Value to set for the model property.
+     * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
         $this->getBackingStore()->set('model', $value);
@@ -884,7 +887,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the notes property value. Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
-     *  @param string|null $value Value to set for the notes property.
+     * @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
@@ -892,7 +895,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
-     *  @param string|null $value Value to set for the operatingSystem property.
+     * @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value): void {
         $this->getBackingStore()->set('operatingSystem', $value);
@@ -900,7 +903,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the osVersion property value. Operating system version of the device. This property is read-only.
-     *  @param string|null $value Value to set for the osVersion property.
+     * @param string|null $value Value to set for the osVersion property.
     */
     public function setOsVersion(?string $value): void {
         $this->getBackingStore()->set('osVersion', $value);
@@ -908,7 +911,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the partnerReportedThreatState property value. Available health states for the Device Health API
-     *  @param ManagedDevicePartnerReportedHealthState|null $value Value to set for the partnerReportedThreatState property.
+     * @param ManagedDevicePartnerReportedHealthState|null $value Value to set for the partnerReportedThreatState property.
     */
     public function setPartnerReportedThreatState(?ManagedDevicePartnerReportedHealthState $value): void {
         $this->getBackingStore()->set('partnerReportedThreatState', $value);
@@ -916,7 +919,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the phoneNumber property value. Phone number of the device. This property is read-only.
-     *  @param string|null $value Value to set for the phoneNumber property.
+     * @param string|null $value Value to set for the phoneNumber property.
     */
     public function setPhoneNumber(?string $value): void {
         $this->getBackingStore()->set('phoneNumber', $value);
@@ -924,7 +927,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
-     *  @param int|null $value Value to set for the physicalMemoryInBytes property.
+     * @param int|null $value Value to set for the physicalMemoryInBytes property.
     */
     public function setPhysicalMemoryInBytes(?int $value): void {
         $this->getBackingStore()->set('physicalMemoryInBytes', $value);
@@ -932,7 +935,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
-     *  @param string|null $value Value to set for the remoteAssistanceSessionErrorDetails property.
+     * @param string|null $value Value to set for the remoteAssistanceSessionErrorDetails property.
     */
     public function setRemoteAssistanceSessionErrorDetails(?string $value): void {
         $this->getBackingStore()->set('remoteAssistanceSessionErrorDetails', $value);
@@ -940,7 +943,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. This property is read-only.
-     *  @param string|null $value Value to set for the remoteAssistanceSessionUrl property.
+     * @param string|null $value Value to set for the remoteAssistanceSessionUrl property.
     */
     public function setRemoteAssistanceSessionUrl(?string $value): void {
         $this->getBackingStore()->set('remoteAssistanceSessionUrl', $value);
@@ -948,7 +951,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
-     *  @param bool|null $value Value to set for the requireUserEnrollmentApproval property.
+     * @param bool|null $value Value to set for the requireUserEnrollmentApproval property.
     */
     public function setRequireUserEnrollmentApproval(?bool $value): void {
         $this->getBackingStore()->set('requireUserEnrollmentApproval', $value);
@@ -956,7 +959,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.
-     *  @param string|null $value Value to set for the serialNumber property.
+     * @param string|null $value Value to set for the serialNumber property.
     */
     public function setSerialNumber(?string $value): void {
         $this->getBackingStore()->set('serialNumber', $value);
@@ -964,7 +967,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
-     *  @param string|null $value Value to set for the subscriberCarrier property.
+     * @param string|null $value Value to set for the subscriberCarrier property.
     */
     public function setSubscriberCarrier(?string $value): void {
         $this->getBackingStore()->set('subscriberCarrier', $value);
@@ -972,7 +975,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
-     *  @param int|null $value Value to set for the totalStorageSpaceInBytes property.
+     * @param int|null $value Value to set for the totalStorageSpaceInBytes property.
     */
     public function setTotalStorageSpaceInBytes(?int $value): void {
         $this->getBackingStore()->set('totalStorageSpaceInBytes', $value);
@@ -980,7 +983,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
-     *  @param string|null $value Value to set for the udid property.
+     * @param string|null $value Value to set for the udid property.
     */
     public function setUdid(?string $value): void {
         $this->getBackingStore()->set('udid', $value);
@@ -988,7 +991,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. User display name. This property is read-only.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -996,7 +999,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -1004,7 +1007,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. Device user principal name. This property is read-only.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);
@@ -1012,7 +1015,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the users property value. The primary users associated with the managed device.
-     *  @param array<User>|null $value Value to set for the users property.
+     * @param array<User>|null $value Value to set for the users property.
     */
     public function setUsers(?array $value): void {
         $this->getBackingStore()->set('users', $value);
@@ -1020,7 +1023,7 @@ class ManagedDevice extends Entity implements Parsable
 
     /**
      * Sets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
-     *  @param string|null $value Value to set for the wiFiMacAddress property.
+     * @param string|null $value Value to set for the wiFiMacAddress property.
     */
     public function setWiFiMacAddress(?string $value): void {
         $this->getBackingStore()->set('wiFiMacAddress', $value);

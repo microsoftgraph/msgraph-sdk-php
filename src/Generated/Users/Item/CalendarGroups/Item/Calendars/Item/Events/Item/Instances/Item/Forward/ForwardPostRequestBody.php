@@ -91,7 +91,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -99,7 +99,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -107,7 +107,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the comment property value. The Comment property
-     *  @param string|null $value Value to set for the Comment property.
+     * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
@@ -115,7 +115,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the toRecipients property value. The ToRecipients property
-     *  @param array<Recipient>|null $value Value to set for the ToRecipients property.
+     * @param array<Recipient>|null $value Value to set for the ToRecipients property.
     */
     public function setToRecipients(?array $value): void {
         $this->getBackingStore()->set('toRecipients', $value);

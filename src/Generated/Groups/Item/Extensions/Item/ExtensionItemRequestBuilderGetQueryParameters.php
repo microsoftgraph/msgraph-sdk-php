@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Extensions\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the group. Read-only. Nullable.
+*/
 class ExtensionItemRequestBuilderGetQueryParameters 
 {
     /**

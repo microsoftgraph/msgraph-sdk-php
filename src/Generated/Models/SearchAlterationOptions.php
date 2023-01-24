@@ -100,7 +100,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the enableModification property value. Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
-     *  @param bool|null $value Value to set for the enableModification property.
+     * @param bool|null $value Value to set for the enableModification property.
     */
     public function setEnableModification(?bool $value): void {
         $this->getBackingStore()->set('enableModification', $value);
@@ -124,7 +124,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the enableSuggestion property value. Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional.
-     *  @param bool|null $value Value to set for the enableSuggestion property.
+     * @param bool|null $value Value to set for the enableSuggestion property.
     */
     public function setEnableSuggestion(?bool $value): void {
         $this->getBackingStore()->set('enableSuggestion', $value);
@@ -132,7 +132,7 @@ class SearchAlterationOptions implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

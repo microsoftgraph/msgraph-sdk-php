@@ -85,7 +85,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
 
     /**
      * Sets the appIconWebUrl property value. URL that points to the icon of the app.
-     *  @param string|null $value Value to set for the appIconWebUrl property.
+     * @param string|null $value Value to set for the appIconWebUrl property.
     */
     public function setAppIconWebUrl(?string $value): void {
         $this->getBackingStore()->set('appIconWebUrl', $value);
@@ -93,7 +93,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
 
     /**
      * Sets the appId property value. Teams app ID of the application.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -101,7 +101,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
 
     /**
      * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
-     *  @param string|null $value Value to set for the teamsEmbeddedContentUrl property.
+     * @param string|null $value Value to set for the teamsEmbeddedContentUrl property.
     */
     public function setTeamsEmbeddedContentUrl(?string $value): void {
         $this->getBackingStore()->set('teamsEmbeddedContentUrl', $value);
@@ -109,7 +109,7 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
 
     /**
      * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

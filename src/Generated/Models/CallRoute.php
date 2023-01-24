@@ -115,7 +115,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -123,7 +123,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -131,7 +131,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the final property value. The final property
-     *  @param IdentitySet|null $value Value to set for the EscapedFinal property.
+     * @param IdentitySet|null $value Value to set for the EscapedFinal property.
     */
     public function setFinal(?IdentitySet $value): void {
         $this->getBackingStore()->set('escapedFinal', $value);
@@ -139,7 +139,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -147,7 +147,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the original property value. The original property
-     *  @param IdentitySet|null $value Value to set for the original property.
+     * @param IdentitySet|null $value Value to set for the original property.
     */
     public function setOriginal(?IdentitySet $value): void {
         $this->getBackingStore()->set('original', $value);
@@ -155,7 +155,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the routingType property value. The routingType property
-     *  @param RoutingType|null $value Value to set for the routingType property.
+     * @param RoutingType|null $value Value to set for the routingType property.
     */
     public function setRoutingType(?RoutingType $value): void {
         $this->getBackingStore()->set('routingType', $value);

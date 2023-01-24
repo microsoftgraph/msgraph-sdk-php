@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\I
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The activity related to user risk level change
+*/
 class RiskyUserHistoryItemItemRequestBuilderGetQueryParameters 
 {
     /**

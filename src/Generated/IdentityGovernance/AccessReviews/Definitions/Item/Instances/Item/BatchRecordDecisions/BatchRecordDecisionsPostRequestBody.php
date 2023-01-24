@@ -110,7 +110,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the decision property value. The decision property
-     *  @param string|null $value Value to set for the decision property.
+     * @param string|null $value Value to set for the decision property.
     */
     public function setDecision(?string $value): void {
         $this->getBackingStore()->set('decision', $value);
@@ -134,7 +134,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the justification property value. The justification property
-     *  @param string|null $value Value to set for the justification property.
+     * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
@@ -142,7 +142,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the principalId property value. The principalId property
-     *  @param string|null $value Value to set for the principalId property.
+     * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
         $this->getBackingStore()->set('principalId', $value);
@@ -150,7 +150,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the resourceId property value. The resourceId property
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);

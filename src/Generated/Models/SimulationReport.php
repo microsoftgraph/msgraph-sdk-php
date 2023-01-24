@@ -100,7 +100,7 @@ class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the overview property value. Overview of an attack simulation and training campaign.
-     *  @param SimulationReportOverview|null $value Value to set for the overview property.
+     * @param SimulationReportOverview|null $value Value to set for the overview property.
     */
     public function setOverview(?SimulationReportOverview $value): void {
         $this->getBackingStore()->set('overview', $value);
@@ -132,7 +132,7 @@ class SimulationReport implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
-     *  @param array<UserSimulationDetails>|null $value Value to set for the simulationUsers property.
+     * @param array<UserSimulationDetails>|null $value Value to set for the simulationUsers property.
     */
     public function setSimulationUsers(?array $value): void {
         $this->getBackingStore()->set('simulationUsers', $value);

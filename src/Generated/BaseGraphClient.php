@@ -108,8 +108,6 @@ use Microsoft\Graph\Generated\TeamsTemplates\TeamsTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\TeamworkRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\UsersRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\Item\DriveItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Workbooks\WorkbooksRequestBuilder;
 use Microsoft\Kiota\Abstractions\ApiClientBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactory;
@@ -119,6 +117,9 @@ use Microsoft\Kiota\Serialization\Json\JsonSerializationWriterFactory;
 use Microsoft\Kiota\Serialization\Text\TextParseNodeFactory;
 use Microsoft\Kiota\Serialization\Text\TextSerializationWriterFactory;
 
+/**
+ * The main entry point of the SDK, exposes the configuration and the fluent API.
+*/
 class BaseGraphClient 
 {
     /**
@@ -606,13 +607,6 @@ class BaseGraphClient
     }
     
     /**
-     * Provides operations to manage the collection of driveItem entities.
-    */
-    public function workbooks(): WorkbooksRequestBuilder {
-        return new WorkbooksRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the collection of agreementAcceptance entities.
      * @param string $id Unique identifier of the item
      * @return AgreementAcceptanceItemRequestBuilder
@@ -1059,17 +1053,6 @@ class BaseGraphClient
         $urlTplParams = $this->pathParameters;
         $urlTplParams['user%2Did'] = $id;
         return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the collection of driveItem entities.
-     * @param string $id Unique identifier of the item
-     * @return DriveItemItemRequestBuilder
-    */
-    public function workbooksById(string $id): DriveItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['driveItem%2Did'] = $id;
-        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

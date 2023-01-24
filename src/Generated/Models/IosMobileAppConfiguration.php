@@ -66,7 +66,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
 
     /**
      * Sets the encodedSettingXml property value. mdm app configuration Base64 binary.
-     *  @param StreamInterface|null $value Value to set for the encodedSettingXml property.
+     * @param StreamInterface|null $value Value to set for the encodedSettingXml property.
     */
     public function setEncodedSettingXml(?StreamInterface $value): void {
         $this->getBackingStore()->set('encodedSettingXml', $value);
@@ -74,7 +74,7 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
 
     /**
      * Sets the settings property value. app configuration setting items.
-     *  @param array<AppConfigurationSettingItem>|null $value Value to set for the settings property.
+     * @param array<AppConfigurationSettingItem>|null $value Value to set for the settings property.
     */
     public function setSettings(?array $value): void {
         $this->getBackingStore()->set('settings', $value);

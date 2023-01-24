@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the template and scheduling for an access review.
+*/
 class AccessReviewScheduleDefinitionItemRequestBuilderGetQueryParameters 
 {
     /**

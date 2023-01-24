@@ -54,7 +54,7 @@ class CertificateBasedAuthConfiguration extends Entity implements Parsable
 
     /**
      * Sets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
-     *  @param array<CertificateAuthority>|null $value Value to set for the certificateAuthorities property.
+     * @param array<CertificateAuthority>|null $value Value to set for the certificateAuthorities property.
     */
     public function setCertificateAuthorities(?array $value): void {
         $this->getBackingStore()->set('certificateAuthorities', $value);

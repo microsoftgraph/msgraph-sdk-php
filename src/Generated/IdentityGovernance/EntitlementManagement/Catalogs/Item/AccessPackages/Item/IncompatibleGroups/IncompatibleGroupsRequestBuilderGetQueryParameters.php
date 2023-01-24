@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Cat
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
+*/
 class IncompatibleGroupsRequestBuilderGetQueryParameters 
 {
     /**

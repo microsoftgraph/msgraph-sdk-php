@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of user object.
+*/
 class UserItemRequestBuilderGetQueryParameters 
 {
     /**

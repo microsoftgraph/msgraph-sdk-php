@@ -64,7 +64,7 @@ class UserTeamwork extends Entity implements Parsable
 
     /**
      * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
-     *  @param array<AssociatedTeamInfo>|null $value Value to set for the associatedTeams property.
+     * @param array<AssociatedTeamInfo>|null $value Value to set for the associatedTeams property.
     */
     public function setAssociatedTeams(?array $value): void {
         $this->getBackingStore()->set('associatedTeams', $value);
@@ -72,7 +72,7 @@ class UserTeamwork extends Entity implements Parsable
 
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.
-     *  @param array<UserScopeTeamsAppInstallation>|null $value Value to set for the installedApps property.
+     * @param array<UserScopeTeamsAppInstallation>|null $value Value to set for the installedApps property.
     */
     public function setInstalledApps(?array $value): void {
         $this->getBackingStore()->set('installedApps', $value);

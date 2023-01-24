@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Teamwork;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get teamwork from me
+*/
 class TeamworkRequestBuilderGetQueryParameters 
 {
     /**

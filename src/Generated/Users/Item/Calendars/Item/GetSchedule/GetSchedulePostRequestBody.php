@@ -111,7 +111,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
-     *  @param int|null $value Value to set for the AvailabilityViewInterval property.
+     * @param int|null $value Value to set for the AvailabilityViewInterval property.
     */
     public function setAvailabilityViewInterval(?int $value): void {
         $this->getBackingStore()->set('availabilityViewInterval', $value);
@@ -127,7 +127,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -135,7 +135,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the endTime property value. The EndTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the EndTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the EndTime property.
     */
     public function setEndTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endTime', $value);
@@ -143,7 +143,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the schedules property value. The Schedules property
-     *  @param array<string>|null $value Value to set for the Schedules property.
+     * @param array<string>|null $value Value to set for the Schedules property.
     */
     public function setSchedules(?array $value): void {
         $this->getBackingStore()->set('schedules', $value);
@@ -151,7 +151,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the startTime property value. The StartTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the StartTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the StartTime property.
     */
     public function setStartTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startTime', $value);

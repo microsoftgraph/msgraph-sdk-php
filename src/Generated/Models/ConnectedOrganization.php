@@ -76,7 +76,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
+     * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
      * @return array<IdentitySource>|null
     */
     public function getIdentitySources(): ?array {
@@ -125,7 +125,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -133,7 +133,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the connected organization.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -141,7 +141,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the connected organization. Supports $filter (eq).
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -149,15 +149,15 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the externalSponsors property value. The externalSponsors property
-     *  @param array<DirectoryObject>|null $value Value to set for the externalSponsors property.
+     * @param array<DirectoryObject>|null $value Value to set for the externalSponsors property.
     */
     public function setExternalSponsors(?array $value): void {
         $this->getBackingStore()->set('externalSponsors', $value);
     }
 
     /**
-     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Nullable.
-     *  @param array<IdentitySource>|null $value Value to set for the identitySources property.
+     * Sets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation or crossCloudAzureActiveDirectoryTenant. Nullable.
+     * @param array<IdentitySource>|null $value Value to set for the identitySources property.
     */
     public function setIdentitySources(?array $value): void {
         $this->getBackingStore()->set('identitySources', $value);
@@ -165,7 +165,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the internalSponsors property value. The internalSponsors property
-     *  @param array<DirectoryObject>|null $value Value to set for the internalSponsors property.
+     * @param array<DirectoryObject>|null $value Value to set for the internalSponsors property.
     */
     public function setInternalSponsors(?array $value): void {
         $this->getBackingStore()->set('internalSponsors', $value);
@@ -173,7 +173,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
@@ -181,7 +181,7 @@ class ConnectedOrganization extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
-     *  @param ConnectedOrganizationState|null $value Value to set for the state property.
+     * @param ConnectedOrganizationState|null $value Value to set for the state property.
     */
     public function setState(?ConnectedOrganizationState $value): void {
         $this->getBackingStore()->set('state', $value);

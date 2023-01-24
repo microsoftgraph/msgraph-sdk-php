@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Solutions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get solutions
+*/
 class SolutionsRequestBuilderGetQueryParameters 
 {
     /**

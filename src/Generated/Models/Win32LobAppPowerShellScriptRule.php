@@ -125,7 +125,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the comparisonValue property value. The script output comparison value. Do not specify a value if the rule is used for detection.
-     *  @param string|null $value Value to set for the comparisonValue property.
+     * @param string|null $value Value to set for the comparisonValue property.
     */
     public function setComparisonValue(?string $value): void {
         $this->getBackingStore()->set('comparisonValue', $value);
@@ -133,7 +133,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the displayName property value. The display name for the rule. Do not specify this value if the rule is used for detection.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -141,7 +141,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether a signature check is enforced.
-     *  @param bool|null $value Value to set for the enforceSignatureCheck property.
+     * @param bool|null $value Value to set for the enforceSignatureCheck property.
     */
     public function setEnforceSignatureCheck(?bool $value): void {
         $this->getBackingStore()->set('enforceSignatureCheck', $value);
@@ -149,7 +149,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the operationType property value. Contains all supported Powershell Script output detection type.
-     *  @param Win32LobAppPowerShellScriptRuleOperationType|null $value Value to set for the operationType property.
+     * @param Win32LobAppPowerShellScriptRuleOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?Win32LobAppPowerShellScriptRuleOperationType $value): void {
         $this->getBackingStore()->set('operationType', $value);
@@ -157,7 +157,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the operator property value. Contains properties for detection operator.
-     *  @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
+     * @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
     */
     public function setOperator(?Win32LobAppRuleOperator $value): void {
         $this->getBackingStore()->set('operator', $value);
@@ -165,7 +165,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the runAs32Bit property value. A value indicating whether the script should run as 32-bit.
-     *  @param bool|null $value Value to set for the runAs32Bit property.
+     * @param bool|null $value Value to set for the runAs32Bit property.
     */
     public function setRunAs32Bit(?bool $value): void {
         $this->getBackingStore()->set('runAs32Bit', $value);
@@ -173,7 +173,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
-     *  @param RunAsAccountType|null $value Value to set for the runAsAccount property.
+     * @param RunAsAccountType|null $value Value to set for the runAsAccount property.
     */
     public function setRunAsAccount(?RunAsAccountType $value): void {
         $this->getBackingStore()->set('runAsAccount', $value);
@@ -181,7 +181,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
 
     /**
      * Sets the scriptContent property value. The base64-encoded script content.
-     *  @param string|null $value Value to set for the scriptContent property.
+     * @param string|null $value Value to set for the scriptContent property.
     */
     public function setScriptContent(?string $value): void {
         $this->getBackingStore()->set('scriptContent', $value);

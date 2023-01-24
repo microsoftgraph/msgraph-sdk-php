@@ -84,7 +84,7 @@ class WorkbookTableColumn extends Entity implements Parsable
 
     /**
      * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
-     *  @param WorkbookFilter|null $value Value to set for the filter property.
+     * @param WorkbookFilter|null $value Value to set for the filter property.
     */
     public function setFilter(?WorkbookFilter $value): void {
         $this->getBackingStore()->set('filter', $value);
@@ -92,7 +92,7 @@ class WorkbookTableColumn extends Entity implements Parsable
 
     /**
      * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
-     *  @param int|null $value Value to set for the index property.
+     * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
         $this->getBackingStore()->set('index', $value);
@@ -100,7 +100,7 @@ class WorkbookTableColumn extends Entity implements Parsable
 
     /**
      * Sets the name property value. Returns the name of the table column.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -108,7 +108,7 @@ class WorkbookTableColumn extends Entity implements Parsable
 
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     *  @param Json|null $value Value to set for the values property.
+     * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {
         $this->getBackingStore()->set('values', $value);

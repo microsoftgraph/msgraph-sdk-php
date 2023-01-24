@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\PhoneMethods\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The phone numbers registered to a user for authentication.
+*/
 class PhoneAuthenticationMethodItemRequestBuilderGetQueryParameters 
 {
     /**

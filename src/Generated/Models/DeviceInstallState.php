@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties for the installation state for a device.
+*/
 class DeviceInstallState extends Entity implements Parsable 
 {
     /**
@@ -125,7 +128,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the deviceId property value. Device Id.
-     *  @param string|null $value Value to set for the deviceId property.
+     * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
         $this->getBackingStore()->set('deviceId', $value);
@@ -133,7 +136,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the deviceName property value. Device name.
-     *  @param string|null $value Value to set for the deviceName property.
+     * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
         $this->getBackingStore()->set('deviceName', $value);
@@ -141,7 +144,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the errorCode property value. The error code for install failures.
-     *  @param string|null $value Value to set for the errorCode property.
+     * @param string|null $value Value to set for the errorCode property.
     */
     public function setErrorCode(?string $value): void {
         $this->getBackingStore()->set('errorCode', $value);
@@ -149,7 +152,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the installState property value. Possible values for install state.
-     *  @param InstallState|null $value Value to set for the installState property.
+     * @param InstallState|null $value Value to set for the installState property.
     */
     public function setInstallState(?InstallState $value): void {
         $this->getBackingStore()->set('installState', $value);
@@ -157,7 +160,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the lastSyncDateTime property value. Last sync date and time.
-     *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
     public function setLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastSyncDateTime', $value);
@@ -165,7 +168,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the osDescription property value. OS Description.
-     *  @param string|null $value Value to set for the osDescription property.
+     * @param string|null $value Value to set for the osDescription property.
     */
     public function setOsDescription(?string $value): void {
         $this->getBackingStore()->set('osDescription', $value);
@@ -173,7 +176,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the osVersion property value. OS Version.
-     *  @param string|null $value Value to set for the osVersion property.
+     * @param string|null $value Value to set for the osVersion property.
     */
     public function setOsVersion(?string $value): void {
         $this->getBackingStore()->set('osVersion', $value);
@@ -181,7 +184,7 @@ class DeviceInstallState extends Entity implements Parsable
 
     /**
      * Sets the userName property value. Device User Name.
-     *  @param string|null $value Value to set for the userName property.
+     * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {
         $this->getBackingStore()->set('userName', $value);

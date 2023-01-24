@@ -65,7 +65,7 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the feedback property value. Teacher's written feedback to the student.
-     *  @param EducationFeedback|null $value Value to set for the feedback property.
+     * @param EducationFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?EducationFeedback $value): void {
         $this->getBackingStore()->set('feedback', $value);
@@ -73,7 +73,7 @@ class EducationFeedbackOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the publishedFeedback property value. A copy of the feedback property that is made when the grade is released to the student.
-     *  @param EducationFeedback|null $value Value to set for the publishedFeedback property.
+     * @param EducationFeedback|null $value Value to set for the publishedFeedback property.
     */
     public function setPublishedFeedback(?EducationFeedback $value): void {
         $this->getBackingStore()->set('publishedFeedback', $value);

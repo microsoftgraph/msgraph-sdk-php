@@ -54,7 +54,7 @@ class PrintService extends Entity implements Parsable
 
     /**
      * Sets the endpoints property value. Endpoints that can be used to access the service. Read-only. Nullable.
-     *  @param array<PrintServiceEndpoint>|null $value Value to set for the endpoints property.
+     * @param array<PrintServiceEndpoint>|null $value Value to set for the endpoints property.
     */
     public function setEndpoints(?array $value): void {
         $this->getBackingStore()->set('endpoints', $value);

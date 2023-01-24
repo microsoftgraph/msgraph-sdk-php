@@ -104,7 +104,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
-     *  @param array<Notebook>|null $value Value to set for the notebooks property.
+     * @param array<Notebook>|null $value Value to set for the notebooks property.
     */
     public function setNotebooks(?array $value): void {
         $this->getBackingStore()->set('notebooks', $value);
@@ -112,7 +112,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
-     *  @param array<OnenoteOperation>|null $value Value to set for the operations property.
+     * @param array<OnenoteOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -120,7 +120,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     *  @param array<OnenotePage>|null $value Value to set for the pages property.
+     * @param array<OnenotePage>|null $value Value to set for the pages property.
     */
     public function setPages(?array $value): void {
         $this->getBackingStore()->set('pages', $value);
@@ -128,7 +128,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
-     *  @param array<OnenoteResource>|null $value Value to set for the resources property.
+     * @param array<OnenoteResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
         $this->getBackingStore()->set('resources', $value);
@@ -136,7 +136,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     *  @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
+     * @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
     */
     public function setSectionGroups(?array $value): void {
         $this->getBackingStore()->set('sectionGroups', $value);
@@ -144,7 +144,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * Sets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     *  @param array<OnenoteSection>|null $value Value to set for the sections property.
+     * @param array<OnenoteSection>|null $value Value to set for the sections property.
     */
     public function setSections(?array $value): void {
         $this->getBackingStore()->set('sections', $value);

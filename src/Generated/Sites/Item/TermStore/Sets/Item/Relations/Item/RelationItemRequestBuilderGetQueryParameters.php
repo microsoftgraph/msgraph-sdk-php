@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Relations\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Indicates which terms have been pinned or reused directly under the set.
+*/
 class RelationItemRequestBuilderGetQueryParameters 
 {
     /**

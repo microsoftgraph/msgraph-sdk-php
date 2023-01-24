@@ -55,7 +55,7 @@ class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Parsable
 
     /**
      * Sets the edgeSearchEngineOpenSearchXmlUrl property value. Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
-     *  @param string|null $value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
+     * @param string|null $value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
     */
     public function setEdgeSearchEngineOpenSearchXmlUrl(?string $value): void {
         $this->getBackingStore()->set('edgeSearchEngineOpenSearchXmlUrl', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Events\Item\Instances;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the instances (occurrences) of an event for a specified time range.  If the event is a `seriesMaster` type, this returns the occurrences and exceptions of the event in the specified time range.
+*/
 class InstancesRequestBuilderGetQueryParameters 
 {
     /**

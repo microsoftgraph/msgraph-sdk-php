@@ -85,7 +85,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -93,7 +93,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the teamDescription property value. Description for the team.
-     *  @param string|null $value Value to set for the teamDescription property.
+     * @param string|null $value Value to set for the teamDescription property.
     */
     public function setTeamDescription(?string $value): void {
         $this->getBackingStore()->set('teamDescription', $value);
@@ -101,7 +101,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the teamDisplayName property value. Display name of the team.
-     *  @param string|null $value Value to set for the teamDisplayName property.
+     * @param string|null $value Value to set for the teamDisplayName property.
     */
     public function setTeamDisplayName(?string $value): void {
         $this->getBackingStore()->set('teamDisplayName', $value);
@@ -109,7 +109,7 @@ class TeamCreatedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the teamId property value. Unique identifier of the team.
-     *  @param string|null $value Value to set for the teamId property.
+     * @param string|null $value Value to set for the teamId property.
     */
     public function setTeamId(?string $value): void {
         $this->getBackingStore()->set('teamId', $value);

@@ -85,7 +85,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Sets the description property value. Description of the object returned. Read-only.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -93,7 +93,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Sets the displayName property value. Name of directory object being returned, like group or application. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -101,7 +101,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
-     *  @param string|null $value Value to set for the externalPartnerTenantId property.
+     * @param string|null $value Value to set for the externalPartnerTenantId property.
     */
     public function setExternalPartnerTenantId(?string $value): void {
         $this->getBackingStore()->set('externalPartnerTenantId', $value);
@@ -109,7 +109,7 @@ class DirectoryObjectPartnerReference extends DirectoryObject implements Parsabl
 
     /**
      * Sets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
-     *  @param string|null $value Value to set for the objectType property.
+     * @param string|null $value Value to set for the objectType property.
     */
     public function setObjectType(?string $value): void {
         $this->getBackingStore()->set('objectType', $value);

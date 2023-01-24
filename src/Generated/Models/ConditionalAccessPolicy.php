@@ -125,7 +125,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the conditions property value. The conditions property
-     *  @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
+     * @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
     */
     public function setConditions(?ConditionalAccessConditionSet $value): void {
         $this->getBackingStore()->set('conditions', $value);
@@ -133,7 +133,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -141,7 +141,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description property
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -149,7 +149,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -157,7 +157,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
-     *  @param ConditionalAccessGrantControls|null $value Value to set for the grantControls property.
+     * @param ConditionalAccessGrantControls|null $value Value to set for the grantControls property.
     */
     public function setGrantControls(?ConditionalAccessGrantControls $value): void {
         $this->getBackingStore()->set('grantControls', $value);
@@ -165,7 +165,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
@@ -173,7 +173,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
-     *  @param ConditionalAccessSessionControls|null $value Value to set for the sessionControls property.
+     * @param ConditionalAccessSessionControls|null $value Value to set for the sessionControls property.
     */
     public function setSessionControls(?ConditionalAccessSessionControls $value): void {
         $this->getBackingStore()->set('sessionControls', $value);
@@ -181,7 +181,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state property
-     *  @param ConditionalAccessPolicyState|null $value Value to set for the state property.
+     * @param ConditionalAccessPolicyState|null $value Value to set for the state property.
     */
     public function setState(?ConditionalAccessPolicyState $value): void {
         $this->getBackingStore()->set('state', $value);

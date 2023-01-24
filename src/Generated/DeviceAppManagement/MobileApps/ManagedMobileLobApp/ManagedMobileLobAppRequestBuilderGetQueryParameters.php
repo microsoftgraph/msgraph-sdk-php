@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\ManagedMobile
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.managedMobileLobApp in the microsoft.graph.mobileApp collection
+*/
 class ManagedMobileLobAppRequestBuilderGetQueryParameters 
 {
     /**

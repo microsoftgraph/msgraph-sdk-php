@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySche
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
+*/
 class TargetScheduleRequestBuilderGetQueryParameters 
 {
     /**

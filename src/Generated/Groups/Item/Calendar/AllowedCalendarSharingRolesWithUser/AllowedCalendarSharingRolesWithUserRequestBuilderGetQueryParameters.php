@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Calendar\AllowedCalendarSharingR
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function allowedCalendarSharingRoles
+*/
 class AllowedCalendarSharingRolesWithUserRequestBuilderGetQueryParameters 
 {
     /**

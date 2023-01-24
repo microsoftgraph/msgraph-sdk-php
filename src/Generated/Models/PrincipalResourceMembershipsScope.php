@@ -65,7 +65,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
 
     /**
      * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
-     *  @param array<AccessReviewScope>|null $value Value to set for the principalScopes property.
+     * @param array<AccessReviewScope>|null $value Value to set for the principalScopes property.
     */
     public function setPrincipalScopes(?array $value): void {
         $this->getBackingStore()->set('principalScopes', $value);
@@ -73,7 +73,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
 
     /**
      * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
-     *  @param array<AccessReviewScope>|null $value Value to set for the resourceScopes property.
+     * @param array<AccessReviewScope>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value): void {
         $this->getBackingStore()->set('resourceScopes', $value);

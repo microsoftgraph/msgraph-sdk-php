@@ -85,7 +85,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
 
     /**
      * Sets the attendanceRecords property value. List of attendance records of an attendance report. Read-only.
-     *  @param array<AttendanceRecord>|null $value Value to set for the attendanceRecords property.
+     * @param array<AttendanceRecord>|null $value Value to set for the attendanceRecords property.
     */
     public function setAttendanceRecords(?array $value): void {
         $this->getBackingStore()->set('attendanceRecords', $value);
@@ -93,7 +93,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
 
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
-     *  @param DateTime|null $value Value to set for the meetingEndDateTime property.
+     * @param DateTime|null $value Value to set for the meetingEndDateTime property.
     */
     public function setMeetingEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('meetingEndDateTime', $value);
@@ -101,7 +101,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
 
     /**
      * Sets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
-     *  @param DateTime|null $value Value to set for the meetingStartDateTime property.
+     * @param DateTime|null $value Value to set for the meetingStartDateTime property.
     */
     public function setMeetingStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('meetingStartDateTime', $value);
@@ -109,7 +109,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
 
     /**
      * Sets the totalParticipantCount property value. Total number of participants. Read-only.
-     *  @param int|null $value Value to set for the totalParticipantCount property.
+     * @param int|null $value Value to set for the totalParticipantCount property.
     */
     public function setTotalParticipantCount(?int $value): void {
         $this->getBackingStore()->set('totalParticipantCount', $value);

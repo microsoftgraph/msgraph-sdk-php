@@ -124,7 +124,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the actions property value. Actions to be taken on a message when the corresponding conditions are fulfilled.
-     *  @param MessageRuleActions|null $value Value to set for the actions property.
+     * @param MessageRuleActions|null $value Value to set for the actions property.
     */
     public function setActions(?MessageRuleActions $value): void {
         $this->getBackingStore()->set('actions', $value);
@@ -132,7 +132,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
-     *  @param MessageRulePredicates|null $value Value to set for the conditions property.
+     * @param MessageRulePredicates|null $value Value to set for the conditions property.
     */
     public function setConditions(?MessageRulePredicates $value): void {
         $this->getBackingStore()->set('conditions', $value);
@@ -140,7 +140,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the rule.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -148,7 +148,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the exceptions property value. Exception conditions for the rule.
-     *  @param MessageRulePredicates|null $value Value to set for the exceptions property.
+     * @param MessageRulePredicates|null $value Value to set for the exceptions property.
     */
     public function setExceptions(?MessageRulePredicates $value): void {
         $this->getBackingStore()->set('exceptions', $value);
@@ -156,7 +156,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the hasError property value. Indicates whether the rule is in an error condition. Read-only.
-     *  @param bool|null $value Value to set for the hasError property.
+     * @param bool|null $value Value to set for the hasError property.
     */
     public function setHasError(?bool $value): void {
         $this->getBackingStore()->set('hasError', $value);
@@ -164,7 +164,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. Indicates whether the rule is enabled to be applied to messages.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -172,7 +172,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the isReadOnly property value. Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
-     *  @param bool|null $value Value to set for the isReadOnly property.
+     * @param bool|null $value Value to set for the isReadOnly property.
     */
     public function setIsReadOnly(?bool $value): void {
         $this->getBackingStore()->set('isReadOnly', $value);
@@ -180,7 +180,7 @@ class MessageRule extends Entity implements Parsable
 
     /**
      * Sets the sequence property value. Indicates the order in which the rule is executed, among other rules.
-     *  @param int|null $value Value to set for the sequence property.
+     * @param int|null $value Value to set for the sequence property.
     */
     public function setSequence(?int $value): void {
         $this->getBackingStore()->set('sequence', $value);

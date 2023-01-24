@@ -96,7 +96,7 @@ class DataSource extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The user who created the dataSource.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -104,7 +104,7 @@ class DataSource extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time the dataSource was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -112,7 +112,7 @@ class DataSource extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -120,7 +120,7 @@ class DataSource extends Entity implements Parsable
 
     /**
      * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
-     *  @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
+     * @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
     */
     public function setHoldStatus(?DataSourceHoldStatus $value): void {
         $this->getBackingStore()->set('holdStatus', $value);

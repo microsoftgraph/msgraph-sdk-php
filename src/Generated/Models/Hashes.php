@@ -120,7 +120,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
-     *  @param string|null $value Value to set for the crc32Hash property.
+     * @param string|null $value Value to set for the crc32Hash property.
     */
     public function setCrc32Hash(?string $value): void {
         $this->getBackingStore()->set('crc32Hash', $value);
@@ -144,7 +144,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
-     *  @param string|null $value Value to set for the quickXorHash property.
+     * @param string|null $value Value to set for the quickXorHash property.
     */
     public function setQuickXorHash(?string $value): void {
         $this->getBackingStore()->set('quickXorHash', $value);
@@ -160,7 +160,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sha1Hash property value. SHA1 hash for the contents of the file (if available). Read-only.
-     *  @param string|null $value Value to set for the sha1Hash property.
+     * @param string|null $value Value to set for the sha1Hash property.
     */
     public function setSha1Hash(?string $value): void {
         $this->getBackingStore()->set('sha1Hash', $value);
@@ -168,7 +168,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
-     *  @param string|null $value Value to set for the sha256Hash property.
+     * @param string|null $value Value to set for the sha256Hash property.
     */
     public function setSha256Hash(?string $value): void {
         $this->getBackingStore()->set('sha256Hash', $value);

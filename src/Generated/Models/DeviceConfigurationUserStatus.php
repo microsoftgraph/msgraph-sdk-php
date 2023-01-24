@@ -95,7 +95,7 @@ class DeviceConfigurationUserStatus extends Entity implements Parsable
 
     /**
      * Sets the devicesCount property value. Devices count for that user.
-     *  @param int|null $value Value to set for the devicesCount property.
+     * @param int|null $value Value to set for the devicesCount property.
     */
     public function setDevicesCount(?int $value): void {
         $this->getBackingStore()->set('devicesCount', $value);
@@ -103,7 +103,7 @@ class DeviceConfigurationUserStatus extends Entity implements Parsable
 
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
-     *  @param DateTime|null $value Value to set for the lastReportedDateTime property.
+     * @param DateTime|null $value Value to set for the lastReportedDateTime property.
     */
     public function setLastReportedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastReportedDateTime', $value);
@@ -111,7 +111,7 @@ class DeviceConfigurationUserStatus extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param ComplianceStatus|null $value Value to set for the status property.
+     * @param ComplianceStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ComplianceStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -119,7 +119,7 @@ class DeviceConfigurationUserStatus extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. User name of the DevicePolicyStatus.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -127,7 +127,7 @@ class DeviceConfigurationUserStatus extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

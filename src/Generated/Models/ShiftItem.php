@@ -81,7 +81,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
 
     /**
      * Sets the activities property value. An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
-     *  @param array<ShiftActivity>|null $value Value to set for the activities property.
+     * @param array<ShiftActivity>|null $value Value to set for the activities property.
     */
     public function setActivities(?array $value): void {
         $this->getBackingStore()->set('activities', $value);
@@ -89,7 +89,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
 
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -97,7 +97,7 @@ class ShiftItem extends ScheduleEntity implements Parsable
 
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
-     *  @param string|null $value Value to set for the notes property.
+     * @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);

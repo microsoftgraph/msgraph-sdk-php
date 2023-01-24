@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Onenote\Sections\Item\Pages\Item\ParentNo
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The notebook that contains the page.  Read-only.
+*/
 class ParentNotebookRequestBuilderGetQueryParameters 
 {
     /**

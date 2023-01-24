@@ -64,7 +64,7 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.
-     *  @param string|null $value Value to set for the mailExchange property.
+     * @param string|null $value Value to set for the mailExchange property.
     */
     public function setMailExchange(?string $value): void {
         $this->getBackingStore()->set('mailExchange', $value);
@@ -72,7 +72,7 @@ class DomainDnsMxRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the preference property value. Value used when configuring the Preference/Priority property of the MX record at the DNS host.
-     *  @param int|null $value Value to set for the preference property.
+     * @param int|null $value Value to set for the preference property.
     */
     public function setPreference(?int $value): void {
         $this->getBackingStore()->set('preference', $value);

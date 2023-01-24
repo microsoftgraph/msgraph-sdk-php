@@ -110,7 +110,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the groupId property value. The groupId property
-     *  @param string|null $value Value to set for the groupId property.
+     * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
         $this->getBackingStore()->set('groupId', $value);
@@ -134,7 +134,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the id property value. The id property
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -142,7 +142,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the siteCollectionId property value. The siteCollectionId property
-     *  @param string|null $value Value to set for the siteCollectionId property.
+     * @param string|null $value Value to set for the siteCollectionId property.
     */
     public function setSiteCollectionId(?string $value): void {
         $this->getBackingStore()->set('siteCollectionId', $value);
@@ -150,7 +150,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the siteId property value. The siteId property
-     *  @param string|null $value Value to set for the siteId property.
+     * @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value): void {
         $this->getBackingStore()->set('siteId', $value);

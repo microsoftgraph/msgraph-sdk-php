@@ -65,7 +65,7 @@ class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient 
 
     /**
      * Sets the channelId property value. The unique identifier for the channel whose members should receive the notification.
-     *  @param string|null $value Value to set for the channelId property.
+     * @param string|null $value Value to set for the channelId property.
     */
     public function setChannelId(?string $value): void {
         $this->getBackingStore()->set('channelId', $value);
@@ -73,7 +73,7 @@ class ChannelMembersNotificationRecipient extends TeamworkNotificationRecipient 
 
     /**
      * Sets the teamId property value. The unique identifier for the team under which the channel resides.
-     *  @param string|null $value Value to set for the teamId property.
+     * @param string|null $value Value to set for the teamId property.
     */
     public function setTeamId(?string $value): void {
         $this->getBackingStore()->set('teamId', $value);

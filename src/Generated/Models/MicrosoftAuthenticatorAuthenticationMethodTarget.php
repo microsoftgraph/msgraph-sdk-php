@@ -54,7 +54,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
 
     /**
      * Sets the authenticationMode property value. The authenticationMode property
-     *  @param MicrosoftAuthenticatorAuthenticationMode|null $value Value to set for the authenticationMode property.
+     * @param MicrosoftAuthenticatorAuthenticationMode|null $value Value to set for the authenticationMode property.
     */
     public function setAuthenticationMode(?MicrosoftAuthenticatorAuthenticationMode $value): void {
         $this->getBackingStore()->set('authenticationMode', $value);

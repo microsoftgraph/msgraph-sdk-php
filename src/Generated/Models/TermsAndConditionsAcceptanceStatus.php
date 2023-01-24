@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal.
+*/
 class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable 
 {
     /**
@@ -95,7 +98,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
 
     /**
      * Sets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
-     *  @param DateTime|null $value Value to set for the acceptedDateTime property.
+     * @param DateTime|null $value Value to set for the acceptedDateTime property.
     */
     public function setAcceptedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('acceptedDateTime', $value);
@@ -103,7 +106,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
 
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
-     *  @param int|null $value Value to set for the acceptedVersion property.
+     * @param int|null $value Value to set for the acceptedVersion property.
     */
     public function setAcceptedVersion(?int $value): void {
         $this->getBackingStore()->set('acceptedVersion', $value);
@@ -111,7 +114,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
 
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
-     *  @param TermsAndConditions|null $value Value to set for the termsAndConditions property.
+     * @param TermsAndConditions|null $value Value to set for the termsAndConditions property.
     */
     public function setTermsAndConditions(?TermsAndConditions $value): void {
         $this->getBackingStore()->set('termsAndConditions', $value);
@@ -119,7 +122,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -127,7 +130,7 @@ class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

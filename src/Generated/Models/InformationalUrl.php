@@ -130,7 +130,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logoUrl property value. CDN URL to the application's logo, Read-only.
-     *  @param string|null $value Value to set for the logoUrl property.
+     * @param string|null $value Value to set for the logoUrl property.
     */
     public function setLogoUrl(?string $value): void {
         $this->getBackingStore()->set('logoUrl', $value);
@@ -154,7 +154,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the marketingUrl property value. Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
-     *  @param string|null $value Value to set for the marketingUrl property.
+     * @param string|null $value Value to set for the marketingUrl property.
     */
     public function setMarketingUrl(?string $value): void {
         $this->getBackingStore()->set('marketingUrl', $value);
@@ -162,7 +162,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the privacyStatementUrl property value. Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
-     *  @param string|null $value Value to set for the privacyStatementUrl property.
+     * @param string|null $value Value to set for the privacyStatementUrl property.
     */
     public function setPrivacyStatementUrl(?string $value): void {
         $this->getBackingStore()->set('privacyStatementUrl', $value);
@@ -178,7 +178,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the supportUrl property value. Link to the application's support page. For example, https://www.contoso.com/app/support
-     *  @param string|null $value Value to set for the supportUrl property.
+     * @param string|null $value Value to set for the supportUrl property.
     */
     public function setSupportUrl(?string $value): void {
         $this->getBackingStore()->set('supportUrl', $value);
@@ -186,7 +186,7 @@ class InformationalUrl implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the termsOfServiceUrl property value. Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
-     *  @param string|null $value Value to set for the termsOfServiceUrl property.
+     * @param string|null $value Value to set for the termsOfServiceUrl property.
     */
     public function setTermsOfServiceUrl(?string $value): void {
         $this->getBackingStore()->set('termsOfServiceUrl', $value);

@@ -100,7 +100,7 @@ class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayAs property value. How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
-     *  @param string|null $value Value to set for the displayAs property.
+     * @param string|null $value Value to set for the displayAs property.
     */
     public function setDisplayAs(?string $value): void {
         $this->getBackingStore()->set('displayAs', $value);
@@ -124,7 +124,7 @@ class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the format property value. Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
-     *  @param string|null $value Value to set for the format property.
+     * @param string|null $value Value to set for the format property.
     */
     public function setFormat(?string $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -132,7 +132,7 @@ class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

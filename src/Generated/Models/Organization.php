@@ -91,6 +91,14 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     * @return string|null
+    */
+    public function getDefaultUsageLocation(): ?string {
+        return $this->getBackingStore()->get('defaultUsageLocation');
+    }
+
+    /**
      * Gets the displayName property value. The display name for the tenant.
      * @return string|null
     */
@@ -121,6 +129,7 @@ class Organization extends DirectoryObject implements Parsable
             'country' => fn(ParseNode $n) => $o->setCountry($n->getStringValue()),
             'countryLetterCode' => fn(ParseNode $n) => $o->setCountryLetterCode($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'defaultUsageLocation' => fn(ParseNode $n) => $o->setDefaultUsageLocation($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'marketingNotificationEmails' => fn(ParseNode $n) => $o->setMarketingNotificationEmails($n->getCollectionOfPrimitiveValues()),
@@ -284,6 +293,7 @@ class Organization extends DirectoryObject implements Parsable
         $writer->writeStringValue('country', $this->getCountry());
         $writer->writeStringValue('countryLetterCode', $this->getCountryLetterCode());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('defaultUsageLocation', $this->getDefaultUsageLocation());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeCollectionOfPrimitiveValues('marketingNotificationEmails', $this->getMarketingNotificationEmails());
@@ -306,7 +316,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the assignedPlans property value. The collection of service plans associated with the tenant. Not nullable.
-     *  @param array<AssignedPlan>|null $value Value to set for the assignedPlans property.
+     * @param array<AssignedPlan>|null $value Value to set for the assignedPlans property.
     */
     public function setAssignedPlans(?array $value): void {
         $this->getBackingStore()->set('assignedPlans', $value);
@@ -314,7 +324,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the branding property value. Branding for the organization. Nullable.
-     *  @param OrganizationalBranding|null $value Value to set for the branding property.
+     * @param OrganizationalBranding|null $value Value to set for the branding property.
     */
     public function setBranding(?OrganizationalBranding $value): void {
         $this->getBackingStore()->set('branding', $value);
@@ -322,7 +332,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
-     *  @param array<string>|null $value Value to set for the businessPhones property.
+     * @param array<string>|null $value Value to set for the businessPhones property.
     */
     public function setBusinessPhones(?array $value): void {
         $this->getBackingStore()->set('businessPhones', $value);
@@ -330,7 +340,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-     *  @param array<CertificateBasedAuthConfiguration>|null $value Value to set for the certificateBasedAuthConfiguration property.
+     * @param array<CertificateBasedAuthConfiguration>|null $value Value to set for the certificateBasedAuthConfiguration property.
     */
     public function setCertificateBasedAuthConfiguration(?array $value): void {
         $this->getBackingStore()->set('certificateBasedAuthConfiguration', $value);
@@ -338,7 +348,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the city property value. City name of the address for the organization.
-     *  @param string|null $value Value to set for the city property.
+     * @param string|null $value Value to set for the city property.
     */
     public function setCity(?string $value): void {
         $this->getBackingStore()->set('city', $value);
@@ -346,7 +356,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the country property value. Country/region name of the address for the organization.
-     *  @param string|null $value Value to set for the country property.
+     * @param string|null $value Value to set for the country property.
     */
     public function setCountry(?string $value): void {
         $this->getBackingStore()->set('country', $value);
@@ -354,7 +364,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
-     *  @param string|null $value Value to set for the countryLetterCode property.
+     * @param string|null $value Value to set for the countryLetterCode property.
     */
     public function setCountryLetterCode(?string $value): void {
         $this->getBackingStore()->set('countryLetterCode', $value);
@@ -362,15 +372,23 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
+     * Sets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     * @param string|null $value Value to set for the defaultUsageLocation property.
+    */
+    public function setDefaultUsageLocation(?string $value): void {
+        $this->getBackingStore()->set('defaultUsageLocation', $value);
+    }
+
+    /**
      * Sets the displayName property value. The display name for the tenant.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -378,7 +396,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the organization. Read-only. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -386,7 +404,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the marketingNotificationEmails property value. Not nullable.
-     *  @param array<string>|null $value Value to set for the marketingNotificationEmails property.
+     * @param array<string>|null $value Value to set for the marketingNotificationEmails property.
     */
     public function setMarketingNotificationEmails(?array $value): void {
         $this->getBackingStore()->set('marketingNotificationEmails', $value);
@@ -394,7 +412,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the mobileDeviceManagementAuthority property value. Mobile device management authority.
-     *  @param MdmAuthority|null $value Value to set for the mobileDeviceManagementAuthority property.
+     * @param MdmAuthority|null $value Value to set for the mobileDeviceManagementAuthority property.
     */
     public function setMobileDeviceManagementAuthority(?MdmAuthority $value): void {
         $this->getBackingStore()->set('mobileDeviceManagementAuthority', $value);
@@ -402,7 +420,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('onPremisesLastSyncDateTime', $value);
@@ -410,7 +428,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
-     *  @param bool|null $value Value to set for the onPremisesSyncEnabled property.
+     * @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value): void {
         $this->getBackingStore()->set('onPremisesSyncEnabled', $value);
@@ -418,7 +436,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the partnerTenantType property value. The partnerTenantType property
-     *  @param PartnerTenantType|null $value Value to set for the partnerTenantType property.
+     * @param PartnerTenantType|null $value Value to set for the partnerTenantType property.
     */
     public function setPartnerTenantType(?PartnerTenantType $value): void {
         $this->getBackingStore()->set('partnerTenantType', $value);
@@ -426,7 +444,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the postalCode property value. Postal code of the address for the organization.
-     *  @param string|null $value Value to set for the postalCode property.
+     * @param string|null $value Value to set for the postalCode property.
     */
     public function setPostalCode(?string $value): void {
         $this->getBackingStore()->set('postalCode', $value);
@@ -434,7 +452,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
-     *  @param string|null $value Value to set for the preferredLanguage property.
+     * @param string|null $value Value to set for the preferredLanguage property.
     */
     public function setPreferredLanguage(?string $value): void {
         $this->getBackingStore()->set('preferredLanguage', $value);
@@ -442,7 +460,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the privacyProfile property value. The privacy profile of an organization.
-     *  @param PrivacyProfile|null $value Value to set for the privacyProfile property.
+     * @param PrivacyProfile|null $value Value to set for the privacyProfile property.
     */
     public function setPrivacyProfile(?PrivacyProfile $value): void {
         $this->getBackingStore()->set('privacyProfile', $value);
@@ -450,7 +468,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the provisionedPlans property value. Not nullable.
-     *  @param array<ProvisionedPlan>|null $value Value to set for the provisionedPlans property.
+     * @param array<ProvisionedPlan>|null $value Value to set for the provisionedPlans property.
     */
     public function setProvisionedPlans(?array $value): void {
         $this->getBackingStore()->set('provisionedPlans', $value);
@@ -458,7 +476,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
-     *  @param array<string>|null $value Value to set for the securityComplianceNotificationMails property.
+     * @param array<string>|null $value Value to set for the securityComplianceNotificationMails property.
     */
     public function setSecurityComplianceNotificationMails(?array $value): void {
         $this->getBackingStore()->set('securityComplianceNotificationMails', $value);
@@ -466,7 +484,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
-     *  @param array<string>|null $value Value to set for the securityComplianceNotificationPhones property.
+     * @param array<string>|null $value Value to set for the securityComplianceNotificationPhones property.
     */
     public function setSecurityComplianceNotificationPhones(?array $value): void {
         $this->getBackingStore()->set('securityComplianceNotificationPhones', $value);
@@ -474,7 +492,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the state property value. State name of the address for the organization.
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -482,7 +500,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the street property value. Street name of the address for organization.
-     *  @param string|null $value Value to set for the street property.
+     * @param string|null $value Value to set for the street property.
     */
     public function setStreet(?string $value): void {
         $this->getBackingStore()->set('street', $value);
@@ -490,7 +508,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the technicalNotificationMails property value. Not nullable.
-     *  @param array<string>|null $value Value to set for the technicalNotificationMails property.
+     * @param array<string>|null $value Value to set for the technicalNotificationMails property.
     */
     public function setTechnicalNotificationMails(?array $value): void {
         $this->getBackingStore()->set('technicalNotificationMails', $value);
@@ -498,7 +516,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the tenantType property value. The tenantType property
-     *  @param string|null $value Value to set for the tenantType property.
+     * @param string|null $value Value to set for the tenantType property.
     */
     public function setTenantType(?string $value): void {
         $this->getBackingStore()->set('tenantType', $value);
@@ -506,7 +524,7 @@ class Organization extends DirectoryObject implements Parsable
 
     /**
      * Sets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
-     *  @param array<VerifiedDomain>|null $value Value to set for the verifiedDomains property.
+     * @param array<VerifiedDomain>|null $value Value to set for the verifiedDomains property.
     */
     public function setVerifiedDomains(?array $value): void {
         $this->getBackingStore()->set('verifiedDomains', $value);

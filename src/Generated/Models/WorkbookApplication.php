@@ -54,7 +54,7 @@ class WorkbookApplication extends Entity implements Parsable
 
     /**
      * Sets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
-     *  @param string|null $value Value to set for the calculationMode property.
+     * @param string|null $value Value to set for the calculationMode property.
     */
     public function setCalculationMode(?string $value): void {
         $this->getBackingStore()->set('calculationMode', $value);

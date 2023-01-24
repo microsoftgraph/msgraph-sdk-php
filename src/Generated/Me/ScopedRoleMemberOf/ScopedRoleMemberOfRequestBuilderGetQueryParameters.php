@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\ScopedRoleMemberOf;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get scopedRoleMemberOf from me
+*/
 class ScopedRoleMemberOfRequestBuilderGetQueryParameters 
 {
     /**

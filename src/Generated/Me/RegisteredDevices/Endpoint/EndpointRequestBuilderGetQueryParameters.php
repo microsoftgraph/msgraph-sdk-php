@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\RegisteredDevices\Endpoint;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.endpoint in the microsoft.graph.directoryObject collection
+*/
 class EndpointRequestBuilderGetQueryParameters 
 {
     /**

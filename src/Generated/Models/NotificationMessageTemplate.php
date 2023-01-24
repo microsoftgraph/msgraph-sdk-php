@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Notification messages are messages that are sent to end users who are determined to be not-compliant with the compliance policies defined by the administrator. Administrators choose notifications and configure them in the Intune Admin Console using the compliance policy creation page under the “Actions for non-compliance” section. Use the notificationMessageTemplate object to create your own custom notifications for administrators to choose while configuring actions for non-compliance.
+*/
 class NotificationMessageTemplate extends Entity implements Parsable 
 {
     /**
@@ -95,7 +98,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
 
     /**
      * Sets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     *  @param NotificationTemplateBrandingOptions|null $value Value to set for the brandingOptions property.
+     * @param NotificationTemplateBrandingOptions|null $value Value to set for the brandingOptions property.
     */
     public function setBrandingOptions(?NotificationTemplateBrandingOptions $value): void {
         $this->getBackingStore()->set('brandingOptions', $value);
@@ -103,7 +106,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
 
     /**
      * Sets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
-     *  @param string|null $value Value to set for the defaultLocale property.
+     * @param string|null $value Value to set for the defaultLocale property.
     */
     public function setDefaultLocale(?string $value): void {
         $this->getBackingStore()->set('defaultLocale', $value);
@@ -111,7 +114,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Display name for the Notification Message Template.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -119,7 +122,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -127,7 +130,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
 
     /**
      * Sets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
-     *  @param array<LocalizedNotificationMessage>|null $value Value to set for the localizedNotificationMessages property.
+     * @param array<LocalizedNotificationMessage>|null $value Value to set for the localizedNotificationMessages property.
     */
     public function setLocalizedNotificationMessages(?array $value): void {
         $this->getBackingStore()->set('localizedNotificationMessages', $value);

@@ -250,7 +250,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -258,7 +258,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
-     *  @param int|null $value Value to set for the altitudeInMeters property.
+     * @param int|null $value Value to set for the altitudeInMeters property.
     */
     public function setAltitudeInMeters(?int $value): void {
         $this->getBackingStore()->set('altitudeInMeters', $value);
@@ -266,7 +266,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -274,7 +274,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the building property value. The building that the printer is located in.
-     *  @param string|null $value Value to set for the building property.
+     * @param string|null $value Value to set for the building property.
     */
     public function setBuilding(?string $value): void {
         $this->getBackingStore()->set('building', $value);
@@ -282,7 +282,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the city property value. The city that the printer is located in.
-     *  @param string|null $value Value to set for the city property.
+     * @param string|null $value Value to set for the city property.
     */
     public function setCity(?string $value): void {
         $this->getBackingStore()->set('city', $value);
@@ -290,7 +290,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the countryOrRegion property value. The country or region that the printer is located in.
-     *  @param string|null $value Value to set for the countryOrRegion property.
+     * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {
         $this->getBackingStore()->set('countryOrRegion', $value);
@@ -298,7 +298,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
-     *  @param string|null $value Value to set for the floor property.
+     * @param string|null $value Value to set for the floor property.
     */
     public function setFloor(?string $value): void {
         $this->getBackingStore()->set('floor', $value);
@@ -306,7 +306,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the floorDescription property value. The description of the floor that the printer is located on.
-     *  @param string|null $value Value to set for the floorDescription property.
+     * @param string|null $value Value to set for the floorDescription property.
     */
     public function setFloorDescription(?string $value): void {
         $this->getBackingStore()->set('floorDescription', $value);
@@ -314,7 +314,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
-     *  @param float|null $value Value to set for the latitude property.
+     * @param float|null $value Value to set for the latitude property.
     */
     public function setLatitude(?float $value): void {
         $this->getBackingStore()->set('latitude', $value);
@@ -322,7 +322,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
-     *  @param float|null $value Value to set for the longitude property.
+     * @param float|null $value Value to set for the longitude property.
     */
     public function setLongitude(?float $value): void {
         $this->getBackingStore()->set('longitude', $value);
@@ -330,7 +330,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -338,7 +338,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
-     *  @param array<string>|null $value Value to set for the organization property.
+     * @param array<string>|null $value Value to set for the organization property.
     */
     public function setOrganization(?array $value): void {
         $this->getBackingStore()->set('organization', $value);
@@ -346,7 +346,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the postalCode property value. The postal code that the printer is located in.
-     *  @param string|null $value Value to set for the postalCode property.
+     * @param string|null $value Value to set for the postalCode property.
     */
     public function setPostalCode(?string $value): void {
         $this->getBackingStore()->set('postalCode', $value);
@@ -354,7 +354,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the roomDescription property value. The description of the room that the printer is located in.
-     *  @param string|null $value Value to set for the roomDescription property.
+     * @param string|null $value Value to set for the roomDescription property.
     */
     public function setRoomDescription(?string $value): void {
         $this->getBackingStore()->set('roomDescription', $value);
@@ -362,7 +362,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
-     *  @param string|null $value Value to set for the roomName property.
+     * @param string|null $value Value to set for the roomName property.
     */
     public function setRoomName(?string $value): void {
         $this->getBackingStore()->set('roomName', $value);
@@ -370,7 +370,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the site property value. The site that the printer is located in.
-     *  @param string|null $value Value to set for the site property.
+     * @param string|null $value Value to set for the site property.
     */
     public function setSite(?string $value): void {
         $this->getBackingStore()->set('site', $value);
@@ -378,7 +378,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the stateOrProvince property value. The state or province that the printer is located in.
-     *  @param string|null $value Value to set for the stateOrProvince property.
+     * @param string|null $value Value to set for the stateOrProvince property.
     */
     public function setStateOrProvince(?string $value): void {
         $this->getBackingStore()->set('stateOrProvince', $value);
@@ -386,7 +386,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the streetAddress property value. The street address where the printer is located.
-     *  @param string|null $value Value to set for the streetAddress property.
+     * @param string|null $value Value to set for the streetAddress property.
     */
     public function setStreetAddress(?string $value): void {
         $this->getBackingStore()->set('streetAddress', $value);
@@ -394,7 +394,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
-     *  @param array<string>|null $value Value to set for the subdivision property.
+     * @param array<string>|null $value Value to set for the subdivision property.
     */
     public function setSubdivision(?array $value): void {
         $this->getBackingStore()->set('subdivision', $value);
@@ -402,7 +402,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subunit property value. The subunit property
-     *  @param array<string>|null $value Value to set for the subunit property.
+     * @param array<string>|null $value Value to set for the subunit property.
     */
     public function setSubunit(?array $value): void {
         $this->getBackingStore()->set('subunit', $value);

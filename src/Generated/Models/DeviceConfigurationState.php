@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Configuration State for a given device.
+*/
 class DeviceConfigurationState extends Entity implements Parsable 
 {
     /**
@@ -104,7 +107,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the policy for this policyBase
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -112,7 +115,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the platformType property value. Supported platform types for policies.
-     *  @param PolicyPlatformType|null $value Value to set for the platformType property.
+     * @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
     public function setPlatformType(?PolicyPlatformType $value): void {
         $this->getBackingStore()->set('platformType', $value);
@@ -120,7 +123,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the settingCount property value. Count of how many setting a policy holds
-     *  @param int|null $value Value to set for the settingCount property.
+     * @param int|null $value Value to set for the settingCount property.
     */
     public function setSettingCount(?int $value): void {
         $this->getBackingStore()->set('settingCount', $value);
@@ -128,7 +131,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the settingStates property value. The settingStates property
-     *  @param array<DeviceConfigurationSettingState>|null $value Value to set for the settingStates property.
+     * @param array<DeviceConfigurationSettingState>|null $value Value to set for the settingStates property.
     */
     public function setSettingStates(?array $value): void {
         $this->getBackingStore()->set('settingStates', $value);
@@ -136,7 +139,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state property
-     *  @param ComplianceStatus|null $value Value to set for the state property.
+     * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -144,7 +147,7 @@ class DeviceConfigurationState extends Entity implements Parsable
 
     /**
      * Sets the version property value. The version of the policy
-     *  @param int|null $value Value to set for the version property.
+     * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {
         $this->getBackingStore()->set('version', $value);

@@ -55,7 +55,7 @@ class ChatMembersNotificationRecipient extends TeamworkNotificationRecipient imp
 
     /**
      * Sets the chatId property value. The unique identifier for the chat whose members should receive the notifications.
-     *  @param string|null $value Value to set for the chatId property.
+     * @param string|null $value Value to set for the chatId property.
     */
     public function setChatId(?string $value): void {
         $this->getBackingStore()->set('chatId', $value);

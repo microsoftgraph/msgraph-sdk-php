@@ -120,7 +120,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
-     *  @param array<ExcludeTarget>|null $value Value to set for the excludeTargets property.
+     * @param array<ExcludeTarget>|null $value Value to set for the excludeTargets property.
     */
     public function setExcludeTargets(?array $value): void {
         $this->getBackingStore()->set('excludeTargets', $value);
@@ -144,7 +144,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
-     *  @param array<AuthenticationMethodsRegistrationCampaignIncludeTarget>|null $value Value to set for the includeTargets property.
+     * @param array<AuthenticationMethodsRegistrationCampaignIncludeTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
@@ -152,7 +152,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum: 0 days. Maximum: 14 days. If the value is '0', the user is prompted during every MFA attempt.
-     *  @param int|null $value Value to set for the snoozeDurationInDays property.
+     * @param int|null $value Value to set for the snoozeDurationInDays property.
     */
     public function setSnoozeDurationInDays(?int $value): void {
         $this->getBackingStore()->set('snoozeDurationInDays', $value);
@@ -168,7 +168,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
 
     /**
      * Sets the state property value. The state property
-     *  @param AdvancedConfigState|null $value Value to set for the state property.
+     * @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value): void {
         $this->getBackingStore()->set('state', $value);

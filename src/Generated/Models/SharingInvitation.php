@@ -120,7 +120,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the email property value. The email address provided for the recipient of the sharing invitation. Read-only.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -144,7 +144,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the invitedBy property value. Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
-     *  @param IdentitySet|null $value Value to set for the invitedBy property.
+     * @param IdentitySet|null $value Value to set for the invitedBy property.
     */
     public function setInvitedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('invitedBy', $value);
@@ -152,7 +152,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the redeemedBy property value. The redeemedBy property
-     *  @param string|null $value Value to set for the redeemedBy property.
+     * @param string|null $value Value to set for the redeemedBy property.
     */
     public function setRedeemedBy(?string $value): void {
         $this->getBackingStore()->set('redeemedBy', $value);
@@ -168,7 +168,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the signInRequired property value. If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
-     *  @param bool|null $value Value to set for the signInRequired property.
+     * @param bool|null $value Value to set for the signInRequired property.
     */
     public function setSignInRequired(?bool $value): void {
         $this->getBackingStore()->set('signInRequired', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
+*/
 class MembersRequestBuilderGetQueryParameters 
 {
     /**

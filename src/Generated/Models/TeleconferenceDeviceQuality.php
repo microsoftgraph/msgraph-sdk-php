@@ -180,7 +180,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -188,7 +188,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -196,7 +196,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the callChainId property value. A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
-     *  @param string|null $value Value to set for the callChainId property.
+     * @param string|null $value Value to set for the callChainId property.
     */
     public function setCallChainId(?string $value): void {
         $this->getBackingStore()->set('callChainId', $value);
@@ -204,7 +204,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the cloudServiceDeploymentEnvironment property value. A geo-region where the service is deployed, such as ProdNoam.
-     *  @param string|null $value Value to set for the cloudServiceDeploymentEnvironment property.
+     * @param string|null $value Value to set for the cloudServiceDeploymentEnvironment property.
     */
     public function setCloudServiceDeploymentEnvironment(?string $value): void {
         $this->getBackingStore()->set('cloudServiceDeploymentEnvironment', $value);
@@ -212,7 +212,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the cloudServiceDeploymentId property value. A unique deployment identifier assigned by Azure.
-     *  @param string|null $value Value to set for the cloudServiceDeploymentId property.
+     * @param string|null $value Value to set for the cloudServiceDeploymentId property.
     */
     public function setCloudServiceDeploymentId(?string $value): void {
         $this->getBackingStore()->set('cloudServiceDeploymentId', $value);
@@ -220,7 +220,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the cloudServiceInstanceName property value. The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-     *  @param string|null $value Value to set for the cloudServiceInstanceName property.
+     * @param string|null $value Value to set for the cloudServiceInstanceName property.
     */
     public function setCloudServiceInstanceName(?string $value): void {
         $this->getBackingStore()->set('cloudServiceInstanceName', $value);
@@ -228,7 +228,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the cloudServiceName property value. The Azure deployed cloud service name, such as contoso.cloudapp.net.
-     *  @param string|null $value Value to set for the cloudServiceName property.
+     * @param string|null $value Value to set for the cloudServiceName property.
     */
     public function setCloudServiceName(?string $value): void {
         $this->getBackingStore()->set('cloudServiceName', $value);
@@ -236,7 +236,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the deviceDescription property value. Any additional description, such as VTC Bldg 30/21.
-     *  @param string|null $value Value to set for the deviceDescription property.
+     * @param string|null $value Value to set for the deviceDescription property.
     */
     public function setDeviceDescription(?string $value): void {
         $this->getBackingStore()->set('deviceDescription', $value);
@@ -244,7 +244,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the deviceName property value. The user media agent name, such as Cisco SX80.
-     *  @param string|null $value Value to set for the deviceName property.
+     * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
         $this->getBackingStore()->set('deviceName', $value);
@@ -252,7 +252,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the mediaLegId property value. A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     *  @param string|null $value Value to set for the mediaLegId property.
+     * @param string|null $value Value to set for the mediaLegId property.
     */
     public function setMediaLegId(?string $value): void {
         $this->getBackingStore()->set('mediaLegId', $value);
@@ -260,7 +260,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the mediaQualityList property value. The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.
-     *  @param array<TeleconferenceDeviceMediaQuality>|null $value Value to set for the mediaQualityList property.
+     * @param array<TeleconferenceDeviceMediaQuality>|null $value Value to set for the mediaQualityList property.
     */
     public function setMediaQualityList(?array $value): void {
         $this->getBackingStore()->set('mediaQualityList', $value);
@@ -268,7 +268,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -276,7 +276,7 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the participantId property value. A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
-     *  @param string|null $value Value to set for the participantId property.
+     * @param string|null $value Value to set for the participantId property.
     */
     public function setParticipantId(?string $value): void {
         $this->getBackingStore()->set('participantId', $value);

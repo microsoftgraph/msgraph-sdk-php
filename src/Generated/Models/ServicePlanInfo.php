@@ -120,7 +120,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the appliesTo property value. The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
-     *  @param string|null $value Value to set for the appliesTo property.
+     * @param string|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?string $value): void {
         $this->getBackingStore()->set('appliesTo', $value);
@@ -136,7 +136,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +144,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the provisioningStatus property value. The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.
-     *  @param string|null $value Value to set for the provisioningStatus property.
+     * @param string|null $value Value to set for the provisioningStatus property.
     */
     public function setProvisioningStatus(?string $value): void {
         $this->getBackingStore()->set('provisioningStatus', $value);
@@ -160,7 +160,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the servicePlanId property value. The unique identifier of the service plan.
-     *  @param string|null $value Value to set for the servicePlanId property.
+     * @param string|null $value Value to set for the servicePlanId property.
     */
     public function setServicePlanId(?string $value): void {
         $this->getBackingStore()->set('servicePlanId', $value);
@@ -168,7 +168,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the servicePlanName property value. The name of the service plan.
-     *  @param string|null $value Value to set for the servicePlanName property.
+     * @param string|null $value Value to set for the servicePlanName property.
     */
     public function setServicePlanName(?string $value): void {
         $this->getBackingStore()->set('servicePlanName', $value);

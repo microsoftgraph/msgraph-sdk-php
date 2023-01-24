@@ -110,7 +110,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the calendarEventId property value. The identifier of the calendar event associated with the meeting.
-     *  @param string|null $value Value to set for the calendarEventId property.
+     * @param string|null $value Value to set for the calendarEventId property.
     */
     public function setCalendarEventId(?string $value): void {
         $this->getBackingStore()->set('calendarEventId', $value);
@@ -134,7 +134,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the joinWebUrl property value. The URL that users click to join or uniquely identify the meeting.
-     *  @param string|null $value Value to set for the joinWebUrl property.
+     * @param string|null $value Value to set for the joinWebUrl property.
     */
     public function setJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('joinWebUrl', $value);
@@ -142,7 +142,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class TeamworkOnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the organizer property value. The organizer of the meeting.
-     *  @param TeamworkUserIdentity|null $value Value to set for the organizer property.
+     * @param TeamworkUserIdentity|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?TeamworkUserIdentity $value): void {
         $this->getBackingStore()->set('organizer', $value);

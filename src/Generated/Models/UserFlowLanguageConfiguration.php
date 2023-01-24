@@ -84,7 +84,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
 
     /**
      * Sets the defaultPages property value. Collection of pages with the default content to display in a user flow for a specified language. This collection does not allow any kind of modification.
-     *  @param array<UserFlowLanguagePage>|null $value Value to set for the defaultPages property.
+     * @param array<UserFlowLanguagePage>|null $value Value to set for the defaultPages property.
     */
     public function setDefaultPages(?array $value): void {
         $this->getBackingStore()->set('defaultPages', $value);
@@ -92,7 +92,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The language name to display. This property is read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -100,7 +100,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. Indicates whether the language is enabled within the user flow.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -108,7 +108,7 @@ class UserFlowLanguageConfiguration extends Entity implements Parsable
 
     /**
      * Sets the overridesPages property value. Collection of pages with the overrides messages to display in a user flow for a specified language. This collection only allows to modify the content of the page, any other modification is not allowed (creation or deletion of pages).
-     *  @param array<UserFlowLanguagePage>|null $value Value to set for the overridesPages property.
+     * @param array<UserFlowLanguagePage>|null $value Value to set for the overridesPages property.
     */
     public function setOverridesPages(?array $value): void {
         $this->getBackingStore()->set('overridesPages', $value);

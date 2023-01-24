@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Invitations\Item\InvitedUser;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user created as part of the invitation creation. Read-Only
+*/
 class InvitedUserRequestBuilderGetQueryParameters 
 {
     /**

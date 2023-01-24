@@ -95,7 +95,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
 
     /**
      * Sets the licenseType property value. The licenseType property
-     *  @param MicrosoftStoreForBusinessLicenseType|null $value Value to set for the licenseType property.
+     * @param MicrosoftStoreForBusinessLicenseType|null $value Value to set for the licenseType property.
     */
     public function setLicenseType(?MicrosoftStoreForBusinessLicenseType $value): void {
         $this->getBackingStore()->set('licenseType', $value);
@@ -103,7 +103,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
 
     /**
      * Sets the packageIdentityName property value. The app package identifier
-     *  @param string|null $value Value to set for the packageIdentityName property.
+     * @param string|null $value Value to set for the packageIdentityName property.
     */
     public function setPackageIdentityName(?string $value): void {
         $this->getBackingStore()->set('packageIdentityName', $value);
@@ -111,7 +111,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
 
     /**
      * Sets the productKey property value. The app product key
-     *  @param string|null $value Value to set for the productKey property.
+     * @param string|null $value Value to set for the productKey property.
     */
     public function setProductKey(?string $value): void {
         $this->getBackingStore()->set('productKey', $value);
@@ -119,7 +119,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
 
     /**
      * Sets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
-     *  @param int|null $value Value to set for the totalLicenseCount property.
+     * @param int|null $value Value to set for the totalLicenseCount property.
     */
     public function setTotalLicenseCount(?int $value): void {
         $this->getBackingStore()->set('totalLicenseCount', $value);
@@ -127,7 +127,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
 
     /**
      * Sets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
-     *  @param int|null $value Value to set for the usedLicenseCount property.
+     * @param int|null $value Value to set for the usedLicenseCount property.
     */
     public function setUsedLicenseCount(?int $value): void {
         $this->getBackingStore()->set('usedLicenseCount', $value);

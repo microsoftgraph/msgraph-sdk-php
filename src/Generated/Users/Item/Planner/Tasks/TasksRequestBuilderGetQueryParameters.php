@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Planner\Tasks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of **plannertask** objects assigned to a User.
+*/
 class TasksRequestBuilderGetQueryParameters 
 {
     /**

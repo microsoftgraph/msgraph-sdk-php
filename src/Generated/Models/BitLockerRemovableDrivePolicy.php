@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * BitLocker Removable Drive Policies.
+*/
 class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +129,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the blockCrossOrganizationWriteAccess property value. This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-     *  @param bool|null $value Value to set for the blockCrossOrganizationWriteAccess property.
+     * @param bool|null $value Value to set for the blockCrossOrganizationWriteAccess property.
     */
     public function setBlockCrossOrganizationWriteAccess(?bool $value): void {
         $this->getBackingStore()->set('blockCrossOrganizationWriteAccess', $value);
@@ -134,7 +137,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     *  @param BitLockerEncryptionMethod|null $value Value to set for the encryptionMethod property.
+     * @param BitLockerEncryptionMethod|null $value Value to set for the encryptionMethod property.
     */
     public function setEncryptionMethod(?BitLockerEncryptionMethod $value): void {
         $this->getBackingStore()->set('encryptionMethod', $value);
@@ -142,7 +145,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +153,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the requireEncryptionForWriteAccess property value. Indicates whether to block write access to devices configured in another organization.  If requireEncryptionForWriteAccess is false, this value does not affect.
-     *  @param bool|null $value Value to set for the requireEncryptionForWriteAccess property.
+     * @param bool|null $value Value to set for the requireEncryptionForWriteAccess property.
     */
     public function setRequireEncryptionForWriteAccess(?bool $value): void {
         $this->getBackingStore()->set('requireEncryptionForWriteAccess', $value);

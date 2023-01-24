@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Localizations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from localizations by key (id)
+*/
 class OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters 
 {
     /**

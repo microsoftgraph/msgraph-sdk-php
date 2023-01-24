@@ -75,7 +75,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
 
     /**
      * Sets the createdDateTimeUtc property value. DateTime when the entity is created.
-     *  @param DateTime|null $value Value to set for the createdDateTimeUtc property.
+     * @param DateTime|null $value Value to set for the createdDateTimeUtc property.
     */
     public function setCreatedDateTimeUtc(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTimeUtc', $value);
@@ -83,7 +83,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
 
     /**
      * Sets the deviceIdentities property value. Collection of all Autopilot devices as a part of this upload.
-     *  @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the deviceIdentities property.
+     * @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the deviceIdentities property.
     */
     public function setDeviceIdentities(?array $value): void {
         $this->getBackingStore()->set('deviceIdentities', $value);
@@ -91,7 +91,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
 
     /**
      * Sets the status property value. The status property
-     *  @param ImportedWindowsAutopilotDeviceIdentityUploadStatus|null $value Value to set for the status property.
+     * @param ImportedWindowsAutopilotDeviceIdentityUploadStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ImportedWindowsAutopilotDeviceIdentityUploadStatus $value): void {
         $this->getBackingStore()->set('status', $value);

@@ -95,7 +95,7 @@ class Endpoint extends DirectoryObject implements Parsable
 
     /**
      * Sets the capability property value. The capability property
-     *  @param string|null $value Value to set for the capability property.
+     * @param string|null $value Value to set for the capability property.
     */
     public function setCapability(?string $value): void {
         $this->getBackingStore()->set('capability', $value);
@@ -103,7 +103,7 @@ class Endpoint extends DirectoryObject implements Parsable
 
     /**
      * Sets the providerId property value. The providerId property
-     *  @param string|null $value Value to set for the providerId property.
+     * @param string|null $value Value to set for the providerId property.
     */
     public function setProviderId(?string $value): void {
         $this->getBackingStore()->set('providerId', $value);
@@ -111,7 +111,7 @@ class Endpoint extends DirectoryObject implements Parsable
 
     /**
      * Sets the providerName property value. The providerName property
-     *  @param string|null $value Value to set for the providerName property.
+     * @param string|null $value Value to set for the providerName property.
     */
     public function setProviderName(?string $value): void {
         $this->getBackingStore()->set('providerName', $value);
@@ -119,7 +119,7 @@ class Endpoint extends DirectoryObject implements Parsable
 
     /**
      * Sets the providerResourceId property value. The providerResourceId property
-     *  @param string|null $value Value to set for the providerResourceId property.
+     * @param string|null $value Value to set for the providerResourceId property.
     */
     public function setProviderResourceId(?string $value): void {
         $this->getBackingStore()->set('providerResourceId', $value);
@@ -127,7 +127,7 @@ class Endpoint extends DirectoryObject implements Parsable
 
     /**
      * Sets the uri property value. The uri property
-     *  @param string|null $value Value to set for the uri property.
+     * @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value): void {
         $this->getBackingStore()->set('uri', $value);

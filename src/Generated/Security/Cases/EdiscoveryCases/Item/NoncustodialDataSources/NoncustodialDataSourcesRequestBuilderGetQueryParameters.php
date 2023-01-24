@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Noncusto
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
+*/
 class NoncustodialDataSourcesRequestBuilderGetQueryParameters 
 {
     /**

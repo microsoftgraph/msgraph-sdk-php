@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\Group;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get group from teams
+*/
 class GroupRequestBuilderGetQueryParameters 
 {
     /**

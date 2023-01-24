@@ -64,7 +64,7 @@ class PlannerPlanDetails extends Entity implements Parsable
 
     /**
      * Sets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
-     *  @param PlannerCategoryDescriptions|null $value Value to set for the categoryDescriptions property.
+     * @param PlannerCategoryDescriptions|null $value Value to set for the categoryDescriptions property.
     */
     public function setCategoryDescriptions(?PlannerCategoryDescriptions $value): void {
         $this->getBackingStore()->set('categoryDescriptions', $value);
@@ -72,7 +72,7 @@ class PlannerPlanDetails extends Entity implements Parsable
 
     /**
      * Sets the sharedWith property value. Set of user IDs that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required for them to access the plan owned by the group.
-     *  @param PlannerUserIds|null $value Value to set for the sharedWith property.
+     * @param PlannerUserIds|null $value Value to set for the sharedWith property.
     */
     public function setSharedWith(?PlannerUserIds $value): void {
         $this->getBackingStore()->set('sharedWith', $value);

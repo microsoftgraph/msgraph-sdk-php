@@ -311,7 +311,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -319,7 +319,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -327,7 +327,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     *  @param PstnCallDurationSource|null $value Value to set for the callDurationSource property.
+     * @param PstnCallDurationSource|null $value Value to set for the callDurationSource property.
     */
     public function setCallDurationSource(?PstnCallDurationSource $value): void {
         $this->getBackingStore()->set('callDurationSource', $value);
@@ -335,7 +335,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the calleeNumber property value. Number dialed in E.164 format.
-     *  @param string|null $value Value to set for the calleeNumber property.
+     * @param string|null $value Value to set for the calleeNumber property.
     */
     public function setCalleeNumber(?string $value): void {
         $this->getBackingStore()->set('calleeNumber', $value);
@@ -343,7 +343,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callerNumber property value. Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
-     *  @param string|null $value Value to set for the callerNumber property.
+     * @param string|null $value Value to set for the callerNumber property.
     */
     public function setCallerNumber(?string $value): void {
         $this->getBackingStore()->set('callerNumber', $value);
@@ -351,7 +351,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callId property value. Call identifier. Not guaranteed to be unique.
-     *  @param string|null $value Value to set for the callId property.
+     * @param string|null $value Value to set for the callId property.
     */
     public function setCallId(?string $value): void {
         $this->getBackingStore()->set('callId', $value);
@@ -359,7 +359,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callType property value. Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
-     *  @param string|null $value Value to set for the callType property.
+     * @param string|null $value Value to set for the callType property.
     */
     public function setCallType(?string $value): void {
         $this->getBackingStore()->set('callType', $value);
@@ -367,7 +367,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the charge property value. Amount of money or cost of the call that is charged to your account.
-     *  @param string|null $value Value to set for the charge property.
+     * @param string|null $value Value to set for the charge property.
     */
     public function setCharge(?string $value): void {
         $this->getBackingStore()->set('charge', $value);
@@ -375,7 +375,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the conferenceId property value. ID of the audio conference.
-     *  @param string|null $value Value to set for the conferenceId property.
+     * @param string|null $value Value to set for the conferenceId property.
     */
     public function setConferenceId(?string $value): void {
         $this->getBackingStore()->set('conferenceId', $value);
@@ -383,7 +383,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the connectionCharge property value. Connection fee price.
-     *  @param string|null $value Value to set for the connectionCharge property.
+     * @param string|null $value Value to set for the connectionCharge property.
     */
     public function setConnectionCharge(?string $value): void {
         $this->getBackingStore()->set('connectionCharge', $value);
@@ -391,7 +391,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the currency property value. Type of currency used to calculate the cost of the call (ISO 4217).
-     *  @param string|null $value Value to set for the currency property.
+     * @param string|null $value Value to set for the currency property.
     */
     public function setCurrency(?string $value): void {
         $this->getBackingStore()->set('currency', $value);
@@ -399,7 +399,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the destinationContext property value. Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
-     *  @param string|null $value Value to set for the destinationContext property.
+     * @param string|null $value Value to set for the destinationContext property.
     */
     public function setDestinationContext(?string $value): void {
         $this->getBackingStore()->set('destinationContext', $value);
@@ -407,7 +407,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the destinationName property value. Country or region dialed.
-     *  @param string|null $value Value to set for the destinationName property.
+     * @param string|null $value Value to set for the destinationName property.
     */
     public function setDestinationName(?string $value): void {
         $this->getBackingStore()->set('destinationName', $value);
@@ -415,7 +415,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the duration property value. How long the call was connected, in seconds.
-     *  @param int|null $value Value to set for the duration property.
+     * @param int|null $value Value to set for the duration property.
     */
     public function setDuration(?int $value): void {
         $this->getBackingStore()->set('duration', $value);
@@ -423,7 +423,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endDateTime property value. Call end time.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -431,7 +431,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Unique call identifier. GUID.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -439,7 +439,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
-     *  @param string|null $value Value to set for the inventoryType property.
+     * @param string|null $value Value to set for the inventoryType property.
     */
     public function setInventoryType(?string $value): void {
         $this->getBackingStore()->set('inventoryType', $value);
@@ -447,7 +447,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the licenseCapability property value. The license used for the call.
-     *  @param string|null $value Value to set for the licenseCapability property.
+     * @param string|null $value Value to set for the licenseCapability property.
     */
     public function setLicenseCapability(?string $value): void {
         $this->getBackingStore()->set('licenseCapability', $value);
@@ -455,7 +455,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -463,7 +463,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
-     *  @param string|null $value Value to set for the operator property.
+     * @param string|null $value Value to set for the operator property.
     */
     public function setOperator(?string $value): void {
         $this->getBackingStore()->set('operator', $value);
@@ -471,7 +471,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDateTime property value. Call start time.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -479,7 +479,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tenantCountryCode property value. Country code of the tenant, ISO 3166-1 alpha-2.
-     *  @param string|null $value Value to set for the tenantCountryCode property.
+     * @param string|null $value Value to set for the tenantCountryCode property.
     */
     public function setTenantCountryCode(?string $value): void {
         $this->getBackingStore()->set('tenantCountryCode', $value);
@@ -487,7 +487,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the usageCountryCode property value. Country code of the user, ISO 3166-1 alpha-2.
-     *  @param string|null $value Value to set for the usageCountryCode property.
+     * @param string|null $value Value to set for the usageCountryCode property.
     */
     public function setUsageCountryCode(?string $value): void {
         $this->getBackingStore()->set('usageCountryCode', $value);
@@ -495,7 +495,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userDisplayName property value. Display name of the user.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -503,7 +503,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userId property value. Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -511,7 +511,7 @@ class PstnCallLogRow implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

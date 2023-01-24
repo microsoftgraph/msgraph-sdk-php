@@ -100,7 +100,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the resourceAccess property value. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
-     *  @param array<ResourceAccess>|null $value Value to set for the resourceAccess property.
+     * @param array<ResourceAccess>|null $value Value to set for the resourceAccess property.
     */
     public function setResourceAccess(?array $value): void {
         $this->getBackingStore()->set('resourceAccess', $value);
@@ -132,7 +132,7 @@ class RequiredResourceAccess implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the resourceAppId property value. The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
-     *  @param string|null $value Value to set for the resourceAppId property.
+     * @param string|null $value Value to set for the resourceAppId property.
     */
     public function setResourceAppId(?string $value): void {
         $this->getBackingStore()->set('resourceAppId', $value);

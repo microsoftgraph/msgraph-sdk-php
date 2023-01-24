@@ -65,7 +65,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
 
     /**
      * Sets the target property value. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
-     *  @param UnifiedRoleManagementPolicyRuleTarget|null $value Value to set for the target property.
+     * @param UnifiedRoleManagementPolicyRuleTarget|null $value Value to set for the target property.
     */
     public function setTarget(?UnifiedRoleManagementPolicyRuleTarget $value): void {
         $this->getBackingStore()->set('target', $value);

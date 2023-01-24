@@ -75,7 +75,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
 
     /**
      * Sets the description property value. Description of the template.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -83,7 +83,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -91,7 +91,7 @@ class GroupSettingTemplate extends DirectoryObject implements Parsable
 
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
-     *  @param array<SettingTemplateValue>|null $value Value to set for the values property.
+     * @param array<SettingTemplateValue>|null $value Value to set for the values property.
     */
     public function setValues(?array $value): void {
         $this->getBackingStore()->set('values', $value);

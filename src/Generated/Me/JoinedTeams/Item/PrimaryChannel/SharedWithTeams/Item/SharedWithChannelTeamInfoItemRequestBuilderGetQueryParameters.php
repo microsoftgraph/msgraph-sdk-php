@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\SharedWit
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of teams with which a channel is shared.
+*/
 class SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters 
 {
     /**

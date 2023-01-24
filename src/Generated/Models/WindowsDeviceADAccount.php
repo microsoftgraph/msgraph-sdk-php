@@ -65,7 +65,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
 
     /**
      * Sets the domainName property value. Not yet documented
-     *  @param string|null $value Value to set for the domainName property.
+     * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
         $this->getBackingStore()->set('domainName', $value);
@@ -73,7 +73,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
 
     /**
      * Sets the userName property value. Not yet documented
-     *  @param string|null $value Value to set for the userName property.
+     * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {
         $this->getBackingStore()->set('userName', $value);

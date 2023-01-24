@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Messages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The messages in a mailbox or folder. Read-only. Nullable.
+*/
 class MessageItemRequestBuilderGetQueryParameters 
 {
     /**

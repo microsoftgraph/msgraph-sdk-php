@@ -75,7 +75,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -83,7 +83,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
 
     /**
      * Sets the message property value. The result message for each threat assessment.
-     *  @param string|null $value Value to set for the message property.
+     * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -91,7 +91,7 @@ class ThreatAssessmentResult extends Entity implements Parsable
 
     /**
      * Sets the resultType property value. The threat assessment result type. Possible values are: checkPolicy, rescan.
-     *  @param ThreatAssessmentResultType|null $value Value to set for the resultType property.
+     * @param ThreatAssessmentResultType|null $value Value to set for the resultType property.
     */
     public function setResultType(?ThreatAssessmentResultType $value): void {
         $this->getBackingStore()->set('resultType', $value);

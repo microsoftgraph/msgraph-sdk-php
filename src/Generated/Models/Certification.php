@@ -129,7 +129,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -137,7 +137,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -145,7 +145,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the certificationDetailsUrl property value. URL that shows certification details for the application.
-     *  @param string|null $value Value to set for the certificationDetailsUrl property.
+     * @param string|null $value Value to set for the certificationDetailsUrl property.
     */
     public function setCertificationDetailsUrl(?string $value): void {
         $this->getBackingStore()->set('certificationDetailsUrl', $value);
@@ -153,7 +153,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
-     *  @param DateTime|null $value Value to set for the certificationExpirationDateTime property.
+     * @param DateTime|null $value Value to set for the certificationExpirationDateTime property.
     */
     public function setCertificationExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('certificationExpirationDateTime', $value);
@@ -161,7 +161,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
-     *  @param bool|null $value Value to set for the isCertifiedByMicrosoft property.
+     * @param bool|null $value Value to set for the isCertifiedByMicrosoft property.
     */
     public function setIsCertifiedByMicrosoft(?bool $value): void {
         $this->getBackingStore()->set('isCertifiedByMicrosoft', $value);
@@ -169,7 +169,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
-     *  @param bool|null $value Value to set for the isPublisherAttested property.
+     * @param bool|null $value Value to set for the isPublisherAttested property.
     */
     public function setIsPublisherAttested(?bool $value): void {
         $this->getBackingStore()->set('isPublisherAttested', $value);
@@ -177,7 +177,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
-     *  @param DateTime|null $value Value to set for the lastCertificationDateTime property.
+     * @param DateTime|null $value Value to set for the lastCertificationDateTime property.
     */
     public function setLastCertificationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastCertificationDateTime', $value);
@@ -185,7 +185,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

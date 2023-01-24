@@ -101,7 +101,7 @@ class TimeRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class TimeRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class TimeRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endTime property value. End time for the time range.
-     *  @param Time|null $value Value to set for the endTime property.
+     * @param Time|null $value Value to set for the endTime property.
     */
     public function setEndTime(?Time $value): void {
         $this->getBackingStore()->set('endTime', $value);
@@ -125,7 +125,7 @@ class TimeRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -133,7 +133,7 @@ class TimeRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startTime property value. Start time for the time range.
-     *  @param Time|null $value Value to set for the startTime property.
+     * @param Time|null $value Value to set for the startTime property.
     */
     public function setStartTime(?Time $value): void {
         $this->getBackingStore()->set('startTime', $value);

@@ -525,7 +525,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsBlockClipboardSharing property value. Indicates whether or not to block clipboard sharing to copy and paste between applications.
-     *  @param bool|null $value Value to set for the appsBlockClipboardSharing property.
+     * @param bool|null $value Value to set for the appsBlockClipboardSharing property.
     */
     public function setAppsBlockClipboardSharing(?bool $value): void {
         $this->getBackingStore()->set('appsBlockClipboardSharing', $value);
@@ -533,7 +533,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsBlockCopyPaste property value. Indicates whether or not to block copy and paste within applications.
-     *  @param bool|null $value Value to set for the appsBlockCopyPaste property.
+     * @param bool|null $value Value to set for the appsBlockCopyPaste property.
     */
     public function setAppsBlockCopyPaste(?bool $value): void {
         $this->getBackingStore()->set('appsBlockCopyPaste', $value);
@@ -541,7 +541,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsBlockYouTube property value. Indicates whether or not to block the YouTube app.
-     *  @param bool|null $value Value to set for the appsBlockYouTube property.
+     * @param bool|null $value Value to set for the appsBlockYouTube property.
     */
     public function setAppsBlockYouTube(?bool $value): void {
         $this->getBackingStore()->set('appsBlockYouTube', $value);
@@ -549,7 +549,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsHideList property value. List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the appsHideList property.
+     * @param array<AppListItem>|null $value Value to set for the appsHideList property.
     */
     public function setAppsHideList(?array $value): void {
         $this->getBackingStore()->set('appsHideList', $value);
@@ -557,7 +557,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsInstallAllowList property value. List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the appsInstallAllowList property.
+     * @param array<AppListItem>|null $value Value to set for the appsInstallAllowList property.
     */
     public function setAppsInstallAllowList(?array $value): void {
         $this->getBackingStore()->set('appsInstallAllowList', $value);
@@ -565,7 +565,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the appsLaunchBlockList property value. List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the appsLaunchBlockList property.
+     * @param array<AppListItem>|null $value Value to set for the appsLaunchBlockList property.
     */
     public function setAppsLaunchBlockList(?array $value): void {
         $this->getBackingStore()->set('appsLaunchBlockList', $value);
@@ -573,7 +573,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to block Bluetooth.
-     *  @param bool|null $value Value to set for the bluetoothBlocked property.
+     * @param bool|null $value Value to set for the bluetoothBlocked property.
     */
     public function setBluetoothBlocked(?bool $value): void {
         $this->getBackingStore()->set('bluetoothBlocked', $value);
@@ -581,7 +581,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the use of the camera.
-     *  @param bool|null $value Value to set for the cameraBlocked property.
+     * @param bool|null $value Value to set for the cameraBlocked property.
     */
     public function setCameraBlocked(?bool $value): void {
         $this->getBackingStore()->set('cameraBlocked', $value);
@@ -589,7 +589,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     *  @param bool|null $value Value to set for the cellularBlockDataRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockDataRoaming property.
     */
     public function setCellularBlockDataRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockDataRoaming', $value);
@@ -597,7 +597,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the cellularBlockMessaging property value. Indicates whether or not to block SMS/MMS messaging.
-     *  @param bool|null $value Value to set for the cellularBlockMessaging property.
+     * @param bool|null $value Value to set for the cellularBlockMessaging property.
     */
     public function setCellularBlockMessaging(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockMessaging', $value);
@@ -605,7 +605,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
-     *  @param bool|null $value Value to set for the cellularBlockVoiceRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockVoiceRoaming property.
     */
     public function setCellularBlockVoiceRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockVoiceRoaming', $value);
@@ -613,7 +613,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the cellularBlockWiFiTethering property value. Indicates whether or not to block syncing Wi-Fi tethering.
-     *  @param bool|null $value Value to set for the cellularBlockWiFiTethering property.
+     * @param bool|null $value Value to set for the cellularBlockWiFiTethering property.
     */
     public function setCellularBlockWiFiTethering(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockWiFiTethering', $value);
@@ -621,7 +621,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
-     *  @param AppListType|null $value Value to set for the compliantAppListType property.
+     * @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value): void {
         $this->getBackingStore()->set('compliantAppListType', $value);
@@ -629,7 +629,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
+     * @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
     public function setCompliantAppsList(?array $value): void {
         $this->getBackingStore()->set('compliantAppsList', $value);
@@ -637,7 +637,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the deviceSharingAllowed property value. Indicates whether or not to allow device sharing mode.
-     *  @param bool|null $value Value to set for the deviceSharingAllowed property.
+     * @param bool|null $value Value to set for the deviceSharingAllowed property.
     */
     public function setDeviceSharingAllowed(?bool $value): void {
         $this->getBackingStore()->set('deviceSharingAllowed', $value);
@@ -645,7 +645,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     *  @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
+     * @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
     */
     public function setDiagnosticDataBlockSubmission(?bool $value): void {
         $this->getBackingStore()->set('diagnosticDataBlockSubmission', $value);
@@ -653,7 +653,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the factoryResetBlocked property value. Indicates whether or not to block user performing a factory reset.
-     *  @param bool|null $value Value to set for the factoryResetBlocked property.
+     * @param bool|null $value Value to set for the factoryResetBlocked property.
     */
     public function setFactoryResetBlocked(?bool $value): void {
         $this->getBackingStore()->set('factoryResetBlocked', $value);
@@ -661,7 +661,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the googleAccountBlockAutoSync property value. Indicates whether or not to block Google account auto sync.
-     *  @param bool|null $value Value to set for the googleAccountBlockAutoSync property.
+     * @param bool|null $value Value to set for the googleAccountBlockAutoSync property.
     */
     public function setGoogleAccountBlockAutoSync(?bool $value): void {
         $this->getBackingStore()->set('googleAccountBlockAutoSync', $value);
@@ -669,7 +669,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the googlePlayStoreBlocked property value. Indicates whether or not to block the Google Play store.
-     *  @param bool|null $value Value to set for the googlePlayStoreBlocked property.
+     * @param bool|null $value Value to set for the googlePlayStoreBlocked property.
     */
     public function setGooglePlayStoreBlocked(?bool $value): void {
         $this->getBackingStore()->set('googlePlayStoreBlocked', $value);
@@ -677,7 +677,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the kioskModeApps property value. A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the kioskModeApps property.
+     * @param array<AppListItem>|null $value Value to set for the kioskModeApps property.
     */
     public function setKioskModeApps(?array $value): void {
         $this->getBackingStore()->set('kioskModeApps', $value);
@@ -685,7 +685,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the kioskModeBlockSleepButton property value. Indicates whether or not to block the screen sleep button while in Kiosk Mode.
-     *  @param bool|null $value Value to set for the kioskModeBlockSleepButton property.
+     * @param bool|null $value Value to set for the kioskModeBlockSleepButton property.
     */
     public function setKioskModeBlockSleepButton(?bool $value): void {
         $this->getBackingStore()->set('kioskModeBlockSleepButton', $value);
@@ -693,7 +693,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
-     *  @param bool|null $value Value to set for the kioskModeBlockVolumeButtons property.
+     * @param bool|null $value Value to set for the kioskModeBlockVolumeButtons property.
     */
     public function setKioskModeBlockVolumeButtons(?bool $value): void {
         $this->getBackingStore()->set('kioskModeBlockVolumeButtons', $value);
@@ -701,7 +701,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to block location services.
-     *  @param bool|null $value Value to set for the locationServicesBlocked property.
+     * @param bool|null $value Value to set for the locationServicesBlocked property.
     */
     public function setLocationServicesBlocked(?bool $value): void {
         $this->getBackingStore()->set('locationServicesBlocked', $value);
@@ -709,7 +709,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
-     *  @param bool|null $value Value to set for the nfcBlocked property.
+     * @param bool|null $value Value to set for the nfcBlocked property.
     */
     public function setNfcBlocked(?bool $value): void {
         $this->getBackingStore()->set('nfcBlocked', $value);
@@ -717,7 +717,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     *  @param bool|null $value Value to set for the passwordBlockFingerprintUnlock property.
+     * @param bool|null $value Value to set for the passwordBlockFingerprintUnlock property.
     */
     public function setPasswordBlockFingerprintUnlock(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockFingerprintUnlock', $value);
@@ -725,7 +725,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
-     *  @param bool|null $value Value to set for the passwordBlockTrustAgents property.
+     * @param bool|null $value Value to set for the passwordBlockTrustAgents property.
     */
     public function setPasswordBlockTrustAgents(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockTrustAgents', $value);
@@ -733,7 +733,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -741,7 +741,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -749,7 +749,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
     public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
@@ -757,7 +757,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -765,7 +765,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require a password.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -773,7 +773,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordRequiredType property value. Android required password type.
-     *  @param AndroidRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param AndroidRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?AndroidRequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -781,7 +781,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
-     *  @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
+     * @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
     */
     public function setPasswordSignInFailureCountBeforeFactoryReset(?int $value): void {
         $this->getBackingStore()->set('passwordSignInFailureCountBeforeFactoryReset', $value);
@@ -789,7 +789,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the powerOffBlocked property value. Indicates whether or not to block powering off the device.
-     *  @param bool|null $value Value to set for the powerOffBlocked property.
+     * @param bool|null $value Value to set for the powerOffBlocked property.
     */
     public function setPowerOffBlocked(?bool $value): void {
         $this->getBackingStore()->set('powerOffBlocked', $value);
@@ -797,7 +797,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
-     *  @param bool|null $value Value to set for the screenCaptureBlocked property.
+     * @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
     public function setScreenCaptureBlocked(?bool $value): void {
         $this->getBackingStore()->set('screenCaptureBlocked', $value);
@@ -805,7 +805,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     *  @param bool|null $value Value to set for the securityRequireVerifyApps property.
+     * @param bool|null $value Value to set for the securityRequireVerifyApps property.
     */
     public function setSecurityRequireVerifyApps(?bool $value): void {
         $this->getBackingStore()->set('securityRequireVerifyApps', $value);
@@ -813,7 +813,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the storageBlockGoogleBackup property value. Indicates whether or not to block Google Backup.
-     *  @param bool|null $value Value to set for the storageBlockGoogleBackup property.
+     * @param bool|null $value Value to set for the storageBlockGoogleBackup property.
     */
     public function setStorageBlockGoogleBackup(?bool $value): void {
         $this->getBackingStore()->set('storageBlockGoogleBackup', $value);
@@ -821,7 +821,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage usage.
-     *  @param bool|null $value Value to set for the storageBlockRemovableStorage property.
+     * @param bool|null $value Value to set for the storageBlockRemovableStorage property.
     */
     public function setStorageBlockRemovableStorage(?bool $value): void {
         $this->getBackingStore()->set('storageBlockRemovableStorage', $value);
@@ -829,7 +829,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require device encryption.
-     *  @param bool|null $value Value to set for the storageRequireDeviceEncryption property.
+     * @param bool|null $value Value to set for the storageRequireDeviceEncryption property.
     */
     public function setStorageRequireDeviceEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireDeviceEncryption', $value);
@@ -837,7 +837,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the storageRequireRemovableStorageEncryption property value. Indicates whether or not to require removable storage encryption.
-     *  @param bool|null $value Value to set for the storageRequireRemovableStorageEncryption property.
+     * @param bool|null $value Value to set for the storageRequireRemovableStorageEncryption property.
     */
     public function setStorageRequireRemovableStorageEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireRemovableStorageEncryption', $value);
@@ -845,7 +845,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the voiceAssistantBlocked property value. Indicates whether or not to block the use of the Voice Assistant.
-     *  @param bool|null $value Value to set for the voiceAssistantBlocked property.
+     * @param bool|null $value Value to set for the voiceAssistantBlocked property.
     */
     public function setVoiceAssistantBlocked(?bool $value): void {
         $this->getBackingStore()->set('voiceAssistantBlocked', $value);
@@ -853,7 +853,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
-     *  @param bool|null $value Value to set for the voiceDialingBlocked property.
+     * @param bool|null $value Value to set for the voiceDialingBlocked property.
     */
     public function setVoiceDialingBlocked(?bool $value): void {
         $this->getBackingStore()->set('voiceDialingBlocked', $value);
@@ -861,7 +861,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
-     *  @param bool|null $value Value to set for the webBrowserBlockAutofill property.
+     * @param bool|null $value Value to set for the webBrowserBlockAutofill property.
     */
     public function setWebBrowserBlockAutofill(?bool $value): void {
         $this->getBackingStore()->set('webBrowserBlockAutofill', $value);
@@ -869,7 +869,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
-     *  @param bool|null $value Value to set for the webBrowserBlocked property.
+     * @param bool|null $value Value to set for the webBrowserBlocked property.
     */
     public function setWebBrowserBlocked(?bool $value): void {
         $this->getBackingStore()->set('webBrowserBlocked', $value);
@@ -877,7 +877,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the webBrowserBlockJavaScript property value. Indicates whether or not to block JavaScript within the web browser.
-     *  @param bool|null $value Value to set for the webBrowserBlockJavaScript property.
+     * @param bool|null $value Value to set for the webBrowserBlockJavaScript property.
     */
     public function setWebBrowserBlockJavaScript(?bool $value): void {
         $this->getBackingStore()->set('webBrowserBlockJavaScript', $value);
@@ -885,7 +885,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the webBrowserBlockPopups property value. Indicates whether or not to block popups within the web browser.
-     *  @param bool|null $value Value to set for the webBrowserBlockPopups property.
+     * @param bool|null $value Value to set for the webBrowserBlockPopups property.
     */
     public function setWebBrowserBlockPopups(?bool $value): void {
         $this->getBackingStore()->set('webBrowserBlockPopups', $value);
@@ -893,7 +893,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
-     *  @param WebBrowserCookieSettings|null $value Value to set for the webBrowserCookieSettings property.
+     * @param WebBrowserCookieSettings|null $value Value to set for the webBrowserCookieSettings property.
     */
     public function setWebBrowserCookieSettings(?WebBrowserCookieSettings $value): void {
         $this->getBackingStore()->set('webBrowserCookieSettings', $value);
@@ -901,7 +901,7 @@ class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the wiFiBlocked property value. Indicates whether or not to block syncing Wi-Fi.
-     *  @param bool|null $value Value to set for the wiFiBlocked property.
+     * @param bool|null $value Value to set for the wiFiBlocked property.
     */
     public function setWiFiBlocked(?bool $value): void {
         $this->getBackingStore()->set('wiFiBlocked', $value);

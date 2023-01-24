@@ -92,7 +92,7 @@ class Place extends Entity implements Parsable
 
     /**
      * Sets the address property value. The street address of the place.
-     *  @param PhysicalAddress|null $value Value to set for the address property.
+     * @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -100,7 +100,7 @@ class Place extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name associated with the place.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -108,7 +108,7 @@ class Place extends Entity implements Parsable
 
     /**
      * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-     *  @param OutlookGeoCoordinates|null $value Value to set for the geoCoordinates property.
+     * @param OutlookGeoCoordinates|null $value Value to set for the geoCoordinates property.
     */
     public function setGeoCoordinates(?OutlookGeoCoordinates $value): void {
         $this->getBackingStore()->set('geoCoordinates', $value);
@@ -116,7 +116,7 @@ class Place extends Entity implements Parsable
 
     /**
      * Sets the phone property value. The phone number of the place.
-     *  @param string|null $value Value to set for the phone property.
+     * @param string|null $value Value to set for the phone property.
     */
     public function setPhone(?string $value): void {
         $this->getBackingStore()->set('phone', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\S
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The to [term] of the relation. The term to which the relationship is defined.
+*/
 class ToTermRequestBuilderGetQueryParameters 
 {
     /**

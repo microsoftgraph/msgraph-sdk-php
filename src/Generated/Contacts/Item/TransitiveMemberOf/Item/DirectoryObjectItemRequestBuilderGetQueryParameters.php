@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get transitiveMemberOf from contacts
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

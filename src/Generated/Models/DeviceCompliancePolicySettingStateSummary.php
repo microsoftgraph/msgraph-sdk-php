@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Compilance Policy Setting State summary across the account.
+*/
 class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsable 
 {
     /**
@@ -154,7 +157,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices
-     *  @param int|null $value Value to set for the compliantDeviceCount property.
+     * @param int|null $value Value to set for the compliantDeviceCount property.
     */
     public function setCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('compliantDeviceCount', $value);
@@ -162,7 +165,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
-     *  @param int|null $value Value to set for the conflictDeviceCount property.
+     * @param int|null $value Value to set for the conflictDeviceCount property.
     */
     public function setConflictDeviceCount(?int $value): void {
         $this->getBackingStore()->set('conflictDeviceCount', $value);
@@ -170,7 +173,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the deviceComplianceSettingStates property value. Not yet documented
-     *  @param array<DeviceComplianceSettingState>|null $value Value to set for the deviceComplianceSettingStates property.
+     * @param array<DeviceComplianceSettingState>|null $value Value to set for the deviceComplianceSettingStates property.
     */
     public function setDeviceComplianceSettingStates(?array $value): void {
         $this->getBackingStore()->set('deviceComplianceSettingStates', $value);
@@ -178,7 +181,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the errorDeviceCount property value. Number of error devices
-     *  @param int|null $value Value to set for the errorDeviceCount property.
+     * @param int|null $value Value to set for the errorDeviceCount property.
     */
     public function setErrorDeviceCount(?int $value): void {
         $this->getBackingStore()->set('errorDeviceCount', $value);
@@ -186,7 +189,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
-     *  @param int|null $value Value to set for the nonCompliantDeviceCount property.
+     * @param int|null $value Value to set for the nonCompliantDeviceCount property.
     */
     public function setNonCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('nonCompliantDeviceCount', $value);
@@ -194,7 +197,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
-     *  @param int|null $value Value to set for the notApplicableDeviceCount property.
+     * @param int|null $value Value to set for the notApplicableDeviceCount property.
     */
     public function setNotApplicableDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notApplicableDeviceCount', $value);
@@ -202,7 +205,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the platformType property value. Supported platform types for policies.
-     *  @param PolicyPlatformType|null $value Value to set for the platformType property.
+     * @param PolicyPlatformType|null $value Value to set for the platformType property.
     */
     public function setPlatformType(?PolicyPlatformType $value): void {
         $this->getBackingStore()->set('platformType', $value);
@@ -210,7 +213,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
-     *  @param int|null $value Value to set for the remediatedDeviceCount property.
+     * @param int|null $value Value to set for the remediatedDeviceCount property.
     */
     public function setRemediatedDeviceCount(?int $value): void {
         $this->getBackingStore()->set('remediatedDeviceCount', $value);
@@ -218,7 +221,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the setting property value. The setting class name and property name.
-     *  @param string|null $value Value to set for the setting property.
+     * @param string|null $value Value to set for the setting property.
     */
     public function setSetting(?string $value): void {
         $this->getBackingStore()->set('setting', $value);
@@ -226,7 +229,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the settingName property value. Name of the setting.
-     *  @param string|null $value Value to set for the settingName property.
+     * @param string|null $value Value to set for the settingName property.
     */
     public function setSettingName(?string $value): void {
         $this->getBackingStore()->set('settingName', $value);
@@ -234,7 +237,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
 
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
-     *  @param int|null $value Value to set for the unknownDeviceCount property.
+     * @param int|null $value Value to set for the unknownDeviceCount property.
     */
     public function setUnknownDeviceCount(?int $value): void {
         $this->getBackingStore()->set('unknownDeviceCount', $value);

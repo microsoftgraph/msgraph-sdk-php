@@ -92,7 +92,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
 
     /**
      * Sets the dataType property value. The dataType property
-     *  @param IdentityUserFlowAttributeDataType|null $value Value to set for the dataType property.
+     * @param IdentityUserFlowAttributeDataType|null $value Value to set for the dataType property.
     */
     public function setDataType(?IdentityUserFlowAttributeDataType $value): void {
         $this->getBackingStore()->set('dataType', $value);
@@ -100,7 +100,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -108,7 +108,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the user flow attribute.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -116,7 +116,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
 
     /**
      * Sets the userFlowAttributeType property value. The userFlowAttributeType property
-     *  @param IdentityUserFlowAttributeType|null $value Value to set for the userFlowAttributeType property.
+     * @param IdentityUserFlowAttributeType|null $value Value to set for the userFlowAttributeType property.
     */
     public function setUserFlowAttributeType(?IdentityUserFlowAttributeType $value): void {
         $this->getBackingStore()->set('userFlowAttributeType', $value);

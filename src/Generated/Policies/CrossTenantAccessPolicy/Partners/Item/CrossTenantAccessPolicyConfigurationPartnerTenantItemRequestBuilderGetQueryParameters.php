@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Defines partner-specific configurations for external Azure Active Directory organizations.
+*/
 class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetQueryParameters 
 {
     /**

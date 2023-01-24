@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequ
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Approval decisions associated with a request.
+*/
 class ApprovalRequestBuilderGetQueryParameters 
 {
     /**

@@ -110,7 +110,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.
-     *  @param bool|null $value Value to set for the isCompliantDeviceAccepted property.
+     * @param bool|null $value Value to set for the isCompliantDeviceAccepted property.
     */
     public function setIsCompliantDeviceAccepted(?bool $value): void {
         $this->getBackingStore()->set('isCompliantDeviceAccepted', $value);
@@ -134,7 +134,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the isHybridAzureADJoinedDeviceAccepted property value. Specifies whether hybrid Azure AD joined devices from external Azure AD organizations are trusted.
-     *  @param bool|null $value Value to set for the isHybridAzureADJoinedDeviceAccepted property.
+     * @param bool|null $value Value to set for the isHybridAzureADJoinedDeviceAccepted property.
     */
     public function setIsHybridAzureADJoinedDeviceAccepted(?bool $value): void {
         $this->getBackingStore()->set('isHybridAzureADJoinedDeviceAccepted', $value);
@@ -142,7 +142,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the isMfaAccepted property value. Specifies whether MFA from external Azure AD organizations is trusted.
-     *  @param bool|null $value Value to set for the isMfaAccepted property.
+     * @param bool|null $value Value to set for the isMfaAccepted property.
     */
     public function setIsMfaAccepted(?bool $value): void {
         $this->getBackingStore()->set('isMfaAccepted', $value);
@@ -150,7 +150,7 @@ class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder, Backe
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

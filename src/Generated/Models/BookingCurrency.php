@@ -54,7 +54,7 @@ class BookingCurrency extends Entity implements Parsable
 
     /**
      * Sets the symbol property value. The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
-     *  @param string|null $value Value to set for the symbol property.
+     * @param string|null $value Value to set for the symbol property.
     */
     public function setSymbol(?string $value): void {
         $this->getBackingStore()->set('symbol', $value);

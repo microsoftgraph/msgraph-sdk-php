@@ -271,7 +271,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -279,7 +279,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -287,7 +287,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdBy property value. Identity of the user, device, and application which created the item. Read-only.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -295,7 +295,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of item creation. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -303,7 +303,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the file property value. Indicates that the remote item is a file. Read-only.
-     *  @param File|null $value Value to set for the file property.
+     * @param File|null $value Value to set for the file property.
     */
     public function setFile(?File $value): void {
         $this->getBackingStore()->set('file', $value);
@@ -311,7 +311,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileSystemInfo property value. Information about the remote item from the local file system. Read-only.
-     *  @param FileSystemInfo|null $value Value to set for the fileSystemInfo property.
+     * @param FileSystemInfo|null $value Value to set for the fileSystemInfo property.
     */
     public function setFileSystemInfo(?FileSystemInfo $value): void {
         $this->getBackingStore()->set('fileSystemInfo', $value);
@@ -319,7 +319,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the folder property value. Indicates that the remote item is a folder. Read-only.
-     *  @param Folder|null $value Value to set for the folder property.
+     * @param Folder|null $value Value to set for the folder property.
     */
     public function setFolder(?Folder $value): void {
         $this->getBackingStore()->set('folder', $value);
@@ -327,7 +327,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Unique identifier for the remote item in its drive. Read-only.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -335,7 +335,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the image property value. Image metadata, if the item is an image. Read-only.
-     *  @param Image|null $value Value to set for the image property.
+     * @param Image|null $value Value to set for the image property.
     */
     public function setImage(?Image $value): void {
         $this->getBackingStore()->set('image', $value);
@@ -343,7 +343,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -351,7 +351,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -359,7 +359,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. Optional. Filename of the remote item. Read-only.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -367,7 +367,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -375,7 +375,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the package property value. If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
-     *  @param Package|null $value Value to set for the package property.
+     * @param Package|null $value Value to set for the package property.
     */
     public function setPackage(?Package $value): void {
         $this->getBackingStore()->set('package', $value);
@@ -383,7 +383,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the parentReference property value. Properties of the parent of the remote item. Read-only.
-     *  @param ItemReference|null $value Value to set for the parentReference property.
+     * @param ItemReference|null $value Value to set for the parentReference property.
     */
     public function setParentReference(?ItemReference $value): void {
         $this->getBackingStore()->set('parentReference', $value);
@@ -391,7 +391,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the shared property value. Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
-     *  @param Shared|null $value Value to set for the shared property.
+     * @param Shared|null $value Value to set for the shared property.
     */
     public function setShared(?Shared $value): void {
         $this->getBackingStore()->set('shared', $value);
@@ -399,7 +399,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sharepointIds property value. Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
-     *  @param SharepointIds|null $value Value to set for the sharepointIds property.
+     * @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
     public function setSharepointIds(?SharepointIds $value): void {
         $this->getBackingStore()->set('sharepointIds', $value);
@@ -407,7 +407,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the size property value. Size of the remote item. Read-only.
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);
@@ -415,7 +415,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the specialFolder property value. If the current item is also available as a special folder, this facet is returned. Read-only.
-     *  @param SpecialFolder|null $value Value to set for the specialFolder property.
+     * @param SpecialFolder|null $value Value to set for the specialFolder property.
     */
     public function setSpecialFolder(?SpecialFolder $value): void {
         $this->getBackingStore()->set('specialFolder', $value);
@@ -423,7 +423,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the video property value. Video metadata, if the item is a video. Read-only.
-     *  @param Video|null $value Value to set for the video property.
+     * @param Video|null $value Value to set for the video property.
     */
     public function setVideo(?Video $value): void {
         $this->getBackingStore()->set('video', $value);
@@ -431,7 +431,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the webDavUrl property value. DAV compatible URL for the item.
-     *  @param string|null $value Value to set for the webDavUrl property.
+     * @param string|null $value Value to set for the webDavUrl property.
     */
     public function setWebDavUrl(?string $value): void {
         $this->getBackingStore()->set('webDavUrl', $value);
@@ -439,7 +439,7 @@ class RemoteItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the webUrl property value. URL that displays the resource in the browser. Read-only.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

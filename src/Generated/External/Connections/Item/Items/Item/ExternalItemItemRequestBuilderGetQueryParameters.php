@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\External\Connections\Item\Items\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get items from external
+*/
 class ExternalItemItemRequestBuilderGetQueryParameters 
 {
     /**

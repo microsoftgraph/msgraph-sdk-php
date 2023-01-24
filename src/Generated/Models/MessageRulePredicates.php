@@ -380,7 +380,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -388,7 +388,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -396,7 +396,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the bodyContains property value. Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the bodyContains property.
+     * @param array<string>|null $value Value to set for the bodyContains property.
     */
     public function setBodyContains(?array $value): void {
         $this->getBackingStore()->set('bodyContains', $value);
@@ -404,7 +404,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the bodyOrSubjectContains property value. Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the bodyOrSubjectContains property.
+     * @param array<string>|null $value Value to set for the bodyOrSubjectContains property.
     */
     public function setBodyOrSubjectContains(?array $value): void {
         $this->getBackingStore()->set('bodyOrSubjectContains', $value);
@@ -412,7 +412,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the categories property value. Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the categories property.
+     * @param array<string>|null $value Value to set for the categories property.
     */
     public function setCategories(?array $value): void {
         $this->getBackingStore()->set('categories', $value);
@@ -420,7 +420,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
-     *  @param array<Recipient>|null $value Value to set for the fromAddresses property.
+     * @param array<Recipient>|null $value Value to set for the fromAddresses property.
     */
     public function setFromAddresses(?array $value): void {
         $this->getBackingStore()->set('fromAddresses', $value);
@@ -428,7 +428,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the hasAttachments property value. Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -436,7 +436,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the headerContains property value. Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the headerContains property.
+     * @param array<string>|null $value Value to set for the headerContains property.
     */
     public function setHeaderContains(?array $value): void {
         $this->getBackingStore()->set('headerContains', $value);
@@ -444,7 +444,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the importance property value. The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     *  @param Importance|null $value Value to set for the importance property.
+     * @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value): void {
         $this->getBackingStore()->set('importance', $value);
@@ -452,7 +452,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isApprovalRequest property value. Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isApprovalRequest property.
+     * @param bool|null $value Value to set for the isApprovalRequest property.
     */
     public function setIsApprovalRequest(?bool $value): void {
         $this->getBackingStore()->set('isApprovalRequest', $value);
@@ -460,7 +460,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isAutomaticForward property value. Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isAutomaticForward property.
+     * @param bool|null $value Value to set for the isAutomaticForward property.
     */
     public function setIsAutomaticForward(?bool $value): void {
         $this->getBackingStore()->set('isAutomaticForward', $value);
@@ -468,7 +468,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isAutomaticReply property value. Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isAutomaticReply property.
+     * @param bool|null $value Value to set for the isAutomaticReply property.
     */
     public function setIsAutomaticReply(?bool $value): void {
         $this->getBackingStore()->set('isAutomaticReply', $value);
@@ -476,7 +476,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isEncrypted property value. Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isEncrypted property.
+     * @param bool|null $value Value to set for the isEncrypted property.
     */
     public function setIsEncrypted(?bool $value): void {
         $this->getBackingStore()->set('isEncrypted', $value);
@@ -484,7 +484,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isMeetingRequest property value. Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isMeetingRequest property.
+     * @param bool|null $value Value to set for the isMeetingRequest property.
     */
     public function setIsMeetingRequest(?bool $value): void {
         $this->getBackingStore()->set('isMeetingRequest', $value);
@@ -492,7 +492,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isMeetingResponse property value. Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isMeetingResponse property.
+     * @param bool|null $value Value to set for the isMeetingResponse property.
     */
     public function setIsMeetingResponse(?bool $value): void {
         $this->getBackingStore()->set('isMeetingResponse', $value);
@@ -500,7 +500,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isNonDeliveryReport property value. Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isNonDeliveryReport property.
+     * @param bool|null $value Value to set for the isNonDeliveryReport property.
     */
     public function setIsNonDeliveryReport(?bool $value): void {
         $this->getBackingStore()->set('isNonDeliveryReport', $value);
@@ -508,7 +508,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isPermissionControlled property value. Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isPermissionControlled property.
+     * @param bool|null $value Value to set for the isPermissionControlled property.
     */
     public function setIsPermissionControlled(?bool $value): void {
         $this->getBackingStore()->set('isPermissionControlled', $value);
@@ -516,7 +516,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isReadReceipt property value. Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isReadReceipt property.
+     * @param bool|null $value Value to set for the isReadReceipt property.
     */
     public function setIsReadReceipt(?bool $value): void {
         $this->getBackingStore()->set('isReadReceipt', $value);
@@ -524,7 +524,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isSigned property value. Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isSigned property.
+     * @param bool|null $value Value to set for the isSigned property.
     */
     public function setIsSigned(?bool $value): void {
         $this->getBackingStore()->set('isSigned', $value);
@@ -532,7 +532,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isVoicemail property value. Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the isVoicemail property.
+     * @param bool|null $value Value to set for the isVoicemail property.
     */
     public function setIsVoicemail(?bool $value): void {
         $this->getBackingStore()->set('isVoicemail', $value);
@@ -540,7 +540,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the messageActionFlag property value. Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     *  @param MessageActionFlag|null $value Value to set for the messageActionFlag property.
+     * @param MessageActionFlag|null $value Value to set for the messageActionFlag property.
     */
     public function setMessageActionFlag(?MessageActionFlag $value): void {
         $this->getBackingStore()->set('messageActionFlag', $value);
@@ -548,7 +548,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the notSentToMe property value. Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the notSentToMe property.
+     * @param bool|null $value Value to set for the notSentToMe property.
     */
     public function setNotSentToMe(?bool $value): void {
         $this->getBackingStore()->set('notSentToMe', $value);
@@ -556,7 +556,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -564,7 +564,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the recipientContains property value. Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the recipientContains property.
+     * @param array<string>|null $value Value to set for the recipientContains property.
     */
     public function setRecipientContains(?array $value): void {
         $this->getBackingStore()->set('recipientContains', $value);
@@ -572,7 +572,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the senderContains property value. Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the senderContains property.
+     * @param array<string>|null $value Value to set for the senderContains property.
     */
     public function setSenderContains(?array $value): void {
         $this->getBackingStore()->set('senderContains', $value);
@@ -580,7 +580,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sensitivity property value. Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     *  @param Sensitivity|null $value Value to set for the sensitivity property.
+     * @param Sensitivity|null $value Value to set for the sensitivity property.
     */
     public function setSensitivity(?Sensitivity $value): void {
         $this->getBackingStore()->set('sensitivity', $value);
@@ -588,7 +588,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sentCcMe property value. Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the sentCcMe property.
+     * @param bool|null $value Value to set for the sentCcMe property.
     */
     public function setSentCcMe(?bool $value): void {
         $this->getBackingStore()->set('sentCcMe', $value);
@@ -596,7 +596,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sentOnlyToMe property value. Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the sentOnlyToMe property.
+     * @param bool|null $value Value to set for the sentOnlyToMe property.
     */
     public function setSentOnlyToMe(?bool $value): void {
         $this->getBackingStore()->set('sentOnlyToMe', $value);
@@ -604,7 +604,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sentToAddresses property value. Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
-     *  @param array<Recipient>|null $value Value to set for the sentToAddresses property.
+     * @param array<Recipient>|null $value Value to set for the sentToAddresses property.
     */
     public function setSentToAddresses(?array $value): void {
         $this->getBackingStore()->set('sentToAddresses', $value);
@@ -612,7 +612,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sentToMe property value. Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the sentToMe property.
+     * @param bool|null $value Value to set for the sentToMe property.
     */
     public function setSentToMe(?bool $value): void {
         $this->getBackingStore()->set('sentToMe', $value);
@@ -620,7 +620,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sentToOrCcMe property value. Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
-     *  @param bool|null $value Value to set for the sentToOrCcMe property.
+     * @param bool|null $value Value to set for the sentToOrCcMe property.
     */
     public function setSentToOrCcMe(?bool $value): void {
         $this->getBackingStore()->set('sentToOrCcMe', $value);
@@ -628,7 +628,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the subjectContains property value. Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
-     *  @param array<string>|null $value Value to set for the subjectContains property.
+     * @param array<string>|null $value Value to set for the subjectContains property.
     */
     public function setSubjectContains(?array $value): void {
         $this->getBackingStore()->set('subjectContains', $value);
@@ -636,7 +636,7 @@ class MessageRulePredicates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the withinSizeRange property value. Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
-     *  @param SizeRange|null $value Value to set for the withinSizeRange property.
+     * @param SizeRange|null $value Value to set for the withinSizeRange property.
     */
     public function setWithinSizeRange(?SizeRange $value): void {
         $this->getBackingStore()->set('withinSizeRange', $value);

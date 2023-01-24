@@ -150,7 +150,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the attendeeAvailability property value. An array that shows the availability status of each attendee for this meeting suggestion.
-     *  @param array<AttendeeAvailability>|null $value Value to set for the attendeeAvailability property.
+     * @param array<AttendeeAvailability>|null $value Value to set for the attendeeAvailability property.
     */
     public function setAttendeeAvailability(?array $value): void {
         $this->getBackingStore()->set('attendeeAvailability', $value);
@@ -166,7 +166,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -174,7 +174,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
-     *  @param float|null $value Value to set for the confidence property.
+     * @param float|null $value Value to set for the confidence property.
     */
     public function setConfidence(?float $value): void {
         $this->getBackingStore()->set('confidence', $value);
@@ -182,7 +182,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the locations property value. An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
-     *  @param array<Location>|null $value Value to set for the locations property.
+     * @param array<Location>|null $value Value to set for the locations property.
     */
     public function setLocations(?array $value): void {
         $this->getBackingStore()->set('locations', $value);
@@ -190,7 +190,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the meetingTimeSlot property value. A time period suggested for the meeting.
-     *  @param TimeSlot|null $value Value to set for the meetingTimeSlot property.
+     * @param TimeSlot|null $value Value to set for the meetingTimeSlot property.
     */
     public function setMeetingTimeSlot(?TimeSlot $value): void {
         $this->getBackingStore()->set('meetingTimeSlot', $value);
@@ -198,7 +198,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -206,7 +206,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the order property value. Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
-     *  @param int|null $value Value to set for the order property.
+     * @param int|null $value Value to set for the order property.
     */
     public function setOrder(?int $value): void {
         $this->getBackingStore()->set('order', $value);
@@ -214,7 +214,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     *  @param FreeBusyStatus|null $value Value to set for the organizerAvailability property.
+     * @param FreeBusyStatus|null $value Value to set for the organizerAvailability property.
     */
     public function setOrganizerAvailability(?FreeBusyStatus $value): void {
         $this->getBackingStore()->set('organizerAvailability', $value);
@@ -222,7 +222,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the suggestionReason property value. Reason for suggesting the meeting time.
-     *  @param string|null $value Value to set for the suggestionReason property.
+     * @param string|null $value Value to set for the suggestionReason property.
     */
     public function setSuggestionReason(?string $value): void {
         $this->getBackingStore()->set('suggestionReason', $value);

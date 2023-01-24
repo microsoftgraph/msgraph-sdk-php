@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppDefini
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The details of this version of the app.
+*/
 class TeamsAppDefinitionRequestBuilderGetQueryParameters 
 {
     /**

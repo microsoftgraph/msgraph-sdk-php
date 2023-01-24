@@ -186,7 +186,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the alerts property value. The list of related alerts. Supports $expand.
-     *  @param array<Alert>|null $value Value to set for the alerts property.
+     * @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value): void {
         $this->getBackingStore()->set('alerts', $value);
@@ -194,7 +194,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the assignedTo property value. Owner of the incident, or null if no owner is assigned. Free editable text.
-     *  @param string|null $value Value to set for the assignedTo property.
+     * @param string|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?string $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
@@ -202,7 +202,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
-     *  @param AlertClassification|null $value Value to set for the classification property.
+     * @param AlertClassification|null $value Value to set for the classification property.
     */
     public function setClassification(?AlertClassification $value): void {
         $this->getBackingStore()->set('classification', $value);
@@ -210,7 +210,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team when the incident is managed.
-     *  @param array<AlertComment>|null $value Value to set for the comments property.
+     * @param array<AlertComment>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value): void {
         $this->getBackingStore()->set('comments', $value);
@@ -218,7 +218,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Time when the incident was first created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -226,7 +226,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the customTags property value. Array of custom tags associated with an incident.
-     *  @param array<string>|null $value Value to set for the customTags property.
+     * @param array<string>|null $value Value to set for the customTags property.
     */
     public function setCustomTags(?array $value): void {
         $this->getBackingStore()->set('customTags', $value);
@@ -234,7 +234,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
-     *  @param AlertDetermination|null $value Value to set for the determination property.
+     * @param AlertDetermination|null $value Value to set for the determination property.
     */
     public function setDetermination(?AlertDetermination $value): void {
         $this->getBackingStore()->set('determination', $value);
@@ -242,7 +242,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The incident name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -250,7 +250,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the incidentWebUrl property value. The URL for the incident page in the Microsoft 365 Defender portal.
-     *  @param string|null $value Value to set for the incidentWebUrl property.
+     * @param string|null $value Value to set for the incidentWebUrl property.
     */
     public function setIncidentWebUrl(?string $value): void {
         $this->getBackingStore()->set('incidentWebUrl', $value);
@@ -258,7 +258,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the lastUpdateDateTime property value. Time when the incident was last updated.
-     *  @param DateTime|null $value Value to set for the lastUpdateDateTime property.
+     * @param DateTime|null $value Value to set for the lastUpdateDateTime property.
     */
     public function setLastUpdateDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastUpdateDateTime', $value);
@@ -266,7 +266,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
-     *  @param string|null $value Value to set for the redirectIncidentId property.
+     * @param string|null $value Value to set for the redirectIncidentId property.
     */
     public function setRedirectIncidentId(?string $value): void {
         $this->getBackingStore()->set('redirectIncidentId', $value);
@@ -274,7 +274,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the severity property value. The severity property
-     *  @param AlertSeverity|null $value Value to set for the severity property.
+     * @param AlertSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?AlertSeverity $value): void {
         $this->getBackingStore()->set('severity', $value);
@@ -282,7 +282,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param IncidentStatus|null $value Value to set for the status property.
+     * @param IncidentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?IncidentStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -290,7 +290,7 @@ class Incident extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant in which the alert was created.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

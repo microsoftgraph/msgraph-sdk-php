@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC).
+*/
 class ResourceOperation extends Entity implements Parsable 
 {
     /**
@@ -74,7 +77,7 @@ class ResourceOperation extends Entity implements Parsable
 
     /**
      * Sets the actionName property value. Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
-     *  @param string|null $value Value to set for the actionName property.
+     * @param string|null $value Value to set for the actionName property.
     */
     public function setActionName(?string $value): void {
         $this->getBackingStore()->set('actionName', $value);
@@ -82,7 +85,7 @@ class ResourceOperation extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -90,7 +93,7 @@ class ResourceOperation extends Entity implements Parsable
 
     /**
      * Sets the resourceName property value. Name of the Resource this operation is performed on.
-     *  @param string|null $value Value to set for the resourceName property.
+     * @param string|null $value Value to set for the resourceName property.
     */
     public function setResourceName(?string $value): void {
         $this->getBackingStore()->set('resourceName', $value);

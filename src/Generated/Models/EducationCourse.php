@@ -130,7 +130,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the courseNumber property value. Unique identifier for the course.
-     *  @param string|null $value Value to set for the courseNumber property.
+     * @param string|null $value Value to set for the courseNumber property.
     */
     public function setCourseNumber(?string $value): void {
         $this->getBackingStore()->set('courseNumber', $value);
@@ -154,7 +154,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the description property value. Description of the course.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -162,7 +162,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Name of the course.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -170,7 +170,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the externalId property value. ID of the course from the syncing system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -178,7 +178,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +186,7 @@ class EducationCourse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subject property value. Subject of the course.
-     *  @param string|null $value Value to set for the subject property.
+     * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
         $this->getBackingStore()->set('subject', $value);

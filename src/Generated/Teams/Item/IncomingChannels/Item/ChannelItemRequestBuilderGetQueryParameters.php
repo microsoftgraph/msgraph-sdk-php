@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * List of channels shared with the team.
+*/
 class ChannelItemRequestBuilderGetQueryParameters 
 {
     /**

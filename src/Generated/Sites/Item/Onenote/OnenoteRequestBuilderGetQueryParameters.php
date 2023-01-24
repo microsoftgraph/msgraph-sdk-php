@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Calls the OneNote service for notebook related operations.
+*/
 class OnenoteRequestBuilderGetQueryParameters 
 {
     /**

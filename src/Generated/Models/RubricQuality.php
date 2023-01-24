@@ -130,7 +130,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the criteria property value. The collection of criteria for this rubric quality.
-     *  @param array<RubricCriterion>|null $value Value to set for the criteria property.
+     * @param array<RubricCriterion>|null $value Value to set for the criteria property.
     */
     public function setCriteria(?array $value): void {
         $this->getBackingStore()->set('criteria', $value);
@@ -154,7 +154,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the description property value. The description of this rubric quality.
-     *  @param EducationItemBody|null $value Value to set for the description property.
+     * @param EducationItemBody|null $value Value to set for the description property.
     */
     public function setDescription(?EducationItemBody $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -162,7 +162,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. The name of this rubric quality.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -170,7 +170,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -178,7 +178,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the qualityId property value. The ID of this resource.
-     *  @param string|null $value Value to set for the qualityId property.
+     * @param string|null $value Value to set for the qualityId property.
     */
     public function setQualityId(?string $value): void {
         $this->getBackingStore()->set('qualityId', $value);
@@ -186,7 +186,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
-     *  @param float|null $value Value to set for the weight property.
+     * @param float|null $value Value to set for the weight property.
     */
     public function setWeight(?float $value): void {
         $this->getBackingStore()->set('weight', $value);

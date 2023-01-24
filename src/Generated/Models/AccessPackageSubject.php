@@ -114,7 +114,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
-     *  @param ConnectedOrganization|null $value Value to set for the connectedOrganization property.
+     * @param ConnectedOrganization|null $value Value to set for the connectedOrganization property.
     */
     public function setConnectedOrganization(?ConnectedOrganization $value): void {
         $this->getBackingStore()->set('connectedOrganization', $value);
@@ -122,7 +122,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the subject.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -130,7 +130,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the email property value. The email address of the subject.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -138,7 +138,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the objectId property value. The object identifier of the subject. null if the subject is not yet a user in the tenant.
-     *  @param string|null $value Value to set for the objectId property.
+     * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
         $this->getBackingStore()->set('objectId', $value);
@@ -146,7 +146,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject does not have a security identifier.
-     *  @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
+     * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
     public function setOnPremisesSecurityIdentifier(?string $value): void {
         $this->getBackingStore()->set('onPremisesSecurityIdentifier', $value);
@@ -154,7 +154,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the principalName property value. The principal name, if known, of the subject.
-     *  @param string|null $value Value to set for the principalName property.
+     * @param string|null $value Value to set for the principalName property.
     */
     public function setPrincipalName(?string $value): void {
         $this->getBackingStore()->set('principalName', $value);
@@ -162,7 +162,7 @@ class AccessPackageSubject extends Entity implements Parsable
 
     /**
      * Sets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
-     *  @param AccessPackageSubjectType|null $value Value to set for the subjectType property.
+     * @param AccessPackageSubjectType|null $value Value to set for the subjectType property.
     */
     public function setSubjectType(?AccessPackageSubjectType $value): void {
         $this->getBackingStore()->set('subjectType', $value);

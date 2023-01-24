@@ -123,7 +123,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the activityType property value. The activityType property
-     *  @param string|null $value Value to set for the activityType property.
+     * @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value): void {
         $this->getBackingStore()->set('activityType', $value);
@@ -131,7 +131,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the chainId property value. The chainId property
-     *  @param int|null $value Value to set for the chainId property.
+     * @param int|null $value Value to set for the chainId property.
     */
     public function setChainId(?int $value): void {
         $this->getBackingStore()->set('chainId', $value);
@@ -155,7 +155,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the previewText property value. The previewText property
-     *  @param ItemBody|null $value Value to set for the previewText property.
+     * @param ItemBody|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?ItemBody $value): void {
         $this->getBackingStore()->set('previewText', $value);
@@ -163,7 +163,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the templateParameters property value. The templateParameters property
-     *  @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
+     * @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
     */
     public function setTemplateParameters(?array $value): void {
         $this->getBackingStore()->set('templateParameters', $value);
@@ -171,7 +171,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the topic property value. The topic property
-     *  @param TeamworkActivityTopic|null $value Value to set for the topic property.
+     * @param TeamworkActivityTopic|null $value Value to set for the topic property.
     */
     public function setTopic(?TeamworkActivityTopic $value): void {
         $this->getBackingStore()->set('topic', $value);

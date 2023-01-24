@@ -303,7 +303,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the assignments property value. Navigation property to list of security groups targeted for policy.
-     *  @param array<TargetedManagedAppPolicyAssignment>|null $value Value to set for the assignments property.
+     * @param array<TargetedManagedAppPolicyAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
@@ -311,7 +311,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the azureRightsManagementServicesAllowed property value. Specifies whether to allow Azure RMS encryption for WIP
-     *  @param bool|null $value Value to set for the azureRightsManagementServicesAllowed property.
+     * @param bool|null $value Value to set for the azureRightsManagementServicesAllowed property.
     */
     public function setAzureRightsManagementServicesAllowed(?bool $value): void {
         $this->getBackingStore()->set('azureRightsManagementServicesAllowed', $value);
@@ -319,7 +319,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the dataRecoveryCertificate property value. Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
-     *  @param WindowsInformationProtectionDataRecoveryCertificate|null $value Value to set for the dataRecoveryCertificate property.
+     * @param WindowsInformationProtectionDataRecoveryCertificate|null $value Value to set for the dataRecoveryCertificate property.
     */
     public function setDataRecoveryCertificate(?WindowsInformationProtectionDataRecoveryCertificate $value): void {
         $this->getBackingStore()->set('dataRecoveryCertificate', $value);
@@ -327,7 +327,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
-     *  @param WindowsInformationProtectionEnforcementLevel|null $value Value to set for the enforcementLevel property.
+     * @param WindowsInformationProtectionEnforcementLevel|null $value Value to set for the enforcementLevel property.
     */
     public function setEnforcementLevel(?WindowsInformationProtectionEnforcementLevel $value): void {
         $this->getBackingStore()->set('enforcementLevel', $value);
@@ -335,7 +335,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseDomain property value. Primary enterprise domain
-     *  @param string|null $value Value to set for the enterpriseDomain property.
+     * @param string|null $value Value to set for the enterpriseDomain property.
     */
     public function setEnterpriseDomain(?string $value): void {
         $this->getBackingStore()->set('enterpriseDomain', $value);
@@ -343,7 +343,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseInternalProxyServers property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseInternalProxyServers property.
     */
     public function setEnterpriseInternalProxyServers(?array $value): void {
         $this->getBackingStore()->set('enterpriseInternalProxyServers', $value);
@@ -351,7 +351,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseIPRanges property value. Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to
-     *  @param array<WindowsInformationProtectionIPRangeCollection>|null $value Value to set for the enterpriseIPRanges property.
+     * @param array<WindowsInformationProtectionIPRangeCollection>|null $value Value to set for the enterpriseIPRanges property.
     */
     public function setEnterpriseIPRanges(?array $value): void {
         $this->getBackingStore()->set('enterpriseIPRanges', $value);
@@ -359,7 +359,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseIPRangesAreAuthoritative property value. Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false
-     *  @param bool|null $value Value to set for the enterpriseIPRangesAreAuthoritative property.
+     * @param bool|null $value Value to set for the enterpriseIPRangesAreAuthoritative property.
     */
     public function setEnterpriseIPRangesAreAuthoritative(?bool $value): void {
         $this->getBackingStore()->set('enterpriseIPRangesAreAuthoritative', $value);
@@ -367,7 +367,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseNetworkDomainNames property value. This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseNetworkDomainNames property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseNetworkDomainNames property.
     */
     public function setEnterpriseNetworkDomainNames(?array $value): void {
         $this->getBackingStore()->set('enterpriseNetworkDomainNames', $value);
@@ -375,7 +375,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseProtectedDomainNames property value. List of enterprise domains to be protected
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseProtectedDomainNames property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseProtectedDomainNames property.
     */
     public function setEnterpriseProtectedDomainNames(?array $value): void {
         $this->getBackingStore()->set('enterpriseProtectedDomainNames', $value);
@@ -383,7 +383,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseProxiedDomains property value. Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
-     *  @param array<WindowsInformationProtectionProxiedDomainCollection>|null $value Value to set for the enterpriseProxiedDomains property.
+     * @param array<WindowsInformationProtectionProxiedDomainCollection>|null $value Value to set for the enterpriseProxiedDomains property.
     */
     public function setEnterpriseProxiedDomains(?array $value): void {
         $this->getBackingStore()->set('enterpriseProxiedDomains', $value);
@@ -391,7 +391,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseProxyServers property value. This is a list of proxy servers. Any server not on this list is considered non-enterprise
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseProxyServers property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the enterpriseProxyServers property.
     */
     public function setEnterpriseProxyServers(?array $value): void {
         $this->getBackingStore()->set('enterpriseProxyServers', $value);
@@ -399,7 +399,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the enterpriseProxyServersAreAuthoritative property value. Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
-     *  @param bool|null $value Value to set for the enterpriseProxyServersAreAuthoritative property.
+     * @param bool|null $value Value to set for the enterpriseProxyServersAreAuthoritative property.
     */
     public function setEnterpriseProxyServersAreAuthoritative(?bool $value): void {
         $this->getBackingStore()->set('enterpriseProxyServersAreAuthoritative', $value);
@@ -407,7 +407,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the exemptAppLockerFiles property value. Another way to input exempt apps through xml files
-     *  @param array<WindowsInformationProtectionAppLockerFile>|null $value Value to set for the exemptAppLockerFiles property.
+     * @param array<WindowsInformationProtectionAppLockerFile>|null $value Value to set for the exemptAppLockerFiles property.
     */
     public function setExemptAppLockerFiles(?array $value): void {
         $this->getBackingStore()->set('exemptAppLockerFiles', $value);
@@ -415,7 +415,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the exemptApps property value. Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
-     *  @param array<WindowsInformationProtectionApp>|null $value Value to set for the exemptApps property.
+     * @param array<WindowsInformationProtectionApp>|null $value Value to set for the exemptApps property.
     */
     public function setExemptApps(?array $value): void {
         $this->getBackingStore()->set('exemptApps', $value);
@@ -423,7 +423,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the iconsVisible property value. Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
-     *  @param bool|null $value Value to set for the iconsVisible property.
+     * @param bool|null $value Value to set for the iconsVisible property.
     */
     public function setIconsVisible(?bool $value): void {
         $this->getBackingStore()->set('iconsVisible', $value);
@@ -431,7 +431,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the indexingEncryptedStoresOrItemsBlocked property value. This switch is for the Windows Search Indexer, to allow or disallow indexing of items
-     *  @param bool|null $value Value to set for the indexingEncryptedStoresOrItemsBlocked property.
+     * @param bool|null $value Value to set for the indexingEncryptedStoresOrItemsBlocked property.
     */
     public function setIndexingEncryptedStoresOrItemsBlocked(?bool $value): void {
         $this->getBackingStore()->set('indexingEncryptedStoresOrItemsBlocked', $value);
@@ -439,7 +439,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     *  @param bool|null $value Value to set for the isAssigned property.
+     * @param bool|null $value Value to set for the isAssigned property.
     */
     public function setIsAssigned(?bool $value): void {
         $this->getBackingStore()->set('isAssigned', $value);
@@ -447,7 +447,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the neutralDomainResources property value. List of domain names that can used for work or personal resource
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the neutralDomainResources property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the neutralDomainResources property.
     */
     public function setNeutralDomainResources(?array $value): void {
         $this->getBackingStore()->set('neutralDomainResources', $value);
@@ -455,7 +455,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the protectedAppLockerFiles property value. Another way to input protected apps through xml files
-     *  @param array<WindowsInformationProtectionAppLockerFile>|null $value Value to set for the protectedAppLockerFiles property.
+     * @param array<WindowsInformationProtectionAppLockerFile>|null $value Value to set for the protectedAppLockerFiles property.
     */
     public function setProtectedAppLockerFiles(?array $value): void {
         $this->getBackingStore()->set('protectedAppLockerFiles', $value);
@@ -463,7 +463,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the protectedApps property value. Protected applications can access enterprise data and the data handled by those applications are protected with encryption
-     *  @param array<WindowsInformationProtectionApp>|null $value Value to set for the protectedApps property.
+     * @param array<WindowsInformationProtectionApp>|null $value Value to set for the protectedApps property.
     */
     public function setProtectedApps(?array $value): void {
         $this->getBackingStore()->set('protectedApps', $value);
@@ -471,7 +471,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the protectionUnderLockConfigRequired property value. Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
-     *  @param bool|null $value Value to set for the protectionUnderLockConfigRequired property.
+     * @param bool|null $value Value to set for the protectionUnderLockConfigRequired property.
     */
     public function setProtectionUnderLockConfigRequired(?bool $value): void {
         $this->getBackingStore()->set('protectionUnderLockConfigRequired', $value);
@@ -479,7 +479,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the revokeOnUnenrollDisabled property value. This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
-     *  @param bool|null $value Value to set for the revokeOnUnenrollDisabled property.
+     * @param bool|null $value Value to set for the revokeOnUnenrollDisabled property.
     */
     public function setRevokeOnUnenrollDisabled(?bool $value): void {
         $this->getBackingStore()->set('revokeOnUnenrollDisabled', $value);
@@ -487,7 +487,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the rightsManagementServicesTemplateId property value. TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     *  @param string|null $value Value to set for the rightsManagementServicesTemplateId property.
+     * @param string|null $value Value to set for the rightsManagementServicesTemplateId property.
     */
     public function setRightsManagementServicesTemplateId(?string $value): void {
         $this->getBackingStore()->set('rightsManagementServicesTemplateId', $value);
@@ -495,7 +495,7 @@ class WindowsInformationProtection extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the smbAutoEncryptedFileExtensions property value. Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
-     *  @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the smbAutoEncryptedFileExtensions property.
+     * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the smbAutoEncryptedFileExtensions property.
     */
     public function setSmbAutoEncryptedFileExtensions(?array $value): void {
         $this->getBackingStore()->set('smbAutoEncryptedFileExtensions', $value);

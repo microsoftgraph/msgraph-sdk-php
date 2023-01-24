@@ -12,6 +12,9 @@ use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Windows Information Protection DataRecoveryCertificate
+*/
 class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -122,7 +125,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -130,7 +133,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -138,7 +141,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the certificate property value. Data recovery Certificate
-     *  @param StreamInterface|null $value Value to set for the certificate property.
+     * @param StreamInterface|null $value Value to set for the certificate property.
     */
     public function setCertificate(?StreamInterface $value): void {
         $this->getBackingStore()->set('certificate', $value);
@@ -146,7 +149,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the description property value. Data recovery Certificate description
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -154,7 +157,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the expirationDateTime property value. Data recovery Certificate expiration datetime
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -162,7 +165,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +173,7 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
 
     /**
      * Sets the subjectName property value. Data recovery Certificate subject name
-     *  @param string|null $value Value to set for the subjectName property.
+     * @param string|null $value Value to set for the subjectName property.
     */
     public function setSubjectName(?string $value): void {
         $this->getBackingStore()->set('subjectName', $value);

@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains content properties for a specific app version. Each mobileAppContent can have multiple mobileAppContentFile.
+*/
 class MobileAppContent extends Entity implements Parsable 
 {
     /**
@@ -64,7 +67,7 @@ class MobileAppContent extends Entity implements Parsable
 
     /**
      * Sets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
-     *  @param array<MobileContainedApp>|null $value Value to set for the containedApps property.
+     * @param array<MobileContainedApp>|null $value Value to set for the containedApps property.
     */
     public function setContainedApps(?array $value): void {
         $this->getBackingStore()->set('containedApps', $value);
@@ -72,7 +75,7 @@ class MobileAppContent extends Entity implements Parsable
 
     /**
      * Sets the files property value. The list of files for this app content version.
-     *  @param array<MobileAppContentFile>|null $value Value to set for the files property.
+     * @param array<MobileAppContentFile>|null $value Value to set for the files property.
     */
     public function setFiles(?array $value): void {
         $this->getBackingStore()->set('files', $value);

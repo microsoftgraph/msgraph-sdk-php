@@ -65,7 +65,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -73,7 +73,7 @@ class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsabl
 
     /**
      * Sets the tabId property value. Unique identifier of the tab.
-     *  @param string|null $value Value to set for the tabId property.
+     * @param string|null $value Value to set for the tabId property.
     */
     public function setTabId(?string $value): void {
         $this->getBackingStore()->set('tabId', $value);

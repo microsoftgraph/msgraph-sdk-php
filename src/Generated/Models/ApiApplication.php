@@ -130,7 +130,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the acceptMappedClaims property value. When true, allows an application to use claims mapping without specifying a custom signing key.
-     *  @param bool|null $value Value to set for the acceptMappedClaims property.
+     * @param bool|null $value Value to set for the acceptMappedClaims property.
     */
     public function setAcceptMappedClaims(?bool $value): void {
         $this->getBackingStore()->set('acceptMappedClaims', $value);
@@ -138,7 +138,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -146,7 +146,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +154,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the knownClientApplications property value. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
-     *  @param array<string>|null $value Value to set for the knownClientApplications property.
+     * @param array<string>|null $value Value to set for the knownClientApplications property.
     */
     public function setKnownClientApplications(?array $value): void {
         $this->getBackingStore()->set('knownClientApplications', $value);
@@ -162,7 +162,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the oauth2PermissionScopes property value. The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-     *  @param array<PermissionScope>|null $value Value to set for the oauth2PermissionScopes property.
+     * @param array<PermissionScope>|null $value Value to set for the oauth2PermissionScopes property.
     */
     public function setOauth2PermissionScopes(?array $value): void {
         $this->getBackingStore()->set('oauth2PermissionScopes', $value);
@@ -170,7 +170,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -178,7 +178,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the preAuthorizedApplications property value. Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
-     *  @param array<PreAuthorizedApplication>|null $value Value to set for the preAuthorizedApplications property.
+     * @param array<PreAuthorizedApplication>|null $value Value to set for the preAuthorizedApplications property.
     */
     public function setPreAuthorizedApplications(?array $value): void {
         $this->getBackingStore()->set('preAuthorizedApplications', $value);
@@ -186,7 +186,7 @@ class ApiApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the requestedAccessTokenVersion property value. Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2
-     *  @param int|null $value Value to set for the requestedAccessTokenVersion property.
+     * @param int|null $value Value to set for the requestedAccessTokenVersion property.
     */
     public function setRequestedAccessTokenVersion(?int $value): void {
         $this->getBackingStore()->set('requestedAccessTokenVersion', $value);

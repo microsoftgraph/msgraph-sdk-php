@@ -65,7 +65,7 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the guestsCount property value. The guestsCount property
+     * Gets the guestsCount property value. Count of guests in a team.
      * @return int|null
     */
     public function getGuestsCount(): ?int {
@@ -73,7 +73,7 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the membersCount property value. The membersCount property
+     * Gets the membersCount property value. Count of members in a team.
      * @return int|null
     */
     public function getMembersCount(): ?int {
@@ -89,7 +89,7 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the ownersCount property value. The ownersCount property
+     * Gets the ownersCount property value. Count of owners in a team.
      * @return int|null
     */
     public function getOwnersCount(): ?int {
@@ -110,7 +110,7 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,23 +118,23 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the guestsCount property value. The guestsCount property
-     *  @param int|null $value Value to set for the guestsCount property.
+     * Sets the guestsCount property value. Count of guests in a team.
+     * @param int|null $value Value to set for the guestsCount property.
     */
     public function setGuestsCount(?int $value): void {
         $this->getBackingStore()->set('guestsCount', $value);
     }
 
     /**
-     * Sets the membersCount property value. The membersCount property
-     *  @param int|null $value Value to set for the membersCount property.
+     * Sets the membersCount property value. Count of members in a team.
+     * @param int|null $value Value to set for the membersCount property.
     */
     public function setMembersCount(?int $value): void {
         $this->getBackingStore()->set('membersCount', $value);
@@ -142,15 +142,15 @@ class TeamSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
     }
 
     /**
-     * Sets the ownersCount property value. The ownersCount property
-     *  @param int|null $value Value to set for the ownersCount property.
+     * Sets the ownersCount property value. Count of owners in a team.
+     * @param int|null $value Value to set for the ownersCount property.
     */
     public function setOwnersCount(?int $value): void {
         $this->getBackingStore()->set('ownersCount', $value);

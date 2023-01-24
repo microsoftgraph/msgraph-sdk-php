@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentReques
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get threatAssessmentRequests from informationProtection
+*/
 class ThreatAssessmentRequestItemRequestBuilderGetQueryParameters 
 {
     /**

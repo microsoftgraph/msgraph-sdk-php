@@ -120,7 +120,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the language property value. The language property
-     *  @param string|null $value Value to set for the language property.
+     * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
         $this->getBackingStore()->set('language', $value);
@@ -144,7 +144,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the number property value. The phone number.
-     *  @param string|null $value Value to set for the number property.
+     * @param string|null $value Value to set for the number property.
     */
     public function setNumber(?string $value): void {
         $this->getBackingStore()->set('number', $value);
@@ -152,7 +152,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the region property value. The region property
-     *  @param string|null $value Value to set for the region property.
+     * @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value): void {
         $this->getBackingStore()->set('region', $value);
@@ -168,7 +168,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
-     *  @param PhoneType|null $value Value to set for the type property.
+     * @param PhoneType|null $value Value to set for the type property.
     */
     public function setType(?PhoneType $value): void {
         $this->getBackingStore()->set('type', $value);

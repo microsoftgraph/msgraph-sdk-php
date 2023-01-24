@@ -66,7 +66,7 @@ class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsa
 
     /**
      * Sets the createdDateTime property value. The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -74,7 +74,7 @@ class PasswordAuthenticationMethod extends AuthenticationMethod implements Parsa
 
     /**
      * Sets the password property value. For security, the password is always returned as null from a LIST or GET operation.
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);

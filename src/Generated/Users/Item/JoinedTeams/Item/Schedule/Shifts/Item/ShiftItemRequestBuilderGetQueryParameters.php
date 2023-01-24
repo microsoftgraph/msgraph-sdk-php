@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The shifts in the schedule.
+*/
 class ShiftItemRequestBuilderGetQueryParameters 
 {
     /**

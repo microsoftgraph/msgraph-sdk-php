@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of agreement objects.
+*/
 class AgreementsRequestBuilderGetQueryParameters 
 {
     /**

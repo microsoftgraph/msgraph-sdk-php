@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\AttachmentSess
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get attachmentSessions from me
+*/
 class AttachmentSessionsRequestBuilderGetQueryParameters 
 {
     /**

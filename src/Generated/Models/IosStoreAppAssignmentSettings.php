@@ -55,7 +55,7 @@ class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implemen
 
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
-     *  @param string|null $value Value to set for the vpnConfigurationId property.
+     * @param string|null $value Value to set for the vpnConfigurationId property.
     */
     public function setVpnConfigurationId(?string $value): void {
         $this->getBackingStore()->set('vpnConfigurationId', $value);

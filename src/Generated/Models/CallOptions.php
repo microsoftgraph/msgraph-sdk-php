@@ -108,7 +108,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -116,7 +116,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -124,7 +124,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hideBotAfterEscalation property value. Indicates whether to hide the app after the call is escalated.
-     *  @param bool|null $value Value to set for the hideBotAfterEscalation property.
+     * @param bool|null $value Value to set for the hideBotAfterEscalation property.
     */
     public function setHideBotAfterEscalation(?bool $value): void {
         $this->getBackingStore()->set('hideBotAfterEscalation', $value);
@@ -132,7 +132,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isContentSharingNotificationEnabled property value. Indicates whether content sharing notifications should be enabled for the call.
-     *  @param bool|null $value Value to set for the isContentSharingNotificationEnabled property.
+     * @param bool|null $value Value to set for the isContentSharingNotificationEnabled property.
     */
     public function setIsContentSharingNotificationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isContentSharingNotificationEnabled', $value);
@@ -140,7 +140,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the metadata for the location where the files of a channel are stored. 
+*/
 class FilesFolderRequestBuilderGetQueryParameters 
 {
     /**

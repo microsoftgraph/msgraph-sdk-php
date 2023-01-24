@@ -141,7 +141,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -149,7 +149,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -157,7 +157,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the birthDate property value. Birth date of the student.
-     *  @param Date|null $value Value to set for the birthDate property.
+     * @param Date|null $value Value to set for the birthDate property.
     */
     public function setBirthDate(?Date $value): void {
         $this->getBackingStore()->set('birthDate', $value);
@@ -165,7 +165,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the externalId property value. ID of the student in the source system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -173,7 +173,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the gender property value. The possible values are: female, male, other, unknownFutureValue.
-     *  @param EducationGender|null $value Value to set for the gender property.
+     * @param EducationGender|null $value Value to set for the gender property.
     */
     public function setGender(?EducationGender $value): void {
         $this->getBackingStore()->set('gender', $value);
@@ -181,7 +181,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the grade property value. Current grade level of the student.
-     *  @param string|null $value Value to set for the grade property.
+     * @param string|null $value Value to set for the grade property.
     */
     public function setGrade(?string $value): void {
         $this->getBackingStore()->set('grade', $value);
@@ -189,7 +189,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the graduationYear property value. Year the student is graduating from the school.
-     *  @param string|null $value Value to set for the graduationYear property.
+     * @param string|null $value Value to set for the graduationYear property.
     */
     public function setGraduationYear(?string $value): void {
         $this->getBackingStore()->set('graduationYear', $value);
@@ -197,7 +197,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -205,7 +205,7 @@ class EducationStudent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the studentNumber property value. Student Number.
-     *  @param string|null $value Value to set for the studentNumber property.
+     * @param string|null $value Value to set for the studentNumber property.
     */
     public function setStudentNumber(?string $value): void {
         $this->getBackingStore()->set('studentNumber', $value);

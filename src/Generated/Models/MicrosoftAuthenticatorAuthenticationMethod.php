@@ -96,7 +96,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
 
     /**
      * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -104,7 +104,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
 
     /**
      * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     *  @param Device|null $value Value to set for the device property.
+     * @param Device|null $value Value to set for the device property.
     */
     public function setDevice(?Device $value): void {
         $this->getBackingStore()->set('device', $value);
@@ -112,7 +112,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
 
     /**
      * Sets the deviceTag property value. Tags containing app metadata.
-     *  @param string|null $value Value to set for the deviceTag property.
+     * @param string|null $value Value to set for the deviceTag property.
     */
     public function setDeviceTag(?string $value): void {
         $this->getBackingStore()->set('deviceTag', $value);
@@ -120,7 +120,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
 
     /**
      * Sets the displayName property value. The name of the device on which this app is registered.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -128,7 +128,7 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
 
     /**
      * Sets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
-     *  @param string|null $value Value to set for the phoneAppVersion property.
+     * @param string|null $value Value to set for the phoneAppVersion property.
     */
     public function setPhoneAppVersion(?string $value): void {
         $this->getBackingStore()->set('phoneAppVersion', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditActivit
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getAuditActivityTypes
+*/
 class GetAuditActivityTypesWithCategoryRequestBuilderGetQueryParameters 
 {
     /**

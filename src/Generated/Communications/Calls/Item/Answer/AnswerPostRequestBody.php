@@ -123,7 +123,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the acceptedModalities property value. The acceptedModalities property
-     *  @param array<Modality>|null $value Value to set for the acceptedModalities property.
+     * @param array<Modality>|null $value Value to set for the acceptedModalities property.
     */
     public function setAcceptedModalities(?array $value): void {
         $this->getBackingStore()->set('acceptedModalities', $value);
@@ -131,7 +131,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the callbackUri property value. The callbackUri property
-     *  @param string|null $value Value to set for the callbackUri property.
+     * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
         $this->getBackingStore()->set('callbackUri', $value);
@@ -155,7 +155,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the callOptions property value. The callOptions property
-     *  @param IncomingCallOptions|null $value Value to set for the callOptions property.
+     * @param IncomingCallOptions|null $value Value to set for the callOptions property.
     */
     public function setCallOptions(?IncomingCallOptions $value): void {
         $this->getBackingStore()->set('callOptions', $value);
@@ -163,7 +163,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the mediaConfig property value. The mediaConfig property
-     *  @param MediaConfig|null $value Value to set for the mediaConfig property.
+     * @param MediaConfig|null $value Value to set for the mediaConfig property.
     */
     public function setMediaConfig(?MediaConfig $value): void {
         $this->getBackingStore()->set('mediaConfig', $value);
@@ -171,7 +171,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the participantCapacity property value. The participantCapacity property
-     *  @param int|null $value Value to set for the participantCapacity property.
+     * @param int|null $value Value to set for the participantCapacity property.
     */
     public function setParticipantCapacity(?int $value): void {
         $this->getBackingStore()->set('participantCapacity', $value);

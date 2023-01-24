@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of the accessReviewInstance objects and their properties.
+*/
 class InstancesRequestBuilderGetQueryParameters 
 {
     /**

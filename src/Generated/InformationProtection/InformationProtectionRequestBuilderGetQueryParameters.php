@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\InformationProtection;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get informationProtection
+*/
 class InformationProtectionRequestBuilderGetQueryParameters 
 {
     /**

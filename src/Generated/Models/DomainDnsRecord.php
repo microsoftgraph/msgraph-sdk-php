@@ -105,7 +105,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * Sets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
-     *  @param bool|null $value Value to set for the isOptional property.
+     * @param bool|null $value Value to set for the isOptional property.
     */
     public function setIsOptional(?bool $value): void {
         $this->getBackingStore()->set('isOptional', $value);
@@ -113,7 +113,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * Sets the label property value. Value used when configuring the name of the DNS record at the DNS host.
-     *  @param string|null $value Value to set for the label property.
+     * @param string|null $value Value to set for the label property.
     */
     public function setLabel(?string $value): void {
         $this->getBackingStore()->set('label', $value);
@@ -121,7 +121,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * Sets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
-     *  @param string|null $value Value to set for the recordType property.
+     * @param string|null $value Value to set for the recordType property.
     */
     public function setRecordType(?string $value): void {
         $this->getBackingStore()->set('recordType', $value);
@@ -129,7 +129,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
-     *  @param string|null $value Value to set for the supportedService property.
+     * @param string|null $value Value to set for the supportedService property.
     */
     public function setSupportedService(?string $value): void {
         $this->getBackingStore()->set('supportedService', $value);
@@ -137,7 +137,7 @@ class DomainDnsRecord extends Entity implements Parsable
 
     /**
      * Sets the ttl property value. Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
-     *  @param int|null $value Value to set for the ttl property.
+     * @param int|null $value Value to set for the ttl property.
     */
     public function setTtl(?int $value): void {
         $this->getBackingStore()->set('ttl', $value);

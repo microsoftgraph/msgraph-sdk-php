@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Represents diagnostics status.
+*/
 class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +129,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the mitigationInstruction property value. Instruction on how to mitigate a failed validation
-     *  @param string|null $value Value to set for the mitigationInstruction property.
+     * @param string|null $value Value to set for the mitigationInstruction property.
     */
     public function setMitigationInstruction(?string $value): void {
         $this->getBackingStore()->set('mitigationInstruction', $value);
@@ -134,7 +137,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +145,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the state property value. The state of the operation
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -150,7 +153,7 @@ class ManagedAppDiagnosticStatus implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the validationName property value. The validation friendly name
-     *  @param string|null $value Value to set for the validationName property.
+     * @param string|null $value Value to set for the validationName property.
     */
     public function setValidationName(?string $value): void {
         $this->getBackingStore()->set('validationName', $value);

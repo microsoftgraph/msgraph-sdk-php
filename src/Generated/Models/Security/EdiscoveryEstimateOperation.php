@@ -114,7 +114,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the indexedItemCount property value. The estimated count of items for the search that matched the content query.
-     *  @param int|null $value Value to set for the indexedItemCount property.
+     * @param int|null $value Value to set for the indexedItemCount property.
     */
     public function setIndexedItemCount(?int $value): void {
         $this->getBackingStore()->set('indexedItemCount', $value);
@@ -122,7 +122,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the indexedItemsSize property value. The estimated size of items for the search that matched the content query.
-     *  @param int|null $value Value to set for the indexedItemsSize property.
+     * @param int|null $value Value to set for the indexedItemsSize property.
     */
     public function setIndexedItemsSize(?int $value): void {
         $this->getBackingStore()->set('indexedItemsSize', $value);
@@ -130,7 +130,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the mailboxCount property value. The number of mailboxes that had search hits.
-     *  @param int|null $value Value to set for the mailboxCount property.
+     * @param int|null $value Value to set for the mailboxCount property.
     */
     public function setMailboxCount(?int $value): void {
         $this->getBackingStore()->set('mailboxCount', $value);
@@ -138,7 +138,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the search property value. eDiscovery search.
-     *  @param EdiscoverySearch|null $value Value to set for the search property.
+     * @param EdiscoverySearch|null $value Value to set for the search property.
     */
     public function setSearch(?EdiscoverySearch $value): void {
         $this->getBackingStore()->set('search', $value);
@@ -146,7 +146,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the siteCount property value. The number of mailboxes that had search hits.
-     *  @param int|null $value Value to set for the siteCount property.
+     * @param int|null $value Value to set for the siteCount property.
     */
     public function setSiteCount(?int $value): void {
         $this->getBackingStore()->set('siteCount', $value);
@@ -154,7 +154,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
-     *  @param int|null $value Value to set for the unindexedItemCount property.
+     * @param int|null $value Value to set for the unindexedItemCount property.
     */
     public function setUnindexedItemCount(?int $value): void {
         $this->getBackingStore()->set('unindexedItemCount', $value);
@@ -162,7 +162,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
 
     /**
      * Sets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
-     *  @param int|null $value Value to set for the unindexedItemsSize property.
+     * @param int|null $value Value to set for the unindexedItemsSize property.
     */
     public function setUnindexedItemsSize(?int $value): void {
         $this->getBackingStore()->set('unindexedItemsSize', $value);

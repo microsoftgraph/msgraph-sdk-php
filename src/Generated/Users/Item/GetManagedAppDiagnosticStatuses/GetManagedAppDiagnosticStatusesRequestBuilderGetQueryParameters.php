@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\GetManagedAppDiagnosticStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Gets diagnostics validation status for a given user.
+*/
 class GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters 
 {
     /**

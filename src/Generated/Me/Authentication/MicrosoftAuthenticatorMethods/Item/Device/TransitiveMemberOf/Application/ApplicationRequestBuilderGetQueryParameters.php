@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMeth
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.application in the microsoft.graph.directoryObject collection
+*/
 class ApplicationRequestBuilderGetQueryParameters 
 {
     /**

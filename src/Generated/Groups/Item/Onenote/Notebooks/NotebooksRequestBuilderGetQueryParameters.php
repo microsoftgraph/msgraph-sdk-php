@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Notebooks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of notebook objects.
+*/
 class NotebooksRequestBuilderGetQueryParameters 
 {
     /**

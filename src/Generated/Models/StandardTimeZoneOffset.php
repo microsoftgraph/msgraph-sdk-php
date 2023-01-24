@@ -138,7 +138,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -146,7 +146,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +154,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the dayOccurrence property value. Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
-     *  @param int|null $value Value to set for the dayOccurrence property.
+     * @param int|null $value Value to set for the dayOccurrence property.
     */
     public function setDayOccurrence(?int $value): void {
         $this->getBackingStore()->set('dayOccurrence', $value);
@@ -162,7 +162,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the dayOfWeek property value. Represents the day of the week when the transition from daylight saving time to standard time.
-     *  @param DayOfWeek|null $value Value to set for the dayOfWeek property.
+     * @param DayOfWeek|null $value Value to set for the dayOfWeek property.
     */
     public function setDayOfWeek(?DayOfWeek $value): void {
         $this->getBackingStore()->set('dayOfWeek', $value);
@@ -170,7 +170,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the month property value. Represents the month of the year when the transition from daylight saving time to standard time occurs.
-     *  @param int|null $value Value to set for the month property.
+     * @param int|null $value Value to set for the month property.
     */
     public function setMonth(?int $value): void {
         $this->getBackingStore()->set('month', $value);
@@ -178,7 +178,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +186,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the time property value. Represents the time of day when the transition from daylight saving time to standard time occurs.
-     *  @param Time|null $value Value to set for the time property.
+     * @param Time|null $value Value to set for the time property.
     */
     public function setTime(?Time $value): void {
         $this->getBackingStore()->set('time', $value);
@@ -194,7 +194,7 @@ class StandardTimeZoneOffset implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the year property value. Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
-     *  @param int|null $value Value to set for the year property.
+     * @param int|null $value Value to set for the year property.
     */
     public function setYear(?int $value): void {
         $this->getBackingStore()->set('year', $value);

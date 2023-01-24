@@ -245,7 +245,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the attachments property value. The attachments property
-     *  @param array<AttachmentBase>|null $value Value to set for the attachments property.
+     * @param array<AttachmentBase>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
         $this->getBackingStore()->set('attachments', $value);
@@ -253,7 +253,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the attachmentSessions property value. The attachmentSessions property
-     *  @param array<AttachmentSession>|null $value Value to set for the attachmentSessions property.
+     * @param array<AttachmentSession>|null $value Value to set for the attachmentSessions property.
     */
     public function setAttachmentSessions(?array $value): void {
         $this->getBackingStore()->set('attachmentSessions', $value);
@@ -261,7 +261,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the body property value. The task body that typically contains information about the task.
-     *  @param ItemBody|null $value Value to set for the body property.
+     * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
         $this->getBackingStore()->set('body', $value);
@@ -269,7 +269,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the bodyLastModifiedDateTime property value. The date and time when the task body was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     *  @param DateTime|null $value Value to set for the bodyLastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the bodyLastModifiedDateTime property.
     */
     public function setBodyLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('bodyLastModifiedDateTime', $value);
@@ -277,7 +277,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
-     *  @param array<string>|null $value Value to set for the categories property.
+     * @param array<string>|null $value Value to set for the categories property.
     */
     public function setCategories(?array $value): void {
         $this->getBackingStore()->set('categories', $value);
@@ -285,7 +285,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the checklistItems property value. A collection of checklistItems linked to a task.
-     *  @param array<ChecklistItem>|null $value Value to set for the checklistItems property.
+     * @param array<ChecklistItem>|null $value Value to set for the checklistItems property.
     */
     public function setChecklistItems(?array $value): void {
         $this->getBackingStore()->set('checklistItems', $value);
@@ -293,7 +293,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the completedDateTime property value. The date and time in the specified time zone that the task was finished.
-     *  @param DateTimeTimeZone|null $value Value to set for the completedDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the completedDateTime property.
     */
     public function setCompletedDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('completedDateTime', $value);
@@ -301,7 +301,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -309,7 +309,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the dueDateTime property value. The date and time in the specified time zone that the task is to be finished.
-     *  @param DateTimeTimeZone|null $value Value to set for the dueDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the dueDateTime property.
     */
     public function setDueDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('dueDateTime', $value);
@@ -317,7 +317,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the task. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -325,7 +325,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the hasAttachments property value. The hasAttachments property
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -333,7 +333,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the importance property value. The importance property
-     *  @param Importance|null $value Value to set for the importance property.
+     * @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value): void {
         $this->getBackingStore()->set('importance', $value);
@@ -341,7 +341,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
-     *  @param bool|null $value Value to set for the isReminderOn property.
+     * @param bool|null $value Value to set for the isReminderOn property.
     */
     public function setIsReminderOn(?bool $value): void {
         $this->getBackingStore()->set('isReminderOn', $value);
@@ -349,7 +349,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -357,7 +357,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the linkedResources property value. A collection of resources linked to the task.
-     *  @param array<LinkedResource>|null $value Value to set for the linkedResources property.
+     * @param array<LinkedResource>|null $value Value to set for the linkedResources property.
     */
     public function setLinkedResources(?array $value): void {
         $this->getBackingStore()->set('linkedResources', $value);
@@ -365,7 +365,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the recurrence property value. The recurrence pattern for the task.
-     *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
+     * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
         $this->getBackingStore()->set('recurrence', $value);
@@ -373,7 +373,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the reminderDateTime property value. The date and time in the specified time zone for a reminder alert of the task to occur.
-     *  @param DateTimeTimeZone|null $value Value to set for the reminderDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the reminderDateTime property.
     */
     public function setReminderDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('reminderDateTime', $value);
@@ -381,7 +381,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -389,7 +389,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param TaskStatus|null $value Value to set for the status property.
+     * @param TaskStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TaskStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -397,7 +397,7 @@ class TodoTask extends Entity implements Parsable
 
     /**
      * Sets the title property value. A brief description of the task.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCred
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
+*/
 class FederatedIdentityCredentialsRequestBuilderGetQueryParameters 
 {
     /**

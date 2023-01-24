@@ -154,7 +154,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -162,7 +162,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the attendees property value. The attendees property
-     *  @param array<AttendeeBase>|null $value Value to set for the attendees property.
+     * @param array<AttendeeBase>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value): void {
         $this->getBackingStore()->set('attendees', $value);
@@ -170,7 +170,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -178,7 +178,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the isOrganizerOptional property value. The isOrganizerOptional property
-     *  @param bool|null $value Value to set for the isOrganizerOptional property.
+     * @param bool|null $value Value to set for the isOrganizerOptional property.
     */
     public function setIsOrganizerOptional(?bool $value): void {
         $this->getBackingStore()->set('isOrganizerOptional', $value);
@@ -186,7 +186,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the locationConstraint property value. The locationConstraint property
-     *  @param LocationConstraint|null $value Value to set for the locationConstraint property.
+     * @param LocationConstraint|null $value Value to set for the locationConstraint property.
     */
     public function setLocationConstraint(?LocationConstraint $value): void {
         $this->getBackingStore()->set('locationConstraint', $value);
@@ -194,7 +194,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the maxCandidates property value. The maxCandidates property
-     *  @param int|null $value Value to set for the maxCandidates property.
+     * @param int|null $value Value to set for the maxCandidates property.
     */
     public function setMaxCandidates(?int $value): void {
         $this->getBackingStore()->set('maxCandidates', $value);
@@ -202,7 +202,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the meetingDuration property value. The meetingDuration property
-     *  @param DateInterval|null $value Value to set for the meetingDuration property.
+     * @param DateInterval|null $value Value to set for the meetingDuration property.
     */
     public function setMeetingDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('meetingDuration', $value);
@@ -210,7 +210,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
-     *  @param float|null $value Value to set for the minimumAttendeePercentage property.
+     * @param float|null $value Value to set for the minimumAttendeePercentage property.
     */
     public function setMinimumAttendeePercentage(?float $value): void {
         $this->getBackingStore()->set('minimumAttendeePercentage', $value);
@@ -218,7 +218,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
-     *  @param bool|null $value Value to set for the returnSuggestionReasons property.
+     * @param bool|null $value Value to set for the returnSuggestionReasons property.
     */
     public function setReturnSuggestionReasons(?bool $value): void {
         $this->getBackingStore()->set('returnSuggestionReasons', $value);
@@ -226,7 +226,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the timeConstraint property value. The timeConstraint property
-     *  @param TimeConstraint|null $value Value to set for the timeConstraint property.
+     * @param TimeConstraint|null $value Value to set for the timeConstraint property.
     */
     public function setTimeConstraint(?TimeConstraint $value): void {
         $this->getBackingStore()->set('timeConstraint', $value);

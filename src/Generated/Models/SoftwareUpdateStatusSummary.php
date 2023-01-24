@@ -194,7 +194,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices.
-     *  @param int|null $value Value to set for the compliantDeviceCount property.
+     * @param int|null $value Value to set for the compliantDeviceCount property.
     */
     public function setCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('compliantDeviceCount', $value);
@@ -202,7 +202,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the compliantUserCount property value. Number of compliant users.
-     *  @param int|null $value Value to set for the compliantUserCount property.
+     * @param int|null $value Value to set for the compliantUserCount property.
     */
     public function setCompliantUserCount(?int $value): void {
         $this->getBackingStore()->set('compliantUserCount', $value);
@@ -210,7 +210,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices.
-     *  @param int|null $value Value to set for the conflictDeviceCount property.
+     * @param int|null $value Value to set for the conflictDeviceCount property.
     */
     public function setConflictDeviceCount(?int $value): void {
         $this->getBackingStore()->set('conflictDeviceCount', $value);
@@ -218,7 +218,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the conflictUserCount property value. Number of conflict users.
-     *  @param int|null $value Value to set for the conflictUserCount property.
+     * @param int|null $value Value to set for the conflictUserCount property.
     */
     public function setConflictUserCount(?int $value): void {
         $this->getBackingStore()->set('conflictUserCount', $value);
@@ -226,7 +226,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the policy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -234,7 +234,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the errorDeviceCount property value. Number of devices had error.
-     *  @param int|null $value Value to set for the errorDeviceCount property.
+     * @param int|null $value Value to set for the errorDeviceCount property.
     */
     public function setErrorDeviceCount(?int $value): void {
         $this->getBackingStore()->set('errorDeviceCount', $value);
@@ -242,7 +242,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the errorUserCount property value. Number of users had error.
-     *  @param int|null $value Value to set for the errorUserCount property.
+     * @param int|null $value Value to set for the errorUserCount property.
     */
     public function setErrorUserCount(?int $value): void {
         $this->getBackingStore()->set('errorUserCount', $value);
@@ -250,7 +250,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the nonCompliantDeviceCount property value. Number of non compliant devices.
-     *  @param int|null $value Value to set for the nonCompliantDeviceCount property.
+     * @param int|null $value Value to set for the nonCompliantDeviceCount property.
     */
     public function setNonCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('nonCompliantDeviceCount', $value);
@@ -258,7 +258,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the nonCompliantUserCount property value. Number of non compliant users.
-     *  @param int|null $value Value to set for the nonCompliantUserCount property.
+     * @param int|null $value Value to set for the nonCompliantUserCount property.
     */
     public function setNonCompliantUserCount(?int $value): void {
         $this->getBackingStore()->set('nonCompliantUserCount', $value);
@@ -266,7 +266,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices.
-     *  @param int|null $value Value to set for the notApplicableDeviceCount property.
+     * @param int|null $value Value to set for the notApplicableDeviceCount property.
     */
     public function setNotApplicableDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notApplicableDeviceCount', $value);
@@ -274,7 +274,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the notApplicableUserCount property value. Number of not applicable users.
-     *  @param int|null $value Value to set for the notApplicableUserCount property.
+     * @param int|null $value Value to set for the notApplicableUserCount property.
     */
     public function setNotApplicableUserCount(?int $value): void {
         $this->getBackingStore()->set('notApplicableUserCount', $value);
@@ -282,7 +282,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices.
-     *  @param int|null $value Value to set for the remediatedDeviceCount property.
+     * @param int|null $value Value to set for the remediatedDeviceCount property.
     */
     public function setRemediatedDeviceCount(?int $value): void {
         $this->getBackingStore()->set('remediatedDeviceCount', $value);
@@ -290,7 +290,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the remediatedUserCount property value. Number of remediated users.
-     *  @param int|null $value Value to set for the remediatedUserCount property.
+     * @param int|null $value Value to set for the remediatedUserCount property.
     */
     public function setRemediatedUserCount(?int $value): void {
         $this->getBackingStore()->set('remediatedUserCount', $value);
@@ -298,7 +298,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices.
-     *  @param int|null $value Value to set for the unknownDeviceCount property.
+     * @param int|null $value Value to set for the unknownDeviceCount property.
     */
     public function setUnknownDeviceCount(?int $value): void {
         $this->getBackingStore()->set('unknownDeviceCount', $value);
@@ -306,7 +306,7 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
 
     /**
      * Sets the unknownUserCount property value. Number of unknown users.
-     *  @param int|null $value Value to set for the unknownUserCount property.
+     * @param int|null $value Value to set for the unknownUserCount property.
     */
     public function setUnknownUserCount(?int $value): void {
         $this->getBackingStore()->set('unknownUserCount', $value);

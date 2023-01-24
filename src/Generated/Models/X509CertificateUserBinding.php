@@ -110,7 +110,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the priority property value. The priority of the binding. Azure AD uses the binding with the highest priority. This value must be a non-negative integer and unique in the collection of objects in the certificateUserBindings property of an x509CertificateAuthenticationMethodConfiguration object. Required
-     *  @param int|null $value Value to set for the priority property.
+     * @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value): void {
         $this->getBackingStore()->set('priority', $value);
@@ -142,7 +142,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the userProperty property value. Defines the Azure AD user property of the user object to use for the binding. The possible values are: userPrincipalName, onPremisesUserPrincipalName, certificateUserIds. Required.
-     *  @param string|null $value Value to set for the userProperty property.
+     * @param string|null $value Value to set for the userProperty property.
     */
     public function setUserProperty(?string $value): void {
         $this->getBackingStore()->set('userProperty', $value);
@@ -150,7 +150,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the x509CertificateField property value. The field on the X.509 certificate to use for the binding. The possible values are: PrincipalName, RFC822Name, SubjectKeyIdentifier, SHA1PublicKey.
-     *  @param string|null $value Value to set for the x509CertificateField property.
+     * @param string|null $value Value to set for the x509CertificateField property.
     */
     public function setX509CertificateField(?string $value): void {
         $this->getBackingStore()->set('x509CertificateField', $value);

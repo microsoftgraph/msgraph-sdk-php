@@ -55,7 +55,7 @@ class MacOSMicrosoftEdgeApp extends MobileApp implements Parsable
 
     /**
      * Sets the channel property value. The enum to specify the channels for Microsoft Edge apps.
-     *  @param MicrosoftEdgeChannel|null $value Value to set for the channel property.
+     * @param MicrosoftEdgeChannel|null $value Value to set for the channel property.
     */
     public function setChannel(?MicrosoftEdgeChannel $value): void {
         $this->getBackingStore()->set('channel', $value);

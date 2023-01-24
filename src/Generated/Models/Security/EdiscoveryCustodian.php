@@ -106,7 +106,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the acknowledgedDateTime property value. Date and time the custodian acknowledged a hold notification.
-     *  @param DateTime|null $value Value to set for the acknowledgedDateTime property.
+     * @param DateTime|null $value Value to set for the acknowledgedDateTime property.
     */
     public function setAcknowledgedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('acknowledgedDateTime', $value);
@@ -114,7 +114,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the email property value. Email address of the custodian.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -122,7 +122,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the custodian.
-     *  @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
+     * @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
     */
     public function setLastIndexOperation(?EdiscoveryIndexOperation $value): void {
         $this->getBackingStore()->set('lastIndexOperation', $value);
@@ -130,7 +130,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
-     *  @param array<SiteSource>|null $value Value to set for the siteSources property.
+     * @param array<SiteSource>|null $value Value to set for the siteSources property.
     */
     public function setSiteSources(?array $value): void {
         $this->getBackingStore()->set('siteSources', $value);
@@ -138,7 +138,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
-     *  @param array<UnifiedGroupSource>|null $value Value to set for the unifiedGroupSources property.
+     * @param array<UnifiedGroupSource>|null $value Value to set for the unifiedGroupSources property.
     */
     public function setUnifiedGroupSources(?array $value): void {
         $this->getBackingStore()->set('unifiedGroupSources', $value);
@@ -146,7 +146,7 @@ class EdiscoveryCustodian extends DataSourceContainer implements Parsable
 
     /**
      * Sets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     *  @param array<UserSource>|null $value Value to set for the userSources property.
+     * @param array<UserSource>|null $value Value to set for the userSources property.
     */
     public function setUserSources(?array $value): void {
         $this->getBackingStore()->set('userSources', $value);

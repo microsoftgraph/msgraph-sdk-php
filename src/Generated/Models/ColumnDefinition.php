@@ -364,7 +364,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the boolean property value. This column stores boolean values.
-     *  @param BooleanColumn|null $value Value to set for the boolean property.
+     * @param BooleanColumn|null $value Value to set for the boolean property.
     */
     public function setBoolean(?BooleanColumn $value): void {
         $this->getBackingStore()->set('boolean', $value);
@@ -372,7 +372,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the calculated property value. This column's data is calculated based on other columns.
-     *  @param CalculatedColumn|null $value Value to set for the calculated property.
+     * @param CalculatedColumn|null $value Value to set for the calculated property.
     */
     public function setCalculated(?CalculatedColumn $value): void {
         $this->getBackingStore()->set('calculated', $value);
@@ -380,7 +380,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the choice property value. This column stores data from a list of choices.
-     *  @param ChoiceColumn|null $value Value to set for the choice property.
+     * @param ChoiceColumn|null $value Value to set for the choice property.
     */
     public function setChoice(?ChoiceColumn $value): void {
         $this->getBackingStore()->set('choice', $value);
@@ -388,7 +388,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the columnGroup property value. For site columns, the name of the group this column belongs to. Helps organize related columns.
-     *  @param string|null $value Value to set for the columnGroup property.
+     * @param string|null $value Value to set for the columnGroup property.
     */
     public function setColumnGroup(?string $value): void {
         $this->getBackingStore()->set('columnGroup', $value);
@@ -396,7 +396,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the contentApprovalStatus property value. This column stores content approval status.
-     *  @param ContentApprovalStatusColumn|null $value Value to set for the contentApprovalStatus property.
+     * @param ContentApprovalStatusColumn|null $value Value to set for the contentApprovalStatus property.
     */
     public function setContentApprovalStatus(?ContentApprovalStatusColumn $value): void {
         $this->getBackingStore()->set('contentApprovalStatus', $value);
@@ -404,7 +404,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the currency property value. This column stores currency values.
-     *  @param CurrencyColumn|null $value Value to set for the currency property.
+     * @param CurrencyColumn|null $value Value to set for the currency property.
     */
     public function setCurrency(?CurrencyColumn $value): void {
         $this->getBackingStore()->set('currency', $value);
@@ -412,7 +412,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the dateTime property value. This column stores DateTime values.
-     *  @param DateTimeColumn|null $value Value to set for the dateTime property.
+     * @param DateTimeColumn|null $value Value to set for the dateTime property.
     */
     public function setDateTime(?DateTimeColumn $value): void {
         $this->getBackingStore()->set('dateTime', $value);
@@ -420,7 +420,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the defaultValue property value. The default value for this column.
-     *  @param DefaultColumnValue|null $value Value to set for the defaultValue property.
+     * @param DefaultColumnValue|null $value Value to set for the defaultValue property.
     */
     public function setDefaultValue(?DefaultColumnValue $value): void {
         $this->getBackingStore()->set('defaultValue', $value);
@@ -428,7 +428,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the description property value. The user-facing description of the column.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -436,7 +436,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The user-facing name of the column.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -444,7 +444,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the enforceUniqueValues property value. If true, no two list items may have the same value for this column.
-     *  @param bool|null $value Value to set for the enforceUniqueValues property.
+     * @param bool|null $value Value to set for the enforceUniqueValues property.
     */
     public function setEnforceUniqueValues(?bool $value): void {
         $this->getBackingStore()->set('enforceUniqueValues', $value);
@@ -452,7 +452,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the geolocation property value. This column stores a geolocation.
-     *  @param GeolocationColumn|null $value Value to set for the geolocation property.
+     * @param GeolocationColumn|null $value Value to set for the geolocation property.
     */
     public function setGeolocation(?GeolocationColumn $value): void {
         $this->getBackingStore()->set('geolocation', $value);
@@ -460,7 +460,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the hidden property value. Specifies whether the column is displayed in the user interface.
-     *  @param bool|null $value Value to set for the hidden property.
+     * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
@@ -468,7 +468,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the hyperlinkOrPicture property value. This column stores hyperlink or picture values.
-     *  @param HyperlinkOrPictureColumn|null $value Value to set for the hyperlinkOrPicture property.
+     * @param HyperlinkOrPictureColumn|null $value Value to set for the hyperlinkOrPicture property.
     */
     public function setHyperlinkOrPicture(?HyperlinkOrPictureColumn $value): void {
         $this->getBackingStore()->set('hyperlinkOrPicture', $value);
@@ -476,7 +476,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
-     *  @param bool|null $value Value to set for the indexed property.
+     * @param bool|null $value Value to set for the indexed property.
     */
     public function setIndexed(?bool $value): void {
         $this->getBackingStore()->set('indexed', $value);
@@ -484,7 +484,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the isDeletable property value. Indicates whether this column can be deleted.
-     *  @param bool|null $value Value to set for the isDeletable property.
+     * @param bool|null $value Value to set for the isDeletable property.
     */
     public function setIsDeletable(?bool $value): void {
         $this->getBackingStore()->set('isDeletable', $value);
@@ -492,7 +492,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the isReorderable property value. Indicates whether values in the column can be reordered. Read-only.
-     *  @param bool|null $value Value to set for the isReorderable property.
+     * @param bool|null $value Value to set for the isReorderable property.
     */
     public function setIsReorderable(?bool $value): void {
         $this->getBackingStore()->set('isReorderable', $value);
@@ -500,7 +500,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the isSealed property value. Specifies whether the column can be changed.
-     *  @param bool|null $value Value to set for the isSealed property.
+     * @param bool|null $value Value to set for the isSealed property.
     */
     public function setIsSealed(?bool $value): void {
         $this->getBackingStore()->set('isSealed', $value);
@@ -508,7 +508,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the lookup property value. This column's data is looked up from another source in the site.
-     *  @param LookupColumn|null $value Value to set for the lookup property.
+     * @param LookupColumn|null $value Value to set for the lookup property.
     */
     public function setLookup(?LookupColumn $value): void {
         $this->getBackingStore()->set('lookup', $value);
@@ -516,7 +516,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -524,7 +524,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the number property value. This column stores number values.
-     *  @param NumberColumn|null $value Value to set for the number property.
+     * @param NumberColumn|null $value Value to set for the number property.
     */
     public function setNumber(?NumberColumn $value): void {
         $this->getBackingStore()->set('number', $value);
@@ -532,7 +532,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the personOrGroup property value. This column stores Person or Group values.
-     *  @param PersonOrGroupColumn|null $value Value to set for the personOrGroup property.
+     * @param PersonOrGroupColumn|null $value Value to set for the personOrGroup property.
     */
     public function setPersonOrGroup(?PersonOrGroupColumn $value): void {
         $this->getBackingStore()->set('personOrGroup', $value);
@@ -540,7 +540,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the propagateChanges property value. If 'true', changes to this column will be propagated to lists that implement the column.
-     *  @param bool|null $value Value to set for the propagateChanges property.
+     * @param bool|null $value Value to set for the propagateChanges property.
     */
     public function setPropagateChanges(?bool $value): void {
         $this->getBackingStore()->set('propagateChanges', $value);
@@ -548,7 +548,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the readOnly property value. Specifies whether the column values can be modified.
-     *  @param bool|null $value Value to set for the readOnly property.
+     * @param bool|null $value Value to set for the readOnly property.
     */
     public function setReadOnly(?bool $value): void {
         $this->getBackingStore()->set('readOnly', $value);
@@ -556,7 +556,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the required property value. Specifies whether the column value isn't optional.
-     *  @param bool|null $value Value to set for the required property.
+     * @param bool|null $value Value to set for the required property.
     */
     public function setRequired(?bool $value): void {
         $this->getBackingStore()->set('required', $value);
@@ -564,7 +564,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the sourceColumn property value. The source column for the content type column.
-     *  @param ColumnDefinition|null $value Value to set for the sourceColumn property.
+     * @param ColumnDefinition|null $value Value to set for the sourceColumn property.
     */
     public function setSourceColumn(?ColumnDefinition $value): void {
         $this->getBackingStore()->set('sourceColumn', $value);
@@ -572,7 +572,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the sourceContentType property value. ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
-     *  @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
+     * @param ContentTypeInfo|null $value Value to set for the sourceContentType property.
     */
     public function setSourceContentType(?ContentTypeInfo $value): void {
         $this->getBackingStore()->set('sourceContentType', $value);
@@ -580,7 +580,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the term property value. This column stores taxonomy terms.
-     *  @param TermColumn|null $value Value to set for the term property.
+     * @param TermColumn|null $value Value to set for the term property.
     */
     public function setTerm(?TermColumn $value): void {
         $this->getBackingStore()->set('term', $value);
@@ -588,7 +588,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the text property value. This column stores text values.
-     *  @param TextColumn|null $value Value to set for the text property.
+     * @param TextColumn|null $value Value to set for the text property.
     */
     public function setText(?TextColumn $value): void {
         $this->getBackingStore()->set('text', $value);
@@ -596,7 +596,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the thumbnail property value. This column stores thumbnail values.
-     *  @param ThumbnailColumn|null $value Value to set for the thumbnail property.
+     * @param ThumbnailColumn|null $value Value to set for the thumbnail property.
     */
     public function setThumbnail(?ThumbnailColumn $value): void {
         $this->getBackingStore()->set('thumbnail', $value);
@@ -604,7 +604,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the type property value. For site columns, the type of column. Read-only.
-     *  @param ColumnTypes|null $value Value to set for the type property.
+     * @param ColumnTypes|null $value Value to set for the type property.
     */
     public function setType(?ColumnTypes $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -612,7 +612,7 @@ class ColumnDefinition extends Entity implements Parsable
 
     /**
      * Sets the validation property value. This column stores validation formula and message for the column.
-     *  @param ColumnValidation|null $value Value to set for the validation property.
+     * @param ColumnValidation|null $value Value to set for the validation property.
     */
     public function setValidation(?ColumnValidation $value): void {
         $this->getBackingStore()->set('validation', $value);

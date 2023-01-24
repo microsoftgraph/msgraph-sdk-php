@@ -125,7 +125,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
-     *  @param bool|null $value Value to set for the availabilityIsAffectedByPersonalCalendar property.
+     * @param bool|null $value Value to set for the availabilityIsAffectedByPersonalCalendar property.
     */
     public function setAvailabilityIsAffectedByPersonalCalendar(?bool $value): void {
         $this->getBackingStore()->set('availabilityIsAffectedByPersonalCalendar', $value);
@@ -133,7 +133,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -141,7 +141,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -149,7 +149,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
-     *  @param bool|null $value Value to set for the isEmailNotificationEnabled property.
+     * @param bool|null $value Value to set for the isEmailNotificationEnabled property.
     */
     public function setIsEmailNotificationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEmailNotificationEnabled', $value);
@@ -157,7 +157,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the role property value. The role property
-     *  @param BookingStaffRole|null $value Value to set for the role property.
+     * @param BookingStaffRole|null $value Value to set for the role property.
     */
     public function setRole(?BookingStaffRole $value): void {
         $this->getBackingStore()->set('role', $value);
@@ -165,7 +165,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
-     *  @param string|null $value Value to set for the timeZone property.
+     * @param string|null $value Value to set for the timeZone property.
     */
     public function setTimeZone(?string $value): void {
         $this->getBackingStore()->set('timeZone', $value);
@@ -173,7 +173,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
-     *  @param bool|null $value Value to set for the useBusinessHours property.
+     * @param bool|null $value Value to set for the useBusinessHours property.
     */
     public function setUseBusinessHours(?bool $value): void {
         $this->getBackingStore()->set('useBusinessHours', $value);
@@ -181,7 +181,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
 
     /**
      * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
-     *  @param array<BookingWorkHours>|null $value Value to set for the workingHours property.
+     * @param array<BookingWorkHours>|null $value Value to set for the workingHours property.
     */
     public function setWorkingHours(?array $value): void {
         $this->getBackingStore()->set('workingHours', $value);

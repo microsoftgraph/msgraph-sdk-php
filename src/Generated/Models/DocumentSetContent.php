@@ -110,7 +110,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentType property value. Content type information of the file.
-     *  @param ContentTypeInfo|null $value Value to set for the contentType property.
+     * @param ContentTypeInfo|null $value Value to set for the contentType property.
     */
     public function setContentType(?ContentTypeInfo $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -134,7 +134,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileName property value. Name of the file in resource folder that should be added as a default content or a template in the document set.
-     *  @param string|null $value Value to set for the fileName property.
+     * @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);
@@ -142,7 +142,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the folderName property value. Folder name in which the file will be placed when a new document set is created in the library.
-     *  @param string|null $value Value to set for the folderName property.
+     * @param string|null $value Value to set for the folderName property.
     */
     public function setFolderName(?string $value): void {
         $this->getBackingStore()->set('folderName', $value);
@@ -150,7 +150,7 @@ class DocumentSetContent implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

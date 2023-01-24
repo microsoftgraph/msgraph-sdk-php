@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AuthenticationMethodConfigurations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from authenticationMethodConfigurations
+*/
 class AuthenticationMethodConfigurationsRequestBuilderGetQueryParameters 
 {
     /**

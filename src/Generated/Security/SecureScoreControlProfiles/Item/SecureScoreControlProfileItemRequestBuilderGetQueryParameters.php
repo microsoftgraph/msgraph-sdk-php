@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get secureScoreControlProfiles from security
+*/
 class SecureScoreControlProfileItemRequestBuilderGetQueryParameters 
 {
     /**

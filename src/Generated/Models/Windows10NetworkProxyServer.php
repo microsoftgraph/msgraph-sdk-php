@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Network Proxy Server Policy.
+*/
 class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
-     *  @param string|null $value Value to set for the address property.
+     * @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -126,7 +129,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +137,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the exceptions property value. Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
-     *  @param array<string>|null $value Value to set for the exceptions property.
+     * @param array<string>|null $value Value to set for the exceptions property.
     */
     public function setExceptions(?array $value): void {
         $this->getBackingStore()->set('exceptions', $value);
@@ -142,7 +145,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +153,7 @@ class Windows10NetworkProxyServer implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the useForLocalAddresses property value. Specifies whether the proxy server should be used for local (intranet) addresses.
-     *  @param bool|null $value Value to set for the useForLocalAddresses property.
+     * @param bool|null $value Value to set for the useForLocalAddresses property.
     */
     public function setUseForLocalAddresses(?bool $value): void {
         $this->getBackingStore()->set('useForLocalAddresses', $value);

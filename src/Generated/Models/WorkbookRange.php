@@ -244,7 +244,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the address property value. Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
-     *  @param string|null $value Value to set for the address property.
+     * @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -252,7 +252,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the addressLocal property value. Represents range reference for the specified range in the language of the user. Read-only.
-     *  @param string|null $value Value to set for the addressLocal property.
+     * @param string|null $value Value to set for the addressLocal property.
     */
     public function setAddressLocal(?string $value): void {
         $this->getBackingStore()->set('addressLocal', $value);
@@ -260,7 +260,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the cellCount property value. Number of cells in the range. Read-only.
-     *  @param int|null $value Value to set for the cellCount property.
+     * @param int|null $value Value to set for the cellCount property.
     */
     public function setCellCount(?int $value): void {
         $this->getBackingStore()->set('cellCount', $value);
@@ -268,7 +268,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the columnCount property value. Represents the total number of columns in the range. Read-only.
-     *  @param int|null $value Value to set for the columnCount property.
+     * @param int|null $value Value to set for the columnCount property.
     */
     public function setColumnCount(?int $value): void {
         $this->getBackingStore()->set('columnCount', $value);
@@ -276,7 +276,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the columnHidden property value. Represents if all columns of the current range are hidden.
-     *  @param bool|null $value Value to set for the columnHidden property.
+     * @param bool|null $value Value to set for the columnHidden property.
     */
     public function setColumnHidden(?bool $value): void {
         $this->getBackingStore()->set('columnHidden', $value);
@@ -284,7 +284,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the columnIndex property value. Represents the column number of the first cell in the range. Zero-indexed. Read-only.
-     *  @param int|null $value Value to set for the columnIndex property.
+     * @param int|null $value Value to set for the columnIndex property.
     */
     public function setColumnIndex(?int $value): void {
         $this->getBackingStore()->set('columnIndex', $value);
@@ -292,7 +292,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the format property value. Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
-     *  @param WorkbookRangeFormat|null $value Value to set for the format property.
+     * @param WorkbookRangeFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookRangeFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -300,7 +300,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the formulas property value. Represents the formula in A1-style notation.
-     *  @param Json|null $value Value to set for the formulas property.
+     * @param Json|null $value Value to set for the formulas property.
     */
     public function setFormulas(?Json $value): void {
         $this->getBackingStore()->set('formulas', $value);
@@ -308,7 +308,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     *  @param Json|null $value Value to set for the formulasLocal property.
+     * @param Json|null $value Value to set for the formulasLocal property.
     */
     public function setFormulasLocal(?Json $value): void {
         $this->getBackingStore()->set('formulasLocal', $value);
@@ -316,7 +316,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
-     *  @param Json|null $value Value to set for the formulasR1C1 property.
+     * @param Json|null $value Value to set for the formulasR1C1 property.
     */
     public function setFormulasR1C1(?Json $value): void {
         $this->getBackingStore()->set('formulasR1C1', $value);
@@ -324,7 +324,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
-     *  @param bool|null $value Value to set for the hidden property.
+     * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
@@ -332,7 +332,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
-     *  @param Json|null $value Value to set for the numberFormat property.
+     * @param Json|null $value Value to set for the numberFormat property.
     */
     public function setNumberFormat(?Json $value): void {
         $this->getBackingStore()->set('numberFormat', $value);
@@ -340,7 +340,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the rowCount property value. Returns the total number of rows in the range. Read-only.
-     *  @param int|null $value Value to set for the rowCount property.
+     * @param int|null $value Value to set for the rowCount property.
     */
     public function setRowCount(?int $value): void {
         $this->getBackingStore()->set('rowCount', $value);
@@ -348,7 +348,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the rowHidden property value. Represents if all rows of the current range are hidden.
-     *  @param bool|null $value Value to set for the rowHidden property.
+     * @param bool|null $value Value to set for the rowHidden property.
     */
     public function setRowHidden(?bool $value): void {
         $this->getBackingStore()->set('rowHidden', $value);
@@ -356,7 +356,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the rowIndex property value. Returns the row number of the first cell in the range. Zero-indexed. Read-only.
-     *  @param int|null $value Value to set for the rowIndex property.
+     * @param int|null $value Value to set for the rowIndex property.
     */
     public function setRowIndex(?int $value): void {
         $this->getBackingStore()->set('rowIndex', $value);
@@ -364,7 +364,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the sort property value. The worksheet containing the current range. Read-only.
-     *  @param WorkbookRangeSort|null $value Value to set for the sort property.
+     * @param WorkbookRangeSort|null $value Value to set for the sort property.
     */
     public function setSort(?WorkbookRangeSort $value): void {
         $this->getBackingStore()->set('sort', $value);
@@ -372,7 +372,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the text property value. Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
-     *  @param Json|null $value Value to set for the text property.
+     * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {
         $this->getBackingStore()->set('text', $value);
@@ -380,7 +380,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     *  @param Json|null $value Value to set for the values property.
+     * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {
         $this->getBackingStore()->set('values', $value);
@@ -388,7 +388,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
-     *  @param Json|null $value Value to set for the valueTypes property.
+     * @param Json|null $value Value to set for the valueTypes property.
     */
     public function setValueTypes(?Json $value): void {
         $this->getBackingStore()->set('valueTypes', $value);
@@ -396,7 +396,7 @@ class WorkbookRange extends Entity implements Parsable
 
     /**
      * Sets the worksheet property value. The worksheet containing the current range. Read-only.
-     *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
+     * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
         $this->getBackingStore()->set('worksheet', $value);

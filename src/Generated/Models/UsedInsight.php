@@ -82,7 +82,7 @@ class UsedInsight extends Entity implements Parsable
 
     /**
      * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
-     *  @param UsageDetails|null $value Value to set for the lastUsed property.
+     * @param UsageDetails|null $value Value to set for the lastUsed property.
     */
     public function setLastUsed(?UsageDetails $value): void {
         $this->getBackingStore()->set('lastUsed', $value);
@@ -90,7 +90,7 @@ class UsedInsight extends Entity implements Parsable
 
     /**
      * Sets the resource property value. Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-     *  @param Entity|null $value Value to set for the resource property.
+     * @param Entity|null $value Value to set for the resource property.
     */
     public function setResource(?Entity $value): void {
         $this->getBackingStore()->set('resource', $value);
@@ -98,7 +98,7 @@ class UsedInsight extends Entity implements Parsable
 
     /**
      * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
-     *  @param ResourceReference|null $value Value to set for the resourceReference property.
+     * @param ResourceReference|null $value Value to set for the resourceReference property.
     */
     public function setResourceReference(?ResourceReference $value): void {
         $this->getBackingStore()->set('resourceReference', $value);
@@ -106,7 +106,7 @@ class UsedInsight extends Entity implements Parsable
 
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
-     *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
+     * @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
     */
     public function setResourceVisualization(?ResourceVisualization $value): void {
         $this->getBackingStore()->set('resourceVisualization', $value);

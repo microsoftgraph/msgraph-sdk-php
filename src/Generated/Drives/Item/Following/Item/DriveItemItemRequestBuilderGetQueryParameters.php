@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Following\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of items the user is following. Only in OneDrive for Business.
+*/
 class DriveItemItemRequestBuilderGetQueryParameters 
 {
     /**

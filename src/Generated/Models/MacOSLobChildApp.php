@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains properties of a macOS .app in the package
+*/
 class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +129,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the buildNumber property value. The build number of the app.
-     *  @param string|null $value Value to set for the buildNumber property.
+     * @param string|null $value Value to set for the buildNumber property.
     */
     public function setBuildNumber(?string $value): void {
         $this->getBackingStore()->set('buildNumber', $value);
@@ -134,7 +137,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the bundleId property value. The bundleId of the app.
-     *  @param string|null $value Value to set for the bundleId property.
+     * @param string|null $value Value to set for the bundleId property.
     */
     public function setBundleId(?string $value): void {
         $this->getBackingStore()->set('bundleId', $value);
@@ -142,7 +145,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +153,7 @@ class MacOSLobChildApp implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the versionNumber property value. The version number of the app.
-     *  @param string|null $value Value to set for the versionNumber property.
+     * @param string|null $value Value to set for the versionNumber property.
     */
     public function setVersionNumber(?string $value): void {
         $this->getBackingStore()->set('versionNumber', $value);

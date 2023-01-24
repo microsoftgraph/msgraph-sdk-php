@@ -130,7 +130,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the displayName property value. Display name of the training.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -154,7 +154,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
-     *  @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
+     * @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
     */
     public function setLatestTrainingStatus(?TrainingStatus $value): void {
         $this->getBackingStore()->set('latestTrainingStatus', $value);
@@ -162,7 +162,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the trainingAssignedProperties property value. Event details of the training when it was assigned to the user.
-     *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingAssignedProperties property.
+     * @param UserTrainingContentEventInfo|null $value Value to set for the trainingAssignedProperties property.
     */
     public function setTrainingAssignedProperties(?UserTrainingContentEventInfo $value): void {
         $this->getBackingStore()->set('trainingAssignedProperties', $value);
@@ -178,7 +178,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the trainingCompletedProperties property value. Event details of the training when it was completed by the user.
-     *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingCompletedProperties property.
+     * @param UserTrainingContentEventInfo|null $value Value to set for the trainingCompletedProperties property.
     */
     public function setTrainingCompletedProperties(?UserTrainingContentEventInfo $value): void {
         $this->getBackingStore()->set('trainingCompletedProperties', $value);
@@ -186,7 +186,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the trainingUpdatedProperties property value. Event details of the training when it was updated/in-progress by the user.
-     *  @param UserTrainingContentEventInfo|null $value Value to set for the trainingUpdatedProperties property.
+     * @param UserTrainingContentEventInfo|null $value Value to set for the trainingUpdatedProperties property.
     */
     public function setTrainingUpdatedProperties(?UserTrainingContentEventInfo $value): void {
         $this->getBackingStore()->set('trainingUpdatedProperties', $value);

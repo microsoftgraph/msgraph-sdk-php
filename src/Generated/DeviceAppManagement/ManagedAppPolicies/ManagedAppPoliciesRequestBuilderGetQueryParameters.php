@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Managed app policies.
+*/
 class ManagedAppPoliciesRequestBuilderGetQueryParameters 
 {
     /**

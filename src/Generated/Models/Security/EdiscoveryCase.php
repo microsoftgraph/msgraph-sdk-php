@@ -147,7 +147,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the closedBy property value. The user who closed the case.
-     *  @param IdentitySet|null $value Value to set for the closedBy property.
+     * @param IdentitySet|null $value Value to set for the closedBy property.
     */
     public function setClosedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('closedBy', $value);
@@ -155,7 +155,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the closedDateTime property.
+     * @param DateTime|null $value Value to set for the closedDateTime property.
     */
     public function setClosedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('closedDateTime', $value);
@@ -163,7 +163,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
-     *  @param array<EdiscoveryCustodian>|null $value Value to set for the custodians property.
+     * @param array<EdiscoveryCustodian>|null $value Value to set for the custodians property.
     */
     public function setCustodians(?array $value): void {
         $this->getBackingStore()->set('custodians', $value);
@@ -171,7 +171,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the externalId property value. The external case number for customer reference.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -179,7 +179,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
-     *  @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the noncustodialDataSources property.
+     * @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the noncustodialDataSources property.
     */
     public function setNoncustodialDataSources(?array $value): void {
         $this->getBackingStore()->set('noncustodialDataSources', $value);
@@ -187,7 +187,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the operations property value. Returns a list of case caseOperation objects for this case.
-     *  @param array<CaseOperation>|null $value Value to set for the operations property.
+     * @param array<CaseOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -195,7 +195,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
-     *  @param array<EdiscoveryReviewSet>|null $value Value to set for the reviewSets property.
+     * @param array<EdiscoveryReviewSet>|null $value Value to set for the reviewSets property.
     */
     public function setReviewSets(?array $value): void {
         $this->getBackingStore()->set('reviewSets', $value);
@@ -203,7 +203,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
-     *  @param array<EdiscoverySearch>|null $value Value to set for the searches property.
+     * @param array<EdiscoverySearch>|null $value Value to set for the searches property.
     */
     public function setSearches(?array $value): void {
         $this->getBackingStore()->set('searches', $value);
@@ -211,7 +211,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the settings property value. Returns a list of eDIscoverySettings objects in the case.
-     *  @param EdiscoveryCaseSettings|null $value Value to set for the settings property.
+     * @param EdiscoveryCaseSettings|null $value Value to set for the settings property.
     */
     public function setSettings(?EdiscoveryCaseSettings $value): void {
         $this->getBackingStore()->set('settings', $value);
@@ -219,7 +219,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
 
     /**
      * Sets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
-     *  @param array<EdiscoveryReviewTag>|null $value Value to set for the tags property.
+     * @param array<EdiscoveryReviewTag>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
         $this->getBackingStore()->set('tags', $value);

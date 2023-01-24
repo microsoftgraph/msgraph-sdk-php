@@ -104,7 +104,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the identityUserFlowAttribute within a user flow.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -112,7 +112,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
-     *  @param bool|null $value Value to set for the isOptional property.
+     * @param bool|null $value Value to set for the isOptional property.
     */
     public function setIsOptional(?bool $value): void {
         $this->getBackingStore()->set('isOptional', $value);
@@ -120,7 +120,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
-     *  @param bool|null $value Value to set for the requiresVerification property.
+     * @param bool|null $value Value to set for the requiresVerification property.
     */
     public function setRequiresVerification(?bool $value): void {
         $this->getBackingStore()->set('requiresVerification', $value);
@@ -128,7 +128,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the userAttribute property value. The user attribute that you want to add to your user flow.
-     *  @param IdentityUserFlowAttribute|null $value Value to set for the userAttribute property.
+     * @param IdentityUserFlowAttribute|null $value Value to set for the userAttribute property.
     */
     public function setUserAttribute(?IdentityUserFlowAttribute $value): void {
         $this->getBackingStore()->set('userAttribute', $value);
@@ -136,7 +136,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the userAttributeValues property value. The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
-     *  @param array<UserAttributeValuesItem>|null $value Value to set for the userAttributeValues property.
+     * @param array<UserAttributeValuesItem>|null $value Value to set for the userAttributeValues property.
     */
     public function setUserAttributeValues(?array $value): void {
         $this->getBackingStore()->set('userAttributeValues', $value);
@@ -144,7 +144,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
 
     /**
      * Sets the userInputType property value. The userInputType property
-     *  @param IdentityUserFlowAttributeInputType|null $value Value to set for the userInputType property.
+     * @param IdentityUserFlowAttributeInputType|null $value Value to set for the userInputType property.
     */
     public function setUserInputType(?IdentityUserFlowAttributeInputType $value): void {
         $this->getBackingStore()->set('userInputType', $value);

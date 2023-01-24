@@ -65,7 +65,7 @@ class IPv4Range extends IpRange implements Parsable
 
     /**
      * Sets the lowerAddress property value. Lower address.
-     *  @param string|null $value Value to set for the lowerAddress property.
+     * @param string|null $value Value to set for the lowerAddress property.
     */
     public function setLowerAddress(?string $value): void {
         $this->getBackingStore()->set('lowerAddress', $value);
@@ -73,7 +73,7 @@ class IPv4Range extends IpRange implements Parsable
 
     /**
      * Sets the upperAddress property value. Upper address.
-     *  @param string|null $value Value to set for the upperAddress property.
+     * @param string|null $value Value to set for the upperAddress property.
     */
     public function setUpperAddress(?string $value): void {
         $this->getBackingStore()->set('upperAddress', $value);

@@ -125,7 +125,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the attemptsCount property value. Number of times the operation was attempted before being marked successful or failed.
-     *  @param int|null $value Value to set for the attemptsCount property.
+     * @param int|null $value Value to set for the attemptsCount property.
     */
     public function setAttemptsCount(?int $value): void {
         $this->getBackingStore()->set('attemptsCount', $value);
@@ -133,7 +133,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Time when the operation was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -141,7 +141,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the error property value. Any error that causes the async operation to fail.
-     *  @param OperationError|null $value Value to set for the error property.
+     * @param OperationError|null $value Value to set for the error property.
     */
     public function setError(?OperationError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -149,7 +149,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the lastActionDateTime property value. Time when the async operation was last updated.
-     *  @param DateTime|null $value Value to set for the lastActionDateTime property.
+     * @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
     public function setLastActionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastActionDateTime', $value);
@@ -157,7 +157,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the operationType property value. The operationType property
-     *  @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
+     * @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?TeamsAsyncOperationType $value): void {
         $this->getBackingStore()->set('operationType', $value);
@@ -165,7 +165,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param TeamsAsyncOperationStatus|null $value Value to set for the status property.
+     * @param TeamsAsyncOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TeamsAsyncOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -173,7 +173,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the targetResourceId property value. The ID of the object that's created or modified as result of this async operation, typically a team.
-     *  @param string|null $value Value to set for the targetResourceId property.
+     * @param string|null $value Value to set for the targetResourceId property.
     */
     public function setTargetResourceId(?string $value): void {
         $this->getBackingStore()->set('targetResourceId', $value);
@@ -181,7 +181,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
 
     /**
      * Sets the targetResourceLocation property value. The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
-     *  @param string|null $value Value to set for the targetResourceLocation property.
+     * @param string|null $value Value to set for the targetResourceLocation property.
     */
     public function setTargetResourceLocation(?string $value): void {
         $this->getBackingStore()->set('targetResourceLocation', $value);

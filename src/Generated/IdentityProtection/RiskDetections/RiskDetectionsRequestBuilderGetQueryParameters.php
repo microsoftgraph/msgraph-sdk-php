@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskDetections;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of the riskDetection objects and their properties.
+*/
 class RiskDetectionsRequestBuilderGetQueryParameters 
 {
     /**

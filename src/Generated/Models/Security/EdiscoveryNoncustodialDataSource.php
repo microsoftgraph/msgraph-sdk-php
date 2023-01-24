@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryNoncustodialDataSource and sets the default values.
+     * Instantiates a new EdiscoveryNoncustodialDataSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -65,7 +65,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
 
     /**
      * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
-     *  @param DataSource|null $value Value to set for the dataSource property.
+     * @param DataSource|null $value Value to set for the dataSource property.
     */
     public function setDataSource(?DataSource $value): void {
         $this->getBackingStore()->set('dataSource', $value);
@@ -73,7 +73,7 @@ class EdiscoveryNoncustodialDataSource extends DataSourceContainer implements Pa
 
     /**
      * Sets the lastIndexOperation property value. Operation entity that represents the latest indexing for the non-custodial data source.
-     *  @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
+     * @param EdiscoveryIndexOperation|null $value Value to set for the lastIndexOperation property.
     */
     public function setLastIndexOperation(?EdiscoveryIndexOperation $value): void {
         $this->getBackingStore()->set('lastIndexOperation', $value);

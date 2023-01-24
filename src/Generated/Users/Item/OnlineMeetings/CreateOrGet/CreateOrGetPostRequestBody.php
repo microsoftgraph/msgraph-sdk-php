@@ -133,7 +133,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -141,7 +141,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -149,7 +149,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the chatInfo property value. The chatInfo property
-     *  @param ChatInfo|null $value Value to set for the chatInfo property.
+     * @param ChatInfo|null $value Value to set for the chatInfo property.
     */
     public function setChatInfo(?ChatInfo $value): void {
         $this->getBackingStore()->set('chatInfo', $value);
@@ -157,7 +157,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -165,7 +165,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the externalId property value. The externalId property
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -173,7 +173,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the participants property value. The participants property
-     *  @param MeetingParticipants|null $value Value to set for the participants property.
+     * @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value): void {
         $this->getBackingStore()->set('participants', $value);
@@ -181,7 +181,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -189,7 +189,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the subject property value. The subject property
-     *  @param string|null $value Value to set for the subject property.
+     * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
         $this->getBackingStore()->set('subject', $value);

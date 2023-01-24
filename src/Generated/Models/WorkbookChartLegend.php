@@ -84,7 +84,7 @@ class WorkbookChartLegend extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-     *  @param WorkbookChartLegendFormat|null $value Value to set for the format property.
+     * @param WorkbookChartLegendFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartLegendFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -92,7 +92,7 @@ class WorkbookChartLegend extends Entity implements Parsable
 
     /**
      * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
-     *  @param bool|null $value Value to set for the overlay property.
+     * @param bool|null $value Value to set for the overlay property.
     */
     public function setOverlay(?bool $value): void {
         $this->getBackingStore()->set('overlay', $value);
@@ -100,7 +100,7 @@ class WorkbookChartLegend extends Entity implements Parsable
 
     /**
      * Sets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-     *  @param string|null $value Value to set for the position property.
+     * @param string|null $value Value to set for the position property.
     */
     public function setPosition(?string $value): void {
         $this->getBackingStore()->set('position', $value);
@@ -108,7 +108,7 @@ class WorkbookChartLegend extends Entity implements Parsable
 
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
-     *  @param bool|null $value Value to set for the visible property.
+     * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
         $this->getBackingStore()->set('visible', $value);

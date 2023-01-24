@@ -102,7 +102,7 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The start time of the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -110,7 +110,7 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the lastActionDateTime property value. The time of the last action in the operation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the lastActionDateTime property.
+     * @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
     public function setLastActionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastActionDateTime', $value);
@@ -118,7 +118,7 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the resourceLocation property value. URI of the resource that the operation is performed on.
-     *  @param string|null $value Value to set for the resourceLocation property.
+     * @param string|null $value Value to set for the resourceLocation property.
     */
     public function setResourceLocation(?string $value): void {
         $this->getBackingStore()->set('resourceLocation', $value);
@@ -126,7 +126,7 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
-     *  @param LongRunningOperationStatus|null $value Value to set for the status property.
+     * @param LongRunningOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?LongRunningOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -134,7 +134,7 @@ class LongRunningOperation extends Entity implements Parsable
 
     /**
      * Sets the statusDetail property value. Details about the status of the operation.
-     *  @param string|null $value Value to set for the statusDetail property.
+     * @param string|null $value Value to set for the statusDetail property.
     */
     public function setStatusDetail(?string $value): void {
         $this->getBackingStore()->set('statusDetail', $value);

@@ -181,7 +181,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -189,7 +189,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -197,7 +197,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the changeType property value. The changeType property
-     *  @param ChangeType|null $value Value to set for the changeType property.
+     * @param ChangeType|null $value Value to set for the changeType property.
     */
     public function setChangeType(?ChangeType $value): void {
         $this->getBackingStore()->set('changeType', $value);
@@ -205,7 +205,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the clientState property value. Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
-     *  @param string|null $value Value to set for the clientState property.
+     * @param string|null $value Value to set for the clientState property.
     */
     public function setClientState(?string $value): void {
         $this->getBackingStore()->set('clientState', $value);
@@ -213,7 +213,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the encryptedContent property value. (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
-     *  @param ChangeNotificationEncryptedContent|null $value Value to set for the encryptedContent property.
+     * @param ChangeNotificationEncryptedContent|null $value Value to set for the encryptedContent property.
     */
     public function setEncryptedContent(?ChangeNotificationEncryptedContent $value): void {
         $this->getBackingStore()->set('encryptedContent', $value);
@@ -221,7 +221,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Unique ID for the notification. Optional.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -229,7 +229,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lifecycleEvent property value. The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired. Optional.
-     *  @param LifecycleEventType|null $value Value to set for the lifecycleEvent property.
+     * @param LifecycleEventType|null $value Value to set for the lifecycleEvent property.
     */
     public function setLifecycleEvent(?LifecycleEventType $value): void {
         $this->getBackingStore()->set('lifecycleEvent', $value);
@@ -237,7 +237,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -245,7 +245,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resource property value. The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
-     *  @param string|null $value Value to set for the resource property.
+     * @param string|null $value Value to set for the resource property.
     */
     public function setResource(?string $value): void {
         $this->getBackingStore()->set('resource', $value);
@@ -253,7 +253,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceData property value. The content of this property depends on the type of resource being subscribed to. Optional.
-     *  @param ResourceData|null $value Value to set for the resourceData property.
+     * @param ResourceData|null $value Value to set for the resourceData property.
     */
     public function setResourceData(?ResourceData $value): void {
         $this->getBackingStore()->set('resourceData', $value);
@@ -261,7 +261,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subscriptionExpirationDateTime property value. The expiration time for the subscription. Required.
-     *  @param DateTime|null $value Value to set for the subscriptionExpirationDateTime property.
+     * @param DateTime|null $value Value to set for the subscriptionExpirationDateTime property.
     */
     public function setSubscriptionExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('subscriptionExpirationDateTime', $value);
@@ -269,7 +269,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subscriptionId property value. The unique identifier of the subscription that generated the notification.Required.
-     *  @param string|null $value Value to set for the subscriptionId property.
+     * @param string|null $value Value to set for the subscriptionId property.
     */
     public function setSubscriptionId(?string $value): void {
         $this->getBackingStore()->set('subscriptionId', $value);
@@ -277,7 +277,7 @@ class ChangeNotification implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tenantId property value. The unique identifier of the tenant from which the change notification originated. Required.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

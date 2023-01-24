@@ -74,7 +74,7 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * Sets the servicePlans property value. Information about the service plans assigned with the license. Read-only, Not nullable
-     *  @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
+     * @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
     */
     public function setServicePlans(?array $value): void {
         $this->getBackingStore()->set('servicePlans', $value);
@@ -82,7 +82,7 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * Sets the skuId property value. Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
-     *  @param string|null $value Value to set for the skuId property.
+     * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
@@ -90,7 +90,7 @@ class LicenseDetails extends Entity implements Parsable
 
     /**
      * Sets the skuPartNumber property value. Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
-     *  @param string|null $value Value to set for the skuPartNumber property.
+     * @param string|null $value Value to set for the skuPartNumber property.
     */
     public function setSkuPartNumber(?string $value): void {
         $this->getBackingStore()->set('skuPartNumber', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimeOffRequests
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get timeOffRequests from me
+*/
 class TimeOffRequestItemRequestBuilderGetQueryParameters 
 {
     /**

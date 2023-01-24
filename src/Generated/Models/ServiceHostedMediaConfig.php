@@ -55,7 +55,7 @@ class ServiceHostedMediaConfig extends MediaConfig implements Parsable
 
     /**
      * Sets the preFetchMedia property value. The list of media to pre-fetch.
-     *  @param array<MediaInfo>|null $value Value to set for the preFetchMedia property.
+     * @param array<MediaInfo>|null $value Value to set for the preFetchMedia property.
     */
     public function setPreFetchMedia(?array $value): void {
         $this->getBackingStore()->set('preFetchMedia', $value);

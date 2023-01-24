@@ -94,7 +94,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     *  @param array<CalendarRoleType>|null $value Value to set for the allowedRoles property.
+     * @param array<CalendarRoleType>|null $value Value to set for the allowedRoles property.
     */
     public function setAllowedRoles(?array $value): void {
         $this->getBackingStore()->set('allowedRoles', $value);
@@ -102,7 +102,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the emailAddress property value. Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
-     *  @param EmailAddress|null $value Value to set for the emailAddress property.
+     * @param EmailAddress|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?EmailAddress $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -110,7 +110,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the isInsideOrganization property value. True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
-     *  @param bool|null $value Value to set for the isInsideOrganization property.
+     * @param bool|null $value Value to set for the isInsideOrganization property.
     */
     public function setIsInsideOrganization(?bool $value): void {
         $this->getBackingStore()->set('isInsideOrganization', $value);
@@ -118,7 +118,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the isRemovable property value. True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
-     *  @param bool|null $value Value to set for the isRemovable property.
+     * @param bool|null $value Value to set for the isRemovable property.
     */
     public function setIsRemovable(?bool $value): void {
         $this->getBackingStore()->set('isRemovable', $value);
@@ -126,7 +126,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the role property value. Current permission level of the calendar sharee or delegate.
-     *  @param CalendarRoleType|null $value Value to set for the role property.
+     * @param CalendarRoleType|null $value Value to set for the role property.
     */
     public function setRole(?CalendarRoleType $value): void {
         $this->getBackingStore()->set('role', $value);

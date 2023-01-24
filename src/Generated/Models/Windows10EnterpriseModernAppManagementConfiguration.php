@@ -55,7 +55,7 @@ class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfigur
 
     /**
      * Sets the uninstallBuiltInApps property value. Indicates whether or not to uninstall a fixed list of built-in Windows apps.
-     *  @param bool|null $value Value to set for the uninstallBuiltInApps property.
+     * @param bool|null $value Value to set for the uninstallBuiltInApps property.
     */
     public function setUninstallBuiltInApps(?bool $value): void {
         $this->getBackingStore()->set('uninstallBuiltInApps', $value);

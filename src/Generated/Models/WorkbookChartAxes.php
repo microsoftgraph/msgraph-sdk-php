@@ -74,7 +74,7 @@ class WorkbookChartAxes extends Entity implements Parsable
 
     /**
      * Sets the categoryAxis property value. Represents the category axis in a chart. Read-only.
-     *  @param WorkbookChartAxis|null $value Value to set for the categoryAxis property.
+     * @param WorkbookChartAxis|null $value Value to set for the categoryAxis property.
     */
     public function setCategoryAxis(?WorkbookChartAxis $value): void {
         $this->getBackingStore()->set('categoryAxis', $value);
@@ -82,7 +82,7 @@ class WorkbookChartAxes extends Entity implements Parsable
 
     /**
      * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
-     *  @param WorkbookChartAxis|null $value Value to set for the seriesAxis property.
+     * @param WorkbookChartAxis|null $value Value to set for the seriesAxis property.
     */
     public function setSeriesAxis(?WorkbookChartAxis $value): void {
         $this->getBackingStore()->set('seriesAxis', $value);
@@ -90,7 +90,7 @@ class WorkbookChartAxes extends Entity implements Parsable
 
     /**
      * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
-     *  @param WorkbookChartAxis|null $value Value to set for the valueAxis property.
+     * @param WorkbookChartAxis|null $value Value to set for the valueAxis property.
     */
     public function setValueAxis(?WorkbookChartAxis $value): void {
         $this->getBackingStore()->set('valueAxis', $value);

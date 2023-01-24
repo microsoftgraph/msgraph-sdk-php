@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Represents a custom question of the business.
+*/
 class BookingCustomQuestion extends Entity implements Parsable 
 {
     /**
@@ -74,7 +77,7 @@ class BookingCustomQuestion extends Entity implements Parsable
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     *  @param AnswerInputType|null $value Value to set for the answerInputType property.
+     * @param AnswerInputType|null $value Value to set for the answerInputType property.
     */
     public function setAnswerInputType(?AnswerInputType $value): void {
         $this->getBackingStore()->set('answerInputType', $value);
@@ -82,7 +85,7 @@ class BookingCustomQuestion extends Entity implements Parsable
 
     /**
      * Sets the answerOptions property value. List of possible answer values.
-     *  @param array<string>|null $value Value to set for the answerOptions property.
+     * @param array<string>|null $value Value to set for the answerOptions property.
     */
     public function setAnswerOptions(?array $value): void {
         $this->getBackingStore()->set('answerOptions', $value);
@@ -90,7 +93,7 @@ class BookingCustomQuestion extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The question.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);

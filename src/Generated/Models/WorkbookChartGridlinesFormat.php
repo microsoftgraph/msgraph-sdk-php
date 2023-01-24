@@ -54,7 +54,7 @@ class WorkbookChartGridlinesFormat extends Entity implements Parsable
 
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
-     *  @param WorkbookChartLineFormat|null $value Value to set for the line property.
+     * @param WorkbookChartLineFormat|null $value Value to set for the line property.
     */
     public function setLine(?WorkbookChartLineFormat $value): void {
         $this->getBackingStore()->set('line', $value);

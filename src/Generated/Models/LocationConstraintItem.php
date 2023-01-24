@@ -55,7 +55,7 @@ class LocationConstraintItem extends Location implements Parsable
 
     /**
      * Sets the resolveAvailability property value. If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.
-     *  @param bool|null $value Value to set for the resolveAvailability property.
+     * @param bool|null $value Value to set for the resolveAvailability property.
     */
     public function setResolveAvailability(?bool $value): void {
         $this->getBackingStore()->set('resolveAvailability', $value);

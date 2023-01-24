@@ -66,7 +66,7 @@ class ConnectionOperation extends Entity implements Parsable
 
     /**
      * Sets the error property value. If status is failed, provides more information about the error that caused the failure.
-     *  @param PublicError|null $value Value to set for the error property.
+     * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -74,7 +74,7 @@ class ConnectionOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
-     *  @param ConnectionOperationStatus|null $value Value to set for the status property.
+     * @param ConnectionOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ConnectionOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

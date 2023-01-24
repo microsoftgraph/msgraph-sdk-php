@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalConnection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -124,7 +124,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
-     *  @param Configuration|null $value Value to set for the configuration property.
+     * @param Configuration|null $value Value to set for the configuration property.
     */
     public function setConfiguration(?Configuration $value): void {
         $this->getBackingStore()->set('configuration', $value);
@@ -132,7 +132,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -140,7 +140,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the groups property value. The groups property
-     *  @param array<ExternalGroup>|null $value Value to set for the groups property.
+     * @param array<ExternalGroup>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value): void {
         $this->getBackingStore()->set('groups', $value);
@@ -148,7 +148,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the items property value. The items property
-     *  @param array<ExternalItem>|null $value Value to set for the items property.
+     * @param array<ExternalItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
@@ -156,7 +156,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the name property value. The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -164,7 +164,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the operations property value. The operations property
-     *  @param array<ConnectionOperation>|null $value Value to set for the operations property.
+     * @param array<ConnectionOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -172,7 +172,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the schema property value. The schema property
-     *  @param Schema|null $value Value to set for the schema property.
+     * @param Schema|null $value Value to set for the schema property.
     */
     public function setSchema(?Schema $value): void {
         $this->getBackingStore()->set('schema', $value);
@@ -180,7 +180,7 @@ class ExternalConnection extends Entity implements Parsable
 
     /**
      * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
-     *  @param ConnectionState|null $value Value to set for the state property.
+     * @param ConnectionState|null $value Value to set for the state property.
     */
     public function setState(?ConnectionState $value): void {
         $this->getBackingStore()->set('state', $value);

@@ -104,7 +104,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the bold property value. Represents the bold status of font.
-     *  @param bool|null $value Value to set for the bold property.
+     * @param bool|null $value Value to set for the bold property.
     */
     public function setBold(?bool $value): void {
         $this->getBackingStore()->set('bold', $value);
@@ -112,7 +112,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the color property value. HTML color code representation of the text color. E.g. #FF0000 represents Red.
-     *  @param string|null $value Value to set for the color property.
+     * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -120,7 +120,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the italic property value. Represents the italic status of the font.
-     *  @param bool|null $value Value to set for the italic property.
+     * @param bool|null $value Value to set for the italic property.
     */
     public function setItalic(?bool $value): void {
         $this->getBackingStore()->set('italic', $value);
@@ -128,7 +128,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the name property value. Font name (e.g. 'Calibri')
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -136,7 +136,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the size property value. Size of the font (e.g. 11)
-     *  @param float|null $value Value to set for the size property.
+     * @param float|null $value Value to set for the size property.
     */
     public function setSize(?float $value): void {
         $this->getBackingStore()->set('size', $value);
@@ -144,7 +144,7 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
-     *  @param string|null $value Value to set for the underline property.
+     * @param string|null $value Value to set for the underline property.
     */
     public function setUnderline(?string $value): void {
         $this->getBackingStore()->set('underline', $value);

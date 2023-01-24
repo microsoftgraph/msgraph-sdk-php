@@ -221,7 +221,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the aadUserId property value. AAD User object identifier (GUID) - represents the physical/multi-account user entity.
-     *  @param string|null $value Value to set for the aadUserId property.
+     * @param string|null $value Value to set for the aadUserId property.
     */
     public function setAadUserId(?string $value): void {
         $this->getBackingStore()->set('aadUserId', $value);
@@ -229,7 +229,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the accountName property value. Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
-     *  @param string|null $value Value to set for the accountName property.
+     * @param string|null $value Value to set for the accountName property.
     */
     public function setAccountName(?string $value): void {
         $this->getBackingStore()->set('accountName', $value);
@@ -237,7 +237,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -245,7 +245,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -253,7 +253,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the domainName property value. NetBIOS/Active Directory domain of user account (that is, domain/account format).
-     *  @param string|null $value Value to set for the domainName property.
+     * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
         $this->getBackingStore()->set('domainName', $value);
@@ -261,7 +261,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-     *  @param EmailRole|null $value Value to set for the emailRole property.
+     * @param EmailRole|null $value Value to set for the emailRole property.
     */
     public function setEmailRole(?EmailRole $value): void {
         $this->getBackingStore()->set('emailRole', $value);
@@ -269,7 +269,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isVpn property value. Indicates whether the user logged on through a VPN.
-     *  @param bool|null $value Value to set for the isVpn property.
+     * @param bool|null $value Value to set for the isVpn property.
     */
     public function setIsVpn(?bool $value): void {
         $this->getBackingStore()->set('isVpn', $value);
@@ -277,7 +277,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonDateTime property value. Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the logonDateTime property.
+     * @param DateTime|null $value Value to set for the logonDateTime property.
     */
     public function setLogonDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('logonDateTime', $value);
@@ -285,7 +285,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonId property value. User sign-in ID.
-     *  @param string|null $value Value to set for the logonId property.
+     * @param string|null $value Value to set for the logonId property.
     */
     public function setLogonId(?string $value): void {
         $this->getBackingStore()->set('logonId', $value);
@@ -293,7 +293,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonIp property value. IP Address the sign-in request originated from.
-     *  @param string|null $value Value to set for the logonIp property.
+     * @param string|null $value Value to set for the logonIp property.
     */
     public function setLogonIp(?string $value): void {
         $this->getBackingStore()->set('logonIp', $value);
@@ -301,7 +301,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonLocation property value. Location (by IP address mapping) associated with a user sign-in event by this user.
-     *  @param string|null $value Value to set for the logonLocation property.
+     * @param string|null $value Value to set for the logonLocation property.
     */
     public function setLogonLocation(?string $value): void {
         $this->getBackingStore()->set('logonLocation', $value);
@@ -309,7 +309,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     *  @param LogonType|null $value Value to set for the logonType property.
+     * @param LogonType|null $value Value to set for the logonType property.
     */
     public function setLogonType(?LogonType $value): void {
         $this->getBackingStore()->set('logonType', $value);
@@ -317,7 +317,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -325,7 +325,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the onPremisesSecurityIdentifier property value. Active Directory (on-premises) Security Identifier (SID) of the user.
-     *  @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
+     * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
     public function setOnPremisesSecurityIdentifier(?string $value): void {
         $this->getBackingStore()->set('onPremisesSecurityIdentifier', $value);
@@ -333,7 +333,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
-     *  @param string|null $value Value to set for the riskScore property.
+     * @param string|null $value Value to set for the riskScore property.
     */
     public function setRiskScore(?string $value): void {
         $this->getBackingStore()->set('riskScore', $value);
@@ -341,7 +341,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
-     *  @param UserAccountSecurityType|null $value Value to set for the userAccountType property.
+     * @param UserAccountSecurityType|null $value Value to set for the userAccountType property.
     */
     public function setUserAccountType(?UserAccountSecurityType $value): void {
         $this->getBackingStore()->set('userAccountType', $value);
@@ -349,7 +349,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userPrincipalName property value. User sign-in name - internet format: (user account name)@(user account DNS domain name).
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The software update status summary.
+*/
 class SoftwareUpdateStatusSummaryRequestBuilderGetQueryParameters 
 {
     /**

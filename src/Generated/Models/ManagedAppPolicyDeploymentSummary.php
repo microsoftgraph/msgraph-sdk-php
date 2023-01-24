@@ -95,7 +95,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
 
     /**
      * Sets the configurationDeployedUserCount property value. Not yet documented
-     *  @param int|null $value Value to set for the configurationDeployedUserCount property.
+     * @param int|null $value Value to set for the configurationDeployedUserCount property.
     */
     public function setConfigurationDeployedUserCount(?int $value): void {
         $this->getBackingStore()->set('configurationDeployedUserCount', $value);
@@ -103,7 +103,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
 
     /**
      * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
-     *  @param array<ManagedAppPolicyDeploymentSummaryPerApp>|null $value Value to set for the configurationDeploymentSummaryPerApp property.
+     * @param array<ManagedAppPolicyDeploymentSummaryPerApp>|null $value Value to set for the configurationDeploymentSummaryPerApp property.
     */
     public function setConfigurationDeploymentSummaryPerApp(?array $value): void {
         $this->getBackingStore()->set('configurationDeploymentSummaryPerApp', $value);
@@ -111,7 +111,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Not yet documented
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -119,7 +119,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
 
     /**
      * Sets the lastRefreshTime property value. Not yet documented
-     *  @param DateTime|null $value Value to set for the lastRefreshTime property.
+     * @param DateTime|null $value Value to set for the lastRefreshTime property.
     */
     public function setLastRefreshTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastRefreshTime', $value);
@@ -127,7 +127,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

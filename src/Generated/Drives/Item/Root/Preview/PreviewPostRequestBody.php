@@ -90,7 +90,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the page property value. The page property
-     *  @param string|null $value Value to set for the page property.
+     * @param string|null $value Value to set for the page property.
     */
     public function setPage(?string $value): void {
         $this->getBackingStore()->set('page', $value);
@@ -114,7 +114,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the zoom property value. The zoom property
-     *  @param float|null $value Value to set for the zoom property.
+     * @param float|null $value Value to set for the zoom property.
     */
     public function setZoom(?float $value): void {
         $this->getBackingStore()->set('zoom', $value);

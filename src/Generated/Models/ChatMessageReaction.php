@@ -111,7 +111,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -135,7 +135,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -143,7 +143,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the reactionType property value. Supported values are like, angry, sad, laugh, heart, surprised.
-     *  @param string|null $value Value to set for the reactionType property.
+     * @param string|null $value Value to set for the reactionType property.
     */
     public function setReactionType(?string $value): void {
         $this->getBackingStore()->set('reactionType', $value);
@@ -151,7 +151,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the user property value. The user property
-     *  @param ChatMessageReactionIdentitySet|null $value Value to set for the user property.
+     * @param ChatMessageReactionIdentitySet|null $value Value to set for the user property.
     */
     public function setUser(?ChatMessageReactionIdentitySet $value): void {
         $this->getBackingStore()->set('user', $value);

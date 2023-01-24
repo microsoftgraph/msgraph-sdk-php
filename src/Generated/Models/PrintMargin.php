@@ -120,7 +120,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the bottom property value. The margin in microns from the bottom edge.
-     *  @param int|null $value Value to set for the bottom property.
+     * @param int|null $value Value to set for the bottom property.
     */
     public function setBottom(?int $value): void {
         $this->getBackingStore()->set('bottom', $value);
@@ -144,7 +144,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the left property value. The margin in microns from the left edge.
-     *  @param int|null $value Value to set for the left property.
+     * @param int|null $value Value to set for the left property.
     */
     public function setLeft(?int $value): void {
         $this->getBackingStore()->set('left', $value);
@@ -152,7 +152,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the right property value. The margin in microns from the right edge.
-     *  @param int|null $value Value to set for the right property.
+     * @param int|null $value Value to set for the right property.
     */
     public function setRight(?int $value): void {
         $this->getBackingStore()->set('right', $value);
@@ -168,7 +168,7 @@ class PrintMargin implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the top property value. The margin in microns from the top edge.
-     *  @param int|null $value Value to set for the top property.
+     * @param int|null $value Value to set for the top property.
     */
     public function setTop(?int $value): void {
         $this->getBackingStore()->set('top', $value);

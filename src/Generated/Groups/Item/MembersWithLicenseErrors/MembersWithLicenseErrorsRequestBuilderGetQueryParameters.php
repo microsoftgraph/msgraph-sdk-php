@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A list of group members with license errors from this group-based license assignment. Read-only.
+*/
 class MembersWithLicenseErrorsRequestBuilderGetQueryParameters 
 {
     /**

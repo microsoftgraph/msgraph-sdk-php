@@ -11,6 +11,9 @@ use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\Se
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}
+*/
 class DirectoryObjectItemRequestBuilder 
 {
     /**

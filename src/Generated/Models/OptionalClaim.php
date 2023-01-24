@@ -120,7 +120,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalProperties property value. Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.
-     *  @param array<string>|null $value Value to set for the additionalProperties property.
+     * @param array<string>|null $value Value to set for the additionalProperties property.
     */
     public function setAdditionalProperties(?array $value): void {
         $this->getBackingStore()->set('additionalProperties', $value);
@@ -136,7 +136,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +144,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the essential property value. If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.
-     *  @param bool|null $value Value to set for the essential property.
+     * @param bool|null $value Value to set for the essential property.
     */
     public function setEssential(?bool $value): void {
         $this->getBackingStore()->set('essential', $value);
@@ -152,7 +152,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. The name of the optional claim.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -160,7 +160,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class OptionalClaim implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the source property value. The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.
-     *  @param string|null $value Value to set for the source property.
+     * @param string|null $value Value to set for the source property.
     */
     public function setSource(?string $value): void {
         $this->getBackingStore()->set('source', $value);

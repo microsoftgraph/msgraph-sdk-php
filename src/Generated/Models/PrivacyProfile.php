@@ -100,7 +100,7 @@ class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contactEmail property value. A valid smtp email address for the privacy statement contact. Not required.
-     *  @param string|null $value Value to set for the contactEmail property.
+     * @param string|null $value Value to set for the contactEmail property.
     */
     public function setContactEmail(?string $value): void {
         $this->getBackingStore()->set('contactEmail', $value);
@@ -124,7 +124,7 @@ class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class PrivacyProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the statementUrl property value. A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
-     *  @param string|null $value Value to set for the statementUrl property.
+     * @param string|null $value Value to set for the statementUrl property.
     */
     public function setStatementUrl(?string $value): void {
         $this->getBackingStore()->set('statementUrl', $value);

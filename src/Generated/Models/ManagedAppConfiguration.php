@@ -62,7 +62,7 @@ class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable
 
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
-     *  @param array<KeyValuePair>|null $value Value to set for the customSettings property.
+     * @param array<KeyValuePair>|null $value Value to set for the customSettings property.
     */
     public function setCustomSettings(?array $value): void {
         $this->getBackingStore()->set('customSettings', $value);

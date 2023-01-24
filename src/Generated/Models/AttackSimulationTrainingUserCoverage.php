@@ -100,7 +100,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     *  @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
+     * @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
     */
     public function setAttackSimulationUser(?AttackSimulationUser $value): void {
         $this->getBackingStore()->set('attackSimulationUser', $value);
@@ -116,7 +116,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -124,7 +124,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * Sets the userTrainings property value. List of assigned trainings and their statuses for the user.
-     *  @param array<UserTrainingStatusInfo>|null $value Value to set for the userTrainings property.
+     * @param array<UserTrainingStatusInfo>|null $value Value to set for the userTrainings property.
     */
     public function setUserTrainings(?array $value): void {
         $this->getBackingStore()->set('userTrainings', $value);

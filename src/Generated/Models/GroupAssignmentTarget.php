@@ -62,7 +62,7 @@ class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget imple
 
     /**
      * Sets the groupId property value. The group Id that is the target of the assignment.
-     *  @param string|null $value Value to set for the groupId property.
+     * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
         $this->getBackingStore()->set('groupId', $value);

@@ -170,7 +170,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -178,7 +178,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the adminConsentDescription property value. A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
-     *  @param string|null $value Value to set for the adminConsentDescription property.
+     * @param string|null $value Value to set for the adminConsentDescription property.
     */
     public function setAdminConsentDescription(?string $value): void {
         $this->getBackingStore()->set('adminConsentDescription', $value);
@@ -186,7 +186,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the adminConsentDisplayName property value. The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
-     *  @param string|null $value Value to set for the adminConsentDisplayName property.
+     * @param string|null $value Value to set for the adminConsentDisplayName property.
     */
     public function setAdminConsentDisplayName(?string $value): void {
         $this->getBackingStore()->set('adminConsentDisplayName', $value);
@@ -194,7 +194,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -202,7 +202,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -210,7 +210,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isEnabled property value. When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -218,7 +218,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -226,7 +226,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the origin property value. The origin property
-     *  @param string|null $value Value to set for the origin property.
+     * @param string|null $value Value to set for the origin property.
     */
     public function setOrigin(?string $value): void {
         $this->getBackingStore()->set('origin', $value);
@@ -234,7 +234,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -242,7 +242,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userConsentDescription property value. A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
-     *  @param string|null $value Value to set for the userConsentDescription property.
+     * @param string|null $value Value to set for the userConsentDescription property.
     */
     public function setUserConsentDescription(?string $value): void {
         $this->getBackingStore()->set('userConsentDescription', $value);
@@ -250,7 +250,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userConsentDisplayName property value. A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
-     *  @param string|null $value Value to set for the userConsentDisplayName property.
+     * @param string|null $value Value to set for the userConsentDisplayName property.
     */
     public function setUserConsentDisplayName(?string $value): void {
         $this->getBackingStore()->set('userConsentDisplayName', $value);
@@ -258,7 +258,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the value property value. Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
-     *  @param string|null $value Value to set for the value property.
+     * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {
         $this->getBackingStore()->set('value', $value);

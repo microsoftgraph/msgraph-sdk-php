@@ -74,7 +74,7 @@ class Planner extends Entity implements Parsable
 
     /**
      * Sets the buckets property value. Read-only. Nullable. Returns a collection of the specified buckets
-     *  @param array<PlannerBucket>|null $value Value to set for the buckets property.
+     * @param array<PlannerBucket>|null $value Value to set for the buckets property.
     */
     public function setBuckets(?array $value): void {
         $this->getBackingStore()->set('buckets', $value);
@@ -82,7 +82,7 @@ class Planner extends Entity implements Parsable
 
     /**
      * Sets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
-     *  @param array<PlannerPlan>|null $value Value to set for the plans property.
+     * @param array<PlannerPlan>|null $value Value to set for the plans property.
     */
     public function setPlans(?array $value): void {
         $this->getBackingStore()->set('plans', $value);
@@ -90,7 +90,7 @@ class Planner extends Entity implements Parsable
 
     /**
      * Sets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
-     *  @param array<PlannerTask>|null $value Value to set for the tasks property.
+     * @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value): void {
         $this->getBackingStore()->set('tasks', $value);

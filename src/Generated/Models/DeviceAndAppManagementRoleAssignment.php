@@ -6,10 +6,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles.
+*/
 class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable 
 {
     /**
-     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -54,7 +57,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
 
     /**
      * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     *  @param array<string>|null $value Value to set for the members property.
+     * @param array<string>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);

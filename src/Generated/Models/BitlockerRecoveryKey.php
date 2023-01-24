@@ -85,7 +85,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time when the key was originally backed up to Azure Active Directory. Not nullable.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -93,7 +93,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Sets the deviceId property value. Identifier of the device the BitLocker key is originally backed up from. Supports $filter (eq).
-     *  @param string|null $value Value to set for the deviceId property.
+     * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
         $this->getBackingStore()->set('deviceId', $value);
@@ -101,7 +101,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Sets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
-     *  @param string|null $value Value to set for the key property.
+     * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -109,7 +109,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
 
     /**
      * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: 1 (for operatingSystemVolume), 2 (for fixedDataVolume), 3 (for removableDataVolume), and 4 (for unknownFutureValue).
-     *  @param VolumeType|null $value Value to set for the volumeType property.
+     * @param VolumeType|null $value Value to set for the volumeType property.
     */
     public function setVolumeType(?VolumeType $value): void {
         $this->getBackingStore()->set('volumeType', $value);

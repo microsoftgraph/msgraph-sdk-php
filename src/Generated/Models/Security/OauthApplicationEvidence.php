@@ -84,7 +84,7 @@ class OauthApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the appId property value. Unique identifier of the application.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -92,7 +92,7 @@ class OauthApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the displayName property value. Name of the application.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -100,7 +100,7 @@ class OauthApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the objectId property value. The unique identifier of the application object in Azure AD.
-     *  @param string|null $value Value to set for the objectId property.
+     * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
         $this->getBackingStore()->set('objectId', $value);
@@ -108,7 +108,7 @@ class OauthApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the publisher property value. The name of the application publisher.
-     *  @param string|null $value Value to set for the publisher property.
+     * @param string|null $value Value to set for the publisher property.
     */
     public function setPublisher(?string $value): void {
         $this->getBackingStore()->set('publisher', $value);

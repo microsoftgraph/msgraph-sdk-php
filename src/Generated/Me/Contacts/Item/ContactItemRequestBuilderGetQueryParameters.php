@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Contacts\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's contacts. Read-only. Nullable.
+*/
 class ContactItemRequestBuilderGetQueryParameters 
 {
     /**

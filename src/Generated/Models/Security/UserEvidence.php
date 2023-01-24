@@ -54,7 +54,7 @@ class UserEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the userAccount property value. The user account details.
-     *  @param UserAccount|null $value Value to set for the userAccount property.
+     * @param UserAccount|null $value Value to set for the userAccount property.
     */
     public function setUserAccount(?UserAccount $value): void {
         $this->getBackingStore()->set('userAccount', $value);

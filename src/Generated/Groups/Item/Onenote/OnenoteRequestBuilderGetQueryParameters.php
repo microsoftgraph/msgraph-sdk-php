@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Onenote;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get onenote from groups
+*/
 class OnenoteRequestBuilderGetQueryParameters 
 {
     /**

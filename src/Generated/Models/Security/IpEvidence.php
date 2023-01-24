@@ -64,7 +64,7 @@ class IpEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the countryLetterCode property value. The two-letter country code according to ISO 3166 format, for example: US, UK, CA, etc..).
-     *  @param string|null $value Value to set for the countryLetterCode property.
+     * @param string|null $value Value to set for the countryLetterCode property.
     */
     public function setCountryLetterCode(?string $value): void {
         $this->getBackingStore()->set('countryLetterCode', $value);
@@ -72,7 +72,7 @@ class IpEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);

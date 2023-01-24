@@ -66,7 +66,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the eventDateTime property value. Date and time when the event occurred.
-     *  @param DateTime|null $value Value to set for the eventDateTime property.
+     * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('eventDateTime', $value);
@@ -74,7 +74,7 @@ class MessagePinnedEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

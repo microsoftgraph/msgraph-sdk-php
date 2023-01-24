@@ -55,7 +55,7 @@ class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable
 
     /**
      * Sets the content property value. Status report content.
-     *  @param Json|null $value Value to set for the content property.
+     * @param Json|null $value Value to set for the content property.
     */
     public function setContent(?Json $value): void {
         $this->getBackingStore()->set('content', $value);

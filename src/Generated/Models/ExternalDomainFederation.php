@@ -75,7 +75,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
 
     /**
      * Sets the displayName property value. The name of the identity source, typically also the domain name. Read only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -83,7 +83,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
 
     /**
      * Sets the domainName property value. The domain name. Read only.
-     *  @param string|null $value Value to set for the domainName property.
+     * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
         $this->getBackingStore()->set('domainName', $value);
@@ -91,7 +91,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
 
     /**
      * Sets the issuerUri property value. The issuerURI of the incoming federation. Read only.
-     *  @param string|null $value Value to set for the issuerUri property.
+     * @param string|null $value Value to set for the issuerUri property.
     */
     public function setIssuerUri(?string $value): void {
         $this->getBackingStore()->set('issuerUri', $value);

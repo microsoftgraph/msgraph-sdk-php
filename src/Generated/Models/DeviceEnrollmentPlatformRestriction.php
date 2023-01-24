@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Platform specific enrollment restrictions
+*/
 class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -120,7 +123,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +131,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +139,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -144,7 +147,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the osMaximumVersion property value. Max OS version supported
-     *  @param string|null $value Value to set for the osMaximumVersion property.
+     * @param string|null $value Value to set for the osMaximumVersion property.
     */
     public function setOsMaximumVersion(?string $value): void {
         $this->getBackingStore()->set('osMaximumVersion', $value);
@@ -152,7 +155,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the osMinimumVersion property value. Min OS version supported
-     *  @param string|null $value Value to set for the osMinimumVersion property.
+     * @param string|null $value Value to set for the osMinimumVersion property.
     */
     public function setOsMinimumVersion(?string $value): void {
         $this->getBackingStore()->set('osMinimumVersion', $value);
@@ -160,7 +163,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
-     *  @param bool|null $value Value to set for the personalDeviceEnrollmentBlocked property.
+     * @param bool|null $value Value to set for the personalDeviceEnrollmentBlocked property.
     */
     public function setPersonalDeviceEnrollmentBlocked(?bool $value): void {
         $this->getBackingStore()->set('personalDeviceEnrollmentBlocked', $value);
@@ -168,7 +171,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * Sets the platformBlocked property value. Block the platform from enrolling
-     *  @param bool|null $value Value to set for the platformBlocked property.
+     * @param bool|null $value Value to set for the platformBlocked property.
     */
     public function setPlatformBlocked(?bool $value): void {
         $this->getBackingStore()->set('platformBlocked', $value);

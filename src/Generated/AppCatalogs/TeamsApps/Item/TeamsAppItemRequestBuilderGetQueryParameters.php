@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get teamsApps from appCatalogs
+*/
 class TeamsAppItemRequestBuilderGetQueryParameters 
 {
     /**

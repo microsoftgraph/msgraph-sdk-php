@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Drive;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+*/
 class DriveRequestBuilderGetQueryParameters 
 {
     /**

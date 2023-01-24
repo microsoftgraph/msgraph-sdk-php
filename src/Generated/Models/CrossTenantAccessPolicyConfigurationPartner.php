@@ -150,7 +150,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
     */
     public function setB2bCollaborationInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bCollaborationInbound', $value);
@@ -166,7 +166,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
     */
     public function setB2bCollaborationOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bCollaborationOutbound', $value);
@@ -174,7 +174,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectInbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectInbound property.
     */
     public function setB2bDirectConnectInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bDirectConnectInbound', $value);
@@ -182,7 +182,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
     */
     public function setB2bDirectConnectOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bDirectConnectOutbound', $value);
@@ -190,7 +190,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -198,7 +198,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
-     *  @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
+     * @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
     */
     public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value): void {
         $this->getBackingStore()->set('inboundTrust', $value);
@@ -206,7 +206,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
-     *  @param bool|null $value Value to set for the isServiceProvider property.
+     * @param bool|null $value Value to set for the isServiceProvider property.
     */
     public function setIsServiceProvider(?bool $value): void {
         $this->getBackingStore()->set('isServiceProvider', $value);
@@ -214,7 +214,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -222,7 +222,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

@@ -175,7 +175,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -183,7 +183,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the description property value. Optional textual description for the channel.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -191,7 +191,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -199,7 +199,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the email property value. The email address for sending messages to the channel. Read-only.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -207,7 +207,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the filesFolder property value. Metadata for the location where the channel's files are stored.
-     *  @param DriveItem|null $value Value to set for the filesFolder property.
+     * @param DriveItem|null $value Value to set for the filesFolder property.
     */
     public function setFilesFolder(?DriveItem $value): void {
         $this->getBackingStore()->set('filesFolder', $value);
@@ -215,7 +215,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
-     *  @param bool|null $value Value to set for the isFavoriteByDefault property.
+     * @param bool|null $value Value to set for the isFavoriteByDefault property.
     */
     public function setIsFavoriteByDefault(?bool $value): void {
         $this->getBackingStore()->set('isFavoriteByDefault', $value);
@@ -223,7 +223,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the members property value. A collection of membership records associated with the channel.
-     *  @param array<ConversationMember>|null $value Value to set for the members property.
+     * @param array<ConversationMember>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
@@ -231,7 +231,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
-     *  @param ChannelMembershipType|null $value Value to set for the membershipType property.
+     * @param ChannelMembershipType|null $value Value to set for the membershipType property.
     */
     public function setMembershipType(?ChannelMembershipType $value): void {
         $this->getBackingStore()->set('membershipType', $value);
@@ -239,7 +239,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
-     *  @param array<ChatMessage>|null $value Value to set for the messages property.
+     * @param array<ChatMessage>|null $value Value to set for the messages property.
     */
     public function setMessages(?array $value): void {
         $this->getBackingStore()->set('messages', $value);
@@ -247,7 +247,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
-     *  @param array<SharedWithChannelTeamInfo>|null $value Value to set for the sharedWithTeams property.
+     * @param array<SharedWithChannelTeamInfo>|null $value Value to set for the sharedWithTeams property.
     */
     public function setSharedWithTeams(?array $value): void {
         $this->getBackingStore()->set('sharedWithTeams', $value);
@@ -255,7 +255,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
-     *  @param array<TeamsTab>|null $value Value to set for the tabs property.
+     * @param array<TeamsTab>|null $value Value to set for the tabs property.
     */
     public function setTabs(?array $value): void {
         $this->getBackingStore()->set('tabs', $value);
@@ -263,7 +263,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
@@ -271,7 +271,7 @@ class Channel extends Entity implements Parsable
 
     /**
      * Sets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

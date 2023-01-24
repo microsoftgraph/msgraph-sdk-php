@@ -116,7 +116,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the connectors property value. The connectors that are associated with the printer.
-     *  @param array<PrintConnector>|null $value Value to set for the connectors property.
+     * @param array<PrintConnector>|null $value Value to set for the connectors property.
     */
     public function setConnectors(?array $value): void {
         $this->getBackingStore()->set('connectors', $value);
@@ -124,7 +124,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
-     *  @param bool|null $value Value to set for the hasPhysicalDevice property.
+     * @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
     public function setHasPhysicalDevice(?bool $value): void {
         $this->getBackingStore()->set('hasPhysicalDevice', $value);
@@ -132,7 +132,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the isShared property value. True if the printer is shared; false otherwise. Read-only.
-     *  @param bool|null $value Value to set for the isShared property.
+     * @param bool|null $value Value to set for the isShared property.
     */
     public function setIsShared(?bool $value): void {
         $this->getBackingStore()->set('isShared', $value);
@@ -140,7 +140,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the lastSeenDateTime property value. The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
-     *  @param DateTime|null $value Value to set for the lastSeenDateTime property.
+     * @param DateTime|null $value Value to set for the lastSeenDateTime property.
     */
     public function setLastSeenDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastSeenDateTime', $value);
@@ -148,7 +148,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the printer was registered. Read-only.
-     *  @param DateTime|null $value Value to set for the registeredDateTime property.
+     * @param DateTime|null $value Value to set for the registeredDateTime property.
     */
     public function setRegisteredDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('registeredDateTime', $value);
@@ -156,7 +156,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     *  @param array<PrinterShare>|null $value Value to set for the shares property.
+     * @param array<PrinterShare>|null $value Value to set for the shares property.
     */
     public function setShares(?array $value): void {
         $this->getBackingStore()->set('shares', $value);
@@ -164,7 +164,7 @@ class Printer extends PrinterBase implements Parsable
 
     /**
      * Sets the taskTriggers property value. A list of task triggers that are associated with the printer.
-     *  @param array<PrintTaskTrigger>|null $value Value to set for the taskTriggers property.
+     * @param array<PrintTaskTrigger>|null $value Value to set for the taskTriggers property.
     */
     public function setTaskTriggers(?array $value): void {
         $this->getBackingStore()->set('taskTriggers', $value);

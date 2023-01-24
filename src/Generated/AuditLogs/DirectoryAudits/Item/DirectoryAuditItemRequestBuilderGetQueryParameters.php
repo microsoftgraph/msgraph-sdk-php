@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get directoryAudits from auditLogs
+*/
 class DirectoryAuditItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Drive;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+*/
 class DriveRequestBuilderGetQueryParameters 
 {
     /**

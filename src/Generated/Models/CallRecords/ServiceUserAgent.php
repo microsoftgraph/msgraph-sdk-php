@@ -55,7 +55,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
 
     /**
      * Sets the role property value. The role property
-     *  @param ServiceRole|null $value Value to set for the role property.
+     * @param ServiceRole|null $value Value to set for the role property.
     */
     public function setRole(?ServiceRole $value): void {
         $this->getBackingStore()->set('role', $value);

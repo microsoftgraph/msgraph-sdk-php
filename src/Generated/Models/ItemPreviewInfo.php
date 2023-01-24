@@ -110,7 +110,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the getUrl property value. The getUrl property
-     *  @param string|null $value Value to set for the getUrl property.
+     * @param string|null $value Value to set for the getUrl property.
     */
     public function setGetUrl(?string $value): void {
         $this->getBackingStore()->set('getUrl', $value);
@@ -134,7 +134,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the postParameters property value. The postParameters property
-     *  @param string|null $value Value to set for the postParameters property.
+     * @param string|null $value Value to set for the postParameters property.
     */
     public function setPostParameters(?string $value): void {
         $this->getBackingStore()->set('postParameters', $value);
@@ -150,7 +150,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the postUrl property value. The postUrl property
-     *  @param string|null $value Value to set for the postUrl property.
+     * @param string|null $value Value to set for the postUrl property.
     */
     public function setPostUrl(?string $value): void {
         $this->getBackingStore()->set('postUrl', $value);

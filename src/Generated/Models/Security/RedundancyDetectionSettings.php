@@ -120,7 +120,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the isEnabled property value. Indicates whether email threading and near duplicate detection are enabled.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -144,7 +144,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the maxWords property value. Specifies the maximum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
-     *  @param int|null $value Value to set for the maxWords property.
+     * @param int|null $value Value to set for the maxWords property.
     */
     public function setMaxWords(?int $value): void {
         $this->getBackingStore()->set('maxWords', $value);
@@ -152,7 +152,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the minWords property value. Specifies the minimum number of words used for email threading and near duplicate detection. To learn more, see Minimum/maximum number of words.
-     *  @param int|null $value Value to set for the minWords property.
+     * @param int|null $value Value to set for the minWords property.
     */
     public function setMinWords(?int $value): void {
         $this->getBackingStore()->set('minWords', $value);
@@ -160,7 +160,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class RedundancyDetectionSettings implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the similarityThreshold property value. Specifies the similarity level for documents to be put in the same near duplicate set. To learn more, see Document and email similarity threshold.
-     *  @param int|null $value Value to set for the similarityThreshold property.
+     * @param int|null $value Value to set for the similarityThreshold property.
     */
     public function setSimilarityThreshold(?int $value): void {
         $this->getBackingStore()->set('similarityThreshold', $value);

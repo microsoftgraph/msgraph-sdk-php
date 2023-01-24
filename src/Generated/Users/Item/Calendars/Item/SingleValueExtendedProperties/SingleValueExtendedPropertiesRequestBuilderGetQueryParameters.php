@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\SingleValueExtende
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+*/
 class SingleValueExtendedPropertiesRequestBuilderGetQueryParameters 
 {
     /**

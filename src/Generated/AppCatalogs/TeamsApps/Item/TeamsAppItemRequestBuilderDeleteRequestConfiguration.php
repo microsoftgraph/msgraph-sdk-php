@@ -4,10 +4,13 @@ namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
+/**
+ * Configuration for the request such as headers, query parameters, and middleware options.
+*/
 class TeamsAppItemRequestBuilderDeleteRequestConfiguration 
 {
     /**
-     * @var array<string, string>|null $headers Request headers
+     * @var array<string, array<string>|string>|null $headers Request headers
     */
     public ?array $headers = null;
     

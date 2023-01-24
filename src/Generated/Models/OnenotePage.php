@@ -157,7 +157,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the content property value. The page's HTML content.
-     *  @param StreamInterface|null $value Value to set for the content property.
+     * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -165,7 +165,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the contentUrl property value. The URL for the page's HTML content.  Read-only.
-     *  @param string|null $value Value to set for the contentUrl property.
+     * @param string|null $value Value to set for the contentUrl property.
     */
     public function setContentUrl(?string $value): void {
         $this->getBackingStore()->set('contentUrl', $value);
@@ -173,7 +173,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the createdByAppId property value. The unique identifier of the application that created the page. Read-only.
-     *  @param string|null $value Value to set for the createdByAppId property.
+     * @param string|null $value Value to set for the createdByAppId property.
     */
     public function setCreatedByAppId(?string $value): void {
         $this->getBackingStore()->set('createdByAppId', $value);
@@ -181,7 +181,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -189,7 +189,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the level property value. The indentation level of the page. Read-only.
-     *  @param int|null $value Value to set for the level property.
+     * @param int|null $value Value to set for the level property.
     */
     public function setLevel(?int $value): void {
         $this->getBackingStore()->set('level', $value);
@@ -197,7 +197,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the links property value. Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-     *  @param PageLinks|null $value Value to set for the links property.
+     * @param PageLinks|null $value Value to set for the links property.
     */
     public function setLinks(?PageLinks $value): void {
         $this->getBackingStore()->set('links', $value);
@@ -205,7 +205,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the order property value. The order of the page within its parent section. Read-only.
-     *  @param int|null $value Value to set for the order property.
+     * @param int|null $value Value to set for the order property.
     */
     public function setOrder(?int $value): void {
         $this->getBackingStore()->set('order', $value);
@@ -213,7 +213,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the page.  Read-only.
-     *  @param Notebook|null $value Value to set for the parentNotebook property.
+     * @param Notebook|null $value Value to set for the parentNotebook property.
     */
     public function setParentNotebook(?Notebook $value): void {
         $this->getBackingStore()->set('parentNotebook', $value);
@@ -221,7 +221,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the parentSection property value. The section that contains the page. Read-only.
-     *  @param OnenoteSection|null $value Value to set for the parentSection property.
+     * @param OnenoteSection|null $value Value to set for the parentSection property.
     */
     public function setParentSection(?OnenoteSection $value): void {
         $this->getBackingStore()->set('parentSection', $value);
@@ -229,7 +229,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the title property value. The title of the page.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -237,7 +237,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
 
     /**
      * Sets the userTags property value. The userTags property
-     *  @param array<string>|null $value Value to set for the userTags property.
+     * @param array<string>|null $value Value to set for the userTags property.
     */
     public function setUserTags(?array $value): void {
         $this->getBackingStore()->set('userTags', $value);

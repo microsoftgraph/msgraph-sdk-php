@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get termsOfUse from identityGovernance
+*/
 class TermsOfUseRequestBuilderGetQueryParameters 
 {
     /**

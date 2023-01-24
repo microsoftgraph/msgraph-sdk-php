@@ -205,7 +205,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -213,7 +213,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the changeId property value. Unique ID of this change in this cycle.
-     *  @param string|null $value Value to set for the changeId property.
+     * @param string|null $value Value to set for the changeId property.
     */
     public function setChangeId(?string $value): void {
         $this->getBackingStore()->set('changeId', $value);
@@ -221,7 +221,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the cycleId property value. Unique ID per job iteration.
-     *  @param string|null $value Value to set for the cycleId property.
+     * @param string|null $value Value to set for the cycleId property.
     */
     public function setCycleId(?string $value): void {
         $this->getBackingStore()->set('cycleId', $value);
@@ -229,7 +229,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds.
-     *  @param int|null $value Value to set for the durationInMilliseconds property.
+     * @param int|null $value Value to set for the durationInMilliseconds property.
     */
     public function setDurationInMilliseconds(?int $value): void {
         $this->getBackingStore()->set('durationInMilliseconds', $value);
@@ -237,7 +237,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the initiatedBy property value. Details of who initiated this provisioning.
-     *  @param Initiator|null $value Value to set for the initiatedBy property.
+     * @param Initiator|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?Initiator $value): void {
         $this->getBackingStore()->set('initiatedBy', $value);
@@ -245,7 +245,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the jobId property value. The unique ID for the whole provisioning job.
-     *  @param string|null $value Value to set for the jobId property.
+     * @param string|null $value Value to set for the jobId property.
     */
     public function setJobId(?string $value): void {
         $this->getBackingStore()->set('jobId', $value);
@@ -253,7 +253,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
-     *  @param array<ModifiedProperty>|null $value Value to set for the modifiedProperties property.
+     * @param array<ModifiedProperty>|null $value Value to set for the modifiedProperties property.
     */
     public function setModifiedProperties(?array $value): void {
         $this->getBackingStore()->set('modifiedProperties', $value);
@@ -261,7 +261,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
-     *  @param ProvisioningAction|null $value Value to set for the provisioningAction property.
+     * @param ProvisioningAction|null $value Value to set for the provisioningAction property.
     */
     public function setProvisioningAction(?ProvisioningAction $value): void {
         $this->getBackingStore()->set('provisioningAction', $value);
@@ -269,7 +269,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the provisioningStatusInfo property value. Details of provisioning status.
-     *  @param ProvisioningStatusInfo|null $value Value to set for the provisioningStatusInfo property.
+     * @param ProvisioningStatusInfo|null $value Value to set for the provisioningStatusInfo property.
     */
     public function setProvisioningStatusInfo(?ProvisioningStatusInfo $value): void {
         $this->getBackingStore()->set('provisioningStatusInfo', $value);
@@ -277,7 +277,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the provisioningSteps property value. Details of each step in provisioning.
-     *  @param array<ProvisioningStep>|null $value Value to set for the provisioningSteps property.
+     * @param array<ProvisioningStep>|null $value Value to set for the provisioningSteps property.
     */
     public function setProvisioningSteps(?array $value): void {
         $this->getBackingStore()->set('provisioningSteps', $value);
@@ -285,7 +285,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the servicePrincipal property value. Represents the service principal used for provisioning.
-     *  @param ProvisioningServicePrincipal|null $value Value to set for the servicePrincipal property.
+     * @param ProvisioningServicePrincipal|null $value Value to set for the servicePrincipal property.
     */
     public function setServicePrincipal(?ProvisioningServicePrincipal $value): void {
         $this->getBackingStore()->set('servicePrincipal', $value);
@@ -293,7 +293,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the sourceIdentity property value. Details of source object being provisioned.
-     *  @param ProvisionedIdentity|null $value Value to set for the sourceIdentity property.
+     * @param ProvisionedIdentity|null $value Value to set for the sourceIdentity property.
     */
     public function setSourceIdentity(?ProvisionedIdentity $value): void {
         $this->getBackingStore()->set('sourceIdentity', $value);
@@ -301,7 +301,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the sourceSystem property value. Details of source system of the object being provisioned.
-     *  @param ProvisioningSystem|null $value Value to set for the sourceSystem property.
+     * @param ProvisioningSystem|null $value Value to set for the sourceSystem property.
     */
     public function setSourceSystem(?ProvisioningSystem $value): void {
         $this->getBackingStore()->set('sourceSystem', $value);
@@ -309,7 +309,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the targetIdentity property value. Details of target object being provisioned.
-     *  @param ProvisionedIdentity|null $value Value to set for the targetIdentity property.
+     * @param ProvisionedIdentity|null $value Value to set for the targetIdentity property.
     */
     public function setTargetIdentity(?ProvisionedIdentity $value): void {
         $this->getBackingStore()->set('targetIdentity', $value);
@@ -317,7 +317,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the targetSystem property value. Details of target system of the object being provisioned.
-     *  @param ProvisioningSystem|null $value Value to set for the targetSystem property.
+     * @param ProvisioningSystem|null $value Value to set for the targetSystem property.
     */
     public function setTargetSystem(?ProvisioningSystem $value): void {
         $this->getBackingStore()->set('targetSystem', $value);
@@ -325,7 +325,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. Unique Azure AD tenant ID.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

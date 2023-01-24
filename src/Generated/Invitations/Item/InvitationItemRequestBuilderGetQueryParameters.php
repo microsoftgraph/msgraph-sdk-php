@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Invitations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from invitations by key (id)
+*/
 class InvitationItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMet
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

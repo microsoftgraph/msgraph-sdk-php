@@ -103,7 +103,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
 
     /**
      * Sets the details property value. Additional details about service event. This property doesn't support filters.
-     *  @param array<KeyValuePair>|null $value Value to set for the details property.
+     * @param array<KeyValuePair>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value): void {
         $this->getBackingStore()->set('details', $value);
@@ -111,7 +111,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
 
     /**
      * Sets the endDateTime property value. The end time of the service event.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -119,7 +119,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The last modified time of the service event.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -127,7 +127,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. The start time of the service event.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -135,7 +135,7 @@ class ServiceAnnouncementBase extends Entity implements Parsable
 
     /**
      * Sets the title property value. The title of the service event.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);

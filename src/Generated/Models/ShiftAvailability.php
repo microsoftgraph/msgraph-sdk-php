@@ -110,7 +110,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the recurrence property value. Specifies the pattern for recurrence
-     *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
+     * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
         $this->getBackingStore()->set('recurrence', $value);
@@ -142,7 +142,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the timeSlots property value. The time slot(s) preferred by the user.
-     *  @param array<TimeRange>|null $value Value to set for the timeSlots property.
+     * @param array<TimeRange>|null $value Value to set for the timeSlots property.
     */
     public function setTimeSlots(?array $value): void {
         $this->getBackingStore()->set('timeSlots', $value);
@@ -150,7 +150,7 @@ class ShiftAvailability implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the timeZone property value. Specifies the time zone for the indicated time.
-     *  @param string|null $value Value to set for the timeZone property.
+     * @param string|null $value Value to set for the timeZone property.
     */
     public function setTimeZone(?string $value): void {
         $this->getBackingStore()->set('timeZone', $value);

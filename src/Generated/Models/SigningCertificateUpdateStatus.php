@@ -101,7 +101,7 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the certificateUpdateResult property value. Status of the last certificate update. Read-only. For a list of statuses, see certificateUpdateResult status.
-     *  @param string|null $value Value to set for the certificateUpdateResult property.
+     * @param string|null $value Value to set for the certificateUpdateResult property.
     */
     public function setCertificateUpdateResult(?string $value): void {
         $this->getBackingStore()->set('certificateUpdateResult', $value);
@@ -125,7 +125,7 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the lastRunDateTime property value. Date and time in ISO 8601 format and in UTC time when the certificate was last updated. Read-only.
-     *  @param DateTime|null $value Value to set for the lastRunDateTime property.
+     * @param DateTime|null $value Value to set for the lastRunDateTime property.
     */
     public function setLastRunDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastRunDateTime', $value);
@@ -133,7 +133,7 @@ class SigningCertificateUpdateStatus implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

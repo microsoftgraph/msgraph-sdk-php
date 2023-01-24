@@ -95,7 +95,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
 
     /**
      * Sets the appDisplayName property value. Display name of the application object on which this extension property is defined. Read-only.
-     *  @param string|null $value Value to set for the appDisplayName property.
+     * @param string|null $value Value to set for the appDisplayName property.
     */
     public function setAppDisplayName(?string $value): void {
         $this->getBackingStore()->set('appDisplayName', $value);
@@ -103,7 +103,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
 
     /**
      * Sets the dataType property value. Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
-     *  @param string|null $value Value to set for the dataType property.
+     * @param string|null $value Value to set for the dataType property.
     */
     public function setDataType(?string $value): void {
         $this->getBackingStore()->set('dataType', $value);
@@ -111,7 +111,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
 
     /**
      * Sets the isSyncedFromOnPremises property value. Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
-     *  @param bool|null $value Value to set for the isSyncedFromOnPremises property.
+     * @param bool|null $value Value to set for the isSyncedFromOnPremises property.
     */
     public function setIsSyncedFromOnPremises(?bool $value): void {
         $this->getBackingStore()->set('isSyncedFromOnPremises', $value);
@@ -119,7 +119,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
 
     /**
      * Sets the name property value. Name of the extension property. Not nullable. Supports $filter (eq).
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -127,7 +127,7 @@ class ExtensionProperty extends DirectoryObject implements Parsable
 
     /**
      * Sets the targetObjects property value. Following values are supported. Not nullable. UserGroupAdministrativeUnitApplicationDeviceOrganization
-     *  @param array<string>|null $value Value to set for the targetObjects property.
+     * @param array<string>|null $value Value to set for the targetObjects property.
     */
     public function setTargetObjects(?array $value): void {
         $this->getBackingStore()->set('targetObjects', $value);

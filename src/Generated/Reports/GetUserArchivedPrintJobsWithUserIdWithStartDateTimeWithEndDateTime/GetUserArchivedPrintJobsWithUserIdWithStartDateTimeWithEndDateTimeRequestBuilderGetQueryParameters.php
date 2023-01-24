@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWi
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getUserArchivedPrintJobs
+*/
 class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters 
 {
     /**

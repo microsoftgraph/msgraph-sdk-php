@@ -64,7 +64,7 @@ class WorkbookCommentReply extends Entity implements Parsable
 
     /**
      * Sets the content property value. The content of a comment reply.
-     *  @param string|null $value Value to set for the content property.
+     * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -72,7 +72,7 @@ class WorkbookCommentReply extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. Indicates the type for the comment reply.
-     *  @param string|null $value Value to set for the contentType property.
+     * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
         $this->getBackingStore()->set('contentType', $value);

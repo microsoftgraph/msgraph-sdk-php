@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Events\Item\Instances\Item\Exten
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the event. Nullable.
+*/
 class ExtensionsRequestBuilderGetQueryParameters 
 {
     /**

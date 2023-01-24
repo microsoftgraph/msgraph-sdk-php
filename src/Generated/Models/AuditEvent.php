@@ -155,7 +155,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the activity property value. Friendly name of the activity.
-     *  @param string|null $value Value to set for the activity property.
+     * @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -163,7 +163,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. The date time in UTC when the activity was performed.
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -171,7 +171,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the activityOperationType property value. The HTTP operation type of the activity.
-     *  @param string|null $value Value to set for the activityOperationType property.
+     * @param string|null $value Value to set for the activityOperationType property.
     */
     public function setActivityOperationType(?string $value): void {
         $this->getBackingStore()->set('activityOperationType', $value);
@@ -179,7 +179,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the activityResult property value. The result of the activity.
-     *  @param string|null $value Value to set for the activityResult property.
+     * @param string|null $value Value to set for the activityResult property.
     */
     public function setActivityResult(?string $value): void {
         $this->getBackingStore()->set('activityResult', $value);
@@ -187,7 +187,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the activityType property value. The type of activity that was being performed.
-     *  @param string|null $value Value to set for the activityType property.
+     * @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value): void {
         $this->getBackingStore()->set('activityType', $value);
@@ -195,7 +195,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the actor property value. AAD user and application that are associated with the audit event.
-     *  @param AuditActor|null $value Value to set for the actor property.
+     * @param AuditActor|null $value Value to set for the actor property.
     */
     public function setActor(?AuditActor $value): void {
         $this->getBackingStore()->set('actor', $value);
@@ -203,7 +203,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the category property value. Audit category.
-     *  @param string|null $value Value to set for the category property.
+     * @param string|null $value Value to set for the category property.
     */
     public function setCategory(?string $value): void {
         $this->getBackingStore()->set('category', $value);
@@ -211,7 +211,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the componentName property value. Component name.
-     *  @param string|null $value Value to set for the componentName property.
+     * @param string|null $value Value to set for the componentName property.
     */
     public function setComponentName(?string $value): void {
         $this->getBackingStore()->set('componentName', $value);
@@ -219,7 +219,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     *  @param string|null $value Value to set for the correlationId property.
+     * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
         $this->getBackingStore()->set('correlationId', $value);
@@ -227,7 +227,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Event display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -235,7 +235,7 @@ class AuditEvent extends Entity implements Parsable
 
     /**
      * Sets the resources property value. Resources being modified.
-     *  @param array<AuditResource>|null $value Value to set for the resources property.
+     * @param array<AuditResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
         $this->getBackingStore()->set('resources', $value);

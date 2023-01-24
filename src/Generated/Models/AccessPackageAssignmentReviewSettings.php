@@ -160,7 +160,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -176,7 +176,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the expirationBehavior property value. The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
-     *  @param AccessReviewExpirationBehavior|null $value Value to set for the expirationBehavior property.
+     * @param AccessReviewExpirationBehavior|null $value Value to set for the expirationBehavior property.
     */
     public function setExpirationBehavior(?AccessReviewExpirationBehavior $value): void {
         $this->getBackingStore()->set('expirationBehavior', $value);
@@ -184,7 +184,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the fallbackReviewers property value. This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
-     *  @param array<SubjectSet>|null $value Value to set for the fallbackReviewers property.
+     * @param array<SubjectSet>|null $value Value to set for the fallbackReviewers property.
     */
     public function setFallbackReviewers(?array $value): void {
         $this->getBackingStore()->set('fallbackReviewers', $value);
@@ -192,7 +192,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the isEnabled property value. If true, access reviews are required for assignments through this policy.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -200,7 +200,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the isRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true.
-     *  @param bool|null $value Value to set for the isRecommendationEnabled property.
+     * @param bool|null $value Value to set for the isRecommendationEnabled property.
     */
     public function setIsRecommendationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isRecommendationEnabled', $value);
@@ -208,7 +208,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the isReviewerJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
-     *  @param bool|null $value Value to set for the isReviewerJustificationRequired property.
+     * @param bool|null $value Value to set for the isReviewerJustificationRequired property.
     */
     public function setIsReviewerJustificationRequired(?bool $value): void {
         $this->getBackingStore()->set('isReviewerJustificationRequired', $value);
@@ -216,7 +216,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the isSelfReview property value. Specifies whether the principals can review their own assignments.
-     *  @param bool|null $value Value to set for the isSelfReview property.
+     * @param bool|null $value Value to set for the isSelfReview property.
     */
     public function setIsSelfReview(?bool $value): void {
         $this->getBackingStore()->set('isSelfReview', $value);
@@ -224,7 +224,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -232,7 +232,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the primaryReviewers property value. This collection specifies the users or group of users who will review the access package assignments.
-     *  @param array<SubjectSet>|null $value Value to set for the primaryReviewers property.
+     * @param array<SubjectSet>|null $value Value to set for the primaryReviewers property.
     */
     public function setPrimaryReviewers(?array $value): void {
         $this->getBackingStore()->set('primaryReviewers', $value);
@@ -240,7 +240,7 @@ class AccessPackageAssignmentReviewSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the schedule property value. When the first review should start and how often it should recur.
-     *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
+     * @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value): void {
         $this->getBackingStore()->set('schedule', $value);

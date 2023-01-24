@@ -64,7 +64,7 @@ class EducationAssignmentResource extends Entity implements Parsable
 
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
-     *  @param bool|null $value Value to set for the distributeForStudentWork property.
+     * @param bool|null $value Value to set for the distributeForStudentWork property.
     */
     public function setDistributeForStudentWork(?bool $value): void {
         $this->getBackingStore()->set('distributeForStudentWork', $value);
@@ -72,7 +72,7 @@ class EducationAssignmentResource extends Entity implements Parsable
 
     /**
      * Sets the resource property value. Resource object that has been associated with this assignment.
-     *  @param EducationResource|null $value Value to set for the resource property.
+     * @param EducationResource|null $value Value to set for the resource property.
     */
     public function setResource(?EducationResource $value): void {
         $this->getBackingStore()->set('resource', $value);

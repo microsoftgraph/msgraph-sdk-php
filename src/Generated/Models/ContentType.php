@@ -234,7 +234,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
-     *  @param array<string>|null $value Value to set for the associatedHubsUrls property.
+     * @param array<string>|null $value Value to set for the associatedHubsUrls property.
     */
     public function setAssociatedHubsUrls(?array $value): void {
         $this->getBackingStore()->set('associatedHubsUrls', $value);
@@ -242,7 +242,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the base property value. Parent contentType from which this content type is derived.
-     *  @param ContentType|null $value Value to set for the base property.
+     * @param ContentType|null $value Value to set for the base property.
     */
     public function setBase(?ContentType $value): void {
         $this->getBackingStore()->set('base', $value);
@@ -250,7 +250,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the baseTypes property value. The collection of content types that are ancestors of this content type.
-     *  @param array<ContentType>|null $value Value to set for the baseTypes property.
+     * @param array<ContentType>|null $value Value to set for the baseTypes property.
     */
     public function setBaseTypes(?array $value): void {
         $this->getBackingStore()->set('baseTypes', $value);
@@ -258,7 +258,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the columnLinks property value. The collection of columns that are required by this content type.
-     *  @param array<ColumnLink>|null $value Value to set for the columnLinks property.
+     * @param array<ColumnLink>|null $value Value to set for the columnLinks property.
     */
     public function setColumnLinks(?array $value): void {
         $this->getBackingStore()->set('columnLinks', $value);
@@ -266,7 +266,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the columnPositions property value. Column order information in a content type.
-     *  @param array<ColumnDefinition>|null $value Value to set for the columnPositions property.
+     * @param array<ColumnDefinition>|null $value Value to set for the columnPositions property.
     */
     public function setColumnPositions(?array $value): void {
         $this->getBackingStore()->set('columnPositions', $value);
@@ -274,7 +274,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the columns property value. The collection of column definitions for this contentType.
-     *  @param array<ColumnDefinition>|null $value Value to set for the columns property.
+     * @param array<ColumnDefinition>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
         $this->getBackingStore()->set('columns', $value);
@@ -282,7 +282,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the description property value. The descriptive text for the item.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -290,7 +290,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the documentSet property value. Document Set metadata.
-     *  @param DocumentSet|null $value Value to set for the documentSet property.
+     * @param DocumentSet|null $value Value to set for the documentSet property.
     */
     public function setDocumentSet(?DocumentSet $value): void {
         $this->getBackingStore()->set('documentSet', $value);
@@ -298,7 +298,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the documentTemplate property value. Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
-     *  @param DocumentSetContent|null $value Value to set for the documentTemplate property.
+     * @param DocumentSetContent|null $value Value to set for the documentTemplate property.
     */
     public function setDocumentTemplate(?DocumentSetContent $value): void {
         $this->getBackingStore()->set('documentTemplate', $value);
@@ -306,7 +306,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the group property value. The name of the group this content type belongs to. Helps organize related content types.
-     *  @param string|null $value Value to set for the group property.
+     * @param string|null $value Value to set for the group property.
     */
     public function setGroup(?string $value): void {
         $this->getBackingStore()->set('group', $value);
@@ -314,7 +314,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the hidden property value. Indicates whether the content type is hidden in the list's 'New' menu.
-     *  @param bool|null $value Value to set for the hidden property.
+     * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
@@ -322,7 +322,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the inheritedFrom property value. If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
-     *  @param ItemReference|null $value Value to set for the inheritedFrom property.
+     * @param ItemReference|null $value Value to set for the inheritedFrom property.
     */
     public function setInheritedFrom(?ItemReference $value): void {
         $this->getBackingStore()->set('inheritedFrom', $value);
@@ -330,7 +330,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the isBuiltIn property value. Specifies if a content type is a built-in content type.
-     *  @param bool|null $value Value to set for the isBuiltIn property.
+     * @param bool|null $value Value to set for the isBuiltIn property.
     */
     public function setIsBuiltIn(?bool $value): void {
         $this->getBackingStore()->set('isBuiltIn', $value);
@@ -338,7 +338,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the name property value. The name of the content type.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -346,7 +346,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the order property value. Specifies the order in which the content type appears in the selection UI.
-     *  @param ContentTypeOrder|null $value Value to set for the order property.
+     * @param ContentTypeOrder|null $value Value to set for the order property.
     */
     public function setOrder(?ContentTypeOrder $value): void {
         $this->getBackingStore()->set('order', $value);
@@ -354,7 +354,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the parentId property value. The unique identifier of the content type.
-     *  @param string|null $value Value to set for the parentId property.
+     * @param string|null $value Value to set for the parentId property.
     */
     public function setParentId(?string $value): void {
         $this->getBackingStore()->set('parentId', $value);
@@ -362,7 +362,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
-     *  @param bool|null $value Value to set for the propagateChanges property.
+     * @param bool|null $value Value to set for the propagateChanges property.
     */
     public function setPropagateChanges(?bool $value): void {
         $this->getBackingStore()->set('propagateChanges', $value);
@@ -370,7 +370,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
-     *  @param bool|null $value Value to set for the readOnly property.
+     * @param bool|null $value Value to set for the readOnly property.
     */
     public function setReadOnly(?bool $value): void {
         $this->getBackingStore()->set('readOnly', $value);
@@ -378,7 +378,7 @@ class ContentType extends Entity implements Parsable
 
     /**
      * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
-     *  @param bool|null $value Value to set for the sealed property.
+     * @param bool|null $value Value to set for the sealed property.
     */
     public function setSealed(?bool $value): void {
         $this->getBackingStore()->set('sealed', $value);

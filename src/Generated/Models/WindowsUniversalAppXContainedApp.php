@@ -55,7 +55,7 @@ class WindowsUniversalAppXContainedApp extends MobileContainedApp implements Par
 
     /**
      * Sets the appUserModelId property value. The app user model ID of the contained app of a WindowsUniversalAppX app.
-     *  @param string|null $value Value to set for the appUserModelId property.
+     * @param string|null $value Value to set for the appUserModelId property.
     */
     public function setAppUserModelId(?string $value): void {
         $this->getBackingStore()->set('appUserModelId', $value);

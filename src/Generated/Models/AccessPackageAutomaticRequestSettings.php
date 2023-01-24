@@ -111,7 +111,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
-     *  @param DateInterval|null $value Value to set for the gracePeriodBeforeAccessRemoval property.
+     * @param DateInterval|null $value Value to set for the gracePeriodBeforeAccessRemoval property.
     */
     public function setGracePeriodBeforeAccessRemoval(?DateInterval $value): void {
         $this->getBackingStore()->set('gracePeriodBeforeAccessRemoval', $value);
@@ -135,7 +135,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -143,7 +143,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
-     *  @param bool|null $value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
+     * @param bool|null $value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
     */
     public function setRemoveAccessWhenTargetLeavesAllowedTargets(?bool $value): void {
         $this->getBackingStore()->set('removeAccessWhenTargetLeavesAllowedTargets', $value);
@@ -151,7 +151,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the requestAccessForAllowedTargets property value. If set to true, automatic assignments will be created for targets in the allowed target scope.
-     *  @param bool|null $value Value to set for the requestAccessForAllowedTargets property.
+     * @param bool|null $value Value to set for the requestAccessForAllowedTargets property.
     */
     public function setRequestAccessForAllowedTargets(?bool $value): void {
         $this->getBackingStore()->set('requestAccessForAllowedTargets', $value);

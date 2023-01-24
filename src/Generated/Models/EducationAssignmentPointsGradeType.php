@@ -55,7 +55,7 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
 
     /**
      * Sets the maxPoints property value. Max points possible for this assignment.
-     *  @param float|null $value Value to set for the maxPoints property.
+     * @param float|null $value Value to set for the maxPoints property.
     */
     public function setMaxPoints(?float $value): void {
         $this->getBackingStore()->set('maxPoints', $value);

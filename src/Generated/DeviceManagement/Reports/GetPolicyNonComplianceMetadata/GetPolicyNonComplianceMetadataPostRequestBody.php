@@ -160,7 +160,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -176,7 +176,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the filter property value. The filter property
-     *  @param string|null $value Value to set for the filter property.
+     * @param string|null $value Value to set for the filter property.
     */
     public function setFilter(?string $value): void {
         $this->getBackingStore()->set('filter', $value);
@@ -184,7 +184,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the groupBy property value. The groupBy property
-     *  @param array<string>|null $value Value to set for the groupBy property.
+     * @param array<string>|null $value Value to set for the groupBy property.
     */
     public function setGroupBy(?array $value): void {
         $this->getBackingStore()->set('groupBy', $value);
@@ -192,7 +192,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the name property value. The name property
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -200,7 +200,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the orderBy property value. The orderBy property
-     *  @param array<string>|null $value Value to set for the orderBy property.
+     * @param array<string>|null $value Value to set for the orderBy property.
     */
     public function setOrderBy(?array $value): void {
         $this->getBackingStore()->set('orderBy', $value);
@@ -208,7 +208,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the search property value. The search property
-     *  @param string|null $value Value to set for the search property.
+     * @param string|null $value Value to set for the search property.
     */
     public function setSearch(?string $value): void {
         $this->getBackingStore()->set('search', $value);
@@ -216,7 +216,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the select property value. The select property
-     *  @param array<string>|null $value Value to set for the select property.
+     * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
         $this->getBackingStore()->set('select', $value);
@@ -224,7 +224,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the sessionId property value. The sessionId property
-     *  @param string|null $value Value to set for the sessionId property.
+     * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {
         $this->getBackingStore()->set('sessionId', $value);
@@ -232,7 +232,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the skip property value. The skip property
-     *  @param int|null $value Value to set for the skip property.
+     * @param int|null $value Value to set for the skip property.
     */
     public function setSkip(?int $value): void {
         $this->getBackingStore()->set('skip', $value);
@@ -240,7 +240,7 @@ class GetPolicyNonComplianceMetadataPostRequestBody implements AdditionalDataHol
 
     /**
      * Sets the top property value. The top property
-     *  @param int|null $value Value to set for the top property.
+     * @param int|null $value Value to set for the top property.
     */
     public function setTop(?int $value): void {
         $this->getBackingStore()->set('top', $value);

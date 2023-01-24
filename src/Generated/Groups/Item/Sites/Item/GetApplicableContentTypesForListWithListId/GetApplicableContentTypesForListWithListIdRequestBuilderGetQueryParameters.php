@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetApplicableContentT
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getApplicableContentTypesForList
+*/
 class GetApplicableContentTypesForListWithListIdRequestBuilderGetQueryParameters 
 {
     /**

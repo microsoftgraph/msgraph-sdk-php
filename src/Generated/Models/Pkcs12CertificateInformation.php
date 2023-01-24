@@ -120,7 +120,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the isActive property value. Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
-     *  @param bool|null $value Value to set for the isActive property.
+     * @param bool|null $value Value to set for the isActive property.
     */
     public function setIsActive(?bool $value): void {
         $this->getBackingStore()->set('isActive', $value);
@@ -144,7 +144,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the notAfter property value. The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     *  @param int|null $value Value to set for the notAfter property.
+     * @param int|null $value Value to set for the notAfter property.
     */
     public function setNotAfter(?int $value): void {
         $this->getBackingStore()->set('notAfter', $value);
@@ -152,7 +152,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the notBefore property value. The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     *  @param int|null $value Value to set for the notBefore property.
+     * @param int|null $value Value to set for the notBefore property.
     */
     public function setNotBefore(?int $value): void {
         $this->getBackingStore()->set('notBefore', $value);
@@ -160,7 +160,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class Pkcs12CertificateInformation implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the thumbprint property value. The certificate thumbprint.
-     *  @param string|null $value Value to set for the thumbprint property.
+     * @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value): void {
         $this->getBackingStore()->set('thumbprint', $value);

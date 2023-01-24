@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarVie
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the collection of bookingAppointment objects for a bookingBusiness that occurs in the specified date range.
+*/
 class CalendarViewRequestBuilderGetQueryParameters 
 {
     /**

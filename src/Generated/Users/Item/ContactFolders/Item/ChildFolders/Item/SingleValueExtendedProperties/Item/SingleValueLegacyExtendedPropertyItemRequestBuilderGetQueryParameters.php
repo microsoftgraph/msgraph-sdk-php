@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+*/
 class SingleValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters 
 {
     /**

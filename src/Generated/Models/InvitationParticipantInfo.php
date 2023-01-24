@@ -130,7 +130,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
-     *  @param bool|null $value Value to set for the hidden property.
+     * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
@@ -154,7 +154,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the identity property value. The identity property
-     *  @param IdentitySet|null $value Value to set for the identity property.
+     * @param IdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?IdentitySet $value): void {
         $this->getBackingStore()->set('identity', $value);
@@ -162,7 +162,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.
-     *  @param string|null $value Value to set for the participantId property.
+     * @param string|null $value Value to set for the participantId property.
     */
     public function setParticipantId(?string $value): void {
         $this->getBackingStore()->set('participantId', $value);
@@ -178,7 +178,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
-     *  @param bool|null $value Value to set for the removeFromDefaultAudioRoutingGroup property.
+     * @param bool|null $value Value to set for the removeFromDefaultAudioRoutingGroup property.
     */
     public function setRemoveFromDefaultAudioRoutingGroup(?bool $value): void {
         $this->getBackingStore()->set('removeFromDefaultAudioRoutingGroup', $value);
@@ -186,7 +186,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
-     *  @param string|null $value Value to set for the replacesCallId property.
+     * @param string|null $value Value to set for the replacesCallId property.
     */
     public function setReplacesCallId(?string $value): void {
         $this->getBackingStore()->set('replacesCallId', $value);

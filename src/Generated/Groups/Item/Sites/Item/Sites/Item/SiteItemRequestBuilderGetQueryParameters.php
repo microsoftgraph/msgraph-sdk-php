@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Sites\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of the sub-sites under this site.
+*/
 class SiteItemRequestBuilderGetQueryParameters 
 {
     /**

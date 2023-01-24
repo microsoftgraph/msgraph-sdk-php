@@ -76,7 +76,7 @@ class FileAttachment extends Attachment implements Parsable
 
     /**
      * Sets the contentBytes property value. The base64-encoded contents of the file.
-     *  @param StreamInterface|null $value Value to set for the contentBytes property.
+     * @param StreamInterface|null $value Value to set for the contentBytes property.
     */
     public function setContentBytes(?StreamInterface $value): void {
         $this->getBackingStore()->set('contentBytes', $value);
@@ -84,7 +84,7 @@ class FileAttachment extends Attachment implements Parsable
 
     /**
      * Sets the contentId property value. The ID of the attachment in the Exchange store.
-     *  @param string|null $value Value to set for the contentId property.
+     * @param string|null $value Value to set for the contentId property.
     */
     public function setContentId(?string $value): void {
         $this->getBackingStore()->set('contentId', $value);
@@ -92,7 +92,7 @@ class FileAttachment extends Attachment implements Parsable
 
     /**
      * Sets the contentLocation property value. Do not use this property as it is not supported.
-     *  @param string|null $value Value to set for the contentLocation property.
+     * @param string|null $value Value to set for the contentLocation property.
     */
     public function setContentLocation(?string $value): void {
         $this->getBackingStore()->set('contentLocation', $value);

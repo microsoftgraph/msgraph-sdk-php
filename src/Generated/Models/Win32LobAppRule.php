@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * A base complex type to store the detection or requirement rule data for a Win32 LOB app.
+*/
 class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -100,7 +103,7 @@ class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +111,7 @@ class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +119,7 @@ class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +127,7 @@ class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the ruleType property value. Contains rule types for Win32 LOB apps.
-     *  @param Win32LobAppRuleType|null $value Value to set for the ruleType property.
+     * @param Win32LobAppRuleType|null $value Value to set for the ruleType property.
     */
     public function setRuleType(?Win32LobAppRuleType $value): void {
         $this->getBackingStore()->set('ruleType', $value);

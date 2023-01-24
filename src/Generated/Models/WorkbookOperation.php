@@ -74,7 +74,7 @@ class WorkbookOperation extends Entity implements Parsable
 
     /**
      * Sets the error property value. The error returned by the operation.
-     *  @param WorkbookOperationError|null $value Value to set for the error property.
+     * @param WorkbookOperationError|null $value Value to set for the error property.
     */
     public function setError(?WorkbookOperationError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -82,7 +82,7 @@ class WorkbookOperation extends Entity implements Parsable
 
     /**
      * Sets the resourceLocation property value. The resource URI for the result.
-     *  @param string|null $value Value to set for the resourceLocation property.
+     * @param string|null $value Value to set for the resourceLocation property.
     */
     public function setResourceLocation(?string $value): void {
         $this->getBackingStore()->set('resourceLocation', $value);
@@ -90,7 +90,7 @@ class WorkbookOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param WorkbookOperationStatus|null $value Value to set for the status property.
+     * @param WorkbookOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?WorkbookOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

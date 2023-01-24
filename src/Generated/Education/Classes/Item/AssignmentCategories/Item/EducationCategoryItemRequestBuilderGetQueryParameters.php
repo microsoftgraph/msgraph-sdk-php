@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * All categories associated with this class. Nullable.
+*/
 class EducationCategoryItemRequestBuilderGetQueryParameters 
 {
     /**

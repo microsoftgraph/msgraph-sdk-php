@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Catalog of the access package containing this policy. Read-only.
+*/
 class CatalogRequestBuilderGetQueryParameters 
 {
     /**

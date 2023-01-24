@@ -130,7 +130,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
-     *  @param ApplicationEnforcedRestrictionsSessionControl|null $value Value to set for the applicationEnforcedRestrictions property.
+     * @param ApplicationEnforcedRestrictionsSessionControl|null $value Value to set for the applicationEnforcedRestrictions property.
     */
     public function setApplicationEnforcedRestrictions(?ApplicationEnforcedRestrictionsSessionControl $value): void {
         $this->getBackingStore()->set('applicationEnforcedRestrictions', $value);
@@ -146,7 +146,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +154,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the cloudAppSecurity property value. Session control to apply cloud app security.
-     *  @param CloudAppSecuritySessionControl|null $value Value to set for the cloudAppSecurity property.
+     * @param CloudAppSecuritySessionControl|null $value Value to set for the cloudAppSecurity property.
     */
     public function setCloudAppSecurity(?CloudAppSecuritySessionControl $value): void {
         $this->getBackingStore()->set('cloudAppSecurity', $value);
@@ -162,7 +162,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
-     *  @param bool|null $value Value to set for the disableResilienceDefaults property.
+     * @param bool|null $value Value to set for the disableResilienceDefaults property.
     */
     public function setDisableResilienceDefaults(?bool $value): void {
         $this->getBackingStore()->set('disableResilienceDefaults', $value);
@@ -170,7 +170,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -178,7 +178,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
-     *  @param PersistentBrowserSessionControl|null $value Value to set for the persistentBrowser property.
+     * @param PersistentBrowserSessionControl|null $value Value to set for the persistentBrowser property.
     */
     public function setPersistentBrowser(?PersistentBrowserSessionControl $value): void {
         $this->getBackingStore()->set('persistentBrowser', $value);
@@ -186,7 +186,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.
-     *  @param SignInFrequencySessionControl|null $value Value to set for the signInFrequency property.
+     * @param SignInFrequencySessionControl|null $value Value to set for the signInFrequency property.
     */
     public function setSignInFrequency(?SignInFrequencySessionControl $value): void {
         $this->getBackingStore()->set('signInFrequency', $value);

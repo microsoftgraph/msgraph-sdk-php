@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Directory objects created by this service principal. Read-only. Nullable.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

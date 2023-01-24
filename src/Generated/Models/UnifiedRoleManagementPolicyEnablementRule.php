@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManagementPol
 
     /**
      * Sets the enabledRules property value. The collection of rules that are enabled for this policy rule. For example, MultiFactorAuthentication, Ticketing, and Justification.
-     *  @param array<string>|null $value Value to set for the enabledRules property.
+     * @param array<string>|null $value Value to set for the enabledRules property.
     */
     public function setEnabledRules(?array $value): void {
         $this->getBackingStore()->set('enabledRules', $value);

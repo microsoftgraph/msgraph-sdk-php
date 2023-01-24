@@ -94,7 +94,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the appId property value. Unique identifier of the application.
-     *  @param int|null $value Value to set for the appId property.
+     * @param int|null $value Value to set for the appId property.
     */
     public function setAppId(?int $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -102,7 +102,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the displayName property value. Name of the application.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -110,7 +110,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the instanceId property value. Identifier of the instance of the Software as a Service (SaaS) application.
-     *  @param int|null $value Value to set for the instanceId property.
+     * @param int|null $value Value to set for the instanceId property.
     */
     public function setInstanceId(?int $value): void {
         $this->getBackingStore()->set('instanceId', $value);
@@ -118,7 +118,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the instanceName property value. Name of the instance of the SaaS application.
-     *  @param string|null $value Value to set for the instanceName property.
+     * @param string|null $value Value to set for the instanceName property.
     */
     public function setInstanceName(?string $value): void {
         $this->getBackingStore()->set('instanceName', $value);
@@ -126,7 +126,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the saasAppId property value. The identifier of the SaaS application.
-     *  @param int|null $value Value to set for the saasAppId property.
+     * @param int|null $value Value to set for the saasAppId property.
     */
     public function setSaasAppId(?int $value): void {
         $this->getBackingStore()->set('saasAppId', $value);

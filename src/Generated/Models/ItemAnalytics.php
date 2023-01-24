@@ -74,7 +74,7 @@ class ItemAnalytics extends Entity implements Parsable
 
     /**
      * Sets the allTime property value. The allTime property
-     *  @param ItemActivityStat|null $value Value to set for the allTime property.
+     * @param ItemActivityStat|null $value Value to set for the allTime property.
     */
     public function setAllTime(?ItemActivityStat $value): void {
         $this->getBackingStore()->set('allTime', $value);
@@ -82,7 +82,7 @@ class ItemAnalytics extends Entity implements Parsable
 
     /**
      * Sets the itemActivityStats property value. The itemActivityStats property
-     *  @param array<ItemActivityStat>|null $value Value to set for the itemActivityStats property.
+     * @param array<ItemActivityStat>|null $value Value to set for the itemActivityStats property.
     */
     public function setItemActivityStats(?array $value): void {
         $this->getBackingStore()->set('itemActivityStats', $value);
@@ -90,7 +90,7 @@ class ItemAnalytics extends Entity implements Parsable
 
     /**
      * Sets the lastSevenDays property value. The lastSevenDays property
-     *  @param ItemActivityStat|null $value Value to set for the lastSevenDays property.
+     * @param ItemActivityStat|null $value Value to set for the lastSevenDays property.
     */
     public function setLastSevenDays(?ItemActivityStat $value): void {
         $this->getBackingStore()->set('lastSevenDays', $value);

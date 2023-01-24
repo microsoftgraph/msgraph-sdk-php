@@ -104,7 +104,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the childFolders property value. The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-     *  @param array<ContactFolder>|null $value Value to set for the childFolders property.
+     * @param array<ContactFolder>|null $value Value to set for the childFolders property.
     */
     public function setChildFolders(?array $value): void {
         $this->getBackingStore()->set('childFolders', $value);
@@ -112,7 +112,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the contacts property value. The contacts in the folder. Navigation property. Read-only. Nullable.
-     *  @param array<Contact>|null $value Value to set for the contacts property.
+     * @param array<Contact>|null $value Value to set for the contacts property.
     */
     public function setContacts(?array $value): void {
         $this->getBackingStore()->set('contacts', $value);
@@ -120,7 +120,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The folder's display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -128,7 +128,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
-     *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
+     * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('multiValueExtendedProperties', $value);
@@ -136,7 +136,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the parentFolderId property value. The ID of the folder's parent folder.
-     *  @param string|null $value Value to set for the parentFolderId property.
+     * @param string|null $value Value to set for the parentFolderId property.
     */
     public function setParentFolderId(?string $value): void {
         $this->getBackingStore()->set('parentFolderId', $value);
@@ -144,7 +144,7 @@ class ContactFolder extends Entity implements Parsable
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
-     *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+     * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('singleValueExtendedProperties', $value);

@@ -84,7 +84,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
 
     /**
      * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
-     *  @param string|null $value Value to set for the color property.
+     * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -92,7 +92,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
 
     /**
      * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
-     *  @param string|null $value Value to set for the sideIndex property.
+     * @param string|null $value Value to set for the sideIndex property.
     */
     public function setSideIndex(?string $value): void {
         $this->getBackingStore()->set('sideIndex', $value);
@@ -100,7 +100,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
 
     /**
      * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
-     *  @param string|null $value Value to set for the style property.
+     * @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value): void {
         $this->getBackingStore()->set('style', $value);
@@ -108,7 +108,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
 
     /**
      * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
-     *  @param string|null $value Value to set for the weight property.
+     * @param string|null $value Value to set for the weight property.
     */
     public function setWeight(?string $value): void {
         $this->getBackingStore()->set('weight', $value);

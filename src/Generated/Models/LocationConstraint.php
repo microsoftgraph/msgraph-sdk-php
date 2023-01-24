@@ -110,7 +110,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isRequired property value. The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
-     *  @param bool|null $value Value to set for the isRequired property.
+     * @param bool|null $value Value to set for the isRequired property.
     */
     public function setIsRequired(?bool $value): void {
         $this->getBackingStore()->set('isRequired', $value);
@@ -134,7 +134,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the locations property value. Constraint information for one or more locations that the client requests for the meeting.
-     *  @param array<LocationConstraintItem>|null $value Value to set for the locations property.
+     * @param array<LocationConstraintItem>|null $value Value to set for the locations property.
     */
     public function setLocations(?array $value): void {
         $this->getBackingStore()->set('locations', $value);
@@ -142,7 +142,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class LocationConstraint implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the suggestLocation property value. The client requests the service to suggest one or more meeting locations.
-     *  @param bool|null $value Value to set for the suggestLocation property.
+     * @param bool|null $value Value to set for the suggestLocation property.
     */
     public function setSuggestLocation(?bool $value): void {
         $this->getBackingStore()->set('suggestLocation', $value);

@@ -75,7 +75,7 @@ class ExternalGroup extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the external group. Optional.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -83,7 +83,7 @@ class ExternalGroup extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The friendly name of the external group. Optional.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -91,7 +91,7 @@ class ExternalGroup extends Entity implements Parsable
 
     /**
      * Sets the members property value. A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
-     *  @param array<Identity>|null $value Value to set for the members property.
+     * @param array<Identity>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);

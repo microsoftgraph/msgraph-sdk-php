@@ -130,7 +130,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowMultipleValues property value. Indicates whether multiple values can be selected from the source.
-     *  @param bool|null $value Value to set for the allowMultipleValues property.
+     * @param bool|null $value Value to set for the allowMultipleValues property.
     */
     public function setAllowMultipleValues(?bool $value): void {
         $this->getBackingStore()->set('allowMultipleValues', $value);
@@ -146,7 +146,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowUnlimitedLength property value. Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
-     *  @param bool|null $value Value to set for the allowUnlimitedLength property.
+     * @param bool|null $value Value to set for the allowUnlimitedLength property.
     */
     public function setAllowUnlimitedLength(?bool $value): void {
         $this->getBackingStore()->set('allowUnlimitedLength', $value);
@@ -154,7 +154,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -162,7 +162,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the columnName property value. The name of the lookup source column.
-     *  @param string|null $value Value to set for the columnName property.
+     * @param string|null $value Value to set for the columnName property.
     */
     public function setColumnName(?string $value): void {
         $this->getBackingStore()->set('columnName', $value);
@@ -170,7 +170,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the listId property value. The unique identifier of the lookup source list.
-     *  @param string|null $value Value to set for the listId property.
+     * @param string|null $value Value to set for the listId property.
     */
     public function setListId(?string $value): void {
         $this->getBackingStore()->set('listId', $value);
@@ -178,7 +178,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +186,7 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the primaryLookupColumnId property value. If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
-     *  @param string|null $value Value to set for the primaryLookupColumnId property.
+     * @param string|null $value Value to set for the primaryLookupColumnId property.
     */
     public function setPrimaryLookupColumnId(?string $value): void {
         $this->getBackingStore()->set('primaryLookupColumnId', $value);

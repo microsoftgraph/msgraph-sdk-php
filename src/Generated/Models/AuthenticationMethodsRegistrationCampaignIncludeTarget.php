@@ -110,7 +110,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the id property value. The object identifier of an Azure Active Directory user or group.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -134,7 +134,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
-     *  @param string|null $value Value to set for the targetedAuthenticationMethod property.
+     * @param string|null $value Value to set for the targetedAuthenticationMethod property.
     */
     public function setTargetedAuthenticationMethod(?string $value): void {
         $this->getBackingStore()->set('targetedAuthenticationMethod', $value);
@@ -150,7 +150,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
 
     /**
      * Sets the targetType property value. The targetType property
-     *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
+     * @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value): void {
         $this->getBackingStore()->set('targetType', $value);

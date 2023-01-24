@@ -141,7 +141,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -149,7 +149,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -157,7 +157,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the certificate property value. Required. The base64 encoded string representing the public certificate.
-     *  @param StreamInterface|null $value Value to set for the certificate property.
+     * @param StreamInterface|null $value Value to set for the certificate property.
     */
     public function setCertificate(?StreamInterface $value): void {
         $this->getBackingStore()->set('certificate', $value);
@@ -165,7 +165,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the certificateRevocationListUrl property value. The URL of the certificate revocation list.
-     *  @param string|null $value Value to set for the certificateRevocationListUrl property.
+     * @param string|null $value Value to set for the certificateRevocationListUrl property.
     */
     public function setCertificateRevocationListUrl(?string $value): void {
         $this->getBackingStore()->set('certificateRevocationListUrl', $value);
@@ -173,7 +173,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the deltaCertificateRevocationListUrl property value. The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
-     *  @param string|null $value Value to set for the deltaCertificateRevocationListUrl property.
+     * @param string|null $value Value to set for the deltaCertificateRevocationListUrl property.
     */
     public function setDeltaCertificateRevocationListUrl(?string $value): void {
         $this->getBackingStore()->set('deltaCertificateRevocationListUrl', $value);
@@ -181,7 +181,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the isRootAuthority property value. Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
-     *  @param bool|null $value Value to set for the isRootAuthority property.
+     * @param bool|null $value Value to set for the isRootAuthority property.
     */
     public function setIsRootAuthority(?bool $value): void {
         $this->getBackingStore()->set('isRootAuthority', $value);
@@ -189,7 +189,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the issuer property value. The issuer of the certificate, calculated from the certificate value. Read-only.
-     *  @param string|null $value Value to set for the issuer property.
+     * @param string|null $value Value to set for the issuer property.
     */
     public function setIssuer(?string $value): void {
         $this->getBackingStore()->set('issuer', $value);
@@ -197,7 +197,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the issuerSki property value. The subject key identifier of the certificate, calculated from the certificate value. Read-only.
-     *  @param string|null $value Value to set for the issuerSki property.
+     * @param string|null $value Value to set for the issuerSki property.
     */
     public function setIssuerSki(?string $value): void {
         $this->getBackingStore()->set('issuerSki', $value);
@@ -205,7 +205,7 @@ class CertificateAuthority implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

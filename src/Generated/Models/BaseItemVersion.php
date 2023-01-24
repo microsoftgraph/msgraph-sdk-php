@@ -84,7 +84,7 @@ class BaseItemVersion extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -92,7 +92,7 @@ class BaseItemVersion extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time the version was last modified. Read-only.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -100,7 +100,7 @@ class BaseItemVersion extends Entity implements Parsable
 
     /**
      * Sets the publication property value. Indicates the publication status of this particular version. Read-only.
-     *  @param PublicationFacet|null $value Value to set for the publication property.
+     * @param PublicationFacet|null $value Value to set for the publication property.
     */
     public function setPublication(?PublicationFacet $value): void {
         $this->getBackingStore()->set('publication', $value);

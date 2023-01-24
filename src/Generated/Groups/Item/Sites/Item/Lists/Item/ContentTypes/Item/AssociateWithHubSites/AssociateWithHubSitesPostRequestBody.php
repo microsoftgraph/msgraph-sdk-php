@@ -90,7 +90,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
 
     /**
      * Sets the hubSiteUrls property value. The hubSiteUrls property
-     *  @param array<string>|null $value Value to set for the hubSiteUrls property.
+     * @param array<string>|null $value Value to set for the hubSiteUrls property.
     */
     public function setHubSiteUrls(?array $value): void {
         $this->getBackingStore()->set('hubSiteUrls', $value);
@@ -114,7 +114,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
 
     /**
      * Sets the propagateToExistingLists property value. The propagateToExistingLists property
-     *  @param bool|null $value Value to set for the propagateToExistingLists property.
+     * @param bool|null $value Value to set for the propagateToExistingLists property.
     */
     public function setPropagateToExistingLists(?bool $value): void {
         $this->getBackingStore()->set('propagateToExistingLists', $value);

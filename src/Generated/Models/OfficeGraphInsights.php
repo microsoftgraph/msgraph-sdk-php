@@ -74,7 +74,7 @@ class OfficeGraphInsights extends Entity implements Parsable
 
     /**
      * Sets the shared property value. Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
-     *  @param array<SharedInsight>|null $value Value to set for the shared property.
+     * @param array<SharedInsight>|null $value Value to set for the shared property.
     */
     public function setShared(?array $value): void {
         $this->getBackingStore()->set('shared', $value);
@@ -82,7 +82,7 @@ class OfficeGraphInsights extends Entity implements Parsable
 
     /**
      * Sets the trending property value. Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
-     *  @param array<Trending>|null $value Value to set for the trending property.
+     * @param array<Trending>|null $value Value to set for the trending property.
     */
     public function setTrending(?array $value): void {
         $this->getBackingStore()->set('trending', $value);
@@ -90,7 +90,7 @@ class OfficeGraphInsights extends Entity implements Parsable
 
     /**
      * Sets the used property value. Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
-     *  @param array<UsedInsight>|null $value Value to set for the used property.
+     * @param array<UsedInsight>|null $value Value to set for the used property.
     */
     public function setUsed(?array $value): void {
         $this->getBackingStore()->set('used', $value);

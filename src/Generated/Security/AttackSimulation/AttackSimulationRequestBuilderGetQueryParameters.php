@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get attackSimulation from security
+*/
 class AttackSimulationRequestBuilderGetQueryParameters 
 {
     /**

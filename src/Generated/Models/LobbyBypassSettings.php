@@ -100,7 +100,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isDialInBypassEnabled property value. Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
-     *  @param bool|null $value Value to set for the isDialInBypassEnabled property.
+     * @param bool|null $value Value to set for the isDialInBypassEnabled property.
     */
     public function setIsDialInBypassEnabled(?bool $value): void {
         $this->getBackingStore()->set('isDialInBypassEnabled', $value);
@@ -124,7 +124,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
-     *  @param LobbyBypassScope|null $value Value to set for the scope property.
+     * @param LobbyBypassScope|null $value Value to set for the scope property.
     */
     public function setScope(?LobbyBypassScope $value): void {
         $this->getBackingStore()->set('scope', $value);

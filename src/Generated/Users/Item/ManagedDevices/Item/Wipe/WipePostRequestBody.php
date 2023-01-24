@@ -110,7 +110,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the keepEnrollmentData property value. The keepEnrollmentData property
-     *  @param bool|null $value Value to set for the keepEnrollmentData property.
+     * @param bool|null $value Value to set for the keepEnrollmentData property.
     */
     public function setKeepEnrollmentData(?bool $value): void {
         $this->getBackingStore()->set('keepEnrollmentData', $value);
@@ -134,7 +134,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the keepUserData property value. The keepUserData property
-     *  @param bool|null $value Value to set for the keepUserData property.
+     * @param bool|null $value Value to set for the keepUserData property.
     */
     public function setKeepUserData(?bool $value): void {
         $this->getBackingStore()->set('keepUserData', $value);
@@ -142,7 +142,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the macOsUnlockCode property value. The macOsUnlockCode property
-     *  @param string|null $value Value to set for the macOsUnlockCode property.
+     * @param string|null $value Value to set for the macOsUnlockCode property.
     */
     public function setMacOsUnlockCode(?string $value): void {
         $this->getBackingStore()->set('macOsUnlockCode', $value);
@@ -150,7 +150,7 @@ class WipePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the persistEsimDataPlan property value. The persistEsimDataPlan property
-     *  @param bool|null $value Value to set for the persistEsimDataPlan property.
+     * @param bool|null $value Value to set for the persistEsimDataPlan property.
     */
     public function setPersistEsimDataPlan(?bool $value): void {
         $this->getBackingStore()->set('persistEsimDataPlan', $value);

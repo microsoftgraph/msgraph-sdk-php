@@ -150,7 +150,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -166,7 +166,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the excludedItemCount property value. Count of items that are excluded from the request.
-     *  @param int|null $value Value to set for the excludedItemCount property.
+     * @param int|null $value Value to set for the excludedItemCount property.
     */
     public function setExcludedItemCount(?int $value): void {
         $this->getBackingStore()->set('excludedItemCount', $value);
@@ -174,7 +174,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the insightCounts property value. Count of items per insight.
-     *  @param array<KeyValuePair>|null $value Value to set for the insightCounts property.
+     * @param array<KeyValuePair>|null $value Value to set for the insightCounts property.
     */
     public function setInsightCounts(?array $value): void {
         $this->getBackingStore()->set('insightCounts', $value);
@@ -182,7 +182,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the itemCount property value. Count of items found.
-     *  @param int|null $value Value to set for the itemCount property.
+     * @param int|null $value Value to set for the itemCount property.
     */
     public function setItemCount(?int $value): void {
         $this->getBackingStore()->set('itemCount', $value);
@@ -190,7 +190,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the itemNeedReview property value. Count of item that need review.
-     *  @param int|null $value Value to set for the itemNeedReview property.
+     * @param int|null $value Value to set for the itemNeedReview property.
     */
     public function setItemNeedReview(?int $value): void {
         $this->getBackingStore()->set('itemNeedReview', $value);
@@ -198,7 +198,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -206,7 +206,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the productItemCounts property value. Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
-     *  @param array<KeyValuePair>|null $value Value to set for the productItemCounts property.
+     * @param array<KeyValuePair>|null $value Value to set for the productItemCounts property.
     */
     public function setProductItemCounts(?array $value): void {
         $this->getBackingStore()->set('productItemCounts', $value);
@@ -214,7 +214,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the signedOffItemCount property value. Count of items signed off by the administrator.
-     *  @param int|null $value Value to set for the signedOffItemCount property.
+     * @param int|null $value Value to set for the signedOffItemCount property.
     */
     public function setSignedOffItemCount(?int $value): void {
         $this->getBackingStore()->set('signedOffItemCount', $value);
@@ -222,7 +222,7 @@ class SubjectRightsRequestDetail implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the totalItemSize property value. Total item size in bytes.
-     *  @param int|null $value Value to set for the totalItemSize property.
+     * @param int|null $value Value to set for the totalItemSize property.
     */
     public function setTotalItemSize(?int $value): void {
         $this->getBackingStore()->set('totalItemSize', $value);

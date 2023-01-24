@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\Operation
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of long-running operations on the list.
+*/
 class RichLongRunningOperationItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -165,7 +165,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     *  @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
+     * @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
     */
     public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value): void {
         $this->getBackingStore()->set('appDataEncryptionType', $value);
@@ -173,7 +173,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
-     *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
+     * @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value): void {
         $this->getBackingStore()->set('apps', $value);
@@ -181,7 +181,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the customSettings property value. A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-     *  @param array<KeyValuePair>|null $value Value to set for the customSettings property.
+     * @param array<KeyValuePair>|null $value Value to set for the customSettings property.
     */
     public function setCustomSettings(?array $value): void {
         $this->getBackingStore()->set('customSettings', $value);
@@ -189,7 +189,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     *  @param int|null $value Value to set for the deployedAppCount property.
+     * @param int|null $value Value to set for the deployedAppCount property.
     */
     public function setDeployedAppCount(?int $value): void {
         $this->getBackingStore()->set('deployedAppCount', $value);
@@ -197,7 +197,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
+     * @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
     public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
         $this->getBackingStore()->set('deploymentSummary', $value);
@@ -205,7 +205,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-     *  @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
+     * @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
     */
     public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('disableAppEncryptionIfDeviceEncryptionIsEnabled', $value);
@@ -213,7 +213,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the encryptAppData property value. Indicates whether managed-app data should be encrypted. (Android only)
-     *  @param bool|null $value Value to set for the encryptAppData property.
+     * @param bool|null $value Value to set for the encryptAppData property.
     */
     public function setEncryptAppData(?bool $value): void {
         $this->getBackingStore()->set('encryptAppData', $value);
@@ -221,7 +221,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-     *  @param bool|null $value Value to set for the faceIdBlocked property.
+     * @param bool|null $value Value to set for the faceIdBlocked property.
     */
     public function setFaceIdBlocked(?bool $value): void {
         $this->getBackingStore()->set('faceIdBlocked', $value);
@@ -229,7 +229,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
-     *  @param string|null $value Value to set for the minimumRequiredPatchVersion property.
+     * @param string|null $value Value to set for the minimumRequiredPatchVersion property.
     */
     public function setMinimumRequiredPatchVersion(?string $value): void {
         $this->getBackingStore()->set('minimumRequiredPatchVersion', $value);
@@ -237,7 +237,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-     *  @param string|null $value Value to set for the minimumRequiredSdkVersion property.
+     * @param string|null $value Value to set for the minimumRequiredSdkVersion property.
     */
     public function setMinimumRequiredSdkVersion(?string $value): void {
         $this->getBackingStore()->set('minimumRequiredSdkVersion', $value);
@@ -245,7 +245,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-     *  @param string|null $value Value to set for the minimumWarningPatchVersion property.
+     * @param string|null $value Value to set for the minimumWarningPatchVersion property.
     */
     public function setMinimumWarningPatchVersion(?string $value): void {
         $this->getBackingStore()->set('minimumWarningPatchVersion', $value);
@@ -253,7 +253,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection implements Parsab
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether screen capture is blocked. (Android only)
-     *  @param bool|null $value Value to set for the screenCaptureBlocked property.
+     * @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
     public function setScreenCaptureBlocked(?bool $value): void {
         $this->getBackingStore()->set('screenCaptureBlocked', $value);

@@ -82,7 +82,7 @@ class TeamInfo extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the team.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -90,7 +90,7 @@ class TeamInfo extends Entity implements Parsable
 
     /**
      * Sets the team property value. The team property
-     *  @param Team|null $value Value to set for the team property.
+     * @param Team|null $value Value to set for the team property.
     */
     public function setTeam(?Team $value): void {
         $this->getBackingStore()->set('team', $value);
@@ -98,7 +98,7 @@ class TeamInfo extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

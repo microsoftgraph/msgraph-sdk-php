@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get monthlyPrintUsageByPrinter from reports
+*/
 class PrintUsageByPrinterItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -245,7 +245,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
-     *  @param ActivityType|null $value Value to set for the activity property.
+     * @param ActivityType|null $value Value to set for the activity property.
     */
     public function setActivity(?ActivityType $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -253,7 +253,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. Date and time when the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -261,7 +261,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the additionalInfo property value. Additional information associated with the risk detection. This string value is represented as a JSON object with the quotations escaped.
-     *  @param string|null $value Value to set for the additionalInfo property.
+     * @param string|null $value Value to set for the additionalInfo property.
     */
     public function setAdditionalInfo(?string $value): void {
         $this->getBackingStore()->set('additionalInfo', $value);
@@ -269,7 +269,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the appId property value. The unique identifier for the associated application.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -277,7 +277,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
-     *  @param string|null $value Value to set for the correlationId property.
+     * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
         $this->getBackingStore()->set('correlationId', $value);
@@ -285,7 +285,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the detectedDateTime property value. Date and time when the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the detectedDateTime property.
+     * @param DateTime|null $value Value to set for the detectedDateTime property.
     */
     public function setDetectedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('detectedDateTime', $value);
@@ -293,7 +293,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline. The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     *  @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
+     * @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
     */
     public function setDetectionTimingType(?RiskDetectionTimingType $value): void {
         $this->getBackingStore()->set('detectionTimingType', $value);
@@ -301,7 +301,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
@@ -309,7 +309,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the keyIds property value. The unique identifier for the key credential associated with the risk detection.
-     *  @param array<string>|null $value Value to set for the keyIds property.
+     * @param array<string>|null $value Value to set for the keyIds property.
     */
     public function setKeyIds(?array $value): void {
         $this->getBackingStore()->set('keyIds', $value);
@@ -317,7 +317,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the lastUpdatedDateTime property value. Date and time when the risk detection was last updated.
-     *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastUpdatedDateTime', $value);
@@ -325,7 +325,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the location property value. Location from where the sign-in was initiated.
-     *  @param SignInLocation|null $value Value to set for the location property.
+     * @param SignInLocation|null $value Value to set for the location property.
     */
     public function setLocation(?SignInLocation $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -333,7 +333,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
-     *  @param string|null $value Value to set for the requestId property.
+     * @param string|null $value Value to set for the requestId property.
     */
     public function setRequestId(?string $value): void {
         $this->getBackingStore()->set('requestId', $value);
@@ -341,7 +341,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     *  @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
@@ -349,7 +349,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
-     *  @param string|null $value Value to set for the riskEventType property.
+     * @param string|null $value Value to set for the riskEventType property.
     */
     public function setRiskEventType(?string $value): void {
         $this->getBackingStore()->set('riskEventType', $value);
@@ -357,7 +357,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
-     *  @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
@@ -365,7 +365,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskState property value. The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
-     *  @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
@@ -373,7 +373,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the servicePrincipalDisplayName property value. The display name for the service principal.
-     *  @param string|null $value Value to set for the servicePrincipalDisplayName property.
+     * @param string|null $value Value to set for the servicePrincipalDisplayName property.
     */
     public function setServicePrincipalDisplayName(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalDisplayName', $value);
@@ -381,7 +381,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the servicePrincipalId property value. The unique identifier for the service principal. Supports $filter (eq).
-     *  @param string|null $value Value to set for the servicePrincipalId property.
+     * @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalId', $value);
@@ -389,7 +389,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the source property value. Source of the risk detection. For example, identityProtection.
-     *  @param string|null $value Value to set for the source property.
+     * @param string|null $value Value to set for the source property.
     */
     public function setSource(?string $value): void {
         $this->getBackingStore()->set('source', $value);
@@ -397,7 +397,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
 
     /**
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
-     *  @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
+     * @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
     */
     public function setTokenIssuerType(?TokenIssuerType $value): void {
         $this->getBackingStore()->set('tokenIssuerType', $value);

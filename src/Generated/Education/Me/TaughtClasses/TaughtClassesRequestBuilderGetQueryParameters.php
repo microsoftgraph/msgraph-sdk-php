@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Me\TaughtClasses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the educationClass resources owned by an educationUser.
+*/
 class TaughtClassesRequestBuilderGetQueryParameters 
 {
     /**

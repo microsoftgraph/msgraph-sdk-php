@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new EducationClass and sets the default values.
+     * Instantiates a new educationClass and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -244,7 +244,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the assignmentCategories property value. All categories associated with this class. Nullable.
-     *  @param array<EducationCategory>|null $value Value to set for the assignmentCategories property.
+     * @param array<EducationCategory>|null $value Value to set for the assignmentCategories property.
     */
     public function setAssignmentCategories(?array $value): void {
         $this->getBackingStore()->set('assignmentCategories', $value);
@@ -252,7 +252,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
-     *  @param EducationAssignmentDefaults|null $value Value to set for the assignmentDefaults property.
+     * @param EducationAssignmentDefaults|null $value Value to set for the assignmentDefaults property.
     */
     public function setAssignmentDefaults(?EducationAssignmentDefaults $value): void {
         $this->getBackingStore()->set('assignmentDefaults', $value);
@@ -260,7 +260,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the assignments property value. All assignments associated with this class. Nullable.
-     *  @param array<EducationAssignment>|null $value Value to set for the assignments property.
+     * @param array<EducationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
@@ -268,7 +268,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the assignmentSettings property value. Specifies class-level assignments settings.
-     *  @param EducationAssignmentSettings|null $value Value to set for the assignmentSettings property.
+     * @param EducationAssignmentSettings|null $value Value to set for the assignmentSettings property.
     */
     public function setAssignmentSettings(?EducationAssignmentSettings $value): void {
         $this->getBackingStore()->set('assignmentSettings', $value);
@@ -276,7 +276,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the classCode property value. Class code used by the school to identify the class.
-     *  @param string|null $value Value to set for the classCode property.
+     * @param string|null $value Value to set for the classCode property.
     */
     public function setClassCode(?string $value): void {
         $this->getBackingStore()->set('classCode', $value);
@@ -284,7 +284,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the course property value. The course property
-     *  @param EducationCourse|null $value Value to set for the course property.
+     * @param EducationCourse|null $value Value to set for the course property.
     */
     public function setCourse(?EducationCourse $value): void {
         $this->getBackingStore()->set('course', $value);
@@ -292,7 +292,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. Entity who created the class
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -300,7 +300,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the class.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -308,7 +308,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Name of the class.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -316,7 +316,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the externalId property value. ID of the class from the syncing system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -324,7 +324,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the externalName property value. Name of the class in the syncing system.
-     *  @param string|null $value Value to set for the externalName property.
+     * @param string|null $value Value to set for the externalName property.
     */
     public function setExternalName(?string $value): void {
         $this->getBackingStore()->set('externalName', $value);
@@ -332,7 +332,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the externalSource property value. How this class was created. Possible values are: sis, manual.
-     *  @param EducationExternalSource|null $value Value to set for the externalSource property.
+     * @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value): void {
         $this->getBackingStore()->set('externalSource', $value);
@@ -340,7 +340,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
-     *  @param string|null $value Value to set for the externalSourceDetail property.
+     * @param string|null $value Value to set for the externalSourceDetail property.
     */
     public function setExternalSourceDetail(?string $value): void {
         $this->getBackingStore()->set('externalSourceDetail', $value);
@@ -348,7 +348,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the grade property value. Grade level of the class.
-     *  @param string|null $value Value to set for the grade property.
+     * @param string|null $value Value to set for the grade property.
     */
     public function setGrade(?string $value): void {
         $this->getBackingStore()->set('grade', $value);
@@ -356,7 +356,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the group property value. The underlying Microsoft 365 group object.
-     *  @param Group|null $value Value to set for the group property.
+     * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
         $this->getBackingStore()->set('group', $value);
@@ -364,7 +364,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
-     *  @param string|null $value Value to set for the mailNickname property.
+     * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
         $this->getBackingStore()->set('mailNickname', $value);
@@ -372,7 +372,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the members property value. All users in the class. Nullable.
-     *  @param array<EducationUser>|null $value Value to set for the members property.
+     * @param array<EducationUser>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
@@ -380,7 +380,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.
-     *  @param array<EducationSchool>|null $value Value to set for the schools property.
+     * @param array<EducationSchool>|null $value Value to set for the schools property.
     */
     public function setSchools(?array $value): void {
         $this->getBackingStore()->set('schools', $value);
@@ -388,7 +388,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the teachers property value. All teachers in the class. Nullable.
-     *  @param array<EducationUser>|null $value Value to set for the teachers property.
+     * @param array<EducationUser>|null $value Value to set for the teachers property.
     */
     public function setTeachers(?array $value): void {
         $this->getBackingStore()->set('teachers', $value);
@@ -396,7 +396,7 @@ class EducationClass extends Entity implements Parsable
 
     /**
      * Sets the term property value. Term for this class.
-     *  @param EducationTerm|null $value Value to set for the term property.
+     * @param EducationTerm|null $value Value to set for the term property.
     */
     public function setTerm(?EducationTerm $value): void {
         $this->getBackingStore()->set('term', $value);

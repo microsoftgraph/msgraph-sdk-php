@@ -120,7 +120,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the completedDateTime property value. The date and time that the follow-up was finished.
-     *  @param DateTimeTimeZone|null $value Value to set for the completedDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the completedDateTime property.
     */
     public function setCompletedDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('completedDateTime', $value);
@@ -144,7 +144,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
-     *  @param DateTimeTimeZone|null $value Value to set for the dueDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the dueDateTime property.
     */
     public function setDueDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('dueDateTime', $value);
@@ -152,7 +152,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the flagStatus property value. The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
-     *  @param FollowupFlagStatus|null $value Value to set for the flagStatus property.
+     * @param FollowupFlagStatus|null $value Value to set for the flagStatus property.
     */
     public function setFlagStatus(?FollowupFlagStatus $value): void {
         $this->getBackingStore()->set('flagStatus', $value);
@@ -160,7 +160,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class FollowupFlag implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDateTime property value. The date and time that the follow-up is to begin.
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

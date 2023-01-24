@@ -120,7 +120,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the appId property value. Refers to the Unique GUID representing Application Id in the Azure Active Directory.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -136,7 +136,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +144,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Refers to the Application Name displayed in the Azure Portal.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -152,7 +152,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the servicePrincipalId property value. Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
-     *  @param string|null $value Value to set for the servicePrincipalId property.
+     * @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalId', $value);
@@ -168,7 +168,7 @@ class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the servicePrincipalName property value. Refers to the Service Principal Name is the Application name in the tenant.
-     *  @param string|null $value Value to set for the servicePrincipalName property.
+     * @param string|null $value Value to set for the servicePrincipalName property.
     */
     public function setServicePrincipalName(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalName', $value);

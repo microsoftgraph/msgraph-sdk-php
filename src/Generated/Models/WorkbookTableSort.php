@@ -74,7 +74,7 @@ class WorkbookTableSort extends Entity implements Parsable
 
     /**
      * Sets the fields property value. Represents the current conditions used to last sort the table. Read-only.
-     *  @param array<WorkbookSortField>|null $value Value to set for the fields property.
+     * @param array<WorkbookSortField>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value): void {
         $this->getBackingStore()->set('fields', $value);
@@ -82,7 +82,7 @@ class WorkbookTableSort extends Entity implements Parsable
 
     /**
      * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
-     *  @param bool|null $value Value to set for the matchCase property.
+     * @param bool|null $value Value to set for the matchCase property.
     */
     public function setMatchCase(?bool $value): void {
         $this->getBackingStore()->set('matchCase', $value);
@@ -90,7 +90,7 @@ class WorkbookTableSort extends Entity implements Parsable
 
     /**
      * Sets the method property value. Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
-     *  @param string|null $value Value to set for the method property.
+     * @param string|null $value Value to set for the method property.
     */
     public function setMethod(?string $value): void {
         $this->getBackingStore()->set('method', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Approval stages for decisions associated with access package assignment requests.
+*/
 class ApprovalItemRequestBuilderGetQueryParameters 
 {
     /**

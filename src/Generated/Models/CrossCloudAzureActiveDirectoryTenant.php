@@ -26,7 +26,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
     }
 
     /**
-     * Gets the cloudInstance property value. The cloudInstance property
+     * Gets the cloudInstance property value. The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
      * @return string|null
     */
     public function getCloudInstance(): ?string {
@@ -34,7 +34,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the Azure Active Directory tenant. Read only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -55,7 +55,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -74,24 +74,24 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
     }
 
     /**
-     * Sets the cloudInstance property value. The cloudInstance property
-     *  @param string|null $value Value to set for the cloudInstance property.
+     * Sets the cloudInstance property value. The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
+     * @param string|null $value Value to set for the cloudInstance property.
     */
     public function setCloudInstance(?string $value): void {
         $this->getBackingStore()->set('cloudInstance', $value);
     }
 
     /**
-     * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * Sets the displayName property value. The name of the Azure Active Directory tenant. Read only.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
-     *  @param string|null $value Value to set for the tenantId property.
+     * Sets the tenantId property value. The ID of the Azure Active Directory tenant. Read only.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);

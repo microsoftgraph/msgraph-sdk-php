@@ -142,7 +142,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the history property value. The activity related to user risk level change
-     *  @param array<RiskyUserHistoryItem>|null $value Value to set for the history property.
+     * @param array<RiskyUserHistoryItem>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
         $this->getBackingStore()->set('history', $value);
@@ -150,7 +150,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the isDeleted property value. Indicates whether the user is deleted. Possible values are: true, false.
-     *  @param bool|null $value Value to set for the isDeleted property.
+     * @param bool|null $value Value to set for the isDeleted property.
     */
     public function setIsDeleted(?bool $value): void {
         $this->getBackingStore()->set('isDeleted', $value);
@@ -158,7 +158,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the isProcessing property value. Indicates whether a user's risky state is being processed by the backend.
-     *  @param bool|null $value Value to set for the isProcessing property.
+     * @param bool|null $value Value to set for the isProcessing property.
     */
     public function setIsProcessing(?bool $value): void {
         $this->getBackingStore()->set('isProcessing', $value);
@@ -166,7 +166,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     *  @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
@@ -174,7 +174,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the riskLastUpdatedDateTime property.
+     * @param DateTime|null $value Value to set for the riskLastUpdatedDateTime property.
     */
     public function setRiskLastUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('riskLastUpdatedDateTime', $value);
@@ -182,7 +182,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     *  @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
@@ -190,7 +190,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the riskState property value. State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     *  @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
@@ -198,7 +198,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. Risky user display name.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -206,7 +206,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. Risky user principal name.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

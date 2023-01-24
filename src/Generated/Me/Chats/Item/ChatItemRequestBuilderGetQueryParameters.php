@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Chats\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get chats from me
+*/
 class ChatItemRequestBuilderGetQueryParameters 
 {
     /**

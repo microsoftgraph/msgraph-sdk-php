@@ -140,7 +140,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the ascending property value. Represents whether the sorting is done in an ascending fashion.
-     *  @param bool|null $value Value to set for the ascending property.
+     * @param bool|null $value Value to set for the ascending property.
     */
     public function setAscending(?bool $value): void {
         $this->getBackingStore()->set('ascending', $value);
@@ -156,7 +156,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -164,7 +164,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the color property value. Represents the color that is the target of the condition if the sorting is on font or cell color.
-     *  @param string|null $value Value to set for the color property.
+     * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -172,7 +172,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
-     *  @param string|null $value Value to set for the dataOption property.
+     * @param string|null $value Value to set for the dataOption property.
     */
     public function setDataOption(?string $value): void {
         $this->getBackingStore()->set('dataOption', $value);
@@ -180,7 +180,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-     *  @param WorkbookIcon|null $value Value to set for the icon property.
+     * @param WorkbookIcon|null $value Value to set for the icon property.
     */
     public function setIcon(?WorkbookIcon $value): void {
         $this->getBackingStore()->set('icon', $value);
@@ -188,7 +188,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the key property value. Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
-     *  @param int|null $value Value to set for the key property.
+     * @param int|null $value Value to set for the key property.
     */
     public function setKey(?int $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -196,7 +196,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -204,7 +204,7 @@ class WorkbookSortField implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
-     *  @param string|null $value Value to set for the sortOn property.
+     * @param string|null $value Value to set for the sortOn property.
     */
     public function setSortOn(?string $value): void {
         $this->getBackingStore()->set('sortOn', $value);

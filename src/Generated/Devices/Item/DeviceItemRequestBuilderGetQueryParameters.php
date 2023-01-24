@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Devices\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the properties and relationships of a device object.
+*/
 class DeviceItemRequestBuilderGetQueryParameters 
 {
     /**

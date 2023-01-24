@@ -110,7 +110,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the aggregationFilterToken property value. A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
-     *  @param string|null $value Value to set for the aggregationFilterToken property.
+     * @param string|null $value Value to set for the aggregationFilterToken property.
     */
     public function setAggregationFilterToken(?string $value): void {
         $this->getBackingStore()->set('aggregationFilterToken', $value);
@@ -126,7 +126,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the count property value. The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
-     *  @param int|null $value Value to set for the count property.
+     * @param int|null $value Value to set for the count property.
     */
     public function setCount(?int $value): void {
         $this->getBackingStore()->set('count', $value);
@@ -142,7 +142,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the key property value. The discrete value of the field that an aggregation was computed on.
-     *  @param string|null $value Value to set for the key property.
+     * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -150,7 +150,7 @@ class SearchBucket implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

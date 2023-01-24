@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceC
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Device configuration states for this device.
+*/
 class DeviceConfigurationStateItemRequestBuilderGetQueryParameters 
 {
     /**

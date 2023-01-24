@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Alerts_v2\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of alerts in Microsoft 365 Defender.
+*/
 class AlertItemRequestBuilderGetQueryParameters 
 {
     /**

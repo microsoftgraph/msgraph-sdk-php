@@ -105,7 +105,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
-     *  @param ItemBody|null $value Value to set for the body property.
+     * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
         $this->getBackingStore()->set('body', $value);
@@ -113,7 +113,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date time object representing the time at which message was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -121,7 +121,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
-     *  @param EventMessageDetail|null $value Value to set for the eventDetail property.
+     * @param EventMessageDetail|null $value Value to set for the eventDetail property.
     */
     public function setEventDetail(?EventMessageDetail $value): void {
         $this->getBackingStore()->set('eventDetail', $value);
@@ -129,7 +129,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the from property value. Information about the sender of the message.
-     *  @param ChatMessageFromIdentitySet|null $value Value to set for the from property.
+     * @param ChatMessageFromIdentitySet|null $value Value to set for the from property.
     */
     public function setFrom(?ChatMessageFromIdentitySet $value): void {
         $this->getBackingStore()->set('from', $value);
@@ -137,7 +137,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the isDeleted property value. If set to true, the original message has been deleted.
-     *  @param bool|null $value Value to set for the isDeleted property.
+     * @param bool|null $value Value to set for the isDeleted property.
     */
     public function setIsDeleted(?bool $value): void {
         $this->getBackingStore()->set('isDeleted', $value);
@@ -145,7 +145,7 @@ class ChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the messageType property value. The messageType property
-     *  @param ChatMessageType|null $value Value to set for the messageType property.
+     * @param ChatMessageType|null $value Value to set for the messageType property.
     */
     public function setMessageType(?ChatMessageType $value): void {
         $this->getBackingStore()->set('messageType', $value);

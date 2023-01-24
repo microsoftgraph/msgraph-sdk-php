@@ -74,7 +74,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the displayName property value. The name associated with the mailbox.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -82,7 +82,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the primaryAddress property value. The primary email address of the mailbox.
-     *  @param string|null $value Value to set for the primaryAddress property.
+     * @param string|null $value Value to set for the primaryAddress property.
     */
     public function setPrimaryAddress(?string $value): void {
         $this->getBackingStore()->set('primaryAddress', $value);
@@ -90,7 +90,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the userAccount property value. The user account of the mailbox.
-     *  @param UserAccount|null $value Value to set for the userAccount property.
+     * @param UserAccount|null $value Value to set for the userAccount property.
     */
     public function setUserAccount(?UserAccount $value): void {
         $this->getBackingStore()->set('userAccount', $value);

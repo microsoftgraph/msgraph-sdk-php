@@ -54,7 +54,7 @@ class PlannerGroup extends Entity implements Parsable
 
     /**
      * Sets the plans property value. Read-only. Nullable. Returns the plannerPlans owned by the group.
-     *  @param array<PlannerPlan>|null $value Value to set for the plans property.
+     * @param array<PlannerPlan>|null $value Value to set for the plans property.
     */
     public function setPlans(?array $value): void {
         $this->getBackingStore()->set('plans', $value);

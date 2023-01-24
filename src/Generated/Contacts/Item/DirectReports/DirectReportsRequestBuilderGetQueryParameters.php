@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contacts\Item\DirectReports;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get directReports from contacts
+*/
 class DirectReportsRequestBuilderGetQueryParameters 
 {
     /**

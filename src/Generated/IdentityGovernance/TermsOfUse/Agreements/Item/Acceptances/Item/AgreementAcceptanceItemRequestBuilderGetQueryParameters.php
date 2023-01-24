@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Read-only. Information about acceptances of this agreement.
+*/
 class AgreementAcceptanceItemRequestBuilderGetQueryParameters 
 {
     /**

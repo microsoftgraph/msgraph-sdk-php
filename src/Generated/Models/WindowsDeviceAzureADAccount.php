@@ -55,7 +55,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsab
 
     /**
      * Sets the userPrincipalName property value. Not yet documented
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

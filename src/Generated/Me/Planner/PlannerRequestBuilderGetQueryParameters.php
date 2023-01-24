@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Planner;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Entry-point to the Planner resource that might exist for a user. Read-only.
+*/
 class PlannerRequestBuilderGetQueryParameters 
 {
     /**

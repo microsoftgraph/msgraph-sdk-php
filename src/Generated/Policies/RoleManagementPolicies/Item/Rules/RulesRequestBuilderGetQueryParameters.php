@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the rules or settings defined for a role management policy. The rules are a collection of following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
+*/
 class RulesRequestBuilderGetQueryParameters 
 {
     /**

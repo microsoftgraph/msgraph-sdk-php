@@ -71,7 +71,7 @@ class IdentityUserFlow extends Entity implements Parsable
 
     /**
      * Sets the userFlowType property value. The userFlowType property
-     *  @param UserFlowType|null $value Value to set for the userFlowType property.
+     * @param UserFlowType|null $value Value to set for the userFlowType property.
     */
     public function setUserFlowType(?UserFlowType $value): void {
         $this->getBackingStore()->set('userFlowType', $value);
@@ -79,7 +79,7 @@ class IdentityUserFlow extends Entity implements Parsable
 
     /**
      * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     *  @param float|null $value Value to set for the userFlowTypeVersion property.
+     * @param float|null $value Value to set for the userFlowTypeVersion property.
     */
     public function setUserFlowTypeVersion(?float $value): void {
         $this->getBackingStore()->set('userFlowTypeVersion', $value);

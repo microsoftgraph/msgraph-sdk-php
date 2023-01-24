@@ -55,7 +55,7 @@ class IPv4CidrRange extends IpRange implements Parsable
 
     /**
      * Sets the cidrAddress property value. IPv4 address in CIDR notation. Not nullable.
-     *  @param string|null $value Value to set for the cidrAddress property.
+     * @param string|null $value Value to set for the cidrAddress property.
     */
     public function setCidrAddress(?string $value): void {
         $this->getBackingStore()->set('cidrAddress', $value);

@@ -54,7 +54,7 @@ class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the description property value. Provides the reason why the DomainDnsUnavailableRecord entity is returned.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);

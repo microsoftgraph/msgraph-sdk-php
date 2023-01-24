@@ -65,7 +65,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
 
     /**
      * Sets the claimValue property value. The value of the authentication context claim.
-     *  @param string|null $value Value to set for the claimValue property.
+     * @param string|null $value Value to set for the claimValue property.
     */
     public function setClaimValue(?string $value): void {
         $this->getBackingStore()->set('claimValue', $value);
@@ -73,7 +73,7 @@ class UnifiedRoleManagementPolicyAuthenticationContextRule extends UnifiedRoleMa
 
     /**
      * Sets the isEnabled property value. Whether this rule is enabled.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);

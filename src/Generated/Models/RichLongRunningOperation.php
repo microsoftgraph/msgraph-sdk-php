@@ -84,7 +84,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
 
     /**
      * Sets the error property value. Error that caused the operation to fail.
-     *  @param PublicError|null $value Value to set for the error property.
+     * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -92,7 +92,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
 
     /**
      * Sets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
-     *  @param int|null $value Value to set for the percentageComplete property.
+     * @param int|null $value Value to set for the percentageComplete property.
     */
     public function setPercentageComplete(?int $value): void {
         $this->getBackingStore()->set('percentageComplete', $value);
@@ -100,7 +100,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
 
     /**
      * Sets the resourceId property value. The unique identifier for the result.
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);
@@ -108,7 +108,7 @@ class RichLongRunningOperation extends LongRunningOperation implements Parsable
 
     /**
      * Sets the type property value. The type of the operation.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);

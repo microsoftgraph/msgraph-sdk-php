@@ -64,7 +64,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
 
     /**
      * Sets the reviewSet property value. eDiscovery review set to which items matching source collection query gets added.
-     *  @param EdiscoveryReviewSet|null $value Value to set for the reviewSet property.
+     * @param EdiscoveryReviewSet|null $value Value to set for the reviewSet property.
     */
     public function setReviewSet(?EdiscoveryReviewSet $value): void {
         $this->getBackingStore()->set('reviewSet', $value);
@@ -72,7 +72,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
 
     /**
      * Sets the search property value. eDiscovery search that gets added to review set.
-     *  @param EdiscoverySearch|null $value Value to set for the search property.
+     * @param EdiscoverySearch|null $value Value to set for the search property.
     */
     public function setSearch(?EdiscoverySearch $value): void {
         $this->getBackingStore()->set('search', $value);

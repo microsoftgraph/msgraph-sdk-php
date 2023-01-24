@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\ManagedDevices\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The managed devices associated with the user.
+*/
 class ManagedDeviceItemRequestBuilderGetQueryParameters 
 {
     /**

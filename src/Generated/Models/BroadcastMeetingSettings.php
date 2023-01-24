@@ -140,7 +140,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
-     *  @param BroadcastMeetingAudience|null $value Value to set for the allowedAudience property.
+     * @param BroadcastMeetingAudience|null $value Value to set for the allowedAudience property.
     */
     public function setAllowedAudience(?BroadcastMeetingAudience $value): void {
         $this->getBackingStore()->set('allowedAudience', $value);
@@ -156,7 +156,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -164,7 +164,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the captions property value. Caption settings of a Teams live event.
-     *  @param BroadcastMeetingCaptionSettings|null $value Value to set for the captions property.
+     * @param BroadcastMeetingCaptionSettings|null $value Value to set for the captions property.
     */
     public function setCaptions(?BroadcastMeetingCaptionSettings $value): void {
         $this->getBackingStore()->set('captions', $value);
@@ -172,7 +172,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
-     *  @param bool|null $value Value to set for the isAttendeeReportEnabled property.
+     * @param bool|null $value Value to set for the isAttendeeReportEnabled property.
     */
     public function setIsAttendeeReportEnabled(?bool $value): void {
         $this->getBackingStore()->set('isAttendeeReportEnabled', $value);
@@ -180,7 +180,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
-     *  @param bool|null $value Value to set for the isQuestionAndAnswerEnabled property.
+     * @param bool|null $value Value to set for the isQuestionAndAnswerEnabled property.
     */
     public function setIsQuestionAndAnswerEnabled(?bool $value): void {
         $this->getBackingStore()->set('isQuestionAndAnswerEnabled', $value);
@@ -188,7 +188,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
-     *  @param bool|null $value Value to set for the isRecordingEnabled property.
+     * @param bool|null $value Value to set for the isRecordingEnabled property.
     */
     public function setIsRecordingEnabled(?bool $value): void {
         $this->getBackingStore()->set('isRecordingEnabled', $value);
@@ -196,7 +196,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
-     *  @param bool|null $value Value to set for the isVideoOnDemandEnabled property.
+     * @param bool|null $value Value to set for the isVideoOnDemandEnabled property.
     */
     public function setIsVideoOnDemandEnabled(?bool $value): void {
         $this->getBackingStore()->set('isVideoOnDemandEnabled', $value);
@@ -204,7 +204,7 @@ class BroadcastMeetingSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

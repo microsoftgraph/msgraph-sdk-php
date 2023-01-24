@@ -120,7 +120,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowCustomMemes property value. If set to true, enables users to include custom memes.
-     *  @param bool|null $value Value to set for the allowCustomMemes property.
+     * @param bool|null $value Value to set for the allowCustomMemes property.
     */
     public function setAllowCustomMemes(?bool $value): void {
         $this->getBackingStore()->set('allowCustomMemes', $value);
@@ -136,7 +136,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowGiphy property value. If set to true, enables Giphy use.
-     *  @param bool|null $value Value to set for the allowGiphy property.
+     * @param bool|null $value Value to set for the allowGiphy property.
     */
     public function setAllowGiphy(?bool $value): void {
         $this->getBackingStore()->set('allowGiphy', $value);
@@ -144,7 +144,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowStickersAndMemes property value. If set to true, enables users to include stickers and memes.
-     *  @param bool|null $value Value to set for the allowStickersAndMemes property.
+     * @param bool|null $value Value to set for the allowStickersAndMemes property.
     */
     public function setAllowStickersAndMemes(?bool $value): void {
         $this->getBackingStore()->set('allowStickersAndMemes', $value);
@@ -152,7 +152,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -160,7 +160,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
-     *  @param GiphyRatingType|null $value Value to set for the giphyContentRating property.
+     * @param GiphyRatingType|null $value Value to set for the giphyContentRating property.
     */
     public function setGiphyContentRating(?GiphyRatingType $value): void {
         $this->getBackingStore()->set('giphyContentRating', $value);
@@ -168,7 +168,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

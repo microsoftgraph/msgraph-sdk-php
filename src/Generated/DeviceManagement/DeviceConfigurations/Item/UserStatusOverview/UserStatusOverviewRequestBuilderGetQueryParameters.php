@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\U
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Device Configuration users status overview
+*/
 class UserStatusOverviewRequestBuilderGetQueryParameters 
 {
     /**

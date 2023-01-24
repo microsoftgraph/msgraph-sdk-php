@@ -65,7 +65,7 @@ class WebApp extends MobileApp implements Parsable
 
     /**
      * Sets the appUrl property value. The web app URL. This property cannot be PATCHed.
-     *  @param string|null $value Value to set for the appUrl property.
+     * @param string|null $value Value to set for the appUrl property.
     */
     public function setAppUrl(?string $value): void {
         $this->getBackingStore()->set('appUrl', $value);
@@ -73,7 +73,7 @@ class WebApp extends MobileApp implements Parsable
 
     /**
      * Sets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
-     *  @param bool|null $value Value to set for the useManagedBrowser property.
+     * @param bool|null $value Value to set for the useManagedBrowser property.
     */
     public function setUseManagedBrowser(?bool $value): void {
         $this->getBackingStore()->set('useManagedBrowser', $value);

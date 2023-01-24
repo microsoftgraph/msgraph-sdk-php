@@ -11,6 +11,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Device location
+*/
 class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -161,7 +164,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -169,7 +172,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the altitude property value. Altitude, given in meters above sea level
-     *  @param float|null $value Value to set for the altitude property.
+     * @param float|null $value Value to set for the altitude property.
     */
     public function setAltitude(?float $value): void {
         $this->getBackingStore()->set('altitude', $value);
@@ -177,7 +180,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -185,7 +188,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the heading property value. Heading in degrees from true north
-     *  @param float|null $value Value to set for the heading property.
+     * @param float|null $value Value to set for the heading property.
     */
     public function setHeading(?float $value): void {
         $this->getBackingStore()->set('heading', $value);
@@ -193,7 +196,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
-     *  @param float|null $value Value to set for the horizontalAccuracy property.
+     * @param float|null $value Value to set for the horizontalAccuracy property.
     */
     public function setHorizontalAccuracy(?float $value): void {
         $this->getBackingStore()->set('horizontalAccuracy', $value);
@@ -201,7 +204,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastCollectedDateTime property value. Time at which location was recorded, relative to UTC
-     *  @param DateTime|null $value Value to set for the lastCollectedDateTime property.
+     * @param DateTime|null $value Value to set for the lastCollectedDateTime property.
     */
     public function setLastCollectedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastCollectedDateTime', $value);
@@ -209,7 +212,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. Latitude coordinate of the device's location
-     *  @param float|null $value Value to set for the latitude property.
+     * @param float|null $value Value to set for the latitude property.
     */
     public function setLatitude(?float $value): void {
         $this->getBackingStore()->set('latitude', $value);
@@ -217,7 +220,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the longitude property value. Longitude coordinate of the device's location
-     *  @param float|null $value Value to set for the longitude property.
+     * @param float|null $value Value to set for the longitude property.
     */
     public function setLongitude(?float $value): void {
         $this->getBackingStore()->set('longitude', $value);
@@ -225,7 +228,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -233,7 +236,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the speed property value. Speed the device is traveling in meters per second
-     *  @param float|null $value Value to set for the speed property.
+     * @param float|null $value Value to set for the speed property.
     */
     public function setSpeed(?float $value): void {
         $this->getBackingStore()->set('speed', $value);
@@ -241,7 +244,7 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the verticalAccuracy property value. Accuracy of altitude in meters
-     *  @param float|null $value Value to set for the verticalAccuracy property.
+     * @param float|null $value Value to set for the verticalAccuracy property.
     */
     public function setVerticalAccuracy(?float $value): void {
         $this->getBackingStore()->set('verticalAccuracy', $value);

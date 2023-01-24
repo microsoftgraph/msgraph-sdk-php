@@ -90,7 +90,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the ids property value. The ids property
-     *  @param array<string>|null $value Value to set for the ids property.
+     * @param array<string>|null $value Value to set for the ids property.
     */
     public function setIds(?array $value): void {
         $this->getBackingStore()->set('ids', $value);
@@ -114,7 +114,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the types property value. The types property
-     *  @param array<string>|null $value Value to set for the types property.
+     * @param array<string>|null $value Value to set for the types property.
     */
     public function setTypes(?array $value): void {
         $this->getBackingStore()->set('types', $value);

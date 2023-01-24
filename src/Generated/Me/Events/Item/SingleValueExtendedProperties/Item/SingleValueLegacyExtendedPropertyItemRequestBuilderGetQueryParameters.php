@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Events\Item\SingleValueExtendedProperties
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+*/
 class SingleValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters 
 {
     /**

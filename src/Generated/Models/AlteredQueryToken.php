@@ -110,7 +110,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the length property value. Defines the length of a changed segment.
-     *  @param int|null $value Value to set for the length property.
+     * @param int|null $value Value to set for the length property.
     */
     public function setLength(?int $value): void {
         $this->getBackingStore()->set('length', $value);
@@ -134,7 +134,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the offset property value. Defines the offset of a changed segment.
-     *  @param int|null $value Value to set for the offset property.
+     * @param int|null $value Value to set for the offset property.
     */
     public function setOffset(?int $value): void {
         $this->getBackingStore()->set('offset', $value);
@@ -150,7 +150,7 @@ class AlteredQueryToken implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the suggestion property value. Represents the corrected segment string.
-     *  @param string|null $value Value to set for the suggestion property.
+     * @param string|null $value Value to set for the suggestion property.
     */
     public function setSuggestion(?string $value): void {
         $this->getBackingStore()->set('suggestion', $value);

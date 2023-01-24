@@ -124,7 +124,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the deviceId property value. Azure AD device identifier.
-     *  @param string|null $value Value to set for the deviceId property.
+     * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
         $this->getBackingStore()->set('deviceId', $value);
@@ -132,7 +132,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the enrollmentType property value. Possible ways of adding a mobile device to management.
-     *  @param DeviceEnrollmentType|null $value Value to set for the enrollmentType property.
+     * @param DeviceEnrollmentType|null $value Value to set for the enrollmentType property.
     */
     public function setEnrollmentType(?DeviceEnrollmentType $value): void {
         $this->getBackingStore()->set('enrollmentType', $value);
@@ -140,7 +140,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the failureCategory property value. Top level failure categories for enrollment.
-     *  @param DeviceEnrollmentFailureReason|null $value Value to set for the failureCategory property.
+     * @param DeviceEnrollmentFailureReason|null $value Value to set for the failureCategory property.
     */
     public function setFailureCategory(?DeviceEnrollmentFailureReason $value): void {
         $this->getBackingStore()->set('failureCategory', $value);
@@ -148,7 +148,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the failureReason property value. Detailed failure reason.
-     *  @param string|null $value Value to set for the failureReason property.
+     * @param string|null $value Value to set for the failureReason property.
     */
     public function setFailureReason(?string $value): void {
         $this->getBackingStore()->set('failureReason', $value);
@@ -156,7 +156,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
-     *  @param string|null $value Value to set for the managedDeviceIdentifier property.
+     * @param string|null $value Value to set for the managedDeviceIdentifier property.
     */
     public function setManagedDeviceIdentifier(?string $value): void {
         $this->getBackingStore()->set('managedDeviceIdentifier', $value);
@@ -164,7 +164,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the operatingSystem property value. Operating System.
-     *  @param string|null $value Value to set for the operatingSystem property.
+     * @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value): void {
         $this->getBackingStore()->set('operatingSystem', $value);
@@ -172,7 +172,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the osVersion property value. OS Version.
-     *  @param string|null $value Value to set for the osVersion property.
+     * @param string|null $value Value to set for the osVersion property.
     */
     public function setOsVersion(?string $value): void {
         $this->getBackingStore()->set('osVersion', $value);
@@ -180,7 +180,7 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
 
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

@@ -72,7 +72,7 @@ class OnenoteEntityBaseModel extends Entity implements Parsable
 
     /**
      * Sets the self property value. The endpoint where you can get details about the page. Read-only.
-     *  @param string|null $value Value to set for the EscapedSelf property.
+     * @param string|null $value Value to set for the EscapedSelf property.
     */
     public function setSelf(?string $value): void {
         $this->getBackingStore()->set('escapedSelf', $value);

@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Scheduled Action Configuration
+*/
 class DeviceComplianceActionItem extends Entity implements Parsable 
 {
     /**
@@ -84,7 +87,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
 
     /**
      * Sets the actionType property value. Scheduled Action Type Enum
-     *  @param DeviceComplianceActionType|null $value Value to set for the actionType property.
+     * @param DeviceComplianceActionType|null $value Value to set for the actionType property.
     */
     public function setActionType(?DeviceComplianceActionType $value): void {
         $this->getBackingStore()->set('actionType', $value);
@@ -92,7 +95,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
 
     /**
      * Sets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-     *  @param int|null $value Value to set for the gracePeriodHours property.
+     * @param int|null $value Value to set for the gracePeriodHours property.
     */
     public function setGracePeriodHours(?int $value): void {
         $this->getBackingStore()->set('gracePeriodHours', $value);
@@ -100,7 +103,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
 
     /**
      * Sets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to.
-     *  @param array<string>|null $value Value to set for the notificationMessageCCList property.
+     * @param array<string>|null $value Value to set for the notificationMessageCCList property.
     */
     public function setNotificationMessageCCList(?array $value): void {
         $this->getBackingStore()->set('notificationMessageCCList', $value);
@@ -108,7 +111,7 @@ class DeviceComplianceActionItem extends Entity implements Parsable
 
     /**
      * Sets the notificationTemplateId property value. What notification Message template to use
-     *  @param string|null $value Value to set for the notificationTemplateId property.
+     * @param string|null $value Value to set for the notificationTemplateId property.
     */
     public function setNotificationTemplateId(?string $value): void {
         $this->getBackingStore()->set('notificationTemplateId', $value);

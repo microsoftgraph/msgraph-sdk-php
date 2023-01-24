@@ -64,7 +64,7 @@ class InferenceClassificationOverride extends Entity implements Parsable
 
     /**
      * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
-     *  @param InferenceClassificationType|null $value Value to set for the classifyAs property.
+     * @param InferenceClassificationType|null $value Value to set for the classifyAs property.
     */
     public function setClassifyAs(?InferenceClassificationType $value): void {
         $this->getBackingStore()->set('classifyAs', $value);
@@ -72,7 +72,7 @@ class InferenceClassificationOverride extends Entity implements Parsable
 
     /**
      * Sets the senderEmailAddress property value. The email address information of the sender for whom the override is created.
-     *  @param EmailAddress|null $value Value to set for the senderEmailAddress property.
+     * @param EmailAddress|null $value Value to set for the senderEmailAddress property.
     */
     public function setSenderEmailAddress(?EmailAddress $value): void {
         $this->getBackingStore()->set('senderEmailAddress', $value);

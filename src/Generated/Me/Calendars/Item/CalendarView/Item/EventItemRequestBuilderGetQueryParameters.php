@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The calendar view for the calendar. Navigation property. Read-only.
+*/
 class EventItemRequestBuilderGetQueryParameters 
 {
     /**

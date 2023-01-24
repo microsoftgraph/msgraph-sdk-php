@@ -130,7 +130,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the direction property value. The direction property
-     *  @param MediaDirection|null $value Value to set for the direction property.
+     * @param MediaDirection|null $value Value to set for the direction property.
     */
     public function setDirection(?MediaDirection $value): void {
         $this->getBackingStore()->set('direction', $value);
@@ -154,7 +154,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the label property value. The media stream label.
-     *  @param string|null $value Value to set for the label property.
+     * @param string|null $value Value to set for the label property.
     */
     public function setLabel(?string $value): void {
         $this->getBackingStore()->set('label', $value);
@@ -162,7 +162,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the mediaType property value. The mediaType property
-     *  @param Modality|null $value Value to set for the mediaType property.
+     * @param Modality|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?Modality $value): void {
         $this->getBackingStore()->set('mediaType', $value);
@@ -170,7 +170,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -178,7 +178,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the serverMuted property value. If the media is muted by the server.
-     *  @param bool|null $value Value to set for the serverMuted property.
+     * @param bool|null $value Value to set for the serverMuted property.
     */
     public function setServerMuted(?bool $value): void {
         $this->getBackingStore()->set('serverMuted', $value);
@@ -186,7 +186,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sourceId property value. The source ID.
-     *  @param string|null $value Value to set for the sourceId property.
+     * @param string|null $value Value to set for the sourceId property.
     */
     public function setSourceId(?string $value): void {
         $this->getBackingStore()->set('sourceId', $value);

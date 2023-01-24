@@ -75,7 +75,7 @@ class AccessReviewReviewer extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date when the reviewer was added for the access review.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -83,7 +83,7 @@ class AccessReviewReviewer extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Name of reviewer.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -91,7 +91,7 @@ class AccessReviewReviewer extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. User principal name of the reviewer.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

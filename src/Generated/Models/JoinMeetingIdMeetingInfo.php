@@ -65,7 +65,7 @@ class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * Sets the joinMeetingId property value. The ID used to join the meeting.
-     *  @param string|null $value Value to set for the joinMeetingId property.
+     * @param string|null $value Value to set for the joinMeetingId property.
     */
     public function setJoinMeetingId(?string $value): void {
         $this->getBackingStore()->set('joinMeetingId', $value);
@@ -73,7 +73,7 @@ class JoinMeetingIdMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * Sets the passcode property value. The passcode used to join the meeting. Optional.
-     *  @param string|null $value Value to set for the passcode property.
+     * @param string|null $value Value to set for the passcode property.
     */
     public function setPasscode(?string $value): void {
         $this->getBackingStore()->set('passcode', $value);

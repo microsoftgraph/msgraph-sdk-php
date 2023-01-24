@@ -110,7 +110,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the originalQueryString property value. Defines the original user query string.
-     *  @param string|null $value Value to set for the originalQueryString property.
+     * @param string|null $value Value to set for the originalQueryString property.
     */
     public function setOriginalQueryString(?string $value): void {
         $this->getBackingStore()->set('originalQueryString', $value);
@@ -142,7 +142,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryAlteration property value. Defines the details of the alteration information for the spelling correction.
-     *  @param SearchAlteration|null $value Value to set for the queryAlteration property.
+     * @param SearchAlteration|null $value Value to set for the queryAlteration property.
     */
     public function setQueryAlteration(?SearchAlteration $value): void {
         $this->getBackingStore()->set('queryAlteration', $value);
@@ -150,7 +150,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
-     *  @param SearchAlterationType|null $value Value to set for the queryAlterationType property.
+     * @param SearchAlterationType|null $value Value to set for the queryAlterationType property.
     */
     public function setQueryAlterationType(?SearchAlterationType $value): void {
         $this->getBackingStore()->set('queryAlterationType', $value);

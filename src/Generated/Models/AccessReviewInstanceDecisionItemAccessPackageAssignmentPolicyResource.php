@@ -65,7 +65,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
 
     /**
      * Sets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
-     *  @param string|null $value Value to set for the accessPackageDisplayName property.
+     * @param string|null $value Value to set for the accessPackageDisplayName property.
     */
     public function setAccessPackageDisplayName(?string $value): void {
         $this->getBackingStore()->set('accessPackageDisplayName', $value);
@@ -73,7 +73,7 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
 
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
-     *  @param string|null $value Value to set for the accessPackageId property.
+     * @param string|null $value Value to set for the accessPackageId property.
     */
     public function setAccessPackageId(?string $value): void {
         $this->getBackingStore()->set('accessPackageId', $value);

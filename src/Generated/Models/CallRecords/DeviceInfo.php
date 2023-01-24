@@ -290,7 +290,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -298,7 +298,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -306,7 +306,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the captureDeviceDriver property value. Name of the capture device driver used by the media endpoint.
-     *  @param string|null $value Value to set for the captureDeviceDriver property.
+     * @param string|null $value Value to set for the captureDeviceDriver property.
     */
     public function setCaptureDeviceDriver(?string $value): void {
         $this->getBackingStore()->set('captureDeviceDriver', $value);
@@ -314,7 +314,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the captureDeviceName property value. Name of the capture device used by the media endpoint.
-     *  @param string|null $value Value to set for the captureDeviceName property.
+     * @param string|null $value Value to set for the captureDeviceName property.
     */
     public function setCaptureDeviceName(?string $value): void {
         $this->getBackingStore()->set('captureDeviceName', $value);
@@ -322,7 +322,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the captureNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the capture device was not working properly.
-     *  @param float|null $value Value to set for the captureNotFunctioningEventRatio property.
+     * @param float|null $value Value to set for the captureNotFunctioningEventRatio property.
     */
     public function setCaptureNotFunctioningEventRatio(?float $value): void {
         $this->getBackingStore()->set('captureNotFunctioningEventRatio', $value);
@@ -330,7 +330,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cpuInsufficentEventRatio property value. Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
-     *  @param float|null $value Value to set for the cpuInsufficentEventRatio property.
+     * @param float|null $value Value to set for the cpuInsufficentEventRatio property.
     */
     public function setCpuInsufficentEventRatio(?float $value): void {
         $this->getBackingStore()->set('cpuInsufficentEventRatio', $value);
@@ -338,7 +338,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the deviceClippingEventRatio property value. Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
-     *  @param float|null $value Value to set for the deviceClippingEventRatio property.
+     * @param float|null $value Value to set for the deviceClippingEventRatio property.
     */
     public function setDeviceClippingEventRatio(?float $value): void {
         $this->getBackingStore()->set('deviceClippingEventRatio', $value);
@@ -346,7 +346,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the deviceGlitchEventRatio property value. Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
-     *  @param float|null $value Value to set for the deviceGlitchEventRatio property.
+     * @param float|null $value Value to set for the deviceGlitchEventRatio property.
     */
     public function setDeviceGlitchEventRatio(?float $value): void {
         $this->getBackingStore()->set('deviceGlitchEventRatio', $value);
@@ -354,7 +354,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.
-     *  @param int|null $value Value to set for the howlingEventCount property.
+     * @param int|null $value Value to set for the howlingEventCount property.
     */
     public function setHowlingEventCount(?int $value): void {
         $this->getBackingStore()->set('howlingEventCount', $value);
@@ -362,7 +362,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the initialSignalLevelRootMeanSquare property value. The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
-     *  @param float|null $value Value to set for the initialSignalLevelRootMeanSquare property.
+     * @param float|null $value Value to set for the initialSignalLevelRootMeanSquare property.
     */
     public function setInitialSignalLevelRootMeanSquare(?float $value): void {
         $this->getBackingStore()->set('initialSignalLevelRootMeanSquare', $value);
@@ -370,7 +370,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lowSpeechLevelEventRatio property value. Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
-     *  @param float|null $value Value to set for the lowSpeechLevelEventRatio property.
+     * @param float|null $value Value to set for the lowSpeechLevelEventRatio property.
     */
     public function setLowSpeechLevelEventRatio(?float $value): void {
         $this->getBackingStore()->set('lowSpeechLevelEventRatio', $value);
@@ -378,7 +378,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lowSpeechToNoiseEventRatio property value. Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
-     *  @param float|null $value Value to set for the lowSpeechToNoiseEventRatio property.
+     * @param float|null $value Value to set for the lowSpeechToNoiseEventRatio property.
     */
     public function setLowSpeechToNoiseEventRatio(?float $value): void {
         $this->getBackingStore()->set('lowSpeechToNoiseEventRatio', $value);
@@ -386,7 +386,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the micGlitchRate property value. Glitches per 5 minute interval for the media endpoint's microphone.
-     *  @param float|null $value Value to set for the micGlitchRate property.
+     * @param float|null $value Value to set for the micGlitchRate property.
     */
     public function setMicGlitchRate(?float $value): void {
         $this->getBackingStore()->set('micGlitchRate', $value);
@@ -394,7 +394,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -402,7 +402,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the receivedNoiseLevel property value. Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     *  @param int|null $value Value to set for the receivedNoiseLevel property.
+     * @param int|null $value Value to set for the receivedNoiseLevel property.
     */
     public function setReceivedNoiseLevel(?int $value): void {
         $this->getBackingStore()->set('receivedNoiseLevel', $value);
@@ -410,7 +410,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the receivedSignalLevel property value. Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     *  @param int|null $value Value to set for the receivedSignalLevel property.
+     * @param int|null $value Value to set for the receivedSignalLevel property.
     */
     public function setReceivedSignalLevel(?int $value): void {
         $this->getBackingStore()->set('receivedSignalLevel', $value);
@@ -418,7 +418,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the renderDeviceDriver property value. Name of the render device driver used by the media endpoint.
-     *  @param string|null $value Value to set for the renderDeviceDriver property.
+     * @param string|null $value Value to set for the renderDeviceDriver property.
     */
     public function setRenderDeviceDriver(?string $value): void {
         $this->getBackingStore()->set('renderDeviceDriver', $value);
@@ -426,7 +426,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the renderDeviceName property value. Name of the render device used by the media endpoint.
-     *  @param string|null $value Value to set for the renderDeviceName property.
+     * @param string|null $value Value to set for the renderDeviceName property.
     */
     public function setRenderDeviceName(?string $value): void {
         $this->getBackingStore()->set('renderDeviceName', $value);
@@ -434,7 +434,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the renderMuteEventRatio property value. Fraction of the call that media endpoint detected device render is muted.
-     *  @param float|null $value Value to set for the renderMuteEventRatio property.
+     * @param float|null $value Value to set for the renderMuteEventRatio property.
     */
     public function setRenderMuteEventRatio(?float $value): void {
         $this->getBackingStore()->set('renderMuteEventRatio', $value);
@@ -442,7 +442,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the renderNotFunctioningEventRatio property value. Fraction of the call that the media endpoint detected the render device was not working properly.
-     *  @param float|null $value Value to set for the renderNotFunctioningEventRatio property.
+     * @param float|null $value Value to set for the renderNotFunctioningEventRatio property.
     */
     public function setRenderNotFunctioningEventRatio(?float $value): void {
         $this->getBackingStore()->set('renderNotFunctioningEventRatio', $value);
@@ -450,7 +450,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the renderZeroVolumeEventRatio property value. Fraction of the call that media endpoint detected device render volume is set to 0.
-     *  @param float|null $value Value to set for the renderZeroVolumeEventRatio property.
+     * @param float|null $value Value to set for the renderZeroVolumeEventRatio property.
     */
     public function setRenderZeroVolumeEventRatio(?float $value): void {
         $this->getBackingStore()->set('renderZeroVolumeEventRatio', $value);
@@ -458,7 +458,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sentNoiseLevel property value. Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     *  @param int|null $value Value to set for the sentNoiseLevel property.
+     * @param int|null $value Value to set for the sentNoiseLevel property.
     */
     public function setSentNoiseLevel(?int $value): void {
         $this->getBackingStore()->set('sentNoiseLevel', $value);
@@ -466,7 +466,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sentSignalLevel property value. Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     *  @param int|null $value Value to set for the sentSignalLevel property.
+     * @param int|null $value Value to set for the sentSignalLevel property.
     */
     public function setSentSignalLevel(?int $value): void {
         $this->getBackingStore()->set('sentSignalLevel', $value);
@@ -474,7 +474,7 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the speakerGlitchRate property value. Glitches per 5 minute internal for the media endpoint's loudspeaker.
-     *  @param float|null $value Value to set for the speakerGlitchRate property.
+     * @param float|null $value Value to set for the speakerGlitchRate property.
     */
     public function setSpeakerGlitchRate(?float $value): void {
         $this->getBackingStore()->set('speakerGlitchRate', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Alerts\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get alerts from security
+*/
 class AlertItemRequestBuilderGetQueryParameters 
 {
     /**

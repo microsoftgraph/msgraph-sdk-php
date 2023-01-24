@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Bundles\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+*/
 class DriveItemItemRequestBuilderGetQueryParameters 
 {
     /**

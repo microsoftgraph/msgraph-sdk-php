@@ -140,7 +140,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the conferenceId property value. The conference id of the online meeting.
-     *  @param string|null $value Value to set for the conferenceId property.
+     * @param string|null $value Value to set for the conferenceId property.
     */
     public function setConferenceId(?string $value): void {
         $this->getBackingStore()->set('conferenceId', $value);
@@ -164,7 +164,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the dialinUrl property value. A URL to the externally-accessible web page that contains dial-in information.
-     *  @param string|null $value Value to set for the dialinUrl property.
+     * @param string|null $value Value to set for the dialinUrl property.
     */
     public function setDialinUrl(?string $value): void {
         $this->getBackingStore()->set('dialinUrl', $value);
@@ -172,7 +172,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -180,7 +180,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollFreeNumber property value. The tollFreeNumber property
-     *  @param string|null $value Value to set for the tollFreeNumber property.
+     * @param string|null $value Value to set for the tollFreeNumber property.
     */
     public function setTollFreeNumber(?string $value): void {
         $this->getBackingStore()->set('tollFreeNumber', $value);
@@ -188,7 +188,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollFreeNumbers property value. List of toll-free numbers that are displayed in the meeting invite.
-     *  @param array<string>|null $value Value to set for the tollFreeNumbers property.
+     * @param array<string>|null $value Value to set for the tollFreeNumbers property.
     */
     public function setTollFreeNumbers(?array $value): void {
         $this->getBackingStore()->set('tollFreeNumbers', $value);
@@ -196,7 +196,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollNumber property value. The tollNumber property
-     *  @param string|null $value Value to set for the tollNumber property.
+     * @param string|null $value Value to set for the tollNumber property.
     */
     public function setTollNumber(?string $value): void {
         $this->getBackingStore()->set('tollNumber', $value);
@@ -204,7 +204,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollNumbers property value. List of toll numbers that are displayed in the meeting invite.
-     *  @param array<string>|null $value Value to set for the tollNumbers property.
+     * @param array<string>|null $value Value to set for the tollNumbers property.
     */
     public function setTollNumbers(?array $value): void {
         $this->getBackingStore()->set('tollNumbers', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\SharedWithTeams\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the list of conversationMembers who can access a shared channel. This method does not return the following conversationMembers from the team:- Users with `Guest` role- Users who are externally authenticated in the tenant
+*/
 class AllowedMembersRequestBuilderGetQueryParameters 
 {
     /**

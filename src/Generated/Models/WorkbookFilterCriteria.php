@@ -160,7 +160,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -176,7 +176,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the color property value. The color property
-     *  @param string|null $value Value to set for the color property.
+     * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -184,7 +184,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the criterion1 property value. The criterion1 property
-     *  @param string|null $value Value to set for the criterion1 property.
+     * @param string|null $value Value to set for the criterion1 property.
     */
     public function setCriterion1(?string $value): void {
         $this->getBackingStore()->set('criterion1', $value);
@@ -192,7 +192,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the criterion2 property value. The criterion2 property
-     *  @param string|null $value Value to set for the criterion2 property.
+     * @param string|null $value Value to set for the criterion2 property.
     */
     public function setCriterion2(?string $value): void {
         $this->getBackingStore()->set('criterion2', $value);
@@ -200,7 +200,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the dynamicCriteria property value. The dynamicCriteria property
-     *  @param string|null $value Value to set for the dynamicCriteria property.
+     * @param string|null $value Value to set for the dynamicCriteria property.
     */
     public function setDynamicCriteria(?string $value): void {
         $this->getBackingStore()->set('dynamicCriteria', $value);
@@ -208,7 +208,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the filterOn property value. The filterOn property
-     *  @param string|null $value Value to set for the filterOn property.
+     * @param string|null $value Value to set for the filterOn property.
     */
     public function setFilterOn(?string $value): void {
         $this->getBackingStore()->set('filterOn', $value);
@@ -216,7 +216,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the icon property value. The icon property
-     *  @param WorkbookIcon|null $value Value to set for the icon property.
+     * @param WorkbookIcon|null $value Value to set for the icon property.
     */
     public function setIcon(?WorkbookIcon $value): void {
         $this->getBackingStore()->set('icon', $value);
@@ -224,7 +224,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -232,7 +232,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the operator property value. The operator property
-     *  @param string|null $value Value to set for the operator property.
+     * @param string|null $value Value to set for the operator property.
     */
     public function setOperator(?string $value): void {
         $this->getBackingStore()->set('operator', $value);
@@ -240,7 +240,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the values property value. The values property
-     *  @param Json|null $value Value to set for the values property.
+     * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {
         $this->getBackingStore()->set('values', $value);

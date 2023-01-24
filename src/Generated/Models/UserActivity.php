@@ -185,7 +185,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the activationUrl property value. Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
-     *  @param string|null $value Value to set for the activationUrl property.
+     * @param string|null $value Value to set for the activationUrl property.
     */
     public function setActivationUrl(?string $value): void {
         $this->getBackingStore()->set('activationUrl', $value);
@@ -193,7 +193,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the activitySourceHost property value. Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
-     *  @param string|null $value Value to set for the activitySourceHost property.
+     * @param string|null $value Value to set for the activitySourceHost property.
     */
     public function setActivitySourceHost(?string $value): void {
         $this->getBackingStore()->set('activitySourceHost', $value);
@@ -201,7 +201,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the appActivityId property value. Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
-     *  @param string|null $value Value to set for the appActivityId property.
+     * @param string|null $value Value to set for the appActivityId property.
     */
     public function setAppActivityId(?string $value): void {
         $this->getBackingStore()->set('appActivityId', $value);
@@ -209,7 +209,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the appDisplayName property value. Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
-     *  @param string|null $value Value to set for the appDisplayName property.
+     * @param string|null $value Value to set for the appDisplayName property.
     */
     public function setAppDisplayName(?string $value): void {
         $this->getBackingStore()->set('appDisplayName', $value);
@@ -217,7 +217,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
-     *  @param Json|null $value Value to set for the contentInfo property.
+     * @param Json|null $value Value to set for the contentInfo property.
     */
     public function setContentInfo(?Json $value): void {
         $this->getBackingStore()->set('contentInfo', $value);
@@ -225,7 +225,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
-     *  @param string|null $value Value to set for the contentUrl property.
+     * @param string|null $value Value to set for the contentUrl property.
     */
     public function setContentUrl(?string $value): void {
         $this->getBackingStore()->set('contentUrl', $value);
@@ -233,7 +233,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -241,7 +241,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expired on the server.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -249,7 +249,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the fallbackUrl property value. Optional. URL used to launch the activity in a web-based app, if available.
-     *  @param string|null $value Value to set for the fallbackUrl property.
+     * @param string|null $value Value to set for the fallbackUrl property.
     */
     public function setFallbackUrl(?string $value): void {
         $this->getBackingStore()->set('fallbackUrl', $value);
@@ -257,7 +257,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
-     *  @param array<ActivityHistoryItem>|null $value Value to set for the historyItems property.
+     * @param array<ActivityHistoryItem>|null $value Value to set for the historyItems property.
     */
     public function setHistoryItems(?array $value): void {
         $this->getBackingStore()->set('historyItems', $value);
@@ -265,7 +265,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -273,7 +273,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     *  @param Status|null $value Value to set for the status property.
+     * @param Status|null $value Value to set for the status property.
     */
     public function setStatus(?Status $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -281,7 +281,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
-     *  @param string|null $value Value to set for the userTimezone property.
+     * @param string|null $value Value to set for the userTimezone property.
     */
     public function setUserTimezone(?string $value): void {
         $this->getBackingStore()->set('userTimezone', $value);
@@ -289,7 +289,7 @@ class UserActivity extends Entity implements Parsable
 
     /**
      * Sets the visualElements property value. The visualElements property
-     *  @param VisualInfo|null $value Value to set for the visualElements property.
+     * @param VisualInfo|null $value Value to set for the visualElements property.
     */
     public function setVisualElements(?VisualInfo $value): void {
         $this->getBackingStore()->set('visualElements', $value);

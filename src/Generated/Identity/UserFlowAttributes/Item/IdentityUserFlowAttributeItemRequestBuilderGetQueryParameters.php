@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Identity\UserFlowAttributes\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents entry point for identity userflow attributes.
+*/
 class IdentityUserFlowAttributeItemRequestBuilderGetQueryParameters 
 {
     /**
