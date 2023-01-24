@@ -36,6 +36,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Gets the cloudInstance
+    * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
     *
     * @return string|null The cloudInstance
     */
@@ -50,6 +51,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Sets the cloudInstance
+    * The ID of the cloud where the tenant is located, one of microsoftonline.com, microsoftonline.us or partner.microsoftonline.cn. Read only.
     *
     * @param string $val The value of the cloudInstance
     *
@@ -62,6 +64,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
     }
     /**
     * Gets the displayName
+    * The name of the Azure Active Directory tenant. Read only.
     *
     * @return string|null The displayName
     */
@@ -76,6 +79,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Sets the displayName
+    * The name of the Azure Active Directory tenant. Read only.
     *
     * @param string $val The value of the displayName
     *
@@ -88,6 +92,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
     }
     /**
     * Gets the tenantId
+    * The ID of the Azure Active Directory tenant. Read only.
     *
     * @return string|null The tenantId
     */
@@ -102,6 +107,7 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource
 
     /**
     * Sets the tenantId
+    * The ID of the Azure Active Directory tenant. Read only.
     *
     * @param string $val The value of the tenantId
     *
