@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Children\Item
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The [set] in which the relation is relevant.
+*/
 class SetRequestBuilderGetQueryParameters 
 {
     /**

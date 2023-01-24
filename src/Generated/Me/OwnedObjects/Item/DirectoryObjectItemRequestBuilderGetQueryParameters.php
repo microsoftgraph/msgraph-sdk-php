@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\OwnedObjects\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

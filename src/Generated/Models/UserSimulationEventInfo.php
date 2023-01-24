@@ -131,7 +131,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the browser property value. Browser information from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     *  @param string|null $value Value to set for the browser property.
+     * @param string|null $value Value to set for the browser property.
     */
     public function setBrowser(?string $value): void {
         $this->getBackingStore()->set('browser', $value);
@@ -155,7 +155,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
-     *  @param DateTime|null $value Value to set for the eventDateTime property.
+     * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('eventDateTime', $value);
@@ -163,7 +163,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the eventName property value. Name of the simulation event by a user in an attack simulation and training campaign.
-     *  @param string|null $value Value to set for the eventName property.
+     * @param string|null $value Value to set for the eventName property.
     */
     public function setEventName(?string $value): void {
         $this->getBackingStore()->set('eventName', $value);
@@ -171,7 +171,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
@@ -179,7 +179,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -187,7 +187,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details from where the simulation event was initiated by a user in an attack simulation and training campaign.
-     *  @param string|null $value Value to set for the osPlatformDeviceDetails property.
+     * @param string|null $value Value to set for the osPlatformDeviceDetails property.
     */
     public function setOsPlatformDeviceDetails(?string $value): void {
         $this->getBackingStore()->set('osPlatformDeviceDetails', $value);

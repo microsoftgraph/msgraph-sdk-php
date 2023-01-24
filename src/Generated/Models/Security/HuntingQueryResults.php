@@ -100,7 +100,7 @@ class HuntingQueryResults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class HuntingQueryResults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class HuntingQueryResults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class HuntingQueryResults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the results property value. The results of the hunting query.
-     *  @param array<HuntingRowResult>|null $value Value to set for the results property.
+     * @param array<HuntingRowResult>|null $value Value to set for the results property.
     */
     public function setResults(?array $value): void {
         $this->getBackingStore()->set('results', $value);
@@ -132,7 +132,7 @@ class HuntingQueryResults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the schema property value. The schema for the response.
-     *  @param array<SinglePropertySchema>|null $value Value to set for the schema property.
+     * @param array<SinglePropertySchema>|null $value Value to set for the schema property.
     */
     public function setSchema(?array $value): void {
         $this->getBackingStore()->set('schema', $value);

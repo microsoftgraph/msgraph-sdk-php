@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of lifecycle policies for this group. Read-only. Nullable.
+*/
 class GroupLifecyclePolicyItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contracts\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of contract object.
+*/
 class ContractItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Onenote\SectionGroups\Item\Secti
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of onenoteSection objects from the specified section group.
+*/
 class SectionsRequestBuilderGetQueryParameters 
 {
     /**

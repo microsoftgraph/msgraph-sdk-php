@@ -75,7 +75,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
      * Sets the conversationMemberRoles property value. Roles for the coversation member user.
-     *  @param array<string>|null $value Value to set for the conversationMemberRoles property.
+     * @param array<string>|null $value Value to set for the conversationMemberRoles property.
     */
     public function setConversationMemberRoles(?array $value): void {
         $this->getBackingStore()->set('conversationMemberRoles', $value);
@@ -83,7 +83,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
      * Sets the conversationMemberUser property value. Identity of the conversation member user.
-     *  @param TeamworkUserIdentity|null $value Value to set for the conversationMemberUser property.
+     * @param TeamworkUserIdentity|null $value Value to set for the conversationMemberUser property.
     */
     public function setConversationMemberUser(?TeamworkUserIdentity $value): void {
         $this->getBackingStore()->set('conversationMemberUser', $value);
@@ -91,7 +91,7 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

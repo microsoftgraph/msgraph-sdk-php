@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+*/
 class ContactFolderItemRequestBuilderGetQueryParameters 
 {
     /**

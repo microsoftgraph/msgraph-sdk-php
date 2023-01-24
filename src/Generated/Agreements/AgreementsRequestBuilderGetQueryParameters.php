@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Agreements;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from agreements
+*/
 class AgreementsRequestBuilderGetQueryParameters 
 {
     /**

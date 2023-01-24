@@ -55,7 +55,7 @@ class OmaSettingBoolean extends OmaSetting implements Parsable
 
     /**
      * Sets the value property value. Value.
-     *  @param bool|null $value Value to set for the value property.
+     * @param bool|null $value Value to set for the value property.
     */
     public function setValue(?bool $value): void {
         $this->getBackingStore()->set('value', $value);

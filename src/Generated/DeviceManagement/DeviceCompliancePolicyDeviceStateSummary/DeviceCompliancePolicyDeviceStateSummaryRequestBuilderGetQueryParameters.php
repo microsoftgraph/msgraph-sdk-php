@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicyDevic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The device compliance state summary for this account.
+*/
 class DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetQueryParameters 
 {
     /**

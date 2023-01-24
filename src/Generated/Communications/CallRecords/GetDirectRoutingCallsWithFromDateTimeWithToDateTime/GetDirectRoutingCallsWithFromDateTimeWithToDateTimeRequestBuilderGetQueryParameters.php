@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\GetDirectRoutingC
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getDirectRoutingCalls
+*/
 class GetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters 
 {
     /**

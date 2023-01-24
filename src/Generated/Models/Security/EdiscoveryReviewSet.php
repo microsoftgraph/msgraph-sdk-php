@@ -55,7 +55,7 @@ class EdiscoveryReviewSet extends DataSet implements Parsable
 
     /**
      * Sets the queries property value. Represents queries within the review set.
-     *  @param array<EdiscoveryReviewSetQuery>|null $value Value to set for the queries property.
+     * @param array<EdiscoveryReviewSetQuery>|null $value Value to set for the queries property.
     */
     public function setQueries(?array $value): void {
         $this->getBackingStore()->set('queries', $value);

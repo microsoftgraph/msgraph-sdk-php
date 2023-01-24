@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachme
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Read-only. Nullable. Supports $expand.
+*/
 class AttachmentItemRequestBuilderGetQueryParameters 
 {
     /**

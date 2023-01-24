@@ -161,7 +161,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -169,7 +169,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -177,7 +177,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the durationBeforeAutomaticDenial property value. The number of days that a request can be pending a response before it is automatically denied.
-     *  @param DateInterval|null $value Value to set for the durationBeforeAutomaticDenial property.
+     * @param DateInterval|null $value Value to set for the durationBeforeAutomaticDenial property.
     */
     public function setDurationBeforeAutomaticDenial(?DateInterval $value): void {
         $this->getBackingStore()->set('durationBeforeAutomaticDenial', $value);
@@ -185,7 +185,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the durationBeforeEscalation property value. If escalation is required, the time a request can be pending a response from a primary approver.
-     *  @param DateInterval|null $value Value to set for the durationBeforeEscalation property.
+     * @param DateInterval|null $value Value to set for the durationBeforeEscalation property.
     */
     public function setDurationBeforeEscalation(?DateInterval $value): void {
         $this->getBackingStore()->set('durationBeforeEscalation', $value);
@@ -193,7 +193,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
-     *  @param array<SubjectSet>|null $value Value to set for the escalationApprovers property.
+     * @param array<SubjectSet>|null $value Value to set for the escalationApprovers property.
     */
     public function setEscalationApprovers(?array $value): void {
         $this->getBackingStore()->set('escalationApprovers', $value);
@@ -201,7 +201,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the fallbackEscalationApprovers property value. The subjects, typically users, who are the fallback escalation approvers.
-     *  @param array<SubjectSet>|null $value Value to set for the fallbackEscalationApprovers property.
+     * @param array<SubjectSet>|null $value Value to set for the fallbackEscalationApprovers property.
     */
     public function setFallbackEscalationApprovers(?array $value): void {
         $this->getBackingStore()->set('fallbackEscalationApprovers', $value);
@@ -209,7 +209,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the fallbackPrimaryApprovers property value. The subjects, typically users, who are the fallback primary approvers.
-     *  @param array<SubjectSet>|null $value Value to set for the fallbackPrimaryApprovers property.
+     * @param array<SubjectSet>|null $value Value to set for the fallbackPrimaryApprovers property.
     */
     public function setFallbackPrimaryApprovers(?array $value): void {
         $this->getBackingStore()->set('fallbackPrimaryApprovers', $value);
@@ -217,7 +217,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
-     *  @param bool|null $value Value to set for the isApproverJustificationRequired property.
+     * @param bool|null $value Value to set for the isApproverJustificationRequired property.
     */
     public function setIsApproverJustificationRequired(?bool $value): void {
         $this->getBackingStore()->set('isApproverJustificationRequired', $value);
@@ -225,7 +225,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the isEscalationEnabled property value. If true, then one or more escalationApprovers are configured in this approval stage.
-     *  @param bool|null $value Value to set for the isEscalationEnabled property.
+     * @param bool|null $value Value to set for the isEscalationEnabled property.
     */
     public function setIsEscalationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEscalationEnabled', $value);
@@ -233,7 +233,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -241,7 +241,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
-     *  @param array<SubjectSet>|null $value Value to set for the primaryApprovers property.
+     * @param array<SubjectSet>|null $value Value to set for the primaryApprovers property.
     */
     public function setPrimaryApprovers(?array $value): void {
         $this->getBackingStore()->set('primaryApprovers', $value);

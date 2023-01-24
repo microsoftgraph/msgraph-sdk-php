@@ -125,7 +125,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the buckets property value. Read-only. Nullable. Collection of buckets in the plan.
-     *  @param array<PlannerBucket>|null $value Value to set for the buckets property.
+     * @param array<PlannerBucket>|null $value Value to set for the buckets property.
     */
     public function setBuckets(?array $value): void {
         $this->getBackingStore()->set('buckets', $value);
@@ -133,7 +133,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property can’t be updated. Required.
-     *  @param PlannerPlanContainer|null $value Value to set for the container property.
+     * @param PlannerPlanContainer|null $value Value to set for the container property.
     */
     public function setContainer(?PlannerPlanContainer $value): void {
         $this->getBackingStore()->set('container', $value);
@@ -141,7 +141,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. Read-only. The user who created the plan.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -149,7 +149,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -157,7 +157,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the details property value. Read-only. Nullable. Additional details about the plan.
-     *  @param PlannerPlanDetails|null $value Value to set for the details property.
+     * @param PlannerPlanDetails|null $value Value to set for the details property.
     */
     public function setDetails(?PlannerPlanDetails $value): void {
         $this->getBackingStore()->set('details', $value);
@@ -165,7 +165,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the owner property value. The owner property
-     *  @param string|null $value Value to set for the owner property.
+     * @param string|null $value Value to set for the owner property.
     */
     public function setOwner(?string $value): void {
         $this->getBackingStore()->set('owner', $value);
@@ -173,7 +173,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the tasks property value. Read-only. Nullable. Collection of tasks in the plan.
-     *  @param array<PlannerTask>|null $value Value to set for the tasks property.
+     * @param array<PlannerTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value): void {
         $this->getBackingStore()->set('tasks', $value);
@@ -181,7 +181,7 @@ class PlannerPlan extends Entity implements Parsable
 
     /**
      * Sets the title property value. Required. Title of the plan.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);

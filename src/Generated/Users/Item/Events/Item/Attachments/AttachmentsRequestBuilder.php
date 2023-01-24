@@ -13,11 +13,13 @@ use Microsoft\Graph\Generated\Users\Item\Events\Item\Attachments\CreateUploadSes
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+*/
 class AttachmentsRequestBuilder 
 {
     /**
@@ -65,6 +67,7 @@ class AttachmentsRequestBuilder
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/event-list-attachments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -80,11 +83,12 @@ class AttachmentsRequestBuilder
     }
 
     /**
-     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0 Find more info here
     */
     public function post(Attachment $body, ?AttachmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -109,10 +113,10 @@ class AttachmentsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
@@ -125,7 +129,7 @@ class AttachmentsRequestBuilder
     }
 
     /**
-     * Use this API to add an attachment to an existing event. This operation limits the size of the attachment you can add to under 3 MB. If an organizer adds an attachment to a meeting event, the organizer can subsequently update the event to send the attachment and update the event for each attendee as well.
+     * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
      * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -135,10 +139,10 @@ class AttachmentsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

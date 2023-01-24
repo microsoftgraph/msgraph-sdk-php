@@ -75,7 +75,7 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
 
     /**
      * Sets the bias property value. The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
-     *  @param int|null $value Value to set for the bias property.
+     * @param int|null $value Value to set for the bias property.
     */
     public function setBias(?int $value): void {
         $this->getBackingStore()->set('bias', $value);
@@ -83,7 +83,7 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
 
     /**
      * Sets the daylightOffset property value. Specifies when the time zone switches from standard time to daylight saving time.
-     *  @param DaylightTimeZoneOffset|null $value Value to set for the daylightOffset property.
+     * @param DaylightTimeZoneOffset|null $value Value to set for the daylightOffset property.
     */
     public function setDaylightOffset(?DaylightTimeZoneOffset $value): void {
         $this->getBackingStore()->set('daylightOffset', $value);
@@ -91,7 +91,7 @@ class CustomTimeZone extends TimeZoneBase implements Parsable
 
     /**
      * Sets the standardOffset property value. Specifies when the time zone switches from daylight saving time to standard time.
-     *  @param StandardTimeZoneOffset|null $value Value to set for the standardOffset property.
+     * @param StandardTimeZoneOffset|null $value Value to set for the standardOffset property.
     */
     public function setStandardOffset(?StandardTimeZoneOffset $value): void {
         $this->getBackingStore()->set('standardOffset', $value);

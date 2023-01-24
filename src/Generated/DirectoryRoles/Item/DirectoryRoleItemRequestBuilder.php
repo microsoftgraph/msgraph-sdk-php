@@ -19,11 +19,13 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to manage the collection of directoryRole entities.
+*/
 class DirectoryRoleItemRequestBuilder 
 {
     /**
@@ -102,7 +104,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Delete entity from directoryRoles
+     * Delete entity from directoryRoles by key (id)
      * @param DirectoryRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -125,6 +127,7 @@ class DirectoryRoleItemRequestBuilder
      * @param DirectoryRoleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DirectoryRoleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -140,7 +143,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft\Graph\Generated.directoryRoles.item.members.item collection
+     * Gets an item from the Microsoft/Graph/Generated.directoryRoles.item.members.item collection
      * @param string $id Unique identifier of the item
      * @return DirectoryObjectItemRequestBuilder
     */
@@ -151,7 +154,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Update entity in directoryRoles
+     * Update entity in directoryRoles by key (id)
      * @param DirectoryRole $body The request body
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -182,7 +185,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Delete entity from directoryRoles
+     * Delete entity from directoryRoles by key (id)
      * @param DirectoryRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -193,7 +196,7 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);
@@ -212,10 +215,10 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
@@ -228,7 +231,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Update entity in directoryRoles
+     * Update entity in directoryRoles by key (id)
      * @param DirectoryRole $body The request body
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -238,10 +241,10 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

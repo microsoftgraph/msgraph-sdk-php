@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The permission that has been granted for a group to a specific application. Supports $expand.
+*/
 class ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters 
 {
     /**

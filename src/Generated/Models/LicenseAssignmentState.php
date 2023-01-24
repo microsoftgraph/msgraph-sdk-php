@@ -141,7 +141,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -149,7 +149,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the assignedByGroup property value. The assignedByGroup property
-     *  @param string|null $value Value to set for the assignedByGroup property.
+     * @param string|null $value Value to set for the assignedByGroup property.
     */
     public function setAssignedByGroup(?string $value): void {
         $this->getBackingStore()->set('assignedByGroup', $value);
@@ -157,7 +157,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -165,7 +165,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the disabledPlans property value. The disabledPlans property
-     *  @param array<string>|null $value Value to set for the disabledPlans property.
+     * @param array<string>|null $value Value to set for the disabledPlans property.
     */
     public function setDisabledPlans(?array $value): void {
         $this->getBackingStore()->set('disabledPlans', $value);
@@ -173,7 +173,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the error property value. The error property
-     *  @param string|null $value Value to set for the error property.
+     * @param string|null $value Value to set for the error property.
     */
     public function setError(?string $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -181,7 +181,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
-     *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastUpdatedDateTime', $value);
@@ -189,7 +189,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -197,7 +197,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the skuId property value. The skuId property
-     *  @param string|null $value Value to set for the skuId property.
+     * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
@@ -205,7 +205,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the state property value. The state property
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);

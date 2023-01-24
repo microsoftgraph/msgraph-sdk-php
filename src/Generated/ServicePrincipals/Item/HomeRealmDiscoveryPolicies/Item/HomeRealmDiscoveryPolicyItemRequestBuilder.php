@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPol
 use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}
+*/
 class HomeRealmDiscoveryPolicyItemRequestBuilder 
 {
     /**

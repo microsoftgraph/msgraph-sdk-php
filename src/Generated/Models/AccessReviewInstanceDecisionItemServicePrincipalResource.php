@@ -55,7 +55,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
 
     /**
      * Sets the appId property value. The appId property
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);

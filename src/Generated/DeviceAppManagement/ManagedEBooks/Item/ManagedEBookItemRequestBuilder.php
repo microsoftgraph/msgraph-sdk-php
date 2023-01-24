@@ -18,11 +18,13 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
+*/
 class ManagedEBookItemRequestBuilder 
 {
     /**
@@ -178,7 +180,7 @@ class ManagedEBookItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);
@@ -197,10 +199,10 @@ class ManagedEBookItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
@@ -223,10 +225,10 @@ class ManagedEBookItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

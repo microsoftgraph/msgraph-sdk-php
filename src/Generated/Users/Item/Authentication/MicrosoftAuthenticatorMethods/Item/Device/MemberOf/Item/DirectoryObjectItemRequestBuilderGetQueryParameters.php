@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthentic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

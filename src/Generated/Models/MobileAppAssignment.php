@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A class containing the properties used for Group Assignment of a Mobile App.
+*/
 class MobileAppAssignment extends Entity implements Parsable 
 {
     /**
@@ -74,7 +77,7 @@ class MobileAppAssignment extends Entity implements Parsable
 
     /**
      * Sets the intent property value. Possible values for the install intent chosen by the admin.
-     *  @param InstallIntent|null $value Value to set for the intent property.
+     * @param InstallIntent|null $value Value to set for the intent property.
     */
     public function setIntent(?InstallIntent $value): void {
         $this->getBackingStore()->set('intent', $value);
@@ -82,7 +85,7 @@ class MobileAppAssignment extends Entity implements Parsable
 
     /**
      * Sets the settings property value. The settings for target assignment defined by the admin.
-     *  @param MobileAppAssignmentSettings|null $value Value to set for the settings property.
+     * @param MobileAppAssignmentSettings|null $value Value to set for the settings property.
     */
     public function setSettings(?MobileAppAssignmentSettings $value): void {
         $this->getBackingStore()->set('settings', $value);
@@ -90,7 +93,7 @@ class MobileAppAssignment extends Entity implements Parsable
 
     /**
      * Sets the target property value. The target group assignment defined by the admin.
-     *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
+     * @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
         $this->getBackingStore()->set('target', $value);

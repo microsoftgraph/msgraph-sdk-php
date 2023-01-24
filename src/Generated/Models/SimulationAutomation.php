@@ -145,7 +145,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation automation.
-     *  @param EmailIdentity|null $value Value to set for the createdBy property.
+     * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -153,7 +153,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time when the attack simulation automation was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -161,7 +161,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the attack simulation automation.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -169,7 +169,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Display name of the attack simulation automation. Supports $filter and $orderby.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -177,7 +177,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation automation.
-     *  @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
+     * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -185,7 +185,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time when the attack simulation automation was most recently modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -193,7 +193,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the lastRunDateTime property value. Date and time of the latest run of the attack simulation automation.
-     *  @param DateTime|null $value Value to set for the lastRunDateTime property.
+     * @param DateTime|null $value Value to set for the lastRunDateTime property.
     */
     public function setLastRunDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastRunDateTime', $value);
@@ -201,7 +201,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the nextRunDateTime property value. Date and time of the upcoming run of the attack simulation automation.
-     *  @param DateTime|null $value Value to set for the nextRunDateTime property.
+     * @param DateTime|null $value Value to set for the nextRunDateTime property.
     */
     public function setNextRunDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('nextRunDateTime', $value);
@@ -209,7 +209,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the runs property value. A collection of simulation automation runs.
-     *  @param array<SimulationAutomationRun>|null $value Value to set for the runs property.
+     * @param array<SimulationAutomationRun>|null $value Value to set for the runs property.
     */
     public function setRuns(?array $value): void {
         $this->getBackingStore()->set('runs', $value);
@@ -217,7 +217,7 @@ class SimulationAutomation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the attack simulation automation. Supports $filter and $orderby. The possible values are: unknown, draft, notRunning, running, completed, unknownFutureValue.
-     *  @param SimulationAutomationStatus|null $value Value to set for the status property.
+     * @param SimulationAutomationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationAutomationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

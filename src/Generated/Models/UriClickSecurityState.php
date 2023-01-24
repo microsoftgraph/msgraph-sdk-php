@@ -141,7 +141,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -149,7 +149,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -157,7 +157,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the clickAction property value. The clickAction property
-     *  @param string|null $value Value to set for the clickAction property.
+     * @param string|null $value Value to set for the clickAction property.
     */
     public function setClickAction(?string $value): void {
         $this->getBackingStore()->set('clickAction', $value);
@@ -165,7 +165,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the clickDateTime property value. The clickDateTime property
-     *  @param DateTime|null $value Value to set for the clickDateTime property.
+     * @param DateTime|null $value Value to set for the clickDateTime property.
     */
     public function setClickDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('clickDateTime', $value);
@@ -173,7 +173,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the id property value. The id property
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -181,7 +181,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -189,7 +189,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sourceId property value. The sourceId property
-     *  @param string|null $value Value to set for the sourceId property.
+     * @param string|null $value Value to set for the sourceId property.
     */
     public function setSourceId(?string $value): void {
         $this->getBackingStore()->set('sourceId', $value);
@@ -197,7 +197,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the uriDomain property value. The uriDomain property
-     *  @param string|null $value Value to set for the uriDomain property.
+     * @param string|null $value Value to set for the uriDomain property.
     */
     public function setUriDomain(?string $value): void {
         $this->getBackingStore()->set('uriDomain', $value);
@@ -205,7 +205,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the verdict property value. The verdict property
-     *  @param string|null $value Value to set for the verdict property.
+     * @param string|null $value Value to set for the verdict property.
     */
     public function setVerdict(?string $value): void {
         $this->getBackingStore()->set('verdict', $value);

@@ -102,7 +102,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the lastShared property value. Details about the shared item. Read only.
-     *  @param SharingDetail|null $value Value to set for the lastShared property.
+     * @param SharingDetail|null $value Value to set for the lastShared property.
     */
     public function setLastShared(?SharingDetail $value): void {
         $this->getBackingStore()->set('lastShared', $value);
@@ -110,7 +110,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the lastSharedMethod property value. The lastSharedMethod property
-     *  @param Entity|null $value Value to set for the lastSharedMethod property.
+     * @param Entity|null $value Value to set for the lastSharedMethod property.
     */
     public function setLastSharedMethod(?Entity $value): void {
         $this->getBackingStore()->set('lastSharedMethod', $value);
@@ -118,7 +118,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
-     *  @param Entity|null $value Value to set for the resource property.
+     * @param Entity|null $value Value to set for the resource property.
     */
     public function setResource(?Entity $value): void {
         $this->getBackingStore()->set('resource', $value);
@@ -126,7 +126,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
-     *  @param ResourceReference|null $value Value to set for the resourceReference property.
+     * @param ResourceReference|null $value Value to set for the resourceReference property.
     */
     public function setResourceReference(?ResourceReference $value): void {
         $this->getBackingStore()->set('resourceReference', $value);
@@ -134,7 +134,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
-     *  @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
+     * @param ResourceVisualization|null $value Value to set for the resourceVisualization property.
     */
     public function setResourceVisualization(?ResourceVisualization $value): void {
         $this->getBackingStore()->set('resourceVisualization', $value);
@@ -142,7 +142,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * Sets the sharingHistory property value. The sharingHistory property
-     *  @param array<SharingDetail>|null $value Value to set for the sharingHistory property.
+     * @param array<SharingDetail>|null $value Value to set for the sharingHistory property.
     */
     public function setSharingHistory(?array $value): void {
         $this->getBackingStore()->set('sharingHistory', $value);

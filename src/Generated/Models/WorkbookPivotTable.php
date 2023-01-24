@@ -64,7 +64,7 @@ class WorkbookPivotTable extends Entity implements Parsable
 
     /**
      * Sets the name property value. Name of the PivotTable.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -72,7 +72,7 @@ class WorkbookPivotTable extends Entity implements Parsable
 
     /**
      * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
-     *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
+     * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
         $this->getBackingStore()->set('worksheet', $value);

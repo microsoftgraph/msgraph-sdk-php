@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+*/
 class ServiceHealthItemRequestBuilderGetQueryParameters 
 {
     /**

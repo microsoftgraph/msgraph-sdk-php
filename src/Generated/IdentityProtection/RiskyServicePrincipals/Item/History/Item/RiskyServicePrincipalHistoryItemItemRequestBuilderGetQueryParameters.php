@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the risk history of Azure AD service principals.
+*/
 class RiskyServicePrincipalHistoryItemItemRequestBuilderGetQueryParameters 
 {
     /**

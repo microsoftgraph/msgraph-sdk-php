@@ -65,7 +65,7 @@ class RoomList extends Place implements Parsable
 
     /**
      * Sets the emailAddress property value. The email address of the room list.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -73,7 +73,7 @@ class RoomList extends Place implements Parsable
 
     /**
      * Sets the rooms property value. The rooms property
-     *  @param array<Room>|null $value Value to set for the rooms property.
+     * @param array<Room>|null $value Value to set for the rooms property.
     */
     public function setRooms(?array $value): void {
         $this->getBackingStore()->set('rooms', $value);

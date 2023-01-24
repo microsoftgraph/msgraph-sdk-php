@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Shares\Item\Root;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+*/
 class RootRequestBuilderGetQueryParameters 
 {
     /**

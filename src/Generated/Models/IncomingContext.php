@@ -120,7 +120,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the observedParticipantId property value. The ID of the participant that is under observation. Read-only.
-     *  @param string|null $value Value to set for the observedParticipantId property.
+     * @param string|null $value Value to set for the observedParticipantId property.
     */
     public function setObservedParticipantId(?string $value): void {
         $this->getBackingStore()->set('observedParticipantId', $value);
@@ -144,7 +144,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the onBehalfOf property value. The identity that the call is happening on behalf of.
-     *  @param IdentitySet|null $value Value to set for the onBehalfOf property.
+     * @param IdentitySet|null $value Value to set for the onBehalfOf property.
     */
     public function setOnBehalfOf(?IdentitySet $value): void {
         $this->getBackingStore()->set('onBehalfOf', $value);
@@ -160,7 +160,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sourceParticipantId property value. The ID of the participant that triggered the incoming call. Read-only.
-     *  @param string|null $value Value to set for the sourceParticipantId property.
+     * @param string|null $value Value to set for the sourceParticipantId property.
     */
     public function setSourceParticipantId(?string $value): void {
         $this->getBackingStore()->set('sourceParticipantId', $value);
@@ -168,7 +168,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the transferor property value. The identity that transferred the call.
-     *  @param IdentitySet|null $value Value to set for the transferor property.
+     * @param IdentitySet|null $value Value to set for the transferor property.
     */
     public function setTransferor(?IdentitySet $value): void {
         $this->getBackingStore()->set('transferor', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\ChecklistItems
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of checklistItems linked to a task.
+*/
 class ChecklistItemsRequestBuilderGetQueryParameters 
 {
     /**

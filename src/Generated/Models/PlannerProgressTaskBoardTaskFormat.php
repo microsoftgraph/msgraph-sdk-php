@@ -54,7 +54,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable
 
     /**
      * Sets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     *  @param string|null $value Value to set for the orderHint property.
+     * @param string|null $value Value to set for the orderHint property.
     */
     public function setOrderHint(?string $value): void {
         $this->getBackingStore()->set('orderHint', $value);

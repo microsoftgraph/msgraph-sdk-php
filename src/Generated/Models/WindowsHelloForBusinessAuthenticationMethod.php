@@ -86,7 +86,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
 
     /**
      * Sets the createdDateTime property value. The date and time that this Windows Hello for Business key was registered.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -94,7 +94,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
 
     /**
      * Sets the device property value. The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     *  @param Device|null $value Value to set for the device property.
+     * @param Device|null $value Value to set for the device property.
     */
     public function setDevice(?Device $value): void {
         $this->getBackingStore()->set('device', $value);
@@ -102,7 +102,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
 
     /**
      * Sets the displayName property value. The name of the device on which Windows Hello for Business is registered
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -110,7 +110,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
 
     /**
      * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
-     *  @param AuthenticationMethodKeyStrength|null $value Value to set for the keyStrength property.
+     * @param AuthenticationMethodKeyStrength|null $value Value to set for the keyStrength property.
     */
     public function setKeyStrength(?AuthenticationMethodKeyStrength $value): void {
         $this->getBackingStore()->set('keyStrength', $value);

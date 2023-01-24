@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of administrativeUnit objects.
+*/
 class AdministrativeUnitsRequestBuilderGetQueryParameters 
 {
     /**

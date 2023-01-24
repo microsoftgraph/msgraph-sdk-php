@@ -100,7 +100,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the movieRating property value. Movies rating labels in Japan
-     *  @param RatingJapanMoviesType|null $value Value to set for the movieRating property.
+     * @param RatingJapanMoviesType|null $value Value to set for the movieRating property.
     */
     public function setMovieRating(?RatingJapanMoviesType $value): void {
         $this->getBackingStore()->set('movieRating', $value);
@@ -124,7 +124,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the tvRating property value. TV content rating labels in Japan
-     *  @param RatingJapanTelevisionType|null $value Value to set for the tvRating property.
+     * @param RatingJapanTelevisionType|null $value Value to set for the tvRating property.
     */
     public function setTvRating(?RatingJapanTelevisionType $value): void {
         $this->getBackingStore()->set('tvRating', $value);

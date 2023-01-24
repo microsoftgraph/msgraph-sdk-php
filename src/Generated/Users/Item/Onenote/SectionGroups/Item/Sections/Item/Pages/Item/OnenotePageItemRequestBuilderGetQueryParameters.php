@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sectio
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of pages in the section.  Read-only. Nullable.
+*/
 class OnenotePageItemRequestBuilderGetQueryParameters 
 {
     /**

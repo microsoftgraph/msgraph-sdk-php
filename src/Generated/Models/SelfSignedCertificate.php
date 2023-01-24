@@ -172,7 +172,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -180,7 +180,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -188,7 +188,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the customKeyIdentifier property value. The customKeyIdentifier property
-     *  @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
+     * @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
     */
     public function setCustomKeyIdentifier(?StreamInterface $value): void {
         $this->getBackingStore()->set('customKeyIdentifier', $value);
@@ -196,7 +196,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -204,7 +204,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -212,7 +212,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the key property value. The key property
-     *  @param StreamInterface|null $value Value to set for the key property.
+     * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -220,7 +220,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the keyId property value. The keyId property
-     *  @param string|null $value Value to set for the keyId property.
+     * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
         $this->getBackingStore()->set('keyId', $value);
@@ -228,7 +228,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -236,7 +236,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -244,7 +244,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the thumbprint property value. The thumbprint property
-     *  @param string|null $value Value to set for the thumbprint property.
+     * @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value): void {
         $this->getBackingStore()->set('thumbprint', $value);
@@ -252,7 +252,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the type property value. The type property
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -260,7 +260,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the usage property value. The usage property
-     *  @param string|null $value Value to set for the usage property.
+     * @param string|null $value Value to set for the usage property.
     */
     public function setUsage(?string $value): void {
         $this->getBackingStore()->set('usage', $value);

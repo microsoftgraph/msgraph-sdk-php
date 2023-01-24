@@ -104,7 +104,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the info property value. The info property
-     *  @param ParticipantInfo|null $value Value to set for the info property.
+     * @param ParticipantInfo|null $value Value to set for the info property.
     */
     public function setInfo(?ParticipantInfo $value): void {
         $this->getBackingStore()->set('info', $value);
@@ -112,7 +112,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the isInLobby property value. true if the participant is in lobby.
-     *  @param bool|null $value Value to set for the isInLobby property.
+     * @param bool|null $value Value to set for the isInLobby property.
     */
     public function setIsInLobby(?bool $value): void {
         $this->getBackingStore()->set('isInLobby', $value);
@@ -120,7 +120,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the isMuted property value. true if the participant is muted (client or server muted).
-     *  @param bool|null $value Value to set for the isMuted property.
+     * @param bool|null $value Value to set for the isMuted property.
     */
     public function setIsMuted(?bool $value): void {
         $this->getBackingStore()->set('isMuted', $value);
@@ -128,7 +128,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the mediaStreams property value. The list of media streams.
-     *  @param array<MediaStream>|null $value Value to set for the mediaStreams property.
+     * @param array<MediaStream>|null $value Value to set for the mediaStreams property.
     */
     public function setMediaStreams(?array $value): void {
         $this->getBackingStore()->set('mediaStreams', $value);
@@ -136,7 +136,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the metadata property value. A blob of data provided by the participant in the roster.
-     *  @param string|null $value Value to set for the metadata property.
+     * @param string|null $value Value to set for the metadata property.
     */
     public function setMetadata(?string $value): void {
         $this->getBackingStore()->set('metadata', $value);
@@ -144,7 +144,7 @@ class Participant extends Entity implements Parsable
 
     /**
      * Sets the recordingInfo property value. Information about whether the participant has recording capability.
-     *  @param RecordingInfo|null $value Value to set for the recordingInfo property.
+     * @param RecordingInfo|null $value Value to set for the recordingInfo property.
     */
     public function setRecordingInfo(?RecordingInfo $value): void {
         $this->getBackingStore()->set('recordingInfo', $value);

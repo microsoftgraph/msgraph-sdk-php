@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBus
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.device in the microsoft.graph.directoryObject collection
+*/
 class DeviceRequestBuilderGetQueryParameters 
 {
     /**

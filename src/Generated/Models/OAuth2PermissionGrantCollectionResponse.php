@@ -54,7 +54,7 @@ class OAuth2PermissionGrantCollectionResponse extends BaseCollectionPaginationCo
 
     /**
      * Sets the value property value. The value property
-     *  @param array<OAuth2PermissionGrant>|null $value Value to set for the value property.
+     * @param array<OAuth2PermissionGrant>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

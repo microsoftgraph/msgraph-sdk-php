@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Entity which represents a connection to device management partner.
+*/
 class DeviceManagementPartner extends Entity implements Parsable 
 {
     /**
@@ -125,7 +128,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Partner display name
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -133,7 +136,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the isConfigured property value. Whether device management partner is configured or not
-     *  @param bool|null $value Value to set for the isConfigured property.
+     * @param bool|null $value Value to set for the isConfigured property.
     */
     public function setIsConfigured(?bool $value): void {
         $this->getBackingStore()->set('isConfigured', $value);
@@ -141,7 +144,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the lastHeartbeatDateTime property value. Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
-     *  @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
+     * @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
     */
     public function setLastHeartbeatDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastHeartbeatDateTime', $value);
@@ -149,7 +152,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the partnerAppType property value. Partner App Type.
-     *  @param DeviceManagementPartnerAppType|null $value Value to set for the partnerAppType property.
+     * @param DeviceManagementPartnerAppType|null $value Value to set for the partnerAppType property.
     */
     public function setPartnerAppType(?DeviceManagementPartnerAppType $value): void {
         $this->getBackingStore()->set('partnerAppType', $value);
@@ -157,7 +160,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the partnerState property value. Partner state of this tenant.
-     *  @param DeviceManagementPartnerTenantState|null $value Value to set for the partnerState property.
+     * @param DeviceManagementPartnerTenantState|null $value Value to set for the partnerState property.
     */
     public function setPartnerState(?DeviceManagementPartnerTenantState $value): void {
         $this->getBackingStore()->set('partnerState', $value);
@@ -165,7 +168,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the singleTenantAppId property value. Partner Single tenant App id
-     *  @param string|null $value Value to set for the singleTenantAppId property.
+     * @param string|null $value Value to set for the singleTenantAppId property.
     */
     public function setSingleTenantAppId(?string $value): void {
         $this->getBackingStore()->set('singleTenantAppId', $value);
@@ -173,7 +176,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property value. DateTime in UTC when PartnerDevices will be marked as NonCompliant
-     *  @param DateTime|null $value Value to set for the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property.
+     * @param DateTime|null $value Value to set for the whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime property.
     */
     public function setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime', $value);
@@ -181,7 +184,7 @@ class DeviceManagementPartner extends Entity implements Parsable
 
     /**
      * Sets the whenPartnerDevicesWillBeRemovedDateTime property value. DateTime in UTC when PartnerDevices will be removed
-     *  @param DateTime|null $value Value to set for the whenPartnerDevicesWillBeRemovedDateTime property.
+     * @param DateTime|null $value Value to set for the whenPartnerDevicesWillBeRemovedDateTime property.
     */
     public function setWhenPartnerDevicesWillBeRemovedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('whenPartnerDevicesWillBeRemovedDateTime', $value);

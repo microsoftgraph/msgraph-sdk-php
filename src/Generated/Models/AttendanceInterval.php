@@ -111,7 +111,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the durationInSeconds property value. Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
-     *  @param int|null $value Value to set for the durationInSeconds property.
+     * @param int|null $value Value to set for the durationInSeconds property.
     */
     public function setDurationInSeconds(?int $value): void {
         $this->getBackingStore()->set('durationInSeconds', $value);
@@ -135,7 +135,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the joinDateTime property value. The time the attendee joined in UTC.
-     *  @param DateTime|null $value Value to set for the joinDateTime property.
+     * @param DateTime|null $value Value to set for the joinDateTime property.
     */
     public function setJoinDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('joinDateTime', $value);
@@ -143,7 +143,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the leaveDateTime property value. The time the attendee left in UTC.
-     *  @param DateTime|null $value Value to set for the leaveDateTime property.
+     * @param DateTime|null $value Value to set for the leaveDateTime property.
     */
     public function setLeaveDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('leaveDateTime', $value);
@@ -151,7 +151,7 @@ class AttendanceInterval implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

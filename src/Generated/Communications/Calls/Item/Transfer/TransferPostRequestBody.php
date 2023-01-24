@@ -92,7 +92,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -100,7 +100,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -108,7 +108,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the transferee property value. The transferee property
-     *  @param ParticipantInfo|null $value Value to set for the transferee property.
+     * @param ParticipantInfo|null $value Value to set for the transferee property.
     */
     public function setTransferee(?ParticipantInfo $value): void {
         $this->getBackingStore()->set('transferee', $value);
@@ -116,7 +116,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the transferTarget property value. The transferTarget property
-     *  @param InvitationParticipantInfo|null $value Value to set for the transferTarget property.
+     * @param InvitationParticipantInfo|null $value Value to set for the transferTarget property.
     */
     public function setTransferTarget(?InvitationParticipantInfo $value): void {
         $this->getBackingStore()->set('transferTarget', $value);

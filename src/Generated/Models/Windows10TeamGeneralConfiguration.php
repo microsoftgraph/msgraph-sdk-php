@@ -246,7 +246,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the azureOperationalInsightsBlockTelemetry property value. Indicates whether or not to Block Azure Operational Insights.
-     *  @param bool|null $value Value to set for the azureOperationalInsightsBlockTelemetry property.
+     * @param bool|null $value Value to set for the azureOperationalInsightsBlockTelemetry property.
     */
     public function setAzureOperationalInsightsBlockTelemetry(?bool $value): void {
         $this->getBackingStore()->set('azureOperationalInsightsBlockTelemetry', $value);
@@ -254,7 +254,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the azureOperationalInsightsWorkspaceId property value. The Azure Operational Insights workspace id.
-     *  @param string|null $value Value to set for the azureOperationalInsightsWorkspaceId property.
+     * @param string|null $value Value to set for the azureOperationalInsightsWorkspaceId property.
     */
     public function setAzureOperationalInsightsWorkspaceId(?string $value): void {
         $this->getBackingStore()->set('azureOperationalInsightsWorkspaceId', $value);
@@ -262,7 +262,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the azureOperationalInsightsWorkspaceKey property value. The Azure Operational Insights Workspace key.
-     *  @param string|null $value Value to set for the azureOperationalInsightsWorkspaceKey property.
+     * @param string|null $value Value to set for the azureOperationalInsightsWorkspaceKey property.
     */
     public function setAzureOperationalInsightsWorkspaceKey(?string $value): void {
         $this->getBackingStore()->set('azureOperationalInsightsWorkspaceKey', $value);
@@ -270,7 +270,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the connectAppBlockAutoLaunch property value. Specifies whether to automatically launch the Connect app whenever a projection is initiated.
-     *  @param bool|null $value Value to set for the connectAppBlockAutoLaunch property.
+     * @param bool|null $value Value to set for the connectAppBlockAutoLaunch property.
     */
     public function setConnectAppBlockAutoLaunch(?bool $value): void {
         $this->getBackingStore()->set('connectAppBlockAutoLaunch', $value);
@@ -278,7 +278,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the maintenanceWindowBlocked property value. Indicates whether or not to Block setting a maintenance window for device updates.
-     *  @param bool|null $value Value to set for the maintenanceWindowBlocked property.
+     * @param bool|null $value Value to set for the maintenanceWindowBlocked property.
     */
     public function setMaintenanceWindowBlocked(?bool $value): void {
         $this->getBackingStore()->set('maintenanceWindowBlocked', $value);
@@ -286,7 +286,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the maintenanceWindowDurationInHours property value. Maintenance window duration for device updates. Valid values 0 to 5
-     *  @param int|null $value Value to set for the maintenanceWindowDurationInHours property.
+     * @param int|null $value Value to set for the maintenanceWindowDurationInHours property.
     */
     public function setMaintenanceWindowDurationInHours(?int $value): void {
         $this->getBackingStore()->set('maintenanceWindowDurationInHours', $value);
@@ -294,7 +294,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the maintenanceWindowStartTime property value. Maintenance window start time for device updates.
-     *  @param Time|null $value Value to set for the maintenanceWindowStartTime property.
+     * @param Time|null $value Value to set for the maintenanceWindowStartTime property.
     */
     public function setMaintenanceWindowStartTime(?Time $value): void {
         $this->getBackingStore()->set('maintenanceWindowStartTime', $value);
@@ -302,7 +302,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the miracastBlocked property value. Indicates whether or not to Block wireless projection.
-     *  @param bool|null $value Value to set for the miracastBlocked property.
+     * @param bool|null $value Value to set for the miracastBlocked property.
     */
     public function setMiracastBlocked(?bool $value): void {
         $this->getBackingStore()->set('miracastBlocked', $value);
@@ -310,7 +310,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the miracastChannel property value. Possible values for Miracast channel.
-     *  @param MiracastChannel|null $value Value to set for the miracastChannel property.
+     * @param MiracastChannel|null $value Value to set for the miracastChannel property.
     */
     public function setMiracastChannel(?MiracastChannel $value): void {
         $this->getBackingStore()->set('miracastChannel', $value);
@@ -318,7 +318,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the miracastRequirePin property value. Indicates whether or not to require a pin for wireless projection.
-     *  @param bool|null $value Value to set for the miracastRequirePin property.
+     * @param bool|null $value Value to set for the miracastRequirePin property.
     */
     public function setMiracastRequirePin(?bool $value): void {
         $this->getBackingStore()->set('miracastRequirePin', $value);
@@ -326,7 +326,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsBlockMyMeetingsAndFiles property value. Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
-     *  @param bool|null $value Value to set for the settingsBlockMyMeetingsAndFiles property.
+     * @param bool|null $value Value to set for the settingsBlockMyMeetingsAndFiles property.
     */
     public function setSettingsBlockMyMeetingsAndFiles(?bool $value): void {
         $this->getBackingStore()->set('settingsBlockMyMeetingsAndFiles', $value);
@@ -334,7 +334,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsBlockSessionResume property value. Specifies whether to allow the ability to resume a session when the session times out.
-     *  @param bool|null $value Value to set for the settingsBlockSessionResume property.
+     * @param bool|null $value Value to set for the settingsBlockSessionResume property.
     */
     public function setSettingsBlockSessionResume(?bool $value): void {
         $this->getBackingStore()->set('settingsBlockSessionResume', $value);
@@ -342,7 +342,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsBlockSigninSuggestions property value. Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
-     *  @param bool|null $value Value to set for the settingsBlockSigninSuggestions property.
+     * @param bool|null $value Value to set for the settingsBlockSigninSuggestions property.
     */
     public function setSettingsBlockSigninSuggestions(?bool $value): void {
         $this->getBackingStore()->set('settingsBlockSigninSuggestions', $value);
@@ -350,7 +350,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsDefaultVolume property value. Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
-     *  @param int|null $value Value to set for the settingsDefaultVolume property.
+     * @param int|null $value Value to set for the settingsDefaultVolume property.
     */
     public function setSettingsDefaultVolume(?int $value): void {
         $this->getBackingStore()->set('settingsDefaultVolume', $value);
@@ -358,7 +358,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsScreenTimeoutInMinutes property value. Specifies the number of minutes until the Hub screen turns off.
-     *  @param int|null $value Value to set for the settingsScreenTimeoutInMinutes property.
+     * @param int|null $value Value to set for the settingsScreenTimeoutInMinutes property.
     */
     public function setSettingsScreenTimeoutInMinutes(?int $value): void {
         $this->getBackingStore()->set('settingsScreenTimeoutInMinutes', $value);
@@ -366,7 +366,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsSessionTimeoutInMinutes property value. Specifies the number of minutes until the session times out.
-     *  @param int|null $value Value to set for the settingsSessionTimeoutInMinutes property.
+     * @param int|null $value Value to set for the settingsSessionTimeoutInMinutes property.
     */
     public function setSettingsSessionTimeoutInMinutes(?int $value): void {
         $this->getBackingStore()->set('settingsSessionTimeoutInMinutes', $value);
@@ -374,7 +374,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the settingsSleepTimeoutInMinutes property value. Specifies the number of minutes until the Hub enters sleep mode.
-     *  @param int|null $value Value to set for the settingsSleepTimeoutInMinutes property.
+     * @param int|null $value Value to set for the settingsSleepTimeoutInMinutes property.
     */
     public function setSettingsSleepTimeoutInMinutes(?int $value): void {
         $this->getBackingStore()->set('settingsSleepTimeoutInMinutes', $value);
@@ -382,7 +382,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the welcomeScreenBackgroundImageUrl property value. The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
-     *  @param string|null $value Value to set for the welcomeScreenBackgroundImageUrl property.
+     * @param string|null $value Value to set for the welcomeScreenBackgroundImageUrl property.
     */
     public function setWelcomeScreenBackgroundImageUrl(?string $value): void {
         $this->getBackingStore()->set('welcomeScreenBackgroundImageUrl', $value);
@@ -390,7 +390,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the welcomeScreenBlockAutomaticWakeUp property value. Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-     *  @param bool|null $value Value to set for the welcomeScreenBlockAutomaticWakeUp property.
+     * @param bool|null $value Value to set for the welcomeScreenBlockAutomaticWakeUp property.
     */
     public function setWelcomeScreenBlockAutomaticWakeUp(?bool $value): void {
         $this->getBackingStore()->set('welcomeScreenBlockAutomaticWakeUp', $value);
@@ -398,7 +398,7 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
 
     /**
      * Sets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
-     *  @param WelcomeScreenMeetingInformation|null $value Value to set for the welcomeScreenMeetingInformation property.
+     * @param WelcomeScreenMeetingInformation|null $value Value to set for the welcomeScreenMeetingInformation property.
     */
     public function setWelcomeScreenMeetingInformation(?WelcomeScreenMeetingInformation $value): void {
         $this->getBackingStore()->set('welcomeScreenMeetingInformation', $value);

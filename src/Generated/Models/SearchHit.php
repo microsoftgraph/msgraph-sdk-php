@@ -140,7 +140,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentSource property value. The name of the content source that the externalItem is part of.
-     *  @param string|null $value Value to set for the contentSource property.
+     * @param string|null $value Value to set for the contentSource property.
     */
     public function setContentSource(?string $value): void {
         $this->getBackingStore()->set('contentSource', $value);
@@ -164,7 +164,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
-     *  @param string|null $value Value to set for the hitId property.
+     * @param string|null $value Value to set for the hitId property.
     */
     public function setHitId(?string $value): void {
         $this->getBackingStore()->set('hitId', $value);
@@ -172,7 +172,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -180,7 +180,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the rank property value. The rank or the order of the result.
-     *  @param int|null $value Value to set for the rank property.
+     * @param int|null $value Value to set for the rank property.
     */
     public function setRank(?int $value): void {
         $this->getBackingStore()->set('rank', $value);
@@ -188,7 +188,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resource property value. The resource property
-     *  @param Entity|null $value Value to set for the resource property.
+     * @param Entity|null $value Value to set for the resource property.
     */
     public function setResource(?Entity $value): void {
         $this->getBackingStore()->set('resource', $value);
@@ -196,7 +196,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resultTemplateId property value. ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
-     *  @param string|null $value Value to set for the resultTemplateId property.
+     * @param string|null $value Value to set for the resultTemplateId property.
     */
     public function setResultTemplateId(?string $value): void {
         $this->getBackingStore()->set('resultTemplateId', $value);
@@ -204,7 +204,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the summary property value. A summary of the result, if a summary is available.
-     *  @param string|null $value Value to set for the summary property.
+     * @param string|null $value Value to set for the summary property.
     */
     public function setSummary(?string $value): void {
         $this->getBackingStore()->set('summary', $value);

@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies
 use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /servicePrincipals/{servicePrincipal-id}/claimsMappingPolicies/{claimsMappingPolicy-id}
+*/
 class ClaimsMappingPolicyItemRequestBuilder 
 {
     /**

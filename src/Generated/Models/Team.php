@@ -231,7 +231,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the summary property value. The summary property
+     * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
      * @return TeamSummary|null
     */
     public function getSummary(): ?TeamSummary {
@@ -315,7 +315,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
-     *  @param array<Channel>|null $value Value to set for the allChannels property.
+     * @param array<Channel>|null $value Value to set for the allChannels property.
     */
     public function setAllChannels(?array $value): void {
         $this->getBackingStore()->set('allChannels', $value);
@@ -323,7 +323,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the channels property value. The collection of channels and messages associated with the team.
-     *  @param array<Channel>|null $value Value to set for the channels property.
+     * @param array<Channel>|null $value Value to set for the channels property.
     */
     public function setChannels(?array $value): void {
         $this->getBackingStore()->set('channels', $value);
@@ -331,7 +331,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
-     *  @param string|null $value Value to set for the classification property.
+     * @param string|null $value Value to set for the classification property.
     */
     public function setClassification(?string $value): void {
         $this->getBackingStore()->set('classification', $value);
@@ -339,7 +339,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Timestamp at which the team was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -347,7 +347,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -355,7 +355,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the team.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -363,7 +363,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
-     *  @param TeamFunSettings|null $value Value to set for the funSettings property.
+     * @param TeamFunSettings|null $value Value to set for the funSettings property.
     */
     public function setFunSettings(?TeamFunSettings $value): void {
         $this->getBackingStore()->set('funSettings', $value);
@@ -371,7 +371,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the group property value. The group property
-     *  @param Group|null $value Value to set for the group property.
+     * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
         $this->getBackingStore()->set('group', $value);
@@ -379,7 +379,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
-     *  @param TeamGuestSettings|null $value Value to set for the guestSettings property.
+     * @param TeamGuestSettings|null $value Value to set for the guestSettings property.
     */
     public function setGuestSettings(?TeamGuestSettings $value): void {
         $this->getBackingStore()->set('guestSettings', $value);
@@ -387,7 +387,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the incomingChannels property value. List of channels shared with the team.
-     *  @param array<Channel>|null $value Value to set for the incomingChannels property.
+     * @param array<Channel>|null $value Value to set for the incomingChannels property.
     */
     public function setIncomingChannels(?array $value): void {
         $this->getBackingStore()->set('incomingChannels', $value);
@@ -395,7 +395,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the installedApps property value. The apps installed in this team.
-     *  @param array<TeamsAppInstallation>|null $value Value to set for the installedApps property.
+     * @param array<TeamsAppInstallation>|null $value Value to set for the installedApps property.
     */
     public function setInstalledApps(?array $value): void {
         $this->getBackingStore()->set('installedApps', $value);
@@ -403,7 +403,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
-     *  @param string|null $value Value to set for the internalId property.
+     * @param string|null $value Value to set for the internalId property.
     */
     public function setInternalId(?string $value): void {
         $this->getBackingStore()->set('internalId', $value);
@@ -411,7 +411,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the isArchived property value. Whether this team is in read-only mode.
-     *  @param bool|null $value Value to set for the isArchived property.
+     * @param bool|null $value Value to set for the isArchived property.
     */
     public function setIsArchived(?bool $value): void {
         $this->getBackingStore()->set('isArchived', $value);
@@ -419,7 +419,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the members property value. Members and owners of the team.
-     *  @param array<ConversationMember>|null $value Value to set for the members property.
+     * @param array<ConversationMember>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
@@ -427,7 +427,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
-     *  @param TeamMemberSettings|null $value Value to set for the memberSettings property.
+     * @param TeamMemberSettings|null $value Value to set for the memberSettings property.
     */
     public function setMemberSettings(?TeamMemberSettings $value): void {
         $this->getBackingStore()->set('memberSettings', $value);
@@ -435,7 +435,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the messagingSettings property value. Settings to configure messaging and mentions in the team.
-     *  @param TeamMessagingSettings|null $value Value to set for the messagingSettings property.
+     * @param TeamMessagingSettings|null $value Value to set for the messagingSettings property.
     */
     public function setMessagingSettings(?TeamMessagingSettings $value): void {
         $this->getBackingStore()->set('messagingSettings', $value);
@@ -443,7 +443,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the operations property value. The async operations that ran or are running on this team.
-     *  @param array<TeamsAsyncOperation>|null $value Value to set for the operations property.
+     * @param array<TeamsAsyncOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -451,7 +451,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the photo property value. The profile photo for the team.
-     *  @param ProfilePhoto|null $value Value to set for the photo property.
+     * @param ProfilePhoto|null $value Value to set for the photo property.
     */
     public function setPhoto(?ProfilePhoto $value): void {
         $this->getBackingStore()->set('photo', $value);
@@ -459,7 +459,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the primaryChannel property value. The general channel for the team.
-     *  @param Channel|null $value Value to set for the primaryChannel property.
+     * @param Channel|null $value Value to set for the primaryChannel property.
     */
     public function setPrimaryChannel(?Channel $value): void {
         $this->getBackingStore()->set('primaryChannel', $value);
@@ -467,7 +467,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the schedule property value. The schedule of shifts for this team.
-     *  @param Schedule|null $value Value to set for the schedule property.
+     * @param Schedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?Schedule $value): void {
         $this->getBackingStore()->set('schedule', $value);
@@ -475,15 +475,15 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
-     *  @param TeamSpecialization|null $value Value to set for the specialization property.
+     * @param TeamSpecialization|null $value Value to set for the specialization property.
     */
     public function setSpecialization(?TeamSpecialization $value): void {
         $this->getBackingStore()->set('specialization', $value);
     }
 
     /**
-     * Sets the summary property value. The summary property
-     *  @param TeamSummary|null $value Value to set for the summary property.
+     * Sets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
+     * @param TeamSummary|null $value Value to set for the summary property.
     */
     public function setSummary(?TeamSummary $value): void {
         $this->getBackingStore()->set('summary', $value);
@@ -491,7 +491,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the tags property value. The tags associated with the team.
-     *  @param array<TeamworkTag>|null $value Value to set for the tags property.
+     * @param array<TeamworkTag>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
         $this->getBackingStore()->set('tags', $value);
@@ -499,7 +499,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the template property value. The template this team was created from. See available templates.
-     *  @param TeamsTemplate|null $value Value to set for the template property.
+     * @param TeamsTemplate|null $value Value to set for the template property.
     */
     public function setTemplate(?TeamsTemplate $value): void {
         $this->getBackingStore()->set('template', $value);
@@ -507,7 +507,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
@@ -515,7 +515,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the visibility property value. The visibility of the group and team. Defaults to Public.
-     *  @param TeamVisibilityType|null $value Value to set for the visibility property.
+     * @param TeamVisibilityType|null $value Value to set for the visibility property.
     */
     public function setVisibility(?TeamVisibilityType $value): void {
         $this->getBackingStore()->set('visibility', $value);
@@ -523,7 +523,7 @@ class Team extends Entity implements Parsable
 
     /**
      * Sets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

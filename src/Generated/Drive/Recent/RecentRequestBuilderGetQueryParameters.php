@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Recent;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function recent
+*/
 class RecentRequestBuilderGetQueryParameters 
 {
     /**

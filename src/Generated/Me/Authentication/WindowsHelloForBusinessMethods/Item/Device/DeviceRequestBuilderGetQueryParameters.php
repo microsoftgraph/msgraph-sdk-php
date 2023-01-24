@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMet
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+*/
 class DeviceRequestBuilderGetQueryParameters 
 {
     /**

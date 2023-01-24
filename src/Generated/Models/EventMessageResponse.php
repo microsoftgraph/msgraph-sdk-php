@@ -65,7 +65,7 @@ class EventMessageResponse extends EventMessage implements Parsable
 
     /**
      * Sets the proposedNewTime property value. The proposedNewTime property
-     *  @param TimeSlot|null $value Value to set for the proposedNewTime property.
+     * @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
         $this->getBackingStore()->set('proposedNewTime', $value);
@@ -73,7 +73,7 @@ class EventMessageResponse extends EventMessage implements Parsable
 
     /**
      * Sets the responseType property value. The responseType property
-     *  @param ResponseType|null $value Value to set for the responseType property.
+     * @param ResponseType|null $value Value to set for the responseType property.
     */
     public function setResponseType(?ResponseType $value): void {
         $this->getBackingStore()->set('responseType', $value);

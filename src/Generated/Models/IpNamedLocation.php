@@ -64,7 +64,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
 
     /**
      * Sets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
-     *  @param array<IpRange>|null $value Value to set for the ipRanges property.
+     * @param array<IpRange>|null $value Value to set for the ipRanges property.
     */
     public function setIpRanges(?array $value): void {
         $this->getBackingStore()->set('ipRanges', $value);
@@ -72,7 +72,7 @@ class IpNamedLocation extends NamedLocation implements Parsable
 
     /**
      * Sets the isTrusted property value. true if this location is explicitly trusted. Optional. Default value is false.
-     *  @param bool|null $value Value to set for the isTrusted property.
+     * @param bool|null $value Value to set for the isTrusted property.
     */
     public function setIsTrusted(?bool $value): void {
         $this->getBackingStore()->set('isTrusted', $value);

@@ -100,7 +100,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the errorInformation property value. The errorInformation property
-     *  @param ProvisioningErrorInfo|null $value Value to set for the errorInformation property.
+     * @param ProvisioningErrorInfo|null $value Value to set for the errorInformation property.
     */
     public function setErrorInformation(?ProvisioningErrorInfo $value): void {
         $this->getBackingStore()->set('errorInformation', $value);
@@ -124,7 +124,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
-     *  @param ProvisioningResult|null $value Value to set for the status property.
+     * @param ProvisioningResult|null $value Value to set for the status property.
     */
     public function setStatus(?ProvisioningResult $value): void {
         $this->getBackingStore()->set('status', $value);

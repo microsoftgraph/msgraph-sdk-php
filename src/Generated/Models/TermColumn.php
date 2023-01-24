@@ -122,7 +122,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -130,7 +130,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowMultipleValues property value. Specifies whether the column will allow more than one value.
-     *  @param bool|null $value Value to set for the allowMultipleValues property.
+     * @param bool|null $value Value to set for the allowMultipleValues property.
     */
     public function setAllowMultipleValues(?bool $value): void {
         $this->getBackingStore()->set('allowMultipleValues', $value);
@@ -138,7 +138,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -154,7 +154,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the parentTerm property value. The parentTerm property
-     *  @param Term|null $value Value to set for the parentTerm property.
+     * @param Term|null $value Value to set for the parentTerm property.
     */
     public function setParentTerm(?Term $value): void {
         $this->getBackingStore()->set('parentTerm', $value);
@@ -162,7 +162,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the showFullyQualifiedName property value. Specifies whether to display the entire term path or only the term label.
-     *  @param bool|null $value Value to set for the showFullyQualifiedName property.
+     * @param bool|null $value Value to set for the showFullyQualifiedName property.
     */
     public function setShowFullyQualifiedName(?bool $value): void {
         $this->getBackingStore()->set('showFullyQualifiedName', $value);
@@ -170,7 +170,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the termSet property value. The termSet property
-     *  @param Set|null $value Value to set for the termSet property.
+     * @param Set|null $value Value to set for the termSet property.
     */
     public function setTermSet(?Set $value): void {
         $this->getBackingStore()->set('termSet', $value);

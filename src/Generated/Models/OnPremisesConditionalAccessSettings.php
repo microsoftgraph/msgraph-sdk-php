@@ -84,7 +84,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the enabled property value. Indicates if on premises conditional access is enabled for this organization
-     *  @param bool|null $value Value to set for the enabled property.
+     * @param bool|null $value Value to set for the enabled property.
     */
     public function setEnabled(?bool $value): void {
         $this->getBackingStore()->set('enabled', $value);
@@ -92,7 +92,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the excludedGroups property value. User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
-     *  @param array<string>|null $value Value to set for the excludedGroups property.
+     * @param array<string>|null $value Value to set for the excludedGroups property.
     */
     public function setExcludedGroups(?array $value): void {
         $this->getBackingStore()->set('excludedGroups', $value);
@@ -100,7 +100,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the includedGroups property value. User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     *  @param array<string>|null $value Value to set for the includedGroups property.
+     * @param array<string>|null $value Value to set for the includedGroups property.
     */
     public function setIncludedGroups(?array $value): void {
         $this->getBackingStore()->set('includedGroups', $value);
@@ -108,7 +108,7 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
 
     /**
      * Sets the overrideDefaultRule property value. Override the default access rule when allowing a device to ensure access is granted.
-     *  @param bool|null $value Value to set for the overrideDefaultRule property.
+     * @param bool|null $value Value to set for the overrideDefaultRule property.
     */
     public function setOverrideDefaultRule(?bool $value): void {
         $this->getBackingStore()->set('overrideDefaultRule', $value);

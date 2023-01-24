@@ -140,7 +140,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the groupBy property value. The groupBy property
-     *  @param array<string>|null $value Value to set for the groupBy property.
+     * @param array<string>|null $value Value to set for the groupBy property.
     */
     public function setGroupBy(?array $value): void {
         $this->getBackingStore()->set('groupBy', $value);
@@ -164,7 +164,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the id property value. The id property
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -172,7 +172,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the orderBy property value. The orderBy property
-     *  @param array<string>|null $value Value to set for the orderBy property.
+     * @param array<string>|null $value Value to set for the orderBy property.
     */
     public function setOrderBy(?array $value): void {
         $this->getBackingStore()->set('orderBy', $value);
@@ -180,7 +180,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the search property value. The search property
-     *  @param string|null $value Value to set for the search property.
+     * @param string|null $value Value to set for the search property.
     */
     public function setSearch(?string $value): void {
         $this->getBackingStore()->set('search', $value);
@@ -188,7 +188,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the select property value. The select property
-     *  @param array<string>|null $value Value to set for the select property.
+     * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
         $this->getBackingStore()->set('select', $value);
@@ -196,7 +196,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the skip property value. The skip property
-     *  @param int|null $value Value to set for the skip property.
+     * @param int|null $value Value to set for the skip property.
     */
     public function setSkip(?int $value): void {
         $this->getBackingStore()->set('skip', $value);
@@ -204,7 +204,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the top property value. The top property
-     *  @param int|null $value Value to set for the top property.
+     * @param int|null $value Value to set for the top property.
     */
     public function setTop(?int $value): void {
         $this->getBackingStore()->set('top', $value);

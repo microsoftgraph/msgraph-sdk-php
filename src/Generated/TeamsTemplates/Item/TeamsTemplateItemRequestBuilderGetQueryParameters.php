@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\TeamsTemplates\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from teamsTemplates by key (id)
+*/
 class TeamsTemplateItemRequestBuilderGetQueryParameters 
 {
     /**

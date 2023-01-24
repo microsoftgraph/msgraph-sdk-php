@@ -11,6 +11,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * This type represents when and to whom to send an e-mail reminder.
+*/
 class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -111,7 +114,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +122,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +130,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the message property value. The message in the reminder.
-     *  @param string|null $value Value to set for the message property.
+     * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -135,7 +138,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -143,7 +146,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
-     *  @param DateInterval|null $value Value to set for the offset property.
+     * @param DateInterval|null $value Value to set for the offset property.
     */
     public function setOffset(?DateInterval $value): void {
         $this->getBackingStore()->set('offset', $value);
@@ -151,7 +154,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the recipients property value. The recipients property
-     *  @param BookingReminderRecipients|null $value Value to set for the recipients property.
+     * @param BookingReminderRecipients|null $value Value to set for the recipients property.
     */
     public function setRecipients(?BookingReminderRecipients $value): void {
         $this->getBackingStore()->set('recipients', $value);

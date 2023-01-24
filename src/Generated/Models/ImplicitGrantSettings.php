@@ -100,7 +100,7 @@ class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the enableAccessTokenIssuance property value. Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
-     *  @param bool|null $value Value to set for the enableAccessTokenIssuance property.
+     * @param bool|null $value Value to set for the enableAccessTokenIssuance property.
     */
     public function setEnableAccessTokenIssuance(?bool $value): void {
         $this->getBackingStore()->set('enableAccessTokenIssuance', $value);
@@ -124,7 +124,7 @@ class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the enableIdTokenIssuance property value. Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
-     *  @param bool|null $value Value to set for the enableIdTokenIssuance property.
+     * @param bool|null $value Value to set for the enableIdTokenIssuance property.
     */
     public function setEnableIdTokenIssuance(?bool $value): void {
         $this->getBackingStore()->set('enableIdTokenIssuance', $value);
@@ -132,7 +132,7 @@ class ImplicitGrantSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

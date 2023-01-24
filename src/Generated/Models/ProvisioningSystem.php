@@ -55,7 +55,7 @@ class ProvisioningSystem extends Identity implements Parsable
 
     /**
      * Sets the details property value. Details of the system.
-     *  @param DetailsInfo|null $value Value to set for the details property.
+     * @param DetailsInfo|null $value Value to set for the details property.
     */
     public function setDetails(?DetailsInfo $value): void {
         $this->getBackingStore()->set('details', $value);

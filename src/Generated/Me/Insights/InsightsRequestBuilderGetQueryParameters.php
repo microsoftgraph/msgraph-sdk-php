@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Insights;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get insights from me
+*/
 class InsightsRequestBuilderGetQueryParameters 
 {
     /**

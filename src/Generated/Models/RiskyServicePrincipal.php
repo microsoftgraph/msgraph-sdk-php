@@ -152,7 +152,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the appId property value. The globally unique identifier for the associated application (its appId property), if any.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -160,7 +160,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name for the service principal.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -168,7 +168,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the history property value. Represents the risk history of Azure AD service principals.
-     *  @param array<RiskyServicePrincipalHistoryItem>|null $value Value to set for the history property.
+     * @param array<RiskyServicePrincipalHistoryItem>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
         $this->getBackingStore()->set('history', $value);
@@ -176,7 +176,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. true if the service principal account is enabled; otherwise, false.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -184,7 +184,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the isProcessing property value. Indicates whether Azure AD is currently processing the service principal's risky state.
-     *  @param bool|null $value Value to set for the isProcessing property.
+     * @param bool|null $value Value to set for the isProcessing property.
     */
     public function setIsProcessing(?bool $value): void {
         $this->getBackingStore()->set('isProcessing', $value);
@@ -192,7 +192,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden,  unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     *  @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
@@ -200,7 +200,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskLastUpdatedDateTime property value. The date and time that the risk state was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. Supports $filter (eq).
-     *  @param DateTime|null $value Value to set for the riskLastUpdatedDateTime property.
+     * @param DateTime|null $value Value to set for the riskLastUpdatedDateTime property.
     */
     public function setRiskLastUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('riskLastUpdatedDateTime', $value);
@@ -208,7 +208,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risky workload identity. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Supports $filter (eq).
-     *  @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
@@ -216,7 +216,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the riskState property value. State of the service principal's risk. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     *  @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
@@ -224,7 +224,7 @@ class RiskyServicePrincipal extends Entity implements Parsable
 
     /**
      * Sets the servicePrincipalType property value. Identifies whether the service principal represents an Application, a ManagedIdentity, or a legacy application (socialIdp). This is set by Azure AD internally and is inherited from servicePrincipal.
-     *  @param string|null $value Value to set for the servicePrincipalType property.
+     * @param string|null $value Value to set for the servicePrincipalType property.
     */
     public function setServicePrincipalType(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalType', $value);

@@ -130,7 +130,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the availabilityView property value. Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
-     *  @param string|null $value Value to set for the availabilityView property.
+     * @param string|null $value Value to set for the availabilityView property.
     */
     public function setAvailabilityView(?string $value): void {
         $this->getBackingStore()->set('availabilityView', $value);
@@ -146,7 +146,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +154,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the error property value. Error information from attempting to get the availability of the user, distribution list, or resource.
-     *  @param FreeBusyError|null $value Value to set for the error property.
+     * @param FreeBusyError|null $value Value to set for the error property.
     */
     public function setError(?FreeBusyError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -162,7 +162,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the scheduleId property value. An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-     *  @param string|null $value Value to set for the scheduleId property.
+     * @param string|null $value Value to set for the scheduleId property.
     */
     public function setScheduleId(?string $value): void {
         $this->getBackingStore()->set('scheduleId', $value);
@@ -178,7 +178,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the scheduleItems property value. Contains the items that describe the availability of the user or resource.
-     *  @param array<ScheduleItem>|null $value Value to set for the scheduleItems property.
+     * @param array<ScheduleItem>|null $value Value to set for the scheduleItems property.
     */
     public function setScheduleItems(?array $value): void {
         $this->getBackingStore()->set('scheduleItems', $value);
@@ -186,7 +186,7 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the workingHours property value. The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
-     *  @param WorkingHours|null $value Value to set for the workingHours property.
+     * @param WorkingHours|null $value Value to set for the workingHours property.
     */
     public function setWorkingHours(?WorkingHours $value): void {
         $this->getBackingStore()->set('workingHours', $value);

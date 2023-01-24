@@ -102,7 +102,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -110,7 +110,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -118,7 +118,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the keyCredential property value. The keyCredential property
-     *  @param KeyCredential|null $value Value to set for the keyCredential property.
+     * @param KeyCredential|null $value Value to set for the keyCredential property.
     */
     public function setKeyCredential(?KeyCredential $value): void {
         $this->getBackingStore()->set('keyCredential', $value);
@@ -126,7 +126,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the passwordCredential property value. The passwordCredential property
-     *  @param PasswordCredential|null $value Value to set for the passwordCredential property.
+     * @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
     public function setPasswordCredential(?PasswordCredential $value): void {
         $this->getBackingStore()->set('passwordCredential', $value);
@@ -134,7 +134,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the proof property value. The proof property
-     *  @param string|null $value Value to set for the proof property.
+     * @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value): void {
         $this->getBackingStore()->set('proof', $value);

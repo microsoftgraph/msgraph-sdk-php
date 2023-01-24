@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RiskDetection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new RiskDetection and sets the default values.
+     * Instantiates a new riskDetection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -235,7 +235,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
-     *  @param ActivityType|null $value Value to set for the activity property.
+     * @param ActivityType|null $value Value to set for the activity property.
     */
     public function setActivity(?ActivityType $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -243,7 +243,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -251,7 +251,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the additionalInfo property value. Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
-     *  @param string|null $value Value to set for the additionalInfo property.
+     * @param string|null $value Value to set for the additionalInfo property.
     */
     public function setAdditionalInfo(?string $value): void {
         $this->getBackingStore()->set('additionalInfo', $value);
@@ -259,7 +259,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     *  @param string|null $value Value to set for the correlationId property.
+     * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
         $this->getBackingStore()->set('correlationId', $value);
@@ -267,7 +267,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the detectedDateTime property.
+     * @param DateTime|null $value Value to set for the detectedDateTime property.
     */
     public function setDetectedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('detectedDateTime', $value);
@@ -275,7 +275,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     *  @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
+     * @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
     */
     public function setDetectionTimingType(?RiskDetectionTimingType $value): void {
         $this->getBackingStore()->set('detectionTimingType', $value);
@@ -283,7 +283,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
@@ -291,7 +291,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastUpdatedDateTime', $value);
@@ -299,7 +299,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the location property value. Location of the sign-in.
-     *  @param SignInLocation|null $value Value to set for the location property.
+     * @param SignInLocation|null $value Value to set for the location property.
     */
     public function setLocation(?SignInLocation $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -307,7 +307,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     *  @param string|null $value Value to set for the requestId property.
+     * @param string|null $value Value to set for the requestId property.
     */
     public function setRequestId(?string $value): void {
         $this->getBackingStore()->set('requestId', $value);
@@ -315,7 +315,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: m365DAdminDismissedDetection.
-     *  @param RiskDetail|null $value Value to set for the riskDetail property.
+     * @param RiskDetail|null $value Value to set for the riskDetail property.
     */
     public function setRiskDetail(?RiskDetail $value): void {
         $this->getBackingStore()->set('riskDetail', $value);
@@ -323,7 +323,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and anomalousUserActivity. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
-     *  @param string|null $value Value to set for the riskEventType property.
+     * @param string|null $value Value to set for the riskEventType property.
     */
     public function setRiskEventType(?string $value): void {
         $this->getBackingStore()->set('riskEventType', $value);
@@ -331,7 +331,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
-     *  @param RiskLevel|null $value Value to set for the riskLevel property.
+     * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
         $this->getBackingStore()->set('riskLevel', $value);
@@ -339,7 +339,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
-     *  @param RiskState|null $value Value to set for the riskState property.
+     * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {
         $this->getBackingStore()->set('riskState', $value);
@@ -347,7 +347,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the source property value. Source of the risk detection. For example, activeDirectory.
-     *  @param string|null $value Value to set for the source property.
+     * @param string|null $value Value to set for the source property.
     */
     public function setSource(?string $value): void {
         $this->getBackingStore()->set('source', $value);
@@ -355,7 +355,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
-     *  @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
+     * @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
     */
     public function setTokenIssuerType(?TokenIssuerType $value): void {
         $this->getBackingStore()->set('tokenIssuerType', $value);
@@ -363,7 +363,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. The user principal name (UPN) of the user.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -371,7 +371,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the userId property value. Unique ID of the user.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -379,7 +379,7 @@ class RiskDetection extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

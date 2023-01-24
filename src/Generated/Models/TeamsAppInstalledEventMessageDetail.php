@@ -75,7 +75,7 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -83,7 +83,7 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * Sets the teamsAppDisplayName property value. Display name of the teamsApp.
-     *  @param string|null $value Value to set for the teamsAppDisplayName property.
+     * @param string|null $value Value to set for the teamsAppDisplayName property.
     */
     public function setTeamsAppDisplayName(?string $value): void {
         $this->getBackingStore()->set('teamsAppDisplayName', $value);
@@ -91,7 +91,7 @@ class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * Sets the teamsAppId property value. Unique identifier of the teamsApp.
-     *  @param string|null $value Value to set for the teamsAppId property.
+     * @param string|null $value Value to set for the teamsAppId property.
     */
     public function setTeamsAppId(?string $value): void {
         $this->getBackingStore()->set('teamsAppId', $value);

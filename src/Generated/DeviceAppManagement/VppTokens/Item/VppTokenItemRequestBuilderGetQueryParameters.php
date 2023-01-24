@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * List of Vpp tokens for this organization.
+*/
 class VppTokenItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains the properties used to assign an MDM app configuration to a group.
+*/
 class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Parsable 
 {
     /**
@@ -54,7 +57,7 @@ class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Pa
 
     /**
      * Sets the target property value. Assignment target that the T&C policy is assigned to.
-     *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
+     * @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
         $this->getBackingStore()->set('target', $value);

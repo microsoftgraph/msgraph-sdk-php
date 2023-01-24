@@ -100,7 +100,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the accessType property value. Defines whether access is allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
-     *  @param CrossTenantAccessPolicyTargetConfigurationAccessType|null $value Value to set for the accessType property.
+     * @param CrossTenantAccessPolicyTargetConfigurationAccessType|null $value Value to set for the accessType property.
     */
     public function setAccessType(?CrossTenantAccessPolicyTargetConfigurationAccessType $value): void {
         $this->getBackingStore()->set('accessType', $value);
@@ -108,7 +108,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -116,7 +116,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -124,7 +124,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class CrossTenantAccessPolicyTargetConfiguration implements AdditionalDataHolder
 
     /**
      * Sets the targets property value. Specifies whether to target users, groups, or applications with this rule.
-     *  @param array<CrossTenantAccessPolicyTarget>|null $value Value to set for the targets property.
+     * @param array<CrossTenantAccessPolicyTarget>|null $value Value to set for the targets property.
     */
     public function setTargets(?array $value): void {
         $this->getBackingStore()->set('targets', $value);

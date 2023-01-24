@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\MemberOf;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.
+*/
 class MemberOfRequestBuilderGetQueryParameters 
 {
     /**

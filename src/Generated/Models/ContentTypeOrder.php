@@ -105,7 +105,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -113,7 +113,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -121,7 +121,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the default property value. Whether this is the default Content Type
-     *  @param bool|null $value Value to set for the EscapedDefault property.
+     * @param bool|null $value Value to set for the EscapedDefault property.
     */
     public function setDefault(?bool $value): void {
         $this->getBackingStore()->set('escapedDefault', $value);
@@ -129,7 +129,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -137,7 +137,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the position property value. Specifies the position in which the Content Type appears in the selection UI.
-     *  @param int|null $value Value to set for the position property.
+     * @param int|null $value Value to set for the position property.
     */
     public function setPosition(?int $value): void {
         $this->getBackingStore()->set('position', $value);

@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization-id}/externalSponsors/{directoryObject-id}
+*/
 class DirectoryObjectItemRequestBuilder 
 {
     /**

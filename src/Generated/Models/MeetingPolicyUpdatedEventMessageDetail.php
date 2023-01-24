@@ -75,7 +75,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -83,7 +83,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * Sets the meetingChatEnabled property value. Represents whether the meeting chat is enabled or not.
-     *  @param bool|null $value Value to set for the meetingChatEnabled property.
+     * @param bool|null $value Value to set for the meetingChatEnabled property.
     */
     public function setMeetingChatEnabled(?bool $value): void {
         $this->getBackingStore()->set('meetingChatEnabled', $value);
@@ -91,7 +91,7 @@ class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * Sets the meetingChatId property value. Unique identifier of the meeting chat.
-     *  @param string|null $value Value to set for the meetingChatId property.
+     * @param string|null $value Value to set for the meetingChatId property.
     */
     public function setMeetingChatId(?string $value): void {
         $this->getBackingStore()->set('meetingChatId', $value);

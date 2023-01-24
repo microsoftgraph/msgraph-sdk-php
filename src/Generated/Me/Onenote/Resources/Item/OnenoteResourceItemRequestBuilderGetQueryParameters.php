@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Onenote\Resources\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
+*/
 class OnenoteResourceItemRequestBuilderGetQueryParameters 
 {
     /**

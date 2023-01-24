@@ -91,7 +91,7 @@ class EducationOrganization extends Entity implements Parsable
 
     /**
      * Sets the description property value. Organization description.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -99,7 +99,7 @@ class EducationOrganization extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Organization display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -107,7 +107,7 @@ class EducationOrganization extends Entity implements Parsable
 
     /**
      * Sets the externalSource property value. Source where this organization was created from. Possible values are: sis, manual.
-     *  @param EducationExternalSource|null $value Value to set for the externalSource property.
+     * @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value): void {
         $this->getBackingStore()->set('externalSource', $value);
@@ -115,7 +115,7 @@ class EducationOrganization extends Entity implements Parsable
 
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
-     *  @param string|null $value Value to set for the externalSourceDetail property.
+     * @param string|null $value Value to set for the externalSourceDetail property.
     */
     public function setExternalSourceDetail(?string $value): void {
         $this->getBackingStore()->set('externalSourceDetail', $value);

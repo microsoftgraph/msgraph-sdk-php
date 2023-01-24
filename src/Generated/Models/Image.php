@@ -100,7 +100,7 @@ class Image implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class Image implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class Image implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the height property value. Optional. Height of the image, in pixels. Read-only.
-     *  @param int|null $value Value to set for the height property.
+     * @param int|null $value Value to set for the height property.
     */
     public function setHeight(?int $value): void {
         $this->getBackingStore()->set('height', $value);
@@ -124,7 +124,7 @@ class Image implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class Image implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the width property value. Optional. Width of the image, in pixels. Read-only.
-     *  @param int|null $value Value to set for the width property.
+     * @param int|null $value Value to set for the width property.
     */
     public function setWidth(?int $value): void {
         $this->getBackingStore()->set('width', $value);

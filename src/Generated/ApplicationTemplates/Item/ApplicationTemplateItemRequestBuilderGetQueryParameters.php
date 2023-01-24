@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties of an applicationTemplate object.
+*/
 class ApplicationTemplateItemRequestBuilderGetQueryParameters 
 {
     /**

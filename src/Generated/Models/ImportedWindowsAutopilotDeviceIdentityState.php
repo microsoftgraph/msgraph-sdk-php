@@ -120,7 +120,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
-     *  @param int|null $value Value to set for the deviceErrorCode property.
+     * @param int|null $value Value to set for the deviceErrorCode property.
     */
     public function setDeviceErrorCode(?int $value): void {
         $this->getBackingStore()->set('deviceErrorCode', $value);
@@ -144,7 +144,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
-     *  @param string|null $value Value to set for the deviceErrorName property.
+     * @param string|null $value Value to set for the deviceErrorName property.
     */
     public function setDeviceErrorName(?string $value): void {
         $this->getBackingStore()->set('deviceErrorName', $value);
@@ -152,7 +152,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the deviceImportStatus property value. The deviceImportStatus property
-     *  @param ImportedWindowsAutopilotDeviceIdentityImportStatus|null $value Value to set for the deviceImportStatus property.
+     * @param ImportedWindowsAutopilotDeviceIdentityImportStatus|null $value Value to set for the deviceImportStatus property.
     */
     public function setDeviceImportStatus(?ImportedWindowsAutopilotDeviceIdentityImportStatus $value): void {
         $this->getBackingStore()->set('deviceImportStatus', $value);
@@ -160,7 +160,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
-     *  @param string|null $value Value to set for the deviceRegistrationId property.
+     * @param string|null $value Value to set for the deviceRegistrationId property.
     */
     public function setDeviceRegistrationId(?string $value): void {
         $this->getBackingStore()->set('deviceRegistrationId', $value);
@@ -168,7 +168,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

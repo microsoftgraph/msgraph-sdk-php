@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item;
 use Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /groups/{group-id}/acceptedSenders/{directoryObject-id}
+*/
 class DirectoryObjectItemRequestBuilder 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Instances\I
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the event. Nullable.
+*/
 class ExtensionsRequestBuilderGetQueryParameters 
 {
     /**

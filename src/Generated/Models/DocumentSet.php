@@ -150,7 +150,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowedContentTypes property value. Content types allowed in document set.
-     *  @param array<ContentTypeInfo>|null $value Value to set for the allowedContentTypes property.
+     * @param array<ContentTypeInfo>|null $value Value to set for the allowedContentTypes property.
     */
     public function setAllowedContentTypes(?array $value): void {
         $this->getBackingStore()->set('allowedContentTypes', $value);
@@ -166,7 +166,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -174,7 +174,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the defaultContents property value. Default contents of document set.
-     *  @param array<DocumentSetContent>|null $value Value to set for the defaultContents property.
+     * @param array<DocumentSetContent>|null $value Value to set for the defaultContents property.
     */
     public function setDefaultContents(?array $value): void {
         $this->getBackingStore()->set('defaultContents', $value);
@@ -182,7 +182,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -190,7 +190,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the propagateWelcomePageChanges property value. Specifies whether to push welcome page changes to inherited content types.
-     *  @param bool|null $value Value to set for the propagateWelcomePageChanges property.
+     * @param bool|null $value Value to set for the propagateWelcomePageChanges property.
     */
     public function setPropagateWelcomePageChanges(?bool $value): void {
         $this->getBackingStore()->set('propagateWelcomePageChanges', $value);
@@ -198,7 +198,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sharedColumns property value. The sharedColumns property
-     *  @param array<ColumnDefinition>|null $value Value to set for the sharedColumns property.
+     * @param array<ColumnDefinition>|null $value Value to set for the sharedColumns property.
     */
     public function setSharedColumns(?array $value): void {
         $this->getBackingStore()->set('sharedColumns', $value);
@@ -206,7 +206,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the shouldPrefixNameToFile property value. Indicates whether to add the name of the document set to each file name.
-     *  @param bool|null $value Value to set for the shouldPrefixNameToFile property.
+     * @param bool|null $value Value to set for the shouldPrefixNameToFile property.
     */
     public function setShouldPrefixNameToFile(?bool $value): void {
         $this->getBackingStore()->set('shouldPrefixNameToFile', $value);
@@ -214,7 +214,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the welcomePageColumns property value. The welcomePageColumns property
-     *  @param array<ColumnDefinition>|null $value Value to set for the welcomePageColumns property.
+     * @param array<ColumnDefinition>|null $value Value to set for the welcomePageColumns property.
     */
     public function setWelcomePageColumns(?array $value): void {
         $this->getBackingStore()->set('welcomePageColumns', $value);
@@ -222,7 +222,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the welcomePageUrl property value. Welcome page absolute URL.
-     *  @param string|null $value Value to set for the welcomePageUrl property.
+     * @param string|null $value Value to set for the welcomePageUrl property.
     */
     public function setWelcomePageUrl(?string $value): void {
         $this->getBackingStore()->set('welcomePageUrl', $value);

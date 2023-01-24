@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The recovery keys associated with the bitlocker entity.
+*/
 class BitlockerRecoveryKeyItemRequestBuilderGetQueryParameters 
 {
     /**

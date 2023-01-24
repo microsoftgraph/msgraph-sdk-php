@@ -74,7 +74,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the displayName property value. The display name for the schedulingGroup. Required.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -82,7 +82,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the isActive property value. Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-     *  @param bool|null $value Value to set for the isActive property.
+     * @param bool|null $value Value to set for the isActive property.
     */
     public function setIsActive(?bool $value): void {
         $this->getBackingStore()->set('isActive', $value);
@@ -90,7 +90,7 @@ class SchedulingGroup extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the userIds property value. The list of user IDs that are a member of the schedulingGroup. Required.
-     *  @param array<string>|null $value Value to set for the userIds property.
+     * @param array<string>|null $value Value to set for the userIds property.
     */
     public function setUserIds(?array $value): void {
         $this->getBackingStore()->set('userIds', $value);

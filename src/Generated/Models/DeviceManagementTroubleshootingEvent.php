@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Event representing an general failure.
+*/
 class DeviceManagementTroubleshootingEvent extends Entity implements Parsable 
 {
     /**
@@ -72,7 +75,7 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. Id used for tracing the failure in the service.
-     *  @param string|null $value Value to set for the correlationId property.
+     * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
         $this->getBackingStore()->set('correlationId', $value);
@@ -80,7 +83,7 @@ class DeviceManagementTroubleshootingEvent extends Entity implements Parsable
 
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
-     *  @param DateTime|null $value Value to set for the eventDateTime property.
+     * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('eventDateTime', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthentic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.servicePrincipal in the microsoft.graph.directoryObject collection
+*/
 class ServicePrincipalRequestBuilderGetQueryParameters 
 {
     /**

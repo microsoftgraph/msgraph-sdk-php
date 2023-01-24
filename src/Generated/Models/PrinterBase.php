@@ -142,7 +142,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the capabilities property value. The capabilities of the printer/printerShare.
-     *  @param PrinterCapabilities|null $value Value to set for the capabilities property.
+     * @param PrinterCapabilities|null $value Value to set for the capabilities property.
     */
     public function setCapabilities(?PrinterCapabilities $value): void {
         $this->getBackingStore()->set('capabilities', $value);
@@ -150,7 +150,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the defaults property value. The default print settings of printer/printerShare.
-     *  @param PrinterDefaults|null $value Value to set for the defaults property.
+     * @param PrinterDefaults|null $value Value to set for the defaults property.
     */
     public function setDefaults(?PrinterDefaults $value): void {
         $this->getBackingStore()->set('defaults', $value);
@@ -158,7 +158,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the printer/printerShare.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -166,7 +166,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the isAcceptingJobs property value. Whether the printer/printerShare is currently accepting new print jobs.
-     *  @param bool|null $value Value to set for the isAcceptingJobs property.
+     * @param bool|null $value Value to set for the isAcceptingJobs property.
     */
     public function setIsAcceptingJobs(?bool $value): void {
         $this->getBackingStore()->set('isAcceptingJobs', $value);
@@ -174,7 +174,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
-     *  @param array<PrintJob>|null $value Value to set for the jobs property.
+     * @param array<PrintJob>|null $value Value to set for the jobs property.
     */
     public function setJobs(?array $value): void {
         $this->getBackingStore()->set('jobs', $value);
@@ -182,7 +182,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the location property value. The physical and/or organizational location of the printer/printerShare.
-     *  @param PrinterLocation|null $value Value to set for the location property.
+     * @param PrinterLocation|null $value Value to set for the location property.
     */
     public function setLocation(?PrinterLocation $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -190,7 +190,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the manufacturer property value. The manufacturer of the printer/printerShare.
-     *  @param string|null $value Value to set for the manufacturer property.
+     * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
         $this->getBackingStore()->set('manufacturer', $value);
@@ -198,7 +198,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the model property value. The model name of the printer/printerShare.
-     *  @param string|null $value Value to set for the model property.
+     * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
         $this->getBackingStore()->set('model', $value);
@@ -206,7 +206,7 @@ class PrinterBase extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param PrinterStatus|null $value Value to set for the status property.
+     * @param PrinterStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrinterStatus $value): void {
         $this->getBackingStore()->set('status', $value);

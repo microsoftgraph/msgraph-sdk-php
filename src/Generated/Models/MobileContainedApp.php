@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * An abstract class that represents a contained app in a mobileApp acting as a package.
+*/
 class MobileContainedApp extends Entity implements Parsable 
 {
     /**

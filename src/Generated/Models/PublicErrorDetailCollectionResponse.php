@@ -54,7 +54,7 @@ class PublicErrorDetailCollectionResponse extends BaseCollectionPaginationCountR
 
     /**
      * Sets the value property value. The value property
-     *  @param array<PublicErrorDetail>|null $value Value to set for the value property.
+     * @param array<PublicErrorDetail>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

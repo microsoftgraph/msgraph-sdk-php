@@ -134,7 +134,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -142,7 +142,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq, in).
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -150,7 +150,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles (isBuiltIn is true) support this attribute. Supports $expand.
-     *  @param array<UnifiedRoleDefinition>|null $value Value to set for the inheritsPermissionsFrom property.
+     * @param array<UnifiedRoleDefinition>|null $value Value to set for the inheritsPermissionsFrom property.
     */
     public function setInheritsPermissionsFrom(?array $value): void {
         $this->getBackingStore()->set('inheritsPermissionsFrom', $value);
@@ -158,7 +158,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the isBuiltIn property value. Flag indicating whether the role definition is part of the default set included in Azure Active Directory (Azure AD) or a custom definition. Read-only. Supports $filter (eq, in).
-     *  @param bool|null $value Value to set for the isBuiltIn property.
+     * @param bool|null $value Value to set for the isBuiltIn property.
     */
     public function setIsBuiltIn(?bool $value): void {
         $this->getBackingStore()->set('isBuiltIn', $value);
@@ -166,7 +166,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. Flag indicating whether the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -174,7 +174,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the resourceScopes property value. List of the scopes or permissions the role definition applies to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
-     *  @param array<string>|null $value Value to set for the resourceScopes property.
+     * @param array<string>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value): void {
         $this->getBackingStore()->set('resourceScopes', $value);
@@ -182,7 +182,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     *  @param array<UnifiedRolePermission>|null $value Value to set for the rolePermissions property.
+     * @param array<UnifiedRolePermission>|null $value Value to set for the rolePermissions property.
     */
     public function setRolePermissions(?array $value): void {
         $this->getBackingStore()->set('rolePermissions', $value);
@@ -190,7 +190,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false but is read-only when isBuiltIn is true. This identifier is typically used if one needs an identifier to be the same across different directories.
-     *  @param string|null $value Value to set for the templateId property.
+     * @param string|null $value Value to set for the templateId property.
     */
     public function setTemplateId(?string $value): void {
         $this->getBackingStore()->set('templateId', $value);
@@ -198,7 +198,7 @@ class UnifiedRoleDefinition extends Entity implements Parsable
 
     /**
      * Sets the version property value. Indicates version of the role definition. Read-only when isBuiltIn is true.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

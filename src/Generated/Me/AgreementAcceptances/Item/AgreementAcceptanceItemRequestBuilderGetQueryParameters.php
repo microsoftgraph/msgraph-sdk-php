@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\AgreementAcceptances\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's terms of use acceptance statuses. Read-only. Nullable.
+*/
 class AgreementAcceptanceItemRequestBuilderGetQueryParameters 
 {
     /**

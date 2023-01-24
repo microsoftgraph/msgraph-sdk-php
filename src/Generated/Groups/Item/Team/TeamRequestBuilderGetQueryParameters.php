@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The team associated with this group.
+*/
 class TeamRequestBuilderGetQueryParameters 
 {
     /**

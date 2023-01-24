@@ -171,7 +171,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -179,7 +179,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -187,7 +187,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cameraMake property value. Camera manufacturer. Read-only.
-     *  @param string|null $value Value to set for the cameraMake property.
+     * @param string|null $value Value to set for the cameraMake property.
     */
     public function setCameraMake(?string $value): void {
         $this->getBackingStore()->set('cameraMake', $value);
@@ -195,7 +195,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cameraModel property value. Camera model. Read-only.
-     *  @param string|null $value Value to set for the cameraModel property.
+     * @param string|null $value Value to set for the cameraModel property.
     */
     public function setCameraModel(?string $value): void {
         $this->getBackingStore()->set('cameraModel', $value);
@@ -203,7 +203,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
-     *  @param float|null $value Value to set for the exposureDenominator property.
+     * @param float|null $value Value to set for the exposureDenominator property.
     */
     public function setExposureDenominator(?float $value): void {
         $this->getBackingStore()->set('exposureDenominator', $value);
@@ -211,7 +211,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
-     *  @param float|null $value Value to set for the exposureNumerator property.
+     * @param float|null $value Value to set for the exposureNumerator property.
     */
     public function setExposureNumerator(?float $value): void {
         $this->getBackingStore()->set('exposureNumerator', $value);
@@ -219,7 +219,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fNumber property value. The F-stop value from the camera. Read-only.
-     *  @param float|null $value Value to set for the fNumber property.
+     * @param float|null $value Value to set for the fNumber property.
     */
     public function setFNumber(?float $value): void {
         $this->getBackingStore()->set('fNumber', $value);
@@ -227,7 +227,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the focalLength property value. The focal length from the camera. Read-only.
-     *  @param float|null $value Value to set for the focalLength property.
+     * @param float|null $value Value to set for the focalLength property.
     */
     public function setFocalLength(?float $value): void {
         $this->getBackingStore()->set('focalLength', $value);
@@ -235,7 +235,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the iso property value. The ISO value from the camera. Read-only.
-     *  @param int|null $value Value to set for the iso property.
+     * @param int|null $value Value to set for the iso property.
     */
     public function setIso(?int $value): void {
         $this->getBackingStore()->set('iso', $value);
@@ -243,7 +243,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -251,7 +251,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     *  @param int|null $value Value to set for the orientation property.
+     * @param int|null $value Value to set for the orientation property.
     */
     public function setOrientation(?int $value): void {
         $this->getBackingStore()->set('orientation', $value);
@@ -259,7 +259,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the takenDateTime property value. Represents the date and time the photo was taken. Read-only.
-     *  @param DateTime|null $value Value to set for the takenDateTime property.
+     * @param DateTime|null $value Value to set for the takenDateTime property.
     */
     public function setTakenDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('takenDateTime', $value);

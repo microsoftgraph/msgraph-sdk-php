@@ -92,7 +92,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
 
     /**
      * Sets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
-     *  @param float|null $value Value to set for the averageInboundBitRate property.
+     * @param float|null $value Value to set for the averageInboundBitRate property.
     */
     public function setAverageInboundBitRate(?float $value): void {
         $this->getBackingStore()->set('averageInboundBitRate', $value);
@@ -100,7 +100,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
 
     /**
      * Sets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
-     *  @param float|null $value Value to set for the averageInboundFrameRate property.
+     * @param float|null $value Value to set for the averageInboundFrameRate property.
     */
     public function setAverageInboundFrameRate(?float $value): void {
         $this->getBackingStore()->set('averageInboundFrameRate', $value);
@@ -108,7 +108,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
 
     /**
      * Sets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
-     *  @param float|null $value Value to set for the averageOutboundBitRate property.
+     * @param float|null $value Value to set for the averageOutboundBitRate property.
     */
     public function setAverageOutboundBitRate(?float $value): void {
         $this->getBackingStore()->set('averageOutboundBitRate', $value);
@@ -116,7 +116,7 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
 
     /**
      * Sets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
-     *  @param float|null $value Value to set for the averageOutboundFrameRate property.
+     * @param float|null $value Value to set for the averageOutboundFrameRate property.
     */
     public function setAverageOutboundFrameRate(?float $value): void {
         $this->getBackingStore()->set('averageOutboundFrameRate', $value);

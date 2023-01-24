@@ -96,7 +96,7 @@ class PrinterShare extends PrinterBase implements Parsable
 
     /**
      * Sets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
-     *  @param bool|null $value Value to set for the allowAllUsers property.
+     * @param bool|null $value Value to set for the allowAllUsers property.
     */
     public function setAllowAllUsers(?bool $value): void {
         $this->getBackingStore()->set('allowAllUsers', $value);
@@ -104,7 +104,7 @@ class PrinterShare extends PrinterBase implements Parsable
 
     /**
      * Sets the allowedGroups property value. The groups whose users have access to print using the printer.
-     *  @param array<Group>|null $value Value to set for the allowedGroups property.
+     * @param array<Group>|null $value Value to set for the allowedGroups property.
     */
     public function setAllowedGroups(?array $value): void {
         $this->getBackingStore()->set('allowedGroups', $value);
@@ -112,7 +112,7 @@ class PrinterShare extends PrinterBase implements Parsable
 
     /**
      * Sets the allowedUsers property value. The users who have access to print using the printer.
-     *  @param array<User>|null $value Value to set for the allowedUsers property.
+     * @param array<User>|null $value Value to set for the allowedUsers property.
     */
     public function setAllowedUsers(?array $value): void {
         $this->getBackingStore()->set('allowedUsers', $value);
@@ -120,7 +120,7 @@ class PrinterShare extends PrinterBase implements Parsable
 
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the printer share was created. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -128,7 +128,7 @@ class PrinterShare extends PrinterBase implements Parsable
 
     /**
      * Sets the printer property value. The printer that this printer share is related to.
-     *  @param Printer|null $value Value to set for the printer property.
+     * @param Printer|null $value Value to set for the printer property.
     */
     public function setPrinter(?Printer $value): void {
         $this->getBackingStore()->set('printer', $value);

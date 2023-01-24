@@ -120,7 +120,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the classes property value. The classes property
-     *  @param array<EducationClass>|null $value Value to set for the classes property.
+     * @param array<EducationClass>|null $value Value to set for the classes property.
     */
     public function setClasses(?array $value): void {
         $this->getBackingStore()->set('classes', $value);
@@ -144,7 +144,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the me property value. The me property
-     *  @param EducationUser|null $value Value to set for the me property.
+     * @param EducationUser|null $value Value to set for the me property.
     */
     public function setMe(?EducationUser $value): void {
         $this->getBackingStore()->set('me', $value);
@@ -152,7 +152,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the schools property value. The schools property
-     *  @param array<EducationSchool>|null $value Value to set for the schools property.
+     * @param array<EducationSchool>|null $value Value to set for the schools property.
     */
     public function setSchools(?array $value): void {
         $this->getBackingStore()->set('schools', $value);
@@ -168,7 +168,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the users property value. The users property
-     *  @param array<EducationUser>|null $value Value to set for the users property.
+     * @param array<EducationUser>|null $value Value to set for the users property.
     */
     public function setUsers(?array $value): void {
         $this->getBackingStore()->set('users', $value);

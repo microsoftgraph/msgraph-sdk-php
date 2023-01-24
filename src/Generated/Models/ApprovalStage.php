@@ -115,7 +115,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the assignedToMe property value. Indicates whether the stage is assigned to the calling user to review. Read-only.
-     *  @param bool|null $value Value to set for the assignedToMe property.
+     * @param bool|null $value Value to set for the assignedToMe property.
     */
     public function setAssignedToMe(?bool $value): void {
         $this->getBackingStore()->set('assignedToMe', $value);
@@ -123,7 +123,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The label provided by the policy creator to identify an approval stage. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -131,7 +131,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the justification property value. The justification associated with the approval stage decision.
-     *  @param string|null $value Value to set for the justification property.
+     * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
@@ -139,7 +139,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-     *  @param Identity|null $value Value to set for the reviewedBy property.
+     * @param Identity|null $value Value to set for the reviewedBy property.
     */
     public function setReviewedBy(?Identity $value): void {
         $this->getBackingStore()->set('reviewedBy', $value);
@@ -147,7 +147,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the reviewedDateTime property value. The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the reviewedDateTime property.
+     * @param DateTime|null $value Value to set for the reviewedDateTime property.
     */
     public function setReviewedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewedDateTime', $value);
@@ -155,7 +155,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-     *  @param string|null $value Value to set for the reviewResult property.
+     * @param string|null $value Value to set for the reviewResult property.
     */
     public function setReviewResult(?string $value): void {
         $this->getBackingStore()->set('reviewResult', $value);
@@ -163,7 +163,7 @@ class ApprovalStage extends Entity implements Parsable
 
     /**
      * Sets the status property value. The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);

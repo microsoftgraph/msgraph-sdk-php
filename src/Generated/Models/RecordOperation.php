@@ -64,7 +64,7 @@ class RecordOperation extends CommsOperation implements Parsable
 
     /**
      * Sets the recordingAccessToken property value. The access token required to retrieve the recording.
-     *  @param string|null $value Value to set for the recordingAccessToken property.
+     * @param string|null $value Value to set for the recordingAccessToken property.
     */
     public function setRecordingAccessToken(?string $value): void {
         $this->getBackingStore()->set('recordingAccessToken', $value);
@@ -72,7 +72,7 @@ class RecordOperation extends CommsOperation implements Parsable
 
     /**
      * Sets the recordingLocation property value. The location where the recording is located.
-     *  @param string|null $value Value to set for the recordingLocation property.
+     * @param string|null $value Value to set for the recordingLocation property.
     */
     public function setRecordingLocation(?string $value): void {
         $this->getBackingStore()->set('recordingLocation', $value);

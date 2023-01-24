@@ -115,7 +115,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     *  @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
+     * @param ManagedAppDataEncryptionType|null $value Value to set for the appDataEncryptionType property.
     */
     public function setAppDataEncryptionType(?ManagedAppDataEncryptionType $value): void {
         $this->getBackingStore()->set('appDataEncryptionType', $value);
@@ -123,7 +123,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
-     *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
+     * @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value): void {
         $this->getBackingStore()->set('apps', $value);
@@ -131,7 +131,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     *  @param string|null $value Value to set for the customBrowserProtocol property.
+     * @param string|null $value Value to set for the customBrowserProtocol property.
     */
     public function setCustomBrowserProtocol(?string $value): void {
         $this->getBackingStore()->set('customBrowserProtocol', $value);
@@ -139,7 +139,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     *  @param int|null $value Value to set for the deployedAppCount property.
+     * @param int|null $value Value to set for the deployedAppCount property.
     */
     public function setDeployedAppCount(?int $value): void {
         $this->getBackingStore()->set('deployedAppCount', $value);
@@ -147,7 +147,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
+     * @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
     public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
         $this->getBackingStore()->set('deploymentSummary', $value);
@@ -155,7 +155,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     *  @param bool|null $value Value to set for the faceIdBlocked property.
+     * @param bool|null $value Value to set for the faceIdBlocked property.
     */
     public function setFaceIdBlocked(?bool $value): void {
         $this->getBackingStore()->set('faceIdBlocked', $value);
@@ -163,7 +163,7 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
 
     /**
      * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     *  @param string|null $value Value to set for the minimumRequiredSdkVersion property.
+     * @param string|null $value Value to set for the minimumRequiredSdkVersion property.
     */
     public function setMinimumRequiredSdkVersion(?string $value): void {
         $this->getBackingStore()->set('minimumRequiredSdkVersion', $value);

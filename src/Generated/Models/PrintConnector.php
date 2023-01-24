@@ -105,7 +105,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the appVersion property value. The connector's version.
-     *  @param string|null $value Value to set for the appVersion property.
+     * @param string|null $value Value to set for the appVersion property.
     */
     public function setAppVersion(?string $value): void {
         $this->getBackingStore()->set('appVersion', $value);
@@ -113,7 +113,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the connector.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -121,7 +121,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
-     *  @param string|null $value Value to set for the fullyQualifiedDomainName property.
+     * @param string|null $value Value to set for the fullyQualifiedDomainName property.
     */
     public function setFullyQualifiedDomainName(?string $value): void {
         $this->getBackingStore()->set('fullyQualifiedDomainName', $value);
@@ -129,7 +129,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
-     *  @param PrinterLocation|null $value Value to set for the location property.
+     * @param PrinterLocation|null $value Value to set for the location property.
     */
     public function setLocation(?PrinterLocation $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -137,7 +137,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
-     *  @param string|null $value Value to set for the operatingSystem property.
+     * @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value): void {
         $this->getBackingStore()->set('operatingSystem', $value);
@@ -145,7 +145,7 @@ class PrintConnector extends Entity implements Parsable
 
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
-     *  @param DateTime|null $value Value to set for the registeredDateTime property.
+     * @param DateTime|null $value Value to set for the registeredDateTime property.
     */
     public function setRegisteredDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('registeredDateTime', $value);

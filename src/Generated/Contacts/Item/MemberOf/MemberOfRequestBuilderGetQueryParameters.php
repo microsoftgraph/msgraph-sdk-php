@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contacts\Item\MemberOf;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get memberOf from contacts
+*/
 class MemberOfRequestBuilderGetQueryParameters 
 {
     /**

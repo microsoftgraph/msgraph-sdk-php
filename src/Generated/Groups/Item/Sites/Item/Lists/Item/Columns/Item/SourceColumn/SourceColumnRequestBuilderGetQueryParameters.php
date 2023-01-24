@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Columns\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The source column for the content type column.
+*/
 class SourceColumnRequestBuilderGetQueryParameters 
 {
     /**

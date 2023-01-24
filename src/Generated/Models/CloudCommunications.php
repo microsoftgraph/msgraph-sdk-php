@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudCommunications extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new cloudCommunications and sets the default values.
+     * Instantiates a new CloudCommunications and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -85,7 +85,7 @@ class CloudCommunications extends Entity implements Parsable
 
     /**
      * Sets the callRecords property value. The callRecords property
-     *  @param array<CallRecord>|null $value Value to set for the callRecords property.
+     * @param array<CallRecord>|null $value Value to set for the callRecords property.
     */
     public function setCallRecords(?array $value): void {
         $this->getBackingStore()->set('callRecords', $value);
@@ -93,7 +93,7 @@ class CloudCommunications extends Entity implements Parsable
 
     /**
      * Sets the calls property value. The calls property
-     *  @param array<Call>|null $value Value to set for the calls property.
+     * @param array<Call>|null $value Value to set for the calls property.
     */
     public function setCalls(?array $value): void {
         $this->getBackingStore()->set('calls', $value);
@@ -101,7 +101,7 @@ class CloudCommunications extends Entity implements Parsable
 
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
-     *  @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
+     * @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
     */
     public function setOnlineMeetings(?array $value): void {
         $this->getBackingStore()->set('onlineMeetings', $value);
@@ -109,7 +109,7 @@ class CloudCommunications extends Entity implements Parsable
 
     /**
      * Sets the presences property value. The presences property
-     *  @param array<Presence>|null $value Value to set for the presences property.
+     * @param array<Presence>|null $value Value to set for the presences property.
     */
     public function setPresences(?array $value): void {
         $this->getBackingStore()->set('presences', $value);

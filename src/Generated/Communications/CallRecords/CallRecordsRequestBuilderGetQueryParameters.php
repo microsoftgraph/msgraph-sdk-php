@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get callRecords from communications
+*/
 class CallRecordsRequestBuilderGetQueryParameters 
 {
     /**

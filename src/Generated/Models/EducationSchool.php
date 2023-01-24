@@ -185,7 +185,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the address property value. Address of the school.
-     *  @param PhysicalAddress|null $value Value to set for the address property.
+     * @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -193,7 +193,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the administrativeUnit property value. The underlying administrativeUnit for this school.
-     *  @param AdministrativeUnit|null $value Value to set for the administrativeUnit property.
+     * @param AdministrativeUnit|null $value Value to set for the administrativeUnit property.
     */
     public function setAdministrativeUnit(?AdministrativeUnit $value): void {
         $this->getBackingStore()->set('administrativeUnit', $value);
@@ -201,7 +201,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the classes property value. Classes taught at the school. Nullable.
-     *  @param array<EducationClass>|null $value Value to set for the classes property.
+     * @param array<EducationClass>|null $value Value to set for the classes property.
     */
     public function setClasses(?array $value): void {
         $this->getBackingStore()->set('classes', $value);
@@ -209,7 +209,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the createdBy property value. Entity who created the school.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -217,7 +217,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the externalId property value. ID of school in syncing system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -225,7 +225,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the externalPrincipalId property value. ID of principal in syncing system.
-     *  @param string|null $value Value to set for the externalPrincipalId property.
+     * @param string|null $value Value to set for the externalPrincipalId property.
     */
     public function setExternalPrincipalId(?string $value): void {
         $this->getBackingStore()->set('externalPrincipalId', $value);
@@ -233,7 +233,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the fax property value. The fax property
-     *  @param string|null $value Value to set for the fax property.
+     * @param string|null $value Value to set for the fax property.
     */
     public function setFax(?string $value): void {
         $this->getBackingStore()->set('fax', $value);
@@ -241,7 +241,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the highestGrade property value. Highest grade taught.
-     *  @param string|null $value Value to set for the highestGrade property.
+     * @param string|null $value Value to set for the highestGrade property.
     */
     public function setHighestGrade(?string $value): void {
         $this->getBackingStore()->set('highestGrade', $value);
@@ -249,7 +249,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the lowestGrade property value. Lowest grade taught.
-     *  @param string|null $value Value to set for the lowestGrade property.
+     * @param string|null $value Value to set for the lowestGrade property.
     */
     public function setLowestGrade(?string $value): void {
         $this->getBackingStore()->set('lowestGrade', $value);
@@ -257,7 +257,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the phone property value. Phone number of school.
-     *  @param string|null $value Value to set for the phone property.
+     * @param string|null $value Value to set for the phone property.
     */
     public function setPhone(?string $value): void {
         $this->getBackingStore()->set('phone', $value);
@@ -265,7 +265,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the principalEmail property value. Email address of the principal.
-     *  @param string|null $value Value to set for the principalEmail property.
+     * @param string|null $value Value to set for the principalEmail property.
     */
     public function setPrincipalEmail(?string $value): void {
         $this->getBackingStore()->set('principalEmail', $value);
@@ -273,7 +273,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the principalName property value. Name of the principal.
-     *  @param string|null $value Value to set for the principalName property.
+     * @param string|null $value Value to set for the principalName property.
     */
     public function setPrincipalName(?string $value): void {
         $this->getBackingStore()->set('principalName', $value);
@@ -281,7 +281,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the schoolNumber property value. School Number.
-     *  @param string|null $value Value to set for the schoolNumber property.
+     * @param string|null $value Value to set for the schoolNumber property.
     */
     public function setSchoolNumber(?string $value): void {
         $this->getBackingStore()->set('schoolNumber', $value);
@@ -289,7 +289,7 @@ class EducationSchool extends EducationOrganization implements Parsable
 
     /**
      * Sets the users property value. Users in the school. Nullable.
-     *  @param array<EducationUser>|null $value Value to set for the users property.
+     * @param array<EducationUser>|null $value Value to set for the users property.
     */
     public function setUsers(?array $value): void {
         $this->getBackingStore()->set('users', $value);

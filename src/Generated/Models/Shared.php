@@ -121,7 +121,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -129,7 +129,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -137,7 +137,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -145,7 +145,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the owner property value. The identity of the owner of the shared item. Read-only.
-     *  @param IdentitySet|null $value Value to set for the owner property.
+     * @param IdentitySet|null $value Value to set for the owner property.
     */
     public function setOwner(?IdentitySet $value): void {
         $this->getBackingStore()->set('owner', $value);
@@ -153,7 +153,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
-     *  @param string|null $value Value to set for the scope property.
+     * @param string|null $value Value to set for the scope property.
     */
     public function setScope(?string $value): void {
         $this->getBackingStore()->set('scope', $value);
@@ -161,7 +161,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sharedBy property value. The identity of the user who shared the item. Read-only.
-     *  @param IdentitySet|null $value Value to set for the sharedBy property.
+     * @param IdentitySet|null $value Value to set for the sharedBy property.
     */
     public function setSharedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('sharedBy', $value);
@@ -169,7 +169,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sharedDateTime property value. The UTC date and time when the item was shared. Read-only.
-     *  @param DateTime|null $value Value to set for the sharedDateTime property.
+     * @param DateTime|null $value Value to set for the sharedDateTime property.
     */
     public function setSharedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('sharedDateTime', $value);

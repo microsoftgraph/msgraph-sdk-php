@@ -175,7 +175,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the agreementFileId property value. The identifier of the agreement file accepted by the user.
-     *  @param string|null $value Value to set for the agreementFileId property.
+     * @param string|null $value Value to set for the agreementFileId property.
     */
     public function setAgreementFileId(?string $value): void {
         $this->getBackingStore()->set('agreementFileId', $value);
@@ -183,7 +183,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the agreementId property value. The identifier of the agreement.
-     *  @param string|null $value Value to set for the agreementId property.
+     * @param string|null $value Value to set for the agreementId property.
     */
     public function setAgreementId(?string $value): void {
         $this->getBackingStore()->set('agreementId', $value);
@@ -191,7 +191,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
-     *  @param string|null $value Value to set for the deviceDisplayName property.
+     * @param string|null $value Value to set for the deviceDisplayName property.
     */
     public function setDeviceDisplayName(?string $value): void {
         $this->getBackingStore()->set('deviceDisplayName', $value);
@@ -199,7 +199,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
-     *  @param string|null $value Value to set for the deviceId property.
+     * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
         $this->getBackingStore()->set('deviceId', $value);
@@ -207,7 +207,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the deviceOSType property value. The operating system used to accept the agreement.
-     *  @param string|null $value Value to set for the deviceOSType property.
+     * @param string|null $value Value to set for the deviceOSType property.
     */
     public function setDeviceOSType(?string $value): void {
         $this->getBackingStore()->set('deviceOSType', $value);
@@ -215,7 +215,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the deviceOSVersion property value. The operating system version of the device used to accept the agreement.
-     *  @param string|null $value Value to set for the deviceOSVersion property.
+     * @param string|null $value Value to set for the deviceOSVersion property.
     */
     public function setDeviceOSVersion(?string $value): void {
         $this->getBackingStore()->set('deviceOSVersion', $value);
@@ -223,7 +223,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -231,7 +231,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the recordedDateTime property.
+     * @param DateTime|null $value Value to set for the recordedDateTime property.
     */
     public function setRecordedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('recordedDateTime', $value);
@@ -239,7 +239,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
-     *  @param AgreementAcceptanceState|null $value Value to set for the state property.
+     * @param AgreementAcceptanceState|null $value Value to set for the state property.
     */
     public function setState(?AgreementAcceptanceState $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -247,7 +247,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the userDisplayName property value. Display name of the user when the acceptance was recorded.
-     *  @param string|null $value Value to set for the userDisplayName property.
+     * @param string|null $value Value to set for the userDisplayName property.
     */
     public function setUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('userDisplayName', $value);
@@ -255,7 +255,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the userEmail property value. Email of the user when the acceptance was recorded.
-     *  @param string|null $value Value to set for the userEmail property.
+     * @param string|null $value Value to set for the userEmail property.
     */
     public function setUserEmail(?string $value): void {
         $this->getBackingStore()->set('userEmail', $value);
@@ -263,7 +263,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the userId property value. The identifier of the user who accepted the agreement. Supports $filter (eq).
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -271,7 +271,7 @@ class AgreementAcceptance extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

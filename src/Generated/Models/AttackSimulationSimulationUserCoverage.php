@@ -131,7 +131,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the attackSimulationUser property value. User in an attack simulation and training campaign.
-     *  @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
+     * @param AttackSimulationUser|null $value Value to set for the attackSimulationUser property.
     */
     public function setAttackSimulationUser(?AttackSimulationUser $value): void {
         $this->getBackingStore()->set('attackSimulationUser', $value);
@@ -147,7 +147,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -155,7 +155,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the clickCount property value. Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
-     *  @param int|null $value Value to set for the clickCount property.
+     * @param int|null $value Value to set for the clickCount property.
     */
     public function setClickCount(?int $value): void {
         $this->getBackingStore()->set('clickCount', $value);
@@ -163,7 +163,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the compromisedCount property value. Number of compromising actions by the user in attack simulation and training campaigns.
-     *  @param int|null $value Value to set for the compromisedCount property.
+     * @param int|null $value Value to set for the compromisedCount property.
     */
     public function setCompromisedCount(?int $value): void {
         $this->getBackingStore()->set('compromisedCount', $value);
@@ -171,7 +171,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
-     *  @param DateTime|null $value Value to set for the latestSimulationDateTime property.
+     * @param DateTime|null $value Value to set for the latestSimulationDateTime property.
     */
     public function setLatestSimulationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('latestSimulationDateTime', $value);
@@ -179,7 +179,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -187,7 +187,7 @@ class AttackSimulationSimulationUserCoverage implements AdditionalDataHolder, Ba
 
     /**
      * Sets the simulationCount property value. Number of attack simulation and training campaigns that the user was included in.
-     *  @param int|null $value Value to set for the simulationCount property.
+     * @param int|null $value Value to set for the simulationCount property.
     */
     public function setSimulationCount(?int $value): void {
         $this->getBackingStore()->set('simulationCount', $value);

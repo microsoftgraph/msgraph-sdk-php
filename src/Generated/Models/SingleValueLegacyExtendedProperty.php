@@ -54,7 +54,7 @@ class SingleValueLegacyExtendedProperty extends Entity implements Parsable
 
     /**
      * Sets the value property value. A property value.
-     *  @param string|null $value Value to set for the value property.
+     * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {
         $this->getBackingStore()->set('value', $value);

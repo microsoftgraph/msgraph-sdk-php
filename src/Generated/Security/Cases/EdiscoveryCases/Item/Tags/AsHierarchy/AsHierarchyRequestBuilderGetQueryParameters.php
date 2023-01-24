@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\AsH
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function asHierarchy
+*/
 class AsHierarchyRequestBuilderGetQueryParameters 
 {
     /**

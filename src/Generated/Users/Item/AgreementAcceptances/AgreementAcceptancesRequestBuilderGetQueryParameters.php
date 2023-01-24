@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\AgreementAcceptances;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the signed-in user's agreementAcceptance objects.
+*/
 class AgreementAcceptancesRequestBuilderGetQueryParameters 
 {
     /**

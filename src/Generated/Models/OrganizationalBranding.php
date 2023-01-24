@@ -55,7 +55,7 @@ class OrganizationalBranding extends OrganizationalBrandingProperties implements
 
     /**
      * Sets the localizations property value. Add different branding based on a locale.
-     *  @param array<OrganizationalBrandingLocalization>|null $value Value to set for the localizations property.
+     * @param array<OrganizationalBrandingLocalization>|null $value Value to set for the localizations property.
     */
     public function setLocalizations(?array $value): void {
         $this->getBackingStore()->set('localizations', $value);

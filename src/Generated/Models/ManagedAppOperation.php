@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Represents an operation applied against an app registration.
+*/
 class ManagedAppOperation extends Entity implements Parsable 
 {
     /**
@@ -85,7 +88,7 @@ class ManagedAppOperation extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The operation name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -93,7 +96,7 @@ class ManagedAppOperation extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The last time the app operation was modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -101,7 +104,7 @@ class ManagedAppOperation extends Entity implements Parsable
 
     /**
      * Sets the state property value. The current state of the operation
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -109,7 +112,7 @@ class ManagedAppOperation extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

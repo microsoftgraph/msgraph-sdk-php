@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Insights\Shared\Item\Resource;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+*/
 class ResourceRequestBuilderGetQueryParameters 
 {
     /**

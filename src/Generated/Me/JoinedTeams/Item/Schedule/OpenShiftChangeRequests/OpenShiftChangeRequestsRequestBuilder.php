@@ -12,11 +12,13 @@ use Microsoft\Graph\Generated\Models\OpenShiftChangeRequestCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
+*/
 class OpenShiftChangeRequestsRequestBuilder 
 {
     /**
@@ -57,6 +59,7 @@ class OpenShiftChangeRequestsRequestBuilder
      * @param OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/openshiftchangerequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftChangeRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,6 +80,7 @@ class OpenShiftChangeRequestsRequestBuilder
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null, ?ResponseHandler $responseHandler = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -101,10 +105,10 @@ class OpenShiftChangeRequestsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
@@ -127,10 +131,10 @@ class OpenShiftChangeRequestsRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

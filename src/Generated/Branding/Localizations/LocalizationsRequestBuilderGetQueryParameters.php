@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Branding\Localizations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve all localization branding objects, including the default branding.
+*/
 class LocalizationsRequestBuilderGetQueryParameters 
 {
     /**

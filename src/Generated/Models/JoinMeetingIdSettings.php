@@ -110,7 +110,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isPasscodeRequired property value. Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
-     *  @param bool|null $value Value to set for the isPasscodeRequired property.
+     * @param bool|null $value Value to set for the isPasscodeRequired property.
     */
     public function setIsPasscodeRequired(?bool $value): void {
         $this->getBackingStore()->set('isPasscodeRequired', $value);
@@ -134,7 +134,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the joinMeetingId property value. The meeting ID to be used to join a meeting. Optional. Read-only.
-     *  @param string|null $value Value to set for the joinMeetingId property.
+     * @param string|null $value Value to set for the joinMeetingId property.
     */
     public function setJoinMeetingId(?string $value): void {
         $this->getBackingStore()->set('joinMeetingId', $value);
@@ -142,7 +142,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class JoinMeetingIdSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the passcode property value. The passcode to join a meeting.  Optional. Read-only.
-     *  @param string|null $value Value to set for the passcode property.
+     * @param string|null $value Value to set for the passcode property.
     */
     public function setPasscode(?string $value): void {
         $this->getBackingStore()->set('passcode', $value);

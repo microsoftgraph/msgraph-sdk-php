@@ -125,7 +125,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-     *  @param string|null $value Value to set for the customerId property.
+     * @param string|null $value Value to set for the customerId property.
     */
     public function setCustomerId(?string $value): void {
         $this->getBackingStore()->set('customerId', $value);
@@ -133,7 +133,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment
-     *  @param array<BookingQuestionAnswer>|null $value Value to set for the customQuestionAnswers property.
+     * @param array<BookingQuestionAnswer>|null $value Value to set for the customQuestionAnswers property.
     */
     public function setCustomQuestionAnswers(?array $value): void {
         $this->getBackingStore()->set('customQuestionAnswers', $value);
@@ -141,7 +141,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -149,7 +149,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the location property value. Represents location information for the bookingCustomer who is booking the appointment.
-     *  @param Location|null $value Value to set for the location property.
+     * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -157,7 +157,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the name property value. The customer's name.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -165,7 +165,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-     *  @param string|null $value Value to set for the notes property.
+     * @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
@@ -173,7 +173,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the phone property value. The customer's phone number.
-     *  @param string|null $value Value to set for the phone property.
+     * @param string|null $value Value to set for the phone property.
     */
     public function setPhone(?string $value): void {
         $this->getBackingStore()->set('phone', $value);
@@ -181,7 +181,7 @@ class BookingCustomerInformation extends BookingCustomerInformationBase implemen
 
     /**
      * Sets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     *  @param string|null $value Value to set for the timeZone property.
+     * @param string|null $value Value to set for the timeZone property.
     */
     public function setTimeZone(?string $value): void {
         $this->getBackingStore()->set('timeZone', $value);

@@ -65,7 +65,7 @@ class SingleServicePrincipal extends SubjectSet implements Parsable
 
     /**
      * Sets the description property value. Description of this service principal.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -73,7 +73,7 @@ class SingleServicePrincipal extends SubjectSet implements Parsable
 
     /**
      * Sets the servicePrincipalId property value. ID of the servicePrincipal.
-     *  @param string|null $value Value to set for the servicePrincipalId property.
+     * @param string|null $value Value to set for the servicePrincipalId property.
     */
     public function setServicePrincipalId(?string $value): void {
         $this->getBackingStore()->set('servicePrincipalId', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityProviders\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties of an existing identityProvider.
+*/
 class IdentityProviderItemRequestBuilderGetQueryParameters 
 {
     /**

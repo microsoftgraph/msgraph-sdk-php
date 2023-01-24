@@ -120,7 +120,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
-     *  @param FileHash|null $value Value to set for the fileHash property.
+     * @param FileHash|null $value Value to set for the fileHash property.
     */
     public function setFileHash(?FileHash $value): void {
         $this->getBackingStore()->set('fileHash', $value);
@@ -144,7 +144,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. File name (without path).
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -152,7 +152,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the path property value. Full file path of the file/imageFile.
-     *  @param string|null $value Value to set for the path property.
+     * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {
         $this->getBackingStore()->set('path', $value);
@@ -168,7 +168,7 @@ class FileSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the riskScore property value. Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
-     *  @param string|null $value Value to set for the riskScore property.
+     * @param string|null $value Value to set for the riskScore property.
     */
     public function setRiskScore(?string $value): void {
         $this->getBackingStore()->set('riskScore', $value);

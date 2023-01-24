@@ -120,7 +120,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hitsContainers property value. A collection of search results.
-     *  @param array<SearchHitsContainer>|null $value Value to set for the hitsContainers property.
+     * @param array<SearchHitsContainer>|null $value Value to set for the hitsContainers property.
     */
     public function setHitsContainers(?array $value): void {
         $this->getBackingStore()->set('hitsContainers', $value);
@@ -144,7 +144,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the queryAlterationResponse property value. Provides information related to spelling corrections in the alteration response.
-     *  @param AlterationResponse|null $value Value to set for the queryAlterationResponse property.
+     * @param AlterationResponse|null $value Value to set for the queryAlterationResponse property.
     */
     public function setQueryAlterationResponse(?AlterationResponse $value): void {
         $this->getBackingStore()->set('queryAlterationResponse', $value);
@@ -160,7 +160,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resultTemplates property value. A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
-     *  @param ResultTemplateDictionary|null $value Value to set for the resultTemplates property.
+     * @param ResultTemplateDictionary|null $value Value to set for the resultTemplates property.
     */
     public function setResultTemplates(?ResultTemplateDictionary $value): void {
         $this->getBackingStore()->set('resultTemplates', $value);
@@ -168,7 +168,7 @@ class SearchResponse implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the searchTerms property value. Contains the search terms sent in the initial search query.
-     *  @param array<string>|null $value Value to set for the searchTerms property.
+     * @param array<string>|null $value Value to set for the searchTerms property.
     */
     public function setSearchTerms(?array $value): void {
         $this->getBackingStore()->set('searchTerms', $value);

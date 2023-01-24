@@ -55,7 +55,7 @@ class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Parsable
 
     /**
      * Sets the daylightBias property value. The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
-     *  @param int|null $value Value to set for the daylightBias property.
+     * @param int|null $value Value to set for the daylightBias property.
     */
     public function setDaylightBias(?int $value): void {
         $this->getBackingStore()->set('daylightBias', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Members\Item\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Delete ref of navigation property members for groups
+*/
 class RefRequestBuilderDeleteQueryParameters 
 {
     /**

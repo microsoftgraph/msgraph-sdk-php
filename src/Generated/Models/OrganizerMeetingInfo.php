@@ -55,7 +55,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * Sets the organizer property value. The organizer property
-     *  @param IdentitySet|null $value Value to set for the organizer property.
+     * @param IdentitySet|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?IdentitySet $value): void {
         $this->getBackingStore()->set('organizer', $value);

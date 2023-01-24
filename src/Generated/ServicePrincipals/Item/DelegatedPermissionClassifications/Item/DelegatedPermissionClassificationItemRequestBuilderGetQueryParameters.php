@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionCl
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get delegatedPermissionClassifications from servicePrincipals
+*/
 class DelegatedPermissionClassificationItemRequestBuilderGetQueryParameters 
 {
     /**

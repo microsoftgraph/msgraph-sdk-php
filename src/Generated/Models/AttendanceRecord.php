@@ -94,7 +94,7 @@ class AttendanceRecord extends Entity implements Parsable
 
     /**
      * Sets the attendanceIntervals property value. List of time periods between joining and leaving a meeting.
-     *  @param array<AttendanceInterval>|null $value Value to set for the attendanceIntervals property.
+     * @param array<AttendanceInterval>|null $value Value to set for the attendanceIntervals property.
     */
     public function setAttendanceIntervals(?array $value): void {
         $this->getBackingStore()->set('attendanceIntervals', $value);
@@ -102,7 +102,7 @@ class AttendanceRecord extends Entity implements Parsable
 
     /**
      * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -110,7 +110,7 @@ class AttendanceRecord extends Entity implements Parsable
 
     /**
      * Sets the identity property value. Identity of the user associated with this atttendance record.
-     *  @param Identity|null $value Value to set for the identity property.
+     * @param Identity|null $value Value to set for the identity property.
     */
     public function setIdentity(?Identity $value): void {
         $this->getBackingStore()->set('identity', $value);
@@ -118,7 +118,7 @@ class AttendanceRecord extends Entity implements Parsable
 
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
-     *  @param string|null $value Value to set for the role property.
+     * @param string|null $value Value to set for the role property.
     */
     public function setRole(?string $value): void {
         $this->getBackingStore()->set('role', $value);
@@ -126,7 +126,7 @@ class AttendanceRecord extends Entity implements Parsable
 
     /**
      * Sets the totalAttendanceInSeconds property value. Total duration of the attendances in seconds.
-     *  @param int|null $value Value to set for the totalAttendanceInSeconds property.
+     * @param int|null $value Value to set for the totalAttendanceInSeconds property.
     */
     public function setTotalAttendanceInSeconds(?int $value): void {
         $this->getBackingStore()->set('totalAttendanceInSeconds', $value);

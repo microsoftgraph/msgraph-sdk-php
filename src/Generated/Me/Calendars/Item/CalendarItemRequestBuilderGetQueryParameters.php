@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Calendars\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's calendars. Read-only. Nullable.
+*/
 class CalendarItemRequestBuilderGetQueryParameters 
 {
     /**

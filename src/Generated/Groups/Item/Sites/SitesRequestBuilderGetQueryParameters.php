@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of SharePoint sites in this group. Access the default site with /sites/root.
+*/
 class SitesRequestBuilderGetQueryParameters 
 {
     /**

@@ -66,7 +66,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
 
     /**
      * Sets the group property value. The group property
-     *  @param Group|null $value Value to set for the group property.
+     * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
         $this->getBackingStore()->set('group', $value);
@@ -74,7 +74,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     *  @param SourceType|null $value Value to set for the includedSources property.
+     * @param SourceType|null $value Value to set for the includedSources property.
     */
     public function setIncludedSources(?SourceType $value): void {
         $this->getBackingStore()->set('includedSources', $value);

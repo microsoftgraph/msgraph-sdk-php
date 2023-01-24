@@ -374,7 +374,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
-     *  @param bool|null $value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
+     * @param bool|null $value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
     */
     public function setAccountsBlockAddingNonMicrosoftAccountEmail(?bool $value): void {
         $this->getBackingStore()->set('accountsBlockAddingNonMicrosoftAccountEmail', $value);
@@ -382,7 +382,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     *  @param bool|null $value Value to set for the applyOnlyToWindows81 property.
+     * @param bool|null $value Value to set for the applyOnlyToWindows81 property.
     */
     public function setApplyOnlyToWindows81(?bool $value): void {
         $this->getBackingStore()->set('applyOnlyToWindows81', $value);
@@ -390,7 +390,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
-     *  @param bool|null $value Value to set for the browserBlockAutofill property.
+     * @param bool|null $value Value to set for the browserBlockAutofill property.
     */
     public function setBrowserBlockAutofill(?bool $value): void {
         $this->getBackingStore()->set('browserBlockAutofill', $value);
@@ -398,7 +398,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
-     *  @param bool|null $value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
+     * @param bool|null $value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
     */
     public function setBrowserBlockAutomaticDetectionOfIntranetSites(?bool $value): void {
         $this->getBackingStore()->set('browserBlockAutomaticDetectionOfIntranetSites', $value);
@@ -406,7 +406,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
-     *  @param bool|null $value Value to set for the browserBlockEnterpriseModeAccess property.
+     * @param bool|null $value Value to set for the browserBlockEnterpriseModeAccess property.
     */
     public function setBrowserBlockEnterpriseModeAccess(?bool $value): void {
         $this->getBackingStore()->set('browserBlockEnterpriseModeAccess', $value);
@@ -414,7 +414,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
-     *  @param bool|null $value Value to set for the browserBlockJavaScript property.
+     * @param bool|null $value Value to set for the browserBlockJavaScript property.
     */
     public function setBrowserBlockJavaScript(?bool $value): void {
         $this->getBackingStore()->set('browserBlockJavaScript', $value);
@@ -422,7 +422,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
-     *  @param bool|null $value Value to set for the browserBlockPlugins property.
+     * @param bool|null $value Value to set for the browserBlockPlugins property.
     */
     public function setBrowserBlockPlugins(?bool $value): void {
         $this->getBackingStore()->set('browserBlockPlugins', $value);
@@ -430,7 +430,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
-     *  @param bool|null $value Value to set for the browserBlockPopups property.
+     * @param bool|null $value Value to set for the browserBlockPopups property.
     */
     public function setBrowserBlockPopups(?bool $value): void {
         $this->getBackingStore()->set('browserBlockPopups', $value);
@@ -438,7 +438,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
-     *  @param bool|null $value Value to set for the browserBlockSendingDoNotTrackHeader property.
+     * @param bool|null $value Value to set for the browserBlockSendingDoNotTrackHeader property.
     */
     public function setBrowserBlockSendingDoNotTrackHeader(?bool $value): void {
         $this->getBackingStore()->set('browserBlockSendingDoNotTrackHeader', $value);
@@ -446,7 +446,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
-     *  @param bool|null $value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
+     * @param bool|null $value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
     */
     public function setBrowserBlockSingleWordEntryOnIntranetSites(?bool $value): void {
         $this->getBackingStore()->set('browserBlockSingleWordEntryOnIntranetSites', $value);
@@ -454,7 +454,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
-     *  @param string|null $value Value to set for the browserEnterpriseModeSiteListLocation property.
+     * @param string|null $value Value to set for the browserEnterpriseModeSiteListLocation property.
     */
     public function setBrowserEnterpriseModeSiteListLocation(?string $value): void {
         $this->getBackingStore()->set('browserEnterpriseModeSiteListLocation', $value);
@@ -462,7 +462,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
-     *  @param InternetSiteSecurityLevel|null $value Value to set for the browserInternetSecurityLevel property.
+     * @param InternetSiteSecurityLevel|null $value Value to set for the browserInternetSecurityLevel property.
     */
     public function setBrowserInternetSecurityLevel(?InternetSiteSecurityLevel $value): void {
         $this->getBackingStore()->set('browserInternetSecurityLevel', $value);
@@ -470,7 +470,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
-     *  @param SiteSecurityLevel|null $value Value to set for the browserIntranetSecurityLevel property.
+     * @param SiteSecurityLevel|null $value Value to set for the browserIntranetSecurityLevel property.
     */
     public function setBrowserIntranetSecurityLevel(?SiteSecurityLevel $value): void {
         $this->getBackingStore()->set('browserIntranetSecurityLevel', $value);
@@ -478,7 +478,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
-     *  @param string|null $value Value to set for the browserLoggingReportLocation property.
+     * @param string|null $value Value to set for the browserLoggingReportLocation property.
     */
     public function setBrowserLoggingReportLocation(?string $value): void {
         $this->getBackingStore()->set('browserLoggingReportLocation', $value);
@@ -486,7 +486,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
-     *  @param bool|null $value Value to set for the browserRequireFirewall property.
+     * @param bool|null $value Value to set for the browserRequireFirewall property.
     */
     public function setBrowserRequireFirewall(?bool $value): void {
         $this->getBackingStore()->set('browserRequireFirewall', $value);
@@ -494,7 +494,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
-     *  @param bool|null $value Value to set for the browserRequireFraudWarning property.
+     * @param bool|null $value Value to set for the browserRequireFraudWarning property.
     */
     public function setBrowserRequireFraudWarning(?bool $value): void {
         $this->getBackingStore()->set('browserRequireFraudWarning', $value);
@@ -502,7 +502,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
-     *  @param bool|null $value Value to set for the browserRequireHighSecurityForRestrictedSites property.
+     * @param bool|null $value Value to set for the browserRequireHighSecurityForRestrictedSites property.
     */
     public function setBrowserRequireHighSecurityForRestrictedSites(?bool $value): void {
         $this->getBackingStore()->set('browserRequireHighSecurityForRestrictedSites', $value);
@@ -510,7 +510,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
-     *  @param bool|null $value Value to set for the browserRequireSmartScreen property.
+     * @param bool|null $value Value to set for the browserRequireSmartScreen property.
     */
     public function setBrowserRequireSmartScreen(?bool $value): void {
         $this->getBackingStore()->set('browserRequireSmartScreen', $value);
@@ -518,7 +518,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
-     *  @param SiteSecurityLevel|null $value Value to set for the browserTrustedSitesSecurityLevel property.
+     * @param SiteSecurityLevel|null $value Value to set for the browserTrustedSitesSecurityLevel property.
     */
     public function setBrowserTrustedSitesSecurityLevel(?SiteSecurityLevel $value): void {
         $this->getBackingStore()->set('browserTrustedSitesSecurityLevel', $value);
@@ -526,7 +526,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     *  @param bool|null $value Value to set for the cellularBlockDataRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockDataRoaming property.
     */
     public function setCellularBlockDataRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockDataRoaming', $value);
@@ -534,7 +534,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
-     *  @param bool|null $value Value to set for the diagnosticsBlockDataSubmission property.
+     * @param bool|null $value Value to set for the diagnosticsBlockDataSubmission property.
     */
     public function setDiagnosticsBlockDataSubmission(?bool $value): void {
         $this->getBackingStore()->set('diagnosticsBlockDataSubmission', $value);
@@ -542,7 +542,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
-     *  @param bool|null $value Value to set for the passwordBlockPicturePasswordAndPin property.
+     * @param bool|null $value Value to set for the passwordBlockPicturePasswordAndPin property.
     */
     public function setPasswordBlockPicturePasswordAndPin(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockPicturePasswordAndPin', $value);
@@ -550,7 +550,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -558,7 +558,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -566,7 +566,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -574,7 +574,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
     public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
@@ -582,7 +582,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -590,7 +590,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -598,7 +598,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
-     *  @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
+     * @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
     */
     public function setPasswordSignInFailureCountBeforeFactoryReset(?int $value): void {
         $this->getBackingStore()->set('passwordSignInFailureCountBeforeFactoryReset', $value);
@@ -606,7 +606,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
-     *  @param bool|null $value Value to set for the storageRequireDeviceEncryption property.
+     * @param bool|null $value Value to set for the storageRequireDeviceEncryption property.
     */
     public function setStorageRequireDeviceEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireDeviceEncryption', $value);
@@ -614,7 +614,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
-     *  @param bool|null $value Value to set for the updatesRequireAutomaticUpdates property.
+     * @param bool|null $value Value to set for the updatesRequireAutomaticUpdates property.
     */
     public function setUpdatesRequireAutomaticUpdates(?bool $value): void {
         $this->getBackingStore()->set('updatesRequireAutomaticUpdates', $value);
@@ -622,7 +622,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
-     *  @param WindowsUserAccountControlSettings|null $value Value to set for the userAccountControlSettings property.
+     * @param WindowsUserAccountControlSettings|null $value Value to set for the userAccountControlSettings property.
     */
     public function setUserAccountControlSettings(?WindowsUserAccountControlSettings $value): void {
         $this->getBackingStore()->set('userAccountControlSettings', $value);
@@ -630,7 +630,7 @@ class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the workFoldersUrl property value. The work folders url.
-     *  @param string|null $value Value to set for the workFoldersUrl property.
+     * @param string|null $value Value to set for the workFoldersUrl property.
     */
     public function setWorkFoldersUrl(?string $value): void {
         $this->getBackingStore()->set('workFoldersUrl', $value);

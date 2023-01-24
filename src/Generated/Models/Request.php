@@ -114,7 +114,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the approvalId property value. The identifier of the approval of the request.
-     *  @param string|null $value Value to set for the approvalId property.
+     * @param string|null $value Value to set for the approvalId property.
     */
     public function setApprovalId(?string $value): void {
         $this->getBackingStore()->set('approvalId', $value);
@@ -122,7 +122,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the completedDateTime property value. The request completion date time.
-     *  @param DateTime|null $value Value to set for the completedDateTime property.
+     * @param DateTime|null $value Value to set for the completedDateTime property.
     */
     public function setCompletedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('completedDateTime', $value);
@@ -130,7 +130,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The principal that created the request.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -138,7 +138,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The request creation date time.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -146,7 +146,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the customData property value. Free text field to define any custom data for the request. Not used.
-     *  @param string|null $value Value to set for the customData property.
+     * @param string|null $value Value to set for the customData property.
     */
     public function setCustomData(?string $value): void {
         $this->getBackingStore()->set('customData', $value);
@@ -154,7 +154,7 @@ class Request extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);

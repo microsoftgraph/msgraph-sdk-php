@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Compliance;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get compliance
+*/
 class ComplianceRequestBuilderGetQueryParameters 
 {
     /**

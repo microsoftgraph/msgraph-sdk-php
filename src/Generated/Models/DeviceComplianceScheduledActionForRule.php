@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Scheduled Action for Rule
+*/
 class DeviceComplianceScheduledActionForRule extends Entity implements Parsable 
 {
     /**
@@ -64,7 +67,7 @@ class DeviceComplianceScheduledActionForRule extends Entity implements Parsable
 
     /**
      * Sets the ruleName property value. Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
-     *  @param string|null $value Value to set for the ruleName property.
+     * @param string|null $value Value to set for the ruleName property.
     */
     public function setRuleName(?string $value): void {
         $this->getBackingStore()->set('ruleName', $value);
@@ -72,7 +75,7 @@ class DeviceComplianceScheduledActionForRule extends Entity implements Parsable
 
     /**
      * Sets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     *  @param array<DeviceComplianceActionItem>|null $value Value to set for the scheduledActionConfigurations property.
+     * @param array<DeviceComplianceActionItem>|null $value Value to set for the scheduledActionConfigurations property.
     */
     public function setScheduledActionConfigurations(?array $value): void {
         $this->getBackingStore()->set('scheduledActionConfigurations', $value);

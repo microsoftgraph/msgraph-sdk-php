@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's calendar groups. Read-only. Nullable.
+*/
 class CalendarGroupItemRequestBuilderGetQueryParameters 
 {
     /**

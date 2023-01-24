@@ -54,7 +54,7 @@ class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult imp
 
     /**
      * Sets the userPrincipalName property value. User principal name of the user to be deleted
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

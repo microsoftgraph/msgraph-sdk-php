@@ -65,7 +65,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
 
     /**
      * Sets the durationUntilExternalUserDeletedAfterBlocked property value. If externalUserLifecycleAction is blockSignInAndDelete, the duration, typically a number of days, after an external user is blocked from sign in before their account is deleted.
-     *  @param DateInterval|null $value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
+     * @param DateInterval|null $value Value to set for the durationUntilExternalUserDeletedAfterBlocked property.
     */
     public function setDurationUntilExternalUserDeletedAfterBlocked(?DateInterval $value): void {
         $this->getBackingStore()->set('durationUntilExternalUserDeletedAfterBlocked', $value);
@@ -73,7 +73,7 @@ class EntitlementManagementSettings extends Entity implements Parsable
 
     /**
      * Sets the externalUserLifecycleAction property value. Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
-     *  @param AccessPackageExternalUserLifecycleAction|null $value Value to set for the externalUserLifecycleAction property.
+     * @param AccessPackageExternalUserLifecycleAction|null $value Value to set for the externalUserLifecycleAction property.
     */
     public function setExternalUserLifecycleAction(?AccessPackageExternalUserLifecycleAction $value): void {
         $this->getBackingStore()->set('externalUserLifecycleAction', $value);

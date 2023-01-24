@@ -131,7 +131,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endDate property value. The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
-     *  @param Date|null $value Value to set for the endDate property.
+     * @param Date|null $value Value to set for the endDate property.
     */
     public function setEndDate(?Date $value): void {
         $this->getBackingStore()->set('endDate', $value);
@@ -155,7 +155,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the numberOfOccurrences property value. The number of times to repeat the event. Required and must be positive if type is numbered.
-     *  @param int|null $value Value to set for the numberOfOccurrences property.
+     * @param int|null $value Value to set for the numberOfOccurrences property.
     */
     public function setNumberOfOccurrences(?int $value): void {
         $this->getBackingStore()->set('numberOfOccurrences', $value);
@@ -163,7 +163,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -171,7 +171,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the recurrenceTimeZone property value. Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.
-     *  @param string|null $value Value to set for the recurrenceTimeZone property.
+     * @param string|null $value Value to set for the recurrenceTimeZone property.
     */
     public function setRecurrenceTimeZone(?string $value): void {
         $this->getBackingStore()->set('recurrenceTimeZone', $value);
@@ -179,7 +179,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDate property value. The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
-     *  @param Date|null $value Value to set for the startDate property.
+     * @param Date|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Date $value): void {
         $this->getBackingStore()->set('startDate', $value);
@@ -187,7 +187,7 @@ class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     *  @param RecurrenceRangeType|null $value Value to set for the type property.
+     * @param RecurrenceRangeType|null $value Value to set for the type property.
     */
     public function setType(?RecurrenceRangeType $value): void {
         $this->getBackingStore()->set('type', $value);

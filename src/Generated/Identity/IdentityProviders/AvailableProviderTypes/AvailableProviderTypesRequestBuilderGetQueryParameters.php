@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Identity\IdentityProviders\AvailableProvider
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function availableProviderTypes
+*/
 class AvailableProviderTypesRequestBuilderGetQueryParameters 
 {
     /**

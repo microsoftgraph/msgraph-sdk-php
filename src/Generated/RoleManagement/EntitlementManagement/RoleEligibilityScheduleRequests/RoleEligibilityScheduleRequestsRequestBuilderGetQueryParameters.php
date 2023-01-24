@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEli
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
+*/
 class RoleEligibilityScheduleRequestsRequestBuilderGetQueryParameters 
 {
     /**

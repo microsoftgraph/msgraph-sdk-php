@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function additionalAccess
+*/
 class AdditionalAccessRequestBuilderGetQueryParameters 
 {
     /**

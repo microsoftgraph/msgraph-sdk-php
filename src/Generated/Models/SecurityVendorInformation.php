@@ -120,7 +120,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -144,7 +144,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the provider property value. Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
-     *  @param string|null $value Value to set for the provider property.
+     * @param string|null $value Value to set for the provider property.
     */
     public function setProvider(?string $value): void {
         $this->getBackingStore()->set('provider', $value);
@@ -152,7 +152,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the providerVersion property value. Version of the provider or subprovider, if it exists, that generated the alert. Required
-     *  @param string|null $value Value to set for the providerVersion property.
+     * @param string|null $value Value to set for the providerVersion property.
     */
     public function setProviderVersion(?string $value): void {
         $this->getBackingStore()->set('providerVersion', $value);
@@ -160,7 +160,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the subProvider property value. Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
-     *  @param string|null $value Value to set for the subProvider property.
+     * @param string|null $value Value to set for the subProvider property.
     */
     public function setSubProvider(?string $value): void {
         $this->getBackingStore()->set('subProvider', $value);
@@ -168,7 +168,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the vendor property value. Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
-     *  @param string|null $value Value to set for the vendor property.
+     * @param string|null $value Value to set for the vendor property.
     */
     public function setVendor(?string $value): void {
         $this->getBackingStore()->set('vendor', $value);

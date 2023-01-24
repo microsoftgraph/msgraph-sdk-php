@@ -55,7 +55,7 @@ class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInst
 
     /**
      * Sets the scope property value. Details of the scope this role is associated with.
-     *  @param AccessReviewInstanceDecisionItemResource|null $value Value to set for the scope property.
+     * @param AccessReviewInstanceDecisionItemResource|null $value Value to set for the scope property.
     */
     public function setScope(?AccessReviewInstanceDecisionItemResource $value): void {
         $this->getBackingStore()->set('scope', $value);

@@ -54,7 +54,7 @@ class Todo extends Entity implements Parsable
 
     /**
      * Sets the lists property value. The task lists in the users mailbox.
-     *  @param array<TodoTaskList>|null $value Value to set for the lists property.
+     * @param array<TodoTaskList>|null $value Value to set for the lists property.
     */
     public function setLists(?array $value): void {
         $this->getBackingStore()->set('lists', $value);

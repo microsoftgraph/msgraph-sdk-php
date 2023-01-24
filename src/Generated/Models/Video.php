@@ -180,7 +180,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -188,7 +188,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audioBitsPerSample property value. Number of audio bits per sample.
-     *  @param int|null $value Value to set for the audioBitsPerSample property.
+     * @param int|null $value Value to set for the audioBitsPerSample property.
     */
     public function setAudioBitsPerSample(?int $value): void {
         $this->getBackingStore()->set('audioBitsPerSample', $value);
@@ -196,7 +196,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audioChannels property value. Number of audio channels.
-     *  @param int|null $value Value to set for the audioChannels property.
+     * @param int|null $value Value to set for the audioChannels property.
     */
     public function setAudioChannels(?int $value): void {
         $this->getBackingStore()->set('audioChannels', $value);
@@ -204,7 +204,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
-     *  @param string|null $value Value to set for the audioFormat property.
+     * @param string|null $value Value to set for the audioFormat property.
     */
     public function setAudioFormat(?string $value): void {
         $this->getBackingStore()->set('audioFormat', $value);
@@ -212,7 +212,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the audioSamplesPerSecond property value. Number of audio samples per second.
-     *  @param int|null $value Value to set for the audioSamplesPerSecond property.
+     * @param int|null $value Value to set for the audioSamplesPerSecond property.
     */
     public function setAudioSamplesPerSecond(?int $value): void {
         $this->getBackingStore()->set('audioSamplesPerSecond', $value);
@@ -220,7 +220,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -228,7 +228,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the bitrate property value. Bit rate of the video in bits per second.
-     *  @param int|null $value Value to set for the bitrate property.
+     * @param int|null $value Value to set for the bitrate property.
     */
     public function setBitrate(?int $value): void {
         $this->getBackingStore()->set('bitrate', $value);
@@ -236,7 +236,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the duration property value. Duration of the file in milliseconds.
-     *  @param int|null $value Value to set for the duration property.
+     * @param int|null $value Value to set for the duration property.
     */
     public function setDuration(?int $value): void {
         $this->getBackingStore()->set('duration', $value);
@@ -244,7 +244,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fourCC property value. 'Four character code' name of the video format.
-     *  @param string|null $value Value to set for the fourCC property.
+     * @param string|null $value Value to set for the fourCC property.
     */
     public function setFourCC(?string $value): void {
         $this->getBackingStore()->set('fourCC', $value);
@@ -252,7 +252,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the frameRate property value. Frame rate of the video.
-     *  @param float|null $value Value to set for the frameRate property.
+     * @param float|null $value Value to set for the frameRate property.
     */
     public function setFrameRate(?float $value): void {
         $this->getBackingStore()->set('frameRate', $value);
@@ -260,7 +260,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the height property value. Height of the video, in pixels.
-     *  @param int|null $value Value to set for the height property.
+     * @param int|null $value Value to set for the height property.
     */
     public function setHeight(?int $value): void {
         $this->getBackingStore()->set('height', $value);
@@ -268,7 +268,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -276,7 +276,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the width property value. Width of the video, in pixels.
-     *  @param int|null $value Value to set for the width property.
+     * @param int|null $value Value to set for the width property.
     */
     public function setWidth(?int $value): void {
         $this->getBackingStore()->set('width', $value);

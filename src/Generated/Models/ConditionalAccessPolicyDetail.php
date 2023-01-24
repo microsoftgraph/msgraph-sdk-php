@@ -110,7 +110,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the conditions property value. The conditions property
-     *  @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
+     * @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
     */
     public function setConditions(?ConditionalAccessConditionSet $value): void {
         $this->getBackingStore()->set('conditions', $value);
@@ -134,7 +134,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the grantControls property value. Represents grant controls that must be fulfilled for the policy.
-     *  @param ConditionalAccessGrantControls|null $value Value to set for the grantControls property.
+     * @param ConditionalAccessGrantControls|null $value Value to set for the grantControls property.
     */
     public function setGrantControls(?ConditionalAccessGrantControls $value): void {
         $this->getBackingStore()->set('grantControls', $value);
@@ -142,7 +142,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the sessionControls property value. Represents a complex type of session controls that is enforced after sign-in.
-     *  @param ConditionalAccessSessionControls|null $value Value to set for the sessionControls property.
+     * @param ConditionalAccessSessionControls|null $value Value to set for the sessionControls property.
     */
     public function setSessionControls(?ConditionalAccessSessionControls $value): void {
         $this->getBackingStore()->set('sessionControls', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Returns a list of case ediscoveryCustodian objects for this case.
+*/
 class EdiscoveryCustodianItemRequestBuilderGetQueryParameters 
 {
     /**

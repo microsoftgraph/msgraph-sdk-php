@@ -120,7 +120,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -144,7 +144,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -160,7 +160,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the theme property value. The theme property
-     *  @param ScheduleEntityTheme|null $value Value to set for the theme property.
+     * @param ScheduleEntityTheme|null $value Value to set for the theme property.
     */
     public function setTheme(?ScheduleEntityTheme $value): void {
         $this->getBackingStore()->set('theme', $value);

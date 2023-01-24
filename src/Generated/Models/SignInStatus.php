@@ -110,7 +110,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalDetails property value. Provides additional details on the sign-in activity
-     *  @param string|null $value Value to set for the additionalDetails property.
+     * @param string|null $value Value to set for the additionalDetails property.
     */
     public function setAdditionalDetails(?string $value): void {
         $this->getBackingStore()->set('additionalDetails', $value);
@@ -126,7 +126,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the errorCode property value. Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
-     *  @param int|null $value Value to set for the errorCode property.
+     * @param int|null $value Value to set for the errorCode property.
     */
     public function setErrorCode(?int $value): void {
         $this->getBackingStore()->set('errorCode', $value);
@@ -142,7 +142,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
-     *  @param string|null $value Value to set for the failureReason property.
+     * @param string|null $value Value to set for the failureReason property.
     */
     public function setFailureReason(?string $value): void {
         $this->getBackingStore()->set('failureReason', $value);
@@ -150,7 +150,7 @@ class SignInStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

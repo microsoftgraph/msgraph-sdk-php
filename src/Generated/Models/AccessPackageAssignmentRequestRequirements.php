@@ -150,7 +150,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the allowCustomAssignmentSchedule property value. Indicates whether the requestor is allowed to set a custom schedule.
-     *  @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
+     * @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
     */
     public function setAllowCustomAssignmentSchedule(?bool $value): void {
         $this->getBackingStore()->set('allowCustomAssignmentSchedule', $value);
@@ -166,7 +166,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -174,7 +174,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the isApprovalRequiredForAdd property value. Indicates whether a request to add must be approved by an approver.
-     *  @param bool|null $value Value to set for the isApprovalRequiredForAdd property.
+     * @param bool|null $value Value to set for the isApprovalRequiredForAdd property.
     */
     public function setIsApprovalRequiredForAdd(?bool $value): void {
         $this->getBackingStore()->set('isApprovalRequiredForAdd', $value);
@@ -182,7 +182,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the isApprovalRequiredForUpdate property value. Indicates whether a request to update must be approved by an approver.
-     *  @param bool|null $value Value to set for the isApprovalRequiredForUpdate property.
+     * @param bool|null $value Value to set for the isApprovalRequiredForUpdate property.
     */
     public function setIsApprovalRequiredForUpdate(?bool $value): void {
         $this->getBackingStore()->set('isApprovalRequiredForUpdate', $value);
@@ -190,7 +190,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -198,7 +198,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the policyDescription property value. The description of the policy that the user is trying to request access using.
-     *  @param string|null $value Value to set for the policyDescription property.
+     * @param string|null $value Value to set for the policyDescription property.
     */
     public function setPolicyDescription(?string $value): void {
         $this->getBackingStore()->set('policyDescription', $value);
@@ -206,7 +206,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
-     *  @param string|null $value Value to set for the policyDisplayName property.
+     * @param string|null $value Value to set for the policyDisplayName property.
     */
     public function setPolicyDisplayName(?string $value): void {
         $this->getBackingStore()->set('policyDisplayName', $value);
@@ -214,7 +214,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
-     *  @param string|null $value Value to set for the policyId property.
+     * @param string|null $value Value to set for the policyId property.
     */
     public function setPolicyId(?string $value): void {
         $this->getBackingStore()->set('policyId', $value);
@@ -222,7 +222,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Sets the schedule property value. Schedule restrictions enforced, if any.
-     *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
+     * @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value): void {
         $this->getBackingStore()->set('schedule', $value);

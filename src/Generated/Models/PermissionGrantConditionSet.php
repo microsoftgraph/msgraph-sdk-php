@@ -124,7 +124,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the clientApplicationIds property value. A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
-     *  @param array<string>|null $value Value to set for the clientApplicationIds property.
+     * @param array<string>|null $value Value to set for the clientApplicationIds property.
     */
     public function setClientApplicationIds(?array $value): void {
         $this->getBackingStore()->set('clientApplicationIds', $value);
@@ -132,7 +132,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
-     *  @param array<string>|null $value Value to set for the clientApplicationPublisherIds property.
+     * @param array<string>|null $value Value to set for the clientApplicationPublisherIds property.
     */
     public function setClientApplicationPublisherIds(?array $value): void {
         $this->getBackingStore()->set('clientApplicationPublisherIds', $value);
@@ -140,7 +140,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
-     *  @param bool|null $value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
+     * @param bool|null $value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
     */
     public function setClientApplicationsFromVerifiedPublisherOnly(?bool $value): void {
         $this->getBackingStore()->set('clientApplicationsFromVerifiedPublisherOnly', $value);
@@ -148,7 +148,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the clientApplicationTenantIds property value. A list of Azure Active Directory tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
-     *  @param array<string>|null $value Value to set for the clientApplicationTenantIds property.
+     * @param array<string>|null $value Value to set for the clientApplicationTenantIds property.
     */
     public function setClientApplicationTenantIds(?array $value): void {
         $this->getBackingStore()->set('clientApplicationTenantIds', $value);
@@ -156,7 +156,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
-     *  @param string|null $value Value to set for the permissionClassification property.
+     * @param string|null $value Value to set for the permissionClassification property.
     */
     public function setPermissionClassification(?string $value): void {
         $this->getBackingStore()->set('permissionClassification', $value);
@@ -164,7 +164,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the oauth2PermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all.
-     *  @param array<string>|null $value Value to set for the permissions property.
+     * @param array<string>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value): void {
         $this->getBackingStore()->set('permissions', $value);
@@ -172,7 +172,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
-     *  @param PermissionType|null $value Value to set for the permissionType property.
+     * @param PermissionType|null $value Value to set for the permissionType property.
     */
     public function setPermissionType(?PermissionType $value): void {
         $this->getBackingStore()->set('permissionType', $value);
@@ -180,7 +180,7 @@ class PermissionGrantConditionSet extends Entity implements Parsable
 
     /**
      * Sets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
-     *  @param string|null $value Value to set for the resourceApplication property.
+     * @param string|null $value Value to set for the resourceApplication property.
     */
     public function setResourceApplication(?string $value): void {
         $this->getBackingStore()->set('resourceApplication', $value);

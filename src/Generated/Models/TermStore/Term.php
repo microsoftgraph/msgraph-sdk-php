@@ -127,7 +127,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the children property value. Children of current term.
-     *  @param array<Term>|null $value Value to set for the children property.
+     * @param array<Term>|null $value Value to set for the children property.
     */
     public function setChildren(?array $value): void {
         $this->getBackingStore()->set('children', $value);
@@ -135,7 +135,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of term creation. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -143,7 +143,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the descriptions property value. Description about term that is dependent on the languageTag.
-     *  @param array<LocalizedDescription>|null $value Value to set for the descriptions property.
+     * @param array<LocalizedDescription>|null $value Value to set for the descriptions property.
     */
     public function setDescriptions(?array $value): void {
         $this->getBackingStore()->set('descriptions', $value);
@@ -151,7 +151,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the labels property value. Label metadata for a term.
-     *  @param array<LocalizedLabel>|null $value Value to set for the labels property.
+     * @param array<LocalizedLabel>|null $value Value to set for the labels property.
     */
     public function setLabels(?array $value): void {
         $this->getBackingStore()->set('labels', $value);
@@ -159,7 +159,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Last date and time of term modification. Read-only.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -167,7 +167,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the properties property value. Collection of properties on the term.
-     *  @param array<KeyValue>|null $value Value to set for the properties property.
+     * @param array<KeyValue>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
         $this->getBackingStore()->set('properties', $value);
@@ -175,7 +175,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the relations property value. To indicate which terms are related to the current term as either pinned or reused.
-     *  @param array<Relation>|null $value Value to set for the relations property.
+     * @param array<Relation>|null $value Value to set for the relations property.
     */
     public function setRelations(?array $value): void {
         $this->getBackingStore()->set('relations', $value);
@@ -183,7 +183,7 @@ class Term extends Entity implements Parsable
 
     /**
      * Sets the set property value. The [set] in which the term is created.
-     *  @param Set|null $value Value to set for the set property.
+     * @param Set|null $value Value to set for the set property.
     */
     public function setSet(?Set $value): void {
         $this->getBackingStore()->set('set', $value);

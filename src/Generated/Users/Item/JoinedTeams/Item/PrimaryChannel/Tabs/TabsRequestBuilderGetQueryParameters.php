@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\T
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of tabs in the specified channel within a team. 
+*/
 class TabsRequestBuilderGetQueryParameters 
 {
     /**

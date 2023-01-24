@@ -55,7 +55,7 @@ class TargetManager extends SubjectSet implements Parsable
 
     /**
      * Sets the managerLevel property value. Manager level, between 1 and 4. The direct manager is 1.
-     *  @param int|null $value Value to set for the managerLevel property.
+     * @param int|null $value Value to set for the managerLevel property.
     */
     public function setManagerLevel(?int $value): void {
         $this->getBackingStore()->set('managerLevel', $value);

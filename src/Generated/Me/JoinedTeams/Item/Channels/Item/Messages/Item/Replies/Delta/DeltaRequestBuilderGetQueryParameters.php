@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\I
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function delta
+*/
 class DeltaRequestBuilderGetQueryParameters 
 {
     /**

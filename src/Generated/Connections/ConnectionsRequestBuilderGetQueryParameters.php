@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Connections;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from connections
+*/
 class ConnectionsRequestBuilderGetQueryParameters 
 {
     /**

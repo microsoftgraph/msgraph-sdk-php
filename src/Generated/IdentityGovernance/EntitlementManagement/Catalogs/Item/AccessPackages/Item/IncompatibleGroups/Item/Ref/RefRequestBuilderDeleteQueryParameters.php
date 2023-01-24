@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Cat
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Delete ref of navigation property incompatibleGroups for identityGovernance
+*/
 class RefRequestBuilderDeleteQueryParameters 
 {
     /**

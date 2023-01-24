@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\LastSharedMe
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get lastSharedMethod from users
+*/
 class LastSharedMethodRequestBuilderGetQueryParameters 
 {
     /**

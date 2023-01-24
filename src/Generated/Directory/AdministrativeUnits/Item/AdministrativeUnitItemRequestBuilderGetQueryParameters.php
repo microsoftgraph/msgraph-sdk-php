@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Conceptual container for user and group directory objects.
+*/
 class AdministrativeUnitItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -65,7 +65,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
 
     /**
      * Sets the featureSettings property value. A collection of Microsoft Authenticator settings such as application context and location context, and whether they are enabled for all users or specific users only.
-     *  @param MicrosoftAuthenticatorFeatureSettings|null $value Value to set for the featureSettings property.
+     * @param MicrosoftAuthenticatorFeatureSettings|null $value Value to set for the featureSettings property.
     */
     public function setFeatureSettings(?MicrosoftAuthenticatorFeatureSettings $value): void {
         $this->getBackingStore()->set('featureSettings', $value);
@@ -73,7 +73,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
 
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
-     *  @param array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
+     * @param array<MicrosoftAuthenticatorAuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);

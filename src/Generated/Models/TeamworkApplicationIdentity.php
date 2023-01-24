@@ -55,7 +55,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
 
     /**
      * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
-     *  @param TeamworkApplicationIdentityType|null $value Value to set for the applicationIdentityType property.
+     * @param TeamworkApplicationIdentityType|null $value Value to set for the applicationIdentityType property.
     */
     public function setApplicationIdentityType(?TeamworkApplicationIdentityType $value): void {
         $this->getBackingStore()->set('applicationIdentityType', $value);

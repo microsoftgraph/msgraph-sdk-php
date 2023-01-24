@@ -66,7 +66,7 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
 
     /**
      * Sets the fileName property value. File name associated with the Value property (.xml).
-     *  @param string|null $value Value to set for the fileName property.
+     * @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);
@@ -74,7 +74,7 @@ class OmaSettingStringXml extends OmaSetting implements Parsable
 
     /**
      * Sets the value property value. Value. (UTF8 encoded byte array)
-     *  @param StreamInterface|null $value Value to set for the value property.
+     * @param StreamInterface|null $value Value to set for the value property.
     */
     public function setValue(?StreamInterface $value): void {
         $this->getBackingStore()->set('value', $value);

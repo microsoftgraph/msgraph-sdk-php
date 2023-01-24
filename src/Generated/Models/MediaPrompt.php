@@ -55,7 +55,7 @@ class MediaPrompt extends Prompt implements Parsable
 
     /**
      * Sets the mediaInfo property value. The mediaInfo property
-     *  @param MediaInfo|null $value Value to set for the mediaInfo property.
+     * @param MediaInfo|null $value Value to set for the mediaInfo property.
     */
     public function setMediaInfo(?MediaInfo $value): void {
         $this->getBackingStore()->set('mediaInfo', $value);

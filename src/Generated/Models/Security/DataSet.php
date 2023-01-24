@@ -84,7 +84,7 @@ class DataSet extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The createdBy property
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -92,7 +92,7 @@ class DataSet extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The createdDateTime property
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -100,7 +100,7 @@ class DataSet extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);

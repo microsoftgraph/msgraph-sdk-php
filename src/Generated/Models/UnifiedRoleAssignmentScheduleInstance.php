@@ -115,7 +115,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     *  @param UnifiedRoleEligibilityScheduleInstance|null $value Value to set for the activatedUsing property.
+     * @param UnifiedRoleEligibilityScheduleInstance|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?UnifiedRoleEligibilityScheduleInstance $value): void {
         $this->getBackingStore()->set('activatedUsing', $value);
@@ -123,7 +123,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the assignmentType property.
+     * @param string|null $value Value to set for the assignmentType property.
     */
     public function setAssignmentType(?string $value): void {
         $this->getBackingStore()->set('assignmentType', $value);
@@ -131,7 +131,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the endDateTime property value. The end date of the schedule instance.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -139,7 +139,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the memberType property.
+     * @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value): void {
         $this->getBackingStore()->set('memberType', $value);
@@ -147,7 +147,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the roleAssignmentOriginId property.
+     * @param string|null $value Value to set for the roleAssignmentOriginId property.
     */
     public function setRoleAssignmentOriginId(?string $value): void {
         $this->getBackingStore()->set('roleAssignmentOriginId', $value);
@@ -155,7 +155,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the roleAssignmentScheduleId property.
+     * @param string|null $value Value to set for the roleAssignmentScheduleId property.
     */
     public function setRoleAssignmentScheduleId(?string $value): void {
         $this->getBackingStore()->set('roleAssignmentScheduleId', $value);
@@ -163,7 +163,7 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
 
     /**
      * Sets the startDateTime property value. When this instance starts.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

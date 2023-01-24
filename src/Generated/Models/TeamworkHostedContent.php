@@ -72,7 +72,7 @@ class TeamworkHostedContent extends Entity implements Parsable
 
     /**
      * Sets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
-     *  @param StreamInterface|null $value Value to set for the contentBytes property.
+     * @param StreamInterface|null $value Value to set for the contentBytes property.
     */
     public function setContentBytes(?StreamInterface $value): void {
         $this->getBackingStore()->set('contentBytes', $value);
@@ -80,7 +80,7 @@ class TeamworkHostedContent extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. Write only. Content type. sicj as image/png, image/jpg.
-     *  @param string|null $value Value to set for the contentType property.
+     * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
         $this->getBackingStore()->set('contentType', $value);

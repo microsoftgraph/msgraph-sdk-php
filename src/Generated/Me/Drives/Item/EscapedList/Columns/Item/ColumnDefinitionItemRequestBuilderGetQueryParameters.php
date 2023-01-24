@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Drives\Item\EscapedList\Columns\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of field definitions for this list.
+*/
 class ColumnDefinitionItemRequestBuilderGetQueryParameters 
 {
     /**

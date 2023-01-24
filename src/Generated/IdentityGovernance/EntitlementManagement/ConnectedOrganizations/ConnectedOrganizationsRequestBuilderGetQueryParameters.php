@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of connectedOrganization objects.
+*/
 class ConnectedOrganizationsRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Cate
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Delete ref of navigation property categories for education
+*/
 class RefRequestBuilderDeleteQueryParameters 
 {
     /**

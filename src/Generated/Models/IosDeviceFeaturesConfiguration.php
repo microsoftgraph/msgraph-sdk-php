@@ -95,7 +95,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
     /**
      * Sets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
-     *  @param string|null $value Value to set for the assetTagTemplate property.
+     * @param string|null $value Value to set for the assetTagTemplate property.
     */
     public function setAssetTagTemplate(?string $value): void {
         $this->getBackingStore()->set('assetTagTemplate', $value);
@@ -103,7 +103,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
     /**
      * Sets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-     *  @param array<IosHomeScreenItem>|null $value Value to set for the homeScreenDockIcons property.
+     * @param array<IosHomeScreenItem>|null $value Value to set for the homeScreenDockIcons property.
     */
     public function setHomeScreenDockIcons(?array $value): void {
         $this->getBackingStore()->set('homeScreenDockIcons', $value);
@@ -111,7 +111,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
     /**
      * Sets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-     *  @param array<IosHomeScreenPage>|null $value Value to set for the homeScreenPages property.
+     * @param array<IosHomeScreenPage>|null $value Value to set for the homeScreenPages property.
     */
     public function setHomeScreenPages(?array $value): void {
         $this->getBackingStore()->set('homeScreenPages', $value);
@@ -119,7 +119,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
     /**
      * Sets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     *  @param string|null $value Value to set for the lockScreenFootnote property.
+     * @param string|null $value Value to set for the lockScreenFootnote property.
     */
     public function setLockScreenFootnote(?string $value): void {
         $this->getBackingStore()->set('lockScreenFootnote', $value);
@@ -127,7 +127,7 @@ class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBas
 
     /**
      * Sets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
-     *  @param array<IosNotificationSettings>|null $value Value to set for the notificationSettings property.
+     * @param array<IosNotificationSettings>|null $value Value to set for the notificationSettings property.
     */
     public function setNotificationSettings(?array $value): void {
         $this->getBackingStore()->set('notificationSettings', $value);

@@ -90,7 +90,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the currentPassword property value. The currentPassword property
-     *  @param string|null $value Value to set for the currentPassword property.
+     * @param string|null $value Value to set for the currentPassword property.
     */
     public function setCurrentPassword(?string $value): void {
         $this->getBackingStore()->set('currentPassword', $value);
@@ -114,7 +114,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the newPassword property value. The newPassword property
-     *  @param string|null $value Value to set for the newPassword property.
+     * @param string|null $value Value to set for the newPassword property.
     */
     public function setNewPassword(?string $value): void {
         $this->getBackingStore()->set('newPassword', $value);

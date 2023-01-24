@@ -105,7 +105,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the isDefault property value. Indicates whether this is the user's default section. Read-only.
-     *  @param bool|null $value Value to set for the isDefault property.
+     * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
         $this->getBackingStore()->set('isDefault', $value);
@@ -113,7 +113,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the links property value. Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
-     *  @param SectionLinks|null $value Value to set for the links property.
+     * @param SectionLinks|null $value Value to set for the links property.
     */
     public function setLinks(?SectionLinks $value): void {
         $this->getBackingStore()->set('links', $value);
@@ -121,7 +121,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the pages property value. The collection of pages in the section.  Read-only. Nullable.
-     *  @param array<OnenotePage>|null $value Value to set for the pages property.
+     * @param array<OnenotePage>|null $value Value to set for the pages property.
     */
     public function setPages(?array $value): void {
         $this->getBackingStore()->set('pages', $value);
@@ -129,7 +129,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the pagesUrl property value. The pages endpoint where you can get details for all the pages in the section. Read-only.
-     *  @param string|null $value Value to set for the pagesUrl property.
+     * @param string|null $value Value to set for the pagesUrl property.
     */
     public function setPagesUrl(?string $value): void {
         $this->getBackingStore()->set('pagesUrl', $value);
@@ -137,7 +137,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the section.  Read-only.
-     *  @param Notebook|null $value Value to set for the parentNotebook property.
+     * @param Notebook|null $value Value to set for the parentNotebook property.
     */
     public function setParentNotebook(?Notebook $value): void {
         $this->getBackingStore()->set('parentNotebook', $value);
@@ -145,7 +145,7 @@ class OnenoteSection extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section.  Read-only.
-     *  @param SectionGroup|null $value Value to set for the parentSectionGroup property.
+     * @param SectionGroup|null $value Value to set for the parentSectionGroup property.
     */
     public function setParentSectionGroup(?SectionGroup $value): void {
         $this->getBackingStore()->set('parentSectionGroup', $value);

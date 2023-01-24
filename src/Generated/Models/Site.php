@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Site extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -236,7 +236,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the analytics property value. Analytics about the view activities that took place in this site.
-     *  @param ItemAnalytics|null $value Value to set for the analytics property.
+     * @param ItemAnalytics|null $value Value to set for the analytics property.
     */
     public function setAnalytics(?ItemAnalytics $value): void {
         $this->getBackingStore()->set('analytics', $value);
@@ -244,7 +244,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the columns property value. The collection of column definitions reusable across lists under this site.
-     *  @param array<ColumnDefinition>|null $value Value to set for the columns property.
+     * @param array<ColumnDefinition>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
         $this->getBackingStore()->set('columns', $value);
@@ -252,7 +252,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
-     *  @param array<ContentType>|null $value Value to set for the contentTypes property.
+     * @param array<ContentType>|null $value Value to set for the contentTypes property.
     */
     public function setContentTypes(?array $value): void {
         $this->getBackingStore()->set('contentTypes', $value);
@@ -260,7 +260,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the displayName property value. The full title for the site. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -268,7 +268,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the drive property value. The default drive (document library) for this site.
-     *  @param Drive|null $value Value to set for the drive property.
+     * @param Drive|null $value Value to set for the drive property.
     */
     public function setDrive(?Drive $value): void {
         $this->getBackingStore()->set('drive', $value);
@@ -276,7 +276,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the drives property value. The collection of drives (document libraries) under this site.
-     *  @param array<Drive>|null $value Value to set for the drives property.
+     * @param array<Drive>|null $value Value to set for the drives property.
     */
     public function setDrives(?array $value): void {
         $this->getBackingStore()->set('drives', $value);
@@ -284,7 +284,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the error property value. The error property
-     *  @param PublicError|null $value Value to set for the error property.
+     * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -292,7 +292,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the externalColumns property value. The externalColumns property
-     *  @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
+     * @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
     */
     public function setExternalColumns(?array $value): void {
         $this->getBackingStore()->set('externalColumns', $value);
@@ -300,7 +300,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
-     *  @param array<BaseItem>|null $value Value to set for the items property.
+     * @param array<BaseItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
@@ -308,7 +308,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the lists property value. The collection of lists under this site.
-     *  @param array<EscapedList>|null $value Value to set for the lists property.
+     * @param array<EscapedList>|null $value Value to set for the lists property.
     */
     public function setLists(?array $value): void {
         $this->getBackingStore()->set('lists', $value);
@@ -316,7 +316,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the onenote property value. Calls the OneNote service for notebook related operations.
-     *  @param Onenote|null $value Value to set for the onenote property.
+     * @param Onenote|null $value Value to set for the onenote property.
     */
     public function setOnenote(?Onenote $value): void {
         $this->getBackingStore()->set('onenote', $value);
@@ -324,7 +324,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the operations property value. The collection of long-running operations on the site.
-     *  @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
+     * @param array<RichLongRunningOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -332,7 +332,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.
-     *  @param array<Permission>|null $value Value to set for the permissions property.
+     * @param array<Permission>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value): void {
         $this->getBackingStore()->set('permissions', $value);
@@ -340,7 +340,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
-     *  @param Root|null $value Value to set for the root property.
+     * @param Root|null $value Value to set for the root property.
     */
     public function setRoot(?Root $value): void {
         $this->getBackingStore()->set('root', $value);
@@ -348,7 +348,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     *  @param SharepointIds|null $value Value to set for the sharepointIds property.
+     * @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
     public function setSharepointIds(?SharepointIds $value): void {
         $this->getBackingStore()->set('sharepointIds', $value);
@@ -356,7 +356,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
-     *  @param SiteCollection|null $value Value to set for the siteCollection property.
+     * @param SiteCollection|null $value Value to set for the siteCollection property.
     */
     public function setSiteCollection(?SiteCollection $value): void {
         $this->getBackingStore()->set('siteCollection', $value);
@@ -364,7 +364,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the sites property value. The collection of the sub-sites under this site.
-     *  @param array<Site>|null $value Value to set for the sites property.
+     * @param array<Site>|null $value Value to set for the sites property.
     */
     public function setSites(?array $value): void {
         $this->getBackingStore()->set('sites', $value);
@@ -372,7 +372,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the termStore property value. The default termStore under this site.
-     *  @param Store|null $value Value to set for the termStore property.
+     * @param Store|null $value Value to set for the termStore property.
     */
     public function setTermStore(?Store $value): void {
         $this->getBackingStore()->set('termStore', $value);
@@ -380,7 +380,7 @@ class Site extends BaseItem implements Parsable
 
     /**
      * Sets the termStores property value. The collection of termStores under this site.
-     *  @param array<Store>|null $value Value to set for the termStores property.
+     * @param array<Store>|null $value Value to set for the termStores property.
     */
     public function setTermStores(?array $value): void {
         $this->getBackingStore()->set('termStores', $value);

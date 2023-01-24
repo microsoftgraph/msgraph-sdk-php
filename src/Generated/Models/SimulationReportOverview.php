@@ -120,7 +120,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -144,7 +144,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the recommendedActions property value. List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
-     *  @param array<RecommendedAction>|null $value Value to set for the recommendedActions property.
+     * @param array<RecommendedAction>|null $value Value to set for the recommendedActions property.
     */
     public function setRecommendedActions(?array $value): void {
         $this->getBackingStore()->set('recommendedActions', $value);
@@ -152,7 +152,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the resolvedTargetsCount property value. Number of valid users in the attack simulation and training campaign.
-     *  @param int|null $value Value to set for the resolvedTargetsCount property.
+     * @param int|null $value Value to set for the resolvedTargetsCount property.
     */
     public function setResolvedTargetsCount(?int $value): void {
         $this->getBackingStore()->set('resolvedTargetsCount', $value);
@@ -160,7 +160,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the simulationEventsContent property value. Summary of simulation events in the attack simulation and training campaign.
-     *  @param SimulationEventsContent|null $value Value to set for the simulationEventsContent property.
+     * @param SimulationEventsContent|null $value Value to set for the simulationEventsContent property.
     */
     public function setSimulationEventsContent(?SimulationEventsContent $value): void {
         $this->getBackingStore()->set('simulationEventsContent', $value);
@@ -168,7 +168,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the trainingEventsContent property value. Summary of assigned trainings in the attack simulation and training campaign.
-     *  @param TrainingEventsContent|null $value Value to set for the trainingEventsContent property.
+     * @param TrainingEventsContent|null $value Value to set for the trainingEventsContent property.
     */
     public function setTrainingEventsContent(?TrainingEventsContent $value): void {
         $this->getBackingStore()->set('trainingEventsContent', $value);

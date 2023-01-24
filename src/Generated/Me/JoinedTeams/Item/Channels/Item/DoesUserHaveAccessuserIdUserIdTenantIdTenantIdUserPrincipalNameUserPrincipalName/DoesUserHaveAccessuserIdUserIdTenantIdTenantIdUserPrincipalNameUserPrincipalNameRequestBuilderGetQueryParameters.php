@@ -2,6 +2,9 @@
 
 namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName;
 
+/**
+ * Invoke function doesUserHaveAccess
+*/
 class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters 
 {
     /**

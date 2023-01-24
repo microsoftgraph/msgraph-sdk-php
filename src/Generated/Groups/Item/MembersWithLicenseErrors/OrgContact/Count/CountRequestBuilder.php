@@ -9,11 +9,13 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to count the resources in the collection.
+*/
 class CountRequestBuilder 
 {
     /**
@@ -37,7 +39,7 @@ class CountRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/membersWithLicenseErrors/microsoft.graph.orgContact/$count';
+        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/membersWithLicenseErrors/microsoft.graph.orgContact/$count{?%24search,%24filter}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
     }
@@ -71,10 +73,13 @@ class CountRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "text/plain"]);
+        $requestInfo->addHeader('Accept', "text/plain");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
+            }
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

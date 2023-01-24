@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Shares\Item\Site;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used to access the underlying site
+*/
 class SiteRequestBuilderGetQueryParameters 
 {
     /**

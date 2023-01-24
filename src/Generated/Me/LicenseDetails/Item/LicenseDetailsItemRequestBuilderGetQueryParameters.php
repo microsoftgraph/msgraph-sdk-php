@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\LicenseDetails\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of this user's license details. Read-only.
+*/
 class LicenseDetailsItemRequestBuilderGetQueryParameters 
 {
     /**

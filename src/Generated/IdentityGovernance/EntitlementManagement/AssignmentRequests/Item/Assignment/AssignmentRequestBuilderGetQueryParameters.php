@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+*/
 class AssignmentRequestBuilderGetQueryParameters 
 {
     /**

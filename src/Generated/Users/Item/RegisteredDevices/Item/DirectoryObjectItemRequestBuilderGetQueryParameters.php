@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\RegisteredDevices\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

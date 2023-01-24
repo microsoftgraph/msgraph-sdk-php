@@ -104,7 +104,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
-     *  @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
+     * @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?array $value): void {
         $this->getBackingStore()->set('appliesTo', $value);
@@ -112,7 +112,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. A description for this feature rollout policy.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -120,7 +120,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name for this  feature rollout policy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -128,7 +128,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the feature property value. The feature property
-     *  @param StagedFeatureName|null $value Value to set for the feature property.
+     * @param StagedFeatureName|null $value Value to set for the feature property.
     */
     public function setFeature(?StagedFeatureName $value): void {
         $this->getBackingStore()->set('feature', $value);
@@ -136,7 +136,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
-     *  @param bool|null $value Value to set for the isAppliedToOrganization property.
+     * @param bool|null $value Value to set for the isAppliedToOrganization property.
     */
     public function setIsAppliedToOrganization(?bool $value): void {
         $this->getBackingStore()->set('isAppliedToOrganization', $value);
@@ -144,7 +144,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. Indicates whether the feature rollout is enabled.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);

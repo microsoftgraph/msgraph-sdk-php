@@ -130,7 +130,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the isDescending property value. True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
-     *  @param bool|null $value Value to set for the isDescending property.
+     * @param bool|null $value Value to set for the isDescending property.
     */
     public function setIsDescending(?bool $value): void {
         $this->getBackingStore()->set('isDescending', $value);
@@ -154,7 +154,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the minimumCount property value. The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
-     *  @param int|null $value Value to set for the minimumCount property.
+     * @param int|null $value Value to set for the minimumCount property.
     */
     public function setMinimumCount(?int $value): void {
         $this->getBackingStore()->set('minimumCount', $value);
@@ -162,7 +162,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the prefixFilter property value. A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
-     *  @param string|null $value Value to set for the prefixFilter property.
+     * @param string|null $value Value to set for the prefixFilter property.
     */
     public function setPrefixFilter(?string $value): void {
         $this->getBackingStore()->set('prefixFilter', $value);
@@ -178,7 +178,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
-     *  @param array<BucketAggregationRange>|null $value Value to set for the ranges property.
+     * @param array<BucketAggregationRange>|null $value Value to set for the ranges property.
     */
     public function setRanges(?array $value): void {
         $this->getBackingStore()->set('ranges', $value);
@@ -186,7 +186,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the sortBy property value. The sortBy property
-     *  @param BucketAggregationSortProperty|null $value Value to set for the sortBy property.
+     * @param BucketAggregationSortProperty|null $value Value to set for the sortBy property.
     */
     public function setSortBy(?BucketAggregationSortProperty $value): void {
         $this->getBackingStore()->set('sortBy', $value);

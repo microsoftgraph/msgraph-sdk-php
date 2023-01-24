@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleAccessPackages\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /identityGovernance/entitlementManagement/accessPackages/{accessPackage-id}/incompatibleAccessPackages/{accessPackage-id1}
+*/
 class AccessPackageItemRequestBuilder 
 {
     /**

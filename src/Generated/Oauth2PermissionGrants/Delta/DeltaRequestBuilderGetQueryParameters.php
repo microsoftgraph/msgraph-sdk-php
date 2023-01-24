@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Oauth2PermissionGrants\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function delta
+*/
 class DeltaRequestBuilderGetQueryParameters 
 {
     /**

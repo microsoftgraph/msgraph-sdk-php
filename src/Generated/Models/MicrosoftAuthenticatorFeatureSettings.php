@@ -100,7 +100,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
-     *  @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayAppInformationRequiredState property.
+     * @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayAppInformationRequiredState property.
     */
     public function setDisplayAppInformationRequiredState(?AuthenticationMethodFeatureConfiguration $value): void {
         $this->getBackingStore()->set('displayAppInformationRequiredState', $value);
@@ -124,7 +124,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
-     *  @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayLocationInformationRequiredState property.
+     * @param AuthenticationMethodFeatureConfiguration|null $value Value to set for the displayLocationInformationRequiredState property.
     */
     public function setDisplayLocationInformationRequiredState(?AuthenticationMethodFeatureConfiguration $value): void {
         $this->getBackingStore()->set('displayLocationInformationRequiredState', $value);
@@ -132,7 +132,7 @@ class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Bac
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

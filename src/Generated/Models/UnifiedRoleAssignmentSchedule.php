@@ -84,7 +84,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
 
     /**
      * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
-     *  @param UnifiedRoleEligibilitySchedule|null $value Value to set for the activatedUsing property.
+     * @param UnifiedRoleEligibilitySchedule|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?UnifiedRoleEligibilitySchedule $value): void {
         $this->getBackingStore()->set('activatedUsing', $value);
@@ -92,7 +92,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
 
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the assignmentType property.
+     * @param string|null $value Value to set for the assignmentType property.
     */
     public function setAssignmentType(?string $value): void {
         $this->getBackingStore()->set('assignmentType', $value);
@@ -100,7 +100,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
 
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the memberType property.
+     * @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value): void {
         $this->getBackingStore()->set('memberType', $value);
@@ -108,7 +108,7 @@ class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements P
 
     /**
      * Sets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
-     *  @param RequestSchedule|null $value Value to set for the scheduleInfo property.
+     * @param RequestSchedule|null $value Value to set for the scheduleInfo property.
     */
     public function setScheduleInfo(?RequestSchedule $value): void {
         $this->getBackingStore()->set('scheduleInfo', $value);

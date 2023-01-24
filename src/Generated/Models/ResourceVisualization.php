@@ -160,7 +160,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -176,7 +176,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the containerDisplayName property value. A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
-     *  @param string|null $value Value to set for the containerDisplayName property.
+     * @param string|null $value Value to set for the containerDisplayName property.
     */
     public function setContainerDisplayName(?string $value): void {
         $this->getBackingStore()->set('containerDisplayName', $value);
@@ -184,7 +184,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the containerType property value. Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-     *  @param string|null $value Value to set for the containerType property.
+     * @param string|null $value Value to set for the containerType property.
     */
     public function setContainerType(?string $value): void {
         $this->getBackingStore()->set('containerType', $value);
@@ -192,7 +192,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the containerWebUrl property value. A path leading to the folder in which the item is stored.
-     *  @param string|null $value Value to set for the containerWebUrl property.
+     * @param string|null $value Value to set for the containerWebUrl property.
     */
     public function setContainerWebUrl(?string $value): void {
         $this->getBackingStore()->set('containerWebUrl', $value);
@@ -200,7 +200,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the mediaType property value. The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
-     *  @param string|null $value Value to set for the mediaType property.
+     * @param string|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?string $value): void {
         $this->getBackingStore()->set('mediaType', $value);
@@ -208,7 +208,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -216,7 +216,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the previewImageUrl property value. A URL leading to the preview image for the item.
-     *  @param string|null $value Value to set for the previewImageUrl property.
+     * @param string|null $value Value to set for the previewImageUrl property.
     */
     public function setPreviewImageUrl(?string $value): void {
         $this->getBackingStore()->set('previewImageUrl', $value);
@@ -224,7 +224,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the previewText property value. A preview text for the item.
-     *  @param string|null $value Value to set for the previewText property.
+     * @param string|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?string $value): void {
         $this->getBackingStore()->set('previewText', $value);
@@ -232,7 +232,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the title property value. The item's title text.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -240,7 +240,7 @@ class ResourceVisualization implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the type property value. The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);

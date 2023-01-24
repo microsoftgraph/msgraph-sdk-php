@@ -115,7 +115,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
-     *  @param string|null $value Value to set for the downloadUri property.
+     * @param string|null $value Value to set for the downloadUri property.
     */
     public function setDownloadUri(?string $value): void {
         $this->getBackingStore()->set('downloadUri', $value);
@@ -123,7 +123,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. Timestamp when this instance and associated data expires and the history is deleted. Required.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -131,7 +131,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
-     *  @param DateTime|null $value Value to set for the fulfilledDateTime property.
+     * @param DateTime|null $value Value to set for the fulfilledDateTime property.
     */
     public function setFulfilledDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('fulfilledDateTime', $value);
@@ -139,7 +139,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
-     *  @param DateTime|null $value Value to set for the reviewHistoryPeriodEndDateTime property.
+     * @param DateTime|null $value Value to set for the reviewHistoryPeriodEndDateTime property.
     */
     public function setReviewHistoryPeriodEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewHistoryPeriodEndDateTime', $value);
@@ -147,7 +147,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
-     *  @param DateTime|null $value Value to set for the reviewHistoryPeriodStartDateTime property.
+     * @param DateTime|null $value Value to set for the reviewHistoryPeriodStartDateTime property.
     */
     public function setReviewHistoryPeriodStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewHistoryPeriodStartDateTime', $value);
@@ -155,7 +155,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the runDateTime property value. Timestamp when the instance's history data is scheduled to be generated.
-     *  @param DateTime|null $value Value to set for the runDateTime property.
+     * @param DateTime|null $value Value to set for the runDateTime property.
     */
     public function setRunDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('runDateTime', $value);
@@ -163,7 +163,7 @@ class AccessReviewHistoryInstance extends Entity implements Parsable
 
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     *  @param AccessReviewHistoryStatus|null $value Value to set for the status property.
+     * @param AccessReviewHistoryStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AccessReviewHistoryStatus $value): void {
         $this->getBackingStore()->set('status', $value);

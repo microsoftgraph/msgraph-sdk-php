@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthentic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the device. Read-only. Nullable.
+*/
 class ExtensionsRequestBuilderGetQueryParameters 
 {
     /**

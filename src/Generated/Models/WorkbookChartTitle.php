@@ -84,7 +84,7 @@ class WorkbookChartTitle extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
-     *  @param WorkbookChartTitleFormat|null $value Value to set for the format property.
+     * @param WorkbookChartTitleFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartTitleFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -92,7 +92,7 @@ class WorkbookChartTitle extends Entity implements Parsable
 
     /**
      * Sets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
-     *  @param bool|null $value Value to set for the overlay property.
+     * @param bool|null $value Value to set for the overlay property.
     */
     public function setOverlay(?bool $value): void {
         $this->getBackingStore()->set('overlay', $value);
@@ -100,7 +100,7 @@ class WorkbookChartTitle extends Entity implements Parsable
 
     /**
      * Sets the text property value. Represents the title text of a chart.
-     *  @param string|null $value Value to set for the text property.
+     * @param string|null $value Value to set for the text property.
     */
     public function setText(?string $value): void {
         $this->getBackingStore()->set('text', $value);
@@ -108,7 +108,7 @@ class WorkbookChartTitle extends Entity implements Parsable
 
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a chart title object.
-     *  @param bool|null $value Value to set for the visible property.
+     * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
         $this->getBackingStore()->set('visible', $value);

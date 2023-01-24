@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of section groups from the specified notebook.
+*/
 class SectionGroupsRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\Drives\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of drives (document libraries) under this site.
+*/
 class DriveItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCategor
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Device category
+*/
 class DeviceCategoryRequestBuilderGetQueryParameters 
 {
     /**

@@ -74,7 +74,7 @@ class ScopedRoleMembership extends Entity implements Parsable
 
     /**
      * Sets the administrativeUnitId property value. Unique identifier for the administrative unit that the directory role is scoped to
-     *  @param string|null $value Value to set for the administrativeUnitId property.
+     * @param string|null $value Value to set for the administrativeUnitId property.
     */
     public function setAdministrativeUnitId(?string $value): void {
         $this->getBackingStore()->set('administrativeUnitId', $value);
@@ -82,7 +82,7 @@ class ScopedRoleMembership extends Entity implements Parsable
 
     /**
      * Sets the roleId property value. Unique identifier for the directory role that the member is in.
-     *  @param string|null $value Value to set for the roleId property.
+     * @param string|null $value Value to set for the roleId property.
     */
     public function setRoleId(?string $value): void {
         $this->getBackingStore()->set('roleId', $value);
@@ -90,7 +90,7 @@ class ScopedRoleMembership extends Entity implements Parsable
 
     /**
      * Sets the roleMemberInfo property value. The roleMemberInfo property
-     *  @param Identity|null $value Value to set for the roleMemberInfo property.
+     * @param Identity|null $value Value to set for the roleMemberInfo property.
     */
     public function setRoleMemberInfo(?Identity $value): void {
         $this->getBackingStore()->set('roleMemberInfo', $value);

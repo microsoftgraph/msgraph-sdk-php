@@ -150,7 +150,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the answer property value. The answer given by the user in case the answerInputType is text.
-     *  @param string|null $value Value to set for the answer property.
+     * @param string|null $value Value to set for the answer property.
     */
     public function setAnswer(?string $value): void {
         $this->getBackingStore()->set('answer', $value);
@@ -166,7 +166,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
-     *  @param AnswerInputType|null $value Value to set for the answerInputType property.
+     * @param AnswerInputType|null $value Value to set for the answerInputType property.
     */
     public function setAnswerInputType(?AnswerInputType $value): void {
         $this->getBackingStore()->set('answerInputType', $value);
@@ -174,7 +174,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the answerOptions property value. In case the answerInputType is radioButton, this will consists of a list of possible answer values.
-     *  @param array<string>|null $value Value to set for the answerOptions property.
+     * @param array<string>|null $value Value to set for the answerOptions property.
     */
     public function setAnswerOptions(?array $value): void {
         $this->getBackingStore()->set('answerOptions', $value);
@@ -182,7 +182,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -190,7 +190,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
-     *  @param bool|null $value Value to set for the isRequired property.
+     * @param bool|null $value Value to set for the isRequired property.
     */
     public function setIsRequired(?bool $value): void {
         $this->getBackingStore()->set('isRequired', $value);
@@ -198,7 +198,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -206,7 +206,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the question property value. The question.
-     *  @param string|null $value Value to set for the question property.
+     * @param string|null $value Value to set for the question property.
     */
     public function setQuestion(?string $value): void {
         $this->getBackingStore()->set('question', $value);
@@ -214,7 +214,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the questionId property value. The ID of the custom question.
-     *  @param string|null $value Value to set for the questionId property.
+     * @param string|null $value Value to set for the questionId property.
     */
     public function setQuestionId(?string $value): void {
         $this->getBackingStore()->set('questionId', $value);
@@ -222,7 +222,7 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the selectedOptions property value. The answers selected by the user.
-     *  @param array<string>|null $value Value to set for the selectedOptions property.
+     * @param array<string>|null $value Value to set for the selectedOptions property.
     */
     public function setSelectedOptions(?array $value): void {
         $this->getBackingStore()->set('selectedOptions', $value);

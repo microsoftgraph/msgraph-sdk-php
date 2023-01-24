@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Todo;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the To Do services available to a user.
+*/
 class TodoRequestBuilderGetQueryParameters 
 {
     /**

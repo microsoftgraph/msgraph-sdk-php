@@ -55,7 +55,7 @@ class SoftwareOathAuthenticationMethod extends AuthenticationMethod implements P
 
     /**
      * Sets the secretKey property value. The secret key of the method. Always returns null.
-     *  @param string|null $value Value to set for the secretKey property.
+     * @param string|null $value Value to set for the secretKey property.
     */
     public function setSecretKey(?string $value): void {
         $this->getBackingStore()->set('secretKey', $value);

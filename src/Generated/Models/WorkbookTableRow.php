@@ -64,7 +64,7 @@ class WorkbookTableRow extends Entity implements Parsable
 
     /**
      * Sets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
-     *  @param int|null $value Value to set for the index property.
+     * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
         $this->getBackingStore()->set('index', $value);
@@ -72,7 +72,7 @@ class WorkbookTableRow extends Entity implements Parsable
 
     /**
      * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     *  @param Json|null $value Value to set for the values property.
+     * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {
         $this->getBackingStore()->set('values', $value);

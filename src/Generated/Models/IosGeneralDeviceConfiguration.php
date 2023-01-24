@@ -1355,7 +1355,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the accountBlockModification property value. Indicates whether or not to allow account modification when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the accountBlockModification property.
+     * @param bool|null $value Value to set for the accountBlockModification property.
     */
     public function setAccountBlockModification(?bool $value): void {
         $this->getBackingStore()->set('accountBlockModification', $value);
@@ -1363,7 +1363,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the activationLockAllowWhenSupervised property value. Indicates whether or not to allow activation lock when the device is in the supervised mode.
-     *  @param bool|null $value Value to set for the activationLockAllowWhenSupervised property.
+     * @param bool|null $value Value to set for the activationLockAllowWhenSupervised property.
     */
     public function setActivationLockAllowWhenSupervised(?bool $value): void {
         $this->getBackingStore()->set('activationLockAllowWhenSupervised', $value);
@@ -1371,7 +1371,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the airDropBlocked property value. Indicates whether or not to allow AirDrop when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the airDropBlocked property.
+     * @param bool|null $value Value to set for the airDropBlocked property.
     */
     public function setAirDropBlocked(?bool $value): void {
         $this->getBackingStore()->set('airDropBlocked', $value);
@@ -1379,7 +1379,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the airDropForceUnmanagedDropTarget property value. Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the airDropForceUnmanagedDropTarget property.
+     * @param bool|null $value Value to set for the airDropForceUnmanagedDropTarget property.
     */
     public function setAirDropForceUnmanagedDropTarget(?bool $value): void {
         $this->getBackingStore()->set('airDropForceUnmanagedDropTarget', $value);
@@ -1387,7 +1387,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the airPlayForcePairingPasswordForOutgoingRequests property value. Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
-     *  @param bool|null $value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
+     * @param bool|null $value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
     */
     public function setAirPlayForcePairingPasswordForOutgoingRequests(?bool $value): void {
         $this->getBackingStore()->set('airPlayForcePairingPasswordForOutgoingRequests', $value);
@@ -1395,7 +1395,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appleNewsBlocked property value. Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the appleNewsBlocked property.
+     * @param bool|null $value Value to set for the appleNewsBlocked property.
     */
     public function setAppleNewsBlocked(?bool $value): void {
         $this->getBackingStore()->set('appleNewsBlocked', $value);
@@ -1403,7 +1403,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appleWatchBlockPairing property value. Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the appleWatchBlockPairing property.
+     * @param bool|null $value Value to set for the appleWatchBlockPairing property.
     */
     public function setAppleWatchBlockPairing(?bool $value): void {
         $this->getBackingStore()->set('appleWatchBlockPairing', $value);
@@ -1411,7 +1411,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appleWatchForceWristDetection property value. Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
-     *  @param bool|null $value Value to set for the appleWatchForceWristDetection property.
+     * @param bool|null $value Value to set for the appleWatchForceWristDetection property.
     */
     public function setAppleWatchForceWristDetection(?bool $value): void {
         $this->getBackingStore()->set('appleWatchForceWristDetection', $value);
@@ -1419,7 +1419,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appsSingleAppModeList property value. Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the appsSingleAppModeList property.
+     * @param array<AppListItem>|null $value Value to set for the appsSingleAppModeList property.
     */
     public function setAppsSingleAppModeList(?array $value): void {
         $this->getBackingStore()->set('appsSingleAppModeList', $value);
@@ -1427,7 +1427,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appStoreBlockAutomaticDownloads property value. Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the appStoreBlockAutomaticDownloads property.
+     * @param bool|null $value Value to set for the appStoreBlockAutomaticDownloads property.
     */
     public function setAppStoreBlockAutomaticDownloads(?bool $value): void {
         $this->getBackingStore()->set('appStoreBlockAutomaticDownloads', $value);
@@ -1435,7 +1435,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appStoreBlocked property value. Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the appStoreBlocked property.
+     * @param bool|null $value Value to set for the appStoreBlocked property.
     */
     public function setAppStoreBlocked(?bool $value): void {
         $this->getBackingStore()->set('appStoreBlocked', $value);
@@ -1443,7 +1443,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appStoreBlockInAppPurchases property value. Indicates whether or not to block the user from making in app purchases.
-     *  @param bool|null $value Value to set for the appStoreBlockInAppPurchases property.
+     * @param bool|null $value Value to set for the appStoreBlockInAppPurchases property.
     */
     public function setAppStoreBlockInAppPurchases(?bool $value): void {
         $this->getBackingStore()->set('appStoreBlockInAppPurchases', $value);
@@ -1451,7 +1451,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appStoreBlockUIAppInstallation property value. Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the appStoreBlockUIAppInstallation property.
+     * @param bool|null $value Value to set for the appStoreBlockUIAppInstallation property.
     */
     public function setAppStoreBlockUIAppInstallation(?bool $value): void {
         $this->getBackingStore()->set('appStoreBlockUIAppInstallation', $value);
@@ -1459,7 +1459,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appStoreRequirePassword property value. Indicates whether or not to require a password when using the app store.
-     *  @param bool|null $value Value to set for the appStoreRequirePassword property.
+     * @param bool|null $value Value to set for the appStoreRequirePassword property.
     */
     public function setAppStoreRequirePassword(?bool $value): void {
         $this->getBackingStore()->set('appStoreRequirePassword', $value);
@@ -1467,7 +1467,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appsVisibilityList property value. List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     *  @param array<AppListItem>|null $value Value to set for the appsVisibilityList property.
+     * @param array<AppListItem>|null $value Value to set for the appsVisibilityList property.
     */
     public function setAppsVisibilityList(?array $value): void {
         $this->getBackingStore()->set('appsVisibilityList', $value);
@@ -1475,7 +1475,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the appsVisibilityListType property value. Possible values of the compliance app list.
-     *  @param AppListType|null $value Value to set for the appsVisibilityListType property.
+     * @param AppListType|null $value Value to set for the appsVisibilityListType property.
     */
     public function setAppsVisibilityListType(?AppListType $value): void {
         $this->getBackingStore()->set('appsVisibilityListType', $value);
@@ -1483,7 +1483,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the bluetoothBlockModification property value. Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
-     *  @param bool|null $value Value to set for the bluetoothBlockModification property.
+     * @param bool|null $value Value to set for the bluetoothBlockModification property.
     */
     public function setBluetoothBlockModification(?bool $value): void {
         $this->getBackingStore()->set('bluetoothBlockModification', $value);
@@ -1491,7 +1491,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the cameraBlocked property.
+     * @param bool|null $value Value to set for the cameraBlocked property.
     */
     public function setCameraBlocked(?bool $value): void {
         $this->getBackingStore()->set('cameraBlocked', $value);
@@ -1499,7 +1499,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     *  @param bool|null $value Value to set for the cellularBlockDataRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockDataRoaming property.
     */
     public function setCellularBlockDataRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockDataRoaming', $value);
@@ -1507,7 +1507,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockGlobalBackgroundFetchWhileRoaming property value. Indicates whether or not to block global background fetch while roaming.
-     *  @param bool|null $value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
     */
     public function setCellularBlockGlobalBackgroundFetchWhileRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockGlobalBackgroundFetchWhileRoaming', $value);
@@ -1515,7 +1515,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockPerAppDataModification property value. Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the cellularBlockPerAppDataModification property.
+     * @param bool|null $value Value to set for the cellularBlockPerAppDataModification property.
     */
     public function setCellularBlockPerAppDataModification(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockPerAppDataModification', $value);
@@ -1523,7 +1523,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockPersonalHotspot property value. Indicates whether or not to block Personal Hotspot.
-     *  @param bool|null $value Value to set for the cellularBlockPersonalHotspot property.
+     * @param bool|null $value Value to set for the cellularBlockPersonalHotspot property.
     */
     public function setCellularBlockPersonalHotspot(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockPersonalHotspot', $value);
@@ -1531,7 +1531,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
-     *  @param bool|null $value Value to set for the cellularBlockVoiceRoaming property.
+     * @param bool|null $value Value to set for the cellularBlockVoiceRoaming property.
     */
     public function setCellularBlockVoiceRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockVoiceRoaming', $value);
@@ -1539,7 +1539,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the certificatesBlockUntrustedTlsCertificates property value. Indicates whether or not to block untrusted TLS certificates.
-     *  @param bool|null $value Value to set for the certificatesBlockUntrustedTlsCertificates property.
+     * @param bool|null $value Value to set for the certificatesBlockUntrustedTlsCertificates property.
     */
     public function setCertificatesBlockUntrustedTlsCertificates(?bool $value): void {
         $this->getBackingStore()->set('certificatesBlockUntrustedTlsCertificates', $value);
@@ -1547,7 +1547,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
-     *  @param bool|null $value Value to set for the classroomAppBlockRemoteScreenObservation property.
+     * @param bool|null $value Value to set for the classroomAppBlockRemoteScreenObservation property.
     */
     public function setClassroomAppBlockRemoteScreenObservation(?bool $value): void {
         $this->getBackingStore()->set('classroomAppBlockRemoteScreenObservation', $value);
@@ -1555,7 +1555,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the classroomAppForceUnpromptedScreenObservation property.
+     * @param bool|null $value Value to set for the classroomAppForceUnpromptedScreenObservation property.
     */
     public function setClassroomAppForceUnpromptedScreenObservation(?bool $value): void {
         $this->getBackingStore()->set('classroomAppForceUnpromptedScreenObservation', $value);
@@ -1563,7 +1563,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
-     *  @param AppListType|null $value Value to set for the compliantAppListType property.
+     * @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value): void {
         $this->getBackingStore()->set('compliantAppListType', $value);
@@ -1571,7 +1571,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
+     * @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
     public function setCompliantAppsList(?array $value): void {
         $this->getBackingStore()->set('compliantAppsList', $value);
@@ -1579,7 +1579,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the configurationProfileBlockChanges property value. Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the configurationProfileBlockChanges property.
+     * @param bool|null $value Value to set for the configurationProfileBlockChanges property.
     */
     public function setConfigurationProfileBlockChanges(?bool $value): void {
         $this->getBackingStore()->set('configurationProfileBlockChanges', $value);
@@ -1587,7 +1587,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
-     *  @param bool|null $value Value to set for the definitionLookupBlocked property.
+     * @param bool|null $value Value to set for the definitionLookupBlocked property.
     */
     public function setDefinitionLookupBlocked(?bool $value): void {
         $this->getBackingStore()->set('definitionLookupBlocked', $value);
@@ -1595,7 +1595,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the deviceBlockEnableRestrictions property value. Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the deviceBlockEnableRestrictions property.
+     * @param bool|null $value Value to set for the deviceBlockEnableRestrictions property.
     */
     public function setDeviceBlockEnableRestrictions(?bool $value): void {
         $this->getBackingStore()->set('deviceBlockEnableRestrictions', $value);
@@ -1603,7 +1603,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the deviceBlockEraseContentAndSettings property value. Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the deviceBlockEraseContentAndSettings property.
+     * @param bool|null $value Value to set for the deviceBlockEraseContentAndSettings property.
     */
     public function setDeviceBlockEraseContentAndSettings(?bool $value): void {
         $this->getBackingStore()->set('deviceBlockEraseContentAndSettings', $value);
@@ -1611,7 +1611,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the deviceBlockNameModification property value. Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the deviceBlockNameModification property.
+     * @param bool|null $value Value to set for the deviceBlockNameModification property.
     */
     public function setDeviceBlockNameModification(?bool $value): void {
         $this->getBackingStore()->set('deviceBlockNameModification', $value);
@@ -1619,7 +1619,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     *  @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
+     * @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
     */
     public function setDiagnosticDataBlockSubmission(?bool $value): void {
         $this->getBackingStore()->set('diagnosticDataBlockSubmission', $value);
@@ -1627,7 +1627,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the diagnosticDataBlockSubmissionModification property value. Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
-     *  @param bool|null $value Value to set for the diagnosticDataBlockSubmissionModification property.
+     * @param bool|null $value Value to set for the diagnosticDataBlockSubmissionModification property.
     */
     public function setDiagnosticDataBlockSubmissionModification(?bool $value): void {
         $this->getBackingStore()->set('diagnosticDataBlockSubmissionModification', $value);
@@ -1635,7 +1635,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the documentsBlockManagedDocumentsInUnmanagedApps property value. Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
-     *  @param bool|null $value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
+     * @param bool|null $value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
     */
     public function setDocumentsBlockManagedDocumentsInUnmanagedApps(?bool $value): void {
         $this->getBackingStore()->set('documentsBlockManagedDocumentsInUnmanagedApps', $value);
@@ -1643,7 +1643,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the documentsBlockUnmanagedDocumentsInManagedApps property value. Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
-     *  @param bool|null $value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
+     * @param bool|null $value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
     */
     public function setDocumentsBlockUnmanagedDocumentsInManagedApps(?bool $value): void {
         $this->getBackingStore()->set('documentsBlockUnmanagedDocumentsInManagedApps', $value);
@@ -1651,7 +1651,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     *  @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
+     * @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
     */
     public function setEmailInDomainSuffixes(?array $value): void {
         $this->getBackingStore()->set('emailInDomainSuffixes', $value);
@@ -1659,7 +1659,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the enterpriseAppBlockTrust property value. Indicates whether or not to block the user from trusting an enterprise app.
-     *  @param bool|null $value Value to set for the enterpriseAppBlockTrust property.
+     * @param bool|null $value Value to set for the enterpriseAppBlockTrust property.
     */
     public function setEnterpriseAppBlockTrust(?bool $value): void {
         $this->getBackingStore()->set('enterpriseAppBlockTrust', $value);
@@ -1667,7 +1667,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the enterpriseAppBlockTrustModification property value. [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
-     *  @param bool|null $value Value to set for the enterpriseAppBlockTrustModification property.
+     * @param bool|null $value Value to set for the enterpriseAppBlockTrustModification property.
     */
     public function setEnterpriseAppBlockTrustModification(?bool $value): void {
         $this->getBackingStore()->set('enterpriseAppBlockTrustModification', $value);
@@ -1675,7 +1675,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the faceTimeBlocked property value. Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the faceTimeBlocked property.
+     * @param bool|null $value Value to set for the faceTimeBlocked property.
     */
     public function setFaceTimeBlocked(?bool $value): void {
         $this->getBackingStore()->set('faceTimeBlocked', $value);
@@ -1683,7 +1683,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the findMyFriendsBlocked property value. Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the findMyFriendsBlocked property.
+     * @param bool|null $value Value to set for the findMyFriendsBlocked property.
     */
     public function setFindMyFriendsBlocked(?bool $value): void {
         $this->getBackingStore()->set('findMyFriendsBlocked', $value);
@@ -1691,7 +1691,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the gameCenterBlocked property value. Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the gameCenterBlocked property.
+     * @param bool|null $value Value to set for the gameCenterBlocked property.
     */
     public function setGameCenterBlocked(?bool $value): void {
         $this->getBackingStore()->set('gameCenterBlocked', $value);
@@ -1699,7 +1699,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the gamingBlockGameCenterFriends property value. Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the gamingBlockGameCenterFriends property.
+     * @param bool|null $value Value to set for the gamingBlockGameCenterFriends property.
     */
     public function setGamingBlockGameCenterFriends(?bool $value): void {
         $this->getBackingStore()->set('gamingBlockGameCenterFriends', $value);
@@ -1707,7 +1707,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the gamingBlockMultiplayer property value. Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the gamingBlockMultiplayer property.
+     * @param bool|null $value Value to set for the gamingBlockMultiplayer property.
     */
     public function setGamingBlockMultiplayer(?bool $value): void {
         $this->getBackingStore()->set('gamingBlockMultiplayer', $value);
@@ -1715,7 +1715,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the hostPairingBlocked property value. indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
-     *  @param bool|null $value Value to set for the hostPairingBlocked property.
+     * @param bool|null $value Value to set for the hostPairingBlocked property.
     */
     public function setHostPairingBlocked(?bool $value): void {
         $this->getBackingStore()->set('hostPairingBlocked', $value);
@@ -1723,7 +1723,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iBooksStoreBlocked property value. Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the iBooksStoreBlocked property.
+     * @param bool|null $value Value to set for the iBooksStoreBlocked property.
     */
     public function setIBooksStoreBlocked(?bool $value): void {
         $this->getBackingStore()->set('iBooksStoreBlocked', $value);
@@ -1731,7 +1731,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iBooksStoreBlockErotica property value. Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
-     *  @param bool|null $value Value to set for the iBooksStoreBlockErotica property.
+     * @param bool|null $value Value to set for the iBooksStoreBlockErotica property.
     */
     public function setIBooksStoreBlockErotica(?bool $value): void {
         $this->getBackingStore()->set('iBooksStoreBlockErotica', $value);
@@ -1739,7 +1739,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
-     *  @param bool|null $value Value to set for the iCloudBlockActivityContinuation property.
+     * @param bool|null $value Value to set for the iCloudBlockActivityContinuation property.
     */
     public function setICloudBlockActivityContinuation(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockActivityContinuation', $value);
@@ -1747,7 +1747,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockBackup property value. Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the iCloudBlockBackup property.
+     * @param bool|null $value Value to set for the iCloudBlockBackup property.
     */
     public function setICloudBlockBackup(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockBackup', $value);
@@ -1755,7 +1755,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the iCloudBlockDocumentSync property.
+     * @param bool|null $value Value to set for the iCloudBlockDocumentSync property.
     */
     public function setICloudBlockDocumentSync(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockDocumentSync', $value);
@@ -1763,7 +1763,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockManagedAppsSync property value. Indicates whether or not to block Managed Apps Cloud Sync.
-     *  @param bool|null $value Value to set for the iCloudBlockManagedAppsSync property.
+     * @param bool|null $value Value to set for the iCloudBlockManagedAppsSync property.
     */
     public function setICloudBlockManagedAppsSync(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockManagedAppsSync', $value);
@@ -1771,7 +1771,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
-     *  @param bool|null $value Value to set for the iCloudBlockPhotoLibrary property.
+     * @param bool|null $value Value to set for the iCloudBlockPhotoLibrary property.
     */
     public function setICloudBlockPhotoLibrary(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockPhotoLibrary', $value);
@@ -1779,7 +1779,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockPhotoStreamSync property value. Indicates whether or not to block iCloud Photo Stream Sync.
-     *  @param bool|null $value Value to set for the iCloudBlockPhotoStreamSync property.
+     * @param bool|null $value Value to set for the iCloudBlockPhotoStreamSync property.
     */
     public function setICloudBlockPhotoStreamSync(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockPhotoStreamSync', $value);
@@ -1787,7 +1787,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudBlockSharedPhotoStream property value. Indicates whether or not to block Shared Photo Stream.
-     *  @param bool|null $value Value to set for the iCloudBlockSharedPhotoStream property.
+     * @param bool|null $value Value to set for the iCloudBlockSharedPhotoStream property.
     */
     public function setICloudBlockSharedPhotoStream(?bool $value): void {
         $this->getBackingStore()->set('iCloudBlockSharedPhotoStream', $value);
@@ -1795,7 +1795,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iCloudRequireEncryptedBackup property value. Indicates whether or not to require backups to iCloud be encrypted.
-     *  @param bool|null $value Value to set for the iCloudRequireEncryptedBackup property.
+     * @param bool|null $value Value to set for the iCloudRequireEncryptedBackup property.
     */
     public function setICloudRequireEncryptedBackup(?bool $value): void {
         $this->getBackingStore()->set('iCloudRequireEncryptedBackup', $value);
@@ -1803,7 +1803,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iTunesBlockExplicitContent property value. Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the iTunesBlockExplicitContent property.
+     * @param bool|null $value Value to set for the iTunesBlockExplicitContent property.
     */
     public function setITunesBlockExplicitContent(?bool $value): void {
         $this->getBackingStore()->set('iTunesBlockExplicitContent', $value);
@@ -1811,7 +1811,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
-     *  @param bool|null $value Value to set for the iTunesBlockMusicService property.
+     * @param bool|null $value Value to set for the iTunesBlockMusicService property.
     */
     public function setITunesBlockMusicService(?bool $value): void {
         $this->getBackingStore()->set('iTunesBlockMusicService', $value);
@@ -1819,7 +1819,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the iTunesBlockRadio property value. Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
-     *  @param bool|null $value Value to set for the iTunesBlockRadio property.
+     * @param bool|null $value Value to set for the iTunesBlockRadio property.
     */
     public function setITunesBlockRadio(?bool $value): void {
         $this->getBackingStore()->set('iTunesBlockRadio', $value);
@@ -1827,7 +1827,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the keyboardBlockAutoCorrect property value. Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
-     *  @param bool|null $value Value to set for the keyboardBlockAutoCorrect property.
+     * @param bool|null $value Value to set for the keyboardBlockAutoCorrect property.
     */
     public function setKeyboardBlockAutoCorrect(?bool $value): void {
         $this->getBackingStore()->set('keyboardBlockAutoCorrect', $value);
@@ -1835,7 +1835,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
-     *  @param bool|null $value Value to set for the keyboardBlockDictation property.
+     * @param bool|null $value Value to set for the keyboardBlockDictation property.
     */
     public function setKeyboardBlockDictation(?bool $value): void {
         $this->getBackingStore()->set('keyboardBlockDictation', $value);
@@ -1843,7 +1843,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the keyboardBlockPredictive property value. Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
-     *  @param bool|null $value Value to set for the keyboardBlockPredictive property.
+     * @param bool|null $value Value to set for the keyboardBlockPredictive property.
     */
     public function setKeyboardBlockPredictive(?bool $value): void {
         $this->getBackingStore()->set('keyboardBlockPredictive', $value);
@@ -1851,7 +1851,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the keyboardBlockShortcuts property value. Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the keyboardBlockShortcuts property.
+     * @param bool|null $value Value to set for the keyboardBlockShortcuts property.
     */
     public function setKeyboardBlockShortcuts(?bool $value): void {
         $this->getBackingStore()->set('keyboardBlockShortcuts', $value);
@@ -1859,7 +1859,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the keyboardBlockSpellCheck property value. Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
-     *  @param bool|null $value Value to set for the keyboardBlockSpellCheck property.
+     * @param bool|null $value Value to set for the keyboardBlockSpellCheck property.
     */
     public function setKeyboardBlockSpellCheck(?bool $value): void {
         $this->getBackingStore()->set('keyboardBlockSpellCheck', $value);
@@ -1867,7 +1867,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowAssistiveSpeak property value. Indicates whether or not to allow assistive speak while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeAllowAssistiveSpeak property.
+     * @param bool|null $value Value to set for the kioskModeAllowAssistiveSpeak property.
     */
     public function setKioskModeAllowAssistiveSpeak(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowAssistiveSpeak', $value);
@@ -1875,7 +1875,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowAssistiveTouchSettings property value. Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeAllowAssistiveTouchSettings property.
+     * @param bool|null $value Value to set for the kioskModeAllowAssistiveTouchSettings property.
     */
     public function setKioskModeAllowAssistiveTouchSettings(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowAssistiveTouchSettings', $value);
@@ -1883,7 +1883,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowAutoLock property value. Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowAutoLock property.
+     * @param bool|null $value Value to set for the kioskModeAllowAutoLock property.
     */
     public function setKioskModeAllowAutoLock(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowAutoLock', $value);
@@ -1891,7 +1891,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowColorInversionSettings property value. Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeAllowColorInversionSettings property.
+     * @param bool|null $value Value to set for the kioskModeAllowColorInversionSettings property.
     */
     public function setKioskModeAllowColorInversionSettings(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowColorInversionSettings', $value);
@@ -1899,7 +1899,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowRingerSwitch property value. Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowRingerSwitch property.
+     * @param bool|null $value Value to set for the kioskModeAllowRingerSwitch property.
     */
     public function setKioskModeAllowRingerSwitch(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowRingerSwitch', $value);
@@ -1907,7 +1907,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowScreenRotation property value. Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowScreenRotation property.
+     * @param bool|null $value Value to set for the kioskModeAllowScreenRotation property.
     */
     public function setKioskModeAllowScreenRotation(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowScreenRotation', $value);
@@ -1915,7 +1915,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowSleepButton property value. Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowSleepButton property.
+     * @param bool|null $value Value to set for the kioskModeAllowSleepButton property.
     */
     public function setKioskModeAllowSleepButton(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowSleepButton', $value);
@@ -1923,7 +1923,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowTouchscreen property value. Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowTouchscreen property.
+     * @param bool|null $value Value to set for the kioskModeAllowTouchscreen property.
     */
     public function setKioskModeAllowTouchscreen(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowTouchscreen', $value);
@@ -1931,7 +1931,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowVoiceOverSettings property value. Indicates whether or not to allow access to the voice over settings while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeAllowVoiceOverSettings property.
+     * @param bool|null $value Value to set for the kioskModeAllowVoiceOverSettings property.
     */
     public function setKioskModeAllowVoiceOverSettings(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowVoiceOverSettings', $value);
@@ -1939,7 +1939,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowVolumeButtons property value. Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
-     *  @param bool|null $value Value to set for the kioskModeAllowVolumeButtons property.
+     * @param bool|null $value Value to set for the kioskModeAllowVolumeButtons property.
     */
     public function setKioskModeAllowVolumeButtons(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowVolumeButtons', $value);
@@ -1947,7 +1947,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAllowZoomSettings property value. Indicates whether or not to allow access to the zoom settings while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeAllowZoomSettings property.
+     * @param bool|null $value Value to set for the kioskModeAllowZoomSettings property.
     */
     public function setKioskModeAllowZoomSettings(?bool $value): void {
         $this->getBackingStore()->set('kioskModeAllowZoomSettings', $value);
@@ -1955,7 +1955,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeAppStoreUrl property value. URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-     *  @param string|null $value Value to set for the kioskModeAppStoreUrl property.
+     * @param string|null $value Value to set for the kioskModeAppStoreUrl property.
     */
     public function setKioskModeAppStoreUrl(?string $value): void {
         $this->getBackingStore()->set('kioskModeAppStoreUrl', $value);
@@ -1963,7 +1963,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeBuiltInAppId property value. ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-     *  @param string|null $value Value to set for the kioskModeBuiltInAppId property.
+     * @param string|null $value Value to set for the kioskModeBuiltInAppId property.
     */
     public function setKioskModeBuiltInAppId(?string $value): void {
         $this->getBackingStore()->set('kioskModeBuiltInAppId', $value);
@@ -1971,7 +1971,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeManagedAppId property value. Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     *  @param string|null $value Value to set for the kioskModeManagedAppId property.
+     * @param string|null $value Value to set for the kioskModeManagedAppId property.
     */
     public function setKioskModeManagedAppId(?string $value): void {
         $this->getBackingStore()->set('kioskModeManagedAppId', $value);
@@ -1979,7 +1979,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeRequireAssistiveTouch property value. Indicates whether or not to require assistive touch while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeRequireAssistiveTouch property.
+     * @param bool|null $value Value to set for the kioskModeRequireAssistiveTouch property.
     */
     public function setKioskModeRequireAssistiveTouch(?bool $value): void {
         $this->getBackingStore()->set('kioskModeRequireAssistiveTouch', $value);
@@ -1987,7 +1987,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeRequireColorInversion property value. Indicates whether or not to require color inversion while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeRequireColorInversion property.
+     * @param bool|null $value Value to set for the kioskModeRequireColorInversion property.
     */
     public function setKioskModeRequireColorInversion(?bool $value): void {
         $this->getBackingStore()->set('kioskModeRequireColorInversion', $value);
@@ -1995,7 +1995,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeRequireMonoAudio property value. Indicates whether or not to require mono audio while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeRequireMonoAudio property.
+     * @param bool|null $value Value to set for the kioskModeRequireMonoAudio property.
     */
     public function setKioskModeRequireMonoAudio(?bool $value): void {
         $this->getBackingStore()->set('kioskModeRequireMonoAudio', $value);
@@ -2003,7 +2003,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeRequireVoiceOver property value. Indicates whether or not to require voice over while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeRequireVoiceOver property.
+     * @param bool|null $value Value to set for the kioskModeRequireVoiceOver property.
     */
     public function setKioskModeRequireVoiceOver(?bool $value): void {
         $this->getBackingStore()->set('kioskModeRequireVoiceOver', $value);
@@ -2011,7 +2011,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the kioskModeRequireZoom property value. Indicates whether or not to require zoom while in kiosk mode.
-     *  @param bool|null $value Value to set for the kioskModeRequireZoom property.
+     * @param bool|null $value Value to set for the kioskModeRequireZoom property.
     */
     public function setKioskModeRequireZoom(?bool $value): void {
         $this->getBackingStore()->set('kioskModeRequireZoom', $value);
@@ -2019,7 +2019,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the lockScreenBlockControlCenter property value. Indicates whether or not to block the user from using control center on the lock screen.
-     *  @param bool|null $value Value to set for the lockScreenBlockControlCenter property.
+     * @param bool|null $value Value to set for the lockScreenBlockControlCenter property.
     */
     public function setLockScreenBlockControlCenter(?bool $value): void {
         $this->getBackingStore()->set('lockScreenBlockControlCenter', $value);
@@ -2027,7 +2027,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the lockScreenBlockNotificationView property value. Indicates whether or not to block the user from using the notification view on the lock screen.
-     *  @param bool|null $value Value to set for the lockScreenBlockNotificationView property.
+     * @param bool|null $value Value to set for the lockScreenBlockNotificationView property.
     */
     public function setLockScreenBlockNotificationView(?bool $value): void {
         $this->getBackingStore()->set('lockScreenBlockNotificationView', $value);
@@ -2035,7 +2035,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the lockScreenBlockPassbook property value. Indicates whether or not to block the user from using passbook when the device is locked.
-     *  @param bool|null $value Value to set for the lockScreenBlockPassbook property.
+     * @param bool|null $value Value to set for the lockScreenBlockPassbook property.
     */
     public function setLockScreenBlockPassbook(?bool $value): void {
         $this->getBackingStore()->set('lockScreenBlockPassbook', $value);
@@ -2043,7 +2043,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the lockScreenBlockTodayView property value. Indicates whether or not to block the user from using the Today View on the lock screen.
-     *  @param bool|null $value Value to set for the lockScreenBlockTodayView property.
+     * @param bool|null $value Value to set for the lockScreenBlockTodayView property.
     */
     public function setLockScreenBlockTodayView(?bool $value): void {
         $this->getBackingStore()->set('lockScreenBlockTodayView', $value);
@@ -2051,7 +2051,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingApps property value. Apps rating as in media content
-     *  @param RatingAppsType|null $value Value to set for the mediaContentRatingApps property.
+     * @param RatingAppsType|null $value Value to set for the mediaContentRatingApps property.
     */
     public function setMediaContentRatingApps(?RatingAppsType $value): void {
         $this->getBackingStore()->set('mediaContentRatingApps', $value);
@@ -2059,7 +2059,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingAustralia property value. Media content rating settings for Australia
-     *  @param MediaContentRatingAustralia|null $value Value to set for the mediaContentRatingAustralia property.
+     * @param MediaContentRatingAustralia|null $value Value to set for the mediaContentRatingAustralia property.
     */
     public function setMediaContentRatingAustralia(?MediaContentRatingAustralia $value): void {
         $this->getBackingStore()->set('mediaContentRatingAustralia', $value);
@@ -2067,7 +2067,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingCanada property value. Media content rating settings for Canada
-     *  @param MediaContentRatingCanada|null $value Value to set for the mediaContentRatingCanada property.
+     * @param MediaContentRatingCanada|null $value Value to set for the mediaContentRatingCanada property.
     */
     public function setMediaContentRatingCanada(?MediaContentRatingCanada $value): void {
         $this->getBackingStore()->set('mediaContentRatingCanada', $value);
@@ -2075,7 +2075,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingFrance property value. Media content rating settings for France
-     *  @param MediaContentRatingFrance|null $value Value to set for the mediaContentRatingFrance property.
+     * @param MediaContentRatingFrance|null $value Value to set for the mediaContentRatingFrance property.
     */
     public function setMediaContentRatingFrance(?MediaContentRatingFrance $value): void {
         $this->getBackingStore()->set('mediaContentRatingFrance', $value);
@@ -2083,7 +2083,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingGermany property value. Media content rating settings for Germany
-     *  @param MediaContentRatingGermany|null $value Value to set for the mediaContentRatingGermany property.
+     * @param MediaContentRatingGermany|null $value Value to set for the mediaContentRatingGermany property.
     */
     public function setMediaContentRatingGermany(?MediaContentRatingGermany $value): void {
         $this->getBackingStore()->set('mediaContentRatingGermany', $value);
@@ -2091,7 +2091,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingIreland property value. Media content rating settings for Ireland
-     *  @param MediaContentRatingIreland|null $value Value to set for the mediaContentRatingIreland property.
+     * @param MediaContentRatingIreland|null $value Value to set for the mediaContentRatingIreland property.
     */
     public function setMediaContentRatingIreland(?MediaContentRatingIreland $value): void {
         $this->getBackingStore()->set('mediaContentRatingIreland', $value);
@@ -2099,7 +2099,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingJapan property value. Media content rating settings for Japan
-     *  @param MediaContentRatingJapan|null $value Value to set for the mediaContentRatingJapan property.
+     * @param MediaContentRatingJapan|null $value Value to set for the mediaContentRatingJapan property.
     */
     public function setMediaContentRatingJapan(?MediaContentRatingJapan $value): void {
         $this->getBackingStore()->set('mediaContentRatingJapan', $value);
@@ -2107,7 +2107,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingNewZealand property value. Media content rating settings for New Zealand
-     *  @param MediaContentRatingNewZealand|null $value Value to set for the mediaContentRatingNewZealand property.
+     * @param MediaContentRatingNewZealand|null $value Value to set for the mediaContentRatingNewZealand property.
     */
     public function setMediaContentRatingNewZealand(?MediaContentRatingNewZealand $value): void {
         $this->getBackingStore()->set('mediaContentRatingNewZealand', $value);
@@ -2115,7 +2115,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingUnitedKingdom property value. Media content rating settings for United Kingdom
-     *  @param MediaContentRatingUnitedKingdom|null $value Value to set for the mediaContentRatingUnitedKingdom property.
+     * @param MediaContentRatingUnitedKingdom|null $value Value to set for the mediaContentRatingUnitedKingdom property.
     */
     public function setMediaContentRatingUnitedKingdom(?MediaContentRatingUnitedKingdom $value): void {
         $this->getBackingStore()->set('mediaContentRatingUnitedKingdom', $value);
@@ -2123,7 +2123,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the mediaContentRatingUnitedStates property value. Media content rating settings for United States
-     *  @param MediaContentRatingUnitedStates|null $value Value to set for the mediaContentRatingUnitedStates property.
+     * @param MediaContentRatingUnitedStates|null $value Value to set for the mediaContentRatingUnitedStates property.
     */
     public function setMediaContentRatingUnitedStates(?MediaContentRatingUnitedStates $value): void {
         $this->getBackingStore()->set('mediaContentRatingUnitedStates', $value);
@@ -2131,7 +2131,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the messagesBlocked property value. Indicates whether or not to block the user from using the Messages app on the supervised device.
-     *  @param bool|null $value Value to set for the messagesBlocked property.
+     * @param bool|null $value Value to set for the messagesBlocked property.
     */
     public function setMessagesBlocked(?bool $value): void {
         $this->getBackingStore()->set('messagesBlocked', $value);
@@ -2139,7 +2139,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the networkUsageRules property value. List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     *  @param array<IosNetworkUsageRule>|null $value Value to set for the networkUsageRules property.
+     * @param array<IosNetworkUsageRule>|null $value Value to set for the networkUsageRules property.
     */
     public function setNetworkUsageRules(?array $value): void {
         $this->getBackingStore()->set('networkUsageRules', $value);
@@ -2147,7 +2147,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the notificationsBlockSettingsModification property value. Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
-     *  @param bool|null $value Value to set for the notificationsBlockSettingsModification property.
+     * @param bool|null $value Value to set for the notificationsBlockSettingsModification property.
     */
     public function setNotificationsBlockSettingsModification(?bool $value): void {
         $this->getBackingStore()->set('notificationsBlockSettingsModification', $value);
@@ -2155,7 +2155,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeBlockFingerprintModification property value. Block modification of registered Touch ID fingerprints when in supervised mode.
-     *  @param bool|null $value Value to set for the passcodeBlockFingerprintModification property.
+     * @param bool|null $value Value to set for the passcodeBlockFingerprintModification property.
     */
     public function setPasscodeBlockFingerprintModification(?bool $value): void {
         $this->getBackingStore()->set('passcodeBlockFingerprintModification', $value);
@@ -2163,7 +2163,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     *  @param bool|null $value Value to set for the passcodeBlockFingerprintUnlock property.
+     * @param bool|null $value Value to set for the passcodeBlockFingerprintUnlock property.
     */
     public function setPasscodeBlockFingerprintUnlock(?bool $value): void {
         $this->getBackingStore()->set('passcodeBlockFingerprintUnlock', $value);
@@ -2171,7 +2171,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeBlockModification property value. Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
-     *  @param bool|null $value Value to set for the passcodeBlockModification property.
+     * @param bool|null $value Value to set for the passcodeBlockModification property.
     */
     public function setPasscodeBlockModification(?bool $value): void {
         $this->getBackingStore()->set('passcodeBlockModification', $value);
@@ -2179,7 +2179,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
-     *  @param bool|null $value Value to set for the passcodeBlockSimple property.
+     * @param bool|null $value Value to set for the passcodeBlockSimple property.
     */
     public function setPasscodeBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passcodeBlockSimple', $value);
@@ -2187,7 +2187,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
-     *  @param int|null $value Value to set for the passcodeExpirationDays property.
+     * @param int|null $value Value to set for the passcodeExpirationDays property.
     */
     public function setPasscodeExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passcodeExpirationDays', $value);
@@ -2195,7 +2195,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. Number of character sets a passcode must contain. Valid values 0 to 4
-     *  @param int|null $value Value to set for the passcodeMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passcodeMinimumCharacterSetCount property.
     */
     public function setPasscodeMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passcodeMinimumCharacterSetCount', $value);
@@ -2203,7 +2203,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
-     *  @param int|null $value Value to set for the passcodeMinimumLength property.
+     * @param int|null $value Value to set for the passcodeMinimumLength property.
     */
     public function setPasscodeMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passcodeMinimumLength', $value);
@@ -2211,7 +2211,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
-     *  @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
     */
     public function setPasscodeMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passcodeMinutesOfInactivityBeforeLock', $value);
@@ -2219,7 +2219,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     *  @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
+     * @param int|null $value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
     */
     public function setPasscodeMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
         $this->getBackingStore()->set('passcodeMinutesOfInactivityBeforeScreenTimeout', $value);
@@ -2227,7 +2227,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
-     *  @param int|null $value Value to set for the passcodePreviousPasscodeBlockCount property.
+     * @param int|null $value Value to set for the passcodePreviousPasscodeBlockCount property.
     */
     public function setPasscodePreviousPasscodeBlockCount(?int $value): void {
         $this->getBackingStore()->set('passcodePreviousPasscodeBlockCount', $value);
@@ -2235,7 +2235,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
-     *  @param bool|null $value Value to set for the passcodeRequired property.
+     * @param bool|null $value Value to set for the passcodeRequired property.
     */
     public function setPasscodeRequired(?bool $value): void {
         $this->getBackingStore()->set('passcodeRequired', $value);
@@ -2243,7 +2243,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passcodeRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passcodeRequiredType property.
     */
     public function setPasscodeRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passcodeRequiredType', $value);
@@ -2251,7 +2251,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the passcodeSignInFailureCountBeforeWipe property value. Number of sign in failures allowed before wiping the device. Valid values 2 to 11
-     *  @param int|null $value Value to set for the passcodeSignInFailureCountBeforeWipe property.
+     * @param int|null $value Value to set for the passcodeSignInFailureCountBeforeWipe property.
     */
     public function setPasscodeSignInFailureCountBeforeWipe(?int $value): void {
         $this->getBackingStore()->set('passcodeSignInFailureCountBeforeWipe', $value);
@@ -2259,7 +2259,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the podcastsBlocked property value. Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
-     *  @param bool|null $value Value to set for the podcastsBlocked property.
+     * @param bool|null $value Value to set for the podcastsBlocked property.
     */
     public function setPodcastsBlocked(?bool $value): void {
         $this->getBackingStore()->set('podcastsBlocked', $value);
@@ -2267,7 +2267,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the safariBlockAutofill property.
+     * @param bool|null $value Value to set for the safariBlockAutofill property.
     */
     public function setSafariBlockAutofill(?bool $value): void {
         $this->getBackingStore()->set('safariBlockAutofill', $value);
@@ -2275,7 +2275,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariBlocked property value. Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
-     *  @param bool|null $value Value to set for the safariBlocked property.
+     * @param bool|null $value Value to set for the safariBlocked property.
     */
     public function setSafariBlocked(?bool $value): void {
         $this->getBackingStore()->set('safariBlocked', $value);
@@ -2283,7 +2283,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariBlockJavaScript property value. Indicates whether or not to block JavaScript in Safari.
-     *  @param bool|null $value Value to set for the safariBlockJavaScript property.
+     * @param bool|null $value Value to set for the safariBlockJavaScript property.
     */
     public function setSafariBlockJavaScript(?bool $value): void {
         $this->getBackingStore()->set('safariBlockJavaScript', $value);
@@ -2291,7 +2291,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariBlockPopups property value. Indicates whether or not to block popups in Safari.
-     *  @param bool|null $value Value to set for the safariBlockPopups property.
+     * @param bool|null $value Value to set for the safariBlockPopups property.
     */
     public function setSafariBlockPopups(?bool $value): void {
         $this->getBackingStore()->set('safariBlockPopups', $value);
@@ -2299,7 +2299,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariCookieSettings property value. Web Browser Cookie Settings.
-     *  @param WebBrowserCookieSettings|null $value Value to set for the safariCookieSettings property.
+     * @param WebBrowserCookieSettings|null $value Value to set for the safariCookieSettings property.
     */
     public function setSafariCookieSettings(?WebBrowserCookieSettings $value): void {
         $this->getBackingStore()->set('safariCookieSettings', $value);
@@ -2307,7 +2307,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariManagedDomains property value. URLs matching the patterns listed here will be considered managed.
-     *  @param array<string>|null $value Value to set for the safariManagedDomains property.
+     * @param array<string>|null $value Value to set for the safariManagedDomains property.
     */
     public function setSafariManagedDomains(?array $value): void {
         $this->getBackingStore()->set('safariManagedDomains', $value);
@@ -2315,7 +2315,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariPasswordAutoFillDomains property value. Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
-     *  @param array<string>|null $value Value to set for the safariPasswordAutoFillDomains property.
+     * @param array<string>|null $value Value to set for the safariPasswordAutoFillDomains property.
     */
     public function setSafariPasswordAutoFillDomains(?array $value): void {
         $this->getBackingStore()->set('safariPasswordAutoFillDomains', $value);
@@ -2323,7 +2323,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the safariRequireFraudWarning property value. Indicates whether or not to require fraud warning in Safari.
-     *  @param bool|null $value Value to set for the safariRequireFraudWarning property.
+     * @param bool|null $value Value to set for the safariRequireFraudWarning property.
     */
     public function setSafariRequireFraudWarning(?bool $value): void {
         $this->getBackingStore()->set('safariRequireFraudWarning', $value);
@@ -2331,7 +2331,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
-     *  @param bool|null $value Value to set for the screenCaptureBlocked property.
+     * @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
     public function setScreenCaptureBlocked(?bool $value): void {
         $this->getBackingStore()->set('screenCaptureBlocked', $value);
@@ -2339,7 +2339,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the siriBlocked property value. Indicates whether or not to block the user from using Siri.
-     *  @param bool|null $value Value to set for the siriBlocked property.
+     * @param bool|null $value Value to set for the siriBlocked property.
     */
     public function setSiriBlocked(?bool $value): void {
         $this->getBackingStore()->set('siriBlocked', $value);
@@ -2347,7 +2347,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the siriBlockedWhenLocked property value. Indicates whether or not to block the user from using Siri when locked.
-     *  @param bool|null $value Value to set for the siriBlockedWhenLocked property.
+     * @param bool|null $value Value to set for the siriBlockedWhenLocked property.
     */
     public function setSiriBlockedWhenLocked(?bool $value): void {
         $this->getBackingStore()->set('siriBlockedWhenLocked', $value);
@@ -2355,7 +2355,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the siriBlockUserGeneratedContent property value. Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
-     *  @param bool|null $value Value to set for the siriBlockUserGeneratedContent property.
+     * @param bool|null $value Value to set for the siriBlockUserGeneratedContent property.
     */
     public function setSiriBlockUserGeneratedContent(?bool $value): void {
         $this->getBackingStore()->set('siriBlockUserGeneratedContent', $value);
@@ -2363,7 +2363,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the siriRequireProfanityFilter property value. Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
-     *  @param bool|null $value Value to set for the siriRequireProfanityFilter property.
+     * @param bool|null $value Value to set for the siriRequireProfanityFilter property.
     */
     public function setSiriRequireProfanityFilter(?bool $value): void {
         $this->getBackingStore()->set('siriRequireProfanityFilter', $value);
@@ -2371,7 +2371,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight search from returning internet results on supervised device.
-     *  @param bool|null $value Value to set for the spotlightBlockInternetResults property.
+     * @param bool|null $value Value to set for the spotlightBlockInternetResults property.
     */
     public function setSpotlightBlockInternetResults(?bool $value): void {
         $this->getBackingStore()->set('spotlightBlockInternetResults', $value);
@@ -2379,7 +2379,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
-     *  @param bool|null $value Value to set for the voiceDialingBlocked property.
+     * @param bool|null $value Value to set for the voiceDialingBlocked property.
     */
     public function setVoiceDialingBlocked(?bool $value): void {
         $this->getBackingStore()->set('voiceDialingBlocked', $value);
@@ -2387,7 +2387,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the wallpaperBlockModification property value. Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
-     *  @param bool|null $value Value to set for the wallpaperBlockModification property.
+     * @param bool|null $value Value to set for the wallpaperBlockModification property.
     */
     public function setWallpaperBlockModification(?bool $value): void {
         $this->getBackingStore()->set('wallpaperBlockModification', $value);
@@ -2395,7 +2395,7 @@ class IosGeneralDeviceConfiguration extends DeviceConfiguration implements Parsa
 
     /**
      * Sets the wiFiConnectOnlyToConfiguredNetworks property value. Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
-     *  @param bool|null $value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
+     * @param bool|null $value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
     */
     public function setWiFiConnectOnlyToConfiguredNetworks(?bool $value): void {
         $this->getBackingStore()->set('wiFiConnectOnlyToConfiguredNetworks', $value);

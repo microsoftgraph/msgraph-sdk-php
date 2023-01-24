@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Atta
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of serviceAnnouncementAttachments.
+*/
 class ServiceAnnouncementAttachmentItemRequestBuilderGetQueryParameters 
 {
     /**

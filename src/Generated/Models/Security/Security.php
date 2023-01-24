@@ -119,7 +119,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the alerts property value. The alerts property
-     *  @param array<Alert>|null $value Value to set for the alerts property.
+     * @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value): void {
         $this->getBackingStore()->set('alerts', $value);
@@ -127,7 +127,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
-     *  @param array<Alert>|null $value Value to set for the alerts_v2 property.
+     * @param array<Alert>|null $value Value to set for the alerts_v2 property.
     */
     public function setAlerts_v2(?array $value): void {
         $this->getBackingStore()->set('alerts_v2', $value);
@@ -135,7 +135,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the attackSimulation property value. The attackSimulation property
-     *  @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
+     * @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
     */
     public function setAttackSimulation(?AttackSimulationRoot $value): void {
         $this->getBackingStore()->set('attackSimulation', $value);
@@ -143,7 +143,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the cases property value. The cases property
-     *  @param CasesRoot|null $value Value to set for the cases property.
+     * @param CasesRoot|null $value Value to set for the cases property.
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
@@ -151,7 +151,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
-     *  @param array<Incident>|null $value Value to set for the incidents property.
+     * @param array<Incident>|null $value Value to set for the incidents property.
     */
     public function setIncidents(?array $value): void {
         $this->getBackingStore()->set('incidents', $value);
@@ -159,7 +159,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
-     *  @param array<SecureScoreControlProfile>|null $value Value to set for the secureScoreControlProfiles property.
+     * @param array<SecureScoreControlProfile>|null $value Value to set for the secureScoreControlProfiles property.
     */
     public function setSecureScoreControlProfiles(?array $value): void {
         $this->getBackingStore()->set('secureScoreControlProfiles', $value);
@@ -167,7 +167,7 @@ class Security extends Entity implements Parsable
 
     /**
      * Sets the secureScores property value. The secureScores property
-     *  @param array<SecureScore>|null $value Value to set for the secureScores property.
+     * @param array<SecureScore>|null $value Value to set for the secureScores property.
     */
     public function setSecureScores(?array $value): void {
         $this->getBackingStore()->set('secureScores', $value);

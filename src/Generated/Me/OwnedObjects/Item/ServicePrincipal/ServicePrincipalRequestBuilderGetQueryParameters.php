@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\OwnedObjects\Item\ServicePrincipal;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the item of type microsoft.graph.directoryObject as microsoft.graph.servicePrincipal
+*/
 class ServicePrincipalRequestBuilderGetQueryParameters 
 {
     /**

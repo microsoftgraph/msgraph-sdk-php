@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Me
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Replies for a specified message. Supports $expand for channel messages.
+*/
 class ChatMessageItemRequestBuilderGetQueryParameters 
 {
     /**

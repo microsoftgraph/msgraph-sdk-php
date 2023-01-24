@@ -100,7 +100,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
 
     /**
      * Sets the notificationRecipientScope property value. Determines the recipient of the notification email.
-     *  @param AccessReviewNotificationRecipientScope|null $value Value to set for the notificationRecipientScope property.
+     * @param AccessReviewNotificationRecipientScope|null $value Value to set for the notificationRecipientScope property.
     */
     public function setNotificationRecipientScope(?AccessReviewNotificationRecipientScope $value): void {
         $this->getBackingStore()->set('notificationRecipientScope', $value);
@@ -124,7 +124,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
 
     /**
      * Sets the notificationTemplateType property value. Indicates the type of access review email to be sent. Supported template type is CompletedAdditionalRecipients, which sends review completion notifications to the recipients.
-     *  @param string|null $value Value to set for the notificationTemplateType property.
+     * @param string|null $value Value to set for the notificationTemplateType property.
     */
     public function setNotificationTemplateType(?string $value): void {
         $this->getBackingStore()->set('notificationTemplateType', $value);
@@ -132,7 +132,7 @@ class AccessReviewNotificationRecipientItem implements AdditionalDataHolder, Bac
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

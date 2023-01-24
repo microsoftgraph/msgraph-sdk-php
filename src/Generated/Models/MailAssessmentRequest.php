@@ -75,7 +75,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     *  @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
+     * @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
     public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
         $this->getBackingStore()->set('destinationRoutingReason', $value);
@@ -83,7 +83,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the messageUri property value. The resource URI of the mail message for assessment.
-     *  @param string|null $value Value to set for the messageUri property.
+     * @param string|null $value Value to set for the messageUri property.
     */
     public function setMessageUri(?string $value): void {
         $this->getBackingStore()->set('messageUri', $value);
@@ -91,7 +91,7 @@ class MailAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
-     *  @param string|null $value Value to set for the recipientEmail property.
+     * @param string|null $value Value to set for the recipientEmail property.
     */
     public function setRecipientEmail(?string $value): void {
         $this->getBackingStore()->set('recipientEmail', $value);

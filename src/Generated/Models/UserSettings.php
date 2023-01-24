@@ -74,7 +74,7 @@ class UserSettings extends Entity implements Parsable
 
     /**
      * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
-     *  @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
+     * @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
     */
     public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value): void {
         $this->getBackingStore()->set('contributionToContentDiscoveryAsOrganizationDisabled', $value);
@@ -82,7 +82,7 @@ class UserSettings extends Entity implements Parsable
 
     /**
      * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
-     *  @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
+     * @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
     */
     public function setContributionToContentDiscoveryDisabled(?bool $value): void {
         $this->getBackingStore()->set('contributionToContentDiscoveryDisabled', $value);
@@ -90,7 +90,7 @@ class UserSettings extends Entity implements Parsable
 
     /**
      * Sets the shiftPreferences property value. The shiftPreferences property
-     *  @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
+     * @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
     */
     public function setShiftPreferences(?ShiftPreferences $value): void {
         $this->getBackingStore()->set('shiftPreferences', $value);

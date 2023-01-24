@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\Operations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The async operations that ran or are running on this team.
+*/
 class TeamsAsyncOperationItemRequestBuilderGetQueryParameters 
 {
     /**

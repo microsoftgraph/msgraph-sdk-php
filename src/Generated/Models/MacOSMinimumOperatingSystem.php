@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * The minimum operating system required for a macOS app.
+*/
 class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -200,7 +203,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -208,7 +211,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -216,7 +219,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -224,7 +227,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_10 property.
+     * @param bool|null $value Value to set for the v10_10 property.
     */
     public function setV10_10(?bool $value): void {
         $this->getBackingStore()->set('v10_10', $value);
@@ -232,7 +235,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_11 property.
+     * @param bool|null $value Value to set for the v10_11 property.
     */
     public function setV10_11(?bool $value): void {
         $this->getBackingStore()->set('v10_11', $value);
@@ -240,7 +243,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_12 property.
+     * @param bool|null $value Value to set for the v10_12 property.
     */
     public function setV10_12(?bool $value): void {
         $this->getBackingStore()->set('v10_12', $value);
@@ -248,7 +251,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_13 property.
+     * @param bool|null $value Value to set for the v10_13 property.
     */
     public function setV10_13(?bool $value): void {
         $this->getBackingStore()->set('v10_13', $value);
@@ -256,7 +259,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_14 property.
+     * @param bool|null $value Value to set for the v10_14 property.
     */
     public function setV10_14(?bool $value): void {
         $this->getBackingStore()->set('v10_14', $value);
@@ -264,7 +267,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_15 property.
+     * @param bool|null $value Value to set for the v10_15 property.
     */
     public function setV10_15(?bool $value): void {
         $this->getBackingStore()->set('v10_15', $value);
@@ -272,7 +275,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_7 property.
+     * @param bool|null $value Value to set for the v10_7 property.
     */
     public function setV10_7(?bool $value): void {
         $this->getBackingStore()->set('v10_7', $value);
@@ -280,7 +283,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_8 property.
+     * @param bool|null $value Value to set for the v10_8 property.
     */
     public function setV10_8(?bool $value): void {
         $this->getBackingStore()->set('v10_8', $value);
@@ -288,7 +291,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v10_9 property.
+     * @param bool|null $value Value to set for the v10_9 property.
     */
     public function setV10_9(?bool $value): void {
         $this->getBackingStore()->set('v10_9', $value);
@@ -296,7 +299,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v11_0 property.
+     * @param bool|null $value Value to set for the v11_0 property.
     */
     public function setV11_0(?bool $value): void {
         $this->getBackingStore()->set('v11_0', $value);
@@ -304,7 +307,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v12_0 property.
+     * @param bool|null $value Value to set for the v12_0 property.
     */
     public function setV12_0(?bool $value): void {
         $this->getBackingStore()->set('v12_0', $value);
@@ -312,7 +315,7 @@ class MacOSMinimumOperatingSystem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
-     *  @param bool|null $value Value to set for the v13_0 property.
+     * @param bool|null $value Value to set for the v13_0 property.
     */
     public function setV13_0(?bool $value): void {
         $this->getBackingStore()->set('v13_0', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Photo;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's profile photo. Read-only.
+*/
 class PhotoRequestBuilderGetQueryParameters 
 {
     /**

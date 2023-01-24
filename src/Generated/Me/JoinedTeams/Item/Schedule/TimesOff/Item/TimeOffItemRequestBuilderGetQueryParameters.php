@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\TimesOff\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The instances of times off in the schedule.
+*/
 class TimeOffItemRequestBuilderGetQueryParameters 
 {
     /**

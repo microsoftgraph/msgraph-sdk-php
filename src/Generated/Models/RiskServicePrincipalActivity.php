@@ -100,7 +100,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the detail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
-     *  @param RiskDetail|null $value Value to set for the detail property.
+     * @param RiskDetail|null $value Value to set for the detail property.
     */
     public function setDetail(?RiskDetail $value): void {
         $this->getBackingStore()->set('detail', $value);
@@ -124,7 +124,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the riskEventTypes property value. The riskEventTypes property
-     *  @param array<string>|null $value Value to set for the riskEventTypes property.
+     * @param array<string>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value): void {
         $this->getBackingStore()->set('riskEventTypes', $value);

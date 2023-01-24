@@ -54,7 +54,7 @@ class Bitlocker extends Entity implements Parsable
 
     /**
      * Sets the recoveryKeys property value. The recovery keys associated with the bitlocker entity.
-     *  @param array<BitlockerRecoveryKey>|null $value Value to set for the recoveryKeys property.
+     * @param array<BitlockerRecoveryKey>|null $value Value to set for the recoveryKeys property.
     */
     public function setRecoveryKeys(?array $value): void {
         $this->getBackingStore()->set('recoveryKeys', $value);

@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles.
+*/
 class RoleAssignment extends Entity implements Parsable 
 {
     /**
@@ -91,7 +94,7 @@ class RoleAssignment extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the Role Assignment.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -99,7 +102,7 @@ class RoleAssignment extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display or friendly name of the role Assignment.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -107,7 +110,7 @@ class RoleAssignment extends Entity implements Parsable
 
     /**
      * Sets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
-     *  @param array<string>|null $value Value to set for the resourceScopes property.
+     * @param array<string>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value): void {
         $this->getBackingStore()->set('resourceScopes', $value);
@@ -115,7 +118,7 @@ class RoleAssignment extends Entity implements Parsable
 
     /**
      * Sets the roleDefinition property value. Role definition this assignment is part of.
-     *  @param RoleDefinition|null $value Value to set for the roleDefinition property.
+     * @param RoleDefinition|null $value Value to set for the roleDefinition property.
     */
     public function setRoleDefinition(?RoleDefinition $value): void {
         $this->getBackingStore()->set('roleDefinition', $value);

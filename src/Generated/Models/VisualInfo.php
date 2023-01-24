@@ -130,7 +130,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the attribution property value. Optional. JSON object used to represent an icon which represents the application used to generate the activity
-     *  @param ImageInfo|null $value Value to set for the attribution property.
+     * @param ImageInfo|null $value Value to set for the attribution property.
     */
     public function setAttribution(?ImageInfo $value): void {
         $this->getBackingStore()->set('attribution', $value);
@@ -146,7 +146,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backgroundColor property value. Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
-     *  @param string|null $value Value to set for the backgroundColor property.
+     * @param string|null $value Value to set for the backgroundColor property.
     */
     public function setBackgroundColor(?string $value): void {
         $this->getBackingStore()->set('backgroundColor', $value);
@@ -154,7 +154,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -162,7 +162,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     *  @param Json|null $value Value to set for the content property.
+     * @param Json|null $value Value to set for the content property.
     */
     public function setContent(?Json $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -170,7 +170,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -178,7 +178,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayText property value. Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
-     *  @param string|null $value Value to set for the displayText property.
+     * @param string|null $value Value to set for the displayText property.
     */
     public function setDisplayText(?string $value): void {
         $this->getBackingStore()->set('displayText', $value);
@@ -186,7 +186,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

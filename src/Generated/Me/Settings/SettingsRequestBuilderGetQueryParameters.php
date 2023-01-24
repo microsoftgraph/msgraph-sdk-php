@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Settings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get settings from me
+*/
 class SettingsRequestBuilderGetQueryParameters 
 {
     /**

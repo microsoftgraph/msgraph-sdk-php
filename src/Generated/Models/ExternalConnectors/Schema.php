@@ -65,7 +65,7 @@ class Schema extends Entity implements Parsable
 
     /**
      * Sets the baseType property value. Must be set to microsoft.graph.externalConnector.externalItem. Required.
-     *  @param string|null $value Value to set for the baseType property.
+     * @param string|null $value Value to set for the baseType property.
     */
     public function setBaseType(?string $value): void {
         $this->getBackingStore()->set('baseType', $value);
@@ -73,7 +73,7 @@ class Schema extends Entity implements Parsable
 
     /**
      * Sets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
-     *  @param array<Property>|null $value Value to set for the properties property.
+     * @param array<Property>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
         $this->getBackingStore()->set('properties', $value);

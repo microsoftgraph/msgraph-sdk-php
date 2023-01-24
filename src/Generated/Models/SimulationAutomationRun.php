@@ -85,7 +85,7 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Sets the endDateTime property value. Date and time when the run ends in an attack simulation automation.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -93,7 +93,7 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Sets the simulationId property value. Unique identifier for the attack simulation campaign initiated in the attack simulation automation run.
-     *  @param string|null $value Value to set for the simulationId property.
+     * @param string|null $value Value to set for the simulationId property.
     */
     public function setSimulationId(?string $value): void {
         $this->getBackingStore()->set('simulationId', $value);
@@ -101,7 +101,7 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. Date and time when the run starts in an attack simulation automation.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -109,7 +109,7 @@ class SimulationAutomationRun extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the attack simulation automation run. The possible values are: unknown, running, succeeded, failed, skipped, unknownFutureValue.
-     *  @param SimulationAutomationRunStatus|null $value Value to set for the status property.
+     * @param SimulationAutomationRunStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationAutomationRunStatus $value): void {
         $this->getBackingStore()->set('status', $value);

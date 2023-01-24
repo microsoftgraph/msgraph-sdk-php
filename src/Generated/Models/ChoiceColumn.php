@@ -110,7 +110,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the allowTextEntry property value. If true, allows custom values that aren't in the configured choices.
-     *  @param bool|null $value Value to set for the allowTextEntry property.
+     * @param bool|null $value Value to set for the allowTextEntry property.
     */
     public function setAllowTextEntry(?bool $value): void {
         $this->getBackingStore()->set('allowTextEntry', $value);
@@ -126,7 +126,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the choices property value. The list of values available for this column.
-     *  @param array<string>|null $value Value to set for the choices property.
+     * @param array<string>|null $value Value to set for the choices property.
     */
     public function setChoices(?array $value): void {
         $this->getBackingStore()->set('choices', $value);
@@ -142,7 +142,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayAs property value. How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
-     *  @param string|null $value Value to set for the displayAs property.
+     * @param string|null $value Value to set for the displayAs property.
     */
     public function setDisplayAs(?string $value): void {
         $this->getBackingStore()->set('displayAs', $value);
@@ -150,7 +150,7 @@ class ChoiceColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

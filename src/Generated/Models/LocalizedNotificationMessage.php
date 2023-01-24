@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The text content of a Notification Message Template for the specified locale.
+*/
 class LocalizedNotificationMessage extends Entity implements Parsable 
 {
     /**
@@ -95,7 +98,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
 
     /**
      * Sets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
-     *  @param bool|null $value Value to set for the isDefault property.
+     * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
         $this->getBackingStore()->set('isDefault', $value);
@@ -103,7 +106,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -111,7 +114,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
 
     /**
      * Sets the locale property value. The Locale for which this message is destined.
-     *  @param string|null $value Value to set for the locale property.
+     * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {
         $this->getBackingStore()->set('locale', $value);
@@ -119,7 +122,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
 
     /**
      * Sets the messageTemplate property value. The Message Template content.
-     *  @param string|null $value Value to set for the messageTemplate property.
+     * @param string|null $value Value to set for the messageTemplate property.
     */
     public function setMessageTemplate(?string $value): void {
         $this->getBackingStore()->set('messageTemplate', $value);
@@ -127,7 +130,7 @@ class LocalizedNotificationMessage extends Entity implements Parsable
 
     /**
      * Sets the subject property value. The Message Template Subject.
-     *  @param string|null $value Value to set for the subject property.
+     * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
         $this->getBackingStore()->set('subject', $value);

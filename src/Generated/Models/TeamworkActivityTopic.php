@@ -110,7 +110,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the source property value. Type of source. Possible values are: entityUrl, text. For supported Microsoft Graph URLs, use entityUrl. For custom text, use text.
-     *  @param TeamworkActivityTopicSource|null $value Value to set for the source property.
+     * @param TeamworkActivityTopicSource|null $value Value to set for the source property.
     */
     public function setSource(?TeamworkActivityTopicSource $value): void {
         $this->getBackingStore()->set('source', $value);
@@ -142,7 +142,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the value property value. The topic value. If the value of the source property is entityUrl, this must be a Microsoft Graph URL. If the vaule is text, this must be a plain text value.
-     *  @param string|null $value Value to set for the value property.
+     * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {
         $this->getBackingStore()->set('value', $value);
@@ -150,7 +150,7 @@ class TeamworkActivityTopic implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the webUrl property value. The link the user clicks when they select the notification. Optional when source is entityUrl; required when source is text.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

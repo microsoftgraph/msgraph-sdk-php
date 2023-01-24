@@ -110,7 +110,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the defaultLanguage property value. Default BCP 47 language tag for the description.
-     *  @param string|null $value Value to set for the defaultLanguage property.
+     * @param string|null $value Value to set for the defaultLanguage property.
     */
     public function setDefaultLanguage(?string $value): void {
         $this->getBackingStore()->set('defaultLanguage', $value);
@@ -134,7 +134,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the descriptions property value. Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
-     *  @param array<DisplayNameLocalization>|null $value Value to set for the descriptions property.
+     * @param array<DisplayNameLocalization>|null $value Value to set for the descriptions property.
     */
     public function setDescriptions(?array $value): void {
         $this->getBackingStore()->set('descriptions', $value);
@@ -142,7 +142,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the formula property value. The formula to validate column value. For examples, see Examples of common formulas in lists.
-     *  @param string|null $value Value to set for the formula property.
+     * @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value): void {
         $this->getBackingStore()->set('formula', $value);
@@ -150,7 +150,7 @@ class ColumnValidation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

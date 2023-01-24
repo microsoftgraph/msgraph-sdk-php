@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Items\Item\ListItem\Versions\Item\Fiel
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of the fields and values for this version of the list item.
+*/
 class FieldsRequestBuilderGetQueryParameters 
 {
     /**

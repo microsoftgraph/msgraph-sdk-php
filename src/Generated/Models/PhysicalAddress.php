@@ -130,7 +130,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the city property value. The city.
-     *  @param string|null $value Value to set for the city property.
+     * @param string|null $value Value to set for the city property.
     */
     public function setCity(?string $value): void {
         $this->getBackingStore()->set('city', $value);
@@ -154,7 +154,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
-     *  @param string|null $value Value to set for the countryOrRegion property.
+     * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {
         $this->getBackingStore()->set('countryOrRegion', $value);
@@ -162,7 +162,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -170,7 +170,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the postalCode property value. The postal code.
-     *  @param string|null $value Value to set for the postalCode property.
+     * @param string|null $value Value to set for the postalCode property.
     */
     public function setPostalCode(?string $value): void {
         $this->getBackingStore()->set('postalCode', $value);
@@ -178,7 +178,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the state property value. The state.
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -186,7 +186,7 @@ class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the street property value. The street.
-     *  @param string|null $value Value to set for the street property.
+     * @param string|null $value Value to set for the street property.
     */
     public function setStreet(?string $value): void {
         $this->getBackingStore()->set('street', $value);

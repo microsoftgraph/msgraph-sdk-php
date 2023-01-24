@@ -100,7 +100,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
 
     /**
      * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
-     *  @param array<X509CertificateRule>|null $value Value to set for the rules property.
+     * @param array<X509CertificateRule>|null $value Value to set for the rules property.
     */
     public function setRules(?array $value): void {
         $this->getBackingStore()->set('rules', $value);
@@ -132,7 +132,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
 
     /**
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     *  @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationDefaultMode property.
+     * @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationDefaultMode property.
     */
     public function setX509CertificateAuthenticationDefaultMode(?X509CertificateAuthenticationMode $value): void {
         $this->getBackingStore()->set('x509CertificateAuthenticationDefaultMode', $value);

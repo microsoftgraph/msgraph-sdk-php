@@ -54,7 +54,7 @@ class Approval extends Entity implements Parsable
 
     /**
      * Sets the stages property value. A collection of stages in the approval decision.
-     *  @param array<ApprovalStage>|null $value Value to set for the stages property.
+     * @param array<ApprovalStage>|null $value Value to set for the stages property.
     */
     public function setStages(?array $value): void {
         $this->getBackingStore()->set('stages', $value);

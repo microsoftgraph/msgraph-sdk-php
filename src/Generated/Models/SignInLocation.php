@@ -120,7 +120,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the city property value. Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
-     *  @param string|null $value Value to set for the city property.
+     * @param string|null $value Value to set for the city property.
     */
     public function setCity(?string $value): void {
         $this->getBackingStore()->set('city', $value);
@@ -144,7 +144,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
-     *  @param string|null $value Value to set for the countryOrRegion property.
+     * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {
         $this->getBackingStore()->set('countryOrRegion', $value);
@@ -152,7 +152,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the geoCoordinates property value. Provides the latitude, longitude and altitude where the sign-in originated.
-     *  @param GeoCoordinates|null $value Value to set for the geoCoordinates property.
+     * @param GeoCoordinates|null $value Value to set for the geoCoordinates property.
     */
     public function setGeoCoordinates(?GeoCoordinates $value): void {
         $this->getBackingStore()->set('geoCoordinates', $value);
@@ -160,7 +160,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the state property value. Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);

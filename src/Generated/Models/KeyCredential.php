@@ -53,7 +53,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the customKeyIdentifier property value. Custom key identifier
+     * Gets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
      * @return StreamInterface|null
     */
     public function getCustomKeyIdentifier(): ?StreamInterface {
@@ -162,7 +162,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -170,15 +170,15 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
     }
 
     /**
-     * Sets the customKeyIdentifier property value. Custom key identifier
-     *  @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
+     * Sets the customKeyIdentifier property value. A 40-character binary type that can be used to identify the credential. Optional. When not provided in the payload, defaults to the thumbprint of the certificate.
+     * @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
     */
     public function setCustomKeyIdentifier(?StreamInterface $value): void {
         $this->getBackingStore()->set('customKeyIdentifier', $value);
@@ -186,7 +186,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Friendly name for the key. Optional.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -194,7 +194,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the endDateTime property value. The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -202,7 +202,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
-     *  @param StreamInterface|null $value Value to set for the key property.
+     * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -210,7 +210,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the keyId property value. The unique identifier (GUID) for the key.
-     *  @param string|null $value Value to set for the keyId property.
+     * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
         $this->getBackingStore()->set('keyId', $value);
@@ -218,7 +218,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -226,7 +226,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the startDateTime property value. The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -234,7 +234,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The type of key credential; for example, Symmetric, AsymmetricX509Cert.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -242,7 +242,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the usage property value. A string that describes the purpose for which the key can be used; for example, Verify.
-     *  @param string|null $value Value to set for the usage property.
+     * @param string|null $value Value to set for the usage property.
     */
     public function setUsage(?string $value): void {
         $this->getBackingStore()->set('usage', $value);

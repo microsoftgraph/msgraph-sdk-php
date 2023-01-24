@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMeth
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+*/
 class DeviceRequestBuilderGetQueryParameters 
 {
     /**

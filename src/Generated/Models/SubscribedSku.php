@@ -114,7 +114,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the appliesTo property value. For example, 'User' or 'Company'.
-     *  @param string|null $value Value to set for the appliesTo property.
+     * @param string|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?string $value): void {
         $this->getBackingStore()->set('appliesTo', $value);
@@ -122,7 +122,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the capabilityStatus property value. Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
-     *  @param string|null $value Value to set for the capabilityStatus property.
+     * @param string|null $value Value to set for the capabilityStatus property.
     */
     public function setCapabilityStatus(?string $value): void {
         $this->getBackingStore()->set('capabilityStatus', $value);
@@ -130,7 +130,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the consumedUnits property value. The number of licenses that have been assigned.
-     *  @param int|null $value Value to set for the consumedUnits property.
+     * @param int|null $value Value to set for the consumedUnits property.
     */
     public function setConsumedUnits(?int $value): void {
         $this->getBackingStore()->set('consumedUnits', $value);
@@ -138,7 +138,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the prepaidUnits property value. Information about the number and status of prepaid licenses.
-     *  @param LicenseUnitsDetail|null $value Value to set for the prepaidUnits property.
+     * @param LicenseUnitsDetail|null $value Value to set for the prepaidUnits property.
     */
     public function setPrepaidUnits(?LicenseUnitsDetail $value): void {
         $this->getBackingStore()->set('prepaidUnits', $value);
@@ -146,7 +146,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the servicePlans property value. Information about the service plans that are available with the SKU. Not nullable
-     *  @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
+     * @param array<ServicePlanInfo>|null $value Value to set for the servicePlans property.
     */
     public function setServicePlans(?array $value): void {
         $this->getBackingStore()->set('servicePlans', $value);
@@ -154,7 +154,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the skuId property value. The unique identifier (GUID) for the service SKU.
-     *  @param string|null $value Value to set for the skuId property.
+     * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {
         $this->getBackingStore()->set('skuId', $value);
@@ -162,7 +162,7 @@ class SubscribedSku extends Entity implements Parsable
 
     /**
      * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
-     *  @param string|null $value Value to set for the skuPartNumber property.
+     * @param string|null $value Value to set for the skuPartNumber property.
     */
     public function setSkuPartNumber(?string $value): void {
         $this->getBackingStore()->set('skuPartNumber', $value);

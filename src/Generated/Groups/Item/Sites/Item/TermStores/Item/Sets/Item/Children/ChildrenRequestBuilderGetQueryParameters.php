@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the first level children of a [set] or [term] resource using the children navigation property.
+*/
 class ChildrenRequestBuilderGetQueryParameters 
 {
     /**

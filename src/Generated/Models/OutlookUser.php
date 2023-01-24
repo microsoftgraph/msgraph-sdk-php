@@ -54,7 +54,7 @@ class OutlookUser extends Entity implements Parsable
 
     /**
      * Sets the masterCategories property value. A list of categories defined for the user.
-     *  @param array<OutlookCategory>|null $value Value to set for the masterCategories property.
+     * @param array<OutlookCategory>|null $value Value to set for the masterCategories property.
     */
     public function setMasterCategories(?array $value): void {
         $this->getBackingStore()->set('masterCategories', $value);

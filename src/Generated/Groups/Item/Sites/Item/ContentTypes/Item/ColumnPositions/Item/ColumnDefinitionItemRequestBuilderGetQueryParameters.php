@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Col
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Column order information in a content type.
+*/
 class ColumnDefinitionItemRequestBuilderGetQueryParameters 
 {
     /**

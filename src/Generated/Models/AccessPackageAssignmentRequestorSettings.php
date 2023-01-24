@@ -160,7 +160,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
-     *  @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
+     * @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
     */
     public function setAllowCustomAssignmentSchedule(?bool $value): void {
         $this->getBackingStore()->set('allowCustomAssignmentSchedule', $value);
@@ -176,7 +176,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -184,7 +184,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
-     *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToAddAccess property.
+     * @param bool|null $value Value to set for the enableOnBehalfRequestorsToAddAccess property.
     */
     public function setEnableOnBehalfRequestorsToAddAccess(?bool $value): void {
         $this->getBackingStore()->set('enableOnBehalfRequestorsToAddAccess', $value);
@@ -192,7 +192,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
-     *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
+     * @param bool|null $value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
     */
     public function setEnableOnBehalfRequestorsToRemoveAccess(?bool $value): void {
         $this->getBackingStore()->set('enableOnBehalfRequestorsToRemoveAccess', $value);
@@ -200,7 +200,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
-     *  @param bool|null $value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
+     * @param bool|null $value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
     */
     public function setEnableOnBehalfRequestorsToUpdateAccess(?bool $value): void {
         $this->getBackingStore()->set('enableOnBehalfRequestorsToUpdateAccess', $value);
@@ -208,7 +208,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
-     *  @param bool|null $value Value to set for the enableTargetsToSelfAddAccess property.
+     * @param bool|null $value Value to set for the enableTargetsToSelfAddAccess property.
     */
     public function setEnableTargetsToSelfAddAccess(?bool $value): void {
         $this->getBackingStore()->set('enableTargetsToSelfAddAccess', $value);
@@ -216,7 +216,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
-     *  @param bool|null $value Value to set for the enableTargetsToSelfRemoveAccess property.
+     * @param bool|null $value Value to set for the enableTargetsToSelfRemoveAccess property.
     */
     public function setEnableTargetsToSelfRemoveAccess(?bool $value): void {
         $this->getBackingStore()->set('enableTargetsToSelfRemoveAccess', $value);
@@ -224,7 +224,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
-     *  @param bool|null $value Value to set for the enableTargetsToSelfUpdateAccess property.
+     * @param bool|null $value Value to set for the enableTargetsToSelfUpdateAccess property.
     */
     public function setEnableTargetsToSelfUpdateAccess(?bool $value): void {
         $this->getBackingStore()->set('enableTargetsToSelfUpdateAccess', $value);
@@ -232,7 +232,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -240,7 +240,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
 
     /**
      * Sets the onBehalfRequestors property value. The principals who can request on-behalf-of others.
-     *  @param array<SubjectSet>|null $value Value to set for the onBehalfRequestors property.
+     * @param array<SubjectSet>|null $value Value to set for the onBehalfRequestors property.
     */
     public function setOnBehalfRequestors(?array $value): void {
         $this->getBackingStore()->set('onBehalfRequestors', $value);

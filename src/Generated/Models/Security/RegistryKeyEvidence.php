@@ -64,7 +64,7 @@ class RegistryKeyEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryHive property value. Registry hive of the key that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryHive property.
+     * @param string|null $value Value to set for the registryHive property.
     */
     public function setRegistryHive(?string $value): void {
         $this->getBackingStore()->set('registryHive', $value);
@@ -72,7 +72,7 @@ class RegistryKeyEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the registryKey property value. Registry key that the recorded action was applied to.
-     *  @param string|null $value Value to set for the registryKey property.
+     * @param string|null $value Value to set for the registryKey property.
     */
     public function setRegistryKey(?string $value): void {
         $this->getBackingStore()->set('registryKey', $value);

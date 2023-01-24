@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Children\Item
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
+*/
 class FromTermRequestBuilderGetQueryParameters 
 {
     /**

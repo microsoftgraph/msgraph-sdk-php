@@ -85,7 +85,7 @@ class IosStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     *  @param IosDeviceType|null $value Value to set for the applicableDeviceType property.
+     * @param IosDeviceType|null $value Value to set for the applicableDeviceType property.
     */
     public function setApplicableDeviceType(?IosDeviceType $value): void {
         $this->getBackingStore()->set('applicableDeviceType', $value);
@@ -93,7 +93,7 @@ class IosStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the appStoreUrl property value. The Apple App Store URL
-     *  @param string|null $value Value to set for the appStoreUrl property.
+     * @param string|null $value Value to set for the appStoreUrl property.
     */
     public function setAppStoreUrl(?string $value): void {
         $this->getBackingStore()->set('appStoreUrl', $value);
@@ -101,7 +101,7 @@ class IosStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the bundleId property value. The Identity Name.
-     *  @param string|null $value Value to set for the bundleId property.
+     * @param string|null $value Value to set for the bundleId property.
     */
     public function setBundleId(?string $value): void {
         $this->getBackingStore()->set('bundleId', $value);
@@ -109,7 +109,7 @@ class IosStoreApp extends MobileApp implements Parsable
 
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     *  @param IosMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
+     * @param IosMinimumOperatingSystem|null $value Value to set for the minimumSupportedOperatingSystem property.
     */
     public function setMinimumSupportedOperatingSystem(?IosMinimumOperatingSystem $value): void {
         $this->getBackingStore()->set('minimumSupportedOperatingSystem', $value);

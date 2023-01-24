@@ -111,7 +111,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. The UTC date and time the file was created on a client.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -135,7 +135,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastAccessedDateTime property value. The UTC date and time the file was last accessed. Available for the recent file list only.
-     *  @param DateTime|null $value Value to set for the lastAccessedDateTime property.
+     * @param DateTime|null $value Value to set for the lastAccessedDateTime property.
     */
     public function setLastAccessedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastAccessedDateTime', $value);
@@ -143,7 +143,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The UTC date and time the file was last modified on a client.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -151,7 +151,7 @@ class FileSystemInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

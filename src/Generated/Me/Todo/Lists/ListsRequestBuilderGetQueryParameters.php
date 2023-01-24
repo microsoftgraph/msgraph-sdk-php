@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Todo\Lists;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of the todoTaskList objects and their properties.
+*/
 class ListsRequestBuilderGetQueryParameters 
 {
     /**

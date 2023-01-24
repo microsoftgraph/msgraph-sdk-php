@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * App for Windows information protection
+*/
 class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -138,7 +141,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -146,7 +149,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +157,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the denied property value. If true, app is denied protection or exemption.
-     *  @param bool|null $value Value to set for the denied property.
+     * @param bool|null $value Value to set for the denied property.
     */
     public function setDenied(?bool $value): void {
         $this->getBackingStore()->set('denied', $value);
@@ -162,7 +165,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the description property value. The app's description.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -170,7 +173,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the displayName property value. App display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -178,7 +181,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +189,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the productName property value. The product name.
-     *  @param string|null $value Value to set for the productName property.
+     * @param string|null $value Value to set for the productName property.
     */
     public function setProductName(?string $value): void {
         $this->getBackingStore()->set('productName', $value);
@@ -194,7 +197,7 @@ class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the publisherName property value. The publisher name
-     *  @param string|null $value Value to set for the publisherName property.
+     * @param string|null $value Value to set for the publisherName property.
     */
     public function setPublisherName(?string $value): void {
         $this->getBackingStore()->set('publisherName', $value);

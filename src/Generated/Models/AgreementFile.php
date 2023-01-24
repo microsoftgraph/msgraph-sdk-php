@@ -54,7 +54,7 @@ class AgreementFile extends AgreementFileProperties implements Parsable
 
     /**
      * Sets the localizations property value. The localized version of the terms of use agreement files attached to the agreement.
-     *  @param array<AgreementFileLocalization>|null $value Value to set for the localizations property.
+     * @param array<AgreementFileLocalization>|null $value Value to set for the localizations property.
     */
     public function setLocalizations(?array $value): void {
         $this->getBackingStore()->set('localizations', $value);

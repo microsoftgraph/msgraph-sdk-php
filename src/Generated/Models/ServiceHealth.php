@@ -74,7 +74,7 @@ class ServiceHealth extends Entity implements Parsable
 
     /**
      * Sets the issues property value. A collection of issues that happened on the service, with detailed information for each issue.
-     *  @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
+     * @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
     */
     public function setIssues(?array $value): void {
         $this->getBackingStore()->set('issues', $value);
@@ -82,7 +82,7 @@ class ServiceHealth extends Entity implements Parsable
 
     /**
      * Sets the service property value. The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
-     *  @param string|null $value Value to set for the service property.
+     * @param string|null $value Value to set for the service property.
     */
     public function setService(?string $value): void {
         $this->getBackingStore()->set('service', $value);
@@ -90,7 +90,7 @@ class ServiceHealth extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param ServiceHealthStatus|null $value Value to set for the status property.
+     * @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value): void {
         $this->getBackingStore()->set('status', $value);

@@ -55,7 +55,7 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable
 
     /**
      * Sets the packageId property value. The identifier for an app, as specified in the play store.
-     *  @param string|null $value Value to set for the packageId property.
+     * @param string|null $value Value to set for the packageId property.
     */
     public function setPackageId(?string $value): void {
         $this->getBackingStore()->set('packageId', $value);

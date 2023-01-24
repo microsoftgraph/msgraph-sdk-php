@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMeth
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
+*/
 class MicrosoftAuthenticatorMethodsRequestBuilderGetQueryParameters 
 {
     /**

@@ -66,7 +66,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
 
     /**
      * Sets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
-     *  @param UserFeedback|null $value Value to set for the feedback property.
+     * @param UserFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?UserFeedback $value): void {
         $this->getBackingStore()->set('feedback', $value);
@@ -74,7 +74,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
 
     /**
      * Sets the identity property value. Identity associated with the endpoint.
-     *  @param IdentitySet|null $value Value to set for the identity property.
+     * @param IdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?IdentitySet $value): void {
         $this->getBackingStore()->set('identity', $value);

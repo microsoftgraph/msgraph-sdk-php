@@ -54,7 +54,7 @@ class RemoteLockActionResult extends DeviceActionResult implements Parsable
 
     /**
      * Sets the unlockPin property value. Pin to unlock the client
-     *  @param string|null $value Value to set for the unlockPin property.
+     * @param string|null $value Value to set for the unlockPin property.
     */
     public function setUnlockPin(?string $value): void {
         $this->getBackingStore()->set('unlockPin', $value);

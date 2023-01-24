@@ -226,7 +226,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the addresses property value. The addresses property
-     *  @param array<PhysicalOfficeAddress>|null $value Value to set for the addresses property.
+     * @param array<PhysicalOfficeAddress>|null $value Value to set for the addresses property.
     */
     public function setAddresses(?array $value): void {
         $this->getBackingStore()->set('addresses', $value);
@@ -234,7 +234,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the companyName property value. The companyName property
-     *  @param string|null $value Value to set for the companyName property.
+     * @param string|null $value Value to set for the companyName property.
     */
     public function setCompanyName(?string $value): void {
         $this->getBackingStore()->set('companyName', $value);
@@ -242,7 +242,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the department property value. The department property
-     *  @param string|null $value Value to set for the department property.
+     * @param string|null $value Value to set for the department property.
     */
     public function setDepartment(?string $value): void {
         $this->getBackingStore()->set('department', $value);
@@ -250,7 +250,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the directReports property value. The directReports property
-     *  @param array<DirectoryObject>|null $value Value to set for the directReports property.
+     * @param array<DirectoryObject>|null $value Value to set for the directReports property.
     */
     public function setDirectReports(?array $value): void {
         $this->getBackingStore()->set('directReports', $value);
@@ -258,7 +258,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -266,7 +266,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the givenName property value. The givenName property
-     *  @param string|null $value Value to set for the givenName property.
+     * @param string|null $value Value to set for the givenName property.
     */
     public function setGivenName(?string $value): void {
         $this->getBackingStore()->set('givenName', $value);
@@ -274,7 +274,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the jobTitle property value. The jobTitle property
-     *  @param string|null $value Value to set for the jobTitle property.
+     * @param string|null $value Value to set for the jobTitle property.
     */
     public function setJobTitle(?string $value): void {
         $this->getBackingStore()->set('jobTitle', $value);
@@ -282,7 +282,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the mail property value. The mail property
-     *  @param string|null $value Value to set for the mail property.
+     * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {
         $this->getBackingStore()->set('mail', $value);
@@ -290,7 +290,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the mailNickname property value. The mailNickname property
-     *  @param string|null $value Value to set for the mailNickname property.
+     * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
         $this->getBackingStore()->set('mailNickname', $value);
@@ -298,7 +298,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the manager property value. The manager property
-     *  @param DirectoryObject|null $value Value to set for the manager property.
+     * @param DirectoryObject|null $value Value to set for the manager property.
     */
     public function setManager(?DirectoryObject $value): void {
         $this->getBackingStore()->set('manager', $value);
@@ -306,7 +306,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the memberOf property value. The memberOf property
-     *  @param array<DirectoryObject>|null $value Value to set for the memberOf property.
+     * @param array<DirectoryObject>|null $value Value to set for the memberOf property.
     */
     public function setMemberOf(?array $value): void {
         $this->getBackingStore()->set('memberOf', $value);
@@ -314,7 +314,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the onPremisesLastSyncDateTime property value. The onPremisesLastSyncDateTime property
-     *  @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('onPremisesLastSyncDateTime', $value);
@@ -322,7 +322,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the onPremisesProvisioningErrors property value. The onPremisesProvisioningErrors property
-     *  @param array<OnPremisesProvisioningError>|null $value Value to set for the onPremisesProvisioningErrors property.
+     * @param array<OnPremisesProvisioningError>|null $value Value to set for the onPremisesProvisioningErrors property.
     */
     public function setOnPremisesProvisioningErrors(?array $value): void {
         $this->getBackingStore()->set('onPremisesProvisioningErrors', $value);
@@ -330,7 +330,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the onPremisesSyncEnabled property value. The onPremisesSyncEnabled property
-     *  @param bool|null $value Value to set for the onPremisesSyncEnabled property.
+     * @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value): void {
         $this->getBackingStore()->set('onPremisesSyncEnabled', $value);
@@ -338,7 +338,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the phones property value. The phones property
-     *  @param array<Phone>|null $value Value to set for the phones property.
+     * @param array<Phone>|null $value Value to set for the phones property.
     */
     public function setPhones(?array $value): void {
         $this->getBackingStore()->set('phones', $value);
@@ -346,7 +346,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the proxyAddresses property value. The proxyAddresses property
-     *  @param array<string>|null $value Value to set for the proxyAddresses property.
+     * @param array<string>|null $value Value to set for the proxyAddresses property.
     */
     public function setProxyAddresses(?array $value): void {
         $this->getBackingStore()->set('proxyAddresses', $value);
@@ -354,7 +354,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the surname property value. The surname property
-     *  @param string|null $value Value to set for the surname property.
+     * @param string|null $value Value to set for the surname property.
     */
     public function setSurname(?string $value): void {
         $this->getBackingStore()->set('surname', $value);
@@ -362,7 +362,7 @@ class OrgContact extends DirectoryObject implements Parsable
 
     /**
      * Sets the transitiveMemberOf property value. The transitiveMemberOf property
-     *  @param array<DirectoryObject>|null $value Value to set for the transitiveMemberOf property.
+     * @param array<DirectoryObject>|null $value Value to set for the transitiveMemberOf property.
     */
     public function setTransitiveMemberOf(?array $value): void {
         $this->getBackingStore()->set('transitiveMemberOf', $value);

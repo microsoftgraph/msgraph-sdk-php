@@ -65,7 +65,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
 
     /**
      * Sets the password property value. The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);
@@ -73,7 +73,7 @@ class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implements Pa
 
     /**
      * Sets the pkcs12Value property value. Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
-     *  @param string|null $value Value to set for the pkcs12Value property.
+     * @param string|null $value Value to set for the pkcs12Value property.
     */
     public function setPkcs12Value(?string $value): void {
         $this->getBackingStore()->set('pkcs12Value', $value);

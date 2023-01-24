@@ -145,7 +145,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the access property value. Statistics about the access actions in this interval. Read-only.
-     *  @param ItemActionStat|null $value Value to set for the access property.
+     * @param ItemActionStat|null $value Value to set for the access property.
     */
     public function setAccess(?ItemActionStat $value): void {
         $this->getBackingStore()->set('access', $value);
@@ -153,7 +153,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the activities property value. Exposes the itemActivities represented in this itemActivityStat resource.
-     *  @param array<ItemActivity>|null $value Value to set for the activities property.
+     * @param array<ItemActivity>|null $value Value to set for the activities property.
     */
     public function setActivities(?array $value): void {
         $this->getBackingStore()->set('activities', $value);
@@ -161,7 +161,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the create property value. Statistics about the create actions in this interval. Read-only.
-     *  @param ItemActionStat|null $value Value to set for the create property.
+     * @param ItemActionStat|null $value Value to set for the create property.
     */
     public function setCreate(?ItemActionStat $value): void {
         $this->getBackingStore()->set('create', $value);
@@ -169,7 +169,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the delete property value. Statistics about the delete actions in this interval. Read-only.
-     *  @param ItemActionStat|null $value Value to set for the delete property.
+     * @param ItemActionStat|null $value Value to set for the delete property.
     */
     public function setDelete(?ItemActionStat $value): void {
         $this->getBackingStore()->set('delete', $value);
@@ -177,7 +177,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the edit property value. Statistics about the edit actions in this interval. Read-only.
-     *  @param ItemActionStat|null $value Value to set for the edit property.
+     * @param ItemActionStat|null $value Value to set for the edit property.
     */
     public function setEdit(?ItemActionStat $value): void {
         $this->getBackingStore()->set('edit', $value);
@@ -185,7 +185,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the endDateTime property value. When the interval ends. Read-only.
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -193,7 +193,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the incompleteData property value. Indicates that the statistics in this interval are based on incomplete data. Read-only.
-     *  @param IncompleteData|null $value Value to set for the incompleteData property.
+     * @param IncompleteData|null $value Value to set for the incompleteData property.
     */
     public function setIncompleteData(?IncompleteData $value): void {
         $this->getBackingStore()->set('incompleteData', $value);
@@ -201,7 +201,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the isTrending property value. Indicates whether the item is 'trending.' Read-only.
-     *  @param bool|null $value Value to set for the isTrending property.
+     * @param bool|null $value Value to set for the isTrending property.
     */
     public function setIsTrending(?bool $value): void {
         $this->getBackingStore()->set('isTrending', $value);
@@ -209,7 +209,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the move property value. Statistics about the move actions in this interval. Read-only.
-     *  @param ItemActionStat|null $value Value to set for the move property.
+     * @param ItemActionStat|null $value Value to set for the move property.
     */
     public function setMove(?ItemActionStat $value): void {
         $this->getBackingStore()->set('move', $value);
@@ -217,7 +217,7 @@ class ItemActivityStat extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. When the interval starts. Read-only.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

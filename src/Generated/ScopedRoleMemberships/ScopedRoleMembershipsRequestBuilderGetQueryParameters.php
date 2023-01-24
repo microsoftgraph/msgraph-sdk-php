@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ScopedRoleMemberships;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from scopedRoleMemberships
+*/
 class ScopedRoleMembershipsRequestBuilderGetQueryParameters 
 {
     /**

@@ -94,7 +94,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
 
     /**
      * Sets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
-     *  @param DeviceExchangeAccessStateSummary|null $value Value to set for the deviceExchangeAccessStateSummary property.
+     * @param DeviceExchangeAccessStateSummary|null $value Value to set for the deviceExchangeAccessStateSummary property.
     */
     public function setDeviceExchangeAccessStateSummary(?DeviceExchangeAccessStateSummary $value): void {
         $this->getBackingStore()->set('deviceExchangeAccessStateSummary', $value);
@@ -102,7 +102,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
 
     /**
      * Sets the deviceOperatingSystemSummary property value. Device operating system summary.
-     *  @param DeviceOperatingSystemSummary|null $value Value to set for the deviceOperatingSystemSummary property.
+     * @param DeviceOperatingSystemSummary|null $value Value to set for the deviceOperatingSystemSummary property.
     */
     public function setDeviceOperatingSystemSummary(?DeviceOperatingSystemSummary $value): void {
         $this->getBackingStore()->set('deviceOperatingSystemSummary', $value);
@@ -110,7 +110,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
 
     /**
      * Sets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
-     *  @param int|null $value Value to set for the dualEnrolledDeviceCount property.
+     * @param int|null $value Value to set for the dualEnrolledDeviceCount property.
     */
     public function setDualEnrolledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('dualEnrolledDeviceCount', $value);
@@ -118,7 +118,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
 
     /**
      * Sets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
-     *  @param int|null $value Value to set for the enrolledDeviceCount property.
+     * @param int|null $value Value to set for the enrolledDeviceCount property.
     */
     public function setEnrolledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('enrolledDeviceCount', $value);
@@ -126,7 +126,7 @@ class ManagedDeviceOverview extends Entity implements Parsable
 
     /**
      * Sets the mdmEnrolledCount property value. The number of devices enrolled in MDM
-     *  @param int|null $value Value to set for the mdmEnrolledCount property.
+     * @param int|null $value Value to set for the mdmEnrolledCount property.
     */
     public function setMdmEnrolledCount(?int $value): void {
         $this->getBackingStore()->set('mdmEnrolledCount', $value);

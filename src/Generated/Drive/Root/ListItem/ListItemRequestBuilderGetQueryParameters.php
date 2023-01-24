@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Root\ListItem;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
+*/
 class ListItemRequestBuilderGetQueryParameters 
 {
     /**

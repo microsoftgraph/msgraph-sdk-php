@@ -55,7 +55,7 @@ class IosHomeScreenApp extends IosHomeScreenItem implements Parsable
 
     /**
      * Sets the bundleID property value. BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
-     *  @param string|null $value Value to set for the bundleID property.
+     * @param string|null $value Value to set for the bundleID property.
     */
     public function setBundleID(?string $value): void {
         $this->getBackingStore()->set('bundleID', $value);

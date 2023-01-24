@@ -56,7 +56,7 @@ class TaskFileAttachment extends AttachmentBase implements Parsable
 
     /**
      * Sets the contentBytes property value. The contentBytes property
-     *  @param StreamInterface|null $value Value to set for the contentBytes property.
+     * @param StreamInterface|null $value Value to set for the contentBytes property.
     */
     public function setContentBytes(?StreamInterface $value): void {
         $this->getBackingStore()->set('contentBytes', $value);

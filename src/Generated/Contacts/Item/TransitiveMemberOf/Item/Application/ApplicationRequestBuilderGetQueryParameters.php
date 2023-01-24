@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item\Applic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the item of type microsoft.graph.directoryObject as microsoft.graph.application
+*/
 class ApplicationRequestBuilderGetQueryParameters 
 {
     /**

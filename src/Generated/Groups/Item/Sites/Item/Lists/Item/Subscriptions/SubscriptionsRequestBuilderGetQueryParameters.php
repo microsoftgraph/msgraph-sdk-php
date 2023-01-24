@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscripti
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The set of subscriptions on the list.
+*/
 class SubscriptionsRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Search;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get search
+*/
 class SearchRequestBuilderGetQueryParameters 
 {
     /**

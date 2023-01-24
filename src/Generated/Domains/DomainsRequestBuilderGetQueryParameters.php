@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Domains;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of domain objects.
+*/
 class DomainsRequestBuilderGetQueryParameters 
 {
     /**

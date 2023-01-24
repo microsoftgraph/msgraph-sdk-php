@@ -55,7 +55,7 @@ class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Pa
 
     /**
      * Sets the isEnabled property value. If set to true, Azure Active Directory security defaults is enabled for the tenant.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);

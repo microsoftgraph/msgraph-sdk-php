@@ -74,7 +74,7 @@ class FileEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     *  @param DetectionStatus|null $value Value to set for the detectionStatus property.
+     * @param DetectionStatus|null $value Value to set for the detectionStatus property.
     */
     public function setDetectionStatus(?DetectionStatus $value): void {
         $this->getBackingStore()->set('detectionStatus', $value);
@@ -82,7 +82,7 @@ class FileEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the fileDetails property value. The file details.
-     *  @param FileDetails|null $value Value to set for the fileDetails property.
+     * @param FileDetails|null $value Value to set for the fileDetails property.
     */
     public function setFileDetails(?FileDetails $value): void {
         $this->getBackingStore()->set('fileDetails', $value);
@@ -90,7 +90,7 @@ class FileEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     *  @param string|null $value Value to set for the mdeDeviceId property.
+     * @param string|null $value Value to set for the mdeDeviceId property.
     */
     public function setMdeDeviceId(?string $value): void {
         $this->getBackingStore()->set('mdeDeviceId', $value);

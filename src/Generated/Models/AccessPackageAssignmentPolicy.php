@@ -175,7 +175,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the accessPackage property value. Access package containing this policy. Read-only.
-     *  @param AccessPackage|null $value Value to set for the accessPackage property.
+     * @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value): void {
         $this->getBackingStore()->set('accessPackage', $value);
@@ -183,7 +183,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
-     *  @param AllowedTargetScope|null $value Value to set for the allowedTargetScope property.
+     * @param AllowedTargetScope|null $value Value to set for the allowedTargetScope property.
     */
     public function setAllowedTargetScope(?AllowedTargetScope $value): void {
         $this->getBackingStore()->set('allowedTargetScope', $value);
@@ -191,7 +191,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the automaticRequestSettings property value. This property is only present for an auto assignment policy; if absent, this is a request-based policy.
-     *  @param AccessPackageAutomaticRequestSettings|null $value Value to set for the automaticRequestSettings property.
+     * @param AccessPackageAutomaticRequestSettings|null $value Value to set for the automaticRequestSettings property.
     */
     public function setAutomaticRequestSettings(?AccessPackageAutomaticRequestSettings $value): void {
         $this->getBackingStore()->set('automaticRequestSettings', $value);
@@ -199,7 +199,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the catalog property value. Catalog of the access package containing this policy. Read-only.
-     *  @param AccessPackageCatalog|null $value Value to set for the catalog property.
+     * @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
     public function setCatalog(?AccessPackageCatalog $value): void {
         $this->getBackingStore()->set('catalog', $value);
@@ -207,7 +207,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -215,7 +215,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the policy.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -223,7 +223,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the policy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -231,7 +231,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the expiration property value. The expiration date for assignments created in this policy.
-     *  @param ExpirationPattern|null $value Value to set for the expiration property.
+     * @param ExpirationPattern|null $value Value to set for the expiration property.
     */
     public function setExpiration(?ExpirationPattern $value): void {
         $this->getBackingStore()->set('expiration', $value);
@@ -239,7 +239,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
@@ -247,7 +247,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the requestApprovalSettings property value. Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
-     *  @param AccessPackageAssignmentApprovalSettings|null $value Value to set for the requestApprovalSettings property.
+     * @param AccessPackageAssignmentApprovalSettings|null $value Value to set for the requestApprovalSettings property.
     */
     public function setRequestApprovalSettings(?AccessPackageAssignmentApprovalSettings $value): void {
         $this->getBackingStore()->set('requestApprovalSettings', $value);
@@ -255,7 +255,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the requestorSettings property value. Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
-     *  @param AccessPackageAssignmentRequestorSettings|null $value Value to set for the requestorSettings property.
+     * @param AccessPackageAssignmentRequestorSettings|null $value Value to set for the requestorSettings property.
     */
     public function setRequestorSettings(?AccessPackageAssignmentRequestorSettings $value): void {
         $this->getBackingStore()->set('requestorSettings', $value);
@@ -263,7 +263,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the reviewSettings property value. Settings for access reviews of assignments through this policy.
-     *  @param AccessPackageAssignmentReviewSettings|null $value Value to set for the reviewSettings property.
+     * @param AccessPackageAssignmentReviewSettings|null $value Value to set for the reviewSettings property.
     */
     public function setReviewSettings(?AccessPackageAssignmentReviewSettings $value): void {
         $this->getBackingStore()->set('reviewSettings', $value);
@@ -271,7 +271,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
 
     /**
      * Sets the specificAllowedTargets property value. The principals that can be assigned access from an access package through this policy.
-     *  @param array<SubjectSet>|null $value Value to set for the specificAllowedTargets property.
+     * @param array<SubjectSet>|null $value Value to set for the specificAllowedTargets property.
     */
     public function setSpecificAllowedTargets(?array $value): void {
         $this->getBackingStore()->set('specificAllowedTargets', $value);

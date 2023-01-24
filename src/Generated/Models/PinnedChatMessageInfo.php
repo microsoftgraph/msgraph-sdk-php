@@ -54,7 +54,7 @@ class PinnedChatMessageInfo extends Entity implements Parsable
 
     /**
      * Sets the message property value. Represents details about the chat message that is pinned.
-     *  @param ChatMessage|null $value Value to set for the message property.
+     * @param ChatMessage|null $value Value to set for the message property.
     */
     public function setMessage(?ChatMessage $value): void {
         $this->getBackingStore()->set('message', $value);

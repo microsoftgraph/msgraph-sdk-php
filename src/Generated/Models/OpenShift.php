@@ -75,7 +75,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the draftOpenShift property value. An unpublished open shift.
-     *  @param OpenShiftItem|null $value Value to set for the draftOpenShift property.
+     * @param OpenShiftItem|null $value Value to set for the draftOpenShift property.
     */
     public function setDraftOpenShift(?OpenShiftItem $value): void {
         $this->getBackingStore()->set('draftOpenShift', $value);
@@ -83,7 +83,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
-     *  @param string|null $value Value to set for the schedulingGroupId property.
+     * @param string|null $value Value to set for the schedulingGroupId property.
     */
     public function setSchedulingGroupId(?string $value): void {
         $this->getBackingStore()->set('schedulingGroupId', $value);
@@ -91,7 +91,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the sharedOpenShift property value. A published open shift.
-     *  @param OpenShiftItem|null $value Value to set for the sharedOpenShift property.
+     * @param OpenShiftItem|null $value Value to set for the sharedOpenShift property.
     */
     public function setSharedOpenShift(?OpenShiftItem $value): void {
         $this->getBackingStore()->set('sharedOpenShift', $value);

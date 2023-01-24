@@ -65,7 +65,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
 
     /**
      * Sets the allowSampleSharing property value. Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
-     *  @param bool|null $value Value to set for the allowSampleSharing property.
+     * @param bool|null $value Value to set for the allowSampleSharing property.
     */
     public function setAllowSampleSharing(?bool $value): void {
         $this->getBackingStore()->set('allowSampleSharing', $value);
@@ -73,7 +73,7 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
 
     /**
      * Sets the enableExpeditedTelemetryReporting property value. Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
-     *  @param bool|null $value Value to set for the enableExpeditedTelemetryReporting property.
+     * @param bool|null $value Value to set for the enableExpeditedTelemetryReporting property.
     */
     public function setEnableExpeditedTelemetryReporting(?bool $value): void {
         $this->getBackingStore()->set('enableExpeditedTelemetryReporting', $value);

@@ -55,7 +55,7 @@ class SharePointIdentity extends Identity implements Parsable
 
     /**
      * Sets the loginName property value. The sign in name of the SharePoint identity.
-     *  @param string|null $value Value to set for the loginName property.
+     * @param string|null $value Value to set for the loginName property.
     */
     public function setLoginName(?string $value): void {
         $this->getBackingStore()->set('loginName', $value);

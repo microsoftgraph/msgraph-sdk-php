@@ -405,7 +405,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the allowWindows11Upgrade property value. When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the allowWindows11Upgrade property.
+     * @param bool|null $value Value to set for the allowWindows11Upgrade property.
     */
     public function setAllowWindows11Upgrade(?bool $value): void {
         $this->getBackingStore()->set('allowWindows11Upgrade', $value);
@@ -413,7 +413,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the automaticUpdateMode property value. Possible values for automatic update mode.
-     *  @param AutomaticUpdateMode|null $value Value to set for the automaticUpdateMode property.
+     * @param AutomaticUpdateMode|null $value Value to set for the automaticUpdateMode property.
     */
     public function setAutomaticUpdateMode(?AutomaticUpdateMode $value): void {
         $this->getBackingStore()->set('automaticUpdateMode', $value);
@@ -421,7 +421,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
-     *  @param AutoRestartNotificationDismissalMethod|null $value Value to set for the autoRestartNotificationDismissal property.
+     * @param AutoRestartNotificationDismissalMethod|null $value Value to set for the autoRestartNotificationDismissal property.
     */
     public function setAutoRestartNotificationDismissal(?AutoRestartNotificationDismissalMethod $value): void {
         $this->getBackingStore()->set('autoRestartNotificationDismissal', $value);
@@ -429,7 +429,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
-     *  @param WindowsUpdateType|null $value Value to set for the businessReadyUpdatesOnly property.
+     * @param WindowsUpdateType|null $value Value to set for the businessReadyUpdatesOnly property.
     */
     public function setBusinessReadyUpdatesOnly(?WindowsUpdateType $value): void {
         $this->getBackingStore()->set('businessReadyUpdatesOnly', $value);
@@ -437,7 +437,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the deadlineForFeatureUpdatesInDays property value. Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the deadlineForFeatureUpdatesInDays property.
+     * @param int|null $value Value to set for the deadlineForFeatureUpdatesInDays property.
     */
     public function setDeadlineForFeatureUpdatesInDays(?int $value): void {
         $this->getBackingStore()->set('deadlineForFeatureUpdatesInDays', $value);
@@ -445,7 +445,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the deadlineForQualityUpdatesInDays property value. Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the deadlineForQualityUpdatesInDays property.
+     * @param int|null $value Value to set for the deadlineForQualityUpdatesInDays property.
     */
     public function setDeadlineForQualityUpdatesInDays(?int $value): void {
         $this->getBackingStore()->set('deadlineForQualityUpdatesInDays', $value);
@@ -453,7 +453,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the deadlineGracePeriodInDays property value. Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the deadlineGracePeriodInDays property.
+     * @param int|null $value Value to set for the deadlineGracePeriodInDays property.
     */
     public function setDeadlineGracePeriodInDays(?int $value): void {
         $this->getBackingStore()->set('deadlineGracePeriodInDays', $value);
@@ -461,7 +461,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     *  @param WindowsDeliveryOptimizationMode|null $value Value to set for the deliveryOptimizationMode property.
+     * @param WindowsDeliveryOptimizationMode|null $value Value to set for the deliveryOptimizationMode property.
     */
     public function setDeliveryOptimizationMode(?WindowsDeliveryOptimizationMode $value): void {
         $this->getBackingStore()->set('deliveryOptimizationMode', $value);
@@ -469,7 +469,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the driversExcluded property value. When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the driversExcluded property.
+     * @param bool|null $value Value to set for the driversExcluded property.
     */
     public function setDriversExcluded(?bool $value): void {
         $this->getBackingStore()->set('driversExcluded', $value);
@@ -477,7 +477,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the engagedRestartDeadlineInDays property value. Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the engagedRestartDeadlineInDays property.
+     * @param int|null $value Value to set for the engagedRestartDeadlineInDays property.
     */
     public function setEngagedRestartDeadlineInDays(?int $value): void {
         $this->getBackingStore()->set('engagedRestartDeadlineInDays', $value);
@@ -485,7 +485,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the engagedRestartSnoozeScheduleInDays property value. Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the engagedRestartSnoozeScheduleInDays property.
+     * @param int|null $value Value to set for the engagedRestartSnoozeScheduleInDays property.
     */
     public function setEngagedRestartSnoozeScheduleInDays(?int $value): void {
         $this->getBackingStore()->set('engagedRestartSnoozeScheduleInDays', $value);
@@ -493,7 +493,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the engagedRestartTransitionScheduleInDays property value. Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the engagedRestartTransitionScheduleInDays property.
+     * @param int|null $value Value to set for the engagedRestartTransitionScheduleInDays property.
     */
     public function setEngagedRestartTransitionScheduleInDays(?int $value): void {
         $this->getBackingStore()->set('engagedRestartTransitionScheduleInDays', $value);
@@ -501,7 +501,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the featureUpdatesDeferralPeriodInDays property.
+     * @param int|null $value Value to set for the featureUpdatesDeferralPeriodInDays property.
     */
     public function setFeatureUpdatesDeferralPeriodInDays(?int $value): void {
         $this->getBackingStore()->set('featureUpdatesDeferralPeriodInDays', $value);
@@ -509,7 +509,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesPaused property value. When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
-     *  @param bool|null $value Value to set for the featureUpdatesPaused property.
+     * @param bool|null $value Value to set for the featureUpdatesPaused property.
     */
     public function setFeatureUpdatesPaused(?bool $value): void {
         $this->getBackingStore()->set('featureUpdatesPaused', $value);
@@ -517,7 +517,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesPauseExpiryDateTime property value. The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
-     *  @param DateTime|null $value Value to set for the featureUpdatesPauseExpiryDateTime property.
+     * @param DateTime|null $value Value to set for the featureUpdatesPauseExpiryDateTime property.
     */
     public function setFeatureUpdatesPauseExpiryDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('featureUpdatesPauseExpiryDateTime', $value);
@@ -525,7 +525,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesPauseStartDate property value. The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
-     *  @param Date|null $value Value to set for the featureUpdatesPauseStartDate property.
+     * @param Date|null $value Value to set for the featureUpdatesPauseStartDate property.
     */
     public function setFeatureUpdatesPauseStartDate(?Date $value): void {
         $this->getBackingStore()->set('featureUpdatesPauseStartDate', $value);
@@ -533,7 +533,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesRollbackStartDateTime property value. The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
-     *  @param DateTime|null $value Value to set for the featureUpdatesRollbackStartDateTime property.
+     * @param DateTime|null $value Value to set for the featureUpdatesRollbackStartDateTime property.
     */
     public function setFeatureUpdatesRollbackStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('featureUpdatesRollbackStartDateTime', $value);
@@ -541,7 +541,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesRollbackWindowInDays property value. The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the featureUpdatesRollbackWindowInDays property.
+     * @param int|null $value Value to set for the featureUpdatesRollbackWindowInDays property.
     */
     public function setFeatureUpdatesRollbackWindowInDays(?int $value): void {
         $this->getBackingStore()->set('featureUpdatesRollbackWindowInDays', $value);
@@ -549,7 +549,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the featureUpdatesWillBeRolledBack property value. When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported.
-     *  @param bool|null $value Value to set for the featureUpdatesWillBeRolledBack property.
+     * @param bool|null $value Value to set for the featureUpdatesWillBeRolledBack property.
     */
     public function setFeatureUpdatesWillBeRolledBack(?bool $value): void {
         $this->getBackingStore()->set('featureUpdatesWillBeRolledBack', $value);
@@ -557,7 +557,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
-     *  @param WindowsUpdateInstallScheduleType|null $value Value to set for the installationSchedule property.
+     * @param WindowsUpdateInstallScheduleType|null $value Value to set for the installationSchedule property.
     */
     public function setInstallationSchedule(?WindowsUpdateInstallScheduleType $value): void {
         $this->getBackingStore()->set('installationSchedule', $value);
@@ -565,7 +565,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the microsoftUpdateServiceAllowed property value. When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the microsoftUpdateServiceAllowed property.
+     * @param bool|null $value Value to set for the microsoftUpdateServiceAllowed property.
     */
     public function setMicrosoftUpdateServiceAllowed(?bool $value): void {
         $this->getBackingStore()->set('microsoftUpdateServiceAllowed', $value);
@@ -573,7 +573,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the postponeRebootUntilAfterDeadline property value. When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the postponeRebootUntilAfterDeadline property.
+     * @param bool|null $value Value to set for the postponeRebootUntilAfterDeadline property.
     */
     public function setPostponeRebootUntilAfterDeadline(?bool $value): void {
         $this->getBackingStore()->set('postponeRebootUntilAfterDeadline', $value);
@@ -581,7 +581,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the prereleaseFeatures property value. Possible values for pre-release features.
-     *  @param PrereleaseFeatures|null $value Value to set for the prereleaseFeatures property.
+     * @param PrereleaseFeatures|null $value Value to set for the prereleaseFeatures property.
     */
     public function setPrereleaseFeatures(?PrereleaseFeatures $value): void {
         $this->getBackingStore()->set('prereleaseFeatures', $value);
@@ -589,7 +589,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the qualityUpdatesDeferralPeriodInDays property.
+     * @param int|null $value Value to set for the qualityUpdatesDeferralPeriodInDays property.
     */
     public function setQualityUpdatesDeferralPeriodInDays(?int $value): void {
         $this->getBackingStore()->set('qualityUpdatesDeferralPeriodInDays', $value);
@@ -597,7 +597,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesPaused property value. When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the qualityUpdatesPaused property.
+     * @param bool|null $value Value to set for the qualityUpdatesPaused property.
     */
     public function setQualityUpdatesPaused(?bool $value): void {
         $this->getBackingStore()->set('qualityUpdatesPaused', $value);
@@ -605,7 +605,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesPauseExpiryDateTime property value. The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
-     *  @param DateTime|null $value Value to set for the qualityUpdatesPauseExpiryDateTime property.
+     * @param DateTime|null $value Value to set for the qualityUpdatesPauseExpiryDateTime property.
     */
     public function setQualityUpdatesPauseExpiryDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('qualityUpdatesPauseExpiryDateTime', $value);
@@ -613,7 +613,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesPauseStartDate property value. The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
-     *  @param Date|null $value Value to set for the qualityUpdatesPauseStartDate property.
+     * @param Date|null $value Value to set for the qualityUpdatesPauseStartDate property.
     */
     public function setQualityUpdatesPauseStartDate(?Date $value): void {
         $this->getBackingStore()->set('qualityUpdatesPauseStartDate', $value);
@@ -621,7 +621,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesRollbackStartDateTime property value. The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported.
-     *  @param DateTime|null $value Value to set for the qualityUpdatesRollbackStartDateTime property.
+     * @param DateTime|null $value Value to set for the qualityUpdatesRollbackStartDateTime property.
     */
     public function setQualityUpdatesRollbackStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('qualityUpdatesRollbackStartDateTime', $value);
@@ -629,7 +629,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the qualityUpdatesWillBeRolledBack property value. When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the qualityUpdatesWillBeRolledBack property.
+     * @param bool|null $value Value to set for the qualityUpdatesWillBeRolledBack property.
     */
     public function setQualityUpdatesWillBeRolledBack(?bool $value): void {
         $this->getBackingStore()->set('qualityUpdatesWillBeRolledBack', $value);
@@ -637,7 +637,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the scheduleImminentRestartWarningInMinutes property value. Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the scheduleImminentRestartWarningInMinutes property.
+     * @param int|null $value Value to set for the scheduleImminentRestartWarningInMinutes property.
     */
     public function setScheduleImminentRestartWarningInMinutes(?int $value): void {
         $this->getBackingStore()->set('scheduleImminentRestartWarningInMinutes', $value);
@@ -645,7 +645,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the scheduleRestartWarningInHours property value. Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported.
-     *  @param int|null $value Value to set for the scheduleRestartWarningInHours property.
+     * @param int|null $value Value to set for the scheduleRestartWarningInHours property.
     */
     public function setScheduleRestartWarningInHours(?int $value): void {
         $this->getBackingStore()->set('scheduleRestartWarningInHours', $value);
@@ -653,7 +653,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the skipChecksBeforeRestart property value. When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported.
-     *  @param bool|null $value Value to set for the skipChecksBeforeRestart property.
+     * @param bool|null $value Value to set for the skipChecksBeforeRestart property.
     */
     public function setSkipChecksBeforeRestart(?bool $value): void {
         $this->getBackingStore()->set('skipChecksBeforeRestart', $value);
@@ -661,7 +661,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the updateNotificationLevel property value. Windows Update Notification Display Options
-     *  @param WindowsUpdateNotificationDisplayOption|null $value Value to set for the updateNotificationLevel property.
+     * @param WindowsUpdateNotificationDisplayOption|null $value Value to set for the updateNotificationLevel property.
     */
     public function setUpdateNotificationLevel(?WindowsUpdateNotificationDisplayOption $value): void {
         $this->getBackingStore()->set('updateNotificationLevel', $value);
@@ -669,7 +669,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
-     *  @param WindowsUpdateForBusinessUpdateWeeks|null $value Value to set for the updateWeeks property.
+     * @param WindowsUpdateForBusinessUpdateWeeks|null $value Value to set for the updateWeeks property.
     */
     public function setUpdateWeeks(?WindowsUpdateForBusinessUpdateWeeks $value): void {
         $this->getBackingStore()->set('updateWeeks', $value);
@@ -677,7 +677,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the userPauseAccess property value. Possible values of a property
-     *  @param Enablement|null $value Value to set for the userPauseAccess property.
+     * @param Enablement|null $value Value to set for the userPauseAccess property.
     */
     public function setUserPauseAccess(?Enablement $value): void {
         $this->getBackingStore()->set('userPauseAccess', $value);
@@ -685,7 +685,7 @@ class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implemen
 
     /**
      * Sets the userWindowsUpdateScanAccess property value. Possible values of a property
-     *  @param Enablement|null $value Value to set for the userWindowsUpdateScanAccess property.
+     * @param Enablement|null $value Value to set for the userWindowsUpdateScanAccess property.
     */
     public function setUserWindowsUpdateScanAccess(?Enablement $value): void {
         $this->getBackingStore()->set('userWindowsUpdateScanAccess', $value);

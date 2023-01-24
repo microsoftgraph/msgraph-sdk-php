@@ -110,7 +110,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the complianceUrl property value. The URL a user can visit to read about the data loss prevention policies for the organization. (ie, policies about what users shouldn't say in chats)
-     *  @param string|null $value Value to set for the complianceUrl property.
+     * @param string|null $value Value to set for the complianceUrl property.
     */
     public function setComplianceUrl(?string $value): void {
         $this->getBackingStore()->set('complianceUrl', $value);
@@ -134,7 +134,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the generalText property value. Explanatory text shown to the sender of the message.
-     *  @param string|null $value Value to set for the generalText property.
+     * @param string|null $value Value to set for the generalText property.
     */
     public function setGeneralText(?string $value): void {
         $this->getBackingStore()->set('generalText', $value);
@@ -142,7 +142,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the matchedConditionDescriptions property value. The list of improper data in the message that was detected by the data loss prevention app. Each DLP app defines its own conditions, examples include 'Credit Card Number' and 'Social Security Number'.
-     *  @param array<string>|null $value Value to set for the matchedConditionDescriptions property.
+     * @param array<string>|null $value Value to set for the matchedConditionDescriptions property.
     */
     public function setMatchedConditionDescriptions(?array $value): void {
         $this->getBackingStore()->set('matchedConditionDescriptions', $value);
@@ -150,7 +150,7 @@ class ChatMessagePolicyViolationPolicyTip implements AdditionalDataHolder, Backe
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

@@ -75,7 +75,7 @@ class EdiscoveryReviewTag extends Tag implements Parsable
 
     /**
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     *  @param ChildSelectability|null $value Value to set for the childSelectability property.
+     * @param ChildSelectability|null $value Value to set for the childSelectability property.
     */
     public function setChildSelectability(?ChildSelectability $value): void {
         $this->getBackingStore()->set('childSelectability', $value);
@@ -83,7 +83,7 @@ class EdiscoveryReviewTag extends Tag implements Parsable
 
     /**
      * Sets the childTags property value. Returns the tags that are a child of a tag.
-     *  @param array<EdiscoveryReviewTag>|null $value Value to set for the childTags property.
+     * @param array<EdiscoveryReviewTag>|null $value Value to set for the childTags property.
     */
     public function setChildTags(?array $value): void {
         $this->getBackingStore()->set('childTags', $value);
@@ -91,7 +91,7 @@ class EdiscoveryReviewTag extends Tag implements Parsable
 
     /**
      * Sets the parent property value. Returns the parent tag of the specified tag.
-     *  @param EdiscoveryReviewTag|null $value Value to set for the parent property.
+     * @param EdiscoveryReviewTag|null $value Value to set for the parent property.
     */
     public function setParent(?EdiscoveryReviewTag $value): void {
         $this->getBackingStore()->set('parent', $value);

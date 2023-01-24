@@ -65,7 +65,7 @@ class ProvisionedIdentity extends Identity implements Parsable
 
     /**
      * Sets the details property value. Details of the identity.
-     *  @param DetailsInfo|null $value Value to set for the details property.
+     * @param DetailsInfo|null $value Value to set for the details property.
     */
     public function setDetails(?DetailsInfo $value): void {
         $this->getBackingStore()->set('details', $value);
@@ -73,7 +73,7 @@ class ProvisionedIdentity extends Identity implements Parsable
 
     /**
      * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
-     *  @param string|null $value Value to set for the identityType property.
+     * @param string|null $value Value to set for the identityType property.
     */
     public function setIdentityType(?string $value): void {
         $this->getBackingStore()->set('identityType', $value);

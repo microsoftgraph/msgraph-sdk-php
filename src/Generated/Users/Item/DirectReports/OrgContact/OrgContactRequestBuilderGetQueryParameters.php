@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\DirectReports\OrgContact;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.orgContact in the microsoft.graph.directoryObject collection
+*/
 class OrgContactRequestBuilderGetQueryParameters 
 {
     /**

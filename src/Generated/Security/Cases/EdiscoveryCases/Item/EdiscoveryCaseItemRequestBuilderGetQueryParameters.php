@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get ediscoveryCases from security
+*/
 class EdiscoveryCaseItemRequestBuilderGetQueryParameters 
 {
     /**

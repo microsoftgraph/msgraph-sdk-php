@@ -75,7 +75,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Sets the group property value. The group associated with this action. Optional.
-     *  @param Identity|null $value Value to set for the group property.
+     * @param Identity|null $value Value to set for the group property.
     */
     public function setGroup(?Identity $value): void {
         $this->getBackingStore()->set('group', $value);
@@ -83,7 +83,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
-     *  @param SharePointIdentity|null $value Value to set for the siteGroup property.
+     * @param SharePointIdentity|null $value Value to set for the siteGroup property.
     */
     public function setSiteGroup(?SharePointIdentity $value): void {
         $this->getBackingStore()->set('siteGroup', $value);
@@ -91,7 +91,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Sets the siteUser property value. The SharePoint user associated with this action. Optional.
-     *  @param SharePointIdentity|null $value Value to set for the siteUser property.
+     * @param SharePointIdentity|null $value Value to set for the siteUser property.
     */
     public function setSiteUser(?SharePointIdentity $value): void {
         $this->getBackingStore()->set('siteUser', $value);

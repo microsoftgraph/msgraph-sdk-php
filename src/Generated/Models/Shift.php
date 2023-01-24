@@ -85,7 +85,7 @@ class Shift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
-     *  @param ShiftItem|null $value Value to set for the draftShift property.
+     * @param ShiftItem|null $value Value to set for the draftShift property.
     */
     public function setDraftShift(?ShiftItem $value): void {
         $this->getBackingStore()->set('draftShift', $value);
@@ -93,7 +93,7 @@ class Shift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
-     *  @param string|null $value Value to set for the schedulingGroupId property.
+     * @param string|null $value Value to set for the schedulingGroupId property.
     */
     public function setSchedulingGroupId(?string $value): void {
         $this->getBackingStore()->set('schedulingGroupId', $value);
@@ -101,7 +101,7 @@ class Shift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
-     *  @param ShiftItem|null $value Value to set for the sharedShift property.
+     * @param ShiftItem|null $value Value to set for the sharedShift property.
     */
     public function setSharedShift(?ShiftItem $value): void {
         $this->getBackingStore()->set('sharedShift', $value);
@@ -109,7 +109,7 @@ class Shift extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the userId property value. ID of the user assigned to the shift. Required.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

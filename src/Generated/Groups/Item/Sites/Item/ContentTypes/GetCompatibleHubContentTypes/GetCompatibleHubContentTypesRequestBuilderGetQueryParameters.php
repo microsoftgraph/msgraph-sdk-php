@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\GetCompa
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getCompatibleHubContentTypes
+*/
 class GetCompatibleHubContentTypesRequestBuilderGetQueryParameters 
 {
     /**

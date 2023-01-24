@@ -84,7 +84,7 @@ class PlannerTaskDetails extends Entity implements Parsable
 
     /**
      * Sets the checklist property value. The collection of checklist items on the task.
-     *  @param PlannerChecklistItems|null $value Value to set for the checklist property.
+     * @param PlannerChecklistItems|null $value Value to set for the checklist property.
     */
     public function setChecklist(?PlannerChecklistItems $value): void {
         $this->getBackingStore()->set('checklist', $value);
@@ -92,7 +92,7 @@ class PlannerTaskDetails extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the task.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -100,7 +100,7 @@ class PlannerTaskDetails extends Entity implements Parsable
 
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     *  @param PlannerPreviewType|null $value Value to set for the previewType property.
+     * @param PlannerPreviewType|null $value Value to set for the previewType property.
     */
     public function setPreviewType(?PlannerPreviewType $value): void {
         $this->getBackingStore()->set('previewType', $value);
@@ -108,7 +108,7 @@ class PlannerTaskDetails extends Entity implements Parsable
 
     /**
      * Sets the references property value. The collection of references on the task.
-     *  @param PlannerExternalReferences|null $value Value to set for the references property.
+     * @param PlannerExternalReferences|null $value Value to set for the references property.
     */
     public function setReferences(?PlannerExternalReferences $value): void {
         $this->getBackingStore()->set('references', $value);

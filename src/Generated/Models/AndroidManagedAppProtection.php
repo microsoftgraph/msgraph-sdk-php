@@ -145,7 +145,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
-     *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
+     * @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value): void {
         $this->getBackingStore()->set('apps', $value);
@@ -153,7 +153,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     *  @param string|null $value Value to set for the customBrowserDisplayName property.
+     * @param string|null $value Value to set for the customBrowserDisplayName property.
     */
     public function setCustomBrowserDisplayName(?string $value): void {
         $this->getBackingStore()->set('customBrowserDisplayName', $value);
@@ -161,7 +161,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     *  @param string|null $value Value to set for the customBrowserPackageId property.
+     * @param string|null $value Value to set for the customBrowserPackageId property.
     */
     public function setCustomBrowserPackageId(?string $value): void {
         $this->getBackingStore()->set('customBrowserPackageId', $value);
@@ -169,7 +169,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     *  @param int|null $value Value to set for the deployedAppCount property.
+     * @param int|null $value Value to set for the deployedAppCount property.
     */
     public function setDeployedAppCount(?int $value): void {
         $this->getBackingStore()->set('deployedAppCount', $value);
@@ -177,7 +177,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     *  @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
+     * @param ManagedAppPolicyDeploymentSummary|null $value Value to set for the deploymentSummary property.
     */
     public function setDeploymentSummary(?ManagedAppPolicyDeploymentSummary $value): void {
         $this->getBackingStore()->set('deploymentSummary', $value);
@@ -185,7 +185,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
-     *  @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
+     * @param bool|null $value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
     */
     public function setDisableAppEncryptionIfDeviceEncryptionIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('disableAppEncryptionIfDeviceEncryptionIsEnabled', $value);
@@ -193,7 +193,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
-     *  @param bool|null $value Value to set for the encryptAppData property.
+     * @param bool|null $value Value to set for the encryptAppData property.
     */
     public function setEncryptAppData(?bool $value): void {
         $this->getBackingStore()->set('encryptAppData', $value);
@@ -201,7 +201,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
-     *  @param string|null $value Value to set for the minimumRequiredPatchVersion property.
+     * @param string|null $value Value to set for the minimumRequiredPatchVersion property.
     */
     public function setMinimumRequiredPatchVersion(?string $value): void {
         $this->getBackingStore()->set('minimumRequiredPatchVersion', $value);
@@ -209,7 +209,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
-     *  @param string|null $value Value to set for the minimumWarningPatchVersion property.
+     * @param string|null $value Value to set for the minimumWarningPatchVersion property.
     */
     public function setMinimumWarningPatchVersion(?string $value): void {
         $this->getBackingStore()->set('minimumWarningPatchVersion', $value);
@@ -217,7 +217,7 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
-     *  @param bool|null $value Value to set for the screenCaptureBlocked property.
+     * @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
     public function setScreenCaptureBlocked(?bool $value): void {
         $this->getBackingStore()->set('screenCaptureBlocked', $value);

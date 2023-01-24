@@ -416,7 +416,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the assistantName property value. The name of the contact's assistant.
-     *  @param string|null $value Value to set for the assistantName property.
+     * @param string|null $value Value to set for the assistantName property.
     */
     public function setAssistantName(?string $value): void {
         $this->getBackingStore()->set('assistantName', $value);
@@ -424,7 +424,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the birthday property value. The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the birthday property.
+     * @param DateTime|null $value Value to set for the birthday property.
     */
     public function setBirthday(?DateTime $value): void {
         $this->getBackingStore()->set('birthday', $value);
@@ -432,7 +432,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the businessAddress property value. The contact's business address.
-     *  @param PhysicalAddress|null $value Value to set for the businessAddress property.
+     * @param PhysicalAddress|null $value Value to set for the businessAddress property.
     */
     public function setBusinessAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('businessAddress', $value);
@@ -440,7 +440,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the businessHomePage property value. The business home page of the contact.
-     *  @param string|null $value Value to set for the businessHomePage property.
+     * @param string|null $value Value to set for the businessHomePage property.
     */
     public function setBusinessHomePage(?string $value): void {
         $this->getBackingStore()->set('businessHomePage', $value);
@@ -448,7 +448,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the businessPhones property value. The contact's business phone numbers.
-     *  @param array<string>|null $value Value to set for the businessPhones property.
+     * @param array<string>|null $value Value to set for the businessPhones property.
     */
     public function setBusinessPhones(?array $value): void {
         $this->getBackingStore()->set('businessPhones', $value);
@@ -456,7 +456,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the children property value. The names of the contact's children.
-     *  @param array<string>|null $value Value to set for the children property.
+     * @param array<string>|null $value Value to set for the children property.
     */
     public function setChildren(?array $value): void {
         $this->getBackingStore()->set('children', $value);
@@ -464,7 +464,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the companyName property value. The name of the contact's company.
-     *  @param string|null $value Value to set for the companyName property.
+     * @param string|null $value Value to set for the companyName property.
     */
     public function setCompanyName(?string $value): void {
         $this->getBackingStore()->set('companyName', $value);
@@ -472,7 +472,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the department property value. The contact's department.
-     *  @param string|null $value Value to set for the department property.
+     * @param string|null $value Value to set for the department property.
     */
     public function setDepartment(?string $value): void {
         $this->getBackingStore()->set('department', $value);
@@ -480,7 +480,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -488,7 +488,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the emailAddresses property value. The contact's email addresses.
-     *  @param array<EmailAddress>|null $value Value to set for the emailAddresses property.
+     * @param array<EmailAddress>|null $value Value to set for the emailAddresses property.
     */
     public function setEmailAddresses(?array $value): void {
         $this->getBackingStore()->set('emailAddresses', $value);
@@ -496,7 +496,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the contact. Read-only. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -504,7 +504,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the fileAs property value. The name the contact is filed under.
-     *  @param string|null $value Value to set for the fileAs property.
+     * @param string|null $value Value to set for the fileAs property.
     */
     public function setFileAs(?string $value): void {
         $this->getBackingStore()->set('fileAs', $value);
@@ -512,7 +512,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the generation property value. The contact's generation.
-     *  @param string|null $value Value to set for the generation property.
+     * @param string|null $value Value to set for the generation property.
     */
     public function setGeneration(?string $value): void {
         $this->getBackingStore()->set('generation', $value);
@@ -520,7 +520,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the givenName property value. The contact's given name.
-     *  @param string|null $value Value to set for the givenName property.
+     * @param string|null $value Value to set for the givenName property.
     */
     public function setGivenName(?string $value): void {
         $this->getBackingStore()->set('givenName', $value);
@@ -528,7 +528,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the homeAddress property value. The contact's home address.
-     *  @param PhysicalAddress|null $value Value to set for the homeAddress property.
+     * @param PhysicalAddress|null $value Value to set for the homeAddress property.
     */
     public function setHomeAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('homeAddress', $value);
@@ -536,7 +536,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the homePhones property value. The contact's home phone numbers.
-     *  @param array<string>|null $value Value to set for the homePhones property.
+     * @param array<string>|null $value Value to set for the homePhones property.
     */
     public function setHomePhones(?array $value): void {
         $this->getBackingStore()->set('homePhones', $value);
@@ -544,7 +544,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the imAddresses property value. The imAddresses property
-     *  @param array<string>|null $value Value to set for the imAddresses property.
+     * @param array<string>|null $value Value to set for the imAddresses property.
     */
     public function setImAddresses(?array $value): void {
         $this->getBackingStore()->set('imAddresses', $value);
@@ -552,7 +552,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the initials property value. The initials property
-     *  @param string|null $value Value to set for the initials property.
+     * @param string|null $value Value to set for the initials property.
     */
     public function setInitials(?string $value): void {
         $this->getBackingStore()->set('initials', $value);
@@ -560,7 +560,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the jobTitle property value. The jobTitle property
-     *  @param string|null $value Value to set for the jobTitle property.
+     * @param string|null $value Value to set for the jobTitle property.
     */
     public function setJobTitle(?string $value): void {
         $this->getBackingStore()->set('jobTitle', $value);
@@ -568,7 +568,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the manager property value. The manager property
-     *  @param string|null $value Value to set for the manager property.
+     * @param string|null $value Value to set for the manager property.
     */
     public function setManager(?string $value): void {
         $this->getBackingStore()->set('manager', $value);
@@ -576,7 +576,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the middleName property value. The middleName property
-     *  @param string|null $value Value to set for the middleName property.
+     * @param string|null $value Value to set for the middleName property.
     */
     public function setMiddleName(?string $value): void {
         $this->getBackingStore()->set('middleName', $value);
@@ -584,7 +584,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the mobilePhone property value. The mobilePhone property
-     *  @param string|null $value Value to set for the mobilePhone property.
+     * @param string|null $value Value to set for the mobilePhone property.
     */
     public function setMobilePhone(?string $value): void {
         $this->getBackingStore()->set('mobilePhone', $value);
@@ -592,7 +592,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
-     *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
+     * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('multiValueExtendedProperties', $value);
@@ -600,7 +600,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the nickName property value. The nickName property
-     *  @param string|null $value Value to set for the nickName property.
+     * @param string|null $value Value to set for the nickName property.
     */
     public function setNickName(?string $value): void {
         $this->getBackingStore()->set('nickName', $value);
@@ -608,7 +608,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the officeLocation property value. The officeLocation property
-     *  @param string|null $value Value to set for the officeLocation property.
+     * @param string|null $value Value to set for the officeLocation property.
     */
     public function setOfficeLocation(?string $value): void {
         $this->getBackingStore()->set('officeLocation', $value);
@@ -616,7 +616,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the otherAddress property value. The otherAddress property
-     *  @param PhysicalAddress|null $value Value to set for the otherAddress property.
+     * @param PhysicalAddress|null $value Value to set for the otherAddress property.
     */
     public function setOtherAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('otherAddress', $value);
@@ -624,7 +624,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the parentFolderId property value. The parentFolderId property
-     *  @param string|null $value Value to set for the parentFolderId property.
+     * @param string|null $value Value to set for the parentFolderId property.
     */
     public function setParentFolderId(?string $value): void {
         $this->getBackingStore()->set('parentFolderId', $value);
@@ -632,7 +632,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the personalNotes property value. The personalNotes property
-     *  @param string|null $value Value to set for the personalNotes property.
+     * @param string|null $value Value to set for the personalNotes property.
     */
     public function setPersonalNotes(?string $value): void {
         $this->getBackingStore()->set('personalNotes', $value);
@@ -640,7 +640,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the photo property value. Optional contact picture. You can get or set a photo for a contact.
-     *  @param ProfilePhoto|null $value Value to set for the photo property.
+     * @param ProfilePhoto|null $value Value to set for the photo property.
     */
     public function setPhoto(?ProfilePhoto $value): void {
         $this->getBackingStore()->set('photo', $value);
@@ -648,7 +648,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the profession property value. The profession property
-     *  @param string|null $value Value to set for the profession property.
+     * @param string|null $value Value to set for the profession property.
     */
     public function setProfession(?string $value): void {
         $this->getBackingStore()->set('profession', $value);
@@ -656,7 +656,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contact. Read-only. Nullable.
-     *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+     * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('singleValueExtendedProperties', $value);
@@ -664,7 +664,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the spouseName property value. The spouseName property
-     *  @param string|null $value Value to set for the spouseName property.
+     * @param string|null $value Value to set for the spouseName property.
     */
     public function setSpouseName(?string $value): void {
         $this->getBackingStore()->set('spouseName', $value);
@@ -672,7 +672,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the surname property value. The surname property
-     *  @param string|null $value Value to set for the surname property.
+     * @param string|null $value Value to set for the surname property.
     */
     public function setSurname(?string $value): void {
         $this->getBackingStore()->set('surname', $value);
@@ -680,7 +680,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the title property value. The title property
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -688,7 +688,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the yomiCompanyName property value. The yomiCompanyName property
-     *  @param string|null $value Value to set for the yomiCompanyName property.
+     * @param string|null $value Value to set for the yomiCompanyName property.
     */
     public function setYomiCompanyName(?string $value): void {
         $this->getBackingStore()->set('yomiCompanyName', $value);
@@ -696,7 +696,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the yomiGivenName property value. The yomiGivenName property
-     *  @param string|null $value Value to set for the yomiGivenName property.
+     * @param string|null $value Value to set for the yomiGivenName property.
     */
     public function setYomiGivenName(?string $value): void {
         $this->getBackingStore()->set('yomiGivenName', $value);
@@ -704,7 +704,7 @@ class Contact extends OutlookItem implements Parsable
 
     /**
      * Sets the yomiSurname property value. The yomiSurname property
-     *  @param string|null $value Value to set for the yomiSurname property.
+     * @param string|null $value Value to set for the yomiSurname property.
     */
     public function setYomiSurname(?string $value): void {
         $this->getBackingStore()->set('yomiSurname', $value);

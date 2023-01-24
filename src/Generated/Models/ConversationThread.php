@@ -135,7 +135,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
-     *  @param array<Recipient>|null $value Value to set for the ccRecipients property.
+     * @param array<Recipient>|null $value Value to set for the ccRecipients property.
     */
     public function setCcRecipients(?array $value): void {
         $this->getBackingStore()->set('ccRecipients', $value);
@@ -143,7 +143,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -151,7 +151,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the isLocked property value. Indicates if the thread is locked. Returned by default.
-     *  @param bool|null $value Value to set for the isLocked property.
+     * @param bool|null $value Value to set for the isLocked property.
     */
     public function setIsLocked(?bool $value): void {
         $this->getBackingStore()->set('isLocked', $value);
@@ -159,7 +159,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Returned by default.
-     *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
+     * @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastDeliveredDateTime', $value);
@@ -167,7 +167,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the posts property value. The posts property
-     *  @param array<Post>|null $value Value to set for the posts property.
+     * @param array<Post>|null $value Value to set for the posts property.
     */
     public function setPosts(?array $value): void {
         $this->getBackingStore()->set('posts', $value);
@@ -175,7 +175,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Returned by default.
-     *  @param string|null $value Value to set for the preview property.
+     * @param string|null $value Value to set for the preview property.
     */
     public function setPreview(?string $value): void {
         $this->getBackingStore()->set('preview', $value);
@@ -183,7 +183,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
-     *  @param string|null $value Value to set for the topic property.
+     * @param string|null $value Value to set for the topic property.
     */
     public function setTopic(?string $value): void {
         $this->getBackingStore()->set('topic', $value);
@@ -191,7 +191,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
-     *  @param array<Recipient>|null $value Value to set for the toRecipients property.
+     * @param array<Recipient>|null $value Value to set for the toRecipients property.
     */
     public function setToRecipients(?array $value): void {
         $this->getBackingStore()->set('toRecipients', $value);
@@ -199,7 +199,7 @@ class ConversationThread extends Entity implements Parsable
 
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this thread. Returned by default.
-     *  @param array<string>|null $value Value to set for the uniqueSenders property.
+     * @param array<string>|null $value Value to set for the uniqueSenders property.
     */
     public function setUniqueSenders(?array $value): void {
         $this->getBackingStore()->set('uniqueSenders', $value);

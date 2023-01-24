@@ -155,7 +155,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -163,7 +163,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the grantedTo property value. The grantedTo property
-     *  @param IdentitySet|null $value Value to set for the grantedTo property.
+     * @param IdentitySet|null $value Value to set for the grantedTo property.
     */
     public function setGrantedTo(?IdentitySet $value): void {
         $this->getBackingStore()->set('grantedTo', $value);
@@ -171,7 +171,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the grantedToIdentities property value. The grantedToIdentities property
-     *  @param array<IdentitySet>|null $value Value to set for the grantedToIdentities property.
+     * @param array<IdentitySet>|null $value Value to set for the grantedToIdentities property.
     */
     public function setGrantedToIdentities(?array $value): void {
         $this->getBackingStore()->set('grantedToIdentities', $value);
@@ -179,7 +179,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
-     *  @param array<SharePointIdentitySet>|null $value Value to set for the grantedToIdentitiesV2 property.
+     * @param array<SharePointIdentitySet>|null $value Value to set for the grantedToIdentitiesV2 property.
     */
     public function setGrantedToIdentitiesV2(?array $value): void {
         $this->getBackingStore()->set('grantedToIdentitiesV2', $value);
@@ -187,7 +187,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
-     *  @param SharePointIdentitySet|null $value Value to set for the grantedToV2 property.
+     * @param SharePointIdentitySet|null $value Value to set for the grantedToV2 property.
     */
     public function setGrantedToV2(?SharePointIdentitySet $value): void {
         $this->getBackingStore()->set('grantedToV2', $value);
@@ -195,7 +195,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
-     *  @param bool|null $value Value to set for the hasPassword property.
+     * @param bool|null $value Value to set for the hasPassword property.
     */
     public function setHasPassword(?bool $value): void {
         $this->getBackingStore()->set('hasPassword', $value);
@@ -203,7 +203,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
-     *  @param ItemReference|null $value Value to set for the inheritedFrom property.
+     * @param ItemReference|null $value Value to set for the inheritedFrom property.
     */
     public function setInheritedFrom(?ItemReference $value): void {
         $this->getBackingStore()->set('inheritedFrom', $value);
@@ -211,7 +211,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
-     *  @param SharingInvitation|null $value Value to set for the invitation property.
+     * @param SharingInvitation|null $value Value to set for the invitation property.
     */
     public function setInvitation(?SharingInvitation $value): void {
         $this->getBackingStore()->set('invitation', $value);
@@ -219,7 +219,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
-     *  @param SharingLink|null $value Value to set for the link property.
+     * @param SharingLink|null $value Value to set for the link property.
     */
     public function setLink(?SharingLink $value): void {
         $this->getBackingStore()->set('link', $value);
@@ -227,7 +227,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
-     *  @param array<string>|null $value Value to set for the roles property.
+     * @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
         $this->getBackingStore()->set('roles', $value);
@@ -235,7 +235,7 @@ class Permission extends Entity implements Parsable
 
     /**
      * Sets the shareId property value. A unique token that can be used to access this shared item via the **shares** API. Read-only.
-     *  @param string|null $value Value to set for the shareId property.
+     * @param string|null $value Value to set for the shareId property.
     */
     public function setShareId(?string $value): void {
         $this->getBackingStore()->set('shareId', $value);

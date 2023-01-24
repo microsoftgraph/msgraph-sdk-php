@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of content types defined for this site.
+*/
 class ContentTypeItemRequestBuilderGetQueryParameters 
 {
     /**

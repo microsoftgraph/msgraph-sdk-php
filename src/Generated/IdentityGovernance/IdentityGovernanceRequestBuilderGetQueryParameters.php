@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get identityGovernance
+*/
 class IdentityGovernanceRequestBuilderGetQueryParameters 
 {
     /**

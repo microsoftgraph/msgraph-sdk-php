@@ -64,7 +64,7 @@ class PrintServiceEndpoint extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. A human-readable display name for the endpoint.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -72,7 +72,7 @@ class PrintServiceEndpoint extends Entity implements Parsable
 
     /**
      * Sets the uri property value. The URI that can be used to access the service.
-     *  @param string|null $value Value to set for the uri property.
+     * @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value): void {
         $this->getBackingStore()->set('uri', $value);

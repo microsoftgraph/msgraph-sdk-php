@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of **printers** that are registered in the tenant.
+*/
 class PrintersRequestBuilderGetQueryParameters 
 {
     /**

@@ -85,7 +85,7 @@ class CalendarSharingMessage extends Message implements Parsable
 
     /**
      * Sets the canAccept property value. The canAccept property
-     *  @param bool|null $value Value to set for the canAccept property.
+     * @param bool|null $value Value to set for the canAccept property.
     */
     public function setCanAccept(?bool $value): void {
         $this->getBackingStore()->set('canAccept', $value);
@@ -93,7 +93,7 @@ class CalendarSharingMessage extends Message implements Parsable
 
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
-     *  @param CalendarSharingMessageAction|null $value Value to set for the sharingMessageAction property.
+     * @param CalendarSharingMessageAction|null $value Value to set for the sharingMessageAction property.
     */
     public function setSharingMessageAction(?CalendarSharingMessageAction $value): void {
         $this->getBackingStore()->set('sharingMessageAction', $value);
@@ -101,7 +101,7 @@ class CalendarSharingMessage extends Message implements Parsable
 
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
-     *  @param array<CalendarSharingMessageAction>|null $value Value to set for the sharingMessageActions property.
+     * @param array<CalendarSharingMessageAction>|null $value Value to set for the sharingMessageActions property.
     */
     public function setSharingMessageActions(?array $value): void {
         $this->getBackingStore()->set('sharingMessageActions', $value);
@@ -109,7 +109,7 @@ class CalendarSharingMessage extends Message implements Parsable
 
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
-     *  @param string|null $value Value to set for the suggestedCalendarName property.
+     * @param string|null $value Value to set for the suggestedCalendarName property.
     */
     public function setSuggestedCalendarName(?string $value): void {
         $this->getBackingStore()->set('suggestedCalendarName', $value);

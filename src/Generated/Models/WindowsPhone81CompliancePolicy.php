@@ -155,7 +155,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the osMaximumVersion property value. Maximum Windows Phone version.
-     *  @param string|null $value Value to set for the osMaximumVersion property.
+     * @param string|null $value Value to set for the osMaximumVersion property.
     */
     public function setOsMaximumVersion(?string $value): void {
         $this->getBackingStore()->set('osMaximumVersion', $value);
@@ -163,7 +163,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
-     *  @param string|null $value Value to set for the osMinimumVersion property.
+     * @param string|null $value Value to set for the osMinimumVersion property.
     */
     public function setOsMinimumVersion(?string $value): void {
         $this->getBackingStore()->set('osMinimumVersion', $value);
@@ -171,7 +171,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
-     *  @param bool|null $value Value to set for the passwordBlockSimple property.
+     * @param bool|null $value Value to set for the passwordBlockSimple property.
     */
     public function setPasswordBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockSimple', $value);
@@ -179,7 +179,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -187,7 +187,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -195,7 +195,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -203,7 +203,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
     public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
@@ -211,7 +211,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -219,7 +219,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -227,7 +227,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -235,7 +235,7 @@ class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy implements P
 
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows phone devices.
-     *  @param bool|null $value Value to set for the storageRequireEncryption property.
+     * @param bool|null $value Value to set for the storageRequireEncryption property.
     */
     public function setStorageRequireEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireEncryption', $value);

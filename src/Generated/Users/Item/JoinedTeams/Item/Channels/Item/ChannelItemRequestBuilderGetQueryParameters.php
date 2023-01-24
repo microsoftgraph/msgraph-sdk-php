@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of channels and messages associated with the team.
+*/
 class ChannelItemRequestBuilderGetQueryParameters 
 {
     /**

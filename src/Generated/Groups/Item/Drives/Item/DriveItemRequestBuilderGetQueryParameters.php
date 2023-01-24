@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The group's drives. Read-only.
+*/
 class DriveItemRequestBuilderGetQueryParameters 
 {
     /**

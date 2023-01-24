@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includ
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the condition sets which are *included* in a permissionGrantPolicy.
+*/
 class IncludesRequestBuilderGetQueryParameters 
 {
     /**

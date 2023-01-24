@@ -75,7 +75,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format +{country code} {number}x{extension}, with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating or updating if they do not match the required format.
-     *  @param string|null $value Value to set for the phoneNumber property.
+     * @param string|null $value Value to set for the phoneNumber property.
     */
     public function setPhoneNumber(?string $value): void {
         $this->getBackingStore()->set('phoneNumber', $value);
@@ -83,7 +83,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
-     *  @param AuthenticationPhoneType|null $value Value to set for the phoneType property.
+     * @param AuthenticationPhoneType|null $value Value to set for the phoneType property.
     */
     public function setPhoneType(?AuthenticationPhoneType $value): void {
         $this->getBackingStore()->set('phoneType', $value);
@@ -91,7 +91,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
-     *  @param AuthenticationMethodSignInState|null $value Value to set for the smsSignInState property.
+     * @param AuthenticationMethodSignInState|null $value Value to set for the smsSignInState property.
     */
     public function setSmsSignInState(?AuthenticationMethodSignInState $value): void {
         $this->getBackingStore()->set('smsSignInState', $value);

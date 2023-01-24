@@ -100,7 +100,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
-     *  @param float|null $value Value to set for the compromisedRate property.
+     * @param float|null $value Value to set for the compromisedRate property.
     */
     public function setCompromisedRate(?float $value): void {
         $this->getBackingStore()->set('compromisedRate', $value);
@@ -124,7 +124,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the events property value. List of simulation events in an attack simulation and training campaign.
-     *  @param array<SimulationEvent>|null $value Value to set for the events property.
+     * @param array<SimulationEvent>|null $value Value to set for the events property.
     */
     public function setEvents(?array $value): void {
         $this->getBackingStore()->set('events', $value);
@@ -132,7 +132,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

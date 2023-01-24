@@ -151,7 +151,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -159,7 +159,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the appId property value. The appId property
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -167,7 +167,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the assignedTo property value. The assignedTo property
-     *  @param string|null $value Value to set for the assignedTo property.
+     * @param string|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?string $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
@@ -175,7 +175,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -183,7 +183,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the comments property value. The comments property
-     *  @param array<string>|null $value Value to set for the comments property.
+     * @param array<string>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value): void {
         $this->getBackingStore()->set('comments', $value);
@@ -191,7 +191,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the feedback property value. The feedback property
-     *  @param AlertFeedback|null $value Value to set for the feedback property.
+     * @param AlertFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?AlertFeedback $value): void {
         $this->getBackingStore()->set('feedback', $value);
@@ -199,7 +199,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -207,7 +207,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param AlertStatus|null $value Value to set for the status property.
+     * @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -215,7 +215,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
-     *  @param DateTime|null $value Value to set for the updatedDateTime property.
+     * @param DateTime|null $value Value to set for the updatedDateTime property.
     */
     public function setUpdatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('updatedDateTime', $value);
@@ -223,7 +223,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the user property value. The user property
-     *  @param string|null $value Value to set for the user property.
+     * @param string|null $value Value to set for the user property.
     */
     public function setUser(?string $value): void {
         $this->getBackingStore()->set('user', $value);

@@ -116,7 +116,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -124,7 +124,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the isUsable property value. The state of the authentication method that indicates whether it's currently usable by the user.
-     *  @param bool|null $value Value to set for the isUsable property.
+     * @param bool|null $value Value to set for the isUsable property.
     */
     public function setIsUsable(?bool $value): void {
         $this->getBackingStore()->set('isUsable', $value);
@@ -132,7 +132,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
-     *  @param bool|null $value Value to set for the isUsableOnce property.
+     * @param bool|null $value Value to set for the isUsableOnce property.
     */
     public function setIsUsableOnce(?bool $value): void {
         $this->getBackingStore()->set('isUsableOnce', $value);
@@ -140,7 +140,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
-     *  @param int|null $value Value to set for the lifetimeInMinutes property.
+     * @param int|null $value Value to set for the lifetimeInMinutes property.
     */
     public function setLifetimeInMinutes(?int $value): void {
         $this->getBackingStore()->set('lifetimeInMinutes', $value);
@@ -148,7 +148,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the methodUsabilityReason property value. Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
-     *  @param string|null $value Value to set for the methodUsabilityReason property.
+     * @param string|null $value Value to set for the methodUsabilityReason property.
     */
     public function setMethodUsabilityReason(?string $value): void {
         $this->getBackingStore()->set('methodUsabilityReason', $value);
@@ -156,7 +156,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the startDateTime property value. The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -164,7 +164,7 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * Sets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
-     *  @param string|null $value Value to set for the temporaryAccessPass property.
+     * @param string|null $value Value to set for the temporaryAccessPass property.
     */
     public function setTemporaryAccessPass(?string $value): void {
         $this->getBackingStore()->set('temporaryAccessPass', $value);

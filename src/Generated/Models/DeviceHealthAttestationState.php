@@ -401,7 +401,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -409,7 +409,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-     *  @param string|null $value Value to set for the attestationIdentityKey property.
+     * @param string|null $value Value to set for the attestationIdentityKey property.
     */
     public function setAttestationIdentityKey(?string $value): void {
         $this->getBackingStore()->set('attestationIdentityKey', $value);
@@ -417,7 +417,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -425,7 +425,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
-     *  @param string|null $value Value to set for the bitLockerStatus property.
+     * @param string|null $value Value to set for the bitLockerStatus property.
     */
     public function setBitLockerStatus(?string $value): void {
         $this->getBackingStore()->set('bitLockerStatus', $value);
@@ -433,7 +433,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bootAppSecurityVersion property value. The security version number of the Boot Application
-     *  @param string|null $value Value to set for the bootAppSecurityVersion property.
+     * @param string|null $value Value to set for the bootAppSecurityVersion property.
     */
     public function setBootAppSecurityVersion(?string $value): void {
         $this->getBackingStore()->set('bootAppSecurityVersion', $value);
@@ -441,7 +441,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
-     *  @param string|null $value Value to set for the bootDebugging property.
+     * @param string|null $value Value to set for the bootDebugging property.
     */
     public function setBootDebugging(?string $value): void {
         $this->getBackingStore()->set('bootDebugging', $value);
@@ -449,7 +449,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bootManagerSecurityVersion property value. The security version number of the Boot Application
-     *  @param string|null $value Value to set for the bootManagerSecurityVersion property.
+     * @param string|null $value Value to set for the bootManagerSecurityVersion property.
     */
     public function setBootManagerSecurityVersion(?string $value): void {
         $this->getBackingStore()->set('bootManagerSecurityVersion', $value);
@@ -457,7 +457,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bootManagerVersion property value. The version of the Boot Manager
-     *  @param string|null $value Value to set for the bootManagerVersion property.
+     * @param string|null $value Value to set for the bootManagerVersion property.
     */
     public function setBootManagerVersion(?string $value): void {
         $this->getBackingStore()->set('bootManagerVersion', $value);
@@ -465,7 +465,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
-     *  @param string|null $value Value to set for the bootRevisionListInfo property.
+     * @param string|null $value Value to set for the bootRevisionListInfo property.
     */
     public function setBootRevisionListInfo(?string $value): void {
         $this->getBackingStore()->set('bootRevisionListInfo', $value);
@@ -473,7 +473,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
-     *  @param string|null $value Value to set for the codeIntegrity property.
+     * @param string|null $value Value to set for the codeIntegrity property.
     */
     public function setCodeIntegrity(?string $value): void {
         $this->getBackingStore()->set('codeIntegrity', $value);
@@ -481,7 +481,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the codeIntegrityCheckVersion property value. The version of the Boot Manager
-     *  @param string|null $value Value to set for the codeIntegrityCheckVersion property.
+     * @param string|null $value Value to set for the codeIntegrityCheckVersion property.
     */
     public function setCodeIntegrityCheckVersion(?string $value): void {
         $this->getBackingStore()->set('codeIntegrityCheckVersion', $value);
@@ -489,7 +489,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
-     *  @param string|null $value Value to set for the codeIntegrityPolicy property.
+     * @param string|null $value Value to set for the codeIntegrityPolicy property.
     */
     public function setCodeIntegrityPolicy(?string $value): void {
         $this->getBackingStore()->set('codeIntegrityPolicy', $value);
@@ -497,7 +497,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
-     *  @param string|null $value Value to set for the contentNamespaceUrl property.
+     * @param string|null $value Value to set for the contentNamespaceUrl property.
     */
     public function setContentNamespaceUrl(?string $value): void {
         $this->getBackingStore()->set('contentNamespaceUrl', $value);
@@ -505,7 +505,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the contentVersion property value. The HealthAttestation state schema version
-     *  @param string|null $value Value to set for the contentVersion property.
+     * @param string|null $value Value to set for the contentVersion property.
     */
     public function setContentVersion(?string $value): void {
         $this->getBackingStore()->set('contentVersion', $value);
@@ -513,7 +513,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-     *  @param string|null $value Value to set for the dataExcutionPolicy property.
+     * @param string|null $value Value to set for the dataExcutionPolicy property.
     */
     public function setDataExcutionPolicy(?string $value): void {
         $this->getBackingStore()->set('dataExcutionPolicy', $value);
@@ -521,7 +521,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
-     *  @param string|null $value Value to set for the deviceHealthAttestationStatus property.
+     * @param string|null $value Value to set for the deviceHealthAttestationStatus property.
     */
     public function setDeviceHealthAttestationStatus(?string $value): void {
         $this->getBackingStore()->set('deviceHealthAttestationStatus', $value);
@@ -529,7 +529,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
-     *  @param string|null $value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
+     * @param string|null $value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
     */
     public function setEarlyLaunchAntiMalwareDriverProtection(?string $value): void {
         $this->getBackingStore()->set('earlyLaunchAntiMalwareDriverProtection', $value);
@@ -537,7 +537,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
-     *  @param string|null $value Value to set for the healthAttestationSupportedStatus property.
+     * @param string|null $value Value to set for the healthAttestationSupportedStatus property.
     */
     public function setHealthAttestationSupportedStatus(?string $value): void {
         $this->getBackingStore()->set('healthAttestationSupportedStatus', $value);
@@ -545,7 +545,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
-     *  @param string|null $value Value to set for the healthStatusMismatchInfo property.
+     * @param string|null $value Value to set for the healthStatusMismatchInfo property.
     */
     public function setHealthStatusMismatchInfo(?string $value): void {
         $this->getBackingStore()->set('healthStatusMismatchInfo', $value);
@@ -553,7 +553,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the issuedDateTime property value. The DateTime when device was evaluated or issued to MDM
-     *  @param DateTime|null $value Value to set for the issuedDateTime property.
+     * @param DateTime|null $value Value to set for the issuedDateTime property.
     */
     public function setIssuedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('issuedDateTime', $value);
@@ -561,7 +561,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the lastUpdateDateTime property value. The Timestamp of the last update.
-     *  @param string|null $value Value to set for the lastUpdateDateTime property.
+     * @param string|null $value Value to set for the lastUpdateDateTime property.
     */
     public function setLastUpdateDateTime(?string $value): void {
         $this->getBackingStore()->set('lastUpdateDateTime', $value);
@@ -569,7 +569,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -577,7 +577,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     *  @param string|null $value Value to set for the operatingSystemKernelDebugging property.
+     * @param string|null $value Value to set for the operatingSystemKernelDebugging property.
     */
     public function setOperatingSystemKernelDebugging(?string $value): void {
         $this->getBackingStore()->set('operatingSystemKernelDebugging', $value);
@@ -585,7 +585,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
-     *  @param string|null $value Value to set for the operatingSystemRevListInfo property.
+     * @param string|null $value Value to set for the operatingSystemRevListInfo property.
     */
     public function setOperatingSystemRevListInfo(?string $value): void {
         $this->getBackingStore()->set('operatingSystemRevListInfo', $value);
@@ -593,7 +593,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the pcr0 property value. The measurement that is captured in PCR[0]
-     *  @param string|null $value Value to set for the pcr0 property.
+     * @param string|null $value Value to set for the pcr0 property.
     */
     public function setPcr0(?string $value): void {
         $this->getBackingStore()->set('pcr0', $value);
@@ -601,7 +601,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
-     *  @param string|null $value Value to set for the pcrHashAlgorithm property.
+     * @param string|null $value Value to set for the pcrHashAlgorithm property.
     */
     public function setPcrHashAlgorithm(?string $value): void {
         $this->getBackingStore()->set('pcrHashAlgorithm', $value);
@@ -609,7 +609,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the resetCount property value. The number of times a PC device has hibernated or resumed
-     *  @param int|null $value Value to set for the resetCount property.
+     * @param int|null $value Value to set for the resetCount property.
     */
     public function setResetCount(?int $value): void {
         $this->getBackingStore()->set('resetCount', $value);
@@ -617,7 +617,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the restartCount property value. The number of times a PC device has rebooted
-     *  @param int|null $value Value to set for the restartCount property.
+     * @param int|null $value Value to set for the restartCount property.
     */
     public function setRestartCount(?int $value): void {
         $this->getBackingStore()->set('restartCount', $value);
@@ -625,7 +625,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-     *  @param string|null $value Value to set for the safeMode property.
+     * @param string|null $value Value to set for the safeMode property.
     */
     public function setSafeMode(?string $value): void {
         $this->getBackingStore()->set('safeMode', $value);
@@ -633,7 +633,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-     *  @param string|null $value Value to set for the secureBoot property.
+     * @param string|null $value Value to set for the secureBoot property.
     */
     public function setSecureBoot(?string $value): void {
         $this->getBackingStore()->set('secureBoot', $value);
@@ -641,7 +641,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
-     *  @param string|null $value Value to set for the secureBootConfigurationPolicyFingerPrint property.
+     * @param string|null $value Value to set for the secureBootConfigurationPolicyFingerPrint property.
     */
     public function setSecureBootConfigurationPolicyFingerPrint(?string $value): void {
         $this->getBackingStore()->set('secureBootConfigurationPolicyFingerPrint', $value);
@@ -649,7 +649,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
-     *  @param string|null $value Value to set for the testSigning property.
+     * @param string|null $value Value to set for the testSigning property.
     */
     public function setTestSigning(?string $value): void {
         $this->getBackingStore()->set('testSigning', $value);
@@ -657,7 +657,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the tpmVersion property value. The security version number of the Boot Application
-     *  @param string|null $value Value to set for the tpmVersion property.
+     * @param string|null $value Value to set for the tpmVersion property.
     */
     public function setTpmVersion(?string $value): void {
         $this->getBackingStore()->set('tpmVersion', $value);
@@ -665,7 +665,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
-     *  @param string|null $value Value to set for the virtualSecureMode property.
+     * @param string|null $value Value to set for the virtualSecureMode property.
     */
     public function setVirtualSecureMode(?string $value): void {
         $this->getBackingStore()->set('virtualSecureMode', $value);
@@ -673,7 +673,7 @@ class DeviceHealthAttestationState implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
-     *  @param string|null $value Value to set for the windowsPE property.
+     * @param string|null $value Value to set for the windowsPE property.
     */
     public function setWindowsPE(?string $value): void {
         $this->getBackingStore()->set('windowsPE', $value);

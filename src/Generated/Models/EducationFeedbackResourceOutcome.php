@@ -65,7 +65,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
 
     /**
      * Sets the feedbackResource property value. The actual feedback resource.
-     *  @param EducationResource|null $value Value to set for the feedbackResource property.
+     * @param EducationResource|null $value Value to set for the feedbackResource property.
     */
     public function setFeedbackResource(?EducationResource $value): void {
         $this->getBackingStore()->set('feedbackResource', $value);
@@ -73,7 +73,7 @@ class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsa
 
     /**
      * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
-     *  @param EducationFeedbackResourceOutcomeStatus|null $value Value to set for the resourceStatus property.
+     * @param EducationFeedbackResourceOutcomeStatus|null $value Value to set for the resourceStatus property.
     */
     public function setResourceStatus(?EducationFeedbackResourceOutcomeStatus $value): void {
         $this->getBackingStore()->set('resourceStatus', $value);

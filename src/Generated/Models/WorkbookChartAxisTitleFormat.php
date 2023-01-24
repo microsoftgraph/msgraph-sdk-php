@@ -54,7 +54,7 @@ class WorkbookChartAxisTitleFormat extends Entity implements Parsable
 
     /**
      * Sets the font property value. Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-     *  @param WorkbookChartFont|null $value Value to set for the font property.
+     * @param WorkbookChartFont|null $value Value to set for the font property.
     */
     public function setFont(?WorkbookChartFont $value): void {
         $this->getBackingStore()->set('font', $value);

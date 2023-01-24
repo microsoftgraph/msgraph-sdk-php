@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
+*/
 class DefinitionRequestBuilderGetQueryParameters 
 {
     /**

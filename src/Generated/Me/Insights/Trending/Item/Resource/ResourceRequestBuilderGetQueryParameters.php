@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Insights\Trending\Item\Resource;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used for navigating to the trending document.
+*/
 class ResourceRequestBuilderGetQueryParameters 
 {
     /**

@@ -91,7 +91,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -99,7 +99,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -107,7 +107,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the callbackUri property value. The callbackUri property
-     *  @param string|null $value Value to set for the callbackUri property.
+     * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
         $this->getBackingStore()->set('callbackUri', $value);
@@ -115,7 +115,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the reason property value. The reason property
-     *  @param RejectReason|null $value Value to set for the reason property.
+     * @param RejectReason|null $value Value to set for the reason property.
     */
     public function setReason(?RejectReason $value): void {
         $this->getBackingStore()->set('reason', $value);

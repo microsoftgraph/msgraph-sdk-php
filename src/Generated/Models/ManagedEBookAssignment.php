@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties used to assign a eBook to a group.
+*/
 class ManagedEBookAssignment extends Entity implements Parsable 
 {
     /**
@@ -71,7 +74,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
 
     /**
      * Sets the installIntent property value. Possible values for the install intent chosen by the admin.
-     *  @param InstallIntent|null $value Value to set for the installIntent property.
+     * @param InstallIntent|null $value Value to set for the installIntent property.
     */
     public function setInstallIntent(?InstallIntent $value): void {
         $this->getBackingStore()->set('installIntent', $value);
@@ -79,7 +82,7 @@ class ManagedEBookAssignment extends Entity implements Parsable
 
     /**
      * Sets the target property value. The assignment target for eBook.
-     *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
+     * @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
         $this->getBackingStore()->set('target', $value);

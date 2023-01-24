@@ -95,7 +95,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
 
     /**
      * Sets the description property value. The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -103,7 +103,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -111,7 +111,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
 
     /**
      * Sets the members property value. Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
-     *  @param array<DirectoryObject>|null $value Value to set for the members property.
+     * @param array<DirectoryObject>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
@@ -119,7 +119,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
 
     /**
      * Sets the roleTemplateId property value. The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
-     *  @param string|null $value Value to set for the roleTemplateId property.
+     * @param string|null $value Value to set for the roleTemplateId property.
     */
     public function setRoleTemplateId(?string $value): void {
         $this->getBackingStore()->set('roleTemplateId', $value);
@@ -127,7 +127,7 @@ class DirectoryRole extends DirectoryObject implements Parsable
 
     /**
      * Sets the scopedMembers property value. Members of this directory role that are scoped to administrative units. Read-only. Nullable.
-     *  @param array<ScopedRoleMembership>|null $value Value to set for the scopedMembers property.
+     * @param array<ScopedRoleMembership>|null $value Value to set for the scopedMembers property.
     */
     public function setScopedMembers(?array $value): void {
         $this->getBackingStore()->set('scopedMembers', $value);

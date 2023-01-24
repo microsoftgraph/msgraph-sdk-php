@@ -120,7 +120,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
-     *  @param bool|null $value Value to set for the addImageQuery property.
+     * @param bool|null $value Value to set for the addImageQuery property.
     */
     public function setAddImageQuery(?bool $value): void {
         $this->getBackingStore()->set('addImageQuery', $value);
@@ -128,7 +128,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -136,7 +136,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alternateText property value. Optional; alt-text accessible content for the image
-     *  @param string|null $value Value to set for the alternateText property.
+     * @param string|null $value Value to set for the alternateText property.
     */
     public function setAlternateText(?string $value): void {
         $this->getBackingStore()->set('alternateText', $value);
@@ -144,7 +144,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alternativeText property value. The alternativeText property
-     *  @param string|null $value Value to set for the alternativeText property.
+     * @param string|null $value Value to set for the alternativeText property.
     */
     public function setAlternativeText(?string $value): void {
         $this->getBackingStore()->set('alternativeText', $value);
@@ -152,7 +152,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -160,7 +160,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
-     *  @param string|null $value Value to set for the iconUrl property.
+     * @param string|null $value Value to set for the iconUrl property.
     */
     public function setIconUrl(?string $value): void {
         $this->getBackingStore()->set('iconUrl', $value);
@@ -168,7 +168,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

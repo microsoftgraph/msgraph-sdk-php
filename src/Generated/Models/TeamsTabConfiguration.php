@@ -120,7 +120,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the contentUrl property value. Url used for rendering tab contents in Teams. Required.
-     *  @param string|null $value Value to set for the contentUrl property.
+     * @param string|null $value Value to set for the contentUrl property.
     */
     public function setContentUrl(?string $value): void {
         $this->getBackingStore()->set('contentUrl', $value);
@@ -144,7 +144,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the entityId property value. Identifier for the entity hosted by the tab provider.
-     *  @param string|null $value Value to set for the entityId property.
+     * @param string|null $value Value to set for the entityId property.
     */
     public function setEntityId(?string $value): void {
         $this->getBackingStore()->set('entityId', $value);
@@ -152,7 +152,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the removeUrl property value. Url called by Teams client when a Tab is removed using the Teams Client.
-     *  @param string|null $value Value to set for the removeUrl property.
+     * @param string|null $value Value to set for the removeUrl property.
     */
     public function setRemoveUrl(?string $value): void {
         $this->getBackingStore()->set('removeUrl', $value);
@@ -168,7 +168,7 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the websiteUrl property value. Url for showing tab contents outside of Teams.
-     *  @param string|null $value Value to set for the websiteUrl property.
+     * @param string|null $value Value to set for the websiteUrl property.
     */
     public function setWebsiteUrl(?string $value): void {
         $this->getBackingStore()->set('websiteUrl', $value);

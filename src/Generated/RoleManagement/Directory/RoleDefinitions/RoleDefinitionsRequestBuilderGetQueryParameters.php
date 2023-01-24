@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
+*/
 class RoleDefinitionsRequestBuilderGetQueryParameters 
 {
     /**

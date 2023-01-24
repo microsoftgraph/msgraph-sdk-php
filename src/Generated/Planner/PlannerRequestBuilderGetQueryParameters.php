@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Planner;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get planner
+*/
 class PlannerRequestBuilderGetQueryParameters 
 {
     /**

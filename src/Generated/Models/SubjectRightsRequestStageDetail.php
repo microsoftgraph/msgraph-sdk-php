@@ -110,7 +110,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the error property value. Describes the error, if any, for the current stage.
-     *  @param PublicError|null $value Value to set for the error property.
+     * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -134,7 +134,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
-     *  @param SubjectRightsRequestStage|null $value Value to set for the stage property.
+     * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
     */
     public function setStage(?SubjectRightsRequestStage $value): void {
         $this->getBackingStore()->set('stage', $value);
@@ -150,7 +150,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     *  @param SubjectRightsRequestStageStatus|null $value Value to set for the status property.
+     * @param SubjectRightsRequestStageStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStageStatus $value): void {
         $this->getBackingStore()->set('status', $value);

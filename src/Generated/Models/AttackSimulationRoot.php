@@ -64,7 +64,7 @@ class AttackSimulationRoot extends Entity implements Parsable
 
     /**
      * Sets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
-     *  @param array<SimulationAutomation>|null $value Value to set for the simulationAutomations property.
+     * @param array<SimulationAutomation>|null $value Value to set for the simulationAutomations property.
     */
     public function setSimulationAutomations(?array $value): void {
         $this->getBackingStore()->set('simulationAutomations', $value);
@@ -72,7 +72,7 @@ class AttackSimulationRoot extends Entity implements Parsable
 
     /**
      * Sets the simulations property value. Represents an attack simulation training campaign in a tenant.
-     *  @param array<Simulation>|null $value Value to set for the simulations property.
+     * @param array<Simulation>|null $value Value to set for the simulations property.
     */
     public function setSimulations(?array $value): void {
         $this->getBackingStore()->set('simulations', $value);

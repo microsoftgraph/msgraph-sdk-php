@@ -74,7 +74,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
 
     /**
      * Sets the alternateNotificationEmails property value. List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
-     *  @param string|null $value Value to set for the alternateNotificationEmails property.
+     * @param string|null $value Value to set for the alternateNotificationEmails property.
     */
     public function setAlternateNotificationEmails(?string $value): void {
         $this->getBackingStore()->set('alternateNotificationEmails', $value);
@@ -82,7 +82,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
 
     /**
      * Sets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
-     *  @param int|null $value Value to set for the groupLifetimeInDays property.
+     * @param int|null $value Value to set for the groupLifetimeInDays property.
     */
     public function setGroupLifetimeInDays(?int $value): void {
         $this->getBackingStore()->set('groupLifetimeInDays', $value);
@@ -90,7 +90,7 @@ class GroupLifecyclePolicy extends Entity implements Parsable
 
     /**
      * Sets the managedGroupTypes property value. The group type for which the expiration policy applies. Possible values are All, Selected or None.
-     *  @param string|null $value Value to set for the managedGroupTypes property.
+     * @param string|null $value Value to set for the managedGroupTypes property.
     */
     public function setManagedGroupTypes(?string $value): void {
         $this->getBackingStore()->set('managedGroupTypes', $value);

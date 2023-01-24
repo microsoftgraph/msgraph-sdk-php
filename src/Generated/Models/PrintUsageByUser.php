@@ -55,7 +55,7 @@ class PrintUsageByUser extends PrintUsage implements Parsable
 
     /**
      * Sets the userPrincipalName property value. The UPN of the user represented by these statistics.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

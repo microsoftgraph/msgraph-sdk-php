@@ -105,7 +105,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -113,7 +113,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -121,7 +121,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for this administrative unit. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -129,7 +129,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
-     *  @param array<DirectoryObject>|null $value Value to set for the members property.
+     * @param array<DirectoryObject>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
@@ -137,7 +137,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
-     *  @param array<ScopedRoleMembership>|null $value Value to set for the scopedRoleMembers property.
+     * @param array<ScopedRoleMembership>|null $value Value to set for the scopedRoleMembers property.
     */
     public function setScopedRoleMembers(?array $value): void {
         $this->getBackingStore()->set('scopedRoleMembers', $value);
@@ -145,7 +145,7 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
 
     /**
      * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
-     *  @param string|null $value Value to set for the visibility property.
+     * @param string|null $value Value to set for the visibility property.
     */
     public function setVisibility(?string $value): void {
         $this->getBackingStore()->set('visibility', $value);

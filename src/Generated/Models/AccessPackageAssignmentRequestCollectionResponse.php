@@ -54,7 +54,7 @@ class AccessPackageAssignmentRequestCollectionResponse extends BaseCollectionPag
 
     /**
      * Sets the value property value. The value property
-     *  @param array<AccessPackageAssignmentRequest>|null $value Value to set for the value property.
+     * @param array<AccessPackageAssignmentRequest>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

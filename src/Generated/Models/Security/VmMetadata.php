@@ -120,7 +120,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cloudProvider property value. The cloudProvider property
-     *  @param VmCloudProvider|null $value Value to set for the cloudProvider property.
+     * @param VmCloudProvider|null $value Value to set for the cloudProvider property.
     */
     public function setCloudProvider(?VmCloudProvider $value): void {
         $this->getBackingStore()->set('cloudProvider', $value);
@@ -144,7 +144,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -152,7 +152,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceId property value. Unique identifier of the Azure resource.
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);
@@ -160,7 +160,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the subscriptionId property value. Unique identifier of the Azure subscription the customer tenant belongs to.
-     *  @param string|null $value Value to set for the subscriptionId property.
+     * @param string|null $value Value to set for the subscriptionId property.
     */
     public function setSubscriptionId(?string $value): void {
         $this->getBackingStore()->set('subscriptionId', $value);
@@ -168,7 +168,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the vmId property value. Unique identifier of the virtual machine instance.
-     *  @param string|null $value Value to set for the vmId property.
+     * @param string|null $value Value to set for the vmId property.
     */
     public function setVmId(?string $value): void {
         $this->getBackingStore()->set('vmId', $value);

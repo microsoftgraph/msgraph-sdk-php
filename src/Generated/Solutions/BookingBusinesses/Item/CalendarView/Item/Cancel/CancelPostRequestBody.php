@@ -80,7 +80,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -88,7 +88,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -96,7 +96,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the cancellationMessage property value. The cancellationMessage property
-     *  @param string|null $value Value to set for the cancellationMessage property.
+     * @param string|null $value Value to set for the cancellationMessage property.
     */
     public function setCancellationMessage(?string $value): void {
         $this->getBackingStore()->set('cancellationMessage', $value);

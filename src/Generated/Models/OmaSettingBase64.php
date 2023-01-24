@@ -65,7 +65,7 @@ class OmaSettingBase64 extends OmaSetting implements Parsable
 
     /**
      * Sets the fileName property value. File name associated with the Value property (.cer
-     *  @param string|null $value Value to set for the fileName property.
+     * @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);
@@ -73,7 +73,7 @@ class OmaSettingBase64 extends OmaSetting implements Parsable
 
     /**
      * Sets the value property value. Value. (Base64 encoded string)
-     *  @param string|null $value Value to set for the value property.
+     * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {
         $this->getBackingStore()->set('value', $value);

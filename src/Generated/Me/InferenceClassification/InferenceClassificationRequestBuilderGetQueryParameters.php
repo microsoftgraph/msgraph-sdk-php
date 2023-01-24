@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\InferenceClassification;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+*/
 class InferenceClassificationRequestBuilderGetQueryParameters 
 {
     /**

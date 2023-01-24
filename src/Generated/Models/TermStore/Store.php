@@ -85,7 +85,7 @@ class Store extends Entity implements Parsable
 
     /**
      * Sets the defaultLanguageTag property value. Default language of the term store.
-     *  @param string|null $value Value to set for the defaultLanguageTag property.
+     * @param string|null $value Value to set for the defaultLanguageTag property.
     */
     public function setDefaultLanguageTag(?string $value): void {
         $this->getBackingStore()->set('defaultLanguageTag', $value);
@@ -93,7 +93,7 @@ class Store extends Entity implements Parsable
 
     /**
      * Sets the groups property value. Collection of all groups available in the term store.
-     *  @param array<Group>|null $value Value to set for the groups property.
+     * @param array<Group>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value): void {
         $this->getBackingStore()->set('groups', $value);
@@ -101,7 +101,7 @@ class Store extends Entity implements Parsable
 
     /**
      * Sets the languageTags property value. List of languages for the term store.
-     *  @param array<string>|null $value Value to set for the languageTags property.
+     * @param array<string>|null $value Value to set for the languageTags property.
     */
     public function setLanguageTags(?array $value): void {
         $this->getBackingStore()->set('languageTags', $value);
@@ -109,7 +109,7 @@ class Store extends Entity implements Parsable
 
     /**
      * Sets the sets property value. Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
-     *  @param array<Set>|null $value Value to set for the sets property.
+     * @param array<Set>|null $value Value to set for the sets property.
     */
     public function setSets(?array $value): void {
         $this->getBackingStore()->set('sets', $value);

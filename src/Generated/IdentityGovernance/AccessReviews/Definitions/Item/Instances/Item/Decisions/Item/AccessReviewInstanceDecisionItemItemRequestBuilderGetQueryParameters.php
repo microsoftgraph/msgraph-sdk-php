@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+*/
 class AccessReviewInstanceDecisionItemItemRequestBuilderGetQueryParameters 
 {
     /**

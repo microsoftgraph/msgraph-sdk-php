@@ -85,7 +85,7 @@ class Contract extends DirectoryObject implements Parsable
 
     /**
      * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
-     *  @param string|null $value Value to set for the contractType property.
+     * @param string|null $value Value to set for the contractType property.
     */
     public function setContractType(?string $value): void {
         $this->getBackingStore()->set('contractType', $value);
@@ -93,7 +93,7 @@ class Contract extends DirectoryObject implements Parsable
 
     /**
      * Sets the customerId property value. The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
-     *  @param string|null $value Value to set for the customerId property.
+     * @param string|null $value Value to set for the customerId property.
     */
     public function setCustomerId(?string $value): void {
         $this->getBackingStore()->set('customerId', $value);
@@ -101,7 +101,7 @@ class Contract extends DirectoryObject implements Parsable
 
     /**
      * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
-     *  @param string|null $value Value to set for the defaultDomainName property.
+     * @param string|null $value Value to set for the defaultDomainName property.
     */
     public function setDefaultDomainName(?string $value): void {
         $this->getBackingStore()->set('defaultDomainName', $value);
@@ -109,7 +109,7 @@ class Contract extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);

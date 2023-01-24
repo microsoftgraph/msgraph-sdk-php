@@ -65,7 +65,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -73,7 +73,7 @@ class MembersLeftEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the members property value. List of members who left the chat.
-     *  @param array<TeamworkUserIdentity>|null $value Value to set for the members property.
+     * @param array<TeamworkUserIdentity>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);

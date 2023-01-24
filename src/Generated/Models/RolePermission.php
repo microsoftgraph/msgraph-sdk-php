@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains the set of ResourceActions determining the allowed and not allowed permissions for each role.
+*/
 class RolePermission implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -90,7 +93,7 @@ class RolePermission implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +101,7 @@ class RolePermission implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +109,7 @@ class RolePermission implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -114,7 +117,7 @@ class RolePermission implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceActions property value. Resource Actions each containing a set of allowed and not allowed permissions.
-     *  @param array<ResourceAction>|null $value Value to set for the resourceActions property.
+     * @param array<ResourceAction>|null $value Value to set for the resourceActions property.
     */
     public function setResourceActions(?array $value): void {
         $this->getBackingStore()->set('resourceActions', $value);

@@ -111,7 +111,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the feedbackBy property value. User who created the feedback.
-     *  @param IdentitySet|null $value Value to set for the feedbackBy property.
+     * @param IdentitySet|null $value Value to set for the feedbackBy property.
     */
     public function setFeedbackBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('feedbackBy', $value);
@@ -135,7 +135,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the feedbackDateTime property value. Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the feedbackDateTime property.
+     * @param DateTime|null $value Value to set for the feedbackDateTime property.
     */
     public function setFeedbackDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('feedbackDateTime', $value);
@@ -143,7 +143,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -151,7 +151,7 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the text property value. Feedback.
-     *  @param EducationItemBody|null $value Value to set for the text property.
+     * @param EducationItemBody|null $value Value to set for the text property.
     */
     public function setText(?EducationItemBody $value): void {
         $this->getBackingStore()->set('text', $value);

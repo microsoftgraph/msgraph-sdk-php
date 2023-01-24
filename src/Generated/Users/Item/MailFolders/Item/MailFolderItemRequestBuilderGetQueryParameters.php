@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's mail folders. Read-only. Nullable.
+*/
 class MailFolderItemRequestBuilderGetQueryParameters 
 {
     /**

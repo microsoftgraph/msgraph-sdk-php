@@ -95,7 +95,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
 
     /**
      * Sets the clientAppId property value. ID of the service principal of the Azure AD app that has been granted access. Read-only.
-     *  @param string|null $value Value to set for the clientAppId property.
+     * @param string|null $value Value to set for the clientAppId property.
     */
     public function setClientAppId(?string $value): void {
         $this->getBackingStore()->set('clientAppId', $value);
@@ -103,7 +103,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
 
     /**
      * Sets the clientId property value. ID of the Azure AD app that has been granted access. Read-only.
-     *  @param string|null $value Value to set for the clientId property.
+     * @param string|null $value Value to set for the clientId property.
     */
     public function setClientId(?string $value): void {
         $this->getBackingStore()->set('clientId', $value);
@@ -111,7 +111,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
 
     /**
      * Sets the permission property value. The name of the resource-specific permission. Read-only.
-     *  @param string|null $value Value to set for the permission property.
+     * @param string|null $value Value to set for the permission property.
     */
     public function setPermission(?string $value): void {
         $this->getBackingStore()->set('permission', $value);
@@ -119,7 +119,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
 
     /**
      * Sets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
-     *  @param string|null $value Value to set for the permissionType property.
+     * @param string|null $value Value to set for the permissionType property.
     */
     public function setPermissionType(?string $value): void {
         $this->getBackingStore()->set('permissionType', $value);
@@ -127,7 +127,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
 
     /**
      * Sets the resourceAppId property value. ID of the Azure AD app that is hosting the resource. Read-only.
-     *  @param string|null $value Value to set for the resourceAppId property.
+     * @param string|null $value Value to set for the resourceAppId property.
     */
     public function setResourceAppId(?string $value): void {
         $this->getBackingStore()->set('resourceAppId', $value);

@@ -64,7 +64,7 @@ class ProfilePhoto extends Entity implements Parsable
 
     /**
      * Sets the height property value. The height of the photo. Read-only.
-     *  @param int|null $value Value to set for the height property.
+     * @param int|null $value Value to set for the height property.
     */
     public function setHeight(?int $value): void {
         $this->getBackingStore()->set('height', $value);
@@ -72,7 +72,7 @@ class ProfilePhoto extends Entity implements Parsable
 
     /**
      * Sets the width property value. The width of the photo. Read-only.
-     *  @param int|null $value Value to set for the width property.
+     * @param int|null $value Value to set for the width property.
     */
     public function setWidth(?int $value): void {
         $this->getBackingStore()->set('width', $value);

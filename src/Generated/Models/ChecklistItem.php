@@ -85,7 +85,7 @@ class ChecklistItem extends Entity implements Parsable
 
     /**
      * Sets the checkedDateTime property value. The date and time when the checklistItem was finished.
-     *  @param DateTime|null $value Value to set for the checkedDateTime property.
+     * @param DateTime|null $value Value to set for the checkedDateTime property.
     */
     public function setCheckedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('checkedDateTime', $value);
@@ -93,7 +93,7 @@ class ChecklistItem extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time when the checklistItem was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -101,7 +101,7 @@ class ChecklistItem extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Field indicating the title of checklistItem.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -109,7 +109,7 @@ class ChecklistItem extends Entity implements Parsable
 
     /**
      * Sets the isChecked property value. State indicating whether the item is checked off or not.
-     *  @param bool|null $value Value to set for the isChecked property.
+     * @param bool|null $value Value to set for the isChecked property.
     */
     public function setIsChecked(?bool $value): void {
         $this->getBackingStore()->set('isChecked', $value);

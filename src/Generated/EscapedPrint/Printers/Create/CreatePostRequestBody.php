@@ -141,7 +141,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -149,7 +149,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -157,7 +157,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the certificateSigningRequest property value. The certificateSigningRequest property
-     *  @param PrintCertificateSigningRequest|null $value Value to set for the certificateSigningRequest property.
+     * @param PrintCertificateSigningRequest|null $value Value to set for the certificateSigningRequest property.
     */
     public function setCertificateSigningRequest(?PrintCertificateSigningRequest $value): void {
         $this->getBackingStore()->set('certificateSigningRequest', $value);
@@ -165,7 +165,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the connectorId property value. The connectorId property
-     *  @param string|null $value Value to set for the connectorId property.
+     * @param string|null $value Value to set for the connectorId property.
     */
     public function setConnectorId(?string $value): void {
         $this->getBackingStore()->set('connectorId', $value);
@@ -173,7 +173,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -181,7 +181,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
-     *  @param bool|null $value Value to set for the hasPhysicalDevice property.
+     * @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
     public function setHasPhysicalDevice(?bool $value): void {
         $this->getBackingStore()->set('hasPhysicalDevice', $value);
@@ -189,7 +189,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the manufacturer property value. The manufacturer property
-     *  @param string|null $value Value to set for the manufacturer property.
+     * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
         $this->getBackingStore()->set('manufacturer', $value);
@@ -197,7 +197,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the model property value. The model property
-     *  @param string|null $value Value to set for the model property.
+     * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
         $this->getBackingStore()->set('model', $value);
@@ -205,7 +205,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the physicalDeviceId property value. The physicalDeviceId property
-     *  @param string|null $value Value to set for the physicalDeviceId property.
+     * @param string|null $value Value to set for the physicalDeviceId property.
     */
     public function setPhysicalDeviceId(?string $value): void {
         $this->getBackingStore()->set('physicalDeviceId', $value);

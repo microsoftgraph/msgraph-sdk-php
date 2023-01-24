@@ -66,7 +66,7 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
 
     /**
      * Sets the content property value. The content stream
-     *  @param StreamInterface|null $value Value to set for the content property.
+     * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -74,7 +74,7 @@ class OnenoteResource extends OnenoteEntityBaseModel implements Parsable
 
     /**
      * Sets the contentUrl property value. The URL for downloading the content
-     *  @param string|null $value Value to set for the contentUrl property.
+     * @param string|null $value Value to set for the contentUrl property.
     */
     public function setContentUrl(?string $value): void {
         $this->getBackingStore()->set('contentUrl', $value);

@@ -110,7 +110,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
-     *  @param string|null $value Value to set for the format property.
+     * @param string|null $value Value to set for the format property.
     */
     public function setFormat(?string $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -134,7 +134,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the formula property value. The formula used to compute the value for this column.
-     *  @param string|null $value Value to set for the formula property.
+     * @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value): void {
         $this->getBackingStore()->set('formula', $value);
@@ -142,7 +142,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
-     *  @param string|null $value Value to set for the outputType property.
+     * @param string|null $value Value to set for the outputType property.
     */
     public function setOutputType(?string $value): void {
         $this->getBackingStore()->set('outputType', $value);

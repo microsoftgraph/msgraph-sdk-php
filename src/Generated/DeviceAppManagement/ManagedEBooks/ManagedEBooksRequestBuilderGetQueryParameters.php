@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The Managed eBook.
+*/
 class ManagedEBooksRequestBuilderGetQueryParameters 
 {
     /**

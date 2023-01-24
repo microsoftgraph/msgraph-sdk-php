@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of segments involved in the session. Read-only. Nullable.
+*/
 class SegmentsRequestBuilderGetQueryParameters 
 {
     /**

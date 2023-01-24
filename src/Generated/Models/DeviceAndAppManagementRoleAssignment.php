@@ -54,7 +54,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
 
     /**
      * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     *  @param array<string>|null $value Value to set for the members property.
+     * @param array<string>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);

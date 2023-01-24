@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Chats\Item\Messages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of all the messages in the chat. Nullable.
+*/
 class ChatMessageItemRequestBuilderGetQueryParameters 
 {
     /**

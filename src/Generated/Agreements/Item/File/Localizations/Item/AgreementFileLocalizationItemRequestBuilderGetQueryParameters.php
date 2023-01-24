@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Agreements\Item\File\Localizations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The localized version of the terms of use agreement files attached to the agreement.
+*/
 class AgreementFileLocalizationItemRequestBuilderGetQueryParameters 
 {
     /**

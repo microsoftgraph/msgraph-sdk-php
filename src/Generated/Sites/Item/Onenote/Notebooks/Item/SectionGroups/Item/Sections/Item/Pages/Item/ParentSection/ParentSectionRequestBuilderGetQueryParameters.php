@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\SectionGro
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The section that contains the page. Read-only.
+*/
 class ParentSectionRequestBuilderGetQueryParameters 
 {
     /**

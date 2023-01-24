@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains properties describing restart coordination following an app installation.
+*/
 class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +129,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the countdownDisplayBeforeRestartInMinutes property value. The number of minutes before the restart time to display the countdown dialog for pending restarts.
-     *  @param int|null $value Value to set for the countdownDisplayBeforeRestartInMinutes property.
+     * @param int|null $value Value to set for the countdownDisplayBeforeRestartInMinutes property.
     */
     public function setCountdownDisplayBeforeRestartInMinutes(?int $value): void {
         $this->getBackingStore()->set('countdownDisplayBeforeRestartInMinutes', $value);
@@ -134,7 +137,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the gracePeriodInMinutes property value. The number of minutes to wait before restarting the device after an app installation.
-     *  @param int|null $value Value to set for the gracePeriodInMinutes property.
+     * @param int|null $value Value to set for the gracePeriodInMinutes property.
     */
     public function setGracePeriodInMinutes(?int $value): void {
         $this->getBackingStore()->set('gracePeriodInMinutes', $value);
@@ -142,7 +145,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +153,7 @@ class Win32LobAppRestartSettings implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the restartNotificationSnoozeDurationInMinutes property value. The number of minutes to snooze the restart notification dialog when the snooze button is selected.
-     *  @param int|null $value Value to set for the restartNotificationSnoozeDurationInMinutes property.
+     * @param int|null $value Value to set for the restartNotificationSnoozeDurationInMinutes property.
     */
     public function setRestartNotificationSnoozeDurationInMinutes(?int $value): void {
         $this->getBackingStore()->set('restartNotificationSnoozeDurationInMinutes', $value);

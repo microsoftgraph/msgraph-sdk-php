@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Me;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get me from education
+*/
 class MeRequestBuilderGetQueryParameters 
 {
     /**

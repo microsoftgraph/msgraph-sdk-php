@@ -100,7 +100,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the target property value. The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
-     *  @param string|null $value Value to set for the target property.
+     * @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value): void {
         $this->getBackingStore()->set('target', $value);
@@ -132,7 +132,7 @@ class CrossTenantAccessPolicyTarget implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the targetType property value. The type of resource that you want to target. The possible values are: user, group, application, unknownFutureValue.
-     *  @param CrossTenantAccessPolicyTargetType|null $value Value to set for the targetType property.
+     * @param CrossTenantAccessPolicyTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?CrossTenantAccessPolicyTargetType $value): void {
         $this->getBackingStore()->set('targetType', $value);

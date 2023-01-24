@@ -110,7 +110,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sortBy property value. The method by which the folder should be sorted.
-     *  @param string|null $value Value to set for the sortBy property.
+     * @param string|null $value Value to set for the sortBy property.
     */
     public function setSortBy(?string $value): void {
         $this->getBackingStore()->set('sortBy', $value);
@@ -142,7 +142,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sortOrder property value. If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
-     *  @param string|null $value Value to set for the sortOrder property.
+     * @param string|null $value Value to set for the sortOrder property.
     */
     public function setSortOrder(?string $value): void {
         $this->getBackingStore()->set('sortOrder', $value);
@@ -150,7 +150,7 @@ class FolderView implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the viewType property value. The type of view that should be used to represent the folder.
-     *  @param string|null $value Value to set for the viewType property.
+     * @param string|null $value Value to set for the viewType property.
     */
     public function setViewType(?string $value): void {
         $this->getBackingStore()->set('viewType', $value);

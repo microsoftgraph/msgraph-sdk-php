@@ -124,7 +124,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of a chart object, which includes line and font formatting. Read-only.
-     *  @param WorkbookChartAxisFormat|null $value Value to set for the format property.
+     * @param WorkbookChartAxisFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartAxisFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -132,7 +132,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the majorGridlines property value. Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
-     *  @param WorkbookChartGridlines|null $value Value to set for the majorGridlines property.
+     * @param WorkbookChartGridlines|null $value Value to set for the majorGridlines property.
     */
     public function setMajorGridlines(?WorkbookChartGridlines $value): void {
         $this->getBackingStore()->set('majorGridlines', $value);
@@ -140,7 +140,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the majorUnit property value. Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
-     *  @param Json|null $value Value to set for the majorUnit property.
+     * @param Json|null $value Value to set for the majorUnit property.
     */
     public function setMajorUnit(?Json $value): void {
         $this->getBackingStore()->set('majorUnit', $value);
@@ -148,7 +148,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the maximum property value. Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     *  @param Json|null $value Value to set for the maximum property.
+     * @param Json|null $value Value to set for the maximum property.
     */
     public function setMaximum(?Json $value): void {
         $this->getBackingStore()->set('maximum', $value);
@@ -156,7 +156,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the minimum property value. Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
-     *  @param Json|null $value Value to set for the minimum property.
+     * @param Json|null $value Value to set for the minimum property.
     */
     public function setMinimum(?Json $value): void {
         $this->getBackingStore()->set('minimum', $value);
@@ -164,7 +164,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the minorGridlines property value. Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
-     *  @param WorkbookChartGridlines|null $value Value to set for the minorGridlines property.
+     * @param WorkbookChartGridlines|null $value Value to set for the minorGridlines property.
     */
     public function setMinorGridlines(?WorkbookChartGridlines $value): void {
         $this->getBackingStore()->set('minorGridlines', $value);
@@ -172,7 +172,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the minorUnit property value. Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
-     *  @param Json|null $value Value to set for the minorUnit property.
+     * @param Json|null $value Value to set for the minorUnit property.
     */
     public function setMinorUnit(?Json $value): void {
         $this->getBackingStore()->set('minorUnit', $value);
@@ -180,7 +180,7 @@ class WorkbookChartAxis extends Entity implements Parsable
 
     /**
      * Sets the title property value. Represents the axis title. Read-only.
-     *  @param WorkbookChartAxisTitle|null $value Value to set for the title property.
+     * @param WorkbookChartAxisTitle|null $value Value to set for the title property.
     */
     public function setTitle(?WorkbookChartAxisTitle $value): void {
         $this->getBackingStore()->set('title', $value);

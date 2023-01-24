@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The details for each version of the app.
+*/
 class AppDefinitionsRequestBuilderGetQueryParameters 
 {
     /**

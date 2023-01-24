@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DirectoryObjects;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from directoryObjects
+*/
 class DirectoryObjectsRequestBuilderGetQueryParameters 
 {
     /**

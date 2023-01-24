@@ -135,7 +135,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description for the policy.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -143,7 +143,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Display name for the policy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -151,7 +151,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
-     *  @param array<UnifiedRoleManagementPolicyRule>|null $value Value to set for the effectiveRules property.
+     * @param array<UnifiedRoleManagementPolicyRule>|null $value Value to set for the effectiveRules property.
     */
     public function setEffectiveRules(?array $value): void {
         $this->getBackingStore()->set('effectiveRules', $value);
@@ -159,7 +159,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
-     *  @param bool|null $value Value to set for the isOrganizationDefault property.
+     * @param bool|null $value Value to set for the isOrganizationDefault property.
     */
     public function setIsOrganizationDefault(?bool $value): void {
         $this->getBackingStore()->set('isOrganizationDefault', $value);
@@ -167,7 +167,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. The identity who last modified the role setting.
-     *  @param Identity|null $value Value to set for the lastModifiedBy property.
+     * @param Identity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?Identity $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -175,7 +175,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The time when the role setting was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -183,7 +183,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
-     *  @param array<UnifiedRoleManagementPolicyRule>|null $value Value to set for the rules property.
+     * @param array<UnifiedRoleManagementPolicyRule>|null $value Value to set for the rules property.
     */
     public function setRules(?array $value): void {
         $this->getBackingStore()->set('rules', $value);
@@ -191,7 +191,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
-     *  @param string|null $value Value to set for the scopeId property.
+     * @param string|null $value Value to set for the scopeId property.
     */
     public function setScopeId(?string $value): void {
         $this->getBackingStore()->set('scopeId', $value);
@@ -199,7 +199,7 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
 
     /**
      * Sets the scopeType property value. The type of the scope where the policy is created. One of Directory, DirectoryRole. Required.
-     *  @param string|null $value Value to set for the scopeType property.
+     * @param string|null $value Value to set for the scopeType property.
     */
     public function setScopeType(?string $value): void {
         $this->getBackingStore()->set('scopeType', $value);

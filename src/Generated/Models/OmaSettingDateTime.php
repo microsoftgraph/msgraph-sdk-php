@@ -56,7 +56,7 @@ class OmaSettingDateTime extends OmaSetting implements Parsable
 
     /**
      * Sets the value property value. Value.
-     *  @param DateTime|null $value Value to set for the value property.
+     * @param DateTime|null $value Value to set for the value property.
     */
     public function setValue(?DateTime $value): void {
         $this->getBackingStore()->set('value', $value);

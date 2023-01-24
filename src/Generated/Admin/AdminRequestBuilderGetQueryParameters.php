@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get admin
+*/
 class AdminRequestBuilderGetQueryParameters 
 {
     /**

@@ -89,7 +89,7 @@ class DirectoryObject extends Entity implements Parsable
 
     /**
      * Sets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
-     *  @param DateTime|null $value Value to set for the deletedDateTime property.
+     * @param DateTime|null $value Value to set for the deletedDateTime property.
     */
     public function setDeletedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('deletedDateTime', $value);

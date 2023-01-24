@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Planner\Plans\Item\Buckets\Item\Tasks\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Read-only. Nullable. The collection of tasks in the bucket.
+*/
 class PlannerTaskItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -125,7 +125,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the acceptances property value. Read-only. Information about acceptances of this agreement.
-     *  @param array<AgreementAcceptance>|null $value Value to set for the acceptances property.
+     * @param array<AgreementAcceptance>|null $value Value to set for the acceptances property.
     */
     public function setAcceptances(?array $value): void {
         $this->getBackingStore()->set('acceptances', $value);
@@ -133,7 +133,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -141,7 +141,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the file property value. Default PDF linked to this agreement.
-     *  @param AgreementFile|null $value Value to set for the file property.
+     * @param AgreementFile|null $value Value to set for the file property.
     */
     public function setFile(?AgreementFile $value): void {
         $this->getBackingStore()->set('file', $value);
@@ -149,7 +149,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the files property value. PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
-     *  @param array<AgreementFileLocalization>|null $value Value to set for the files property.
+     * @param array<AgreementFileLocalization>|null $value Value to set for the files property.
     */
     public function setFiles(?array $value): void {
         $this->getBackingStore()->set('files', $value);
@@ -157,7 +157,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the isPerDeviceAcceptanceRequired property value. Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
-     *  @param bool|null $value Value to set for the isPerDeviceAcceptanceRequired property.
+     * @param bool|null $value Value to set for the isPerDeviceAcceptanceRequired property.
     */
     public function setIsPerDeviceAcceptanceRequired(?bool $value): void {
         $this->getBackingStore()->set('isPerDeviceAcceptanceRequired', $value);
@@ -165,7 +165,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the isViewingBeforeAcceptanceRequired property value. Indicates whether the user has to expand the agreement before accepting. Supports $filter (eq).
-     *  @param bool|null $value Value to set for the isViewingBeforeAcceptanceRequired property.
+     * @param bool|null $value Value to set for the isViewingBeforeAcceptanceRequired property.
     */
     public function setIsViewingBeforeAcceptanceRequired(?bool $value): void {
         $this->getBackingStore()->set('isViewingBeforeAcceptanceRequired', $value);
@@ -173,7 +173,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the termsExpiration property value. Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
-     *  @param TermsExpiration|null $value Value to set for the termsExpiration property.
+     * @param TermsExpiration|null $value Value to set for the termsExpiration property.
     */
     public function setTermsExpiration(?TermsExpiration $value): void {
         $this->getBackingStore()->set('termsExpiration', $value);
@@ -181,7 +181,7 @@ class Agreement extends Entity implements Parsable
 
     /**
      * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
-     *  @param DateInterval|null $value Value to set for the userReacceptRequiredFrequency property.
+     * @param DateInterval|null $value Value to set for the userReacceptRequiredFrequency property.
     */
     public function setUserReacceptRequiredFrequency(?DateInterval $value): void {
         $this->getBackingStore()->set('userReacceptRequiredFrequency', $value);

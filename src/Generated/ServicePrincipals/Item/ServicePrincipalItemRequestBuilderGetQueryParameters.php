@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of a servicePrincipal object.
+*/
 class ServicePrincipalItemRequestBuilderGetQueryParameters 
 {
     /**

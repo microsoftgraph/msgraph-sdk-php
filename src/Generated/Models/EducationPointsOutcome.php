@@ -65,7 +65,7 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the points property value. The numeric grade the teacher has given the student for this assignment.
-     *  @param EducationAssignmentPointsGrade|null $value Value to set for the points property.
+     * @param EducationAssignmentPointsGrade|null $value Value to set for the points property.
     */
     public function setPoints(?EducationAssignmentPointsGrade $value): void {
         $this->getBackingStore()->set('points', $value);
@@ -73,7 +73,7 @@ class EducationPointsOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
-     *  @param EducationAssignmentPointsGrade|null $value Value to set for the publishedPoints property.
+     * @param EducationAssignmentPointsGrade|null $value Value to set for the publishedPoints property.
     */
     public function setPublishedPoints(?EducationAssignmentPointsGrade $value): void {
         $this->getBackingStore()->set('publishedPoints', $value);

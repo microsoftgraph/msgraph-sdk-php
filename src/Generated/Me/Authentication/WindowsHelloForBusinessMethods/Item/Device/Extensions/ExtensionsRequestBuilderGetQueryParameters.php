@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\WindowsHelloForBusinessMet
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of open extensions defined for the device. Read-only. Nullable.
+*/
 class ExtensionsRequestBuilderGetQueryParameters 
 {
     /**

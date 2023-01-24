@@ -150,7 +150,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -166,7 +166,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the dayOfMonth property value. The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
-     *  @param int|null $value Value to set for the dayOfMonth property.
+     * @param int|null $value Value to set for the dayOfMonth property.
     */
     public function setDayOfMonth(?int $value): void {
         $this->getBackingStore()->set('dayOfMonth', $value);
@@ -174,7 +174,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     *  @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
+     * @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value): void {
         $this->getBackingStore()->set('daysOfWeek', $value);
@@ -182,7 +182,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the firstDayOfWeek property value. The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
-     *  @param DayOfWeek|null $value Value to set for the firstDayOfWeek property.
+     * @param DayOfWeek|null $value Value to set for the firstDayOfWeek property.
     */
     public function setFirstDayOfWeek(?DayOfWeek $value): void {
         $this->getBackingStore()->set('firstDayOfWeek', $value);
@@ -190,7 +190,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the index property value. Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
-     *  @param WeekIndex|null $value Value to set for the index property.
+     * @param WeekIndex|null $value Value to set for the index property.
     */
     public function setIndex(?WeekIndex $value): void {
         $this->getBackingStore()->set('index', $value);
@@ -198,7 +198,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the interval property value. The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
-     *  @param int|null $value Value to set for the interval property.
+     * @param int|null $value Value to set for the interval property.
     */
     public function setInterval(?int $value): void {
         $this->getBackingStore()->set('interval', $value);
@@ -206,7 +206,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the month property value. The month in which the event occurs.  This is a number from 1 to 12.
-     *  @param int|null $value Value to set for the month property.
+     * @param int|null $value Value to set for the month property.
     */
     public function setMonth(?int $value): void {
         $this->getBackingStore()->set('month', $value);
@@ -214,7 +214,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -222,7 +222,7 @@ class RecurrencePattern implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
-     *  @param RecurrencePatternType|null $value Value to set for the type property.
+     * @param RecurrencePatternType|null $value Value to set for the type property.
     */
     public function setType(?RecurrencePatternType $value): void {
         $this->getBackingStore()->set('type', $value);

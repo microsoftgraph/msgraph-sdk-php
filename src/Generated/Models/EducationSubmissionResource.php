@@ -64,7 +64,7 @@ class EducationSubmissionResource extends Entity implements Parsable
 
     /**
      * Sets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
-     *  @param string|null $value Value to set for the assignmentResourceUrl property.
+     * @param string|null $value Value to set for the assignmentResourceUrl property.
     */
     public function setAssignmentResourceUrl(?string $value): void {
         $this->getBackingStore()->set('assignmentResourceUrl', $value);
@@ -72,7 +72,7 @@ class EducationSubmissionResource extends Entity implements Parsable
 
     /**
      * Sets the resource property value. Resource object.
-     *  @param EducationResource|null $value Value to set for the resource property.
+     * @param EducationResource|null $value Value to set for the resource property.
     */
     public function setResource(?EducationResource $value): void {
         $this->getBackingStore()->set('resource', $value);

@@ -114,7 +114,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the comment property value. Represents the comment associated with this name.
-     *  @param string|null $value Value to set for the comment property.
+     * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
@@ -122,7 +122,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the name property value. The name of the object. Read-only.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -130,7 +130,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the scope property value. Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
-     *  @param string|null $value Value to set for the scope property.
+     * @param string|null $value Value to set for the scope property.
     */
     public function setScope(?string $value): void {
         $this->getBackingStore()->set('scope', $value);
@@ -138,7 +138,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -146,7 +146,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the value property value. Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
-     *  @param Json|null $value Value to set for the value property.
+     * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {
         $this->getBackingStore()->set('value', $value);
@@ -154,7 +154,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the visible property value. Specifies whether the object is visible or not.
-     *  @param bool|null $value Value to set for the visible property.
+     * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
         $this->getBackingStore()->set('visible', $value);
@@ -162,7 +162,7 @@ class WorkbookNamedItem extends Entity implements Parsable
 
     /**
      * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
-     *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
+     * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
         $this->getBackingStore()->set('worksheet', $value);

@@ -85,7 +85,7 @@ class Relation extends Entity implements Parsable
 
     /**
      * Sets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
-     *  @param Term|null $value Value to set for the fromTerm property.
+     * @param Term|null $value Value to set for the fromTerm property.
     */
     public function setFromTerm(?Term $value): void {
         $this->getBackingStore()->set('fromTerm', $value);
@@ -93,7 +93,7 @@ class Relation extends Entity implements Parsable
 
     /**
      * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
-     *  @param RelationType|null $value Value to set for the relationship property.
+     * @param RelationType|null $value Value to set for the relationship property.
     */
     public function setRelationship(?RelationType $value): void {
         $this->getBackingStore()->set('relationship', $value);
@@ -101,7 +101,7 @@ class Relation extends Entity implements Parsable
 
     /**
      * Sets the set property value. The [set] in which the relation is relevant.
-     *  @param Set|null $value Value to set for the set property.
+     * @param Set|null $value Value to set for the set property.
     */
     public function setSet(?Set $value): void {
         $this->getBackingStore()->set('set', $value);
@@ -109,7 +109,7 @@ class Relation extends Entity implements Parsable
 
     /**
      * Sets the toTerm property value. The to [term] of the relation. The term to which the relationship is defined.
-     *  @param Term|null $value Value to set for the toTerm property.
+     * @param Term|null $value Value to set for the toTerm property.
     */
     public function setToTerm(?Term $value): void {
         $this->getBackingStore()->set('toTerm', $value);

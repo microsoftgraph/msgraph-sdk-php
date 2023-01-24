@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:- directory (Azure AD)- entitlement management (Azure AD)
+*/
 class RoleAssignmentsRequestBuilderGetQueryParameters 
 {
     /**

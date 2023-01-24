@@ -75,7 +75,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
 
     /**
      * Sets the query property value. Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
-     *  @param string|null $value Value to set for the query property.
+     * @param string|null $value Value to set for the query property.
     */
     public function setQuery(?string $value): void {
         $this->getBackingStore()->set('query', $value);
@@ -83,7 +83,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
 
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
-     *  @param string|null $value Value to set for the queryRoot property.
+     * @param string|null $value Value to set for the queryRoot property.
     */
     public function setQueryRoot(?string $value): void {
         $this->getBackingStore()->set('queryRoot', $value);
@@ -91,7 +91,7 @@ class AccessReviewNotificationRecipientQueryScope extends AccessReviewNotificati
 
     /**
      * Sets the queryType property value. Indicates the type of query. Allowed value is MicrosoftGraph.
-     *  @param string|null $value Value to set for the queryType property.
+     * @param string|null $value Value to set for the queryType property.
     */
     public function setQueryType(?string $value): void {
         $this->getBackingStore()->set('queryType', $value);

@@ -104,7 +104,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the failedDeviceCount property value. Number of Devices that have failed to install this book.
-     *  @param int|null $value Value to set for the failedDeviceCount property.
+     * @param int|null $value Value to set for the failedDeviceCount property.
     */
     public function setFailedDeviceCount(?int $value): void {
         $this->getBackingStore()->set('failedDeviceCount', $value);
@@ -112,7 +112,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this book.
-     *  @param int|null $value Value to set for the failedUserCount property.
+     * @param int|null $value Value to set for the failedUserCount property.
     */
     public function setFailedUserCount(?int $value): void {
         $this->getBackingStore()->set('failedUserCount', $value);
@@ -120,7 +120,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the installedDeviceCount property value. Number of Devices that have successfully installed this book.
-     *  @param int|null $value Value to set for the installedDeviceCount property.
+     * @param int|null $value Value to set for the installedDeviceCount property.
     */
     public function setInstalledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('installedDeviceCount', $value);
@@ -128,7 +128,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the installedUserCount property value. Number of Users whose devices have all succeeded to install this book.
-     *  @param int|null $value Value to set for the installedUserCount property.
+     * @param int|null $value Value to set for the installedUserCount property.
     */
     public function setInstalledUserCount(?int $value): void {
         $this->getBackingStore()->set('installedUserCount', $value);
@@ -136,7 +136,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the notInstalledDeviceCount property value. Number of Devices that does not have this book installed.
-     *  @param int|null $value Value to set for the notInstalledDeviceCount property.
+     * @param int|null $value Value to set for the notInstalledDeviceCount property.
     */
     public function setNotInstalledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notInstalledDeviceCount', $value);
@@ -144,7 +144,7 @@ class EBookInstallSummary extends Entity implements Parsable
 
     /**
      * Sets the notInstalledUserCount property value. Number of Users that did not install this book.
-     *  @param int|null $value Value to set for the notInstalledUserCount property.
+     * @param int|null $value Value to set for the notInstalledUserCount property.
     */
     public function setNotInstalledUserCount(?int $value): void {
         $this->getBackingStore()->set('notInstalledUserCount', $value);

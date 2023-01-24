@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Shares\Item\Items\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * All driveItems contained in the sharing root. This collection cannot be enumerated.
+*/
 class DriveItemItemRequestBuilderGetQueryParameters 
 {
     /**

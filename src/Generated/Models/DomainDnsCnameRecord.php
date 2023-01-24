@@ -54,7 +54,7 @@ class DomainDnsCnameRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the canonicalName property value. The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
-     *  @param string|null $value Value to set for the canonicalName property.
+     * @param string|null $value Value to set for the canonicalName property.
     */
     public function setCanonicalName(?string $value): void {
         $this->getBackingStore()->set('canonicalName', $value);

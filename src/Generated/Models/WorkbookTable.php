@@ -184,7 +184,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the columns property value. Represents a collection of all the columns in the table. Read-only.
-     *  @param array<WorkbookTableColumn>|null $value Value to set for the columns property.
+     * @param array<WorkbookTableColumn>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
         $this->getBackingStore()->set('columns', $value);
@@ -192,7 +192,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
-     *  @param bool|null $value Value to set for the highlightFirstColumn property.
+     * @param bool|null $value Value to set for the highlightFirstColumn property.
     */
     public function setHighlightFirstColumn(?bool $value): void {
         $this->getBackingStore()->set('highlightFirstColumn', $value);
@@ -200,7 +200,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the highlightLastColumn property value. Indicates whether the last column contains special formatting.
-     *  @param bool|null $value Value to set for the highlightLastColumn property.
+     * @param bool|null $value Value to set for the highlightLastColumn property.
     */
     public function setHighlightLastColumn(?bool $value): void {
         $this->getBackingStore()->set('highlightLastColumn', $value);
@@ -208,7 +208,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
-     *  @param string|null $value Value to set for the legacyId property.
+     * @param string|null $value Value to set for the legacyId property.
     */
     public function setLegacyId(?string $value): void {
         $this->getBackingStore()->set('legacyId', $value);
@@ -216,7 +216,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the name property value. Name of the table.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -224,7 +224,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the rows property value. Represents a collection of all the rows in the table. Read-only.
-     *  @param array<WorkbookTableRow>|null $value Value to set for the rows property.
+     * @param array<WorkbookTableRow>|null $value Value to set for the rows property.
     */
     public function setRows(?array $value): void {
         $this->getBackingStore()->set('rows', $value);
@@ -232,7 +232,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the showBandedColumns property value. Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
-     *  @param bool|null $value Value to set for the showBandedColumns property.
+     * @param bool|null $value Value to set for the showBandedColumns property.
     */
     public function setShowBandedColumns(?bool $value): void {
         $this->getBackingStore()->set('showBandedColumns', $value);
@@ -240,7 +240,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the showBandedRows property value. Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
-     *  @param bool|null $value Value to set for the showBandedRows property.
+     * @param bool|null $value Value to set for the showBandedRows property.
     */
     public function setShowBandedRows(?bool $value): void {
         $this->getBackingStore()->set('showBandedRows', $value);
@@ -248,7 +248,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the showFilterButton property value. Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
-     *  @param bool|null $value Value to set for the showFilterButton property.
+     * @param bool|null $value Value to set for the showFilterButton property.
     */
     public function setShowFilterButton(?bool $value): void {
         $this->getBackingStore()->set('showFilterButton', $value);
@@ -256,7 +256,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the showHeaders property value. Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
-     *  @param bool|null $value Value to set for the showHeaders property.
+     * @param bool|null $value Value to set for the showHeaders property.
     */
     public function setShowHeaders(?bool $value): void {
         $this->getBackingStore()->set('showHeaders', $value);
@@ -264,7 +264,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the showTotals property value. Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
-     *  @param bool|null $value Value to set for the showTotals property.
+     * @param bool|null $value Value to set for the showTotals property.
     */
     public function setShowTotals(?bool $value): void {
         $this->getBackingStore()->set('showTotals', $value);
@@ -272,7 +272,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the sort property value. Represents the sorting for the table. Read-only.
-     *  @param WorkbookTableSort|null $value Value to set for the sort property.
+     * @param WorkbookTableSort|null $value Value to set for the sort property.
     */
     public function setSort(?WorkbookTableSort $value): void {
         $this->getBackingStore()->set('sort', $value);
@@ -280,7 +280,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
-     *  @param string|null $value Value to set for the style property.
+     * @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value): void {
         $this->getBackingStore()->set('style', $value);
@@ -288,7 +288,7 @@ class WorkbookTable extends Entity implements Parsable
 
     /**
      * Sets the worksheet property value. The worksheet containing the current table. Read-only.
-     *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
+     * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
         $this->getBackingStore()->set('worksheet', $value);

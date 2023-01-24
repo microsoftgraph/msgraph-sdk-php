@@ -135,7 +135,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the classification property value. The classification property
-     *  @param ServiceHealthClassificationType|null $value Value to set for the classification property.
+     * @param ServiceHealthClassificationType|null $value Value to set for the classification property.
     */
     public function setClassification(?ServiceHealthClassificationType $value): void {
         $this->getBackingStore()->set('classification', $value);
@@ -143,7 +143,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the feature property value. The feature name of the service issue.
-     *  @param string|null $value Value to set for the feature property.
+     * @param string|null $value Value to set for the feature property.
     */
     public function setFeature(?string $value): void {
         $this->getBackingStore()->set('feature', $value);
@@ -151,7 +151,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the featureGroup property value. The feature group name of the service issue.
-     *  @param string|null $value Value to set for the featureGroup property.
+     * @param string|null $value Value to set for the featureGroup property.
     */
     public function setFeatureGroup(?string $value): void {
         $this->getBackingStore()->set('featureGroup', $value);
@@ -159,7 +159,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the impactDescription property value. The description of the service issue impact.
-     *  @param string|null $value Value to set for the impactDescription property.
+     * @param string|null $value Value to set for the impactDescription property.
     */
     public function setImpactDescription(?string $value): void {
         $this->getBackingStore()->set('impactDescription', $value);
@@ -167,7 +167,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the isResolved property value. Indicates whether the issue is resolved.
-     *  @param bool|null $value Value to set for the isResolved property.
+     * @param bool|null $value Value to set for the isResolved property.
     */
     public function setIsResolved(?bool $value): void {
         $this->getBackingStore()->set('isResolved', $value);
@@ -175,7 +175,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the origin property value. The origin property
-     *  @param ServiceHealthOrigin|null $value Value to set for the origin property.
+     * @param ServiceHealthOrigin|null $value Value to set for the origin property.
     */
     public function setOrigin(?ServiceHealthOrigin $value): void {
         $this->getBackingStore()->set('origin', $value);
@@ -183,7 +183,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the posts property value. Collection of historical posts for the service issue.
-     *  @param array<ServiceHealthIssuePost>|null $value Value to set for the posts property.
+     * @param array<ServiceHealthIssuePost>|null $value Value to set for the posts property.
     */
     public function setPosts(?array $value): void {
         $this->getBackingStore()->set('posts', $value);
@@ -191,7 +191,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the service property value. Indicates the service affected by the issue.
-     *  @param string|null $value Value to set for the service property.
+     * @param string|null $value Value to set for the service property.
     */
     public function setService(?string $value): void {
         $this->getBackingStore()->set('service', $value);
@@ -199,7 +199,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param ServiceHealthStatus|null $value Value to set for the status property.
+     * @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value): void {
         $this->getBackingStore()->set('status', $value);

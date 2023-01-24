@@ -120,7 +120,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     *  @param array<ConditionalAccessGrantControl>|null $value Value to set for the builtInControls property.
+     * @param array<ConditionalAccessGrantControl>|null $value Value to set for the builtInControls property.
     */
     public function setBuiltInControls(?array $value): void {
         $this->getBackingStore()->set('builtInControls', $value);
@@ -144,7 +144,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
-     *  @param array<string>|null $value Value to set for the customAuthenticationFactors property.
+     * @param array<string>|null $value Value to set for the customAuthenticationFactors property.
     */
     public function setCustomAuthenticationFactors(?array $value): void {
         $this->getBackingStore()->set('customAuthenticationFactors', $value);
@@ -152,7 +152,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the operator property value. Defines the relationship of the grant controls. Possible values: AND, OR.
-     *  @param string|null $value Value to set for the operator property.
+     * @param string|null $value Value to set for the operator property.
     */
     public function setOperator(?string $value): void {
         $this->getBackingStore()->set('operator', $value);
@@ -168,7 +168,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
 
     /**
      * Sets the termsOfUse property value. List of terms of use IDs required by the policy.
-     *  @param array<string>|null $value Value to set for the termsOfUse property.
+     * @param array<string>|null $value Value to set for the termsOfUse property.
     */
     public function setTermsOfUse(?array $value): void {
         $this->getBackingStore()->set('termsOfUse', $value);

@@ -150,7 +150,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +158,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -166,7 +166,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
-     *  @param string|null $value Value to set for the listId property.
+     * @param string|null $value Value to set for the listId property.
     */
     public function setListId(?string $value): void {
         $this->getBackingStore()->set('listId', $value);
@@ -174,7 +174,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the listItemId property value. An integer identifier for the item within the containing list.
-     *  @param string|null $value Value to set for the listItemId property.
+     * @param string|null $value Value to set for the listItemId property.
     */
     public function setListItemId(?string $value): void {
         $this->getBackingStore()->set('listItemId', $value);
@@ -182,7 +182,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
-     *  @param string|null $value Value to set for the listItemUniqueId property.
+     * @param string|null $value Value to set for the listItemUniqueId property.
     */
     public function setListItemUniqueId(?string $value): void {
         $this->getBackingStore()->set('listItemUniqueId', $value);
@@ -190,7 +190,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -198,7 +198,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
-     *  @param string|null $value Value to set for the siteId property.
+     * @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value): void {
         $this->getBackingStore()->set('siteId', $value);
@@ -206,7 +206,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the siteUrl property value. The SharePoint URL for the site that contains the item.
-     *  @param string|null $value Value to set for the siteUrl property.
+     * @param string|null $value Value to set for the siteUrl property.
     */
     public function setSiteUrl(?string $value): void {
         $this->getBackingStore()->set('siteUrl', $value);
@@ -214,7 +214,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tenantId property value. The unique identifier (guid) for the tenancy.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
@@ -222,7 +222,7 @@ class SharepointIds implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
-     *  @param string|null $value Value to set for the webId property.
+     * @param string|null $value Value to set for the webId property.
     */
     public function setWebId(?string $value): void {
         $this->getBackingStore()->set('webId', $value);

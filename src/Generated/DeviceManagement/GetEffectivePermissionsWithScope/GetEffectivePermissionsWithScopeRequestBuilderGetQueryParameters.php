@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWith
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieves the effective permissions of the currently authenticated user
+*/
 class GetEffectivePermissionsWithScopeRequestBuilderGetQueryParameters 
 {
     /**

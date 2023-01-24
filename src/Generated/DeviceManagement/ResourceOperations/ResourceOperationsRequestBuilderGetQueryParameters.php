@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ResourceOperations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The Resource Operations.
+*/
 class ResourceOperationsRequestBuilderGetQueryParameters 
 {
     /**

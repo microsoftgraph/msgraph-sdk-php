@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get deviceManagement
+*/
 class DeviceManagementRequestBuilderGetQueryParameters 
 {
     /**

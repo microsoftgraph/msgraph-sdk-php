@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Photos\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get photos from me
+*/
 class ProfilePhotoItemRequestBuilderGetQueryParameters 
 {
     /**

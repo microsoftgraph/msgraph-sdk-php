@@ -110,7 +110,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the assignedUserCount property value. Number of users who were assigned the training in an attack simulation and training campaign.
-     *  @param int|null $value Value to set for the assignedUserCount property.
+     * @param int|null $value Value to set for the assignedUserCount property.
     */
     public function setAssignedUserCount(?int $value): void {
         $this->getBackingStore()->set('assignedUserCount', $value);
@@ -126,7 +126,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the completedUserCount property value. Number of users who completed the training in an attack simulation and training campaign.
-     *  @param int|null $value Value to set for the completedUserCount property.
+     * @param int|null $value Value to set for the completedUserCount property.
     */
     public function setCompletedUserCount(?int $value): void {
         $this->getBackingStore()->set('completedUserCount', $value);
@@ -142,7 +142,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the displayName property value. Display name of the training in an attack simulation and training campaign.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -150,7 +150,7 @@ class AssignedTrainingInfo implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

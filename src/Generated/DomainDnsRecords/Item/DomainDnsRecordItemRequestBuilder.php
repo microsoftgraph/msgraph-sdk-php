@@ -10,11 +10,13 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
+/**
+ * Provides operations to manage the collection of domainDnsRecord entities.
+*/
 class DomainDnsRecordItemRequestBuilder 
 {
     /**
@@ -44,7 +46,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Delete entity from domainDnsRecords
+     * Delete entity from domainDnsRecords by key (id)
      * @param DomainDnsRecordItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -63,7 +65,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Get entity from domainDnsRecords by key
+     * Get entity from domainDnsRecords by key (id)
      * @param DomainDnsRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return Promise
@@ -82,7 +84,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Update entity in domainDnsRecords
+     * Update entity in domainDnsRecords by key (id)
      * @param DomainDnsRecord $body The request body
      * @param DomainDnsRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param ResponseHandler|null $responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -102,7 +104,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Delete entity from domainDnsRecords
+     * Delete entity from domainDnsRecords by key (id)
      * @param DomainDnsRecordItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class DomainDnsRecordItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);
@@ -123,7 +125,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Get entity from domainDnsRecords by key
+     * Get entity from domainDnsRecords by key (id)
      * @param DomainDnsRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,10 +134,10 @@ class DomainDnsRecordItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
@@ -148,7 +150,7 @@ class DomainDnsRecordItemRequestBuilder
     }
 
     /**
-     * Update entity in domainDnsRecords
+     * Update entity in domainDnsRecords by key (id)
      * @param DomainDnsRecord $body The request body
      * @param DomainDnsRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -158,10 +160,10 @@ class DomainDnsRecordItemRequestBuilder
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->headers = array_merge($requestInfo->headers, ["Accept" => "application/json"]);
+        $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

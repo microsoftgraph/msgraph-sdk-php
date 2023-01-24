@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+*/
 class ServiceUpdateMessageItemRequestBuilderGetQueryParameters 
 {
     /**

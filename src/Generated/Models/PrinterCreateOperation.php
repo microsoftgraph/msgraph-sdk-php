@@ -65,7 +65,7 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
 
     /**
      * Sets the certificate property value. The signed certificate created during the registration process. Read-only.
-     *  @param string|null $value Value to set for the certificate property.
+     * @param string|null $value Value to set for the certificate property.
     */
     public function setCertificate(?string $value): void {
         $this->getBackingStore()->set('certificate', $value);
@@ -73,7 +73,7 @@ class PrinterCreateOperation extends PrintOperation implements Parsable
 
     /**
      * Sets the printer property value. The created printer entity. Read-only.
-     *  @param Printer|null $value Value to set for the printer property.
+     * @param Printer|null $value Value to set for the printer property.
     */
     public function setPrinter(?Printer $value): void {
         $this->getBackingStore()->set('printer', $value);

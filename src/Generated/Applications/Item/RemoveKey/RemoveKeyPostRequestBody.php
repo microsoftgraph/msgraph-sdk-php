@@ -90,7 +90,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the keyId property value. The keyId property
-     *  @param string|null $value Value to set for the keyId property.
+     * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
         $this->getBackingStore()->set('keyId', $value);
@@ -114,7 +114,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the proof property value. The proof property
-     *  @param string|null $value Value to set for the proof property.
+     * @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value): void {
         $this->getBackingStore()->set('proof', $value);

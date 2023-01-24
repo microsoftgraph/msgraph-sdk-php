@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationMethodConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -65,7 +65,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the policy. Possible values are: enabled, disabled.
-     *  @param AuthenticationMethodState|null $value Value to set for the state property.
+     * @param AuthenticationMethodState|null $value Value to set for the state property.
     */
     public function setState(?AuthenticationMethodState $value): void {
         $this->getBackingStore()->set('state', $value);

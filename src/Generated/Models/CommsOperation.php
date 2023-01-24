@@ -91,7 +91,7 @@ class CommsOperation extends Entity implements Parsable
 
     /**
      * Sets the clientContext property value. Unique Client Context string. Max limit is 256 chars.
-     *  @param string|null $value Value to set for the clientContext property.
+     * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {
         $this->getBackingStore()->set('clientContext', $value);
@@ -99,7 +99,7 @@ class CommsOperation extends Entity implements Parsable
 
     /**
      * Sets the resultInfo property value. The result information. Read-only.
-     *  @param ResultInfo|null $value Value to set for the resultInfo property.
+     * @param ResultInfo|null $value Value to set for the resultInfo property.
     */
     public function setResultInfo(?ResultInfo $value): void {
         $this->getBackingStore()->set('resultInfo', $value);
@@ -107,7 +107,7 @@ class CommsOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param OperationStatus|null $value Value to set for the status property.
+     * @param OperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?OperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

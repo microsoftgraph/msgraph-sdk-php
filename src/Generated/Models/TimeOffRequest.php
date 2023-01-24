@@ -76,7 +76,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the endDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -84,7 +84,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -92,7 +92,7 @@ class TimeOffRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the timeOffReasonId property value. The reason for the time off.
-     *  @param string|null $value Value to set for the timeOffReasonId property.
+     * @param string|null $value Value to set for the timeOffReasonId property.
     */
     public function setTimeOffReasonId(?string $value): void {
         $this->getBackingStore()->set('timeOffReasonId', $value);

@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The device configuration assignment entity assigns an AAD group to a specific device configuration.
+*/
 class DeviceConfigurationAssignment extends Entity implements Parsable 
 {
     /**
@@ -54,7 +57,7 @@ class DeviceConfigurationAssignment extends Entity implements Parsable
 
     /**
      * Sets the target property value. The assignment target for the device configuration.
-     *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
+     * @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
         $this->getBackingStore()->set('target', $value);

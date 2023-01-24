@@ -116,7 +116,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callId property value. Unique identifier of the call.
-     *  @param string|null $value Value to set for the callId property.
+     * @param string|null $value Value to set for the callId property.
     */
     public function setCallId(?string $value): void {
         $this->getBackingStore()->set('callId', $value);
@@ -124,7 +124,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callRecordingDisplayName property value. Display name for the call recording.
-     *  @param string|null $value Value to set for the callRecordingDisplayName property.
+     * @param string|null $value Value to set for the callRecordingDisplayName property.
     */
     public function setCallRecordingDisplayName(?string $value): void {
         $this->getBackingStore()->set('callRecordingDisplayName', $value);
@@ -132,7 +132,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callRecordingDuration property value. Duration of the call recording.
-     *  @param DateInterval|null $value Value to set for the callRecordingDuration property.
+     * @param DateInterval|null $value Value to set for the callRecordingDuration property.
     */
     public function setCallRecordingDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('callRecordingDuration', $value);
@@ -140,7 +140,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
-     *  @param CallRecordingStatus|null $value Value to set for the callRecordingStatus property.
+     * @param CallRecordingStatus|null $value Value to set for the callRecordingStatus property.
     */
     public function setCallRecordingStatus(?CallRecordingStatus $value): void {
         $this->getBackingStore()->set('callRecordingStatus', $value);
@@ -148,7 +148,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the callRecordingUrl property value. Call recording URL.
-     *  @param string|null $value Value to set for the callRecordingUrl property.
+     * @param string|null $value Value to set for the callRecordingUrl property.
     */
     public function setCallRecordingUrl(?string $value): void {
         $this->getBackingStore()->set('callRecordingUrl', $value);
@@ -156,7 +156,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);
@@ -164,7 +164,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
 
     /**
      * Sets the meetingOrganizer property value. Organizer of the meeting.
-     *  @param IdentitySet|null $value Value to set for the meetingOrganizer property.
+     * @param IdentitySet|null $value Value to set for the meetingOrganizer property.
     */
     public function setMeetingOrganizer(?IdentitySet $value): void {
         $this->getBackingStore()->set('meetingOrganizer', $value);

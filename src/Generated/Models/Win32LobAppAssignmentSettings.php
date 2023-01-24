@@ -85,7 +85,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
 
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
-     *  @param Win32LobAppDeliveryOptimizationPriority|null $value Value to set for the deliveryOptimizationPriority property.
+     * @param Win32LobAppDeliveryOptimizationPriority|null $value Value to set for the deliveryOptimizationPriority property.
     */
     public function setDeliveryOptimizationPriority(?Win32LobAppDeliveryOptimizationPriority $value): void {
         $this->getBackingStore()->set('deliveryOptimizationPriority', $value);
@@ -93,7 +93,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
 
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
-     *  @param MobileAppInstallTimeSettings|null $value Value to set for the installTimeSettings property.
+     * @param MobileAppInstallTimeSettings|null $value Value to set for the installTimeSettings property.
     */
     public function setInstallTimeSettings(?MobileAppInstallTimeSettings $value): void {
         $this->getBackingStore()->set('installTimeSettings', $value);
@@ -101,7 +101,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
 
     /**
      * Sets the notifications property value. Contains value for notification status.
-     *  @param Win32LobAppNotification|null $value Value to set for the notifications property.
+     * @param Win32LobAppNotification|null $value Value to set for the notifications property.
     */
     public function setNotifications(?Win32LobAppNotification $value): void {
         $this->getBackingStore()->set('notifications', $value);
@@ -109,7 +109,7 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
 
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
-     *  @param Win32LobAppRestartSettings|null $value Value to set for the restartSettings property.
+     * @param Win32LobAppRestartSettings|null $value Value to set for the restartSettings property.
     */
     public function setRestartSettings(?Win32LobAppRestartSettings $value): void {
         $this->getBackingStore()->set('restartSettings', $value);

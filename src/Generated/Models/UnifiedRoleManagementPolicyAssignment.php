@@ -94,7 +94,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
-     *  @param UnifiedRoleManagementPolicy|null $value Value to set for the policy property.
+     * @param UnifiedRoleManagementPolicy|null $value Value to set for the policy property.
     */
     public function setPolicy(?UnifiedRoleManagementPolicy $value): void {
         $this->getBackingStore()->set('policy', $value);
@@ -102,7 +102,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * Sets the policyId property value. The id of the policy. Inherited from entity.
-     *  @param string|null $value Value to set for the policyId property.
+     * @param string|null $value Value to set for the policyId property.
     */
     public function setPolicyId(?string $value): void {
         $this->getBackingStore()->set('policyId', $value);
@@ -110,7 +110,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
-     *  @param string|null $value Value to set for the roleDefinitionId property.
+     * @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value): void {
         $this->getBackingStore()->set('roleDefinitionId', $value);
@@ -118,7 +118,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
-     *  @param string|null $value Value to set for the scopeId property.
+     * @param string|null $value Value to set for the scopeId property.
     */
     public function setScopeId(?string $value): void {
         $this->getBackingStore()->set('scopeId', $value);
@@ -126,7 +126,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
 
     /**
      * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
-     *  @param string|null $value Value to set for the scopeType property.
+     * @param string|null $value Value to set for the scopeType property.
     */
     public function setScopeType(?string $value): void {
         $this->getBackingStore()->set('scopeType', $value);

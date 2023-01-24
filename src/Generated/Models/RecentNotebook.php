@@ -121,7 +121,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -129,7 +129,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -137,7 +137,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. The name of the notebook.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -145,7 +145,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the lastAccessedTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the lastAccessedTime property.
+     * @param DateTime|null $value Value to set for the lastAccessedTime property.
     */
     public function setLastAccessedTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastAccessedTime', $value);
@@ -153,7 +153,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
-     *  @param RecentNotebookLinks|null $value Value to set for the links property.
+     * @param RecentNotebookLinks|null $value Value to set for the links property.
     */
     public function setLinks(?RecentNotebookLinks $value): void {
         $this->getBackingStore()->set('links', $value);
@@ -161,7 +161,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -169,7 +169,7 @@ class RecentNotebook implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sourceService property value. The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
-     *  @param OnenoteSourceService|null $value Value to set for the sourceService property.
+     * @param OnenoteSourceService|null $value Value to set for the sourceService property.
     */
     public function setSourceService(?OnenoteSourceService $value): void {
         $this->getBackingStore()->set('sourceService', $value);

@@ -64,7 +64,7 @@ class SecurityGroupEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the displayName property value. The name of the security group.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -72,7 +72,7 @@ class SecurityGroupEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the securityGroupId property value. Unique identifier of the security group.
-     *  @param string|null $value Value to set for the securityGroupId property.
+     * @param string|null $value Value to set for the securityGroupId property.
     */
     public function setSecurityGroupId(?string $value): void {
         $this->getBackingStore()->set('securityGroupId', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.
+*/
 class IdentityItemRequestBuilderGetQueryParameters 
 {
     /**

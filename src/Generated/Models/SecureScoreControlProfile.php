@@ -235,7 +235,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the actionType property value. Control action type (Config, Review, Behavior).
-     *  @param string|null $value Value to set for the actionType property.
+     * @param string|null $value Value to set for the actionType property.
     */
     public function setActionType(?string $value): void {
         $this->getBackingStore()->set('actionType', $value);
@@ -243,7 +243,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the actionUrl property value. URL to where the control can be actioned.
-     *  @param string|null $value Value to set for the actionUrl property.
+     * @param string|null $value Value to set for the actionUrl property.
     */
     public function setActionUrl(?string $value): void {
         $this->getBackingStore()->set('actionUrl', $value);
@@ -251,7 +251,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
-     *  @param string|null $value Value to set for the azureTenantId property.
+     * @param string|null $value Value to set for the azureTenantId property.
     */
     public function setAzureTenantId(?string $value): void {
         $this->getBackingStore()->set('azureTenantId', $value);
@@ -259,7 +259,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
-     *  @param array<ComplianceInformation>|null $value Value to set for the complianceInformation property.
+     * @param array<ComplianceInformation>|null $value Value to set for the complianceInformation property.
     */
     public function setComplianceInformation(?array $value): void {
         $this->getBackingStore()->set('complianceInformation', $value);
@@ -267,7 +267,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
-     *  @param string|null $value Value to set for the controlCategory property.
+     * @param string|null $value Value to set for the controlCategory property.
     */
     public function setControlCategory(?string $value): void {
         $this->getBackingStore()->set('controlCategory', $value);
@@ -275,7 +275,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
-     *  @param array<SecureScoreControlStateUpdate>|null $value Value to set for the controlStateUpdates property.
+     * @param array<SecureScoreControlStateUpdate>|null $value Value to set for the controlStateUpdates property.
     */
     public function setControlStateUpdates(?array $value): void {
         $this->getBackingStore()->set('controlStateUpdates', $value);
@@ -283,7 +283,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the deprecated property value. Flag to indicate if a control is depreciated.
-     *  @param bool|null $value Value to set for the deprecated property.
+     * @param bool|null $value Value to set for the deprecated property.
     */
     public function setDeprecated(?bool $value): void {
         $this->getBackingStore()->set('deprecated', $value);
@@ -291,7 +291,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the implementationCost property value. Resource cost of implemmentating control (low, moderate, high).
-     *  @param string|null $value Value to set for the implementationCost property.
+     * @param string|null $value Value to set for the implementationCost property.
     */
     public function setImplementationCost(?string $value): void {
         $this->getBackingStore()->set('implementationCost', $value);
@@ -299,7 +299,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -307,7 +307,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the maxScore property value. max attainable score for the control.
-     *  @param float|null $value Value to set for the maxScore property.
+     * @param float|null $value Value to set for the maxScore property.
     */
     public function setMaxScore(?float $value): void {
         $this->getBackingStore()->set('maxScore', $value);
@@ -315,7 +315,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the rank property value. Microsoft's stack ranking of control.
-     *  @param int|null $value Value to set for the rank property.
+     * @param int|null $value Value to set for the rank property.
     */
     public function setRank(?int $value): void {
         $this->getBackingStore()->set('rank', $value);
@@ -323,7 +323,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the remediation property value. Description of what the control will help remediate.
-     *  @param string|null $value Value to set for the remediation property.
+     * @param string|null $value Value to set for the remediation property.
     */
     public function setRemediation(?string $value): void {
         $this->getBackingStore()->set('remediation', $value);
@@ -331,7 +331,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation.
-     *  @param string|null $value Value to set for the remediationImpact property.
+     * @param string|null $value Value to set for the remediationImpact property.
     */
     public function setRemediationImpact(?string $value): void {
         $this->getBackingStore()->set('remediationImpact', $value);
@@ -339,7 +339,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the service property value. Service that owns the control (Exchange, Sharepoint, Azure AD).
-     *  @param string|null $value Value to set for the service property.
+     * @param string|null $value Value to set for the service property.
     */
     public function setService(?string $value): void {
         $this->getBackingStore()->set('service', $value);
@@ -347,7 +347,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
-     *  @param array<string>|null $value Value to set for the threats property.
+     * @param array<string>|null $value Value to set for the threats property.
     */
     public function setThreats(?array $value): void {
         $this->getBackingStore()->set('threats', $value);
@@ -355,7 +355,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the tier property value. The tier property
-     *  @param string|null $value Value to set for the tier property.
+     * @param string|null $value Value to set for the tier property.
     */
     public function setTier(?string $value): void {
         $this->getBackingStore()->set('tier', $value);
@@ -363,7 +363,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the title property value. The title property
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -371,7 +371,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the userImpact property value. The userImpact property
-     *  @param string|null $value Value to set for the userImpact property.
+     * @param string|null $value Value to set for the userImpact property.
     */
     public function setUserImpact(?string $value): void {
         $this->getBackingStore()->set('userImpact', $value);
@@ -379,7 +379,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the vendorInformation property value. The vendorInformation property
-     *  @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
+     * @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
     */
     public function setVendorInformation(?SecurityVendorInformation $value): void {
         $this->getBackingStore()->set('vendorInformation', $value);

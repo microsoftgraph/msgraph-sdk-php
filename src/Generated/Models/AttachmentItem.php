@@ -140,7 +140,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
-     *  @param AttachmentType|null $value Value to set for the attachmentType property.
+     * @param AttachmentType|null $value Value to set for the attachmentType property.
     */
     public function setAttachmentType(?AttachmentType $value): void {
         $this->getBackingStore()->set('attachmentType', $value);
@@ -156,7 +156,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -164,7 +164,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentId property value. The CID or Content-Id of the attachment for referencing in case of in-line attachments using <img src='cid:contentId'> tag in HTML messages. Optional.
-     *  @param string|null $value Value to set for the contentId property.
+     * @param string|null $value Value to set for the contentId property.
     */
     public function setContentId(?string $value): void {
         $this->getBackingStore()->set('contentId', $value);
@@ -172,7 +172,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentType property value. The nature of the data in the attachment. Optional.
-     *  @param string|null $value Value to set for the contentType property.
+     * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -180,7 +180,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isInline property value. true if the attachment is an inline attachment; otherwise, false. Optional.
-     *  @param bool|null $value Value to set for the isInline property.
+     * @param bool|null $value Value to set for the isInline property.
     */
     public function setIsInline(?bool $value): void {
         $this->getBackingStore()->set('isInline', $value);
@@ -188,7 +188,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -196,7 +196,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -204,7 +204,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the size property value. The length of the attachment in bytes. Required.
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);

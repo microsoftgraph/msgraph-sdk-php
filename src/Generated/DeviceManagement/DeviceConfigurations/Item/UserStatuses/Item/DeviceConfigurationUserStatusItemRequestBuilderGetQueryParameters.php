@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\U
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Device configuration installation status by user.
+*/
 class DeviceConfigurationUserStatusItemRequestBuilderGetQueryParameters 
 {
     /**

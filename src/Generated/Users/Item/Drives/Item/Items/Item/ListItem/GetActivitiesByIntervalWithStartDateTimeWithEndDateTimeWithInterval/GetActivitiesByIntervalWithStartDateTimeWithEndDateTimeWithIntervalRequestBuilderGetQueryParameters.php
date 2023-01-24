@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Items\Item\ListItem\G
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getActivitiesByInterval
+*/
 class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetQueryParameters 
 {
     /**

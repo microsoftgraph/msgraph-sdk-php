@@ -110,7 +110,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
-     *  @param bool|null $value Value to set for the contentTypesEnabled property.
+     * @param bool|null $value Value to set for the contentTypesEnabled property.
     */
     public function setContentTypesEnabled(?bool $value): void {
         $this->getBackingStore()->set('contentTypesEnabled', $value);
@@ -134,7 +134,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hidden property value. If true, indicates that the list is not normally visible in the SharePoint user experience.
-     *  @param bool|null $value Value to set for the hidden property.
+     * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
@@ -142,7 +142,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class ListInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
-     *  @param string|null $value Value to set for the template property.
+     * @param string|null $value Value to set for the template property.
     */
     public function setTemplate(?string $value): void {
         $this->getBackingStore()->set('template', $value);

@@ -110,7 +110,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alteredHighlightedQueryString property value. Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.
-     *  @param string|null $value Value to set for the alteredHighlightedQueryString property.
+     * @param string|null $value Value to set for the alteredHighlightedQueryString property.
     */
     public function setAlteredHighlightedQueryString(?string $value): void {
         $this->getBackingStore()->set('alteredHighlightedQueryString', $value);
@@ -126,7 +126,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alteredQueryString property value. Defines the altered query string with spelling correction.
-     *  @param string|null $value Value to set for the alteredQueryString property.
+     * @param string|null $value Value to set for the alteredQueryString property.
     */
     public function setAlteredQueryString(?string $value): void {
         $this->getBackingStore()->set('alteredQueryString', $value);
@@ -134,7 +134,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alteredQueryTokens property value. Represents changed segments related to an original user query.
-     *  @param array<AlteredQueryToken>|null $value Value to set for the alteredQueryTokens property.
+     * @param array<AlteredQueryToken>|null $value Value to set for the alteredQueryTokens property.
     */
     public function setAlteredQueryTokens(?array $value): void {
         $this->getBackingStore()->set('alteredQueryTokens', $value);
@@ -142,7 +142,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -150,7 +150,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

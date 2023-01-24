@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Insta
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of attachment objects attached to an event.
+*/
 class AttachmentsRequestBuilderGetQueryParameters 
 {
     /**

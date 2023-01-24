@@ -71,7 +71,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
 
     /**
      * Sets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
-     *  @param bool|null $value Value to set for the isRegistrationRequired property.
+     * @param bool|null $value Value to set for the isRegistrationRequired property.
     */
     public function setIsRegistrationRequired(?bool $value): void {
         $this->getBackingStore()->set('isRegistrationRequired', $value);
@@ -79,7 +79,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
 
     /**
      * Sets the targetType property value. The targetType property
-     *  @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
+     * @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value): void {
         $this->getBackingStore()->set('targetType', $value);

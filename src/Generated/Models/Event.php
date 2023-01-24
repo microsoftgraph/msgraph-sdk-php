@@ -466,7 +466,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
-     *  @param bool|null $value Value to set for the allowNewTimeProposals property.
+     * @param bool|null $value Value to set for the allowNewTimeProposals property.
     */
     public function setAllowNewTimeProposals(?bool $value): void {
         $this->getBackingStore()->set('allowNewTimeProposals', $value);
@@ -474,7 +474,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the attachments property value. The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     *  @param array<Attachment>|null $value Value to set for the attachments property.
+     * @param array<Attachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
         $this->getBackingStore()->set('attachments', $value);
@@ -482,7 +482,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the attendees property value. The collection of attendees for the event.
-     *  @param array<Attendee>|null $value Value to set for the attendees property.
+     * @param array<Attendee>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value): void {
         $this->getBackingStore()->set('attendees', $value);
@@ -490,7 +490,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the body property value. The body of the message associated with the event. It can be in HTML or text format.
-     *  @param ItemBody|null $value Value to set for the body property.
+     * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
         $this->getBackingStore()->set('body', $value);
@@ -498,7 +498,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
-     *  @param string|null $value Value to set for the bodyPreview property.
+     * @param string|null $value Value to set for the bodyPreview property.
     */
     public function setBodyPreview(?string $value): void {
         $this->getBackingStore()->set('bodyPreview', $value);
@@ -506,7 +506,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the calendar property value. The calendar that contains the event. Navigation property. Read-only.
-     *  @param Calendar|null $value Value to set for the calendar property.
+     * @param Calendar|null $value Value to set for the calendar property.
     */
     public function setCalendar(?Calendar $value): void {
         $this->getBackingStore()->set('calendar', $value);
@@ -514,7 +514,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
-     *  @param DateTimeTimeZone|null $value Value to set for the end property.
+     * @param DateTimeTimeZone|null $value Value to set for the end property.
     */
     public function setEnd(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('end', $value);
@@ -522,7 +522,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the event. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -530,7 +530,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the hasAttachments property value. Set to true if the event has attachments.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -538,7 +538,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
-     *  @param bool|null $value Value to set for the hideAttendees property.
+     * @param bool|null $value Value to set for the hideAttendees property.
     */
     public function setHideAttendees(?bool $value): void {
         $this->getBackingStore()->set('hideAttendees', $value);
@@ -546,7 +546,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
-     *  @param string|null $value Value to set for the iCalUId property.
+     * @param string|null $value Value to set for the iCalUId property.
     */
     public function setICalUId(?string $value): void {
         $this->getBackingStore()->set('iCalUId', $value);
@@ -554,7 +554,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the importance property value. The importance property
-     *  @param Importance|null $value Value to set for the importance property.
+     * @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value): void {
         $this->getBackingStore()->set('importance', $value);
@@ -562,7 +562,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
-     *  @param array<Event>|null $value Value to set for the instances property.
+     * @param array<Event>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value): void {
         $this->getBackingStore()->set('instances', $value);
@@ -570,7 +570,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isAllDay property value. The isAllDay property
-     *  @param bool|null $value Value to set for the isAllDay property.
+     * @param bool|null $value Value to set for the isAllDay property.
     */
     public function setIsAllDay(?bool $value): void {
         $this->getBackingStore()->set('isAllDay', $value);
@@ -578,7 +578,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isCancelled property value. The isCancelled property
-     *  @param bool|null $value Value to set for the isCancelled property.
+     * @param bool|null $value Value to set for the isCancelled property.
     */
     public function setIsCancelled(?bool $value): void {
         $this->getBackingStore()->set('isCancelled', $value);
@@ -586,7 +586,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isDraft property value. The isDraft property
-     *  @param bool|null $value Value to set for the isDraft property.
+     * @param bool|null $value Value to set for the isDraft property.
     */
     public function setIsDraft(?bool $value): void {
         $this->getBackingStore()->set('isDraft', $value);
@@ -594,7 +594,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isOnlineMeeting property value. The isOnlineMeeting property
-     *  @param bool|null $value Value to set for the isOnlineMeeting property.
+     * @param bool|null $value Value to set for the isOnlineMeeting property.
     */
     public function setIsOnlineMeeting(?bool $value): void {
         $this->getBackingStore()->set('isOnlineMeeting', $value);
@@ -602,7 +602,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isOrganizer property value. The isOrganizer property
-     *  @param bool|null $value Value to set for the isOrganizer property.
+     * @param bool|null $value Value to set for the isOrganizer property.
     */
     public function setIsOrganizer(?bool $value): void {
         $this->getBackingStore()->set('isOrganizer', $value);
@@ -610,7 +610,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the isReminderOn property value. The isReminderOn property
-     *  @param bool|null $value Value to set for the isReminderOn property.
+     * @param bool|null $value Value to set for the isReminderOn property.
     */
     public function setIsReminderOn(?bool $value): void {
         $this->getBackingStore()->set('isReminderOn', $value);
@@ -618,7 +618,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the location property value. The location property
-     *  @param Location|null $value Value to set for the location property.
+     * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
         $this->getBackingStore()->set('location', $value);
@@ -626,7 +626,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the locations property value. The locations property
-     *  @param array<Location>|null $value Value to set for the locations property.
+     * @param array<Location>|null $value Value to set for the locations property.
     */
     public function setLocations(?array $value): void {
         $this->getBackingStore()->set('locations', $value);
@@ -634,7 +634,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-     *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
+     * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('multiValueExtendedProperties', $value);
@@ -642,7 +642,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the onlineMeeting property value. The onlineMeeting property
-     *  @param OnlineMeetingInfo|null $value Value to set for the onlineMeeting property.
+     * @param OnlineMeetingInfo|null $value Value to set for the onlineMeeting property.
     */
     public function setOnlineMeeting(?OnlineMeetingInfo $value): void {
         $this->getBackingStore()->set('onlineMeeting', $value);
@@ -650,7 +650,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
-     *  @param OnlineMeetingProviderType|null $value Value to set for the onlineMeetingProvider property.
+     * @param OnlineMeetingProviderType|null $value Value to set for the onlineMeetingProvider property.
     */
     public function setOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
         $this->getBackingStore()->set('onlineMeetingProvider', $value);
@@ -658,7 +658,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the onlineMeetingUrl property value. The onlineMeetingUrl property
-     *  @param string|null $value Value to set for the onlineMeetingUrl property.
+     * @param string|null $value Value to set for the onlineMeetingUrl property.
     */
     public function setOnlineMeetingUrl(?string $value): void {
         $this->getBackingStore()->set('onlineMeetingUrl', $value);
@@ -666,7 +666,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the organizer property value. The organizer property
-     *  @param Recipient|null $value Value to set for the organizer property.
+     * @param Recipient|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?Recipient $value): void {
         $this->getBackingStore()->set('organizer', $value);
@@ -674,7 +674,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the originalEndTimeZone property value. The originalEndTimeZone property
-     *  @param string|null $value Value to set for the originalEndTimeZone property.
+     * @param string|null $value Value to set for the originalEndTimeZone property.
     */
     public function setOriginalEndTimeZone(?string $value): void {
         $this->getBackingStore()->set('originalEndTimeZone', $value);
@@ -682,7 +682,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the originalStart property value. The originalStart property
-     *  @param DateTime|null $value Value to set for the originalStart property.
+     * @param DateTime|null $value Value to set for the originalStart property.
     */
     public function setOriginalStart(?DateTime $value): void {
         $this->getBackingStore()->set('originalStart', $value);
@@ -690,7 +690,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the originalStartTimeZone property value. The originalStartTimeZone property
-     *  @param string|null $value Value to set for the originalStartTimeZone property.
+     * @param string|null $value Value to set for the originalStartTimeZone property.
     */
     public function setOriginalStartTimeZone(?string $value): void {
         $this->getBackingStore()->set('originalStartTimeZone', $value);
@@ -698,7 +698,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the recurrence property value. The recurrence property
-     *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
+     * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
         $this->getBackingStore()->set('recurrence', $value);
@@ -706,7 +706,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
-     *  @param int|null $value Value to set for the reminderMinutesBeforeStart property.
+     * @param int|null $value Value to set for the reminderMinutesBeforeStart property.
     */
     public function setReminderMinutesBeforeStart(?int $value): void {
         $this->getBackingStore()->set('reminderMinutesBeforeStart', $value);
@@ -714,7 +714,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the responseRequested property value. The responseRequested property
-     *  @param bool|null $value Value to set for the responseRequested property.
+     * @param bool|null $value Value to set for the responseRequested property.
     */
     public function setResponseRequested(?bool $value): void {
         $this->getBackingStore()->set('responseRequested', $value);
@@ -722,7 +722,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the responseStatus property value. The responseStatus property
-     *  @param ResponseStatus|null $value Value to set for the responseStatus property.
+     * @param ResponseStatus|null $value Value to set for the responseStatus property.
     */
     public function setResponseStatus(?ResponseStatus $value): void {
         $this->getBackingStore()->set('responseStatus', $value);
@@ -730,7 +730,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the sensitivity property value. The sensitivity property
-     *  @param Sensitivity|null $value Value to set for the sensitivity property.
+     * @param Sensitivity|null $value Value to set for the sensitivity property.
     */
     public function setSensitivity(?Sensitivity $value): void {
         $this->getBackingStore()->set('sensitivity', $value);
@@ -738,7 +738,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the seriesMasterId property value. The seriesMasterId property
-     *  @param string|null $value Value to set for the seriesMasterId property.
+     * @param string|null $value Value to set for the seriesMasterId property.
     */
     public function setSeriesMasterId(?string $value): void {
         $this->getBackingStore()->set('seriesMasterId', $value);
@@ -746,7 +746,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the showAs property value. The showAs property
-     *  @param FreeBusyStatus|null $value Value to set for the showAs property.
+     * @param FreeBusyStatus|null $value Value to set for the showAs property.
     */
     public function setShowAs(?FreeBusyStatus $value): void {
         $this->getBackingStore()->set('showAs', $value);
@@ -754,7 +754,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the event. Read-only. Nullable.
-     *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+     * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('singleValueExtendedProperties', $value);
@@ -762,7 +762,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the start property value. The start property
-     *  @param DateTimeTimeZone|null $value Value to set for the start property.
+     * @param DateTimeTimeZone|null $value Value to set for the start property.
     */
     public function setStart(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('start', $value);
@@ -770,7 +770,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the subject property value. The subject property
-     *  @param string|null $value Value to set for the subject property.
+     * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
         $this->getBackingStore()->set('subject', $value);
@@ -778,7 +778,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the transactionId property value. The transactionId property
-     *  @param string|null $value Value to set for the transactionId property.
+     * @param string|null $value Value to set for the transactionId property.
     */
     public function setTransactionId(?string $value): void {
         $this->getBackingStore()->set('transactionId', $value);
@@ -786,7 +786,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the type property value. The type property
-     *  @param EventType|null $value Value to set for the type property.
+     * @param EventType|null $value Value to set for the type property.
     */
     public function setType(?EventType $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -794,7 +794,7 @@ class Event extends OutlookItem implements Parsable
 
     /**
      * Sets the webLink property value. The webLink property
-     *  @param string|null $value Value to set for the webLink property.
+     * @param string|null $value Value to set for the webLink property.
     */
     public function setWebLink(?string $value): void {
         $this->getBackingStore()->set('webLink', $value);

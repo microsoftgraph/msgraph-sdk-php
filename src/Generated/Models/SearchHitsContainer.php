@@ -120,7 +120,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the aggregations property value. The aggregations property
-     *  @param array<SearchAggregation>|null $value Value to set for the aggregations property.
+     * @param array<SearchAggregation>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value): void {
         $this->getBackingStore()->set('aggregations', $value);
@@ -136,7 +136,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +144,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hits property value. A collection of the search results.
-     *  @param array<SearchHit>|null $value Value to set for the hits property.
+     * @param array<SearchHit>|null $value Value to set for the hits property.
     */
     public function setHits(?array $value): void {
         $this->getBackingStore()->set('hits', $value);
@@ -152,7 +152,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the moreResultsAvailable property value. Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.
-     *  @param bool|null $value Value to set for the moreResultsAvailable property.
+     * @param bool|null $value Value to set for the moreResultsAvailable property.
     */
     public function setMoreResultsAvailable(?bool $value): void {
         $this->getBackingStore()->set('moreResultsAvailable', $value);
@@ -160,7 +160,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the total property value. The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.
-     *  @param int|null $value Value to set for the total property.
+     * @param int|null $value Value to set for the total property.
     */
     public function setTotal(?int $value): void {
         $this->getBackingStore()->set('total', $value);

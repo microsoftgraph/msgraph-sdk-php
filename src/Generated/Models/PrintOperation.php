@@ -72,7 +72,7 @@ class PrintOperation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The DateTimeOffset when the operation was created. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -80,7 +80,7 @@ class PrintOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param PrintOperationStatus|null $value Value to set for the status property.
+     * @param PrintOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrintOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

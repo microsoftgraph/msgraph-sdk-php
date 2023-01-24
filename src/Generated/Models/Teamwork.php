@@ -54,7 +54,7 @@ class Teamwork extends Entity implements Parsable
 
     /**
      * Sets the workforceIntegrations property value. The workforceIntegrations property
-     *  @param array<WorkforceIntegration>|null $value Value to set for the workforceIntegrations property.
+     * @param array<WorkforceIntegration>|null $value Value to set for the workforceIntegrations property.
     */
     public function setWorkforceIntegrations(?array $value): void {
         $this->getBackingStore()->set('workforceIntegrations', $value);

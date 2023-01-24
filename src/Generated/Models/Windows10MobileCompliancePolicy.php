@@ -205,7 +205,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the bitLockerEnabled property value. Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-     *  @param bool|null $value Value to set for the bitLockerEnabled property.
+     * @param bool|null $value Value to set for the bitLockerEnabled property.
     */
     public function setBitLockerEnabled(?bool $value): void {
         $this->getBackingStore()->set('bitLockerEnabled', $value);
@@ -213,7 +213,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
-     *  @param bool|null $value Value to set for the codeIntegrityEnabled property.
+     * @param bool|null $value Value to set for the codeIntegrityEnabled property.
     */
     public function setCodeIntegrityEnabled(?bool $value): void {
         $this->getBackingStore()->set('codeIntegrityEnabled', $value);
@@ -221,7 +221,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     *  @param bool|null $value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
+     * @param bool|null $value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
     */
     public function setEarlyLaunchAntiMalwareDriverEnabled(?bool $value): void {
         $this->getBackingStore()->set('earlyLaunchAntiMalwareDriverEnabled', $value);
@@ -229,7 +229,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the osMaximumVersion property value. Maximum Windows Phone version.
-     *  @param string|null $value Value to set for the osMaximumVersion property.
+     * @param string|null $value Value to set for the osMaximumVersion property.
     */
     public function setOsMaximumVersion(?string $value): void {
         $this->getBackingStore()->set('osMaximumVersion', $value);
@@ -237,7 +237,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the osMinimumVersion property value. Minimum Windows Phone version.
-     *  @param string|null $value Value to set for the osMinimumVersion property.
+     * @param string|null $value Value to set for the osMinimumVersion property.
     */
     public function setOsMinimumVersion(?string $value): void {
         $this->getBackingStore()->set('osMinimumVersion', $value);
@@ -245,7 +245,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordBlockSimple property value. Whether or not to block syncing the calendar.
-     *  @param bool|null $value Value to set for the passwordBlockSimple property.
+     * @param bool|null $value Value to set for the passwordBlockSimple property.
     */
     public function setPasswordBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockSimple', $value);
@@ -253,7 +253,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before password expiration. Valid values 1 to 255
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -261,7 +261,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -269,7 +269,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -277,7 +277,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
     public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
@@ -285,7 +285,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -293,7 +293,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows Phone device.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -301,7 +301,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -309,7 +309,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the passwordRequireToUnlockFromIdle property value. Require a password to unlock an idle device.
-     *  @param bool|null $value Value to set for the passwordRequireToUnlockFromIdle property.
+     * @param bool|null $value Value to set for the passwordRequireToUnlockFromIdle property.
     */
     public function setPasswordRequireToUnlockFromIdle(?bool $value): void {
         $this->getBackingStore()->set('passwordRequireToUnlockFromIdle', $value);
@@ -317,7 +317,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     *  @param bool|null $value Value to set for the secureBootEnabled property.
+     * @param bool|null $value Value to set for the secureBootEnabled property.
     */
     public function setSecureBootEnabled(?bool $value): void {
         $this->getBackingStore()->set('secureBootEnabled', $value);
@@ -325,7 +325,7 @@ class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy implements 
 
     /**
      * Sets the storageRequireEncryption property value. Require encryption on windows devices.
-     *  @param bool|null $value Value to set for the storageRequireEncryption property.
+     * @param bool|null $value Value to set for the storageRequireEncryption property.
     */
     public function setStorageRequireEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireEncryption', $value);

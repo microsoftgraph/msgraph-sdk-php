@@ -145,7 +145,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the activeUserCount property value. Active user count of the given tenant.
-     *  @param int|null $value Value to set for the activeUserCount property.
+     * @param int|null $value Value to set for the activeUserCount property.
     */
     public function setActiveUserCount(?int $value): void {
         $this->getBackingStore()->set('activeUserCount', $value);
@@ -153,7 +153,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the averageComparativeScores property value. Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
-     *  @param array<AverageComparativeScore>|null $value Value to set for the averageComparativeScores property.
+     * @param array<AverageComparativeScore>|null $value Value to set for the averageComparativeScores property.
     */
     public function setAverageComparativeScores(?array $value): void {
         $this->getBackingStore()->set('averageComparativeScores', $value);
@@ -161,7 +161,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the azureTenantId property value. GUID string for tenant ID.
-     *  @param string|null $value Value to set for the azureTenantId property.
+     * @param string|null $value Value to set for the azureTenantId property.
     */
     public function setAzureTenantId(?string $value): void {
         $this->getBackingStore()->set('azureTenantId', $value);
@@ -169,7 +169,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the controlScores property value. Contains tenant scores for a set of controls.
-     *  @param array<ControlScore>|null $value Value to set for the controlScores property.
+     * @param array<ControlScore>|null $value Value to set for the controlScores property.
     */
     public function setControlScores(?array $value): void {
         $this->getBackingStore()->set('controlScores', $value);
@@ -177,7 +177,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date when the entity is created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -185,7 +185,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
-     *  @param float|null $value Value to set for the currentScore property.
+     * @param float|null $value Value to set for the currentScore property.
     */
     public function setCurrentScore(?float $value): void {
         $this->getBackingStore()->set('currentScore', $value);
@@ -193,7 +193,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
-     *  @param array<string>|null $value Value to set for the enabledServices property.
+     * @param array<string>|null $value Value to set for the enabledServices property.
     */
     public function setEnabledServices(?array $value): void {
         $this->getBackingStore()->set('enabledServices', $value);
@@ -201,7 +201,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the licensedUserCount property value. Licensed user count of the given tenant.
-     *  @param int|null $value Value to set for the licensedUserCount property.
+     * @param int|null $value Value to set for the licensedUserCount property.
     */
     public function setLicensedUserCount(?int $value): void {
         $this->getBackingStore()->set('licensedUserCount', $value);
@@ -209,7 +209,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
-     *  @param float|null $value Value to set for the maxScore property.
+     * @param float|null $value Value to set for the maxScore property.
     */
     public function setMaxScore(?float $value): void {
         $this->getBackingStore()->set('maxScore', $value);
@@ -217,7 +217,7 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
-     *  @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
+     * @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
     */
     public function setVendorInformation(?SecurityVendorInformation $value): void {
         $this->getBackingStore()->set('vendorInformation', $value);

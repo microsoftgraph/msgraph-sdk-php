@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get insights from users
+*/
 class InsightsRequestBuilderGetQueryParameters 
 {
     /**

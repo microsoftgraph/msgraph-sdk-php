@@ -62,7 +62,7 @@ class ListItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * Sets the fields property value. A collection of the fields and values for this version of the list item.
-     *  @param FieldValueSet|null $value Value to set for the fields property.
+     * @param FieldValueSet|null $value Value to set for the fields property.
     */
     public function setFields(?FieldValueSet $value): void {
         $this->getBackingStore()->set('fields', $value);

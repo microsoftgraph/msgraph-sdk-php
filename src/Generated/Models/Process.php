@@ -201,7 +201,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the accountName property value. User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
-     *  @param string|null $value Value to set for the accountName property.
+     * @param string|null $value Value to set for the accountName property.
     */
     public function setAccountName(?string $value): void {
         $this->getBackingStore()->set('accountName', $value);
@@ -209,7 +209,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -217,7 +217,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -225,7 +225,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the commandLine property value. The full process invocation commandline including all parameters.
-     *  @param string|null $value Value to set for the commandLine property.
+     * @param string|null $value Value to set for the commandLine property.
     */
     public function setCommandLine(?string $value): void {
         $this->getBackingStore()->set('commandLine', $value);
@@ -233,7 +233,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -241,7 +241,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
-     *  @param FileHash|null $value Value to set for the fileHash property.
+     * @param FileHash|null $value Value to set for the fileHash property.
     */
     public function setFileHash(?FileHash $value): void {
         $this->getBackingStore()->set('fileHash', $value);
@@ -249,7 +249,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
-     *  @param ProcessIntegrityLevel|null $value Value to set for the integrityLevel property.
+     * @param ProcessIntegrityLevel|null $value Value to set for the integrityLevel property.
     */
     public function setIntegrityLevel(?ProcessIntegrityLevel $value): void {
         $this->getBackingStore()->set('integrityLevel', $value);
@@ -257,7 +257,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isElevated property value. True if the process is elevated.
-     *  @param bool|null $value Value to set for the isElevated property.
+     * @param bool|null $value Value to set for the isElevated property.
     */
     public function setIsElevated(?bool $value): void {
         $this->getBackingStore()->set('isElevated', $value);
@@ -265,7 +265,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. The name of the process' Image file.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -273,7 +273,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -281,7 +281,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the parentProcessCreatedDateTime property value. DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the parentProcessCreatedDateTime property.
+     * @param DateTime|null $value Value to set for the parentProcessCreatedDateTime property.
     */
     public function setParentProcessCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('parentProcessCreatedDateTime', $value);
@@ -289,7 +289,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the parentProcessId property value. The Process ID (PID) of the parent process.
-     *  @param int|null $value Value to set for the parentProcessId property.
+     * @param int|null $value Value to set for the parentProcessId property.
     */
     public function setParentProcessId(?int $value): void {
         $this->getBackingStore()->set('parentProcessId', $value);
@@ -297,7 +297,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the parentProcessName property value. The name of the image file of the parent process.
-     *  @param string|null $value Value to set for the parentProcessName property.
+     * @param string|null $value Value to set for the parentProcessName property.
     */
     public function setParentProcessName(?string $value): void {
         $this->getBackingStore()->set('parentProcessName', $value);
@@ -305,7 +305,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the path property value. Full path, including filename.
-     *  @param string|null $value Value to set for the path property.
+     * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {
         $this->getBackingStore()->set('path', $value);
@@ -313,7 +313,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the processId property value. The Process ID (PID) of the process.
-     *  @param int|null $value Value to set for the processId property.
+     * @param int|null $value Value to set for the processId property.
     */
     public function setProcessId(?int $value): void {
         $this->getBackingStore()->set('processId', $value);

@@ -110,7 +110,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
-     *  @param bool|null $value Value to set for the isCaptionEnabled property.
+     * @param bool|null $value Value to set for the isCaptionEnabled property.
     */
     public function setIsCaptionEnabled(?bool $value): void {
         $this->getBackingStore()->set('isCaptionEnabled', $value);
@@ -134,7 +134,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the spokenLanguage property value. The spoken language.
-     *  @param string|null $value Value to set for the spokenLanguage property.
+     * @param string|null $value Value to set for the spokenLanguage property.
     */
     public function setSpokenLanguage(?string $value): void {
         $this->getBackingStore()->set('spokenLanguage', $value);
@@ -150,7 +150,7 @@ class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the translationLanguages property value. The translation languages (choose up to 6).
-     *  @param array<string>|null $value Value to set for the translationLanguages property.
+     * @param array<string>|null $value Value to set for the translationLanguages property.
     */
     public function setTranslationLanguages(?array $value): void {
         $this->getBackingStore()->set('translationLanguages', $value);

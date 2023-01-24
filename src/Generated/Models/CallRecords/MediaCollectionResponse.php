@@ -55,7 +55,7 @@ class MediaCollectionResponse extends BaseCollectionPaginationCountResponse impl
 
     /**
      * Sets the value property value. The value property
-     *  @param array<Media>|null $value Value to set for the value property.
+     * @param array<Media>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

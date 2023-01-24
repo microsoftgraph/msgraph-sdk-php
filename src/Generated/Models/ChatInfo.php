@@ -110,7 +110,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the messageId property value. The unique identifier of a message in a Microsoft Teams channel.
-     *  @param string|null $value Value to set for the messageId property.
+     * @param string|null $value Value to set for the messageId property.
     */
     public function setMessageId(?string $value): void {
         $this->getBackingStore()->set('messageId', $value);
@@ -134,7 +134,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the replyChainMessageId property value. The ID of the reply message.
-     *  @param string|null $value Value to set for the replyChainMessageId property.
+     * @param string|null $value Value to set for the replyChainMessageId property.
     */
     public function setReplyChainMessageId(?string $value): void {
         $this->getBackingStore()->set('replyChainMessageId', $value);
@@ -150,7 +150,7 @@ class ChatInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the threadId property value. The unique identifier for a thread in Microsoft Teams.
-     *  @param string|null $value Value to set for the threadId property.
+     * @param string|null $value Value to set for the threadId property.
     */
     public function setThreadId(?string $value): void {
         $this->getBackingStore()->set('threadId', $value);

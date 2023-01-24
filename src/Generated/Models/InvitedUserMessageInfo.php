@@ -110,7 +110,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
-     *  @param array<Recipient>|null $value Value to set for the ccRecipients property.
+     * @param array<Recipient>|null $value Value to set for the ccRecipients property.
     */
     public function setCcRecipients(?array $value): void {
         $this->getBackingStore()->set('ccRecipients', $value);
@@ -134,7 +134,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
-     *  @param string|null $value Value to set for the customizedMessageBody property.
+     * @param string|null $value Value to set for the customizedMessageBody property.
     */
     public function setCustomizedMessageBody(?string $value): void {
         $this->getBackingStore()->set('customizedMessageBody', $value);
@@ -142,7 +142,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the messageLanguage property value. The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
-     *  @param string|null $value Value to set for the messageLanguage property.
+     * @param string|null $value Value to set for the messageLanguage property.
     */
     public function setMessageLanguage(?string $value): void {
         $this->getBackingStore()->set('messageLanguage', $value);
@@ -150,7 +150,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

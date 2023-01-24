@@ -190,7 +190,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -198,7 +198,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the assignCategories property value. A list of categories to be assigned to a message.
-     *  @param array<string>|null $value Value to set for the assignCategories property.
+     * @param array<string>|null $value Value to set for the assignCategories property.
     */
     public function setAssignCategories(?array $value): void {
         $this->getBackingStore()->set('assignCategories', $value);
@@ -206,7 +206,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -214,7 +214,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the copyToFolder property value. The ID of a folder that a message is to be copied to.
-     *  @param string|null $value Value to set for the copyToFolder property.
+     * @param string|null $value Value to set for the copyToFolder property.
     */
     public function setCopyToFolder(?string $value): void {
         $this->getBackingStore()->set('copyToFolder', $value);
@@ -222,7 +222,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
-     *  @param bool|null $value Value to set for the delete property.
+     * @param bool|null $value Value to set for the delete property.
     */
     public function setDelete(?bool $value): void {
         $this->getBackingStore()->set('delete', $value);
@@ -230,7 +230,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
-     *  @param array<Recipient>|null $value Value to set for the forwardAsAttachmentTo property.
+     * @param array<Recipient>|null $value Value to set for the forwardAsAttachmentTo property.
     */
     public function setForwardAsAttachmentTo(?array $value): void {
         $this->getBackingStore()->set('forwardAsAttachmentTo', $value);
@@ -238,7 +238,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
-     *  @param array<Recipient>|null $value Value to set for the forwardTo property.
+     * @param array<Recipient>|null $value Value to set for the forwardTo property.
     */
     public function setForwardTo(?array $value): void {
         $this->getBackingStore()->set('forwardTo', $value);
@@ -246,7 +246,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the markAsRead property value. Indicates whether a message should be marked as read.
-     *  @param bool|null $value Value to set for the markAsRead property.
+     * @param bool|null $value Value to set for the markAsRead property.
     */
     public function setMarkAsRead(?bool $value): void {
         $this->getBackingStore()->set('markAsRead', $value);
@@ -254,7 +254,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
-     *  @param Importance|null $value Value to set for the markImportance property.
+     * @param Importance|null $value Value to set for the markImportance property.
     */
     public function setMarkImportance(?Importance $value): void {
         $this->getBackingStore()->set('markImportance', $value);
@@ -262,7 +262,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the moveToFolder property value. The ID of the folder that a message will be moved to.
-     *  @param string|null $value Value to set for the moveToFolder property.
+     * @param string|null $value Value to set for the moveToFolder property.
     */
     public function setMoveToFolder(?string $value): void {
         $this->getBackingStore()->set('moveToFolder', $value);
@@ -270,7 +270,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -278,7 +278,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
-     *  @param bool|null $value Value to set for the permanentDelete property.
+     * @param bool|null $value Value to set for the permanentDelete property.
     */
     public function setPermanentDelete(?bool $value): void {
         $this->getBackingStore()->set('permanentDelete', $value);
@@ -286,7 +286,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the redirectTo property value. The email addresses to which a message should be redirected.
-     *  @param array<Recipient>|null $value Value to set for the redirectTo property.
+     * @param array<Recipient>|null $value Value to set for the redirectTo property.
     */
     public function setRedirectTo(?array $value): void {
         $this->getBackingStore()->set('redirectTo', $value);
@@ -294,7 +294,7 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
-     *  @param bool|null $value Value to set for the stopProcessingRules property.
+     * @param bool|null $value Value to set for the stopProcessingRules property.
     */
     public function setStopProcessingRules(?bool $value): void {
         $this->getBackingStore()->set('stopProcessingRules', $value);

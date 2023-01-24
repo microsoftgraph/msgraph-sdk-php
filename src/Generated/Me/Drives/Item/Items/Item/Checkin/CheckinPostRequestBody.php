@@ -90,7 +90,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -106,7 +106,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the checkInAs property value. The checkInAs property
-     *  @param string|null $value Value to set for the checkInAs property.
+     * @param string|null $value Value to set for the checkInAs property.
     */
     public function setCheckInAs(?string $value): void {
         $this->getBackingStore()->set('checkInAs', $value);
@@ -114,7 +114,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the comment property value. The comment property
-     *  @param string|null $value Value to set for the comment property.
+     * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);

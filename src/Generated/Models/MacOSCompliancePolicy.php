@@ -215,7 +215,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     *  @param bool|null $value Value to set for the deviceThreatProtectionEnabled property.
+     * @param bool|null $value Value to set for the deviceThreatProtectionEnabled property.
     */
     public function setDeviceThreatProtectionEnabled(?bool $value): void {
         $this->getBackingStore()->set('deviceThreatProtectionEnabled', $value);
@@ -223,7 +223,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     *  @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
+     * @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
     */
     public function setDeviceThreatProtectionRequiredSecurityLevel(?DeviceThreatProtectionLevel $value): void {
         $this->getBackingStore()->set('deviceThreatProtectionRequiredSecurityLevel', $value);
@@ -231,7 +231,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
-     *  @param bool|null $value Value to set for the firewallBlockAllIncoming property.
+     * @param bool|null $value Value to set for the firewallBlockAllIncoming property.
     */
     public function setFirewallBlockAllIncoming(?bool $value): void {
         $this->getBackingStore()->set('firewallBlockAllIncoming', $value);
@@ -239,7 +239,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the firewallEnabled property value. Whether the firewall should be enabled or not.
-     *  @param bool|null $value Value to set for the firewallEnabled property.
+     * @param bool|null $value Value to set for the firewallEnabled property.
     */
     public function setFirewallEnabled(?bool $value): void {
         $this->getBackingStore()->set('firewallEnabled', $value);
@@ -247,7 +247,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
-     *  @param bool|null $value Value to set for the firewallEnableStealthMode property.
+     * @param bool|null $value Value to set for the firewallEnableStealthMode property.
     */
     public function setFirewallEnableStealthMode(?bool $value): void {
         $this->getBackingStore()->set('firewallEnableStealthMode', $value);
@@ -255,7 +255,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the osMaximumVersion property value. Maximum MacOS version.
-     *  @param string|null $value Value to set for the osMaximumVersion property.
+     * @param string|null $value Value to set for the osMaximumVersion property.
     */
     public function setOsMaximumVersion(?string $value): void {
         $this->getBackingStore()->set('osMaximumVersion', $value);
@@ -263,7 +263,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the osMinimumVersion property value. Minimum MacOS version.
-     *  @param string|null $value Value to set for the osMinimumVersion property.
+     * @param string|null $value Value to set for the osMinimumVersion property.
     */
     public function setOsMinimumVersion(?string $value): void {
         $this->getBackingStore()->set('osMinimumVersion', $value);
@@ -271,7 +271,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple passwords.
-     *  @param bool|null $value Value to set for the passwordBlockSimple property.
+     * @param bool|null $value Value to set for the passwordBlockSimple property.
     */
     public function setPasswordBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockSimple', $value);
@@ -279,7 +279,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 65535
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -287,7 +287,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -295,7 +295,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of password. Valid values 4 to 14
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -303,7 +303,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
     public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
@@ -311,7 +311,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -319,7 +319,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -327,7 +327,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -335,7 +335,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Mac OS devices.
-     *  @param bool|null $value Value to set for the storageRequireEncryption property.
+     * @param bool|null $value Value to set for the storageRequireEncryption property.
     */
     public function setStorageRequireEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireEncryption', $value);
@@ -343,7 +343,7 @@ class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the systemIntegrityProtectionEnabled property value. Require that devices have enabled system integrity protection.
-     *  @param bool|null $value Value to set for the systemIntegrityProtectionEnabled property.
+     * @param bool|null $value Value to set for the systemIntegrityProtectionEnabled property.
     */
     public function setSystemIntegrityProtectionEnabled(?bool $value): void {
         $this->getBackingStore()->set('systemIntegrityProtectionEnabled', $value);

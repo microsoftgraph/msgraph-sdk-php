@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Entity representing a job to export a report
+*/
 class DeviceManagementExportJob extends Entity implements Parsable 
 {
     /**
@@ -145,7 +148,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. Time that the exported report expires
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -153,7 +156,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the filter property value. Filters applied on the report
-     *  @param string|null $value Value to set for the filter property.
+     * @param string|null $value Value to set for the filter property.
     */
     public function setFilter(?string $value): void {
         $this->getBackingStore()->set('filter', $value);
@@ -161,7 +164,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the format property value. Possible values for the file format of a report
-     *  @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
+     * @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
     */
     public function setFormat(?DeviceManagementReportFileFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -169,7 +172,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the localizationType property value. Configures how the requested export job is localized
-     *  @param DeviceManagementExportJobLocalizationType|null $value Value to set for the localizationType property.
+     * @param DeviceManagementExportJobLocalizationType|null $value Value to set for the localizationType property.
     */
     public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value): void {
         $this->getBackingStore()->set('localizationType', $value);
@@ -177,7 +180,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the reportName property value. Name of the report
-     *  @param string|null $value Value to set for the reportName property.
+     * @param string|null $value Value to set for the reportName property.
     */
     public function setReportName(?string $value): void {
         $this->getBackingStore()->set('reportName', $value);
@@ -185,7 +188,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the requestDateTime property value. Time that the exported report was requested
-     *  @param DateTime|null $value Value to set for the requestDateTime property.
+     * @param DateTime|null $value Value to set for the requestDateTime property.
     */
     public function setRequestDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('requestDateTime', $value);
@@ -193,7 +196,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the select property value. Columns selected from the report
-     *  @param array<string>|null $value Value to set for the select property.
+     * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
         $this->getBackingStore()->set('select', $value);
@@ -201,7 +204,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
-     *  @param string|null $value Value to set for the snapshotId property.
+     * @param string|null $value Value to set for the snapshotId property.
     */
     public function setSnapshotId(?string $value): void {
         $this->getBackingStore()->set('snapshotId', $value);
@@ -209,7 +212,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the status property value. Possible statuses associated with a generated report
-     *  @param DeviceManagementReportStatus|null $value Value to set for the status property.
+     * @param DeviceManagementReportStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DeviceManagementReportStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -217,7 +220,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
 
     /**
      * Sets the url property value. Temporary location of the exported report
-     *  @param string|null $value Value to set for the url property.
+     * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {
         $this->getBackingStore()->set('url', $value);

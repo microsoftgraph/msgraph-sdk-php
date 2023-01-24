@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * A class containing the properties for Audit Resource.
+*/
 class AuditResource implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -120,7 +123,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +131,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the auditResourceType property value. Audit resource's type.
-     *  @param string|null $value Value to set for the auditResourceType property.
+     * @param string|null $value Value to set for the auditResourceType property.
     */
     public function setAuditResourceType(?string $value): void {
         $this->getBackingStore()->set('auditResourceType', $value);
@@ -136,7 +139,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +147,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -152,7 +155,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the modifiedProperties property value. List of modified properties.
-     *  @param array<AuditProperty>|null $value Value to set for the modifiedProperties property.
+     * @param array<AuditProperty>|null $value Value to set for the modifiedProperties property.
     */
     public function setModifiedProperties(?array $value): void {
         $this->getBackingStore()->set('modifiedProperties', $value);
@@ -160,7 +163,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +171,7 @@ class AuditResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceId property value. Audit resource's Id.
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);

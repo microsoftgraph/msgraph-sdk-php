@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The identifier for the deployment an app.
+*/
 class ManagedMobileApp extends Entity implements Parsable 
 {
     /**
@@ -64,7 +67,7 @@ class ManagedMobileApp extends Entity implements Parsable
 
     /**
      * Sets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
-     *  @param MobileAppIdentifier|null $value Value to set for the mobileAppIdentifier property.
+     * @param MobileAppIdentifier|null $value Value to set for the mobileAppIdentifier property.
     */
     public function setMobileAppIdentifier(?MobileAppIdentifier $value): void {
         $this->getBackingStore()->set('mobileAppIdentifier', $value);
@@ -72,7 +75,7 @@ class ManagedMobileApp extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

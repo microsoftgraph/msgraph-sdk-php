@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Enrollment Configuration Assignment
+*/
 class EnrollmentConfigurationAssignment extends Entity implements Parsable 
 {
     /**
@@ -54,7 +57,7 @@ class EnrollmentConfigurationAssignment extends Entity implements Parsable
 
     /**
      * Sets the target property value. Represents an assignment to managed devices in the tenant
-     *  @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
+     * @param DeviceAndAppManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?DeviceAndAppManagementAssignmentTarget $value): void {
         $this->getBackingStore()->set('target', $value);

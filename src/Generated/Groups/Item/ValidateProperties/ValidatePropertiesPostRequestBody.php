@@ -100,7 +100,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -124,7 +124,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the mailNickname property value. The mailNickname property
-     *  @param string|null $value Value to set for the mailNickname property.
+     * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
         $this->getBackingStore()->set('mailNickname', $value);
@@ -132,7 +132,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     *  @param string|null $value Value to set for the onBehalfOfUserId property.
+     * @param string|null $value Value to set for the onBehalfOfUserId property.
     */
     public function setOnBehalfOfUserId(?string $value): void {
         $this->getBackingStore()->set('onBehalfOfUserId', $value);

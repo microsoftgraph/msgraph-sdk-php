@@ -74,7 +74,7 @@ class IdentityApiConnector extends Entity implements Parsable
 
     /**
      * Sets the authenticationConfiguration property value. The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
-     *  @param ApiAuthenticationConfigurationBase|null $value Value to set for the authenticationConfiguration property.
+     * @param ApiAuthenticationConfigurationBase|null $value Value to set for the authenticationConfiguration property.
     */
     public function setAuthenticationConfiguration(?ApiAuthenticationConfigurationBase $value): void {
         $this->getBackingStore()->set('authenticationConfiguration', $value);
@@ -82,7 +82,7 @@ class IdentityApiConnector extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the API connector.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -90,7 +90,7 @@ class IdentityApiConnector extends Entity implements Parsable
 
     /**
      * Sets the targetUrl property value. The URL of the API endpoint to call.
-     *  @param string|null $value Value to set for the targetUrl property.
+     * @param string|null $value Value to set for the targetUrl property.
     */
     public function setTargetUrl(?string $value): void {
         $this->getBackingStore()->set('targetUrl', $value);

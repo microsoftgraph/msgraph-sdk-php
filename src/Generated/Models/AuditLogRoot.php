@@ -74,7 +74,7 @@ class AuditLogRoot extends Entity implements Parsable
 
     /**
      * Sets the directoryAudits property value. The directoryAudits property
-     *  @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
+     * @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
     */
     public function setDirectoryAudits(?array $value): void {
         $this->getBackingStore()->set('directoryAudits', $value);
@@ -82,7 +82,7 @@ class AuditLogRoot extends Entity implements Parsable
 
     /**
      * Sets the provisioning property value. The provisioning property
-     *  @param array<ProvisioningObjectSummary>|null $value Value to set for the provisioning property.
+     * @param array<ProvisioningObjectSummary>|null $value Value to set for the provisioning property.
     */
     public function setProvisioning(?array $value): void {
         $this->getBackingStore()->set('provisioning', $value);
@@ -90,7 +90,7 @@ class AuditLogRoot extends Entity implements Parsable
 
     /**
      * Sets the signIns property value. The signIns property
-     *  @param array<SignIn>|null $value Value to set for the signIns property.
+     * @param array<SignIn>|null $value Value to set for the signIns property.
     */
     public function setSignIns(?array $value): void {
         $this->getBackingStore()->set('signIns', $value);

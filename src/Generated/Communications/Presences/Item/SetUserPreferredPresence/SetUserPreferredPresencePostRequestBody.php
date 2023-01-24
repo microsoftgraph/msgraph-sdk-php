@@ -101,7 +101,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the activity property value. The activity property
-     *  @param string|null $value Value to set for the activity property.
+     * @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -109,7 +109,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -117,7 +117,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the availability property value. The availability property
-     *  @param string|null $value Value to set for the availability property.
+     * @param string|null $value Value to set for the availability property.
     */
     public function setAvailability(?string $value): void {
         $this->getBackingStore()->set('availability', $value);
@@ -125,7 +125,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -133,7 +133,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
 
     /**
      * Sets the expirationDuration property value. The expirationDuration property
-     *  @param DateInterval|null $value Value to set for the expirationDuration property.
+     * @param DateInterval|null $value Value to set for the expirationDuration property.
     */
     public function setExpirationDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('expirationDuration', $value);

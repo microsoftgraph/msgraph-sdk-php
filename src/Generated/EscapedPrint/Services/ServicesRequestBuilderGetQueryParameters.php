@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Services;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of **printService** objects that represent the services available to your tenant.
+*/
 class ServicesRequestBuilderGetQueryParameters 
 {
     /**

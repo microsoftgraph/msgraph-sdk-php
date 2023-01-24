@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get roleManagement
+*/
 class RoleManagementRequestBuilderGetQueryParameters 
 {
     /**

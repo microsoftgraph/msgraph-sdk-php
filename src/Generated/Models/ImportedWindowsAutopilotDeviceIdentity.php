@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Imported windows autopilot devices.
+*/
 class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable 
 {
     /**
@@ -115,7 +118,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the assignedUserPrincipalName property value. UPN of the user the device will be assigned
-     *  @param string|null $value Value to set for the assignedUserPrincipalName property.
+     * @param string|null $value Value to set for the assignedUserPrincipalName property.
     */
     public function setAssignedUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('assignedUserPrincipalName', $value);
@@ -123,7 +126,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the groupTag property value. Group Tag of the Windows autopilot device.
-     *  @param string|null $value Value to set for the groupTag property.
+     * @param string|null $value Value to set for the groupTag property.
     */
     public function setGroupTag(?string $value): void {
         $this->getBackingStore()->set('groupTag', $value);
@@ -131,7 +134,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the hardwareIdentifier property value. Hardware Blob of the Windows autopilot device.
-     *  @param StreamInterface|null $value Value to set for the hardwareIdentifier property.
+     * @param StreamInterface|null $value Value to set for the hardwareIdentifier property.
     */
     public function setHardwareIdentifier(?StreamInterface $value): void {
         $this->getBackingStore()->set('hardwareIdentifier', $value);
@@ -139,7 +142,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the importId property value. The Import Id of the Windows autopilot device.
-     *  @param string|null $value Value to set for the importId property.
+     * @param string|null $value Value to set for the importId property.
     */
     public function setImportId(?string $value): void {
         $this->getBackingStore()->set('importId', $value);
@@ -147,7 +150,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the productKey property value. Product Key of the Windows autopilot device.
-     *  @param string|null $value Value to set for the productKey property.
+     * @param string|null $value Value to set for the productKey property.
     */
     public function setProductKey(?string $value): void {
         $this->getBackingStore()->set('productKey', $value);
@@ -155,7 +158,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the serialNumber property value. Serial number of the Windows autopilot device.
-     *  @param string|null $value Value to set for the serialNumber property.
+     * @param string|null $value Value to set for the serialNumber property.
     */
     public function setSerialNumber(?string $value): void {
         $this->getBackingStore()->set('serialNumber', $value);
@@ -163,7 +166,7 @@ class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable
 
     /**
      * Sets the state property value. Current state of the imported device.
-     *  @param ImportedWindowsAutopilotDeviceIdentityState|null $value Value to set for the state property.
+     * @param ImportedWindowsAutopilotDeviceIdentityState|null $value Value to set for the state property.
     */
     public function setState(?ImportedWindowsAutopilotDeviceIdentityState $value): void {
         $this->getBackingStore()->set('state', $value);

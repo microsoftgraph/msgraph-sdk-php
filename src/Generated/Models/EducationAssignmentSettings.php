@@ -54,7 +54,7 @@ class EducationAssignmentSettings extends Entity implements Parsable
 
     /**
      * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
-     *  @param bool|null $value Value to set for the submissionAnimationDisabled property.
+     * @param bool|null $value Value to set for the submissionAnimationDisabled property.
     */
     public function setSubmissionAnimationDisabled(?bool $value): void {
         $this->getBackingStore()->set('submissionAnimationDisabled', $value);

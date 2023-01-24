@@ -9,12 +9,14 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\RequestOption;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Provides operations to call the getCompliancePolicyNonComplianceReport method.
+*/
 class GetCompliancePolicyNonComplianceReportRequestBuilder 
 {
     /**
@@ -76,7 +78,7 @@ class GetCompliancePolicyNonComplianceReportRequestBuilder
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
-                $requestInfo->headers = array_merge($requestInfo->headers, $requestConfiguration->headers);
+                $requestInfo->addHeaders($requestConfiguration->headers);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

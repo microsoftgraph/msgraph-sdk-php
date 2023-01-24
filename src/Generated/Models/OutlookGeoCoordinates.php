@@ -130,7 +130,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-     *  @param float|null $value Value to set for the accuracy property.
+     * @param float|null $value Value to set for the accuracy property.
     */
     public function setAccuracy(?float $value): void {
         $this->getBackingStore()->set('accuracy', $value);
@@ -138,7 +138,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -146,7 +146,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the altitude property value. The altitude of the location.
-     *  @param float|null $value Value to set for the altitude property.
+     * @param float|null $value Value to set for the altitude property.
     */
     public function setAltitude(?float $value): void {
         $this->getBackingStore()->set('altitude', $value);
@@ -154,7 +154,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
-     *  @param float|null $value Value to set for the altitudeAccuracy property.
+     * @param float|null $value Value to set for the altitudeAccuracy property.
     */
     public function setAltitudeAccuracy(?float $value): void {
         $this->getBackingStore()->set('altitudeAccuracy', $value);
@@ -162,7 +162,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -170,7 +170,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the latitude property value. The latitude of the location.
-     *  @param float|null $value Value to set for the latitude property.
+     * @param float|null $value Value to set for the latitude property.
     */
     public function setLatitude(?float $value): void {
         $this->getBackingStore()->set('latitude', $value);
@@ -178,7 +178,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the longitude property value. The longitude of the location.
-     *  @param float|null $value Value to set for the longitude property.
+     * @param float|null $value Value to set for the longitude property.
     */
     public function setLongitude(?float $value): void {
         $this->getBackingStore()->set('longitude', $value);
@@ -186,7 +186,7 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

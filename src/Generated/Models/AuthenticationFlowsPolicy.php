@@ -74,7 +74,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. Inherited property. A description of the policy. Optional. Read-only.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -82,7 +82,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Inherited property. The human-readable name of the policy. Optional. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -90,7 +90,7 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
 
     /**
      * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
-     *  @param SelfServiceSignUpAuthenticationFlowConfiguration|null $value Value to set for the selfServiceSignUp property.
+     * @param SelfServiceSignUpAuthenticationFlowConfiguration|null $value Value to set for the selfServiceSignUp property.
     */
     public function setSelfServiceSignUp(?SelfServiceSignUpAuthenticationFlowConfiguration $value): void {
         $this->getBackingStore()->set('selfServiceSignUp', $value);

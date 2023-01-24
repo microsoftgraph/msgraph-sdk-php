@@ -100,7 +100,7 @@ class MediaInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class MediaInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class MediaInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class MediaInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the resourceId property value. Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);
@@ -132,7 +132,7 @@ class MediaInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the uri property value. Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
-     *  @param string|null $value Value to set for the uri property.
+     * @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value): void {
         $this->getBackingStore()->set('uri', $value);
