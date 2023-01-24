@@ -26,6 +26,7 @@ class PayloadDetail extends Entity
 
     /**
     * Gets the coachmarks
+    * Payload coachmark details.
     *
     * @return PayloadCoachmark|null The coachmarks
     */
@@ -44,6 +45,7 @@ class PayloadDetail extends Entity
 
     /**
     * Sets the coachmarks
+    * Payload coachmark details.
     *
     * @param PayloadCoachmark $val The value to assign to the coachmarks
     *
@@ -56,6 +58,7 @@ class PayloadDetail extends Entity
     }
     /**
     * Gets the content
+    * Payload content details.
     *
     * @return string|null The content
     */
@@ -70,6 +73,7 @@ class PayloadDetail extends Entity
 
     /**
     * Sets the content
+    * Payload content details.
     *
     * @param string $val The value of the content
     *
@@ -82,6 +86,7 @@ class PayloadDetail extends Entity
     }
     /**
     * Gets the phishingUrl
+    * The phishing URL used to target a user.
     *
     * @return string|null The phishingUrl
     */
@@ -96,6 +101,7 @@ class PayloadDetail extends Entity
 
     /**
     * Sets the phishingUrl
+    * The phishing URL used to target a user.
     *
     * @param string $val The value of the phishingUrl
     *

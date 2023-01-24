@@ -369,6 +369,7 @@ class Team extends Entity
 
     /**
     * Gets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @return TeamSummary|null The summary
     */
@@ -387,6 +388,7 @@ class Team extends Entity
 
     /**
     * Sets the summary
+    * Contains summary information about the team, including number of owners, members, and guests.
     *
     * @param TeamSummary $val The summary
     *

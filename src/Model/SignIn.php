@@ -85,6 +85,7 @@ class SignIn extends Entity
 
      /**
      * Gets the appliedConditionalAccessPolicies
+    * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
      *
      * @return array|null The appliedConditionalAccessPolicies
      */
@@ -99,6 +100,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appliedConditionalAccessPolicies
+    * Provides a list of conditional access policies that are triggered by the corresponding sign-in activity.
     *
     * @param AppliedConditionalAccessPolicy[] $val The appliedConditionalAccessPolicies
     *

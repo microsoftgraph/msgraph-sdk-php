@@ -27,6 +27,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the operations
+    * Represents an attack simulation training operation.
      *
      * @return array|null The operations
      */
@@ -41,6 +42,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the operations
+    * Represents an attack simulation training operation.
     *
     * @param AttackSimulationOperation[] $val The operations
     *
@@ -55,6 +57,7 @@ class AttackSimulationRoot extends Entity
 
      /**
      * Gets the payloads
+    * Represents an attack simulation training campaign payload in a tenant.
      *
      * @return array|null The payloads
      */
@@ -69,6 +72,7 @@ class AttackSimulationRoot extends Entity
 
     /**
     * Sets the payloads
+    * Represents an attack simulation training campaign payload in a tenant.
     *
     * @param Payload[] $val The payloads
     *

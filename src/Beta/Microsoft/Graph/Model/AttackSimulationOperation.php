@@ -26,6 +26,7 @@ class AttackSimulationOperation extends LongRunningOperation
 {
     /**
     * Gets the percentageCompleted
+    * Percentage of completion of the respective operation.
     *
     * @return int|null The percentageCompleted
     */
@@ -40,6 +41,7 @@ class AttackSimulationOperation extends LongRunningOperation
 
     /**
     * Sets the percentageCompleted
+    * Percentage of completion of the respective operation.
     *
     * @param int $val The percentageCompleted
     *
@@ -53,6 +55,7 @@ class AttackSimulationOperation extends LongRunningOperation
 
     /**
     * Gets the tenantId
+    * Tenant identifier.
     *
     * @return string|null The tenantId
     */
@@ -67,6 +70,7 @@ class AttackSimulationOperation extends LongRunningOperation
 
     /**
     * Sets the tenantId
+    * Tenant identifier.
     *
     * @param string $val The tenantId
     *
@@ -80,6 +84,7 @@ class AttackSimulationOperation extends LongRunningOperation
 
     /**
     * Gets the type
+    * The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
     *
     * @return AttackSimulationOperationType|null The type
     */
@@ -98,6 +103,7 @@ class AttackSimulationOperation extends LongRunningOperation
 
     /**
     * Sets the type
+    * The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
     *
     * @param AttackSimulationOperationType $val The type
     *

@@ -26,6 +26,7 @@ class CloudPcRemoteActionCapability extends Entity
 
     /**
     * Gets the actionCapability
+    * Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
     *
     * @return ActionCapability|null The actionCapability
     */
@@ -44,6 +45,7 @@ class CloudPcRemoteActionCapability extends Entity
 
     /**
     * Sets the actionCapability
+    * Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
     *
     * @param ActionCapability $val The value to assign to the actionCapability
     *
@@ -57,6 +59,7 @@ class CloudPcRemoteActionCapability extends Entity
 
     /**
     * Gets the actionName
+    * The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
     *
     * @return CloudPcRemoteActionName|null The actionName
     */
@@ -75,6 +78,7 @@ class CloudPcRemoteActionCapability extends Entity
 
     /**
     * Sets the actionName
+    * The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
     *
     * @param CloudPcRemoteActionName $val The value to assign to the actionName
     *
